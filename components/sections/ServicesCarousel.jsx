@@ -3,10 +3,13 @@
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import ArrowButton from '@/components/ui/ArrowButton';
+import SiteLink from '@/components/ui/SiteLink';
 import { SERVICES } from '@/data/services';
+import './Services.css';
 
-// Swipeable row of service cards with prev/next arrows (styles in Services.css)
-export default function ServicesCarousel() {
+// Swipeable row of photo cards with prev/next arrows.
+// items: [{ title, text, href, scene, image?, cta? }]; idPrefix keeps ids unique if a page has two carousels.
+export default function ServicesCarousel({ title = 'Roofing Services', items = SERVICES, idPrefix = 'svc' }) {
   const trackRef = useRef(null);
   const [atStart, setAtStart] = useState(true);
   const [atEnd, setAtEnd] = useState(false);
@@ -46,27 +49,29 @@ export default function ServicesCarousel() {
     }
   };
 
+  const ids = { title: `${idPrefix}Title`, track: `${idPrefix}Track` };
+
   return (
     <>
       <div className="svc-head">
-        <h2 id="svcTitle">Roofing Services</h2>
+        <h2 id={ids.title}>{title}</h2>
         <div className="svc-arrows">
-          <ArrowButton direction="prev" id="svcPrev" aria-label="Previous services" aria-controls="svcTrack" disabled={atStart} onClick={() => scrollCards(-1)} />
-          <ArrowButton direction="next" id="svcNext" aria-label="Next services" aria-controls="svcTrack" disabled={atEnd} onClick={() => scrollCards(1)} />
+          <ArrowButton direction="prev" id={`${idPrefix}Prev`} aria-label={`Previous ${title.toLowerCase()}`} aria-controls={ids.track} disabled={atStart} onClick={() => scrollCards(-1)} />
+          <ArrowButton direction="next" id={`${idPrefix}Next`} aria-label={`Next ${title.toLowerCase()}`} aria-controls={ids.track} disabled={atEnd} onClick={() => scrollCards(1)} />
         </div>
       </div>
 
-      <div className="svc-track" id="svcTrack" ref={trackRef} tabIndex={0} aria-roledescription="carousel" aria-labelledby="svcTitle" onKeyDown={onKeyDown}>
-        {SERVICES.map((service, i) => (
-          <article className="svc-card" role="group" aria-roledescription="slide" aria-label={`${i + 1} of ${SERVICES.length}`} key={service.title}>
-            <div className={`svc-media ${service.scene}`} aria-hidden="true">
-              {service.image && (
-                <Image src={service.image} alt="" fill sizes="(min-width: 901px) 390px, (min-width: 621px) 50vw, 86vw" />
-              )}
+      <div className="svc-track" id={ids.track} ref={trackRef} tabIndex={0} aria-roledescription="carousel" aria-labelledby={ids.title} onKeyDown={onKeyDown}>
+        {items.map((item, i) => (
+          <article className="svc-card" role="group" aria-roledescription="slide" aria-label={`${i + 1} of ${items.length}`} key={item.title}>
+            <div className={`svc-media ${item.scene || ''}`} aria-hidden="true">
+              {item.image && <Image src={item.image} alt="" fill sizes="(min-width: 901px) 390px, (min-width: 621px) 50vw, 86vw" />}
             </div>
-            <h3>{service.title}</h3>
-            <p>{service.text}</p>
-            <a className="btn btn-gold" href={service.href}>More Info</a>
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+            <SiteLink className="btn btn-gold" href={item.href} aria-label={`${item.cta || 'More Info'}: ${item.title}`}>
+              {item.cta || 'More Info'}
+            </SiteLink>
           </article>
         ))}
       </div>

@@ -8,7 +8,7 @@ export const BUSINESS = {
   shortName: 'QRS',
   tagline: 'DETAIL-FIRST ROOFING',
   description:
-    'Detail-first roof repair and replacement for homeowners across Los Angeles and Orange County, backed by a lifetime workmanship warranty. CSLB Lic # 1061942.',
+    'Detail-first roof repair and replacement for homeowners across Southern California, backed by a lifetime workmanship warranty. CSLB Lic # 1061942.',
   email: 'info@qualityroofingspecialists.com',
   priceRange: '$$',
   address: {
@@ -31,15 +31,15 @@ export const TEL = 'tel:+13103401643';
 export const PHONE_INTL = '+1-310-340-1643'; // format search engines expect
 
 // Home page title and description (search results + link previews)
-export const HOME_TITLE = 'Roof Repair & Replacement in Los Angeles | Quality Roofing Specialists';
+export const HOME_TITLE = 'Roof Repair & Replacement in Southern California | Quality Roofing Specialists';
 export const HOME_DESCRIPTION =
-  'Roof repair & replacement in Los Angeles & Orange County. Tile, flat & shingle roofing, $199 Roof Check, lifetime workmanship warranty. Call (310) 340-1643.';
+  'Roof repair & replacement in Southern California. Tile, flat & shingle roofing, $199 Roof Check, lifetime workmanship warranty. Call (310) 340-1643.';
 
 // Short trust points in the bar under the hero
 export const PROOF_POINTS = [
   { title: '30+ years', text: 'Roofing experience' },
   { title: 'Detail-first', text: 'Clear scope. Clean execution.' },
-  { title: 'LA + OC', text: 'Local service area' },
+  { title: 'SoCal', text: 'Local service area' },
   { title: 'Lifetime', text: 'Workmanship warranty' },
 ];
 

@@ -1,0 +1,5 @@
+/* ---------- Carousel section (Roofing Types, More commercial buildings…) ---------- */
+.card-carousel{background:#fff;padding:60px 0}
+.card-carousel-wash{background:var(--wash)}
+@media (min-width:621px){.card-carousel{padding:88px 0}}
+@media (min-width:901px){.card-carousel{padding:100px 0}}

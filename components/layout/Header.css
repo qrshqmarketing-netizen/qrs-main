@@ -169,3 +169,9 @@
   .mega-link small{color:var(--muted)}
   .mega-link svg{color:var(--gold-ink)}
 }
+
+/* Locations dropdown: two county cards + "All service areas" */
+.mega-loc .mega-card-list > b{display:block;margin-bottom:2px}
+@media (min-width:1200px){
+  .mega-loc .mega-inner{grid-template-columns:1.2fr 1fr .9fr}
+}

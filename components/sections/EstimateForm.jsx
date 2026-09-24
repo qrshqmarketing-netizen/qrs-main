@@ -9,6 +9,8 @@ const SERVICE_OPTIONS = [
   'Tile lift & relay',
   'Flat roofing',
   'Shingle roofing',
+  'Metal roofing or gutters',
+  'Commercial or HOA roofing',
   'Not sure yet',
 ];
 const ROOF_TYPES = ['Not sure', 'Tile', 'Shingle', 'Flat', 'Metal'];

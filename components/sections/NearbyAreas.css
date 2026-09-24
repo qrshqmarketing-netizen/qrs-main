@@ -1,0 +1,10 @@
+/* ---------- City page: nearby service areas ---------- */
+.nearby{background:#fff;padding:48px 0;border-top:1px solid var(--line)}
+.nearby h2{color:var(--navy);font-size:26px;font-weight:500;margin-bottom:18px}
+.chip-all{background:var(--navy);border-color:var(--navy);color:#fff}
+.chip-all svg{color:var(--gold)}
+a.chip-all:hover{background:var(--navy-2)}
+@media (min-width:621px){
+  .nearby{padding:64px 0}
+  .nearby h2{font-size:32px}
+}

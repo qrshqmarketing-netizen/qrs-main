@@ -1,8 +1,9 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
 import { ArrowRight, QRS_LEAF_PATH } from '@/components/ui/icons';
-import { LOCATIONS, SERVICE_RADIUS_MI } from '@/data/locations';
+import { cityPath, LOCATIONS, SERVICE_RADIUS_MI } from '@/data/locations';
 import { PHONE, TEL } from '@/data/site';
 import { miles, nominatimSearch, zipPrefixServed } from '@/lib/geo';
 import { loadLeaflet } from '@/lib/leaflet';
@@ -13,8 +14,13 @@ const PIN_SVG =
   '<svg viewBox="0 0 34 44" aria-hidden="true"><path d="M17 1C8.2 1 1 8 1 16.7 1 28.5 17 43 17 43s16-14.5 16-26.3C33 8 25.8 1 17 1Z" fill="#ffb82e" stroke="#062d57" stroke-width="2"/>' +
   `<g transform="translate(6.5 5.5) scale(.33)"><path d="${QRS_LEAF_PATH}" fill="#062d57"/></g></svg>`;
 
-// Service area map (Leaflet + OpenStreetMap tiles) with a city list and ZIP code lookup
-export default function ServiceArea() {
+// Service area map (Leaflet + OpenStreetMap tiles) with a city list and ZIP code lookup.
+// City pages pass `focus` (a city slug) to start zoomed in on that city.
+export default function ServiceArea({
+  heading = 'Locations We Proudly Serve',
+  sub = 'Explore the map below to find out if your city is within our Southern California service area',
+  focus,
+}) {
   const wrapRef = useRef(null);
   const mapEl = useRef(null);
   const listRef = useRef(null);
@@ -61,15 +67,20 @@ export default function ServiceArea() {
 
         const icon = (isActive) =>
           L.divIcon({ className: 'qrs-pin' + (isActive ? ' active' : ''), html: PIN_SVG, iconSize: [34, 44], iconAnchor: [17, 43], popupAnchor: [0, -38] });
-        const markers = LOCATIONS.map(({ city, lat, lng }, i) =>
+        const markers = LOCATIONS.map(({ city, slug, lat, lng }, i) =>
           L.marker([lat, lng], { icon: icon(false), title: 'QRS ' + city, alt: 'QRS ' + city })
             .addTo(leafletMap)
-            .bindPopup('<b>QRS ' + city + '</b><a href="' + TEL + '">' + PHONE + '</a><br><a href="#estimate">Get an estimate →</a>')
+            .bindPopup('<b>QRS ' + city + '</b><a href="' + TEL + '">' + PHONE + '</a><br><a href="#estimate">Get an estimate →</a><br><a href="' + cityPath(slug) + '">' + city + ' roofing →</a>')
             .on('click', () => select(i, false))
         );
-        // Fit all pins
+        // Fit all pins, or zoom in on this page's city
         leafletMap.fitBounds(L.featureGroup(markers).getBounds().pad(0.25));
         map.current = { L, map: leafletMap, markers, icon, searchPin: null, active: -1 };
+        const focusIndex = LOCATIONS.findIndex((l) => l.slug === focus);
+        if (focusIndex > -1) {
+          leafletMap.setView(markers[focusIndex].getLatLng(), 11);
+          select(focusIndex, false);
+        }
       },
       () => !cancelled && setOffline(true) // map library didn't load: the list still works
     );
@@ -116,7 +127,7 @@ export default function ServiceArea() {
       }
     } catch {
       setMsg(zipPrefixServed(z)
-        ? <><b>Good news!</b> {z} is in the LA / Orange County area we serve.</>
+        ? <><b>Good news!</b> {z} is in our Southern California service area.</>
         : <>{z} may be outside our area. Call <b>{PHONE}</b> to confirm.</>);
     }
   };
@@ -129,8 +140,8 @@ export default function ServiceArea() {
   return (
     <section className="area" id="service-area">
       <div className="container">
-        <h2>Locations We Proudly Serve</h2>
-        <p className="area-sub">Explore the map below to find out if your city is within our Southern California service area</p>
+        <h2>{heading}</h2>
+        <p className="area-sub">{sub}</p>
 
         <div className="loc-wrap" id="locWrap" ref={wrapRef}>
           <aside className="loc-panel">
@@ -154,7 +165,7 @@ export default function ServiceArea() {
             </div>
 
             <ul className="loc-list" id="locList" ref={listRef}>
-              {LOCATIONS.map(({ city }, i) => (
+              {LOCATIONS.map(({ city, slug }, i) => (
                 <li
                   className={'loc-item' + (active === i ? ' active' : '')}
                   tabIndex={0}
@@ -170,7 +181,9 @@ export default function ServiceArea() {
                     }
                   }}
                 >
-                  <h3>QRS {city}</h3>
+                  <h3>
+                    <Link href={cityPath(slug)} prefetch={false}>QRS {city}</Link>
+                  </h3>
                   <a className="loc-phone" href={TEL}>{PHONE}</a>
                   <a className="loc-btn" href="#estimate">Get Estimate</a>
                 </li>

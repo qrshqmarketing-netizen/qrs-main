@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
 import { CloseIcon, GoogleLogo } from '@/components/ui/icons';
 import { GOOGLE_REVIEWS } from '@/data/reviews';
 import { SHOW_REVIEW_EVENT } from '@/lib/events';
@@ -15,6 +16,8 @@ export default function ReviewToast() {
   const [shown, setShown] = useState(null); // index of the review in the toast
   const [visible, setVisible] = useState(false);
   const loop = useRef({ next: 0, timer: null, hovering: false, reviewsOnScreen: false, stopped: false });
+  const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     const s = loop.current;
@@ -42,27 +45,29 @@ export default function ReviewToast() {
       }, SHOW_MS);
     };
 
-    // Don't show the toast while the reviews themselves are on screen
-    let observer;
-    const reviews = document.getElementById('reviews');
-    if (reviews && 'IntersectionObserver' in window) {
-      observer = new IntersectionObserver(
-        ([entry]) => {
-          s.reviewsOnScreen = entry.isIntersecting;
-          if (s.reviewsOnScreen) setVisible(false);
-        },
-        { threshold: 0.2 }
-      );
-      observer.observe(reviews);
-    }
     s.timer = setTimeout(cycle, FIRST_MS);
-
     return () => {
       s.stopped = true;
       clearTimeout(s.timer);
-      observer?.disconnect();
     };
   }, []);
+
+  // Don't show the toast while the reviews themselves are on screen (re-checked on every page)
+  useEffect(() => {
+    const s = loop.current;
+    s.reviewsOnScreen = false;
+    const reviews = document.getElementById('reviews');
+    if (!reviews || !('IntersectionObserver' in window)) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        s.reviewsOnScreen = entry.isIntersecting;
+        if (s.reviewsOnScreen) setVisible(false);
+      },
+      { threshold: 0.2 }
+    );
+    observer.observe(reviews);
+    return () => observer.disconnect();
+  }, [pathname]);
 
   const hover = (on) => () => {
     loop.current.hovering = on;
@@ -76,11 +81,16 @@ export default function ReviewToast() {
     session.set('rvToastOff', '1');
   };
 
-  // Jump to this review in the reviews section
+  // Jump to this review in the reviews section (on the home page if this page has none)
   const openReview = () => {
-    window.dispatchEvent(new CustomEvent(SHOW_REVIEW_EVENT, { detail: shown }));
     setVisible(false);
-    document.getElementById('reviews')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    const reviews = document.getElementById('reviews');
+    if (!reviews) {
+      router.push('/#reviews');
+      return;
+    }
+    window.dispatchEvent(new CustomEvent(SHOW_REVIEW_EVENT, { detail: shown }));
+    reviews.scrollIntoView({ behavior: 'smooth', block: 'center' });
   };
 
   const review = shown === null ? null : REVIEWS[shown];

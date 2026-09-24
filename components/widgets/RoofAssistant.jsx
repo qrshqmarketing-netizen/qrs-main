@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { ArrowRight, CloseIcon, QrsMark } from '@/components/ui/icons';
 import { ANSWERS, CHAT_ENDPOINT, CHIP_PROMPTS, FALLBACK_ANSWER, GREETING, STARTERS } from '@/data/assistant';
 import { PHONE, TEL } from '@/data/site';
@@ -37,6 +38,7 @@ export default function RoofAssistant() {
   const inputRef = useRef(null);
   const formRef = useRef(null);
   const bubbleRef = useRef(null);
+  const router = useRouter();
 
   useEffect(() => {
     openRef.current = open;
@@ -118,9 +120,20 @@ export default function RoofAssistant() {
     } else openChat();
   };
 
-  // Links in answers (data-qa-close) close the chat on phones so the page section is visible
+  // Links in answers: data-qa-close links close the chat on phones so the page is visible.
+  // Page links change pages without a reload; section links (#…) fall back to the home page's section.
   const onLogClick = (e) => {
-    if (e.target.closest('[data-qa-close]') && window.matchMedia('(max-width:620px)').matches) closeChat();
+    const link = e.target.closest('a');
+    if (!link) return;
+    if (link.hasAttribute('data-qa-close') && window.matchMedia('(max-width:620px)').matches) closeChat();
+    const href = link.getAttribute('href') || '';
+    if (href.startsWith('/')) {
+      e.preventDefault();
+      router.push(href);
+    } else if (href.length > 1 && href.startsWith('#') && !document.getElementById(href.slice(1))) {
+      e.preventDefault();
+      router.push('/' + href);
+    }
   };
 
   const onInput = (e) => {

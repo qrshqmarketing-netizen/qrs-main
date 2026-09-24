@@ -127,3 +127,110 @@ main h2{animation:fadeUp .9s ease .3s both}
 .not-found{min-height:60vh;display:flex;align-items:center;text-align:center;background:var(--wash)}
 .not-found h1{color:var(--navy)}
 .not-found .lead{margin:0 auto 28px}
+
+/* ---------- Shared building blocks for the inner pages ---------- */
+/* Links inside body copy (content from the data/ files) */
+.text-link{
+  font-weight:700;color:var(--navy);text-decoration:underline;text-decoration-color:var(--gold);
+  text-decoration-thickness:2px;text-underline-offset:4px;transition:color .15s;
+}
+.text-link:hover{color:var(--gold-ink)}
+.on-dark .text-link{color:#fff}
+.on-dark .text-link:hover{color:var(--gold-2)}
+
+/* Navy outline button */
+.btn-line{border-color:rgba(6,45,87,.28);color:var(--navy);background:#fff}
+.btn-line:hover{border-color:var(--navy)}
+
+/* Heading + intro above a section's content */
+.section-head{max-width:760px;margin:0 0 30px}
+.section-head.center{margin:0 auto 34px;text-align:center}
+.section-head h2{color:var(--navy);font-size:var(--h2);margin-bottom:14px}
+.section-head p{color:var(--navy);font-size:17px;line-height:1.65;margin:0}
+@media (min-width:621px){
+  .section-head{margin-bottom:44px}
+  .section-head.center{margin-bottom:48px}
+  .section-head p{font-size:18px;line-height:1.7}
+}
+
+/* Faint clay-tile scallops behind a section (fades in from the left) */
+.tile-pattern{position:relative;isolation:isolate}
+.tile-pattern:before{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(circle at 50% 100%,transparent 57%,rgba(6,45,87,.06) 59%,rgba(6,45,87,.06) 64%,transparent 66%) 0 0/44px 22px,
+    radial-gradient(circle at 50% 100%,transparent 57%,rgba(6,45,87,.06) 59%,rgba(6,45,87,.06) 64%,transparent 66%) 22px 11px/44px 22px;
+  -webkit-mask-image:linear-gradient(90deg,transparent 15%,#000 85%);
+          mask-image:linear-gradient(90deg,transparent 15%,#000 85%);
+}
+.tile-pattern.on-dark:before{
+  background:
+    radial-gradient(circle at 50% 100%,transparent 57%,rgba(255,255,255,.05) 59%,rgba(255,255,255,.05) 64%,transparent 66%) 0 0/44px 22px,
+    radial-gradient(circle at 50% 100%,transparent 57%,rgba(255,255,255,.05) 59%,rgba(255,255,255,.05) 64%,transparent 66%) 22px 11px/44px 22px;
+}
+
+/* Pill links and tags */
+.chips{display:flex;flex-wrap:wrap;gap:10px;list-style:none;margin:0;padding:0}
+.chip{
+  display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:9px 16px;border-radius:999px;
+  border:1.5px solid var(--line);background:#fff;color:var(--navy);
+  font:600 15px/1.25 var(--font-head);transition:border-color .15s,background .15s;
+}
+a.chip:hover{border-color:var(--navy)}
+.chip svg{width:15px;height:15px;color:var(--gold-ink)}
+
+/* Box that shows scene art (below) until a real photo is added */
+.art{position:relative;overflow:hidden;background:#2c3a46}
+
+/* ---------- Placeholder roof "photos" (CSS-only) — used until real job photos are added ---------- */
+.scene-replace{background:
+  repeating-linear-gradient(-28deg,transparent 0 26px,rgba(255,255,255,.14) 27px 29px,transparent 30px 54px),
+  repeating-linear-gradient(62deg,rgba(0,0,0,.22) 0 2px,transparent 2px 40px),
+  radial-gradient(circle at 80% 10%,rgba(255,200,120,.55),transparent 40%),
+  linear-gradient(160deg,#8d979d 0%,#56616a 55%,#2e3a44 100%)}
+.scene-repair{background:
+  repeating-linear-gradient(0deg,rgba(80,25,10,.35) 0 3px,transparent 3px 30px),
+  repeating-linear-gradient(90deg,rgba(255,255,255,.1) 0 14px,rgba(0,0,0,.16) 14px 30px),
+  radial-gradient(circle at 20% 15%,rgba(255,220,170,.5),transparent 45%),
+  linear-gradient(170deg,#c9744a 0%,#a2502f 55%,#5e2b1a 100%)}
+.scene-tile{background:
+  linear-gradient(180deg,#9ec3dd 0 22%,transparent 22%),
+  repeating-linear-gradient(90deg,rgba(255,255,255,.12) 0 16px,rgba(0,0,0,.18) 16px 34px),
+  repeating-linear-gradient(0deg,rgba(70,25,10,.35) 0 3px,transparent 3px 38px),
+  linear-gradient(175deg,#d98a5c 0%,#b25f3a 60%,#6a321e 100%)}
+.scene-flat{background:
+  linear-gradient(180deg,#8fbbe0 0%,#c9dcec 30%,transparent 30.5%),
+  repeating-linear-gradient(90deg,transparent 0 58px,rgba(0,0,0,.12) 58px 60px),
+  radial-gradient(ellipse at 50% 30%,rgba(255,255,255,.35),transparent 60%),
+  linear-gradient(180deg,#b9c0c5 30%,#8a939a 70%,#4b555d 100%)}
+.scene-shingle{background:
+  repeating-linear-gradient(-12deg,transparent 0 22px,rgba(255,255,255,.1) 23px 25px,transparent 26px 46px),
+  repeating-linear-gradient(78deg,rgba(0,0,0,.28) 0 2px,transparent 2px 34px),
+  radial-gradient(circle at 75% 12%,rgba(255,184,46,.35),transparent 38%),
+  linear-gradient(150deg,#5d646a 0%,#3c434a 50%,#1f262d 100%)}
+.scene-inspect{background:
+  linear-gradient(180deg,#7fb0d8 0%,#b7d3e8 42%,transparent 42.5%),
+  repeating-linear-gradient(-20deg,transparent 0 24px,rgba(255,255,255,.14) 25px 27px,transparent 28px 50px),
+  linear-gradient(160deg,#7d878e 40%,#4b565f 75%,#27323b 100%)}
+
+.scene-metal{background:
+  repeating-linear-gradient(90deg,rgba(255,255,255,.16) 0 2px,transparent 2px 36px),
+  repeating-linear-gradient(90deg,transparent 0 30px,rgba(0,0,0,.16) 30px 32px,transparent 32px 36px),
+  radial-gradient(circle at 72% 14%,rgba(255,220,170,.45),transparent 42%),
+  linear-gradient(165deg,#6f7f8a 0%,#4b5a64 55%,#26323b 100%)}
+.scene-gutter{background:
+  linear-gradient(180deg,#9ec3dd 0 30%,transparent 30%),
+  linear-gradient(180deg,transparent 60%,#dfe4e8 60% 65%,#a7b1b9 65% 68%,transparent 68%),
+  repeating-linear-gradient(-14deg,transparent 0 22px,rgba(255,255,255,.1) 23px 25px,transparent 26px 46px),
+  linear-gradient(170deg,#5d646a 30%,#3c434a 62%,#2a3138 100%)}
+.scene-commercial{background:
+  linear-gradient(180deg,#8fbbe0 0%,#c9dcec 26%,transparent 26.5%),
+  radial-gradient(ellipse 13% 8% at 28% 54%,#eef1f3 62%,transparent 65%),
+  radial-gradient(ellipse 9% 6% at 70% 64%,#e1e6ea 62%,transparent 65%),
+  repeating-linear-gradient(90deg,transparent 0 70px,rgba(0,0,0,.1) 70px 72px),
+  linear-gradient(180deg,#c3c9cd 26%,#9aa3a9 70%,#5a646b 100%)}
+.scene-hoa{background:
+  linear-gradient(180deg,#a9cbe3 0 24%,transparent 24%),
+  repeating-linear-gradient(90deg,transparent 0 64px,rgba(0,0,0,.2) 64px 67px),
+  repeating-linear-gradient(-28deg,transparent 0 18px,rgba(255,255,255,.12) 19px 21px,transparent 22px 38px),
+  linear-gradient(170deg,#b86b43 0%,#8f4d2e 55%,#4f2717 100%)}

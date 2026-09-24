@@ -28,7 +28,8 @@ export default function HomePage() {
     <>
       <JsonLd data={homeJsonLd({ title: HOME_TITLE })} />
       <main id="top">
-        <Hero />
+        {/* The keyword line above the big headline is the page's H1 (matches the page title) */}
+        <Hero h1="eyebrow" />
         <ProofBar />
         <Services />
         <Faq />

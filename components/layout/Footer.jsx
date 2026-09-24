@@ -1,11 +1,17 @@
 import BrandLogo from '@/components/ui/BrandLogo';
 import { FacebookIcon, InstagramIcon, LinkedInIcon, YouTubeIcon } from '@/components/ui/icons';
+import SiteLink from '@/components/ui/SiteLink';
 import { FOOTER } from '@/data/navigation';
 import { BUSINESS, SOCIAL } from '@/data/site';
 import CopyrightYear from './CopyrightYear';
 import './Footer.css';
 
-const links = (list) => list.map((link) => <a href={link.href} key={link.label}>{link.label}</a>);
+const links = (list) =>
+  list.map((link) => (
+    <SiteLink href={link.href} prefetch={false} key={link.label}>
+      {link.label}
+    </SiteLink>
+  ));
 
 export default function Footer() {
   return (

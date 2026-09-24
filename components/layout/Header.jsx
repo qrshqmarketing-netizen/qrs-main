@@ -4,15 +4,18 @@ import { useEffect, useRef, useState } from 'react';
 import BrandLogo from '@/components/ui/BrandLogo';
 import SiteLink from '@/components/ui/SiteLink';
 import { ArrowRight, Caret } from '@/components/ui/icons';
-import { COMMERCIAL_MENU, HEADER_CTA, NAV_LINKS, RESIDENTIAL_MENU } from '@/data/navigation';
+import { COMMERCIAL_MENU, HEADER_CTA, LOCATIONS_MENU, NAV_LINKS, RESIDENTIAL_MENU } from '@/data/navigation';
 import './Header.css';
 
 // Wide screens show the full menu with hover dropdowns; smaller screens use the menu button
 const isDesktop = () => window.matchMedia('(min-width:1200px)').matches;
 
+// Menu links don't prefetch: there are dozens of them in the (hidden) dropdowns
+const MenuLink = (props) => <SiteLink prefetch={false} {...props} />;
+
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false); // phone/tablet slide-down menu
-  const [openItem, setOpenItem] = useState(null); // 'res' | 'com' | null
+  const [openItem, setOpenItem] = useState(null); // 'res' | 'com' | 'loc' | null
   const [activeGroup, setActiveGroup] = useState(0); // roof type shown in the Residential menu
   const closeTimer = useRef(null);
   const triggers = useRef({});
@@ -40,7 +43,7 @@ export default function Header() {
     if (e.target.closest('a')) setMenuOpen(false);
   };
 
-  // Props for a dropdown (Residential / Commercial)
+  // Props for a dropdown (Residential / Commercial / Locations)
   const dropdown = (key) => ({
     className: 'nav-item' + (openItem === key ? ' open' : ''),
     onMouseEnter: () => {
@@ -89,7 +92,7 @@ export default function Header() {
     onFocus: () => isDesktop() && setActiveGroup(i),
   });
 
-  const { groups, feature, promo } = RESIDENTIAL_MENU;
+  const { groups, hub, feature, promo } = RESIDENTIAL_MENU;
   const { buildings, partner } = COMMERCIAL_MENU;
 
   return (
@@ -113,34 +116,36 @@ export default function Header() {
                         <Caret />
                       </button>
                       <div className="mega-list" id={group.id}>
-                        <SiteLink className="mega-all" href={group.all.href}>
+                        <MenuLink className="mega-all" href={group.all.href}>
                           {group.all.label} <ArrowRight />
-                        </SiteLink>
+                        </MenuLink>
                         <ul>
                           {group.links.map((link) => (
                             <li key={link.href}>
-                              <SiteLink href={link.href}>
+                              <MenuLink href={link.href}>
                                 <span>{link.label}</span>
                                 {link.note && <small>{link.note}</small>}
-                              </SiteLink>
+                              </MenuLink>
                             </li>
                           ))}
                         </ul>
                       </div>
                     </div>
                   ))}
-                  <SiteLink className="mega-link" href={feature.href}>
-                    <span>
-                      <b>{feature.title}</b>
-                      <small>{feature.note}</small>
-                    </span>
-                    <ArrowRight />
-                  </SiteLink>
+                  {[feature, hub].map((item) => (
+                    <MenuLink className="mega-link" href={item.href} key={item.href}>
+                      <span>
+                        <b>{item.title}</b>
+                        <small>{item.note}</small>
+                      </span>
+                      <ArrowRight />
+                    </MenuLink>
+                  ))}
                 </div>
                 <aside className="mega-promo">
                   <b>{promo.title}</b>
                   <p>{promo.text}</p>
-                  <a className="btn btn-gold" href={promo.cta.href}>{promo.cta.label}</a>
+                  <SiteLink className="btn btn-gold" href={promo.cta.href}>{promo.cta.label}</SiteLink>
                 </aside>
               </div>
             </div>
@@ -154,34 +159,64 @@ export default function Header() {
             <div className="mega mega-com" id="megaCom" onClick={closeOnLink}>
               <div className="mega-inner">
                 <div className="mega-card mega-card-list">
-                  <SiteLink className="mega-card-head" href={buildings.href}>
+                  <MenuLink className="mega-card-head" href={buildings.href}>
                     <b>{buildings.title}</b> <ArrowRight />
-                  </SiteLink>
+                  </MenuLink>
                   <ul>
                     {buildings.links.map((link) => (
                       <li key={link.href}>
-                        <SiteLink href={link.href}>{link.label}</SiteLink>
+                        <MenuLink href={link.href}>{link.label}</MenuLink>
                       </li>
                     ))}
                   </ul>
                 </div>
-                <SiteLink className="mega-card" href={partner.href}>
+                <MenuLink className="mega-card" href={partner.href}>
                   <b>{partner.title}</b>
                   <span>{partner.text}</span>
                   <em>
                     {partner.cta} <ArrowRight />
                   </em>
-                </SiteLink>
+                </MenuLink>
+              </div>
+            </div>
+          </div>
+
+          <div {...dropdown('loc')}>
+            <button {...trigger('loc', 'megaLoc')}>
+              Locations
+              <Caret />
+            </button>
+            <div className="mega mega-loc" id="megaLoc" onClick={closeOnLink}>
+              <div className="mega-inner">
+                {LOCATIONS_MENU.counties.map((county) => (
+                  <div className="mega-card mega-card-list" key={county.title}>
+                    <b>{county.title}</b>
+                    <ul>
+                      {county.links.map((link) => (
+                        <li key={link.href}>
+                          <MenuLink href={link.href}>{link.label}</MenuLink>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+                <MenuLink className="mega-card" href={LOCATIONS_MENU.all.href}>
+                  <b>{LOCATIONS_MENU.all.title}</b>
+                  <span>{LOCATIONS_MENU.all.text}</span>
+                  <em>
+                    {LOCATIONS_MENU.all.cta} <ArrowRight />
+                  </em>
+                </MenuLink>
               </div>
             </div>
           </div>
 
           {NAV_LINKS.map((link) => (
-            <SiteLink href={link.href} key={link.href}>{link.label}</SiteLink>
+            <MenuLink href={link.href} key={link.href}>{link.label}</MenuLink>
           ))}
         </nav>
 
-        <a className="btn btn-gold nav-cta" href={HEADER_CTA.href}>{HEADER_CTA.label}</a>
+        <SiteLink className="btn btn-gold nav-cta" href={HEADER_CTA.href}>{HEADER_CTA.label}</SiteLink>
         <button className="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded={menuOpen} onClick={toggleMenu}>
           <span></span>
           <span></span>

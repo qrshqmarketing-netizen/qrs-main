@@ -11,6 +11,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 ## Project notes
 
 - Quality Roofing Specialists marketing site: Next.js App Router, JavaScript, plain CSS. See README.md for the layout.
-- Editable content lives in `data/`; each page section is a component in `components/sections/` with its CSS file beside it.
+- Editable content lives in `data/`; each page section is a component in `components/sections/` with its CSS file beside it. Page layouts (service, hub, city) are in `components/templates/`; `data/catalog.js` holds the page structure and `data/content.js` joins it with the copy.
+- SEO rule from the owner: every page's `keyword` must appear in its meta title, meta description, H1 and first 100 words. Content text uses `[words](/path/)` links and `**bold**` (rendered by `components/ui/Rich.jsx`); only link to pages that exist.
 - Stylesheet order matters: `app/layout.js` imports `leaflet/dist/leaflet.css`, then `app/globals.css`, then components import their own CSS. Keep shared primitives (buttons, form fields, `.container`, `.section`) in `globals.css` so section styles can override them.
 - The GitHub repo is public: keep API keys in `.env.local` (git-ignored), never in code.

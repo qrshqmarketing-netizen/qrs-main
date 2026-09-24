@@ -47,5 +47,4 @@
   .faq-item p{padding:0 24px 22px;font-size:18px}
   .faq-cta{margin-top:40px}
 }
-.faq-item p a{color:var(--gold-ink);font-weight:700}
 @media (prefers-reduced-motion:reduce){.faq:before,.faq:after{animation:none}}

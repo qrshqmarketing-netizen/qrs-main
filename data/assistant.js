@@ -49,7 +49,7 @@ export const ANSWERS = [
   },
   {
     match: /area|serve|zip|city|location|near|orange county|los angeles|\bla\b|\boc\b|\b9\d{4}\b|santa monica|pasadena|glendale|burbank|torrance|long beach|anaheim|santa ana|huntington|irvine|newport/,
-    answer: 'We serve homeowners across Los Angeles and Orange County. You can enter your ZIP in our <a href="#service-area" data-qa-close>service area map</a> to check your city, or call ' + call + '.',
+    answer: 'We serve homeowners across Los Angeles and Orange County. You can enter your ZIP in our <a href="/locations/" data-qa-close>service area map</a> to check your city, or call ' + call + '.',
     chips: ['Book a Roof Check', 'What services do you offer?'],
   },
   {
@@ -64,7 +64,7 @@ export const ANSWERS = [
   },
   {
     match: /service|offer|do you do|tile|shingle|flat|type/,
-    answer: 'We handle roof replacements, roof repairs, tile lift &amp; relay, flat roofing, shingle roofing, and inspections &amp; roof care. <a href="#services" data-qa-close>See all services</a>.',
+    answer: 'We handle roof replacements, roof repairs, tile lift &amp; relay, flat roofing, shingle roofing, and inspections &amp; roof care. <a href="/residential-roofing/" data-qa-close>See all services</a>.',
     chips: ['Do I need a new roof?', 'Book a Roof Check'],
   },
   {
@@ -84,7 +84,7 @@ export const ANSWERS = [
   },
   {
     match: /experience|years|how long have|licens|trust|who are/,
-    answer: 'QRS brings 30+ years of roofing experience to every job, with detail-first workmanship across LA and Orange County. <a href="#why" data-qa-close>Why homeowners choose QRS</a>.',
+    answer: 'QRS brings 30+ years of roofing experience to every job, with detail-first workmanship across LA and Orange County. <a href="/about-us/" data-qa-close>Why homeowners choose QRS</a>.',
     chips: ['How does the process work?', 'Book a Roof Check'],
   },
   {

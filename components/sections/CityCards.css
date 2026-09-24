@@ -1,0 +1,23 @@
+/* ---------- Locations page: city cards by county ---------- */
+.city-cards{background:var(--wash);padding:60px 0}
+.city-county + .city-county{margin-top:44px}
+.city-county h2{color:var(--navy);font-size:clamp(30px,8vw,40px);margin-bottom:18px}
+.city-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:14px}
+.city-card{
+  display:flex;flex-direction:column;gap:8px;padding:22px 22px 20px;border-radius:16px;background:#fff;border:1px solid var(--line);
+  box-shadow:0 8px 24px rgba(6,45,87,.05);transition:border-color .15s,box-shadow .15s,transform .15s;
+}
+.city-card:hover{border-color:var(--gold);box-shadow:0 14px 32px rgba(6,45,87,.10);transform:translateY(-2px)}
+.city-card b{color:var(--navy);font:600 22px/1.2 var(--font-head);letter-spacing:-.02em}
+.city-card span{color:var(--ink);font-size:15px;line-height:1.6}
+.city-card em{margin-top:auto;padding-top:6px;display:inline-flex;align-items:center;gap:8px;color:var(--gold-ink);font:700 14px/1.2 var(--font-head);font-style:normal;text-transform:uppercase;letter-spacing:.03em}
+.city-card em svg{width:15px;height:15px}
+@media (min-width:621px){
+  .city-cards{padding:88px 0}
+  .city-county + .city-county{margin-top:64px}
+  .city-grid{grid-template-columns:1fr 1fr;gap:18px}
+}
+@media (min-width:901px){
+  .city-cards{padding:100px 0}
+  .city-grid{grid-template-columns:repeat(3,1fr)}
+}

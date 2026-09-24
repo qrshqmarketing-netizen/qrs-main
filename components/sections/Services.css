@@ -41,37 +41,6 @@
 }
 @media (min-width:901px){.svc-card{flex-basis:calc((100% - 20px) / 3)}}
 
-/* Placeholder roof "photos" (CSS-only) — swap for real job photos */
-.scene-replace{background:
-  repeating-linear-gradient(-28deg,transparent 0 26px,rgba(255,255,255,.14) 27px 29px,transparent 30px 54px),
-  repeating-linear-gradient(62deg,rgba(0,0,0,.22) 0 2px,transparent 2px 40px),
-  radial-gradient(circle at 80% 10%,rgba(255,200,120,.55),transparent 40%),
-  linear-gradient(160deg,#8d979d 0%,#56616a 55%,#2e3a44 100%)}
-.scene-repair{background:
-  repeating-linear-gradient(0deg,rgba(80,25,10,.35) 0 3px,transparent 3px 30px),
-  repeating-linear-gradient(90deg,rgba(255,255,255,.1) 0 14px,rgba(0,0,0,.16) 14px 30px),
-  radial-gradient(circle at 20% 15%,rgba(255,220,170,.5),transparent 45%),
-  linear-gradient(170deg,#c9744a 0%,#a2502f 55%,#5e2b1a 100%)}
-.scene-tile{background:
-  linear-gradient(180deg,#9ec3dd 0 22%,transparent 22%),
-  repeating-linear-gradient(90deg,rgba(255,255,255,.12) 0 16px,rgba(0,0,0,.18) 16px 34px),
-  repeating-linear-gradient(0deg,rgba(70,25,10,.35) 0 3px,transparent 3px 38px),
-  linear-gradient(175deg,#d98a5c 0%,#b25f3a 60%,#6a321e 100%)}
-.scene-flat{background:
-  linear-gradient(180deg,#8fbbe0 0%,#c9dcec 30%,transparent 30.5%),
-  repeating-linear-gradient(90deg,transparent 0 58px,rgba(0,0,0,.12) 58px 60px),
-  radial-gradient(ellipse at 50% 30%,rgba(255,255,255,.35),transparent 60%),
-  linear-gradient(180deg,#b9c0c5 30%,#8a939a 70%,#4b555d 100%)}
-.scene-shingle{background:
-  repeating-linear-gradient(-12deg,transparent 0 22px,rgba(255,255,255,.1) 23px 25px,transparent 26px 46px),
-  repeating-linear-gradient(78deg,rgba(0,0,0,.28) 0 2px,transparent 2px 34px),
-  radial-gradient(circle at 75% 12%,rgba(255,184,46,.35),transparent 38%),
-  linear-gradient(150deg,#5d646a 0%,#3c434a 50%,#1f262d 100%)}
-.scene-inspect{background:
-  linear-gradient(180deg,#7fb0d8 0%,#b7d3e8 42%,transparent 42.5%),
-  repeating-linear-gradient(-20deg,transparent 0 24px,rgba(255,255,255,.14) 25px 27px,transparent 28px 50px),
-  linear-gradient(160deg,#7d878e 40%,#4b565f 75%,#27323b 100%)}
-
 /* The QRS Standard — centered copy below the carousel */
 .svc-about{text-align:center;margin-top:56px}
 .svc-about h2{color:var(--navy);font-size:clamp(32px,9.6vw,36px);font-weight:500;line-height:1.05;letter-spacing:-.03em;margin-bottom:20px}

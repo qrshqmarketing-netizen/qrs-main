@@ -1,7 +1,13 @@
 import Image from 'next/image';
+import SiteLink from '@/components/ui/SiteLink';
 import './FinalCta.css';
 
-export default function FinalCta() {
+// Closing call to action over the neighborhood photo. Pages can change the words and the button.
+export default function FinalCta({
+  heading = 'Detail-First Roofing',
+  text = 'At QRS, there’s no pressure, no mystery scope and no surprises — ever. Start with a roofer-led roof check today!',
+  cta = { label: 'Get Pro Advice', href: '#roof-check' },
+}) {
   return (
     <section className="final">
       <div className="container">
@@ -11,12 +17,9 @@ export default function FinalCta() {
             <circle cx="17" cy="15.5" r="5.5" fill="#ffb82e" />
           </svg>
         </div>
-        <h2>Detail-First Roofing</h2>
-        <p>
-          At QRS, there&rsquo;s no pressure, no mystery scope and no surprises &mdash; ever. Start with a roofer-led roof
-          check today!
-        </p>
-        <a className="btn btn-gold" href="#roof-check">Get Pro Advice</a>
+        <h2>{heading}</h2>
+        <p>{text}</p>
+        <SiteLink className="btn btn-gold" href={cta.href}>{cta.label}</SiteLink>
       </div>
       <Image
         className="cta-scene"

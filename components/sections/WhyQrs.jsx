@@ -1,16 +1,17 @@
 import Image from 'next/image';
+import SiteLink from '@/components/ui/SiteLink';
 import { CREDENTIALS } from '@/data/credentials';
 import './WhyQrs.css';
 
 // Logos display up to 150px wide on phones, 170px on larger screens
 const LOGO_SIZES = '(min-width: 621px) 170px, 150px';
 
-export default function WhyQrs() {
+export default function WhyQrs({ heading = 'Why Choose QRS', cta = { label: 'Learn More About Us', href: '/about-us/' } }) {
   return (
     <section className="why" id="why">
       <div className="why-roof" aria-hidden="true"></div>
       <div className="container">
-        <h2>Why Choose QRS</h2>
+        <h2>{heading}</h2>
         <div className="cred-card">
           <h3>Accreditations &amp; Partnerships</h3>
           <div className="cred-marquee">
@@ -29,7 +30,7 @@ export default function WhyQrs() {
             </div>
           </div>
         </div>
-        <a className="btn btn-gold" href="#reviews">Learn More About Us</a>
+        {cta && <SiteLink className="btn btn-gold" href={cta.href}>{cta.label}</SiteLink>}
       </div>
     </section>
   );

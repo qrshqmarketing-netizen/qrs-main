@@ -1,4 +1,5 @@
 import { QRS_LEAF_PATH } from '@/components/ui/icons';
+import Rich from '@/components/ui/Rich';
 import './Guarantee.css';
 
 const POINTS = ['Written scope & price before work starts', 'Photo-documented roof check', 'Final walkthrough with you'];
@@ -53,9 +54,7 @@ export default function Guarantee() {
             what you&rsquo;re getting before any work begins.
           </p>
           <p>
-            Whether you need a roof replacement, a roof repair or a tile lift &amp; relay, we stand behind every project. We
-            walk the finished roof with you, go over your warranty in plain English and follow through after the install.
-            With QRS, your new roof isn&rsquo;t just finished &mdash; it&rsquo;s done right.
+            <Rich text="Whether you need a [roof replacement](/residential-roofing/#roof-replacement), a [roof repair](/residential-roofing/#roof-repairs) or a tile lift & relay, we stand behind every project. We walk the finished roof with you, go over your warranty in plain English and follow through after the install. With QRS, your new roof isn’t just finished — it’s done right." />
           </p>
         </div>
       </div>

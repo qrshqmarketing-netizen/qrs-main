@@ -1,0 +1,27 @@
+/* ---------- Hub card grid ---------- */
+.card-grid{background:#fff;padding:60px 0}
+.card-grid-wash{background:var(--wash)}
+.cg-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:34px 20px}
+.cg-card{position:relative;display:flex;flex-direction:column}
+.cg-media{aspect-ratio:4/3;border-radius:16px;margin-bottom:18px;box-shadow:0 12px 30px rgba(6,45,87,.10)}
+.cg-media:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(4,20,38,.35))}
+.cg-media > *{transition:transform .5s ease}
+.cg-media img{object-fit:cover}
+.cg-card:hover .cg-media{box-shadow:0 18px 40px rgba(6,45,87,.16)}
+.cg-card h3{color:var(--navy);font-size:26px;font-weight:500;line-height:1.1;letter-spacing:-.03em;margin:0 0 10px}
+/* Stretch the title link over the whole card */
+.cg-link:after{content:"";position:absolute;inset:0;border-radius:16px}
+.cg-link:focus-visible{outline:none}
+.cg-link:focus-visible:after{outline:3px solid rgba(255,184,46,.7);outline-offset:6px}
+.cg-card p{color:var(--ink);font-size:16px;line-height:1.65;margin:0 0 18px}
+.cg-more{align-self:flex-start;margin-top:auto;min-height:44px;padding:9px 20px;border-radius:6px;font-size:16px}
+.cg-card:hover .cg-more{border-color:var(--navy)}
+@media (min-width:621px){
+  .card-grid{padding:88px 0}
+  .cg-grid{grid-template-columns:1fr 1fr;gap:44px 24px}
+  .cg-card h3{font-size:30px}
+}
+@media (min-width:901px){
+  .card-grid{padding:100px 0}
+  .cg-grid{grid-template-columns:repeat(3,1fr)}
+}

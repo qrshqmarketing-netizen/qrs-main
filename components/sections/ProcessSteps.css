@@ -1,0 +1,33 @@
+/* ---------- Our Process (numbered steps + sticky visual) ---------- */
+.process-block{background:var(--wash);padding:60px 0}
+.process-block-white{background:#fff}
+.process-block-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:36px}
+.process-block h2{color:var(--navy);font-size:var(--h2);margin-bottom:10px}
+.process-block-sub{color:var(--navy);font:600 18px/1.4 var(--font-head);margin:0 0 30px}
+.process-list{list-style:none;margin:0;padding:0;display:grid;gap:30px}
+.process-list > li{padding-left:0}
+.process-list h3{display:flex;align-items:center;gap:14px;color:var(--navy);font-size:22px;font-weight:600;line-height:1.25;letter-spacing:-.02em;margin:0 0 10px}
+.process-num{
+  flex:0 0 40px;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;
+  background:var(--gold);color:var(--navy);font:700 17px/1 var(--font-head);letter-spacing:0;
+}
+.process-list p{color:var(--ink);font-size:16px;line-height:1.7;margin:0 0 10px 54px}
+.process-list ul{margin:6px 0 0 54px;padding:0;list-style:none;display:grid;gap:6px}
+.process-list ul li{position:relative;padding-left:20px;color:var(--navy);font-size:15px;line-height:1.55}
+.process-list ul li:before{content:"";position:absolute;left:2px;top:.62em;width:8px;height:8px;border-radius:50%;background:var(--gold-ink)}
+.process-block-media{position:relative;aspect-ratio:4/5;border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
+.process-block-media img{object-fit:cover}
+.process-block-visual{display:none}
+@media (min-width:621px){
+  .process-block{padding:88px 0}
+  .process-block-sub{font-size:20px;margin-bottom:38px}
+  .process-list{gap:36px}
+  .process-list h3{font-size:26px}
+  .process-list p{font-size:17px}
+  .process-list ul li{font-size:16px}
+}
+@media (min-width:901px){
+  .process-block{padding:100px 0}
+  .process-block-grid{grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:64px;align-items:start}
+  .process-block-visual{display:block;position:sticky;top:110px}
+}

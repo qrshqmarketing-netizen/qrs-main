@@ -1,0 +1,26 @@
+/* ---------- Overview (heading + large intro copy) ---------- */
+.overview{background:#fff;padding:56px 0}
+.overview-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:18px}
+.overview h2{color:var(--navy);font-size:clamp(34px,9vw,42px);margin:0}
+.overview-body p{
+  color:var(--navy);font-family:var(--font-head);font-size:19px;font-weight:400;line-height:1.55;letter-spacing:-.01em;margin:0 0 20px;
+}
+.overview-body p:last-child{margin-bottom:0}
+@media (min-width:621px){
+  .overview{padding:80px 0}
+  .overview h2{font-size:48px}
+  .overview-body p{font-size:22px;margin-bottom:26px}
+}
+@media (min-width:901px){
+  .overview{padding:100px 0}
+  .overview-grid{grid-template-columns:260px minmax(0,1fr);gap:56px}
+  .overview-body p{font-size:24px;line-height:1.5}
+}
+/* Centered variant (About page intro) */
+.overview-center .overview-grid{grid-template-columns:minmax(0,1fr);max-width:1000px;text-align:center}
+.overview-center h2{font-size:var(--h2);font-weight:700;margin-bottom:6px}
+.overview-center .overview-body p{font-size:18px;font-family:var(--font-body);font-weight:500;line-height:1.7}
+.overview-center.tile-pattern:before{-webkit-mask-image:radial-gradient(ellipse at center,#000 10%,transparent 75%);mask-image:radial-gradient(ellipse at center,#000 10%,transparent 75%)}
+.overview-cta{margin-top:10px;border-radius:6px}
+@media (min-width:621px){.overview-center .overview-body p{font-size:20px}}
+@media (min-width:901px){.overview-center .overview-grid{grid-template-columns:minmax(0,1fr)}}

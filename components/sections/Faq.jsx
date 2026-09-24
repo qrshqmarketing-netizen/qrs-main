@@ -1,23 +1,36 @@
+import Rich from '@/components/ui/Rich';
 import { FAQS } from '@/data/faqs';
 import './Faq.css';
 
-export default function Faq() {
+// FAQ accordion. The home page uses data/faqs.js; other pages pass their own questions.
+export default function Faq({
+  id = 'faq',
+  heading = 'Frequently Asked Questions',
+  sub = 'Straight answers to the questions homeowners ask us most.',
+  faqs = FAQS,
+  cta = true,
+}) {
+  const titleId = `${id}Title`;
   return (
-    <section className="faq" id="faq" aria-labelledby="faqTitle">
+    <section className="faq" id={id} aria-labelledby={titleId}>
       <div className="container">
-        <h2 id="faqTitle">Frequently Asked Questions</h2>
-        <p className="faq-sub">Straight answers to the questions homeowners ask us most.</p>
+        <h2 id={titleId}>{heading}</h2>
+        {sub && <p className="faq-sub">{sub}</p>}
         <div className="faq-list">
-          {FAQS.map((faq, i) => (
+          {faqs.map((faq, i) => (
             <details className="faq-item" open={i === 0} key={faq.q}>
               <summary>{faq.q}</summary>
-              <p>{faq.a}</p>
+              <p>
+                <Rich text={faq.a} />
+              </p>
             </details>
           ))}
         </div>
-        <div className="faq-cta">
-          <a className="btn btn-gold" href="#roof-check">Get Pro Advice</a>
-        </div>
+        {cta && (
+          <div className="faq-cta">
+            <a className="btn btn-gold" href="#roof-check">Get Pro Advice</a>
+          </div>
+        )}
       </div>
     </section>
   );
