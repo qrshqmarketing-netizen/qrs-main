@@ -2,7 +2,7 @@ import Image from 'next/image';
 import SiteLink from '@/components/ui/SiteLink';
 import './FinalCta.css';
 
-// Closing call to action over the neighborhood photo. Pages can change the words and the button.
+// Closing call to action above the footer, over the QRS truck photo. Pages can change the words and the button.
 export default function FinalCta({
   heading = 'Detail-First Roofing',
   text = 'At QRS, there’s no pressure, no mystery scope and no surprises — ever. Start with a roofer-led roof check today!',
@@ -21,13 +21,14 @@ export default function FinalCta({
         <p>{text}</p>
         <SiteLink className="btn btn-gold" href={cta.href}>{cta.label}</SiteLink>
       </div>
+      {/* 4K photo (full-size original: assets/originals/qrs-truck.jpg); Next.js serves a smaller copy sized to each screen */}
       <Image
         className="cta-scene"
-        src="/images/cta-section-background-new.webp"
-        width={1758}
-        height={895}
+        src="/images/qrs-truck-4k.webp"
+        width={3840}
+        height={1955}
         sizes="100vw"
-        alt="QRS roofing truck parked on a residential street in front of homes"
+        alt="Quality Roofing Specialists truck parked on a residential street in front of homes"
       />
     </section>
   );
