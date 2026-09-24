@@ -4,8 +4,8 @@ import { useEffect, useRef, useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import { CloseIcon, GoogleLogo } from '@/components/ui/icons';
 import { GOOGLE_REVIEWS } from '@/data/reviews';
-import { SHOW_REVIEW_EVENT } from '@/lib/events';
-import { session } from '@/lib/storage';
+import { COOKIE_OK_EVENT, COOKIE_OK_KEY, SHOW_REVIEW_EVENT } from '@/lib/events';
+import { local, session } from '@/lib/storage';
 import './ReviewToast.css';
 
 const SHOW_MS = 7000, GAP_MS = 9000, FIRST_MS = 6000;
@@ -27,9 +27,8 @@ export default function ReviewToast() {
     const cycle = () => {
       clearTimeout(s.timer);
       if (s.stopped) return;
-      // Wait while the reviews section is on screen, the phone menu is open or the cookie notice is up (same corner)
-      const busy = ['menu-open', 'cookie-open'].some((c) => document.body.classList.contains(c));
-      if (s.reviewsOnScreen || busy) {
+      // Wait while the reviews section is on screen or the phone menu is open
+      if (s.reviewsOnScreen || document.body.classList.contains('menu-open')) {
         s.timer = setTimeout(cycle, 2000);
         return;
       }
@@ -46,10 +45,16 @@ export default function ReviewToast() {
       }, SHOW_MS);
     };
 
-    s.timer = setTimeout(cycle, FIRST_MS);
+    // First visit: nothing until the visitor accepts the cookie notice, then the usual first delay
+    const start = () => {
+      s.timer = setTimeout(cycle, FIRST_MS);
+    };
+    if (local.get(COOKIE_OK_KEY)) start();
+    else window.addEventListener(COOKIE_OK_EVENT, start, { once: true });
     return () => {
       s.stopped = true;
       clearTimeout(s.timer);
+      window.removeEventListener(COOKIE_OK_EVENT, start);
     };
   }, []);
 

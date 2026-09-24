@@ -2,18 +2,17 @@
 
 import { useEffect, useState } from 'react';
 import { PRIVACY_POLICY_URL } from '@/data/site';
+import { COOKIE_OK_EVENT, COOKIE_OK_KEY } from '@/lib/events';
 import { local } from '@/lib/storage';
 import './CookieNotice.css';
 
-const SEEN_KEY = 'cookieNoticeOk';
-
 // Small cookie notice for first-time visitors, in the bottom-left corner. "Got it" hides it for good in that browser.
-// While it's up, the review pop-up (same corner) and the chat teaser wait.
+// The review pop-up doesn't start until the visitor clicks "Got it"; the chat teaser waits while the notice is up.
 export default function CookieNotice() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    if (local.get(SEEN_KEY)) return;
+    if (local.get(COOKIE_OK_KEY)) return;
     const t = setTimeout(() => setOpen(true), 1200);
     return () => clearTimeout(t);
   }, []);
@@ -25,7 +24,8 @@ export default function CookieNotice() {
   if (!open) return null;
 
   const dismiss = () => {
-    local.set(SEEN_KEY, '1');
+    local.set(COOKIE_OK_KEY, '1');
+    window.dispatchEvent(new Event(COOKIE_OK_EVENT));
     setOpen(false);
   };
 
