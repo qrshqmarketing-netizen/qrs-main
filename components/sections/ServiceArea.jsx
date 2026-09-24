@@ -142,8 +142,8 @@ export default function ServiceArea({
             <div className="loc-search">
               <div className="loc-search-title">
                 <svg viewBox="0 0 32 32" aria-hidden="true">
-                  <circle cx="16" cy="16" r="15" fill="none" stroke="#ffb82e" strokeWidth="1.6" />
-                  <path d="M16 7.5a6 6 0 0 0-6 6c0 4.5 6 10.5 6 10.5s6-6 6-10.5a6 6 0 0 0-6-6Z" fill="#ffb82e" />
+                  <circle cx="16" cy="16" r="15" fill="none" stroke="#bb9f5e" strokeWidth="1.6" />
+                  <path d="M16 7.5a6 6 0 0 0-6 6c0 4.5 6 10.5 6 10.5s6-6 6-10.5a6 6 0 0 0-6-6Z" fill="#bb9f5e" />
                   <circle cx="16" cy="13.5" r="2.3" fill="#0f2c55" />
                 </svg>
                 <span>Find Your Nearest QRS Service Area</span>

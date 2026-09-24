@@ -14,7 +14,7 @@
 .bento-link{color:inherit;text-decoration:none}
 .bento-link:after{content:"";position:absolute;inset:0;border-radius:18px}
 .bento-link:focus-visible{outline:none}
-.bento-link:focus-visible:after{outline:3px solid rgba(255,184,46,.8);outline-offset:-3px}
+.bento-link:focus-visible:after{outline:3px solid rgba(187,159,94,.8);outline-offset:-3px}
 
 /* Phones and tablets, 2 columns: the first tile is large; the last tile of an even set fills its row */
 .bento > :first-child{grid-column:span 2;grid-row:span 2}

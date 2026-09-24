@@ -14,7 +14,7 @@ export default function FinalCta({
         <div className="final-pin" aria-hidden="true">
           <svg viewBox="0 0 34 40">
             <path d="M17 1C8.7 1 2 7.6 2 15.8 2 27 17 39 17 39s15-12 15-23.2C32 7.6 25.3 1 17 1Z" fill="#fff" />
-            <circle cx="17" cy="15.5" r="5.5" fill="#ffb82e" />
+            <circle cx="17" cy="15.5" r="5.5" fill="#bb9f5e" />
           </svg>
         </div>
         <h2>{heading}</h2>

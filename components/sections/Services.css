@@ -9,7 +9,7 @@
   -webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;outline:none;
 }
 .svc-track::-webkit-scrollbar{display:none}
-.svc-track:focus-visible{box-shadow:0 0 0 3px rgba(255,184,46,.5);border-radius:8px}
+.svc-track:focus-visible{box-shadow:0 0 0 3px rgba(187,159,94,.5);border-radius:8px}
 .svc-card{
   position:relative;flex:0 0 86%;aspect-ratio:1 / 1.01;min-height:360px;
   border-radius:6px;overflow:hidden;scroll-snap-align:start;isolation:isolate;
