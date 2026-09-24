@@ -1,6 +1,6 @@
 # Quality Roofing Specialists website
 
-The Quality Roofing Specialists website as a modular [Next.js](https://nextjs.org) site: the home page plus about 50 inner pages (residential and commercial services, 12 city pages, About, Careers and Contractors). Every page is built from shared section components, and the words live in simple files in `data/`.
+The Quality Roofing Specialists website as a modular [Next.js](https://nextjs.org) site: the home page plus about 50 inner pages (residential and commercial services, 13 city pages, About, Careers and Contractors). Every page is built from shared section components, and the words live in simple files in `data/`.
 
 ## Run it on your computer
 

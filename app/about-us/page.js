@@ -38,7 +38,7 @@ export default function AboutPage() {
         imageAlt="Aerial view of finished shingle roofs in a Southern California neighborhood"
         tone="wash"
       />
-      <SplitFeature {...page.careers} image="/images/cta-section-background-new.webp" imageAlt="QRS roofing truck parked on a residential street" reverse />
+      <SplitFeature {...page.careers} image="/images/qrs-truck-4k.webp" imageAlt="Quality Roofing Specialists truck parked on a residential street" reverse />
       <SplitFeature {...page.partners} scene="scene-commercial" tone="wash" />
       <Testimonials />
       <RoofCheck />

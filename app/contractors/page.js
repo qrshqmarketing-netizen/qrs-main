@@ -50,7 +50,7 @@ export default function ContractorsPage() {
       <Overview heading={page.overview.heading} paragraphs={page.overview.paragraphs} />
       <ValueGrid heading={page.audiences.heading} items={page.audiences.points} tone="wash" />
       <FeatureBand id="white-label" {...page.whiteLabel} />
-      <ProcessSteps heading={page.process.heading} subheading={page.process.subheading} steps={page.process.steps} image="/images/cta-section-background-new.webp" imageAlt="QRS roofing truck parked on a residential street" tone="white" />
+      <ProcessSteps heading={page.process.heading} subheading={page.process.subheading} steps={page.process.steps} image="/images/qrs-truck-4k.webp" imageAlt="Quality Roofing Specialists truck parked on a residential street" tone="white" />
       <DifferenceBand />
       <WhyChoose heading={page.why.heading} intro={page.why.intro} points={page.why.points} cta={{ label: 'Start a Conversation', href: '#roof-check' }} />
       <RelatedLinks heading="Related pages" links={RELATED} />

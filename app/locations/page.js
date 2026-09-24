@@ -17,7 +17,7 @@ import { pageJsonLd } from '@/lib/structuredData';
 export const metadata = pageMetadata({ title: page.metaTitle, description: page.metaDescription, path: LOCATIONS_LINK.href });
 
 const CRUMBS = [HOME, LOCATIONS_LINK];
-const HERO_IMAGE = '/images/cta-section-background-new.webp';
+const HERO_IMAGE = '/images/qrs-truck-4k.webp';
 
 const schema = pageJsonLd({
   path: LOCATIONS_LINK.href,
@@ -44,7 +44,7 @@ export default function LocationsPage() {
         title={page.hero.heading}
         intro={page.hero.intro}
         image={HERO_IMAGE}
-        imageAlt="QRS roofing truck parked on a residential street"
+        imageAlt="Quality Roofing Specialists truck parked on a residential street"
         imagePosition="40% center"
       />
       <Offices sub="Our Los Angeles and Valley offices serve homes and businesses across Los Angeles and Orange County. One number reaches both." />

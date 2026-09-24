@@ -30,8 +30,12 @@ export const metadata = {
     google: SITE_VERIFICATION.google || undefined,
     other: SITE_VERIFICATION.bing ? { 'msvalidate.01': SITE_VERIFICATION.bing } : undefined,
   },
+  // Browser-tab and home-screen icons, made from the logo's roof mark (source: assets/originals/qrs-mark.webp)
   icons: {
-    icon: { url: '/favicon.svg', type: 'image/svg+xml' },
+    icon: [
+      { url: '/favicon.ico', sizes: '16x16 32x32 48x48' },
+      { url: '/icon-192.png', type: 'image/png', sizes: '192x192' },
+    ],
     apple: '/apple-touch-icon.png',
   },
   openGraph: openGraphBase,
