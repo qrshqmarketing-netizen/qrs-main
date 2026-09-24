@@ -49,3 +49,13 @@ export const CAREERS_PAGE = {
     { q: 'How do I apply?', a: `Email [${EMAIL}](mailto:${EMAIL}) with the role you’re interested in and a little about your experience, or call us during business hours.` },
   ],
 };
+
+// Careers section on the home page: this intro beside the roles above, linking to /careers/
+export const CAREERS_TEASER = {
+  eyebrow: 'Join the crew',
+  heading: 'Roofing Careers at QRS',
+  paragraphs: [
+    'We’re always glad to meet people who take pride in careful work. Join a detail-first team doing tile, shingle, flat and metal roofing across Southern California.',
+  ],
+  cta: { label: 'Explore Careers', href: '/careers/' },
+};

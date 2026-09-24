@@ -8,8 +8,7 @@ footer .container{max-width:1080px}
 .ft-small a{display:flex;align-items:center;min-height:40px;min-width:44px;font-size:14px;color:#44607f}
 .ft-col a:hover{color:var(--gold-ink)}
 .ft-brand{grid-column:1/-1;grid-row:1;align-items:flex-start;justify-content:space-between;margin-bottom:16px}
-.ft-brand .brand-name{color:var(--navy)}
-.ft-brand .brand-name small{color:#44607f;opacity:1}
+.ft-brand .brand-logo{height:56px}
 .ft-social{display:flex;gap:4px;margin:12px 0 0 -11px}
 .ft-social a{width:44px;height:44px;color:#8c96a3;display:grid;place-items:center}
 .ft-social a:hover{color:var(--navy)}

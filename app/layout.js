@@ -6,6 +6,7 @@ import './globals.css';
 import { Inter, Poppins } from 'next/font/google';
 import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
+import CookieNotice from '@/components/widgets/CookieNotice';
 import InstantQuote from '@/components/widgets/InstantQuote';
 import ReviewToast from '@/components/widgets/ReviewToast';
 import RoofAssistant from '@/components/widgets/RoofAssistant';
@@ -54,6 +55,7 @@ export default function RootLayout({ children }) {
         <ReviewToast />
         <RoofAssistant />
         <InstantQuote />
+        <CookieNotice />
       </body>
     </html>
   );

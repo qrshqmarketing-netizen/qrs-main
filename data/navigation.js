@@ -2,7 +2,7 @@
 // Links starting with # jump to a section: on pages without that section they go to the home page's section.
 
 import { LOCATIONS } from './locations';
-import { PHONE, TEL } from './site';
+import { PHONE, PRIVACY_POLICY_URL, TEL } from './site';
 
 export const RESIDENTIAL_MENU = {
   groups: [
@@ -127,7 +127,8 @@ export const FOOTER = {
     { label: 'Our Guarantee', href: '#guarantee' },
     { label: 'Reviews', href: '#reviews' },
     { label: 'Careers', href: '/careers/' },
-    { label: 'Privacy Policy', href: '#' },
+    // Shows once PRIVACY_POLICY_URL is set in data/site.js (the cookie notice links there too)
+    ...(PRIVACY_POLICY_URL ? [{ label: 'Privacy Policy', href: PRIVACY_POLICY_URL }] : []),
   ],
   services: [
     { label: 'Residential Roofing', href: '/residential-roofing/' },

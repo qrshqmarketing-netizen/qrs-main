@@ -44,12 +44,10 @@
   .navlinks.mobile-open > a,.nav-trigger{display:inline-flex;width:auto;min-height:0;padding:0;border:0;justify-content:normal}
   .navlinks > a,.navlinks .nav-trigger{white-space:nowrap;font-size:15px}
   /* 1200–1299px: compact header so all six items fit on one line */
-  .site-header .brand-name{font-size:.95rem}
   .nav-cta{margin-left:0}
 }
 @media (min-width:1300px){
   .navlinks,.navlinks.mobile-open{gap:26px}
-  .site-header .brand-name{font-size:1.05rem}
   .navlinks > a,.navlinks .nav-trigger{font-size:16px}
   .nav-cta{padding:13px 20px;font-size:18px}
 }

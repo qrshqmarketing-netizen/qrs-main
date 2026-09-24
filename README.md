@@ -26,6 +26,9 @@ To test the finished (production) version: `npm run build`, then `npm start`.
 | Offices (Los Angeles and Valley), shown on the Service Areas page and their city pages | `OFFICES` in `data/site.js` |
 | Home page title and description (Google + link previews) | `data/site.js` |
 | Google Search Console and Bing verification codes | `SITE_VERIFICATION` in `data/site.js` |
+| Logo (header: dark version, footer: regular) | `public/images/logo/` (full-size original: `assets/originals/qrs-logo.png`) |
+| Privacy policy link (cookie notice + footer; hidden until set) | `PRIVACY_POLICY_URL` in `data/site.js` |
+| Cookie notice wording | `components/widgets/CookieNotice.jsx` |
 | Header menus and footer links | `data/navigation.js` |
 | Services carousel (home and city pages) | `data/services.js` |
 | Home page FAQ | `data/faqs.js` |
@@ -35,7 +38,8 @@ To test the finished (production) version: `npm run build`, then `npm start`.
 | City pages (intro, neighborhoods, local FAQs) | `data/locationPages.js` |
 | Project photo gallery on the city pages | `data/projects.js` |
 | $199 Roof Check / roof survey card beside the estimate form | `data/offers.js` |
-| Residential hub, About, Careers, Contractors, Locations pages | `data/pages/` |
+| Residential hub, About, Careers, Contractors (including white-label roofing), Locations pages | `data/pages/` |
+| Careers section on the home page | `CAREERS_TEASER` in `data/pages/careers.js` (roles come from the Careers page) |
 | Page names, addresses, card blurbs, placeholder art | `data/catalog.js` |
 | "The QRS Way" steps | `data/process.js` |
 | Accreditation logos | `data/credentials.js` + images in `public/images/badges/` |
@@ -121,7 +125,7 @@ Before pointing qualityroofingspecialists.com at the new site:
 
 - **Redirects:** the current WordPress site has about 150 addresses (service pages, 96 city pages, 25 blog posts, privacy policy and more). Map each one to its new page with permanent redirects, or they'll show "not found" and lose their Google rankings.
 - **Tracking:** the current site loads Google Tag Manager (GTM-P7Z3CMG); the new site doesn't have analytics yet.
-- **Policies:** the current site has privacy policy and terms pages; the new site doesn't yet.
+- **Policies:** the current site has privacy policy and terms pages; the new site doesn't yet. Once the privacy policy exists, set `PRIVACY_POLICY_URL` (`data/site.js`) and the footer and cookie notice link to it.
 - **Content:** replace the temporary city gallery photos (`data/projects.js`) and double-check claims such as warranty wording and awards.
 
 ## History

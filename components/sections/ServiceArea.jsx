@@ -2,17 +2,12 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, QRS_LEAF_PATH } from '@/components/ui/icons';
+import { ArrowRight } from '@/components/ui/icons';
 import { cityPath, LOCATIONS, SERVICE_RADIUS_MI } from '@/data/locations';
 import { PHONE, TEL } from '@/data/site';
 import { miles, nominatimSearch, zipPrefixServed } from '@/lib/geo';
-import { loadLeaflet } from '@/lib/leaflet';
+import { loadLeaflet, qrsPin } from '@/lib/leaflet';
 import './ServiceArea.css';
-
-// Map pin (an HTML string, because Leaflet draws the markers itself)
-const PIN_SVG =
-  '<svg viewBox="0 0 34 44" aria-hidden="true"><path d="M17 1C8.2 1 1 8 1 16.7 1 28.5 17 43 17 43s16-14.5 16-26.3C33 8 25.8 1 17 1Z" fill="#ffb82e" stroke="#062d57" stroke-width="2"/>' +
-  `<g transform="translate(6.5 5.5) scale(.33)"><path d="${QRS_LEAF_PATH}" fill="#062d57"/></g></svg>`;
 
 // Service area map (Leaflet + OpenStreetMap tiles) with a city list and ZIP code lookup.
 // City pages pass `focus` (a city slug) to start zoomed in on that city.
@@ -65,8 +60,7 @@ export default function ServiceArea({
           attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         }).addTo(leafletMap);
 
-        const icon = (isActive) =>
-          L.divIcon({ className: 'qrs-pin' + (isActive ? ' active' : ''), html: PIN_SVG, iconSize: [34, 44], iconAnchor: [17, 43], popupAnchor: [0, -38] });
+        const icon = (isActive) => qrsPin(L, isActive);
         const markers = LOCATIONS.map(({ city, slug, lat, lng }, i) =>
           L.marker([lat, lng], { icon: icon(false), title: 'QRS ' + city, alt: 'QRS ' + city })
             .addTo(leafletMap)

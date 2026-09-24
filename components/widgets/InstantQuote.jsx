@@ -5,7 +5,7 @@ import { flushSync } from 'react-dom';
 import { CloseIcon } from '@/components/ui/icons';
 import { FINANCE, FINANCING_URL, LEAD_ENDPOINT, PRICING } from '@/data/instantQuote';
 import { PHONE, TEL } from '@/data/site';
-import { loadLeaflet } from '@/lib/leaflet';
+import { loadLeaflet, qrsPin } from '@/lib/leaflet';
 import { buildingInsights, DEMO, fmt, geocode, money, monthly, myLocation, priceFor, styleOf, summarize } from '@/lib/roofQuote';
 import { local } from '@/lib/storage';
 import './InstantQuote.css';
@@ -156,7 +156,7 @@ export default function InstantQuote() {
     setError(null);
     try {
       const pt = await getPoint();
-      applyRoof(summarize(await buildingInsights(pt.lat, pt.lng), pt.label));
+      applyRoof(summarize(await buildingInsights(pt.lat, pt.lng), pt.label, pt));
     } catch (e) {
       setError(ERRORS[e] || ERRORS.api);
     } finally {
@@ -171,7 +171,7 @@ export default function InstantQuote() {
     if (q) measure(() => geocode(q));
   };
 
-  // Satellite view with each measured roof section outlined
+  // Satellite view centered on the roof, with one pin on the building's center
   useEffect(() => {
     if (step !== 2 || !roof) return;
     let cancelled = false;
@@ -190,15 +190,9 @@ export default function InstantQuote() {
       const { map: m, layer } = map.current;
       m.invalidateSize();
       layer.clearLayers();
-      const ll = (p) => [p.latitude, p.longitude];
-      roof.facets.forEach((f) => {
-        if (!f.box) return;
-        L.rectangle([ll(f.box.sw), ll(f.box.ne)], { color: f.color, weight: 2, fillOpacity: 0.22 })
-          .bindTooltip(f.facing + ': ' + fmt(f.sqft) + ' sq ft')
-          .addTo(layer);
-      });
-      if (roof.box) m.fitBounds([ll(roof.box.sw), ll(roof.box.ne)], { padding: [20, 20], maxZoom: 20 });
-      else m.setView(ll(roof.center), 20);
+      const point = [roof.center.latitude, roof.center.longitude];
+      L.marker(point, { icon: qrsPin(L), interactive: false, keyboard: false }).addTo(layer);
+      m.setView(point, 20);
     }, 20);
     return () => {
       cancelled = true;
@@ -350,7 +344,7 @@ export default function InstantQuote() {
 
           {/* Step 2: measurements */}
           <section data-panel="2" hidden={step !== 2}>
-            <div className="rm-map rm-measured" id="rmMap" ref={mapEl} role="img" aria-label="Satellite view of the roof with measured sections outlined"></div>
+            <div className="rm-map rm-measured" id="rmMap" ref={mapEl} role="img" aria-label="Satellite view of the property with a pin on the roof"></div>
             <p className="rm-addr rm-measured" id="rmAddrOut">{roof?.label}</p>
             <h3 className="rm-manual-only" id="rmManualTitle" hidden={!manual}>Tell us about your roof</h3>
             <p className="rm-manual-only" hidden={!manual}>An approximation is fine. We confirm every detail on site.</p>
@@ -399,7 +393,6 @@ export default function InstantQuote() {
               <ul id="rmList">
                 {roof?.facets.map((f, i) => (
                   <li key={i}>
-                    <i style={{ background: f.color }}></i>
                     {f.facing + ' · ' + f.rise + '/12'}
                     <em>{fmt(f.sqft)} sq ft</em>
                   </li>

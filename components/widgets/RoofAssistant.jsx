@@ -44,13 +44,18 @@ export default function RoofAssistant() {
     openRef.current = open;
   }, [open]);
 
-  // First visit this session: show the "Hi!" teaser after a few seconds
+  // First visit this session: show the "Hi!" teaser after a few seconds (after the cookie notice, if it's up)
   useEffect(() => {
     if (session.get('qaSeen')) {
       setSeen(true);
       return;
     }
-    const t = setTimeout(() => !openRef.current && setTeaser(true), 4000);
+    let t;
+    const show = () => {
+      if (document.body.classList.contains('cookie-open')) t = setTimeout(show, 2000);
+      else if (!openRef.current) setTeaser(true);
+    };
+    t = setTimeout(show, 4000);
     return () => clearTimeout(t);
   }, []);
 

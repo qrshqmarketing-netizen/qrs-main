@@ -1,0 +1,17 @@
+/* ---------- Cookie notice: first visit, bottom left (the review pop-up waits until it's closed) ---------- */
+.cookie{
+  position:fixed;left:12px;right:86px;bottom:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:1160;
+  display:flex;align-items:center;gap:12px;padding:10px 10px 10px 16px;
+  background:#fff;border:1px solid #e3e6ea;border-radius:14px;box-shadow:0 14px 36px rgba(6,45,87,.18);
+  animation:cookieIn .35s ease both;
+}
+.cookie p{flex:1;margin:0;color:var(--ink);font-size:13px;line-height:1.45}
+.cookie a{color:var(--navy);font-weight:700;text-decoration:underline;text-underline-offset:2px}
+.cookie-ok{flex:0 0 auto;min-height:38px;padding:8px 16px;border:0;border-radius:8px;background:var(--navy);color:#fff;font:700 13px/1 var(--font-btn);cursor:pointer}
+.cookie-ok:hover{background:var(--navy-2)}
+.cookie-ok:focus-visible{outline:3px solid rgba(255,184,46,.6);outline-offset:2px}
+@keyframes cookieIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.cookie{animation:none}}
+@media (min-width:621px){
+  .cookie{left:24px;right:auto;bottom:24px;width:360px}
+}

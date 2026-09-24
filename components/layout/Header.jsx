@@ -98,7 +98,7 @@ export default function Header() {
   return (
     <header className="site-header">
       <div className="container nav">
-        <BrandLogo />
+        <BrandLogo variant="dark" preload />
 
         <nav className={'navlinks' + (menuOpen ? ' mobile-open' : '')} id="navlinks" aria-label="Main" onClick={onNavClick}>
           <div {...dropdown('res')}>

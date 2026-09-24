@@ -27,8 +27,9 @@ export default function ReviewToast() {
     const cycle = () => {
       clearTimeout(s.timer);
       if (s.stopped) return;
-      // Wait while the reviews section is on screen or the phone menu is open
-      if (s.reviewsOnScreen || document.body.classList.contains('menu-open')) {
+      // Wait while the reviews section is on screen, the phone menu is open or the cookie notice is up (same corner)
+      const busy = ['menu-open', 'cookie-open'].some((c) => document.body.classList.contains(c));
+      if (s.reviewsOnScreen || busy) {
         s.timer = setTimeout(cycle, 2000);
         return;
       }

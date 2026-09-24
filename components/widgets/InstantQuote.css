@@ -77,7 +77,6 @@ body.rm-lock{overflow:hidden}
 .rm-facets summary{cursor:pointer;color:var(--navy);font-weight:700;padding:4px 0}
 .rm-facets ul{margin:8px 0 0;padding:0;list-style:none}
 .rm-facets li{display:flex;align-items:center;gap:9px;padding:7px 0;border-bottom:1px solid var(--line)}
-.rm-facets li i{flex:0 0 12px;height:12px;border-radius:3px}
 .rm-facets li em{margin-left:auto;font-style:normal;font-weight:700;color:var(--navy)}
 
 .rm-manual .rm-measured{display:none}

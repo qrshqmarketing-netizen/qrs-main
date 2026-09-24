@@ -123,6 +123,11 @@ textarea{min-height:105px;resize:vertical}
 main h2{animation:fadeUp .9s ease .3s both}
 @media (prefers-reduced-motion:reduce){main h2{animation:none}}
 
+/* ---------- Gold map pin (service area map, Instant Quote); built by qrsPin() in lib/leaflet.js ---------- */
+.qrs-pin{background:none;border:0}
+.qrs-pin svg{width:34px;height:44px;display:block;filter:drop-shadow(0 3px 4px rgba(0,0,0,.45));transition:transform .2s;transform-origin:50% 100%}
+.qrs-pin.active svg{transform:scale(1.25)}
+
 /* ---------- Page not built yet (404, app/not-found.js) ---------- */
 .not-found{min-height:60vh;display:flex;align-items:center;text-align:center;background:var(--wash)}
 .not-found h1{color:var(--navy)}

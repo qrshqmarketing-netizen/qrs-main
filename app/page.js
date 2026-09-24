@@ -1,4 +1,5 @@
 import Faq from '@/components/sections/Faq';
+import FeatureBand from '@/components/sections/FeatureBand';
 import FinalCta from '@/components/sections/FinalCta';
 import Guarantee from '@/components/sections/Guarantee';
 import Hero from '@/components/sections/Hero';
@@ -11,6 +12,7 @@ import Testimonials from '@/components/sections/Testimonials';
 import WhyQrs from '@/components/sections/WhyQrs';
 import JsonLd from '@/components/ui/JsonLd';
 import { FAQS } from '@/data/faqs';
+import { CAREERS_PAGE, CAREERS_TEASER } from '@/data/pages/careers';
 import { HOME_DESCRIPTION, HOME_TITLE } from '@/data/site';
 import { openGraphBase, twitterBase } from '@/lib/seo';
 import { pageJsonLd } from '@/lib/structuredData';
@@ -40,6 +42,12 @@ export default function HomePage() {
         <RoofCheck />
         <ServiceArea />
         <Guarantee />
+        <FeatureBand
+          id="careers"
+          tone="light"
+          {...CAREERS_TEASER}
+          points={CAREERS_PAGE.roles.items.map((role) => ({ title: role.title, text: role.text, href: '/careers/#roles' }))}
+        />
         <FinalCta />
       </main>
     </>

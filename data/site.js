@@ -68,6 +68,9 @@ export const PROOF_POINTS = [
 // Optional `poster`: a photo in public/images shown before the video plays, like '/images/video-poster.webp'.
 export const PROCESS_VIDEO = { embed: '', poster: '' };
 
+// Privacy policy page, linked from the cookie notice. Leave '' until the page exists.
+export const PRIVACY_POLICY_URL = '';
+
 // Footer social links. Replace '#' with your real profile URLs.
 export const SOCIAL = {
   facebook: '#',

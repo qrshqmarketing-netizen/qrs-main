@@ -3,11 +3,11 @@
 export const CONTRACTORS_PAGE = {
   keyword: 'roofing subcontractor',
   metaTitle: 'Roofing Subcontractor in Los Angeles',
-  metaDescription: 'Need a roofing subcontractor in LA or Orange County? QRS works with general contractors, builders, remodelers and property managers. Request an estimate.',
+  metaDescription: 'Need a roofing subcontractor in LA or Orange County? QRS partners with general contractors, builders and property managers, including white-label roofing.',
   hero: {
     heading: 'Partner With QRS as Your Roofing Subcontractor',
     intro: 'General contractors, builders and remodelers across Los Angeles and Orange County bring us in as their roofing subcontractor. You get roofer-led assessments, written scopes you can build on and photo documentation for your records and your clients.',
-    highlights: ['Roofer-led assessments and scopes', 'Photo documentation you can share', 'Clean sites and clear communication'],
+    highlights: ['Roofer-led assessments and scopes', 'Photo documentation you can share', 'White-label service under your brand'],
   },
   overview: {
     heading: 'Roofing Handled, So You Can Run the Job',
@@ -24,6 +24,21 @@ export const CONTRACTORS_PAGE = {
       { title: 'Property managers', text: 'Keep one roofing partner across your buildings for surveys, repairs, replacements and scheduled roof care, with photo records for each property.' },
       { title: 'HOA boards', text: 'Get roofer-led findings and written scopes your board can review together. Our [HOA & multi-family roofing](/hoa-multi-family/) page explains how we plan community projects.' },
     ],
+  },
+  // White-label service: QRS does the roofing under the contractor's brand
+  whiteLabel: {
+    eyebrow: 'White-label roofing',
+    heading: 'White-Label Roofing Under Your Brand',
+    paragraphs: [
+      'Want detail-first roofing on your projects without a second company name in front of your client? With our white-label service, our crews handle the roofing under your brand. Your client works with you from the first estimate to the final walkthrough, and we stay behind the scenes.',
+    ],
+    points: [
+      { title: 'Your brand on the job', text: 'No QRS yard signs or sales material on your job sites. To your client, we’re part of your team.' },
+      { title: 'Your client stays yours', text: 'We don’t market to your customers or offer them other work. Questions and updates go through you.' },
+      { title: 'Scopes and photos for your file', text: 'Written scopes, prices and before-and-after photos you can present to your client under your name.' },
+      { title: 'The same detail-first roofing', text: 'Roofer-led assessments, clean installs and tidy job sites, whichever name is on the job.' },
+    ],
+    cta: { label: 'Ask About White-Label Work', href: '#roof-check' },
   },
   process: {
     subheading: 'How a partnership project runs',
@@ -46,10 +61,10 @@ export const CONTRACTORS_PAGE = {
     ],
   },
   faqs: [
-    { q: 'What kinds of projects do you partner on?', a: 'Remodels, additions and ADUs, new construction, multi-family buildings and commercial properties. Tell us how your projects usually run, and we’ll plan our part of the work around it.' },
+    { q: 'What kinds of projects do you partner on?', a: 'Remodels, additions and ADUs, new construction, multi-family buildings and commercial properties across Los Angeles and Orange County (see our [service areas](/locations/)). Tell us how your projects usually run, and we’ll plan our part of the work around it.' },
     { q: 'Which roof types and services can you cover?', a: 'Tile, shingle, flat and low-slope, and standing seam metal roofs, plus rain gutters, across replacements, repairs and new installations. Our [residential roofing](/residential-roofing/) pages cover each roof type in detail.' },
     { q: 'Can you assess a roof before we finalize our bid?', a: 'Yes, and that’s often the right time to bring us in. A roofer assesses the roof, photo-documents what we find and puts the scope and price in writing so you can build them into your bid.' },
     { q: 'How do you work alongside other trades on site?', a: 'We coordinate start dates and work areas with you, keep materials and debris contained and clean up as we go. If something on site affects the roof, like a change in the plans, we tell you so we can adjust the scope together.' },
-    { q: 'What areas do you cover?', a: 'We work across Los Angeles County and Orange County, from Santa Monica and Pasadena to Long Beach and Newport Beach. See our [service area](/locations/) for the full list of cities.' },
+    { q: 'Do you offer white-label roofing?', a: 'Yes. With our white-label service, our crews handle the roofing on your projects under your brand, and your client works with you from start to finish. Mention it when you share the project, and we’ll plan the job that way.' },
   ],
 };
