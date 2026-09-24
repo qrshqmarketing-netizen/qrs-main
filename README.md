@@ -95,6 +95,14 @@ assets/originals/    Full-size source images (not used by the site)
 
 Links like `#roof-check` jump to that section on the current page; if the page doesn't have it, they go to the home page's section.
 
+## Service area map: nearest location
+
+When a visitor near one of the cities opens a page with the service area map (home, Service Areas), the map zooms to the nearest QRS location and says so, using the approximate location of their internet connection. There's no permission prompt, nothing is stored, and city pages keep their own city. The location comes from the hosting network (`app/api/location/route.js`):
+
+- **Vercel:** works automatically.
+- **Cloudflare in front of the site:** in the Cloudflare dashboard, turn on **Rules → Managed Transforms → Add visitor location headers**.
+- **Testing on your computer:** add `DEV_IP_LOCATION=34.1425,-118.2551` (any latitude,longitude) to `.env.local` and restart `npm run dev`.
+
 ## Search engines and AI
 
 Everything points at the live address, **https://qualityroofingspecialists.com** (`SITE_URL` in `data/site.js`), even before the site is moved there: canonical tags, the sitemap, link previews and structured data.
@@ -125,7 +133,7 @@ Before pointing qualityroofingspecialists.com at the new site:
 
 - **Redirects:** the current WordPress site has about 150 addresses (service pages, 96 city pages, 25 blog posts, privacy policy and more). Map each one to its new page with permanent redirects, or they'll show "not found" and lose their Google rankings.
 - **Tracking:** the current site loads Google Tag Manager (GTM-P7Z3CMG); the new site doesn't have analytics yet.
-- **Policies:** the current site has privacy policy and terms pages; the new site doesn't yet. Once the privacy policy exists, set `PRIVACY_POLICY_URL` (`data/site.js`) and the footer and cookie notice link to it.
+- **Policies:** the current site has privacy policy and terms pages; the new site doesn't yet. Once the privacy policy exists, set `PRIVACY_POLICY_URL` (`data/site.js`) and the footer and cookie notice link to it. Mention that the service area map uses visitors' approximate location (from their IP address) to suggest the nearest office.
 - **Content:** replace the temporary city gallery photos (`data/projects.js`) and double-check claims such as warranty wording and awards.
 
 ## History

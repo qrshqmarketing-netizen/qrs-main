@@ -9,8 +9,22 @@ import { miles, nominatimSearch, zipPrefixServed } from '@/lib/geo';
 import { loadLeaflet, qrsPin } from '@/lib/leaflet';
 import './ServiceArea.css';
 
+// The QRS location closest to a [lat, lng] point: { index, distance } (distance in miles)
+function nearestLocation(point) {
+  let index = 0, distance = Infinity;
+  LOCATIONS.forEach((l, i) => {
+    const d = miles(point, [l.lat, l.lng]);
+    if (d < distance) { distance = d; index = i; }
+  });
+  return { index, distance };
+}
+
+// Locations from a visitor's IP address are approximate, so "nearby" gets a wider radius than a ZIP code check
+const IP_NEARBY_MI = SERVICE_RADIUS_MI * 2;
+
 // Service area map (Leaflet + OpenStreetMap tiles) with a city list and ZIP code lookup.
-// City pages pass `focus` (a city slug) to start zoomed in on that city.
+// City pages pass `focus` (a city slug) to start zoomed in on that city. Elsewhere the map zooms to the location
+// nearest the visitor's approximate position (from their IP address, see app/api/location/route.js), if they're nearby.
 export default function ServiceArea({
   heading = 'Locations We Proudly Serve',
   sub = 'Explore the map below to find out if your city is within our Southern California service area',
@@ -74,6 +88,20 @@ export default function ServiceArea({
         if (focusIndex > -1) {
           leafletMap.setView(markers[focusIndex].getLatLng(), 11);
           select(focusIndex, false);
+        } else {
+          fetch('/api/location/')
+            .then((res) => res.json())
+            .then(({ lat, lng }) => {
+              const m = map.current;
+              // Skip when there's no location, or the visitor already picked a city or searched a ZIP code
+              if (cancelled || !m || lat == null || m.active > -1) return;
+              const { index, distance } = nearestLocation([lat, lng]);
+              if (distance > IP_NEARBY_MI) return;
+              m.map.setView(m.markers[index].getLatLng(), 10);
+              select(index, false);
+              setMsg((current) => current || <>Looks like you&rsquo;re near <b>QRS {LOCATIONS[index].city}</b>. Enter your ZIP code to confirm.</>);
+            })
+            .catch(() => {}); // no location: keep the overview of every city
         }
       },
       () => !cancelled && setOffline(true) // map library didn't load: the list still works
@@ -103,11 +131,7 @@ export default function ServiceArea({
       const hit = await nominatimSearch('postalcode=' + z);
       if (!hit || !m) throw new Error('none');
       const pt = [+hit.lat, +hit.lon];
-      let best = 0, bestD = Infinity;
-      LOCATIONS.forEach((l, i) => {
-        const d = miles(pt, [l.lat, l.lng]);
-        if (d < bestD) { bestD = d; best = i; }
-      });
+      const { index: best, distance: bestD } = nearestLocation(pt);
       m.searchPin?.remove();
       m.searchPin = m.L.circleMarker(pt, { radius: 8, color: '#fff', weight: 3, fillColor: '#062d57', fillOpacity: 1 }).addTo(m.map);
       const bounds = m.L.latLngBounds([pt, m.markers[best].getLatLng()]);
