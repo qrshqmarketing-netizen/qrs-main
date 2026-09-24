@@ -2,6 +2,7 @@ import CityCards from '@/components/sections/CityCards';
 import DifferenceBand from '@/components/sections/DifferenceBand';
 import Faq from '@/components/sections/Faq';
 import FinalCta from '@/components/sections/FinalCta';
+import Offices from '@/components/sections/Offices';
 import PageHero from '@/components/sections/PageHero';
 import RoofCheck from '@/components/sections/RoofCheck';
 import ServiceArea from '@/components/sections/ServiceArea';
@@ -46,6 +47,7 @@ export default function LocationsPage() {
         imageAlt="QRS roofing truck parked on a residential street"
         imagePosition="40% center"
       />
+      <Offices sub="Our Los Angeles and Valley offices serve homes and businesses across Los Angeles and Orange County. One number reaches both." />
       <ServiceArea heading="Find Your Nearest QRS Service Area" sub="Enter your ZIP code or pick a city on the map to see its phone number, estimate link and city page." />
       <CityCards blurbs={BLURBS} />
       <DifferenceBand />

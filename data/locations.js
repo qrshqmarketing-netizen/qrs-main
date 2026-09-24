@@ -7,6 +7,7 @@ export const LOCATIONS = [
   { city: 'Pasadena', slug: 'pasadena', county: 'Los Angeles County', lat: 34.1478, lng: -118.1445 },
   { city: 'Glendale', slug: 'glendale', county: 'Los Angeles County', lat: 34.1425, lng: -118.2551 },
   { city: 'Burbank', slug: 'burbank', county: 'Los Angeles County', lat: 34.1808, lng: -118.309 },
+  { city: 'Woodland Hills', slug: 'woodland-hills', county: 'Los Angeles County', lat: 34.1684, lng: -118.6058 },
   { city: 'Torrance', slug: 'torrance', county: 'Los Angeles County', lat: 33.8358, lng: -118.3406 },
   { city: 'Long Beach', slug: 'long-beach', county: 'Los Angeles County', lat: 33.7701, lng: -118.1937 },
   { city: 'Anaheim', slug: 'anaheim', county: 'Orange County', lat: 33.8366, lng: -117.9143 },

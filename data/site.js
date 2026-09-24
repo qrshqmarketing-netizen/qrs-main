@@ -27,6 +27,19 @@ export const BUSINESS = {
   ],
 };
 
+// Offices, shown on the Service Areas page and on the city page each one sits in (citySlug, from data/locations.js).
+// The first is the main office (BUSINESS.address). Both answer the same phone number.
+export const OFFICES = [
+  { name: 'Los Angeles Office', citySlug: 'los-angeles', address: BUSINESS.address, geo: BUSINESS.geo, mapUrl: BUSINESS.mapUrl },
+  {
+    name: 'Valley Office',
+    citySlug: 'woodland-hills',
+    address: { street: '22900 Ventura Blvd, Suite 124', city: 'Woodland Hills', region: 'CA', postalCode: '91364', country: 'US' },
+    geo: { latitude: 34.165009, longitude: -118.626272 },
+    mapUrl: 'https://www.google.com/maps/search/?api=1&query=22900+Ventura+Blvd+Suite+124+Woodland+Hills+CA+91364',
+  },
+];
+
 export const PHONE = '(310) 340-1643';
 export const TEL = 'tel:+13103401643';
 export const PHONE_INTL = '+1-310-340-1643'; // format search engines expect

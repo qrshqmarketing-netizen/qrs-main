@@ -88,7 +88,7 @@ body.rm-lock{overflow:hidden}
 .rm-range small{display:block;color:var(--muted);font-size:12px}
 .rm-pitch{margin:0 0 18px;padding:0;border:0}
 .rm-pitch legend,.rm-types legend{display:flex;width:100%;justify-content:space-between;margin-bottom:8px;color:var(--navy);font-size:13px;font-weight:900}
-.rm-pitch legend small{color:var(--muted);font-weight:600}
+.rm-pitch legend small,.rm-types legend small{color:var(--muted);font-weight:600}
 .rm-pitch div{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
 .rm-pitch input,.rm-types input{position:absolute;opacity:0;width:1px;height:1px;min-height:0}
 .rm-pitch label{display:flex;flex-direction:column;align-items:center;gap:3px;margin:0;padding:10px 2px 8px;border:1.5px solid #d7e0e8;border-radius:12px;background:#fff;color:var(--navy);font:600 12px/1.2 var(--font-head);text-align:center;cursor:pointer;transition:.15s}
@@ -110,6 +110,11 @@ body.rm-lock{overflow:hidden}
 .rm-price span{display:block;color:#c9d7e5;font-size:12px;font-weight:700}
 .rm-price b{display:block;margin:4px 0 6px;font:600 clamp(1.7rem,8vw,2.1rem)/1.1 var(--font-head);letter-spacing:-.02em;color:var(--gold)}
 .rm-price small{display:block;color:#c9d7e5;font-size:12px;line-height:1.5}
+/* Several materials picked: one row per material under the overall range */
+.rm-compare{margin:0 0 8px;padding:8px 0 2px;border-top:1px solid rgba(255,255,255,.16)}
+.rm-compare div{display:flex;justify-content:space-between;gap:12px;padding:3px 0}
+.rm-compare dt{color:#fff;font:600 14px/1.4 var(--font-head)}
+.rm-compare dd{margin:0;color:var(--gold);font:600 14px/1.4 var(--font-head)}
 .rm-fin{margin:0 0 16px;padding:16px;border:1.5px solid var(--line);border-radius:16px}
 .rm-fin-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:12px}
 .rm-fin-head b{color:var(--navy);font:600 1.05rem/1.2 var(--font-head)}
@@ -122,6 +127,7 @@ body.rm-lock{overflow:hidden}
 .rm-fin-row span{color:var(--muted);font-size:.85rem;font-weight:700}
 .rm-fin-row b{color:var(--navy);font:600 1.5rem/1 var(--font-head)}
 .rm-fin-row b small{font-size:.8rem;color:var(--muted)}
+.rm-fin-row b.rm-range-pay{font-size:1.2rem;white-space:nowrap} /* a payment range when comparing materials */
 .rm-fin p{margin:10px 0 12px!important;font-size:11.5px!important;line-height:1.45!important}
 .rm-fin .btn{min-height:44px;font-size:16px}
 .rm-quote .btn{margin-bottom:8px}

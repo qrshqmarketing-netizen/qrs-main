@@ -14,7 +14,7 @@ export const LOCATION_PAGES = {
     intro: {
       heading: 'Roofing for Every Kind of Los Angeles Home',
       paragraphs: [
-        'Los Angeles roofing covers more ground than most cities: Spanish Revival homes with clay tile in Los Feliz, mid-century houses with low-slope roofs in the hills, Craftsman bungalows with shingles in Highland Park and Eagle Rock. Our office is in the Fairfax area, and our crews bring the same detail-first process to every roof across the city.',
+        'Los Angeles roofing covers more ground than most cities: Spanish Revival homes with clay tile in Los Feliz, mid-century houses with low-slope roofs in the hills, Craftsman bungalows with shingles in Highland Park and Eagle Rock. Our Los Angeles office is in the Fairfax area, with a second office in Woodland Hills for the Valley, and our crews bring the same detail-first process to every roof across the city.',
         'It starts with a roofer-led [$199 Roof Check](#roof-check), not a sales pitch. We photo-document what we find, explain it in plain English and give you a written scope and price before any work begins. Whether your roof needs a [tile lift & relay](/tile-roofing/lift-and-relay/), a [flat roof repair](/flat-roofing/repairs/) or a full replacement, you’ll know exactly what you’re paying for.',
       ],
     },
@@ -25,12 +25,12 @@ export const LOCATION_PAGES = {
       { title: 'Mixed roofs on one house', text: 'Many LA homes pair a tile or shingle main roof with flat sections over additions, garages or patios, and each needs its own details.' },
     ],
     faqs: [
-      { q: 'Do you serve my Los Angeles neighborhood?', a: 'We work across the city, from the Hollywood Hills and Silver Lake to Sherman Oaks and Encino, and our office is in the Fairfax area. Check your ZIP code on the map on this page, or give us a call.' },
+      { q: 'Do you serve my Los Angeles neighborhood?', a: 'We work across the city, from the Hollywood Hills and Silver Lake to Sherman Oaks and Encino, with offices in the Fairfax area and in Woodland Hills. Check your ZIP code on the map on this page, or give us a call.' },
       { q: 'What roof types do you work on in Los Angeles?', a: 'All of the common ones: [tile](/tile-roofing/), [shingle](/shingle-roofing/) and [flat](/flat-roofing/) roofs, plus standing seam metal. Plenty of homes here have more than one type, and one Roof Check covers them all.' },
       { q: 'Can you work on hillside homes?', a: 'Yes. Steep lots and narrow streets take extra planning for access, material deliveries and safety, and we build that into the written scope before work starts.' },
       { q: 'How do I get started?', a: 'Book a $199 Roof Check. A roofer inspects your roof, photo-documents its condition and gives you a clear next step: repair, monitor, maintain or replace.' },
     ],
-    nearby: ['glendale', 'burbank', 'santa-monica', 'pasadena'],
+    nearby: ['woodland-hills', 'glendale', 'burbank', 'santa-monica'],
     final: { heading: 'Let’s Take a Look at Your Los Angeles Roof', text: 'No pressure, no mystery scope and no surprises. Start with a roofer-led Roof Check for your Los Angeles home.' },
   },
 
@@ -154,8 +154,39 @@ export const LOCATION_PAGES = {
       { q: 'Which parts of Burbank do you serve?', a: 'All of Burbank, including Magnolia Park, the Media District, Downtown Burbank, the Rancho Equestrian District and the Burbank Hills.' },
       { q: 'Can you add gutters when I replace my roof?', a: 'Yes. [Rain gutters](/rain-gutters/) can be planned together with a roof replacement, so the drip edge, gutters and downspouts all work as one system.' },
     ],
-    nearby: ['glendale', 'los-angeles', 'pasadena'],
+    nearby: ['glendale', 'los-angeles', 'pasadena', 'woodland-hills'],
     final: { heading: 'Clear, Careful Roofing for Burbank', text: 'Get photos, plain-English answers and a written scope for your Burbank roof, starting with a roofer-led Roof Check.' },
+  },
+
+  'woodland-hills': {
+    keyword: 'woodland hills roofing',
+    metaTitle: 'Woodland Hills Roofing & Roof Repair',
+    metaDescription: 'Woodland Hills roofing from our Valley office on Ventura Blvd: tile, shingle and flat roof repair and replacement with written scopes. Book a $199 Roof Check.',
+    hero: {
+      heading: 'Woodland Hills roofing from our Valley office.',
+      sub: 'Roofer-led inspections, written scopes and clean installs for homes across Woodland Hills and the West Valley.',
+    },
+    intro: {
+      heading: 'Local Roofing From Our Woodland Hills Office',
+      paragraphs: [
+        'Woodland Hills roofing has to stand up to some of the hottest summers in Los Angeles. Homes here sit at the west end of the San Fernando Valley, from mid-century tracts like Corbin Palms to hillside houses south of Ventura Boulevard near the Santa Monica Mountains. Our Valley office is right on Ventura Boulevard, so our crews are close by for a [$199 Roof Check](#roof-check), whether you live near Warner Center or up in the hills.',
+        'Every visit ends with photos of what we found, a plain-English explanation, and a written scope and price before any work begins. Many Valley homes need attention where heat does the most damage: aging [shingle roofs](/shingle-roofing/), dried-out underlayment under [tile](/tile-roofing/) and low-slope sections that call for a [flat roof repair](/flat-roofing/repairs/). From the same office we also serve Tarzana, Encino, Canoga Park, West Hills and Calabasas.',
+      ],
+    },
+    neighborhoods: ['Warner Center', 'Walnut Acres', 'Corbin Palms', 'Forest Hills', 'Serrania', 'South of the Boulevard'],
+    considerations: [
+      { title: 'Valley heat and sun', text: 'Long, hot summers dry out underlayment and sealants and age shingles faster, especially on south- and west-facing slopes.' },
+      { title: 'Attic heat and ventilation', text: 'A hot attic cooks shingles from below, so balanced intake and exhaust ventilation is one of the first things we check.' },
+      { title: 'Fire season near the hills', text: 'Homes near the Santa Monica Mountains benefit from ember-resistant details like closed eaves, bird stops and well-sealed vents.' },
+    ],
+    faqs: [
+      { q: 'Where is your Woodland Hills office?', a: 'Our Valley office is at 22900 Ventura Blvd, Suite 124, Woodland Hills, CA 91364. Call (310) 340-1643 to book a Roof Check or ask a question.' },
+      { q: 'Which parts of the Valley do you serve from Woodland Hills?', a: 'All of Woodland Hills, including Warner Center, Walnut Acres and the hills south of Ventura Boulevard, plus nearby Tarzana, Encino, Canoga Park, West Hills and Calabasas. Check your ZIP code on the map on this page.' },
+      { q: 'How does Valley heat affect my roof?', a: 'Heat breaks down underlayment, sealants and shingles faster, and a hot attic makes it worse. A [shingle roof inspection](/shingle-roofing/inspection/) shows how your roof is holding up, with photos.' },
+      { q: 'Do you work on hillside homes near the Santa Monica Mountains?', a: 'Yes. Steep lots and narrow roads take extra planning for access, deliveries and safety, and we build that into the written scope before work starts.' },
+    ],
+    nearby: ['los-angeles', 'burbank', 'santa-monica'],
+    final: { heading: 'Roofing Help From Our Valley Office', text: 'Start with a roofer-led Roof Check, photos of what we find and a written scope for your Woodland Hills home.' },
   },
 
   torrance: {

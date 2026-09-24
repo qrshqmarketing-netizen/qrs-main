@@ -17,7 +17,9 @@ const PITCHES = [
   { value: 'Conventional', note: '4–8/12', path: 'M5 21 22 7l17 14Z' },
   { value: 'Steep', note: '9+/12', path: 'M9 22 22 2l13 20Z' },
 ];
+const PITCH_VALUES = PITCHES.map((p) => p.value);
 const ROOF_TYPES = ['Tile', 'Shingle', 'Flat', 'Metal', 'Not sure'];
+const MATERIALS = Object.keys(PRICING);
 const STORIES = ['1 story', '2 stories', '3+ stories'];
 const ERRORS = {
   addr: { msg: "We couldn't find that address. Try adding the city or ZIP code.", canSkip: true },
@@ -26,6 +28,13 @@ const ERRORS = {
   api: { msg: 'Something went wrong while measuring.', canSkip: true },
 };
 const LONGEST_TERM = Math.max(...FINANCE.terms);
+
+// Multi-select choices: adds or removes `value`, keeping the list in `order`.
+// `alone` is a choice that can't be combined with others ("Not sure").
+function toggle(list, value, order, alone) {
+  const next = list.includes(value) ? list.filter((v) => v !== value) : value === alone ? [value] : [...list.filter((v) => v !== alone), value];
+  return order.filter((v) => next.includes(v));
+}
 
 // "Instant Quote" tab on the right edge: address → roof measurement → contact → price range + financing.
 // Prices and settings live in data/instantQuote.js; the measuring logic in lib/roofQuote.js.
@@ -38,8 +47,8 @@ export default function InstantQuote() {
   const [roof, setRoof] = useState(null); // measured roof, or null when entered by hand
   const [address, setAddress] = useState('');
   const [sqft, setSqft] = useState({ value: 1800, max: 6000, step: 10 });
-  const [pitch, setPitch] = useState('');
-  const [roofType, setRoofType] = useState('Not sure');
+  const [pitches, setPitches] = useState([]); // several allowed, e.g. a conventional roof with a flat section
+  const [roofTypes, setRoofTypes] = useState(['Not sure']);
   const [stories, setStories] = useState('');
   const [quote, setQuote] = useState(null);
   const [term, setTerm] = useState(FINANCE.defaultTerm);
@@ -130,10 +139,10 @@ export default function InstantQuote() {
   // Step 2 works two ways: pre-filled from the Solar API, or entered by hand when there's no roof data
   function applyRoof(r) {
     setRoof(r);
-    setPitch(r ? styleOf(r.rise) : '');
+    setPitches(r ? [styleOf(r.rise)] : []);
     if (r) {
       setSqft({ value: r.sqft, max: Math.max(6000, Math.ceil((r.sqft * 1.5) / 50) * 50), step: 1 });
-      if (styleOf(r.rise) === 'Flat') setRoofType('Flat');
+      if (styleOf(r.rise) === 'Flat') setRoofTypes(['Flat']);
     } else {
       setSqft({ value: 1800, max: 6000, step: 10 });
     }
@@ -209,22 +218,27 @@ export default function InstantQuote() {
   const onContact = (e) => {
     e.preventDefault();
     const f = new FormData(e.target);
-    const chosenPitch = pitch || 'Not sure';
+    // The estimate starts with what's on the roof now. "Not sure" is priced as shingle (or flat, if every pitch picked is flat).
+    const current = roofTypes.filter((t) => PRICING[t]);
+    const flatOnly = pitches.length > 0 && pitches.every((p) => p === 'Flat');
     const q = {
       name: f.get('name'),
       phone: f.get('phone'),
       email: f.get('email'),
       address: roof ? roof.label : address,
-      roofType,
+      roofTypes,
       sqft: sqft.value,
-      pitch: chosenPitch,
+      pitches,
       stories,
-      // "Not sure" roofs are priced as shingle (or flat, if the pitch is flat)
-      material: PRICING[roofType] ? roofType : chosenPitch === 'Flat' ? 'Flat' : 'Shingle',
+      materials: current.length ? current : [flatOnly ? 'Flat' : 'Shingle'],
       measured: roof ? { sqft: roof.sqft, pitch: roof.rise + '/12', sections: roof.facets.length } : null,
     };
-    const est = priceFor(q, q.material);
-    q.estimate = { material: q.material, low: est.low, high: est.high, termYears: term, monthly: Math.round(monthly((est.low + est.high) / 2, term)) };
+    // Sent to the lead endpoint: one estimate per material, with the example monthly payment
+    q.termYears = term;
+    q.estimates = q.materials.map((material) => {
+      const est = priceFor(q, material);
+      return { material, low: est.low, high: est.high, monthly: Math.round(monthly((est.low + est.high) / 2, term)) };
+    });
     setQuote(q);
     if (LEAD_ENDPOINT) {
       fetch(LEAD_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(q) }).catch(() => {});
@@ -236,6 +250,7 @@ export default function InstantQuote() {
     flushSync(() => {
       setAddress('');
       setStories('');
+      setRoofTypes(['Not sure']);
       setRoof(null);
       setStep(1);
     });
@@ -261,9 +276,13 @@ export default function InstantQuote() {
   };
 
   const manual = !roof;
-  const est = quote ? priceFor(quote, quote.material) : null;
+  // Step 4: one price range per material being compared, plus the overall range across them
+  const ests = quote ? quote.materials.map((material) => ({ material, ...priceFor(quote, material) })) : [];
+  const low = ests.length ? Math.min(...ests.map((e) => e.low)) : 0;
+  const high = ests.length ? Math.max(...ests.map((e) => e.high)) : 0;
+  const payments = ests.map((e) => monthly((e.low + e.high) / 2, term));
   const priceMeta = quote
-    ? [fmt(quote.sqft) + ' sq ft', quote.pitch !== 'Not sure' ? quote.pitch.toLowerCase() + ' pitch' : '', quote.stories].filter(Boolean).join(' · ')
+    ? [fmt(quote.sqft) + ' sq ft', quote.pitches.length ? quote.pitches.join(' + ').toLowerCase() + ' pitch' : '', quote.stories].filter(Boolean).join(' · ')
     : '';
   const measuredNote = roof
     ? (DEMO
@@ -351,12 +370,12 @@ export default function InstantQuote() {
             </div>
             <fieldset className="rm-pitch">
               <legend>
-                Roof pitch <small id="rmPitchNote">{roof ? `Measured ${roof.rise}/12` : ''}</small>
+                Roof pitch <small id="rmPitchNote">{roof ? `Measured ${roof.rise}/12 · pick all that apply` : 'Pick all that apply'}</small>
               </legend>
               <div>
                 {PITCHES.map((p, i) => (
                   <Fragment key={p.value}>
-                    <input type="radio" name="rmPitch" id={`rmP${i + 1}`} value={p.value} checked={pitch === p.value} onChange={() => setPitch(p.value)} />
+                    <input type="checkbox" name="rmPitch" id={`rmP${i + 1}`} value={p.value} checked={pitches.includes(p.value)} onChange={() => setPitches((list) => toggle(list, p.value, PITCH_VALUES))} />
                     <label htmlFor={`rmP${i + 1}`}>
                       <svg viewBox="0 0 44 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" aria-hidden="true">
                         <path d={p.path} />
@@ -388,11 +407,23 @@ export default function InstantQuote() {
               </ul>
             </details>
             <fieldset className="rm-types">
-              <legend>What's on the roof now?</legend>
+              <legend>
+                What's on the roof now? <small>Pick all that apply</small>
+              </legend>
               <div>
                 {ROOF_TYPES.map((type, i) => (
                   <Fragment key={type}>
-                    <input type="radio" name="rmType" id={`rmT${i + 1}`} value={type} checked={roofType === type} onChange={() => setRoofType(type)} />
+                    <input
+                      type="checkbox"
+                      name="rmType"
+                      id={`rmT${i + 1}`}
+                      value={type}
+                      checked={roofTypes.includes(type)}
+                      onChange={() => setRoofTypes((list) => {
+                        const next = toggle(list, type, ROOF_TYPES, 'Not sure');
+                        return next.length ? next : ['Not sure'];
+                      })}
+                    />
                     <label htmlFor={`rmT${i + 1}`}>{type}</label>
                   </Fragment>
                 ))}
@@ -440,17 +471,39 @@ export default function InstantQuote() {
             </h3>
 
             <div className="rm-price" aria-live="polite">
-              <span id="rmPriceLabel">{est ? est.label : 'Roof replacement'}</span>
-              <b id="rmPrice">{est ? money(est.low) + ' – ' + money(est.high) : '—'}</b>
+              <span id="rmPriceLabel">{ests.length === 1 ? ests[0].label : ests.length ? 'Roof replacement: ' + quote.materials.join(', ') : 'Roof replacement'}</span>
+              <b id="rmPrice">{ests.length ? money(low) + ' – ' + money(high) : '—'}</b>
+              {ests.length > 1 && (
+                <dl className="rm-compare">
+                  {ests.map((e) => (
+                    <div key={e.material}>
+                      <dt>{e.material}</dt>
+                      <dd>{money(e.low)} – {money(e.high)}</dd>
+                    </div>
+                  ))}
+                </dl>
+              )}
               <small id="rmPriceMeta">{priceMeta}</small>
             </div>
 
             <fieldset className="rm-types">
-              <legend>Compare materials</legend>
+              <legend>
+                Compare materials <small>Pick one or more</small>
+              </legend>
               <div id="rmMats">
-                {quote && Object.keys(PRICING).map((material, i) => (
+                {quote && MATERIALS.map((material, i) => (
                   <Fragment key={material}>
-                    <input type="radio" name="rmMat" id={`rmMat${i}`} value={material} checked={quote.material === material} onChange={() => setQuote({ ...quote, material })} />
+                    <input
+                      type="checkbox"
+                      name="rmMat"
+                      id={`rmMat${i}`}
+                      value={material}
+                      checked={quote.materials.includes(material)}
+                      onChange={() => setQuote((q) => {
+                        const next = toggle(q.materials, material, MATERIALS);
+                        return next.length ? { ...q, materials: next } : q; // always compare at least one
+                      })}
+                    />
                     <label htmlFor={`rmMat${i}`}>{material}</label>
                   </Fragment>
                 ))}
@@ -461,7 +514,7 @@ export default function InstantQuote() {
               <div className="rm-fin-head">
                 <b>Financing</b>
                 <span>
-                  As low as <strong id="rmFinLow">{est ? money(monthly(est.low, LONGEST_TERM)) + '/mo' : '—'}</strong>
+                  As low as <strong id="rmFinLow">{ests.length ? money(monthly(low, LONGEST_TERM)) + '/mo' : '—'}</strong>
                 </span>
               </div>
               <fieldset className="rm-types rm-terms">
@@ -477,13 +530,19 @@ export default function InstantQuote() {
               </fieldset>
               <div className="rm-fin-row">
                 <span>Est. monthly payment</span>
-                <b id="rmMonthly">
-                  {est ? <>{money(monthly((est.low + est.high) / 2, term))}<small>/mo</small></> : '—'}
+                <b id="rmMonthly" className={payments.length > 1 ? 'rm-range-pay' : undefined}>
+                  {ests.length ? (
+                    <>
+                      {money(Math.min(...payments))}
+                      {payments.length > 1 && ' – ' + money(Math.max(...payments))}
+                      <small>/mo</small>
+                    </>
+                  ) : '—'}
                 </b>
               </div>
               <p id="rmFinNote">
-                {est &&
-                  `Example payment on the middle of your range, ${term} years at ${FINANCE.apr}% APR. For illustration only, not an offer of credit. Subject to credit approval.`}
+                {ests.length > 0 &&
+                  `Example ${ests.length > 1 ? 'payments on the middle of each material’s range' : 'payment on the middle of your range'}, ${term} years at ${FINANCE.apr}% APR. For illustration only, not an offer of credit. Subject to credit approval.`}
               </p>
               <a className="btn btn-dark" id="rmFinBtn" href={FINANCING_URL || TEL} {...(FINANCING_URL ? { target: '_blank', rel: 'noopener' } : {})}>
                 Check my financing options

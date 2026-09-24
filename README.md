@@ -23,6 +23,7 @@ To test the finished (production) version: `npm run build`, then `npm start`.
 | What | File |
 | --- | --- |
 | Phone, email, address, hours, social links, video | `data/site.js` |
+| Offices (Los Angeles and Valley), shown on the Service Areas page and their city pages | `OFFICES` in `data/site.js` |
 | Home page title and description (Google + link previews) | `data/site.js` |
 | Google Search Console and Bing verification codes | `SITE_VERIFICATION` in `data/site.js` |
 | Header menus and footer links | `data/navigation.js` |
@@ -41,7 +42,7 @@ To test the finished (production) version: `npm run build`, then `npm start`.
 | Google reviews | `data/reviews.js` |
 | Service area cities (map + city pages) | `data/locations.js` |
 | Chat assistant answers | `data/assistant.js` |
-| Instant Quote prices and financing | `data/instantQuote.js` |
+| Instant Quote prices and financing (visitors can pick several pitches, roof types and materials to compare) | `data/instantQuote.js` |
 | Section order on the home page | `app/page.js` |
 | Site-wide colors, fonts, buttons, form fields | `app/globals.css` |
 | One section's look | the `.css` file next to it in `components/` |
@@ -85,6 +86,7 @@ assets/originals/    Full-size source images (not used by the site)
 
 - **A service page in an existing section:** add an entry to that section's `services` list in `data/services/`, then link it from the menu in `data/navigation.js`. The page, its breadcrumbs, cards and sitemap entry appear automatically.
 - **A city:** add it to `data/locations.js` and give it an entry in `data/locationPages.js`.
+- **An office:** add it to `OFFICES` in `data/site.js` with the slug of the city page it sits in. Its card appears on that city page and on the Service Areas page, and search engines see it as a branch of the business.
 - **A one-off page:** create a folder in `app/` with a `page.js` that combines sections from `components/sections/` (see `app/careers/page.js`). The header, footer and widgets appear automatically, and the browser tab reads "<title> | Quality Roofing Specialists". Also add its address to `ALL_PATHS` in `data/content.js` (sitemap) and an entry to `PAGE_INDEX` in `lib/pageIndex.js` (AI files), and give it structured data with `pageJsonLd` like the other pages.
 
 Links like `#roof-check` jump to that section on the current page; if the page doesn't have it, they go to the home page's section.
@@ -104,7 +106,7 @@ Everything points at the live address, **https://qualityroofingspecialists.com**
 This project is on public GitHub, so **never put API keys in the code**. Copy `.env.example` to `.env.local` (which git ignores) and fill in what you use:
 
 - `NEXT_PUBLIC_GOOGLE_MAPS_KEY`: real roof measurements in the Instant Quote drawer (Google Solar + Geocoding APIs). Restrict the key to your domain in Google Cloud Console. Without it, the drawer runs in demo mode.
-- `NEXT_PUBLIC_LEAD_ENDPOINT`: where Instant Quote leads are sent (CRM webhook or form service).
+- `NEXT_PUBLIC_LEAD_ENDPOINT`: where Instant Quote leads are sent as JSON (CRM webhook or form service). Each lead lists the pitches and roof types picked (`pitches`, `roofTypes`) and one estimate per material (`estimates`).
 - `NEXT_PUBLIC_CHAT_ENDPOINT`: an AI backend for the chat assistant. Without it, the built-in answers are used.
 
 Restart `npm run dev` after changing `.env.local`. On your hosting service, add the same variables in its settings.
