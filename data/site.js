@@ -10,6 +10,7 @@ export const BUSINESS = {
   description:
     'Detail-first roof repair and replacement for homeowners across Southern California, backed by a lifetime workmanship warranty. CSLB Lic # 1061942.',
   email: 'info@qualityroofingspecialists.com',
+  license: '1061942', // California CSLB contractor license number
   priceRange: '$$',
   address: {
     street: '1444 N Poinsettia Pl, Unit 308',
@@ -29,6 +30,13 @@ export const BUSINESS = {
 export const PHONE = '(310) 340-1643';
 export const TEL = 'tel:+13103401643';
 export const PHONE_INTL = '+1-310-340-1643'; // format search engines expect
+
+// Search engine ownership codes, copied from Google Search Console and Bing Webmaster Tools.
+// The Google code is the one on the current WordPress site, so Search Console stays verified after the switch.
+export const SITE_VERIFICATION = {
+  google: 'SyZ2s7uoL4sqZ3pKCmqTSSx5jYHPnjFSlzjMfY2xktM',
+  bing: '',
+};
 
 // Home page title and description (search results + link previews)
 export const HOME_TITLE = 'Roof Repair & Replacement in Southern California | Quality Roofing Specialists';

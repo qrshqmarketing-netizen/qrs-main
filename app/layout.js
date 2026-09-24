@@ -9,8 +9,8 @@ import Header from '@/components/layout/Header';
 import InstantQuote from '@/components/widgets/InstantQuote';
 import ReviewToast from '@/components/widgets/ReviewToast';
 import RoofAssistant from '@/components/widgets/RoofAssistant';
-import { BUSINESS, HOME_DESCRIPTION, SITE_URL } from '@/data/site';
-import { openGraphBase, twitterBase } from '@/lib/seo';
+import { BUSINESS, HOME_DESCRIPTION, SITE_URL, SITE_VERIFICATION } from '@/data/site';
+import { ALLOW_INDEXING, openGraphBase, twitterBase } from '@/lib/seo';
 
 // Google Fonts, downloaded at build time and served from this site
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '500', '600', '700'], variable: '--font-poppins' });
@@ -21,7 +21,14 @@ export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: { default: BUSINESS.name, template: `%s | ${BUSINESS.name}` },
   description: HOME_DESCRIPTION,
-  robots: { index: true, follow: true, 'max-snippet': -1, 'max-video-preview': -1, 'max-image-preview': 'large' },
+  // Staging and preview copies are kept out of search results (see ALLOW_INDEXING in lib/seo.js)
+  robots: ALLOW_INDEXING
+    ? { index: true, follow: true, 'max-snippet': -1, 'max-video-preview': -1, 'max-image-preview': 'large' }
+    : { index: false, follow: false },
+  verification: {
+    google: SITE_VERIFICATION.google || undefined,
+    other: SITE_VERIFICATION.bing ? { 'msvalidate.01': SITE_VERIFICATION.bing } : undefined,
+  },
   icons: {
     icon: { url: '/favicon.svg', type: 'image/svg+xml' },
     apple: '/apple-touch-icon.png',

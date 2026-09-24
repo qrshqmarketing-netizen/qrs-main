@@ -24,6 +24,7 @@ To test the finished (production) version: `npm run build`, then `npm start`.
 | --- | --- |
 | Phone, email, address, hours, social links, video | `data/site.js` |
 | Home page title and description (Google + link previews) | `data/site.js` |
+| Google Search Console and Bing verification codes | `SITE_VERIFICATION` in `data/site.js` |
 | Header menus and footer links | `data/navigation.js` |
 | Services carousel (home and city pages) | `data/services.js` |
 | Home page FAQ | `data/faqs.js` |
@@ -31,6 +32,8 @@ To test the finished (production) version: `npm run build`, then `npm start`.
 | Rain gutters and HOA & multi-family pages | `data/services/specialty.js` |
 | Commercial pages | `data/services/commercial.js` |
 | City pages (intro, neighborhoods, local FAQs) | `data/locationPages.js` |
+| Project photo gallery on the city pages | `data/projects.js` |
+| $199 Roof Check / roof survey card beside the estimate form | `data/offers.js` |
 | Residential hub, About, Careers, Contractors, Locations pages | `data/pages/` |
 | Page names, addresses, card blurbs, placeholder art | `data/catalog.js` |
 | "The QRS Way" steps | `data/process.js` |
@@ -48,6 +51,7 @@ In the `data/` files, `[words](/path/)` makes a link and `**words**` makes bold 
 Common edits:
 
 - **Photos:** pages show placeholder art until you add real job photos. Put the photo in `public/images/`, then add `image: '/images/your-photo.webp'` to the page (or card) in its `data/` file.
+- **City project galleries:** every city page currently shows the same temporary photos and artwork. Add real projects to `PROJECTS` in `data/projects.js` (instructions at the top of the file); a city with projects shows only its own. Set `SHOW_PLACEHOLDER_GALLERY` to `false` to hide the gallery on cities without projects.
 - **Process video:** set `embed` in `PROCESS_VIDEO` (`data/site.js`) to a YouTube embed URL.
 - **Social links:** replace the `'#'` values in `SOCIAL` (`data/site.js`).
 
@@ -60,7 +64,9 @@ app/
   residential-roofing/, shingle-roofing/, tile-roofing/, flat-roofing/, metal-roofing/,
   commercial-roofing/, rain-gutters/, hoa-multi-family/, locations/, about-us/, careers/, contractors/
                      One folder per page address; [service] and [city] folders build one page per entry
-  sitemap.js, robots.js  sitemap.xml and robots.txt for search engines
+  sitemap.js, robots.js  sitemap.xml and robots.txt for search engines and AI crawlers
+  llms.txt/, llms-full.txt/, okf/
+                     Files for AI assistants, built from the page content (see "Search engines and AI")
   not-found.js       "Page not built yet" screen for addresses that don't exist
   globals.css        Site-wide styles
 components/
@@ -70,7 +76,7 @@ components/
   widgets/           Review pop-up, chat assistant, Instant Quote drawer
   ui/                Small shared pieces: logo, icons, links, arrow buttons
 data/                Content and settings (see the table above)
-lib/                 Helper code: SEO tags, map loading, Instant Quote math, search engine data
+lib/                 Helper code: SEO tags, structured data, AI files, map loading, Instant Quote math
 public/              Files served as-is: images, favicon, link-preview image
 assets/originals/    Full-size source images (not used by the site)
 ```
@@ -79,9 +85,19 @@ assets/originals/    Full-size source images (not used by the site)
 
 - **A service page in an existing section:** add an entry to that section's `services` list in `data/services/`, then link it from the menu in `data/navigation.js`. The page, its breadcrumbs, cards and sitemap entry appear automatically.
 - **A city:** add it to `data/locations.js` and give it an entry in `data/locationPages.js`.
-- **A one-off page:** create a folder in `app/` with a `page.js` that combines sections from `components/sections/` (see `app/careers/page.js`). The header, footer and widgets appear automatically, and the browser tab reads "<title> | Quality Roofing Specialists".
+- **A one-off page:** create a folder in `app/` with a `page.js` that combines sections from `components/sections/` (see `app/careers/page.js`). The header, footer and widgets appear automatically, and the browser tab reads "<title> | Quality Roofing Specialists". Also add its address to `ALL_PATHS` in `data/content.js` (sitemap) and an entry to `PAGE_INDEX` in `lib/pageIndex.js` (AI files), and give it structured data with `pageJsonLd` like the other pages.
 
 Links like `#roof-check` jump to that section on the current page; if the page doesn't have it, they go to the home page's section.
+
+## Search engines and AI
+
+Everything points at the live address, **https://qualityroofingspecialists.com** (`SITE_URL` in `data/site.js`), even before the site is moved there: canonical tags, the sitemap, link previews and structured data.
+
+- **robots.txt** (`app/robots.js`) lets every search engine and the main AI crawlers (ChatGPT, Claude, Perplexity, Gemini and others) read the whole site, and points them to the sitemap.
+- **Structured data:** each page has one JSON-LD block (built by `lib/structuredData.js` from the same text as the page) describing the business, the page, its breadcrumbs, the service it offers and its FAQs. After launch, check pages with Google's [Rich Results Test](https://search.google.com/test/rich-results).
+- **AI files:** `/llms.txt` (a map of the site), `/llms-full.txt` (every page's main text and FAQs) and `/okf/` (the same knowledge as a Google Open Knowledge Format bundle) are rebuilt from the page content on every deploy (`lib/aiFiles.js`). They carry a `noindex` header so they don't show up in Google results. Google Search doesn't use them; they're for AI tools.
+- **Verification:** the Google Search Console code from the current WordPress site is in `SITE_VERIFICATION` (`data/site.js`), so the Search Console property stays verified after the switch. Add a Bing code there too if you use Bing Webmaster Tools.
+- **Staging copies stay out of Google:** only the live domain is indexed. On Vercel this is automatic (preview deployments, and production until the live domain is connected, tell search engines to stay away). On any other host, set the environment variable `SITE_NOINDEX=true` on staging servers.
 
 ## Settings and keys
 
@@ -98,6 +114,13 @@ Restart `npm run dev` after changing `.env.local`. On your hosting service, add 
 ## Publishing
 
 The easiest host for a Next.js site is [Vercel](https://vercel.com) (free tier): import this GitHub repo and it deploys on every push. Any host that runs Node.js also works (`npm run build` then `npm start`).
+
+Before pointing qualityroofingspecialists.com at the new site:
+
+- **Redirects:** the current WordPress site has about 150 addresses (service pages, 96 city pages, 25 blog posts, privacy policy and more). Map each one to its new page with permanent redirects, or they'll show "not found" and lose their Google rankings.
+- **Tracking:** the current site loads Google Tag Manager (GTM-P7Z3CMG); the new site doesn't have analytics yet.
+- **Policies:** the current site has privacy policy and terms pages; the new site doesn't yet.
+- **Content:** replace the temporary city gallery photos (`data/projects.js`) and double-check claims such as warranty wording and awards.
 
 ## History
 

@@ -1,15 +1,15 @@
+import { RICH_TOKEN } from '@/lib/richText';
 import SiteLink from './SiteLink';
 
 // Text from the data/ files can contain simple Markdown:
 //   [words](/tile-roofing/)  → a link      **words** → bold
-const TOKEN = /\[([^\]]+)\]\(([^)\s]+)\)|\*\*([^*]+)\*\*/g;
 
 export function renderRich(text, keyPrefix = 'r') {
   if (typeof text !== 'string') return text;
   const out = [];
   let last = 0;
   let n = 0;
-  for (const m of text.matchAll(TOKEN)) {
+  for (const m of text.matchAll(RICH_TOKEN)) {
     if (m.index > last) out.push(text.slice(last, m.index));
     const key = `${keyPrefix}${n++}`;
     out.push(
@@ -28,6 +28,3 @@ export function renderRich(text, keyPrefix = 'r') {
 export default function Rich({ text }) {
   return renderRich(text);
 }
-
-// Plain text version (for meta descriptions, structured data and counting words)
-export const plainText = (text) => text.replace(TOKEN, (_, label, _href, bold) => label ?? bold);

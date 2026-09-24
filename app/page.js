@@ -10,9 +10,10 @@ import Services from '@/components/sections/Services';
 import Testimonials from '@/components/sections/Testimonials';
 import WhyQrs from '@/components/sections/WhyQrs';
 import JsonLd from '@/components/ui/JsonLd';
+import { FAQS } from '@/data/faqs';
 import { HOME_DESCRIPTION, HOME_TITLE } from '@/data/site';
 import { openGraphBase, twitterBase } from '@/lib/seo';
-import { homeJsonLd } from '@/lib/structuredData';
+import { pageJsonLd } from '@/lib/structuredData';
 
 export const metadata = {
   title: HOME_TITLE,
@@ -26,7 +27,7 @@ export const metadata = {
 export default function HomePage() {
   return (
     <>
-      <JsonLd data={homeJsonLd({ title: HOME_TITLE })} />
+      <JsonLd data={pageJsonLd({ path: '/', title: HOME_TITLE, description: HOME_DESCRIPTION, faqs: FAQS })} />
       <main id="top">
         {/* The keyword line above the big headline is the page's H1 (matches the page title) */}
         <Hero h1="eyebrow" />

@@ -7,22 +7,39 @@ import PageHero from '@/components/sections/PageHero';
 import RoofCheck from '@/components/sections/RoofCheck';
 import ServiceFinder from '@/components/sections/ServiceFinder';
 import { LOCATION_CTA } from '@/components/templates/shared';
+import JsonLd from '@/components/ui/JsonLd';
 import { HOME, RESIDENTIAL, RESIDENTIAL_TYPES, typeCard } from '@/data/catalog';
 import { RESIDENTIAL_PAGE as page } from '@/data/pages/residential';
 import { pageMetadata } from '@/lib/pages';
+import { pageJsonLd } from '@/lib/structuredData';
 
 export const metadata = pageMetadata({ title: page.metaTitle, description: page.metaDescription, path: RESIDENTIAL.href });
+
+const CRUMBS = [HOME, RESIDENTIAL];
+const HERO_IMAGE = '/images/home-hero-drone-view.webp';
+
+const schema = pageJsonLd({
+  path: RESIDENTIAL.href,
+  title: page.metaTitle,
+  description: page.metaDescription,
+  type: 'CollectionPage',
+  crumbs: CRUMBS,
+  faqs: page.faqs,
+  service: { name: RESIDENTIAL.label, type: page.keyword, catalog: RESIDENTIAL_TYPES.map((t) => ({ name: t.label, href: t.href })) },
+  image: HERO_IMAGE,
+});
 
 // Residential hub: every roof type, then every service by roof type (content in data/pages/residential.js)
 export default function ResidentialRoofingPage() {
   return (
     <main id="top">
+      <JsonLd data={schema} />
       <PageHero
-        crumbs={[HOME, RESIDENTIAL]}
+        crumbs={CRUMBS}
         eyebrow="Los Angeles & Orange County"
         title={page.hero.heading}
         intro={page.hero.intro}
-        image="/images/home-hero-drone-view.webp"
+        image={HERO_IMAGE}
         imageAlt="Aerial view of a Southern California neighborhood of shingle-roofed homes"
         imagePosition="center 45%"
       />

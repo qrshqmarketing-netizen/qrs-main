@@ -8,12 +8,25 @@ import RelatedLinks from '@/components/sections/RelatedLinks';
 import RoofCheck from '@/components/sections/RoofCheck';
 import ValueGrid from '@/components/sections/ValueGrid';
 import WhyChoose from '@/components/sections/WhyChoose';
+import JsonLd from '@/components/ui/JsonLd';
 import { CONTRACTORS_LINK, HOME } from '@/data/catalog';
 import { relatedLinks } from '@/data/content';
 import { CONTRACTORS_PAGE as page } from '@/data/pages/contractors';
 import { pageMetadata } from '@/lib/pages';
+import { pageJsonLd } from '@/lib/structuredData';
 
 export const metadata = pageMetadata({ title: page.metaTitle, description: page.metaDescription, path: CONTRACTORS_LINK.href });
+
+const CRUMBS = [HOME, CONTRACTORS_LINK];
+
+const schema = pageJsonLd({
+  path: CONTRACTORS_LINK.href,
+  title: page.metaTitle,
+  description: page.metaDescription,
+  crumbs: CRUMBS,
+  faqs: page.faqs,
+  service: { name: 'Roofing Subcontractor Services', type: page.keyword },
+});
 
 const RELATED = relatedLinks(['/commercial-roofing/', '/hoa-multi-family/', '/flat-roofing/', '/residential-roofing/']);
 
@@ -21,8 +34,9 @@ const RELATED = relatedLinks(['/commercial-roofing/', '/hoa-multi-family/', '/fl
 export default function ContractorsPage() {
   return (
     <main id="top">
+      <JsonLd data={schema} />
       <PageHero
-        crumbs={[HOME, CONTRACTORS_LINK]}
+        crumbs={CRUMBS}
         eyebrow="Contractor Partnerships"
         title={page.hero.heading}
         intro={page.hero.intro}

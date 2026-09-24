@@ -8,6 +8,8 @@ import ProcessSteps from '@/components/sections/ProcessSteps';
 import RelatedLinks from '@/components/sections/RelatedLinks';
 import RoofCheck from '@/components/sections/RoofCheck';
 import WhyChoose from '@/components/sections/WhyChoose';
+import JsonLd from '@/components/ui/JsonLd';
+import { pageJsonLd } from '@/lib/structuredData';
 import { LOCATION_CTA } from './shared';
 
 // A service page (e.g. /tile-roofing/lift-and-relay/). Content shape: see data/services/*.js.
@@ -15,8 +17,18 @@ import { LOCATION_CTA } from './shared';
 // related: [{ label, href }] closest related pages; scenes: [heroArt, processArt] placeholder art until photos exist.
 export default function ServicePage({ page, crumbs, eyebrow, carousel, related, scenes = [], offer }) {
   const [heroScene = 'scene-shingle', processScene = heroScene] = scenes;
+  const schema = pageJsonLd({
+    path: crumbs.at(-1).href,
+    title: page.metaTitle,
+    description: page.metaDescription,
+    crumbs,
+    faqs: page.faqs,
+    service: { name: page.title, type: page.keyword, category: eyebrow },
+    image: page.image,
+  });
   return (
     <main id="top">
+      <JsonLd data={schema} />
       <PageHero
         crumbs={crumbs}
         eyebrow={eyebrow}

@@ -8,14 +8,27 @@ import PageHero from '@/components/sections/PageHero';
 import RoofCheck from '@/components/sections/RoofCheck';
 import SplitFeature from '@/components/sections/SplitFeature';
 import ValueGrid from '@/components/sections/ValueGrid';
+import JsonLd from '@/components/ui/JsonLd';
+import { pageJsonLd } from '@/lib/structuredData';
 import { LOCATION_CTA } from './shared';
 
 // A hub page (e.g. /tile-roofing/ or /commercial-roofing/): intro, cards for every page in the section,
 // why-choose points, FAQs and the Roof Check form. Content shape: `hub` in data/services/*.js.
 // cards: [{ title, text, href, scene, image? }]; feature: optional SplitFeature props (e.g. contractors teaser).
 export default function HubPage({ hub, crumbs, eyebrow, image, imageAlt, scene, cards, carousel, feature, offer }) {
+  const schema = pageJsonLd({
+    path: crumbs.at(-1).href,
+    title: hub.metaTitle,
+    description: hub.metaDescription,
+    type: 'CollectionPage',
+    crumbs,
+    faqs: hub.faqs,
+    service: { name: crumbs.at(-1).label, type: hub.keyword, catalog: cards.map((c) => ({ name: c.title, href: c.href })) },
+    image,
+  });
   return (
     <main id="top">
+      <JsonLd data={schema} />
       <PageHero
         crumbs={crumbs}
         eyebrow={eyebrow}
