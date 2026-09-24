@@ -1,0 +1,85 @@
+/* ---------- Services carousel ---------- */
+.services{background:#fff;padding:44px 0 64px}
+.svc-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:24px}
+.svc-head h2{margin:0;color:var(--navy);font-size:var(--h2)}
+.svc-arrows{display:flex;gap:10px;flex:0 0 auto}
+.svc-track{
+  display:flex;gap:10px;overflow-x:auto;
+  scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;
+  -webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;outline:none;
+}
+.svc-track::-webkit-scrollbar{display:none}
+.svc-track:focus-visible{box-shadow:0 0 0 3px rgba(255,184,46,.5);border-radius:8px}
+.svc-card{
+  position:relative;flex:0 0 86%;aspect-ratio:1 / 1.01;min-height:360px;
+  border-radius:6px;overflow:hidden;scroll-snap-align:start;isolation:isolate;
+  color:#fff;background:#2c3a46;
+  display:flex;flex-direction:column;justify-content:flex-end;padding:24px;
+}
+/* Photo layer: put an <img> inside .svc-media to use a real job photo */
+.svc-media{position:absolute;inset:0;z-index:-2;transition:transform .5s ease}
+.svc-media img{width:100%;height:100%;object-fit:cover;display:block}
+.svc-card:hover .svc-media{transform:scale(1.04)}
+.svc-card:before{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(4,20,38,0) 25%,rgba(4,20,38,.45) 55%,rgba(4,20,38,.9) 100%);
+}
+.svc-card h3{font-size:32px;font-weight:500;line-height:1;letter-spacing:-.03em;margin-bottom:14px;text-shadow:0 2px 14px rgba(0,0,0,.3)}
+.svc-card p{
+  font-family:var(--font-body);font-size:16px;font-weight:400;line-height:1.6;color:rgba(255,255,255,.92);
+  margin-bottom:18px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+}
+.svc-card .btn{align-self:flex-start;min-height:44px;padding:9px 22px;border-radius:5px;font-size:17px}
+@media (min-width:621px){
+  .services{padding:18px 0 88px}
+  .svc-head{justify-content:flex-end;gap:24px;margin-bottom:36px}
+  .svc-arrows{gap:24px}
+  .svc-card{flex-basis:calc((100% - 10px) / 2);min-height:330px;padding:32px}
+  .svc-card h3{font-size:40px;margin-bottom:18px}
+  .svc-card p{font-size:18px;line-height:1.7;margin-bottom:20px}
+  .svc-card .btn{min-height:42px;font-size:18px}
+}
+@media (min-width:901px){.svc-card{flex-basis:calc((100% - 20px) / 3)}}
+
+/* Placeholder roof "photos" (CSS-only) — swap for real job photos */
+.scene-replace{background:
+  repeating-linear-gradient(-28deg,transparent 0 26px,rgba(255,255,255,.14) 27px 29px,transparent 30px 54px),
+  repeating-linear-gradient(62deg,rgba(0,0,0,.22) 0 2px,transparent 2px 40px),
+  radial-gradient(circle at 80% 10%,rgba(255,200,120,.55),transparent 40%),
+  linear-gradient(160deg,#8d979d 0%,#56616a 55%,#2e3a44 100%)}
+.scene-repair{background:
+  repeating-linear-gradient(0deg,rgba(80,25,10,.35) 0 3px,transparent 3px 30px),
+  repeating-linear-gradient(90deg,rgba(255,255,255,.1) 0 14px,rgba(0,0,0,.16) 14px 30px),
+  radial-gradient(circle at 20% 15%,rgba(255,220,170,.5),transparent 45%),
+  linear-gradient(170deg,#c9744a 0%,#a2502f 55%,#5e2b1a 100%)}
+.scene-tile{background:
+  linear-gradient(180deg,#9ec3dd 0 22%,transparent 22%),
+  repeating-linear-gradient(90deg,rgba(255,255,255,.12) 0 16px,rgba(0,0,0,.18) 16px 34px),
+  repeating-linear-gradient(0deg,rgba(70,25,10,.35) 0 3px,transparent 3px 38px),
+  linear-gradient(175deg,#d98a5c 0%,#b25f3a 60%,#6a321e 100%)}
+.scene-flat{background:
+  linear-gradient(180deg,#8fbbe0 0%,#c9dcec 30%,transparent 30.5%),
+  repeating-linear-gradient(90deg,transparent 0 58px,rgba(0,0,0,.12) 58px 60px),
+  radial-gradient(ellipse at 50% 30%,rgba(255,255,255,.35),transparent 60%),
+  linear-gradient(180deg,#b9c0c5 30%,#8a939a 70%,#4b555d 100%)}
+.scene-shingle{background:
+  repeating-linear-gradient(-12deg,transparent 0 22px,rgba(255,255,255,.1) 23px 25px,transparent 26px 46px),
+  repeating-linear-gradient(78deg,rgba(0,0,0,.28) 0 2px,transparent 2px 34px),
+  radial-gradient(circle at 75% 12%,rgba(255,184,46,.35),transparent 38%),
+  linear-gradient(150deg,#5d646a 0%,#3c434a 50%,#1f262d 100%)}
+.scene-inspect{background:
+  linear-gradient(180deg,#7fb0d8 0%,#b7d3e8 42%,transparent 42.5%),
+  repeating-linear-gradient(-20deg,transparent 0 24px,rgba(255,255,255,.14) 25px 27px,transparent 28px 50px),
+  linear-gradient(160deg,#7d878e 40%,#4b565f 75%,#27323b 100%)}
+
+/* The QRS Standard — centered copy below the carousel */
+.svc-about{text-align:center;margin-top:56px}
+.svc-about h2{color:var(--navy);font-size:clamp(32px,9.6vw,36px);font-weight:500;line-height:1.05;letter-spacing:-.03em;margin-bottom:20px}
+.svc-about p{max-width:800px;margin:0 auto 18px;color:var(--navy);font-family:var(--font-body);font-size:17px;font-weight:600;line-height:1.65}
+.svc-about .btn{margin-top:8px;border-radius:5px}
+@media (min-width:621px){
+  .svc-about{margin-top:78px}
+  .svc-about h2{font-size:60px;line-height:1;margin-bottom:26px}
+  .svc-about p{margin-bottom:24px;font-size:18px;line-height:1.7}
+  .svc-about .btn{margin-top:6px}
+}

@@ -1,0 +1,60 @@
+/* ---------- Hero ---------- */
+.hero{
+  position:relative;overflow:hidden;isolation:isolate;
+  min-height:560px;display:flex;align-items:flex-end;
+  color:#fff;background:#4f5960;
+}
+/* Drone photo of a finished roof, darkened toward the bottom so the headline stays readable */
+.hero-roof-texture{position:absolute;inset:0;z-index:-2}
+.hero-roof-texture img{object-fit:cover;object-position:center 40%}
+.hero-roof-texture:after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(3,27,52,.20) 0%,rgba(3,27,52,.52) 52%,rgba(3,27,52,.78) 100%);
+}
+.hero-glow{
+  position:absolute;left:-8%;bottom:-45%;width:70%;height:80%;z-index:-1;
+  background:radial-gradient(ellipse,rgba(255,184,46,.18),transparent 66%);pointer-events:none;
+}
+.hero:after{
+  content:"";position:absolute;inset:auto 0 0;height:34%;z-index:-1;pointer-events:none;
+  background:linear-gradient(transparent,rgba(2,21,40,.34));
+}
+.hero-inner{
+  position:relative;z-index:2;width:100%;
+  display:flex;justify-content:center;align-items:center;
+  padding:110px 0 40px;margin:auto auto 0;text-align:center;
+}
+.hero-copy{width:min(900px,100%);margin:0 auto}
+.hero-copy .eyebrow{
+  color:var(--gold-2);font-family:var(--font-head);font-size:13px;font-weight:600;letter-spacing:.06em;line-height:1.5;
+  text-shadow:0 2px 16px rgba(0,0,0,.35);margin-bottom:0;
+}
+.hero h1{
+  max-width:900px;margin:12px auto 0;
+  font-size:clamp(36px,11vw,48px);font-weight:700;line-height:1.1;letter-spacing:-.03em;
+  text-shadow:0 4px 24px rgba(0,0,0,.32);
+}
+.hero h1 span{color:#fff}
+.hero-sub{
+  font-family:var(--font-head);font-size:19px;font-weight:500;line-height:1.3;letter-spacing:-.02em;
+  color:#fff;max-width:760px;margin:16px auto 26px;text-shadow:0 2px 15px rgba(0,0,0,.35);
+}
+.hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.hero-actions .btn{width:100%;max-width:340px;box-shadow:0 12px 30px rgba(0,0,0,.18)}
+@media (min-width:621px){
+  .hero{min-height:600px}
+  .hero-inner{padding:130px 0 42px}
+  .hero-copy .eyebrow{font-size:18px;letter-spacing:0;line-height:inherit;margin-bottom:12px}
+  .hero h1{font-size:60px;line-height:1.2}
+  .hero-sub{font-size:26px;line-height:1.2;letter-spacing:-.03em;margin:22px auto 28px}
+  .hero-actions .btn{width:auto;max-width:none;min-width:245px}
+}
+@media (min-width:901px){
+  .hero{min-height:clamp(640px,86vh,820px)}
+  .hero-inner{padding:150px 0 50px}
+  .hero h1{font-size:72px}
+  .hero-sub{font-size:32px}
+}
+/* Tagline waits 1s after load, then fades up */
+.hero-sub{animation:fadeUp .9s ease 1s both}
+@media (prefers-reduced-motion:reduce){.hero-sub{animation:none}}

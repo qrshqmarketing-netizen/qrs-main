@@ -1,0 +1,31 @@
+/* ---------- Review toast — bottom left ---------- */
+.rv-toast{
+  position:fixed;left:12px;right:86px;bottom:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:1150;width:auto;
+  background:#fff;border-radius:16px;border:1px solid #e3e6ea;box-shadow:0 18px 44px rgba(6,45,87,.20);
+  opacity:0;visibility:hidden;transform:translateY(16px);
+  transition:opacity .3s ease,transform .3s ease,visibility 0s linear .3s;
+}
+.rv-toast.show{opacity:1;visibility:visible;transform:none;transition:opacity .3s ease,transform .3s ease}
+.rv-toast:before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:4px;border-radius:0 4px 4px 0;background:var(--gold)}
+.rv-open{display:flex;gap:10px;width:100%;padding:12px 34px 12px 16px;border:0;background:transparent;text-align:left;color:inherit;border-radius:16px;font:inherit}
+.rv-open:focus-visible{outline:3px solid rgba(255,184,46,.6);outline-offset:2px}
+.rv-avatar{flex:0 0 34px;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:#fff;font:600 15px/1 var(--font-head)}
+.rv-body{display:flex;flex-direction:column;min-width:0;flex:1}
+.rv-top{display:flex;align-items:center;gap:8px}
+.rv-name{font:600 16px/1.3 var(--font-head);color:#202124;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rv-g{width:16px;height:16px;flex:0 0 16px;margin-left:auto}
+.rv-stars{color:#fbbc04;font-size:14px;letter-spacing:2px;line-height:1.4;margin-top:1px}
+.rv-text{margin-top:4px;font:400 14px/1.5 var(--font-body);color:#3c4043;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.rv-meta{display:none;margin-top:6px;font:400 12px/1.3 var(--font-head);color:#80868b}
+.rv-open:hover .rv-name{text-decoration:underline;text-underline-offset:3px}
+.rv-close{position:absolute;top:4px;right:4px;width:32px;height:32px;border:0;border-radius:50%;background:transparent;color:#80868b;display:grid;place-items:center;padding:0}
+.rv-close:hover{background:#f1f3f4;color:#202124}
+.rv-close svg{width:14px;height:14px}
+@media (min-width:621px){
+  .rv-toast{left:24px;right:auto;bottom:24px;width:360px}
+  .rv-open{gap:12px;padding:16px 40px 16px 20px}
+  .rv-avatar{flex-basis:40px;width:40px;height:40px;font-size:17px}
+  .rv-meta{display:block}
+  .rv-close{top:8px;right:8px;width:28px;height:28px}
+}
+@media (prefers-reduced-motion:reduce){.rv-toast,.rv-toast.show{transition:none;transform:none}}

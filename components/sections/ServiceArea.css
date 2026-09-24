@@ -1,0 +1,76 @@
+/* ---------- Service area map (Leaflet + OpenStreetMap tiles) ---------- */
+.area{background:#fff;padding:64px 0}
+.area .container{max-width:1080px}
+.area h2{color:var(--navy);font-size:var(--h2);font-weight:500;line-height:1.1;letter-spacing:-.03em;margin-bottom:14px}
+.area-sub{color:var(--navy);font-family:var(--font-head);font-size:19px;font-weight:400;letter-spacing:0;line-height:1.35;margin:0 0 26px}
+.loc-wrap{
+  display:grid;grid-template-columns:1fr;grid-template-rows:auto 320px auto;height:auto;
+  border-radius:6px;overflow:hidden;background:#1d3a63;box-shadow:0 14px 40px rgba(6,45,87,.12);
+}
+.loc-wrap:fullscreen{height:100vh;border-radius:0}
+.loc-panel{display:contents;background:#1d3a63;color:#fff}
+.loc-search{grid-row:1;background:#0f2c55;padding:18px 16px 18px;color:#fff}
+.loc-search-title{display:flex;align-items:center;gap:10px;color:var(--gold);font-weight:700;font-size:14px;line-height:1.35;margin-bottom:14px}
+.loc-search-title svg{flex:0 0 32px;width:32px;height:32px}
+.loc-form{display:flex;align-items:center;border:2px solid var(--gold);border-radius:999px;padding:3px 3px 3px 20px;height:50px}
+.loc-form input{flex:1;min-width:0;min-height:0;border:0;background:transparent;color:#fff;padding:0;font-size:16px;box-shadow:none}
+.loc-form input::placeholder{color:var(--gold);opacity:.9}
+.loc-form input:focus{box-shadow:none}
+.loc-form button{flex:0 0 40px;width:40px;height:40px;border-radius:50%;border:0;background:var(--gold);color:var(--navy);display:grid;place-items:center;padding:0}
+.loc-form button svg{width:16px;height:16px}
+.loc-msg{font-size:13px;line-height:1.45;color:#d6e2ee;margin-top:10px;min-height:0}
+.loc-msg:empty{display:none}
+.loc-msg b{color:var(--gold)}
+/* Own stacking context so Leaflet's z-indexed panes can't paint over the sticky header */
+.loc-map-box{grid-row:2;position:relative;z-index:0;min-height:0}
+#qrsMap{position:absolute;inset:0;background:#2f3b40}
+/* Map "customization": muted dark terrain look like the reference */
+#qrsMap .leaflet-tile-pane{filter:var(--map-filter,sepia(.3) saturate(1.4) brightness(.52) contrast(1.55))}
+.loc-list{
+  grid-row:3;max-height:330px;background:#1d3a63;color:#fff;
+  position:relative;list-style:none;margin:0;padding:0;overflow-y:auto;flex:1;
+  scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.25) transparent;
+}
+.loc-item{display:grid;grid-template-columns:1fr auto;align-items:center;column-gap:12px;padding:16px 16px 16px 12px;border-bottom:1px solid rgba(255,255,255,.1);border-left:4px solid transparent;cursor:pointer;transition:background .2s}
+.loc-item:hover{background:#244470}
+.loc-item.active{background:#264775;border-left-color:var(--gold)}
+.loc-item h3{grid-column:1;font-size:16px;font-weight:600;letter-spacing:0;line-height:1.35;margin:0 0 2px}
+.loc-item .loc-phone{grid-column:1;display:flex;align-items:center;min-height:40px;font-weight:700;font-size:15px;color:#fff}
+.loc-item .loc-btn{
+  grid-column:2;grid-row:1 / span 2;
+  display:inline-flex;align-items:center;min-height:44px;padding:0 16px;
+  background:var(--gold);color:#101820;border-radius:999px;
+  font-size:12px;font-weight:900;letter-spacing:.03em;text-transform:uppercase;
+}
+.loc-full{
+  position:absolute;top:10px;right:10px;z-index:500;width:40px;height:40px;border:0;border-radius:4px;
+  background:#0b0f14;color:#fff;display:grid;place-items:center;padding:0;
+}
+.loc-full svg{width:18px;height:18px}
+.qrs-pin{background:none;border:0}
+.qrs-pin svg{width:34px;height:44px;display:block;filter:drop-shadow(0 3px 4px rgba(0,0,0,.45));transition:transform .2s;transform-origin:50% 100%}
+.qrs-pin.active svg{transform:scale(1.25)}
+@media (min-width:621px){
+  .area{padding:80px 0}
+  .area h2{font-size:52px;line-height:1.2;margin-bottom:34px}
+  .area-sub{font-size:32px;line-height:1.2;margin-bottom:38px}
+  .loc-wrap{grid-template-rows:auto 380px auto}
+  .loc-search{padding:18px 18px 20px}
+  .loc-search-title{font-size:.8rem;margin-bottom:18px}
+  .loc-form{height:44px;padding:4px 4px 4px 20px}
+  .loc-form input{font-size:.82rem}
+  .loc-form button{flex-basis:30px;width:30px;height:30px}
+  .loc-msg{font-size:.76rem}
+  .loc-item{display:list-item;grid-template-columns:none;column-gap:normal;align-items:normal;padding:22px 18px 18px}
+  .loc-item h3{font-size:18px;margin:0 0 6px}
+  .loc-item .loc-phone{display:block;align-items:normal;min-height:0;font-size:1rem;margin-bottom:10px}
+  .loc-item .loc-btn{display:inline-block;align-items:normal;min-height:0;padding:6px 13px;font-size:.64rem}
+  .loc-full{width:32px;height:32px;border-radius:3px}
+}
+@media (min-width:901px){
+  .area{padding:110px 0 100px}
+  .loc-wrap{grid-template-columns:266px 1fr;grid-template-rows:none;height:610px}
+  .loc-panel{display:flex;flex-direction:column;min-height:0}
+  .loc-search,.loc-map-box,.loc-list{grid-row:auto}
+  .loc-list{max-height:none;background:transparent}
+}

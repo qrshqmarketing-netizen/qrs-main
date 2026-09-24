@@ -1,0 +1,36 @@
+/* ---------- The QRS Guarantee ---------- */
+.gtee{position:relative;overflow:hidden;background:linear-gradient(180deg,#fff 0%,#f7f8fa 45%,#eef0f3 100%);padding-top:64px}
+.gtee-grid{position:relative;display:grid;grid-template-columns:minmax(0,1fr);gap:0;align-items:center}
+.gtee-art{display:flex;justify-content:center}
+.gtee-card{
+  width:min(440px,100%);margin:0 auto 56px;background:var(--navy);color:#fff;border-radius:20px;
+  padding:30px 22px 24px;text-align:center;box-shadow:0 22px 50px rgba(6,45,87,.18);
+}
+.gtee-seal{width:160px;height:160px;display:block;margin:0 auto 22px}
+.gtee-points{list-style:none;margin:0;padding:0;display:grid;gap:10px;text-align:left}
+.gtee-points li{display:flex;gap:12px;align-items:center;font-family:var(--font-head);font-weight:600;font-size:15px;line-height:1.4;padding:12px 14px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)}
+.gtee-points li:before{content:"✓";flex:0 0 26px;height:26px;border-radius:50%;background:var(--gold);color:var(--navy);display:grid;place-items:center;font-size:.8rem;font-weight:900}
+.gtee-copy{order:-1;padding:0 0 32px}
+.gtee-title{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.gtee-badge{flex:0 0 76px;width:76px;height:76px;animation:gteeSpin 28s linear infinite}
+@keyframes gteeSpin{to{transform:rotate(360deg)}}
+.gtee-title h2{color:var(--gold);font-size:var(--h2);font-weight:500;line-height:1;letter-spacing:-.03em;margin:0}
+.gtee-copy p{color:var(--navy);font-family:var(--font-body);font-size:17px;font-weight:400;line-height:1.65;margin:0 0 16px}
+.gtee-copy p:last-child{margin-bottom:0}
+@media (min-width:621px){
+  .gtee{padding-top:56px}
+  .gtee-card{border-radius:22px;padding:38px 34px 32px}
+  .gtee-seal{width:190px;height:190px;margin-bottom:26px}
+  .gtee-points{gap:12px}
+  .gtee-points li{font-size:16px;line-height:inherit}
+  .gtee-copy{padding:10px 0 20px}
+  .gtee-title{gap:22px;margin-bottom:40px}
+  .gtee-badge{flex-basis:96px;width:96px;height:96px}
+  .gtee-copy p,.gtee-copy p:last-child{font-size:18px;line-height:1.7;margin-bottom:4px}
+}
+@media (min-width:901px){
+  .gtee-grid{grid-template-columns:1fr 1fr;gap:56px}
+  .gtee-card{margin:0 0 72px}
+  .gtee-copy{order:0;padding:10px 0 72px}
+}
+@media (prefers-reduced-motion:reduce){.gtee-badge{animation:none}}

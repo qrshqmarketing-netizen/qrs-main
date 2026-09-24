@@ -1,0 +1,11 @@
+/* ---------- Brand logo (header + footer) ---------- */
+.brand{display:flex;align-items:center;gap:11px;font-weight:950;white-space:nowrap;min-width:0}
+.brand-mark{flex:0 0 auto;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--gold)}
+.brand-mark svg{width:34px;height:34px}
+.brand-name{font-family:var(--font-head);font-weight:700;letter-spacing:-.01em;font-size:clamp(13px,4.2vw,.94rem);line-height:1.05}
+.brand-name small{display:block;font-size:.62rem;font-weight:700;opacity:.78;margin-top:4px}
+@media (min-width:621px){
+  .brand-mark{width:46px;height:46px}
+  .brand-name{font-size:1.05rem}
+}
+@media (min-width:901px){.brand{flex-shrink:0}}

@@ -1,0 +1,129 @@
+/* =====================================================================
+   QRS — mobile-first stylesheet: site-wide rules
+   Each section's own styles sit next to its component in components/.
+   Base rules are for phones. Larger screens layer on top:
+     @media (min-width:381px)   large phones
+     @media (min-width:621px)   tablets
+     @media (min-width:901px)   desktop (menu button + CTA in the header)
+     @media (min-width:1200px)  full header menu
+     @media (min-width:1300px)  wide desktop
+   Rows with four columns on desktop become a 2 × 2 grid on phones.
+   ===================================================================== */
+
+/* ---------- Tokens ---------- */
+:root{
+  --navy:#062d57;
+  --navy-2:#0a3969;
+  --gold:#ffb82e;
+  --gold-2:#ffc64d;
+  --gold-ink:#c98500;
+  --ink:#10243a;
+  --muted:#64748b;
+  --paper:#fff;
+  --wash:#f5f8fb;
+  --line:#e4eaf0;
+  --green:#1d7a58;
+  --shadow:0 18px 50px rgba(6,45,87,.12);
+  --radius:22px;
+  --max:1180px;
+
+  /* Headings: Poppins 500, -3% tracking. Buttons: Inter 700. Body: system UI 18 / 1.7.
+     --font-poppins / --font-inter are set by next/font in app/layout.js (self-hosted Google Fonts). */
+  --font-head:var(--font-poppins),ui-sans-serif,system-ui,sans-serif;
+  --font-btn:var(--font-inter),ui-sans-serif,system-ui,sans-serif;
+  --font-body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+
+  /* Section heading size: 36–48px on phones, 60px from tablet up */
+  --h2:clamp(36px,10.6vw,48px);
+}
+@media (min-width:621px){:root{--h2:60px}}
+
+/* ---------- Base ---------- */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{
+  margin:0;
+  font-family:var(--font-body);font-size:15px;line-height:1.7;
+  color:var(--ink);background:var(--paper);
+  -webkit-font-smoothing:antialiased;
+}
+body.menu-open{overflow:hidden}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+.section{padding:64px 0}
+@media (min-width:621px){.section{padding:88px 0}}
+
+.eyebrow{
+  color:var(--gold);font-weight:900;font-size:.76rem;letter-spacing:.15em;
+  text-transform:uppercase;margin-bottom:12px;
+}
+h1,h2,h3,p{margin-top:0}
+h1,h2,h3,h4,h5,h6{font-family:var(--font-head);font-weight:500;letter-spacing:-.03em;line-height:1}
+h1{font-size:clamp(2.8rem,14vw,4.4rem);margin-bottom:22px}
+h2{font-size:2.35rem;margin-bottom:16px}
+h3{font-size:1.25rem;margin-bottom:9px}
+@media (min-width:621px){
+  h1{font-size:clamp(3rem,6.4vw,6.4rem)}
+  h2{font-size:clamp(2.3rem,4.2vw,4rem)}
+}
+.lead{color:var(--muted);font-size:1.08rem;max-width:680px}
+/* Phones: balance headline line breaks so no word is left alone on a line */
+h1,h2,h3,.eyebrow,.hero-sub{text-wrap:balance}
+@media (min-width:621px){h1,h2,h3,.eyebrow,.hero-sub{text-wrap:wrap}}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  min-height:50px;padding:13px 20px;border-radius:12px;border:1px solid transparent;
+  font-family:var(--font-btn);font-weight:700;font-size:18px;line-height:27px;
+  transition:.2s ease;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:#101820;box-shadow:0 9px 22px rgba(255,184,46,.22)}
+.btn-dark{background:var(--navy);color:#fff}
+.btn-light{background:#fff;color:var(--navy)}
+.btn-outline{border-color:rgba(255,255,255,.32);color:#fff;background:rgba(255,255,255,.06)}
+.btn-outline:hover{background:rgba(255,255,255,.12)}
+.arrow{font-size:1.1em}
+
+/* ---------- Form fields (estimate form + Instant Quote) ---------- */
+label{display:block;font-size:13px;font-weight:900;color:var(--navy);margin-bottom:6px}
+input,select,textarea{
+  width:100%;min-height:50px;border:1px solid #d7e0e8;border-radius:11px;padding:13px 14px;
+  background:#fff;color:var(--ink);outline:none;font-size:16px; /* 16px stops iOS zooming in on focus */
+}
+input:focus,select:focus,textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(255,184,46,.15)}
+textarea{min-height:105px;resize:vertical}
+.field{margin-bottom:15px}
+.form-note{font-size:13px;line-height:1.5;color:var(--muted);margin-top:12px}
+@media (min-width:621px){
+  label{font-size:.78rem}
+  input,select,textarea{min-height:0;font-size:inherit}
+  textarea{min-height:105px}
+  .form-note{font-size:.74rem;line-height:inherit;margin-top:10px}
+}
+/* Hidden visually, still read by screen readers */
+.sr-only{position:absolute;left:-9999px}
+
+/* ---------- Map theme: Leaflet popups and controls (service area + Instant Quote maps) ---------- */
+.leaflet-popup-content-wrapper{background:var(--navy);color:#fff;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.leaflet-popup-tip{background:var(--navy)}
+.leaflet-popup-content{margin:14px 18px;font:inherit}
+.leaflet-popup-content b{display:block;font-size:.95rem;margin-bottom:3px}
+.leaflet-popup-content a{color:var(--gold);font-weight:800;font-size:.8rem}
+.leaflet-container a.leaflet-popup-close-button{color:#fff}
+.leaflet-control-attribution{font-size:.62rem;background:rgba(255,255,255,.7)!important}
+.leaflet-control-zoom a{color:var(--navy)!important}
+
+/* ---------- Entrance animations ---------- */
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+/* Headings: short delay after load, then fade up */
+main h2{animation:fadeUp .9s ease .3s both}
+@media (prefers-reduced-motion:reduce){main h2{animation:none}}
+
+/* ---------- Page not built yet (404, app/not-found.js) ---------- */
+.not-found{min-height:60vh;display:flex;align-items:center;text-align:center;background:var(--wash)}
+.not-found h1{color:var(--navy)}
+.not-found .lead{margin:0 auto 28px}

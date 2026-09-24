@@ -1,0 +1,33 @@
+/* ---------- $199 Roof Check + estimate form ---------- */
+.check{background:var(--wash)}
+.check-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:24px;align-items:start}
+.check-card{background:var(--navy);color:#fff;border-radius:20px;padding:26px 22px;position:static;box-shadow:var(--shadow)}
+.check-card h2,.form-card h2{font-size:32px!important;line-height:1.05}
+.price{font-family:var(--font-head);font-size:3.2rem;font-weight:700;letter-spacing:-.03em;color:var(--gold);line-height:1}
+.check-card p{color:#d5e1eb}
+.check-points{display:grid;gap:11px;margin-top:22px}
+.check-points div{display:flex;gap:10px;align-items:flex-start;color:#e8f0f6;font-size:15px;line-height:1.55}
+.check-points b{color:var(--gold)}
+.form-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px 20px;box-shadow:0 8px 25px rgba(6,45,87,.05)}
+.form-row{display:grid;grid-template-columns:1fr;gap:0 14px}
+.success{display:none;padding:17px;border-radius:12px;background:#edf9f3;color:#176044;font-weight:800;margin-top:15px}
+.success.show{display:block}
+@media (min-width:621px){
+  .check-card{border-radius:24px;padding:34px}
+  .check-card h2,.form-card h2{font-size:40px!important}
+  .price{font-size:3.7rem}
+  .check-points{margin-top:24px}
+  .check-points div{font-size:.9rem;line-height:inherit}
+  .form-card{border-radius:24px;padding:32px}
+  .form-row{grid-template-columns:1fr 1fr;gap:14px}
+  .check-grid{gap:40px}
+}
+@media (min-width:901px){
+  .check-grid{grid-template-columns:.9fr 1.1fr;gap:55px}
+  .check-card{position:sticky;top:105px}
+}
+/* Were inline styles in the one-page version */
+.check-card h2{margin-top:12px}
+.form-card .eyebrow{color:var(--gold-ink)}
+.form-card .lead{font-size:.95rem;margin-bottom:25px}
+.form-card .btn{width:100%}

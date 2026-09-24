@@ -1,0 +1,25 @@
+/* ---------- QRS Way steps (4 across → 2 × 2 on phones) ---------- */
+.qrs-way{position:relative;overflow:hidden;background:#fff;padding:64px 0}
+.qrs-way .container{position:relative;z-index:1}
+.qrs-way h2{text-align:center;color:var(--navy);font-size:var(--h2);margin-bottom:36px}
+.steps{display:grid;grid-template-columns:1fr 1fr;gap:36px 16px;max-width:1080px;margin:0 auto}
+.step{text-align:center;padding:0}
+.step-label{color:var(--navy);font-family:var(--font-head);font-size:18px;font-weight:500;line-height:1;letter-spacing:-.03em;margin-bottom:16px}
+.step-icon{width:56px;height:56px;margin:0 auto 12px;color:var(--gold)}
+.step-icon svg{width:100%;height:100%;display:block}
+.step h3{color:var(--gold);font-size:18px;font-weight:500;line-height:1.1;letter-spacing:-.03em;margin-bottom:8px}
+.step p{color:var(--navy);font-family:var(--font-body);font-size:15px;font-weight:400;line-height:1.55;max-width:230px;margin:0 auto}
+@media (min-width:621px){
+  .qrs-way{padding:40px 0 96px}
+  .qrs-way h2{margin-bottom:44px}
+  .steps{gap:48px 22px}
+  .step{padding:0 8px}
+  .step-label{font-size:24px;margin-bottom:22px}
+  .step-icon{width:72px;height:72px;margin-bottom:14px}
+  .step h3{font-size:24px;line-height:1;margin-bottom:14px}
+  .step p{font-size:18px;line-height:1.7}
+}
+@media (min-width:901px){
+  .steps{grid-template-columns:repeat(4,1fr);gap:22px}
+  .step-label{margin-bottom:36px}
+}

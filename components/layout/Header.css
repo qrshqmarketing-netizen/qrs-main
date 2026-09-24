@@ -1,0 +1,171 @@
+/* ---------- Header ---------- */
+.site-header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(6,45,87,.97);color:#fff;
+  box-shadow:0 5px 24px rgba(0,0,0,.08);
+}
+.site-header .container{width:calc(100% - 40px);max-width:none}
+.nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.menu-btn{display:block;flex:0 0 auto;border:0;background:transparent;color:#fff;width:46px;height:46px;margin-right:-8px}
+.menu-btn span{display:block;width:22px;height:2px;background:#fff;margin:5px auto;border-radius:2px}
+.nav-cta{display:none;margin-left:0;font-size:18px}
+
+/* Phone / tablet menu: slides down under the header */
+.navlinks{display:none;font-family:var(--font-head);font-size:16px;font-weight:600;line-height:27px}
+.navlinks a{opacity:.9}
+.navlinks a:hover{color:var(--gold)}
+.navlinks.mobile-open{
+  display:flex;position:absolute;left:0;right:0;top:70px;
+  flex-direction:column;align-items:stretch;gap:0;
+  max-height:calc(100vh - 70px);max-height:calc(100dvh - 70px);overflow-y:auto;overscroll-behavior:contain;
+  padding:8px 20px 24px;background:var(--navy);border-top:1px solid rgba(255,255,255,.1);
+}
+.navlinks.mobile-open > a,.nav-trigger{
+  display:flex;width:100%;justify-content:space-between;align-items:center;
+  min-height:54px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:17px;
+}
+
+@media (min-width:621px){
+  .site-header .container{width:calc(100% - 48px)}
+  .nav{height:78px}
+  .menu-btn{margin-right:0}
+  .navlinks.mobile-open{top:78px;max-height:calc(100vh - 78px);padding:8px 24px 20px}
+}
+@media (min-width:901px){
+  /* Tablet landscape / small laptop: menu button + visible CTA */
+  .nav-cta{display:inline-flex;flex-shrink:0;white-space:nowrap;margin-left:auto;padding:13px 16px;font-size:16px}
+}
+@media (min-width:1200px){
+  .menu-btn{display:none}
+  .navlinks,.navlinks.mobile-open{
+    display:flex;position:static;flex-direction:row;align-items:center;gap:20px;margin-left:auto;
+    max-height:none;overflow:visible;padding:0;background:transparent;border:0;
+  }
+  .navlinks.mobile-open > a,.nav-trigger{display:inline-flex;width:auto;min-height:0;padding:0;border:0;justify-content:normal}
+  .navlinks > a,.navlinks .nav-trigger{white-space:nowrap;font-size:15px}
+  /* 1200–1299px: compact header so all six items fit on one line */
+  .site-header .brand-name{font-size:.95rem}
+  .nav-cta{margin-left:0}
+}
+@media (min-width:1300px){
+  .navlinks,.navlinks.mobile-open{gap:26px}
+  .site-header .brand-name{font-size:1.05rem}
+  .navlinks > a,.navlinks .nav-trigger{font-size:16px}
+  .nav-cta{padding:13px 20px;font-size:18px}
+}
+
+/* ---------- Navigation dropdowns (Residential / Commercial) ---------- */
+.nav-item{position:static}
+.nav-trigger{gap:5px;border-top:0;border-left:0;border-right:0;background:transparent;color:inherit;font:inherit;opacity:.9;cursor:pointer}
+.navlinks.mobile-open .nav-trigger{font-size:17px}
+.nav-trigger:hover,.nav-item.open .nav-trigger{color:var(--gold);opacity:1}
+.nav-caret{width:15px;height:15px;transition:transform .2s ease}
+.nav-item.open > .nav-trigger .nav-caret{transform:rotate(180deg)}
+.mega a{opacity:1}
+.mega a:hover{color:inherit}
+
+/* Phone / tablet: accordions inside the slide-down menu */
+.mega{display:none;color:#fff}
+.nav-item.open > .mega{display:block}
+.mega-inner{padding:6px 0 14px}
+.mega-tab{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  width:100%;min-height:48px;padding:12px 14px;margin:0 0 4px;border:0;border-left:4px solid transparent;border-radius:10px;
+  background:rgba(255,255,255,.05);color:#fff;font:600 16px/1.3 var(--font-head);text-align:left;cursor:pointer;
+  transition:background .15s,border-color .15s;
+}
+.mega-tab:hover{background:rgba(255,255,255,.1)}
+.mega-tab .nav-caret{opacity:.8}
+.mega-group.active .mega-tab{background:rgba(255,255,255,.1);border-left-color:var(--gold)}
+.mega-group.active .mega-tab .nav-caret{transform:rotate(180deg);color:var(--gold)}
+.mega-list{display:none;padding:4px 0 10px 14px}
+.mega-group.active .mega-list{display:block}
+.mega-all{
+  display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:6px 0;margin:2px 0 2px 12px;
+  font:600 12px/1 var(--font-head);color:var(--gold)!important;letter-spacing:.02em;text-transform:uppercase;
+}
+.mega-all svg{width:15px;height:15px;transition:transform .15s}
+.mega-all:hover svg{transform:translateX(3px)}
+.mega-list ul{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.mega-list li a{display:flex;flex-direction:column;justify-content:center;min-height:44px;padding:9px 12px;border-radius:8px;transition:background .15s}
+.mega-list li a:hover{background:rgba(255,255,255,.08)}
+.mega-list li span{display:block;font:500 15px/1.3 var(--font-head);letter-spacing:-.01em;color:#fff}
+.mega-list li small{display:block;font:400 13px/1.4 var(--font-body);color:#b9c9d9;margin-top:2px}
+.mega-promo{display:none;background:var(--navy);color:#fff;border-radius:14px;padding:24px;align-self:start}
+.mega-promo b{display:block;font:600 20px/1.2 var(--font-head);letter-spacing:-.02em;margin-bottom:8px}
+.mega-promo p{font-size:15px;line-height:1.6;color:#d5e1eb;margin:0 0 18px}
+.mega-promo .btn{width:100%;min-height:46px;border-radius:8px;font-size:16px}
+.mega-card{
+  display:flex;flex-direction:column;gap:8px;padding:16px;margin-bottom:8px;border-radius:14px;
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);transition:border-color .15s,box-shadow .15s;
+}
+.mega-card b{font:600 17px/1.2 var(--font-head);letter-spacing:-.02em;color:#fff}
+.mega-card span{font-size:14px;line-height:1.6;color:#b9c9d9}
+.mega-card em{margin-top:auto;padding-top:8px;display:inline-flex;align-items:center;gap:8px;font:600 14px/1 var(--font-head);font-style:normal;color:var(--gold);text-transform:uppercase;letter-spacing:.02em}
+.mega-card em svg,.mega-card-head svg{width:15px;height:15px}
+.mega-card-head{display:flex;align-items:center;gap:10px}
+.mega-card-head svg{color:var(--gold-ink);transition:transform .15s}
+.mega-card-head:hover svg{transform:translateX(3px)}
+.mega-card-list ul{list-style:none;margin:4px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 18px}
+.mega-card-list li a{display:flex;align-items:center;min-height:40px;padding:7px 0;font:500 15px/1.3 var(--font-head);color:#fff}
+.mega-card-list li a:hover{color:var(--gold-ink)}
+
+/* Desktop: full-width panels under the header */
+@media (min-width:1200px){
+  .mega{
+    display:block;position:absolute;left:0;right:0;top:100%;background:#fff;color:var(--navy);
+    border-top:3px solid var(--gold);box-shadow:0 24px 50px rgba(6,45,87,.18);
+    opacity:0;visibility:hidden;transform:translateY(-6px);
+    transition:opacity .18s ease,transform .18s ease,visibility 0s linear .18s;
+  }
+  .nav-item.open > .mega{opacity:1;visibility:visible;transform:none;transition:opacity .18s ease,transform .18s ease}
+  .mega-inner{width:min(var(--max),calc(100% - 40px));margin:auto;padding:30px 0 34px;display:grid;gap:28px}
+
+  .mega-res .mega-inner{grid-template-columns:1fr}
+  .mega-types{display:grid;grid-template-columns:250px 1fr;grid-auto-rows:min-content;column-gap:34px}
+  .mega-group{display:contents}
+  .mega-tab{grid-column:1;min-height:0;padding:14px 16px;margin:0 0 6px;background:transparent;color:var(--navy);font-size:18px}
+  .mega-tab:hover{background:var(--wash)}
+  .mega-tab .nav-caret{transform:rotate(-90deg);opacity:.5}
+  .mega-group.active .mega-tab{background:var(--wash)}
+  .mega-group.active .mega-tab .nav-caret{transform:rotate(-90deg);opacity:1;color:var(--gold-ink)}
+  .mega-list{grid-column:2;grid-row:1 / span 5;padding:0 0 0 34px;border-left:1px solid var(--line)}
+  .mega-all{min-height:0;padding:0;margin:6px 0 16px;font-size:14px;color:var(--gold-ink)!important}
+  .mega-list ul{grid-template-columns:1fr 1fr;gap:4px 24px}
+  .mega-list li a{display:block;flex-direction:row;justify-content:normal;min-height:0;padding:10px 12px}
+  .mega-list li a:hover{background:var(--wash)}
+  .mega-list li span{font-size:17px;color:var(--navy)}
+  .mega-list li small{color:var(--muted)}
+
+  .mega-com .mega-inner{grid-template-columns:1.6fr 1fr}
+  .mega-card{padding:24px;margin:0;background:var(--wash);border-color:var(--line)}
+  a.mega-card:hover{border-color:var(--gold);box-shadow:0 10px 24px rgba(6,45,87,.08)}
+  .mega-card b{font-size:20px;color:var(--navy)}
+  .mega-card span{font-size:15px;color:var(--muted)}
+  .mega-card em{color:var(--gold-ink)}
+  .mega-card-list ul{gap:2px 18px}
+  .mega-card-list li a{display:block;align-items:normal;min-height:0;padding:7px 0;font-size:16px;color:var(--navy)}
+}
+@media (min-width:1300px){
+  .mega-res .mega-inner{grid-template-columns:1fr 280px}
+  .mega-promo{display:block}
+}
+
+/* HOA link under the roof types (Residential) */
+.mega-link{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  min-height:56px;padding:12px 14px;margin:10px 0 4px;border-radius:10px;
+  border:1px solid rgba(255,255,255,.14);color:#fff;transition:background .15s,border-color .15s;
+}
+.mega-link:hover{background:rgba(255,255,255,.08)}
+.mega-link b{display:block;font:600 16px/1.3 var(--font-head);letter-spacing:-.01em}
+.mega-link small{display:block;font:400 13px/1.4 var(--font-body);color:#b9c9d9;margin-top:2px}
+.mega-link svg{flex:0 0 16px;width:16px;height:16px;color:var(--gold);transition:transform .15s}
+.mega-link:hover svg{transform:translateX(3px)}
+@media (min-width:1200px){
+  .mega-link{grid-column:1;min-height:0;padding:14px 16px;margin:8px 0 0;border:0;border-top:1px solid var(--line);border-radius:0 0 10px 10px;color:var(--navy)}
+  .mega-link:hover{background:var(--wash)}
+  .mega-link b{font-size:18px}
+  .mega-link small{color:var(--muted)}
+  .mega-link svg{color:var(--gold-ink)}
+}

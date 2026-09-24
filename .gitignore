@@ -4,6 +4,11 @@
 # Dependencies (reinstall with `npm install`)
 node_modules/
 
+# Next.js build output
+.next/
+out/
+.vercel/
+
 # Logs
 *.log
 npm-debug.log*

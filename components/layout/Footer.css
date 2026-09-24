@@ -1,0 +1,33 @@
+/* ---------- Footer ---------- */
+footer{background:#fff;color:var(--navy);padding:44px 0 96px} /* bottom room so the chat bubble never covers the copyright */
+footer .container{max-width:1080px}
+.ft-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 20px}
+.ft-col{display:flex;flex-direction:column;align-items:flex-start;min-width:0}
+.ft-big a{display:flex;align-items:center;min-height:44px;font-family:var(--font-head);font-size:16px;font-weight:600;line-height:1.35;letter-spacing:0}
+.ft-col h4{font-family:var(--font-head);font-size:16px;font-weight:600;letter-spacing:0;margin:18px 0 4px}
+.ft-small a{display:flex;align-items:center;min-height:40px;min-width:44px;font-size:14px;color:#44607f}
+.ft-col a:hover{color:var(--gold-ink)}
+.ft-brand{grid-column:1/-1;grid-row:1;align-items:flex-start;justify-content:space-between;margin-bottom:16px}
+.ft-brand .brand-name{color:var(--navy)}
+.ft-brand .brand-name small{color:#44607f;opacity:1}
+.ft-social{display:flex;gap:4px;margin:12px 0 0 -11px}
+.ft-social a{width:44px;height:44px;color:#8c96a3;display:grid;place-items:center}
+.ft-social a:hover{color:var(--navy)}
+.ft-social svg{width:18px;height:18px}
+.ft-copy{
+  max-width:850px;margin:28px auto 0;background:#f2f3f5;border-radius:6px;
+  padding:16px 18px;font-size:13px;font-weight:600;line-height:1.5;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;
+}
+@media (min-width:621px){
+  footer{padding:52px 0 18px}
+  .ft-grid{grid-template-columns:1.05fr 1fr 1fr 1fr 1.25fr;gap:24px}
+  .ft-col{min-width:auto}
+  .ft-big a{display:inline;align-items:normal;min-height:0;margin-bottom:18px}
+  .ft-col h4{margin:0 0 18px}
+  .ft-small a{display:inline;align-items:normal;min-height:0;min-width:0;font-size:.8rem;margin-bottom:16px}
+  .ft-brand{grid-column:auto;grid-row:auto;align-items:flex-end;margin-bottom:0}
+  .ft-social{gap:18px;margin:40px 0 0}
+  .ft-social a{width:22px;height:22px}
+  .ft-copy{margin-top:44px;padding:18px 20px;font-size:.8rem;line-height:inherit;gap:10px 14px}
+  .ft-copy span+span{padding-left:14px;border-left:1px solid #c9ced6}
+}

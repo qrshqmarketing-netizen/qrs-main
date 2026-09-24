@@ -1,0 +1,24 @@
+/* ---------- Final CTA — neighborhood photo ---------- */
+.final{position:relative;overflow:hidden;text-align:center;color:var(--navy);
+  background:linear-gradient(180deg,#fff 0%,#eaf6fc 30%,#d7eefa 100%);padding:48px 0 0}
+.final-pin{width:76px;height:76px;border-radius:50%;background:var(--gold);display:grid;place-items:center;margin:0 auto 20px}
+.final-pin svg{width:30px;height:36px}
+.final h2{font-size:var(--h2);font-weight:700;letter-spacing:-.03em;line-height:1.05;margin:0 auto 16px;max-width:760px}
+.final p{max-width:470px;margin:0 auto 24px;font-family:var(--font-body);font-size:17px;font-weight:600;line-height:1.65}
+.final .btn{border-radius:5px;min-height:48px;padding:9px 24px}
+/* Top edge of the photo fades into the section background */
+.cta-scene{
+  display:block;width:100%;height:280px;margin-top:-10px;
+  object-fit:cover;object-position:50% 75%;
+  -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 22%);
+          mask-image:linear-gradient(180deg,transparent 0,#000 22%);
+}
+@media (min-width:621px){
+  .final{padding-top:34px}
+  .final-pin{width:92px;height:92px;margin-bottom:22px}
+  .final-pin svg{width:34px;height:40px}
+  .final h2{line-height:1;margin-bottom:18px}
+  .final p{margin-bottom:26px;font-size:18px;line-height:1.7}
+  .final .btn{min-height:42px;padding:9px 22px}
+  .cta-scene{height:clamp(300px,48vw,760px)}
+}
