@@ -41,7 +41,7 @@ To test the finished (production) version: `npm run build`, then `npm start`.
 | Region pages (LA County, Orange County) | `data/regionPages.js` |
 | City pages (intro, neighborhoods, local FAQs) | `data/locationPages.js` |
 | Blog posts | `data/blog/posts.js` (blog index wording: `data/pages/blog.js`) |
-| Contact, Reviews, Projects, Privacy and Terms pages | `data/pages/contact.js`, `reviews.js`, `projects.js`, `legal.js` |
+| Contact, Reviews, Projects, Privacy, Terms and Accessibility pages | `data/pages/contact.js`, `reviews.js`, `projects.js`, `legal.js` |
 | Redirects from the old WordPress addresses | `data/redirects.js` |
 | Project photo gallery on the city pages | `data/projects.js` |
 | $199 Roof Check / roof survey card beside the estimate form | `data/offers.js` |
@@ -77,6 +77,7 @@ app/
   blog/, contact-us/, …
                      One folder per page address; [service], [region], [city] and [slug] folders build one page per entry
   api/location/      The visitor's approximate location for the service area map
+  api/chat/          AI backend for the chat assistant (OpenRouter) + lead capture (see "Settings and keys")
   sitemap.js, robots.js  sitemap.xml and robots.txt for search engines and AI crawlers
   llms.txt/, llms-full.txt/, okf/
                      Files for AI assistants, built from the page content (see "Search engines and AI")
@@ -129,11 +130,15 @@ This project is on public GitHub, so **never put API keys in the code**. Copy `.
 
 - `NEXT_PUBLIC_GOOGLE_MAPS_KEY`: real roof measurements in the Instant Quote drawer (Google Solar + Geocoding APIs). Restrict the key to your domain in Google Cloud Console. Without it, the drawer runs in demo mode.
 - `NEXT_PUBLIC_LEAD_ENDPOINT`: where Instant Quote leads are sent as JSON (CRM webhook or form service). Each lead lists the pitches and roof types picked (`pitches`, `roofTypes`) and one estimate per material (`estimates`).
-- `NEXT_PUBLIC_CHAT_ENDPOINT`: an AI backend for the chat assistant. Without it, the built-in answers are used.
+- `OPENROUTER_API_KEY` and `OPENROUTER_MODEL`: the AI backend for the chat assistant (`app/api/chat/route.js`, via [OpenRouter](https://openrouter.ai)). Without a key, the widget falls back to the built-in canned answers in `data/assistant.js`. Double-check `OPENROUTER_MODEL`'s exact slug at [openrouter.ai/models](https://openrouter.ai/models) before going live.
+- `CRM_LEAD_ENDPOINT` and `CRM_LEAD_TOKEN`: where the chat assistant sends leads it captures from the conversation (name, phone, email, zip, interest and transcript), as JSON (`lib/crm.js`). Leave empty and captured leads are just logged to the server console until your CRM is ready.
+- `NEXT_PUBLIC_CHAT_ENDPOINT`: only set this to point the chat widget at a different, separately hosted AI backend instead of the built-in one above.
 
 Restart `npm run dev` after changing `.env.local`. On your hosting service, add the same variables in its settings.
 
-**Not connected yet:** the estimate form ("Tell us what you need") only shows a confirmation. Hook it up in `components/sections/EstimateForm.jsx`.
+**Not connected yet:**
+- The estimate form ("Tell us what you need") only shows a confirmation. Hook it up in `components/sections/EstimateForm.jsx`.
+- The chat assistant's lead capture logs to the server console until `CRM_LEAD_ENDPOINT` points at a real CRM.
 
 ## Publishing
 
@@ -143,7 +148,7 @@ Before pointing qualityroofingspecialists.com at the new site:
 
 - **Redirects:** every address on the current WordPress site (about 150) either exists on the new site or has a permanent redirect in `data/redirects.js`. If you add or remove old pages before launch, update that list.
 - **Tracking:** the current site loads Google Tag Manager (GTM-P7Z3CMG); the new site doesn't have analytics yet.
-- **Policies:** the Privacy Policy and Terms (`data/pages/legal.js`) are drafts written from how this site works. Have your attorney review them, and update them when you add analytics, advertising pixels or new forms.
+- **Policies:** the Privacy Policy, Terms and Accessibility Statement (`data/pages/legal.js`) are drafts written from how this site works. Have your attorney review them, and update them when you add analytics, advertising pixels or new forms.
 - **Instant Quote financing numbers:** `FINANCE` in `data/instantQuote.js` is still example data (APR and terms); set your lender's real terms, and `FINANCING_URL` if you have an application link.
 - **Content:** replace the temporary city gallery photos (`data/projects.js`) and double-check claims such as warranty wording and awards.
 

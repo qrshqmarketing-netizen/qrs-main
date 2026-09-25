@@ -12,7 +12,7 @@ export default function ReviewGrid({ heading = 'What Homeowners Say', reviews = 
         </div>
         <div className="rg-grid">
           {reviews.map((review) => (
-            <figure className="rg-card" key={review.url}>
+            <figure className="rg-card" key={review.name}>
               <div className="rg-stars" role="img" aria-label="Rated 5 out of 5 stars on Google">
                 <Star /><Star /><Star /><Star /><Star />
               </div>

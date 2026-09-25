@@ -25,7 +25,7 @@ export default function ReviewSlider() {
     <div className="tst-slider" id="tstSlider" aria-roledescription="carousel" aria-label="Google reviews">
       <div aria-live="polite">
         {GOOGLE_REVIEWS.map((review, i) => (
-          <figure className={'tst-slide' + (i === index ? ' active' : '')} aria-roledescription="slide" aria-label={`${i + 1} of ${count}`} key={review.url}>
+          <figure className={'tst-slide' + (i === index ? ' active' : '')} aria-roledescription="slide" aria-label={`${i + 1} of ${count}`} key={review.name}>
             <div className="g-stars" role="img" aria-label="Rated 5 out of 5 stars on Google">
               <Star /><Star /><Star /><Star /><Star />
             </div>

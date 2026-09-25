@@ -2,6 +2,7 @@
 
 import {
   ABOUT_LINK,
+  ACCESSIBILITY_LINK,
   BLOG_LINK,
   blogPath,
   CAREERS_LINK,
@@ -112,4 +113,5 @@ export const ALL_PATHS = [
   CONTACT_LINK.href,
   PRIVACY_LINK.href,
   TERMS_LINK.href,
+  ACCESSIBILITY_LINK.href,
 ];

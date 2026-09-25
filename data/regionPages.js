@@ -33,6 +33,8 @@ export const REGION_PAGES = {
 
   'orange-county': {
     keyword: 'orange county roofing',
+    image: '/images/orange-county-drone-view.webp',
+    imageAlt: 'Aerial view of Orange County suburban neighborhoods with hills in the background',
     metaTitle: 'Orange County Roofing Services',
     metaDescription: 'Orange County roofing for homes, HOAs and businesses from Anaheim to Newport Beach: tile, shingle, flat and metal roofs. Book a $199 Roof Check today.',
     hero: {

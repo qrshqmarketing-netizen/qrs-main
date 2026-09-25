@@ -158,6 +158,7 @@ export const ABOUT_MENU = {
 
 // Links after the dropdowns
 export const NAV_LINKS = [
+  { label: 'Contractors', href: '/contractors/' },
   { label: 'Projects', href: '/projects/' },
   { label: 'Contact', href: '/contact-us/' },
 ];
@@ -209,5 +210,6 @@ export const FOOTER = {
   legal: [
     ...(PRIVACY_POLICY_URL ? [{ label: 'Privacy Policy', href: PRIVACY_POLICY_URL }] : []),
     { label: 'Terms & Conditions', href: '/terms-and-conditions/' },
+    { label: 'Accessibility Statement', href: '/accessibility-statement/' },
   ],
 };

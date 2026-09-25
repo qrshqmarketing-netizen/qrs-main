@@ -39,6 +39,7 @@ export const PRIVACY_POLICY = {
       items: [
         'The service area map loads map tiles from OpenStreetMap, and ZIP code lookups are sent to OpenStreetMap’s Nominatim service.',
         'When you enter an address in the Instant Quote, it’s sent to a mapping service (Google Maps Platform, or OpenStreetMap in demo mode) to find the roof and estimate its size, and satellite imagery is loaded from Esri.',
+        'Our website assistant sends your chat messages to an AI language model provider (via OpenRouter) to generate a reply. If you share your name and a phone number or email while chatting, that information may be passed to our customer management system so our team can follow up.',
         'Requests you submit may be delivered to our customer management system so our team can follow up.',
       ],
       after: ['These services receive the information needed to do their job, such as the address you enter and your IP address, and handle it under their own privacy policies.'],
@@ -162,6 +163,33 @@ export const TERMS = {
     {
       heading: 'Contact us',
       paragraphs: [`Questions about these terms? Please ${CONTACT}.`],
+    },
+  ],
+};
+
+export const ACCESSIBILITY = {
+  keyword: 'accessibility statement',
+  metaTitle: 'Accessibility Statement',
+  metaDescription: 'Quality Roofing Specialists is committed to a website that works for everyone. Read our accessibility statement and how to reach us about accessibility.',
+  title: 'Accessibility Statement',
+  updated: UPDATED,
+  intro: 'Quality Roofing Specialists (“QRS,” “we,” “us”) wants everyone, including people with disabilities, to be able to use qualityroofingspecialists.com.',
+  sections: [
+    {
+      heading: 'Our approach',
+      paragraphs: ['We work toward meeting the Web Content Accessibility Guidelines (WCAG) 2.1, Level AA, as a general standard for this website, and we review and improve the site over time. This is an ongoing effort, not a claim that every page fully meets that standard today.'],
+    },
+    {
+      heading: 'If you have trouble using this site',
+      paragraphs: [`If you have difficulty accessing any part of this website, or need information in a different format, please ${CONTACT}. Let us know the page and what happened, and we’ll do our best to help and to fix the issue.`],
+    },
+    {
+      heading: 'Third-party content',
+      paragraphs: ['Some features on this site, such as maps, embedded reviews and our website assistant, are provided by other companies. We can’t guarantee the accessibility of those third-party tools, but we choose them with accessibility in mind where we can.'],
+    },
+    {
+      heading: 'Changes to this statement',
+      paragraphs: ['We may update this statement as the website changes. The date at the top shows when it last changed.'],
     },
   ],
 };

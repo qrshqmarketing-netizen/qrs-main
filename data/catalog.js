@@ -16,6 +16,7 @@ export const BLOG_LINK = { label: 'Roofing Blog', href: '/blog/' };
 export const blogPath = (slug) => `/blog/${slug}/`;
 export const PRIVACY_LINK = { label: 'Privacy Policy', href: '/privacy-policy/' };
 export const TERMS_LINK = { label: 'Terms & Conditions', href: '/terms-and-conditions/' };
+export const ACCESSIBILITY_LINK = { label: 'Accessibility Statement', href: '/accessibility-statement/' };
 
 // Sections with a hub page and service pages under it.
 // `scenes` are placeholder art for cards (rotated); `image` is a real photo for the hub hero, when there is one.

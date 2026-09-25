@@ -452,7 +452,7 @@ export default function InstantQuote() {
                 <button className="rm-back" type="button" onClick={() => setStep(2)}>Back</button>
                 <button className="btn btn-gold" type="submit">See my estimate</button>
               </div>
-              <p className="form-note">By sending, you agree QRS may call or text you about your project. No spam, ever.</p>
+              <p className="form-note">By sending, you agree QRS may call or text you about your project. No spam, ever. See our <a href="/privacy-policy/">Privacy Policy</a> and <a href="/terms-and-conditions/">Terms &amp; Conditions</a>.</p>
             </form>
           </section>
 

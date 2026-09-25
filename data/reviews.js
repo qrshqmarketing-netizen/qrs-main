@@ -1,5 +1,9 @@
 // Google reviews shown in the reviews slider and the pop-up in the bottom-left corner.
 // `color` is the avatar circle behind the first letter of the name. Use \n for a line break.
+// `url` should be that reviewer's own Google Maps contributor link; when we don't have it yet, it falls
+// back to the business's Google Maps listing (BUSINESS.mapUrl) so the link is still real, not made up.
+
+import { BUSINESS } from './site';
 
 export const GOOGLE_REVIEWS = [
   {
@@ -43,5 +47,26 @@ export const GOOGLE_REVIEWS = [
     date: 'a month ago',
     color: '#007b83',
     text: 'We had a great experience with Quality Roofing Specialist. Tony, the project manager, was awesome to work with. He kept us updated, answered all our questions, and made sure everything went smoothly. The crew did a great job, and the final result looks amazing. I would definitely recommend Tony and the whole team',
+  },
+  {
+    name: 'Emilee Crowley',
+    url: BUSINESS.mapUrl,
+    date: '3 months ago',
+    color: '#d81b60',
+    text: 'We had an awesome experience with the crew of Quality Roofing. I called around to get quotes for a roof replacement and they gave me much better quote than the other roofing companies. Definitely within the budget and did a perfect job. No mess, they cleaned everything at the end',
+  },
+  {
+    name: 'Noam Nahori',
+    url: BUSINESS.mapUrl,
+    date: '2 months ago',
+    color: '#3949ab',
+    text: 'We recently had our roof replaced by Quality Roofing Specialists, and the entire experience was excellent. The crew arrived on time every day, kept the property clean, and finished the project exactly as promised. The quality of the workmanship is outstanding, and the new roof looks amazing. If you’re looking for a reliable roofing contractor, I highly recommend this company.',
+  },
+  {
+    name: 'Cynthia Pina',
+    url: BUSINESS.mapUrl,
+    date: '5 months ago',
+    color: '#616161',
+    text: 'Tony went above and beyond my expectations!! He was available immediately to inspect the roof and gave a great deal. He definitely worked with our budget. I highly recommend Quality Roofing for any roof repair you may need:)',
   },
 ];

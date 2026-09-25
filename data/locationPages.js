@@ -5,6 +5,8 @@
 export const LOCATION_PAGES = {
   'los-angeles': {
     keyword: 'los angeles roofing',
+    image: '/images/los-angeles-drone-view.webp',
+    imagePosition: 'center 40%',
     metaTitle: 'Los Angeles Roofing & Roof Repair',
     metaDescription: 'Los Angeles roofing from a detail-first local team: tile, shingle and flat roof repair and replacement with written scopes. Book a $199 Roof Check.',
     hero: {
@@ -36,6 +38,8 @@ export const LOCATION_PAGES = {
 
   'santa-monica': {
     keyword: 'santa monica roofing',
+    image: '/images/santa-monica-drone-view.webp',
+    imagePosition: 'center 35%',
     metaTitle: 'Santa Monica Roofing & Roof Repair',
     metaDescription: 'Santa Monica roofing built for coastal conditions: tile, shingle and flat roof repair and replacement from a detail-first team. Book a $199 Roof Check.',
     hero: {
@@ -67,6 +71,8 @@ export const LOCATION_PAGES = {
 
   pasadena: {
     keyword: 'pasadena roofing',
+    image: '/images/pasadena-drone-view.webp',
+    imagePosition: 'center 40%',
     metaTitle: 'Pasadena Roofing: Repair & Replacement',
     metaDescription: 'Pasadena roofing for Craftsman, Spanish Revival and mid-century homes: tile, shingle and flat roof repair and replacement. Book a $199 Roof Check.',
     hero: {
@@ -98,6 +104,8 @@ export const LOCATION_PAGES = {
 
   glendale: {
     keyword: 'glendale roofing',
+    image: '/images/glendale-drone-view.webp',
+    imagePosition: 'center 45%',
     metaTitle: 'Glendale Roofing & Roof Replacement',
     metaDescription: 'Glendale roofing for foothill, canyon and downtown homes: tile, shingle and flat roof repair and replacement with written scopes. Book a $199 Roof Check.',
     hero: {
@@ -129,6 +137,8 @@ export const LOCATION_PAGES = {
 
   burbank: {
     keyword: 'burbank roofing',
+    image: '/images/burbank-drone-view.webp',
+    imagePosition: 'center 45%',
     metaTitle: 'Burbank Roofing & Roof Repairs',
     metaDescription: 'Burbank roofing for Valley heat and mid-century homes: shingle, tile and flat roof repair and replacement with written scopes. Book a $199 Roof Check.',
     hero: {
@@ -193,6 +203,8 @@ export const LOCATION_PAGES = {
 
   torrance: {
     keyword: 'torrance roofing',
+    image: '/images/torrance-drone-view.webp',
+    imagePosition: 'center 45%',
     metaTitle: 'Torrance Roofing & Roof Replacement',
     metaDescription: 'Torrance roofing for South Bay homes: shingle, tile and flat roof repair and replacement with clear, written scopes. Book a roofer-led $199 Roof Check.',
     hero: {
@@ -255,6 +267,8 @@ export const LOCATION_PAGES = {
 
   anaheim: {
     keyword: 'anaheim roofing',
+    image: '/images/anaheim-drone-view.webp',
+    imagePosition: 'center 40%',
     metaTitle: 'Anaheim Roofing & Roof Repair',
     metaDescription: 'Anaheim roofing from Anaheim Hills to the Colony: shingle, tile and flat roof repair and replacement with written scopes. Book a $199 Roof Check today.',
     hero: {
@@ -286,6 +300,8 @@ export const LOCATION_PAGES = {
 
   'santa-ana': {
     keyword: 'santa ana roofing',
+    image: '/images/santa-ana-drone-view.webp',
+    imagePosition: 'center 50%',
     metaTitle: 'Santa Ana Roofing & Roof Replacement',
     metaDescription: 'Santa Ana roofing for historic and modern homes: tile, shingle and flat roof repair and replacement with written scopes. Book a $199 Roof Check today.',
     hero: {
@@ -317,6 +333,8 @@ export const LOCATION_PAGES = {
 
   'huntington-beach': {
     keyword: 'huntington beach roofing',
+    image: '/images/huntington-beach-drone-view.webp',
+    imagePosition: 'center 55%',
     metaTitle: 'Huntington Beach Roofing & Repairs',
     metaDescription: 'Huntington Beach roofing built for salt air and ocean wind: tile, shingle and flat roof repair and replacement. Book a roofer-led $199 Roof Check today.',
     hero: {
@@ -348,6 +366,8 @@ export const LOCATION_PAGES = {
 
   irvine: {
     keyword: 'irvine roofing',
+    image: '/images/irvine-drone-view.webp',
+    imagePosition: 'center 40%',
     metaTitle: 'Irvine Roofing & Roof Replacement',
     metaDescription: 'Irvine roofing for concrete tile, shingle and flat roofs across the villages: repair, lift & relay and replacement. Book a roofer-led $199 Roof Check.',
     hero: {
@@ -379,6 +399,8 @@ export const LOCATION_PAGES = {
 
   'newport-beach': {
     keyword: 'newport beach roofing',
+    image: '/images/newport-beach-drone-view.webp',
+    imagePosition: 'center 55%',
     metaTitle: 'Newport Beach Roofing & Roof Repair',
     metaDescription: 'Newport Beach roofing for coastal homes: tile, shingle, flat and standing seam metal roof repair and replacement. Book a roofer-led $199 Roof Check.',
     hero: {

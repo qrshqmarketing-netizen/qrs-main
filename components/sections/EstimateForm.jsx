@@ -18,7 +18,8 @@ const ROOF_TYPES = ['Not sure', 'Tile', 'Shingle', 'Flat', 'Metal'];
 export default function EstimateForm() {
   const [saved, setSaved] = useState(false);
 
-  // Starter version: only shows a confirmation. Send the form data to your CRM/email service here.
+  // Starter version: only shows a confirmation in the browser (see README.md "Not connected yet").
+  // Send the form data to your CRM/email service here when you're ready.
   const onSubmit = (e) => {
     e.preventDefault();
     setSaved(true);
@@ -69,9 +70,9 @@ export default function EstimateForm() {
       </div>
 
       <button className="btn btn-gold" type="submit">{saved ? 'Request Saved ✓' : 'Request My Estimate →'}</button>
-      <div className="form-note">
-        This starter version only shows a confirmation in the browser. Connect the form to your CRM/email endpoint when you're ready.
-      </div>
+      <p className="form-note">
+        By submitting, you agree QRS may contact you by phone, text or email about your request, including with automated technology. Message and data rates may apply; consent isn't required to do business with us. See our <a href="/privacy-policy/">Privacy Policy</a> and <a href="/terms-and-conditions/">Terms &amp; Conditions</a>.
+      </p>
       <div className={'success' + (saved ? ' show' : '')} id="success">
         Thanks — your request is ready for confirmation. This starter page did not send anything.
       </div>
