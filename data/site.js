@@ -50,8 +50,12 @@ export const PHONE_INTL = '+1-310-340-1643'; // format search engines expect
 // The Google code is the one on the current WordPress site, so Search Console stays verified after the switch.
 export const SITE_VERIFICATION = {
   google: 'SyZ2s7uoL4sqZ3pKCmqTSSx5jYHPnjFSlzjMfY2xktM',
-  bing: '',
+  bing: '7EF115AF17F4DB7072BDE8A129257E53',
 };
+
+// Microsoft Clarity project ID (heatmaps/session recordings). Only loads on the live site (see
+// ALLOW_INDEXING in lib/seo.js), so previews and local dev don't add noise to the real analytics.
+export const CLARITY_ID = 'ynxdd3rck6';
 
 // Home page title and description (search results + link previews)
 export const HOME_TITLE = 'Roof Repair & Replacement in Southern California | Quality Roofing Specialists';

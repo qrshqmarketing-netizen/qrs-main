@@ -3,6 +3,7 @@
 import 'leaflet/dist/leaflet.css';
 import './globals.css';
 
+import Script from 'next/script';
 import { Inter, Poppins } from 'next/font/google';
 import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
@@ -10,7 +11,7 @@ import CookieNotice from '@/components/widgets/CookieNotice';
 import InstantQuote from '@/components/widgets/InstantQuote';
 import ReviewToast from '@/components/widgets/ReviewToast';
 import RoofAssistant from '@/components/widgets/RoofAssistant';
-import { BUSINESS, HOME_DESCRIPTION, SITE_URL, SITE_VERIFICATION } from '@/data/site';
+import { BUSINESS, CLARITY_ID, HOME_DESCRIPTION, SITE_URL, SITE_VERIFICATION } from '@/data/site';
 import { ALLOW_INDEXING, openGraphBase, twitterBase } from '@/lib/seo';
 
 // Google Fonts, downloaded at build time and served from this site
@@ -60,6 +61,15 @@ export default function RootLayout({ children }) {
         <RoofAssistant />
         <InstantQuote />
         <CookieNotice />
+        {ALLOW_INDEXING && (
+          <Script id="clarity" strategy="afterInteractive">
+            {`(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "${CLARITY_ID}");`}
+          </Script>
+        )}
       </body>
     </html>
   );
