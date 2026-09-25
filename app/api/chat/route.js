@@ -4,6 +4,7 @@
 // route returns an error and the widget falls back to its built-in canned answers — no code change needed.
 import { SYSTEM_PROMPT } from '@/data/assistant';
 import { BUSINESS, SITE_URL } from '@/data/site';
+import { findRelevantPages } from '@/lib/chatRetrieval';
 import { sendLeadToCRM } from '@/lib/crm';
 
 const OPENROUTER_URL = 'https://openrouter.ai/api/v1/chat/completions';
@@ -42,6 +43,19 @@ export async function POST(request) {
     .map((m) => ({ role: m.role, content: m.content.slice(0, MAX_CHARS) }));
   if (!messages.length) return Response.json({ error: 'no messages' }, { status: 400 });
 
+  // Ground the reply in the site's actual page content: search PAGE_INDEX for pages relevant to the
+  // visitor's latest message and hand the model short, plain-text summaries of the best matches.
+  const lastUserMessage = [...messages].reverse().find((m) => m.role === 'user')?.content || '';
+  const relevant = findRelevantPages(lastUserMessage);
+  const context = relevant.length
+    ? {
+        role: 'system',
+        content:
+          "Relevant content from this website for the visitor's latest message. Ground your answer in it and don't contradict it or the facts above; if it doesn't cover the question, fall back to the facts and rules above.\n\n" +
+          relevant.join('\n\n'),
+      }
+    : null;
+
   let rawReply;
   try {
     const res = await fetch(OPENROUTER_URL, {
@@ -54,7 +68,7 @@ export async function POST(request) {
       },
       body: JSON.stringify({
         model: MODEL,
-        messages: [{ role: 'system', content: SYSTEM_PROMPT }, ...messages],
+        messages: [{ role: 'system', content: SYSTEM_PROMPT }, ...(context ? [context] : []), ...messages],
         temperature: 0.4,
         max_tokens: 400,
       }),
