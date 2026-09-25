@@ -35,10 +35,10 @@ export default function Footer() {
           <div className="ft-col ft-brand">
             <BrandLogo />
             <div className="ft-social">
-              <a href={SOCIAL.facebook} aria-label="Facebook"><FacebookIcon /></a>
-              <a href={SOCIAL.instagram} aria-label="Instagram"><InstagramIcon /></a>
-              <a href={SOCIAL.linkedin} aria-label="LinkedIn"><LinkedInIcon /></a>
-              <a href={SOCIAL.youtube} aria-label="YouTube"><YouTubeIcon /></a>
+              {SOCIAL.facebook && <a href={SOCIAL.facebook} aria-label="Facebook"><FacebookIcon /></a>}
+              {SOCIAL.instagram && <a href={SOCIAL.instagram} aria-label="Instagram"><InstagramIcon /></a>}
+              {SOCIAL.linkedin && <a href={SOCIAL.linkedin} aria-label="LinkedIn"><LinkedInIcon /></a>}
+              {SOCIAL.youtube && <a href={SOCIAL.youtube} aria-label="YouTube"><YouTubeIcon /></a>}
             </div>
           </div>
         </div>

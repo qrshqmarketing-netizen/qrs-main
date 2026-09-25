@@ -56,6 +56,11 @@ export default function CarePlanPricing() {
         <p className="cp-over">
           Homes over 5,000 sq ft? <a href={TEL}>Call {PHONE}</a> for a custom price.
         </p>
+        <p className="cp-download">
+          <a className="text-link" href="/downloads/roof-care-plan.pdf" download>
+            Download the Roof Care Plan (PDF) →
+          </a>
+        </p>
         <p className="form-note cp-fine">
           {billingNote} {disclaimer}
         </p>

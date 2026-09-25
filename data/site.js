@@ -73,10 +73,10 @@ export const PROCESS_VIDEO = { embed: '', poster: '' };
 // Privacy policy page, linked from the cookie notice. Leave '' until the page exists.
 export const PRIVACY_POLICY_URL = '/privacy-policy/';
 
-// Footer social links. Replace '#' with your real profile URLs.
+// Footer social links. Leave one '' to hide that icon until you have a real profile URL for it.
 export const SOCIAL = {
-  facebook: '#',
-  instagram: '#',
-  linkedin: '#',
-  youtube: '#',
+  facebook: 'https://www.facebook.com/QualityRoofingSpecialists/',
+  instagram: '',
+  linkedin: '',
+  youtube: '',
 };
