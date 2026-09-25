@@ -5,21 +5,23 @@
 import { citiesIn, cityPath, REGIONS, regionPath } from './locations';
 import { PHONE, PRIVACY_POLICY_URL, TEL } from './site';
 
+// Roof Repair, Replacement, Inspection, Emergency, Maintenance Plans and Financing: shown in their own
+// top-level "Services" menu (below), not nested under Residential, since they serve every roof type.
+export const SERVICES_MENU = {
+  title: 'Roofing Services',
+  links: [
+    { label: 'Roof Repair', href: '/roof-repair/' },
+    { label: 'Roof Replacement', href: '/roof-replacement/' },
+    { label: 'Roof Inspection', href: '/roof-inspection/' },
+    { label: 'Emergency & Storm Damage', href: '/emergency-roof-repair/', urgent: true },
+    { label: 'Maintenance Plans', href: '/roof-maintenance-plans/' },
+    { label: 'Financing', href: '/financing/' },
+  ],
+};
+
 export const RESIDENTIAL_MENU = {
-  // First tab: services across every roof type (shown first when the menu opens)
+  // First tab: shown first when the menu opens
   groups: [
-    {
-      id: 'mega-services',
-      label: 'Roof Services',
-      links: [
-        { label: 'Roof Repair', note: 'Every roof type', href: '/roof-repair/' },
-        { label: 'Roof Replacement', note: 'Every roof type', href: '/roof-replacement/' },
-        { label: 'Roof Inspection', note: '$199 Roof Check', href: '/roof-inspection/' },
-        { label: 'Emergency & Storm Damage', href: '/emergency-roof-repair/', urgent: true },
-        { label: 'Maintenance Plans', href: '/roof-maintenance-plans/' },
-        { label: 'Financing', href: '/financing/' },
-      ],
-    },
     {
       id: 'mega-shingle',
       label: 'Shingle Roofing',
@@ -156,11 +158,10 @@ export const ABOUT_MENU = {
   },
 };
 
-// Links after the dropdowns
+// Links after the dropdowns. `pulse: true` gets the glow/pulse treatment (desktop) or a highlight (mobile).
 export const NAV_LINKS = [
-  { label: 'Contractors', href: '/contractors/' },
   { label: 'Projects', href: '/projects/' },
-  { label: 'Contact', href: '/contact-us/' },
+  { label: 'Contractors', href: '/contractors/', pulse: true },
 ];
 
 export const HEADER_CTA = { label: 'Get Pro Advice', href: '#roof-check' };

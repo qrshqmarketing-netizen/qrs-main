@@ -22,11 +22,20 @@
   display:flex;position:absolute;left:0;right:0;top:70px;
   flex-direction:column;align-items:stretch;gap:0;
   max-height:calc(100vh - 70px);max-height:calc(100dvh - 70px);overflow-y:auto;overscroll-behavior:contain;
-  padding:8px 20px 24px;background:var(--navy);border-top:1px solid rgba(255,255,255,.1);
+  padding:8px 20px 24px;background:#fff;border-top:1px solid var(--line);box-shadow:0 16px 30px rgba(6,45,87,.14);
 }
 .navlinks.mobile-open > a,.nav-trigger{
   display:flex;width:100%;justify-content:space-between;align-items:center;
-  min-height:54px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:17px;
+  min-height:54px;padding:14px 0;border-bottom:1px solid var(--line);font-size:17px;
+}
+/* Below 1200px the menu opens as a light slide-down panel; the always-navy desktop header keeps its own
+   white-on-navy colors from the bare .nav-trigger/.navlinks rules further up, untouched by this block. */
+@media (max-width:1199px){
+  .navlinks.mobile-open > a,
+  .navlinks.mobile-open .nav-trigger{color:var(--navy)}
+  .navlinks.mobile-open a:hover{color:var(--gold-ink)}
+  .navlinks.mobile-open .nav-trigger:hover,
+  .navlinks.mobile-open .nav-item.open > .nav-trigger{color:var(--gold-ink);opacity:1}
 }
 
 @media (min-width:621px){
@@ -72,50 +81,51 @@
 .mega a{opacity:1}
 .mega a:hover{color:inherit}
 
-/* Phone / tablet: accordions inside the slide-down menu */
-.mega{display:none;color:#fff}
+/* Phone / tablet: accordions inside the slide-down menu (light — see the max-width:1199px block above;
+   colors here match the 1200px+ desktop panel exactly, since desktop redeclares every one independently) */
+.mega{display:none;color:var(--navy)}
 .nav-item.open > .mega{display:block}
 .mega-inner{padding:6px 0 14px}
 .mega-tab{
   display:flex;align-items:center;justify-content:space-between;gap:10px;
   width:100%;min-height:48px;padding:12px 14px;margin:0 0 4px;border:0;border-left:4px solid transparent;border-radius:10px;
-  background:rgba(255,255,255,.05);color:#fff;font:600 16px/1.3 var(--font-head);text-align:left;cursor:pointer;
+  background:transparent;color:var(--navy);font:600 16px/1.3 var(--font-head);text-align:left;cursor:pointer;
   transition:background .15s,border-color .15s;
 }
-.mega-tab:hover{background:rgba(255,255,255,.1)}
+.mega-tab:hover{background:var(--wash)}
 .mega-tab .nav-caret{opacity:.8}
-.mega-group.active .mega-tab{background:rgba(255,255,255,.1);border-left-color:var(--gold)}
-.mega-group.active .mega-tab .nav-caret{transform:rotate(180deg);color:var(--gold)}
+.mega-group.active .mega-tab{background:var(--wash);border-left-color:var(--gold)}
+.mega-group.active .mega-tab .nav-caret{transform:rotate(180deg);color:var(--gold-ink)}
 .mega-list{display:none;padding:4px 0 10px 14px}
 .mega-group.active .mega-list{display:block}
 .mega-all{
   display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:6px 0;margin:2px 0 2px 12px;
-  font:600 12px/1 var(--font-head);color:var(--gold)!important;letter-spacing:.02em;text-transform:uppercase;
+  font:600 12px/1 var(--font-head);color:var(--gold-ink)!important;letter-spacing:.02em;text-transform:uppercase;
 }
 .mega-all svg{width:15px;height:15px;transition:transform .15s}
 .mega-all:hover svg{transform:translateX(3px)}
 .mega-list ul{list-style:none;margin:0;padding:0;display:grid;gap:0}
 .mega-list li a{display:flex;flex-direction:column;justify-content:center;min-height:44px;padding:9px 12px;border-radius:8px;transition:background .15s}
-.mega-list li a:hover{background:rgba(255,255,255,.08)}
-.mega-list li span{display:block;font:500 15px/1.3 var(--font-head);letter-spacing:-.01em;color:#fff}
-.mega-list li small{display:block;font:400 13px/1.4 var(--font-body);color:#b9c9d9;margin-top:2px}
+.mega-list li a:hover{background:var(--wash)}
+.mega-list li span{display:block;font:500 15px/1.3 var(--font-head);letter-spacing:-.01em;color:var(--navy)}
+.mega-list li small{display:block;font:400 13px/1.4 var(--font-body);color:var(--muted);margin-top:2px}
 .mega-promo{display:none;background:var(--navy);color:#fff;border-radius:14px;padding:24px;align-self:start}
 .mega-promo b{display:block;font:600 20px/1.2 var(--font-head);letter-spacing:-.02em;margin-bottom:8px}
 .mega-promo p{font-size:15px;line-height:1.6;color:#d5e1eb;margin:0 0 18px}
 .mega-promo .btn{width:100%;min-height:46px;border-radius:8px;font-size:16px}
 .mega-card{
   display:flex;flex-direction:column;gap:8px;padding:16px;margin-bottom:8px;border-radius:14px;
-  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);transition:border-color .15s,box-shadow .15s;
+  background:var(--wash);border:1px solid var(--line);transition:border-color .15s,box-shadow .15s;
 }
-.mega-card b{font:600 17px/1.2 var(--font-head);letter-spacing:-.02em;color:#fff}
-.mega-card span{font-size:14px;line-height:1.6;color:#b9c9d9}
-.mega-card em{margin-top:auto;padding-top:8px;display:inline-flex;align-items:center;gap:8px;font:600 14px/1 var(--font-head);font-style:normal;color:var(--gold);text-transform:uppercase;letter-spacing:.02em}
+.mega-card b{font:600 17px/1.2 var(--font-head);letter-spacing:-.02em;color:var(--navy)}
+.mega-card span{font-size:14px;line-height:1.6;color:var(--muted)}
+.mega-card em{margin-top:auto;padding-top:8px;display:inline-flex;align-items:center;gap:8px;font:600 14px/1 var(--font-head);font-style:normal;color:var(--gold-ink);text-transform:uppercase;letter-spacing:.02em}
 .mega-card em svg,.mega-card-head svg{width:15px;height:15px}
 .mega-card-head{display:flex;align-items:center;gap:10px}
 .mega-card-head svg{color:var(--gold-ink);transition:transform .15s}
 .mega-card-head:hover svg{transform:translateX(3px)}
 .mega-card-list ul{list-style:none;margin:4px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 18px}
-.mega-card-list li a{display:flex;align-items:center;min-height:40px;padding:7px 0;font:500 15px/1.3 var(--font-head);color:#fff}
+.mega-card-list li a{display:flex;align-items:center;min-height:40px;padding:7px 0;font:500 15px/1.3 var(--font-head);color:var(--navy)}
 .mega-card-list li a:hover{color:var(--gold-ink)}
 
 /* Desktop: full-width panels under the header */
@@ -145,6 +155,7 @@
   .mega-list li span{font-size:17px;color:var(--navy)}
   .mega-list li small{color:var(--muted)}
 
+  .mega-services .mega-inner{grid-template-columns:1fr;max-width:420px}
   .mega-com .mega-inner{grid-template-columns:1.4fr 1fr .9fr}
   .mega-card-single ul{grid-template-columns:1fr}
   .mega-about .mega-inner{grid-template-columns:1.4fr 1fr}
@@ -165,12 +176,12 @@
 .mega-link{
   display:flex;align-items:center;justify-content:space-between;gap:12px;
   min-height:56px;padding:12px 14px;margin:10px 0 4px;border-radius:10px;
-  border:1px solid rgba(255,255,255,.14);color:#fff;transition:background .15s,border-color .15s;
+  border:1px solid var(--line);color:var(--navy);transition:background .15s,border-color .15s;
 }
-.mega-link:hover{background:rgba(255,255,255,.08)}
+.mega-link:hover{background:var(--wash)}
 .mega-link b{display:block;font:600 16px/1.3 var(--font-head);letter-spacing:-.01em}
-.mega-link small{display:block;font:400 13px/1.4 var(--font-body);color:#b9c9d9;margin-top:2px}
-.mega-link svg{flex:0 0 16px;width:16px;height:16px;color:var(--gold);transition:transform .15s}
+.mega-link small{display:block;font:400 13px/1.4 var(--font-body);color:var(--muted);margin-top:2px}
+.mega-link svg{flex:0 0 16px;width:16px;height:16px;color:var(--gold-ink);transition:transform .15s}
 .mega-link:hover svg{transform:translateX(3px)}
 @media (min-width:1200px){
   .mega-link{grid-column:1;min-height:0;padding:14px 16px;margin:8px 0 0;border:0;border-top:1px solid var(--line);border-radius:0 0 10px 10px;color:var(--navy)}
@@ -188,3 +199,18 @@
 
 /* Red dot on emergency links */
 .menu-urgent{display:inline-block;width:8px;height:8px;margin-right:9px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px rgba(192,57,43,.22);vertical-align:middle;position:relative;top:-1px}
+
+/* Contractors nav link (data/navigation.js NAV_LINKS `pulse: true`): a steady gold highlight on
+   mobile/tablet (a full-width row in the slide-down menu), a glowing pulse every 3s on desktop. */
+.navlinks > a.nav-pulse,
+.navlinks.mobile-open > a.nav-pulse{background:rgba(212,181,114,.16);border-radius:10px;color:var(--gold-ink)}
+@keyframes navPulse{
+  0%,100%{box-shadow:0 0 0 0 rgba(212,181,114,.55)}
+  50%{box-shadow:0 0 0 6px rgba(212,181,114,0)}
+}
+@media (min-width:1200px){
+  .navlinks > a.nav-pulse{padding:7px 14px;border-radius:999px;color:var(--gold);animation:navPulse 3s ease-in-out infinite}
+}
+@media (prefers-reduced-motion:reduce){
+  .navlinks > a.nav-pulse{animation:none}
+}

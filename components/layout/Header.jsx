@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import BrandLogo from '@/components/ui/BrandLogo';
 import SiteLink from '@/components/ui/SiteLink';
 import { ArrowRight, Caret, PhoneIcon } from '@/components/ui/icons';
-import { ABOUT_MENU, COMMERCIAL_MENU, HEADER_CTA, LOCATIONS_MENU, NAV_LINKS, RESIDENTIAL_MENU } from '@/data/navigation';
+import { ABOUT_MENU, COMMERCIAL_MENU, HEADER_CTA, LOCATIONS_MENU, NAV_LINKS, RESIDENTIAL_MENU, SERVICES_MENU } from '@/data/navigation';
 import { PHONE, TEL } from '@/data/site';
 import './Header.css';
 
@@ -19,7 +19,7 @@ const UrgentDot = () => <i className="menu-urgent" aria-hidden="true" />;
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false); // phone/tablet slide-down menu
-  const [openItem, setOpenItem] = useState(null); // 'res' | 'com' | 'loc' | 'about' | null
+  const [openItem, setOpenItem] = useState(null); // 'services' | 'res' | 'com' | 'loc' | 'about' | null
   const [activeGroup, setActiveGroup] = useState(0); // roof type shown in the Residential menu
   const closeTimer = useRef(null);
   const triggers = useRef({});
@@ -105,6 +105,30 @@ export default function Header() {
         <BrandLogo variant="dark" preload />
 
         <nav className={'navlinks' + (menuOpen ? ' mobile-open' : '')} id="navlinks" aria-label="Main" onClick={onNavClick}>
+          <div {...dropdown('services')}>
+            <button {...trigger('services', 'megaServices')}>
+              Services
+              <Caret />
+            </button>
+            <div className="mega mega-services" id="megaServices" onClick={closeOnLink}>
+              <div className="mega-inner">
+                <div className="mega-card mega-card-list">
+                  <b>{SERVICES_MENU.title}</b>
+                  <ul>
+                    {SERVICES_MENU.links.map((link) => (
+                      <li key={link.href}>
+                        <MenuLink href={link.href}>
+                          {link.urgent && <UrgentDot />}
+                          {link.label}
+                        </MenuLink>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div {...dropdown('res')}>
             <button {...trigger('res', 'megaRes')}>
               Residential
@@ -266,7 +290,9 @@ export default function Header() {
           </div>
 
           {NAV_LINKS.map((link) => (
-            <MenuLink href={link.href} key={link.href}>{link.label}</MenuLink>
+            <MenuLink className={link.pulse ? 'nav-pulse' : undefined} href={link.href} key={link.href}>
+              {link.label}
+            </MenuLink>
           ))}
         </nav>
 
