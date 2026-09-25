@@ -1,0 +1,24 @@
+/* ---------- Blog index: post cards ---------- */
+.post-cards{background:var(--wash);padding:60px 0}
+.pc-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:22px}
+.pc-card{position:relative;display:flex;flex-direction:column;padding:0 0 22px;border-radius:18px;background:#fff;border:1px solid var(--line);box-shadow:0 8px 24px rgba(6,45,87,.05);overflow:hidden;transition:box-shadow .2s,transform .2s}
+.pc-card:hover{box-shadow:0 16px 36px rgba(6,45,87,.12);transform:translateY(-2px)}
+.pc-media{aspect-ratio:16/9;margin-bottom:18px}
+.pc-card time,.pc-card h3,.pc-card p,.pc-more{margin-left:22px;margin-right:22px}
+.pc-card time{color:var(--gold-ink);font:700 12px/1.3 var(--font-head);letter-spacing:.08em;text-transform:uppercase}
+.pc-card h3{margin-top:8px;margin-bottom:10px;color:var(--navy);font-size:21px;font-weight:600;line-height:1.25;letter-spacing:-.02em}
+.pc-link{color:inherit;text-decoration:none}
+.pc-link:after{content:"";position:absolute;inset:0}
+.pc-link:focus-visible{outline:none}
+.pc-link:focus-visible:after{outline:3px solid rgba(212,181,114,.8);outline-offset:-3px;border-radius:18px}
+.pc-card p{margin-top:0;margin-bottom:16px;color:var(--ink);font-size:15px;line-height:1.6}
+.pc-more{margin-top:auto;display:inline-flex;align-items:center;gap:8px;color:var(--gold-ink);font:700 13px/1.2 var(--font-head);letter-spacing:.03em;text-transform:uppercase}
+.pc-more svg{width:14px;height:14px}
+@media (min-width:621px){
+  .post-cards{padding:88px 0}
+  .pc-grid{grid-template-columns:1fr 1fr}
+}
+@media (min-width:901px){
+  .post-cards{padding:100px 0}
+  .pc-grid{grid-template-columns:repeat(3,1fr)}
+}

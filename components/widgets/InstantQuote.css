@@ -4,7 +4,7 @@
   display:flex;align-items:center;gap:8px;writing-mode:vertical-rl;
   padding:14px 8px;border:0;border-radius:12px 0 0 12px;background:var(--navy);color:#fff;
   font:600 13px/1 var(--font-head);letter-spacing:.02em;
-  box-shadow:-6px 10px 28px rgba(6,45,87,.28),inset 0 0 0 1px rgba(187,159,94,.22);
+  box-shadow:-6px 10px 28px rgba(6,45,87,.28),inset 0 0 0 1px rgba(212,181,114,.22);
   transition:padding .2s ease,opacity .2s ease;
 }
 .rm-tab:hover{padding-right:12px}
@@ -12,7 +12,7 @@
 @property --rm-beam{syntax:'<angle>';inherits:false;initial-value:0deg}
 .rm-tab:before{
   content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;pointer-events:none;
-  background:conic-gradient(from var(--rm-beam),transparent 0 72%,rgba(187,159,94,.25) 82%,var(--gold) 92%,#f2e6c6 95%,var(--gold) 97%,transparent);
+  background:conic-gradient(from var(--rm-beam),transparent 0 72%,rgba(212,181,114,.25) 82%,var(--gold) 92%,#f2e6c6 95%,var(--gold) 97%,transparent);
   -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;
   mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);
   animation:rmBeam 4.5s linear infinite;
@@ -94,13 +94,13 @@ body.rm-lock{overflow:hidden}
 .rm-pitch label svg{width:44px;height:24px;color:var(--gold-ink)}
 .rm-pitch label small{color:var(--muted);font:400 11px/1.2 var(--font-body)}
 .rm-pitch input:checked+label{border-color:var(--navy);background:#f7f2e6;box-shadow:inset 0 0 0 1px var(--navy)}
-.rm-pitch input:focus-visible+label{outline:3px solid rgba(187,159,94,.6);outline-offset:2px}
+.rm-pitch input:focus-visible+label{outline:3px solid rgba(212,181,114,.6);outline-offset:2px}
 .rm-stories{margin-bottom:18px}
 .rm-types{margin:0 0 20px;padding:0;border:0}
 .rm-types div{display:flex;flex-wrap:wrap;gap:8px}
 .rm-types label{margin:0;padding:9px 15px;border:1.5px solid #d7e0e8;border-radius:999px;background:#fff;color:var(--navy);font:600 .88rem/1.2 var(--font-head);cursor:pointer;transition:.15s}
 .rm-types input:checked+label{border-color:var(--navy);background:var(--navy);color:#fff}
-.rm-types input:focus-visible+label{outline:3px solid rgba(187,159,94,.6);outline-offset:2px}
+.rm-types input:focus-visible+label{outline:3px solid rgba(212,181,114,.6);outline-offset:2px}
 .rm-actions{display:flex;gap:10px}
 .rm-actions .btn{flex:1}
 .rm-back{flex:0 0 auto;min-height:50px;padding:0 18px;border:1.5px solid var(--navy);border-radius:12px;background:#fff;color:var(--navy);font:700 16px/1 var(--font-btn)}

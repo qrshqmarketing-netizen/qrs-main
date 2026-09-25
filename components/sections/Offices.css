@@ -2,6 +2,8 @@
 .offices{background:var(--wash);padding:60px 0}
 .office-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
 .office-card{padding:24px 22px;border-radius:18px;background:#fff;border:1px solid var(--line);box-shadow:0 8px 24px rgba(6,45,87,.05)}
+.office-photo{position:relative;aspect-ratio:16/9;margin:-24px -22px 20px;border-radius:18px 18px 0 0;overflow:hidden;background:var(--wash)}
+.office-photo img{object-fit:cover}
 .office-card h3{display:flex;align-items:center;gap:10px;margin:0 0 12px;color:var(--navy);font-size:20px;font-weight:600;line-height:1.25;letter-spacing:-.02em}
 .office-card h3 svg{flex:none;width:24px;height:24px;fill:var(--gold);stroke:var(--navy);stroke-width:1.4}
 .office-card h3 svg circle{fill:var(--navy);stroke:none}
@@ -12,10 +14,12 @@
 .office-links a{display:inline-flex;align-items:center;gap:8px;color:var(--gold-ink);font:700 13px/1.2 var(--font-head);letter-spacing:.03em;text-transform:uppercase;text-decoration:none}
 .office-links a:hover{color:var(--navy)}
 .office-links svg{width:14px;height:14px}
+.office-note{margin:18px 0 0;color:var(--navy);font:600 15px/1.5 var(--font-head)}
 @media (min-width:621px){
   .offices{padding:88px 0}
   .office-grid{grid-template-columns:1fr 1fr;gap:20px}
   .office-card{padding:28px 26px}
+  .office-photo{margin:-28px -26px 22px}
 }
 @media (min-width:901px){
   .offices{padding:100px 0}

@@ -9,10 +9,11 @@ import { miles, nominatimSearch, zipPrefixServed } from '@/lib/geo';
 import { loadLeaflet, qrsPin } from '@/lib/leaflet';
 import './ServiceArea.css';
 
-// The QRS location closest to a [lat, lng] point: { index, distance } (distance in miles)
-function nearestLocation(point) {
+// The QRS location closest to a [lat, lng] point, optionally only within one region: { index, distance } (miles)
+function nearestLocation(point, region) {
   let index = 0, distance = Infinity;
   LOCATIONS.forEach((l, i) => {
+    if (region && l.region !== region) return;
     const d = miles(point, [l.lat, l.lng]);
     if (d < distance) { distance = d; index = i; }
   });
@@ -23,12 +24,14 @@ function nearestLocation(point) {
 const IP_NEARBY_MI = SERVICE_RADIUS_MI * 2;
 
 // Service area map (Leaflet + OpenStreetMap tiles) with a city list and ZIP code lookup.
-// City pages pass `focus` (a city slug) to start zoomed in on that city. Elsewhere the map zooms to the location
+// City pages pass `focus` (a city slug) to start zoomed in on that city; region pages pass `region` to fit its cities.
+// Elsewhere the map zooms to the location
 // nearest the visitor's approximate position (from their IP address, see app/api/location/route.js), if they're nearby.
 export default function ServiceArea({
   heading = 'Locations We Proudly Serve',
   sub = 'Explore the map below to find out if your city is within our Southern California service area',
   focus,
+  region,
 }) {
   const wrapRef = useRef(null);
   const mapEl = useRef(null);
@@ -81,8 +84,9 @@ export default function ServiceArea({
             .bindPopup('<b>QRS ' + city + '</b><a href="' + TEL + '">' + PHONE + '</a><br><a href="#estimate">Get an estimate →</a><br><a href="' + cityPath(slug) + '">' + city + ' roofing →</a>')
             .on('click', () => select(i, false))
         );
-        // Fit all pins, or zoom in on this page's city
-        leafletMap.fitBounds(L.featureGroup(markers).getBounds().pad(0.25));
+        // Fit all pins (or this region's), or zoom in on this page's city
+        const shown = region ? markers.filter((_, i) => LOCATIONS[i].region === region) : markers;
+        leafletMap.fitBounds(L.featureGroup(shown).getBounds().pad(0.25));
         map.current = { L, map: leafletMap, markers, icon, searchPin: null, active: -1 };
         const focusIndex = LOCATIONS.findIndex((l) => l.slug === focus);
         if (focusIndex > -1) {
@@ -95,7 +99,7 @@ export default function ServiceArea({
               const m = map.current;
               // Skip when there's no location, or the visitor already picked a city or searched a ZIP code
               if (cancelled || !m || lat == null || m.active > -1) return;
-              const { index, distance } = nearestLocation([lat, lng]);
+              const { index, distance } = nearestLocation([lat, lng], region);
               if (distance > IP_NEARBY_MI) return;
               m.map.setView(m.markers[index].getLatLng(), 10);
               select(index, false);
@@ -166,8 +170,8 @@ export default function ServiceArea({
             <div className="loc-search">
               <div className="loc-search-title">
                 <svg viewBox="0 0 32 32" aria-hidden="true">
-                  <circle cx="16" cy="16" r="15" fill="none" stroke="#bb9f5e" strokeWidth="1.6" />
-                  <path d="M16 7.5a6 6 0 0 0-6 6c0 4.5 6 10.5 6 10.5s6-6 6-10.5a6 6 0 0 0-6-6Z" fill="#bb9f5e" />
+                  <circle cx="16" cy="16" r="15" fill="none" stroke="#d4b572" strokeWidth="1.6" />
+                  <path d="M16 7.5a6 6 0 0 0-6 6c0 4.5 6 10.5 6 10.5s6-6 6-10.5a6 6 0 0 0-6-6Z" fill="#d4b572" />
                   <circle cx="16" cy="13.5" r="2.3" fill="#0f2c55" />
                 </svg>
                 <span>Find Your Nearest QRS Service Area</span>

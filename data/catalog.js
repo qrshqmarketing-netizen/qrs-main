@@ -5,10 +5,17 @@
 export const HOME = { label: 'Home', href: '/' };
 export const RESIDENTIAL = { label: 'Residential Roofing', href: '/residential-roofing/' };
 export const COMMERCIAL_LINK = { label: 'Commercial Roofing', href: '/commercial-roofing/' };
-export const LOCATIONS_LINK = { label: 'Service Areas', href: '/locations/' };
+export const LOCATIONS_LINK = { label: 'Service Areas', href: '/service-areas/' };
 export const ABOUT_LINK = { label: 'About QRS', href: '/about-us/' };
 export const CAREERS_LINK = { label: 'Careers', href: '/careers/' };
 export const CONTRACTORS_LINK = { label: 'Contractors', href: '/contractors/' };
+export const CONTACT_LINK = { label: 'Contact Us', href: '/contact-us/' };
+export const REVIEWS_LINK = { label: 'Reviews', href: '/reviews/' };
+export const PROJECTS_LINK = { label: 'Projects', href: '/projects/' };
+export const BLOG_LINK = { label: 'Roofing Blog', href: '/blog/' };
+export const blogPath = (slug) => `/blog/${slug}/`;
+export const PRIVACY_LINK = { label: 'Privacy Policy', href: '/privacy-policy/' };
+export const TERMS_LINK = { label: 'Terms & Conditions', href: '/terms-and-conditions/' };
 
 // Sections with a hub page and service pages under it.
 // `scenes` are placeholder art for cards (rotated); `image` is a real photo for the hub hero, when there is one.
@@ -74,6 +81,38 @@ export const SINGLES = {
     parent: RESIDENTIAL,
     scenes: ['scene-hoa'],
     blurb: 'Roofing for HOAs and multi-family properties, with photo-documented reports boards and managers can review.',
+  },
+};
+
+// Stand-alone service pages for homes and commercial buildings alike (copy: data/services/programs.js)
+export const PROGRAMS = {
+  emergency: { key: 'emergency', label: 'Emergency & Storm Damage', href: '/emergency-roof-repair/', parent: null, scenes: ['scene-repair'] },
+  plans: { key: 'plans', label: 'Maintenance Plans', href: '/roof-maintenance-plans/', parent: null, scenes: ['scene-inspect'] },
+  financing: { key: 'financing', label: 'Financing', href: '/financing/', parent: null, scenes: ['scene-replace'] },
+};
+
+// Service-first hub pages (copy: data/services/serviceHubs.js). cards: the pages each hub links to, in order.
+export const SERVICE_HUBS = {
+  repair: {
+    key: 'repair',
+    label: 'Roof Repair',
+    href: '/roof-repair/',
+    scenes: ['scene-repair'],
+    cards: ['/shingle-roofing/repairs/', '/tile-roofing/repairs/', '/flat-roofing/repairs/', '/tile-roofing/lift-and-relay/', '/emergency-roof-repair/', '/commercial-roofing/repair/'],
+  },
+  replacement: {
+    key: 'replacement',
+    label: 'Roof Replacement',
+    href: '/roof-replacement/',
+    scenes: ['scene-replace'],
+    cards: ['/shingle-roofing/replacement/', '/tile-roofing/replacement/', '/flat-roofing/replacement/', '/tile-roofing/lift-and-relay/', '/metal-roofing/standing-seam/', '/commercial-roofing/replacement/'],
+  },
+  inspection: {
+    key: 'inspection',
+    label: 'Roof Inspection',
+    href: '/roof-inspection/',
+    scenes: ['scene-inspect'],
+    cards: ['/shingle-roofing/inspection/', '/tile-roofing/inspection/', '/flat-roofing/inspection/', '/roof-maintenance-plans/', '/commercial-roofing/maintenance/', '/emergency-roof-repair/'],
   },
 };
 

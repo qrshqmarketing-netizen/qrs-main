@@ -1,11 +1,25 @@
 // Header menus and footer links.
+// Menu links with `urgent: true` get a red dot (emergency pages).
 // Links starting with # jump to a section: on pages without that section they go to the home page's section.
 
-import { LOCATIONS } from './locations';
+import { citiesIn, cityPath, REGIONS, regionPath } from './locations';
 import { PHONE, PRIVACY_POLICY_URL, TEL } from './site';
 
 export const RESIDENTIAL_MENU = {
+  // First tab: services across every roof type (shown first when the menu opens)
   groups: [
+    {
+      id: 'mega-services',
+      label: 'Roof Services',
+      links: [
+        { label: 'Roof Repair', note: 'Every roof type', href: '/roof-repair/' },
+        { label: 'Roof Replacement', note: 'Every roof type', href: '/roof-replacement/' },
+        { label: 'Roof Inspection', note: '$199 Roof Check', href: '/roof-inspection/' },
+        { label: 'Emergency & Storm Damage', href: '/emergency-roof-repair/', urgent: true },
+        { label: 'Maintenance Plans', href: '/roof-maintenance-plans/' },
+        { label: 'Financing', href: '/financing/' },
+      ],
+    },
     {
       id: 'mega-shingle',
       label: 'Shingle Roofing',
@@ -75,6 +89,16 @@ export const RESIDENTIAL_MENU = {
 };
 
 export const COMMERCIAL_MENU = {
+  services: {
+    title: 'Commercial Services',
+    links: [
+      { label: 'Roof Repair', href: '/commercial-roofing/repair/' },
+      { label: 'Roof Replacement', href: '/commercial-roofing/replacement/' },
+      { label: 'Inspection & Maintenance', href: '/commercial-roofing/maintenance/' },
+      { label: 'Maintenance Plans', href: '/roof-maintenance-plans/' },
+      { label: 'Emergency & Storm Damage', href: '/emergency-roof-repair/', urgent: true },
+    ],
+  },
   buildings: {
     title: 'Commercial Buildings',
     href: '/commercial-roofing/',
@@ -89,32 +113,53 @@ export const COMMERCIAL_MENU = {
     ],
   },
   partner: {
-    title: 'Contractors',
-    text: 'For businesses that work with QRS (B2B).',
+    title: 'Contractors & White-Label',
+    text: 'Roofing subcontracting for GCs, builders and property managers, under our name or yours.',
     cta: 'Partner with us',
     href: '/contractors/',
   },
 };
 
-// Service areas, grouped by county (city list comes from data/locations.js)
+// Service areas, grouped by region (regions and cities come from data/locations.js)
 export const LOCATIONS_MENU = {
-  counties: ['Los Angeles County', 'Orange County'].map((county) => ({
-    title: county,
-    links: LOCATIONS.filter((l) => l.county === county).map((l) => ({ label: l.city, href: `/locations/${l.slug}/` })),
+  regions: REGIONS.map((r) => ({
+    title: r.name,
+    href: regionPath(r.slug),
+    links: citiesIn(r.slug).map((l) => ({ label: l.city, href: cityPath(l.slug) })),
   })),
   all: {
     title: 'All Service Areas',
     text: 'See every city we serve and check your ZIP code on the map.',
     cta: 'View the map',
-    href: '/locations/',
+    href: '/service-areas/',
+  },
+};
+
+export const ABOUT_MENU = {
+  about: {
+    title: 'About QRS',
+    href: '/about-us/',
+    links: [
+      { label: 'Why QRS', href: '/about-us/' },
+      { label: 'Customer Reviews', href: '/reviews/' },
+      { label: 'Our Guarantee', href: '/about-us/#guarantee' },
+      { label: 'Projects', href: '/projects/' },
+      { label: 'Roofing Blog', href: '/blog/' },
+      { label: 'Contact Us', href: '/contact-us/' },
+    ],
+  },
+  careers: {
+    title: 'Careers',
+    text: 'Join a detail-first crew doing roofing across Southern California.',
+    cta: 'See roofing jobs',
+    href: '/careers/',
   },
 };
 
 // Links after the dropdowns
 export const NAV_LINKS = [
-  { label: 'Contractors', href: '/contractors/' },
-  { label: 'Why QRS', href: '/about-us/' },
-  { label: 'Careers', href: '/careers/' },
+  { label: 'Projects', href: '/projects/' },
+  { label: 'Contact', href: '/contact-us/' },
 ];
 
 export const HEADER_CTA = { label: 'Get Pro Advice', href: '#roof-check' };
@@ -123,17 +168,21 @@ export const FOOTER = {
   main: [
     { label: 'Home', href: '/' },
     { label: 'About QRS', href: '/about-us/' },
-    { label: 'Start a Roof Check', href: '#roof-check' },
-    { label: 'Our Guarantee', href: '#guarantee' },
-    { label: 'Reviews', href: '#reviews' },
+    { label: 'Reviews', href: '/reviews/' },
+    { label: 'Projects', href: '/projects/' },
+    { label: 'Roofing Blog', href: '/blog/' },
     { label: 'Careers', href: '/careers/' },
-    // Shows once PRIVACY_POLICY_URL is set in data/site.js (the cookie notice links there too)
-    ...(PRIVACY_POLICY_URL ? [{ label: 'Privacy Policy', href: PRIVACY_POLICY_URL }] : []),
+    { label: 'Contact Us', href: '/contact-us/' },
+    { label: 'Start a Roof Check', href: '#roof-check' },
   ],
   services: [
     { label: 'Residential Roofing', href: '/residential-roofing/' },
     { label: 'Commercial Roofing', href: '/commercial-roofing/' },
-    { label: 'Service Areas', href: '/locations/' },
+    { label: 'Roof Repair', href: '/roof-repair/' },
+    { label: 'Roof Replacement', href: '/roof-replacement/' },
+    { label: 'Emergency & Storm Damage', href: '/emergency-roof-repair/' },
+    { label: 'Maintenance Plans', href: '/roof-maintenance-plans/' },
+    { label: 'Financing', href: '/financing/' },
     { label: 'Contractors', href: '/contractors/' },
   ],
   roofTypes: {
@@ -152,7 +201,13 @@ export const FOOTER = {
     links: [
       { label: 'How It Works', href: '#process' },
       { label: PHONE, href: TEL },
-      { label: 'LA + Orange County', href: '/locations/' },
+      { label: 'Service Areas', href: '/service-areas/' },
+      ...REGIONS.map((r) => ({ label: r.name, href: regionPath(r.slug) })),
     ],
   },
+  // Small print under the columns. Privacy shows once PRIVACY_POLICY_URL is set in data/site.js (the cookie notice links there too).
+  legal: [
+    ...(PRIVACY_POLICY_URL ? [{ label: 'Privacy Policy', href: PRIVACY_POLICY_URL }] : []),
+    { label: 'Terms & Conditions', href: '/terms-and-conditions/' },
+  ],
 };

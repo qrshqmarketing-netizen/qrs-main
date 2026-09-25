@@ -4,9 +4,9 @@
 .faq:before,.faq:after{content:"";position:absolute;inset:-25%;z-index:-1;pointer-events:none;will-change:transform,opacity}
 .faq:before{
   background:
-    radial-gradient(38% 32% at 18% 22%,rgba(187,159,94,.26),transparent 70%),
+    radial-gradient(38% 32% at 18% 22%,rgba(212,181,114,.26),transparent 70%),
     radial-gradient(30% 26% at 70% 12%,rgba(212,181,114,.16),transparent 70%),
-    radial-gradient(34% 30% at 30% 88%,rgba(187,159,94,.12),transparent 70%);
+    radial-gradient(34% 30% at 30% 88%,rgba(212,181,114,.12),transparent 70%);
   animation:faqBreathe 11s ease-in-out infinite alternate;
 }
 .faq:after{
@@ -31,7 +31,7 @@
   font-family:var(--font-head);font-size:16px;font-weight:600;line-height:1.45;letter-spacing:0;
 }
 .faq-item summary::-webkit-details-marker{display:none}
-.faq-item summary:focus-visible{outline:3px solid rgba(187,159,94,.6);outline-offset:2px;border-radius:10px}
+.faq-item summary:focus-visible{outline:3px solid rgba(212,181,114,.6);outline-offset:2px;border-radius:10px}
 .faq-item summary:after{
   content:"+";flex:0 0 32px;height:32px;border-radius:50%;background:var(--navy);color:#fff;
   display:grid;place-items:center;font-size:1.2rem;font-weight:700;line-height:1;transition:transform .25s,background .2s;

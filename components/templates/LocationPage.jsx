@@ -15,7 +15,7 @@ import Testimonials from '@/components/sections/Testimonials';
 import WhyQrs from '@/components/sections/WhyQrs';
 import JsonLd from '@/components/ui/JsonLd';
 import { HOME, LOCATIONS_LINK } from '@/data/catalog';
-import { cityPath } from '@/data/locations';
+import { cityPath, findRegion, regionPath } from '@/data/locations';
 import { projectsFor } from '@/data/projects';
 import { SERVICES } from '@/data/services';
 import { OFFICES, SITE_URL } from '@/data/site';
@@ -27,12 +27,13 @@ const PHOTOS = [
   { src: '/images/roof-drone-palms.webp', position: 'center 45%' },
 ];
 
-// A city page (e.g. /locations/pasadena/): the home page's sections with local copy from data/locationPages.js
+// A city page (e.g. /service-areas/la-county/pasadena/): the home page's sections with local copy from data/locationPages.js
 // and a gallery of projects in the area (data/projects.js)
 export default function LocationPage({ location, page, index = 0 }) {
   const { city, slug, county } = location;
-  const photo = page.image ? { src: page.image } : PHOTOS[index % PHOTOS.length];
-  const crumbs = [HOME, LOCATIONS_LINK, { label: city, href: cityPath(slug) }];
+  const region = findRegion(location.region);
+  const photo = page.image ? { src: page.image, position: page.imagePosition } : PHOTOS[index % PHOTOS.length];
+  const crumbs = [HOME, LOCATIONS_LINK, { label: region.name, href: regionPath(region.slug) }, { label: city, href: cityPath(slug) }];
   const office = OFFICES.find((o) => o.citySlug === slug);
   const schema = pageJsonLd({
     path: cityPath(slug),
@@ -67,7 +68,7 @@ export default function LocationPage({ location, page, index = 0 }) {
           <Breadcrumbs items={crumbs} />
         </div>
       </div>
-      <LocalIntro city={city} heading={page.intro.heading} paragraphs={page.intro.paragraphs} office={office} neighborhoods={page.neighborhoods} considerations={page.considerations} />
+      <LocalIntro city={city} heading={page.intro.heading} paragraphs={page.intro.paragraphs} offices={office ? [office] : []} neighborhoods={page.neighborhoods} considerations={page.considerations} />
       <ProjectGallery
         city={city}
         heading={`Roofing Projects in ${city}`}

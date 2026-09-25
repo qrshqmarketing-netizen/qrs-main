@@ -9,14 +9,14 @@ export const SERVICES = [
     schemaName: 'Roof Replacement',
     scene: 'scene-replace',
     text: 'Full tear-off and new roof systems built for Southern California conditions, installed with a clear written scope and a lifetime workmanship warranty.',
-    href: '/residential-roofing/#roof-replacement',
+    href: '/roof-replacement/',
   },
   {
     title: 'Roof Repairs',
     schemaName: 'Roof Repair',
     scene: 'scene-repair',
     text: 'Leaks, cracked tiles and storm damage addressed with photo documentation, so you see exactly what was wrong and what we fixed.',
-    href: '/residential-roofing/#roof-repairs',
+    href: '/roof-repair/',
   },
   {
     title: 'Tile Lift & Relay',
@@ -44,6 +44,6 @@ export const SERVICES = [
     schemaName: 'Roof Inspections & Roof Care',
     scene: 'scene-inspect',
     text: 'Detailed inspections and maintenance designed to catch small problems early, starting with our roofer-led $199 Roof Check.',
-    href: '/residential-roofing/#inspections',
+    href: '/roof-inspection/',
   },
 ];

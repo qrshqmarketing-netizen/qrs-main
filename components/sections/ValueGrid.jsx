@@ -4,9 +4,9 @@ import './ValueGrid.css';
 
 // Grid of short titled points (values, audiences, roles). Items can have an optional link.
 // items: [{ title, text, link?: { label, href } }]
-export default function ValueGrid({ id, heading, intro, items = [], columns = 4, tone }) {
+export default function ValueGrid({ id, heading, intro, items = [], columns = 4, tone, pattern = false }) {
   return (
-    <section className={'value-grid' + (tone === 'wash' ? ' value-grid-wash' : '')} id={id}>
+    <section className={'value-grid' + (tone === 'wash' ? ' value-grid-wash' : '') + (pattern ? ' tile-pattern' : '')} id={id}>
       <div className="container">
         {(heading || intro) && (
           <div className="section-head center">

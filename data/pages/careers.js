@@ -43,7 +43,7 @@ export const CAREERS_PAGE = {
     ],
   },
   faqs: [
-    { q: 'Where are the jobs located?', a: 'Our projects are across Los Angeles County and Orange County, including [Los Angeles](/locations/los-angeles/), Pasadena, Long Beach, Irvine and the [other cities we serve](/locations/).' },
+    { q: 'Where are the jobs located?', a: 'Our projects are across Los Angeles County and Orange County, including [Los Angeles](/service-areas/la-county/los-angeles/), Pasadena, Long Beach, Irvine and the [other cities we serve](/service-areas/).' },
     { q: 'What do you look for?', a: 'People who take pride in careful work, communicate clearly and treat homeowners’ property with respect.' },
     { q: 'What if I don’t see an opening for my role?', a: 'Send us your info anyway. Openings change through the year, and we’re always glad to hear from people who share our standards.' },
     { q: 'How do I apply?', a: `Email [${EMAIL}](mailto:${EMAIL}) with the role you’re interested in and a little about your experience, or call us during business hours.` },

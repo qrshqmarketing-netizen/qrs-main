@@ -1,4 +1,4 @@
-// Project photos for the bento gallery on each city page (/locations/<city>/).
+// Project photos for the bento gallery on each city page (/service-areas/<region>/<city>/).
 //
 // TEMPORARY: until projects come from the CRM, every city shows PLACEHOLDER_PROJECTS: the same stand-in photos and
 // roof-type artwork, captioned by service (not by city). Swap in real local projects before launch, or set
@@ -42,6 +42,9 @@ export const PLACEHOLDER_PROJECTS = [
   },
   { title: 'Rain Gutters', label: 'Gutters & drainage', scene: 'scene-gutter', href: '/rain-gutters/' },
 ];
+
+// Every project (Projects page): the real ones when there are any, otherwise the placeholders (or nothing)
+export const allProjects = () => (PROJECTS.length > 0 ? PROJECTS : SHOW_PLACEHOLDER_GALLERY ? PLACEHOLDER_PROJECTS : []);
 
 // A city's gallery: its own projects when it has any, otherwise the placeholders (or nothing)
 export function projectsFor(slug) {

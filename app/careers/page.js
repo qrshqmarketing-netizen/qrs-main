@@ -37,7 +37,7 @@ export default function CareersPage() {
           { label: `Call ${PHONE}`, href: TEL, style: 'line' },
         ]}
       />
-      <ValueGrid heading={page.values.heading} items={page.values.items} tone="wash" />
+      <ValueGrid heading={page.values.heading} items={page.values.items} tone="wash" pattern />
       <ValueGrid id="roles" heading={page.roles.heading} intro={page.roles.intro} items={page.roles.items} />
       <Faq heading="Careers FAQs" sub="Straight answers about working at QRS." faqs={page.faqs} cta={false} />
       <ProcessSteps heading={page.apply.heading} subheading={page.apply.subheading} steps={page.apply.steps} image="/images/roof-drone-palms.webp" imageAlt="Aerial view of a finished shingle roof" tone="white" />

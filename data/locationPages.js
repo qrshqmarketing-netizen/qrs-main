@@ -1,4 +1,4 @@
-// City pages (/locations/<slug>/): the local part of each page. The rest of the page reuses the home page sections.
+// City pages (/service-areas/<region>/<slug>/): the local part of each page. The rest of the page reuses the home page sections.
 // keyword: the page's main search phrase; it appears in metaTitle, metaDescription, hero.heading (the H1) and the intro.
 // Text fields can link with [words](/path/) and bold with **words**. nearby: slugs from data/locations.js.
 
@@ -160,6 +160,8 @@ export const LOCATION_PAGES = {
 
   'woodland-hills': {
     keyword: 'woodland hills roofing',
+    image: '/images/woodland-hills-office.webp', // hero photo: our Valley office building
+    imagePosition: 'center 60%',
     metaTitle: 'Woodland Hills Roofing & Roof Repair',
     metaDescription: 'Woodland Hills roofing from our Valley office on Ventura Blvd: tile, shingle and flat roof repair and replacement with written scopes. Book a $199 Roof Check.',
     hero: {

@@ -14,11 +14,16 @@
 :root{
   --navy:#062d57;
   --navy-2:#0a3969;
-  /* Gold from the logo: --gold is the wordmark color, --gold-2 its highlight (hovers), --gold-ink a deeper shade
-     for small gold text on white or pale backgrounds (readable contrast). Transparent versions: rgba(187,159,94,…) */
-  --gold:#bb9f5e;
-  --gold-2:#d4b572;
+  /* Gold from the logo: --gold is the bright highlight of the logo gradient (buttons, accents), --gold-2 a lighter hover,
+     --gold-ink a deeper shade for small gold text on white or pale backgrounds (readable contrast).
+     Transparent versions: rgba(212,181,114,…) */
+  --gold:#d4b572;
+  --gold-2:#e0c68a;
   --gold-ink:#826a35;
+  /* Clay red, the color of a fired roof tile: the second button color, kept for "call now" and emergency actions
+     so it stands out from the gold "plan / book" buttons. White text on it is 5.4:1 (readable). --red-2 is its hover. */
+  --red:#c0392b;
+  --red-2:#a8301f;
   --ink:#10243a;
   --muted:#64748b;
   --paper:#fff;
@@ -83,7 +88,10 @@ h1,h2,h3,.eyebrow,.hero-sub{text-wrap:balance}
   transition:.2s ease;
 }
 .btn:hover{transform:translateY(-2px)}
-.btn-gold{background:var(--gold);color:#101820;box-shadow:0 9px 22px rgba(187,159,94,.22)}
+.btn-gold{background:var(--gold);color:#101820;box-shadow:0 9px 22px rgba(212,181,114,.22)}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 9px 22px rgba(192,57,43,.24)}
+.btn-red:hover{background:var(--red-2)}
+.btn-red svg{width:19px;height:19px;flex:none}
 .btn-dark{background:var(--navy);color:#fff}
 .btn-light{background:#fff;color:var(--navy)}
 .btn-outline{border-color:rgba(255,255,255,.32);color:#fff;background:rgba(255,255,255,.06)}
@@ -96,7 +104,7 @@ input,select,textarea{
   width:100%;min-height:50px;border:1px solid #d7e0e8;border-radius:11px;padding:13px 14px;
   background:#fff;color:var(--ink);outline:none;font-size:16px; /* 16px stops iOS zooming in on focus */
 }
-input:focus,select:focus,textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(187,159,94,.15)}
+input:focus,select:focus,textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(212,181,114,.15)}
 textarea{min-height:105px;resize:vertical}
 .field{margin-bottom:15px}
 .form-note{font-size:13px;line-height:1.5;color:var(--muted);margin-top:12px}
@@ -213,7 +221,7 @@ a.chip:hover{border-color:var(--navy)}
 .scene-shingle{background:
   repeating-linear-gradient(-12deg,transparent 0 22px,rgba(255,255,255,.1) 23px 25px,transparent 26px 46px),
   repeating-linear-gradient(78deg,rgba(0,0,0,.28) 0 2px,transparent 2px 34px),
-  radial-gradient(circle at 75% 12%,rgba(187,159,94,.35),transparent 38%),
+  radial-gradient(circle at 75% 12%,rgba(212,181,114,.35),transparent 38%),
   linear-gradient(150deg,#5d646a 0%,#3c434a 50%,#1f262d 100%)}
 .scene-inspect{background:
   linear-gradient(180deg,#7fb0d8 0%,#b7d3e8 42%,transparent 42.5%),

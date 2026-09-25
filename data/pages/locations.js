@@ -1,4 +1,4 @@
-// Locations page (/locations/): map, every city and service-area FAQs. Each city's own page copy is in data/locationPages.js.
+// Locations page (/service-areas/): map, every city and service-area FAQs. Each city's own page copy is in data/locationPages.js.
 
 export const LOCATIONS_PAGE = {
   keyword: 'roofing service areas',
@@ -17,7 +17,7 @@ export const LOCATIONS_PAGE = {
     },
     {
       q: 'Do you work in both Los Angeles and Orange County?',
-      a: 'Yes. Our team works across Los Angeles County and Orange County, from [Santa Monica](/locations/santa-monica/) and [Pasadena](/locations/pasadena/) to [Irvine](/locations/irvine/) and [Newport Beach](/locations/newport-beach/).',
+      a: 'Yes. Our team works across Los Angeles County and Orange County, from [Santa Monica](/service-areas/la-county/santa-monica/) and [Pasadena](/service-areas/la-county/pasadena/) to [Irvine](/service-areas/orange-county/irvine/) and [Newport Beach](/service-areas/orange-county/newport-beach/).',
     },
     {
       q: 'What if my city isn’t listed?',

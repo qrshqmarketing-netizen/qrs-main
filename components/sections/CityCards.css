@@ -2,6 +2,9 @@
 .city-cards{background:var(--wash);padding:60px 0}
 .city-county + .city-county{margin-top:44px}
 .city-county h2{color:var(--navy);font-size:clamp(30px,8vw,40px);margin-bottom:18px}
+.city-county h2 a{display:inline-flex;align-items:center;gap:12px;color:inherit;text-decoration:none}
+.city-county h2 a svg{width:26px;height:26px;color:var(--gold-ink);transition:transform .2s}
+.city-county h2 a:hover svg{transform:translateX(4px)}
 .city-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:14px}
 .city-card{
   display:flex;flex-direction:column;gap:8px;padding:22px 22px 20px;border-radius:16px;background:#fff;border:1px solid var(--line);

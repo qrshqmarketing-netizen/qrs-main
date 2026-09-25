@@ -8,7 +8,7 @@
 .rv-toast.show{opacity:1;visibility:visible;transform:none;transition:opacity .3s ease,transform .3s ease}
 .rv-toast:before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:4px;border-radius:0 4px 4px 0;background:var(--gold)}
 .rv-open{display:flex;gap:10px;width:100%;padding:12px 34px 12px 16px;border:0;background:transparent;text-align:left;color:inherit;border-radius:16px;font:inherit}
-.rv-open:focus-visible{outline:3px solid rgba(187,159,94,.6);outline-offset:2px}
+.rv-open:focus-visible{outline:3px solid rgba(212,181,114,.6);outline-offset:2px}
 .rv-avatar{flex:0 0 34px;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:#fff;font:600 15px/1 var(--font-head)}
 .rv-body{display:flex;flex-direction:column;min-width:0;flex:1}
 .rv-top{display:flex;align-items:center;gap:8px}

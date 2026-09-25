@@ -33,7 +33,7 @@ const schema = pageJsonLd({
 // Each city card shows the one-line intro from that city's page
 const BLURBS = Object.fromEntries(Object.entries(LOCATION_PAGES).map(([slug, p]) => [slug, p.hero.sub]));
 
-// Locations page: the service-area map and every city page (content in data/pages/locations.js)
+// Service Areas page: offices, the map, every region and city page (content in data/pages/locations.js)
 export default function LocationsPage() {
   return (
     <main id="top">
@@ -49,7 +49,7 @@ export default function LocationsPage() {
       />
       <Offices sub="Our Los Angeles and Valley offices serve homes and businesses across Los Angeles and Orange County. One number reaches both." />
       <ServiceArea heading="Find Your Nearest QRS Service Area" sub="Enter your ZIP code or pick a city on the map to see its phone number, estimate link and city page." />
-      <CityCards blurbs={BLURBS} />
+      <CityCards blurbs={BLURBS} linkRegions />
       <DifferenceBand />
       <Faq heading="Service Area FAQs" sub="Straight answers about where we work." faqs={page.faqs} cta={false} />
       <RoofCheck tone="white" />

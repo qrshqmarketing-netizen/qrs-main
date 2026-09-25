@@ -61,7 +61,7 @@ export const CONTRACTORS_PAGE = {
     ],
   },
   faqs: [
-    { q: 'What kinds of projects do you partner on?', a: 'Remodels, additions and ADUs, new construction, multi-family buildings and commercial properties across Los Angeles and Orange County (see our [service areas](/locations/)). Tell us how your projects usually run, and we’ll plan our part of the work around it.' },
+    { q: 'What kinds of projects do you partner on?', a: 'Remodels, additions and ADUs, new construction, multi-family buildings and commercial properties across Los Angeles and Orange County (see our [service areas](/service-areas/)). Tell us how your projects usually run, and we’ll plan our part of the work around it.' },
     { q: 'Which roof types and services can you cover?', a: 'Tile, shingle, flat and low-slope, and standing seam metal roofs, plus rain gutters, across replacements, repairs and new installations. Our [residential roofing](/residential-roofing/) pages cover each roof type in detail.' },
     { q: 'Can you assess a roof before we finalize our bid?', a: 'Yes, and that’s often the right time to bring us in. A roofer assesses the roof, photo-documents what we find and puts the scope and price in writing so you can build them into your bid.' },
     { q: 'How do you work alongside other trades on site?', a: 'We coordinate start dates and work areas with you, keep materials and debris contained and clean up as we go. If something on site affects the roof, like a change in the plans, we tell you so we can adjust the scope together.' },

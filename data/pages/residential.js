@@ -120,7 +120,7 @@ export const RESIDENTIAL_PAGE = {
     },
     {
       q: 'Which areas do you serve?',
-      a: 'Homes across Los Angeles and Orange County, including Los Angeles, Santa Monica, Pasadena, Long Beach, Irvine and Newport Beach. See every city on our [service areas](/locations/) page.',
+      a: 'Homes across Los Angeles and Orange County, including Los Angeles, Santa Monica, Pasadena, Long Beach, Irvine and Newport Beach. See every city on our [service areas](/service-areas/) page.',
     },
   ],
 };

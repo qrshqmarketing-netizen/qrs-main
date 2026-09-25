@@ -1,11 +1,25 @@
-// Builds the hub page and service pages for a section (shingle, tile, flat, metal, commercial) and the
-// stand-alone service pages (rain gutters, HOA). The route files in app/ call these.
+// Builds the hub page and service pages for a section (shingle, tile, flat, metal, commercial), the stand-alone
+// service pages (rain gutters, HOA, emergency, maintenance plans, financing) and the service-first hubs
+// (roof repair, replacement, inspection). The route files in app/ call these.
 
-import { CONTRACTORS_LINK, roofTypeCards, typeCard, SINGLES } from '@/data/catalog';
-import { COMMERCIAL, findService, relatedLinks, serviceCards, serviceCrumbs, sectionCrumbs, serviceHref, singleCrumbs } from '@/data/content';
+import { CONTRACTORS_LINK, HOME, roofTypeCards, typeCard, SINGLES } from '@/data/catalog';
+import {
+  cardFor,
+  COMMERCIAL,
+  findService,
+  relatedLinks,
+  sectionCrumbs,
+  sectionPages,
+  serviceCards,
+  serviceCrumbs,
+  serviceHref,
+  serviceTypeCards,
+  singleCrumbs,
+} from '@/data/content';
 import { pageMetadata } from '@/lib/pages';
 import HubPage from './HubPage';
 import ServicePage from './ServicePage';
+import { isRepair, REPAIR_ACTIONS } from './shared';
 
 const isCommercial = (section) => section.key === 'commercial';
 
@@ -45,6 +59,7 @@ export function SectionHub({ section }) {
       scene={section.scenes[0]}
       cards={cards}
       carousel={isCommercial(section) ? null : { title: 'Roofing Types', items: roofTypeCards(section.href) }}
+      extraGrid={section.serviceTypes ? { heading: 'Commercial Roofing Services', intro: 'Repairs, replacement and ongoing care for any commercial roof.', cards: serviceTypeCards(section) } : null}
       feature={feature}
       offer={isCommercial(section) ? 'commercial' : 'home'}
     />
@@ -52,7 +67,7 @@ export function SectionHub({ section }) {
 }
 
 // ----- Service pages (/tile-roofing/lift-and-relay/, …) -----
-export const serviceParams = (section) => section.services.map((s) => ({ service: s.slug }));
+export const serviceParams = (section) => sectionPages(section).map((s) => ({ service: s.slug }));
 
 export function serviceMetadata(section, slug) {
   const service = findService(section, slug);
@@ -61,7 +76,7 @@ export function serviceMetadata(section, slug) {
 
 export function SectionService({ section, slug }) {
   const service = findService(section, slug);
-  const i = section.services.indexOf(service);
+  const i = sectionPages(section).indexOf(service);
   const n = section.scenes.length;
   return (
     <ServicePage
@@ -72,24 +87,45 @@ export function SectionService({ section, slug }) {
       carousel={carouselFor(section, serviceHref(section, service))}
       scenes={[section.scenes[i % n], section.scenes[(i + 1) % n]]}
       offer={isCommercial(section) ? 'commercial' : 'home'}
+      actions={isRepair(service) ? REPAIR_ACTIONS : undefined}
     />
   );
 }
 
-// ----- Stand-alone pages (/rain-gutters/, /hoa-multi-family/) -----
+// ----- Stand-alone pages (/rain-gutters/, /hoa-multi-family/, /emergency-roof-repair/, /roof-maintenance-plans/, /financing/) -----
 export const singleMetadata = (single) =>
   pageMetadata({ title: single.page.metaTitle, description: single.page.metaDescription, path: single.href });
 
-export function SinglePage({ single }) {
+export function SinglePage({ single, actions, finalCta }) {
   return (
     <ServicePage
       page={single.page}
       crumbs={singleCrumbs(single)}
-      eyebrow={single.parent.label}
+      eyebrow={single.parent ? single.parent.label : 'Roof Services'}
       related={relatedLinks(single.page.related)}
       carousel={{ title: 'Roofing Types', items: roofTypeCards(single.href) }}
       scenes={[single.scenes[0], 'scene-inspect']}
       offer={single.key === 'hoa' ? 'commercial' : 'home'}
+      actions={actions}
+      {...(finalCta && { finalCta })}
+    />
+  );
+}
+
+// ----- Service-first hubs (/roof-repair/, /roof-replacement/, /roof-inspection/) -----
+export const serviceHubMetadata = (page) => pageMetadata({ title: page.hub.metaTitle, description: page.hub.metaDescription, path: page.href });
+
+export function ServiceHub({ page, actions }) {
+  return (
+    <HubPage
+      hub={page.hub}
+      crumbs={[HOME, { label: page.label, href: page.href }]}
+      eyebrow="Roof Services"
+      scene={page.scenes[0]}
+      cards={page.cards.map(cardFor).filter(Boolean)}
+      carousel={{ title: 'Roofing Types', items: roofTypeCards() }}
+      offer="home"
+      actions={actions}
     />
   );
 }

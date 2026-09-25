@@ -2,8 +2,8 @@ import Rich from '@/components/ui/Rich';
 import { OfficeCard } from './Offices';
 import './LocalIntro.css';
 
-// City pages: local intro copy, the office in that city (if there is one), the neighborhoods we serve and local roof considerations
-export default function LocalIntro({ city, heading, paragraphs = [], office, neighborhoods = [], considerations = [] }) {
+// City and region pages: local intro copy, the offices there (if any), the neighborhoods we serve and local roof considerations
+export default function LocalIntro({ city, heading, paragraphs = [], offices = [], neighborhoods = [], considerations = [] }) {
   return (
     <section className="local-intro tile-pattern">
       <div className="container local-grid">
@@ -17,7 +17,9 @@ export default function LocalIntro({ city, heading, paragraphs = [], office, nei
           ))}
         </div>
         <aside className="local-aside">
-          {office && <OfficeCard office={office} cityLink={false} />}
+          {offices.map((office) => (
+            <OfficeCard office={office} cityLink={offices.length > 1} key={office.name} />
+          ))}
           {neighborhoods.length > 0 && (
             <div className="local-card">
               <h3>Neighborhoods we serve in {city}</h3>

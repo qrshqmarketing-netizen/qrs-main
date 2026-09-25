@@ -35,7 +35,7 @@ export const TILE_CONTENT = {
       { q: 'How long does a tile roof last?', a: 'The tiles and the layers under them age on different clocks. Well-kept clay and concrete tile can go for decades, while the underlayment beneath is usually what gives out first, especially after years of Southern California heat. When an older tile roof starts leaking, that hidden layer is the usual suspect.' },
       { q: 'Is it safe to walk on a tile roof?', a: 'We’d advise against it. Tiles crack when weight lands on an unsupported spot, and the damage often can’t be seen from the ground. If someone needs roof access for other work, ask how they plan to protect the tile before they climb up.' },
       { q: 'My Spanish-style home has flat roof sections too. Can you handle both?', a: 'Yes. Many Spanish Revival homes pair tile with flat areas behind parapet walls, and the transitions between them need as much attention as either roof. We look at both during the Roof Check, and our [flat roofing](/flat-roofing/) work covers the low-slope side.' },
-      { q: 'Do you work on tile roofs in my area?', a: 'We serve homeowners throughout Los Angeles County and Orange County, from Santa Monica and Burbank to Long Beach and Newport Beach. See our [service locations](/locations/), or book a [$199 Roof Check](#roof-check) and we’ll confirm your address is covered.' },
+      { q: 'Do you work on tile roofs in my area?', a: 'We serve homeowners throughout Los Angeles County and Orange County, from Santa Monica and Burbank to Long Beach and Newport Beach. See our [service locations](/service-areas/), or book a [$199 Roof Check](#roof-check) and we’ll confirm your address is covered.' },
     ],
   },
 
@@ -310,7 +310,7 @@ export const TILE_CONTENT = {
           { title: 'Roofer-led from the first visit', text: 'Care starts with a roofer-led [$199 Roof Check](#roof-check), so the plan fits your actual roof rather than a generic checklist.' },
           { title: 'A record you can use', text: 'Years of photos make it easier to plan and budget, and if you sell, they show buyers how the roof was looked after.' },
           { title: 'No pressure to replace', text: 'Care visits are about keeping your roof working. When we recommend bigger work, it comes with photos, reasons and a written price, and the choice stays yours.' },
-          { title: 'Local to LA and Orange County', text: 'Salt air corrodes flashings near the coast, inland heat bakes underlayment, and Santa Ana winds loosen tiles and fill valleys. We plan care around how those conditions play out across [Los Angeles and Orange County](/locations/).' },
+          { title: 'Local to LA and Orange County', text: 'Salt air corrodes flashings near the coast, inland heat bakes underlayment, and Santa Ana winds loosen tiles and fill valleys. We plan care around how those conditions play out across [Los Angeles and Orange County](/service-areas/).' },
         ],
       },
       faqs: [

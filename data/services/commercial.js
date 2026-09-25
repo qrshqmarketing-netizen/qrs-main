@@ -34,7 +34,7 @@ export const COMMERCIAL_CONTENT = {
       { q: 'Can our building stay open while you work on the roof?', a: 'Usually, yes. Most commercial roofing happens while the building is in use, so we plan access, noise, staging and deliveries with you before work begins. If any step needs an area cleared, you’ll know ahead of time.' },
       { q: 'Do you repair commercial roofs, or only replace them?', a: 'Both. Many commercial leaks trace back to one failed flashing, a clogged drain or a worn seam, and a targeted repair is the right fix. When a roof is near the end of its life, the survey photos show it, so you can plan and budget for replacement.' },
       { q: 'Do you offer ongoing maintenance for commercial roofs?', a: 'Yes. Scheduled roof care covers seasonal checks, clearing drains and debris, and a photo record you can keep with your building files. It helps you catch wear early and deal with it before the rainy season.' },
-      { q: 'Do you work with general contractors and property managers?', a: 'Yes. We partner with general contractors, builders and property managers across [Los Angeles and Orange County](/locations/). Our [contractor partnerships](/contractors/) page explains how those projects run.' },
+      { q: 'Do you work with general contractors and property managers?', a: 'Yes. We partner with general contractors, builders and property managers across [Los Angeles and Orange County](/service-areas/). Our [contractor partnerships](/contractors/) page explains how those projects run.' },
     ],
   },
 
@@ -82,7 +82,7 @@ export const COMMERCIAL_CONTENT = {
         { q: 'What does a roof survey cover on an office building?', a: 'A roofer walks the full roof and checks every HVAC curb, drain, scupper, parapet and roof hatch, along with the seams and surface in between. We photograph what we find, explain it in plain English and tell you what each area needs next.' },
         { q: 'Do you work on rooftop HVAC units?', a: 'We handle the roofing around them: curbs, flashings and penetrations. Servicing the units themselves is a job for your HVAC contractor, and we’re glad to coordinate with them when roof work touches the equipment.' },
         { q: 'Do you also roof apartment and condo buildings?', a: 'Yes. Our [HOA & multi-family roofing](/hoa-multi-family/) service handles residential properties with the same survey-first approach. If you manage both office and residential buildings, we can cover the whole portfolio.' },
-        { q: 'Do you serve office buildings outside Los Angeles?', a: 'Yes. We work across LA County and Orange County, from Burbank and Glendale to Irvine and Santa Ana. See our [service area](/locations/) for every city we cover.' },
+        { q: 'Do you serve office buildings outside Los Angeles?', a: 'Yes. We work across LA County and Orange County, from Burbank and Glendale to Irvine and Santa Ana. See our [service area](/service-areas/) for every city we cover.' },
       ],
       related: ['/commercial-roofing/malls/', '/commercial-roofing/retail/', '/hoa-multi-family/'],
     },
@@ -226,7 +226,7 @@ export const COMMERCIAL_CONTENT = {
         { q: 'Why does our roof keep leaking around stacks and vents?', a: 'Penetrations heat up, cool down and sometimes vibrate, and residue from some processes breaks down roofing around them. Flashing that was sealed over rather than properly built tends to fail first. We rebuild those details to suit the conditions on your roof.' },
         { q: 'What do you need from us before a roof survey?', a: 'Safe roof access, a contact who knows the building, and any history of leaks or past repairs. If some areas are restricted or call for extra safety gear, let us know so we can plan the visit around it.' },
         { q: 'Do you also roof the office or showroom part of our building?', a: 'Yes. Many industrial properties include front offices or a showroom, sometimes under a different kind of roof. We can include every section in one survey and one written scope.' },
-        { q: 'Do you serve industrial areas in both counties?', a: 'Yes. We work with industrial properties across LA County and Orange County, including Los Angeles, Torrance, Anaheim and Santa Ana. Our [service area](/locations/) page lists every city we serve.' },
+        { q: 'Do you serve industrial areas in both counties?', a: 'Yes. We work with industrial properties across LA County and Orange County, including Los Angeles, Torrance, Anaheim and Santa Ana. Our [service area](/service-areas/) page lists every city we serve.' },
       ],
       related: ['/commercial-roofing/warehouses/', '/commercial-roofing/shops/', '/flat-roofing/'],
     },
@@ -274,7 +274,7 @@ export const COMMERCIAL_CONTENT = {
         { q: 'Can you plan around noise-sensitive work, like a recording studio?', a: 'Yes. Tell us about sessions and quiet hours when you reach out, and we’ll plan the loudest steps, like tearing off the old roof, around them where we can. Auto shops and other businesses with customer bays get the same kind of planning.' },
         { q: 'Do you work on roofs with exhaust fans and vents?', a: 'Yes. Exhaust fans, vent stacks and ducts are common leak points on shop roofs, especially when they were added after the roof went on. We flash each one properly as part of the repair or replacement.' },
         { q: 'Our building has gutters and downspouts. Can you look at those too?', a: 'Yes. We check gutters and downspouts during the survey, since they carry water off the roof. If they need work, our [rain gutters](/rain-gutters/) service can be part of the same scope.' },
-        { q: 'Do you only work on large commercial buildings?', a: 'No. We roof small commercial buildings across LA and Orange County, from a single-bay auto shop to a row of storefronts. Check our [service area](/locations/) to see if we cover your city.' },
+        { q: 'Do you only work on large commercial buildings?', a: 'No. We roof small commercial buildings across LA and Orange County, from a single-bay auto shop to a row of storefronts. Check our [service area](/service-areas/) to see if we cover your city.' },
       ],
       related: ['/commercial-roofing/retail/', '/commercial-roofing/industrial/', '/flat-roofing/'],
     },
@@ -322,7 +322,7 @@ export const COMMERCIAL_CONTENT = {
         { q: 'Can you replace a warehouse roof while we keep shipping?', a: 'That’s what phasing is for. We plan work areas around your docks and truck routes and keep material staging out of the way. If a section above sensitive inventory needs a cleared or covered area, we plan it with you ahead of time.' },
         { q: 'Do you work on warehouse skylights?', a: 'Skylights are one of the most common leak points on a warehouse roof. We check the curbs and flashing around each one during the survey and include any roofing repairs in your scope. If a skylight itself is cracked or clouded, we note it in the photos so you can plan for it.' },
         { q: 'Our warehouse is leased. Can you coordinate with the tenant?', a: 'Yes. We can work out access and timing with your tenant’s operations contact while keeping you informed on the scope and findings. Everyone works from the same photos and written plan.' },
-        { q: 'Do you also roof manufacturing and industrial buildings?', a: 'Yes. Facilities with production equipment and lots of rooftop penetrations need their own kind of planning, covered on our [industrial roofing](/commercial-roofing/industrial/) page. You can also check our [service area](/locations/) to confirm we cover your city.' },
+        { q: 'Do you also roof manufacturing and industrial buildings?', a: 'Yes. Facilities with production equipment and lots of rooftop penetrations need their own kind of planning, covered on our [industrial roofing](/commercial-roofing/industrial/) page. You can also check our [service area](/service-areas/) to confirm we cover your city.' },
       ],
       related: ['/commercial-roofing/industrial/', '/commercial-roofing/malls/', '/flat-roofing/'],
     },
@@ -342,7 +342,7 @@ export const COMMERCIAL_CONTENT = {
       overview: {
         paragraphs: [
           'Malls and shopping centers grow and change, and so do their roofs. Sections built at different times sit at different heights, each tenant space tends to add its own rooftop units, and every remodel can leave behind new penetrations, abandoned curbs or quick patches. Skylights over common areas, parapets with signage and long runs of drains complete the picture. Water can travel across connected sections before it shows up in a store, so we follow each leak back across the roof to where it actually starts.',
-          'Work on an open center takes coordination. We plan the scope with center management, phase it across roof sections and tenant spaces, and schedule around store hours, deliveries, entrances and parking. Closeout photos by section give you a record of what was done above each space. We work with centers [across Los Angeles and Orange County](/locations/), and it all starts with a roof survey: [request an estimate](#roof-check) and we’ll take it from there.',
+          'Work on an open center takes coordination. We plan the scope with center management, phase it across roof sections and tenant spaces, and schedule around store hours, deliveries, entrances and parking. Closeout photos by section give you a record of what was done above each space. We work with centers [across Los Angeles and Orange County](/service-areas/), and it all starts with a roof survey: [request an estimate](#roof-check) and we’ll take it from there.',
         ],
       },
       process: {

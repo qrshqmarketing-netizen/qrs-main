@@ -35,7 +35,7 @@ export const FLAT_CONTENT = {
       { q: 'What is modified bitumen?', a: 'It’s a tough, asphalt-based roofing membrane with built-in reinforcement, typically installed in layers with overlapping, sealed laps. It handles routine foot traffic and strong sun well, one reason it’s so common on low-slope homes in Southern California. The right system for your roof still depends on its condition and drainage.' },
       { q: 'Do you work on the flat sections of Spanish-style homes?', a: 'Yes. Many Spanish and Mediterranean homes pair [tile roofing](/tile-roofing/) with flat sections hidden behind parapet walls, drained by scuppers through the wall. We look at the flat areas, the parapet caps and the wall flashings, not just the tile you can see from the street.' },
       { q: 'Do you work on flat roofs for commercial buildings?', a: 'Yes. Offices, shops, warehouses and many other commercial buildings rely on low-slope roofs, and we plan that work around each building’s condition and drainage too. Visit our [commercial roofing](/commercial-roofing/) section for details.' },
-      { q: 'Do you work on flat roofs in my part of LA or Orange County?', a: 'We work across Los Angeles County and Orange County, in cities such as Glendale, Torrance, Anaheim, Santa Ana and Huntington Beach as well as Los Angeles itself. Our [service area](/locations/) page shows whether your city is on the list.' },
+      { q: 'Do you work on flat roofs in my part of LA or Orange County?', a: 'We work across Los Angeles County and Orange County, in cities such as Glendale, Torrance, Anaheim, Santa Ana and Huntington Beach as well as Los Angeles itself. Our [service area](/service-areas/) page shows whether your city is on the list.' },
     ],
   },
 

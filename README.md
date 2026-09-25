@@ -1,6 +1,6 @@
 # Quality Roofing Specialists website
 
-The Quality Roofing Specialists website as a modular [Next.js](https://nextjs.org) site: the home page plus about 50 inner pages (residential and commercial services, 13 city pages, About, Careers and Contractors). Every page is built from shared section components, and the words live in simple files in `data/`.
+The Quality Roofing Specialists website as a modular [Next.js](https://nextjs.org) site: the home page plus about 100 inner pages (service-first pages, residential and commercial services, service regions and 13 city pages, a blog, Projects, Reviews, About, Careers, Contractors, Contact and legal pages). Every page is built from shared section components, and the words live in simple files in `data/`.
 
 ## Run it on your computer
 
@@ -34,8 +34,15 @@ To test the finished (production) version: `npm run build`, then `npm start`.
 | Home page FAQ | `data/faqs.js` |
 | Shingle / tile / flat / metal pages (hub + every service) | `data/services/shingle.js`, `tile.js`, `flat.js`, `metal.js` |
 | Rain gutters and HOA & multi-family pages | `data/services/specialty.js` |
-| Commercial pages | `data/services/commercial.js` |
+| Commercial pages (hub + building types) | `data/services/commercial.js` |
+| Commercial repair, replacement and maintenance pages | `data/services/commercialServices.js` |
+| Roof Repair, Roof Replacement and Roof Inspection pages (every roof type) | `data/services/serviceHubs.js`; their cards: `SERVICE_HUBS` in `data/catalog.js` |
+| Emergency & storm damage, maintenance plans and financing pages | `data/services/programs.js` |
+| Region pages (LA County, Orange County) | `data/regionPages.js` |
 | City pages (intro, neighborhoods, local FAQs) | `data/locationPages.js` |
+| Blog posts | `data/blog/posts.js` (blog index wording: `data/pages/blog.js`) |
+| Contact, Reviews, Projects, Privacy and Terms pages | `data/pages/contact.js`, `reviews.js`, `projects.js`, `legal.js` |
+| Redirects from the old WordPress addresses | `data/redirects.js` |
 | Project photo gallery on the city pages | `data/projects.js` |
 | $199 Roof Check / roof survey card beside the estimate form | `data/offers.js` |
 | Residential hub, About, Careers, Contractors (including white-label roofing), Locations pages | `data/pages/` |
@@ -44,7 +51,7 @@ To test the finished (production) version: `npm run build`, then `npm start`.
 | "The QRS Way" steps | `data/process.js` |
 | Accreditation logos | `data/credentials.js` + images in `public/images/badges/` |
 | Google reviews | `data/reviews.js` |
-| Service area cities (map + city pages) | `data/locations.js` |
+| Service regions and cities (map, region and city pages) | `data/locations.js` |
 | Chat assistant answers | `data/assistant.js` |
 | Instant Quote prices and financing (visitors can pick several pitches, roof types and materials to compare) | `data/instantQuote.js` |
 | Section order on the home page | `app/page.js` |
@@ -66,9 +73,10 @@ Common edits:
 app/
   layout.js          Header, footer and floating widgets shared by every page; fonts; SEO defaults
   page.js            The home page: its sections, in order
-  residential-roofing/, shingle-roofing/, tile-roofing/, flat-roofing/, metal-roofing/,
-  commercial-roofing/, rain-gutters/, hoa-multi-family/, locations/, about-us/, careers/, contractors/
-                     One folder per page address; [service] and [city] folders build one page per entry
+  roof-repair/, roof-replacement/, residential-roofing/, shingle-roofing/, commercial-roofing/, service-areas/,
+  blog/, contact-us/, …
+                     One folder per page address; [service], [region], [city] and [slug] folders build one page per entry
+  api/location/      The visitor's approximate location for the service area map
   sitemap.js, robots.js  sitemap.xml and robots.txt for search engines and AI crawlers
   llms.txt/, llms-full.txt/, okf/
                      Files for AI assistants, built from the page content (see "Search engines and AI")
@@ -89,7 +97,9 @@ assets/originals/    Full-size source images (not used by the site)
 ## Adding pages
 
 - **A service page in an existing section:** add an entry to that section's `services` list in `data/services/`, then link it from the menu in `data/navigation.js`. The page, its breadcrumbs, cards and sitemap entry appear automatically.
-- **A city:** add it to `data/locations.js` and give it an entry in `data/locationPages.js`.
+- **A city:** add it to `data/locations.js` (with its region) and give it an entry in `data/locationPages.js`. It gets a page at `/service-areas/<region>/<city>/`.
+- **A new region (expanding to a new market):** add it to `REGIONS` in `data/locations.js`, add its page copy to `data/regionPages.js`, then add its cities. The menus, map, sitemap and structured data pick it up automatically.
+- **A blog post:** add it to `BLOG_POSTS` in `data/blog/posts.js` (newest first).
 - **An office:** add it to `OFFICES` in `data/site.js` with the slug of the city page it sits in. Its card appears on that city page and on the Service Areas page, and search engines see it as a branch of the business.
 - **A one-off page:** create a folder in `app/` with a `page.js` that combines sections from `components/sections/` (see `app/careers/page.js`). The header, footer and widgets appear automatically, and the browser tab reads "<title> | Quality Roofing Specialists". Also add its address to `ALL_PATHS` in `data/content.js` (sitemap) and an entry to `PAGE_INDEX` in `lib/pageIndex.js` (AI files), and give it structured data with `pageJsonLd` like the other pages.
 
@@ -131,9 +141,10 @@ The easiest host for a Next.js site is [Vercel](https://vercel.com) (free tier):
 
 Before pointing qualityroofingspecialists.com at the new site:
 
-- **Redirects:** the current WordPress site has about 150 addresses (service pages, 96 city pages, 25 blog posts, privacy policy and more). Map each one to its new page with permanent redirects, or they'll show "not found" and lose their Google rankings.
+- **Redirects:** every address on the current WordPress site (about 150) either exists on the new site or has a permanent redirect in `data/redirects.js`. If you add or remove old pages before launch, update that list.
 - **Tracking:** the current site loads Google Tag Manager (GTM-P7Z3CMG); the new site doesn't have analytics yet.
-- **Policies:** the current site has privacy policy and terms pages; the new site doesn't yet. Once the privacy policy exists, set `PRIVACY_POLICY_URL` (`data/site.js`) and the footer and cookie notice link to it. Mention that the service area map uses visitors' approximate location (from their IP address) to suggest the nearest office.
+- **Policies:** the Privacy Policy and Terms (`data/pages/legal.js`) are drafts written from how this site works. Have your attorney review them, and update them when you add analytics, advertising pixels or new forms.
+- **Instant Quote financing numbers:** `FINANCE` in `data/instantQuote.js` is still example data (APR and terms); set your lender's real terms, and `FINANCING_URL` if you have an application link.
 - **Content:** replace the temporary city gallery photos (`data/projects.js`) and double-check claims such as warranty wording and awards.
 
 ## History

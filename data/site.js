@@ -28,7 +28,7 @@ export const BUSINESS = {
 };
 
 // Offices, shown on the Service Areas page and on the city page each one sits in (citySlug, from data/locations.js).
-// The first is the main office (BUSINESS.address). Both answer the same phone number.
+// The first is the main office (BUSINESS.address). Both answer the same phone number. `image`: an optional photo for its card.
 export const OFFICES = [
   { name: 'Los Angeles Office', citySlug: 'los-angeles', address: BUSINESS.address, geo: BUSINESS.geo, mapUrl: BUSINESS.mapUrl },
   {
@@ -36,6 +36,8 @@ export const OFFICES = [
     citySlug: 'woodland-hills',
     address: { street: '22900 Ventura Blvd, Suite 124', city: 'Woodland Hills', region: 'CA', postalCode: '91364', country: 'US' },
     geo: { latitude: 34.165009, longitude: -118.626272 },
+    image: '/images/woodland-hills-office.webp',
+    imageAlt: 'Aerial view of the Woodland Court office building on Ventura Boulevard in Woodland Hills',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=22900+Ventura+Blvd+Suite+124+Woodland+Hills+CA+91364',
   },
 ];
@@ -69,7 +71,7 @@ export const PROOF_POINTS = [
 export const PROCESS_VIDEO = { embed: '', poster: '' };
 
 // Privacy policy page, linked from the cookie notice. Leave '' until the page exists.
-export const PRIVACY_POLICY_URL = '';
+export const PRIVACY_POLICY_URL = '/privacy-policy/';
 
 // Footer social links. Replace '#' with your real profile URLs.
 export const SOCIAL = {

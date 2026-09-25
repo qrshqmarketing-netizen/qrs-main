@@ -14,8 +14,9 @@ import { LOCATION_CTA } from './shared';
 
 // A hub page (e.g. /tile-roofing/ or /commercial-roofing/): intro, cards for every page in the section,
 // why-choose points, FAQs and the Roof Check form. Content shape: `hub` in data/services/*.js.
-// cards: [{ title, text, href, scene, image? }]; feature: optional SplitFeature props (e.g. contractors teaser).
-export default function HubPage({ hub, crumbs, eyebrow, image, imageAlt, scene, cards, carousel, feature, offer }) {
+// cards: [{ title, text, href, scene, image? }]; extraGrid: optional { heading, intro, cards } shown before them
+// (commercial services); feature: optional SplitFeature props (e.g. contractors teaser); actions: hero buttons (PageHero).
+export default function HubPage({ hub, crumbs, eyebrow, image, imageAlt, scene, cards, extraGrid, carousel, feature, offer, actions }) {
   const schema = pageJsonLd({
     path: crumbs.at(-1).href,
     title: hub.metaTitle,
@@ -23,7 +24,7 @@ export default function HubPage({ hub, crumbs, eyebrow, image, imageAlt, scene, 
     type: 'CollectionPage',
     crumbs,
     faqs: hub.faqs,
-    service: { name: crumbs.at(-1).label, type: hub.keyword, catalog: cards.map((c) => ({ name: c.title, href: c.href })) },
+    service: { name: crumbs.at(-1).label, type: hub.keyword, catalog: [...(extraGrid?.cards || []), ...cards].map((c) => ({ name: c.title, href: c.href })) },
     image,
   });
   return (
@@ -37,9 +38,11 @@ export default function HubPage({ hub, crumbs, eyebrow, image, imageAlt, scene, 
         image={image}
         imageAlt={imageAlt}
         card={{ kicker: offer === 'commercial' ? 'Why owners call QRS' : 'Why homeowners call QRS', scene, highlights: hub.hero.highlights, offer }}
+        {...(actions && { actions })}
       />
       <Overview heading={hub.overview.heading} paragraphs={hub.overview.paragraphs} />
-      <CardGrid id="services" heading={hub.cards.heading} intro={hub.cards.intro} cards={cards} tone="wash" />
+      {extraGrid && <CardGrid id="services" heading={extraGrid.heading} intro={extraGrid.intro} cards={extraGrid.cards} tone="wash" />}
+      <CardGrid id={extraGrid ? 'buildings' : 'services'} heading={hub.cards.heading} intro={hub.cards.intro} cards={cards} tone={extraGrid ? undefined : 'wash'} />
       <ValueGrid heading={hub.highlights.heading} items={hub.highlights.points} columns={3} />
       {feature && <SplitFeature {...feature} tone="wash" />}
       <DifferenceBand />

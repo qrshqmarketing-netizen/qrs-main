@@ -20,7 +20,7 @@ export default function NearbyAreas({ city, nearby = [] }) {
             </li>
           ))}
           <li>
-            <SiteLink className="chip chip-all" href="/locations/">
+            <SiteLink className="chip chip-all" href="/service-areas/">
               All service areas <ArrowRight />
             </SiteLink>
           </li>

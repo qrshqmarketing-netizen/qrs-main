@@ -47,6 +47,12 @@ export default function Footer() {
             Copyright &copy; <CopyrightYear builtYear={new Date().getFullYear()} /> {BUSINESS.name}, All Rights Reserved
           </span>
           <span>Lifetime Workmanship Warranty</span>
+          <span>CSLB Lic # {BUSINESS.license}</span>
+          {FOOTER.legal.map((link) => (
+            <span key={link.href}>
+              <SiteLink href={link.href} prefetch={false}>{link.label}</SiteLink>
+            </span>
+          ))}
         </div>
       </div>
     </footer>

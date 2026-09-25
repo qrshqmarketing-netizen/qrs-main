@@ -15,7 +15,8 @@ import { LOCATION_CTA } from './shared';
 // A service page (e.g. /tile-roofing/lift-and-relay/). Content shape: see data/services/*.js.
 // crumbs: breadcrumb trail; eyebrow: section label above the H1; carousel: { title, items } of related sections;
 // related: [{ label, href }] closest related pages; scenes: [heroArt, processArt] placeholder art until photos exist.
-export default function ServicePage({ page, crumbs, eyebrow, carousel, related, scenes = [], offer }) {
+// actions: hero buttons (PageHero); finalCta: the closing call to action (FinalCta props).
+export default function ServicePage({ page, crumbs, eyebrow, carousel, related, scenes = [], offer, actions, finalCta = LOCATION_CTA }) {
   const [heroScene = 'scene-shingle', processScene = heroScene] = scenes;
   const schema = pageJsonLd({
     path: crumbs.at(-1).href,
@@ -37,6 +38,7 @@ export default function ServicePage({ page, crumbs, eyebrow, carousel, related, 
         image={page.image}
         imageAlt={page.imageAlt}
         card={{ kicker: `${page.navLabel} with QRS`, scene: heroScene, highlights: page.hero.highlights, offer }}
+        {...(actions && { actions })}
       />
       <Overview paragraphs={page.overview.paragraphs} />
       <ProcessSteps heading={page.process.heading} subheading={page.process.subheading} steps={page.process.steps} scene={processScene} />
@@ -46,7 +48,7 @@ export default function ServicePage({ page, crumbs, eyebrow, carousel, related, 
       {carousel?.items?.length > 0 && <CardCarousel title={carousel.title} items={carousel.items} idPrefix="types" />}
       <Faq heading="Frequently Asked Questions" sub={`Straight answers about ${page.keyword || page.title.toLowerCase()}.`} faqs={page.faqs} cta={false} />
       <RoofCheck tone="white" offer={offer} />
-      <FinalCta {...LOCATION_CTA} />
+      <FinalCta {...finalCta} />
     </main>
   );
 }

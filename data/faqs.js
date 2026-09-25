@@ -30,6 +30,6 @@ export const FAQS = [
   },
   {
     q: 'What areas do you serve?',
-    a: `We serve homeowners across [Southern California](/locations/). Enter your ZIP code in our [service area map](#service-area) to check your city, or call [${PHONE}](${TEL}).`,
+    a: `We serve homeowners across [Southern California](/service-areas/). Enter your ZIP code in our [service area map](#service-area) to check your city, or call [${PHONE}](${TEL}).`,
   },
 ];

@@ -3,9 +3,10 @@ import { LOCATION_PAGES } from '@/data/locationPages';
 import { cityPath, findCity, LOCATIONS } from '@/data/locations';
 import { pageMetadata } from '@/lib/pages';
 
-// One page per city in data/locations.js, with copy from data/locationPages.js (other addresses show the 404 page)
+// One page per city in data/locations.js, at /service-areas/<region>/<city>/, with copy from data/locationPages.js.
+// Other addresses (including a city under the wrong region) show the 404 page.
 export const dynamicParams = false;
-export const generateStaticParams = () => LOCATIONS.map((l) => ({ city: l.slug }));
+export const generateStaticParams = () => LOCATIONS.map((l) => ({ region: l.region, city: l.slug }));
 
 export async function generateMetadata({ params }) {
   const { city } = await params;

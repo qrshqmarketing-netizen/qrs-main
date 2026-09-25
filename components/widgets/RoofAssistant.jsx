@@ -231,9 +231,9 @@ export default function RoofAssistant() {
       >
         <svg className="qa-ic-open" viewBox="0 0 40 40" aria-hidden="true">
           <path d="M20 5C11.2 5 4 11.1 4 18.7c0 4.1 2.1 7.8 5.5 10.3L8 35l7.1-3.6c1.6.4 3.2.6 4.9.6 8.8 0 16-6.1 16-13.3S28.8 5 20 5Z" fill="#062d57" />
-          <circle cx="13.5" cy="18.7" r="2.2" fill="#bb9f5e" />
-          <circle cx="20" cy="18.7" r="2.2" fill="#bb9f5e" />
-          <circle cx="26.5" cy="18.7" r="2.2" fill="#bb9f5e" />
+          <circle cx="13.5" cy="18.7" r="2.2" fill="#d4b572" />
+          <circle cx="20" cy="18.7" r="2.2" fill="#d4b572" />
+          <circle cx="26.5" cy="18.7" r="2.2" fill="#d4b572" />
         </svg>
         <CloseIcon className="qa-ic-close" strokeWidth={2.8} />
         <span className="qa-dot" aria-hidden="true"></span>

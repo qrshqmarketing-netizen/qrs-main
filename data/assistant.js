@@ -49,7 +49,7 @@ export const ANSWERS = [
   },
   {
     match: /area|serve|zip|city|location|near|orange county|los angeles|\bla\b|\boc\b|\b9\d{4}\b|santa monica|pasadena|glendale|burbank|torrance|long beach|anaheim|santa ana|huntington|irvine|newport/,
-    answer: 'We serve homeowners across Los Angeles and Orange County. You can enter your ZIP in our <a href="/locations/" data-qa-close>service area map</a> to check your city, or call ' + call + '.',
+    answer: 'We serve homeowners across Los Angeles and Orange County. You can enter your ZIP in our <a href="/service-areas/" data-qa-close>service area map</a> to check your city, or call ' + call + '.',
     chips: ['Book a Roof Check', 'What services do you offer?'],
   },
   {

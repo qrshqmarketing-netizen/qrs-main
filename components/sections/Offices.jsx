@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import SiteLink from '@/components/ui/SiteLink';
 import { ArrowRight } from '@/components/ui/icons';
 import { cityPath, findCity } from '@/data/locations';
@@ -8,7 +9,12 @@ import './Offices.css';
 export function OfficeCard({ office, cityLink = true }) {
   const { street, city, region, postalCode } = office.address;
   return (
-    <div className="office-card">
+    <div className={'office-card' + (office.image ? ' office-card-photo' : '')}>
+      {office.image && (
+        <div className="office-photo">
+          <Image src={office.image} alt={office.imageAlt || ''} fill sizes="(min-width: 901px) 560px, 100vw" />
+        </div>
+      )}
       <h3>
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M12 2.5a7 7 0 0 0-7 7c0 5.2 7 12 7 12s7-6.8 7-12a7 7 0 0 0-7-7Z" />
@@ -35,9 +41,9 @@ export function OfficeCard({ office, cityLink = true }) {
 }
 
 // Service Areas page: every office (data/site.js)
-export default function Offices({ heading = 'Our Offices', sub }) {
+export default function Offices({ heading = 'Our Offices', sub, note }) {
   return (
-    <section className="offices">
+    <section className="offices tile-pattern">
       <div className="container">
         <div className="section-head">
           <h2>{heading}</h2>
@@ -48,6 +54,7 @@ export default function Offices({ heading = 'Our Offices', sub }) {
             <OfficeCard office={office} key={office.name} />
           ))}
         </div>
+        {note && <p className="office-note">{note}</p>}
       </div>
     </section>
   );

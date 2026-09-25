@@ -35,7 +35,7 @@ export const SHINGLE_CONTENT = {
       { q: 'Should I choose shingles or tile for my home?', a: 'It comes down to your home’s framing, style and budget. Tile has its own distinct look and is much heavier, while shingles are lighter and usually cost less to install. You can compare the two on our [tile roofing](/tile-roofing/) page, and we’re glad to talk through the tradeoffs for your home.' },
       { q: 'Can shingles go on a flat or very low-slope roof?', a: 'No. Shingles rely on the roof’s pitch to shed water, so flat and very low-slope areas need a different system. Plenty of homes here pair a shingled main roof with a low-slope section over a porch or addition, and our [flat roofing](/flat-roofing/) page covers those.' },
       { q: 'How long will a shingle roof last in Southern California?', a: 'There’s no single answer. Shingle quality, installation, attic ventilation and sun exposure all play a part, and a sunny slope in the inland valleys usually ages faster than a shaded one near the coast. Rather than guessing from the roof’s age, a Roof Check looks at its actual condition.' },
-      { q: 'Which cities do you serve?', a: 'We work across Los Angeles County and Orange County, from Santa Monica, Pasadena and Long Beach to Anaheim, Irvine and Newport Beach. Visit our [service area](/locations/) page to find your city.' },
+      { q: 'Which cities do you serve?', a: 'We work across Los Angeles County and Orange County, from Santa Monica, Pasadena and Long Beach to Anaheim, Irvine and Newport Beach. Visit our [service area](/service-areas/) page to find your city.' },
     ],
   },
 
@@ -122,7 +122,7 @@ export const SHINGLE_CONTENT = {
           { title: 'Repair first, when repair will do', text: 'If a repair solves it, that’s what we recommend. A cracked pipe boot is not a reason to sell you a new roof.' },
           { title: 'Leak tracing, not guesswork', text: 'We follow the water’s path back to the entry point, so the fix goes where the problem actually is.' },
           { title: 'Proof you can see', text: 'You get photos of the damaged flashing or shingle before we touch it and of the finished repair afterward.' },
-          { title: 'Local weather know-how', text: 'We repair shingle roofs all over [Los Angeles and Orange County](/locations/), so we know how coastal air, valley heat and Santa Ana winds each wear a roof down.' },
+          { title: 'Local weather know-how', text: 'We repair shingle roofs all over [Los Angeles and Orange County](/service-areas/), so we know how coastal air, valley heat and Santa Ana winds each wear a roof down.' },
         ],
       },
       faqs: [
@@ -310,7 +310,7 @@ export const SHINGLE_CONTENT = {
         intro: 'Good roof care is consistent, well documented and honest about what it finds.',
         points: [
           { title: 'Records that show real change', text: 'Side-by-side photos from each visit make it clear whether wear is holding steady or speeding up.' },
-          { title: 'Care that fits coast and shade', text: 'Near the coast in cities like [Huntington Beach](/locations/huntington-beach/), and on shaded slopes anywhere, we watch for the dark streaks and moss that damp shingles invite, along with salt air wearing on metal flashings.' },
+          { title: 'Care that fits coast and shade', text: 'Near the coast in cities like [Huntington Beach](/service-areas/orange-county/huntington-beach/), and on shaded slopes anywhere, we watch for the dark streaks and moss that damp shingles invite, along with salt air wearing on metal flashings.' },
           { title: 'Trees and debris kept in check', text: 'Overhanging branches scrape granules off and drop leaves into valleys, so we point out when trimming would help your roof.' },
           { title: 'Planning without pressure', text: 'When replacement starts to come into view, you hear about it early, with photos, so you can plan on your own timeline.' },
         ],

@@ -542,8 +542,8 @@ export default function InstantQuote() {
               </a>
             </div>
 
-            <p>A ballpark from your answers, not a final quote. Your exact price comes after a free on-site inspection.</p>
-            <a className="btn btn-gold" href={TEL}>Book my free inspection · {PHONE}</a>
+            <p>A ballpark from your answers, not a final quote. Your exact price comes in a written scope after a roofer-led Roof Check on site.</p>
+            <a className="btn btn-gold" href={TEL}>Book my $199 Roof Check · {PHONE}</a>
             <button className="rm-link" type="button" id="rmAgain" onClick={startOver}>Start over with another roof</button>
           </section>
         </div>

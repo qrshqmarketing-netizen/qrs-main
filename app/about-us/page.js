@@ -1,4 +1,5 @@
 import FinalCta from '@/components/sections/FinalCta';
+import Guarantee from '@/components/sections/Guarantee';
 import ImageHero from '@/components/sections/ImageHero';
 import Overview from '@/components/sections/Overview';
 import Process from '@/components/sections/Process';
@@ -30,6 +31,7 @@ export default function AboutPage() {
       <ValueGrid heading={page.values.heading} items={page.values.items} tone="wash" />
       <WhyQrs heading="Why Homeowners Choose QRS" cta={{ label: 'Read Our Reviews', href: '#reviews' }} />
       <Process />
+      <Guarantee />
       <SplitFeature
         heading={page.services.heading}
         paragraphs={page.services.paragraphs}

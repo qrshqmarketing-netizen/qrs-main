@@ -52,7 +52,7 @@ export const METAL_CONTENT = {
       },
       {
         q: 'Will a metal roof hold up to salt air near the coast?',
-        a: 'It can, with the right choices. Salt air is hard on any metal, so homes near the water in places like [Huntington Beach](/locations/huntington-beach/) and Santa Monica need a panel metal, finish and fasteners chosen for that exposure. Cut edges, trims and flashings need careful detailing too, and we’ll go over coastal options before anything goes into your written scope.',
+        a: 'It can, with the right choices. Salt air is hard on any metal, so homes near the water in places like [Huntington Beach](/service-areas/orange-county/huntington-beach/) and Santa Monica need a panel metal, finish and fasteners chosen for that exposure. Cut edges, trims and flashings need careful detailing too, and we’ll go over coastal options before anything goes into your written scope.',
       },
       {
         q: 'Do metal roofs need different gutters?',

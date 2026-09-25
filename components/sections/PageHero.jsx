@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Rich from '@/components/ui/Rich';
 import SiteLink from '@/components/ui/SiteLink';
-import { QrsMark } from '@/components/ui/icons';
+import { PhoneIcon, QrsMark } from '@/components/ui/icons';
 import { PHONE, TEL } from '@/data/site';
 import Breadcrumbs from './Breadcrumbs';
 import './PageHero.css';
@@ -12,6 +12,8 @@ const DEFAULT_ACTIONS = [
 ];
 
 // Inner-page hero: title and intro on the left; a photo (or, until one is added, a branded card) on the right.
+// actions: [{ label, href, style: 'gold' | 'red' | 'line' }]; an action with `drawer: true` opens the Instant Quote instead.
+// Red phone buttons get a handset icon; other gold and red buttons get an arrow.
 // card: { kicker, scene, highlights: ['...', '...', '...'], offer: 'home' | 'commercial' }
 export default function PageHero({ crumbs, eyebrow, title, intro, image, imageAlt = '', imagePosition, card, actions = DEFAULT_ACTIONS }) {
   return (
@@ -28,12 +30,20 @@ export default function PageHero({ crumbs, eyebrow, title, intro, image, imageAl
           )}
           {actions?.length > 0 && (
             <div className="page-hero-actions">
-              {actions.map((a) => (
-                <SiteLink className={`btn btn-${a.style || 'gold'}`} href={a.href} key={a.href}>
-                  {a.label}
-                  {a.style !== 'line' && <span className="arrow">→</span>}
-                </SiteLink>
-              ))}
+              {actions.map((a) =>
+                a.drawer ? (
+                  <button className={`btn btn-${a.style || 'gold'}`} type="button" data-rm-open="" key={a.label}>
+                    {a.label}
+                    {a.style !== 'line' && <span className="arrow">→</span>}
+                  </button>
+                ) : (
+                  <SiteLink className={`btn btn-${a.style || 'gold'}`} href={a.href} key={a.href}>
+                    {a.href.startsWith('tel:') && a.style === 'red' && <PhoneIcon />}
+                    {a.label}
+                    {a.style !== 'line' && !a.href.startsWith('tel:') && <span className="arrow">→</span>}
+                  </SiteLink>
+                )
+              )}
             </div>
           )}
         </div>
