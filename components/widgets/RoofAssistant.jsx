@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { ArrowRight, CloseIcon, QrsMark } from '@/components/ui/icons';
+import { ArrowRight, CloseIcon, QrsMark, RefreshIcon } from '@/components/ui/icons';
 import { ANSWERS, CHAT_ENDPOINT, CHIP_PROMPTS, FALLBACK_ANSWER, GREETING, STARTERS } from '@/data/assistant';
 import { PHONE, TEL } from '@/data/site';
 import { session } from '@/lib/storage';
@@ -97,17 +97,21 @@ export default function RoofAssistant() {
     busy.current = false;
   }
 
+  function showGreeting() {
+    add('bot', GREETING[0]);
+    setTimeout(() => {
+      add('bot', GREETING[1]);
+      setChips(STARTERS);
+    }, 450);
+  }
+
   function openChat() {
     setOpen(true);
     setSeen(true);
     session.set('qaSeen', '1');
     if (!started.current) {
       started.current = true;
-      add('bot', GREETING[0]);
-      setTimeout(() => {
-        add('bot', GREETING[1]);
-        setChips(STARTERS);
-      }, 450);
+      showGreeting();
     }
     setTimeout(() => inputRef.current.focus({ preventScroll: true }), 230);
   }
@@ -115,6 +119,19 @@ export default function RoofAssistant() {
   function closeChat() {
     setOpen(false);
     bubbleRef.current.focus({ preventScroll: true });
+  }
+
+  // Clears the conversation (on screen, in memory and what's sent to the AI backend) and starts fresh
+  function newChat() {
+    busy.current = false;
+    started.current = true;
+    history.current = [];
+    setTyping(false);
+    setChips([]);
+    setText('');
+    setMessages([]);
+    showGreeting();
+    inputRef.current.focus({ preventScroll: true });
   }
 
   const onTeaserClick = (e) => {
@@ -182,6 +199,9 @@ export default function RoofAssistant() {
             <b id="qaTitle">QRS Roof Assistant</b>
             <span>Usually replies instantly</span>
           </div>
+          <button className="qa-new" type="button" id="qaNew" aria-label="Start a new chat" onClick={newChat}>
+            <RefreshIcon />
+          </button>
           <button className="qa-x" type="button" id="qaClose" aria-label="Close chat" onClick={closeChat}>
             <CloseIcon />
           </button>
