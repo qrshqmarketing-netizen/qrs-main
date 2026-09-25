@@ -44,14 +44,15 @@ export async function POST(request) {
   if (!messages.length) return Response.json({ error: 'no messages' }, { status: 400 });
 
   // Ground the reply in the site's actual page content: search PAGE_INDEX for pages relevant to the
-  // visitor's latest message and hand the model short, plain-text summaries of the best matches.
+  // visitor's latest message and hand the model plain-text blocks (including their specifics, not just a
+  // summary) from the best matches.
   const lastUserMessage = [...messages].reverse().find((m) => m.role === 'user')?.content || '';
   const relevant = findRelevantPages(lastUserMessage);
   const context = relevant.length
     ? {
         role: 'system',
         content:
-          "Relevant content from this website for the visitor's latest message. Ground your answer in it and don't contradict it or the facts above; if it doesn't cover the question, fall back to the facts and rules above.\n\n" +
+          "Relevant content from this website for the visitor's latest message — real page content, not a paraphrase. Use its specific details in your answer and don't contradict it or the facts above; if it doesn't cover the question, fall back to the facts and rules above.\n\n" +
           relevant.join('\n\n'),
       }
     : null;
