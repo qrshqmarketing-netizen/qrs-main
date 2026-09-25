@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 const SERVICE_OPTIONS = [
   'Roof inspection / roof check',
+  'Roof maintenance plan',
   'Roof repair',
   'Roof replacement',
   'Tile lift & relay',

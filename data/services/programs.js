@@ -94,98 +94,18 @@ export const EMERGENCY_ROOF_REPAIR = {
   related: ['/roof-repair/', '/roof-inspection/', '/roof-replacement/'],
 };
 
+// Full content for this page now lives in data/pages/carePlan.js (CARE_PLAN) — app/roof-maintenance-plans/page.js
+// is a bespoke composition, not the generic ServicePage template. This entry keeps only what's still read
+// by data/content.js's SINGLE_PAGES (sitemap, and the card blurb shown wherever this page is linked as a card).
 export const ROOF_MAINTENANCE_PLANS = {
   slug: 'roof-maintenance-plans',
   keyword: 'roof maintenance plans',
-  title: 'Roof Maintenance Plans',
+  title: 'The Roof Care Plan',
   navLabel: 'Maintenance Plans',
-  card: 'Scheduled roof visits for homes, HOAs and commercial buildings, set up after a Roof Check and finished with a photo report every time.',
-  metaTitle: 'Roof Maintenance Plans in LA & OC',
+  card: 'Three priced plans, scheduled before and after the rains, with a written photo report every visit — see pricing for your roof size.',
+  metaTitle: 'Roof Maintenance Plans & Pricing | The Roof Care Plan',
   metaDescription:
-    'Roof maintenance plans for homes, HOAs and commercial buildings in LA & Orange County, with a photo report after every visit. Book a $199 Roof Check.',
-  hero: {
-    intro:
-      'Most roof problems start small and stay out of sight until a storm finds them. Our roof maintenance plans put your roof on a schedule, with a roofer clearing, checking and resealing, and a photo report at the end of every visit.',
-    highlights: ['Set up after a $199 Roof Check', 'Visits on the schedule in your plan', 'A photo report after every visit'],
-  },
-  overview: {
-    paragraphs: [
-      'Roofs across Los Angeles and Orange County wear in familiar ways. Sun bakes the sealant around vents and flashings until it cracks, Santa Ana winds fill valleys and gutters with leaves and palm debris, and salt air near the coast works on exposed metal. None of it looks serious until water backs up or a seal gives way in the first big storm. A plan makes that upkeep routine. It’s set up after a [$199 Roof Check](#roof-check), built around your roof’s type, age and condition, and visits happen on the schedule set in your plan.',
-      'A plan is different from a one-time tune-up. A [tile roof tune-up](/tile-roofing/tune-up/), for example, is a single visit that clears a backlog of small fixes. A plan keeps a new backlog from forming, and each photo report adds to a history of your roof that you can use when it’s time to budget for bigger work. Anything beyond what your plan covers gets a **written price** before we do it, so a maintenance visit never turns into a surprise bill.',
-    ],
-  },
-  process: {
-    subheading: 'How a roof maintenance plan works',
-    steps: [
-      {
-        title: 'Start with a Roof Check',
-        text: 'A roofer inspects your roof and photo-documents its condition, giving your plan a baseline to compare every later visit against.',
-      },
-      {
-        title: 'Build the plan around your roof',
-        text: 'We set up your plan around what the Roof Check shows, including when visits should happen and what each one should focus on.',
-        bullets: ['Roof type and age', 'Current condition and trouble spots', 'Valleys, drains and gutters that collect debris'],
-      },
-      {
-        title: 'Scheduled visits',
-        text: 'Visits follow the schedule in your plan, and each one focuses on the places where water gets held up or finds a way in.',
-        bullets: ['Debris cleared from valleys, drains and gutters', 'Flashings and penetrations checked and resealed', 'Early wear spotted before it leaks'],
-      },
-      {
-        title: 'Photo report after each visit',
-        text: 'Every visit ends with a photo report showing what we cleared and resealed, plus anything that has changed since the last one.',
-      },
-      {
-        title: 'Written price for anything extra',
-        text: 'If a visit turns up work beyond your plan, you get photos, a plain-English explanation and a written price, and the decision stays with you.',
-      },
-    ],
-  },
-  why: {
-    heading: 'Why Choose QRS for Roof Maintenance Plans?',
-    intro: 'A plan is only as good as the attention each visit gets and the record it leaves behind.',
-    points: [
-      {
-        title: 'Roofers who read the early signs',
-        text: 'With 30+ years of roofing experience, we know what early wear looks like: a seal starting to split, a tile beginning to slide, a drain that’s slow to clear.',
-      },
-      {
-        title: 'A history you can plan with',
-        text: 'Photo reports build up over time, so you can see how the roof is aging and budget for bigger work before it turns urgent.',
-      },
-      {
-        title: 'Homes, HOAs and commercial',
-        text: 'Plans work for single homes, for [HOA communities](/hoa-multi-family/) with one point of contact, and for [commercial roof maintenance](/commercial-roofing/maintenance/) on buildings that stay open while we work.',
-      },
-      {
-        title: 'Maintenance, not a sales visit',
-        text: 'When a visit finds something, we tell you what it is and how soon it matters. Replacement comes up only when the photos show it’s time.',
-      },
-    ],
-  },
-  faqs: [
-    {
-      q: 'How often will you visit my roof?',
-      a: 'That’s set in your plan, based on your roof’s type, age and condition. A roof under big trees or near the coast may need more attention than one in open sun, and we’ll explain the schedule we suggest so you can decide what fits.',
-    },
-    {
-      q: 'What does a visit cover on tile, shingle and flat roofs?',
-      a: 'Visits cover things like clearing debris from valleys, drains and gutters and checking and resealing flashings and penetrations. Beyond that, the focus follows your roof type: slipped tiles and ridge mortar on tile, lifted tabs and pipe boots on shingle, and seams and standing water on flat and low-slope roofs.',
-    },
-    {
-      q: 'What happens if a visit finds a bigger problem?',
-      a: 'We photograph it, explain it in plain English and give you a written price before any work beyond the plan. You decide whether and when to go ahead, and if a [roof repair](/roof-repair/) will handle it, that’s what we’ll recommend.',
-    },
-    {
-      q: 'Can an HOA board or property manager set up a plan?',
-      a: 'Yes. A plan can cover the buildings across a community, including carports and common-area roofs, with one point of contact for the board or manager. The photo reports are easy to share at board meetings, so decisions rest on what the roofs actually look like.',
-    },
-    {
-      q: 'What if a storm damages my roof between visits?',
-      a: 'Call us. A roofer will assess and photo-document the damage, and your earlier photo reports help show what changed. Our [emergency roof repair](/emergency-roof-repair/) page explains what happens next, from temporary protection to the permanent repair.',
-    },
-  ],
-  related: ['/tile-roofing/roof-care/', '/shingle-roofing/roof-care/', '/flat-roofing/roof-care/'],
+    'Roof maintenance plans for Los Angeles & Orange County homes: three priced tiers, seasonal visits and a photo report every time. See Roof Care Plan pricing.',
 };
 
 export const ROOF_FINANCING = {
