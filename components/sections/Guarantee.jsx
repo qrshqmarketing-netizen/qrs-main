@@ -50,8 +50,9 @@ export default function Guarantee() {
           </div>
           <p>
             At Quality Roofing Specialists, doing the job right is the whole point. Every roof we install is backed by our
-            lifetime workmanship warranty, and every project starts with a clear written scope &mdash; so you know exactly
-            what you&rsquo;re getting before any work begins.
+            lifetime workmanship warranty covering our installation labor &mdash; separate from the manufacturer&rsquo;s own
+            material warranty &mdash; with its full terms set out in the written agreement you sign before work begins, so
+            you always know exactly what&rsquo;s covered.
           </p>
           <p>
             <Rich text="Whether you need a [roof replacement](/roof-replacement/), a [roof repair](/roof-repair/) or a tile lift & relay, we stand behind every project. We walk the finished roof with you, go over your warranty in plain English and follow through after the install. With QRS, your new roof isn’t just finished — it’s done right." />

@@ -25,6 +25,8 @@
 .vid-tag{position:absolute;left:16px;bottom:14px;color:#fff;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;opacity:.85}
 
 .tst-grid{display:grid;grid-template-columns:1fr;gap:28px;max-width:820px;margin:64px auto 0}
+/* The bare ReviewSlider on its own (app/page.js), without the "Don't Take Our Word For It" heading/badge */
+.tst-standalone{max-width:820px;margin:0 auto}
 .tst-intro h2{color:var(--navy);font-size:var(--h2);font-weight:500;line-height:1.05;margin-bottom:18px}
 .tst-intro p{color:var(--navy);font-family:var(--font-body);font-size:17px;font-weight:400;line-height:1.65;margin:0}
 .tst-slider{position:relative}

@@ -26,7 +26,7 @@ export const COMMERCIAL_CONTENT = {
       points: [
         { title: 'Surveys led by roofers', text: 'A roofer walks the roof, photographs what matters and gives you a clear next step for each area: repair, monitor, maintain or replace.' },
         { title: 'Scope and schedule in writing', text: 'Before any work starts, you see the scope, the price and how the work will fit around your operations.' },
-        { title: 'Experience and accountability', text: 'QRS brings 30+ years of roofing experience, NRCA membership and an A+ rating as a BBB Accredited Business, and backs installs with a lifetime workmanship warranty.' },
+        { title: 'Experience and accountability', text: 'QRS brings 30+ years of roofing experience to every project and backs installs with a lifetime workmanship warranty.' },
       ],
     },
     faqs: [

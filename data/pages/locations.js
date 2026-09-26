@@ -8,7 +8,7 @@ export const LOCATIONS_PAGE = {
   hero: {
     heading: 'Roofing Service Areas in Los Angeles & Orange County',
     intro:
-      'Our roofing service areas cover homes and businesses in 13 cities across Los Angeles and Orange County, plus the neighborhoods around them. Find your city below, or check your ZIP code on the map.',
+      'Our roofing service areas cover homes and businesses in 14 cities across Los Angeles and Orange County, plus the neighborhoods around them. Find your city below, or check your ZIP code on the map.',
   },
   faqs: [
     {

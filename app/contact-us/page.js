@@ -40,13 +40,13 @@ export default function ContactPage() {
         eyebrow="Contact"
         title={page.hero.heading}
         intro={page.hero.intro}
-        card={{ kicker: 'Reach our team', scene: 'scene-inspect', highlights: [`Call ${PHONE}`, 'Offices in Los Angeles & Woodland Hills', HOURS_LINE] }}
+        card={{ kicker: 'Reach our team', scene: 'scene-inspect', highlights: [`Call ${PHONE}`, 'Offices in Los Angeles, Woodland Hills & Vernon', HOURS_LINE] }}
         actions={[
           { label: `Call ${PHONE}`, href: TEL, style: 'red' },
           { label: 'Request an Estimate', href: '#roof-check', style: 'line' },
         ]}
       />
-      <Offices sub="Visit or call either office. One phone number reaches our whole team." note={`Hours: ${HOURS_LINE}`} />
+      <Offices sub="Visit or call any of our offices. One phone number reaches our whole team." note={`Hours: ${HOURS_LINE}`} />
       <ValueGrid heading={page.ways.heading} items={page.ways.items} />
       <RoofCheck />
       <ServiceArea heading="Check Your Service Area" sub="Enter your ZIP code or pick a city on the map to see its phone number, estimate link and city page." />

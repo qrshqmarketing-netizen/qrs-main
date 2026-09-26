@@ -57,7 +57,7 @@ export const CONTRACTORS_PAGE = {
       { title: 'Assessments by roofers', text: 'The person scoping your roof knows roofing, not just pricing, so conditions that affect the work get flagged early.' },
       { title: 'Scopes you can rely on', text: 'Written scopes and prices spell out what’s included before work starts, so there’s less to sort out later.' },
       { title: 'Photos for you and your client', text: 'Before, during and after photos support your records, your progress updates and your client conversations.' },
-      { title: 'Recognized in the industry', text: 'QRS is an NRCA member, EPA Lead-Safe Certified and a BBB Accredited Business with an A+ rating. We ranked #252 on the 2024 Qualified Remodeler Top 500 and received the NAHB National Industry Leader Legend Award.' },
+      { title: 'Recognized in the industry', text: 'We ranked #252 on the 2024 Qualified Remodeler Top 500 and received the NAHB National Industry Leader Legend Award.' },
     ],
   },
   faqs: [

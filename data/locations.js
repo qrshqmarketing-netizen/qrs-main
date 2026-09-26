@@ -22,6 +22,7 @@ export const LOCATIONS = [
   { city: 'Huntington Beach', slug: 'huntington-beach', county: 'Orange County', region: 'orange-county', lat: 33.6595, lng: -117.9988 },
   { city: 'Irvine', slug: 'irvine', county: 'Orange County', region: 'orange-county', lat: 33.6846, lng: -117.8265 },
   { city: 'Newport Beach', slug: 'newport-beach', county: 'Orange County', region: 'orange-county', lat: 33.6189, lng: -117.9298 },
+  { city: 'Vernon', slug: 'vernon', county: 'Los Angeles County', region: 'la-county', lat: 34.0018, lng: -118.2184 },
 ];
 
 // A ZIP code within this many miles of a city above counts as "in our service area"

@@ -1,6 +1,6 @@
 # Quality Roofing Specialists website
 
-The Quality Roofing Specialists website as a modular [Next.js](https://nextjs.org) site: the home page plus about 100 inner pages (service-first pages, residential and commercial services, service regions and 13 city pages, a blog, Projects, Reviews, About, Careers, Contractors, Contact and legal pages). Every page is built from shared section components, and the words live in simple files in `data/`.
+The Quality Roofing Specialists website as a modular [Next.js](https://nextjs.org) site: the home page plus about 100 inner pages (service-first pages, residential and commercial services, service regions and 14 city pages, a blog, Projects, Reviews, About, Careers, Contractors, Contact and legal pages). Every page is built from shared section components, and the words live in simple files in `data/`.
 
 ## Run it on your computer
 
@@ -23,7 +23,7 @@ To test the finished (production) version: `npm run build`, then `npm start`.
 | What | File |
 | --- | --- |
 | Phone, email, address, hours, social links, video | `data/site.js` |
-| Offices (Los Angeles and Valley), shown on the Service Areas page and their city pages | `OFFICES` in `data/site.js` |
+| Offices (Los Angeles, Valley and Vernon), shown on the Service Areas page and their city pages | `OFFICES` in `data/site.js` |
 | Home page title and description (Google + link previews) | `data/site.js` |
 | Google Search Console and Bing verification codes | `SITE_VERIFICATION` in `data/site.js` |
 | Logo (header: dark version, footer: regular) | `public/images/logo/` (full-size original: `assets/originals/qrs-logo.png`) |

@@ -1,3 +1,4 @@
+import CredentialsMarquee from '@/components/sections/CredentialsMarquee';
 import Faq from '@/components/sections/Faq';
 import FeatureBand from '@/components/sections/FeatureBand';
 import FinalCta from '@/components/sections/FinalCta';
@@ -5,6 +6,7 @@ import Guarantee from '@/components/sections/Guarantee';
 import Hero from '@/components/sections/Hero';
 import Process from '@/components/sections/Process';
 import ProofBar from '@/components/sections/ProofBar';
+import ReviewSlider from '@/components/sections/ReviewSlider';
 import RoofCheck from '@/components/sections/RoofCheck';
 import ServiceArea from '@/components/sections/ServiceArea';
 import Services from '@/components/sections/Services';
@@ -34,11 +36,19 @@ export default function HomePage() {
         {/* The keyword line above the big headline is the page's H1 (matches the page title) */}
         <Hero h1="eyebrow" />
         <ProofBar />
+        <section className="section">
+          <div className="container">
+            <CredentialsMarquee />
+            <div className="tst-standalone">
+              <ReviewSlider />
+            </div>
+          </div>
+        </section>
         <Services />
         <Faq />
         <Process />
-        <WhyQrs />
-        <Testimonials />
+        <WhyQrs showCredentials={false} />
+        <Testimonials showReviews={false} />
         <RoofCheck />
         <ServiceArea />
         <Guarantee />

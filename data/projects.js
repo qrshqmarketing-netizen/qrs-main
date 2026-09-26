@@ -15,7 +15,36 @@
 //     href: '/tile-roofing/lift-and-relay/',               // optional: the service page the tile links to
 //   }
 
-export const PROJECTS = [];
+export const PROJECTS = [
+  {
+    city: 'vernon',
+    title: 'Shingle Roof Replacement',
+    image: '/images/vernon-2.webp',
+    alt: 'Aerial view of a shingle roof tear-off in progress, with new materials staged on the roof',
+    href: '/shingle-roofing/replacement/',
+  },
+  {
+    city: 'vernon',
+    title: 'Shingle Roof Replacement',
+    image: '/images/vernon-1.webp',
+    alt: 'Aerial view of a finished shingle roof',
+    href: '/shingle-roofing/replacement/',
+  },
+  {
+    city: 'vernon',
+    title: 'Tile Roof Replacement',
+    image: '/images/vernon-4.webp',
+    alt: 'Close-up of a roofer installing new concrete tile over fresh underlayment',
+    href: '/tile-roofing/replacement/',
+  },
+  {
+    city: 'vernon',
+    title: 'Tile Roof Replacement',
+    image: '/images/vernon-5.webp',
+    alt: 'Aerial view of a boom truck delivering roof tile during a reroof',
+    href: '/tile-roofing/replacement/',
+  },
+];
 
 export const SHOW_PLACEHOLDER_GALLERY = true;
 
@@ -43,8 +72,9 @@ export const PLACEHOLDER_PROJECTS = [
   { title: 'Rain Gutters', label: 'Gutters & drainage', scene: 'scene-gutter', href: '/rain-gutters/' },
 ];
 
-// Every project (Projects page): the real ones when there are any, otherwise the placeholders (or nothing)
-export const allProjects = () => (PROJECTS.length > 0 ? PROJECTS : SHOW_PLACEHOLDER_GALLERY ? PLACEHOLDER_PROJECTS : []);
+// Every project (Projects page): real projects first, then the placeholders to round out the gallery
+// (ProjectGallery's `all` mode splits any length into full-sized bento grids, so this can grow freely)
+export const allProjects = () => [...PROJECTS, ...(SHOW_PLACEHOLDER_GALLERY ? PLACEHOLDER_PROJECTS : [])];
 
 // A city's gallery: its own projects when it has any, otherwise the placeholders (or nothing)
 export function projectsFor(slug) {
