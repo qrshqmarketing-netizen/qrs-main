@@ -75,7 +75,7 @@ export default function LocationPage({ location, page, index = 0 }) {
         sub="Tile, shingle, flat and metal roofing, done the detail-first way. Pick a project to see how we handle that kind of work."
         projects={projectsFor(slug)}
       />
-      <Services title={`Roofing Services in ${city}`} about={false} />
+      <Services title={`Roofing Services in ${city}`} pattern={false} />
       <Faq heading={`${city} Roofing FAQs`} sub={`Straight answers for ${city} homeowners.`} faqs={page.faqs} />
       <Process />
       <WhyQrs />

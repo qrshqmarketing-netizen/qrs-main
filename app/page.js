@@ -6,6 +6,7 @@ import Guarantee from '@/components/sections/Guarantee';
 import Hero from '@/components/sections/Hero';
 import Process from '@/components/sections/Process';
 import ProofBar from '@/components/sections/ProofBar';
+import QrsStandard from '@/components/sections/QrsStandard';
 import ReviewSlider from '@/components/sections/ReviewSlider';
 import RoofCheck from '@/components/sections/RoofCheck';
 import ServiceArea from '@/components/sections/ServiceArea';
@@ -44,6 +45,7 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+        <QrsStandard />
         <Services />
         <Faq />
         <Process />

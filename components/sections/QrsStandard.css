@@ -1,0 +1,10 @@
+/* ---------- The QRS Standard ---------- */
+.qrs-standard{background:#fff;text-align:center}
+.qrs-standard h2{color:var(--navy);font-size:clamp(32px,9.6vw,36px);font-weight:500;line-height:1.05;letter-spacing:-.03em;margin-bottom:20px}
+.qrs-standard p{max-width:800px;margin:0 auto 18px;color:var(--navy);font-family:var(--font-body);font-size:17px;font-weight:600;line-height:1.65}
+.qrs-standard .btn{margin-top:8px;border-radius:5px}
+@media (min-width:621px){
+  .qrs-standard h2{font-size:60px;line-height:1;margin-bottom:26px}
+  .qrs-standard p{margin-bottom:24px;font-size:18px;line-height:1.7}
+  .qrs-standard .btn{margin-top:6px}
+}

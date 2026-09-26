@@ -26,7 +26,7 @@
 
 .tst-grid{display:grid;grid-template-columns:1fr;gap:28px;max-width:820px;margin:64px auto 0}
 /* The bare ReviewSlider on its own (app/page.js), without the "Don't Take Our Word For It" heading/badge */
-.tst-standalone{max-width:820px;margin:0 auto}
+.tst-standalone{max-width:820px;margin:64px auto 0}
 .tst-intro h2{color:var(--navy);font-size:var(--h2);font-weight:500;line-height:1.05;margin-bottom:18px}
 .tst-intro p{color:var(--navy);font-family:var(--font-body);font-size:17px;font-weight:400;line-height:1.65;margin:0}
 .tst-slider{position:relative}
@@ -61,6 +61,7 @@ a.tst-name:hover{text-decoration:underline;text-underline-offset:3px}
   .vid-copy p,.tst-intro p{font-size:18px;line-height:1.7}
   .vid-tag{left:18px;bottom:16px;font-size:.72rem}
   .tst-grid{margin-top:80px}
+  .tst-standalone{margin-top:80px}
   .tst-intro h2{line-height:1;margin-bottom:30px}
   .tst-slide blockquote{margin-bottom:36px;font-size:18px;line-height:1.7}
   .tst-name{font-size:18px}

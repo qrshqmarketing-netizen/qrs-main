@@ -52,7 +52,7 @@ export default function RegionPage({ region, page }) {
       <LocalIntro city={region.name} heading={page.intro.heading} paragraphs={page.intro.paragraphs} offices={offices} considerations={page.considerations} />
       <CityCards regions={[region.slug]} blurbs={blurbs} heading={`Cities We Serve in ${region.name}`} />
       <ServiceArea heading={`Find QRS Near You in ${region.short}`} sub="Enter your ZIP code or pick a city on the map to see its phone number, estimate link and city page." region={region.slug} />
-      <Services title={`Roofing Services in ${region.name}`} about={false} />
+      <Services title={`Roofing Services in ${region.name}`} pattern={false} />
       <Faq heading={`${region.name} Roofing FAQs`} sub={`Straight answers for property owners across ${region.name}.`} faqs={page.faqs} />
       <RoofCheck tone="white" />
       <FinalCta />
