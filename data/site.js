@@ -75,6 +75,7 @@ export const PROOF_POINTS = [
   { title: 'Detail-first', text: 'Clear scope. Clean execution.' },
   { title: 'SoCal', text: 'Local service area' },
   { title: 'Lifetime', text: 'Workmanship warranty' },
+  { title: '270', text: '5-star Google reviews' },
 ];
 
 // Process video. Set `embed` to a YouTube embed URL like 'https://www.youtube.com/embed/VIDEO_ID'.

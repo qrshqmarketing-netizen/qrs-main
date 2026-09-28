@@ -3,8 +3,8 @@ import SiteLink from '@/components/ui/SiteLink';
 import { PhoneIcon } from '@/components/ui/icons';
 import './FinalCta.css';
 
-// Closing call to action above the footer, over the QRS truck photo. Pages can change the words and the button
-// (cta.style: 'gold', or 'red' for a "call now" button).
+// Closing call to action above the footer, over a neighborhood street photo. Pages can change the words and the
+// button (cta.style: 'gold', or 'red' for a "call now" button).
 export default function FinalCta({
   heading = 'Detail-First Roofing',
   text = 'At QRS, there’s no pressure, no mystery scope and no surprises — ever. Start with a roofer-led roof check today!',
@@ -26,14 +26,14 @@ export default function FinalCta({
           {cta.label}
         </SiteLink>
       </div>
-      {/* 4K photo (full-size original: assets/originals/qrs-truck.jpg); Next.js serves a smaller copy sized to each screen */}
+      {/* Next.js serves a smaller copy of this photo sized to each screen */}
       <Image
         className="cta-scene"
-        src="/images/qrs-truck-4k.webp"
-        width={3840}
-        height={1955}
+        src="/images/bottom-cta-background.webp"
+        width={1758}
+        height={895}
         sizes="100vw"
-        alt="Quality Roofing Specialists truck parked on a residential street in front of homes"
+        alt="Row of homes with pitched roofs along a residential street"
       />
     </section>
   );
