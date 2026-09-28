@@ -12,8 +12,9 @@
 //     area: 'Bungalow Heaven',                              // optional neighborhood, shown above the title
 //     image: '/images/projects/pasadena-lift-and-relay.webp', // photo in public/images/projects/
 //     alt: 'Clay tile roof on a Craftsman home after a tile lift and relay',
-//     href: '/tile-roofing/lift-and-relay/',               // optional: the service page the tile links to
 //   }
+// A tile with a photo opens it in the full-screen gallery (ProjectLightbox); tiles without one just show the
+// roof-type artwork below and aren't clickable.
 
 export const PROJECTS = [
   {
@@ -21,28 +22,24 @@ export const PROJECTS = [
     title: 'Shingle Roof Replacement',
     image: '/images/vernon-2.webp',
     alt: 'Aerial view of a shingle roof tear-off in progress, with new materials staged on the roof',
-    href: '/shingle-roofing/replacement/',
   },
   {
     city: 'vernon',
     title: 'Shingle Roof Replacement',
     image: '/images/vernon-1.webp',
     alt: 'Aerial view of a finished shingle roof',
-    href: '/shingle-roofing/replacement/',
   },
   {
     city: 'vernon',
     title: 'Tile Roof Replacement',
     image: '/images/vernon-4.webp',
     alt: 'Close-up of a roofer installing new concrete tile over fresh underlayment',
-    href: '/tile-roofing/replacement/',
   },
   {
     city: 'vernon',
     title: 'Tile Roof Replacement',
     image: '/images/vernon-5.webp',
     alt: 'Aerial view of a boom truck delivering roof tile during a reroof',
-    href: '/tile-roofing/replacement/',
   },
 ];
 
@@ -56,20 +53,18 @@ export const PLACEHOLDER_PROJECTS = [
     image: '/images/roof-drone-palms.webp',
     alt: 'Aerial view of a dark shingle hip roof on a home with palm trees',
     position: 'center 45%',
-    href: '/shingle-roofing/replacement/',
   },
-  { title: 'Tile Lift & Relay', label: 'Tile roofing', scene: 'scene-tile', href: '/tile-roofing/lift-and-relay/' },
-  { title: 'Flat Roof Replacement', label: 'Flat roofing', scene: 'scene-flat', href: '/flat-roofing/replacement/' },
-  { title: 'Standing Seam Metal', label: 'Metal roofing', scene: 'scene-metal', href: '/metal-roofing/standing-seam/' },
+  { title: 'Tile Lift & Relay', label: 'Tile roofing', scene: 'scene-tile' },
+  { title: 'Flat Roof Replacement', label: 'Flat roofing', scene: 'scene-flat' },
+  { title: 'Standing Seam Metal', label: 'Metal roofing', scene: 'scene-metal' },
   {
     title: 'HOA & Multi-Family Roofing',
     label: 'Communities',
     image: '/images/home-hero-drone-view.webp',
     alt: 'Aerial view of a neighborhood of shingle-roofed homes',
     position: 'center 40%',
-    href: '/hoa-multi-family/',
   },
-  { title: 'Rain Gutters', label: 'Gutters & drainage', scene: 'scene-gutter', href: '/rain-gutters/' },
+  { title: 'Rain Gutters', label: 'Gutters & drainage', scene: 'scene-gutter' },
 ];
 
 // Every project (Projects page): real projects first, then the placeholders to round out the gallery
