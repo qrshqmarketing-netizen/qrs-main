@@ -4,7 +4,7 @@ import 'leaflet/dist/leaflet.css';
 import './globals.css';
 
 import Script from 'next/script';
-import { Inter, Poppins } from 'next/font/google';
+import { Inter, Open_Sans } from 'next/font/google';
 import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
 import CookieNotice from '@/components/widgets/CookieNotice';
@@ -15,7 +15,7 @@ import { BUSINESS, CLARITY_ID, HOME_DESCRIPTION, SITE_URL, SITE_VERIFICATION } f
 import { ALLOW_INDEXING, openGraphBase, twitterBase } from '@/lib/seo';
 
 // Google Fonts, downloaded at build time and served from this site
-const poppins = Poppins({ subsets: ['latin'], weight: ['400', '500', '600', '700'], variable: '--font-poppins' });
+const openSans = Open_Sans({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800'], variable: '--font-open-sans' });
 const inter = Inter({ subsets: ['latin'], weight: '700', variable: '--font-inter' });
 
 // Defaults for every page. A page's own `metadata` export overrides these.
@@ -52,7 +52,7 @@ export const viewport = {
 // Header, footer and the floating widgets appear on every page
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${poppins.variable} ${inter.variable}`} data-scroll-behavior="smooth">
+    <html lang="en" className={`${openSans.variable} ${inter.variable}`} data-scroll-behavior="smooth">
       <body>
         <Header />
         {children}

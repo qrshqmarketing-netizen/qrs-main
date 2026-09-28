@@ -34,11 +34,11 @@
   --radius:22px;
   --max:1180px;
 
-  /* Headings: Poppins 500, -3% tracking. Buttons: Inter 700. Body: system UI 18 / 1.7.
-     --font-poppins / --font-inter are set by next/font in app/layout.js (self-hosted Google Fonts). */
-  --font-head:var(--font-poppins),ui-sans-serif,system-ui,sans-serif;
+  /* Headings & body: Open Sans, weights unchanged (500 headings, 400-900 body/eyebrow as used per component).
+     Buttons: Inter 700. --font-open-sans / --font-inter are set by next/font in app/layout.js (self-hosted Google Fonts). */
+  --font-head:var(--font-open-sans),ui-sans-serif,system-ui,sans-serif;
   --font-btn:var(--font-inter),ui-sans-serif,system-ui,sans-serif;
-  --font-body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  --font-body:var(--font-open-sans),-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 
   /* Section heading size: 36–48px on phones, 60px from tablet up */
   --h2:clamp(36px,10.6vw,48px);
