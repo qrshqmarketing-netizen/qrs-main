@@ -154,7 +154,7 @@ export const TERMS = {
     },
     {
       heading: 'Contractor license',
-      paragraphs: ['Quality Roofing Specialists is a licensed California contractor, CSLB License #1061942. You can verify a contractor’s license with the [Contractors State License Board](https://www.cslb.ca.gov/).'],
+      paragraphs: ['Quality Roofing Specialists is a licensed California contractor, CSLB License #1061942, licensed since January 3, 2020. You can verify a contractor’s license with the [Contractors State License Board](https://www.cslb.ca.gov/).'],
     },
     {
       heading: 'Governing law and changes',

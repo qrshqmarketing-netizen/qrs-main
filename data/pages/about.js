@@ -4,7 +4,7 @@ export const ABOUT_PAGE = {
   keyword: 'quality roofing specialists',
   metaTitle: 'About Us',
   metaDescription:
-    'About Quality Roofing Specialists: a detail-first roofing team with 30+ years of roofing experience, serving homes across Los Angeles & Orange County.',
+    'About Quality Roofing Specialists: a detail-first roofing team, a licensed California contractor since 2020, serving homes across Los Angeles & Orange County.',
   hero: {
     eyebrow: 'About Our Company',
     heading: 'Meet Quality Roofing Specialists',
@@ -12,7 +12,7 @@ export const ABOUT_PAGE = {
   intro: {
     heading: 'Your Detail-First Roofing Team',
     paragraphs: [
-      'Quality Roofing Specialists is a local roofing team serving homeowners and property owners across Los Angeles and Orange County, with 30+ years of roofing experience behind every job. Our approach is simple: a roofer should look at your roof before anyone tries to sell you one.',
+      'Quality Roofing Specialists is a local roofing team serving homeowners and property owners across Los Angeles and Orange County, licensed as a California contractor since 2020. Our approach is simple: a roofer should look at your roof before anyone tries to sell you one.',
       'That’s why our work starts with a roofer-led [$199 Roof Check](#roof-check), photo documentation and a plain-English explanation. Before any work begins you get a written scope and price. When the job is done, we walk the finished roof with you and back our installs with a lifetime workmanship warranty.',
     ],
   },

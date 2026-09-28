@@ -147,7 +147,7 @@ export const HOA_MULTI_FAMILY = {
   why: {
     heading: 'Why Choose QRS for HOA & Multi-Family Roofing?',
     intro:
-      'Boards, managers and owners need answers they can take into a meeting, and residents need to know what’s happening overhead. We bring 30+ years of roofing experience to both.',
+      'Boards, managers and owners need answers they can take into a meeting, and residents need to know what’s happening overhead. As a licensed California contractor since 2020, we bring that accountability to both.',
     points: [
       {
         title: 'Reports made for board review',

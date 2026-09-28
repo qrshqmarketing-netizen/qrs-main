@@ -760,7 +760,7 @@ export const BLOG_POSTS = [
       {
         heading: 'Hire a Roofing Contractor',
         paragraphs: [
-          'For help keeping your asphalt shingle roof cooler, talk to a roofer. Our team brings 30+ years of roofing experience, and proper attic ventilation is part of how we install [shingle roofing](/shingle-roofing/). Start with a [$199 Roof Check](#roof-check) to see where your roof stands.',
+          'For help keeping your asphalt shingle roof cooler, talk to a roofer. Our team is a licensed California contractor since 2020, and proper attic ventilation is part of how we install [shingle roofing](/shingle-roofing/). Start with a [$199 Roof Check](#roof-check) to see where your roof stands.',
         ],
       },
     ],
@@ -823,7 +823,7 @@ export const BLOG_POSTS = [
       {
         heading: 'Contact the Asphalt Shingle Roof Experts',
         paragraphs: [
-          'If you’ve noticed any of these signs, our team can help. We bring 30+ years of roofing experience to every [shingle roof repair](/shingle-roofing/repairs/), and if the damage is too widespread to repair, we’ll explain why a [shingle roof replacement](/shingle-roofing/replacement/) makes more sense. Start with a [$199 Roof Check](#roof-check), or learn more about our [residential roofing](/residential-roofing/) services.',
+          'If you’ve noticed any of these signs, our team can help. We handle every [shingle roof repair](/shingle-roofing/repairs/) as a licensed California contractor since 2020, and if the damage is too widespread to repair, we’ll explain why a [shingle roof replacement](/shingle-roofing/replacement/) makes more sense. Start with a [$199 Roof Check](#roof-check), or learn more about our [residential roofing](/residential-roofing/) services.',
         ],
       },
     ],
@@ -883,7 +883,7 @@ export const BLOG_POSTS = [
         heading: 'Conclusion',
         paragraphs: [
           'There are many roofing companies out there, and with the money you’re investing in your home, choosing the right one matters. Do your research, look into the company’s history and talk with them before you decide.',
-          'If you’re looking for a reliable roofing specialist in [Los Angeles](https://lacounty.gov/), Quality Roofing Specialists brings 30+ years of roofing experience, no-pressure advice and written pricing before any work begins. Learn more about our [residential roofing](/residential-roofing/) services, or start with a [$199 Roof Check](#roof-check).',
+          'If you’re looking for a reliable roofing specialist in [Los Angeles](https://lacounty.gov/), Quality Roofing Specialists is a licensed California contractor since 2020, offering no-pressure advice and written pricing before any work begins. Learn more about our [residential roofing](/residential-roofing/) services, or start with a [$199 Roof Check](#roof-check).',
         ],
       },
     ],
@@ -1364,7 +1364,7 @@ export const BLOG_POSTS = [
         paragraphs: [
           'Quality Roofing Specialists installs [shingle roofing](/shingle-roofing/), [tile roofing](/tile-roofing/), flat roofing and standing seam metal roofs for homes and commercial buildings across Los Angeles and Orange County.',
           'Our process has four steps: a Roof Check, where we inspect and photo-document your roof; a clear quote with the written scope and price; an expert install by qualified crews; and a final walkthrough of the finished roof and your lifetime workmanship warranty.',
-          'Our team has 30+ years of roofing experience with residential and commercial roofs. As a local roofing team, we can help you choose the roof type that suits your home, your budget and the Southern California climate. Start with a [$199 Roof Check](#roof-check).',
+          'Our team is a licensed California contractor since 2020, working on residential and commercial roofs. As a local roofing team, we can help you choose the roof type that suits your home, your budget and the Southern California climate. Start with a [$199 Roof Check](#roof-check).',
         ],
       },
     ],

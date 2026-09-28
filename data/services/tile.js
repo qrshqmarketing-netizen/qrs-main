@@ -119,7 +119,7 @@ export const TILE_CONTENT = {
         heading: 'Why Choose QRS for Tile Roof Repair?',
         intro: 'A tile repair should fix the cause, not just the drip, without leaving a trail of cracked tiles behind.',
         points: [
-          { title: 'Experience with how tile is built', text: 'With 30+ years of roofing experience, we know how clay and concrete tile roofs are layered, fastened and flashed, and that’s what finding a leak depends on.' },
+          { title: 'Experience with how tile is built', text: 'As a licensed California contractor since 2020, we know how clay and concrete tile roofs are layered, fastened and flashed, and that’s what finding a leak depends on.' },
           { title: 'Honest when a repair won’t hold', text: 'A [$199 Roof Check](#roof-check) gives you photos and a straight answer on whether a repair will last or the roof needs more.' },
           { title: 'Photo proof of every fix', text: 'You get photos of the damage and the finished repair, so you’re never just taking our word for it.' },
           { title: 'Matching that doesn’t stand out', text: 'We look for the closest available color and profile, so a repair on a front-facing slope doesn’t draw the eye.' },

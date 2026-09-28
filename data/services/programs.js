@@ -65,7 +65,7 @@ export const EMERGENCY_ROOF_REPAIR = {
       },
       {
         title: 'Every roof type, one team',
-        text: 'We bring 30+ years of roofing experience to tile, shingle, flat and metal roofs, and storm damage shows up differently on each one.',
+        text: 'As a licensed California contractor since 2020, we work on tile, shingle, flat and metal roofs, and storm damage shows up differently on each one.',
       },
     ],
   },

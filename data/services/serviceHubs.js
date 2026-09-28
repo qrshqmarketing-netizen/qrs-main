@@ -97,7 +97,7 @@ export const ROOF_INSPECTION_HUB = {
   highlights: {
     heading: 'What You Get From Every Roof Check',
     points: [
-      { title: 'A roofer’s read on your roof', text: 'The inspection is done by a roofer who knows how shingle, tile and flat roofs are built and how each one tends to fail, backed by our 30+ years of roofing experience.' },
+      { title: 'A roofer’s read on your roof', text: 'The inspection is done by a roofer who knows how shingle, tile and flat roofs are built and how each one tends to fail, backed by our standing as a licensed California contractor since 2020.' },
       { title: 'Photos you can keep and share', text: 'The photos let you review the findings later, show them to family or a buyer, and compare your options without relying on memory.' },
       { title: 'One clear next step', text: 'If work makes sense, a written scope and price follow. If the roof only needs watching, that’s what we’ll recommend, with no push toward a bigger job.' },
     ],

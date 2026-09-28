@@ -3,6 +3,7 @@
 // `chips` are the suggested follow-up buttons. null = the starter questions, [] = none.
 
 import { BUSINESS, PHONE, TEL } from './site';
+import { formatDate } from '@/lib/dates';
 
 // The chat assistant's backend: app/api/chat/route.js (an OpenRouter model — see OPENROUTER_API_KEY and
 // OPENROUTER_MODEL in .env.local). Set NEXT_PUBLIC_CHAT_ENDPOINT only to point the widget at a different,
@@ -27,7 +28,7 @@ Facts you can rely on:
 - Services: roof repair, roof replacement, tile lift & relay, flat roofing, shingle roofing, metal roofing, rain gutters, HOA & multi-family roofing, commercial roofing, and roof inspections.
 - Installs are backed by a lifetime workmanship warranty.
 - Service area: Los Angeles and Orange County, Southern California.
-- Phone: ${PHONE}. Quality Roofing Specialists is a licensed California contractor, CSLB License #${BUSINESS.license}.
+- Phone: ${PHONE}. Quality Roofing Specialists is a licensed California contractor, CSLB License #${BUSINESS.license}, licensed since ${formatDate(BUSINESS.licenseSince)}.
 
 Rules:
 - Never invent facts, prices, warranty terms or timelines beyond what's given here or in the relevant content. If you don't know something, say so and offer a call to ${PHONE}.
@@ -108,7 +109,7 @@ export const ANSWERS = [
   },
   {
     match: /experience|years|how long have|licens|trust|who are/,
-    answer: 'QRS brings 30+ years of roofing experience to every job, with detail-first workmanship across LA and Orange County. <a href="/about-us/" data-qa-close>Why homeowners choose QRS</a>.',
+    answer: 'QRS is a licensed California contractor (CSLB #1061942) since 2020, bringing detail-first workmanship to every job across LA and Orange County. <a href="/about-us/" data-qa-close>Why homeowners choose QRS</a>.',
     chips: ['How does the process work?', 'Book a Roof Check'],
   },
   {

@@ -3,6 +3,7 @@ import { FacebookIcon, InstagramIcon, LinkedInIcon, YouTubeIcon } from '@/compon
 import SiteLink from '@/components/ui/SiteLink';
 import { FOOTER } from '@/data/navigation';
 import { BUSINESS, SOCIAL } from '@/data/site';
+import { formatDate } from '@/lib/dates';
 import CopyrightYear from './CopyrightYear';
 import './Footer.css';
 
@@ -47,7 +48,7 @@ export default function Footer() {
             Copyright &copy; <CopyrightYear builtYear={new Date().getFullYear()} /> {BUSINESS.name}, All Rights Reserved
           </span>
           <span>Lifetime Workmanship Warranty</span>
-          <span>CSLB Lic # {BUSINESS.license}</span>
+          <span>CSLB Lic # {BUSINESS.license} &middot; Licensed since {formatDate(BUSINESS.licenseSince)}</span>
           {FOOTER.legal.map((link) => (
             <span key={link.href}>
               <SiteLink href={link.href} prefetch={false}>{link.label}</SiteLink>

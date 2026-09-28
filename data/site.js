@@ -11,6 +11,7 @@ export const BUSINESS = {
     'Detail-first roof repair and replacement for homeowners across Southern California, backed by a lifetime workmanship warranty. CSLB Lic # 1061942.',
   email: 'info@qualityroofingspecialists.com',
   license: '1061942', // California CSLB contractor license number
+  licenseSince: '2020-01-03', // CSLB license issue date
   priceRange: '$$',
   address: {
     street: '1444 N Poinsettia Pl, Unit 308',
@@ -71,7 +72,7 @@ export const HOME_DESCRIPTION =
 
 // Short trust points in the bar under the hero
 export const PROOF_POINTS = [
-  { title: '30+ years', text: 'Roofing experience' },
+  { title: 'Since 2020', text: 'Licensed California contractor' },
   { title: 'Detail-first', text: 'Clear scope. Clean execution.' },
   { title: 'SoCal', text: 'Local service area' },
   { title: 'Lifetime', text: 'Workmanship warranty' },
