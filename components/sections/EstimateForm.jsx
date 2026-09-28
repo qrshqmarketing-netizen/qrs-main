@@ -1,20 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-
-const SERVICE_OPTIONS = [
-  'Roof inspection / roof check',
-  'Roof maintenance plan',
-  'Roof repair',
-  'Roof replacement',
-  'Tile lift & relay',
-  'Flat roofing',
-  'Shingle roofing',
-  'Metal roofing or gutters',
-  'Commercial or HOA roofing',
-  'Not sure yet',
-];
-const ROOF_TYPES = ['Not sure', 'Tile', 'Shingle', 'Flat', 'Metal'];
+import { ROOF_TYPES, SERVICE_OPTIONS } from '@/data/estimateOptions';
 
 export default function EstimateForm() {
   const [saved, setSaved] = useState(false);

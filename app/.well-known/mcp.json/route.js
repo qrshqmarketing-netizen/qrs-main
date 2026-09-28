@@ -13,7 +13,7 @@ export function GET() {
         url: `${SITE_URL}/mcp/`,
         transport: 'streamable-http',
         description:
-          'Read-only tools for AI agents: check Quality Roofing Specialists service-area coverage, search site content (services, pricing, FAQs), and get business contact info. No forms or leads are submitted through this server.',
+          'Tools for AI agents: check Quality Roofing Specialists service-area coverage, search site content (services, pricing, FAQs), get business contact info, and request an estimate callback (submits a real lead with the person’s explicit consent).',
       },
     },
   };

@@ -1,6 +1,7 @@
-// MCP (Model Context Protocol) server: lets AI agents call read-only tools backed by real QRS site data —
-// service-area coverage, site content search (services, pricing, FAQs), and business contact info. See
-// lib/mcpTools.js for what each tool actually does. Nothing here submits a form or writes anywhere.
+// MCP (Model Context Protocol) server: lets AI agents call tools backed by real QRS site data — service-area
+// coverage, site content search (services, pricing, FAQs), business contact info, and (the one tool that
+// writes anything) submitting a real estimate/contact request. See lib/mcpTools.js for what each tool does
+// and the safeguards on the one that submits a lead.
 //
 // Implements the JSON-RPC 2.0 subset of MCP's Streamable HTTP transport (https://modelcontextprotocol.io)
 // needed for stateless tool calls: initialize, notifications/initialized, tools/list, tools/call, ping.
@@ -20,25 +21,32 @@ const CORS = {
   'Access-Control-Allow-Headers': 'Content-Type, MCP-Protocol-Version',
 };
 
-async function handle({ method, params }) {
+function clientIP(request) {
+  return request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || request.headers.get('x-real-ip') || 'unknown';
+}
+
+async function handle({ method, params }, context) {
   switch (method) {
     case 'initialize':
       return {
         protocolVersion: params?.protocolVersion || PROTOCOL_VERSION,
         capabilities: { tools: {} },
         serverInfo: { name: 'quality-roofing-specialists', title: 'Quality Roofing Specialists', version: '1.0.0' },
-        instructions: `Read-only tools for ${SITE_URL}: check service-area coverage, search site content (services, pricing, FAQs), and get business contact info.`,
+        instructions:
+          `Tools for ${SITE_URL}: check service-area coverage, search site content (services, pricing, FAQs), get business contact info, ` +
+          `and request_estimate — the one tool that writes anything. It submits a real lead, so only call it with a real person's ` +
+          `explicit, given consent and real contact info, never speculatively.`,
       };
     case 'notifications/initialized':
     case 'ping':
       return {};
     case 'tools/list':
-      return { tools: TOOLS.map(({ name, description, inputSchema }) => ({ name, description, inputSchema })) };
+      return { tools: TOOLS.map(({ name, description, inputSchema, annotations }) => ({ name, description, inputSchema, annotations })) };
     case 'tools/call': {
       const tool = TOOLS.find((t) => t.name === params?.name);
       if (!tool) throw { code: -32602, message: `Unknown tool: ${params?.name}` };
       try {
-        return await tool.run(params?.arguments || {});
+        return await tool.run(params?.arguments || {}, context);
       } catch (err) {
         return { content: [{ type: 'text', text: 'Tool failed: ' + (err?.message || 'unknown error') }], isError: true };
       }
@@ -63,7 +71,7 @@ export async function POST(request) {
 
   const isNotification = msg.id === undefined;
   try {
-    const result = await handle(msg);
+    const result = await handle(msg, { ip: clientIP(request) });
     return isNotification ? new Response(null, { status: 202, headers: CORS }) : json({ jsonrpc: '2.0', id: msg.id, result });
   } catch (err) {
     if (isNotification) return new Response(null, { status: 202, headers: CORS });
