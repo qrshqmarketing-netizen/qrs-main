@@ -1,8 +1,9 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { ArrowRight, CloseIcon, QrsMark, RefreshIcon } from '@/components/ui/icons';
+import { ArrowRight, CloseIcon, RefreshIcon } from '@/components/ui/icons';
 import { ANSWERS, CHAT_ENDPOINT, CHIP_PROMPTS, FALLBACK_ANSWER, GREETING, STARTERS } from '@/data/assistant';
 import { PHONE, TEL } from '@/data/site';
 import { session } from '@/lib/storage';
@@ -191,9 +192,7 @@ export default function RoofAssistant() {
       <section className="qa-panel" id="qaPanel" role="dialog" aria-modal="false" aria-labelledby="qaTitle" onKeyDown={(e) => e.key === 'Escape' && closeChat()}>
         <header className="qa-head">
           <span className="qa-avatar" aria-hidden="true">
-            <svg viewBox="0 0 64 64">
-              <QrsMark />
-            </svg>
+            <Image src="/icon-192.png" alt="" width={32} height={32} />
           </span>
           <div className="qa-title">
             <b id="qaTitle">QRS Roof Assistant</b>
