@@ -45,8 +45,8 @@ export function SectionHub({ section }) {
         subheading: 'For general contractors, builders and property managers',
         paragraphs: ['Need a roofing partner for your projects? We bring roofer-led assessments, written scopes and photo-documented work to every job we do with you.'],
         cta: { label: 'Partner with us', href: CONTRACTORS_LINK.href },
-        image: '/images/qrs-truck-4k.webp',
-        imageAlt: 'Quality Roofing Specialists truck parked on a residential street',
+        image: '/images/bottom-cta-background.webp',
+        imageAlt: 'Row of homes with pitched roofs along a residential street',
       }
     : null;
   return (

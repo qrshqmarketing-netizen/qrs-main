@@ -13,7 +13,7 @@ import { pageJsonLd } from '@/lib/structuredData';
 export const metadata = pageMetadata({ title: page.metaTitle, description: page.metaDescription, path: CAREERS_LINK.href });
 
 const CRUMBS = [HOME, CAREERS_LINK];
-const HERO_IMAGE = '/images/qrs-truck-4k.webp';
+const HERO_IMAGE = '/images/bottom-cta-background.webp';
 
 const schema = pageJsonLd({ path: CAREERS_LINK.href, title: page.metaTitle, description: page.metaDescription, crumbs: CRUMBS, faqs: page.faqs, image: HERO_IMAGE });
 
@@ -30,7 +30,7 @@ export default function CareersPage() {
         title={page.hero.heading}
         intro={page.hero.intro}
         image={HERO_IMAGE}
-        imageAlt="Quality Roofing Specialists truck parked on a residential street"
+        imageAlt="Row of homes with pitched roofs along a residential street"
         imagePosition="40% center"
         actions={[
           { label: 'Email Us Your Info', href: EMAIL_LINK, style: 'gold' },
