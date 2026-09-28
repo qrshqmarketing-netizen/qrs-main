@@ -198,7 +198,7 @@
 }
 
 /* Red dot on emergency links */
-.menu-urgent{display:inline-block;width:8px;height:8px;margin-right:9px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px rgba(192,57,43,.22);vertical-align:middle;position:relative;top:-1px}
+.menu-urgent{display:inline-block;width:8px;height:8px;margin-right:9px;border-radius:50%;background:var(--plum);box-shadow:0 0 0 3px rgba(107,37,69,.22);vertical-align:middle;position:relative;top:-1px}
 
 /* Contractors nav link (data/navigation.js NAV_LINKS `pulse: true`): a steady gold highlight on
    mobile/tablet (a full-width row in the slide-down menu), a glowing pulse every 3s on desktop. */

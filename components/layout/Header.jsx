@@ -299,7 +299,7 @@ export default function Header() {
         {/* Gold: book a Roof Check. Red: call now (the number shows on wide screens, an icon elsewhere). */}
         <div className="nav-actions">
           <SiteLink className="btn btn-gold nav-cta" href={HEADER_CTA.href}>{HEADER_CTA.label}</SiteLink>
-          <a className="btn btn-red nav-call" href={TEL} aria-label={`Call ${PHONE}`}>
+          <a className="btn btn-plum nav-call" href={TEL} aria-label={`Call ${PHONE}`}>
             <PhoneIcon />
             <span>{PHONE}</span>
           </a>

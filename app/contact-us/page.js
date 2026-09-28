@@ -42,7 +42,7 @@ export default function ContactPage() {
         intro={page.hero.intro}
         card={{ kicker: 'Reach our team', scene: 'scene-inspect', highlights: [`Call ${PHONE}`, 'Offices in Los Angeles, Woodland Hills & Vernon', HOURS_LINE] }}
         actions={[
-          { label: `Call ${PHONE}`, href: TEL, style: 'red' },
+          { label: `Call ${PHONE}`, href: TEL, style: 'plum' },
           { label: 'Request an Estimate', href: '#roof-check', style: 'line' },
         ]}
       />

@@ -4,7 +4,7 @@ import { PhoneIcon } from '@/components/ui/icons';
 import './FinalCta.css';
 
 // Closing call to action above the footer, over a neighborhood street photo. Pages can change the words and the
-// button (cta.style: 'gold', or 'red' for a "call now" button).
+// button (cta.style: 'gold', or 'plum' for a "call now" button).
 export default function FinalCta({
   heading = 'Detail-First Roofing',
   text = 'At QRS, there’s no pressure, no mystery scope and no surprises — ever. Start with a roofer-led roof check today!',

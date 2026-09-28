@@ -9,21 +9,21 @@ export const LOCATION_CTA = {
   cta: { label: 'Find Your Location', href: '/service-areas/' },
 };
 
-// Red is kept for "call now" actions (see --red in app/globals.css).
-// Repair pages: the gold Roof Check button, plus a red call button for a roof that's leaking now
+// Plum is kept for "call now" actions (see --plum in app/globals.css).
+// Repair pages: the gold Roof Check button, plus a plum call button for a roof that's leaking now
 export const REPAIR_ACTIONS = [
   { label: 'Get Pro Advice', href: '#roof-check', style: 'gold' },
-  { label: `Leaking Now? Call ${PHONE}`, href: TEL, style: 'red' },
+  { label: `Leaking Now? Call ${PHONE}`, href: TEL, style: 'plum' },
 ];
 export const isRepair = (service) => ['repair', 'repairs'].includes(service.slug);
 
 // Emergency & Storm Damage page: calling comes first
 export const EMERGENCY_ACTIONS = [
-  { label: `Call ${PHONE}`, href: TEL, style: 'red' },
+  { label: `Call ${PHONE}`, href: TEL, style: 'plum' },
   { label: 'Request an Estimate', href: '#roof-check', style: 'line' },
 ];
 export const EMERGENCY_CTA = {
   heading: 'Storm Damage or a Sudden Leak?',
   text: 'Call and tell us what happened. A roofer assesses and photographs the damage, adds temporary protection if it’s needed and prices the permanent repair in writing.',
-  cta: { label: `Call ${PHONE}`, href: TEL, style: 'red' },
+  cta: { label: `Call ${PHONE}`, href: TEL, style: 'plum' },
 };

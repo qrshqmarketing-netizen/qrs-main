@@ -20,10 +20,10 @@
   --gold:#d4b572;
   --gold-2:#e0c68a;
   --gold-ink:#826a35;
-  /* Clay red, the color of a fired roof tile: the second button color, kept for "call now" and emergency actions
-     so it stands out from the gold "plan / book" buttons. White text on it is 5.4:1 (readable). --red-2 is its hover. */
-  --red:#c0392b;
-  --red-2:#a8301f;
+  /* Deep plum: the second button color, kept for "call now" and emergency actions so it stands out from the
+     gold "plan / book" buttons. White text on it is ~10.6:1 (readable). --plum-2 is its hover. */
+  --plum:#6b2545;
+  --plum-2:#5b1f3b;
   --ink:#10243a;
   --muted:#64748b;
   --paper:#fff;
@@ -89,9 +89,9 @@ h1,h2,h3,.eyebrow,.hero-sub{text-wrap:balance}
 }
 .btn:hover{transform:translateY(-2px)}
 .btn-gold{background:var(--gold);color:#101820;box-shadow:0 9px 22px rgba(212,181,114,.22)}
-.btn-red{background:var(--red);color:#fff;box-shadow:0 9px 22px rgba(192,57,43,.24)}
-.btn-red:hover{background:var(--red-2)}
-.btn-red svg{width:19px;height:19px;flex:none}
+.btn-plum{background:var(--plum);color:#fff;box-shadow:0 9px 22px rgba(107,37,69,.24)}
+.btn-plum:hover{background:var(--plum-2)}
+.btn-plum svg{width:19px;height:19px;flex:none}
 .btn-dark{background:var(--navy);color:#fff}
 .btn-light{background:#fff;color:var(--navy)}
 .btn-outline{border-color:rgba(255,255,255,.32);color:#fff;background:rgba(255,255,255,.06)}

@@ -12,8 +12,8 @@ const DEFAULT_ACTIONS = [
 ];
 
 // Inner-page hero: title and intro on the left; a photo (or, until one is added, a branded card) on the right.
-// actions: [{ label, href, style: 'gold' | 'red' | 'line' }]; an action with `drawer: true` opens the Instant Quote instead.
-// Red phone buttons get a handset icon; other gold and red buttons get an arrow.
+// actions: [{ label, href, style: 'gold' | 'plum' | 'line' }]; an action with `drawer: true` opens the Instant Quote instead.
+// Plum phone buttons get a handset icon; other gold and plum buttons get an arrow.
 // card: { kicker, scene, highlights: ['...', '...', '...'], offer: 'home' | 'commercial' }
 export default function PageHero({ crumbs, eyebrow, title, intro, image, imageAlt = '', imagePosition, card, actions = DEFAULT_ACTIONS }) {
   return (
@@ -38,7 +38,7 @@ export default function PageHero({ crumbs, eyebrow, title, intro, image, imageAl
                   </button>
                 ) : (
                   <SiteLink className={`btn btn-${a.style || 'gold'}`} href={a.href} key={a.href}>
-                    {a.href.startsWith('tel:') && a.style === 'red' && <PhoneIcon />}
+                    {a.href.startsWith('tel:') && a.style === 'plum' && <PhoneIcon />}
                     {a.label}
                     {a.style !== 'line' && !a.href.startsWith('tel:') && <span className="arrow">→</span>}
                   </SiteLink>
