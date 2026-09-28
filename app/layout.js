@@ -4,7 +4,7 @@ import 'leaflet/dist/leaflet.css';
 import './globals.css';
 
 import Script from 'next/script';
-import { Inter, Open_Sans } from 'next/font/google';
+import { Open_Sans } from 'next/font/google';
 import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
 import CookieNotice from '@/components/widgets/CookieNotice';
@@ -16,7 +16,6 @@ import { ALLOW_INDEXING, openGraphBase, twitterBase } from '@/lib/seo';
 
 // Google Fonts, downloaded at build time and served from this site
 const openSans = Open_Sans({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800'], variable: '--font-open-sans' });
-const inter = Inter({ subsets: ['latin'], weight: '700', variable: '--font-inter' });
 
 // Defaults for every page. A page's own `metadata` export overrides these.
 export const metadata = {
@@ -52,7 +51,7 @@ export const viewport = {
 // Header, footer and the floating widgets appear on every page
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${openSans.variable} ${inter.variable}`} data-scroll-behavior="smooth">
+    <html lang="en" className={openSans.variable} data-scroll-behavior="smooth">
       <body>
         <Header />
         {children}
