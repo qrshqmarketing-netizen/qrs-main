@@ -28,6 +28,8 @@ export default function AboutPage() {
       <JsonLd data={schema} />
       <Hero crumbs={CRUMBS} eyebrow={page.hero.eyebrow} title={page.hero.heading} image={HERO_IMAGE} imagePosition="center 40%" />
       <Overview center heading={page.intro.heading} paragraphs={page.intro.paragraphs} />
+      <SplitFeature eyebrow={page.story.eyebrow} heading={page.story.heading} paragraphs={page.story.paragraphs} scene="scene-replace" />
+      <ValueGrid heading={page.team.heading} intro={page.team.intro} items={page.team.items} columns={2} />
       <ValueGrid heading={page.values.heading} items={page.values.items} tone="wash" />
       <WhyQrs heading="Why Homeowners Choose QRS" cta={{ label: 'Read Our Reviews', href: '#reviews' }} />
       <Process />

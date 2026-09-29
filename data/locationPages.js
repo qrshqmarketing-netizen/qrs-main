@@ -434,8 +434,9 @@ export const LOCATION_PAGES = {
     keyword: 'vernon roofing',
     image: '/images/vernon-industrial.webp',
     imagePosition: 'center 55%',
+    offer: 'commercial',
     metaTitle: 'Vernon Roofing & Commercial Roof Repair',
-    metaDescription: 'Vernon, CA roofing for the city’s warehouses, plants and commercial buildings: roof repair, replacement and inspection with written scopes. Book a $199 Roof Check.',
+    metaDescription: 'Vernon, CA roofing for the city’s warehouses, plants and commercial buildings: roof repair, replacement and inspection with written scopes. Request a roof survey.',
     hero: {
       heading: 'Vernon roofing for an exclusively industrial city.',
       sub: 'Roofer-led inspections and clean installs for the warehouses, manufacturing plants and commercial buildings across Vernon.',
@@ -444,7 +445,7 @@ export const LOCATION_PAGES = {
       heading: 'Roofing Built for Vernon’s Industrial Buildings',
       paragraphs: [
         'Vernon calls itself “exclusively industrial,” and the roofs here show it: wide, low-slope roofs over warehouses, manufacturing plants and food-processing facilities, built to cover large open floor plans rather than a typical house roof. Our Vernon office keeps us close to these buildings and to the surrounding industrial areas near Downtown Los Angeles.',
-        'It starts with a roofer-led [$199 Roof Check](#roof-check), not a sales pitch. We photo-document the roof, explain what we find in plain English and give you a written scope and price before any work begins — the same process whether the job is a [flat roof repair](/flat-roofing/repairs/), a full [commercial roof replacement](/commercial-roofing/replacement/) or ongoing [commercial roof maintenance](/commercial-roofing/maintenance/).',
+        'It starts with a roofer-led [roof survey](#roof-check), not a sales pitch. We photo-document the roof, explain what we find in plain English and give you a written scope and price before any work begins — the same process whether the job is a [flat roof repair](/flat-roofing/repairs/), a full [commercial roof replacement](/commercial-roofing/replacement/) or ongoing [commercial roof maintenance](/commercial-roofing/maintenance/).',
       ],
     },
     neighborhoods: [],

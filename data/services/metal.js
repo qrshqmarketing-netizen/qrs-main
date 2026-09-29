@@ -48,7 +48,7 @@ export const METAL_CONTENT = {
       },
       {
         q: 'How long does a metal roof last?',
-        a: 'Metal roofs are known for long service lives, but we won’t promise you a number of years. How long yours lasts depends on the metal and finish, how much sun and salt air it sees, and the quality of the installation. We focus on the part we control: careful work backed by our lifetime workmanship warranty.',
+        a: 'Metal roofs are known for long service lives, but we won’t promise you a number of years. How long yours lasts depends on the metal and finish, how much sun and salt air it sees, and the quality of the installation. We focus on the part we control: careful work backed by our 10-year workmanship warranty.',
       },
       {
         q: 'Will a metal roof hold up to salt air near the coast?',
@@ -110,14 +110,14 @@ export const METAL_CONTENT = {
           },
           {
             title: 'Final walkthrough',
-            text: 'We look over the finished roof together, including photos of the deck and underlayment now hidden under the panels, and talk through your lifetime workmanship warranty.',
+            text: 'We look over the finished roof together, including photos of the deck and underlayment now hidden under the panels, and talk through your 10-year workmanship warranty.',
           },
         ],
       },
       why: {
         heading: 'Why Choose QRS for Standing Seam Roofing?',
         intro:
-          'Standing seam shows every shortcut in the finished panels, so we don’t take any. Each install is backed by the QRS Guarantee, our lifetime workmanship warranty.',
+          'Standing seam shows every shortcut in the finished panels, so we don’t take any. Each install is backed by the QRS Guarantee, our 10-year workmanship warranty.',
         points: [
           {
             title: 'A straight answer on fit',

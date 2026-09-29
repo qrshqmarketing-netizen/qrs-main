@@ -36,12 +36,13 @@ export default function Hero({
   align = 'left',
   stats = true,
   actions = DEFAULT_ACTIONS,
+  className,
 }) {
   const Eyebrow = h1 === 'eyebrow' ? 'h1' : 'div';
   const Title = h1 === 'eyebrow' ? 'p' : 'h1';
   return (
     <>
-      <section className={'hero hero-photo' + (image ? '' : ' hero-fallback')} aria-label={label}>
+      <section className={'hero hero-photo' + (image ? '' : ' hero-fallback') + (className ? ` ${className}` : '')} aria-label={label}>
         {image && (
           <div className={'hero-roof-texture' + (mobileImage ? ' hero-roof-texture-desktop' : '')} aria-hidden="true">
             <Image src={image} alt={imageAlt} fill preload sizes="100vw" style={imagePosition ? { objectPosition: imagePosition } : undefined} />
@@ -53,7 +54,7 @@ export default function Hero({
           </div>
         )}
         <div className="hero-glow" aria-hidden="true"></div>
-        <div className={'container hero-inner on-dark' + (align === 'left' ? ' hero-left' : '')}>
+        <div className={'container hero-inner on-dark' + (align === 'left' ? ' hero-left' : '') + (className ? ` ${className}` : '')}>
           <div className="hero-copy">
             {eyebrow && <Eyebrow className="eyebrow">{eyebrow}</Eyebrow>}
             <Title className="hero-title">{title}</Title>

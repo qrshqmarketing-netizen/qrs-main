@@ -44,7 +44,7 @@ export const RAIN_GUTTERS = {
       },
       {
         title: 'Clean-up and final walkthrough',
-        text: 'We clear away the old gutters and debris, then walk the new runs with you, from the first outlet to the last downspout, and go over the lifetime workmanship warranty on your new gutters.',
+        text: 'We clear away the old gutters and debris, then walk the new runs with you, from the first outlet to the last downspout, and go over the 10-year workmanship warranty on your new gutters.',
       },
     ],
   },
@@ -140,7 +140,7 @@ export const HOA_MULTI_FAMILY = {
       },
       {
         title: 'Walkthrough and closeout',
-        text: 'We review the completed work with your manager or board contact, hand over photos of each building and go over the lifetime workmanship warranty that backs our installs.',
+        text: 'We review the completed work with your manager or board contact, hand over photos of each building and go over the 10-year workmanship warranty that backs our installs.',
       },
     ],
   },

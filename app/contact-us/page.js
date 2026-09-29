@@ -23,7 +23,11 @@ const HOURS_LINE = HOURS.map((h) => `${shortDays(h.days)} ${h.time}`).join(' · 
 const FAQS = [
   {
     q: 'What are your business hours?',
-    a: `We’re open ${HOURS.map((h) => `${h.days} ${h.time}`).join(' and ')}. Outside those hours, send the [estimate form](#roof-check) and we’ll follow up.`,
+    a: `Our office is open ${HOURS.map((h) => `${h.days} ${h.time}`).join(' and ')}. Outside those hours, send the [estimate form](#roof-check) and we’ll follow up.`,
+  },
+  {
+    q: 'Can you help outside office hours for a roofing emergency?',
+    a: 'Yes. Our field techs take emergency calls on weekdays and weekends outside regular office hours. Call us and we’ll let you know the next available time.',
   },
   ...page.faqs,
 ];

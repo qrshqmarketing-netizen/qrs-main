@@ -535,7 +535,7 @@ export default function InstantQuote() {
               </div>
               <p id="rmFinNote">
                 {ests.length > 0 &&
-                  `Example ${ests.length > 1 ? 'payments on the middle of each material’s range' : 'payment on the middle of your range'}, ${term} years at ${FINANCE.apr}% APR. For illustration only, not an offer of credit. Subject to credit approval.`}
+                  `Example ${ests.length > 1 ? 'payments on the middle of each material’s range' : 'payment on the middle of your range'}, ${term} years at ${FINANCE.apr}% APR through Momnt Financing or Service Financing. For illustration only, not an offer of credit. Subject to credit approval.`}
               </p>
               <a className="btn btn-dark" id="rmFinBtn" href={FINANCING_URL || TEL} {...(FINANCING_URL ? { target: '_blank', rel: 'noopener' } : {})}>
                 Check my financing options

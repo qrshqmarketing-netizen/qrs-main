@@ -88,7 +88,7 @@ export const EMERGENCY_ROOF_REPAIR = {
     },
     {
       q: 'What if the damage is too much for a repair?',
-      a: 'Sometimes a storm spreads damage across the whole roof, or exposes a roof that was already near the end of its life. We’ll show you that in photos and walk you through your options. For a replacement or a larger repair, [financing](/financing/) options are available, subject to credit approval.',
+      a: 'Sometimes a storm spreads damage across the whole roof, or exposes a roof that was already near the end of its life. We’ll show you that in photos and walk you through your options. For a full replacement, [financing](/financing/) through Momnt Financing or Service Financing is available, subject to credit approval.',
     },
   ],
   related: ['/roof-repair/', '/roof-inspection/', '/roof-replacement/'],
@@ -113,19 +113,19 @@ export const ROOF_FINANCING = {
   keyword: 'roof financing',
   title: 'Roof Financing',
   navLabel: 'Financing',
-  card: 'Spread the cost of a roof replacement or larger repair into monthly payments, subject to credit approval, once your written scope and price are in hand.',
+  card: 'Spread the cost of a home roof replacement into monthly payments through Momnt Financing or Service Financing, subject to credit approval, once your written scope and price are in hand.',
   metaTitle: 'Roof Financing in Los Angeles & OC',
   metaDescription:
-    'Roof financing in LA & Orange County: spread the cost of a replacement or larger repair into monthly payments, subject to credit approval. Book a Roof Check.',
+    'Roof financing in LA & Orange County: spread the cost of a home roof replacement into monthly payments through Momnt Financing or Service Financing. Book a Roof Check.',
   hero: {
     intro:
-      'A new roof is a big expense, and it rarely comes at a convenient time. Roof financing can spread the cost into monthly payments, subject to credit approval, and it starts only after you have a written scope and price.',
-    highlights: ['For replacements and larger repairs', 'Written scope and price come first', 'Example payments in our Instant Quote'],
+      'A new roof is a big expense, and it rarely comes at a convenient time. Roof financing through Momnt Financing or Service Financing can spread the cost into monthly payments, subject to credit approval, and it starts only after you have a written scope and price.',
+    highlights: ['For home roof replacements', 'Through Momnt Financing or Service Financing', 'Written scope and price come first', 'Example payments in our Instant Quote'],
   },
   overview: {
     paragraphs: [
-      'Roofs don’t wait for a good moment to wear out. A leak turns out to be worn underlayment across the whole roof, a storm finishes off shingles that were already tired, or an inspection for a home sale shows the roof is near the end of its life. Financing options are available to help spread the cost of a [roof replacement](/roof-replacement/) or a larger repair into monthly payments, subject to credit approval. To get a feel for the numbers, the **Instant Quote** on this site gives a ballpark replacement price for your roof and shows example monthly payments alongside it.',
-      'Your actual price starts with a [$199 Roof Check](#roof-check), where a roofer inspects and photo-documents the roof and tells you plainly whether it needs a repair or a replacement. Then you get a written scope and price, so you know exactly what you’re financing before you apply. However you choose to pay, qualified crews do the work cleanly and to spec, and installs are backed by our lifetime workmanship warranty.',
+      'Roofs don’t wait for a good moment to wear out. A leak turns out to be worn underlayment across the whole roof, a storm finishes off shingles that were already tired, or an inspection for a home sale shows the roof is near the end of its life. Financing is available through **Momnt Financing** and **Service Financing** to help spread the cost of a [home roof replacement](/roof-replacement/) into monthly payments, subject to credit approval. To get a feel for the numbers, the **Instant Quote** on this site gives a ballpark replacement price for your roof and shows example monthly payments alongside it.',
+      'Your actual price starts with a [$199 Roof Check](#roof-check), where a roofer inspects and photo-documents the roof and tells you plainly whether it needs a repair or a replacement. Then you get a written scope and price, so you know exactly what you’re financing before you apply. Financing is available for home roof replacements — repairs and commercial projects are paid another way. However you choose to pay, qualified crews do the work cleanly and to spec, and installs are backed by our 10-year workmanship warranty.',
     ],
   },
   process: {
@@ -149,7 +149,7 @@ export const ROOF_FINANCING = {
       },
       {
         title: 'Install and final walkthrough',
-        text: 'Qualified crews complete the work in your written scope, then we walk the finished roof with you and go over your lifetime workmanship warranty.',
+        text: 'Qualified crews complete the work in your written scope, then we walk the finished roof with you and go over your 10-year workmanship warranty.',
       },
     ],
   },
@@ -171,14 +171,14 @@ export const ROOF_FINANCING = {
       },
       {
         title: 'The same detail-first install',
-        text: 'Every install gets the same clean, to-spec work and the same lifetime workmanship warranty, however it’s paid for.',
+        text: 'Every install gets the same clean, to-spec work and the same 10-year workmanship warranty, however it’s paid for.',
       },
     ],
   },
   faqs: [
     {
       q: 'What kind of roof work can be financed?',
-      a: 'Financing options are meant for bigger projects: a roof replacement or a larger repair. Once you have your written scope and price, ask us whether financing is available for your project.',
+      a: 'Financing through Momnt Financing or Service Financing is available for home roof replacements. It doesn’t cover repairs or commercial projects. Once you have your written scope and price, ask us whether financing fits your project.',
     },
     {
       q: 'Do I need a written scope and price before applying?',
@@ -194,7 +194,7 @@ export const ROOF_FINANCING = {
     },
     {
       q: 'Can financing help with storm damage?',
-      a: 'If storm damage calls for a replacement or a larger repair, financing options may help spread the cost, subject to credit approval. The permanent repair still starts with photos and a written scope, and our [emergency roof repair](/emergency-roof-repair/) page explains those steps.',
+      a: 'If storm damage calls for a full home roof replacement, financing through Momnt Financing or Service Financing may help spread the cost, subject to credit approval. Repairs, including storm repairs, aren’t financed. The permanent fix still starts with photos and a written scope, and our [emergency roof repair](/emergency-roof-repair/) page explains those steps.',
     },
   ],
   related: ['/roof-replacement/', '/roof-repair/', '/roof-inspection/'],

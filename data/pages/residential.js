@@ -10,7 +10,7 @@ export const RESIDENTIAL_PAGE = {
     heading: 'Residential Roofing Services',
     intro:
       'Detail-first residential roofing for homes across Los Angeles and Orange County, from a leak on a tile roof to a full tear-off on a shingle home. Every job starts with a roofer-led Roof Check, not a sales pitch.',
-    highlights: ['Shingle, tile, flat and metal roofs', 'Written scope and price before work', 'Lifetime workmanship warranty'],
+    highlights: ['Shingle, tile, flat and metal roofs', 'Written scope and price before work', '10-Year workmanship warranty'],
   },
   overview: {
     heading: 'One Team for Every Roof on Your Home',
@@ -30,7 +30,7 @@ export const RESIDENTIAL_PAGE = {
       {
         id: 'roof-replacement',
         title: 'Roof Replacement',
-        text: 'A full tear-off and a new roof system, installed to spec with a written scope and a lifetime workmanship warranty.',
+        text: 'A full tear-off and a new roof system, installed to spec with a written scope and a 10-year workmanship warranty.',
         links: [
           { label: 'Shingle', href: '/shingle-roofing/replacement/' },
           { label: 'Tile', href: '/tile-roofing/replacement/' },

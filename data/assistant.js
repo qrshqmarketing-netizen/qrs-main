@@ -26,7 +26,7 @@ export const SYSTEM_PROMPT = `You are the QRS Roof Assistant, a chat assistant o
 
 Facts you can rely on:
 - Services: roof repair, roof replacement, tile lift & relay, flat roofing, shingle roofing, metal roofing, rain gutters, HOA & multi-family roofing, commercial roofing, and roof inspections.
-- Installs are backed by a lifetime workmanship warranty.
+- Installs are backed by a 10-year workmanship warranty.
 - Service area: Los Angeles and Orange County, Southern California.
 - Phone: ${PHONE}. Quality Roofing Specialists is a licensed California contractor, CSLB License #${BUSINESS.license}, licensed since ${formatDate(BUSINESS.licenseSince)}.
 
@@ -69,7 +69,7 @@ export const ANSWERS = [
   },
   {
     match: /warrant|guarantee/,
-    answer: 'Our installs are backed by a lifetime workmanship warranty. At the final walkthrough we go over your warranty with you in plain English. <a href="#guarantee" data-qa-close>See the QRS Guarantee</a>.',
+    answer: 'Our installs are backed by a 10-year workmanship warranty. At the final walkthrough we go over your warranty with you in plain English. <a href="#guarantee" data-qa-close>See the QRS Guarantee</a>.',
     chips: ['How does the process work?', 'Book a Roof Check'],
   },
   {

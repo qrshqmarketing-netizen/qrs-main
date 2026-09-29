@@ -14,8 +14,8 @@ const POINTS = [
   },
   {
     icon: 'walkthrough',
-    title: 'Lifetime workmanship',
-    text: 'Our installs are backed by a lifetime workmanship warranty, and we walk the finished roof with you before we call it done.',
+    title: '10-Year workmanship',
+    text: 'Our installs are backed by a 10-year workmanship warranty, and we walk the finished roof with you before we call it done.',
   },
 ];
 

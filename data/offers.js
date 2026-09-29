@@ -9,13 +9,16 @@ export const OFFERS = {
     text: 'Get a roofer to look at your roof before a salesperson tries to sell you one.',
     points: [
       { title: 'Roofer first.', text: 'Condition-focused visit — not a pitch.' },
+      { title: 'A real tune-up.', text: 'We seal vents, pipes and flashings as we go, not just look at them.' },
       { title: 'Photo documentation.', text: 'See what we see, in plain English.' },
       { title: 'Clear next step.', text: 'Repair, monitor, maintain or replace.' },
-      { title: 'Pay after the visit.', text: 'No deposit to start the inspection.' },
+      { title: 'Credited toward replacement.', text: 'The $199 counts toward the price if you move forward.' },
+      { title: 'Pay after the visit.', text: 'No deposit to start.' },
     ],
   },
   commercial: {
     eyebrow: 'Commercial, HOA & partner projects',
+    price: '$0.15/sq ft',
     heading: 'Start with a roofer-led roof survey.',
     text: 'Tell us about the building or project and we’ll start with a roofer’s look at the roof, not a sales pitch.',
     points: [

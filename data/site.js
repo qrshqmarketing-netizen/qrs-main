@@ -8,7 +8,7 @@ export const BUSINESS = {
   shortName: 'QRS',
   tagline: 'DETAIL-FIRST ROOFING',
   description:
-    'Detail-first roof repair and replacement for homeowners across Southern California, backed by a lifetime workmanship warranty. CSLB Lic # 1061942.',
+    'Detail-first roof repair and replacement for homeowners across Southern California, licensed, bonded and insured and backed by a 10-year workmanship warranty. CSLB Lic # 1061942.',
   email: 'info@qualityroofingspecialists.com',
   license: '1061942', // California CSLB contractor license number
   licenseSince: '2020-01-03', // CSLB license issue date
@@ -22,10 +22,7 @@ export const BUSINESS = {
   },
   geo: { latitude: 34.0971, longitude: -118.3483 },
   mapUrl: 'https://goo.gl/maps/8iyLP5euPPcdEa9L7',
-  hours: [
-    { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '08:00', closes: '19:00' },
-    { days: ['Sunday'], opens: '10:00', closes: '17:00' },
-  ],
+  hours: [{ days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '08:00', closes: '18:00' }],
 };
 
 // Offices, shown on the Service Areas page and on the city page each one sits in (citySlug, from data/locations.js).
@@ -73,13 +70,13 @@ export const GTM_ID = 'GTM-P7Z3CMG';
 // Home page title and description (search results + link previews)
 export const HOME_TITLE = 'Roof Repair & Replacement in Southern California | Quality Roofing Specialists';
 export const HOME_DESCRIPTION =
-  'Roof repair & replacement in Southern California. Tile, flat & shingle roofing, $199 Roof Check, lifetime workmanship warranty. Call (310) 340-1643.';
+  'Roof repair & replacement in Southern California. Tile, flat & shingle roofing, $199 Roof Check, 10-year workmanship warranty. Call (310) 340-1643.';
 
 // Short trust points in the bar under the hero
 export const PROOF_POINTS = [
-  { title: 'Since 2020', text: 'Licensed California contractor' },
+  { title: 'Since 2020', text: 'Licensed, bonded & insured' },
   { title: 'SoCal', text: 'Local service area' },
-  { title: 'Lifetime', text: 'Workmanship warranty' },
+  { title: '10-Year', text: 'Workmanship warranty' },
   { title: '270', text: '5-star Google reviews' },
 ];
 

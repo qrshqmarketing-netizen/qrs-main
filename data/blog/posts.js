@@ -1363,7 +1363,7 @@ export const BLOG_POSTS = [
         heading: 'Our Roof Installation Services',
         paragraphs: [
           'Quality Roofing Specialists installs [shingle roofing](/shingle-roofing/), [tile roofing](/tile-roofing/), flat roofing and standing seam metal roofs for homes and commercial buildings across Los Angeles and Orange County.',
-          'Our process has four steps: a Roof Check, where we inspect and photo-document your roof; a clear quote with the written scope and price; an expert install by qualified crews; and a final walkthrough of the finished roof and your lifetime workmanship warranty.',
+          'Our process has four steps: a Roof Check, where we inspect and photo-document your roof; a clear quote with the written scope and price; an expert install by qualified crews; and a final walkthrough of the finished roof and your 10-year workmanship warranty.',
           'Our team is a licensed California contractor since 2020, working on residential and commercial roofs. As a local roofing team, we can help you choose the roof type that suits your home, your budget and the Southern California climate. Start with a [$199 Roof Check](#roof-check).',
         ],
       },

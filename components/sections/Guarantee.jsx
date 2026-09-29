@@ -10,7 +10,7 @@ export default function Guarantee() {
       <div className="container gtee-grid">
         <div className="gtee-art">
           <div className="gtee-card">
-            <svg className="gtee-seal" viewBox="0 0 200 200" role="img" aria-label="Lifetime workmanship warranty seal">
+            <svg className="gtee-seal" viewBox="0 0 200 200" role="img" aria-label="10-Year workmanship warranty seal">
               <defs>
                 <path id="sealArc" d="M100 100m-70 0a70 70 0 1 1 140 0a70 70 0 1 1-140 0" />
               </defs>
@@ -18,7 +18,7 @@ export default function Guarantee() {
               <circle cx="100" cy="100" r="84" fill="none" stroke="#062d57" strokeWidth="2" strokeDasharray="3 5" />
               <circle cx="100" cy="100" r="56" fill="#062d57" />
               <text fontSize="13" fontWeight="900" fill="#062d57" letterSpacing="1">
-                <textPath href="#sealArc" textLength="430" lengthAdjust="spacing">LIFETIME WORKMANSHIP WARRANTY • QRS •</textPath>
+                <textPath href="#sealArc" textLength="430" lengthAdjust="spacing">10-YEAR WORKMANSHIP WARRANTY • QRS •</textPath>
               </text>
               <path d="M78 101l15 15 30-32" fill="none" stroke="#d4b572" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
@@ -50,9 +50,10 @@ export default function Guarantee() {
           </div>
           <p>
             At Quality Roofing Specialists, doing the job right is the whole point. Every roof we install is backed by our
-            lifetime workmanship warranty covering our installation labor &mdash; separate from the manufacturer&rsquo;s own
+            10-year workmanship warranty covering our installation labor &mdash; separate from the manufacturer&rsquo;s own
             material warranty &mdash; with its full terms set out in the written agreement you sign before work begins, so
-            you always know exactly what&rsquo;s covered.
+            you always know exactly what&rsquo;s covered. We&rsquo;re certified with our manufacturers and register your
+            material warranty for you, so that coverage is in place without any extra paperwork on your end.
           </p>
           <p>
             <Rich text="Whether you need a [roof replacement](/roof-replacement/), a [roof repair](/roof-repair/) or a tile lift & relay, we stand behind every project. We walk the finished roof with you, go over your warranty in plain English and follow through after the install. With QRS, your new roof isn’t just finished — it’s done right." />

@@ -26,7 +26,7 @@ export const COMMERCIAL_CONTENT = {
       points: [
         { title: 'Surveys led by roofers', text: 'A roofer walks the roof, photographs what matters and gives you a clear next step for each area: repair, monitor, maintain or replace.' },
         { title: 'Scope and schedule in writing', text: 'Before any work starts, you see the scope, the price and how the work will fit around your operations.' },
-        { title: 'Experience and accountability', text: 'QRS is a licensed California contractor since 2020, and backs installs with a lifetime workmanship warranty.' },
+        { title: 'Experience and accountability', text: 'QRS is a licensed California contractor since 2020, and backs installs with a 10-year workmanship warranty.' },
       ],
     },
     faqs: [
@@ -74,7 +74,7 @@ export const COMMERCIAL_CONTENT = {
           { title: 'Leaks traced, not guessed at', text: 'We follow water back to where it enters instead of patching the spot above the stain, and we show you the photos.' },
           { title: 'Findings ownership can follow', text: 'Plain-English findings and clear photos make it easier to explain a repair, or a replacement budget, up the chain.' },
           { title: 'Plans that respect tenants', text: 'Access, noise and staging are worked out before the project starts, so you can tell tenants what to expect.' },
-          { title: 'Lifetime workmanship warranty', text: 'Our installs are backed by a lifetime workmanship warranty, and we review it with you at closeout.' },
+          { title: '10-Year workmanship warranty', text: 'Our installs are backed by a 10-year workmanship warranty, and we review it with you at closeout.' },
         ],
       },
       faqs: [
@@ -159,7 +159,7 @@ export const COMMERCIAL_CONTENT = {
           { title: 'Survey of every roof section', text: 'A roofer surveys the sanctuary, halls and classrooms and photo-documents the condition of each section.', bullets: ['Cracked, slipped or missing tiles', 'Valleys, flashings and underlayment', 'Drains on low-slope roofs'] },
           { title: 'A scope your board can review', text: 'Your board gets a written scope and price organized by roof section, so priorities are clear and the work can be phased if needed.', bullets: ['Priorities by roof section', 'Services and events to work around', 'Options to phase the work'] },
           { title: 'Work planned around your calendar', text: 'We schedule around the services and events on your calendar and keep entrances and walkways clear while we work.' },
-          { title: 'Closeout walkthrough', text: 'We review the finished roof with your facilities lead or committee, share photos of the work and go over your lifetime workmanship warranty.' },
+          { title: 'Closeout walkthrough', text: 'We review the finished roof with your facilities lead or committee, share photos of the work and go over your 10-year workmanship warranty.' },
           { title: 'Seasonal care for every section', text: 'Regular checks catch slipped tiles and clogged drains early, and the photo record helps future boards plan ahead.' },
         ],
       },
@@ -218,7 +218,7 @@ export const COMMERCIAL_CONTENT = {
           { title: 'Detail at every penetration', text: 'Stacks, curbs and supports get flashing built to suit the roof system, not just a smear of sealant.' },
           { title: 'Safety planned before work starts', text: 'Roof access, edges, skylights and work zones are planned with your facility team before anyone goes up.' },
           { title: 'Records for your maintenance team', text: 'Photo documentation by roof area makes it easier to track repairs, wear and future work.' },
-          { title: 'Lifetime workmanship warranty', text: 'Your new roof comes with our lifetime workmanship warranty, explained in plain English at closeout.' },
+          { title: '10-Year workmanship warranty', text: 'Your new roof comes with our 10-year workmanship warranty, explained in plain English at closeout.' },
         ],
       },
       faqs: [
@@ -266,7 +266,7 @@ export const COMMERCIAL_CONTENT = {
           { title: 'Small roofs get full attention', text: 'A small roof gets the same roofer-led survey, photo documentation and written scope as a large one.' },
           { title: 'Repairs when repairs make sense', text: 'If a repair will do the job, we say so. If the roof is past patching, we show you why.' },
           { title: 'Direct, plain-English answers', text: 'You get clear answers about your roof, your price and your schedule, without the runaround.' },
-          { title: 'Lifetime workmanship warranty', text: 'New roofs we install carry our lifetime workmanship warranty, and we explain it in plain English at the final walkthrough.' },
+          { title: '10-Year workmanship warranty', text: 'New roofs we install carry our 10-year workmanship warranty, and we explain it in plain English at the final walkthrough.' },
         ],
       },
       faqs: [

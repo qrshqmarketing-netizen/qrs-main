@@ -6,7 +6,7 @@ import { PHONE, TEL } from './site';
 export const FAQS = [
   {
     q: 'What is the $199 Roof Check?',
-    a: 'It’s a roofer-led inspection of your roof’s condition — not a sales pitch. We photo-document what we find, explain it in plain English and give you a clear next step: repair, monitor, maintain or replace.',
+    a: 'It’s a roofer-led tune-up, not just a look-over. We inspect your roof’s condition, seal the vents, pipes and flashings as we go, and photo-document what we find. You get a plain-English explanation and a clear next step: repair, monitor, maintain or replace. If you move forward with a repair or replacement, the $199 is credited toward the job.',
   },
   {
     q: 'Do I have to pay anything up front?',
@@ -22,7 +22,7 @@ export const FAQS = [
   },
   {
     q: 'What kind of warranty do you offer?',
-    a: 'Our installs are backed by a lifetime workmanship warranty. At the final walkthrough we go over your warranty with you in plain English.',
+    a: 'Our installs are backed by a 10-year workmanship warranty. At the final walkthrough we go over your warranty with you in plain English.',
   },
   {
     q: 'What types of roofs do you work on?',

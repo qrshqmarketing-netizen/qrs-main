@@ -65,6 +65,7 @@ export default function HomePage() {
           intro="Clear inspections. Straightforward estimates. Clean workmanship."
           image="/images/home-hero-shingle-closeup-drone-view.webp"
           imageAlt="Close aerial view of a dimensional shingle roof on a Southern California home"
+          className="hero-top-pad"
         />
         <section className="section">
           <div className="container">

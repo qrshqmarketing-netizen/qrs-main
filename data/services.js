@@ -9,7 +9,7 @@ export const SERVICES = [
     schemaName: 'Roof Replacement',
     scene: 'scene-replace',
     image: '/images/shingle-roof-completed-drone-view.webp',
-    text: 'Full tear-off and new roof systems built for Southern California conditions, installed with a clear written scope and a lifetime workmanship warranty.',
+    text: 'Full tear-off and new roof systems built for Southern California conditions, installed with a clear written scope and a 10-year workmanship warranty.',
     href: '/roof-replacement/',
   },
   {

@@ -74,7 +74,7 @@ export const COMMERCIAL_SERVICES = [
         { title: 'System choice and written scope', text: 'We recommend the low-slope system that suits your building and put the scope, price and phasing plan in writing before work starts.', bullets: ['Roof system and flashing details', 'Sections and the order of work', 'Work hours, access and staging'] },
         { title: 'Phased tear-off and install', text: 'Crews work one section at a time, removing the old roofing, checking the deck and installing the new system before starting the next area.', bullets: ['Old roofing removed down to the deck', 'Deck condition photographed while exposed', 'New flashings at curbs, drains and edges'] },
         { title: 'A building that stays open', text: 'Staging, hoisting and debris removal are planned away from entrances and customer paths, and old roofing is hauled off as each section is finished.' },
-        { title: 'Closeout photos and walkthrough', text: 'We walk the finished roof with your team, hand over closeout photos and go over your lifetime workmanship warranty in plain English.' },
+        { title: 'Closeout photos and walkthrough', text: 'We walk the finished roof with your team, hand over closeout photos and go over your 10-year workmanship warranty in plain English.' },
       ],
     },
     why: {
@@ -84,7 +84,7 @@ export const COMMERCIAL_SERVICES = [
         { title: 'A survey, not a sales pitch', text: 'A roofer tells you whether replacement is really due, with photos of the areas behind the recommendation.' },
         { title: 'A system matched to the building', text: 'Drainage, equipment and foot traffic shape what we recommend, so the new roof suits how the building is used.' },
         { title: 'Phasing that keeps you open', text: 'The work plan follows your hours and the people inside, so business carries on while the roof is replaced.' },
-        { title: 'Lifetime workmanship warranty', text: 'Every replacement is backed by our lifetime workmanship warranty, which we review with you at the final walkthrough.' },
+        { title: '10-Year workmanship warranty', text: 'Every replacement is backed by our 10-year workmanship warranty, which we review with you at the final walkthrough.' },
       ],
     },
     faqs: [

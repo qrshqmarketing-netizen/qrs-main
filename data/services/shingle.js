@@ -9,7 +9,7 @@ export const SHINGLE_CONTENT = {
     hero: {
       heading: 'Shingle Roofing Services',
       intro: 'Good shingle roofing is about more than the shingles you see from the street. It’s also the underlayment, flashings and attic ventilation underneath, and we give those the same care on every asphalt shingle roof we work on across Los Angeles and Orange County.',
-      highlights: ['Premium shingle systems, installed to spec', 'Proper ventilation and tidy detailing', 'Lifetime workmanship warranty on installs'],
+      highlights: ['Premium shingle systems, installed to spec', 'Proper ventilation and tidy detailing', '10-Year workmanship warranty on installs'],
     },
     overview: {
       heading: 'Shingle Roofs Built for Southern California',
@@ -79,7 +79,7 @@ export const SHINGLE_CONTENT = {
           { title: 'A roofer’s honest recommendation', text: 'A roofer who has been on your roof tells you whether it truly needs replacing, and if a [shingle roof tune-up](/shingle-roofing/tune-up/) would keep it going, we’ll say so.' },
           { title: 'Photos of what gets covered up', text: 'Once the new roof is on, the deck and underlayment are hidden for good, so we photograph them while they’re still exposed.' },
           { title: 'A clean site, start to finish', text: 'Tarps over landscaping, careful clean-up and a final sweep for nails leave your yard the way we found it, something homeowners mention in their Google reviews.' },
-          { title: 'Backed by The QRS Guarantee', text: 'Your new shingle roof comes with our lifetime workmanship warranty, and we go over exactly what it covers at the final walkthrough.' },
+          { title: 'Backed by The QRS Guarantee', text: 'Your new shingle roof comes with our 10-year workmanship warranty, and we go over exactly what it covers at the final walkthrough.' },
         ],
       },
       faqs: [
@@ -87,6 +87,7 @@ export const SHINGLE_CONTENT = {
         { q: 'What signs mean my shingle roof needs replacing?', a: 'Widespread granule loss, curling or cupping across whole slopes, shingles that crack when lifted and leaks in more than one place all point that way. One or two damaged areas usually call for a repair instead, and the Roof Check photos show which you’re dealing with.' },
         { q: 'Should I replace my gutters at the same time?', a: 'If your gutters are sagging, leaking at the seams or pulling away, doing them with the roof is often simpler, because the drip edge and gutters work together at the eaves. We can add [rain gutters](/rain-gutters/) to your written scope so both are planned as one job.' },
         { q: 'How should I get ready for a roof replacement?', a: 'Move cars out of the driveway, take mirrors and pictures off walls that may shake during tear-off, and cover anything stored in the attic, since dust can sift through the deck. Keep pets and kids clear of the work area, and leave protecting the landscaping and cleaning up to us.' },
+        { q: 'What if the decking underneath is soft or damaged?', a: 'Your written scope includes a standard allowance for deck repair, so ordinary soft spots are already covered. If we find damage beyond that allowance, we’ll show you in photos and give you the price before replacing anything further.' },
         { q: 'How do I choose a shingle color?', a: 'Look at the whole house, so the roof works with your stucco, trim and any stone. Lighter blends tend to stay cooler in direct sun, which is worth weighing on hot inland streets in Burbank or Anaheim, while multi-tone blends bring out the depth of architectural shingles. Viewing a full-size sample outside in daylight gives a truer read than a small swatch indoors.' },
       ],
       related: ['/shingle-roofing/repairs/', '/shingle-roofing/inspection/', '/shingle-roofing/installation/'],
@@ -178,7 +179,7 @@ export const SHINGLE_CONTENT = {
           { title: 'Ventilation planned from the start', text: 'Balanced intake and exhaust are designed into the roof rather than added later, because attic heat can age shingles early.' },
           { title: 'Careful tie-ins and wall flashing', text: 'Where an addition meets the existing roof or a stucco wall, we detail the flashing, including kick-out flashing where a roof edge runs into a wall, so water goes into the gutter instead of behind the wall.' },
           { title: 'A tidy site for the next trade', text: 'We clean up as we go, so builders and the trades that follow walk onto a clear site.' },
-          { title: 'Lifetime workmanship warranty', text: 'Every roof we install is backed by The QRS Guarantee, and we explain how it works in plain English at the final walkthrough.' },
+          { title: '10-Year workmanship warranty', text: 'Every roof we install is backed by The QRS Guarantee, and we explain how it works in plain English at the final walkthrough.' },
         ],
       },
       faqs: [

@@ -4,6 +4,8 @@
   min-height:560px;display:flex;align-items:flex-end;
   color:#fff;background:#4f5960;
 }
+/* Taller hero, home page only */
+.hero.hero-top-pad{min-height:680px}
 /* No photo yet: a dark navy gradient stands in for the drone photo, same full-height frame */
 .hero-fallback{background:linear-gradient(135deg,#0e3b6e 0%,#062d57 48%,#03192e 100%)}
 /* Drone photo of a finished roof, darkened toward the bottom so the headline stays readable */
@@ -35,6 +37,8 @@
      to two lines on narrow phones, so this carries extra headroom beyond the header's single-line height */
   padding:165px 0 40px;margin:auto auto 0;text-align:center;
 }
+/* A little extra breathing room above the eyebrow (home page only) */
+.hero-inner.hero-top-pad{padding-top:225px}
 .hero-copy{width:min(900px,100%);margin:0 auto}
 .hero-copy .eyebrow{
   color:var(--gold-2);font-family:var(--font-head);font-size:13px;font-weight:600;letter-spacing:.06em;line-height:1.5;
@@ -62,7 +66,9 @@
 .hero-inner.hero-left .proofbar{margin-top:36px}
 @media (min-width:621px){
   .hero{min-height:600px}
+  .hero.hero-top-pad{min-height:740px}
   .hero-inner{padding:140px 0 42px}
+  .hero-inner.hero-top-pad{padding-top:210px}
   .hero-copy .eyebrow{font-size:18px;letter-spacing:0;line-height:inherit;margin-bottom:12px}
   .hero-title{font-size:72px;line-height:1.05;text-wrap:wrap}
   .hero-sub{font-size:19px;line-height:1.4;letter-spacing:-.01em;margin:22px auto 28px}
@@ -71,7 +77,9 @@
 }
 @media (min-width:901px){
   .hero{min-height:clamp(640px,86vh,820px)}
+  .hero.hero-top-pad{min-height:clamp(760px,94vh,920px)}
   .hero-inner{padding:150px 0 50px}
+  .hero-inner.hero-top-pad{padding-top:220px}
   .hero-title{font-size:90px}
   .hero-sub{font-size:22px}
 }

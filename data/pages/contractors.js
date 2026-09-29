@@ -23,6 +23,8 @@ export const CONTRACTORS_PAGE = {
       { title: 'Builders and remodelers', text: 'From new construction and ADUs to a changed roofline on a remodel, we install tile, shingle, flat and metal roofs that fit the plans and the rest of the home.' },
       { title: 'Property managers', text: 'Keep one roofing partner across your buildings for surveys, repairs, replacements and scheduled roof care, with photo records for each property.' },
       { title: 'HOA boards', text: 'Get roofer-led findings and written scopes your board can review together. Our [HOA & multi-family roofing](/hoa-multi-family/) page explains how we plan community projects.' },
+      { title: 'Solar companies', text: 'Bring us in to handle the roof around a solar install, from mounting-point flashing to a full replacement before panels go up.' },
+      { title: 'Roofing contractors', text: 'We take on overflow work from other roofing contractors, and bring in vetted subcontractors of our own when a job needs the extra capacity.' },
     ],
   },
   // White-label service: QRS does the roofing under the contractor's brand
