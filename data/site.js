@@ -65,6 +65,11 @@ export const SITE_VERIFICATION = {
 // ALLOW_INDEXING in lib/seo.js), so previews and local dev don't add noise to the real analytics.
 export const CLARITY_ID = 'ynxdd3rck6';
 
+// Google Tag Manager container ID, copied from the current WordPress site. Loads Google Analytics
+// (GA4 properties G-HCLLJLECZ2 and G-0HTXYPMNC5) via the tags configured inside the GTM container itself.
+// Only loads on the live site (see ALLOW_INDEXING in lib/seo.js), same as Clarity above.
+export const GTM_ID = 'GTM-P7Z3CMG';
+
 // Home page title and description (search results + link previews)
 export const HOME_TITLE = 'Roof Repair & Replacement in Southern California | Quality Roofing Specialists';
 export const HOME_DESCRIPTION =
@@ -73,7 +78,6 @@ export const HOME_DESCRIPTION =
 // Short trust points in the bar under the hero
 export const PROOF_POINTS = [
   { title: 'Since 2020', text: 'Licensed California contractor' },
-  { title: 'Detail-first', text: 'Clear scope. Clean execution.' },
   { title: 'SoCal', text: 'Local service area' },
   { title: 'Lifetime', text: 'Workmanship warranty' },
   { title: '270', text: '5-star Google reviews' },

@@ -48,6 +48,8 @@ export const FLAT_CONTENT = {
       card: 'A full tear-off down to the deck and a new modified bitumen or low-slope system, planned around how your roof drains.',
       metaTitle: 'Flat Roof Replacement in Los Angeles',
       metaDescription: 'Flat roof replacement in Los Angeles & Orange County: full tear-off to the deck and a new low-slope system planned to drain. Start with a $199 Roof Check.',
+      image: '/images/flat-roof-replacement-completed-white-membrane.webp',
+      imageAlt: 'Aerial view of a completed white flat roof membrane with tile coping',
       hero: {
         intro: 'When patches stop holding and the membrane is worn out, it’s time to start over from the deck. With a flat roof replacement, we tear off the old layers, check the deck and install a new low-slope system planned around the way water leaves your roof.',
         highlights: ['Full tear-off down to the deck', 'Drainage planned into the new roof', 'Lifetime workmanship warranty'],
@@ -60,6 +62,8 @@ export const FLAT_CONTENT = {
       },
       process: {
         subheading: 'How a flat roof replacement works',
+        image: '/images/flat-roof-replacement-tear-off-drone-view.webp',
+        imageAlt: 'Aerial view of a flat roof tear-off in progress, down to the plywood deck with new curbs framed in',
         steps: [
           { title: 'Roof Check and written scope', text: 'We walk the roof, photo-document the membrane, drains and flashings, and put the full scope and price in writing before anything is torn off.', bullets: ['Membrane wear, blisters and splits', 'Ponding and drainage patterns', 'Parapets, curbs and penetrations'] },
           { title: 'Tear-off to the deck', text: 'The old roofing comes off down to the deck, and we keep debris contained and cleaned up as we go.', bullets: ['Old layers removed, not roofed over', 'Decking inspected and photographed'] },

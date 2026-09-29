@@ -2,12 +2,10 @@
 // service pages (rain gutters, HOA, emergency, maintenance plans, financing) and the service-first hubs
 // (roof repair, replacement, inspection). The route files in app/ call these.
 
-import { CONTRACTORS_LINK, HOME, roofTypeCards, typeCard, SINGLES } from '@/data/catalog';
+import { CONTRACTORS_LINK, HOME, typeCard, SINGLES } from '@/data/catalog';
 import {
   cardFor,
-  COMMERCIAL,
   findService,
-  relatedLinks,
   sectionCrumbs,
   sectionPages,
   serviceCards,
@@ -22,14 +20,6 @@ import ServicePage from './ServicePage';
 import { isRepair, REPAIR_ACTIONS } from './shared';
 
 const isCommercial = (section) => section.key === 'commercial';
-
-// Carousel shown on a page: other roof types on residential pages, other building types on commercial pages
-function carouselFor(section, excludeHref) {
-  if (isCommercial(section)) {
-    return { title: 'More Commercial Roofing', items: serviceCards(COMMERCIAL).filter((c) => c.href !== excludeHref) };
-  }
-  return { title: 'Roofing Types', items: roofTypeCards(section.href) };
-}
 
 // ----- Hub pages (/tile-roofing/, /commercial-roofing/, …) -----
 export const hubMetadata = (section) =>
@@ -58,7 +48,6 @@ export function SectionHub({ section }) {
       imageAlt={section.imageAlt}
       scene={section.scenes[0]}
       cards={cards}
-      carousel={isCommercial(section) ? null : { title: 'Roofing Types', items: roofTypeCards(section.href) }}
       extraGrid={section.serviceTypes ? { heading: 'Commercial Roofing Services', intro: 'Repairs, replacement and ongoing care for any commercial roof.', cards: serviceTypeCards(section) } : null}
       feature={feature}
       offer={isCommercial(section) ? 'commercial' : 'home'}
@@ -83,8 +72,6 @@ export function SectionService({ section, slug }) {
       page={service}
       crumbs={serviceCrumbs(section, service)}
       eyebrow={section.label}
-      related={relatedLinks(service.related)}
-      carousel={carouselFor(section, serviceHref(section, service))}
       scenes={[section.scenes[i % n], section.scenes[(i + 1) % n]]}
       offer={isCommercial(section) ? 'commercial' : 'home'}
       actions={isRepair(service) ? REPAIR_ACTIONS : undefined}
@@ -102,8 +89,6 @@ export function SinglePage({ single, actions, finalCta }) {
       page={single.page}
       crumbs={singleCrumbs(single)}
       eyebrow={single.parent ? single.parent.label : 'Roof Services'}
-      related={relatedLinks(single.page.related)}
-      carousel={{ title: 'Roofing Types', items: roofTypeCards(single.href) }}
       scenes={[single.scenes[0], 'scene-inspect']}
       offer={single.key === 'hoa' ? 'commercial' : 'home'}
       actions={actions}
@@ -123,7 +108,6 @@ export function ServiceHub({ page, actions }) {
       eyebrow="Roof Services"
       scene={page.scenes[0]}
       cards={page.cards.map(cardFor).filter(Boolean)}
-      carousel={{ title: 'Roofing Types', items: roofTypeCards() }}
       offer="home"
       actions={actions}
     />

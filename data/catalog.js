@@ -27,8 +27,9 @@ export const GROUPS = {
     href: '/shingle-roofing/',
     parent: RESIDENTIAL,
     scenes: ['scene-shingle', 'scene-replace', 'scene-inspect'],
-    image: '/images/roof-drone-palms.webp',
-    imageAlt: 'Aerial view of a dark shingle hip roof on a Southern California home with palm trees',
+    image: '/images/shingle-roof-completed-drone-view.webp',
+    imageAlt: 'Aerial view of a finished shingle roof on a Southern California home',
+    cardImage: '/images/shingle-roof-grey-roofing-services-card.webp',
     blurb: 'Premium shingle roofs installed to the manufacturer’s requirements, with proper ventilation and clean lines.',
   },
   tile: {
@@ -37,6 +38,7 @@ export const GROUPS = {
     href: '/tile-roofing/',
     parent: RESIDENTIAL,
     scenes: ['scene-tile', 'scene-repair', 'scene-hoa'],
+    cardImage: '/images/tile-roof-replacement.webp',
     blurb: 'Clay and concrete tile roofs repaired, re-laid over new underlayment or replaced, keeping the look you love.',
   },
   flat: {
@@ -45,6 +47,7 @@ export const GROUPS = {
     href: '/flat-roofing/',
     parent: RESIDENTIAL,
     scenes: ['scene-flat', 'scene-commercial', 'scene-inspect'],
+    cardImage: '/images/flat-roof-torch-down-drone-view-services.webp',
     blurb: 'Modified bitumen and low-slope systems planned around drainage and the way water moves across your roof.',
   },
   metal: {
@@ -118,7 +121,7 @@ export const SERVICE_HUBS = {
 };
 
 // Residential roof types in menu order (for cards and the "Roofing Types" carousel)
-export const RESIDENTIAL_TYPES = [GROUPS.shingle, GROUPS.tile, GROUPS.flat, GROUPS.metal, SINGLES.gutters, SINGLES.hoa];
+export const RESIDENTIAL_TYPES = [GROUPS.shingle, GROUPS.flat, GROUPS.metal, GROUPS.tile];
 
 export const typeCard = (t) => ({ title: t.label, text: t.blurb, href: t.href, scene: t.scenes[0], image: t.cardImage });
 

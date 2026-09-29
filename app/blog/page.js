@@ -1,5 +1,5 @@
 import FinalCta from '@/components/sections/FinalCta';
-import PageHero from '@/components/sections/PageHero';
+import Hero from '@/components/sections/Hero';
 import PostCards from '@/components/sections/PostCards';
 import RoofCheck from '@/components/sections/RoofCheck';
 import JsonLd from '@/components/ui/JsonLd';
@@ -26,13 +26,7 @@ export default function BlogPage() {
   return (
     <main id="top">
       <JsonLd data={schema} />
-      <PageHero
-        crumbs={CRUMBS}
-        eyebrow="Roofing Blog"
-        title={page.hero.heading}
-        intro={page.hero.intro}
-        card={{ kicker: 'Popular topics', scene: 'scene-inspect', highlights: ['Storm damage and leaks', 'Repair vs. replacement', 'Keeping a roof in good shape'] }}
-      />
+      <Hero crumbs={CRUMBS} eyebrow="Roofing Blog" title={page.hero.heading} intro={page.hero.intro} />
       <PostCards posts={BLOG_POSTS} heading="Latest Articles" />
       <RoofCheck tone="white" />
       <FinalCta />

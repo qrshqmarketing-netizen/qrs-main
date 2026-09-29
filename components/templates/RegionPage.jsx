@@ -1,11 +1,8 @@
 import CityCards from '@/components/sections/CityCards';
-import Faq from '@/components/sections/Faq';
 import FinalCta from '@/components/sections/FinalCta';
+import Hero from '@/components/sections/Hero';
 import LocalIntro from '@/components/sections/LocalIntro';
-import PageHero from '@/components/sections/PageHero';
 import RoofCheck from '@/components/sections/RoofCheck';
-import ServiceArea from '@/components/sections/ServiceArea';
-import Services from '@/components/sections/Services';
 import JsonLd from '@/components/ui/JsonLd';
 import { HOME, LOCATIONS_LINK } from '@/data/catalog';
 import { LOCATION_PAGES } from '@/data/locationPages';
@@ -35,7 +32,6 @@ export default function RegionPage({ region, page }) {
     description: page.metaDescription,
     type: 'CollectionPage',
     crumbs,
-    faqs: page.faqs,
     parts: cities.map((l) => ({ label: `${l.city} Roofing`, href: cityPath(l.slug) })),
     service: {
       name: `Roofing in ${region.name}, ${region.state}`,
@@ -48,12 +44,9 @@ export default function RegionPage({ region, page }) {
   return (
     <main id="top">
       <JsonLd data={schema} />
-      <PageHero crumbs={crumbs} eyebrow="Service Areas" title={page.hero.heading} intro={page.hero.intro} image={photo.src} imageAlt={photo.alt} imagePosition={photo.position} />
+      <Hero crumbs={crumbs} eyebrow="Service Areas" title={page.hero.heading} intro={page.hero.intro} image={photo.src} imageAlt={photo.alt} imagePosition={photo.position} />
       <LocalIntro city={region.name} heading={page.intro.heading} paragraphs={page.intro.paragraphs} offices={offices} considerations={page.considerations} />
       <CityCards regions={[region.slug]} blurbs={blurbs} heading={`Cities We Serve in ${region.name}`} />
-      <ServiceArea heading={`Find QRS Near You in ${region.short}`} sub="Enter your ZIP code or pick a city on the map to see its phone number, estimate link and city page." region={region.slug} />
-      <Services title={`Roofing Services in ${region.name}`} pattern={false} />
-      <Faq heading={`${region.name} Roofing FAQs`} sub={`Straight answers for property owners across ${region.name}.`} faqs={page.faqs} />
       <RoofCheck tone="white" />
       <FinalCta />
     </main>

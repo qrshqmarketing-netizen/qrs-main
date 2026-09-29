@@ -1,80 +1,41 @@
-'use client';
-
-import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import ArrowButton from '@/components/ui/ArrowButton';
 import SiteLink from '@/components/ui/SiteLink';
 import { SERVICES } from '@/data/services';
 import './Services.css';
 
-// Swipeable row of photo cards with prev/next arrows.
-// items: [{ title, text, href, scene, image?, cta? }]; idPrefix keeps ids unique if a page has two carousels.
-export default function ServicesCarousel({ title = 'Roofing Services', items = SERVICES, idPrefix = 'svc' }) {
-  const trackRef = useRef(null);
-  const [atStart, setAtStart] = useState(true);
-  const [atEnd, setAtEnd] = useState(false);
-
-  useEffect(() => {
-    const track = trackRef.current;
-    const update = () => {
-      setAtStart(track.scrollLeft <= 2);
-      setAtEnd(track.scrollLeft >= track.scrollWidth - track.clientWidth - 2);
-    };
-    update();
-    track.addEventListener('scroll', update, { passive: true });
-    window.addEventListener('resize', update);
-    return () => {
-      track.removeEventListener('scroll', update);
-      window.removeEventListener('resize', update);
-    };
-  }, []);
-
-  // Scroll by one card width (plus the gap)
-  const scrollCards = (dir) => {
-    const track = trackRef.current;
-    const card = track.querySelector('.svc-card');
-    const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
-    const step = card ? card.getBoundingClientRect().width + gap : track.clientWidth;
-    track.scrollBy({ left: dir * step, behavior: 'smooth' });
-  };
-
-  const onKeyDown = (e) => {
-    if (e.key === 'ArrowRight') {
-      e.preventDefault();
-      if (!atEnd) scrollCards(1);
-    }
-    if (e.key === 'ArrowLeft') {
-      e.preventDefault();
-      if (!atStart) scrollCards(-1);
-    }
-  };
-
-  const ids = { title: `${idPrefix}Title`, track: `${idPrefix}Track` };
-
+// Sticky intro (heading + CTA) on the left, a photo-card grid on the right. compact: stack the heading
+// above the cards instead (no sticky column) and let the cards run larger — for a short item list (e.g.
+// just Residential + Commercial on the home page) rather than a long carousel-style list.
+// items: [{ title, text, href, scene, image? }]; idPrefix keeps the heading id unique if a page has two of these.
+// cta: set false to drop the "Get Pro Advice" button under the heading (e.g. the home page's compact section).
+export default function ServicesCarousel({ title = 'Roofing Services', items = SERVICES, idPrefix = 'svc', compact = false, cta = true }) {
+  const titleId = `${idPrefix}Title`;
   return (
-    <>
-      <div className="svc-head">
-        <h2 id={ids.title}>{title}</h2>
-        <div className="svc-arrows">
-          <ArrowButton direction="prev" id={`${idPrefix}Prev`} aria-label={`Previous ${title.toLowerCase()}`} aria-controls={ids.track} disabled={atStart} onClick={() => scrollCards(-1)} />
-          <ArrowButton direction="next" id={`${idPrefix}Next`} aria-label={`Next ${title.toLowerCase()}`} aria-controls={ids.track} disabled={atEnd} onClick={() => scrollCards(1)} />
-        </div>
+    <div className={'svc-layout' + (compact ? ' svc-compact' : '')}>
+      <div className="svc-intro">
+        <div className="eyebrow">What We Offer</div>
+        <h2 id={titleId}>{title}</h2>
+        {cta && (
+          <SiteLink className="btn btn-gold" href="#roof-check">
+            Get Pro Advice <span className="arrow">→</span>
+          </SiteLink>
+        )}
       </div>
 
-      <div className="svc-track" id={ids.track} ref={trackRef} tabIndex={0} aria-roledescription="carousel" aria-labelledby={ids.title} onKeyDown={onKeyDown}>
-        {items.map((item, i) => (
-          <article className="svc-card" role="group" aria-roledescription="slide" aria-label={`${i + 1} of ${items.length}`} key={item.title}>
-            <div className={`svc-media ${item.scene || ''}`} aria-hidden="true">
-              {item.image && <Image src={item.image} alt="" fill sizes="(min-width: 901px) 390px, (min-width: 621px) 50vw, 86vw" />}
-            </div>
-            <h3>{item.title}</h3>
-            <p>{item.text}</p>
-            <SiteLink className="btn btn-gold" href={item.href} aria-label={`${item.cta || 'More Info'}: ${item.title}`}>
-              {item.cta || 'More Info'}
+      <ul className="svc-grid" aria-labelledby={titleId}>
+        {items.map((item) => (
+          <li className="svc-card" key={item.href}>
+            <SiteLink className="svc-card-link" href={item.href}>
+              <div className={`svc-media art ${item.scene || 'scene-shingle'}`} aria-hidden="true">
+                {item.image && <Image src={item.image} alt="" fill sizes="(min-width: 901px) 360px, (min-width: 621px) 46vw, 92vw" />}
+              </div>
+              <p className="svc-caption">
+                <b>{item.title}.</b> {item.text}
+              </p>
             </SiteLink>
-          </article>
+          </li>
         ))}
-      </div>
-    </>
+      </ul>
+    </div>
   );
 }

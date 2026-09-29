@@ -48,6 +48,8 @@ export const TILE_CONTENT = {
       card: 'When the old tiles are past saving, we tear off to the deck and build a complete new tile system, from underlayment and flashings to ridge.',
       metaTitle: 'Tile Roof Replacement in Los Angeles',
       metaDescription: 'Tile roof replacement in Los Angeles & Orange County: full tear-off, new underlayment, flashings and clay or concrete tile. Book your $199 Roof Check.',
+      image: '/images/tile-roof-replacement.webp',
+      imageAlt: 'Finished clay barrel tile roof on a home, viewed from above',
       hero: {
         intro: 'Sometimes the tiles themselves are finished. A tile roof replacement takes the roof down to the deck and builds a complete new system, from underlayment and flashings to the tile and ridge.',
         highlights: ['Full tear-off down to the deck', 'Clay or concrete tile to suit your home', 'Lifetime workmanship warranty'],
@@ -60,6 +62,8 @@ export const TILE_CONTENT = {
       },
       process: {
         subheading: 'How a tile roof replacement works',
+        image: '/images/tile-roof-replacement-drone-view.webp',
+        imageAlt: 'Aerial view of a large finished clay tile roof on a commercial building',
         steps: [
           { title: 'Roof Check and recommendation', text: 'We inspect the roof and photo-document the tile, flashing and underlayment condition, so the case for replacement is clear to you, not just to us.' },
           { title: 'Choose your tile', text: 'We talk through clay and concrete options, profiles and colors, and help you pick a tile that suits your home and budget.', bullets: ['Clay barrel or S tile', 'Flat or S concrete tile', 'Colors that suit your home’s style'] },
@@ -143,6 +147,8 @@ export const TILE_CONTENT = {
       card: 'Keep the tile roof you love. We lift the tiles, replace the worn underlayment underneath and reset your roof in its original pattern.',
       metaTitle: 'Tile Lift & Relay in Los Angeles',
       metaDescription: 'Tile lift & relay in Los Angeles & Orange County: new underlayment under your existing tiles, reset cleanly to keep your look. Start with a $199 Roof Check.',
+      image: '/images/tile-lift-off-and-reset-drone-view.webp',
+      imageAlt: 'Aerial view of tiles lifted off a roof during a tile lift and relay, exposing the underlayment',
       hero: {
         intro: 'Most tile roofs don’t fail at the tile; they fail at the underlayment beneath it. A tile lift & relay replaces that hidden layer and puts your own tiles back, so your roof keeps its look.',
         highlights: ['Your tiles reused, broken ones matched', 'New underlayment and flashings', 'Written scope and price first'],
@@ -155,6 +161,8 @@ export const TILE_CONTENT = {
       },
       process: {
         subheading: 'How a tile lift & relay works',
+        image: '/images/tile-lift-off-and-reset-drone-view-2.webp',
+        imageAlt: 'Aerial view of a tile roof mid lift and relay, with tiles staged and a crew member on a ladder',
         steps: [
           { title: 'Roof Check and scope', text: 'We inspect the roof and photo-document what we find, including the underlayment wherever it can be seen, so the case for a relay is clear.', bullets: ['Underlayment condition', 'Cracked, slipped or missing tiles', 'Valleys, flashings and penetrations'] },
           { title: 'Careful tile removal', text: 'Tiles are heavy and can crack if mishandled, so they come off by hand and are stacked with care until they go back in the same pattern. Some older tiles break anyway, which is why matching replacements are planned from the start.' },

@@ -101,6 +101,9 @@ export default function Header() {
 
   return (
     <header className="site-header">
+      <div className="announce-bar">
+        <SiteLink href="#roof-check">New: $199 Roofer-Led Roof Check — photos, plain English, pay after the visit.</SiteLink>
+      </div>
       <div className="container nav">
         <BrandLogo variant="dark" preload />
 

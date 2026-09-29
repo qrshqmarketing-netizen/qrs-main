@@ -1,4 +1,4 @@
-import { GoogleLogo, QrsMark } from '@/components/ui/icons';
+import { GoogleLogo } from '@/components/ui/icons';
 import ProcessVideo from './ProcessVideo';
 import ReviewSlider from './ReviewSlider';
 import './Testimonials.css';
@@ -12,11 +12,6 @@ export default function Testimonials({ showVideo = true, showReviews = true }) {
         {showVideo && (
           <div className="vid-grid">
             <div className="vid-copy">
-              <div className="vid-mark" aria-hidden="true">
-                <svg viewBox="0 0 64 64">
-                  <QrsMark fill="currentColor" stroke="#fff" />
-                </svg>
-              </div>
               <h2>Take the Guesswork Out of Roof Repairs</h2>
               <p>
                 See the QRS process from start to finish &mdash; from the first roof check to the final walkthrough. With

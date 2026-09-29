@@ -1,6 +1,6 @@
 import FinalCta from '@/components/sections/FinalCta';
 import Guarantee from '@/components/sections/Guarantee';
-import ImageHero from '@/components/sections/ImageHero';
+import Hero from '@/components/sections/Hero';
 import Overview from '@/components/sections/Overview';
 import Process from '@/components/sections/Process';
 import RoofCheck from '@/components/sections/RoofCheck';
@@ -26,7 +26,7 @@ export default function AboutPage() {
   return (
     <main id="top">
       <JsonLd data={schema} />
-      <ImageHero crumbs={CRUMBS} eyebrow={page.hero.eyebrow} title={page.hero.heading} image={HERO_IMAGE} imagePosition="center 40%" />
+      <Hero crumbs={CRUMBS} eyebrow={page.hero.eyebrow} title={page.hero.heading} image={HERO_IMAGE} imagePosition="center 40%" />
       <Overview center heading={page.intro.heading} paragraphs={page.intro.paragraphs} />
       <ValueGrid heading={page.values.heading} items={page.values.items} tone="wash" />
       <WhyQrs heading="Why Homeowners Choose QRS" cta={{ label: 'Read Our Reviews', href: '#reviews' }} />

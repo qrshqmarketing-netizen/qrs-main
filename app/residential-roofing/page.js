@@ -1,9 +1,9 @@
-import CardGrid from '@/components/sections/CardGrid';
+import CardCarousel from '@/components/sections/CardCarousel';
 import DifferenceBand from '@/components/sections/DifferenceBand';
 import Faq from '@/components/sections/Faq';
 import FinalCta from '@/components/sections/FinalCta';
+import Hero from '@/components/sections/Hero';
 import Overview from '@/components/sections/Overview';
-import PageHero from '@/components/sections/PageHero';
 import RoofCheck from '@/components/sections/RoofCheck';
 import ServiceFinder from '@/components/sections/ServiceFinder';
 import { LOCATION_CTA } from '@/components/templates/shared';
@@ -34,7 +34,7 @@ export default function ResidentialRoofingPage() {
   return (
     <main id="top">
       <JsonLd data={schema} />
-      <PageHero
+      <Hero
         crumbs={CRUMBS}
         eyebrow="Los Angeles & Orange County"
         title={page.hero.heading}
@@ -44,7 +44,7 @@ export default function ResidentialRoofingPage() {
         imagePosition="center 45%"
       />
       <Overview heading={page.overview.heading} paragraphs={page.overview.paragraphs} />
-      <CardGrid id="roof-types" heading={page.cards.heading} intro={page.cards.intro} cards={RESIDENTIAL_TYPES.map(typeCard)} tone="wash" />
+      <CardCarousel title={page.cards.heading} items={RESIDENTIAL_TYPES.map(typeCard)} idPrefix="roofTypes" tone="wash" />
       <ServiceFinder heading={page.finder.heading} intro={page.finder.intro} rows={page.finder.rows} />
       <DifferenceBand />
       <Faq heading="Frequently Asked Questions" sub="Straight answers about residential roofing." faqs={page.faqs} cta={false} />

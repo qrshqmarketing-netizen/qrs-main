@@ -29,11 +29,11 @@ export default function FinalCta({
       {/* Next.js serves a smaller copy of this photo sized to each screen */}
       <Image
         className="cta-scene"
-        src="/images/bottom-cta-background.webp"
-        width={1758}
-        height={895}
+        src="/images/cta-tile-roof-underlayment-drone-view.webp"
+        width={1500}
+        height={1125}
         sizes="100vw"
-        alt="Row of homes with pitched roofs along a residential street"
+        alt="Aerial view of a tile roof installation with underlayment and stacked tile"
       />
     </section>
   );

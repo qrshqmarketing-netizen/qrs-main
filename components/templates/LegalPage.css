@@ -1,5 +1,6 @@
 /* ---------- Privacy policy and terms ---------- */
-.legal{background:#fff;padding:32px 0 72px}
+/* Top padding clears the fixed, always-on-top .site-header (announcement row + nav) */
+.legal{background:#fff;padding:126px 0 72px}
 .legal-inner{max-width:780px}
 .legal h1{color:var(--navy);font-size:clamp(36px,9vw,52px);line-height:1.05;margin:18px 0 10px}
 .legal-updated{margin:0 0 28px;color:var(--muted);font-size:14px}
@@ -10,6 +11,6 @@
 .legal ul{margin:0 0 14px;padding-left:22px}
 .legal li{margin-bottom:8px}
 @media (min-width:621px){
-  .legal{padding:40px 0 100px}
+  .legal{padding:134px 0 100px}
   .legal p,.legal li{font-size:17px}
 }

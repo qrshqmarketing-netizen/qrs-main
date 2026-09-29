@@ -41,6 +41,30 @@ export const PROJECTS = [
     image: '/images/vernon-5.webp',
     alt: 'Aerial view of a boom truck delivering roof tile during a reroof',
   },
+  {
+    title: 'Shingle Roof Installation',
+    label: 'Shingle roofing',
+    image: '/images/shingle-roof-installation-underlayment.webp',
+    alt: 'Roofers installing felt underlayment during a shingle roof installation, with materials staged on the roof',
+  },
+  {
+    title: 'Shingle Roof Replacement',
+    label: 'Shingle roofing',
+    image: '/images/shingle-roof-repair-ridge-finish.webp',
+    alt: 'Aerial view of a nearly finished light grey shingle roof, with a roofer working near the ridge',
+  },
+  {
+    title: 'Shingle Roof Care',
+    label: 'Shingle roofing',
+    image: '/images/shingle-roof-care-multi-family.webp',
+    alt: 'Aerial view of a shingle roof on a Tudor-style multi-family building, alongside an adjoining flat roof',
+  },
+  {
+    title: 'Shingle Roof Inspection',
+    label: 'Shingle roofing',
+    image: '/images/shingle-roof-inspection-overhead.webp',
+    alt: 'Aerial overhead view of a finished dark grey shingle roof',
+  },
 ];
 
 export const SHOW_PLACEHOLDER_GALLERY = true;

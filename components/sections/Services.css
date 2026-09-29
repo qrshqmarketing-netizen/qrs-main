@@ -1,42 +1,41 @@
-/* ---------- Services carousel ---------- */
-.services{background:#fff;padding:44px 0 64px}
-.svc-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:24px}
-.svc-head h2{margin:0;color:var(--navy);font-size:var(--h2)}
-.svc-arrows{display:flex;gap:10px;flex:0 0 auto}
-.svc-track{
-  display:flex;gap:10px;overflow-x:auto;
-  scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;
-  -webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;outline:none;
-}
-.svc-track::-webkit-scrollbar{display:none}
-.svc-track:focus-visible{box-shadow:0 0 0 3px rgba(212,181,114,.5);border-radius:8px}
-.svc-card{
-  position:relative;flex:0 0 86%;aspect-ratio:1 / 1.01;min-height:360px;
-  border-radius:6px;overflow:hidden;scroll-snap-align:start;isolation:isolate;
-  color:#fff;background:#2c3a46;
-  display:flex;flex-direction:column;justify-content:flex-end;padding:24px;
-}
-/* Photo layer: put an <img> inside .svc-media to use a real job photo */
-.svc-media{position:absolute;inset:0;z-index:-2;transition:transform .5s ease}
-.svc-media img{width:100%;height:100%;object-fit:cover;display:block}
-.svc-card:hover .svc-media{transform:scale(1.04)}
-.svc-card:before{
-  content:"";position:absolute;inset:0;z-index:-1;
-  background:linear-gradient(180deg,rgba(4,20,38,0) 25%,rgba(4,20,38,.45) 55%,rgba(4,20,38,.9) 100%);
-}
-.svc-card h3{font-size:32px;font-weight:500;line-height:1;letter-spacing:-.03em;margin-bottom:14px;text-shadow:0 2px 14px rgba(0,0,0,.3)}
-.svc-card p{
-  font-family:var(--font-body);font-size:16px;font-weight:400;line-height:1.6;color:rgba(255,255,255,.92);
-  margin-bottom:18px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
-}
-.svc-card .btn{align-self:flex-start;min-height:44px;padding:9px 22px;border-radius:5px;font-size:17px}
+/* ---------- Services / Roofing Types: sticky intro + photo-card grid ---------- */
+.services{background:#fff;padding:56px 0}
+.svc-layout{display:grid;grid-template-columns:1fr;gap:36px}
+.svc-intro .eyebrow{margin-bottom:14px}
+.svc-intro h2{color:var(--navy);font-size:var(--h2);margin-bottom:22px}
+.svc-intro .btn{min-height:48px;padding:9px 24px;border-radius:999px;font-size:17px}
+
+.svc-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:28px}
+.svc-card-link{display:block;color:inherit;text-decoration:none}
+.svc-media{position:relative;aspect-ratio:4/3;border-radius:0;overflow:hidden;margin-bottom:16px}
+.svc-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.svc-card-link:hover .svc-media img{transform:scale(1.05)}
+.svc-caption{font-family:var(--font-body);font-size:15px;font-weight:300;line-height:1.65;color:var(--muted)}
+.svc-caption b{color:var(--navy);font-weight:600}
+
 @media (min-width:621px){
-  .services{padding:18px 0 88px}
-  .svc-head{justify-content:flex-end;gap:24px;margin-bottom:36px}
-  .svc-arrows{gap:24px}
-  .svc-card{flex-basis:calc((100% - 10px) / 2);min-height:330px;padding:32px}
-  .svc-card h3{font-size:40px;margin-bottom:18px}
-  .svc-card p{font-size:18px;line-height:1.7;margin-bottom:20px}
-  .svc-card .btn{min-height:42px;font-size:18px}
+  .services{padding:30px 0 96px}
+  .svc-layout{gap:44px}
+  .svc-intro h2{margin-bottom:26px}
+  .svc-grid{grid-template-columns:1fr 1fr;gap:32px 28px}
+  .svc-caption{font-size:16px}
 }
-@media (min-width:901px){.svc-card{flex-basis:calc((100% - 20px) / 3)}}
+@media (min-width:901px){
+  .svc-layout{grid-template-columns:minmax(0,.8fr) minmax(0,1.3fr);gap:56px}
+  .svc-intro{position:sticky;top:140px;align-self:start}
+}
+
+/* compact: heading stacked above the cards (no sticky column), cards run the full width and larger */
+.svc-compact{grid-template-columns:1fr}
+.svc-compact .svc-intro{margin-bottom:8px;text-align:center}
+.svc-compact .svc-intro .btn{margin:0 auto}
+@media (min-width:621px){
+  .svc-compact .svc-grid{gap:40px}
+  .svc-compact .svc-media{aspect-ratio:5/4}
+}
+@media (min-width:901px){
+  .svc-compact{grid-template-columns:1fr}
+  .svc-compact .svc-intro{position:static;top:auto}
+  .svc-compact .svc-grid{grid-template-columns:1fr 1fr;gap:48px}
+  .svc-compact .svc-caption{font-size:18px}
+}

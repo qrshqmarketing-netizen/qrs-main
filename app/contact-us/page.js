@@ -1,7 +1,7 @@
 import Faq from '@/components/sections/Faq';
 import FinalCta from '@/components/sections/FinalCta';
+import Hero from '@/components/sections/Hero';
 import Offices from '@/components/sections/Offices';
-import PageHero from '@/components/sections/PageHero';
 import RoofCheck from '@/components/sections/RoofCheck';
 import ServiceArea from '@/components/sections/ServiceArea';
 import ValueGrid from '@/components/sections/ValueGrid';
@@ -35,12 +35,11 @@ export default function ContactPage() {
   return (
     <main id="top">
       <JsonLd data={schema} />
-      <PageHero
+      <Hero
         crumbs={CRUMBS}
         eyebrow="Contact"
         title={page.hero.heading}
         intro={page.hero.intro}
-        card={{ kicker: 'Reach our team', scene: 'scene-inspect', highlights: [`Call ${PHONE}`, 'Offices in Los Angeles, Woodland Hills & Vernon', HOURS_LINE] }}
         actions={[
           { label: `Call ${PHONE}`, href: TEL, style: 'plum' },
           { label: 'Request an Estimate', href: '#roof-check', style: 'line' },

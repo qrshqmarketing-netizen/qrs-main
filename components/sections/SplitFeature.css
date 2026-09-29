@@ -6,8 +6,8 @@
 .split h2{color:var(--gold-ink);font-size:var(--h2);font-weight:700;line-height:1.05;margin-bottom:12px}
 .split-sub{color:var(--navy);font:600 22px/1.25 var(--font-head);letter-spacing:-.02em;margin:0 0 18px}
 .split-copy p{color:var(--navy);font-size:17px;line-height:1.7;margin:0 0 22px}
-.split-copy .btn{border-radius:6px}
-.split-media{aspect-ratio:4/3;border-radius:18px;box-shadow:var(--shadow)}
+.split-copy .btn{border-radius:999px}
+.split-media{aspect-ratio:4/3;border-radius:0;box-shadow:var(--shadow)}
 .split-media img{object-fit:cover}
 @media (min-width:621px){
   .split{padding:88px 0}

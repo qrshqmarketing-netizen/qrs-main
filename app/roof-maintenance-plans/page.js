@@ -2,7 +2,7 @@ import CarePlanPricing from '@/components/sections/CarePlanPricing';
 import Faq from '@/components/sections/Faq';
 import FeatureBand from '@/components/sections/FeatureBand';
 import FinalCta from '@/components/sections/FinalCta';
-import PageHero from '@/components/sections/PageHero';
+import Hero from '@/components/sections/Hero';
 import PlanScope from '@/components/sections/PlanScope';
 import ProcessSteps from '@/components/sections/ProcessSteps';
 import RoofCheck from '@/components/sections/RoofCheck';
@@ -26,7 +26,7 @@ export default function RoofMaintenancePlansPage() {
   return (
     <main id="top">
       <JsonLd data={schema} />
-      <PageHero crumbs={CRUMBS} eyebrow="Maintenance Plans" title={page.hero.heading} intro={page.hero.intro} card={{ scene: LINK.scenes[0], highlights: page.hero.highlights }} />
+      <Hero crumbs={CRUMBS} eyebrow="Maintenance Plans" title={page.hero.heading} intro={page.hero.intro} />
       <ValueGrid heading={page.whatGoesWrong.heading} items={page.whatGoesWrong.items} tone="wash" pattern />
       <CarePlanPricing />
       <PlanScope />

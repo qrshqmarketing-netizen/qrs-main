@@ -1,0 +1,11 @@
+/* ---------- Project morph slider (city pages and the Projects page) ---------- */
+.gallery{background:var(--wash);padding:60px 0}
+.project-carousel-frame{position:relative;height:380px}
+@media (min-width:621px){
+  .gallery{padding:88px 0}
+  .project-carousel-frame{height:460px}
+}
+@media (min-width:901px){
+  .gallery{padding:100px 0}
+  .project-carousel-frame{height:520px}
+}

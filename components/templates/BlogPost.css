@@ -1,5 +1,6 @@
 /* ---------- Blog post ---------- */
-.post{background:#fff;padding:32px 0 64px}
+/* Top padding clears the fixed, always-on-top .site-header (announcement row + nav) */
+.post{background:#fff;padding:126px 0 64px}
 .post-inner{max-width:760px}
 .post .eyebrow{margin-top:22px;color:var(--gold-ink)}
 .post h1{color:var(--navy);font-size:clamp(34px,8.5vw,50px);line-height:1.08;margin:8px 0 12px}
@@ -10,6 +11,6 @@
 .post ul{margin:0 0 16px;padding-left:22px}
 .post li{margin-bottom:8px}
 @media (min-width:621px){
-  .post{padding:40px 0 88px}
+  .post{padding:134px 0 88px}
   .post p,.post li{font-size:18px}
 }

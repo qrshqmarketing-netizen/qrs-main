@@ -48,6 +48,8 @@ export const SHINGLE_CONTENT = {
       card: 'A full tear-off and a complete new shingle system, from the deck and underlayment up to the ridge caps, with a written scope and price first.',
       metaTitle: 'Shingle Roof Replacement in LA & OC',
       metaDescription: 'Shingle roof replacement in Los Angeles & Orange County: full tear-off, new underlayment, flashing and balanced ventilation. Book a $199 Roof Check to start.',
+      image: '/images/shingle-roof-replacement-tear-off-drone-view.webp',
+      imageAlt: 'Aerial view of a shingle roof tear-off in progress, with crew removing old shingles down to the deck',
       hero: {
         intro: 'When shingles turn brittle, curl and shed granules across the whole roof, patching only buys time. A shingle roof replacement starts over: we tear the old roof off down to the deck and build a complete new system to the manufacturer’s requirements.',
         highlights: ['Full tear-off down to the deck', 'Balanced attic intake and exhaust', 'Your choice of shingle style and color'],
@@ -60,6 +62,8 @@ export const SHINGLE_CONTENT = {
       },
       process: {
         subheading: 'How a shingle roof replacement works',
+        image: '/images/shingle-roof-grey-roofing-services-card.webp',
+        imageAlt: 'Close-up of a finished grey shingle roof',
         steps: [
           { title: 'Roof Check and photos', text: 'A roofer inspects the roof, photographs the wear and tells you plainly whether replacement is the right call.', bullets: ['Granule loss, curling and brittleness', 'Flashings, valleys and penetrations', 'Attic intake and exhaust vents'] },
           { title: 'Clear quote and shingle choice', text: 'You pick the shingle style and color, then get a written scope and price for the full system before any work begins.' },
@@ -143,6 +147,8 @@ export const SHINGLE_CONTENT = {
       card: 'Shingle roofs for new homes, additions and ADUs, or a switch from wood shakes or tile, built as a complete system with ventilation designed in.',
       metaTitle: 'New Shingle Roof Installation in LA',
       metaDescription: 'New shingle roof installation for homes, additions and ADUs in Los Angeles & Orange County, built to the manufacturer’s requirements. Request an estimate.',
+      image: '/images/shingle-roof-repair-ridge-finish.webp',
+      imageAlt: 'Aerial view of a nearly finished light grey shingle roof, with a roofer working near the ridge',
       hero: {
         intro: 'Building an ADU, adding a room or retiring an old wood shake roof? Every shingle roof installation we take on is planned from the deck up, with ventilation, flashing and edge details settled before the first bundle goes on.',
         highlights: ['New homes, additions, ADUs and garages', 'Clean tie-ins to your existing roof', 'Switches from shake and other roof types'],
@@ -155,6 +161,8 @@ export const SHINGLE_CONTENT = {
       },
       process: {
         subheading: 'How a new shingle roof comes together',
+        image: '/images/shingle-roof-installation-underlayment.webp',
+        imageAlt: 'Roofers installing felt underlayment during a shingle roof installation, with materials staged on the roof',
         steps: [
           { title: 'Plan the roof', text: 'We go over the plans or the existing roof with you or your builder, from pitch and decking to vents and wall flashing.', bullets: ['Pitch suited to shingles', 'Intake and exhaust vent layout', 'Wall and tie-in flashing details'] },
           { title: 'Clear written quote', text: 'Your quote lists the shingle, underlayment and ventilation plan along with the price, so you and your builder work from the same plan.' },
@@ -191,6 +199,8 @@ export const SHINGLE_CONTENT = {
       card: 'Our $199 Roof Check for shingle roofs: a roofer-led, photo-documented look at the shingles, flashings and vents, ending with a clear next step.',
       metaTitle: 'Shingle Roof Inspection in Los Angeles',
       metaDescription: 'A roofer-led shingle roof inspection in Los Angeles & Orange County, with photos, plain-English findings and a clear next step. Book your $199 Roof Check.',
+      image: '/images/shingle-roof-inspection-overhead.webp',
+      imageAlt: 'Aerial overhead view of a finished dark grey shingle roof',
       hero: {
         intro: 'Our $199 Roof Check is a shingle roof inspection led by a roofer: an honest read on what’s worn, what’s fine and what, if anything, needs attention. It’s photo-documented, explained in plain English and not a sales pitch.',
         highlights: ['Shingles, flashings, vents and valleys', 'One clear next step, in plain English', 'No deposit: you pay after the visit'],
@@ -285,6 +295,8 @@ export const SHINGLE_CONTENT = {
       card: 'Scheduled checks for your shingle roof, with debris cleared, seals checked and a photo record that shows how the roof is wearing over time.',
       metaTitle: 'Shingle Roof Care & Maintenance in LA',
       metaDescription: 'Ongoing shingle roof care in Los Angeles & Orange County: seasonal checks, debris clearing and photo records that catch wear early. Start with a Roof Check.',
+      image: '/images/shingle-roof-care-multi-family.webp',
+      imageAlt: 'Aerial view of a shingle roof on a Tudor-style multi-family building, alongside an adjoining flat roof',
       hero: {
         intro: 'Sun, wind and the occasional hard rain wear on shingles a little at a time. Scheduled shingle roof care keeps watch on that wear, clears what collects on the roof and builds a photo record, so small changes get caught early.',
         highlights: ['Seasonal visits, scheduled ahead', 'A photo record of your roof over time', 'Early warning on wear and damage'],

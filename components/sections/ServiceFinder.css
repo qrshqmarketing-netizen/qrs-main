@@ -2,7 +2,7 @@
 .finder{background:#fff;padding:60px 0}
 .finder-list{display:grid;gap:14px}
 .finder-row{
-  display:grid;grid-template-columns:minmax(0,1fr);gap:16px;padding:22px 20px;border-radius:16px;background:#fff;
+  display:grid;grid-template-columns:minmax(0,1fr);gap:16px;padding:22px 20px;border-radius:0;background:#fff;
   border:1px solid var(--line);border-left:4px solid var(--gold);scroll-margin-top:100px;
 }
 .finder-row:target{box-shadow:0 0 0 3px rgba(212,181,114,.45)}

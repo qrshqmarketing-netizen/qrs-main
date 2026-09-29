@@ -4,18 +4,20 @@ import 'leaflet/dist/leaflet.css';
 import './globals.css';
 
 import Script from 'next/script';
-import { Open_Sans } from 'next/font/google';
+import { Instrument_Serif, Open_Sans } from 'next/font/google';
 import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
 import CookieNotice from '@/components/widgets/CookieNotice';
 import InstantQuote from '@/components/widgets/InstantQuote';
 import ReviewToast from '@/components/widgets/ReviewToast';
 import RoofAssistant from '@/components/widgets/RoofAssistant';
-import { BUSINESS, CLARITY_ID, HOME_DESCRIPTION, SITE_URL, SITE_VERIFICATION } from '@/data/site';
+import { BUSINESS, CLARITY_ID, GTM_ID, HOME_DESCRIPTION, SITE_URL, SITE_VERIFICATION } from '@/data/site';
 import { ALLOW_INDEXING, openGraphBase, twitterBase } from '@/lib/seo';
 
 // Google Fonts, downloaded at build time and served from this site
-const openSans = Open_Sans({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800'], variable: '--font-open-sans' });
+const openSans = Open_Sans({ subsets: ['latin'], weight: ['300', '400', '500', '600', '700', '800'], variable: '--font-open-sans' });
+// Editorial serif for the home hero headline only (components/sections/Hero.css)
+const instrumentSerif = Instrument_Serif({ subsets: ['latin'], weight: '400', variable: '--font-serif' });
 
 // Defaults for every page. A page's own `metadata` export overrides these.
 export const metadata = {
@@ -51,8 +53,18 @@ export const viewport = {
 // Header, footer and the floating widgets appear on every page
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={openSans.variable} data-scroll-behavior="smooth">
+    <html lang="en" className={openSans.variable + ' ' + instrumentSerif.variable} data-scroll-behavior="smooth">
       <body>
+        {ALLOW_INDEXING && (
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+              height="0"
+              width="0"
+              style={{ display: 'none', visibility: 'hidden' }}
+            />
+          </noscript>
+        )}
         <Header />
         {children}
         <Footer />
@@ -61,13 +73,22 @@ export default function RootLayout({ children }) {
         <InstantQuote />
         <CookieNotice />
         {ALLOW_INDEXING && (
-          <Script id="clarity" strategy="afterInteractive">
-            {`(function(c,l,a,r,i,t,y){
+          <>
+            <Script id="gtm" strategy="afterInteractive">
+              {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','${GTM_ID}');`}
+            </Script>
+            <Script id="clarity" strategy="afterInteractive">
+              {`(function(c,l,a,r,i,t,y){
     c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
     t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
     y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
 })(window, document, "clarity", "script", "${CLARITY_ID}");`}
-          </Script>
+            </Script>
+          </>
         )}
       </body>
     </html>

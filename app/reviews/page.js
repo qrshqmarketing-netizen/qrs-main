@@ -1,6 +1,6 @@
 import FinalCta from '@/components/sections/FinalCta';
 import Guarantee from '@/components/sections/Guarantee';
-import PageHero from '@/components/sections/PageHero';
+import Hero from '@/components/sections/Hero';
 import ReviewGrid from '@/components/sections/ReviewGrid';
 import RoofCheck from '@/components/sections/RoofCheck';
 import WhyQrs from '@/components/sections/WhyQrs';
@@ -20,13 +20,7 @@ export default function ReviewsPage() {
   return (
     <main id="top">
       <JsonLd data={schema} />
-      <PageHero
-        crumbs={CRUMBS}
-        eyebrow="Reviews"
-        title={page.hero.heading}
-        intro={page.hero.intro}
-        card={{ kicker: 'What customers mention', scene: 'scene-shingle', highlights: ['Clear, plain-English explanations', 'Crews that show up on time', 'Spotless clean-up after the job'] }}
-      />
+      <Hero crumbs={CRUMBS} eyebrow="Reviews" title={page.hero.heading} intro={page.hero.intro} />
       <ReviewGrid />
       <WhyQrs heading="Why Homeowners Choose QRS" />
       <Guarantee />

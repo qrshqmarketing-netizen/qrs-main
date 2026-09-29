@@ -5,6 +5,7 @@ import ArrowButton from '@/components/ui/ArrowButton';
 import { GoogleLogo, Star } from '@/components/ui/icons';
 import { GOOGLE_REVIEWS } from '@/data/reviews';
 import { SHOW_REVIEW_EVENT } from '@/lib/events';
+import './Testimonials.css';
 
 const withLineBreaks = (text) => text.split('\n').flatMap((line, i) => (i ? [<br key={i} />, line] : [line]));
 

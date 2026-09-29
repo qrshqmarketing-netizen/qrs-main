@@ -2,8 +2,8 @@ import CityCards from '@/components/sections/CityCards';
 import DifferenceBand from '@/components/sections/DifferenceBand';
 import Faq from '@/components/sections/Faq';
 import FinalCta from '@/components/sections/FinalCta';
+import Hero from '@/components/sections/Hero';
 import Offices from '@/components/sections/Offices';
-import PageHero from '@/components/sections/PageHero';
 import RoofCheck from '@/components/sections/RoofCheck';
 import ServiceArea from '@/components/sections/ServiceArea';
 import JsonLd from '@/components/ui/JsonLd';
@@ -38,7 +38,7 @@ export default function LocationsPage() {
   return (
     <main id="top">
       <JsonLd data={schema} />
-      <PageHero
+      <Hero
         crumbs={CRUMBS}
         eyebrow="Los Angeles & Orange County"
         title={page.hero.heading}

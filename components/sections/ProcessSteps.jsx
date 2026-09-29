@@ -3,8 +3,9 @@ import Rich from '@/components/ui/Rich';
 import './ProcessSteps.css';
 
 // Numbered steps with optional bullet lists, beside a photo (or scene art) that stays in view while scrolling.
+// The photo only shows at 901px+ by default; pass `showOnMobile` to also show it (in-flow, not sticky) below 901px.
 // steps: [{ title, text, bullets? }]
-export default function ProcessSteps({ heading = 'Our Process', subheading, steps = [], scene = 'scene-inspect', image, imageAlt = '', tone }) {
+export default function ProcessSteps({ heading = 'Our Process', subheading, steps = [], scene = 'scene-inspect', image, imageAlt = '', showOnMobile = false, tone }) {
   return (
     <section className={'process-block' + (tone === 'white' ? ' process-block-white' : '')}>
       <div className="container process-block-grid">
@@ -32,7 +33,7 @@ export default function ProcessSteps({ heading = 'Our Process', subheading, step
             ))}
           </ol>
         </div>
-        <div className="process-block-visual">
+        <div className={'process-block-visual' + (showOnMobile ? ' process-block-visual-mobile' : '')}>
           {image ? (
             <div className="process-block-media">
               <Image src={image} alt={imageAlt} fill sizes="(min-width: 901px) 420px, 100vw" />
