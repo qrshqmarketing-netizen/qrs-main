@@ -16,9 +16,9 @@
 .menu-btn{display:block;flex:0 0 auto;border:0;background:transparent;color:#fff;width:46px;height:46px;margin-right:-8px}
 .menu-btn span{display:block;width:22px;height:2px;background:#fff;margin:5px auto;border-radius:0}
 .nav-actions{display:flex;align-items:center;gap:10px;flex-shrink:0;margin-left:auto}
-.nav-cta{display:none;font-size:18px;border-color:#fff;border-radius:999px;text-transform:uppercase;letter-spacing:.03em}
+.nav-cta{display:none;font-size:18px;border-color:#fff;border-radius:999px;text-transform:uppercase;letter-spacing:.03em;font-family:var(--font-head);font-weight:600}
 /* Red call button: a handset icon; the number shows from 1440px */
-.nav-call{width:46px;min-height:46px;padding:0;border-radius:999px;box-shadow:none;border-color:#fff;text-transform:uppercase;letter-spacing:.03em}
+.nav-call{width:46px;min-height:46px;padding:0;border-radius:999px;box-shadow:none;border-color:#fff;text-transform:uppercase;letter-spacing:.03em;font-family:var(--font-head);font-weight:600}
 .nav-call span{display:none}
 
 /* Phone / tablet menu: slides down under the header */
@@ -64,17 +64,19 @@
   }
   .navlinks.mobile-open > a,.nav-trigger{display:inline-flex;width:auto;min-height:0;padding:0;border:0;justify-content:normal}
   .navlinks > a,.navlinks .nav-trigger{white-space:nowrap;font-size:15px}
+  .nav-cta,.nav-call{font-size:15px}
   /* 1200–1299px: compact header so all six items fit on one line */
   .nav-actions{margin-left:0}
 }
 @media (min-width:1300px){
   .navlinks,.navlinks.mobile-open{gap:26px}
   .navlinks > a,.navlinks .nav-trigger{font-size:16px}
-  .nav-cta{padding:13px 20px;font-size:18px}
+  .nav-cta{padding:13px 20px;font-size:16px}
+  .nav-call{font-size:16px}
 }
 
 @media (min-width:1440px){
-  .nav-call{width:auto;padding:13px 18px;font-size:17px;white-space:nowrap}
+  .nav-call{width:auto;padding:13px 18px;font-size:16px;white-space:nowrap}
   .nav-call span{display:inline}
 }
 

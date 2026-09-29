@@ -26,12 +26,12 @@ export default function ServicesCarousel({ title = 'Roofing Services', items = S
         {items.map((item) => (
           <li className="svc-card" key={item.href}>
             <SiteLink className="svc-card-link" href={item.href}>
-              <div className={`svc-media art ${item.scene || 'scene-shingle'}`} aria-hidden="true">
+              <div className={`svc-media art ${item.scene || 'scene-shingle'}`}>
                 {item.image && <Image src={item.image} alt="" fill sizes="(min-width: 901px) 360px, (min-width: 621px) 46vw, 92vw" />}
+                <p className="svc-caption">
+                  <b>{item.title}.</b> {item.text}
+                </p>
               </div>
-              <p className="svc-caption">
-                <b>{item.title}.</b> {item.text}
-              </p>
             </SiteLink>
           </li>
         ))}

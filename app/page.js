@@ -63,8 +63,8 @@ export default function HomePage() {
         <Hero
           h1="eyebrow"
           intro="Clear inspections. Straightforward estimates. Clean workmanship."
-          image="/images/home-hero-shingle-neighborhood-drone-view.webp"
-          imageAlt="Aerial view of a Southern California neighborhood of shingle-roofed homes"
+          image="/images/home-hero-shingle-closeup-drone-view.webp"
+          imageAlt="Close aerial view of a dimensional shingle roof on a Southern California home"
         />
         <section className="section">
           <div className="container">

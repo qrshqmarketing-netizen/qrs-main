@@ -19,11 +19,13 @@ export default function CardGrid({ id, heading, intro, cards = [], tone }) {
             <article className="cg-card" key={card.href}>
               <div className={`cg-media art ${card.scene || 'scene-shingle'}`}>
                 {card.image && <Image src={card.image} alt="" fill sizes="(min-width: 901px) 380px, (min-width: 621px) 50vw, 100vw" />}
+                <div className="cg-overlay">
+                  <h3>
+                    <SiteLink className="cg-link" href={card.href}>{card.title}</SiteLink>
+                  </h3>
+                  {card.text && <p>{card.text}</p>}
+                </div>
               </div>
-              <h3>
-                <SiteLink className="cg-link" href={card.href}>{card.title}</SiteLink>
-              </h3>
-              {card.text && <p>{card.text}</p>}
               <span className="btn btn-line cg-more" aria-hidden="true">
                 More Info <span className="arrow">→</span>
               </span>
