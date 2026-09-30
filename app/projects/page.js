@@ -5,7 +5,7 @@ import JsonLd from '@/components/ui/JsonLd';
 import { HOME, PROJECTS_LINK } from '@/data/catalog';
 import { MID_WILSHIRE_PROJECT } from '@/data/pages/mid-wilshire-project';
 import { PROJECTS_PAGE as page } from '@/data/pages/projects';
-import { allProjects } from '@/data/projects';
+import { RECENT_WORK, RECENT_WORK_SUB } from '@/data/recentWork';
 import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
 import './projects.css';
@@ -37,8 +37,8 @@ export default function ProjectsPage() {
       </section>
       <ProjectCarousel
         heading={page.gallery.heading}
-        sub={page.gallery.sub}
-        projects={allProjects()}
+        sub={RECENT_WORK_SUB}
+        projects={RECENT_WORK}
         id="work"
         pattern
       />

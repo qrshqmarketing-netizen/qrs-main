@@ -10,7 +10,7 @@ import WhyQrs from '@/components/sections/WhyQrs';
 import JsonLd from '@/components/ui/JsonLd';
 import { COMMERCIAL_LINK, RESIDENTIAL } from '@/data/catalog';
 import { HOME_DESCRIPTION, HOME_TITLE } from '@/data/site';
-import { MID_WILSHIRE_PROJECT } from '@/data/pages/mid-wilshire-project';
+import { RECENT_WORK, RECENT_WORK_SUB } from '@/data/recentWork';
 import { openGraphBase, twitterBase } from '@/lib/seo';
 import { pageJsonLd } from '@/lib/structuredData';
 
@@ -53,16 +53,6 @@ const HOME_PRODUCTS = [
   { title: '*ReserveReady* HOA Roofing', text: 'Roof inspections, clear scopes and planning support for community boards.', href: '/hoa-multi-family/', scene: 'scene-hoa' },
 ];
 
-// The home page's "Recent Work" slider: its own photos, independent of the /projects/ page and city pages.
-const HOME_RECENT_WORK = [
-  { title: 'Shingle Roof Replacement in San Pedro 90019', image: '/images/recent-work-shingle-multi-hip-drone-view.webp' },
-  { title: 'Flat Roof Replacement in Hollywood Hills West 90046', image: '/images/recent-work-round-flat-roof-drone-view.webp' },
-  { title: 'Warehouse Flat Roof Replacement in Santa Ana 92703', image: '/images/recent-work-commercial-flat-roof-drone-view.webp' },
-  { title: 'Shingle Roof Replacement in San Pedro 90731', image: '/images/recent-work-shingle-row-drone-view.webp' },
-  { title: 'Multi-Family Flat/Shingle Roof Replacement in West Hollywood 90036', image: '/images/recent-work-tudor-flat-roof-street-view.webp' },
-  { title: 'Tile & Flat Roofing in Mid-Wilshire 90019', image: MID_WILSHIRE_PROJECT.image, href: MID_WILSHIRE_PROJECT.path },
-];
-
 // Home page: sections in order, top to bottom, matching the site's top-nav structure — Testimonials, an
 // intro paragraph, Services/Residential/Commercial together, Service Areas, About, Projects, then the
 // lead-capture "Get Pro Advice" form. Reorder or remove a line to change the page.
@@ -86,7 +76,7 @@ export default function HomePage() {
         <ServiceArea />
         <Services title="Roofing Systems" items={HOME_PRODUCTS} compact cta={false} pattern={false} slider id="roofing-systems" />
         <WhyQrs />
-        <ProjectCarousel heading="Recent Work" sub="A look at the roofing projects our crews take on." projects={HOME_RECENT_WORK} id="work" pattern />
+        <ProjectCarousel heading="Recent Work" sub={RECENT_WORK_SUB} projects={RECENT_WORK} id="work" pattern />
         <RoofCheck />
         <FinalCta />
       </main>

@@ -12,6 +12,6 @@ export const PROJECTS_PAGE = {
   },
   gallery: {
     heading: 'Recent Work',
-    sub: 'A selection of roofing work from across our service area.',
+    sub: 'A look at the roofing projects our crews take on.',
   },
 };
