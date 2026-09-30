@@ -5,8 +5,8 @@ export const ROOF_REPAIR_HUB = {
   metaTitle: 'Roof Repair in Los Angeles & OC',
   metaDescription: 'Roof repair in Los Angeles & Orange County for shingle, tile and flat roofs: leaks traced to the source, storm damage photographed. Book a free roof evaluation.',
   hero: {
-    heading: 'Roof Repair Services',
-    intro: 'A leak is a symptom, and patching the spot above the stain rarely cures it. Our roof repair work across Los Angeles and Orange County traces the water to its real source on shingle, tile and flat roofs, then fixes it with photos of the problem and the finished repair.',
+    heading: 'Roof Repair Services · *LeakRescue*',
+    intro: 'A leak is a symptom, and patching the spot above the stain rarely cures it. Our *LeakRescue* repair service traces the water to its real source on shingle, tile and flat roofs, then fixes it with photos of the problem and the finished repair.',
     highlights: ['Leaks traced to the real entry point', 'Storm damage assessed and photographed', 'Honest advice on repair vs. replace'],
   },
   overview: {
@@ -79,8 +79,8 @@ export const ROOF_INSPECTION_HUB = {
   metaTitle: 'Roof Inspection in Los Angeles & OC',
   metaDescription: 'Roof inspection in Los Angeles & Orange County: a free, photo-documented roof evaluation with a clear next step, not a sales pitch. Book yours today.',
   hero: {
-    heading: 'Roof Inspection Services',
-    intro: 'A roof inspection should tell you what’s really happening on your roof, not steer you toward a sale. Our [free roof evaluation](#roof-check) uses drone footage of your shingle, tile or flat roof to show what matters, explain it in plain English and give you one clear next step.',
+    heading: 'Roof Inspection Services · *RoofScan 360*',
+    intro: 'A roof inspection should tell you what’s really happening on your roof, not steer you toward a sale. Our *RoofScan 360* evaluation uses drone footage of your shingle, tile or flat roof to show what matters, explain it in plain English and give you one clear next step.',
     highlights: ['A roofer on the roof, not a salesperson', 'Every finding photographed and explained', 'Free, with no obligation'],
   },
   overview: {
@@ -108,5 +108,40 @@ export const ROOF_INSPECTION_HUB = {
     { q: 'I’m selling my home. Should I have the roof inspected first?', a: 'It can help. Knowing the roof’s condition before you list gives you time to handle small repairs on your own schedule, plus photos you can share with buyers. That makes the roof less likely to become a surprise late in the sale.' },
     { q: 'How is a free roof evaluation different from a maintenance plan?', a: 'A roof evaluation is one visit that shows where your roof stands today. A [roof maintenance plan](/roof-maintenance-plans/) is set up after a free roof evaluation, around your roof’s type, age and condition, with visits on the schedule in your plan and a photo report after each one. Anything beyond the plan gets a written price before work.' },
     { q: 'Do you inspect roofs on commercial buildings?', a: 'Yes. Offices, retail centers, warehouses, churches and other commercial buildings get a roofer-led, photo-documented roof survey of the membrane, drains, flashings and equipment curbs. Ongoing care is covered on our [commercial inspection & maintenance](/commercial-roofing/maintenance/) page.' },
+  ],
+};
+
+export const ROOF_TUNE_UP_HUB = {
+  keyword: 'roof tune-ups',
+  metaTitle: 'Roof Tune-Ups in Los Angeles & OC',
+  metaDescription: 'Roof tune-ups in Los Angeles & Orange County for shingle, tile, flat and commercial roofs: small fixes, drain clearing and photo-documented work.',
+  hero: {
+    heading: 'Roof Tune-Ups for Every Roof Type',
+    intro: 'A roof tune-up is a focused visit for the small issues that can be fixed before they turn into leaks. We check the roof, photograph what we find and handle practical upkeep on shingle, tile, flat and commercial roofs.',
+    highlights: ['Small fixes and loose details addressed', 'Debris and roof drains cleared where needed', 'Photos and a clear next step'],
+  },
+  overview: {
+    heading: 'One Tune-Up Visit, Matched to Your Roof',
+    paragraphs: [
+      'The work depends on the roof. A shingle tune-up can address exposed nails, loose tabs and worn sealant. A tile visit can reset slipped tiles and clear valleys. On a flat roof, we look at seams, flashings and drainage. For a commercial building, we can check the roof around drains, penetrations and equipment curbs while keeping the property in service.',
+      'We start with a roofer’s look at the roof and agree on the scope and price before work begins. If we find an active leak or a larger failure, we’ll show you the photos and explain whether a [roof repair](/roof-repair/) or replacement is the better fit. For scheduled visits and ongoing upkeep, see the [RoofCare Plan](/roof-maintenance-plans/).',
+    ],
+  },
+  cards: {
+    heading: 'Choose a Roof Tune-Up',
+    intro: 'Tune-up details vary by roof system. Choose the closest match below, or contact us about a commercial property.',
+  },
+  highlights: {
+    heading: 'A Practical Reset for Your Roof',
+    points: [
+      { title: 'Work sized to the roof', text: 'We focus on small maintenance items and tell you when an issue needs a repair instead.' },
+      { title: 'Photos and a written scope', text: 'You can see what we found and know what the visit includes before work starts.' },
+      { title: 'Residential and commercial', text: 'Local crews handle everything from a small home roof to larger commercial properties.' },
+    ],
+  },
+  faqs: [
+    { q: 'What is the difference between a tune-up and roof care?', a: 'A tune-up is a single visit for small fixes and upkeep. The [RoofCare Plan](/roof-maintenance-plans/) schedules recurring visits and photo reports over time.' },
+    { q: 'Can a tune-up fix an active leak?', a: 'Sometimes, when the cause is a small and clear issue. If the leak needs more investigation or the roof has a larger failure, we’ll explain the repair options and provide a written scope.' },
+    { q: 'Do you offer tune-ups for commercial roofs?', a: 'Yes. We provide inspection and maintenance visits for commercial roofs, including drains, seams, flashings and rooftop equipment.' },
   ],
 };

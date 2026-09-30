@@ -41,14 +41,25 @@ const HOME_SERVICES = [
   },
 ];
 
+const HOME_PRODUCTS = [
+  { title: '*TotalShield* Shingle Systems', text: 'Complete shingle replacements and new installations, built from the deck up.', href: '/shingle-roofing/replacement/', scene: 'scene-shingle', image: '/images/shingle-roof-completed-drone-view.webp' },
+  { title: '*FlatGuard* Flat Roofing', text: 'Flat roof systems planned around drainage, seams and lasting protection.', href: '/flat-roofing/replacement/', scene: 'scene-flat', image: '/images/flat-roof-torch-down-drone-view-services.webp' },
+  { title: '*LockSeam* Metal Roofing', text: 'Standing seam metal roofing with clean lines and concealed fasteners.', href: '/metal-roofing/standing-seam/', scene: 'scene-metal' },
+  { title: '*LeakRescue* Roof Repairs', text: 'Leaks traced to the source and repaired with clear photos and a written scope.', href: '/roof-repair/', scene: 'scene-repair' },
+  { title: '*RoofScan 360* Inspections', text: 'A roofer-led inspection with photos, plain-English findings and a clear next step.', href: '/roof-inspection/', scene: 'scene-inspect' },
+  { title: '*SecondLife* Tile Reset', text: 'Keep sound roof tiles while replacing the worn underlayment below.', href: '/tile-roofing/lift-and-relay/', scene: 'scene-tile' },
+  { title: '*RoofCare Plan*', text: 'Scheduled roof care with seasonal visits and a photo report each time.', href: '/roof-maintenance-plans/', scene: 'scene-inspect' },
+  { title: '*ReserveReady* HOA Roofing', text: 'Roof inspections, clear scopes and planning support for community boards.', href: '/hoa-multi-family/', scene: 'scene-hoa' },
+];
+
 // The home page's "Recent Work" slider: its own photos, independent of the /projects/ page and city pages.
 const HOME_RECENT_WORK = [
-  { title: 'Shingle Roof Replacement', image: '/images/recent-work-shingle-multi-hip-drone-view.webp' },
-  { title: 'Flat Roof Replacement', image: '/images/recent-work-round-flat-roof-drone-view.webp' },
-  { title: 'Commercial Flat Roofing', image: '/images/recent-work-commercial-flat-roof-drone-view.webp' },
-  { title: 'Shingle Roof Replacement', image: '/images/recent-work-shingle-row-drone-view.webp' },
-  { title: 'Flat Roof Replacement', image: '/images/recent-work-tudor-flat-roof-street-view.webp' },
-  { title: 'Tile & Flat Roofing', image: '/images/recent-work-spanish-tile-flat-roof-street-view.webp' },
+  { title: 'Shingle Roof Replacement in San Pedro 90019', image: '/images/recent-work-shingle-multi-hip-drone-view.webp' },
+  { title: 'Flat Roof Replacement in Hollywood Hills West 90046', image: '/images/recent-work-round-flat-roof-drone-view.webp' },
+  { title: 'Warehouse Flat Roof Replacement in Santa Ana 92703', image: '/images/recent-work-commercial-flat-roof-drone-view.webp' },
+  { title: 'Shingle Roof Replacement in San Pedro 90731', image: '/images/recent-work-shingle-row-drone-view.webp' },
+  { title: 'Multi-Family Flat/Shingle Roof Replacement in West Hollywood 90036', image: '/images/recent-work-tudor-flat-roof-street-view.webp' },
+  { title: 'Tile & Flat Roofing in Mid-Wilshire 90019', image: '/images/recent-work-spanish-tile-flat-roof-street-view.webp' },
 ];
 
 // Home page: sections in order, top to bottom, matching the site's top-nav structure — Testimonials, an
@@ -72,6 +83,7 @@ export default function HomePage() {
         <QrsStandard />
         <Services items={HOME_SERVICES} compact cta={false} />
         <ServiceArea />
+        <Services title="Roofing Systems" items={HOME_PRODUCTS} compact cta={false} pattern={false} slider id="roofing-systems" />
         <WhyQrs />
         <ProjectCarousel heading="Recent Work" sub="A look at the roofing projects our crews take on." projects={HOME_RECENT_WORK} id="work" pattern />
         <RoofCheck />

@@ -46,3 +46,24 @@
   .svc-compact .svc-caption{font-size:18px}
   .svc-compact .svc-caption h3{font-size:32px}
 }
+
+/* Compact, full-bleed product marquee for the homepage. The doubled track loops seamlessly. */
+.svc-marquee{overflow:hidden;padding:38px 0 48px}
+.svc-marquee>.container{max-width:none;padding:0}
+.svc-slider-layout{display:block}
+.svc-marquee .svc-intro{max-width:1180px;margin:0 auto 22px;padding:0 22px;text-align:left}
+.svc-marquee .svc-intro h2{font-size:clamp(28px,3vw,38px);margin:0}
+.svc-marquee-viewport{width:100%;overflow:hidden}
+.svc-marquee-track{display:flex;width:max-content;animation:svcMarquee 48s linear infinite;will-change:transform}
+.svc-marquee .svc-marquee-group{display:flex;grid-template-columns:none;flex:none;gap:18px;width:max-content;padding:0 9px}
+.svc-marquee .svc-card{flex:0 0 clamp(220px,22vw,270px);width:clamp(220px,22vw,270px)}
+.svc-marquee .svc-media{aspect-ratio:4/3}
+.svc-marquee .svc-caption{padding:14px;font-size:13px;line-height:1.45}
+.svc-marquee .svc-caption h3{font-size:20px;margin-bottom:5px}
+.svc-marquee-viewport:hover .svc-marquee-track,.svc-marquee-viewport:focus-within .svc-marquee-track{animation-play-state:paused}
+@keyframes svcMarquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){
+  .svc-marquee-viewport{overflow-x:auto;scrollbar-width:thin}
+  .svc-marquee-track{animation:none;transform:none}
+  .svc-marquee .svc-marquee-group[aria-hidden="true"]{display:none}
+}

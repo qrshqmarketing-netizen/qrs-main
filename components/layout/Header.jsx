@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import BrandLogo from '@/components/ui/BrandLogo';
 import SiteLink from '@/components/ui/SiteLink';
+import Rich from '@/components/ui/Rich';
 import { ArrowRight, Caret, PhoneIcon } from '@/components/ui/icons';
 import { CONTRACTORS_LINK } from '@/data/catalog';
 import { ABOUT_MENU, COMMERCIAL_MENU, HEADER_CTA, LOCATIONS_MENU, RESIDENTIAL_MENU, SERVICES_MENU } from '@/data/navigation';
@@ -120,7 +121,7 @@ export default function Header() {
                       <li key={link.href}>
                         <MenuLink href={link.href}>
                           {link.urgent && <UrgentDot />}
-                          {link.label}
+                          <Rich text={link.label} />
                         </MenuLink>
                       </li>
                     ))}
@@ -141,13 +142,13 @@ export default function Header() {
                   {groups.map((group, i) => (
                     <div className={'mega-group' + (activeGroup === i ? ' active' : '')} key={group.id}>
                       <button {...tabProps(i)} aria-controls={group.id}>
-                        {group.label}
+                        <Rich text={group.label} />
                         <Caret />
                       </button>
                       <div className="mega-list" id={group.id}>
                         {group.all && (
                           <MenuLink className="mega-all" href={group.all.href}>
-                            {group.all.label} <ArrowRight />
+                            <Rich text={group.all.label} /> <ArrowRight />
                           </MenuLink>
                         )}
                         <ul>
@@ -156,7 +157,7 @@ export default function Header() {
                               <MenuLink href={link.href}>
                                 <span>
                                   {link.urgent && <UrgentDot />}
-                                  {link.label}
+                                  <Rich text={link.label} />
                                 </span>
                                 {link.note && <small>{link.note}</small>}
                               </MenuLink>
@@ -169,8 +170,8 @@ export default function Header() {
                   {[feature, hub].map((item) => (
                     <MenuLink className="mega-link" href={item.href} key={item.href}>
                       <span>
-                        <b>{item.title}</b>
-                        <small>{item.note}</small>
+                        <b><Rich text={item.title} /></b>
+                        <small><Rich text={item.note} /></small>
                       </span>
                       <ArrowRight />
                     </MenuLink>
@@ -199,7 +200,7 @@ export default function Header() {
                   <ul>
                     {buildings.links.map((link) => (
                       <li key={link.href}>
-                        <MenuLink href={link.href}>{link.label}</MenuLink>
+                        <MenuLink href={link.href}><Rich text={link.label} /></MenuLink>
                       </li>
                     ))}
                   </ul>
@@ -211,7 +212,7 @@ export default function Header() {
                       <li key={link.href}>
                         <MenuLink href={link.href}>
                           {link.urgent && <UrgentDot />}
-                          {link.label}
+                          <Rich text={link.label} />
                         </MenuLink>
                       </li>
                     ))}

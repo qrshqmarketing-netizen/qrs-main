@@ -13,7 +13,7 @@ const LOGOS = {
 // Served as-is (unoptimized) so the lossless file keeps its crisp edges.
 export default function BrandLogo({ variant = 'regular', preload = false }) {
   return (
-    <Link className="brand" href="/">
+    <Link className="brand" href="/" aria-label={`${BUSINESS.shortName} homepage`} title={`Go to the ${BUSINESS.shortName} homepage.`}>
       <Image className="brand-logo" src={LOGOS[variant]} alt={BUSINESS.name} width={520} height={150} preload={preload} unoptimized />
     </Link>
   );

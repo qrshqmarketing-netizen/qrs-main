@@ -99,7 +99,7 @@ export const RAIN_GUTTERS = {
 export const HOA_MULTI_FAMILY = {
   slug: 'hoa-multi-family',
   keyword: 'hoa & multi-family roofing',
-  title: 'HOA & Multi-Family Roofing',
+  title: 'HOA & Multi-Family Roofing · *ReserveReady*',
   navLabel: 'HOA & Multi-Family',
   card: 'Roofing for HOA communities and multi-family properties, with photo-documented reports, work phased building by building and one point of contact.',
   metaTitle: 'HOA & Multi-Family Roofing in LA & OC',
@@ -107,7 +107,7 @@ export const HOA_MULTI_FAMILY = {
     'HOA and multi-family roofing in Los Angeles & Orange County: photo-documented reports, phased work and one point of contact. Request an estimate.',
   hero: {
     intro:
-      'HOA & multi-family roofing is about more than the roof: a board needs clear information, residents need a heads-up and the budget needs a plan. We bring photo-documented reports, written proposals and one point of contact to all of it.',
+      'The *ReserveReady* program helps HOA boards plan roofing across their community, with clear inspections, phased proposals and long-range budget planning. Residents get a heads-up, and the board has one point of contact throughout the work.',
     highlights: ['Photo reports your board can review', 'Work phased building by building', 'One point of contact, start to finish'],
   },
   overview: {

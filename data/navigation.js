@@ -14,7 +14,8 @@ export const SERVICES_MENU = {
     { label: 'Roof Replacement', href: '/roof-replacement/' },
     { label: 'Roof Inspection', href: '/roof-inspection/' },
     { label: 'Emergency & Storm Damage', href: '/emergency-roof-repair/', urgent: true },
-    { label: 'Maintenance Plans', href: '/roof-maintenance-plans/' },
+    { label: 'Roof Tune-Ups', href: '/roof-tune-ups/' },
+    { label: 'Roof Maintenance Plans', href: '/roof-maintenance-plans/' },
     { label: 'Financing', href: '/financing/' },
   ],
 };
@@ -31,8 +32,6 @@ export const RESIDENTIAL_MENU = {
         { label: 'Roof Repairs', href: '/shingle-roofing/repairs/' },
         { label: 'New Installations', href: '/shingle-roofing/installation/' },
         { label: 'Inspections', href: '/shingle-roofing/inspection/' },
-        { label: 'Tune-Ups', href: '/shingle-roofing/tune-up/' },
-        { label: 'Roof Care', href: '/shingle-roofing/roof-care/' },
       ],
     },
     {
@@ -44,8 +43,6 @@ export const RESIDENTIAL_MENU = {
         { label: 'Roof Repairs', href: '/tile-roofing/repairs/' },
         { label: 'Lift & Relay', note: 'Reset & re-paper', href: '/tile-roofing/lift-and-relay/' },
         { label: 'Inspections', href: '/tile-roofing/inspection/' },
-        { label: 'Tune-Ups', href: '/tile-roofing/tune-up/' },
-        { label: 'Roof Care', href: '/tile-roofing/roof-care/' },
       ],
     },
     {
@@ -57,8 +54,6 @@ export const RESIDENTIAL_MENU = {
         { label: 'Roof Repairs', href: '/flat-roofing/repairs/' },
         { label: 'New Installations', href: '/flat-roofing/installation/' },
         { label: 'Inspections', href: '/flat-roofing/inspection/' },
-        { label: 'Tune-Ups', href: '/flat-roofing/tune-up/' },
-        { label: 'Roof Care', href: '/flat-roofing/roof-care/' },
       ],
     },
     {
@@ -97,7 +92,6 @@ export const COMMERCIAL_MENU = {
       { label: 'Roof Repair', href: '/commercial-roofing/repair/' },
       { label: 'Roof Replacement', href: '/commercial-roofing/replacement/' },
       { label: 'Inspection & Maintenance', href: '/commercial-roofing/maintenance/' },
-      { label: 'Maintenance Plans', href: '/roof-maintenance-plans/' },
       { label: 'Emergency & Storm Damage', href: '/emergency-roof-repair/', urgent: true },
     ],
   },

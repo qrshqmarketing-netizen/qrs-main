@@ -7,7 +7,7 @@ const LA = '/service-areas/la-county/';
 const OC = '/service-areas/orange-county/';
 const city = (region, slug) => `${region}${slug}/`;
 
-// Blog posts moved from the site root to /blog/<same slug>/
+// Retired blog posts now send their old site-root addresses to the refreshed blog index.
 export const BLOG_SLUGS = [
   'flat-roof-repair-contractors',
   'commercial-roof-repair-services',
@@ -60,7 +60,7 @@ export const REDIRECTS = [
   ['/locations.kml', '/service-areas/'],
 
   // Blog posts
-  ...BLOG_SLUGS.map((slug) => [`/${slug}/`, `/blog/${slug}/`]),
+  ...BLOG_SLUGS.flatMap((slug) => [[`/${slug}/`, '/blog/'], [`/blog/${slug}/`, '/blog/']]),
 
   // City pages at the site root
   ['/huntington-beach/', city(OC, 'huntington-beach')],

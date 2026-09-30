@@ -142,7 +142,7 @@ export const TILE_CONTENT = {
     {
       slug: 'lift-and-relay',
       keyword: 'tile lift & relay',
-      title: 'Tile Lift & Relay',
+      title: 'Tile Lift & Relay · *SecondLife*',
       navLabel: 'Lift & Relay',
       card: 'Keep the tile roof you love. We lift the tiles, replace the worn underlayment underneath and reset your roof in its original pattern.',
       metaTitle: 'Tile Lift & Relay in Los Angeles',
@@ -150,7 +150,7 @@ export const TILE_CONTENT = {
       image: '/images/tile-lift-off-and-reset-drone-view.webp',
       imageAlt: 'Aerial view of tiles lifted off a roof during a tile lift and relay, exposing the underlayment',
       hero: {
-        intro: 'Most tile roofs don’t fail at the tile; they fail at the underlayment beneath it. A tile lift & relay replaces that hidden layer and puts your own tiles back, so your roof keeps its look.',
+        intro: 'Most tile roofs don’t fail at the tile; they fail at the underlayment beneath it. *SecondLife* Tile Reset replaces that hidden layer and puts your own tiles back, so your roof keeps its look.',
         highlights: ['Your tiles reused, broken ones matched', 'New underlayment and flashings', 'Written scope and price first'],
       },
       overview: {

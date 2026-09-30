@@ -7,8 +7,8 @@ export const SHINGLE_CONTENT = {
     metaTitle: 'Shingle Roofing in Los Angeles & OC',
     metaDescription: 'Shingle roofing for Los Angeles & Orange County homes: replacement, repairs, new installs, inspections, tune-ups and roof care. Book a free roof evaluation.',
     hero: {
-      heading: 'Shingle Roofing Services',
-      intro: 'Good shingle roofing is about more than the shingles you see from the street. It’s also the underlayment, flashings and attic ventilation underneath, and we give those the same care on every asphalt shingle roof we work on across Los Angeles and Orange County.',
+      heading: 'Shingle Roofing Services · *TotalShield*',
+      intro: 'Good shingle roofing is about more than the shingles you see from the street. It’s also the underlayment, flashings and attic ventilation underneath, and we give those the same care on every asphalt shingle roof we work on across Los Angeles and Orange County. Our complete replacement and new-install package is the *TotalShield* Shingle System.',
       highlights: ['Premium shingle systems, installed to spec', 'Proper ventilation and tidy detailing', '10-Year workmanship warranty on installs'],
     },
     overview: {
@@ -43,7 +43,7 @@ export const SHINGLE_CONTENT = {
     {
       slug: 'replacement',
       keyword: 'shingle roof replacement',
-      title: 'Shingle Roof Replacement',
+      title: 'Shingle Roof Replacement · *TotalShield*',
       navLabel: 'Roof Replacement',
       card: 'A full tear-off and a complete new shingle system, from the deck and underlayment up to the ridge caps, with a written scope and price first.',
       metaTitle: 'Shingle Roof Replacement in LA & OC',
@@ -51,7 +51,7 @@ export const SHINGLE_CONTENT = {
       image: '/images/shingle-roof-replacement-tear-off-drone-view.webp',
       imageAlt: 'Aerial view of a shingle roof tear-off in progress, with crew removing old shingles down to the deck',
       hero: {
-        intro: 'When shingles turn brittle, curl and shed granules across the whole roof, patching only buys time. A shingle roof replacement starts over: we tear the old roof off down to the deck and build a complete new system to the manufacturer’s requirements.',
+        intro: 'When shingles turn brittle, curl and shed granules across the whole roof, patching only buys time. A shingle roof replacement starts over: we tear the old roof off down to the deck and build a complete new system to the manufacturer’s requirements. We call this package the *TotalShield* Shingle System.',
         highlights: ['Full tear-off down to the deck', 'Balanced attic intake and exhaust', 'Your choice of shingle style and color'],
       },
       overview: {
@@ -143,7 +143,7 @@ export const SHINGLE_CONTENT = {
     {
       slug: 'installation',
       keyword: 'shingle roof installation',
-      title: 'New Shingle Roof Installation',
+      title: 'New Shingle Roof Installation · *TotalShield*',
       navLabel: 'New Installations',
       card: 'Shingle roofs for new homes, additions and ADUs, or a switch from wood shakes or tile, built as a complete system with ventilation designed in.',
       metaTitle: 'New Shingle Roof Installation in LA',
@@ -151,7 +151,7 @@ export const SHINGLE_CONTENT = {
       image: '/images/shingle-roof-repair-ridge-finish.webp',
       imageAlt: 'Aerial view of a nearly finished light grey shingle roof, with a roofer working near the ridge',
       hero: {
-        intro: 'Building an ADU, adding a room or retiring an old wood shake roof? Every shingle roof installation we take on is planned from the deck up, with ventilation, flashing and edge details settled before the first bundle goes on.',
+        intro: 'Building an ADU, adding a room or retiring an old wood shake roof? Every shingle roof installation we take on is planned from the deck up, with ventilation, flashing and edge details settled before the first bundle goes on. It’s part of the *TotalShield* Shingle System.',
         highlights: ['New homes, additions, ADUs and garages', 'Clean tie-ins to your existing roof', 'Switches from shake and other roof types'],
       },
       overview: {

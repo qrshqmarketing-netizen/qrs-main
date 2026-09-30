@@ -4,10 +4,10 @@ export const BLOG_PAGE = {
   keyword: 'roofing blog',
   metaTitle: 'Roofing Blog & Tips',
   metaDescription:
-    'The QRS roofing blog: plain-English answers about roof repair, replacement, maintenance and storm damage for Southern California homeowners.',
+    'The QRS roofing blog is being refreshed. New, locally relevant articles for homeowners and property owners across Southern California are coming soon.',
   hero: {
-    heading: 'Roofing Blog & Tips',
+    heading: 'Roofing Blog Updates Coming Soon',
     intro:
-      'Our roofing blog answers the questions homeowners ask us most, from spotting storm damage to choosing a roof type. When you want a roofer’s eyes on your own roof, start with a [free roof evaluation](#roof-check).',
+      'We’re preparing updated roofing blog articles for homeowners and property owners across Southern California. Until they’re ready, explore our [residential roofing](/residential-roofing/) and [commercial roofing](/commercial-roofing/) services or request a [free roof evaluation](#roof-check).',
   },
 };

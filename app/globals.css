@@ -134,6 +134,14 @@ textarea{min-height:105px;resize:vertical}
 main h2{animation:fadeUp .9s ease .3s both}
 @media (prefers-reduced-motion:reduce){main h2{animation:none}}
 
+/* Sections reveal as they enter the viewport; content stays visible when scripts are unavailable. */
+.reveal-on-scroll{opacity:0;transform:translateY(14px);transition:opacity .65s ease,transform .65s ease}
+.reveal-on-scroll.reveal-visible{opacity:1;transform:translateY(0)}
+@media (prefers-reduced-motion:reduce){.reveal-on-scroll,.reveal-on-scroll.reveal-visible{opacity:1;transform:none;transition:none}}
+
+/* Product names have a distinct serif italic treatment wherever rich text displays them. */
+.product-brand{font-family:Georgia,'Times New Roman',serif;font-style:italic}
+
 /* ---------- Orange centroid map marker (service area map, Instant Quote); built by qrsPin() in lib/leaflet.js ---------- */
 .qrs-pin{background:none;border:0}
 .qrs-pin svg{width:26px;height:26px;display:block;filter:drop-shadow(0 2px 4px rgba(0,0,0,.35));transition:transform .2s;transform-origin:50% 50%}

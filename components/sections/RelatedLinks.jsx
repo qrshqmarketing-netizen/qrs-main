@@ -1,4 +1,5 @@
 import SiteLink from '@/components/ui/SiteLink';
+import Rich from '@/components/ui/Rich';
 import { ArrowRight } from '@/components/ui/icons';
 import './RelatedLinks.css';
 
@@ -13,7 +14,7 @@ export default function RelatedLinks({ heading = 'Related services', links = [] 
           {links.map((link) => (
             <li key={link.href}>
               <SiteLink className="chip" href={link.href}>
-                {link.label} <ArrowRight />
+                <Rich text={link.label} /> <ArrowRight />
               </SiteLink>
             </li>
           ))}

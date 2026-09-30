@@ -30,7 +30,7 @@ export default function BlogPage() {
       <JsonLd data={schema} />
       <Hero crumbs={CRUMBS} eyebrow="Roofing Blog" title={page.hero.heading} intro={page.hero.intro} />
       <ReviewStrip />
-      <PostCards posts={BLOG_POSTS} heading="Latest Articles" />
+      <PostCards posts={BLOG_POSTS} heading="Coming Soon" />
       <ProofBar />
       <RoofCheck tone="white" />
       <FinalCta

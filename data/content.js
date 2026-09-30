@@ -27,7 +27,7 @@ import { COMMERCIAL_SERVICES } from './services/commercialServices';
 import { FLAT_CONTENT } from './services/flat';
 import { METAL_CONTENT } from './services/metal';
 import { EMERGENCY_ROOF_REPAIR, ROOF_FINANCING, ROOF_MAINTENANCE_PLANS } from './services/programs';
-import { ROOF_INSPECTION_HUB, ROOF_REPAIR_HUB, ROOF_REPLACEMENT_HUB } from './services/serviceHubs';
+import { ROOF_INSPECTION_HUB, ROOF_REPAIR_HUB, ROOF_REPLACEMENT_HUB, ROOF_TUNE_UP_HUB } from './services/serviceHubs';
 import { SHINGLE_CONTENT } from './services/shingle';
 import { HOA_MULTI_FAMILY, RAIN_GUTTERS } from './services/specialty';
 import { TILE_CONTENT } from './services/tile';
@@ -53,7 +53,8 @@ export const SINGLE_PAGES = [GUTTERS, HOA, EMERGENCY, MAINTENANCE_PLANS, FINANCI
 export const REPAIR_HUB = { ...SERVICE_HUBS.repair, hub: ROOF_REPAIR_HUB };
 export const REPLACEMENT_HUB = { ...SERVICE_HUBS.replacement, hub: ROOF_REPLACEMENT_HUB };
 export const INSPECTION_HUB = { ...SERVICE_HUBS.inspection, hub: ROOF_INSPECTION_HUB };
-export const SERVICE_HUB_PAGES = [REPAIR_HUB, REPLACEMENT_HUB, INSPECTION_HUB];
+export const TUNE_UP_HUB = { ...SERVICE_HUBS.tuneups, hub: ROOF_TUNE_UP_HUB };
+export const SERVICE_HUB_PAGES = [REPAIR_HUB, REPLACEMENT_HUB, INSPECTION_HUB, TUNE_UP_HUB];
 
 // A section's pages: building types / services first, then (commercial) the service types
 export const sectionPages = (section) => [...section.services, ...(section.serviceTypes || [])];

@@ -12,6 +12,8 @@ import InstantQuote from '@/components/widgets/InstantQuote';
 import ReviewToast from '@/components/widgets/ReviewToast';
 import SeasonPromo from '@/components/widgets/SeasonPromo';
 import RoofAssistant from '@/components/widgets/RoofAssistant';
+import RevealSections from '@/components/ui/RevealSections';
+import HelpfulTitles from '@/components/ui/HelpfulTitles';
 import { BUSINESS, CLARITY_ID, GTM_ID, HOME_DESCRIPTION, SITE_URL, SITE_VERIFICATION } from '@/data/site';
 import { ALLOW_INDEXING, openGraphBase, twitterBase } from '@/lib/seo';
 
@@ -67,6 +69,8 @@ export default function RootLayout({ children }) {
           </noscript>
         )}
         <Header />
+        <RevealSections />
+        <HelpfulTitles />
         {children}
         <Footer />
         <ReviewToast />

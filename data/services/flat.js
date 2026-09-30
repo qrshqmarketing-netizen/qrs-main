@@ -7,8 +7,8 @@ export const FLAT_CONTENT = {
     metaTitle: 'Flat Roofing in LA & Orange County',
     metaDescription: 'Flat roofing in Los Angeles & Orange County: modified bitumen and low-slope roofs installed, repaired and maintained around drainage. Book a free roof evaluation.',
     hero: {
-      heading: 'Flat Roofing Services',
-      intro: 'A flat roof can’t count on a steep pitch to shed water, so every drain, seam and flashing has to do its job. QRS handles flat roofing across Los Angeles and Orange County, from new installs and replacements to repairs and ongoing care.',
+      heading: 'Flat Roofing Services · *FlatGuard*',
+      intro: 'A flat roof can’t count on a steep pitch to shed water, so every drain, seam and flashing has to do its job. QRS handles flat roofing across Los Angeles and Orange County, from new installs and replacements to repairs and ongoing care. Our low-slope replacement and installation package is the *FlatGuard* Roof System.',
       highlights: ['Modified bitumen and low-slope systems', 'Drains, scuppers and parapets detailed', 'Written scope and price before work starts'],
     },
     overview: {
@@ -43,7 +43,7 @@ export const FLAT_CONTENT = {
     {
       slug: 'replacement',
       keyword: 'flat roof replacement',
-      title: 'Flat Roof Replacement',
+      title: 'Flat Roof Replacement · *FlatGuard*',
       navLabel: 'Roof Replacement',
       card: 'A full tear-off down to the deck and a new modified bitumen or low-slope system, planned around how your roof drains.',
       metaTitle: 'Flat Roof Replacement in Los Angeles',
@@ -51,7 +51,7 @@ export const FLAT_CONTENT = {
       image: '/images/flat-roof-replacement-completed-white-membrane.webp',
       imageAlt: 'Aerial view of a completed white flat roof membrane with tile coping',
       hero: {
-        intro: 'When patches stop holding and the membrane is worn out, it’s time to start over from the deck. With a flat roof replacement, we tear off the old layers, check the deck and install a new low-slope system planned around the way water leaves your roof.',
+        intro: 'When patches stop holding and the membrane is worn out, it’s time to start over from the deck. With a flat roof replacement, we tear off the old layers, check the deck and install our *FlatGuard* low-slope system, planned around the way water leaves your roof.',
         highlights: ['Full tear-off down to the deck', 'Drainage planned into the new roof', '10-Year workmanship warranty'],
       },
       overview: {
@@ -143,13 +143,13 @@ export const FLAT_CONTENT = {
     {
       slug: 'installation',
       keyword: 'flat roof installation',
-      title: 'New Flat Roof Installation',
+      title: 'New Flat Roof Installation · *FlatGuard*',
       navLabel: 'New Installations',
       card: 'New low-slope roofs for ADUs, additions, garages and patio covers, with slope, drains and tie-ins planned from the start.',
       metaTitle: 'Flat Roof Installation in Los Angeles',
       metaDescription: 'New flat roof installation for ADUs, additions, garages and patio covers in Los Angeles & Orange County, planned around slope and drains. Request an estimate.',
       hero: {
-        intro: 'Building an ADU, an addition or a new garage? For each new flat roof installation, we plan the slope, drains and tie-ins before the first layer of modified bitumen or another low-slope system goes down.',
+        intro: 'Building an ADU, an addition or a new garage? For each new flat roof installation, we plan the slope, drains and tie-ins before the first layer of modified bitumen or another low-slope system goes down. It’s part of the *FlatGuard* Roof System.',
         highlights: ['ADUs, additions, garages and patio covers', 'Slope and drain locations planned early', 'Clean tie-ins to your existing roof'],
       },
       overview: {

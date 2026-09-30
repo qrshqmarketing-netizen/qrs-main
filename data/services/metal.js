@@ -8,9 +8,9 @@ export const METAL_CONTENT = {
     metaDescription:
       'Metal roofing for Los Angeles & Orange County homes: standing seam panels, rain gutters planned to match and a written scope first. Book a free roof evaluation.',
     hero: {
-      heading: 'Metal Roofing Services',
+      heading: 'Metal Roofing Services · *LockSeam*',
       intro:
-        'Metal roofing gives Southern California homes clean lines and a noncombustible surface that stands up to intense sun and heat. We install standing seam roofs and rain gutters for every roof type, starting with a roofer-led inspection and a written scope.',
+        'Metal roofing gives Southern California homes clean lines and a noncombustible surface that stands up to intense sun and heat. Our standing seam package is the *LockSeam* Metal System. We install standing seam roofs and rain gutters for every roof type, starting with a roofer-led inspection and a written scope.',
       highlights: ['Standing seam with concealed fasteners', 'Noncombustible, long-lasting panels', 'Gutters planned with the roof edge'],
     },
     overview: {
@@ -68,7 +68,7 @@ export const METAL_CONTENT = {
     {
       slug: 'standing-seam',
       keyword: 'standing seam metal roofing',
-      title: 'Standing Seam Metal Roofing',
+      title: 'Standing Seam Metal Roofing · *LockSeam*',
       navLabel: 'Standing Seam',
       card: 'Clean vertical panels joined by raised seams, held by hidden clips that let the metal move with the heat. Suited to modern homes, ADUs and patio covers.',
       metaTitle: 'Standing Seam Metal Roofing in LA',
@@ -76,7 +76,7 @@ export const METAL_CONTENT = {
         'Standing seam metal roofing in Los Angeles & Orange County: concealed clips, a flat, sound deck and clean flashings. Schedule a free roof evaluation.',
       hero: {
         intro:
-          'A standing seam roof is only as good as the parts you can’t see: the deck and underlayment beneath the panels, the clips under the seams and the flashings at every wall and vent. We plan and install each of them with the same care as the panels.',
+          'The *LockSeam* Metal System is built around the parts you can’t see as well as the panels: the deck and underlayment beneath them, the clips under the seams and the flashings at every wall and vent. We plan and install each with care.',
         highlights: ['Concealed clips, no screws through panels', 'Flat, sound deck to limit oil-canning', 'Matching trims, flashings and closures'],
       },
       overview: {

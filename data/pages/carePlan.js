@@ -10,9 +10,9 @@ export const CARE_PLAN = {
   metaDescription:
     'Roof maintenance plans for Los Angeles & Orange County homes: three priced tiers, seasonal visits and a photo report every time. See Roof Care Plan pricing.',
   hero: {
-    heading: 'The Roof Care Plan',
+    heading: 'Roof Maintenance Plans · *RoofCare Plan*',
     intro:
-      'Your roof is failing right now. Just slowly. Los Angeles gets twelve inches of rain a year — and three hundred days of sun. Roofs here don’t wear out from water; they wear out from heat, light and time, every single day, whether it rains or not. We come out twice a year and stay ahead of it.',
+      'The *RoofCare Plan* schedules tune-ups and maintenance before small wear turns into a surprise leak. Your roof is failing right now. Just slowly. Los Angeles gets twelve inches of rain a year — and three hundred days of sun. Roofs here don’t wear out from water; they wear out from heat, light and time, every single day, whether it rains or not. We come out twice a year and stay ahead of it.',
     highlights: ['Scheduled visits, before and after the rains', 'A written photo report every time', 'Pay after each visit — nothing up front'],
   },
   whatGoesWrong: {

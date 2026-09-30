@@ -91,7 +91,7 @@ export const SINGLES = {
 // Stand-alone service pages for homes and commercial buildings alike (copy: data/services/programs.js)
 export const PROGRAMS = {
   emergency: { key: 'emergency', label: 'Emergency & Storm Damage', href: '/emergency-roof-repair/', parent: null, scenes: ['scene-repair'] },
-  plans: { key: 'plans', label: 'Maintenance Plans', href: '/roof-maintenance-plans/', parent: null, scenes: ['scene-inspect'] },
+  plans: { key: 'plans', label: 'Roof Maintenance Plans', href: '/roof-maintenance-plans/', parent: null, scenes: ['scene-inspect'] },
   financing: { key: 'financing', label: 'Financing', href: '/financing/', parent: null, scenes: ['scene-replace'] },
 };
 
@@ -117,6 +117,13 @@ export const SERVICE_HUBS = {
     href: '/roof-inspection/',
     scenes: ['scene-inspect'],
     cards: ['/shingle-roofing/inspection/', '/tile-roofing/inspection/', '/flat-roofing/inspection/', '/roof-maintenance-plans/', '/commercial-roofing/maintenance/', '/emergency-roof-repair/'],
+  },
+  tuneups: {
+    key: 'tuneups',
+    label: 'Roof Tune-Ups',
+    href: '/roof-tune-ups/',
+    scenes: ['scene-inspect'],
+    cards: ['/shingle-roofing/tune-up/', '/tile-roofing/tune-up/', '/flat-roofing/tune-up/', '/commercial-roofing/maintenance/'],
   },
 };
 
