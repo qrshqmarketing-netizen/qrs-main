@@ -60,6 +60,7 @@ export default function InstantQuote() {
   const mapEl = useRef(null);
   const map = useRef(null); // { map, layer }
   const busyRef = useRef(false);
+  const openerRef = useRef(null);
   const stepRef = useRef(step); // latest values for timers
   const openRef = useRef(open);
 
@@ -68,7 +69,9 @@ export default function InstantQuote() {
     openRef.current = open;
   }, [step, open]);
 
-  function openDrawer() {
+  // opener: the button that opened the drawer, so focus can return to it (the tab is hidden on phones)
+  function openDrawer(opener) {
+    openerRef.current = opener || tabRef.current;
     setOpen(true);
     setTimeout(() => {
       (stepRef.current === 1 ? addrRef : closeRef).current.focus({ preventScroll: true });
@@ -78,7 +81,7 @@ export default function InstantQuote() {
 
   function closeDrawer() {
     setOpen(false);
-    tabRef.current.focus({ preventScroll: true });
+    (openerRef.current || tabRef.current)?.focus({ preventScroll: true });
   }
 
   useEffect(() => {
@@ -92,9 +95,10 @@ export default function InstantQuote() {
   // Any element with a data-rm-open attribute opens the drawer (handy for extra buttons)
   useEffect(() => {
     const onClick = (e) => {
-      if (e.target.closest('[data-rm-open]')) {
+      const opener = e.target.closest('[data-rm-open]');
+      if (opener) {
         e.preventDefault();
-        openDrawer();
+        openDrawer(opener);
       }
     };
     document.addEventListener('click', onClick);
@@ -252,7 +256,7 @@ export default function InstantQuote() {
 
   return (
     <div className={'rm' + (open ? ' open' : '') + (manual ? ' rm-manual' : '')} id="rm" data-step={step}>
-      <button className="rm-tab" type="button" id="rmTab" ref={tabRef} aria-controls="rmDrawer" aria-expanded={open} onClick={openDrawer}>
+      <button className="rm-tab" type="button" id="rmTab" ref={tabRef} aria-controls="rmDrawer" aria-expanded={open} onClick={() => openDrawer()}>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <path d="M3 11 12 4l9 7" />
           <path d="M5 10v10h14V10" />

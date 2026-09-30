@@ -127,6 +127,10 @@ body.rm-lock{overflow:hidden}
 .rm-fin p{margin:10px 0 12px!important;font-size:11.5px!important;line-height:1.45!important}
 .rm-fin .btn{min-height:44px;font-size:16px}
 .rm-quote .btn{margin-bottom:8px}
+/* Phones: no side tab; the "Get an Instant Quote" buttons (components/ui/QuoteTrigger.jsx) open the drawer */
+@media (max-width:620px){
+  .rm-tab{display:none}
+}
 @media (min-width:621px){
   .rm-tab{padding:18px 10px;font-size:14px}
   .rm-drawer{width:440px}

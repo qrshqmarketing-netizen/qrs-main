@@ -1,0 +1,5 @@
+/* Phones only (the Instant Quote side tab takes over from 621px up) */
+.quote-trigger{display:none}
+@media (max-width:620px){
+  .quote-trigger{display:inline-flex}
+}

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Rich from '@/components/ui/Rich';
+import QuoteTrigger from '@/components/ui/QuoteTrigger';
 import SiteLink from '@/components/ui/SiteLink';
 import { PhoneIcon } from '@/components/ui/icons';
 import { PHONE, TEL } from '@/data/site';
@@ -16,7 +17,8 @@ const DEFAULT_ACTIONS = [
 // the big headline ('title', the default) or the small keyword line above it ('eyebrow', home page only).
 // actions: [{ label, href, style: 'gold' | 'plum' | 'line' }]; an action with `drawer: true` opens the
 // Instant Quote drawer instead of navigating. When `image` is omitted, a CSS-only dark navy/gold
-// background is used instead of a photo (Hero.css .hero-fallback). Pass `mobileImage` (e.g. a portrait
+// background is used instead of a photo (Hero.css .hero-fallback). On phones a "Get an Instant Quote" button
+// (QuoteTrigger) follows the actions, unless one of them already opens the drawer. Pass `mobileImage` (e.g. a portrait
 // crop of the same scene) to show a different photo below 621px instead of a cropped `image`. `stats` nests the
 // proof-bar stats in the hero (home page only; sub pages place <ProofBar /> below their intro section).
 export default function Hero({
@@ -80,6 +82,7 @@ export default function Hero({
                     </SiteLink>
                   )
                 )}
+                {!actions.some((a) => a.drawer) && <QuoteTrigger />}
               </div>
             )}
           </div>
