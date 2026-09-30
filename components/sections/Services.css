@@ -56,7 +56,7 @@
 .svc-marquee-viewport{width:100%;overflow:hidden}
 .svc-marquee-track{display:flex;width:max-content;animation:svcMarquee 48s linear infinite;will-change:transform}
 .svc-marquee .svc-marquee-group{display:flex;grid-template-columns:none;flex:none;gap:18px;width:max-content;padding:0 9px}
-.svc-marquee .svc-card{flex:0 0 clamp(220px,22vw,270px);width:clamp(220px,22vw,270px)}
+.svc-marquee .svc-card{flex:0 0 clamp(240px,24vw,300px);width:clamp(240px,24vw,300px)}
 .svc-marquee .svc-media{aspect-ratio:4/3}
 .svc-marquee .svc-caption{padding:14px;font-size:13px;line-height:1.45}
 .svc-marquee .svc-caption h3{font-size:20px;margin-bottom:5px}
