@@ -4,7 +4,6 @@ import Faq from '@/components/sections/Faq';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
 import ProofBar from '@/components/sections/ProofBar';
-import ReviewStrip from '@/components/sections/ReviewStrip';
 import Offices from '@/components/sections/Offices';
 import RoofCheck from '@/components/sections/RoofCheck';
 import ServiceArea from '@/components/sections/ServiceArea';
@@ -49,7 +48,6 @@ export default function LocationsPage() {
         imageAlt="Row of homes with pitched roofs along a residential street"
         imagePosition="40% center"
       />
-      <ReviewStrip />
       <Offices sub="Our Los Angeles and Valley offices serve homes and businesses across Los Angeles and Orange County. One number reaches both." />
       <ProofBar />
       <ServiceArea heading="Find Your Nearest QRS Service Area" sub="Enter your ZIP code or pick a city on the map to see its phone number, estimate link and city page." />

@@ -1,10 +1,5 @@
-import FinalCta from '@/components/sections/FinalCta';
-import Guarantee from '@/components/sections/Guarantee';
 import Hero from '@/components/sections/Hero';
-import ProofBar from '@/components/sections/ProofBar';
-import ReviewGrid from '@/components/sections/ReviewGrid';
-import RoofCheck from '@/components/sections/RoofCheck';
-import WhyQrs from '@/components/sections/WhyQrs';
+import ReviewDestinations from '@/components/sections/ReviewDestinations';
 import JsonLd from '@/components/ui/JsonLd';
 import { HOME, REVIEWS_LINK } from '@/data/catalog';
 import { REVIEWS_PAGE as page } from '@/data/pages/reviews';
@@ -16,21 +11,13 @@ export const metadata = pageMetadata({ title: page.metaTitle, description: page.
 const CRUMBS = [HOME, REVIEWS_LINK];
 const schema = pageJsonLd({ path: REVIEWS_LINK.href, title: page.metaTitle, description: page.metaDescription, crumbs: CRUMBS });
 
-// Reviews page: every Google review (data/reviews.js), accreditations and the guarantee
+// A simple hub for leaving a review by location and platform.
 export default function ReviewsPage() {
   return (
     <main id="top">
       <JsonLd data={schema} />
-      <Hero crumbs={CRUMBS} eyebrow="Reviews" title={page.hero.heading} intro={page.hero.intro} />
-      <ReviewGrid />
-      <ProofBar />
-      <WhyQrs heading="Why Homeowners Choose QRS" />
-      <Guarantee />
-      <RoofCheck />
-      <FinalCta
-        heading="Be Our Next Five-Star Review"
-        text="See why homeowners and businesses across Los Angeles and Orange County trust QRS. Start with a roofer-led roof check and a written scope and price."
-      />
+      <Hero crumbs={CRUMBS} eyebrow="Reviews" title={page.hero.heading} intro={page.hero.intro} image={page.hero.image} imageAlt={page.hero.imageAlt} actions={[]} />
+      <ReviewDestinations />
     </main>
   );
 }

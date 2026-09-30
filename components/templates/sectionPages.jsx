@@ -1,8 +1,8 @@
-// Builds the hub page and service pages for a section (shingle, tile, flat, metal, commercial), the stand-alone
+// Builds the hub page and service pages for a section (shingle, tile, flat, commercial), the stand-alone
 // service pages (rain gutters, HOA, emergency, maintenance plans, financing) and the service-first hubs
 // (roof repair, replacement, inspection). The route files in app/ call these.
 
-import { CONTRACTORS_LINK, HOME, typeCard, SINGLES } from '@/data/catalog';
+import { CONTRACTORS_LINK, HOME } from '@/data/catalog';
 import {
   cardFor,
   findService,
@@ -27,7 +27,6 @@ export const hubMetadata = (section) =>
 
 export function SectionHub({ section }) {
   const cards = serviceCards(section);
-  if (section.key === 'metal') cards.push(typeCard(SINGLES.gutters)); // the Metal menu also lists rain gutters
   const feature = isCommercial(section)
     ? {
         eyebrow: 'Contractors',
@@ -79,7 +78,7 @@ export function SectionService({ section, slug }) {
   );
 }
 
-// ----- Stand-alone pages (/rain-gutters/, /hoa-multi-family/, /emergency-roof-repair/, /roof-maintenance-plans/, /financing/) -----
+// ----- Stand-alone pages (/rain-gutters/, /hoa-multi-family/, /emergency-roof-repair/, /roof-maintenance-plans/, /roof-financing/) -----
 export const singleMetadata = (single) =>
   pageMetadata({ title: single.page.metaTitle, description: single.page.metaDescription, path: single.href });
 

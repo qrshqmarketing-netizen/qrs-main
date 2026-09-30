@@ -17,7 +17,7 @@ const PITCHES = [
   { value: 'Steep', note: '9+/12', path: 'M9 22 22 2l13 20Z' },
 ];
 const PITCH_VALUES = PITCHES.map((p) => p.value);
-const ROOF_TYPES = ['Tile', 'Shingle', 'Flat', 'Metal', 'Not sure'];
+const ROOF_TYPES = ['Tile', 'Shingle', 'Flat', 'Not sure'];
 const MATERIALS = Object.keys(PRICING);
 const STORIES = ['1 story', '2 stories', '3+ stories'];
 const ERRORS = {

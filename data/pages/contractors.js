@@ -20,7 +20,7 @@ export const CONTRACTORS_PAGE = {
     heading: 'Who We Work With',
     points: [
       { title: 'General contractors', text: 'Bring us in for the roofing scope on remodels, additions and commercial projects. You get one roofing contact, a written scope and updates without the follow-up calls.' },
-      { title: 'Builders and remodelers', text: 'From new construction and ADUs to a changed roofline on a remodel, we install tile, shingle, flat and metal roofs that fit the plans and the rest of the home.' },
+      { title: 'Builders and remodelers', text: 'From new construction and ADUs to a changed roofline on a remodel, we install tile, shingle and flat roofs that fit the plans and the rest of the home.' },
       { title: 'Property managers', text: 'Keep one roofing partner across your buildings for surveys, repairs, replacements and scheduled roof care, with photo records for each property.' },
       { title: 'HOA boards', text: 'Get roofer-led findings and written scopes your board can review together. Our [HOA & multi-family roofing](/hoa-multi-family/) page explains how we plan community projects.' },
       { title: 'Solar companies', text: 'Bring us in to handle the roof around a solar install, from mounting-point flashing to a full replacement before panels go up.' },
@@ -64,7 +64,7 @@ export const CONTRACTORS_PAGE = {
   },
   faqs: [
     { q: 'What kinds of projects do you partner on?', a: 'Remodels, additions and ADUs, new construction, multi-family buildings and commercial properties across Los Angeles and Orange County (see our [service areas](/service-areas/)). Tell us how your projects usually run, and we’ll plan our part of the work around it.' },
-    { q: 'Which roof types and services can you cover?', a: 'Tile, shingle, flat and low-slope, and standing seam metal roofs, plus rain gutters, across replacements, repairs and new installations. Our [residential roofing](/residential-roofing/) pages cover each roof type in detail.' },
+    { q: 'Which roof types and services can you cover?', a: 'Tile, shingle and flat roofs, plus rain gutters, across replacements, repairs and new installations. Our [residential roofing](/residential-roofing/) pages cover each roof type in detail.' },
     { q: 'Can you assess a roof before we finalize our bid?', a: 'Yes, and that’s often the right time to bring us in. A roofer assesses the roof, photo-documents what we find and puts the scope and price in writing so you can build them into your bid.' },
     { q: 'How do you work alongside other trades on site?', a: 'We coordinate start dates and work areas with you, keep materials and debris contained and clean up as we go. If something on site affects the roof, like a change in the plans, we tell you so we can adjust the scope together.' },
     { q: 'Do you offer white-label roofing?', a: 'Yes. With our white-label service, our crews handle the roofing on your projects under your brand, and your client works with you from start to finish. Mention it when you share the project, and we’ll plan the job that way.' },

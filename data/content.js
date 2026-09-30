@@ -27,7 +27,6 @@ import { cityPath, LOCATIONS, REGIONS, regionPath } from './locations';
 import { COMMERCIAL_CONTENT } from './services/commercial';
 import { COMMERCIAL_SERVICES } from './services/commercialServices';
 import { FLAT_CONTENT } from './services/flat';
-import { METAL_CONTENT } from './services/metal';
 import { EMERGENCY_ROOF_REPAIR, ROOF_FINANCING, ROOF_MAINTENANCE_PLANS } from './services/programs';
 import { ROOF_INSPECTION_HUB, ROOF_REPAIR_HUB, ROOF_REPLACEMENT_HUB, ROOF_TUNE_UP_HUB } from './services/serviceHubs';
 import { SHINGLE_CONTENT } from './services/shingle';
@@ -39,9 +38,8 @@ import { TILE_CONTENT } from './services/tile';
 export const SHINGLE = { ...GROUPS.shingle, ...SHINGLE_CONTENT };
 export const TILE = { ...GROUPS.tile, ...TILE_CONTENT };
 export const FLAT = { ...GROUPS.flat, ...FLAT_CONTENT };
-export const METAL = { ...GROUPS.metal, ...METAL_CONTENT };
 export const COMMERCIAL = { ...GROUPS.commercial, ...COMMERCIAL_CONTENT, serviceTypes: COMMERCIAL_SERVICES };
-export const SECTIONS = [SHINGLE, TILE, FLAT, METAL, COMMERCIAL];
+export const SECTIONS = [SHINGLE, TILE, FLAT, COMMERCIAL];
 
 // Stand-alone pages: { ...structure, page }
 export const GUTTERS = { ...SINGLES.gutters, page: RAIN_GUTTERS };

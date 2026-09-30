@@ -40,11 +40,11 @@ export const ROOF_REPAIR_HUB = {
 export const ROOF_REPLACEMENT_HUB = {
   keyword: 'roof replacement',
   metaTitle: 'Roof Replacement in Los Angeles & OC',
-  metaDescription: 'Roof replacement in Los Angeles & Orange County: full tear-off, a new shingle, tile, flat or metal roof and a written scope first. Book a free roof evaluation.',
+  metaDescription: 'Roof replacement in Los Angeles & Orange County: full tear-off, a new shingle, tile or flat roof and a written scope first. Book a free roof evaluation.',
   hero: {
     heading: 'Roof Replacement Services',
     intro: 'A roof replacement is a big decision, so it should rest on your roof’s real condition, not a sales pitch. We start with a roofer-led [free roof evaluation](#roof-check), then tear the old roof off and build a complete new system suited to your home and to Southern California sun, wind and winter storms.',
-    highlights: ['Tear-off and a complete new roof system', 'Shingle, tile, flat and standing seam metal', 'Backed by a 10-year workmanship warranty'],
+    highlights: ['Tear-off and a complete new roof system', 'Shingle, tile and flat roofing', 'Backed by a 10-year workmanship warranty'],
   },
   overview: {
     heading: 'When a New Roof Is the Right Call',
@@ -60,13 +60,13 @@ export const ROOF_REPLACEMENT_HUB = {
   highlights: {
     heading: 'Choosing a Roof for Southern California',
     points: [
-      { title: 'Start with the framing', text: 'Clay and concrete tile are far heavier than shingles or metal, so a switch to tile depends on whether the structure can carry it. Moving from tile to a lighter roof is usually simpler on that front.' },
-      { title: 'Match the roof to the house', text: 'Tile suits Spanish and Mediterranean homes, shingles fit Craftsman and ranch styles, and [standing seam metal](/metal-roofing/standing-seam/) gives modern homes clean lines. Low-slope sections need a system built to drain, not shingles or tile.' },
+      { title: 'Start with the framing', text: 'Clay and concrete tile are far heavier than shingles, so a switch to tile depends on whether the structure can carry it. Moving from tile to a lighter roof is usually simpler on that front.' },
+      { title: 'Match the roof to the house', text: 'Tile suits Spanish and Mediterranean homes, shingles fit Craftsman and ranch styles, and low-slope sections need a system built to drain, not shingles or tile.' },
       { title: 'Plan for your exposure', text: 'Inland valleys bake roofs in summer heat, coastal homes deal with salt air and the marine layer, and homes near brush face wind-blown embers. Where your home sits shapes the material and detailing we recommend.' },
     ],
   },
   faqs: [
-    { q: 'Can I finance a roof replacement?', a: 'Yes. [Financing](/financing/) options are available to help spread the cost of your new roof into monthly payments, subject to credit approval. The Instant Quote on this site shows example monthly payments, and your written scope and price come first, so you know exactly what you’re financing.' },
+    { q: 'Can I finance a roof replacement?', a: 'Yes. [Roof financing](/roof-financing/) options are available to help spread the cost of your new roof into monthly payments, subject to credit approval. The Instant Quote on this site shows example monthly payments, and your written scope and price come first, so you know exactly what you’re financing.' },
     { q: 'Do I have to replace the whole roof at once?', a: 'Not always. A single section, such as a flat roof over an addition or a detached garage, sometimes wears out well before the rest and can be handled on its own. When the wear is spread across the roof, replacing it all at once is usually the more sensible choice. The roof evaluation photos show which situation you’re in.' },
     { q: 'How is my yard protected during a tear-off?', a: 'We lay tarps to protect your landscaping and catch debris as the old roof comes off, and every job ends with a nail sweep and clean-up. If there’s something close to the house you’re worried about, like a fragile planter or patio furniture, point it out before work starts.' },
     { q: 'What happens at the end of a roof replacement?', a: 'We do a final walkthrough with you, review the finished roof and go over your 10-year workmanship warranty in plain English. It’s also your chance to ask questions and point out anything you’d like us to look at again.' },

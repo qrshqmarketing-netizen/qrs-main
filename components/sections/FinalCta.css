@@ -1,6 +1,7 @@
 /* ---------- Final CTA — white copy over a darkened job-site photo ---------- */
 .final{position:relative;overflow:hidden;isolation:isolate;text-align:center;color:#fff;background:#062d57;padding:104px 0}
-.cta-scene{object-fit:cover;object-position:center 40%;z-index:-2}
+.cta-parallax{position:absolute;inset:-18% 0;z-index:-2;overflow:hidden;transform:translate3d(0,var(--cta-parallax-y,0px),0);will-change:transform}
+.cta-scene{object-fit:cover;object-position:center 40%}
 /* Dark overlay so the white copy stays readable over any part of the photo */
 .final:before{
   content:"";position:absolute;inset:0;z-index:-1;

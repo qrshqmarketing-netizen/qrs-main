@@ -1,10 +1,10 @@
-import Image from 'next/image';
 import Rich from '@/components/ui/Rich';
 import QuoteTrigger from '@/components/ui/QuoteTrigger';
 import SiteLink from '@/components/ui/SiteLink';
 import { PhoneIcon } from '@/components/ui/icons';
 import { PHONE, TEL } from '@/data/site';
 import Breadcrumbs from './Breadcrumbs';
+import HeroParallax from './HeroParallax';
 import ProofBar from './ProofBar';
 import './Hero.css';
 
@@ -20,7 +20,7 @@ const DEFAULT_ACTIONS = [
 // background is used instead of a photo (Hero.css .hero-fallback). On phones a "Get an Instant Quote" button
 // (QuoteTrigger) follows the actions, unless one of them already opens the drawer. Pass `mobileImage` (e.g. a portrait
 // crop of the same scene) to show a different photo below 621px instead of a cropped `image`. `stats` nests the
-// proof-bar stats in the hero (home page only; sub pages place <ProofBar /> below their intro section).
+// proof-bar stats in the hero; opt in only on the homepage and service pages.
 export default function Hero({
   crumbs,
   eyebrow = 'Roof Repair & Replacement in Southern California',
@@ -46,16 +46,7 @@ export default function Hero({
   return (
     <>
       <section className={'hero hero-photo' + (image ? '' : ' hero-fallback') + (className ? ` ${className}` : '')} aria-label={label}>
-        {image && (
-          <div className={'hero-roof-texture' + (mobileImage ? ' hero-roof-texture-desktop' : '')} aria-hidden="true">
-            <Image src={image} alt={imageAlt} fill preload sizes="100vw" style={imagePosition ? { objectPosition: imagePosition } : undefined} />
-          </div>
-        )}
-        {mobileImage && (
-          <div className="hero-roof-texture hero-roof-texture-mobile" aria-hidden="true">
-            <Image src={mobileImage} alt={imageAlt} fill preload sizes="100vw" />
-          </div>
-        )}
+        <HeroParallax image={image} mobileImage={mobileImage} imageAlt={imageAlt} imagePosition={imagePosition} />
         <div className="hero-glow" aria-hidden="true"></div>
         <div className={'container hero-inner on-dark' + (align === 'left' ? ' hero-left' : '') + (className ? ` ${className}` : '')}>
           <div className="hero-copy">

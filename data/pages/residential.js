@@ -5,12 +5,12 @@ export const RESIDENTIAL_PAGE = {
   keyword: 'residential roofing',
   metaTitle: 'Residential Roofing in Los Angeles',
   metaDescription:
-    'Residential roofing in Los Angeles & Orange County: shingle, tile, flat and metal roofs, rain gutters and HOA roofing. Start with a free roof evaluation.',
+    'Residential roofing in Los Angeles & Orange County: shingle, tile and flat roofs, rain gutters and HOA roofing. Start with a free roof evaluation.',
   hero: {
     heading: 'Residential Roofing Services',
     intro:
       'Detail-first residential roofing for homes across Los Angeles and Orange County, from a leak on a tile roof to a full tear-off on a shingle home. Every job starts with a free roof evaluation, not a sales pitch.',
-    highlights: ['Shingle, tile, flat and metal roofs', 'Written scope and price before work', '10-Year workmanship warranty'],
+    highlights: ['Shingle, tile and flat roofs', 'Written scope and price before work', '10-Year workmanship warranty'],
   },
   overview: {
     heading: 'One Team for Every Roof on Your Home',
@@ -35,7 +35,6 @@ export const RESIDENTIAL_PAGE = {
           { label: 'Shingle', href: '/shingle-roofing/replacement/' },
           { label: 'Tile', href: '/tile-roofing/replacement/' },
           { label: 'Flat', href: '/flat-roofing/replacement/' },
-          { label: 'Standing seam metal', href: '/metal-roofing/standing-seam/' },
         ],
       },
       {
@@ -61,7 +60,6 @@ export const RESIDENTIAL_PAGE = {
         links: [
           { label: 'Shingle', href: '/shingle-roofing/installation/' },
           { label: 'Flat', href: '/flat-roofing/installation/' },
-          { label: 'Standing seam metal', href: '/metal-roofing/standing-seam/' },
         ],
       },
       {
@@ -108,7 +106,7 @@ export const RESIDENTIAL_PAGE = {
   faqs: [
     {
       q: 'What kinds of homes do you work on?',
-      a: 'Single-family homes, townhomes, ADUs and garages, plus HOA and multi-family properties across Los Angeles and Orange County. We work on [shingle](/shingle-roofing/), [tile](/tile-roofing/), [flat](/flat-roofing/) and [metal](/metal-roofing/) roofs.',
+      a: 'Single-family homes, townhomes, ADUs and garages, plus HOA and multi-family properties across Los Angeles and Orange County. We work on [shingle](/shingle-roofing/), [tile](/tile-roofing/) and [flat](/flat-roofing/) roofs.',
     },
     {
       q: 'How do I know whether I need a repair or a new roof?',

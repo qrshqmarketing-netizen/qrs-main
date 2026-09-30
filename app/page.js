@@ -45,7 +45,6 @@ const HOME_SERVICES = [
 const HOME_PRODUCTS = [
   { title: '*TotalShield* Shingle Systems', text: 'Complete shingle replacements and new installations, built from the deck up.', href: '/shingle-roofing/replacement/', scene: 'scene-shingle', image: '/images/shingle-roof-completed-drone-view.webp' },
   { title: '*FlatGuard* Flat Roofing', text: 'Flat roof systems planned around drainage, seams and lasting protection.', href: '/flat-roofing/replacement/', scene: 'scene-flat', image: '/images/flat-roof-torch-down-drone-view-services.webp' },
-  { title: '*LockSeam* Metal Roofing', text: 'Standing seam metal roofing with clean lines and concealed fasteners.', href: '/metal-roofing/standing-seam/', scene: 'scene-metal' },
   { title: '*LeakRescue* Roof Repairs', text: 'Leaks traced to the source and repaired with clear photos and a written scope.', href: '/roof-repair/', scene: 'scene-repair' },
   { title: '*RoofScan 360* Inspections', text: 'A roofer-led inspection with photos, plain-English findings and a clear next step.', href: '/roof-inspection/', scene: 'scene-inspect' },
   { title: '*SecondLife* Tile Reset', text: 'Keep sound roof tiles while replacing the worn underlayment below.', href: '/tile-roofing/lift-and-relay/', scene: 'scene-tile' },
@@ -53,8 +52,8 @@ const HOME_PRODUCTS = [
   { title: '*ReserveReady* HOA Roofing', text: 'Roof inspections, clear scopes and planning support for community boards.', href: '/hoa-multi-family/', scene: 'scene-hoa' },
 ];
 
-// Home page: sections in order, top to bottom, matching the site's top-nav structure — Testimonials, an
-// intro paragraph, Services/Residential/Commercial together, Service Areas, About, Projects, then the
+// Home page: sections in order, top to bottom, matching the site's top-nav structure — an intro paragraph,
+// Services/Residential/Commercial together, Service Areas, About, Projects, then the
 // lead-capture "Get Pro Advice" form. Reorder or remove a line to change the page.
 export default function HomePage() {
   return (
@@ -70,8 +69,8 @@ export default function HomePage() {
           className="hero-top-pad"
           stats
         />
-        <ReviewStrip />
         <QrsStandard />
+        <ReviewStrip />
         <Services items={HOME_SERVICES} compact cta={false} />
         <ServiceArea />
         <Services title="Roofing Systems" items={HOME_PRODUCTS} compact cta={false} pattern={false} slider id="roofing-systems" />

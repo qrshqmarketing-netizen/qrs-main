@@ -1,4 +1,4 @@
-// Single service pages: /emergency-roof-repair/, /roof-maintenance-plans/ and /financing/.
+// Single service pages: /emergency-roof-repair/, /roof-maintenance-plans/ and /roof-financing/.
 
 export const EMERGENCY_ROOF_REPAIR = {
   slug: 'emergency-roof-repair',
@@ -65,7 +65,7 @@ export const EMERGENCY_ROOF_REPAIR = {
       },
       {
         title: 'Every roof type, one team',
-        text: 'As a licensed California contractor since 2020, we work on tile, shingle, flat and metal roofs, and storm damage shows up differently on each one.',
+        text: 'As a licensed California contractor since 2020, we work on tile, shingle and flat roofs, and storm damage shows up differently on each one.',
       },
     ],
   },
@@ -88,7 +88,7 @@ export const EMERGENCY_ROOF_REPAIR = {
     },
     {
       q: 'What if the damage is too much for a repair?',
-      a: 'Sometimes a storm spreads damage across the whole roof, or exposes a roof that was already near the end of its life. We’ll show you that in photos and walk you through your options. For a full replacement, [financing](/financing/) through Momnt Financing or Service Financing is available, subject to credit approval.',
+      a: 'Sometimes a storm spreads damage across the whole roof, or exposes a roof that was already near the end of its life. We’ll show you that in photos and walk you through your options. For a full replacement, [roof financing](/roof-financing/) through Momnt Financing or Service Financing is available, subject to credit approval.',
     },
   ],
   related: ['/roof-repair/', '/roof-inspection/', '/roof-replacement/'],
@@ -109,19 +109,30 @@ export const ROOF_MAINTENANCE_PLANS = {
 };
 
 export const ROOF_FINANCING = {
-  slug: 'financing',
+  slug: 'roof-financing',
   keyword: 'roof financing',
   title: 'Roof Financing',
-  navLabel: 'Financing',
+  navLabel: 'Roof Financing',
   card: 'Spread the cost of a home roof replacement into monthly payments through Momnt Financing or Service Financing, subject to credit approval, once your written scope and price are in hand.',
   // Closing call to action above the footer (FinalCta); other service pages word theirs from `keyword`
   final: {
     heading: 'Get Your Price, Then Your Payment Options',
     text: 'A roofer gives you a written scope and price for your roof replacement, then we walk you through monthly payments with Momnt Financing or Service Financing.',
   },
-  metaTitle: 'Roof Financing in Los Angeles & OC',
+  metaTitle: 'Roof Financing in Los Angeles & Orange County',
   metaDescription:
     'Roof financing in LA & Orange County: spread the cost of a home roof replacement into monthly payments through Momnt Financing or Service Financing. Book a free roof evaluation.',
+  image: '/images/financing-hero-background.webp',
+  imageAlt: 'A roofing professional reviewing a project with homeowners',
+  showReviews: false,
+  partners: {
+    heading: 'Our Financing Partners',
+    intro: 'Financing options are available through these providers for qualifying home roof replacements. Approval is subject to credit review.',
+    items: [
+      { name: 'Momnt Financing', image: '/images/momnt-logo.webp', imageAlt: 'Momnt logo', width: 864, height: 156 },
+      { name: 'Service Financing', image: '/images/service-finance-mark.webp', imageAlt: 'Service Finance logo', width: 2668, height: 900 },
+    ],
+  },
   hero: {
     intro:
       'A new roof is a big expense, and it rarely comes at a convenient time. Roof financing through Momnt Financing or Service Financing can spread the cost into monthly payments, subject to credit approval, and it starts only after you have a written scope and price.',

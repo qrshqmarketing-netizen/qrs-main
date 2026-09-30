@@ -2,7 +2,6 @@ import Faq from '@/components/sections/Faq';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
 import ProofBar from '@/components/sections/ProofBar';
-import ReviewStrip from '@/components/sections/ReviewStrip';
 import Offices from '@/components/sections/Offices';
 import RoofCheck from '@/components/sections/RoofCheck';
 import ServiceArea from '@/components/sections/ServiceArea';
@@ -51,7 +50,6 @@ export default function ContactPage() {
           { label: 'Request an Estimate', href: '#roof-check', style: 'line' },
         ]}
       />
-      <ReviewStrip />
       <Offices sub="Visit or call any of our offices. One phone number reaches our whole team." note={`Hours: ${HOURS_LINE}`} />
       <ProofBar />
       <ValueGrid heading={page.ways.heading} items={page.ways.items} />

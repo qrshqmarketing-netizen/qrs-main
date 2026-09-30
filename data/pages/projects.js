@@ -4,11 +4,11 @@ export const PROJECTS_PAGE = {
   keyword: 'roofing projects',
   metaTitle: 'Roofing Projects',
   metaDescription:
-    'Roofing projects by Quality Roofing Specialists: tile, shingle, flat and metal roofs for homes, HOAs and businesses across Southern California. Book a free roof evaluation.',
+    'Roofing projects by Quality Roofing Specialists: tile, shingle and flat roofs for homes, HOAs and businesses across Southern California. Book a free roof evaluation.',
   hero: {
     heading: 'Our Roofing Projects',
     intro:
-      'Browse roofing projects from homes, communities and commercial properties across Southern California, featuring tile, shingle, flat and metal roof work.',
+      'Browse roofing projects from homes, communities and commercial properties across Southern California, featuring tile, shingle and flat roof work.',
   },
   gallery: {
     heading: 'Recent Work',

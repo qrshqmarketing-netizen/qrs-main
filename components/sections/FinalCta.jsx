@@ -1,8 +1,8 @@
-import Image from 'next/image';
 import QuoteTrigger from '@/components/ui/QuoteTrigger';
 import SiteLink from '@/components/ui/SiteLink';
 import { PhoneIcon } from '@/components/ui/icons';
 import { PHONE, TEL } from '@/data/site';
+import CtaParallax from './CtaParallax';
 import './FinalCta.css';
 
 const TRUST = ['CSLB licensed, bonded & insured', '10-year workmanship warranty', 'Google customer reviews'];
@@ -19,13 +19,7 @@ export default function FinalCta({
   const isCall = cta.href.startsWith('tel:');
   return (
     <section className="final">
-      <Image
-        className="cta-scene"
-        src="/images/cta-shingle-reroof-crew-drone-view.webp"
-        fill
-        sizes="100vw"
-        alt="Aerial view of a QRS crew installing a new shingle roof"
-      />
+      <CtaParallax />
       <div className="container final-inner">
         <h2>{heading}</h2>
         <p>{text}</p>

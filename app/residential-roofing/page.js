@@ -3,7 +3,6 @@ import DifferenceBand from '@/components/sections/DifferenceBand';
 import Faq from '@/components/sections/Faq';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
-import ProofBar from '@/components/sections/ProofBar';
 import ReviewStrip from '@/components/sections/ReviewStrip';
 import Overview from '@/components/sections/Overview';
 import RoofCheck from '@/components/sections/RoofCheck';
@@ -44,10 +43,10 @@ export default function ResidentialRoofingPage() {
         image={HERO_IMAGE}
         imageAlt="Aerial view of a Southern California neighborhood of shingle-roofed homes"
         imagePosition="center 45%"
+        stats
       />
-      <ReviewStrip />
       <Overview heading={page.overview.heading} paragraphs={page.overview.paragraphs} />
-      <ProofBar />
+      <ReviewStrip />
       <CardCarousel title={page.cards.heading} items={RESIDENTIAL_TYPES.map(typeCard)} idPrefix="roofTypes" tone="wash" />
       <ServiceFinder heading={page.finder.heading} intro={page.finder.intro} rows={page.finder.rows} />
       <DifferenceBand />

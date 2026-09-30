@@ -2,7 +2,6 @@ import FinalCta from '@/components/sections/FinalCta';
 import Guarantee from '@/components/sections/Guarantee';
 import Hero from '@/components/sections/Hero';
 import ProofBar from '@/components/sections/ProofBar';
-import ReviewStrip from '@/components/sections/ReviewStrip';
 import Overview from '@/components/sections/Overview';
 import Process from '@/components/sections/Process';
 import RoofCheck from '@/components/sections/RoofCheck';
@@ -29,7 +28,6 @@ export default function AboutPage() {
     <main id="top">
       <JsonLd data={schema} />
       <Hero crumbs={CRUMBS} eyebrow={page.hero.eyebrow} title={page.hero.heading} image={HERO_IMAGE} imagePosition="center 40%" />
-      <ReviewStrip />
       <Overview center heading={page.intro.heading} paragraphs={page.intro.paragraphs} />
       <ProofBar />
       <SplitFeature eyebrow={page.story.eyebrow} heading={page.story.heading} paragraphs={page.story.paragraphs} scene="scene-replace" />

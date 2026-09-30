@@ -27,7 +27,7 @@ export const CAREERS_PAGE = {
     heading: 'Roles We Hire For',
     intro: 'Openings change through the year. If there’s no posting for your role, send us your info anyway.',
     items: [
-      { title: 'Roofers & installers', text: 'Hands-on roofing work on tile, shingle, flat and metal roofs, with pride in clean, careful installs.', link: { label: 'Ask about this role', href: apply('Roofer / installer') } },
+      { title: 'Roofers & installers', text: 'Hands-on roofing work on tile, shingle and flat roofs, with pride in clean, careful installs.', link: { label: 'Ask about this role', href: apply('Roofer / installer') } },
       { title: 'Crew leads & foremen', text: 'Lead a crew on site, keep the work to the written scope and leave every job site clean.', link: { label: 'Ask about this role', href: apply('Crew lead / foreman') } },
       { title: 'Estimators & project managers', text: 'Run roof checks, write clear scopes and keep homeowners informed from start to final walkthrough.', link: { label: 'Ask about this role', href: apply('Estimator / project manager') } },
       { title: 'Office & customer care', text: 'Schedule roof checks, answer calls and keep projects organized behind the scenes.', link: { label: 'Ask about this role', href: apply('Office / customer care') } },
@@ -55,7 +55,7 @@ export const CAREERS_TEASER = {
   eyebrow: 'Join the crew',
   heading: 'Roofing Careers at QRS',
   paragraphs: [
-    'We’re always glad to meet people who take pride in careful work. Join a detail-first team doing tile, shingle, flat and metal roofing across Southern California.',
+    'We’re always glad to meet people who take pride in careful work. Join a detail-first team doing tile, shingle and flat roofing across Southern California.',
   ],
   cta: { label: 'Explore Careers', href: '/careers/' },
 };

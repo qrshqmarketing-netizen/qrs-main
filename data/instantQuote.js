@@ -20,7 +20,6 @@ export const PRICING = {
   Shingle: { label: 'Shingle roof replacement', low: 5.5, high: 8.5 },
   Tile: { label: 'Tile roof replacement', low: 12, high: 18 },
   Flat: { label: 'Flat roof replacement', low: 7, high: 11 },
-  Metal: { label: 'Metal roof replacement', low: 11, high: 16 },
 };
 export const WASTE = 1.1; // +10% for cuts, starter and ridge
 export const PITCH_ADJ = { Flat: 1, Low: 1, Conventional: 1.08, Steep: 1.25, 'Not sure': 1.08 };

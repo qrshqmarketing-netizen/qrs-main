@@ -1,7 +1,6 @@
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
 import ProofBar from '@/components/sections/ProofBar';
-import ReviewStrip from '@/components/sections/ReviewStrip';
 import PostCards from '@/components/sections/PostCards';
 import RoofCheck from '@/components/sections/RoofCheck';
 import JsonLd from '@/components/ui/JsonLd';
@@ -29,7 +28,6 @@ export default function BlogPage() {
     <main id="top">
       <JsonLd data={schema} />
       <Hero crumbs={CRUMBS} eyebrow="Roofing Blog" title={page.hero.heading} intro={page.hero.intro} />
-      <ReviewStrip />
       <PostCards posts={BLOG_POSTS} heading="Coming Soon" />
       <ProofBar />
       <RoofCheck tone="white" />

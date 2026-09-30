@@ -5,17 +5,17 @@ export const TILE_CONTENT = {
   hub: {
     keyword: 'tile roofing',
     metaTitle: 'Tile Roofing in LA & Orange County',
-    metaDescription: 'Tile roofing in Los Angeles & Orange County: clay and concrete tile repair, lift & relay, replacement and roof care. Start with a free roof evaluation.',
+    metaDescription: 'Tile roofing in Los Angeles & Orange County: clay, concrete and slate tile repair, lift & relay, replacement and roof care. Start with a free roof evaluation.',
     hero: {
       heading: 'Tile Roofing Services',
-      intro: 'Clay and concrete tiles often outlast the layers beneath them, so a tile roof is only as sound as the parts you can’t see. Our tile roofing work across Los Angeles and Orange County covers repairs, tune-ups, relays and replacement, and it starts with a roofer-led look at the whole system.',
-      highlights: ['Clay barrel, S tile and concrete profiles', 'Focused on what’s under the tile', 'Free drone roof evaluation to start'],
+      intro: 'Clay, concrete and slate tiles often outlast the layers beneath them, so a tile roof is only as sound as the parts you can’t see. Our tile roofing work across Los Angeles and Orange County covers repairs, tune-ups, relays and replacement, and it starts with a roofer-led look at the whole system.',
+      highlights: ['Clay, concrete and slate options', 'Focused on what’s under the tile', 'Free drone roof evaluation to start'],
     },
     overview: {
       heading: 'A Tile Roof Is More Than Its Tiles',
       paragraphs: [
         'Tile is part of the look of Southern California, from the clay barrel tile on Spanish Revival homes in Pasadena and Glendale to the concrete tile on newer Mediterranean-style homes in Irvine. The tiles themselves are tough. What actually keeps water out is the underlayment beneath them, helped by the flashings and valleys that steer water off the roof. Heat, Santa Ana winds and the occasional earthquake work on those layers for years, and they usually wear out well before the tile does. That’s why every tile job we do starts with what’s happening under the tile.',
-        'The right service depends on where your roof is in its life. A few cracked or slipped tiles call for a targeted [tile roof repair](/tile-roofing/repairs/). Worn underlayment beneath tiles that are still sound is the job for a [tile lift & relay](/tile-roofing/lift-and-relay/), which keeps your home’s original look. When the tiles themselves are failing, a [tile roof replacement](/tile-roofing/replacement/) starts fresh. In between, a tune-up or scheduled roof care keeps small problems small, and a free roof evaluation tells you which of these your roof actually needs.',
+        'The right service depends on where your roof is in its life. A few cracked or slipped tiles call for a targeted [tile roof repair](/tile-roofing/repairs/). Worn underlayment beneath tiles that are still sound is the job for a [tile lift & relay](/tile-roofing/lift-and-relay/), which keeps your home’s original look. If you are comparing materials, explore [concrete tile roofing](/tile-roofing/concrete/) and [slate tile roofing](/tile-roofing/slate/). When the tiles themselves are failing, a [tile roof replacement](/tile-roofing/replacement/) starts fresh. A free roof evaluation helps identify what your roof needs.',
       ],
     },
     cards: {
@@ -85,7 +85,7 @@ export const TILE_CONTENT = {
       faqs: [
         { q: 'How do I know my tile roof needs replacing, not relaying?', a: 'The tiles tell you. Widespread cracking, concrete tile that has gone soft or porous, or a patchwork of mismatched repairs usually points to replacement. If most tiles are sound and the trouble is underneath, a relay is often the better value, and a [tile roof inspection](/tile-roofing/inspection/) shows which side of that line your roof is on.' },
         { q: 'Should I choose clay or concrete tile for my new roof?', a: 'It comes down to looks, weight and budget. Clay is the traditional choice for Spanish Revival architecture and holds its color well, while concrete comes in many colors and profiles and suits a wide range of home styles. We’ll walk you through both before anything goes into your written scope.' },
-        { q: 'Can I replace my tile roof with a different roof type?', a: 'Yes. Some homeowners choose a [shingle roof installation](/shingle-roofing/installation/) or [standing seam metal roofing](/metal-roofing/standing-seam/) instead, while others want to keep the character tile gives their home. We’ll lay out the trade-offs in plain English, including how each option would look on your house.' },
+        { q: 'Can I replace my tile roof with a different roof type?', a: 'Yes. Some homeowners choose a [shingle roof installation](/shingle-roofing/installation/) instead, while others want to keep the character tile gives their home. We’ll lay out the trade-offs in plain English, including how each option would look on your house.' },
         { q: 'Does the underlayment matter if the tile is brand new?', a: 'It matters most. Even new tile sheds water rather than sealing it out, so wind-driven rain that gets past the tiles depends on the underlayment and flashings to stop it. That’s why your scope covers those layers in as much detail as the tile you can see.' },
       ],
       related: ['/tile-roofing/lift-and-relay/', '/tile-roofing/inspection/', '/tile-roofing/repairs/'],
@@ -328,6 +328,96 @@ export const TILE_CONTENT = {
         { q: 'Does tile roof care include my gutters?', a: 'Keeping gutters and drains clear of debris is part of routine care, since clogged gutters can back water up at the eaves. If yours are damaged or undersized, our [rain gutter](/rain-gutters/) service can replace them.' },
       ],
       related: ['/tile-roofing/tune-up/', '/tile-roofing/inspection/', '/tile-roofing/lift-and-relay/'],
+    },
+    {
+      slug: 'slate',
+      keyword: 'slate tile roofing',
+      title: 'Slate Tile Roofing',
+      navLabel: 'Slate Tile Roofing',
+      card: 'A distinctive natural-stone roof option, planned around your home’s structure, roof details and the slate profile you want.',
+      metaTitle: 'Slate Tile Roofing in Los Angeles & Orange County',
+      metaDescription: 'Slate tile roofing in Los Angeles & Orange County: plan a natural-stone roof with careful attention to structure, underlayment and flashing. Request a roof evaluation.',
+      image: '/images/tile-roof-replacement.webp',
+      imageAlt: 'Tile roof on a Southern California home',
+      hero: {
+        intro: 'Slate tile roofing brings the natural color and texture of stone to a home. Before planning a slate roof, we review the existing structure, roof design and installation details so the scope fits the property.',
+        highlights: ['Natural slate appearance', 'Roof structure and details reviewed', 'Written scope before work begins'],
+      },
+      overview: {
+        paragraphs: [
+          'Slate has a distinctive look and a long service life when the roof is designed and installed for the material. Its weight and the way it is fastened make planning especially important. We begin with a roof evaluation, discuss the home’s structure and existing roof, and explain the work involved before recommending a direction.',
+          'A complete slate roof scope considers the deck, underlayment, flashing, drainage and the slate profile. If slate is not the right fit for the structure or budget, we can also talk through [concrete tile roofing](/tile-roofing/concrete/) and other [tile roof replacement](/tile-roofing/replacement/) options.'
+        ],
+      },
+      process: {
+        subheading: 'Planning a slate tile roof',
+        steps: [
+          { title: 'Review the existing roof', text: 'We document roof conditions, geometry and visible details, then talk through the look and goals for the project.' },
+          { title: 'Assess the structure', text: 'Slate is a substantial roofing material. The roof framing and applicable project requirements need review before a final system is selected.' },
+          { title: 'Prepare a written scope', text: 'The proposal explains the planned roof assembly, slate selection, underlayment, flashing and cleanup.' },
+          { title: 'Install and review', text: 'Work follows the approved scope, with attention to the slate layout and transitions. We share project photos and review the completed work with you.' },
+        ],
+      },
+      why: {
+        heading: 'Planning Slate Tile Roofing with QRS',
+        intro: 'A slate roof needs sound planning from the structure up, not just a material choice.',
+        points: [
+          { title: 'Start with the home', text: 'We consider the roof’s framing, slope, drainage and details before proposing a system.' },
+          { title: 'Clear scope and pricing', text: 'You see the planned materials and work in writing before installation begins.' },
+          { title: 'One local team', text: 'Our local crews handle roofing projects across Los Angeles and Orange County, with project size matched to the property and scope.' },
+        ],
+      },
+      faqs: [
+        { q: 'Can every home support slate tile roofing?', a: 'Not necessarily. Slate is heavy, so the existing framing and project requirements need to be reviewed before choosing it. A roof evaluation is the right first step.' },
+        { q: 'What does slate roofing cost?', a: 'Cost depends on the roof, access, slate selection and the work needed beneath it. We inspect the roof and provide a written scope and price for the specific home.' },
+        { q: 'What if slate is not a fit for my home?', a: 'We can compare other options, including [concrete tile roofing](/tile-roofing/concrete/) and a complete [tile roof replacement](/tile-roofing/replacement/), based on the home and your goals.' },
+      ],
+      related: ['/tile-roofing/concrete/', '/tile-roofing/replacement/', '/tile-roofing/inspection/'],
+    },
+    {
+      slug: 'concrete',
+      keyword: 'concrete tile roofing',
+      title: 'Concrete Tile Roofing',
+      navLabel: 'Concrete Tile Roofing',
+      card: 'Explore concrete tile profiles and colors, with a roof system planned around the deck, underlayment and flashing.',
+      metaTitle: 'Concrete Tile Roofing in Los Angeles & Orange County',
+      metaDescription: 'Concrete tile roofing in Los Angeles & Orange County: compare profiles, colors and roof-system details with a local roofing crew. Request a roof evaluation.',
+      image: '/images/tile-roof-replacement.webp',
+      imageAlt: 'Concrete tile roof on a Southern California home',
+      hero: {
+        intro: 'Concrete tile roofing offers a range of profiles and colors for homes across Southern California. The complete roof system matters just as much as the tiles, so we plan the underlayment, flashing and drainage alongside the finish.',
+        highlights: ['Multiple profiles and color choices', 'Underlayment and flashing included in planning', 'Written scope before work begins'],
+      },
+      overview: {
+        paragraphs: [
+          'Concrete tile can suit many home styles, from Spanish-inspired architecture to newer Mediterranean designs. A successful installation starts with a roof evaluation and a clear plan for the deck, underlayment, flashing, tile profile and water flow.',
+          'If you are replacing an older tile roof, we compare the existing condition with the options for a complete replacement. If the tiles can be reused and the underlayment is the main concern, [tile lift & relay](/tile-roofing/lift-and-relay/) may be worth considering. We can also discuss [slate tile roofing](/tile-roofing/slate/) if you are exploring a natural-stone appearance.'
+        ],
+      },
+      process: {
+        subheading: 'How a concrete tile roof project works',
+        steps: [
+          { title: 'Evaluate the existing roof', text: 'We photograph the roof, check visible conditions and discuss your goals for the new system.' },
+          { title: 'Choose a profile and color', text: 'We review available concrete tile options and how they fit the home’s architecture and project scope.' },
+          { title: 'Plan the roof assembly', text: 'Your written scope covers removal as needed, underlayment, flashing, drainage and tile installation.' },
+          { title: 'Install and walk through', text: 'Our crew completes the approved work and reviews the finished project and photos with you.' },
+        ],
+      },
+      why: {
+        heading: 'Concrete Tile Roofing Planned for Your Home',
+        intro: 'The visible tile is only one part of a roof that needs to manage water and weather.',
+        points: [
+          { title: 'Tile and roof details together', text: 'We include the layers below the tile and the transitions that direct water into the project plan.' },
+          { title: 'Options explained clearly', text: 'We talk through profiles, colors and repair versus replacement based on what the roof needs.' },
+          { title: 'Local crews for projects of different sizes', text: 'Our small local roofing company takes on both focused tile work and larger roof projects across Los Angeles and Orange County.' },
+        ],
+      },
+      faqs: [
+        { q: 'What concrete tile styles are available?', a: 'Concrete tiles come in different profiles and colors. The options available for your project depend on the home, product selection and scope; we can review those during the estimate.' },
+        { q: 'Can you replace only damaged concrete tiles?', a: 'Often, yes. We inspect the surrounding tiles and underlayment, then explain whether a targeted [tile roof repair](/tile-roofing/repairs/) or more extensive work makes sense.' },
+        { q: 'Can concrete tile be installed over my existing roof?', a: 'That depends on the existing roof assembly and project requirements. We evaluate the roof and describe any tear-off or preparation needed in the written scope.' },
+      ],
+      related: ['/tile-roofing/slate/', '/tile-roofing/replacement/', '/tile-roofing/repairs/'],
     },
   ],
 };

@@ -28,7 +28,7 @@ export const LOCATION_PAGES = {
     ],
     faqs: [
       { q: 'Do you serve my Los Angeles neighborhood?', a: 'We work across the city, from the Hollywood Hills and Silver Lake to Sherman Oaks and Encino, with offices in the Fairfax area and in Woodland Hills. Check your ZIP code on the map on this page, or give us a call.' },
-      { q: 'What roof types do you work on in Los Angeles?', a: 'All of the common ones: [tile](/tile-roofing/), [shingle](/shingle-roofing/) and [flat](/flat-roofing/) roofs, plus standing seam metal. Plenty of homes here have more than one type, and one roof evaluation covers them all.' },
+      { q: 'What roof types do you work on in Los Angeles?', a: 'All of the common ones: [tile](/tile-roofing/), [shingle](/shingle-roofing/) and [flat](/flat-roofing/) roofs. Plenty of homes here have more than one type, and one roof evaluation covers them all.' },
       { q: 'Can you work on hillside homes?', a: 'Yes. Steep lots and narrow streets take extra planning for access, material deliveries and safety, and we build that into the written scope before work starts.' },
       { q: 'How do I get started?', a: 'Book a free roof evaluation. A roofer inspects your roof, photo-documents its condition and gives you a clear next step: repair, monitor, maintain or replace.' },
     ],
@@ -129,7 +129,6 @@ export const LOCATION_PAGES = {
       { q: 'Do you serve hillside homes in Glendale?', a: 'Yes. We work on homes in the Glendale foothills and canyons, and we plan access, deliveries and safety into the written scope before work begins.' },
       { q: 'What should I check after a Santa Ana wind event?', a: 'Look for shingles or tiles in the yard, lifted edges and debris piled in valleys and gutters. If you see any of those, a roofer-led inspection will show whether anything needs attention before the next rain.' },
       { q: 'Which Glendale neighborhoods do you work in?', a: 'All of Glendale, including Adams Hill, Rossmoyne, Verdugo Woodlands, Chevy Chase Canyon, Sparr Heights, Glenoaks Canyon and Montrose.' },
-      { q: 'Do you install standing seam metal roofs in Glendale?', a: 'Yes. [Standing seam metal roofing](/metal-roofing/standing-seam/) suits modern homes and additions, and metal is noncombustible, which many hillside homeowners value.' },
     ],
     nearby: ['burbank', 'pasadena', 'los-angeles'],
     final: { heading: 'Roofing Glendale Homes Can Count On', text: 'Start with a free roof evaluation, photos of what we find and a written scope for your Glendale home.' },
@@ -402,7 +401,7 @@ export const LOCATION_PAGES = {
     image: '/images/newport-beach-drone-view.webp',
     imagePosition: 'center 55%',
     metaTitle: 'Newport Beach Roofing & Roof Repair',
-    metaDescription: 'Newport Beach roofing for coastal homes: tile, shingle, flat and standing seam metal roof repair and replacement. Book a roofer-led free roof evaluation.',
+    metaDescription: 'Newport Beach roofing for coastal homes: tile, shingle and flat roof repair and replacement. Book a roofer-led free roof evaluation.',
     hero: {
       heading: 'Newport Beach roofing, built for coastal living.',
       sub: 'Roofer-led inspections and detail-first installs for homes from Corona del Mar to Newport Coast.',
@@ -410,8 +409,8 @@ export const LOCATION_PAGES = {
     intro: {
       heading: 'Roofing for Newport Beach, From the Islands to the Bluffs',
       paragraphs: [
-        'Newport Beach roofing has to handle constant coastal exposure. Homes on Balboa Island, Lido Isle and the Balboa Peninsula sit right in the salt air, while Corona del Mar, Newport Heights and Newport Coast see ocean wind and marine layer from the bluffs above. Roof styles range from tile and shingle to flat roofs and standing seam metal on modern homes.',
-        'We start with a roofer-led [free roof evaluation](#roof-check), photograph the areas coastal conditions affect most and explain what we find in plain English. That could lead to a [flat roof repair](/flat-roofing/repairs/), [standing seam metal roofing](/metal-roofing/standing-seam/) on a modern home, or a tile or shingle replacement, always with a written scope and price first.',
+        'Newport Beach roofing has to handle constant coastal exposure. Homes on Balboa Island, Lido Isle and the Balboa Peninsula sit right in the salt air, while Corona del Mar, Newport Heights and Newport Coast see ocean wind and marine layer from the bluffs above. Roof styles range from tile and shingle to flat roofs on homes of every age and style.',
+        'We start with a roofer-led [free roof evaluation](#roof-check), photograph the areas coastal conditions affect most and explain what we find in plain English. That could lead to a [flat roof repair](/flat-roofing/repairs/) or a tile or shingle replacement, always with a written scope and price first.',
       ],
     },
     neighborhoods: ['Corona del Mar', 'Balboa Island', 'Balboa Peninsula', 'Lido Isle', 'Newport Heights', 'Eastbluff', 'Dover Shores', 'Newport Coast'],
@@ -422,7 +421,6 @@ export const LOCATION_PAGES = {
     ],
     faqs: [
       { q: 'Which Newport Beach neighborhoods do you serve?', a: 'All of Newport Beach, including Corona del Mar, Balboa Island, the Balboa Peninsula, Lido Isle, Newport Heights, Eastbluff, Dover Shores and Newport Coast.' },
-      { q: 'Is standing seam metal a good choice near the ocean?', a: 'It can be, with the right finish and details. We talk through how metal performs in salt air, along with tile and other options, during your roof evaluation.' },
       { q: 'Do you work on homes on Balboa Island and the peninsula?', a: 'Yes. Tight lots and close neighbors there take careful planning for staging and cleanup, and we build that into the written scope.' },
       { q: 'Do you offer ongoing roof care for coastal homes?', a: 'Yes. Scheduled [roof care](/tile-roofing/roof-care/) helps catch salt-air wear early, with photo records from each visit.' },
     ],

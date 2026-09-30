@@ -2,7 +2,6 @@ import CityCards from '@/components/sections/CityCards';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
 import ProofBar from '@/components/sections/ProofBar';
-import ReviewStrip from '@/components/sections/ReviewStrip';
 import LocalIntro from '@/components/sections/LocalIntro';
 import RoofCheck from '@/components/sections/RoofCheck';
 import JsonLd from '@/components/ui/JsonLd';
@@ -47,7 +46,6 @@ export default function RegionPage({ region, page }) {
     <main id="top">
       <JsonLd data={schema} />
       <Hero crumbs={crumbs} eyebrow="Service Areas" title={page.hero.heading} intro={page.hero.intro} image={photo.src} imageAlt={photo.alt} imagePosition={photo.position} />
-      <ReviewStrip />
       <LocalIntro city={region.name} heading={page.intro.heading} paragraphs={page.intro.paragraphs} offices={offices} considerations={page.considerations} />
       <ProofBar />
       <CityCards regions={[region.slug]} blurbs={blurbs} heading={`Cities We Serve in ${region.name}`} />

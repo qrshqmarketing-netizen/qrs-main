@@ -9,9 +9,9 @@ export const SERVICE_OPTIONS = [
   'Tile lift & relay',
   'Flat roofing',
   'Shingle roofing',
-  'Metal roofing or gutters',
+  'Rain gutters',
   'Commercial or HOA roofing',
   'Not sure yet',
 ];
 
-export const ROOF_TYPES = ['Not sure', 'Tile', 'Shingle', 'Flat', 'Metal'];
+export const ROOF_TYPES = ['Not sure', 'Tile', 'Shingle', 'Flat'];

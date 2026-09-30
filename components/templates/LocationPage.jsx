@@ -1,7 +1,6 @@
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
 import ProofBar from '@/components/sections/ProofBar';
-import ReviewStrip from '@/components/sections/ReviewStrip';
 import LocalIntro from '@/components/sections/LocalIntro';
 import ProjectCarousel from '@/components/sections/ProjectCarousel';
 import RoofCheck from '@/components/sections/RoofCheck';
@@ -54,13 +53,12 @@ export default function LocationPage({ location, page, index = 0 }) {
         imagePosition={photo.position}
         label={`QRS roofing in ${city}`}
       />
-      <ReviewStrip />
       <LocalIntro city={city} heading={page.intro.heading} paragraphs={page.intro.paragraphs} offices={office ? [office] : []} neighborhoods={page.neighborhoods} considerations={page.considerations} />
       <ProofBar />
       <ProjectCarousel
         city={city}
         heading={`Roofing Projects in ${city}`}
-        sub="Tile, shingle, flat and metal roofing, done the detail-first way. Pick a project to see how we handle that kind of work."
+        sub="Tile, shingle and flat roofing, done the detail-first way. Pick a project to see how we handle that kind of work."
         projects={projectsFor(slug)}
       />
       <RoofCheck offer={page.offer || 'home'} />

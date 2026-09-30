@@ -5,7 +5,7 @@ import { PHONE, TEL } from '@/data/site';
 // Content: ROOF_FINANCING in data/services/programs.js. The first button opens the Instant Quote (example payments).
 export const metadata = singleMetadata(FINANCING);
 
-export default function FinancingPage() {
+export default function RoofFinancingPage() {
   return (
     <SinglePage
       single={FINANCING}

@@ -2,7 +2,6 @@ import Faq from '@/components/sections/Faq';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
 import ProofBar from '@/components/sections/ProofBar';
-import ReviewStrip from '@/components/sections/ReviewStrip';
 import ProcessSteps from '@/components/sections/ProcessSteps';
 import ValueGrid from '@/components/sections/ValueGrid';
 import JsonLd from '@/components/ui/JsonLd';
@@ -40,7 +39,6 @@ export default function CareersPage() {
           { label: `Call ${PHONE}`, href: TEL, style: 'line' },
         ]}
       />
-      <ReviewStrip />
       <ValueGrid heading={page.values.heading} items={page.values.items} tone="wash" pattern />
       <ProofBar />
       <ValueGrid id="roles" heading={page.roles.heading} intro={page.roles.intro} items={page.roles.items} />

@@ -6,7 +6,7 @@ export const REGION_PAGES = {
   'la-county': {
     keyword: 'los angeles county roofing',
     metaTitle: 'Los Angeles County Roofing',
-    metaDescription: 'Los Angeles County roofing from our Los Angeles, Valley and Vernon offices: tile, shingle, flat and metal roof repair and replacement. Book a free roof evaluation.',
+    metaDescription: 'Los Angeles County roofing from our Los Angeles, Valley and Vernon offices: tile, shingle and flat roof repair and replacement. Book a free roof evaluation.',
     hero: {
       heading: 'Los Angeles County Roofing Services',
       intro: 'From the beach cities to the San Fernando Valley, Los Angeles County roofing takes local know-how. Our Los Angeles, Valley and Vernon offices serve homes and businesses across the county — homes start with a roofer-led [free roof evaluation](#roof-check), and commercial buildings start with a roofer-led survey.',
@@ -36,7 +36,7 @@ export const REGION_PAGES = {
     image: '/images/orange-county-drone-view.webp',
     imageAlt: 'Aerial view of Orange County suburban neighborhoods with hills in the background',
     metaTitle: 'Orange County Roofing Services',
-    metaDescription: 'Orange County roofing for homes, HOAs and businesses from Anaheim to Newport Beach: tile, shingle, flat and metal roofs. Book a free roof evaluation for your home today.',
+    metaDescription: 'Orange County roofing for homes, HOAs and businesses from Anaheim to Newport Beach: tile, shingle and flat roofs. Book a free roof evaluation for your home today.',
     hero: {
       heading: 'Orange County Roofing Services',
       intro: 'Orange County roofing means coastal homes, master-planned communities and busy commercial centers. We serve homes, HOAs and businesses across the county — homes start with a roofer-led [free roof evaluation](#roof-check), and commercial and larger HOA properties start with a roofer-led survey.',

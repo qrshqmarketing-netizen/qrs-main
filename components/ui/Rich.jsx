@@ -5,7 +5,6 @@ const PRODUCT_BRANDS = new Set([
   'HardShell',
   'TotalShield',
   'FlatGuard',
-  'LockSeam',
   'LeakRescue',
   'RoofScan 360',
   'SecondLife',

@@ -47,6 +47,8 @@ export const COMMERCIAL_CONTENT = {
       card: 'Roof surveys, repairs and replacement for office buildings, planned around your tenants and documented for owners and property managers.',
       metaTitle: 'Office Building Roofing in Los Angeles',
       metaDescription: 'Office building roofing in Los Angeles & Orange County: leak repairs, rooftop HVAC flashing and replacement planned around tenants. Request a roof survey.',
+      image: '/images/office-building-hero.webp',
+      imageAlt: 'Modern office building exterior beneath a clear Southern California sky',
       hero: {
         intro: 'When the roof leaks over an occupied office, the calls start coming in. We find where the water gets in, repair it with photo documentation and plan larger roof work so your tenants can keep working.',
         highlights: ['Work planned around your tenants', 'Curbs and flashings at rooftop HVAC', 'Photo-documented findings for owners'],

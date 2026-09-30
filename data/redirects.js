@@ -1,5 +1,5 @@
 // Permanent redirects from the old WordPress site's addresses to their new pages (used by next.config.mjs).
-// Old addresses that match a new page exactly (/contact-us/, /financing/, /service-areas/la-county/glendale/, …)
+// Old addresses that match a new page exactly (/contact-us/, /service-areas/la-county/glendale/, …)
 // need no redirect and aren't listed. Plain data with no imports, so next.config.mjs can load it directly.
 // Cities without their own page go to the nearest city page when they border it, otherwise to their region page.
 
@@ -36,6 +36,7 @@ export const BLOG_SLUGS = [
 ];
 
 export const REDIRECTS = [
+  ['/financing/', '/roof-financing/'],
   // Service pages
   ['/residential-roofing-services/', '/residential-roofing/'],
   ['/residential-roofing-services/roof-repair/', '/roof-repair/'],

@@ -1,8 +1,8 @@
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
-import ProofBar from '@/components/sections/ProofBar';
 import ReviewStrip from '@/components/sections/ReviewStrip';
 import Overview from '@/components/sections/Overview';
+import PartnerLogos from '@/components/sections/PartnerLogos';
 import ProcessSteps from '@/components/sections/ProcessSteps';
 import RoofCheck from '@/components/sections/RoofCheck';
 import WhyChoose from '@/components/sections/WhyChoose';
@@ -34,11 +34,12 @@ export default function ServicePage({ page, crumbs, eyebrow, scenes = [], offer,
         intro={page.hero.intro}
         image={page.image}
         imageAlt={page.imageAlt}
+        stats
         {...(actions && { actions })}
       />
-      <ReviewStrip />
       <Overview paragraphs={page.overview.paragraphs} />
-      <ProofBar />
+      {page.showReviews !== false && <ReviewStrip />}
+      {page.partners && <PartnerLogos {...page.partners} />}
       <ProcessSteps
         heading={page.process.heading}
         subheading={page.process.subheading}

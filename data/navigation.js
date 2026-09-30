@@ -5,7 +5,7 @@
 import { citiesIn, cityPath, REGIONS, regionPath } from './locations';
 import { PHONE, PRIVACY_POLICY_URL, TEL } from './site';
 
-// Roof Repair, Replacement, Inspection, Emergency, Maintenance Plans and Financing: shown in their own
+// Roof Repair, Replacement, Inspection, Emergency and Maintenance Plans: shown in their own
 // top-level "Services" menu (below), not nested under Residential, since they serve every roof type.
 export const SERVICES_MENU = {
   title: 'Roofing Services',
@@ -16,7 +16,6 @@ export const SERVICES_MENU = {
     { label: 'Emergency & Storm Damage', href: '/emergency-roof-repair/', urgent: true },
     { label: 'Roof Tune-Ups', href: '/roof-tune-ups/' },
     { label: 'Roof Maintenance Plans', href: '/roof-maintenance-plans/' },
-    { label: 'Financing', href: '/financing/' },
   ],
 };
 
@@ -42,6 +41,8 @@ export const RESIDENTIAL_MENU = {
         { label: 'Roof Replacement', note: 'New tile roof', href: '/tile-roofing/replacement/' },
         { label: 'Roof Repairs', href: '/tile-roofing/repairs/' },
         { label: 'Lift & Relay', note: 'Reset & re-paper', href: '/tile-roofing/lift-and-relay/' },
+        { label: 'Slate Tile Roofing', href: '/tile-roofing/slate/' },
+        { label: 'Concrete Tile Roofing', href: '/tile-roofing/concrete/' },
         { label: 'Inspections', href: '/tile-roofing/inspection/' },
       ],
     },
@@ -54,15 +55,6 @@ export const RESIDENTIAL_MENU = {
         { label: 'Roof Repairs', href: '/flat-roofing/repairs/' },
         { label: 'New Installations', href: '/flat-roofing/installation/' },
         { label: 'Inspections', href: '/flat-roofing/inspection/' },
-      ],
-    },
-    {
-      id: 'mega-metal',
-      label: 'Metal Roofing',
-      all: { label: 'All Metal Roofing', href: '/metal-roofing/' },
-      links: [
-        { label: 'Standing Seam', href: '/metal-roofing/standing-seam/' },
-        { label: 'Rain Gutters', href: '/rain-gutters/' },
       ],
     },
   ],
@@ -177,7 +169,7 @@ export const FOOTER = {
         { label: 'Roof Repair', href: '/roof-repair/' },
         { label: 'Roof Replacement', href: '/roof-replacement/' },
         { label: 'Maintenance Plans', href: '/roof-maintenance-plans/' },
-        { label: 'Financing', href: '/financing/' },
+        { label: 'Roof Financing', href: '/roof-financing/' },
       ],
     },
     {

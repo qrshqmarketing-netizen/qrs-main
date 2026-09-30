@@ -39,7 +39,7 @@ export const ABOUT_PAGE = {
     items: [
       { title: 'Field Inspectors & Lead Roofers', text: 'Every $199 Roof Check is done by a field inspector, lead roofer or estimator on our own team — never a subcontractor.' },
       { title: 'Senior Production Manager', text: '30 years overseeing roofing projects, managing our crews and quality control on every job.' },
-      { title: '12 Crews, Every Roof Type', text: 'Dedicated crews for shingle, tile, flat and metal roofing, with vetted subcontractors brought in only during overflow.' },
+      { title: '12 Crews, Every Roof Type', text: 'Dedicated crews for shingle, tile and flat roofing, with vetted subcontractors brought in only during overflow.' },
       { title: 'Bilingual Office & Field Staff', text: 'Our team communicates in English, Spanish and Tagalog.' },
     ],
   },

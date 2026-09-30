@@ -1,5 +1,5 @@
 // Single service pages: /rain-gutters/ and /hoa-multi-family/.
-// RAIN_GUTTERS.card also appears in the card grid on the metal roofing hub.
+// RAIN_GUTTERS is a stand-alone service page.
 
 export const RAIN_GUTTERS = {
   slug: 'rain-gutters',
@@ -51,7 +51,7 @@ export const RAIN_GUTTERS = {
   why: {
     heading: 'Why Choose QRS for Rain Gutters?',
     intro:
-      'Gutters are where your roof hands off its water, whether it’s tile, shingle or [standing seam metal](/metal-roofing/standing-seam/), so they get the same detail-first attention as the roof itself.',
+      'Gutters are where your roof hands off its water, whether it’s tile, shingle or flat, so they get the same detail-first attention as the roof itself.',
     points: [
       {
         title: 'A roofer’s eye on drainage',
@@ -93,7 +93,7 @@ export const RAIN_GUTTERS = {
       a: 'Away from the house. Extensions or splash blocks carry water clear of the foundation instead of letting it soak the soil at the base of your walls. We’ll point out any downspouts that empty onto walkways or back toward the house.',
     },
   ],
-  related: ['/metal-roofing/standing-seam/', '/shingle-roofing/roof-care/', '/tile-roofing/roof-care/'],
+  related: ['/shingle-roofing/roof-care/', '/tile-roofing/roof-care/'],
 };
 
 export const HOA_MULTI_FAMILY = {

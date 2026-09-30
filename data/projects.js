@@ -88,7 +88,6 @@ export const PLACEHOLDER_PROJECTS = [
   },
   { title: 'Tile Lift & Relay', label: 'Tile roofing', scene: 'scene-tile' },
   { title: 'Flat Roof Replacement', label: 'Flat roofing', scene: 'scene-flat' },
-  { title: 'Standing Seam Metal', label: 'Metal roofing', scene: 'scene-metal' },
   {
     title: 'HOA & Multi-Family Roofing',
     label: 'Communities',

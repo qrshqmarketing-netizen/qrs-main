@@ -4,7 +4,6 @@ import FeatureBand from '@/components/sections/FeatureBand';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
 import ProofBar from '@/components/sections/ProofBar';
-import ReviewStrip from '@/components/sections/ReviewStrip';
 import Overview from '@/components/sections/Overview';
 import ProcessSteps from '@/components/sections/ProcessSteps';
 import RelatedLinks from '@/components/sections/RelatedLinks';
@@ -51,7 +50,6 @@ export default function ContractorsPage() {
           { label: `Call ${PHONE}`, href: TEL, style: 'line' },
         ]}
       />
-      <ReviewStrip />
       <Overview heading={page.overview.heading} paragraphs={page.overview.paragraphs} />
       <ProofBar />
       <ValueGrid heading={page.audiences.heading} items={page.audiences.points} tone="wash" />

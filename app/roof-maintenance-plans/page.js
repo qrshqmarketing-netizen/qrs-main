@@ -3,8 +3,6 @@ import Faq from '@/components/sections/Faq';
 import FeatureBand from '@/components/sections/FeatureBand';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
-import ProofBar from '@/components/sections/ProofBar';
-import ReviewStrip from '@/components/sections/ReviewStrip';
 import PlanScope from '@/components/sections/PlanScope';
 import ProcessSteps from '@/components/sections/ProcessSteps';
 import RoofCheck from '@/components/sections/RoofCheck';
@@ -28,10 +26,8 @@ export default function RoofMaintenancePlansPage() {
   return (
     <main id="top">
       <JsonLd data={schema} />
-      <Hero crumbs={CRUMBS} eyebrow="Maintenance Plans" title={page.hero.heading} intro={page.hero.intro} />
-      <ReviewStrip />
+      <Hero crumbs={CRUMBS} eyebrow="Maintenance Plans" title={page.hero.heading} intro={page.hero.intro} stats />
       <ValueGrid heading={page.whatGoesWrong.heading} items={page.whatGoesWrong.items} tone="wash" pattern />
-      <ProofBar />
       <CarePlanPricing />
       <PlanScope />
       <ProcessSteps heading={page.schedule.heading} steps={page.schedule.steps} scene="scene-inspect" tone="white" />
