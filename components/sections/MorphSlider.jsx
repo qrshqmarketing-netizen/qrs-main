@@ -1,6 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
 import { Mesh, Program, Renderer, Texture, Triangle } from 'ogl';
 import { gsap } from 'gsap';
 import './MorphSlider.css';
@@ -479,6 +480,7 @@ export default function MorphSlider({
 }) {
   const containerRef = useRef(null);
   const engineRef = useRef(null);
+  const draggedRef = useRef(false);
   const [index, setIndex] = useState(startIndex);
   const [hovering, setHovering] = useState(false);
 
@@ -517,14 +519,17 @@ export default function MorphSlider({
   }, [autoplay, autoplayDelay, hovering, index]);
 
   useEffect(() => {
-    const el = containerRef.current;
-    if (!el) return undefined;
+    const stage = containerRef.current;
+    const el = stage?.parentElement;
+    if (!stage || !el) return undefined;
     let startX = 0;
     let width = 1;
     let active = false;
 
     const onDown = (e) => {
-      const rect = el.getBoundingClientRect();
+      if (!e.target.closest('.morph-slider-stage, .morph-slider-project-link')) return;
+      draggedRef.current = false;
+      const rect = stage.getBoundingClientRect();
       width = rect.width || 1;
       startX = e.clientX;
       const px = (e.clientX - rect.left) / rect.width;
@@ -542,6 +547,7 @@ export default function MorphSlider({
     const onMove = (e) => {
       if (!active) return;
       const ndx = (e.clientX - startX) / width;
+      if (Math.abs(ndx) > 0.015) draggedRef.current = true;
       engineRef.current?.drag(ndx);
     };
     const onUp = () => {
@@ -577,6 +583,7 @@ export default function MorphSlider({
   );
 
   const hasCaptions = items.some((item) => item.caption);
+  const activeLink = items[index]?.href;
 
   return (
     <div
@@ -591,6 +598,21 @@ export default function MorphSlider({
       {...props}
     >
       <div ref={containerRef} className="morph-slider-stage" role="group" aria-roledescription="carousel" aria-label="Image morph slider" tabIndex={0} onKeyDown={onKeyDown} />
+
+      {activeLink && (
+        <Link
+          className="morph-slider-project-link"
+          href={activeLink}
+          aria-label={`View project: ${items[index].caption || 'project details'}`}
+          title={`View project: ${items[index].caption || 'project details'}`}
+          onClick={(e) => {
+            if (draggedRef.current) {
+              e.preventDefault();
+              draggedRef.current = false;
+            }
+          }}
+        />
+      )}
 
       {showCaptions && hasCaptions && (
         <div className="morph-slider-caption" aria-live="polite">

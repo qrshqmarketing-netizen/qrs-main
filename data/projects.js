@@ -16,7 +16,15 @@
 // A tile with a photo opens it in the full-screen gallery (ProjectLightbox); tiles without one just show the
 // roof-type artwork below and aren't clickable.
 
+import { MID_WILSHIRE_PROJECT } from './pages/mid-wilshire-project';
+
 export const PROJECTS = [
+  {
+    title: 'Multi-Family Tile & Flat Roofing in Mid-Wilshire 90019',
+    image: MID_WILSHIRE_PROJECT.image,
+    alt: MID_WILSHIRE_PROJECT.imageAlt,
+    href: MID_WILSHIRE_PROJECT.path,
+  },
   {
     city: 'vernon',
     title: 'Shingle Roof Replacement',

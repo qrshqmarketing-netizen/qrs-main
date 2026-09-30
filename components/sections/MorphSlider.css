@@ -29,6 +29,18 @@
   height: 100%;
 }
 
+.morph-slider-project-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.morph-slider-project-link:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: -5px;
+}
+
 .morph-slider-caption {
   position: absolute;
   left: 22px;

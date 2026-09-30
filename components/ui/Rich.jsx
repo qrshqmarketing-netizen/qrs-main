@@ -2,6 +2,7 @@ import { RICH_TOKEN } from '@/lib/richText';
 import SiteLink from './SiteLink';
 
 const PRODUCT_BRANDS = new Set([
+  'HardShell',
   'TotalShield',
   'FlatGuard',
   'LockSeam',

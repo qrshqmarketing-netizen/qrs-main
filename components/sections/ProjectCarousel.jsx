@@ -25,7 +25,7 @@ export default function ProjectCarousel({ city, heading, sub, projects = [], id 
         </div>
         <div className="project-carousel-frame">
           <MorphSlider
-            items={photos.map((p) => ({ image: p.image, caption: caption(p) }))}
+            items={photos.map((p) => ({ image: p.image, caption: caption(p), href: p.href }))}
             transition="melt"
             intensity={0.55}
             aberration={0.35}

@@ -1,43 +1,46 @@
-import FinalCta from '@/components/sections/FinalCta';
-import Hero from '@/components/sections/Hero';
-import ProofBar from '@/components/sections/ProofBar';
-import ReviewStrip from '@/components/sections/ReviewStrip';
+import Breadcrumbs from '@/components/sections/Breadcrumbs';
 import ProjectCarousel from '@/components/sections/ProjectCarousel';
-import RoofCheck from '@/components/sections/RoofCheck';
+import Rich from '@/components/ui/Rich';
 import JsonLd from '@/components/ui/JsonLd';
 import { HOME, PROJECTS_LINK } from '@/data/catalog';
+import { MID_WILSHIRE_PROJECT } from '@/data/pages/mid-wilshire-project';
 import { PROJECTS_PAGE as page } from '@/data/pages/projects';
 import { allProjects } from '@/data/projects';
 import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
+import './projects.css';
 
 export const metadata = pageMetadata({ title: page.metaTitle, description: page.metaDescription, path: PROJECTS_LINK.href });
 
 const CRUMBS = [HOME, PROJECTS_LINK];
-const HERO_IMAGE = '/images/projects-hero-round-roof-drone-view.webp';
-const schema = pageJsonLd({ path: PROJECTS_LINK.href, title: page.metaTitle, description: page.metaDescription, type: 'CollectionPage', crumbs: CRUMBS, image: HERO_IMAGE });
+const schema = pageJsonLd({
+  path: PROJECTS_LINK.href,
+  title: page.metaTitle,
+  description: page.metaDescription,
+  type: 'CollectionPage',
+  crumbs: CRUMBS,
+  image: MID_WILSHIRE_PROJECT.image,
+});
 
-// Projects page: every project in data/projects.js (temporary stand-ins until the CRM feed), then the services behind them
 export default function ProjectsPage() {
   return (
-    <main id="top">
+    <main id="top" className="projects-hub">
       <JsonLd data={schema} />
-      <Hero
-        crumbs={CRUMBS}
-        eyebrow="Projects"
-        title={page.hero.heading}
-        intro={page.hero.intro}
-        image={HERO_IMAGE}
-        imageAlt="Aerial view of a round flat roof surrounded by trees"
-        imagePosition="center 45%"
-      />
-      <ReviewStrip />
-      <ProjectCarousel heading={page.gallery.heading} sub={page.gallery.sub} projects={allProjects()} id="work" pattern />
-      <ProofBar />
-      <RoofCheck tone="white" />
-      <FinalCta
-        heading="Want Results Like These?"
-        text="Tell us about your roof. A roofer looks at it and gives you a written scope and price for work like the projects above."
+      <section className="projects-hub-intro">
+        <div className="container">
+          <Breadcrumbs items={CRUMBS} />
+          <div className="projects-hub-copy">
+            <h1>{page.hero.heading}</h1>
+            <p><Rich text={page.hero.intro} /></p>
+          </div>
+        </div>
+      </section>
+      <ProjectCarousel
+        heading={page.gallery.heading}
+        sub={page.gallery.sub}
+        projects={allProjects()}
+        id="work"
+        pattern
       />
     </main>
   );

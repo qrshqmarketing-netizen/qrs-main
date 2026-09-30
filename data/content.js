@@ -21,6 +21,7 @@ import {
   TERMS_LINK,
 } from './catalog';
 import { BLOG_POSTS } from './blog/posts';
+import { MID_WILSHIRE_PROJECT } from './pages/mid-wilshire-project';
 import { cityPath, LOCATIONS, REGIONS, regionPath } from './locations';
 import { COMMERCIAL_CONTENT } from './services/commercial';
 import { COMMERCIAL_SERVICES } from './services/commercialServices';
@@ -106,6 +107,7 @@ export const ALL_PATHS = [
   LOCATIONS_LINK.href,
   ...REGIONS.flatMap((r) => [regionPath(r.slug), ...LOCATIONS.filter((l) => l.region === r.slug).map((l) => cityPath(l.slug))]),
   PROJECTS_LINK.href,
+  MID_WILSHIRE_PROJECT.path,
   REVIEWS_LINK.href,
   BLOG_LINK.href,
   ...BLOG_POSTS.map((p) => blogPath(p.slug)),

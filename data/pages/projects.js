@@ -8,10 +8,10 @@ export const PROJECTS_PAGE = {
   hero: {
     heading: 'Our Roofing Projects',
     intro:
-      'A look at the roofing projects our crews take on: tile, shingle, flat and metal roofs for homes, HOAs and commercial buildings. Every one starts with a roofer-led [free roof evaluation](#roof-check) and ends with a final walkthrough.',
+      'Browse roofing projects from homes, communities and commercial properties across Southern California, featuring tile, shingle, flat and metal roof work.',
   },
   gallery: {
     heading: 'Recent Work',
-    sub: 'Pick a project to see how we handle that kind of roof.',
+    sub: 'A selection of roofing work from across our service area.',
   },
 };
