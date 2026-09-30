@@ -286,7 +286,7 @@ export default function Header() {
             </div>
           </div>
 
-          <MenuLink href={CONTRACTORS_LINK.href}>{CONTRACTORS_LINK.label}</MenuLink>
+          <MenuLink href={CONTRACTORS_LINK.href}>For Contractors</MenuLink>
         </nav>
 
         {/* Gold: book a Roof Check. Red: call now (the number shows on wide screens, an icon elsewhere). */}

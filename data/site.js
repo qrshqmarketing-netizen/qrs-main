@@ -74,10 +74,10 @@ export const HOME_DESCRIPTION =
 
 // Short trust points in the bar under the hero
 export const PROOF_POINTS = [
-  { title: 'Since 2020', text: 'Licensed, bonded & insured' },
-  { title: 'SoCal', text: 'Local service area' },
+  { title: 'CSLB #1061942', text: 'Licensed, bonded & insured' },
+  { title: 'Google Reviews', text: 'Homes & businesses' },
   { title: '10-Year', text: 'Workmanship warranty' },
-  { title: '270', text: '5-star Google reviews' },
+  { title: 'Roofer-Led', text: 'Inspections and estimates' },
 ];
 
 // Process video. Set `embed` to a YouTube embed URL like 'https://www.youtube.com/embed/VIDEO_ID'.

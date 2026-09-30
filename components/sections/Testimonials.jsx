@@ -33,7 +33,7 @@ export default function Testimonials({ showVideo = true, showReviews = true }) {
                 <GoogleLogo className="g-logo" />
                 <div>
                   <b>Google Reviews</b>
-                  <span>5-star reviews from real QRS customers</span>
+                  <span>Reviews from local customers</span>
                 </div>
               </div>
             </div>
