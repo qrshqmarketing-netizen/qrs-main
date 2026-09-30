@@ -7,7 +7,6 @@ import { FINANCE, FINANCING_URL, LEAD_ENDPOINT, PRICING } from '@/data/instantQu
 import { PHONE, TEL } from '@/data/site';
 import { loadLeaflet, qrsPin } from '@/lib/leaflet';
 import { buildingInsights, DEMO, fmt, geocode, money, monthly, myLocation, priceFor, styleOf, summarize } from '@/lib/roofQuote';
-import { local } from '@/lib/storage';
 import './InstantQuote.css';
 
 const STEPS = ['Address', 'Your roof', 'Contact', 'Estimate'];
@@ -40,7 +39,6 @@ function toggle(list, value, order, alone) {
 // Prices and settings live in data/instantQuote.js; the measuring logic in lib/roofQuote.js.
 export default function InstantQuote() {
   const [open, setOpen] = useState(false);
-  const [peek, setPeek] = useState(false); // first-visit preview slide-out
   const [step, setStep] = useState(1);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState(null);
@@ -101,38 +99,6 @@ export default function InstantQuote() {
     };
     document.addEventListener('click', onClick);
     return () => document.removeEventListener('click', onClick);
-  }, []);
-
-  // On a visitor's first page load, slide the drawer out briefly so they see what the tab does.
-  // Touching the drawer during the preview keeps it open.
-  useEffect(() => {
-    if (local.get('rmPeekSeen')) return;
-    const drawer = drawerRef.current;
-    let t1, t2;
-    const keep = () => {
-      setPeek(false);
-      openDrawer();
-    };
-    const start = () => {
-      t1 = setTimeout(() => {
-        local.set('rmPeekSeen', '1');
-        if (openRef.current) return;
-        setPeek(true);
-        drawer.addEventListener('pointerdown', keep, { once: true });
-        t2 = setTimeout(() => {
-          drawer.removeEventListener('pointerdown', keep);
-          setPeek(false);
-        }, 2200);
-      }, 800);
-    };
-    if (document.readyState === 'complete') start();
-    else window.addEventListener('load', start, { once: true });
-    return () => {
-      window.removeEventListener('load', start);
-      drawer.removeEventListener('pointerdown', keep);
-      clearTimeout(t1);
-      clearTimeout(t2);
-    };
   }, []);
 
   // ----- Step 1 → 2 -----
@@ -285,7 +251,7 @@ export default function InstantQuote() {
     : '';
 
   return (
-    <div className={'rm' + (open ? ' open' : '') + (peek ? ' peek' : '') + (manual ? ' rm-manual' : '')} id="rm" data-step={step}>
+    <div className={'rm' + (open ? ' open' : '') + (manual ? ' rm-manual' : '')} id="rm" data-step={step}>
       <button className="rm-tab" type="button" id="rmTab" ref={tabRef} aria-controls="rmDrawer" aria-expanded={open} onClick={openDrawer}>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <path d="M3 11 12 4l9 7" />
@@ -296,7 +262,7 @@ export default function InstantQuote() {
       </button>
       <div className="rm-shade" id="rmShade" onClick={closeDrawer}></div>
 
-      <aside className="rm-drawer" id="rmDrawer" ref={drawerRef} role="dialog" aria-modal="true" aria-labelledby="rmTitle" inert={!open && !peek} onKeyDown={onDrawerKeyDown}>
+      <aside className="rm-drawer" id="rmDrawer" ref={drawerRef} role="dialog" aria-modal="true" aria-labelledby="rmTitle" inert={!open} onKeyDown={onDrawerKeyDown}>
         <header className="rm-head">
           <div>
             <span>Free roof measurement · 30 seconds</span>
@@ -542,8 +508,8 @@ export default function InstantQuote() {
               </a>
             </div>
 
-            <p>A ballpark from your answers, not a final quote. Your exact price comes in a written scope after a roofer-led Roof Check on site.</p>
-            <a className="btn btn-gold" href={TEL}>Book my $199 Roof Check · {PHONE}</a>
+            <p>A ballpark from your answers, not a final quote. Your exact price comes in a written scope after a free roof evaluation on site.</p>
+            <a className="btn btn-gold" href={TEL}>Book my free roof evaluation · {PHONE}</a>
             <button className="rm-link" type="button" id="rmAgain" onClick={startOver}>Start over with another roof</button>
           </section>
         </div>

@@ -55,7 +55,10 @@ export default function BlogPost({ post }) {
       </article>
       <RelatedLinks heading="Related services" links={relatedLinks(post.related)} />
       <RoofCheck />
-      <FinalCta />
+      <FinalCta
+        heading="Have a Question About Your Roof?"
+        text="An article only goes so far. A roofer, not a salesperson, can look at your roof and give you a clear next step with a written scope and price."
+      />
     </main>
   );
 }

@@ -31,7 +31,7 @@ export const GOOGLE_REVIEWS = [
     name: 'Kelsey Breadmont',
     url: 'https://www.google.com/maps/contrib/114865948403606358586/reviews?hl=en',
     date: '4 months ago',
-    color: '#e37400',
+    color: '#b35900',
     text: 'I was recommended this roofing company by a friend, and I’m really glad I went with them. I had a problem with water leaking into my attic from the flashing around the chimney, and the team was very helpful from the start. Tony was the roofer working with me, and he was always professional and friendly. He took care of resealing the flashing and chimney, which made the leak much better right away. He kept in touch with me after the work, and now we’re working on sealing the chimney even more to make sure everything is perfect. I feel confident that the team will get everything fixed up right. Based on my experience so far, I’d definitely give them five stars. Thanks to everyone there for their hard work!',
   },
   {

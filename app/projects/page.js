@@ -1,5 +1,7 @@
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
+import ProofBar from '@/components/sections/ProofBar';
+import ReviewStrip from '@/components/sections/ReviewStrip';
 import ProjectCarousel from '@/components/sections/ProjectCarousel';
 import RoofCheck from '@/components/sections/RoofCheck';
 import JsonLd from '@/components/ui/JsonLd';
@@ -29,9 +31,14 @@ export default function ProjectsPage() {
         imageAlt="Aerial view of a round flat roof surrounded by trees"
         imagePosition="center 45%"
       />
+      <ReviewStrip />
       <ProjectCarousel heading={page.gallery.heading} sub={page.gallery.sub} projects={allProjects()} id="work" pattern />
+      <ProofBar />
       <RoofCheck tone="white" />
-      <FinalCta />
+      <FinalCta
+        heading="Want Results Like These?"
+        text="Tell us about your roof. A roofer looks at it and gives you a written scope and price for work like the projects above."
+      />
     </main>
   );
 }

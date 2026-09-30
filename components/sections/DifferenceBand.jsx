@@ -5,7 +5,7 @@ const POINTS = [
   {
     icon: 'roof-check',
     title: 'Roofer first. No pressure.',
-    text: 'Every project starts with a roofer-led Roof Check, not a sales pitch. You get photos, plain-English answers and a clear next step.',
+    text: 'Every project starts with a free roof evaluation, not a sales pitch. You get photos, plain-English answers and a clear next step.',
   },
   {
     icon: 'quote',

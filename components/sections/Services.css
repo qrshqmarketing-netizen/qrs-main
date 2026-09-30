@@ -1,7 +1,7 @@
 /* ---------- Services / Roofing Types: sticky intro + photo-card grid ---------- */
 .services{background:#fff;padding:56px 0}
 .svc-layout{display:grid;grid-template-columns:1fr;gap:36px}
-.svc-intro .eyebrow{margin-bottom:14px}
+.svc-intro .eyebrow{color:var(--gold-ink);margin-bottom:14px}
 .svc-intro h2{color:var(--navy);font-size:var(--h2);margin-bottom:22px}
 .svc-intro .btn{min-height:48px;padding:9px 24px;border-radius:999px;font-size:17px}
 
@@ -13,9 +13,10 @@
 .svc-media:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.8) 100%);pointer-events:none}
 .svc-caption{
   position:absolute;left:0;right:0;bottom:0;z-index:1;padding:16px;margin:0;
-  font-family:var(--font-body);font-size:15px;font-weight:300;line-height:1.65;color:#fff;
+  font-family:var(--font-body);font-size:15px;font-weight:500;line-height:1.65;color:#fff;
 }
-.svc-caption b{color:#fff;font-weight:600}
+.svc-caption h3{color:#fff;font-size:24px;font-weight:600;line-height:1.1;letter-spacing:.01em;margin:0 0 8px}
+.svc-caption p{margin:0;color:#fff}
 
 @media (min-width:621px){
   .services{padding:30px 0 96px}
@@ -23,6 +24,7 @@
   .svc-intro h2{margin-bottom:26px}
   .svc-grid{grid-template-columns:1fr 1fr;gap:32px 28px}
   .svc-caption{font-size:16px;padding:20px}
+  .svc-caption h3{font-size:26px}
 }
 @media (min-width:901px){
   .svc-layout{grid-template-columns:minmax(0,.8fr) minmax(0,1.3fr);gap:56px}
@@ -42,4 +44,5 @@
   .svc-compact .svc-intro{position:static;top:auto}
   .svc-compact .svc-grid{grid-template-columns:1fr 1fr;gap:48px}
   .svc-compact .svc-caption{font-size:18px}
+  .svc-compact .svc-caption h3{font-size:32px}
 }

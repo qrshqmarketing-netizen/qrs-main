@@ -4,7 +4,7 @@ import 'leaflet/dist/leaflet.css';
 import './globals.css';
 
 import Script from 'next/script';
-import { Instrument_Serif, Open_Sans } from 'next/font/google';
+import { Open_Sans, Roboto_Condensed } from 'next/font/google';
 import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
 import CookieNotice from '@/components/widgets/CookieNotice';
@@ -16,8 +16,8 @@ import { ALLOW_INDEXING, openGraphBase, twitterBase } from '@/lib/seo';
 
 // Google Fonts, downloaded at build time and served from this site
 const openSans = Open_Sans({ subsets: ['latin'], weight: ['300', '400', '500', '600', '700', '800'], variable: '--font-open-sans' });
-// Editorial serif for the home hero headline only (components/sections/Hero.css)
-const instrumentSerif = Instrument_Serif({ subsets: ['latin'], weight: '400', variable: '--font-serif' });
+// Uppercase condensed display face for every heading (h1–h6 and the hero headline)
+const robotoCondensed = Roboto_Condensed({ subsets: ['latin'], weight: ['500', '600', '700'], variable: '--font-condensed' });
 
 // Defaults for every page. A page's own `metadata` export overrides these.
 export const metadata = {
@@ -53,7 +53,7 @@ export const viewport = {
 // Header, footer and the floating widgets appear on every page
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={openSans.variable + ' ' + instrumentSerif.variable} data-scroll-behavior="smooth">
+    <html lang="en" className={openSans.variable + ' ' + robotoCondensed.variable} data-scroll-behavior="smooth">
       <body>
         {ALLOW_INDEXING && (
           <noscript>

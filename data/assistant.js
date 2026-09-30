@@ -13,10 +13,10 @@ import { formatDate } from '@/lib/dates';
 export const CHAT_ENDPOINT = process.env.NEXT_PUBLIC_CHAT_ENDPOINT || '/api/chat/';
 
 const call = `<a href="${TEL}">${PHONE}</a>`;
-const check = '<a href="#roof-check" data-qa-close>$199 Roof Check</a>';
+const check = '<a href="#roof-check" data-qa-close>free roof evaluation</a>';
 
 export const GREETING = [
-  'Hi! I\'m the QRS Roof Assistant. 👋 I can answer questions about roof repairs, replacements, our $199 Roof Check and more.',
+  'Hi! I\'m the QRS Roof Assistant. 👋 I can answer questions about roof repairs, replacements, our free roof evaluation and more.',
   'What can I help you with?',
 ];
 
@@ -27,6 +27,7 @@ export const SYSTEM_PROMPT = `You are the QRS Roof Assistant, a chat assistant o
 Facts you can rely on:
 - Services: roof repair, roof replacement, tile lift & relay, flat roofing, shingle roofing, metal roofing, rain gutters, HOA & multi-family roofing, commercial roofing, and roof inspections.
 - Installs are backed by a 10-year workmanship warranty.
+- Homes start with a free roof evaluation: we use drone footage to see the roof's condition, with no charge and no obligation. Commercial buildings start with a roof survey instead.
 - Service area: Los Angeles and Orange County, Southern California.
 - Phone: ${PHONE}. Quality Roofing Specialists is a licensed California contractor, CSLB License #${BUSINESS.license}, licensed since ${formatDate(BUSINESS.licenseSince)}.
 
@@ -42,11 +43,11 @@ Rules:
 - Answer in plain conversational text only. The chat window doesn't render Markdown or links, so never write [text](url) links, **bold**, bullet lists or headings — if you want to point to a page, just say its name in plain words (e.g. "our Financing page").
 - If the visitor has shared enough for someone to follow up with them (their name, and a phone number or email), thank them naturally, mention someone from QRS will follow up, and end your reply with a line starting with [[LEAD]] followed by compact JSON with keys name, phone, email, zip, interest (use "" for anything not given). Only do this once, the first time you have a name and a phone or email — never repeat it later in the conversation, and never mention this line or show it to the visitor.`;
 
-export const STARTERS = ['I have a leak', 'What is the $199 Roof Check?', 'How much does it cost?', 'What areas do you serve?'];
+export const STARTERS = ['I have a leak', 'Is the roof evaluation free?', 'How much does it cost?', 'What areas do you serve?'];
 
 // Chip label → message sent when it's tapped (when they differ)
 export const CHIP_PROMPTS = {
-  'Book a Roof Check': 'I want to book a roof check',
+  'Book a free evaluation': 'I want to book a free roof evaluation',
   'Talk to a person': 'Can I talk to a person?',
   'What is tile lift & relay?': 'What is tile lift and relay?',
 };
@@ -54,48 +55,48 @@ export const CHIP_PROMPTS = {
 export const ANSWERS = [
   {
     match: /leak|drip|water|stain|ceiling|storm|emergenc|damage|wind|rain/,
-    answer: 'Sorry you\'re dealing with that. For an active leak or storm damage, the fastest route is to call us at ' + call + '. Otherwise, a ' + check + ' will pinpoint the cause and we\'ll photo-document exactly what we find.',
-    chips: ['Book a Roof Check', 'Talk to a person'],
+    answer: 'Sorry you\'re dealing with that. For an active leak or storm damage, the fastest route is to call us at ' + call + '. Otherwise, a ' + check + ' will help pinpoint the cause and we\'ll photo-document exactly what we find.',
+    chips: ['Book a free evaluation', 'Talk to a person'],
   },
   {
-    match: /199|roof check|inspect|inspection|look at/,
-    answer: 'The ' + check + ' is a roofer-led inspection — not a sales pitch. We photo-document your roof\'s condition, explain it in plain English and give you a clear next step: repair, monitor, maintain or replace. There\'s no deposit; you pay after the visit.',
-    chips: ['Book a Roof Check', 'What areas do you serve?'],
+    match: /199|free|evaluat|roof check|inspect|inspection|look at/,
+    answer: 'Yes, the <a href="#roof-check" data-qa-close>roof evaluation</a> is free. We use drone footage to see your roof\'s condition, explain it in plain English and give you a clear next step: repair, monitor, maintain or replace. The $199 Roof Check is optional: a tune-up where we seal the vents, pipes and flashings, paid after the visit and credited toward a replacement if you move forward.',
+    chips: ['Book a free evaluation', 'What areas do you serve?'],
   },
   {
     match: /cost|price|how much|quote|estimate|expensive|afford|pricing/,
     answer: 'Every roof is different, so we don\'t guess at prices. After a ' + check + ' you get a written scope and price before any work starts — no pressure and no mystery pricing.',
-    chips: ['Book a Roof Check', 'Do I need a new roof?'],
+    chips: ['Book a free evaluation', 'Do I need a new roof?'],
   },
   {
     match: /warrant|guarantee/,
     answer: 'Our installs are backed by a 10-year workmanship warranty. At the final walkthrough we go over your warranty with you in plain English. <a href="#guarantee" data-qa-close>See the QRS Guarantee</a>.',
-    chips: ['How does the process work?', 'Book a Roof Check'],
+    chips: ['How does the process work?', 'Book a free evaluation'],
   },
   {
     match: /area|serve|zip|city|location|near|orange county|los angeles|\bla\b|\boc\b|\b9\d{4}\b|santa monica|pasadena|glendale|burbank|torrance|long beach|anaheim|santa ana|huntington|irvine|newport/,
     answer: 'We serve homeowners across Los Angeles and Orange County. You can enter your ZIP in our <a href="/service-areas/" data-qa-close>service area map</a> to check your city, or call ' + call + '.',
-    chips: ['Book a Roof Check', 'What services do you offer?'],
+    chips: ['Book a free evaluation', 'What services do you offer?'],
   },
   {
     match: /replace|new roof|re-?roof|need a new|old roof|age/,
     answer: 'Not always! Many roofs just need a targeted repair or a tile lift &amp; relay. A ' + check + ' tells you what your roof actually needs, so you don\'t pay for work you don\'t need.',
-    chips: ['What is tile lift & relay?', 'Book a Roof Check'],
+    chips: ['What is tile lift & relay?', 'Book a free evaluation'],
   },
   {
     match: /tile lift|relay|underlayment/,
     answer: 'With a tile lift &amp; relay, we lift your existing tiles, replace the worn underlayment underneath and reset the roof cleanly — keeping the look you already love.',
-    chips: ['Book a Roof Check', 'What services do you offer?'],
+    chips: ['Book a free evaluation', 'What services do you offer?'],
   },
   {
     match: /service|offer|do you do|tile|shingle|flat|type/,
     answer: 'We handle roof replacements, roof repairs, tile lift &amp; relay, flat roofing, shingle roofing, and inspections &amp; roof care. <a href="/residential-roofing/" data-qa-close>See all services</a>.',
-    chips: ['Do I need a new roof?', 'Book a Roof Check'],
+    chips: ['Do I need a new roof?', 'Book a free evaluation'],
   },
   {
     match: /process|how does|how it works|step|work with/,
-    answer: 'It\'s four steps: <b>1.</b> Roof Check — we inspect and photo-document. <b>2.</b> Clear Quote — a written scope and price. <b>3.</b> Expert Install — done cleanly and to spec. <b>4.</b> Final Walkthrough — we review the roof and your warranty with you.',
-    chips: ['How much does it cost?', 'Book a Roof Check'],
+    answer: 'It\'s four steps: <b>1.</b> Roof Evaluation — free, with drone footage of your roof. <b>2.</b> Clear Quote — a written scope and price. <b>3.</b> Expert Install — done cleanly and to spec. <b>4.</b> Final Walkthrough — we review the roof and your warranty with you.',
+    chips: ['How much does it cost?', 'Book a free evaluation'],
   },
   {
     match: /book|schedule|appointment|sign up|get started|start/,
@@ -110,7 +111,7 @@ export const ANSWERS = [
   {
     match: /experience|years|how long have|licens|trust|who are/,
     answer: 'QRS is a licensed California contractor (CSLB #1061942) since 2020, bringing detail-first workmanship to every job across LA and Orange County. <a href="/about-us/" data-qa-close>Why homeowners choose QRS</a>.',
-    chips: ['How does the process work?', 'Book a Roof Check'],
+    chips: ['How does the process work?', 'Book a free evaluation'],
   },
   {
     match: /^(hi|hello|hey|yo|good (morning|afternoon|evening))\b/,

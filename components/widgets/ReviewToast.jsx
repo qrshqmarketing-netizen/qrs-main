@@ -11,7 +11,7 @@ import './ReviewToast.css';
 const SHOW_MS = 7000, GAP_MS = 9000, FIRST_MS = 6000;
 const REVIEWS = GOOGLE_REVIEWS.map((r) => ({ ...r, text: r.text.replace(/\s+/g, ' ').trim() }));
 
-// Rotates the Google reviews in the bottom-left corner. Closing it hides it for the rest of the visit.
+// Compact toast in the bottom-left corner that rotates the Google reviews (name, stars and a one-line quote). Closing it hides it for the rest of the visit.
 export default function ReviewToast() {
   const [shown, setShown] = useState(null); // index of the review in the toast
   const [visible, setVisible] = useState(false);
@@ -120,13 +120,10 @@ export default function ReviewToast() {
         <span className="rv-body">
           <span className="rv-top">
             <span className="rv-name">{review?.name}</span>
+            <span className="rv-stars" aria-hidden="true">★★★★★</span>
             <GoogleLogo className="rv-g" />
           </span>
-          <span className="rv-stars" aria-hidden="true">★★★★★</span>
           <span className="rv-text">{review && `“${review.text}”`}</span>
-          <span className="rv-meta">
-            <span className="rv-date">{review?.date}</span> &middot; Google review
-          </span>
         </span>
       </button>
       <button className="rv-close" type="button" aria-label="Hide reviews" onClick={close}>

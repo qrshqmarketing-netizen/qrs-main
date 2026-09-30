@@ -1,13 +1,15 @@
 import CardGrid from '@/components/sections/CardGrid';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
+import ProofBar from '@/components/sections/ProofBar';
+import ReviewStrip from '@/components/sections/ReviewStrip';
 import Overview from '@/components/sections/Overview';
 import RoofCheck from '@/components/sections/RoofCheck';
 import SplitFeature from '@/components/sections/SplitFeature';
 import ValueGrid from '@/components/sections/ValueGrid';
 import JsonLd from '@/components/ui/JsonLd';
 import { pageJsonLd } from '@/lib/structuredData';
-import { LOCATION_CTA } from './shared';
+import { closingCta } from './shared';
 
 // A hub page (e.g. /tile-roofing/ or /commercial-roofing/): intro, cards for every page in the section,
 // why-choose points and the Roof Check form. Content shape: `hub` in data/services/*.js.
@@ -35,13 +37,15 @@ export default function HubPage({ hub, crumbs, eyebrow, image, imageAlt, cards, 
         imageAlt={imageAlt}
         {...(actions && { actions })}
       />
+      <ReviewStrip />
       <Overview heading={hub.overview.heading} paragraphs={hub.overview.paragraphs} />
+      <ProofBar />
       {extraGrid && <CardGrid id="services" heading={extraGrid.heading} intro={extraGrid.intro} cards={extraGrid.cards} tone="wash" />}
       <CardGrid id={extraGrid ? 'buildings' : 'services'} heading={hub.cards.heading} intro={hub.cards.intro} cards={cards} tone={extraGrid ? undefined : 'wash'} />
       <ValueGrid heading={hub.highlights.heading} items={hub.highlights.points} columns={3} />
       {feature && <SplitFeature {...feature} tone="wash" />}
       <RoofCheck tone="white" offer={offer} />
-      <FinalCta {...LOCATION_CTA} />
+      <FinalCta {...closingCta(hub.keyword, offer)} />
     </main>
   );
 }

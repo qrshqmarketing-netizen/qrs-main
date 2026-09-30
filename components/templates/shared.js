@@ -2,11 +2,19 @@
 
 import { PHONE, TEL } from '@/data/site';
 
-// Closing "find your location" call to action (over the truck photo)
-export const LOCATION_CTA = {
-  heading: 'Find Your Nearest QRS Service Area',
-  text: 'We serve homeowners and property owners across Los Angeles and Orange County. Find your city and check your ZIP code.',
-  cta: { label: 'Find Your Location', href: '/service-areas/' },
+// Closing call to action on service and hub pages, worded around the page's keyword (e.g. 'tile roof repair').
+// It sends visitors to the estimate form, not away from the page; commercial pages talk about the building.
+const properCase = (keyword) => keyword.replace(/\bhoa\b/gi, 'HOA');
+export const closingCta = (keyword, offer = 'home') => {
+  const topic = properCase(keyword);
+  return {
+    heading: `Get a Straight Answer on ${topic}`,
+    text:
+      offer === 'commercial'
+        ? `Tell us about the building. A roofer, not a salesperson, walks the roof and gives you a clear next step on ${topic}, with a written scope and price.`
+        : `Tell us what’s going on with your roof. A roofer, not a salesperson, looks at it and gives you a clear next step on ${topic}, with a written scope and price.`,
+    cta: { label: 'Get Pro Advice', href: '#roof-check' },
+  };
 };
 
 // Plum is kept for "call now" actions (see --plum in app/globals.css).

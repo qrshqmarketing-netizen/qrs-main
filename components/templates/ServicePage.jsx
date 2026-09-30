@@ -1,17 +1,20 @@
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
+import ProofBar from '@/components/sections/ProofBar';
+import ReviewStrip from '@/components/sections/ReviewStrip';
 import Overview from '@/components/sections/Overview';
 import ProcessSteps from '@/components/sections/ProcessSteps';
 import RoofCheck from '@/components/sections/RoofCheck';
 import WhyChoose from '@/components/sections/WhyChoose';
 import JsonLd from '@/components/ui/JsonLd';
 import { pageJsonLd } from '@/lib/structuredData';
-import { LOCATION_CTA } from './shared';
+import { closingCta } from './shared';
 
 // A service page (e.g. /tile-roofing/lift-and-relay/). Content shape: see data/services/*.js.
 // crumbs: breadcrumb trail; eyebrow: section label above the H1; scenes: [heroArt, processArt] placeholder
-// art until photos exist. actions: hero buttons (Hero); finalCta: the closing call to action (FinalCta props).
-export default function ServicePage({ page, crumbs, eyebrow, scenes = [], offer, actions, finalCta = LOCATION_CTA }) {
+// art until photos exist. actions: hero buttons (Hero); finalCta: the closing call to action (FinalCta
+// props; defaults to page.final, else one worded around page.keyword).
+export default function ServicePage({ page, crumbs, eyebrow, scenes = [], offer, actions, finalCta = page.final || closingCta(page.keyword, offer) }) {
   const [heroScene = 'scene-shingle', processScene = heroScene] = scenes;
   const schema = pageJsonLd({
     path: crumbs.at(-1).href,
@@ -33,7 +36,9 @@ export default function ServicePage({ page, crumbs, eyebrow, scenes = [], offer,
         imageAlt={page.imageAlt}
         {...(actions && { actions })}
       />
+      <ReviewStrip />
       <Overview paragraphs={page.overview.paragraphs} />
+      <ProofBar />
       <ProcessSteps
         heading={page.process.heading}
         subheading={page.process.subheading}

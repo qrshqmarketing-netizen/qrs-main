@@ -5,18 +5,18 @@ export const RESIDENTIAL_PAGE = {
   keyword: 'residential roofing',
   metaTitle: 'Residential Roofing in Los Angeles',
   metaDescription:
-    'Residential roofing in Los Angeles & Orange County: shingle, tile, flat and metal roofs, rain gutters and HOA roofing. Start with a $199 Roof Check.',
+    'Residential roofing in Los Angeles & Orange County: shingle, tile, flat and metal roofs, rain gutters and HOA roofing. Start with a free roof evaluation.',
   hero: {
     heading: 'Residential Roofing Services',
     intro:
-      'Detail-first residential roofing for homes across Los Angeles and Orange County, from a leak on a tile roof to a full tear-off on a shingle home. Every job starts with a roofer-led Roof Check, not a sales pitch.',
+      'Detail-first residential roofing for homes across Los Angeles and Orange County, from a leak on a tile roof to a full tear-off on a shingle home. Every job starts with a free roof evaluation, not a sales pitch.',
     highlights: ['Shingle, tile, flat and metal roofs', 'Written scope and price before work', '10-Year workmanship warranty'],
   },
   overview: {
     heading: 'One Team for Every Roof on Your Home',
     paragraphs: [
       'Many Southern California homes have more than one kind of roof: a tile main roof with a flat section behind the parapet, a shingle house with a low-slope patio cover, a garage or ADU with a system of its own. Our crews work on all of them, so one roofer-led assessment covers the whole house and one written scope explains what each part needs.',
-      'Start with your roof type below, or jump straight to the service you’re after. Not sure where to begin? A [$199 Roof Check](#roof-check) gives you photos of your roof’s condition and a clear next step: repair, monitor, maintain or replace.',
+      'Start with your roof type below, or jump straight to the service you’re after. Not sure where to begin? A [free roof evaluation](#roof-check) gives you photos of your roof’s condition and a clear next step: repair, monitor, maintain or replace.',
     ],
   },
   cards: {
@@ -112,7 +112,7 @@ export const RESIDENTIAL_PAGE = {
     },
     {
       q: 'How do I know whether I need a repair or a new roof?',
-      a: 'Start with a $199 Roof Check. A roofer inspects the roof, photo-documents what they find and explains your options in plain English, including when a repair or a tile lift & relay is enough.',
+      a: 'Start with a free roof evaluation. A roofer inspects the roof, photo-documents what they find and explains your options in plain English, including when a repair or a tile lift & relay is enough.',
     },
     {
       q: 'Will I get a written price before work starts?',

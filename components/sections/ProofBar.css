@@ -1,5 +1,5 @@
-/* ---------- Proof bar (4 across → 2 × 2 on phones) ---------- */
-.proofbar{background:#fff;border-bottom:1px solid var(--proof-line,var(--line))}
+/* ---------- Proof bar (4 across → 2 × 2 on phones): nested in the home hero, or a white band below a sub page's intro ---------- */
+.proofbar{background:#fff;border-top:1px solid var(--proof-line,var(--line));border-bottom:1px solid var(--proof-line,var(--line))}
 .proof-grid{display:grid;grid-template-columns:1fr 1fr}
 .proof-item{padding:20px 14px 20px 0}
 .proof-item:nth-child(odd){border-right:1px solid var(--proof-line,var(--line))}
@@ -21,6 +21,6 @@
 
 /* Dark variant: nested in the home hero (Hero.jsx align="left" stats), sitting right on the photo instead
    of its own white bar — same layout/sizing, just recolored for a dark background. */
-.proofbar.on-dark{background:transparent;border-bottom:0;--proof-line:rgba(255,255,255,.22)}
+.proofbar.on-dark{background:transparent;border-top:0;border-bottom:0;--proof-line:rgba(255,255,255,.22)}
 .proofbar.on-dark .proof-item b{color:#fff}
 .proofbar.on-dark .proof-item span{color:rgba(255,255,255,.72)}

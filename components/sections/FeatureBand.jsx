@@ -26,7 +26,7 @@ export default function FeatureBand({ id, eyebrow, heading, paragraphs = [], poi
         <ul className="band-points">
           {points.map((point) => (
             <li key={point.title}>
-              <b>{point.href ? <SiteLink href={point.href}>{point.title}</SiteLink> : point.title}</b>
+              <h3>{point.href ? <SiteLink href={point.href}>{point.title}</SiteLink> : point.title}</h3>
               <span>
                 <Rich text={point.text} />
               </span>

@@ -6,10 +6,10 @@ export const REGION_PAGES = {
   'la-county': {
     keyword: 'los angeles county roofing',
     metaTitle: 'Los Angeles County Roofing',
-    metaDescription: 'Los Angeles County roofing from our Los Angeles, Valley and Vernon offices: tile, shingle, flat and metal roof repair and replacement. Book a $199 Roof Check.',
+    metaDescription: 'Los Angeles County roofing from our Los Angeles, Valley and Vernon offices: tile, shingle, flat and metal roof repair and replacement. Book a free roof evaluation.',
     hero: {
       heading: 'Los Angeles County Roofing Services',
-      intro: 'From the beach cities to the San Fernando Valley, Los Angeles County roofing takes local know-how. Our Los Angeles, Valley and Vernon offices serve homes and businesses across the county — homes start with a roofer-led [$199 Roof Check](#roof-check), and commercial buildings start with a roofer-led survey.',
+      intro: 'From the beach cities to the San Fernando Valley, Los Angeles County roofing takes local know-how. Our Los Angeles, Valley and Vernon offices serve homes and businesses across the county — homes start with a roofer-led [free roof evaluation](#roof-check), and commercial buildings start with a roofer-led survey.',
     },
     intro: {
       heading: 'One County, Many Roofing Climates',
@@ -36,10 +36,10 @@ export const REGION_PAGES = {
     image: '/images/orange-county-drone-view.webp',
     imageAlt: 'Aerial view of Orange County suburban neighborhoods with hills in the background',
     metaTitle: 'Orange County Roofing Services',
-    metaDescription: 'Orange County roofing for homes, HOAs and businesses from Anaheim to Newport Beach: tile, shingle, flat and metal roofs. Book a $199 Roof Check for your home today.',
+    metaDescription: 'Orange County roofing for homes, HOAs and businesses from Anaheim to Newport Beach: tile, shingle, flat and metal roofs. Book a free roof evaluation for your home today.',
     hero: {
       heading: 'Orange County Roofing Services',
-      intro: 'Orange County roofing means coastal homes, master-planned communities and busy commercial centers. We serve homes, HOAs and businesses across the county — homes start with a roofer-led [$199 Roof Check](#roof-check), and commercial and larger HOA properties start with a roofer-led survey.',
+      intro: 'Orange County roofing means coastal homes, master-planned communities and busy commercial centers. We serve homes, HOAs and businesses across the county — homes start with a roofer-led [free roof evaluation](#roof-check), and commercial and larger HOA properties start with a roofer-led survey.',
     },
     intro: {
       heading: 'Roofing Across Orange County',
@@ -57,7 +57,7 @@ export const REGION_PAGES = {
       { q: 'Which Orange County cities do you serve?', a: 'Our city pages cover Anaheim, Santa Ana, Huntington Beach, Irvine and Newport Beach, and we work in many nearby communities as well. Check your address with the ZIP code map on this page.' },
       { q: 'Do you work with Orange County HOAs?', a: 'Yes. Boards get photo-documented findings, written scopes they can review together and one point of contact from the first survey to the final walkthrough.' },
       { q: 'Do you roof commercial buildings in Orange County?', a: 'Yes. From retail centers to offices and warehouses, we plan commercial projects around the people who use the building, so it stays open while we work.' },
-      { q: 'How does a project start?', a: 'With a roofer-led Roof Check. You get photos of your roof’s condition, a plain-English explanation and a written scope and price for anything it needs.' },
+      { q: 'How does a project start?', a: 'With a free roof evaluation. You get photos of your roof’s condition, a plain-English explanation and a written scope and price for anything it needs.' },
     ],
   },
 };

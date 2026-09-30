@@ -4,7 +4,8 @@ import { useEffect, useRef, useState } from 'react';
 import BrandLogo from '@/components/ui/BrandLogo';
 import SiteLink from '@/components/ui/SiteLink';
 import { ArrowRight, Caret, PhoneIcon } from '@/components/ui/icons';
-import { ABOUT_MENU, COMMERCIAL_MENU, HEADER_CTA, LOCATIONS_MENU, NAV_LINKS, RESIDENTIAL_MENU, SERVICES_MENU } from '@/data/navigation';
+import { CONTRACTORS_LINK } from '@/data/catalog';
+import { ABOUT_MENU, COMMERCIAL_MENU, HEADER_CTA, LOCATIONS_MENU, RESIDENTIAL_MENU, SERVICES_MENU } from '@/data/navigation';
 import { PHONE, TEL } from '@/data/site';
 import './Header.css';
 
@@ -19,7 +20,7 @@ const UrgentDot = () => <i className="menu-urgent" aria-hidden="true" />;
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false); // phone/tablet slide-down menu
-  const [openItem, setOpenItem] = useState(null); // 'services' | 'res' | 'com' | 'loc' | 'about' | null
+  const [openItem, setOpenItem] = useState(null); // 'services' | 'res' | 'com' | 'about' | null
   const [activeGroup, setActiveGroup] = useState(0); // roof type shown in the Residential menu
   const closeTimer = useRef(null);
   const triggers = useRef({});
@@ -47,7 +48,7 @@ export default function Header() {
     if (e.target.closest('a')) setMenuOpen(false);
   };
 
-  // Props for a dropdown (Residential / Commercial / Service Areas / About)
+  // Props for a dropdown (Services / Residential / Commercial / About)
   const dropdown = (key) => ({
     className: 'nav-item' + (openItem === key ? ' open' : ''),
     onMouseEnter: () => {
@@ -101,9 +102,6 @@ export default function Header() {
 
   return (
     <header className="site-header">
-      <div className="announce-bar">
-        <SiteLink href="#roof-check">New: $199 Roofer-Led Roof Check — photos, plain English, pay after the visit.</SiteLink>
-      </div>
       <div className="container nav">
         <BrandLogo variant="dark" preload />
 
@@ -230,38 +228,7 @@ export default function Header() {
             </div>
           </div>
 
-          <div {...dropdown('loc')}>
-            <button {...trigger('loc', 'megaLoc')}>
-              Service Areas
-              <Caret />
-            </button>
-            <div className="mega mega-loc" id="megaLoc" onClick={closeOnLink}>
-              <div className="mega-inner">
-                {LOCATIONS_MENU.regions.map((region) => (
-                  <div className="mega-card mega-card-list" key={region.title}>
-                    <MenuLink className="mega-card-head" href={region.href}>
-                      <b>{region.title}</b> <ArrowRight />
-                    </MenuLink>
-                    <ul>
-                      {region.links.map((link) => (
-                        <li key={link.href}>
-                          <MenuLink href={link.href}>{link.label}</MenuLink>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-                <MenuLink className="mega-card" href={LOCATIONS_MENU.all.href}>
-                  <b>{LOCATIONS_MENU.all.title}</b>
-                  <span>{LOCATIONS_MENU.all.text}</span>
-                  <em>
-                    {LOCATIONS_MENU.all.cta} <ArrowRight />
-                  </em>
-                </MenuLink>
-              </div>
-            </div>
-          </div>
-
+          {/* About: company links + careers, then every service area (the former Service Areas menu) */}
           <div {...dropdown('about')}>
             <button {...trigger('about', 'megaAbout')}>
               About
@@ -269,34 +236,57 @@ export default function Header() {
             </button>
             <div className="mega mega-about" id="megaAbout" onClick={closeOnLink}>
               <div className="mega-inner">
-                <div className="mega-card mega-card-list">
-                  <MenuLink className="mega-card-head" href={ABOUT_MENU.about.href}>
-                    <b>{ABOUT_MENU.about.title}</b> <ArrowRight />
+                <div className="mega-col">
+                  <div className="mega-card mega-card-list">
+                    <MenuLink className="mega-card-head" href={ABOUT_MENU.about.href}>
+                      <b>{ABOUT_MENU.about.title}</b> <ArrowRight />
+                    </MenuLink>
+                    <ul>
+                      {ABOUT_MENU.about.links.map((link) => (
+                        <li key={link.label}>
+                          <MenuLink href={link.href}>{link.label}</MenuLink>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <MenuLink className="mega-card" href={ABOUT_MENU.careers.href}>
+                    <b>{ABOUT_MENU.careers.title}</b>
+                    <span>{ABOUT_MENU.careers.text}</span>
+                    <em>
+                      {ABOUT_MENU.careers.cta} <ArrowRight />
+                    </em>
                   </MenuLink>
-                  <ul>
-                    {ABOUT_MENU.about.links.map((link) => (
-                      <li key={link.label}>
-                        <MenuLink href={link.href}>{link.label}</MenuLink>
-                      </li>
-                    ))}
-                  </ul>
                 </div>
-                <MenuLink className="mega-card" href={ABOUT_MENU.careers.href}>
-                  <b>{ABOUT_MENU.careers.title}</b>
-                  <span>{ABOUT_MENU.careers.text}</span>
-                  <em>
-                    {ABOUT_MENU.careers.cta} <ArrowRight />
-                  </em>
-                </MenuLink>
+                {LOCATIONS_MENU.regions.map((region, i) => (
+                  <div className="mega-col" key={region.title}>
+                    <div className="mega-card mega-card-list">
+                      <MenuLink className="mega-card-head" href={region.href}>
+                        <b>{region.title}</b> <ArrowRight />
+                      </MenuLink>
+                      <ul>
+                        {region.links.map((link) => (
+                          <li key={link.href}>
+                            <MenuLink href={link.href}>{link.label}</MenuLink>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    {i === LOCATIONS_MENU.regions.length - 1 && (
+                      <MenuLink className="mega-card" href={LOCATIONS_MENU.all.href}>
+                        <b>{LOCATIONS_MENU.all.title}</b>
+                        <span>{LOCATIONS_MENU.all.text}</span>
+                        <em>
+                          {LOCATIONS_MENU.all.cta} <ArrowRight />
+                        </em>
+                      </MenuLink>
+                    )}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
 
-          {NAV_LINKS.map((link) => (
-            <MenuLink className={link.pulse ? 'nav-pulse' : undefined} href={link.href} key={link.href}>
-              {link.label}
-            </MenuLink>
-          ))}
+          <MenuLink href={CONTRACTORS_LINK.href}>{CONTRACTORS_LINK.label}</MenuLink>
         </nav>
 
         {/* Gold: book a Roof Check. Red: call now (the number shows on wide screens, an icon elsewhere). */}

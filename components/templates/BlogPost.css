@@ -1,5 +1,5 @@
 /* ---------- Blog post ---------- */
-/* Top padding clears the fixed, always-on-top .site-header (announcement row + nav) */
+/* Top padding clears the fixed, always-on-top floating header pill */
 .post{background:#fff;padding:126px 0 64px}
 .post-inner{max-width:760px}
 .post .eyebrow{margin-top:22px;color:var(--gold-ink)}

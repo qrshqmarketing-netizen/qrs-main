@@ -33,12 +33,11 @@
 .hero-inner{
   position:relative;z-index:2;
   display:flex;justify-content:center;align-items:center;
-  /* Top padding clears the fixed .site-header (announcement row + nav); the announcement text can wrap
-     to two lines on narrow phones, so this carries extra headroom beyond the header's single-line height */
-  padding:165px 0 40px;margin:auto auto 0;text-align:center;
+  /* Top padding clears the fixed floating header pill (72px tall on phones, 80px from 621px) */
+  padding:112px 0 40px;margin:auto auto 0;text-align:center;
 }
 /* A little extra breathing room above the eyebrow (home page only) */
-.hero-inner.hero-top-pad{padding-top:225px}
+.hero-inner.hero-top-pad{padding-top:170px}
 .hero-copy{width:min(900px,100%);margin:0 auto}
 .hero-copy .eyebrow{
   color:var(--gold-2);font-family:var(--font-head);font-size:13px;font-weight:600;letter-spacing:.06em;line-height:1.5;
@@ -47,15 +46,17 @@
 /* Big headline (an <h1>, or a <p> when the keyword line above it is the H1) */
 .hero-title{
   max-width:900px;margin:12px auto 0;
-  font-family:var(--font-serif),Georgia,serif;font-size:clamp(40px,12vw,52px);font-weight:400;line-height:1.08;letter-spacing:-.01em;
+  font-family:var(--font-display);font-size:clamp(40px,12vw,52px);font-weight:600;line-height:1.02;letter-spacing:.01em;text-transform:uppercase;
   text-wrap:balance;text-shadow:0 4px 24px rgba(0,0,0,.32);
 }
 .hero-title span{color:#fff}
 .hero-sub{
-  font-family:var(--font-head);font-size:16px;font-weight:300;line-height:1.5;letter-spacing:-.01em;
+  font-family:var(--font-head);font-size:16px;font-weight:500;line-height:1.5;letter-spacing:-.01em;
   color:#fff;max-width:760px;margin:16px auto 26px;text-shadow:0 2px 15px rgba(0,0,0,.35);
 }
 .hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+/* Pages with no intro line under the headline still get room above the buttons */
+.hero-title + .hero-actions{margin-top:26px}
 .hero-actions .btn{width:100%;max-width:340px;box-shadow:0 12px 30px rgba(0,0,0,.18)}
 /* Home page only (Hero align="left" stats): left-justified copy, proof-bar stats nested below it */
 .hero-inner.hero-left{display:block;text-align:left}
@@ -67,8 +68,8 @@
 @media (min-width:621px){
   .hero{min-height:600px}
   .hero.hero-top-pad{min-height:740px}
-  .hero-inner{padding:140px 0 42px}
-  .hero-inner.hero-top-pad{padding-top:210px}
+  .hero-inner{padding:120px 0 42px}
+  .hero-inner.hero-top-pad{padding-top:180px}
   .hero-copy .eyebrow{font-size:18px;letter-spacing:0;line-height:inherit;margin-bottom:12px}
   .hero-title{font-size:72px;line-height:1.05;text-wrap:wrap}
   .hero-sub{font-size:19px;line-height:1.4;letter-spacing:-.01em;margin:22px auto 28px}
@@ -78,8 +79,8 @@
 @media (min-width:901px){
   .hero{min-height:clamp(640px,86vh,820px)}
   .hero.hero-top-pad{min-height:clamp(760px,94vh,920px)}
-  .hero-inner{padding:150px 0 50px}
-  .hero-inner.hero-top-pad{padding-top:220px}
+  .hero-inner{padding:130px 0 50px}
+  .hero-inner.hero-top-pad{padding-top:190px}
   .hero-title{font-size:90px}
   .hero-sub{font-size:22px}
 }

@@ -17,7 +17,8 @@ const DEFAULT_ACTIONS = [
 // actions: [{ label, href, style: 'gold' | 'plum' | 'line' }]; an action with `drawer: true` opens the
 // Instant Quote drawer instead of navigating. When `image` is omitted, a CSS-only dark navy/gold
 // background is used instead of a photo (Hero.css .hero-fallback). Pass `mobileImage` (e.g. a portrait
-// crop of the same scene) to show a different photo below 621px instead of a cropped `image`.
+// crop of the same scene) to show a different photo below 621px instead of a cropped `image`. `stats` nests the
+// proof-bar stats in the hero (home page only; sub pages place <ProofBar /> below their intro section).
 export default function Hero({
   crumbs,
   eyebrow = 'Roof Repair & Replacement in Southern California',
@@ -34,7 +35,7 @@ export default function Hero({
   label = 'QRS Southern California roofing',
   h1 = 'title',
   align = 'left',
-  stats = true,
+  stats = false,
   actions = DEFAULT_ACTIONS,
   className,
 }) {

@@ -14,8 +14,8 @@
 .gtee-title{display:flex;align-items:center;gap:14px;margin-bottom:22px}
 .gtee-badge{flex:0 0 76px;width:76px;height:76px;animation:gteeSpin 28s linear infinite}
 @keyframes gteeSpin{to{transform:rotate(360deg)}}
-.gtee-title h2{color:var(--gold);font-size:var(--h2);font-weight:500;line-height:1;letter-spacing:-.03em;margin:0}
-.gtee-copy p{color:var(--navy);font-family:var(--font-body);font-size:17px;font-weight:300;line-height:1.65;margin:0 0 16px}
+.gtee-title h2{color:var(--gold-ink);font-size:var(--h2);font-weight:500;line-height:1;letter-spacing:.01em;margin:0}
+.gtee-copy p{color:var(--navy);font-family:var(--font-body);font-size:17px;font-weight:500;line-height:1.65;margin:0 0 16px}
 .gtee-copy p:last-child{margin-bottom:0}
 @media (min-width:621px){
   .gtee{padding-top:56px}

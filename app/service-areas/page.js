@@ -3,6 +3,8 @@ import DifferenceBand from '@/components/sections/DifferenceBand';
 import Faq from '@/components/sections/Faq';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
+import ProofBar from '@/components/sections/ProofBar';
+import ReviewStrip from '@/components/sections/ReviewStrip';
 import Offices from '@/components/sections/Offices';
 import RoofCheck from '@/components/sections/RoofCheck';
 import ServiceArea from '@/components/sections/ServiceArea';
@@ -47,13 +49,18 @@ export default function LocationsPage() {
         imageAlt="Row of homes with pitched roofs along a residential street"
         imagePosition="40% center"
       />
+      <ReviewStrip />
       <Offices sub="Our Los Angeles and Valley offices serve homes and businesses across Los Angeles and Orange County. One number reaches both." />
+      <ProofBar />
       <ServiceArea heading="Find Your Nearest QRS Service Area" sub="Enter your ZIP code or pick a city on the map to see its phone number, estimate link and city page." />
       <CityCards blurbs={BLURBS} linkRegions />
       <DifferenceBand />
       <Faq heading="Service Area FAQs" sub="Straight answers about where we work." faqs={page.faqs} cta={false} />
       <RoofCheck tone="white" />
-      <FinalCta />
+      <FinalCta
+        heading="Local Roofers Across LA & Orange County"
+        text="Wherever you are in our service area, a local roofer looks at your roof and gives you a clear next step with a written scope and price."
+      />
     </main>
   );
 }

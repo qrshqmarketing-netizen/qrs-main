@@ -25,7 +25,7 @@
   --plum:#6b2545;
   --plum-2:#5b1f3b;
   --ink:#10243a;
-  --muted:#64748b;
+  --muted:#5a6b82; /* secondary text; ~5.4:1 on white and ~5.1:1 on --wash, both pass WCAG AA */
   --paper:#fff;
   --wash:#f5f8fb;
   --line:#e4eaf0;
@@ -34,8 +34,9 @@
   --radius:22px;
   --max:1180px;
 
-  /* Headings, body and buttons: all Open Sans, weights unchanged (500 headings, 700 buttons, 400-900
-     body/eyebrow as used per component). --font-open-sans is set by next/font in app/layout.js (self-hosted Google Font). */
+  /* Headings (h1–h6): Roboto Condensed, uppercase (--font-display). Body, UI and buttons: Open Sans, paragraphs at
+     medium (500). Both are self-hosted Google Fonts set by next/font in app/layout.js. */
+  --font-display:var(--font-condensed),"Arial Narrow",ui-sans-serif,system-ui,sans-serif;
   --font-head:var(--font-open-sans),ui-sans-serif,system-ui,sans-serif;
   --font-btn:var(--font-open-sans),ui-sans-serif,system-ui,sans-serif;
   --font-body:var(--font-open-sans),-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
@@ -50,7 +51,7 @@
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 body{
   margin:0;
-  font-family:var(--font-body);font-size:15px;font-weight:300;line-height:1.7;
+  font-family:var(--font-body);font-size:15px;font-weight:500;line-height:1.7;
   color:var(--ink);background:var(--paper);
   -webkit-font-smoothing:antialiased;
 }
@@ -67,9 +68,7 @@ button{cursor:pointer}
   text-transform:uppercase;margin-bottom:12px;
 }
 h1,h2,h3,p{margin-top:0}
-h1,h2,h3,h4,h5,h6{font-family:var(--font-head);font-weight:500;letter-spacing:-.03em;line-height:1}
-/* Editorial serif for the two biggest heading levels site-wide; h3 and smaller stay on the sans-serif body font */
-h1,h2{font-family:var(--font-serif),Georgia,serif;font-weight:400;letter-spacing:-.01em}
+h1,h2,h3,h4,h5,h6{font-family:var(--font-display);font-weight:600;letter-spacing:.01em;line-height:1.05;text-transform:uppercase}
 h1{font-size:clamp(2.8rem,14vw,4.4rem);margin-bottom:22px}
 h2{font-size:2.35rem;margin-bottom:16px}
 h3{font-size:1.25rem;margin-bottom:9px}

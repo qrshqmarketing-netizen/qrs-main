@@ -1,5 +1,7 @@
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
+import ProofBar from '@/components/sections/ProofBar';
+import ReviewStrip from '@/components/sections/ReviewStrip';
 import LocalIntro from '@/components/sections/LocalIntro';
 import ProjectCarousel from '@/components/sections/ProjectCarousel';
 import RoofCheck from '@/components/sections/RoofCheck';
@@ -52,7 +54,9 @@ export default function LocationPage({ location, page, index = 0 }) {
         imagePosition={photo.position}
         label={`QRS roofing in ${city}`}
       />
+      <ReviewStrip />
       <LocalIntro city={city} heading={page.intro.heading} paragraphs={page.intro.paragraphs} offices={office ? [office] : []} neighborhoods={page.neighborhoods} considerations={page.considerations} />
+      <ProofBar />
       <ProjectCarousel
         city={city}
         heading={`Roofing Projects in ${city}`}

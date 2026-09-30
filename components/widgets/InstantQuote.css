@@ -35,9 +35,6 @@ body.rm-lock{overflow:hidden}
   transition:transform .32s cubic-bezier(.2,.8,.2,1),visibility 0s linear .32s;
 }
 .rm.open .rm-drawer{transform:none;visibility:visible;transition:transform .32s cubic-bezier(.2,.8,.2,1)}
-/* Page-load preview: drawer slides out, then back behind the tab */
-.rm.peek .rm-drawer{transform:none;visibility:visible;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
-.rm.peek .rm-tab{opacity:0}
 .rm-head{display:flex;align-items:center;gap:12px;padding:16px 18px;padding-top:calc(16px + env(safe-area-inset-top));background:var(--navy);color:#fff}
 .rm-head div{flex:1;min-width:0}
 .rm-head span{display:block;color:var(--gold);font:600 11px/1.4 var(--font-head);letter-spacing:.08em;text-transform:uppercase}
@@ -140,4 +137,4 @@ body.rm-lock{overflow:hidden}
   .rm-x{width:34px;height:34px}
 }
 @media (prefers-reduced-motion:reduce){.rm-drawer,.rm-shade{transition:none!important}}
-.rm-optional{font-weight:300;color:var(--muted)}
+.rm-optional{font-weight:500;color:var(--muted)}

@@ -10,19 +10,19 @@
   content:"✓";position:absolute;left:18px;top:19px;width:26px;height:26px;border-radius:0;
   display:grid;place-items:center;background:var(--gold);color:var(--navy);font:800 14px/1 var(--font-head);
 }
-.band-points b{display:block;margin-bottom:6px;font:600 18px/1.3 var(--font-head);letter-spacing:-.01em}
-.band-points b a{color:inherit;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:4px}
+.band-points h3{margin:0 0 8px;font-size:21px;font-weight:600;line-height:1.2;letter-spacing:.01em}
+.band-points h3 a{color:inherit;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:4px}
 .band-points span{display:block;font-size:15px;line-height:1.6}
 
 .band-navy{background:var(--navy);color:#fff}
 .band-navy .eyebrow{color:var(--gold)}
-.band-navy h2,.band-navy .band-points b{color:#fff}
+.band-navy h2,.band-navy .band-points h3{color:#fff}
 .band-navy .band-copy p,.band-navy .band-points span{color:#d5e1eb}
 .band-navy .band-points li{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)}
 
 .band-light{background:var(--wash);color:var(--navy)}
 .band-light .eyebrow{color:var(--gold-ink)}
-.band-light h2,.band-light .band-copy p,.band-light .band-points b{color:var(--navy)}
+.band-light h2,.band-light .band-copy p,.band-light .band-points h3{color:var(--navy)}
 .band-light .band-points span{color:var(--ink)}
 .band-light .band-points li{background:#fff;border:1px solid var(--line);box-shadow:0 8px 24px rgba(6,45,87,.05)}
 

@@ -1,5 +1,5 @@
 /* ---------- Privacy policy and terms ---------- */
-/* Top padding clears the fixed, always-on-top .site-header (announcement row + nav) */
+/* Top padding clears the fixed, always-on-top floating header pill */
 .legal{background:#fff;padding:126px 0 72px}
 .legal-inner{max-width:780px}
 .legal h1{color:var(--navy);font-size:clamp(36px,9vw,52px);line-height:1.05;margin:18px 0 10px}

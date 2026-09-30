@@ -1,6 +1,7 @@
 import FinalCta from '@/components/sections/FinalCta';
 import Guarantee from '@/components/sections/Guarantee';
 import Hero from '@/components/sections/Hero';
+import ProofBar from '@/components/sections/ProofBar';
 import ReviewGrid from '@/components/sections/ReviewGrid';
 import RoofCheck from '@/components/sections/RoofCheck';
 import WhyQrs from '@/components/sections/WhyQrs';
@@ -22,10 +23,14 @@ export default function ReviewsPage() {
       <JsonLd data={schema} />
       <Hero crumbs={CRUMBS} eyebrow="Reviews" title={page.hero.heading} intro={page.hero.intro} />
       <ReviewGrid />
+      <ProofBar />
       <WhyQrs heading="Why Homeowners Choose QRS" />
       <Guarantee />
       <RoofCheck />
-      <FinalCta />
+      <FinalCta
+        heading="Be Our Next Five-Star Review"
+        text="See why homeowners and businesses across Los Angeles and Orange County trust QRS. Start with a roofer-led roof check and a written scope and price."
+      />
     </main>
   );
 }

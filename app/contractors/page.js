@@ -3,6 +3,8 @@ import Faq from '@/components/sections/Faq';
 import FeatureBand from '@/components/sections/FeatureBand';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
+import ProofBar from '@/components/sections/ProofBar';
+import ReviewStrip from '@/components/sections/ReviewStrip';
 import Overview from '@/components/sections/Overview';
 import ProcessSteps from '@/components/sections/ProcessSteps';
 import RelatedLinks from '@/components/sections/RelatedLinks';
@@ -49,7 +51,9 @@ export default function ContractorsPage() {
           { label: `Call ${PHONE}`, href: TEL, style: 'line' },
         ]}
       />
+      <ReviewStrip />
       <Overview heading={page.overview.heading} paragraphs={page.overview.paragraphs} />
+      <ProofBar />
       <ValueGrid heading={page.audiences.heading} items={page.audiences.points} tone="wash" />
       <FeatureBand id="white-label" {...page.whiteLabel} />
       <ProcessSteps heading={page.process.heading} subheading={page.process.subheading} steps={page.process.steps} image="/images/contractors-process-roofer-tablet.webp" imageAlt="Roofer on a rooftop smiling while reviewing a scope on a tablet" tone="white" />

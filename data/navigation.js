@@ -158,55 +158,49 @@ export const ABOUT_MENU = {
   },
 };
 
-// Links after the dropdowns. `pulse: true` gets the glow/pulse treatment (desktop) or a highlight (mobile).
-export const NAV_LINKS = [
-  { label: 'Projects', href: '/projects/' },
-  { label: 'Contractors', href: '/contractors/', pulse: true },
-];
-
 export const HEADER_CTA = { label: 'Get Pro Advice', href: '#roof-check' };
 
+// Footer: four short columns. Pages that dropped out of the header (Projects, Contractors) live here.
 export const FOOTER = {
-  main: [
-    { label: 'Home', href: '/' },
-    { label: 'About QRS', href: '/about-us/' },
-    { label: 'Reviews', href: '/reviews/' },
-    { label: 'Projects', href: '/projects/' },
-    { label: 'Roofing Blog', href: '/blog/' },
-    { label: 'Careers', href: '/careers/' },
-    { label: 'Contact Us', href: '/contact-us/' },
-    { label: 'Start a Roof Check', href: '#roof-check' },
+  columns: [
+    {
+      title: 'Company',
+      links: [
+        { label: 'About QRS', href: '/about-us/' },
+        { label: 'Projects', href: '/projects/' },
+        { label: 'Reviews', href: '/reviews/' },
+        { label: 'Roofing Blog', href: '/blog/' },
+        { label: 'Careers', href: '/careers/' },
+        { label: 'Contractors', href: '/contractors/' },
+      ],
+    },
+    {
+      title: 'Services',
+      links: [
+        { label: 'Residential Roofing', href: '/residential-roofing/' },
+        { label: 'Commercial Roofing', href: '/commercial-roofing/' },
+        { label: 'Roof Repair', href: '/roof-repair/' },
+        { label: 'Roof Replacement', href: '/roof-replacement/' },
+        { label: 'Maintenance Plans', href: '/roof-maintenance-plans/' },
+        { label: 'Financing', href: '/financing/' },
+      ],
+    },
+    {
+      title: 'Service Areas',
+      links: [
+        { label: 'All Service Areas', href: '/service-areas/' },
+        ...REGIONS.map((r) => ({ label: r.name, href: regionPath(r.slug) })),
+      ],
+    },
+    {
+      title: 'Contact',
+      links: [
+        { label: PHONE, href: TEL },
+        { label: 'Contact Us', href: '/contact-us/' },
+        { label: 'Get Pro Advice', href: '#roof-check' },
+      ],
+    },
   ],
-  services: [
-    { label: 'Residential Roofing', href: '/residential-roofing/' },
-    { label: 'Commercial Roofing', href: '/commercial-roofing/' },
-    { label: 'Roof Repair', href: '/roof-repair/' },
-    { label: 'Roof Replacement', href: '/roof-replacement/' },
-    { label: 'Emergency & Storm Damage', href: '/emergency-roof-repair/' },
-    { label: 'Maintenance Plans', href: '/roof-maintenance-plans/' },
-    { label: 'Financing', href: '/financing/' },
-    { label: 'Contractors', href: '/contractors/' },
-  ],
-  roofTypes: {
-    title: 'Roof Types',
-    links: [
-      { label: 'Tile', href: '/tile-roofing/' },
-      { label: 'Shingle', href: '/shingle-roofing/' },
-      { label: 'Flat', href: '/flat-roofing/' },
-      { label: 'Metal', href: '/metal-roofing/' },
-      { label: 'Tile Lift & Relay', href: '/tile-roofing/lift-and-relay/' },
-      { label: 'Rain Gutters', href: '/rain-gutters/' },
-    ],
-  },
-  contact: {
-    title: 'Get In Touch',
-    links: [
-      { label: 'How It Works', href: '#process' },
-      { label: PHONE, href: TEL },
-      { label: 'Service Areas', href: '/service-areas/' },
-      ...REGIONS.map((r) => ({ label: r.name, href: regionPath(r.slug) })),
-    ],
-  },
   // Small print under the columns. Privacy shows once PRIVACY_POLICY_URL is set in data/site.js (the cookie notice links there too).
   legal: [
     ...(PRIVACY_POLICY_URL ? [{ label: 'Privacy Policy', href: PRIVACY_POLICY_URL }] : []),

@@ -1,6 +1,8 @@
 import Faq from '@/components/sections/Faq';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
+import ProofBar from '@/components/sections/ProofBar';
+import ReviewStrip from '@/components/sections/ReviewStrip';
 import ProcessSteps from '@/components/sections/ProcessSteps';
 import ValueGrid from '@/components/sections/ValueGrid';
 import JsonLd from '@/components/ui/JsonLd';
@@ -38,7 +40,9 @@ export default function CareersPage() {
           { label: `Call ${PHONE}`, href: TEL, style: 'line' },
         ]}
       />
+      <ReviewStrip />
       <ValueGrid heading={page.values.heading} items={page.values.items} tone="wash" pattern />
+      <ProofBar />
       <ValueGrid id="roles" heading={page.roles.heading} intro={page.roles.intro} items={page.roles.items} />
       <Faq heading="Careers FAQs" sub="Straight answers about working at QRS." faqs={page.faqs} cta={false} />
       <ProcessSteps
@@ -50,7 +54,7 @@ export default function CareersPage() {
         showOnMobile
         tone="white"
       />
-      <FinalCta heading="Ready to Join the Crew?" text={`Email us your info or call ${PHONE} during business hours.`} cta={{ label: 'Email Us Your Info', href: EMAIL_LINK }} />
+      <FinalCta trust={false} heading="Ready to Join the Crew?" text={`Email us your info or call ${PHONE} during business hours.`} cta={{ label: 'Email Us Your Info', href: EMAIL_LINK }} />
     </main>
   );
 }

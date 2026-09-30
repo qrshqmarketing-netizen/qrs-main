@@ -63,7 +63,7 @@ export const BLOG_POSTS = [
         heading: 'Call Our Contractors Today',
         paragraphs: [
           'If you’re seeing any of the flat roof problems or warning signs above, address them soon to avoid further damage. At Quality Roofing Specialists, we work on flat and low-slope roofs across Los Angeles and Orange County, including modified bitumen and other low-slope systems, and we plan every repair around the roof’s condition and drainage.',
-          'Start with a [$199 Roof Check](#roof-check): a roofer inspects your flat roof, photo-documents what they find and explains it in plain English. If a repair is needed, you get a written scope and price before any work starts. If the roof is past repairing, a [flat roof replacement](/flat-roofing/replacement/) may be the better path, and we’ll explain why.',
+          'Start with a [free roof evaluation](#roof-check): a roofer inspects your flat roof, photo-documents what they find and explains it in plain English. If a repair is needed, you get a written scope and price before any work starts. If the roof is past repairing, a [flat roof replacement](/flat-roofing/replacement/) may be the better path, and we’ll explain why.',
         ],
       },
     ],
@@ -121,7 +121,7 @@ export const BLOG_POSTS = [
         heading: 'Call Our Service Today',
         paragraphs: [
           'If your commercial roof is showing wear, leaks or damage, or it’s been a while since its last professional inspection, don’t put it off. Minor repairs that wait tend to become major ones, with all the expense and disruption that comes with them.',
-          'Our [commercial roof repair](/commercial-roofing/repair/) work starts with a roofer-led inspection and photos of what we find, followed by a written scope and price before any work starts, and your building stays open while we work. To keep problems from coming back, ask about [commercial roof maintenance](/commercial-roofing/maintenance/), with visits on a set schedule and a photo report after each one. Start with a [$199 Roof Check](#roof-check).',
+          'Our [commercial roof repair](/commercial-roofing/repair/) work starts with a roofer-led inspection and photos of what we find, followed by a written scope and price before any work starts, and your building stays open while we work. To keep problems from coming back, ask about [commercial roof maintenance](/commercial-roofing/maintenance/), with visits on a set schedule and a photo report after each one. Start with a [free roof evaluation](#roof-check).',
         ],
       },
     ],
@@ -164,7 +164,7 @@ export const BLOG_POSTS = [
         heading: 'Finding a Reliable Roofing Contractor for Storm Damage Repair',
         paragraphs: [
           'When you see signs of storm damage, you need a reliable team. Call Quality Roofing Specialists when a storm damages your roof or a leak starts. A roofer assesses the damage and photo-documents it, and if water is still getting in, we can put temporary protection such as a tarp in place to limit further damage.',
-          'Once the roof is protected, you get a written scope and price for the permanent repair, and our photos and written scope can be shared with your insurance company. Learn more about our [emergency roof repair](/emergency-roof-repair/) service, or if the damage isn’t urgent, start with a [$199 Roof Check](#roof-check). Wondering whether the repair can improve your roof’s look too? Read [how storm damage roof repair can boost your home’s aesthetics](/blog/storm-damage-roof-repair-boost-home/).',
+          'Once the roof is protected, you get a written scope and price for the permanent repair, and our photos and written scope can be shared with your insurance company. Learn more about our [emergency roof repair](/emergency-roof-repair/) service, or if the damage isn’t urgent, start with a [free roof evaluation](#roof-check). Wondering whether the repair can improve your roof’s look too? Read [how storm damage roof repair can boost your home’s aesthetics](/blog/storm-damage-roof-repair-boost-home/).',
         ],
       },
     ],
@@ -209,7 +209,7 @@ export const BLOG_POSTS = [
         heading: 'Rely on Quality Roofing Specialists for Any Leaks',
         paragraphs: [
           'There are many signs of a leaky roof, from stains and peeling paint to mildew in your home. What matters most is finding the source and fixing it so it doesn’t happen again.',
-          'That’s where we come in. Our [roof repair](/roof-repair/) work starts with tracking down the source of the leak and photo-documenting it, and you get a written scope and price before any work starts. If water is coming in right now, see our [emergency roof repair](/emergency-roof-repair/) page; otherwise, start with a [$199 Roof Check](#roof-check).',
+          'That’s where we come in. Our [roof repair](/roof-repair/) work starts with tracking down the source of the leak and photo-documenting it, and you get a written scope and price before any work starts. If water is coming in right now, see our [emergency roof repair](/emergency-roof-repair/) page; otherwise, start with a [free roof evaluation](#roof-check).',
         ],
       },
     ],
@@ -274,7 +274,7 @@ export const BLOG_POSTS = [
         heading: 'Ensure Your Roofing Is Up to Par with Quality Roofing Specialists',
         paragraphs: [
           'Any of these roof coating applications can improve how a roof performs, but a coating is only as good as the roof underneath it. If the roof is leaking, has soft spots or has reached the end of its life, a coating won’t fix that.',
-          'Before you choose one, find out where your roof actually stands. A [$199 Roof Check](#roof-check) gives you a roofer-led, photo-documented look at its condition and a clear next step: repair, monitor, maintain or replace. If regular upkeep is what your roof needs, a [roof maintenance plan](/roof-maintenance-plans/) keeps it on schedule.',
+          'Before you choose one, find out where your roof actually stands. A [free roof evaluation](#roof-check) gives you a roofer-led, photo-documented look at its condition and a clear next step: repair, monitor, maintain or replace. If regular upkeep is what your roof needs, a [roof maintenance plan](/roof-maintenance-plans/) keeps it on schedule.',
         ],
       },
     ],
@@ -333,7 +333,7 @@ export const BLOG_POSTS = [
         heading: 'Transform Storms into Style with Quality Roofing Specialists',
         paragraphs: [
           'Whether it’s a windstorm, heavy rain or a winter storm, you want your home ready for it and able to come through. If a storm damages your roof or a leak starts, call us. A roofer will assess and photo-document the damage and, when it’s needed, set up temporary protection such as a tarp. Permanent repairs come next, with a written scope and price.',
-          'Learn more about our [emergency roof repair](/emergency-roof-repair/) service, read up on the [signs of storm damage](/blog/signs-of-storm-damage/), or start with a [$199 Roof Check](#roof-check) if the damage isn’t urgent.',
+          'Learn more about our [emergency roof repair](/emergency-roof-repair/) service, read up on the [signs of storm damage](/blog/signs-of-storm-damage/), or start with a [free roof evaluation](#roof-check) if the damage isn’t urgent.',
         ],
       },
     ],
@@ -390,10 +390,10 @@ export const BLOG_POSTS = [
         ],
       },
       {
-        heading: 'Get a Clear Answer with a $199 Roof Check',
+        heading: 'Get a Clear Answer with a Free Roof Evaluation',
         paragraphs: [
           'You now have a better sense of how to approach the choice between repair and replacement. The extent of damage, your roof’s age and the cost of each option all belong in the decision. But what if you’re still not sure which makes sense for your roof?',
-          'That’s what our [$199 Roof Check](#roof-check) is for. A roofer inspects your roof, photo-documents what they find and explains it in plain English, then recommends a clear next step: repair, monitor, maintain or replace. From there you get a written scope and price, whether that’s a [roof repair](/roof-repair/) or a [roof replacement](/roof-replacement/).',
+          'That’s what our [free roof evaluation](#roof-check) is for. A roofer inspects your roof, photo-documents what they find and explains it in plain English, then recommends a clear next step: repair, monitor, maintain or replace. From there you get a written scope and price, whether that’s a [roof repair](/roof-repair/) or a [roof replacement](/roof-replacement/).',
         ],
       },
     ],
@@ -456,7 +456,7 @@ export const BLOG_POSTS = [
       {
         heading: 'Our Team Knows How to Repair a Tiled Roof and Can Fix Yours',
         paragraphs: [
-          'If you’re in Los Angeles or Orange County and your tile roof needs attention, our team can help. Our [tile roof repair](/tile-roofing/repairs/) work replaces cracked and slipped tiles with the closest available match, and we photo-document the work so you can see what was done. Start with a [$199 Roof Check](#roof-check) to find out what your roof really needs.',
+          'If you’re in Los Angeles or Orange County and your tile roof needs attention, our team can help. Our [tile roof repair](/tile-roofing/repairs/) work replaces cracked and slipped tiles with the closest available match, and we photo-document the work so you can see what was done. Start with a [free roof evaluation](#roof-check) to find out what your roof really needs.',
         ],
       },
     ],
@@ -520,7 +520,7 @@ export const BLOG_POSTS = [
         heading: 'Quality Roofing Specialists Has What You Need',
         paragraphs: [
           'When your roof faces a sudden problem, these temporary options can help you respond quickly. They aren’t permanent solutions, but they can hold you over until a proper repair is done.',
-          'Stay safe, and call a roofing professional when a fix goes beyond a simple step. A [$199 Roof Check](#roof-check) gets a roofer’s eyes on the problem, with photos and a plain-English explanation, and our [roof repair](/roof-repair/) work follows with a written scope and price.',
+          'Stay safe, and call a roofing professional when a fix goes beyond a simple step. A [free roof evaluation](#roof-check) gets a roofer’s eyes on the problem, with photos and a plain-English explanation, and our [roof repair](/roof-repair/) work follows with a written scope and price.',
         ],
       },
     ],
@@ -552,7 +552,7 @@ export const BLOG_POSTS = [
       {
         heading: 'Inspect and Detect',
         paragraphs: [
-          'Before you repair anything, inspect the roof. Finding the existing damage, like loose shingles, cracked tiles or weak spots, lets you deal with the weak points before winter storms find them. You can leave this checkup to a roofer: a [$199 Roof Check](#roof-check) photo-documents your roof’s condition and tells you what, if anything, needs fixing before the rain.',
+          'Before you repair anything, inspect the roof. Finding the existing damage, like loose shingles, cracked tiles or weak spots, lets you deal with the weak points before winter storms find them. You can leave this checkup to a roofer: a [free roof evaluation](#roof-check) photo-documents your roof’s condition and tells you what, if anything, needs fixing before the rain.',
         ],
       },
       {
@@ -639,7 +639,7 @@ export const BLOG_POSTS = [
         heading: 'Quality Roofing Specialists Is Here for Your Asphalt Shingle Roof Repair and Replacement Needs',
         paragraphs: [
           'An asphalt shingle roof lasts longest when you stay on top of repairs. Keeping small problems small goes a long way toward keeping your roof in good shape.',
-          'If you live in Los Angeles or Orange County, our [shingle roof repair](/shingle-roofing/repairs/) work covers cracked, curled and missing shingles and the flashing around them, with photos of what we find and a written scope and price before any work starts. Start with a [$199 Roof Check](#roof-check).',
+          'If you live in Los Angeles or Orange County, our [shingle roof repair](/shingle-roofing/repairs/) work covers cracked, curled and missing shingles and the flashing around them, with photos of what we find and a written scope and price before any work starts. Start with a [free roof evaluation](#roof-check).',
         ],
       },
     ],
@@ -707,7 +707,7 @@ export const BLOG_POSTS = [
       {
         heading: 'Call Quality Roofing Specialists for Professional Assistance',
         paragraphs: [
-          'We hope these tips help when you need them. If you’d rather leave repairs to a professional, we keep homes across Los Angeles and Orange County in good shape. Our [roof repair](/roof-repair/) work is photo-documented, and you get a written scope and price before any work starts. Start with a [$199 Roof Check](#roof-check).',
+          'We hope these tips help when you need them. If you’d rather leave repairs to a professional, we keep homes across Los Angeles and Orange County in good shape. Our [roof repair](/roof-repair/) work is photo-documented, and you get a written scope and price before any work starts. Start with a [free roof evaluation](#roof-check).',
         ],
       },
     ],
@@ -760,7 +760,7 @@ export const BLOG_POSTS = [
       {
         heading: 'Hire a Roofing Contractor',
         paragraphs: [
-          'For help keeping your asphalt shingle roof cooler, talk to a roofer. Our team is a licensed California contractor since 2020, and proper attic ventilation is part of how we install [shingle roofing](/shingle-roofing/). Start with a [$199 Roof Check](#roof-check) to see where your roof stands.',
+          'For help keeping your asphalt shingle roof cooler, talk to a roofer. Our team is a licensed California contractor since 2020, and proper attic ventilation is part of how we install [shingle roofing](/shingle-roofing/). Start with a [free roof evaluation](#roof-check) to see where your roof stands.',
         ],
       },
     ],
@@ -823,7 +823,7 @@ export const BLOG_POSTS = [
       {
         heading: 'Contact the Asphalt Shingle Roof Experts',
         paragraphs: [
-          'If you’ve noticed any of these signs, our team can help. We handle every [shingle roof repair](/shingle-roofing/repairs/) as a licensed California contractor since 2020, and if the damage is too widespread to repair, we’ll explain why a [shingle roof replacement](/shingle-roofing/replacement/) makes more sense. Start with a [$199 Roof Check](#roof-check), or learn more about our [residential roofing](/residential-roofing/) services.',
+          'If you’ve noticed any of these signs, our team can help. We handle every [shingle roof repair](/shingle-roofing/repairs/) as a licensed California contractor since 2020, and if the damage is too widespread to repair, we’ll explain why a [shingle roof replacement](/shingle-roofing/replacement/) makes more sense. Start with a [free roof evaluation](#roof-check), or learn more about our [residential roofing](/residential-roofing/) services.',
         ],
       },
     ],
@@ -883,7 +883,7 @@ export const BLOG_POSTS = [
         heading: 'Conclusion',
         paragraphs: [
           'There are many roofing companies out there, and with the money you’re investing in your home, choosing the right one matters. Do your research, look into the company’s history and talk with them before you decide.',
-          'If you’re looking for a reliable roofing specialist in [Los Angeles](https://lacounty.gov/), Quality Roofing Specialists is a licensed California contractor since 2020, offering no-pressure advice and written pricing before any work begins. Learn more about our [residential roofing](/residential-roofing/) services, or start with a [$199 Roof Check](#roof-check).',
+          'If you’re looking for a reliable roofing specialist in [Los Angeles](https://lacounty.gov/), Quality Roofing Specialists is a licensed California contractor since 2020, offering no-pressure advice and written pricing before any work begins. Learn more about our [residential roofing](/residential-roofing/) services, or start with a [free roof evaluation](#roof-check).',
         ],
       },
     ],
@@ -952,7 +952,7 @@ export const BLOG_POSTS = [
       {
         heading: 'Conclusion',
         paragraphs: [
-          'Overall, we recommend most homeowners avoid wooden roofing because of its durability problems and fire risk. Asphalt shingles or tile will get you more from your roof. We repair, install and maintain [shingle roofing](/shingle-roofing/) and [tile roofing](/tile-roofing/) for homes across [Los Angeles](https://www.lacity.org/) and Orange County. Start with a [$199 Roof Check](#roof-check).',
+          'Overall, we recommend most homeowners avoid wooden roofing because of its durability problems and fire risk. Asphalt shingles or tile will get you more from your roof. We repair, install and maintain [shingle roofing](/shingle-roofing/) and [tile roofing](/tile-roofing/) for homes across [Los Angeles](https://www.lacity.org/) and Orange County. Start with a [free roof evaluation](#roof-check).',
         ],
       },
     ],
@@ -1007,8 +1007,8 @@ export const BLOG_POSTS = [
       {
         heading: 'Let Us Help You Care for Your Roof',
         paragraphs: [
-          'Quality Roofing Specialists can help you care for and maintain your roof. A [roof maintenance plan](/roof-maintenance-plans/) is set up after a Roof Check around your roof’s type, age and condition, with visits on the schedule set in your plan and a photo report after each one. And when it’s time, we handle repairs and replacements for shingle and tile roofs across Los Angeles and Orange County.',
-          'Start with a [$199 Roof Check](#roof-check) to see where your roof stands today.',
+          'Quality Roofing Specialists can help you care for and maintain your roof. A [roof maintenance plan](/roof-maintenance-plans/) is set up after a free roof evaluation around your roof’s type, age and condition, with visits on the schedule set in your plan and a photo report after each one. And when it’s time, we handle repairs and replacements for shingle and tile roofs across Los Angeles and Orange County.',
+          'Start with a [free roof evaluation](#roof-check) to see where your roof stands today.',
         ],
       },
     ],
@@ -1084,7 +1084,7 @@ export const BLOG_POSTS = [
       {
         heading: 'Contact Quality Roofing Specialists for Additional Questions',
         paragraphs: [
-          'Have a different question about tile roofs? Our team can talk through any question or concern you have. The easiest way to get answers about your own roof is a [$199 Roof Check](#roof-check): a roofer inspects it, photo-documents what they find and explains it in plain English.',
+          'Have a different question about tile roofs? Our team can talk through any question or concern you have. The easiest way to get answers about your own roof is a [free roof evaluation](#roof-check): a roofer inspects it, photo-documents what they find and explains it in plain English.',
         ],
       },
     ],
@@ -1137,7 +1137,7 @@ export const BLOG_POSTS = [
         heading: 'Are Solar Panel Tiles Worth the Money?',
         paragraphs: [
           'Solar tiles are still being improved, and some owners have reported problems with their systems. Generating power from a renewable source is a benefit that’s hard to pass up, but for many homeowners they remain a costly, higher-risk choice. Unless you’re prepared for the cost of repairs or replacement, it may be wise to wait until the technology is more proven.',
-          'Whatever you decide, the roof underneath comes first. If your roof is aging and you’re weighing solar, a [$199 Roof Check](#roof-check) tells you where it stands before anything goes on top. If it’s time for a new roof, see our [roof replacement](/roof-replacement/) options, or compare materials in our guide to the [types of roofing](/blog/5-types-of-roofing/).',
+          'Whatever you decide, the roof underneath comes first. If your roof is aging and you’re weighing solar, a [free roof evaluation](#roof-check) tells you where it stands before anything goes on top. If it’s time for a new roof, see our [roof replacement](/roof-replacement/) options, or compare materials in our guide to the [types of roofing](/blog/5-types-of-roofing/).',
         ],
       },
     ],
@@ -1187,7 +1187,7 @@ export const BLOG_POSTS = [
       {
         heading: 'Professional Gutter Services',
         paragraphs: [
-          'Now that you know how often your gutters need cleaning, let a professional handle it. Clearing debris from gutters, drains and valleys is part of what our [roof maintenance plan](/roof-maintenance-plans/) visits cover, and each visit ends with a photo report. If your gutters are damaged or worn out, we can replace them with new [rain gutters](/rain-gutters/). Start with a [$199 Roof Check](#roof-check).',
+          'Now that you know how often your gutters need cleaning, let a professional handle it. Clearing debris from gutters, drains and valleys is part of what our [roof maintenance plan](/roof-maintenance-plans/) visits cover, and each visit ends with a photo report. If your gutters are damaged or worn out, we can replace them with new [rain gutters](/rain-gutters/). Start with a [free roof evaluation](#roof-check).',
         ],
       },
     ],
@@ -1247,7 +1247,7 @@ export const BLOG_POSTS = [
       {
         heading: 'Install an Asphalt Shingle Roof',
         paragraphs: [
-          'We install asphalt shingle roofs across Los Angeles and Orange County: premium shingle systems installed to the manufacturer’s requirements, with proper ventilation and tidy detailing. Learn about our [shingle roof replacement](/shingle-roofing/replacement/) process, or start with a [$199 Roof Check](#roof-check).',
+          'We install asphalt shingle roofs across Los Angeles and Orange County: premium shingle systems installed to the manufacturer’s requirements, with proper ventilation and tidy detailing. Learn about our [shingle roof replacement](/shingle-roofing/replacement/) process, or start with a [free roof evaluation](#roof-check).',
         ],
       },
     ],
@@ -1300,7 +1300,7 @@ export const BLOG_POSTS = [
         paragraphs: [
           'The dark streaks on many roofs are actually algae, and mold and algae spread by airborne spores that travel easily from roof to roof. If you see growth on one roof in your neighborhood, it’s likely to show up on others. Mold also causes and worsens problems like leaks and rot, so where you see it, expect other roofing problems that can do damage over time.',
           'Cleaning may not get rid of every spore, and in some cases, damaged sections of the roof need replacing. That’s why a roofer should take a look. At Quality Roofing Specialists, every project starts with a [roof inspection](/roof-inspection/) to find the extent of the problem, and we photo-document what we find, including any damage the growth has done to the shingles or the layers underneath.',
-          'If the growth has led to damage, our [shingle roof repair](/shingle-roofing/repairs/) work fixes it, with a written scope and price before work starts. Start with a [$199 Roof Check](#roof-check).',
+          'If the growth has led to damage, our [shingle roof repair](/shingle-roofing/repairs/) work fixes it, with a written scope and price before work starts. Start with a [free roof evaluation](#roof-check).',
         ],
       },
     ],
@@ -1363,8 +1363,8 @@ export const BLOG_POSTS = [
         heading: 'Our Roof Installation Services',
         paragraphs: [
           'Quality Roofing Specialists installs [shingle roofing](/shingle-roofing/), [tile roofing](/tile-roofing/), flat roofing and standing seam metal roofs for homes and commercial buildings across Los Angeles and Orange County.',
-          'Our process has four steps: a Roof Check, where we inspect and photo-document your roof; a clear quote with the written scope and price; an expert install by qualified crews; and a final walkthrough of the finished roof and your 10-year workmanship warranty.',
-          'Our team is a licensed California contractor since 2020, working on residential and commercial roofs. As a local roofing team, we can help you choose the roof type that suits your home, your budget and the Southern California climate. Start with a [$199 Roof Check](#roof-check).',
+          'Our process has four steps: a free roof evaluation, where we inspect and photo-document your roof; a clear quote with the written scope and price; an expert install by qualified crews; and a final walkthrough of the finished roof and your 10-year workmanship warranty.',
+          'Our team is a licensed California contractor since 2020, working on residential and commercial roofs. As a local roofing team, we can help you choose the roof type that suits your home, your budget and the Southern California climate. Start with a [free roof evaluation](#roof-check).',
         ],
       },
     ],
@@ -1427,7 +1427,7 @@ export const BLOG_POSTS = [
       {
         heading: 'Quality Roofing Specialists',
         paragraphs: [
-          'Quality Roofing Specialists offers roof inspections, repairs and installations. Along with the tips above, a professional inspection is one of the smartest things you can do for your roof. If you’d rather not keep track yourself, a [roof maintenance plan](/roof-maintenance-plans/) puts visits on the schedule set in your plan, covering things like clearing debris, checking and resealing flashings and spotting wear early, with a photo report after each visit. Start with a [$199 Roof Check](#roof-check).',
+          'Quality Roofing Specialists offers roof inspections, repairs and installations. Along with the tips above, a professional inspection is one of the smartest things you can do for your roof. If you’d rather not keep track yourself, a [roof maintenance plan](/roof-maintenance-plans/) puts visits on the schedule set in your plan, covering things like clearing debris, checking and resealing flashings and spotting wear early, with a photo report after each visit. Start with a [free roof evaluation](#roof-check).',
         ],
       },
     ],

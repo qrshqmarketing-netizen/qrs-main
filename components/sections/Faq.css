@@ -9,7 +9,7 @@
 .faq-item summary{
   list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;
   min-height:60px;padding:16px 18px;color:var(--navy);
-  font-family:var(--font-head);font-size:16px;font-weight:300;line-height:1.45;letter-spacing:0;
+  font-family:var(--font-head);font-size:16px;font-weight:500;line-height:1.45;letter-spacing:0;
 }
 .faq-item summary::-webkit-details-marker{display:none}
 .faq-item summary:focus-visible{outline:3px solid rgba(212,181,114,.6);outline-offset:2px;border-radius:0}
@@ -18,7 +18,7 @@
   display:grid;place-items:center;font-size:1.2rem;font-weight:700;line-height:1;transition:transform .25s,background .2s;
 }
 .faq-item[open] summary:after{transform:rotate(45deg);background:var(--gold);color:var(--navy)}
-.faq-item p{margin:0;padding:0 18px 20px;color:var(--navy);font-family:var(--font-body);font-size:16px;font-weight:300;line-height:1.7}
+.faq-item p{margin:0;padding:0 18px 20px;color:var(--navy);font-family:var(--font-body);font-size:16px;font-weight:500;line-height:1.7}
 .faq-cta{text-align:center;margin-top:32px}
 .faq-cta .btn{border-radius:999px}
 @media (min-width:621px){

@@ -5,11 +5,11 @@ export const CONTACT_PAGE = {
   keyword: 'contact quality roofing specialists',
   metaTitle: 'Contact',
   metaDescription:
-    'Contact Quality Roofing Specialists: call (310) 340-1643, visit our Los Angeles, Valley or Vernon office, or request a $199 Roof Check online and get a clear next step.',
+    'Contact Quality Roofing Specialists: call (310) 340-1643, visit our Los Angeles, Valley or Vernon office, or request a free roof evaluation online and get a clear next step.',
   hero: {
     heading: 'Contact Quality Roofing Specialists',
     intro:
-      'Call, email or send us your project details, and our team will get back to you with a clear next step. Every roof we work on starts with a roofer-led [$199 Roof Check](#roof-check), not a sales pitch.',
+      'Call, email or send us your project details, and our team will get back to you with a clear next step. Every roof we work on starts with a roofer-led [free roof evaluation](#roof-check), not a sales pitch.',
   },
   ways: {
     heading: 'How to Reach Us',
@@ -22,7 +22,7 @@ export const CONTACT_PAGE = {
   },
   faqs: [
     { q: 'Which office should I contact?', a: 'Any of them. All of our offices share one phone number, so calling (310) 340-1643 reaches our team wherever your property is.' },
-    { q: 'Can I send photos of my roof before a visit?', a: 'Yes. Email them with the property address and a short note about what you’re seeing. A roofer still confirms everything in person during the Roof Check.' },
+    { q: 'Can I send photos of my roof before a visit?', a: 'Yes. Email them with the property address and a short note about what you’re seeing. A roofer still confirms everything in person during the roof evaluation.' },
     { q: 'Do you work in my area?', a: 'We serve homes and businesses across [Los Angeles County](/service-areas/la-county/) and [Orange County](/service-areas/orange-county/). Enter your ZIP code on the map on this page to check your address.' },
   ],
 };

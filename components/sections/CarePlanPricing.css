@@ -19,7 +19,7 @@
 .cp-card{position:relative;background:#fff;border:1.5px solid var(--line);border-radius:0;padding:30px 24px 24px;text-align:center;display:flex;flex-direction:column}
 .cp-popular{border-color:var(--gold);box-shadow:var(--shadow)}
 .cp-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--navy);font:800 .72rem/1 var(--font-head);padding:6px 14px;border-radius:999px;white-space:nowrap}
-.cp-card h3{margin:6px 0 4px;font-family:var(--font-head);font-size:1.3rem;color:var(--navy)}
+.cp-card h3{margin:6px 0 4px;font-family:var(--font-display);font-size:1.3rem;color:var(--navy)}
 .cp-tagline{color:var(--muted);font-size:.88rem;margin:0 0 18px;min-height:2.4em}
 .cp-price{margin-bottom:6px}
 .cp-price b{font-family:var(--font-head);font-size:2.2rem;color:var(--navy)}

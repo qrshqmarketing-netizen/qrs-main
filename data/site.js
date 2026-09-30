@@ -70,7 +70,7 @@ export const GTM_ID = 'GTM-P7Z3CMG';
 // Home page title and description (search results + link previews)
 export const HOME_TITLE = 'Roof Repair & Replacement in Southern California | Quality Roofing Specialists';
 export const HOME_DESCRIPTION =
-  'Roof repair & replacement in Southern California. Tile, flat & shingle roofing, $199 Roof Check, 10-year workmanship warranty. Call (310) 340-1643.';
+  'Roof repair & replacement in Southern California. Tile, flat & shingle roofing, free roof evaluation, 10-year workmanship warranty. Call (310) 340-1643.';
 
 // Short trust points in the bar under the hero
 export const PROOF_POINTS = [

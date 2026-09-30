@@ -2,7 +2,7 @@ import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
 import ProjectCarousel from '@/components/sections/ProjectCarousel';
 import QrsStandard from '@/components/sections/QrsStandard';
-import ReviewSlider from '@/components/sections/ReviewSlider';
+import ReviewStrip from '@/components/sections/ReviewStrip';
 import RoofCheck from '@/components/sections/RoofCheck';
 import ServiceArea from '@/components/sections/ServiceArea';
 import Services from '@/components/sections/Services';
@@ -66,14 +66,9 @@ export default function HomePage() {
           image="/images/home-hero-shingle-closeup-drone-view.webp"
           imageAlt="Close aerial view of a dimensional shingle roof on a Southern California home"
           className="hero-top-pad"
+          stats
         />
-        <section className="section">
-          <div className="container">
-            <div className="tst-standalone">
-              <ReviewSlider />
-            </div>
-          </div>
-        </section>
+        <ReviewStrip />
         <QrsStandard />
         <Services items={HOME_SERVICES} compact cta={false} />
         <ServiceArea />

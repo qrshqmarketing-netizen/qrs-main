@@ -18,20 +18,12 @@ export default function Footer() {
     <footer>
       <div className="container">
         <div className="ft-grid">
-          <nav className="ft-col ft-big" aria-label="Main">
-            {links(FOOTER.main)}
-          </nav>
-          <nav className="ft-col ft-big" aria-label="Services and locations">
-            {links(FOOTER.services)}
-          </nav>
-          <div className="ft-col ft-small">
-            <h4>{FOOTER.roofTypes.title}</h4>
-            {links(FOOTER.roofTypes.links)}
-          </div>
-          <div className="ft-col ft-small">
-            <h4>{FOOTER.contact.title}</h4>
-            {links(FOOTER.contact.links)}
-          </div>
+          {FOOTER.columns.map((col) => (
+            <nav className="ft-col" aria-label={col.title} key={col.title}>
+              <h4>{col.title}</h4>
+              {links(col.links)}
+            </nav>
+          ))}
           <div className="ft-col ft-brand">
             <BrandLogo variant="dark" />
             <div className="ft-social">

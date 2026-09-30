@@ -8,6 +8,6 @@ export const REVIEWS_PAGE = {
   hero: {
     heading: 'Customer Reviews',
     intro:
-      'Read customer reviews from homeowners who trusted Quality Roofing Specialists with their roofs, in their own words from Google. Then see how it works for yourself with a roofer-led [$199 Roof Check](#roof-check).',
+      'Read customer reviews from homeowners who trusted Quality Roofing Specialists with their roofs, in their own words from Google. Then see how it works for yourself with a roofer-led [free roof evaluation](#roof-check).',
   },
 };

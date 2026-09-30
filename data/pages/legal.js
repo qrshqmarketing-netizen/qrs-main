@@ -47,7 +47,7 @@ export const PRIVACY_POLICY = {
     {
       heading: 'How we use information',
       items: [
-        'To respond to your requests, schedule Roof Checks and prepare estimates and written scopes',
+        'To respond to your requests, schedule roof evaluations and Roof Checks and prepare estimates and written scopes',
         'To provide our roofing services and follow up after the work',
         'To contact you by phone, text or email about your request or project',
         'To keep the website working, secure and useful',
@@ -125,8 +125,8 @@ export const TERMS = {
       paragraphs: ['Prices from the Instant Quote are ballpark estimates based on the information you enter and on satellite imagery. They aren’t a quote, an offer or a contract. Your actual price comes in a written scope after a roofer inspects the roof and confirms its measurements and condition.'],
     },
     {
-      heading: 'Roof Checks and roofing services',
-      paragraphs: ['Roof Checks and other visits are scheduled based on availability. The work we perform, its price, schedule and warranty are set out in the written scope and agreement for your project, and those documents control if they differ from anything on this website.'],
+      heading: 'Roof evaluations, Roof Checks and roofing services',
+      paragraphs: ['Roof evaluations, Roof Checks and other visits are scheduled based on availability. The work we perform, its price, schedule and warranty are set out in the written scope and agreement for your project, and those documents control if they differ from anything on this website.'],
     },
     {
       heading: 'Financing',

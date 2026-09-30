@@ -25,7 +25,7 @@ export default function CityCards({ blurbs = {}, regions = REGIONS.map((r) => r.
             <div className="city-grid">
               {citiesIn(r.slug).map((l) => (
                 <SiteLink className="city-card" href={cityPath(l.slug)} key={l.slug}>
-                  <b>{l.city}</b>
+                  <h3>{l.city}</h3>
                   {blurbs[l.slug] && <span>{blurbs[l.slug]}</span>}
                   <em>
                     {l.city} roofing <ArrowRight />

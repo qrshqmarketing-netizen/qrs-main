@@ -6,7 +6,7 @@ export const METAL_CONTENT = {
     keyword: 'metal roofing',
     metaTitle: 'Metal Roofing in Los Angeles & OC',
     metaDescription:
-      'Metal roofing for Los Angeles & Orange County homes: standing seam panels, rain gutters planned to match and a written scope first. Book a $199 Roof Check.',
+      'Metal roofing for Los Angeles & Orange County homes: standing seam panels, rain gutters planned to match and a written scope first. Book a free roof evaluation.',
     hero: {
       heading: 'Metal Roofing Services',
       intro:
@@ -17,7 +17,7 @@ export const METAL_CONTENT = {
       heading: 'Is a Metal Roof Right for Your Home?',
       paragraphs: [
         'For homes, the metal roof we install is **standing seam**, named for the raised seams that join its long vertical panels. The look is clean and linear, which suits modern and mid-century homes, and it works just as well on a new ADU, a porch roof or a patio cover. Metal can also be a smart change when an older roof is due for replacement, as long as the deck, slope and drainage are right for it. Here in Los Angeles and Orange County, any metal roof should be planned around hard sun, dry Santa Ana winds, winter storms and, near the beach, salt air.',
-        'Metal isn’t the right answer for every roof, and we’ll tell you if it isn’t right for yours. Our [$199 Roof Check](#roof-check) starts there: a roofer checks your slope, the condition of the existing roof and how water leaves it, and tells you in plain English whether metal makes sense. If it does, we’ll walk you through [standing seam metal roofing](/metal-roofing/standing-seam/), from panel color to trims, and plan gutters that tie into the new roof edge. If you decide to go ahead, nothing starts until you’ve seen the written scope and price.',
+        'Metal isn’t the right answer for every roof, and we’ll tell you if it isn’t right for yours. Our [free roof evaluation](#roof-check) starts there: a roofer checks your slope, the condition of the existing roof and how water leaves it, and tells you in plain English whether metal makes sense. If it does, we’ll walk you through [standing seam metal roofing](/metal-roofing/standing-seam/), from panel color to trims, and plan gutters that tie into the new roof edge. If you decide to go ahead, nothing starts until you’ve seen the written scope and price.',
       ],
     },
     cards: {
@@ -60,7 +60,7 @@ export const METAL_CONTENT = {
       },
       {
         q: 'Do you inspect existing metal roofs?',
-        a: 'Yes. A Roof Check on a metal roof looks at the seams, trims and flashings, the sealant around pipes and vents, any loose or backed-out fasteners and signs of corrosion. You get photos and a plain-English next step: repair, monitor, maintain or replace.',
+        a: 'Yes. A roof evaluation on a metal roof looks at the seams, trims and flashings, the sealant around pipes and vents, any loose or backed-out fasteners and signs of corrosion. You get photos and a plain-English next step: repair, monitor, maintain or replace.',
       },
     ],
   },
@@ -73,7 +73,7 @@ export const METAL_CONTENT = {
       card: 'Clean vertical panels joined by raised seams, held by hidden clips that let the metal move with the heat. Suited to modern homes, ADUs and patio covers.',
       metaTitle: 'Standing Seam Metal Roofing in LA',
       metaDescription:
-        'Standing seam metal roofing in Los Angeles & Orange County: concealed clips, a flat, sound deck and clean flashings. Schedule a $199 Roof Check.',
+        'Standing seam metal roofing in Los Angeles & Orange County: concealed clips, a flat, sound deck and clean flashings. Schedule a free roof evaluation.',
       hero: {
         intro:
           'A standing seam roof is only as good as the parts you can’t see: the deck and underlayment beneath the panels, the clips under the seams and the flashings at every wall and vent. We plan and install each of them with the same care as the panels.',
@@ -82,14 +82,14 @@ export const METAL_CONTENT = {
       overview: {
         paragraphs: [
           '**Standing seam metal roofing** uses long panels that run from ridge to eave, joined along seams that stand up above the flat of each panel. Concealed clips under those seams hold everything down, so no screws pierce the face of the metal. The clips also give each panel room to expand as it heats up in the afternoon sun and contract as it cools at night, which helps keep the metal from buckling or working fasteners loose over time. The result is a crisp, clean-lined roof that’s noncombustible, long-lasting and available in reflective finishes suited to Southern California heat.',
-          'Across Los Angeles and Orange County, you’ll see standing seam on everything from modern hillside homes to backyard ADUs, porch roofs and patio covers. Wherever it goes, metal shows the quality of the installation: a wavy deck or a clip fastened too tight can show up as ripples in the finished panels. Our [$199 Roof Check](#roof-check) looks closely at your slope, existing flashings and how water leaves the roof, so the plan accounts for every edge, wall and vent before a single panel is ordered.',
+          'Across Los Angeles and Orange County, you’ll see standing seam on everything from modern hillside homes to backyard ADUs, porch roofs and patio covers. Wherever it goes, metal shows the quality of the installation: a wavy deck or a clip fastened too tight can show up as ripples in the finished panels. Our [free roof evaluation](#roof-check) looks closely at your slope, existing flashings and how water leaves the roof, so the plan accounts for every edge, wall and vent before a single panel is ordered.',
         ],
       },
       process: {
         subheading: 'How we install a standing seam roof',
         steps: [
           {
-            title: 'Roof Check and panel plan',
+            title: 'Roof Evaluation and panel plan',
             text: 'We inspect and photo-document the roof, confirm the slope and talk through panel profile, metal and color with you. Your written scope then lists the panels, underlayment, trims and flashings, with the price.',
             bullets: ['Slope and roof condition', 'Walls, valleys, vents and skylights', 'Sun, wind and salt-air exposure'],
           },

@@ -114,9 +114,14 @@ export const ROOF_FINANCING = {
   title: 'Roof Financing',
   navLabel: 'Financing',
   card: 'Spread the cost of a home roof replacement into monthly payments through Momnt Financing or Service Financing, subject to credit approval, once your written scope and price are in hand.',
+  // Closing call to action above the footer (FinalCta); other service pages word theirs from `keyword`
+  final: {
+    heading: 'Get Your Price, Then Your Payment Options',
+    text: 'A roofer gives you a written scope and price for your roof replacement, then we walk you through monthly payments with Momnt Financing or Service Financing.',
+  },
   metaTitle: 'Roof Financing in Los Angeles & OC',
   metaDescription:
-    'Roof financing in LA & Orange County: spread the cost of a home roof replacement into monthly payments through Momnt Financing or Service Financing. Book a Roof Check.',
+    'Roof financing in LA & Orange County: spread the cost of a home roof replacement into monthly payments through Momnt Financing or Service Financing. Book a free roof evaluation.',
   hero: {
     intro:
       'A new roof is a big expense, and it rarely comes at a convenient time. Roof financing through Momnt Financing or Service Financing can spread the cost into monthly payments, subject to credit approval, and it starts only after you have a written scope and price.',
@@ -125,14 +130,14 @@ export const ROOF_FINANCING = {
   overview: {
     paragraphs: [
       'Roofs don’t wait for a good moment to wear out. A leak turns out to be worn underlayment across the whole roof, a storm finishes off shingles that were already tired, or an inspection for a home sale shows the roof is near the end of its life. Financing is available through **Momnt Financing** and **Service Financing** to help spread the cost of a [home roof replacement](/roof-replacement/) into monthly payments, subject to credit approval. To get a feel for the numbers, the **Instant Quote** on this site gives a ballpark replacement price for your roof and shows example monthly payments alongside it.',
-      'Your actual price starts with a [$199 Roof Check](#roof-check), where a roofer inspects and photo-documents the roof and tells you plainly whether it needs a repair or a replacement. Then you get a written scope and price, so you know exactly what you’re financing before you apply. Financing is available for home roof replacements — repairs and commercial projects are paid another way. However you choose to pay, qualified crews do the work cleanly and to spec, and installs are backed by our 10-year workmanship warranty.',
+      'Your actual price starts with a [free roof evaluation](#roof-check), where a roofer inspects and photo-documents the roof and tells you plainly whether it needs a repair or a replacement. Then you get a written scope and price, so you know exactly what you’re financing before you apply. Financing is available for home roof replacements — repairs and commercial projects are paid another way. However you choose to pay, qualified crews do the work cleanly and to spec, and installs are backed by our 10-year workmanship warranty.',
     ],
   },
   process: {
     subheading: 'How roof financing works with QRS',
     steps: [
       {
-        title: 'Roof Check',
+        title: 'Roof Evaluation',
         text: 'A roofer inspects and photo-documents your roof, then explains in plain English whether a repair will do or a replacement makes more sense.',
       },
       {
@@ -163,7 +168,7 @@ export const ROOF_FINANCING = {
       },
       {
         title: 'Advice based on your roof',
-        text: 'What we recommend comes from the Roof Check photos, not from how you plan to pay. If a [roof repair](/roof-repair/) will do, we say so.',
+        text: 'What we recommend comes from the roof evaluation photos, not from how you plan to pay. If a [roof repair](/roof-repair/) will do, we say so.',
       },
       {
         title: 'No pressure to finance',
@@ -189,8 +194,8 @@ export const ROOF_FINANCING = {
       a: 'Open the Instant Quote on this site and enter your address, a few details about your roof and where to send your estimate. It shows a ballpark replacement price with example monthly payments. Those examples are for illustration only, not an offer of credit, and your actual price comes from your written scope.',
     },
     {
-      q: 'Can I get a Roof Check before deciding about financing?',
-      a: 'Of course. The Roof Check is about your roof, not how you’ll pay for it. There’s no deposit: you pay the $199 after the visit, and you can think about financing once you have your written scope and price.',
+      q: 'Can I get a free roof evaluation before deciding about financing?',
+      a: 'Of course. The roof evaluation is about your roof, not how you’ll pay for it. The evaluation is free, and you can think about financing once you have your written scope and price.',
     },
     {
       q: 'Can financing help with storm damage?',

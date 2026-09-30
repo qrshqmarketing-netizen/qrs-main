@@ -1,6 +1,8 @@
 import Faq from '@/components/sections/Faq';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
+import ProofBar from '@/components/sections/ProofBar';
+import ReviewStrip from '@/components/sections/ReviewStrip';
 import Offices from '@/components/sections/Offices';
 import RoofCheck from '@/components/sections/RoofCheck';
 import ServiceArea from '@/components/sections/ServiceArea';
@@ -49,12 +51,17 @@ export default function ContactPage() {
           { label: 'Request an Estimate', href: '#roof-check', style: 'line' },
         ]}
       />
+      <ReviewStrip />
       <Offices sub="Visit or call any of our offices. One phone number reaches our whole team." note={`Hours: ${HOURS_LINE}`} />
+      <ProofBar />
       <ValueGrid heading={page.ways.heading} items={page.ways.items} />
       <RoofCheck />
       <ServiceArea heading="Check Your Service Area" sub="Enter your ZIP code or pick a city on the map to see its phone number, estimate link and city page." />
       <Faq heading="Contact FAQs" sub="Straight answers about reaching our team." faqs={FAQS} cta={false} />
-      <FinalCta />
+      <FinalCta
+        heading="Talk to a Roofer, Not a Call Center"
+        text="Call the office or send the form, and a roofer gets back to you with a clear next step, a written scope and a price."
+      />
     </main>
   );
 }

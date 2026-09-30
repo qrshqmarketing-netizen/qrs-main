@@ -3,10 +3,12 @@ import DifferenceBand from '@/components/sections/DifferenceBand';
 import Faq from '@/components/sections/Faq';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
+import ProofBar from '@/components/sections/ProofBar';
+import ReviewStrip from '@/components/sections/ReviewStrip';
 import Overview from '@/components/sections/Overview';
 import RoofCheck from '@/components/sections/RoofCheck';
 import ServiceFinder from '@/components/sections/ServiceFinder';
-import { LOCATION_CTA } from '@/components/templates/shared';
+import { closingCta } from '@/components/templates/shared';
 import JsonLd from '@/components/ui/JsonLd';
 import { HOME, RESIDENTIAL, RESIDENTIAL_TYPES, typeCard } from '@/data/catalog';
 import { RESIDENTIAL_PAGE as page } from '@/data/pages/residential';
@@ -43,13 +45,15 @@ export default function ResidentialRoofingPage() {
         imageAlt="Aerial view of a Southern California neighborhood of shingle-roofed homes"
         imagePosition="center 45%"
       />
+      <ReviewStrip />
       <Overview heading={page.overview.heading} paragraphs={page.overview.paragraphs} />
+      <ProofBar />
       <CardCarousel title={page.cards.heading} items={RESIDENTIAL_TYPES.map(typeCard)} idPrefix="roofTypes" tone="wash" />
       <ServiceFinder heading={page.finder.heading} intro={page.finder.intro} rows={page.finder.rows} />
       <DifferenceBand />
       <Faq heading="Frequently Asked Questions" sub="Straight answers about residential roofing." faqs={page.faqs} cta={false} />
       <RoofCheck tone="white" />
-      <FinalCta {...LOCATION_CTA} />
+      <FinalCta {...closingCta(page.keyword)} />
     </main>
   );
 }

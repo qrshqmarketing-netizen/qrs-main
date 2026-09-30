@@ -5,16 +5,16 @@ import { PHONE, TEL } from './site';
 
 export const FAQS = [
   {
-    q: 'What is the $199 Roof Check?',
-    a: 'It’s a roofer-led tune-up, not just a look-over. We inspect your roof’s condition, seal the vents, pipes and flashings as we go, and photo-document what we find. You get a plain-English explanation and a clear next step: repair, monitor, maintain or replace. If you move forward with a repair or replacement, the $199 is credited toward the job.',
+    q: 'Is the roof evaluation free? What is the $199 Roof Check?',
+    a: 'Yes, the roof evaluation is free. We use drone footage to see the condition of your roof, explain what we find in plain English and give you a clear next step: repair, monitor, maintain or replace. The $199 Roof Check is optional. It’s a tune-up where we seal the vents, pipes and flashings as much as possible, and if you move forward with a repair or replacement, the $199 is credited toward the job.',
   },
   {
     q: 'Do I have to pay anything up front?',
-    a: 'No. There’s no deposit to start the Roof Check — you pay after the visit.',
+    a: 'No. The roof evaluation is free, and if you choose the optional $199 Roof Check, there’s no deposit — you pay after the visit.',
   },
   {
     q: 'Do I need a full roof replacement?',
-    a: 'Not always. Many roofs just need a targeted repair or a [tile lift & relay](/tile-roofing/lift-and-relay/). The Roof Check tells you what your roof actually needs, so you’re not paying for work you don’t need.',
+    a: 'Not always. Many roofs just need a targeted repair or a [tile lift & relay](/tile-roofing/lift-and-relay/). The free roof evaluation tells you what your roof actually needs, so you’re not paying for work you don’t need.',
   },
   {
     q: 'Will I know the price before work starts?',

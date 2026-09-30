@@ -49,7 +49,7 @@ export const SERVICES = [
     schemaName: 'Roof Inspections & Roof Care',
     scene: 'scene-inspect',
     image: '/images/shingle-roof-inspection-overhead.webp',
-    text: 'Detailed inspections and maintenance designed to catch small problems early, starting with our roofer-led $199 Roof Check.',
+    text: 'Detailed inspections and maintenance designed to catch small problems early, starting with a free roof evaluation.',
     href: '/roof-inspection/',
   },
 ];

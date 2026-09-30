@@ -1,6 +1,8 @@
 import FinalCta from '@/components/sections/FinalCta';
 import Guarantee from '@/components/sections/Guarantee';
 import Hero from '@/components/sections/Hero';
+import ProofBar from '@/components/sections/ProofBar';
+import ReviewStrip from '@/components/sections/ReviewStrip';
 import Overview from '@/components/sections/Overview';
 import Process from '@/components/sections/Process';
 import RoofCheck from '@/components/sections/RoofCheck';
@@ -27,7 +29,9 @@ export default function AboutPage() {
     <main id="top">
       <JsonLd data={schema} />
       <Hero crumbs={CRUMBS} eyebrow={page.hero.eyebrow} title={page.hero.heading} image={HERO_IMAGE} imagePosition="center 40%" />
+      <ReviewStrip />
       <Overview center heading={page.intro.heading} paragraphs={page.intro.paragraphs} />
+      <ProofBar />
       <SplitFeature eyebrow={page.story.eyebrow} heading={page.story.heading} paragraphs={page.story.paragraphs} scene="scene-replace" />
       <ValueGrid heading={page.team.heading} intro={page.team.intro} items={page.team.items} columns={2} />
       <ValueGrid heading={page.values.heading} items={page.values.items} tone="wash" />
@@ -44,9 +48,12 @@ export default function AboutPage() {
       />
       <SplitFeature {...page.careers} image="/images/bottom-cta-background.webp" imageAlt="Row of homes with pitched roofs along a residential street" reverse />
       <SplitFeature {...page.partners} scene="scene-commercial" tone="wash" />
-      <Testimonials />
+      <Testimonials showReviews={false} />
       <RoofCheck />
-      <FinalCta />
+      <FinalCta
+        heading="Work With a Roofer-Led Team"
+        text="QRS is family-owned and local. Tell us about your roof and a roofer, not a salesperson, gives you a clear next step with a written scope and price."
+      />
     </main>
   );
 }

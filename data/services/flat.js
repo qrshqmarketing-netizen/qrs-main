@@ -5,7 +5,7 @@ export const FLAT_CONTENT = {
   hub: {
     keyword: 'flat roofing',
     metaTitle: 'Flat Roofing in LA & Orange County',
-    metaDescription: 'Flat roofing in Los Angeles & Orange County: modified bitumen and low-slope roofs installed, repaired and maintained around drainage. Book a $199 Roof Check.',
+    metaDescription: 'Flat roofing in Los Angeles & Orange County: modified bitumen and low-slope roofs installed, repaired and maintained around drainage. Book a free roof evaluation.',
     hero: {
       heading: 'Flat Roofing Services',
       intro: 'A flat roof can’t count on a steep pitch to shed water, so every drain, seam and flashing has to do its job. QRS handles flat roofing across Los Angeles and Orange County, from new installs and replacements to repairs and ongoing care.',
@@ -15,7 +15,7 @@ export const FLAT_CONTENT = {
       heading: 'Flat Roofs Need Their Own Kind of Detail',
       paragraphs: [
         'Low-slope roofs are everywhere in Southern California: on mid-century and modern homes, over garages, patio covers and room additions, on new backyard ADUs, and tucked behind the parapet walls of Spanish-style houses. Every one of them still has to drain. That takes a gentle, deliberate slope that carries rainwater to a drain, a scupper (an opening through the parapet) or a gutter instead of letting it sit. When that slope is missing or a drain is blocked, water ponds, the sun bakes the membrane, and seams and flashings start to give way.',
-        'We install **modified bitumen and other low-slope systems**, chosen for your roof’s condition, how it drains and what sits on it, from HVAC equipment to skylights. Our advice comes from a roofer on your roof, not a salesperson at your kitchen table. The [$199 Roof Check](#roof-check) photo-documents the membrane, seams, drains and flashings, explains the findings in plain English and ends with a clear next step: repair, monitor, maintain or replace. You see a written scope and price before any work begins, and finished installs carry our 10-year workmanship warranty.',
+        'We install **modified bitumen and other low-slope systems**, chosen for your roof’s condition, how it drains and what sits on it, from HVAC equipment to skylights. Our advice comes from a roofer on your roof, not a salesperson at your kitchen table. The [free roof evaluation](#roof-check) photo-documents the membrane, seams, drains and flashings, explains the findings in plain English and ends with a clear next step: repair, monitor, maintain or replace. You see a written scope and price before any work begins, and finished installs carry our 10-year workmanship warranty.',
       ],
     },
     cards: {
@@ -47,7 +47,7 @@ export const FLAT_CONTENT = {
       navLabel: 'Roof Replacement',
       card: 'A full tear-off down to the deck and a new modified bitumen or low-slope system, planned around how your roof drains.',
       metaTitle: 'Flat Roof Replacement in Los Angeles',
-      metaDescription: 'Flat roof replacement in Los Angeles & Orange County: full tear-off to the deck and a new low-slope system planned to drain. Start with a $199 Roof Check.',
+      metaDescription: 'Flat roof replacement in Los Angeles & Orange County: full tear-off to the deck and a new low-slope system planned to drain. Start with a free roof evaluation.',
       image: '/images/flat-roof-replacement-completed-white-membrane.webp',
       imageAlt: 'Aerial view of a completed white flat roof membrane with tile coping',
       hero: {
@@ -65,7 +65,7 @@ export const FLAT_CONTENT = {
         image: '/images/flat-roof-replacement-tear-off-drone-view.webp',
         imageAlt: 'Aerial view of a flat roof tear-off in progress, down to the plywood deck with new curbs framed in',
         steps: [
-          { title: 'Roof Check and written scope', text: 'We walk the roof, photo-document the membrane, drains and flashings, and put the full scope and price in writing before anything is torn off.', bullets: ['Membrane wear, blisters and splits', 'Ponding and drainage patterns', 'Parapets, curbs and penetrations'] },
+          { title: 'Roof Evaluation and written scope', text: 'We walk the roof, photo-document the membrane, drains and flashings, and put the full scope and price in writing before anything is torn off.', bullets: ['Membrane wear, blisters and splits', 'Ponding and drainage patterns', 'Parapets, curbs and penetrations'] },
           { title: 'Tear-off to the deck', text: 'The old roofing comes off down to the deck, and we keep debris contained and cleaned up as we go.', bullets: ['Old layers removed, not roofed over', 'Decking inspected and photographed'] },
           { title: 'Drainage and edge prep', text: 'Before the new roof goes on, we prepare the edges, drains and scuppers and build any crickets your scope calls for.' },
           { title: 'New low-slope system', text: 'We install the modified bitumen or other low-slope system named in your scope, sealing every lap and flashing each parapet, curb, vent and skylight.', bullets: ['Laps and seams sealed', 'Parapet and wall flashings', 'HVAC curbs, vents and skylights'] },
@@ -83,8 +83,8 @@ export const FLAT_CONTENT = {
         ],
       },
       faqs: [
-        { q: 'What are the signs a flat roof is past repairing?', a: 'Common signs include leaks in more than one spot, blisters and splits across much of the surface, soft areas in the deck and patches that keep failing. A [$199 Roof Check](#roof-check) documents what we find with photos, so you can see the reasons behind our recommendation.' },
-        { q: 'Can you put a new flat roof over the old one?', a: 'A full tear-off is the standard for a lasting result: taking the old layers off lets us check the deck, get rid of trapped moisture and give the new system a sound surface to start from, rather than hiding problems underneath it. On some commercial buildings, repairing or recoating an existing system that’s still sound can be the right call instead — your Roof Check will tell you which situation you’re in.' },
+        { q: 'What are the signs a flat roof is past repairing?', a: 'Common signs include leaks in more than one spot, blisters and splits across much of the surface, soft areas in the deck and patches that keep failing. A [free roof evaluation](#roof-check) documents what we find with photos, so you can see the reasons behind our recommendation.' },
+        { q: 'Can you put a new flat roof over the old one?', a: 'A full tear-off is the standard for a lasting result: taking the old layers off lets us check the deck, get rid of trapped moisture and give the new system a sound surface to start from, rather than hiding problems underneath it. On some commercial buildings, repairing or recoating an existing system that’s still sound can be the right call instead — your roof evaluation will tell you which situation you’re in.' },
         { q: 'Will a new roof stop water from ponding?', a: 'Replacement is the natural time to improve drainage, whether that means adding crickets, building up low spots or changing how water reaches the drains and scuppers. How much can change depends on the roof’s structure, and your written scope spells out the drainage work before anything starts.' },
         { q: 'Should the gutters and downspouts be replaced at the same time?', a: 'Not always, but we check them as part of the scope, because a new roof can only drain as fast as its outlets. If yours are worn out or too small, our [rain gutter](/rain-gutters/) service can be part of the same project.' },
         { q: 'Can a new flat roof have a lighter, reflective surface?', a: 'Usually, yes. Light-colored, reflective surfaces bounce back more of the sun’s heat than dark ones, which is worth considering on a roof that sits in full sun most of the year. We’ll go over the surface options that fit your system.' },
@@ -99,7 +99,7 @@ export const FLAT_CONTENT = {
       navLabel: 'Roof Repairs',
       card: 'Leaks, blisters, open seams and failed flashings traced to the source, repaired carefully and documented with photos.',
       metaTitle: 'Flat Roof Repair in Los Angeles',
-      metaDescription: 'Flat roof repair in Los Angeles & Orange County: we trace leaks to the source and fix seams, blisters and flashings, with photos. Book a $199 Roof Check.',
+      metaDescription: 'Flat roof repair in Los Angeles & Orange County: we trace leaks to the source and fix seams, blisters and flashings, with photos. Book a free roof evaluation.',
       hero: {
         intro: 'On a flat roof, the stain on your ceiling can be a long way from the actual leak. We start every flat roof repair by tracing the water back to where it gets in, then show you photos of the problem and the fix.',
         highlights: ['Leaks traced to where water enters', 'Seams, blisters and flashings repaired', 'Photos of the damage and the fix'],
@@ -107,7 +107,7 @@ export const FLAT_CONTENT = {
       overview: {
         paragraphs: [
           'Water on a flat roof moves slowly and finds every weakness. The usual culprits are a seam or lap that has opened, a blister that has cracked, a split in the membrane, or flashing that has pulled away at a parapet wall, HVAC curb, vent or skylight. Clogged drains and scuppers make everything worse by letting water stand where it was never meant to. Because water can travel under the membrane before it drips, we check the whole area around a leak, not just the spot above the stain.',
-          'A targeted repair makes sense when the rest of the roof is still in reasonable shape. If the membrane is worn out across the surface, we’ll tell you plainly that more patching would only delay a [flat roof replacement](/flat-roofing/replacement/). Either way, you get a written scope and price before we start, along with photos of the damage and, afterward, the finished repair. If a storm just came through and you’re seeing new stains, book a [$199 Roof Check](#roof-check) and we’ll show you exactly what the rain found.',
+          'A targeted repair makes sense when the rest of the roof is still in reasonable shape. If the membrane is worn out across the surface, we’ll tell you plainly that more patching would only delay a [flat roof replacement](/flat-roofing/replacement/). Either way, you get a written scope and price before we start, along with photos of the damage and, afterward, the finished repair. If a storm just came through and you’re seeing new stains, book a [free roof evaluation](#roof-check) and we’ll show you exactly what the rain found.',
         ],
       },
       process: {
@@ -193,9 +193,9 @@ export const FLAT_CONTENT = {
       keyword: 'flat roof inspection',
       title: 'Flat Roof Inspection',
       navLabel: 'Inspections',
-      card: 'Our $199 Roof Check for flat roofs: a roofer-led, photo-documented look at the membrane, seams, drains and flashings.',
+      card: 'Our free roof evaluation for flat roofs: a roofer-led, photo-documented look at the membrane, seams, drains and flashings.',
       metaTitle: 'Flat Roof Inspection in Los Angeles',
-      metaDescription: 'Roofer-led flat roof inspection in Los Angeles & Orange County: seams, drains, parapets and ponding, all photo-documented. Book your $199 Roof Check today.',
+      metaDescription: 'Roofer-led flat roof inspection in Los Angeles & Orange County: seams, drains, parapets and ponding, all photo-documented. Book your free roof evaluation today.',
       hero: {
         intro: 'You usually can’t judge a flat roof from the ground. A flat roof inspection puts a roofer on top of yours to photo-document the membrane, seams, drains and flashings and explain the findings in plain English.',
         highlights: ['Roofer-led, not a sales pitch', 'Every problem area photographed', 'No deposit: pay after the visit'],
@@ -203,13 +203,13 @@ export const FLAT_CONTENT = {
       overview: {
         paragraphs: [
           'A flat roof keeps its problems out of sight. From the ground you can’t see the blister that’s about to crack, the lap lifting at a parapet or the dirt ring where water sat for days after the last storm. Up top, we walk the whole surface, check the membrane for splits, blisters and worn areas, look closely at seams and laps, and follow the flashings wherever the membrane meets a wall or curb. We also make sure drains, scuppers and downspouts are clear and doing their job.',
-          'If you’ve noticed a ceiling stain, point it out; it helps us trace water back to its source on the roof. This is our [$199 Roof Check](#roof-check), applied to a low-slope roof: you get photos, a plain-English explanation and one clear recommendation to repair, monitor, maintain or replace. There’s no pressure to decide on the spot. If the roof does need work, you’ll know whether a [flat roof repair](/flat-roofing/repairs/) will do or whether it’s time to plan for more.',
+          'If you’ve noticed a ceiling stain, point it out; it helps us trace water back to its source on the roof. This is our [free roof evaluation](#roof-check), applied to a low-slope roof: you get photos, a plain-English explanation and one clear recommendation to repair, monitor, maintain or replace. There’s no pressure to decide on the spot. If the roof does need work, you’ll know whether a [flat roof repair](/flat-roofing/repairs/) will do or whether it’s time to plan for more.',
         ],
       },
       process: {
         subheading: 'What happens during a flat roof inspection',
         steps: [
-          { title: 'Book your Roof Check', text: 'Tell us what you’ve noticed, whether it’s a leak, a stain or water that won’t drain, and we’ll schedule a roofer to come out.' },
+          { title: 'Book your free roof evaluation', text: 'Tell us what you’ve noticed, whether it’s a leak, a stain or water that won’t drain, and we’ll schedule a roofer to come out.' },
           { title: 'Walk the roof surface', text: 'The roofer checks the membrane, seams and laps across the whole roof, noting blisters, splits, worn areas and signs of ponding.', bullets: ['Blisters, splits and surface wear', 'Seams and laps', 'Ponding marks and low spots'] },
           { title: 'Edges, drains and penetrations', text: 'Next come the parapets, drains, scuppers, curbs, vents and skylights, the places a flat roof is most likely to let water in.', bullets: ['Parapet walls, caps and wall flashings', 'Drains, scuppers and downspouts', 'HVAC curbs, vents and skylights'] },
           { title: 'Photos in plain English', text: 'We share the photos and explain what each finding means for your roof, without jargon or pressure.' },
@@ -218,18 +218,18 @@ export const FLAT_CONTENT = {
       },
       why: {
         heading: 'Why Choose QRS for Flat Roof Inspection?',
-        intro: 'A Roof Check exists to give you an honest read on your roof, backed by photos, whether or not you hire us for any work.',
+        intro: 'A roof evaluation exists to give you an honest read on your roof, backed by photos, whether or not you hire us for any work.',
         points: [
           { title: 'A roofer on your roof', text: 'The person inspecting your flat roof is a roofer who knows how low-slope systems age and fail.' },
           { title: 'Photos of every finding', text: 'Everything we flag is photographed, so you can see the problem for yourself instead of taking our word for it.' },
           { title: 'No pressure to buy', text: 'Sometimes the right answer is to keep an eye on things, and we’ll tell you when it is.' },
-          { title: 'Pay after the visit', text: 'There’s no deposit to book, and you pay the $199 once the inspection is done.' },
+          { title: 'Free to start', text: 'The roof evaluation costs nothing. The $199 Roof Check tune-up is optional, with no deposit, and you pay after the visit.' },
         ],
       },
       faqs: [
         { q: 'When is a flat roof inspection worth booking?', a: 'Good times are before buying or selling a home, after a heavy storm, when the roof is getting older and before you decide between repair and replacement. It’s also smart after other trades have worked on the roof, such as an HVAC replacement.' },
         { q: 'What does ponding water tell you about my roof?', a: 'Water that sits long after a storm points to low spots, clogged drains or not enough slope. Over time it breaks down the surface and works its way into seams, so we note where it collects and what’s causing it.' },
-        { q: 'Is the Roof Check just a pitch for a new roof?', a: 'No. It’s a roofer-led assessment that ends with a clear next step, and sometimes that step is simply monitoring or regular [flat roof care](/flat-roofing/roof-care/). We recommend replacement only when the photos back it up.' },
+        { q: 'Is the roof evaluation just a pitch for a new roof?', a: 'No. It’s a roofer-led assessment that ends with a clear next step, and sometimes that step is simply monitoring or regular [flat roof care](/flat-roofing/roof-care/). We recommend replacement only when the photos back it up.' },
         { q: 'Can you check a flat roof before I buy the house?', a: 'Yes. We’ll photo-document the roof’s condition and explain what we see, so you know what you’re buying. Many mid-century and Spanish-style homes have flat sections that are easy to miss from the ground, and if the house also has [tile roofing](/tile-roofing/), we look at those slopes too.' },
         { q: 'How close is my flat roof to needing replacement?', a: 'We can’t name a date, but we can tell you whether it’s in good shape, wearing normally or nearing the end of its life, and show you the photos behind that call. Knowing early gives you time to plan instead of reacting to a leak.' },
       ],
@@ -276,7 +276,7 @@ export const FLAT_CONTENT = {
       },
       faqs: [
         { q: 'Do I need a tune-up or a repair?', a: 'It depends on what’s wrong. A repair fixes a specific problem, like an active leak. A tune-up is preventive: one visit that handles a list of small issues across the roof before any of them turns into a leak.' },
-        { q: 'When is a good time for a flat roof tune-up?', a: 'Late summer or early fall, ahead of the rainy season, is a smart time, because that’s when dried-out sealants and clogged drains matter most. It’s also a natural follow-up when a [$199 Roof Check](#roof-check) turns up a few minor items.' },
+        { q: 'When is a good time for a flat roof tune-up?', a: 'Late summer or early fall, ahead of the rainy season, is a smart time, because that’s when dried-out sealants and clogged drains matter most. It’s also a natural follow-up when a [free roof evaluation](#roof-check) turns up a few minor items.' },
         { q: 'Does a tune-up include clearing drains and scuppers?', a: 'Yes. Clearing drains, scuppers and downspouts is part of every flat roof tune-up, since clogged outlets are a common cause of ponding and overflow. If water sits because of low spots or too little slope, that’s a bigger fix, often handled during a [flat roof replacement](/flat-roofing/replacement/).' },
         { q: 'Is a tune-up enough for an older flat roof?', a: 'Sometimes. If the membrane is still sound, a tune-up can keep small problems from turning into leaks while you plan ahead. If it’s brittle or worn through in many places, we’ll be honest that resealing won’t fix the underlying wear.' },
         { q: 'Can you tune up the flat sections of a tile roof home?', a: 'Yes. On Spanish-style homes, the flat areas behind the parapets need the same attention as the tile slopes, especially the scuppers that drain them. If the tile needs work too, we can plan a [tile roof tune-up](/tile-roofing/tune-up/) alongside it.' },
@@ -291,7 +291,7 @@ export const FLAT_CONTENT = {
       navLabel: 'Roof Care',
       card: 'Scheduled, ongoing maintenance for flat roofs: seasonal checks, clear drains and a photo record that catches wear early.',
       metaTitle: 'Flat Roof Care & Maintenance in LA',
-      metaDescription: 'Flat roof care in Los Angeles & Orange County: seasonal maintenance visits, clear drains and photos that track wear over time. Start with a $199 Roof Check.',
+      metaDescription: 'Flat roof care in Los Angeles & Orange County: seasonal maintenance visits, clear drains and photos that track wear over time. Start with a free roof evaluation.',
       hero: {
         intro: 'A flat roof does better with someone keeping an eye on it. Flat roof care from QRS keeps drains clear, checks seams and flashings each season and builds a photo history, so small changes are caught while they’re still small.',
         highlights: ['Seasonal checks around the rainy season', 'Drains and scuppers kept clear', 'A photo history of your roof'],
@@ -305,7 +305,7 @@ export const FLAT_CONTENT = {
       process: {
         subheading: 'How flat roof care works',
         steps: [
-          { title: 'Start with a Roof Check', text: 'Roof care begins with a [$199 Roof Check](#roof-check), which gives us a photo-documented baseline for your roof.' },
+          { title: 'Start with a free roof evaluation', text: 'Roof care begins with a [free roof evaluation](#roof-check), which gives us a photo-documented baseline for your roof.' },
           { title: 'Set a seasonal schedule', text: 'Together we pick visit timing that suits your roof, built around the rainy season and how much debris the roof collects.' },
           { title: 'Routine care visits', text: 'Each visit clears drains, scuppers and debris and checks the membrane, laps, flashings and penetrations for new wear.', bullets: ['Drains, scuppers and downspouts cleared', 'Seams, laps and blisters checked', 'Parapet caps and wall flashings', 'HVAC curbs, vents and skylights'] },
           { title: 'Photos compared over time', text: 'We photograph the same areas on each visit, so changes like a growing blister or a lifting lap stand out.' },

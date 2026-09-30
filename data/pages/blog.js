@@ -8,6 +8,6 @@ export const BLOG_PAGE = {
   hero: {
     heading: 'Roofing Blog & Tips',
     intro:
-      'Our roofing blog answers the questions homeowners ask us most, from spotting storm damage to choosing a roof type. When you want a roofer’s eyes on your own roof, start with a [$199 Roof Check](#roof-check).',
+      'Our roofing blog answers the questions homeowners ask us most, from spotting storm damage to choosing a roof type. When you want a roofer’s eyes on your own roof, start with a [free roof evaluation](#roof-check).',
   },
 };

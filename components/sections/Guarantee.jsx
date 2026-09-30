@@ -1,4 +1,3 @@
-import { QRS_LEAF_PATH } from '@/components/ui/icons';
 import Rich from '@/components/ui/Rich';
 import './Guarantee.css';
 
@@ -37,10 +36,6 @@ export default function Guarantee() {
               <text fontSize="11.5" fontWeight="800" fill="#062d57" textLength="272" lengthAdjust="spacing">
                 <textPath href="#gteeCircle" textLength="272" lengthAdjust="spacing">THE QRS GUARANTEE • THE QRS GUARANTEE •</textPath>
               </text>
-              <g transform="translate(37 37) scale(.72)">
-                <path d={QRS_LEAF_PATH} fill="#d4b572" />
-                <path d="M23 22h18M20 29h24M23 37h18" stroke="#062d57" strokeWidth="3" strokeLinecap="round" />
-              </g>
             </svg>
             <h2>
               The QRS
