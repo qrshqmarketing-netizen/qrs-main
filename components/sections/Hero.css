@@ -50,6 +50,8 @@
   text-wrap:balance;text-shadow:0 4px 24px rgba(0,0,0,.32);
 }
 .hero-title span{color:#fff}
+.hero-title .product-brand{text-transform:none}
+.hero-title .product-brand sup{font-family:var(--font-head);font-size:.42em;font-style:normal;letter-spacing:0;vertical-align:super}
 .hero-sub{
   font-family:var(--font-head);font-size:16px;font-weight:500;line-height:1.5;letter-spacing:-.01em;
   color:#fff;max-width:760px;margin:16px auto 26px;text-shadow:0 2px 15px rgba(0,0,0,.35);

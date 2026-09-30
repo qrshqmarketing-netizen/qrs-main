@@ -2,19 +2,15 @@ import Image from 'next/image';
 import Breadcrumbs from '@/components/sections/Breadcrumbs';
 import JsonLd from '@/components/ui/JsonLd';
 import Rich from '@/components/ui/Rich';
-import { PROJECTS_LINK } from '@/data/catalog';
-import { MID_WILSHIRE_PROJECT as page } from '@/data/pages/mid-wilshire-project';
+import { HOME, PROJECTS_LINK } from '@/data/catalog';
+import { SAN_PEDRO_PROJECT as page } from '@/data/pages/san-pedro-project';
 import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
 import '@/components/templates/ProjectDetail.css';
 
 export const metadata = pageMetadata({ title: page.title, description: page.description, path: page.path });
 
-const CRUMBS = [
-  { label: 'Home', href: '/' },
-  PROJECTS_LINK,
-  { label: page.title, href: page.path },
-];
+const CRUMBS = [HOME, PROJECTS_LINK, { label: page.title, href: page.path }];
 const schema = pageJsonLd({
   path: page.path,
   title: page.title,
@@ -23,7 +19,7 @@ const schema = pageJsonLd({
   image: page.image,
 });
 
-export default function MidWilshireProjectPage() {
+export default function SanPedroProjectPage() {
   return (
     <main id="top" className="project-detail">
       <JsonLd data={schema} />

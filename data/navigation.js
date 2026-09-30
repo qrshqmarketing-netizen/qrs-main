@@ -166,6 +166,7 @@ export const FOOTER = {
         { label: 'Roofing Blog', href: '/blog/' },
         { label: 'Careers', href: '/careers/' },
         { label: 'Contractors', href: '/contractors/' },
+        { label: 'MCP Server', href: '/mcp/' },
       ],
     },
     {

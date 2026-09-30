@@ -536,9 +536,10 @@ export default function MorphSlider({
       const py = (e.clientY - rect.top) / rect.height;
       engineRef.current?.setPointer(px, 1 - py);
       active = engineRef.current?.beginDrag() ?? false;
-      if (active && el.setPointerCapture) {
+      const captureTarget = e.target.closest('.morph-slider-project-link') || el;
+      if (active && captureTarget.setPointerCapture) {
         try {
-          el.setPointerCapture(e.pointerId);
+          captureTarget.setPointerCapture(e.pointerId);
         } catch {
           // ignore
         }
@@ -611,7 +612,9 @@ export default function MorphSlider({
               draggedRef.current = false;
             }
           }}
-        />
+        >
+          <span className="morph-slider-project-link-label">View project <span aria-hidden="true">↗</span></span>
+        </Link>
       )}
 
       {showCaptions && hasCaptions && (

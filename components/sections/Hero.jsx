@@ -60,7 +60,7 @@ export default function Hero({
         <div className={'container hero-inner on-dark' + (align === 'left' ? ' hero-left' : '') + (className ? ` ${className}` : '')}>
           <div className="hero-copy">
             {eyebrow && <Eyebrow className="eyebrow">{eyebrow}</Eyebrow>}
-            <Title className="hero-title"><Rich text={title} /></Title>
+            <Title className="hero-title"><Rich text={title} registeredMark /></Title>
             {intro && (
               <p className="hero-sub">
                 <Rich text={intro} />

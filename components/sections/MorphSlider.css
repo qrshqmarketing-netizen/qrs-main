@@ -41,6 +41,22 @@
   outline-offset: -5px;
 }
 
+.morph-slider-project-link-label {
+  position: absolute;
+  right: 22px;
+  bottom: 22px;
+  padding: 9px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(10, 10, 12, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+
 .morph-slider-caption {
   position: absolute;
   left: 22px;
