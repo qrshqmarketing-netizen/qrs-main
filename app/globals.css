@@ -140,7 +140,7 @@ main h2{animation:fadeUp .9s ease .3s both}
 @media (prefers-reduced-motion:reduce){.reveal-on-scroll,.reveal-on-scroll.reveal-visible{opacity:1;transform:none;transition:none}}
 
 /* Product names have a distinct serif italic treatment wherever rich text displays them. */
-.product-brand{font-family:Georgia,'Times New Roman',serif;font-style:italic}
+.product-brand{font-family:Georgia,'Times New Roman',serif;font-style:italic;text-transform:none!important}
 
 /* ---------- Orange centroid map marker (service area map, Instant Quote); built by qrsPin() in lib/leaflet.js ---------- */
 .qrs-pin{background:none;border:0}
