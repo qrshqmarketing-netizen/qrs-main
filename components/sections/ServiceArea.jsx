@@ -25,8 +25,8 @@ const IP_NEARBY_MI = SERVICE_RADIUS_MI * 2;
 
 // Service area map (Leaflet + OpenStreetMap tiles) with a city list and ZIP code lookup.
 // City pages pass `focus` (a city slug) to start zoomed in on that city; region pages pass `region` to fit its cities.
-// Elsewhere the map zooms to the location
-// nearest the visitor's approximate position (from their IP address, see app/api/location/route.js), if they're nearby.
+// Elsewhere desktop maps may zoom to a nearby location from the visitor's approximate IP location. Mobile starts at
+// the full service-area view so the map and long city list don't shift while someone scrolls the page.
 export default function ServiceArea({
   heading = 'Locations We Proudly Serve',
   sub = 'Explore the map below to find out if your city is within our Southern California service area',
@@ -56,7 +56,10 @@ export default function ServiceArea({
     // Keep the selected city visible in the list
     const list = listRef.current, li = itemRefs.current[i];
     const top = li.offsetTop, bottom = top + li.offsetHeight;
-    if (top < list.scrollTop || bottom > list.scrollTop + list.clientHeight) list.scrollTo({ top: top - 8, behavior: 'smooth' });
+    if (window.matchMedia('(min-width: 901px)').matches
+      && (top < list.scrollTop || bottom > list.scrollTop + list.clientHeight)) {
+      list.scrollTo({ top: top - 8, behavior: 'smooth' });
+    }
 
     if (fly) {
       m.map.flyTo(m.markers[i].getLatLng(), 11, { duration: 0.8 });
@@ -66,10 +69,20 @@ export default function ServiceArea({
 
   useEffect(() => {
     let cancelled = false;
+    const mobileLayout = window.matchMedia('(max-width: 900px)').matches;
     loadLeaflet().then(
       (L) => {
         if (cancelled || !mapEl.current) return;
-        const leafletMap = L.map(mapEl.current, { scrollWheelZoom: false, zoomControl: true, attributionControl: true })
+        const leafletMap = L.map(mapEl.current, {
+          dragging: !mobileLayout,
+          touchZoom: !mobileLayout,
+          doubleClickZoom: !mobileLayout,
+          boxZoom: !mobileLayout,
+          keyboard: !mobileLayout,
+          scrollWheelZoom: false,
+          zoomControl: true,
+          attributionControl: true,
+        })
           .setView([33.9, -118.12], 9);
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
           maxZoom: 19,
@@ -92,7 +105,7 @@ export default function ServiceArea({
         if (focusIndex > -1) {
           leafletMap.setView(markers[focusIndex].getLatLng(), 11);
           select(focusIndex, false);
-        } else {
+        } else if (!mobileLayout) {
           fetch('/api/location/')
             .then((res) => res.json())
             .then(({ lat, lng }) => {

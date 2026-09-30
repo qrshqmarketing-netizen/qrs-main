@@ -45,6 +45,11 @@
   background:#0b0f14;color:#fff;display:grid;place-items:center;padding:0;
 }
 .loc-full svg{width:18px;height:18px}
+@media (max-width:900px){
+  /* Let a finger swipe scroll the page through the map and the complete location list. */
+  #qrsMap{touch-action:pan-y pinch-zoom}
+  .loc-list{max-height:none;overflow:visible;overscroll-behavior:initial;touch-action:pan-y}
+}
 @media (min-width:621px){
   .area{padding:80px 0}
   .area h2{font-size:52px;line-height:1.2;margin-bottom:34px}
