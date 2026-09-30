@@ -1,5 +1,6 @@
 // Seasonal promo for the $199 Roof Check (components/widgets/SeasonPromo.jsx): a centered modal on a visitor's
-// first visit, and a "before you go" version when a desktop visitor moves to leave the page. Set `active: false`
+// first visit, and a "before you go" version when a visitor looks like they are leaving (mouse to the top of the window on desktop;
+// a quick flick back up the page or returning from another tab or app on phones). Set `active: false`
 // to switch both off. `exclude`: pages where the home offer doesn't apply (commercial, partner and job pages).
 
 export const SEASON_PROMO = {

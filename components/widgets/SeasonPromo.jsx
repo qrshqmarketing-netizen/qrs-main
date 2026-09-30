@@ -10,11 +10,13 @@ import { local, session } from '@/lib/storage';
 import './SeasonPromo.css';
 
 const FIRST_MS = 3000, EXIT_ARM_MS = 8000;
+const FLICK_PX = 350, FLICK_MS = 300; // phones: an upward scroll this far this fast, once they're a screen down, reads as leaving
 const SERVICE = 'Roof inspection / roof check'; // estimate form option picked by the promo button (data/estimateOptions.js)
 
 // The $199 Roof Check season promo (copy in data/promo.js): a centered modal over a dark overlay, at most once per visit.
 // - first visit: shortly after the cookie notice is accepted (the review toast waits while it's open)
-// - later visits, desktop only: when the pointer leaves through the top of the window
+// - later visits: on desktop when the pointer leaves through the top of the window; on phones and tablets when
+//   they flick quickly back up the page (reaching for the address bar) or come back after switching tabs or apps
 // Click outside, Esc or ✕ closes it (the exit version also has "No thanks"); once someone books from it, it never shows again.
 export default function SeasonPromo() {
   const [view, setView] = useState(null); // 'card' | 'exit' | null
@@ -56,21 +58,41 @@ export default function SeasonPromo() {
     };
   }, []);
 
-  // Exit intent (mouse and trackpad only; phones have no reliable signal, so they never see it)
+  // Exit intent
   useEffect(() => {
-    if (!promo.active || !window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+    if (!promo.active) return;
     let armed = false;
     const arm = setTimeout(() => (armed = true), EXIT_ARM_MS);
-    const onOut = (e) => {
-      if (!armed || e.relatedTarget || e.clientY > 0) return;
-      if (session.get('promoShown') || local.get('promoClaimed') || blocked()) return;
+    const showExit = () => {
+      if (!armed || session.get('promoShown') || local.get('promoClaimed') || blocked()) return;
       session.set('promoShown', '1');
       setView('exit');
     };
-    document.addEventListener('mouseout', onOut);
+
+    // Mouse and trackpad: the pointer leaves through the top of the window
+    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      const onOut = (e) => !e.relatedTarget && e.clientY <= 0 && showExit();
+      document.addEventListener('mouseout', onOut);
+      return () => {
+        clearTimeout(arm);
+        document.removeEventListener('mouseout', onOut);
+      };
+    }
+
+    // Touch: a fast flick back up the page, or returning to the tab after leaving it
+    let mark = { y: window.scrollY, t: Date.now() };
+    const onScroll = () => {
+      const y = window.scrollY, t = Date.now();
+      if (y > mark.y || t - mark.t > FLICK_MS) mark = { y, t };
+      else if (mark.y > window.innerHeight && mark.y - y > FLICK_PX) showExit();
+    };
+    const onVisible = () => document.visibilityState === 'visible' && showExit();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    document.addEventListener('visibilitychange', onVisible);
     return () => {
       clearTimeout(arm);
-      document.removeEventListener('mouseout', onOut);
+      window.removeEventListener('scroll', onScroll);
+      document.removeEventListener('visibilitychange', onVisible);
     };
   }, []);
 
