@@ -1,4 +1,5 @@
 import Faq from '@/components/sections/Faq';
+import FeatureBand from '@/components/sections/FeatureBand';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
 import PartnerLogos from '@/components/sections/PartnerLogos';
@@ -12,6 +13,7 @@ import WhyQrs from '@/components/sections/WhyQrs';
 import JsonLd from '@/components/ui/JsonLd';
 import { COMMERCIAL_LINK, RESIDENTIAL } from '@/data/catalog';
 import { FAQS } from '@/data/faqs';
+import { CAREERS_PAGE, CAREERS_TEASER } from '@/data/pages/careers';
 import { HOME_DESCRIPTION, HOME_TITLE } from '@/data/site';
 import { RECENT_WORK, RECENT_WORK_SUB } from '@/data/recentWork';
 import { ROOF_FINANCING } from '@/data/services/programs';
@@ -81,6 +83,12 @@ export default function HomePage() {
         <WhyQrs />
         <ProjectCarousel heading="Recent Work" sub={RECENT_WORK_SUB} projects={RECENT_WORK} id="work" pattern />
         <PartnerLogos {...ROOF_FINANCING.partners} />
+        <FeatureBand
+          id="careers"
+          tone="light"
+          {...CAREERS_TEASER}
+          points={CAREERS_PAGE.roles.items.map((role) => ({ title: role.title, text: role.text, href: '/careers/#roles' }))}
+        />
         <Faq cta={false} />
         <RoofCheck />
         <FinalCta />

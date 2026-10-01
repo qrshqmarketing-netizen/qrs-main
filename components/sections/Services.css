@@ -7,7 +7,7 @@
 
 .svc-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:28px}
 .svc-card-link{display:block;color:inherit;text-decoration:none}
-.svc-media{position:relative;aspect-ratio:4/3;border-radius:0;overflow:hidden}
+.svc-media{position:relative;aspect-ratio:4/3;border-radius:var(--radius);overflow:hidden}
 .svc-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
 .svc-card-link:hover .svc-media img{transform:scale(1.05)}
 .svc-media:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.8) 100%);pointer-events:none}

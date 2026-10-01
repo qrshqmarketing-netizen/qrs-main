@@ -21,6 +21,6 @@
 .overview-center h2{font-size:var(--h2);font-weight:700;margin-bottom:6px}
 .overview-center .overview-body p{font-size:18px;font-family:var(--font-body);font-weight:500;line-height:1.7}
 .overview-center.tile-pattern:before{-webkit-mask-image:radial-gradient(ellipse at center,#000 10%,transparent 75%);mask-image:radial-gradient(ellipse at center,#000 10%,transparent 75%)}
-.overview-cta{margin-top:10px;border-radius:0}
+.overview-cta{margin-top:10px;border-radius:var(--radius)}
 @media (min-width:621px){.overview-center .overview-body p{font-size:20px}}
 @media (min-width:901px){.overview-center .overview-grid{grid-template-columns:minmax(0,1fr)}}

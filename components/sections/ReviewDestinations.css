@@ -1,6 +1,6 @@
 .review-destinations{background:var(--wash)}
 .review-destinations-grid{display:grid;grid-template-columns:1fr;gap:18px;max-width:1060px;margin:0 auto}
-.review-destination-card{min-width:0;padding:26px;border:1px solid var(--line);background:#fff;box-shadow:0 10px 28px rgba(6,45,87,.06)}
+.review-destination-card{border-radius:var(--radius);min-width:0;padding:26px;border:1px solid var(--line);background:#fff;box-shadow:0 10px 28px rgba(6,45,87,.06)}
 .review-destination-card h3{margin:0 0 8px;color:var(--navy);font:700 25px/1.2 var(--font-head)}
 .review-destination-card p{margin:0 0 20px;color:var(--muted);line-height:1.6}
 .review-destination-actions{display:flex;flex-wrap:wrap;gap:10px}

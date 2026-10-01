@@ -30,7 +30,7 @@ export default function ProjectCarousel({ city, heading, sub, projects = [], id 
             intensity={0.55}
             aberration={0.35}
             drift={0.4}
-            radius={0}
+            radius={5}
             autoplay
             loop
           />

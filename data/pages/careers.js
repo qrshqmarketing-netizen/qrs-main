@@ -60,12 +60,12 @@ export const CAREERS_PAGE = {
   ],
 };
 
-// Careers section on the home page: this intro beside the roles above, linking to /careers/
+// Careers section on the home page (after the financing partners): this intro beside the roles above, linking to /careers/
 export const CAREERS_TEASER = {
   eyebrow: 'Join the crew',
   heading: 'Roofing Careers at QRS',
   paragraphs: [
-    'We’re always glad to meet people who take pride in careful work. Join a detail-first team doing tile, shingle and flat roofing across Southern California.',
+    'We’re building a team of dedicated professionals with a bold goal: protecting 6,000 homes with quality roofing over the next 10 years. Join a detail-first crew doing tile, shingle and flat roofing across Los Angeles and Orange County.',
   ],
   cta: { label: 'Explore Careers', href: '/careers/' },
 };
