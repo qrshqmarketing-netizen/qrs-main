@@ -1,7 +1,7 @@
 /* ---------- Blog index: post cards ---------- */
 .post-cards{background:var(--wash);padding:60px 0}
 .pc-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:22px}
-.pc-card{position:relative;display:flex;flex-direction:column;padding:0 0 22px;border-radius:var(--radius);background:#fff;border:1px solid var(--line);box-shadow:0 8px 24px rgba(6,45,87,.05);overflow:hidden;transition:box-shadow .2s,transform .2s}
+.pc-card{position:relative;display:flex;flex-direction:column;padding:0 0 22px;border-radius:var(--radius);background:var(--paper);border:1px solid var(--line);box-shadow:0 8px 24px rgba(6,45,87,.05);overflow:hidden;transition:box-shadow .2s,transform .2s}
 .pc-card:hover{box-shadow:0 16px 36px rgba(6,45,87,.12);transform:translateY(-2px)}
 .pc-media{aspect-ratio:16/9;margin-bottom:18px;border-radius:var(--radius) var(--radius) 0 0;overflow:hidden}
 .pc-card time,.pc-card h3,.pc-card p,.pc-more{margin-left:22px;margin-right:22px}

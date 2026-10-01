@@ -1,5 +1,5 @@
 /* ---------- Services / Roofing Types: sticky intro + photo-card grid ---------- */
-.services{background:#fff;padding:56px 0}
+.services{background:var(--paper);padding:56px 0}
 .svc-layout{display:grid;grid-template-columns:1fr;gap:36px}
 .svc-intro .eyebrow{color:var(--gold-ink);margin-bottom:14px}
 .svc-intro h2{color:var(--navy);font-size:var(--h2);margin-bottom:22px}

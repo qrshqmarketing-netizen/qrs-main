@@ -1,4 +1,4 @@
-.projects-hub-intro{background:#fff;padding:96px 0 18px}
+.projects-hub-intro{background:var(--paper);padding:96px 0 18px}
 .projects-hub-intro .crumbs ol{margin-bottom:28px}
 .projects-hub-copy{max-width:900px}
 .projects-hub-copy h1{color:var(--navy);font-size:clamp(36px,5vw,58px);font-weight:500;line-height:1.08;letter-spacing:-.02em;margin:0 0 16px}

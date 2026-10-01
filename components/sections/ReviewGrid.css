@@ -1,7 +1,7 @@
 /* ---------- Reviews page: every Google review as a card ---------- */
 .review-grid{background:var(--wash);padding:60px 0}
 .rg-grid{columns:1;column-gap:20px}
-.rg-card{break-inside:avoid;margin:0 0 20px;padding:24px 22px;border-radius:var(--radius);background:#fff;border:1px solid var(--line);box-shadow:0 8px 24px rgba(6,45,87,.05)}
+.rg-card{break-inside:avoid;margin:0 0 20px;padding:24px 22px;border-radius:var(--radius);background:var(--paper);border:1px solid var(--line);box-shadow:0 8px 24px rgba(6,45,87,.05)}
 .rg-stars{display:flex;gap:2px;margin-bottom:12px;color:#fbbc04}
 .rg-stars svg{width:18px;height:18px;fill:currentColor}
 .rg-card blockquote{margin:0 0 18px;color:var(--ink);font-size:16px;line-height:1.7}

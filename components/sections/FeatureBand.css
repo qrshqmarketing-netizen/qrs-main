@@ -14,7 +14,7 @@
 .band-points h3 a{color:inherit;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:4px}
 .band-points span{display:block;font-size:15px;line-height:1.6}
 
-.band-navy{background:var(--navy);color:#fff}
+.band-navy{background:var(--surface-navy);color:#fff}
 .band-navy .eyebrow{color:var(--gold)}
 .band-navy h2,.band-navy .band-points h3{color:#fff}
 .band-navy .band-copy p,.band-navy .band-points span{color:#d5e1eb}
@@ -24,7 +24,7 @@
 .band-light .eyebrow{color:var(--gold-ink)}
 .band-light h2,.band-light .band-copy p,.band-light .band-points h3{color:var(--navy)}
 .band-light .band-points span{color:var(--ink)}
-.band-light .band-points li{background:#fff;border:1px solid var(--line);box-shadow:0 8px 24px rgba(6,45,87,.05)}
+.band-light .band-points li{background:var(--paper);border:1px solid var(--line);box-shadow:0 8px 24px rgba(6,45,87,.05)}
 
 @media (min-width:621px){
   .band{padding:88px 0}

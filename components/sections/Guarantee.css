@@ -3,7 +3,7 @@
 .gtee-grid{position:relative;display:grid;grid-template-columns:minmax(0,1fr);gap:0;align-items:center}
 .gtee-art{display:flex;justify-content:center}
 .gtee-card{
-  width:min(440px,100%);margin:0 auto 56px;background:var(--navy);color:#fff;border-radius:var(--radius);
+  width:min(440px,100%);margin:0 auto 56px;background:var(--surface-navy);color:#fff;border-radius:var(--radius);
   padding:30px 22px 24px;text-align:center;box-shadow:0 22px 50px rgba(6,45,87,.18);
 }
 .gtee-seal{width:160px;height:160px;display:block;margin:0 auto 22px}

@@ -1,7 +1,7 @@
 /* ---------- Office cards (Service Areas page, and the city pages with an office) ---------- */
 .offices{background:var(--wash);padding:60px 0}
 .office-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
-.office-card{padding:24px 22px;border-radius:var(--radius);background:#fff;border:1px solid var(--line);box-shadow:0 8px 24px rgba(6,45,87,.05)}
+.office-card{padding:24px 22px;border-radius:var(--radius);background:var(--paper);border:1px solid var(--line);box-shadow:0 8px 24px rgba(6,45,87,.05)}
 .office-photo{position:relative;aspect-ratio:16/9;margin:-24px -22px 20px;border-radius:var(--radius) var(--radius) 0 0;overflow:hidden;background:var(--wash)}
 .office-photo img{object-fit:cover}
 .office-card h3{display:flex;align-items:center;gap:10px;margin:0 0 12px;color:var(--navy);font-size:20px;font-weight:600;line-height:1.25;letter-spacing:.01em}

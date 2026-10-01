@@ -24,7 +24,7 @@
 
 .qa-teaser{
   position:absolute;right:70px;bottom:10px;width:max-content;max-width:200px;
-  background:#fff;color:var(--navy);border-radius:var(--radius);padding:11px 34px 11px 14px;
+  background:var(--paper);color:var(--navy);border-radius:var(--radius);padding:11px 34px 11px 14px;
   font-family:var(--font-head);font-size:.86rem;font-weight:700;line-height:1.35;box-shadow:0 10px 30px rgba(6,45,87,.18);
   animation:qaIn .35s ease both;cursor:pointer;
 }
@@ -35,15 +35,15 @@
 /* Phones: the chat opens as a bottom sheet */
 .qa-panel{
   position:fixed;inset:auto 0 0 0;width:100%;height:min(88vh,100dvh);
-  display:flex;flex-direction:column;background:#fff;border-radius:var(--radius) var(--radius) 0 0;overflow:hidden; /* phone: a sheet at the bottom of the screen */
+  display:flex;flex-direction:column;background:var(--paper);border-radius:var(--radius) var(--radius) 0 0;overflow:hidden; /* phone: a sheet at the bottom of the screen */
   box-shadow:0 24px 70px rgba(6,45,87,.30),0 0 0 1px rgba(6,45,87,.06);
   transform-origin:bottom right;opacity:0;transform:translateY(14px) scale(.96);visibility:hidden;
   transition:opacity .22s ease,transform .22s ease,visibility 0s linear .22s;
 }
 .qa.open .qa-panel{opacity:1;transform:none;visibility:visible;transition:opacity .22s ease,transform .22s ease}
-.qa-head{position:relative;background:var(--navy);color:#fff;padding:18px 18px 16px;display:flex;align-items:center;gap:12px;overflow:hidden}
+.qa-head{position:relative;background:var(--surface-navy);color:#fff;padding:18px 18px 16px;display:flex;align-items:center;gap:12px;overflow:hidden}
 .qa-head:after{content:"";position:absolute;right:-40px;top:-60px;width:170px;height:170px;border-radius:var(--radius);background:radial-gradient(circle,rgba(212,181,114,.28),transparent 68%);pointer-events:none}
-.qa-avatar{position:relative;flex:0 0 44px;width:44px;height:44px;border-radius:var(--radius);background:#fff;display:grid;place-items:center}
+.qa-avatar{position:relative;flex:0 0 44px;width:44px;height:44px;border-radius:var(--radius);background:var(--paper);display:grid;place-items:center}
 .qa-avatar img{width:32px;height:32px}
 .qa-avatar:after{content:"";position:absolute;right:-3px;bottom:-3px;width:12px;height:12px;border-radius:var(--radius);background:#34c77b;border:2.5px solid var(--navy)}
 .qa-title{flex:1;min-width:0}
@@ -54,8 +54,8 @@
 .qa-new svg,.qa-x svg{width:16px;height:16px}
 .qa-log{flex:1;overflow-y:auto;padding:18px 16px 8px;background:var(--wash);display:flex;flex-direction:column;gap:10px;scrollbar-width:thin}
 .qa-msg{max-width:84%;padding:11px 14px;border-radius:var(--radius);font-size:.9rem;line-height:1.5;animation:qaIn .25s ease both;overflow-wrap:anywhere}
-.qa-msg.bot{align-self:flex-start;background:#fff;color:var(--ink);border:1px solid var(--line);border-bottom-left-radius:5px}
-.qa-msg.me{align-self:flex-end;background:var(--navy);color:#fff;border-bottom-right-radius:5px}
+.qa-msg.bot{align-self:flex-start;background:var(--paper);color:var(--ink);border:1px solid var(--line);border-bottom-left-radius:5px}
+.qa-msg.me{align-self:flex-end;background:var(--surface-navy);color:#fff;border-bottom-right-radius:5px}
 .qa-msg a{color:var(--gold-ink);font-weight:800}
 .qa-msg.me a{color:var(--gold)}
 @keyframes qaIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
@@ -65,15 +65,15 @@
 @keyframes qaDot{0%,60%,100%{transform:translateY(0);opacity:.5}30%{transform:translateY(-5px);opacity:1}}
 .qa-chips{display:flex;flex-wrap:wrap;gap:7px;padding:4px 16px 12px;background:var(--wash)}
 .qa-chips:empty{display:none}
-.qa-chip{min-height:36px;border:1.5px solid var(--navy);background:#fff;color:var(--navy);border-radius:999px;padding:7px 13px;font-family:var(--font-head);font-size:.8rem;font-weight:600;line-height:1.2;transition:.15s}
-.qa-chip:hover{background:var(--navy);color:#fff}
-.qa-form{display:flex;align-items:flex-end;gap:8px;padding:12px;border-top:1px solid var(--line);background:#fff}
+.qa-chip{min-height:36px;border:1.5px solid var(--navy);background:var(--paper);color:var(--navy);border-radius:999px;padding:7px 13px;font-family:var(--font-head);font-size:.8rem;font-weight:600;line-height:1.2;transition:.15s}
+.qa-chip:hover{background:var(--surface-navy);color:#fff}
+.qa-form{display:flex;align-items:flex-end;gap:8px;padding:12px;border-top:1px solid var(--line);background:var(--paper)}
 .qa-form textarea{flex:1;min-height:44px;max-height:120px;resize:none;border-radius:var(--radius);padding:11px 14px;font-size:16px;line-height:1.4}
 .qa-send{flex:0 0 44px;width:44px;height:44px;border-radius:999px;border:0;background:var(--gold);color:var(--navy);display:grid;place-items:center;padding:0;transition:.15s}
 .qa-send:hover:not(:disabled){background:var(--gold-2);transform:translateY(-1px)}
 .qa-send:disabled{opacity:.45;cursor:default}
 .qa-send svg{width:20px;height:20px}
-.qa-foot{display:flex;justify-content:space-between;gap:10px;padding:0 14px 12px;padding-bottom:calc(12px + env(safe-area-inset-bottom));background:#fff;font-size:.72rem;color:var(--muted)}
+.qa-foot{display:flex;justify-content:space-between;gap:10px;padding:0 14px 12px;padding-bottom:calc(12px + env(safe-area-inset-bottom));background:var(--paper);font-size:.72rem;color:var(--muted)}
 .qa-foot a{color:var(--navy);font-weight:800;white-space:nowrap}
 @media (min-width:621px){
   .qa{right:24px;bottom:24px}

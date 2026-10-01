@@ -1,5 +1,5 @@
 /* ---------- Hub card grid ---------- */
-.card-grid{background:#fff;padding:60px 0}
+.card-grid{background:var(--paper);padding:60px 0}
 .card-grid-wash{background:var(--wash)}
 .cg-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:34px 20px}
 .cg-card{position:relative;display:flex;flex-direction:column}

@@ -7,8 +7,8 @@
 .cp-bands legend small{display:block;margin-top:2px;color:var(--muted);font-weight:600;font-size:12px}
 .cp-bands>div{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
 .cp-bands input{position:absolute;opacity:0;width:1px;height:1px;min-height:0}
-.cp-bands label{margin:0;padding:10px 18px;border:1.5px solid var(--line);border-radius:999px;background:#fff;color:var(--navy);font:600 .9rem/1.2 var(--font-head);cursor:pointer;transition:.15s}
-.cp-bands input:checked+label{border-color:var(--navy);background:var(--navy);color:#fff}
+.cp-bands label{margin:0;padding:10px 18px;border:1.5px solid var(--line);border-radius:999px;background:var(--paper);color:var(--navy);font:600 .9rem/1.2 var(--font-head);cursor:pointer;transition:.15s}
+.cp-bands input:checked+label{border-color:var(--navy);background:var(--surface-navy);color:#fff}
 .cp-bands input:focus-visible+label{outline:3px solid rgba(212,181,114,.6);outline-offset:2px}
 
 .cp-grid{display:grid;gap:20px;grid-template-columns:1fr;max-width:1040px;margin:0 auto}
@@ -16,7 +16,7 @@
   .cp-grid{grid-template-columns:repeat(3,1fr);align-items:stretch}
 }
 
-.cp-card{position:relative;background:#fff;border:1.5px solid var(--line);border-radius:var(--radius);padding:30px 24px 24px;text-align:center;display:flex;flex-direction:column}
+.cp-card{position:relative;background:var(--paper);border:1.5px solid var(--line);border-radius:var(--radius);padding:30px 24px 24px;text-align:center;display:flex;flex-direction:column}
 .cp-popular{border-color:var(--gold);box-shadow:var(--shadow)}
 .cp-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--navy);font:800 .72rem/1 var(--font-head);padding:6px 14px;border-radius:999px;white-space:nowrap}
 .cp-card h3{margin:6px 0 4px;font-family:var(--font-display);font-size:1.3rem;color:var(--navy)}

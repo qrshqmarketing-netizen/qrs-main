@@ -1,5 +1,5 @@
 /* ---------- Video + Google reviews ---------- */
-.testimonials{background:#fff;padding:64px 0 72px}
+.testimonials{background:var(--paper);padding:64px 0 72px}
 .testimonials .container{border:1px solid var(--line);border-radius:var(--radius);padding:36px 24px}
 .vid-grid{display:grid;grid-template-columns:1fr;gap:28px;align-items:center;max-width:1000px;margin:0 auto}
 .vid-copy h2{color:var(--gold-ink);font-size:var(--h2);font-weight:500;line-height:1.05;margin-bottom:18px}
@@ -40,7 +40,7 @@
 .tst-arrows .svc-arrow{width:44px;height:44px}
 
 /* Google branding */
-.g-badge{display:flex;align-items:center;gap:14px;margin-top:24px;padding:14px 18px 14px 16px;background:#fff;border:1px solid #dadce0;border-radius:var(--radius);box-shadow:0 6px 18px rgba(60,64,67,.10)}
+.g-badge{display:flex;align-items:center;gap:14px;margin-top:24px;padding:14px 18px 14px 16px;background:var(--paper);border:1px solid #dadce0;border-radius:var(--radius);box-shadow:0 6px 18px rgba(60,64,67,.10)}
 .g-logo{width:34px;height:34px;flex:0 0 34px}
 .g-badge b{display:block;font:600 17px/1.2 var(--font-head);color:#202124;letter-spacing:-.01em}
 .g-badge span{display:block;font-size:14px;line-height:1.4;color:#5f6368;margin-top:2px}

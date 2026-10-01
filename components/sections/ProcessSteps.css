@@ -1,6 +1,6 @@
 /* ---------- Our Process (numbered steps + sticky visual) ---------- */
 .process-block{background:var(--wash);padding:60px 0}
-.process-block-white{background:#fff}
+.process-block-white{background:var(--paper)}
 .process-block-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:36px}
 .process-block h2{color:var(--navy);font-size:var(--h2);margin-bottom:10px}
 .process-block-sub{color:var(--navy);font:600 18px/1.4 var(--font-head);margin:0 0 30px}

@@ -27,7 +27,9 @@
   --plum-2:#5b1f3b;
   --ink:#10243a;
   --muted:#5a6b82; /* secondary text; ~5.4:1 on white and ~5.1:1 on --wash, both pass WCAG AA */
-  --paper:#fff;
+  --paper:#fff; /* card and section surfaces (dark theme: app/dark-theme.css) */
+  --surface-navy:var(--navy); /* navy bands, cards and buttons: stays dark navy in the dark theme while --navy text turns light */
+  --surface-navy-2:var(--navy-2);
   --wash:#f5f8fb;
   --line:#e4eaf0;
   --green:#1d7a58;
@@ -93,8 +95,8 @@ h1,h2,h3,.eyebrow,.hero-sub{text-wrap:balance}
 .btn-plum{background:var(--plum);color:#fff;box-shadow:0 9px 22px rgba(107,37,69,.24)}
 .btn-plum:hover{background:var(--plum-2)}
 .btn-plum svg{width:19px;height:19px;flex:none}
-.btn-dark{background:var(--navy);color:#fff}
-.btn-light{background:#fff;color:var(--navy)}
+.btn-dark{background:var(--surface-navy);color:#fff}
+.btn-light{background:var(--paper);color:var(--navy)}
 .btn-outline{border-color:rgba(255,255,255,.32);color:#fff;background:rgba(255,255,255,.06)}
 .btn-outline:hover{background:rgba(255,255,255,.12)}
 .arrow{font-size:1.1em}
@@ -103,7 +105,7 @@ h1,h2,h3,.eyebrow,.hero-sub{text-wrap:balance}
 label{display:block;font-size:13px;font-weight:900;color:var(--navy);margin-bottom:6px}
 input,select,textarea{
   width:100%;min-height:50px;border:1px solid #d7e0e8;border-radius:var(--radius);padding:13px 14px;
-  background:#fff;color:var(--ink);outline:none;font-size:16px; /* 16px stops iOS zooming in on focus */
+  background:var(--paper);color:var(--ink);outline:none;font-size:16px; /* 16px stops iOS zooming in on focus */
 }
 input:focus,select:focus,textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(212,181,114,.15)}
 textarea{min-height:105px;resize:vertical}
@@ -119,8 +121,8 @@ textarea{min-height:105px;resize:vertical}
 .sr-only{position:absolute;left:-9999px}
 
 /* ---------- Map theme: Leaflet popups and controls (service area + Instant Quote maps) ---------- */
-.leaflet-popup-content-wrapper{background:var(--navy);color:#fff;border-radius:var(--radius);box-shadow:0 10px 30px rgba(0,0,0,.35)}
-.leaflet-popup-tip{background:var(--navy)}
+.leaflet-popup-content-wrapper{background:var(--surface-navy);color:#fff;border-radius:var(--radius);box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.leaflet-popup-tip{background:var(--surface-navy)}
 .leaflet-popup-content{margin:14px 18px;font:inherit}
 .leaflet-popup-content b{display:block;font-size:.95rem;margin-bottom:3px}
 .leaflet-popup-content a{color:var(--gold);font-weight:800;font-size:.8rem}
@@ -163,7 +165,7 @@ main h2{animation:fadeUp .9s ease .3s both}
 .on-dark .text-link:hover{color:var(--gold-2)}
 
 /* Navy outline button */
-.btn-line{border-color:rgba(6,45,87,.28);color:var(--navy);background:#fff}
+.btn-line{border-color:rgba(6,45,87,.28);color:var(--navy);background:var(--paper)}
 .btn-line:hover{border-color:var(--navy)}
 
 /* Heading + intro above a section's content */
@@ -197,7 +199,7 @@ main h2{animation:fadeUp .9s ease .3s both}
 .chips{display:flex;flex-wrap:wrap;gap:10px;list-style:none;margin:0;padding:0}
 .chip{
   display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:9px 16px;border-radius:999px;
-  border:1.5px solid var(--line);background:#fff;color:var(--navy);
+  border:1.5px solid var(--line);background:var(--paper);color:var(--navy);
   font:600 15px/1.25 var(--font-head);transition:border-color .15s,background .15s;
 }
 a.chip:hover{border-color:var(--navy)}

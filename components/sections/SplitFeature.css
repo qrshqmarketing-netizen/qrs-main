@@ -1,5 +1,5 @@
 /* ---------- Split feature (text + picture) ---------- */
-.split{background:#fff;padding:60px 0}
+.split{background:var(--paper);padding:60px 0}
 .split-wash{background:var(--wash)}
 .split-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:30px;align-items:center}
 .split .eyebrow{color:var(--gold-ink)}

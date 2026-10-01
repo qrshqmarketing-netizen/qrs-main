@@ -2,7 +2,7 @@
 .rv-toast{
   position:fixed;left:12px;bottom:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:1150;
   width:max-content;max-width:calc(100% - 100px);
-  background:#fff;border-radius:14px;border:1px solid #e3e6ea;box-shadow:0 10px 28px rgba(6,45,87,.18);
+  background:var(--paper);border-radius:14px;border:1px solid #e3e6ea;box-shadow:0 10px 28px rgba(6,45,87,.18);
   opacity:0;visibility:hidden;transform:translateY(12px);
   transition:opacity .3s ease,transform .3s ease,visibility 0s linear .3s;
 }

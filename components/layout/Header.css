@@ -12,7 +12,7 @@
 }
 .nav .brand-logo{height:36px}
 .menu-btn{display:block;flex:0 0 auto;border:0;background:transparent;color:#fff;width:44px;height:44px}
-.menu-btn span{display:block;width:22px;height:2px;background:#fff;margin:5px auto;border-radius:var(--radius)}
+.menu-btn span{display:block;width:22px;height:2px;background:var(--paper);margin:5px auto;border-radius:var(--radius)}
 .nav-actions{display:flex;align-items:center;gap:8px;flex-shrink:0;margin-left:auto}
 .nav-cta{display:none;min-height:44px;font-size:15px;border-color:#fff;border-radius:999px;text-transform:uppercase;letter-spacing:.03em;font-family:var(--font-head);font-weight:600}
 /* Red call button: always a round handset icon, so the pill stays compact */
@@ -109,7 +109,7 @@
 .mega-list li a:hover{background:var(--wash)}
 .mega-list li span{display:block;font:500 15px/1.3 var(--font-head);letter-spacing:-.01em;color:var(--navy)}
 .mega-list li small{display:block;font:400 13px/1.4 var(--font-body);color:var(--muted);margin-top:2px}
-.mega-promo{display:none;background:var(--navy);color:#fff;border-radius:var(--radius);padding:24px;align-self:start}
+.mega-promo{display:none;background:var(--surface-navy);color:#fff;border-radius:var(--radius);padding:24px;align-self:start}
 .mega-promo b{display:block;font:600 20px/1.2 var(--font-head);letter-spacing:-.02em;margin-bottom:8px}
 .mega-promo p{font-size:15px;line-height:1.6;color:#d5e1eb;margin:0 0 18px}
 .mega-promo .btn{width:100%;min-height:46px;border-radius:999px;font-size:16px}

@@ -1,5 +1,5 @@
 /* ---------- Proof bar (4 across → 2 × 2 on phones): nested in the home hero, or a white band below a sub page's intro ---------- */
-.proofbar{background:#fff;border-top:1px solid var(--proof-line,var(--line));border-bottom:1px solid var(--proof-line,var(--line))}
+.proofbar{background:var(--paper);border-top:1px solid var(--proof-line,var(--line));border-bottom:1px solid var(--proof-line,var(--line))}
 .proof-grid{display:grid;grid-template-columns:1fr 1fr}
 .proof-item{padding:20px 14px 20px 0}
 .proof-item:nth-child(odd){border-right:1px solid var(--proof-line,var(--line))}
