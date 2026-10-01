@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import Breadcrumbs from '@/components/sections/Breadcrumbs';
+import ScrollParallaxImage from '@/components/sections/ScrollParallaxImage';
 import JsonLd from '@/components/ui/JsonLd';
 import Rich from '@/components/ui/Rich';
 import { PROJECTS_LINK } from '@/data/catalog';
@@ -30,7 +30,7 @@ export default function MidWilshireProjectPage() {
       <section className="project-detail-gallery" aria-label="Project photos">
         <div className="container">
           <figure className="project-detail-photo">
-            <Image src={page.image} alt={page.imageAlt} fill sizes="(max-width: 900px) 100vw, 1200px" preload />
+            <ScrollParallaxImage src={page.image} alt={page.imageAlt} sizes="(max-width: 900px) 100vw, 1200px" preload />
           </figure>
         </div>
       </section>

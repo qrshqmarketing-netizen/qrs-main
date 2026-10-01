@@ -129,7 +129,7 @@ export const ABOUT_MENU = {
     href: '/about-us/',
     links: [
       { label: 'Why QRS', href: '/about-us/' },
-      { label: 'Customer Reviews', href: '/reviews/' },
+      { label: 'Give a Review', href: '/reviews/' },
       { label: 'Our Guarantee', href: '/about-us/#guarantee' },
       { label: 'Projects', href: '/projects/' },
       { label: 'Roofing Blog', href: '/blog/' },
@@ -154,11 +154,11 @@ export const FOOTER = {
       links: [
         { label: 'About QRS', href: '/about-us/' },
         { label: 'Projects', href: '/projects/' },
-        { label: 'Reviews', href: '/reviews/' },
+        { label: 'Give a Review', href: '/reviews/' },
         { label: 'Roofing Blog', href: '/blog/' },
         { label: 'Careers', href: '/careers/' },
         { label: 'Contractors', href: '/contractors/' },
-        { label: 'MCP Server', href: '/mcp/' },
+        { label: 'Connect an AI Agent', href: '/mcp/' },
       ],
     },
     {

@@ -1,8 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
 import { PROCESS_VIDEO } from '@/data/site';
+import ScrollParallaxImage from './ScrollParallaxImage';
 
 // Placeholder frame that swaps in the YouTube player when clicked (set the video in data/site.js)
 export default function ProcessVideo() {
@@ -20,7 +20,7 @@ export default function ProcessVideo() {
 
   return (
     <button className="vid-frame" id="vidFrame" type="button" aria-label="Play the QRS process video" onClick={() => embed && setPlaying(true)}>
-      {poster && <Image src={poster} alt="" fill sizes="(min-width: 901px) 540px, 100vw" />}
+      {poster && <ScrollParallaxImage src={poster} sizes="(min-width: 901px) 540px, 100vw" />}
       <span className="vid-play" aria-hidden="true"></span>
       <span className="vid-tag">QRS process video</span>
     </button>

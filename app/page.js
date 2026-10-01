@@ -69,9 +69,9 @@ export default function HomePage() {
           className="hero-top-pad"
           stats
         />
+        <Services items={HOME_SERVICES} compact cta={false} />
         <QrsStandard />
         <ReviewStrip />
-        <Services items={HOME_SERVICES} compact cta={false} />
         <ServiceArea />
         <Services title="Roofing Systems" items={HOME_PRODUCTS} compact cta={false} pattern={false} slider id="roofing-systems" />
         <WhyQrs />

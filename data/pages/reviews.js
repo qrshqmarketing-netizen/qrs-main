@@ -3,20 +3,20 @@ export const REVIEW_DESTINATIONS = [
   {
     location: 'Woodland Hills',
     links: [
-      { platform: 'Google', href: 'https://g.page/r/CR1o7Ju0Q1QjEBM/review' },
-      { platform: 'Yelp', href: 'https://www.yelp.com/writeareview/biz/RXY3eryZVywVqsxR8rlXyw?return_url=%2Fbiz%2FRXY3eryZVywVqsxR8rlXyw&review_origin=biz-details-war-button' },
+      { id: 'woodland-hills-google', platform: 'Google', href: 'https://g.page/r/CR1o7Ju0Q1QjEBM/review' },
+      { id: 'woodland-hills-yelp', platform: 'Yelp', href: 'https://www.yelp.com/writeareview/biz/RXY3eryZVywVqsxR8rlXyw?return_url=%2Fbiz%2FRXY3eryZVywVqsxR8rlXyw&review_origin=biz-details-war-button' },
     ],
   },
   {
     location: 'West Hollywood',
     links: [
-      { platform: 'Google', href: 'https://g.page/r/CWsVFBHyvyZiEBM/review' },
-      { platform: 'Yelp', href: 'https://www.yelp.com/writeareview/biz/JQZfz176BB3CsUb30IJ6rg?return_url=%2Fbiz%2FJQZfz176BB3CsUb30IJ6rg&review_origin=biz-details-war-button' },
+      { id: 'west-hollywood-google', platform: 'Google', href: 'https://g.page/r/CWsVFBHyvyZiEBM/review' },
+      { id: 'west-hollywood-yelp', platform: 'Yelp', href: 'https://www.yelp.com/writeareview/biz/JQZfz176BB3CsUb30IJ6rg?return_url=%2Fbiz%2FJQZfz176BB3CsUb30IJ6rg&review_origin=biz-details-war-button' },
     ],
   },
   {
     location: 'Vernon',
-    links: [{ platform: 'Google', href: 'https://g.page/r/CfLQ6GkPIVdtEBM/review' }],
+    links: [{ id: 'vernon-google', platform: 'Google', href: 'https://g.page/r/CfLQ6GkPIVdtEBM/review' }],
   },
 ];
 

@@ -1,4 +1,5 @@
 import { REVIEW_DESTINATIONS } from '@/data/pages/reviews';
+import ReviewLink from './ReviewLink';
 import './ReviewDestinations.css';
 
 export default function ReviewDestinations() {
@@ -16,17 +17,8 @@ export default function ReviewDestinations() {
               <h3>{location}</h3>
               <p>Leave a review for our {location} team.</p>
               <div className="review-destination-actions">
-                {links.map(({ platform, href }) => (
-                  <a
-                    className={platform === 'Google' ? 'btn btn-gold' : 'btn btn-line'}
-                    href={href}
-                    key={platform}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title={`Opens ${platform} to write a review for our ${location} location`}
-                  >
-                    Leave a {platform} review
-                  </a>
+                {links.map(({ id, platform }) => (
+                  <ReviewLink key={id} location={location} platform={platform} destination={id} />
                 ))}
               </div>
             </article>

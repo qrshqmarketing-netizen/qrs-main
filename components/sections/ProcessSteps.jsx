@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import Rich from '@/components/ui/Rich';
+import ScrollParallaxImage from './ScrollParallaxImage';
 import './ProcessSteps.css';
 
 // Numbered steps with optional bullet lists, beside a photo (or scene art) that stays in view while scrolling.
@@ -36,7 +36,7 @@ export default function ProcessSteps({ heading = 'Our Process', subheading, step
         <div className={'process-block-visual' + (showOnMobile ? ' process-block-visual-mobile' : '')}>
           {image ? (
             <div className="process-block-media">
-              <Image src={image} alt={imageAlt} fill sizes="(min-width: 901px) 420px, 100vw" />
+              <ScrollParallaxImage src={image} alt={imageAlt} sizes="(min-width: 901px) 420px, 100vw" />
             </div>
           ) : (
             <div className={`process-block-media art ${scene}`} aria-hidden="true" />

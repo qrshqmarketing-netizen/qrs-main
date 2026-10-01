@@ -1,7 +1,7 @@
-import Image from 'next/image';
 import SiteLink from '@/components/ui/SiteLink';
 import Rich from '@/components/ui/Rich';
 import { SERVICES } from '@/data/services';
+import ScrollParallaxImage from './ScrollParallaxImage';
 import './Services.css';
 
 // Sticky intro (heading + CTA) on the left, a photo-card grid on the right. compact stacks the heading;
@@ -14,7 +14,7 @@ export default function ServicesCarousel({ title = 'Roofing Services', items = S
     <li className="svc-card" key={`${copy ? 'copy-' : ''}${item.href}`}>
       <SiteLink className="svc-card-link" href={item.href} tabIndex={copy ? -1 : undefined}>
         <div className={`svc-media art ${item.scene || 'scene-shingle'}`}>
-          {item.image && <Image src={item.image} alt="" fill sizes={slider ? '(min-width: 1200px) 260px, 230px' : '(min-width: 901px) 360px, (min-width: 621px) 46vw, 92vw'} />}
+          {item.image && <ScrollParallaxImage src={item.image} sizes={slider ? '(min-width: 1200px) 260px, 230px' : '(min-width: 901px) 360px, (min-width: 621px) 46vw, 92vw'} />}
           <div className="svc-caption">
             <h3><Rich text={item.title} /></h3>
             <p>{item.text}</p>

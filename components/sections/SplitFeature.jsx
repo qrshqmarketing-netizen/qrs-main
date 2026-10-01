@@ -1,6 +1,6 @@
-import Image from 'next/image';
 import Rich from '@/components/ui/Rich';
 import SiteLink from '@/components/ui/SiteLink';
+import ScrollParallaxImage from './ScrollParallaxImage';
 import './SplitFeature.css';
 
 // Text beside a photo (or scene art). reverse puts the picture on the left.
@@ -24,7 +24,7 @@ export default function SplitFeature({ eyebrow, heading, subheading, paragraphs 
           )}
         </div>
         <div className={`split-media art ${image ? '' : scene}`}>
-          {image && <Image src={image} alt={imageAlt} fill sizes="(min-width: 901px) 540px, 100vw" />}
+          {image && <ScrollParallaxImage src={image} alt={imageAlt} sizes="(min-width: 901px) 540px, 100vw" />}
         </div>
       </div>
     </section>

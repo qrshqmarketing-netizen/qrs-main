@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import SiteLink from '@/components/ui/SiteLink';
+import ScrollParallaxImage from './ScrollParallaxImage';
 import { ArrowRight } from '@/components/ui/icons';
 import { cityPath, findCity } from '@/data/locations';
 import { OFFICES, PHONE, TEL } from '@/data/site';
@@ -12,7 +12,7 @@ export function OfficeCard({ office, cityLink = true }) {
     <div className={'office-card' + (office.image ? ' office-card-photo' : '')}>
       {office.image && (
         <div className="office-photo">
-          <Image src={office.image} alt={office.imageAlt || ''} fill sizes="(min-width: 901px) 560px, 100vw" />
+          <ScrollParallaxImage src={office.image} alt={office.imageAlt || ''} sizes="(min-width: 901px) 560px, 100vw" />
         </div>
       )}
       <h3>

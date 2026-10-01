@@ -30,6 +30,6 @@
 @media (min-width:901px){
   .process-block{padding:100px 0}
   .process-block-grid{grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:64px;align-items:start}
-  .process-block-visual{display:block;position:sticky;top:110px}
+  .process-block-visual{display:block}
   .process-block-visual-mobile{margin-top:0}
 }
