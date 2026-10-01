@@ -24,7 +24,7 @@ export const GROUPS = {
   shingle: {
     key: 'shingle',
     label: 'Shingle Roofing',
-    href: '/shingle-roofing/',
+    href: '/residential-roofing/shingle-roofing/',
     parent: RESIDENTIAL,
     scenes: ['scene-shingle', 'scene-replace', 'scene-inspect'],
     image: '/images/shingle-roof-completed-drone-view.webp',
@@ -35,7 +35,7 @@ export const GROUPS = {
   tile: {
     key: 'tile',
     label: 'Tile Roofing',
-    href: '/tile-roofing/',
+    href: '/residential-roofing/tile-roofing/',
     parent: RESIDENTIAL,
     scenes: ['scene-tile', 'scene-repair', 'scene-hoa'],
     cardImage: '/images/tile-roof-replacement.webp',
@@ -44,7 +44,7 @@ export const GROUPS = {
   flat: {
     key: 'flat',
     label: 'Flat Roofing',
-    href: '/flat-roofing/',
+    href: '/residential-roofing/flat-roofing/',
     parent: RESIDENTIAL,
     scenes: ['scene-flat', 'scene-commercial', 'scene-inspect'],
     cardImage: '/images/flat-roof-torch-down-drone-view-services.webp',
@@ -65,7 +65,7 @@ export const SINGLES = {
   gutters: {
     key: 'gutters',
     label: 'Rain Gutters',
-    href: '/rain-gutters/',
+    href: '/residential-roofing/rain-gutters/',
     parent: RESIDENTIAL,
     scenes: ['scene-gutter'],
     blurb: 'Gutters and downspouts planned with your roof, so rainwater leaves the house the way it should.',
@@ -73,7 +73,7 @@ export const SINGLES = {
   hoa: {
     key: 'hoa',
     label: 'HOA & Multi-Family',
-    href: '/hoa-multi-family/',
+    href: '/residential-roofing/hoa-multi-family/',
     parent: RESIDENTIAL,
     scenes: ['scene-hoa'],
     blurb: 'Roofing for HOAs and multi-family properties, with photo-documented reports boards and managers can review.',
@@ -83,6 +83,7 @@ export const SINGLES = {
 // Stand-alone service pages for homes and commercial buildings alike (copy: data/services/programs.js)
 export const PROGRAMS = {
   emergency: { key: 'emergency', label: 'Emergency & Storm Damage', href: '/emergency-roof-repair/', parent: null, scenes: ['scene-repair'] },
+  inspection: { key: 'inspection', label: 'Roof Inspection', href: '/roof-inspection/', parent: null, scenes: ['scene-inspect'] },
   plans: { key: 'plans', label: 'Roof Maintenance Plans', href: '/roof-maintenance-plans/', parent: null, scenes: ['scene-inspect'] },
   financing: { key: 'financing', label: 'Roof Financing', href: '/roof-financing/', parent: null, scenes: ['scene-replace'] },
 };
@@ -94,28 +95,14 @@ export const SERVICE_HUBS = {
     label: 'Roof Repair',
     href: '/roof-repair/',
     scenes: ['scene-repair'],
-    cards: ['/shingle-roofing/repairs/', '/tile-roofing/repairs/', '/flat-roofing/repairs/', '/tile-roofing/lift-and-relay/', '/emergency-roof-repair/', '/commercial-roofing/repair/'],
+    cards: ['/residential-roofing/shingle-roofing/repair/', '/residential-roofing/tile-roofing/repair/', '/residential-roofing/flat-roofing/repair/', '/residential-roofing/tile-roofing/lift-and-relay/', '/emergency-roof-repair/', '/commercial-roofing/repair/'],
   },
   replacement: {
     key: 'replacement',
     label: 'Roof Replacement',
     href: '/roof-replacement/',
     scenes: ['scene-replace'],
-    cards: ['/shingle-roofing/replacement/', '/tile-roofing/replacement/', '/flat-roofing/replacement/', '/tile-roofing/lift-and-relay/', '/commercial-roofing/replacement/'],
-  },
-  inspection: {
-    key: 'inspection',
-    label: 'Roof Inspection',
-    href: '/roof-inspection/',
-    scenes: ['scene-inspect'],
-    cards: ['/shingle-roofing/inspection/', '/tile-roofing/inspection/', '/flat-roofing/inspection/', '/roof-maintenance-plans/', '/commercial-roofing/maintenance/', '/emergency-roof-repair/'],
-  },
-  tuneups: {
-    key: 'tuneups',
-    label: 'Roof Tune-Ups',
-    href: '/roof-tune-ups/',
-    scenes: ['scene-inspect'],
-    cards: ['/shingle-roofing/tune-up/', '/tile-roofing/tune-up/', '/flat-roofing/tune-up/', '/commercial-roofing/maintenance/'],
+    cards: ['/residential-roofing/shingle-roofing/replacement/', '/residential-roofing/tile-roofing/replacement/', '/residential-roofing/flat-roofing/replacement/', '/residential-roofing/tile-roofing/lift-and-relay/', '/commercial-roofing/replacement/'],
   },
 };
 

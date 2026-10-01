@@ -1,3 +1,4 @@
+import Faq from '@/components/sections/Faq';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
 import PartnerLogos from '@/components/sections/PartnerLogos';
@@ -10,6 +11,7 @@ import Services from '@/components/sections/Services';
 import WhyQrs from '@/components/sections/WhyQrs';
 import JsonLd from '@/components/ui/JsonLd';
 import { COMMERCIAL_LINK, RESIDENTIAL } from '@/data/catalog';
+import { FAQS } from '@/data/faqs';
 import { HOME_DESCRIPTION, HOME_TITLE } from '@/data/site';
 import { RECENT_WORK, RECENT_WORK_SUB } from '@/data/recentWork';
 import { ROOF_FINANCING } from '@/data/services/programs';
@@ -45,13 +47,13 @@ const HOME_SERVICES = [
 ];
 
 const HOME_PRODUCTS = [
-  { title: '*TotalShield* Shingle Systems', text: 'Complete shingle replacements and new installations, built from the deck up.', href: '/shingle-roofing/replacement/', scene: 'scene-shingle', image: '/images/shingle-roof-completed-drone-view.webp' },
-  { title: '*FlatGuard* Flat Roofing', text: 'Flat roof systems planned around drainage, seams and lasting protection.', href: '/flat-roofing/replacement/', scene: 'scene-flat', image: '/images/flat-roof-torch-down-drone-view-services.webp' },
+  { title: '*TotalShield* Shingle Systems', text: 'Complete shingle replacements and new installations, built from the deck up.', href: '/residential-roofing/shingle-roofing/replacement/', scene: 'scene-shingle', image: '/images/shingle-roof-completed-drone-view.webp' },
+  { title: '*FlatGuard* Flat Roofing', text: 'Flat roof systems planned around drainage, seams and lasting protection.', href: '/residential-roofing/flat-roofing/replacement/', scene: 'scene-flat', image: '/images/flat-roof-torch-down-drone-view-services.webp' },
   { title: '*LeakRescue* Roof Repairs', text: 'Leaks traced to the source and repaired with clear photos and a written scope.', href: '/roof-repair/', scene: 'scene-repair' },
   { title: '*RoofScan 360* Inspections', text: 'A roofer-led inspection with photos, plain-English findings and a clear next step.', href: '/roof-inspection/', scene: 'scene-inspect' },
-  { title: '*SecondLife* Tile Reset', text: 'Keep sound roof tiles while replacing the worn underlayment below.', href: '/tile-roofing/lift-and-relay/', scene: 'scene-tile' },
+  { title: '*SecondLife* Tile Reset', text: 'Keep sound roof tiles while replacing the worn underlayment below.', href: '/residential-roofing/tile-roofing/lift-and-relay/', scene: 'scene-tile' },
   { title: '*RoofCare Plan*', text: 'Scheduled roof care with seasonal visits and a photo report each time.', href: '/roof-maintenance-plans/', scene: 'scene-inspect' },
-  { title: '*ReserveReady* HOA Roofing', text: 'Roof inspections, clear scopes and planning support for community boards.', href: '/hoa-multi-family/', scene: 'scene-hoa' },
+  { title: '*ReserveReady* HOA Roofing', text: 'Roof inspections, clear scopes and planning support for community boards.', href: '/residential-roofing/hoa-multi-family/', scene: 'scene-hoa' },
 ];
 
 // Home page: sections in order, top to bottom, matching the site's top-nav structure — an intro paragraph,
@@ -60,7 +62,7 @@ const HOME_PRODUCTS = [
 export default function HomePage() {
   return (
     <>
-      <JsonLd data={pageJsonLd({ path: '/', title: HOME_TITLE, description: HOME_DESCRIPTION })} />
+      <JsonLd data={pageJsonLd({ path: '/', title: HOME_TITLE, description: HOME_DESCRIPTION, faqs: FAQS })} />
       <main id="top">
         {/* The keyword line above the big headline is the page's H1 (matches the page title) */}
         <Hero
@@ -79,6 +81,7 @@ export default function HomePage() {
         <WhyQrs />
         <ProjectCarousel heading="Recent Work" sub={RECENT_WORK_SUB} projects={RECENT_WORK} id="work" pattern />
         <PartnerLogos {...ROOF_FINANCING.partners} />
+        <Faq cta={false} />
         <RoofCheck />
         <FinalCta />
       </main>

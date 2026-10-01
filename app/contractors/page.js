@@ -31,7 +31,7 @@ const schema = pageJsonLd({
   service: { name: 'Roofing Subcontractor Services', type: page.keyword },
 });
 
-const RELATED = relatedLinks(['/commercial-roofing/', '/hoa-multi-family/', '/flat-roofing/', '/residential-roofing/']);
+const RELATED = relatedLinks(['/commercial-roofing/', '/residential-roofing/hoa-multi-family/', '/residential-roofing/flat-roofing/', '/residential-roofing/']);
 
 // Contractor partnerships (B2B) page (content in data/pages/contractors.js)
 export default function ContractorsPage() {

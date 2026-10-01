@@ -44,7 +44,7 @@ export const METAL_CONTENT = {
     faqs: [
       {
         q: 'Can I switch from a tile or shingle roof to metal?',
-        a: 'Usually, yes. Switching means a full tear-off, new underlayment, and trims and flashings made for metal. The deck gets a close look too, since the panels need a solid, flat surface underneath. If you’d rather keep the look you have, we’ll compare metal honestly with a [tile roof replacement](/tile-roofing/replacement/) or [shingle roof replacement](/shingle-roofing/replacement/).',
+        a: 'Usually, yes. Switching means a full tear-off, new underlayment, and trims and flashings made for metal. The deck gets a close look too, since the panels need a solid, flat surface underneath. If you’d rather keep the look you have, we’ll compare metal honestly with a [tile roof replacement](/residential-roofing/tile-roofing/replacement/) or [shingle roof replacement](/residential-roofing/shingle-roofing/replacement/).',
       },
       {
         q: 'How long does a metal roof last?',
@@ -56,7 +56,7 @@ export const METAL_CONTENT = {
       },
       {
         q: 'Do metal roofs need different gutters?',
-        a: 'Not different, but carefully matched. Water comes off smooth metal panels quickly, so gutter size and position matter, and the gutter metal should be compatible with the roof to avoid corrosion where they meet. When gutters are part of the project, we detail the trims, drip edge and [rain gutters](/rain-gutters/) together so they work as one system.',
+        a: 'Not different, but carefully matched. Water comes off smooth metal panels quickly, so gutter size and position matter, and the gutter metal should be compatible with the roof to avoid corrosion where they meet. When gutters are part of the project, we detail the trims, drip edge and [rain gutters](/residential-roofing/rain-gutters/) together so they work as one system.',
       },
       {
         q: 'Do you inspect existing metal roofs?',
@@ -133,7 +133,7 @@ export const METAL_CONTENT = {
           },
           {
             title: 'Gutters that tie in',
-            text: 'If your gutters are due, we can plan [new rain gutters](/rain-gutters/) with the roof so the drip edge and trims hand water off cleanly.',
+            text: 'If your gutters are due, we can plan [new rain gutters](/residential-roofing/rain-gutters/) with the roof so the drip edge and trims hand water off cleanly.',
           },
         ],
       },
@@ -152,14 +152,14 @@ export const METAL_CONTENT = {
         },
         {
           q: 'Can standing seam go on a low-slope roof?',
-          a: 'Often, yes. Some standing seam panels are designed for lower slopes than shingles or tile can handle, but the panel and seam type have to match the pitch. We confirm your slope first, and if metal isn’t the right fit, a [flat roofing](/flat-roofing/) system may suit it better.',
+          a: 'Often, yes. Some standing seam panels are designed for lower slopes than shingles or tile can handle, but the panel and seam type have to match the pitch. We confirm your slope first, and if metal isn’t the right fit, a [flat roofing](/residential-roofing/flat-roofing/) system may suit it better.',
         },
         {
           q: 'Does standing seam cost more than a shingle roof?',
-          a: 'Usually, at least up front. The panels, trims and specialized labor cost more than an asphalt shingle roof, and the final price depends on your roof’s size, shape and details. Your written scope shows the price before any work starts, and if you’d like to compare, we can also scope a [shingle roof replacement](/shingle-roofing/replacement/) for the same roof.',
+          a: 'Usually, at least up front. The panels, trims and specialized labor cost more than an asphalt shingle roof, and the final price depends on your roof’s size, shape and details. Your written scope shows the price before any work starts, and if you’d like to compare, we can also scope a [shingle roof replacement](/residential-roofing/shingle-roofing/replacement/) for the same roof.',
         },
       ],
-      related: ['/rain-gutters/', '/shingle-roofing/replacement/', '/tile-roofing/replacement/'],
+      related: ['/residential-roofing/rain-gutters/', '/residential-roofing/shingle-roofing/replacement/', '/residential-roofing/tile-roofing/replacement/'],
     },
   ],
 };

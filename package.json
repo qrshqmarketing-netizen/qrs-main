@@ -5,8 +5,10 @@
   "description": "Quality Roofing Specialists website (Next.js)",
   "scripts": {
     "dev": "next dev",
+    "prebuild": "npm run lastmod",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lastmod": "node --no-warnings --import ./scripts/alias.mjs scripts/lastmod.mjs"
   },
   "dependencies": {
     "gsap": "^3.15.0",

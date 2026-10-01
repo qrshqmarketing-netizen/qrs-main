@@ -23,7 +23,7 @@ function nearestProject(projects, point) {
 }
 
 // Map of finished projects (Leaflet + OpenStreetMap tiles) with a project list and ZIP code lookup, on /projects/.
-// projects: [{ title, path, place, geo: [lat, lng], image }] (PROJECT_PAGES in data/pages/projects.js).
+// projects: [{ title, path, place, geo: [lat, lng], image }] (PROJECT_PAGES in data/pages/projects.js). heading, sub: optional.
 // On load it zooms to the project closest to the visitor's approximate IP location; a ZIP code search does the same
 // for that ZIP. Each pin and list item links to the project's page.
 export default function ProjectMap({ projects, heading, sub }) {
@@ -140,8 +140,8 @@ export default function ProjectMap({ projects, heading, sub }) {
   return (
     <section className="area proj-area" id="project-map">
       <div className="container">
-        <h2>{heading}</h2>
-        <p className="area-sub">{sub}</p>
+        {heading && <h2>{heading}</h2>}
+        {sub && <p className="area-sub">{sub}</p>}
 
         <div className="loc-wrap" ref={wrapRef}>
           <aside className="loc-panel">

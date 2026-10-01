@@ -14,7 +14,7 @@ export const FAQS = [
   },
   {
     q: 'Do I need a full roof replacement?',
-    a: 'Not always. Many roofs just need a targeted repair or a [tile lift & relay](/tile-roofing/lift-and-relay/). The free roof evaluation tells you what your roof actually needs, so you’re not paying for work you don’t need.',
+    a: 'Not always. Many roofs just need a targeted repair or a [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/). The free roof evaluation tells you what your roof actually needs, so you’re not paying for work you don’t need.',
   },
   {
     q: 'Will I know the price before work starts?',
@@ -22,11 +22,11 @@ export const FAQS = [
   },
   {
     q: 'What kind of warranty do you offer?',
-    a: 'Our installs are backed by a 10-year workmanship warranty. At the final walkthrough we go over your warranty with you in plain English.',
+    a: 'Our installs are backed by a 10-year workmanship warranty, and the roofing materials carry the manufacturer’s warranty, which depends on the product and its warranty tier. At the final walkthrough we go over your warranty with you in plain English.',
   },
   {
     q: 'What types of roofs do you work on?',
-    a: 'We handle [tile](/tile-roofing/), [shingle](/shingle-roofing/) and [flat roofing](/flat-roofing/), including roof replacements, roof repairs, tile lift & relay, inspections and ongoing roof care.',
+    a: 'We handle [tile](/residential-roofing/tile-roofing/), [shingle](/residential-roofing/shingle-roofing/) and [flat roofing](/residential-roofing/flat-roofing/), including roof replacements, roof repairs, tile lift & relay, inspections and ongoing roof care.',
   },
   {
     q: 'What areas do you serve?',

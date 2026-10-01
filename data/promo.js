@@ -13,5 +13,5 @@ export const SEASON_PROMO = {
     text: 'Book the $199 Roof Check and we seal the vents, pipes and flashings before the storms arrive. The $199 counts toward a replacement if you move forward.',
   },
   cta: { label: 'Book the $199 Roof Check', href: '#roof-check' },
-  exclude: ['/commercial-roofing/', '/hoa-multi-family/', '/service-areas/la-county/vernon/', '/contractors/', '/careers/'],
+  exclude: ['/commercial-roofing/', '/residential-roofing/hoa-multi-family/', '/service-areas/la-county/vernon/', '/contractors/', '/careers/'],
 };

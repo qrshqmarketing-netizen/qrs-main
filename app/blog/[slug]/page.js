@@ -11,7 +11,7 @@ const findPost = (slug) => BLOG_POSTS.find((p) => p.slug === slug);
 
 export async function generateMetadata({ params }) {
   const post = findPost((await params).slug);
-  return pageMetadata({ title: post.metaTitle, description: post.metaDescription, path: blogPath(post.slug) });
+  return pageMetadata({ title: post.metaTitle, description: post.metaDescription, path: blogPath(post.slug), noindex: post.noindex });
 }
 
 export default async function BlogPostPage({ params }) {

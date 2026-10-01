@@ -1,3 +1,4 @@
+import Faq from '@/components/sections/Faq';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
 import ProofBar from '@/components/sections/ProofBar';
@@ -39,6 +40,7 @@ export default function LocationPage({ location, page, index = 0 }) {
       // A city with a branch office is served from that office (see the offices in lib/structuredData.js)
       provider: office && office !== OFFICES[0] ? `${SITE_URL}${cityPath(slug)}#office` : undefined,
     },
+    faqs: page.faqs,
     image: photo.src,
   });
   return (
@@ -61,6 +63,7 @@ export default function LocationPage({ location, page, index = 0 }) {
         sub="Tile, shingle and flat roofing, done the detail-first way. Pick a project to see how we handle that kind of work."
         projects={projectsFor(slug)}
       />
+      <Faq heading={`${city} Roofing FAQs`} sub={`Straight answers for ${city} ${page.offer === 'commercial' ? 'property owners' : 'homeowners'}.`} faqs={page.faqs} cta={false} />
       <RoofCheck offer={page.offer || 'home'} />
       <FinalCta heading={page.final.heading} text={page.final.text} />
     </main>

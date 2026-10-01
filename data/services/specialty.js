@@ -1,4 +1,4 @@
-// Single service pages: /rain-gutters/ and /hoa-multi-family/.
+// Single service pages: /residential-roofing/rain-gutters/ and /residential-roofing/hoa-multi-family/.
 // RAIN_GUTTERS is a stand-alone service page.
 
 export const RAIN_GUTTERS = {
@@ -67,7 +67,7 @@ export const RAIN_GUTTERS = {
       },
       {
         title: 'Tidy work, one home or many',
-        text: 'We keep walkways clear while we work and leave the ground along your walls clean, whether the job is one house or an entire [HOA community](/hoa-multi-family/).',
+        text: 'We keep walkways clear while we work and leave the ground along your walls clean, whether the job is one house or an entire [HOA community](/residential-roofing/hoa-multi-family/).',
       },
     ],
   },
@@ -82,7 +82,7 @@ export const RAIN_GUTTERS = {
     },
     {
       q: 'Should I replace my gutters when I replace my roof?',
-      a: 'If your gutters are aging, sagging or undersized, it’s a good time. A new roof usually gets new drip edge, and gutters hung after it can sit correctly beneath it. Planning a [tile roof replacement](/tile-roofing/replacement/) or [shingle roof replacement](/shingle-roofing/replacement/)? Ask us to include gutters in the same written scope.',
+      a: 'If your gutters are aging, sagging or undersized, it’s a good time. A new roof usually gets new drip edge, and gutters hung after it can sit correctly beneath it. Planning a [tile roof replacement](/residential-roofing/tile-roofing/replacement/) or [shingle roof replacement](/residential-roofing/shingle-roofing/replacement/)? Ask us to include gutters in the same written scope.',
     },
     {
       q: 'Are gutter guards worth adding?',
@@ -93,7 +93,7 @@ export const RAIN_GUTTERS = {
       a: 'Away from the house. Extensions or splash blocks carry water clear of the foundation instead of letting it soak the soil at the base of your walls. We’ll point out any downspouts that empty onto walkways or back toward the house.',
     },
   ],
-  related: ['/shingle-roofing/roof-care/', '/tile-roofing/roof-care/'],
+  related: ['/roof-maintenance-plans/', '/roof-maintenance-plans/'],
 };
 
 export const HOA_MULTI_FAMILY = {
@@ -186,8 +186,8 @@ export const HOA_MULTI_FAMILY = {
     },
     {
       q: 'Can carports and common-area roofs be included?',
-      a: 'Yes. Carports, clubhouses and other common-area roofs can be part of the same report and phasing plan. Many carports are flat or low-slope, so they get a [flat roofing](/flat-roofing/) system planned around drainage, and we can add [rain gutters](/rain-gutters/) and downspouts wherever buildings need them.',
+      a: 'Yes. Carports, clubhouses and other common-area roofs can be part of the same report and phasing plan. Many carports are flat or low-slope, so they get a [flat roofing](/residential-roofing/flat-roofing/) system planned around drainage, and we can add [rain gutters](/residential-roofing/rain-gutters/) and downspouts wherever buildings need them.',
     },
   ],
-  related: ['/rain-gutters/', '/flat-roofing/replacement/', '/tile-roofing/replacement/'],
+  related: ['/residential-roofing/rain-gutters/', '/residential-roofing/flat-roofing/replacement/', '/residential-roofing/tile-roofing/replacement/'],
 };

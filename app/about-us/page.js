@@ -1,3 +1,4 @@
+import Faq from '@/components/sections/Faq';
 import FeatureBand from '@/components/sections/FeatureBand';
 import FinalCta from '@/components/sections/FinalCta';
 import Guarantee from '@/components/sections/Guarantee';
@@ -21,7 +22,7 @@ export const metadata = pageMetadata({ title: page.metaTitle, description: page.
 const CRUMBS = [HOME, { label: 'About Us', href: ABOUT_LINK.href }];
 const HERO_IMAGE = '/images/roof-drone-palms.webp';
 
-const schema = pageJsonLd({ path: ABOUT_LINK.href, title: page.metaTitle, description: page.metaDescription, type: 'AboutPage', crumbs: CRUMBS, image: HERO_IMAGE });
+const schema = pageJsonLd({ path: ABOUT_LINK.href, title: page.metaTitle, description: page.metaDescription, type: 'AboutPage', crumbs: CRUMBS, faqs: page.faqs, image: HERO_IMAGE });
 
 // About page (content in data/pages/about.js)
 export default function AboutPage() {
@@ -49,6 +50,7 @@ export default function AboutPage() {
       <SplitFeature {...page.careers} image="/images/bottom-cta-background.webp" imageAlt="Row of homes with pitched roofs along a residential street" reverse />
       <SplitFeature {...page.partners} scene="scene-commercial" tone="wash" />
       <Testimonials showReviews={false} />
+      <Faq heading="About QRS: FAQs" sub="Straight answers about who we are and how we work." faqs={page.faqs} cta={false} />
       <RoofCheck />
       <FinalCta
         heading="Work With a Roofer-Led Team"

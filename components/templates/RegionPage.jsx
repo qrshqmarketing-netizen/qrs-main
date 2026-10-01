@@ -1,4 +1,5 @@
 import CityCards from '@/components/sections/CityCards';
+import Faq from '@/components/sections/Faq';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
 import ProofBar from '@/components/sections/ProofBar';
@@ -40,6 +41,7 @@ export default function RegionPage({ region, page }) {
       area: { '@type': 'AdministrativeArea', name: `${region.name}, ${region.state}` },
       catalog: SERVICES.map((s) => ({ name: s.schemaName, href: s.href })),
     },
+    faqs: page.faqs,
     image: photo.src,
   });
   return (
@@ -49,6 +51,7 @@ export default function RegionPage({ region, page }) {
       <LocalIntro city={region.name} heading={page.intro.heading} paragraphs={page.intro.paragraphs} offices={offices} considerations={page.considerations} />
       <ProofBar />
       <CityCards regions={[region.slug]} blurbs={blurbs} heading={`Cities We Serve in ${region.name}`} />
+      <Faq heading={`${region.name} Roofing FAQs`} sub={`Straight answers for property owners across ${region.name}.`} faqs={page.faqs} cta={false} />
       <RoofCheck tone="white" />
       <FinalCta
         heading={`Roofing Across ${region.name}`}

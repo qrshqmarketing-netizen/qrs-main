@@ -15,7 +15,7 @@ export const REGION_PAGES = {
       heading: 'One County, Many Roofing Climates',
       paragraphs: [
         'Los Angeles County covers a lot of ground, and roofs age differently across it. Near the coast in [Santa Monica](/service-areas/la-county/santa-monica/) and Long Beach, salt air and the marine layer work on flashings and fasteners. In the Valley and foothill cities like Burbank, Glendale and Pasadena, long hot summers bake underlayment and shingles, and dry Santa Ana winds test every loose tile and edge. Older neighborhoods mix clay tile, shingle and flat roofs, often on the same house, while an exclusively industrial city like [Vernon](/service-areas/la-county/vernon/) is almost entirely warehouses and plants with large, low-slope roofs.',
-        'Our [Los Angeles](/service-areas/la-county/los-angeles/) office in the Fairfax area, our Valley office in [Woodland Hills](/service-areas/la-county/woodland-hills/) and our [Vernon](/service-areas/la-county/vernon/) office keep roofers close to every city we serve here. Whether your roof needs a [tile lift & relay](/tile-roofing/lift-and-relay/) or a full replacement, the process stays the same: photos of what we find, a written scope and price before work starts, and a final walkthrough when the job is done.',
+        'Our [Los Angeles](/service-areas/la-county/los-angeles/) office in the Fairfax area, our Valley office in [Woodland Hills](/service-areas/la-county/woodland-hills/) and our [Vernon](/service-areas/la-county/vernon/) office keep roofers close to every city we serve here. Whether your roof needs a [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/) or a full replacement, the process stays the same: photos of what we find, a written scope and price before work starts, and a final walkthrough when the job is done.',
       ],
     },
     considerations: [
@@ -45,7 +45,7 @@ export const REGION_PAGES = {
       heading: 'Roofing Across Orange County',
       paragraphs: [
         'Many Orange County neighborhoods were built with concrete tile roofs, and plenty of those roofs are now old enough that the underlayment beneath the tiles has worn out. In master-planned communities like those in [Irvine](/service-areas/orange-county/irvine/), similar homes tend to reach that point around the same time. Along the coast in Huntington Beach and Newport Beach, salt air and ocean wind add wear to flashings, vents and ridge details, while inland cities like Anaheim and Santa Ana see more heat.',
-        'We start with photos and a plain-English explanation of what we find, then give you a written scope and price before any work begins. That might mean a [tile roof repair](/tile-roofing/repairs/), a [tile roof replacement](/tile-roofing/replacement/) or a [roof maintenance plan](/roof-maintenance-plans/) for a whole community. Boards and property managers get one point of contact through our [HOA & multi-family roofing](/hoa-multi-family/) work.',
+        'We start with photos and a plain-English explanation of what we find, then give you a written scope and price before any work begins. That might mean a [tile roof repair](/residential-roofing/tile-roofing/repair/), a [tile roof replacement](/residential-roofing/tile-roofing/replacement/) or a [roof maintenance plan](/roof-maintenance-plans/) for a whole community. Boards and property managers get one point of contact through our [HOA & multi-family roofing](/residential-roofing/hoa-multi-family/) work.',
       ],
     },
     considerations: [

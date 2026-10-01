@@ -20,15 +20,18 @@ import {
   SINGLES,
   TERMS_LINK,
 } from './catalog';
-import { BLOG_POSTS } from './blog/posts';
+import { PUBLISHED_POSTS } from './blog/posts';
+import { HOLLYWOOD_HILLS_PROJECT } from './pages/hollywood-hills-project';
 import { MID_WILSHIRE_PROJECT } from './pages/mid-wilshire-project';
+import { PANORAMA_CITY_PROJECT } from './pages/panorama-city-project';
+import { SAN_PEDRO_FULL_ROOF_PROJECT } from './pages/san-pedro-full-roof-project';
 import { SAN_PEDRO_PROJECT } from './pages/san-pedro-project';
 import { cityPath, LOCATIONS, REGIONS, regionPath } from './locations';
 import { COMMERCIAL_CONTENT } from './services/commercial';
 import { COMMERCIAL_SERVICES } from './services/commercialServices';
 import { FLAT_CONTENT } from './services/flat';
-import { EMERGENCY_ROOF_REPAIR, ROOF_FINANCING, ROOF_MAINTENANCE_PLANS } from './services/programs';
-import { ROOF_INSPECTION_HUB, ROOF_REPAIR_HUB, ROOF_REPLACEMENT_HUB, ROOF_TUNE_UP_HUB } from './services/serviceHubs';
+import { EMERGENCY_ROOF_REPAIR, ROOF_FINANCING, ROOF_INSPECTION, ROOF_MAINTENANCE_PLANS } from './services/programs';
+import { ROOF_REPAIR_HUB, ROOF_REPLACEMENT_HUB } from './services/serviceHubs';
 import { SHINGLE_CONTENT } from './services/shingle';
 import { HOA_MULTI_FAMILY, RAIN_GUTTERS } from './services/specialty';
 import { TILE_CONTENT } from './services/tile';
@@ -45,16 +48,17 @@ export const SECTIONS = [SHINGLE, TILE, FLAT, COMMERCIAL];
 export const GUTTERS = { ...SINGLES.gutters, page: RAIN_GUTTERS };
 export const HOA = { ...SINGLES.hoa, page: HOA_MULTI_FAMILY };
 export const EMERGENCY = { ...PROGRAMS.emergency, page: EMERGENCY_ROOF_REPAIR };
+export const INSPECTION = { ...PROGRAMS.inspection, page: ROOF_INSPECTION };
 export const MAINTENANCE_PLANS = { ...PROGRAMS.plans, page: ROOF_MAINTENANCE_PLANS };
 export const FINANCING = { ...PROGRAMS.financing, page: ROOF_FINANCING };
-export const SINGLE_PAGES = [GUTTERS, HOA, EMERGENCY, MAINTENANCE_PLANS, FINANCING];
+export const SINGLE_PAGES = [GUTTERS, HOA, EMERGENCY, INSPECTION, MAINTENANCE_PLANS, FINANCING];
 
 // Service-first hubs: { ...structure, hub }
 export const REPAIR_HUB = { ...SERVICE_HUBS.repair, hub: ROOF_REPAIR_HUB };
 export const REPLACEMENT_HUB = { ...SERVICE_HUBS.replacement, hub: ROOF_REPLACEMENT_HUB };
-export const INSPECTION_HUB = { ...SERVICE_HUBS.inspection, hub: ROOF_INSPECTION_HUB };
-export const TUNE_UP_HUB = { ...SERVICE_HUBS.tuneups, hub: ROOF_TUNE_UP_HUB };
-export const SERVICE_HUB_PAGES = [REPAIR_HUB, REPLACEMENT_HUB, INSPECTION_HUB, TUNE_UP_HUB];
+export const SERVICE_HUB_PAGES = [REPAIR_HUB, REPLACEMENT_HUB];
+// The service-first hub (/roof-repair/ or /roof-replacement/) that lists a page as one of its cards, if any
+export const hubFor = (href) => SERVICE_HUB_PAGES.find((h) => h.cards.includes(href));
 
 // A section's pages: building types / services first, then (commercial) the service types
 export const sectionPages = (section) => [...section.services, ...(section.serviceTypes || [])];
@@ -63,7 +67,10 @@ export const findService = (section, slug) => sectionPages(section).find((s) => 
 
 // Breadcrumb trails
 export const sectionCrumbs = (section) => [HOME, ...(section.parent ? [section.parent] : []), { label: section.label, href: section.href }];
-export const serviceCrumbs = (section, service) => [...sectionCrumbs(section), { label: service.navLabel, href: serviceHref(section, service) }];
+// A service page's own crumb uses its name (the H1 without the program brand, e.g. "Shingle Roof Repair"), not its
+// short menu label ("Roof Repairs"), so it doesn't read like the /roof-repair/ hub in search results
+const crumbLabel = (service) => service.title.split(' · ')[0];
+export const serviceCrumbs = (section, service) => [...sectionCrumbs(section), { label: crumbLabel(service), href: serviceHref(section, service) }];
 export const singleCrumbs = (single) => [HOME, ...(single.parent ? [single.parent] : []), { label: single.label, href: single.href }];
 
 // Cards for a list of a section's pages (placeholder art rotates until real photos are added)
@@ -108,9 +115,13 @@ export const ALL_PATHS = [
   PROJECTS_LINK.href,
   MID_WILSHIRE_PROJECT.path,
   SAN_PEDRO_PROJECT.path,
+  SAN_PEDRO_FULL_ROOF_PROJECT.path,
+  HOLLYWOOD_HILLS_PROJECT.path,
+  PANORAMA_CITY_PROJECT.path,
   REVIEWS_LINK.href,
-  BLOG_LINK.href,
-  ...BLOG_POSTS.map((p) => blogPath(p.slug)),
+  // The blog index is listed once it has a published post (until then it's a "coming soon" page, kept out of search)
+  ...(PUBLISHED_POSTS.length > 0 ? [BLOG_LINK.href] : []),
+  ...PUBLISHED_POSTS.map((p) => blogPath(p.slug)),
   ABOUT_LINK.href,
   CAREERS_LINK.href,
   CONTACT_LINK.href,

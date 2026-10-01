@@ -30,7 +30,9 @@ export default function RoofMaintenancePlansPage() {
       <ValueGrid heading={page.whatGoesWrong.heading} items={page.whatGoesWrong.items} tone="wash" pattern />
       <CarePlanPricing />
       <PlanScope />
+      <ValueGrid id="roof-types" heading={page.byRoof.heading} intro={page.byRoof.intro} items={page.byRoof.items} columns={3} tone="wash" />
       <ProcessSteps heading={page.schedule.heading} steps={page.schedule.steps} scene="scene-inspect" tone="white" />
+      <FeatureBand {...page.tuneUp} tone="light" />
       <FeatureBand eyebrow={page.memberBenefits.eyebrow} heading={page.memberBenefits.heading} paragraphs={page.memberBenefits.paragraphs} points={page.memberBenefits.points} cta={{ label: 'Get Started', href: '#roof-check' }} />
       <Faq heading="Roof Care Plan FAQs" sub="Straight answers about how the plan works." faqs={page.faqs} />
       <RoofCheck />

@@ -2,9 +2,10 @@
 // service pages (rain gutters, HOA, emergency, maintenance plans, financing) and the service-first hubs
 // (roof repair, replacement, inspection). The route files in app/ call these.
 
-import { CONTRACTORS_LINK, HOME } from '@/data/catalog';
+import { CONTRACTORS_LINK, HOME, PROGRAMS } from '@/data/catalog';
 import {
   cardFor,
+  hubFor,
   findService,
   sectionCrumbs,
   sectionPages,
@@ -21,12 +22,15 @@ import { isRepair, REPAIR_ACTIONS } from './shared';
 
 const isCommercial = (section) => section.key === 'commercial';
 
-// ----- Hub pages (/tile-roofing/, /commercial-roofing/, …) -----
+// Every-roof-type pages listed after a residential hub's own services (inspections and maintenance cover all roof types)
+const SHARED_CARDS = [PROGRAMS.inspection.href, PROGRAMS.plans.href];
+
+// ----- Hub pages (/residential-roofing/tile-roofing/, /commercial-roofing/, …) -----
 export const hubMetadata = (section) =>
   pageMetadata({ title: section.hub.metaTitle, description: section.hub.metaDescription, path: section.href });
 
 export function SectionHub({ section }) {
-  const cards = serviceCards(section);
+  const cards = [...serviceCards(section), ...(isCommercial(section) ? [] : SHARED_CARDS.map(cardFor))];
   const feature = isCommercial(section)
     ? {
         eyebrow: 'Contractors',
@@ -54,7 +58,7 @@ export function SectionHub({ section }) {
   );
 }
 
-// ----- Service pages (/tile-roofing/lift-and-relay/, …) -----
+// ----- Service pages (/residential-roofing/tile-roofing/lift-and-relay/, …) -----
 export const serviceParams = (section) => sectionPages(section).map((s) => ({ service: s.slug }));
 
 export function serviceMetadata(section, slug) {
@@ -69,6 +73,7 @@ export function SectionService({ section, slug }) {
   return (
     <ServicePage
       page={service}
+      hub={hubFor(serviceHref(section, service))}
       crumbs={serviceCrumbs(section, service)}
       eyebrow={section.label}
       scenes={[section.scenes[i % n], section.scenes[(i + 1) % n]]}
@@ -78,7 +83,7 @@ export function SectionService({ section, slug }) {
   );
 }
 
-// ----- Stand-alone pages (/rain-gutters/, /hoa-multi-family/, /emergency-roof-repair/, /roof-maintenance-plans/, /roof-financing/) -----
+// ----- Stand-alone pages (/residential-roofing/rain-gutters/, /residential-roofing/hoa-multi-family/, /emergency-roof-repair/, /roof-inspection/, /roof-financing/) -----
 export const singleMetadata = (single) =>
   pageMetadata({ title: single.page.metaTitle, description: single.page.metaDescription, path: single.href });
 
@@ -86,6 +91,7 @@ export function SinglePage({ single, actions, finalCta }) {
   return (
     <ServicePage
       page={single.page}
+      hub={hubFor(single.href)}
       crumbs={singleCrumbs(single)}
       eyebrow={single.parent ? single.parent.label : 'Roof Services'}
       scenes={[single.scenes[0], 'scene-inspect']}
@@ -96,7 +102,7 @@ export function SinglePage({ single, actions, finalCta }) {
   );
 }
 
-// ----- Service-first hubs (/roof-repair/, /roof-replacement/, /roof-inspection/) -----
+// ----- Service-first hubs (/roof-repair/, /roof-replacement/) -----
 export const serviceHubMetadata = (page) => pageMetadata({ title: page.hub.metaTitle, description: page.hub.metaDescription, path: page.href });
 
 export function ServiceHub({ page, actions }) {
@@ -107,6 +113,7 @@ export function ServiceHub({ page, actions }) {
       eyebrow="Roof Services"
       scene={page.scenes[0]}
       cards={page.cards.map(cardFor).filter(Boolean)}
+      process
       offer="home"
       actions={actions}
     />

@@ -36,7 +36,7 @@ function renderText(text, keyPrefix, registeredMark = true) {
 }
 
 // Text from the data/ files can contain simple Markdown:
-//   [words](/tile-roofing/)  → a link      **words** → bold      *words* → italic
+//   [words](/residential-roofing/tile-roofing/)  → a link      **words** → bold      *words* → italic
 
 export function renderRich(text, keyPrefix = 'r', registeredMark = true) {
   if (typeof text !== 'string') return text;

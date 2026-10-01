@@ -8,7 +8,7 @@ export const CARE_PLAN = {
   keyword: 'roof maintenance plans',
   metaTitle: 'Roof Maintenance Plans & Pricing | The Roof Care Plan',
   metaDescription:
-    'Roof maintenance plans for Los Angeles & Orange County homes: three priced tiers, seasonal visits and a photo report every time. See Roof Care Plan pricing.',
+    'Roof maintenance plans and one-time tune-ups for Los Angeles & Orange County homes: three priced tiers, seasonal visits and a photo report every time.',
   hero: {
     heading: 'Roof Maintenance Plans · *RoofCare Plan*',
     intro:
@@ -87,6 +87,42 @@ export const CARE_PLAN = {
       'Coatings, tree trimming, permits and code upgrades',
     ],
   },
+  // What visits focus on for each roof type (this page replaced the separate shingle, tile and flat roof care pages)
+  byRoof: {
+    heading: 'What Each Visit Checks on Your Roof',
+    intro: 'Every visit follows the same routine, matched to your roof type, and each one adds to a photo record you can compare year to year.',
+    items: [
+      {
+        title: 'Shingle roofs',
+        text: 'We clear the valleys and roof surface, check pipe boots, vents and flashing sealant, and look for lifted tabs and nail pops. We also watch for dark streaks and moss on shaded or coastal slopes, and point out overhanging branches that scrape granules off and fill valleys with leaves.',
+      },
+      {
+        title: 'Tile roofs',
+        text: 'We clear valleys, eaves, gutters and drains, flag slipped or cracked tiles, and check ridge mortar and bird stops. Over the years, the photo record shows when the underlayment may be nearing the end, so you can plan a [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/) on your own timeline.',
+      },
+      {
+        title: 'Flat roofs',
+        text: 'We clear drains, scuppers and downspouts, check seams, laps and blisters, and look over parapet caps, wall flashings, HVAC curbs, vents and skylights. Small garage and ADU roofs clog just as easily, so they’re worth including.',
+      },
+    ],
+  },
+  // One-time tune-ups live on this page too (they replaced the separate /roof-tune-up/ page): shown as a band with id #tune-up
+  tuneUp: {
+    id: 'tune-up',
+    eyebrow: 'One-time visit',
+    heading: 'Need a One-Time Roof Tune-Up?',
+    paragraphs: [
+      'A roof tune-up is one focused visit for a roof that’s basically sound but showing its age in small ways. You get a written list of fixes and one price before we start, and photos of every fix when we’re done. It often makes sense to start with a tune-up, then move into a plan.',
+      'If the list is longer than a tune-up should handle, or the problem is an active leak, a [roof repair](/roof-repair/) is the better fit, and we’ll tell you so.',
+    ],
+    points: [
+      { title: 'Shingle roofs', text: 'Lifted tabs hand-sealed, nail pops reset, flashing sealant renewed, split pipe boots and broken shingles replaced, and valleys cleared.' },
+      { title: 'Tile roofs', text: 'Slipped and loose tiles reset, a few cracked tiles replaced with the closest available match, vents and flashings resealed, and valleys and eaves cleared.' },
+      { title: 'Flat roofs', text: 'Flashings resealed, loose edge metal secured, small blisters and splits patched, and drains, scuppers and downspouts cleared.' },
+      { title: 'One written price', text: 'A written list of fixes and one price before any work, and before-and-after photos of each fix.' },
+    ],
+    cta: { label: 'Get Pro Advice', href: '#roof-check' },
+  },
   schedule: {
     heading: 'Two Visits, Timed to the Season',
     steps: [
@@ -128,6 +164,34 @@ export const CARE_PLAN = {
     {
       q: 'Can an HOA board or property manager set up a plan?',
       a: 'Yes. A plan can cover the buildings across a community, including carports and common-area roofs — as long as it’s roofing material, not patio covers — with one point of contact for the board or manager. The photo reports are easy to share at board meetings, so decisions rest on what the roofs actually look like.',
+    },
+    {
+      q: 'Is a maintenance plan the same as a tune-up?',
+      a: 'Not quite. A [roof tune-up](#tune-up) is a one-time visit to fix a list of small issues, while a plan is ongoing, with scheduled visits and a running photo record. It often makes sense to start with a tune-up, then move into regular care.',
+    },
+    {
+      q: 'What does a roof tune-up include?',
+      a: 'It depends on the roof. On shingles, it usually means resealing lifted tabs, fixing nail pops, renewing flashing sealant and replacing cracked pipe boots. On tile, it means resetting slipped tiles, replacing a few cracked ones, resealing vents and clearing valleys. On a flat roof, we reseal flashings, patch small blisters and splits, secure edge metal and clear drains and scuppers. Your written scope spells out exactly what we’ll do.',
+    },
+    {
+      q: 'Will a tune-up fix an active leak?',
+      a: 'Sometimes, if the leak comes from a small, obvious source like a split pipe boot, a slipped tile or a clogged drain. Leaks that need tracing, or that come from worn underlayment or a failed flashing, need a proper [roof repair](/roof-repair/), and the roof evaluation tells you which one you’re dealing with.',
+    },
+    {
+      q: 'When is the right time for a tune-up?',
+      a: 'Late summer and fall work well, after the hottest months and before the winter storms. A tune-up also makes sense after strong winds or a noticeable earthquake, after other trades have been on the roof, and before you sell your home or soon after you buy one.',
+    },
+    {
+      q: 'Can I clean my roof myself?',
+      a: 'We’d advise against it. Shingles scuff easily, especially when they’re warm, tile cracks underfoot, and pressure washing strips the granules that protect shingles and can drive water under tiles. Clearing gutters from a ladder is one thing, but walking the roof is a job for a roofer.',
+    },
+    {
+      q: 'What causes the dark streaks on my shingles?',
+      a: 'Those streaks are usually algae, which grows on shaded, damp slopes and often shows up where the marine layer lingers. The streaks are mostly cosmetic, but moss is different: it holds moisture against the shingles and can lift their edges.',
+    },
+    {
+      q: 'What can I keep an eye on between visits?',
+      a: 'From the ground or a window, watch for slipped tiles, water still standing on a flat roof long after rain, scuppers or downspouts that overflow, and new stains on ceilings or walls. Leave climbing onto the roof to a roofer.',
     },
     {
       q: 'Who actually does the maintenance visit?',

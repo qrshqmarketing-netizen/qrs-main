@@ -1,8 +1,10 @@
 // Temporary placeholder for the QRS blog. Replace this entry with approved new articles.
+// noindex: true keeps a post out of search results, the sitemap and the AI files (the blog index still shows it).
 
 export const BLOG_POSTS = [
   {
     slug: 'roofing-blog-updates',
+    noindex: true, // placeholder, not an article
     title: 'Roofing Blog Updates Coming Soon',
     keyword: 'roofing blog updates',
     metaTitle: 'Roofing Blog Updates Coming Soon | QRS',
@@ -22,3 +24,6 @@ export const BLOG_POSTS = [
     related: ['/residential-roofing/', '/commercial-roofing/'],
   },
 ];
+
+// Posts search engines and AI assistants should know about
+export const PUBLISHED_POSTS = BLOG_POSTS.filter((p) => !p.noindex);

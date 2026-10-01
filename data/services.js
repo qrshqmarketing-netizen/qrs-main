@@ -26,7 +26,7 @@ export const SERVICES = [
     scene: 'scene-tile',
     image: '/images/tile-lift-off-and-reset-drone-view.webp',
     text: 'We lift your existing tiles, replace the worn underlayment underneath and reset the roof cleanly, keeping the look you already love.',
-    href: '/tile-roofing/lift-and-relay/',
+    href: '/residential-roofing/tile-roofing/lift-and-relay/',
   },
   {
     title: 'Flat Roofing',
@@ -34,7 +34,7 @@ export const SERVICES = [
     scene: 'scene-flat',
     image: '/images/flat-roof-torch-down-drone-view-services.webp',
     text: 'Modified bitumen and low-slope systems planned around your roof’s condition, drainage and the way water actually moves across it.',
-    href: '/flat-roofing/',
+    href: '/residential-roofing/flat-roofing/',
   },
   {
     title: 'Shingle Roofing',
@@ -42,7 +42,7 @@ export const SERVICES = [
     scene: 'scene-shingle',
     image: '/images/shingle-roof-grey-roofing-services-card.webp',
     text: 'Premium shingle systems installed to the manufacturer’s requirements, with clean lines, proper ventilation and tidy detailing.',
-    href: '/shingle-roofing/',
+    href: '/residential-roofing/shingle-roofing/',
   },
   {
     title: 'Inspections & Roof Care',

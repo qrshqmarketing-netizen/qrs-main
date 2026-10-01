@@ -15,7 +15,7 @@ export const COMMERCIAL_SERVICES = [
     },
     overview: {
       paragraphs: [
-        'On a low-slope roof, water seldom drips straight down from the spot where it enters. It can slip under a lap, travel along the deck and show up over a different office, aisle or bay, which is why a patch above the stain so often fails. We check the likely entry points first: seams and laps, flashing at rooftop units and pipe penetrations, drain bowls, scuppers and the base of parapet walls. Once we find the cause, we make a targeted [flat roof repair](/flat-roofing/repairs/) that ties into the existing modified bitumen or other low-slope system.',
+        'On a low-slope roof, water seldom drips straight down from the spot where it enters. It can slip under a lap, travel along the deck and show up over a different office, aisle or bay, which is why a patch above the stain so often fails. We check the likely entry points first: seams and laps, flashing at rooftop units and pipe penetrations, drain bowls, scuppers and the base of parapet walls. Once we find the cause, we make a targeted [flat roof repair](/residential-roofing/flat-roofing/repair/) that ties into the existing modified bitumen or other low-slope system.',
         'Repairs on an occupied building have to fit around the people inside. Before we go up, we confirm roof access, where the water shows inside and whether anything below needs protecting, and the building stays open while we work. Every repair is photographed before and after, so owners, property managers and tenants all see what failed and how it was fixed. If the survey shows wear across the whole roof, we’ll tell you plainly, and those photos become the starting point for planning a [commercial roof replacement](/commercial-roofing/replacement/).',
       ],
     },
@@ -64,7 +64,7 @@ export const COMMERCIAL_SERVICES = [
     overview: {
       paragraphs: [
         'Repairs are the right call until the same roof keeps needing them. Signs that [commercial roof repair](/commercial-roofing/repair/) has run its course include leaks in new places every rainy season, seams opening across the field of the roof, surfacing worn thin by years of Southern California sun, and soft spots underfoot where water has reached the insulation or deck. Before we recommend anything, a roofer walks the whole roof and photographs it area by area. The survey shows whether replacement is due now, belongs in next year’s budget, or can wait while targeted repairs keep the roof working.',
-        'The new roof should fit how your building works. We install [modified bitumen and other low-slope systems](/flat-roofing/), and the survey tells us which one suits your roof. Commercial buildings stay open during the work: we tear off and replace the roof in phases, section by section, planned around your hours, deliveries and the people below. Tarps protect landscaping and nail sweeps keep walkways and parking clear, and when the last section is finished, you get closeout photos of the completed roof for your records.',
+        'The new roof should fit how your building works. We install [modified bitumen and other low-slope systems](/residential-roofing/flat-roofing/), and the survey tells us which one suits your roof. Commercial buildings stay open during the work: we tear off and replace the roof in phases, section by section, planned around your hours, deliveries and the people below. Tarps protect landscaping and nail sweeps keep walkways and parking clear, and when the last section is finished, you get closeout photos of the completed roof for your records.',
       ],
     },
     process: {
@@ -88,13 +88,14 @@ export const COMMERCIAL_SERVICES = [
       ],
     },
     faqs: [
+      { q: 'Do you pull the permits?', a: 'Yes. When the project needs a building permit, we pull it for you.' },
       { q: 'How do we know it’s time to replace and not repair again?', a: 'Look at the pattern rather than the latest leak. If repair bills keep adding up, leaks appear in new places each season, or large areas of the roof are worn, soft or holding water, replacement is usually the sounder investment. Our survey photos show which situation you’re in.' },
       { q: 'Which roof system will you recommend?', a: 'That depends on your building. We install modified bitumen and other low-slope systems, and we weigh drainage, rooftop equipment, foot traffic and the structure underneath before recommending one. Your written scope names the system and explains why it fits.' },
       { q: 'Will tenants and customers be affected during the replacement?', a: 'Your building stays open during the work. We phase the replacement by roof section and settle noise, access, staging and delivery times with you in advance, so you can give tenants and staff dates for each phase.' },
       { q: 'Can a large roof be replaced in stages?', a: 'Yes. Big roofs are divided into sections and replaced in a planned order, and phases can be spread across budget cycles when that fits your plans. Our [warehouse roofing](/commercial-roofing/warehouses/) page shows how we approach long, flat spans.' },
       { q: 'How do we look after the new roof?', a: 'Keep drains clear and have the roof checked on a schedule, especially ahead of the rainy season and after other trades work up there. Our [commercial roof maintenance](/commercial-roofing/maintenance/) service handles both, with a photo report after each visit.' },
     ],
-    related: ['/commercial-roofing/repair/', '/commercial-roofing/maintenance/', '/flat-roofing/replacement/'],
+    related: ['/commercial-roofing/repair/', '/commercial-roofing/maintenance/', '/residential-roofing/flat-roofing/replacement/'],
   },
 
   {

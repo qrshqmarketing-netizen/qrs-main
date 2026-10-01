@@ -25,7 +25,7 @@ export const LOCATIONS_PAGE = {
     },
     {
       q: 'Do you work on commercial properties in these areas too?',
-      a: 'Yes. Along with homes, we handle [commercial roofing](/commercial-roofing/) and [HOA & multi-family](/hoa-multi-family/) properties across our service areas.',
+      a: 'Yes. Along with homes, we handle [commercial roofing](/commercial-roofing/) and [HOA & multi-family](/residential-roofing/hoa-multi-family/) properties across our service areas.',
     },
   ],
 };

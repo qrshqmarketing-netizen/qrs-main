@@ -34,7 +34,7 @@ export default function ProjectsPage() {
           </div>
         </div>
       </section>
-      <ProjectMap heading={page.map.heading} sub={page.map.sub} projects={PROJECT_PAGES} />
+      <ProjectMap projects={PROJECT_PAGES} />
     </main>
   );
 }

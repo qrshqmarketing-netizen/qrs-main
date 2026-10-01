@@ -3,7 +3,7 @@
 export const ROOF_REPAIR_HUB = {
   keyword: 'roof repair',
   metaTitle: 'Roof Repair in Los Angeles & OC',
-  metaDescription: 'Roof repair in Los Angeles & Orange County for shingle, tile and flat roofs: leaks traced to the source, storm damage photographed. Book a free roof evaluation.',
+  metaDescription: 'Roof repair in Los Angeles & Orange County for shingle, tile and flat roofs: leaks traced to the source and fixed, with a written price first. Book a free roof evaluation.',
   hero: {
     heading: 'Roof Repair Services · *LeakRescue*',
     intro: 'Roof repair from QRS finds where water is really getting into your shingle, tile or flat roof and fixes it at the source, across Los Angeles and Orange County. Our *LeakRescue* repair service shows you photos of the problem and the finished repair, with a written scope and price before any work. Start with a free roof evaluation.',
@@ -18,7 +18,7 @@ export const ROOF_REPAIR_HUB = {
   },
   cards: {
     heading: 'Choose Your Roof Repair',
-    intro: 'Start with your roof type, or go straight to storm damage, commercial buildings or a tune-up that fixes the small stuff before it leaks.',
+    intro: 'Start with your roof type. If water is coming in right now or a storm just hit, go to emergency roof repair; for offices, stores and warehouses, see commercial roof repair.',
   },
   highlights: {
     heading: 'How We Handle Every Repair',
@@ -29,11 +29,14 @@ export const ROOF_REPAIR_HUB = {
     ],
   },
   faqs: [
+    { q: 'How much does a roof repair cost?', a: 'It depends on what failed and how much needs fixing. A cracked pipe boot or a few slipped tiles is a small job, while a failed valley, flashing or damaged decking takes more work. We trace the leak to its source first, then give you a written scope and price before any repair begins, so you know the cost up front.' },
+    { q: 'Is there a warranty on roof repairs?', a: 'The materials in a repair carry the manufacturer’s warranty, and what it covers depends on the product and its warranty tier. Our 10-year workmanship warranty applies to new roof installs.' },
+    { q: 'Do you work with insurance adjusters?', a: 'Yes, as our schedule allows. Our team is small, so we can’t always be there when the adjuster visits, but we’ll help you where we can, and our photos and written scope give you clear documentation to share with your insurance company.' },
     { q: 'A storm just damaged my roof. What happens first?', a: 'Call us. A roofer assesses the damage and photo-documents it, and when it’s needed, we put temporary protection such as a tarp in place to limit further water damage. Permanent repairs follow with a written scope and price, and our photos and written scope can be shared with your insurance company. Our [emergency roof repair](/emergency-roof-repair/) page has more detail.' },
     { q: 'When does repairing an older roof stop making sense?', a: 'When repairs keep chasing new leaks, or the roof covering is worn out across most of its surface, more patching only postpones the bigger job. Age alone isn’t the test, though; condition is. A [free roof evaluation](#roof-check) photographs the whole roof so you can see which side of that line yours is on.' },
     { q: 'Can you repair a roof you didn’t install?', a: 'Yes. We repair shingle, tile and flat roofs regardless of who put them on. We look at how the roof was built, match materials as closely as we can and tell you plainly if earlier work is part of the problem.' },
     { q: 'Can a small leak wait until the rainy season is over?', a: 'It’s a risky bet. Water that gets in can soak insulation, stain drywall and soften the roof deck long before the damage is obvious, and small openings tend to grow with each storm. Fixing it early usually keeps the repair small.' },
-    { q: 'Do you repair roofs on commercial and HOA properties?', a: 'Yes. Offices, retail, warehouses and other commercial buildings get the same leak tracing and photo documentation, and the building stays open while we work; see [commercial roof repair](/commercial-roofing/repair/). Condo and townhome communities get one point of contact through our [HOA & multi-family](/hoa-multi-family/) service.' },
+    { q: 'Do you repair roofs on commercial and HOA properties?', a: 'Yes. Offices, retail, warehouses and other commercial buildings get the same leak tracing and photo documentation, and the building stays open while we work; see [commercial roof repair](/commercial-roofing/repair/). Condo and townhome communities get one point of contact through our [HOA & multi-family](/residential-roofing/hoa-multi-family/) service.' },
   ],
 };
 
@@ -49,7 +52,7 @@ export const ROOF_REPLACEMENT_HUB = {
   overview: {
     heading: 'When a New Roof Is the Right Call',
     paragraphs: [
-      'Replacement makes sense when a roof is worn out as a whole, not in one spot. That looks like shingles gone brittle and bare of granules on every slope, tile and underlayment failing together, or a flat roof carrying patch on top of patch with water reaching the deck. At that stage, each [roof repair](/roof-repair/) buys less time than the last. It isn’t the only option for tile, though: when the tiles are still sound and it’s the underlayment that has failed, a [tile lift & relay](/tile-roofing/lift-and-relay/) replaces that layer and puts your own tiles back.',
+      'Replacement makes sense when a roof is worn out as a whole, not in one spot. That looks like shingles gone brittle and bare of granules on every slope, tile and underlayment failing together, or a flat roof carrying patch on top of patch with water reaching the deck. At that stage, each [roof repair](/roof-repair/) buys less time than the last. It isn’t the only option for tile, though: when the tiles are still sound and it’s the underlayment that has failed, a [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/) replaces that layer and puts your own tiles back.',
       'A full tear-off takes the roof down to the deck. That lets us check the decking and address soft or damaged sections before building up again with new underlayment, flashings at every wall and penetration, the ventilation or drainage details your roof type calls for, and the new roofing itself. Your written scope lists all of it before work begins, including the material, profile and color you’ve chosen and how any decking damage found under the old roof will be handled. Qualified crews then install the agreed system cleanly and to spec.',
     ],
   },
@@ -66,82 +69,14 @@ export const ROOF_REPLACEMENT_HUB = {
     ],
   },
   faqs: [
+    { q: 'How much does a roof replacement cost in Los Angeles?', a: 'It depends on your roof: its size, pitch and number of stories, the roofing material, how many old layers come off and whether any decking needs replacing. Tile usually costs the most to install. For a quick estimated range, our Instant Quote measures your roof from satellite imagery. Your actual price comes in a written scope after a [free roof evaluation](#roof-check), before any work begins, and [financing](/roof-financing/) can spread it into monthly payments.' },
+    { q: 'How long does a roof replacement take?', a: 'Most home roof replacements take 3 to 5 days. The roof’s size, the roofing material, any decking repairs and the weather can change that.' },
+    { q: 'Do you pull the permits?', a: 'Yes. When your roofing project needs a building permit, we pull it for you.' },
+    { q: 'What are the signs I need a new roof?', a: 'Look for wear across the whole roof rather than one problem: shingles that are brittle, curling or shedding granules everywhere, a flat roof membrane worn through in many places, leaks that keep coming back in different spots, or soft decking. Tile is different, because the tiles often outlast the underlayment, so a [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/) may be all you need. A free roof evaluation shows which one you’re dealing with.' },
     { q: 'Can I finance a roof replacement?', a: 'Yes. [Roof financing](/roof-financing/) options are available to help spread the cost of your new roof into monthly payments, subject to credit approval. The Instant Quote on this site shows example monthly payments, and your written scope and price come first, so you know exactly what you’re financing.' },
     { q: 'Do I have to replace the whole roof at once?', a: 'Not always. A single section, such as a flat roof over an addition or a detached garage, sometimes wears out well before the rest and can be handled on its own. When the wear is spread across the roof, replacing it all at once is usually the more sensible choice. The roof evaluation photos show which situation you’re in.' },
     { q: 'How is my yard protected during a tear-off?', a: 'We lay tarps to protect your landscaping and catch debris as the old roof comes off, and every job ends with a nail sweep and clean-up. If there’s something close to the house you’re worried about, like a fragile planter or patio furniture, point it out before work starts.' },
     { q: 'What happens at the end of a roof replacement?', a: 'We do a final walkthrough with you, review the finished roof and go over your 10-year workmanship warranty in plain English. It’s also your chance to ask questions and point out anything you’d like us to look at again.' },
     { q: 'Do you replace roofs on commercial and HOA buildings?', a: 'Yes. A [commercial roof replacement](/commercial-roofing/replacement/) is planned so the building stays open during the work. HOA and multi-family projects get one point of contact for the whole job.' },
-  ],
-};
-
-export const ROOF_INSPECTION_HUB = {
-  keyword: 'roof inspection',
-  metaTitle: 'Roof Inspection in Los Angeles & OC',
-  metaDescription: 'Roof inspection in Los Angeles & Orange County: a free, photo-documented roof evaluation with a clear next step, not a sales pitch. Book yours today.',
-  hero: {
-    heading: 'Roof Inspection Services · *RoofScan 360*',
-    intro: 'A roof inspection from QRS is a free, roofer-led roof evaluation for homes across Los Angeles and Orange County, checking the roofing, flashings, edges and gutters on shingle, tile and flat roofs. Our *RoofScan 360* evaluation uses drone footage to show what matters, explains every finding in plain English and ends with one clear next step.',
-    highlights: ['A roofer on the roof, not a salesperson', 'Every finding photographed and explained', 'Free, with no obligation'],
-  },
-  overview: {
-    heading: 'What a Roof Evaluation Covers',
-    paragraphs: [
-      'Every roof type has its own weak points, so the roofer adapts the inspection to what’s on your house. On shingles, that means granule loss, lifted tabs, nail pops and pipe boots. On tile, it’s cracked or slipped tiles, ridge mortar, bird stops and whatever underlayment can be seen. On a flat roof, it’s the membrane, seams, blisters, drains and signs of ponding. Every roof also gets a close look at the flashings where it meets walls, chimneys, skylights and vents, and at the edges and any gutters that carry water away. We photograph each finding, which lets you judge the roof’s condition with your own eyes.',
-      'It’s worth booking one when you’re **buying or selling a home**, after a storm or strong Santa Ana winds, when an older roof leaves you unsure of its condition, or before choosing between a [roof repair](/roof-repair/) and a [roof replacement](/roof-replacement/). The visit ends with one recommendation: repair, monitor, maintain or replace. Sometimes the honest answer is that your roof is fine for now, and we’ll say so. There’s no deposit, you pay after the visit, and you’re under no obligation to hire us for any work.',
-    ],
-  },
-  cards: {
-    heading: 'Inspections and Ongoing Roof Care',
-    intro: 'See what we check on your roof type, or keep watch over time with a maintenance plan for your home, HOA or commercial building.',
-  },
-  highlights: {
-    heading: 'What You Get From Every Roof Evaluation',
-    points: [
-      { title: 'A roofer’s read on your roof', text: 'The inspection is done by a roofer who knows how shingle, tile and flat roofs are built and how each one tends to fail, backed by our standing as a licensed California contractor since 2020.' },
-      { title: 'Photos you can keep and share', text: 'The photos let you review the findings later, show them to family or a buyer, and compare your options without relying on memory.' },
-      { title: 'One clear next step', text: 'If work makes sense, a written scope and price follow. If the roof only needs watching, that’s what we’ll recommend, with no push toward a bigger job.' },
-    ],
-  },
-  faqs: [
-    { q: 'What should I tell you before the roof evaluation?', a: 'Anything you’ve noticed: stains, drips, roofing pieces in the yard, past repairs, the roof’s age if you know it, a recent storm or an upcoming sale. That context points the roofer to likely trouble spots, and the rest of the roof still gets checked.' },
-    { q: 'Is a free roof evaluation worth it after a storm if nothing is leaking?', a: 'Often, yes. High winds and heavy rain can loosen flashings, shift tiles and break shingle seals without an immediate leak, and those weak spots tend to give way in the next storm. If water is already coming in, our [emergency roof repair](/emergency-roof-repair/) page explains how we handle it.' },
-    { q: 'I’m selling my home. Should I have the roof inspected first?', a: 'It can help. Knowing the roof’s condition before you list gives you time to handle small repairs on your own schedule, plus photos you can share with buyers. That makes the roof less likely to become a surprise late in the sale.' },
-    { q: 'How is a free roof evaluation different from a maintenance plan?', a: 'A roof evaluation is one visit that shows where your roof stands today. A [roof maintenance plan](/roof-maintenance-plans/) is set up after a free roof evaluation, around your roof’s type, age and condition, with visits on the schedule in your plan and a photo report after each one. Anything beyond the plan gets a written price before work.' },
-    { q: 'Do you inspect roofs on commercial buildings?', a: 'Yes. Offices, retail centers, warehouses, churches and other commercial buildings get a roofer-led, photo-documented roof survey of the membrane, drains, flashings and equipment curbs. Ongoing care is covered on our [commercial inspection & maintenance](/commercial-roofing/maintenance/) page.' },
-  ],
-};
-
-export const ROOF_TUNE_UP_HUB = {
-  keyword: 'roof tune-ups',
-  metaTitle: 'Roof Tune-Ups in Los Angeles & OC',
-  metaDescription: 'Roof tune-ups in Los Angeles & Orange County for shingle, tile, flat and commercial roofs: small fixes, drain clearing and photo-documented work.',
-  hero: {
-    heading: 'Roof Tune-Ups for Every Roof Type',
-    intro: 'Roof tune-ups from QRS are focused visits that fix small issues on shingle, tile, flat and commercial roofs across Los Angeles and Orange County before they turn into leaks. We check the roof, photograph what we find and handle practical upkeep, from loose shingle tabs and slipped tiles to clogged roof drains.',
-    highlights: ['Small fixes and loose details addressed', 'Debris and roof drains cleared where needed', 'Photos and a clear next step'],
-  },
-  overview: {
-    heading: 'One Tune-Up Visit, Matched to Your Roof',
-    paragraphs: [
-      'The work depends on the roof. A shingle tune-up can address exposed nails, loose tabs and worn sealant. A tile visit can reset slipped tiles and clear valleys. On a flat roof, we look at seams, flashings and drainage. For a commercial building, we can check the roof around drains, penetrations and equipment curbs while keeping the property in service.',
-      'We start with a roofer’s look at the roof and agree on the scope and price before work begins. If we find an active leak or a larger failure, we’ll show you the photos and explain whether a [roof repair](/roof-repair/) or replacement is the better fit. For scheduled visits and ongoing upkeep, see the [RoofCare Plan](/roof-maintenance-plans/).',
-    ],
-  },
-  cards: {
-    heading: 'Choose a Roof Tune-Up',
-    intro: 'Tune-up details vary by roof system. Choose the closest match below, or contact us about a commercial property.',
-  },
-  highlights: {
-    heading: 'A Practical Reset for Your Roof',
-    points: [
-      { title: 'Work sized to the roof', text: 'We focus on small maintenance items and tell you when an issue needs a repair instead.' },
-      { title: 'Photos and a written scope', text: 'You can see what we found and know what the visit includes before work starts.' },
-      { title: 'Residential and commercial', text: 'Local crews handle everything from a small home roof to larger commercial properties.' },
-    ],
-  },
-  faqs: [
-    { q: 'What is the difference between a tune-up and roof care?', a: 'A tune-up is a single visit for small fixes and upkeep. The [RoofCare Plan](/roof-maintenance-plans/) schedules recurring visits and photo reports over time.' },
-    { q: 'Can a tune-up fix an active leak?', a: 'Sometimes, when the cause is a small and clear issue. If the leak needs more investigation or the roof has a larger failure, we’ll explain the repair options and provide a written scope.' },
-    { q: 'Do you offer tune-ups for commercial roofs?', a: 'Yes. We provide inspection and maintenance visits for commercial roofs, including drains, seams, flashings and rooftop equipment.' },
   ],
 };

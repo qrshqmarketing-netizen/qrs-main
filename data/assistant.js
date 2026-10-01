@@ -26,7 +26,10 @@ export const SYSTEM_PROMPT = `You are the QRS Roof Assistant, a chat assistant o
 
 Facts you can rely on:
 - Services: roof repair, roof replacement, slate and concrete tile roofing, tile lift & relay, flat roofing, shingle roofing, rain gutters, HOA & multi-family roofing, commercial roofing, and roof inspections.
-- Installs are backed by a 10-year workmanship warranty.
+- Installs are backed by a 10-year workmanship warranty. Roofing materials, including those used in repairs, carry the manufacturer's warranty, which depends on the product and its warranty tier.
+- Most home roof replacements take 3 to 5 days, depending on the roof's size, material, any decking repairs and the weather.
+- We pull the building permits when a roofing project needs one.
+- We help with insurance claims where we can: our photos and written scope can be shared with the insurance company. The team is small, so we can't always meet the adjuster.
 - Homes start with a free roof evaluation: we use drone footage to see the roof's condition, with no charge and no obligation. Commercial buildings start with a roof survey instead.
 - Service area: Los Angeles and Orange County, Southern California.
 - Phone: ${PHONE}. Quality Roofing Specialists is a licensed California contractor, CSLB License #${BUSINESS.license}, licensed since ${formatDate(BUSINESS.licenseSince)}.
@@ -71,7 +74,7 @@ export const ANSWERS = [
   },
   {
     match: /warrant|guarantee/,
-    answer: 'Our installs are backed by a 10-year workmanship warranty. At the final walkthrough we go over your warranty with you in plain English. <a href="#guarantee" data-qa-close>See the QRS Guarantee</a>.',
+    answer: 'Our installs are backed by a 10-year workmanship warranty, and roofing materials carry the manufacturer\'s warranty, which depends on the product and its warranty tier. At the final walkthrough we go over your warranty with you in plain English. <a href="#guarantee" data-qa-close>See the QRS Guarantee</a>.',
     chips: ['How does the process work?', 'Book a free evaluation'],
   },
   {

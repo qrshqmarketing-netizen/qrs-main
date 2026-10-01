@@ -32,9 +32,9 @@ export const RESIDENTIAL_PAGE = {
         title: 'Roof Replacement',
         text: 'A full tear-off and a new roof system, installed to spec with a written scope and a 10-year workmanship warranty.',
         links: [
-          { label: 'Shingle', href: '/shingle-roofing/replacement/' },
-          { label: 'Tile', href: '/tile-roofing/replacement/' },
-          { label: 'Flat', href: '/flat-roofing/replacement/' },
+          { label: 'Shingle', href: '/residential-roofing/shingle-roofing/replacement/' },
+          { label: 'Tile', href: '/residential-roofing/tile-roofing/replacement/' },
+          { label: 'Flat', href: '/residential-roofing/flat-roofing/replacement/' },
         ],
       },
       {
@@ -42,24 +42,24 @@ export const RESIDENTIAL_PAGE = {
         title: 'Roof Repairs',
         text: 'Leaks, storm damage and worn details fixed at the source, with photos of what was wrong and what we did.',
         links: [
-          { label: 'Shingle', href: '/shingle-roofing/repairs/' },
-          { label: 'Tile', href: '/tile-roofing/repairs/' },
-          { label: 'Flat', href: '/flat-roofing/repairs/' },
+          { label: 'Shingle', href: '/residential-roofing/shingle-roofing/repair/' },
+          { label: 'Tile', href: '/residential-roofing/tile-roofing/repair/' },
+          { label: 'Flat', href: '/residential-roofing/flat-roofing/repair/' },
         ],
       },
       {
         id: 'lift-and-relay',
         title: 'Tile Lift & Relay',
         text: 'New underlayment beneath your existing tiles, so a tile roof keeps its look and stops leaking.',
-        links: [{ label: 'Tile lift & relay', href: '/tile-roofing/lift-and-relay/' }],
+        links: [{ label: 'Tile lift & relay', href: '/residential-roofing/tile-roofing/lift-and-relay/' }],
       },
       {
         id: 'new-installations',
         title: 'New Installations',
         text: 'Roofs for new construction, additions, ADUs and homes changing to a different roof type.',
         links: [
-          { label: 'Shingle', href: '/shingle-roofing/installation/' },
-          { label: 'Flat', href: '/flat-roofing/installation/' },
+          { label: 'Shingle', href: '/residential-roofing/shingle-roofing/installation/' },
+          { label: 'Flat', href: '/residential-roofing/flat-roofing/installation/' },
         ],
       },
       {
@@ -67,38 +67,30 @@ export const RESIDENTIAL_PAGE = {
         title: 'Inspections',
         text: 'Roofer-led, photo-documented inspections when you’re buying or selling, after a storm, or before deciding between repair and replacement.',
         links: [
-          { label: 'Shingle', href: '/shingle-roofing/inspection/' },
-          { label: 'Tile', href: '/tile-roofing/inspection/' },
-          { label: 'Flat', href: '/flat-roofing/inspection/' },
+          { label: 'Shingle', href: '/roof-inspection/#shingle-roofs' },
+          { label: 'Tile', href: '/roof-inspection/#tile-roofs' },
+          { label: 'Flat', href: '/roof-inspection/#flat-roofs' },
         ],
       },
       {
         id: 'tune-ups',
         title: 'Tune-Ups',
         text: 'A focused visit that fixes the small things, like loose pieces, tired sealant and cluttered valleys, before they turn into leaks.',
-        links: [
-          { label: 'Shingle', href: '/shingle-roofing/tune-up/' },
-          { label: 'Tile', href: '/tile-roofing/tune-up/' },
-          { label: 'Flat', href: '/flat-roofing/tune-up/' },
-        ],
+        links: [{ label: 'Roof tune-ups', href: '/roof-maintenance-plans/#tune-up' }],
       },
       {
         id: 'roof-care',
         title: 'Roof Care',
         text: 'Scheduled maintenance that keeps an eye on wear over time, with photo records from every visit.',
-        links: [
-          { label: 'Shingle', href: '/shingle-roofing/roof-care/' },
-          { label: 'Tile', href: '/tile-roofing/roof-care/' },
-          { label: 'Flat', href: '/flat-roofing/roof-care/' },
-        ],
+        links: [{ label: 'Roof maintenance plans', href: '/roof-maintenance-plans/' }],
       },
       {
         id: 'gutters-and-hoa',
         title: 'Gutters & HOA Roofing',
         text: 'Rain gutters planned with your roof, and roofing for HOA and multi-family properties.',
         links: [
-          { label: 'Rain gutters', href: '/rain-gutters/' },
-          { label: 'HOA & multi-family', href: '/hoa-multi-family/' },
+          { label: 'Rain gutters', href: '/residential-roofing/rain-gutters/' },
+          { label: 'HOA & multi-family', href: '/residential-roofing/hoa-multi-family/' },
         ],
       },
     ],
@@ -106,7 +98,7 @@ export const RESIDENTIAL_PAGE = {
   faqs: [
     {
       q: 'What kinds of homes do you work on?',
-      a: 'Single-family homes, townhomes, ADUs and garages, plus HOA and multi-family properties across Los Angeles and Orange County. We work on [shingle](/shingle-roofing/), [tile](/tile-roofing/) and [flat](/flat-roofing/) roofs.',
+      a: 'Single-family homes, townhomes, ADUs and garages, plus HOA and multi-family properties across Los Angeles and Orange County. We work on [shingle](/residential-roofing/shingle-roofing/), [tile](/residential-roofing/tile-roofing/) and [flat](/residential-roofing/flat-roofing/) roofs.',
     },
     {
       q: 'How do I know whether I need a repair or a new roof?',

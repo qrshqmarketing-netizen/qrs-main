@@ -13,7 +13,7 @@ export const COMMERCIAL_CONTENT = {
     overview: {
       heading: 'Detail-First Roofing for Commercial Buildings',
       paragraphs: [
-        'Most commercial buildings in Southern California sit under low-slope roofs, and those roofs wear differently than a home’s. Water needs a clear path to drains and scuppers. Rooftop HVAC units and other equipment add penetrations that need sound flashing, while parapet walls and coping take the brunt of the sun and the Santa Ana winds. We repair and replace [modified bitumen and other low-slope systems](/flat-roofing/), along with the tile and shingle sections found on many churches and some retail buildings.',
+        'Most commercial buildings in Southern California sit under low-slope roofs, and those roofs wear differently than a home’s. Water needs a clear path to drains and scuppers. Rooftop HVAC units and other equipment add penetrations that need sound flashing, while parapet walls and coping take the brunt of the sun and the Santa Ana winds. We repair and replace [modified bitumen and other low-slope systems](/residential-roofing/flat-roofing/), along with the tile and shingle sections found on many churches and some retail buildings.',
         'If you own or manage a commercial building, you need more than a price. You need to know what’s wrong, what it will take to fix and how the work will affect tenants, customers or staff. Our roof surveys are photo-documented and explained in plain English, every scope is written before work starts, and schedules are planned around your hours. When the job is done, you get closeout photos for your files. [Request an estimate](#roof-check) to get started.',
       ],
     },
@@ -30,7 +30,7 @@ export const COMMERCIAL_CONTENT = {
       ],
     },
     faqs: [
-      { q: 'What types of commercial buildings do you roof?', a: 'We roof office buildings, retail stores, churches, industrial facilities, shops and small businesses, warehouses, and malls and shopping centers. Apartment buildings and condo communities are covered by our [HOA & multi-family roofing](/hoa-multi-family/) service.' },
+      { q: 'What types of commercial buildings do you roof?', a: 'We roof office buildings, retail stores, churches, industrial facilities, shops and small businesses, warehouses, and malls and shopping centers. Apartment buildings and condo communities are covered by our [HOA & multi-family roofing](/residential-roofing/hoa-multi-family/) service.' },
       { q: 'Can our building stay open while you work on the roof?', a: 'Usually, yes. Most commercial roofing happens while the building is in use, so we plan access, noise, staging and deliveries with you before work begins. If any step needs an area cleared, you’ll know ahead of time.' },
       { q: 'Do you repair commercial roofs, or only replace them?', a: 'Both. Many commercial leaks trace back to one failed flashing, a clogged drain or a worn seam, and a targeted repair is the right fix. When a roof is near the end of its life, the survey photos show it, so you can plan and budget for replacement.' },
       { q: 'Do you offer ongoing maintenance for commercial roofs?', a: 'Yes. Scheduled roof care covers seasonal checks, clearing drains and debris, and a photo record you can keep with your building files. It helps you catch wear early and deal with it before the rainy season.' },
@@ -55,7 +55,7 @@ export const COMMERCIAL_CONTENT = {
       },
       overview: {
         paragraphs: [
-          'Office building roofing is detail work. Most office roofs are low-slope and crowded with HVAC units, exhaust fans, conduit and roof hatches, and many are ringed by parapet walls capped with coping. Each of those details is a place water can get in, and the first sign is often a stained ceiling tile in a top-floor suite. We follow the leak to its source, whether that’s a failed curb flashing, a split seam or a drain backing up, then repair or replace the [flat and low-slope roofing](/flat-roofing/) with the right system for your building.',
+          'Office building roofing is detail work. Most office roofs are low-slope and crowded with HVAC units, exhaust fans, conduit and roof hatches, and many are ringed by parapet walls capped with coping. Each of those details is a place water can get in, and the first sign is often a stained ceiling tile in a top-floor suite. We follow the leak to its source, whether that’s a failed curb flashing, a split seam or a drain backing up, then repair or replace the [flat and low-slope roofing](/residential-roofing/flat-roofing/) with the right system for your building.',
           'For owners and property managers, the roof is also a planning question. Is it worth repairing, or is replacement coming? What needs attention this year, and what can wait? Our roof survey answers with photos and plain-English findings you can share with ownership or keep with your building records. When larger work is due, we build the scope and work plan around your tenants, covering roof access, noise, staging and deliveries.',
         ],
       },
@@ -83,10 +83,10 @@ export const COMMERCIAL_CONTENT = {
         { q: 'Why does our office roof leak only in heavy rain?', a: 'Heavy rain tests drainage. A partly clogged drain or scupper, a low spot that holds water, or worn flashing at a parapet or curb can stay dry in a light shower and leak once water backs up. A roof survey pinpoints which one it is.' },
         { q: 'What does a roof survey cover on an office building?', a: 'A roofer walks the full roof and checks every HVAC curb, drain, scupper, parapet and roof hatch, along with the seams and surface in between. We photograph what we find, explain it in plain English and tell you what each area needs next.' },
         { q: 'Do you work on rooftop HVAC units?', a: 'We handle the roofing around them: curbs, flashings and penetrations. Servicing the units themselves is a job for your HVAC contractor, and we’re glad to coordinate with them when roof work touches the equipment.' },
-        { q: 'Do you also roof apartment and condo buildings?', a: 'Yes. Our [HOA & multi-family roofing](/hoa-multi-family/) service handles residential properties with the same survey-first approach. If you manage both office and residential buildings, we can cover the whole portfolio.' },
+        { q: 'Do you also roof apartment and condo buildings?', a: 'Yes. Our [HOA & multi-family roofing](/residential-roofing/hoa-multi-family/) service handles residential properties with the same survey-first approach. If you manage both office and residential buildings, we can cover the whole portfolio.' },
         { q: 'Do you serve office buildings outside Los Angeles?', a: 'Yes. We work across LA County and Orange County, from Burbank and Glendale to Irvine and Santa Ana. See our [service area](/service-areas/) for every city we cover.' },
       ],
-      related: ['/commercial-roofing/malls/', '/commercial-roofing/retail/', '/hoa-multi-family/'],
+      related: ['/commercial-roofing/malls/', '/commercial-roofing/retail/', '/residential-roofing/hoa-multi-family/'],
     },
 
     {
@@ -103,7 +103,7 @@ export const COMMERCIAL_CONTENT = {
       },
       overview: {
         paragraphs: [
-          'Good retail store roofing does two jobs: it keeps water off the sales floor, and it keeps the building looking like a place people want to shop. Most stores sit under a low-slope roof with rooftop units, skylights and sign mounts that all depend on sound flashing. Some also have a decorative mansard or front façade finished in tile or shingles, aging in full view of your customers. We handle both, from [flat roofing](/flat-roofing/) over the sales floor to the steep-slope sections out front.',
+          'Good retail store roofing does two jobs: it keeps water off the sales floor, and it keeps the building looking like a place people want to shop. Most stores sit under a low-slope roof with rooftop units, skylights and sign mounts that all depend on sound flashing. Some also have a decorative mansard or front façade finished in tile or shingles, aging in full view of your customers. We handle both, from [flat roofing](/residential-roofing/flat-roofing/) over the sales floor to the steep-slope sections out front.',
           'Timing matters as much as the roofing itself. Before work starts, we talk through store hours, delivery windows, customer entrances and parking, then write the scope and schedule around them. We plan material staging away from customer paths and clean up as we go. If your store is one of many in a larger center, our [mall and shopping center roofing](/commercial-roofing/malls/) page explains how we phase work across tenants.',
         ],
       },
@@ -129,12 +129,12 @@ export const COMMERCIAL_CONTENT = {
       },
       faqs: [
         { q: 'Can you fix a leak over our sales floor without closing the store?', a: 'In most cases, yes. Leak repairs are usually done from the roof, so the store can stay open while we work. If any step needs an area inside kept clear, we’ll tell you before the day of the work.' },
-        { q: 'Do you repair mansard and façade roofs on retail buildings?', a: 'Yes. Those sections are usually finished in tile or shingles and need the same care as any sloped roof. We use the closest available match to your existing material and can fold the work into the same scope as the main roof. Learn more about [tile roofing](/tile-roofing/) and [shingle roofing](/shingle-roofing/).' },
+        { q: 'Do you repair mansard and façade roofs on retail buildings?', a: 'Yes. Those sections are usually finished in tile or shingles and need the same care as any sloped roof. We use the closest available match to your existing material and can fold the work into the same scope as the main roof. Learn more about [tile roofing](/residential-roofing/tile-roofing/) and [shingle roofing](/residential-roofing/shingle-roofing/).' },
         { q: 'We lease our store. Can we still request a roof survey?', a: 'Yes. Tenants often call first because they’re the ones who see the leak. We can coordinate roof access with your landlord or property manager and share the photos with them, so decisions about the repair start from facts.' },
         { q: 'Why do leaks often start at skylights and signs?', a: 'Every skylight curb and sign mount is a break in the roof, and the flashing and sealant around it take a beating from the Southern California sun. Water that slips past can run along the deck before it drips, so a leak over one aisle may start somewhere else entirely.' },
         { q: 'Do you roof smaller shops and storefront businesses too?', a: 'Yes. For small commercial buildings, workshops and studios, see our page on [shop and small business roofing](/commercial-roofing/shops/).' },
       ],
-      related: ['/commercial-roofing/malls/', '/commercial-roofing/shops/', '/flat-roofing/'],
+      related: ['/commercial-roofing/malls/', '/commercial-roofing/shops/', '/residential-roofing/flat-roofing/'],
     },
 
     {
@@ -151,7 +151,7 @@ export const COMMERCIAL_CONTENT = {
       },
       overview: {
         paragraphs: [
-          'Many churches in Los Angeles and Orange County pair a steep sanctuary roof, often clay tile or shingles, with low-slope roofs over fellowship or parish halls, offices and classrooms. Each section ages in its own way. Tiles can crack or shift in an earthquake while the underlayment beneath them slowly dries out, and the low-slope areas depend on clear drains and sound flashing. We care for all of it, from [tile roofing](/tile-roofing/) on the sanctuary to [flat roofing](/flat-roofing/) over the hall.',
+          'Many churches in Los Angeles and Orange County pair a steep sanctuary roof, often clay tile or shingles, with low-slope roofs over fellowship or parish halls, offices and classrooms. Each section ages in its own way. Tiles can crack or shift in an earthquake while the underlayment beneath them slowly dries out, and the low-slope areas depend on clear drains and sound flashing. We care for all of it, from [tile roofing](/residential-roofing/tile-roofing/) on the sanctuary to [flat roofing](/residential-roofing/flat-roofing/) over the hall.',
           'Decisions about a church roof rarely rest with one person. A board, a building committee or a group of trustees usually weighs in, so our roof survey comes with photos and plain-English findings anyone can follow, plus a clear next step for each section. Once the work is approved, we plan it around worship services, weddings, memorials and weekday programs, and we keep walkways and parking areas clean for your members and visitors.',
         ],
       },
@@ -177,12 +177,12 @@ export const COMMERCIAL_CONTENT = {
       },
       faqs: [
         { q: 'Can the roof work be scheduled around our worship services?', a: 'Yes. We plan work days around your service times and the events on your calendar, and we let you know in advance which days will be noisy or need areas kept clear.' },
-        { q: 'Our sanctuary has an old clay tile roof. Does it need replacing?', a: 'Not necessarily. Clay tile can last a very long time; it’s usually the underlayment beneath it that wears out first. If most tiles are sound, a [tile lift & relay](/tile-roofing/lift-and-relay/) replaces that layer and resets your existing tiles, keeping the sanctuary’s look.' },
+        { q: 'Our sanctuary has an old clay tile roof. Does it need replacing?', a: 'Not necessarily. Clay tile can last a very long time; it’s usually the underlayment beneath it that wears out first. If most tiles are sound, a [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/) replaces that layer and resets your existing tiles, keeping the sanctuary’s look.' },
         { q: 'How do we decide what to fix first on a limited budget?', a: 'We rank what we find by urgency: active leaks and failing flashings first, then worn areas you can plan for. Your written scope can list each item separately, so your board can phase the work over time.' },
         { q: 'Do you roof fellowship halls and classroom buildings too?', a: 'Yes. Halls, offices and classrooms on a church campus often have low-slope roofs, and we can survey and roof them alongside the sanctuary. One scope can cover the whole campus or a single building.' },
         { q: 'Can an earthquake damage a church tile roof?', a: 'It can. Shaking can crack tiles or knock them out of place, and the damage isn’t always visible from the ground. After a noticeable quake, a roof survey shows with photos whether anything moved.' },
       ],
-      related: ['/tile-roofing/', '/shingle-roofing/', '/flat-roofing/'],
+      related: ['/residential-roofing/tile-roofing/', '/residential-roofing/shingle-roofing/', '/residential-roofing/flat-roofing/'],
     },
 
     {
@@ -199,7 +199,7 @@ export const COMMERCIAL_CONTENT = {
       },
       overview: {
         paragraphs: [
-          'Industrial buildings put more on their roofs than most. Exhaust stacks, ductwork, vents, conduit and equipment supports add up quickly, and each penetration is a potential leak point. Maintenance crews walk the roof to reach equipment, wearing paths into the surface, and some processes vent residue that wears on roofing around stacks. We start with a close look at all of it, then repair or replace the roof with [low-slope roofing systems](/flat-roofing/) suited to how your facility runs.',
+          'Industrial buildings put more on their roofs than most. Exhaust stacks, ductwork, vents, conduit and equipment supports add up quickly, and each penetration is a potential leak point. Maintenance crews walk the roof to reach equipment, wearing paths into the surface, and some processes vent residue that wears on roofing around stacks. We start with a close look at all of it, then repair or replace the roof with [low-slope roofing systems](/residential-roofing/flat-roofing/) suited to how your facility runs.',
           'Most facilities can’t pause production for a roof project, so the plan has to fit your operation. Before work starts, we walk through shift schedules, loading areas, what sits beneath each roof section and where crews can safely get on and off the roof. The written scope lays out the work in phases, and closeout photos document each area for your maintenance records. If your site includes storage or distribution buildings, our [warehouse roofing](/commercial-roofing/warehouses/) page covers those too.',
         ],
       },
@@ -230,7 +230,7 @@ export const COMMERCIAL_CONTENT = {
         { q: 'Do you also roof the office or showroom part of our building?', a: 'Yes. Many industrial properties include front offices or a showroom, sometimes under a different kind of roof. We can include every section in one survey and one written scope.' },
         { q: 'Do you serve industrial areas in both counties?', a: 'Yes. We work with industrial properties across LA County and Orange County, including Los Angeles, Torrance, Anaheim and Santa Ana. Our [service area](/service-areas/) page lists every city we serve.' },
       ],
-      related: ['/commercial-roofing/warehouses/', '/commercial-roofing/shops/', '/flat-roofing/'],
+      related: ['/commercial-roofing/warehouses/', '/commercial-roofing/shops/', '/residential-roofing/flat-roofing/'],
     },
 
     {
@@ -247,7 +247,7 @@ export const COMMERCIAL_CONTENT = {
       },
       overview: {
         paragraphs: [
-          'Small commercial buildings collect roof problems quietly. A patch from one owner, a vent added by the next tenant, an exhaust fan or skylight cut in long ago: over time, a small roof can end up with more repairs than roof. Auto and repair shops, workshops, studios and storefront businesses also need the space below to stay dry, because tools, equipment, vehicles and stock don’t mix with water. We sort out what’s worth repairing and what isn’t, then handle the [flat roof repair](/flat-roofing/repairs/) or replacement cleanly.',
+          'Small commercial buildings collect roof problems quietly. A patch from one owner, a vent added by the next tenant, an exhaust fan or skylight cut in long ago: over time, a small roof can end up with more repairs than roof. Auto and repair shops, workshops, studios and storefront businesses also need the space below to stay dry, because tools, equipment, vehicles and stock don’t mix with water. We sort out what’s worth repairing and what isn’t, then handle the [flat roof repair](/residential-roofing/flat-roofing/repair/) or replacement cleanly.',
           'Most small business owners don’t have a facilities department. You’re the one who sees the leak, calls the roofer and approves the price. So we keep it simple: a roofer looks at the roof, shows you photos of what’s wrong and gives you a written scope and price before any work starts. Where we can, we schedule around your working hours. For larger stores built around customers and a sales floor, see our [retail store roofing](/commercial-roofing/retail/) page.',
         ],
       },
@@ -275,10 +275,10 @@ export const COMMERCIAL_CONTENT = {
         { q: 'Is it worth repairing an old, heavily patched roof?', a: 'Sometimes. If the deck is sound and the problems are limited to a few areas, a repair can buy real time. If patches are failing across the roof, repeated repairs can cost more than they’re worth, and the survey photos make that easy to see.' },
         { q: 'Can you plan around noise-sensitive work, like a recording studio?', a: 'Yes. Tell us about sessions and quiet hours when you reach out, and we’ll plan the loudest steps, like tearing off the old roof, around them where we can. Auto shops and other businesses with customer bays get the same kind of planning.' },
         { q: 'Do you work on roofs with exhaust fans and vents?', a: 'Yes. Exhaust fans, vent stacks and ducts are common leak points on shop roofs, especially when they were added after the roof went on. We flash each one properly as part of the repair or replacement.' },
-        { q: 'Our building has gutters and downspouts. Can you look at those too?', a: 'Yes. We check gutters and downspouts during the survey, since they carry water off the roof. If they need work, our [rain gutters](/rain-gutters/) service can be part of the same scope.' },
+        { q: 'Our building has gutters and downspouts. Can you look at those too?', a: 'Yes. We check gutters and downspouts during the survey, since they carry water off the roof. If they need work, our [rain gutters](/residential-roofing/rain-gutters/) service can be part of the same scope.' },
         { q: 'Do you only work on large commercial buildings?', a: 'No. We roof small commercial buildings across LA and Orange County, from a single-bay auto shop to a row of storefronts. Check our [service area](/service-areas/) to see if we cover your city.' },
       ],
-      related: ['/commercial-roofing/retail/', '/commercial-roofing/industrial/', '/flat-roofing/'],
+      related: ['/commercial-roofing/retail/', '/commercial-roofing/industrial/', '/residential-roofing/flat-roofing/'],
     },
 
     {
@@ -295,7 +295,7 @@ export const COMMERCIAL_CONTENT = {
       },
       overview: {
         paragraphs: [
-          'Warehouse roofs are big, simple and unforgiving. Across a wide, nearly flat span, water has to travel a long way to reach a drain or scupper, so a low spot, a missing cricket or a clogged drain can leave water sitting on the roof after every storm. Skylights, roof hatches and parapet walls add more details to watch. Many Southern California warehouses are concrete tilt-up buildings with roofs like this, and we repair and replace them with [low-slope roofing](/flat-roofing/) planned around how water drains.',
+          'Warehouse roofs are big, simple and unforgiving. Across a wide, nearly flat span, water has to travel a long way to reach a drain or scupper, so a low spot, a missing cricket or a clogged drain can leave water sitting on the roof after every storm. Skylights, roof hatches and parapet walls add more details to watch. Many Southern California warehouses are concrete tilt-up buildings with roofs like this, and we repair and replace them with [low-slope roofing](/residential-roofing/flat-roofing/) planned around how water drains.',
           'Size changes how the work is planned. Our roof survey works across the roof in sections, with photos of drains, seams, skylights and flashing, so you can see where problems cluster and budget for them. Repairs can target the worst areas first. For a replacement, we phase the work by section and plan it around loading docks, truck traffic and what’s stored below each part of the roof. [Request an estimate](#roof-check) to start with a survey of your building.',
         ],
       },
@@ -326,7 +326,7 @@ export const COMMERCIAL_CONTENT = {
         { q: 'Our warehouse is leased. Can you coordinate with the tenant?', a: 'Yes. We can work out access and timing with your tenant’s operations contact while keeping you informed on the scope and findings. Everyone works from the same photos and written plan.' },
         { q: 'Do you also roof manufacturing and industrial buildings?', a: 'Yes. Facilities with production equipment and lots of rooftop penetrations need their own kind of planning, covered on our [industrial roofing](/commercial-roofing/industrial/) page. You can also check our [service area](/service-areas/) to confirm we cover your city.' },
       ],
-      related: ['/commercial-roofing/industrial/', '/commercial-roofing/malls/', '/flat-roofing/'],
+      related: ['/commercial-roofing/industrial/', '/commercial-roofing/malls/', '/residential-roofing/flat-roofing/'],
     },
 
     {
@@ -374,7 +374,7 @@ export const COMMERCIAL_CONTENT = {
         { q: 'Do you roof freestanding stores and office buildings too?', a: 'Yes. See [retail store roofing](/commercial-roofing/retail/) for single stores and pad buildings, and [office building roofing](/commercial-roofing/office-buildings/) if your portfolio includes office properties.' },
         { q: 'Can you help us plan roof budgets for the whole center?', a: 'Yes. A center-wide survey with photos by section shows which areas need attention now and which can be planned for later. That gives ownership a clearer picture for budgeting repairs and future replacement phases.' },
       ],
-      related: ['/commercial-roofing/retail/', '/commercial-roofing/office-buildings/', '/hoa-multi-family/'],
+      related: ['/commercial-roofing/retail/', '/commercial-roofing/office-buildings/', '/residential-roofing/hoa-multi-family/'],
     },
   ],
 };

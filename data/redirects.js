@@ -7,36 +7,54 @@ const LA = '/service-areas/la-county/';
 const OC = '/service-areas/orange-county/';
 const city = (region, slug) => `${region}${slug}/`;
 
-// Retired blog posts now send their old site-root addresses to the refreshed blog index.
-export const BLOG_SLUGS = [
-  'flat-roof-repair-contractors',
-  'commercial-roof-repair-services',
-  'signs-of-storm-damage',
-  'signs-of-a-leaky-roof',
-  'roof-coating-applications',
-  'storm-damage-roof-repair-boost-home',
-  'guide-to-roof-repair-vs-replacement',
-  'how-to-repair-a-tiled-roof',
-  '5-temporary-roof-repair-options',
-  '5-winter-roof-repair-tips',
-  'asphalt-shingle-roof-repair',
-  '6-diy-roof-repair-tips',
-  '5-tips-roof-maintenance',
-  'how-to-keep-your-roof-cool',
-  '5-signs-damaged-asphalt-shingle-roof',
-  'tile-roofs-frequently-asked-questions',
-  'how-to-prolong-the-life-of-your-roof',
-  '5-musts-reliable-roofing-specialist',
-  'wooden-roofing-pros-cons',
-  'how-to-remove-mold-from-roof',
-  'solar-panel-tiles-are-they-worth-it',
-  'how-often-should-you-clean-your-gutters',
-  '5-types-of-roofing',
-  'asphalt-shingles-faqs',
-];
+const R = '/residential-roofing/';
+
+// Retired WordPress blog posts (at the site root and under /blog/) go to the page that now covers the same topic.
+export const BLOG_REDIRECTS = {
+  'flat-roof-repair-contractors': `${R}flat-roofing/repair/`,
+  'commercial-roof-repair-services': '/commercial-roofing/repair/',
+  'signs-of-storm-damage': '/emergency-roof-repair/',
+  'signs-of-a-leaky-roof': '/roof-repair/',
+  'roof-coating-applications': `${R}flat-roofing/`,
+  'storm-damage-roof-repair-boost-home': '/emergency-roof-repair/',
+  'guide-to-roof-repair-vs-replacement': '/roof-repair/',
+  'how-to-repair-a-tiled-roof': `${R}tile-roofing/repair/`,
+  '5-temporary-roof-repair-options': '/emergency-roof-repair/',
+  '5-winter-roof-repair-tips': '/roof-repair/',
+  'asphalt-shingle-roof-repair': `${R}shingle-roofing/repair/`,
+  '6-diy-roof-repair-tips': '/roof-repair/',
+  '5-tips-roof-maintenance': '/roof-maintenance-plans/',
+  'how-to-keep-your-roof-cool': `${R}flat-roofing/replacement/`,
+  '5-signs-damaged-asphalt-shingle-roof': `${R}shingle-roofing/repair/`,
+  'tile-roofs-frequently-asked-questions': `${R}tile-roofing/`,
+  'how-to-prolong-the-life-of-your-roof': '/roof-maintenance-plans/',
+  '5-musts-reliable-roofing-specialist': '/about-us/',
+  'wooden-roofing-pros-cons': R,
+  'how-to-remove-mold-from-roof': '/roof-maintenance-plans/',
+  'solar-panel-tiles-are-they-worth-it': R,
+  'how-often-should-you-clean-your-gutters': `${R}rain-gutters/`,
+  '5-types-of-roofing': R,
+  'asphalt-shingles-faqs': `${R}shingle-roofing/`,
+};
 
 export const REDIRECTS = [
   ['/financing/', '/roof-financing/'],
+  // Pages renamed, merged or moved on the new site (October 2026): one inspection page and one maintenance page
+  // (with one-time tune-ups) for every roof type, singular /repair/ slugs, residential pages under
+  // /residential-roofing/, and every project under /projects/. Specific addresses come before the catch-alls.
+  ['/roof-tune-ups/', '/roof-maintenance-plans/'],
+  ['/roof-tune-up/', '/roof-maintenance-plans/'],
+  ...['shingle', 'tile', 'flat'].flatMap((type) => [
+    [`/${type}-roofing/tune-up/`, '/roof-maintenance-plans/'],
+    [`/${type}-roofing/roof-care/`, '/roof-maintenance-plans/'],
+    [`/${type}-roofing/inspection/`, '/roof-inspection/'],
+    [`/${type}-roofing/repairs/`, `/residential-roofing/${type}-roofing/repair/`],
+    [`/${type}-roofing/`, `/residential-roofing/${type}-roofing/`],
+    [`/${type}-roofing/:service/`, `/residential-roofing/${type}-roofing/:service/`],
+  ]),
+  ['/rain-gutters/', '/residential-roofing/rain-gutters/'],
+  ['/hoa-multi-family/', '/residential-roofing/hoa-multi-family/'],
+  ['/project/tile-flat-roofing-in-mid-wilshire-90019/', '/projects/tile-flat-roofing-in-mid-wilshire-90019/'],
   // Service pages
   ['/residential-roofing-services/', '/residential-roofing/'],
   ['/residential-roofing-services/roof-repair/', '/roof-repair/'],
@@ -44,8 +62,8 @@ export const REDIRECTS = [
   ['/residential-roofing-services/roof-inspection/', '/roof-inspection/'],
   ['/residential-roofing-services/new-roof-installation/', '/roof-replacement/'],
   ['/residential-roofing-services/roof-storm-damage/', '/emergency-roof-repair/'],
-  ['/residential-roofing-services/gutter-replacement/', '/rain-gutters/'],
-  ['/residential-roofing-services/attic-ventilation/', '/shingle-roofing/replacement/'],
+  ['/residential-roofing-services/gutter-replacement/', '/residential-roofing/rain-gutters/'],
+  ['/residential-roofing-services/attic-ventilation/', '/residential-roofing/shingle-roofing/replacement/'],
   ['/commercial-roofing-services/', '/commercial-roofing/'],
   ['/commercial-roofing-services/commercial-roof-repair/', '/commercial-roofing/repair/'],
   ['/commercial-roofing-services/commercial-roof-installation/', '/commercial-roofing/replacement/'],
@@ -61,7 +79,7 @@ export const REDIRECTS = [
   ['/locations.kml', '/service-areas/'],
 
   // Blog posts
-  ...BLOG_SLUGS.flatMap((slug) => [[`/${slug}/`, '/blog/'], [`/blog/${slug}/`, '/blog/']]),
+  ...Object.entries(BLOG_REDIRECTS).flatMap(([slug, to]) => [[`/${slug}/`, to], [`/blog/${slug}/`, to]]),
 
   // City pages at the site root
   ['/huntington-beach/', city(OC, 'huntington-beach')],

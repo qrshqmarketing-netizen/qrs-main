@@ -5,6 +5,9 @@ import { PHONE, TEL } from '@/data/site';
 // Closing call to action on service and hub pages, worded around the page's keyword (e.g. 'tile roof repair').
 // It sends visitors to the estimate form, not away from the page; commercial pages talk about the building.
 const properCase = (keyword) => keyword.replace(/\bhoa\b/gi, 'HOA');
+
+// FAQ section subtitle on service and hub pages
+export const faqSub = (keyword) => `Straight answers about ${properCase(keyword)}.`;
 export const closingCta = (keyword, offer = 'home') => {
   const topic = properCase(keyword);
   return {

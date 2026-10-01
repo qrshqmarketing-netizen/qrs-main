@@ -2,6 +2,7 @@
 // The mission, vision and core values come from COMPANY in data/site.js.
 
 import { BUSINESS, COMPANY } from '@/data/site';
+import { formatDate } from '@/lib/dates';
 
 export const ABOUT_PAGE = {
   keyword: 'quality roofing specialists',
@@ -56,7 +57,7 @@ export const ABOUT_PAGE = {
   services: {
     heading: 'Roofing We Do Every Day',
     paragraphs: [
-      'From a [tile lift & relay](/tile-roofing/lift-and-relay/) on a Spanish Revival home to a [shingle roof replacement](/shingle-roofing/replacement/) or a [flat roof repair](/flat-roofing/repairs/) on a mid-century house, our crews bring the same care to every roof. We also handle [commercial roofing](/commercial-roofing/) and [HOA & multi-family](/hoa-multi-family/) properties.',
+      'From a [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/) on a Spanish Revival home to a [shingle roof replacement](/residential-roofing/shingle-roofing/replacement/) or a [flat roof repair](/residential-roofing/flat-roofing/repair/) on a mid-century house, our crews bring the same care to every roof. We also handle [commercial roofing](/commercial-roofing/) and [HOA & multi-family](/residential-roofing/hoa-multi-family/) properties.',
     ],
     cta: { label: 'See residential roofing', href: '/residential-roofing/' },
   },
@@ -67,6 +68,13 @@ export const ABOUT_PAGE = {
     paragraphs: ['We like meeting roofers and team members who take pride in careful, clean work and clear communication with homeowners.'],
     cta: { label: 'Explore careers', href: '/careers/' },
   },
+  faqs: [
+    { q: 'Is Quality Roofing Specialists licensed and insured?', a: `Yes. QRS is licensed, bonded and insured as a California contractor: CSLB license #${BUSINESS.license}, licensed since ${formatDate(BUSINESS.licenseSince)}.` },
+    { q: 'Who owns Quality Roofing Specialists?', a: 'QRS is family-owned, woman-owned and locally owned. It was co-founded by **Tony Goldberg** and **Adva Goldberg**, who serve as CEO and President. Tony did his first roofing job at 16.' },
+    { q: 'What areas do you serve?', a: 'Homes and businesses across [Los Angeles County](/service-areas/la-county/) and [Orange County](/service-areas/orange-county/), from our offices in the Fairfax area of Los Angeles, Woodland Hills and Vernon.' },
+    { q: 'Do you use subcontractors?', a: 'Our own 12 crews do the work, with dedicated crews for shingle, tile and flat roofing. We bring in vetted subcontractors only during overflow, and every $199 Roof Check is done by a field inspector, lead roofer or estimator on our own team.' },
+    { q: 'What languages does your team speak?', a: 'Our office and field staff communicate in English, Spanish and Tagalog.' },
+  ],
   partners: {
     eyebrow: 'Contractors',
     heading: 'Partner With QRS',

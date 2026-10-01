@@ -36,13 +36,14 @@ To test the finished (production) version: `npm run build`, then `npm start`.
 | Rain gutters and HOA & multi-family pages | `data/services/specialty.js` |
 | Commercial pages (hub + building types) | `data/services/commercial.js` |
 | Commercial repair, replacement and maintenance pages | `data/services/commercialServices.js` |
-| Roof Repair, Roof Replacement and Roof Inspection pages (every roof type) | `data/services/serviceHubs.js`; their cards: `SERVICE_HUBS` in `data/catalog.js` |
-| Emergency & storm damage, maintenance plans and financing pages | `data/services/programs.js` |
+| Roof Repair and Roof Replacement hubs (every roof type) | `data/services/serviceHubs.js`; their cards: `SERVICE_HUBS` in `data/catalog.js` |
+| Emergency & storm damage, roof inspection and roof tune-ups (one page each for every roof type), maintenance plans and financing pages | `data/services/programs.js` (the maintenance plan page itself: `data/pages/carePlan.js`) |
 | Region pages (LA County, Orange County) | `data/regionPages.js` |
 | City pages (intro, neighborhoods, local FAQs) | `data/locationPages.js` |
 | Blog posts | `data/blog/posts.js` (blog index wording: `data/pages/blog.js`) |
 | Contact, Reviews, Projects, Privacy, Terms and Accessibility pages | `data/pages/contact.js`, `reviews.js`, `projects.js`, `legal.js` |
 | Redirects from the old WordPress addresses | `data/redirects.js` |
+| Sitemap last-modified dates (updated automatically when a page's text changes; runs before every build, or `npm run lastmod`) | `data/lastModified.json` (script: `scripts/lastmod.mjs`) |
 | Project photo gallery on the city pages | `data/projects.js` |
 | $199 Roof Check / roof survey card beside the estimate form | `data/offers.js` |
 | Residential hub, About, Careers, Contractors (including white-label roofing), Locations pages | `data/pages/` |
@@ -73,7 +74,8 @@ Common edits:
 app/
   layout.js          Header, footer and floating widgets shared by every page; fonts; SEO defaults
   page.js            The home page: its sections, in order
-  roof-repair/, roof-replacement/, residential-roofing/, shingle-roofing/, commercial-roofing/, service-areas/,
+  roof-repair/, roof-replacement/, residential-roofing/ (with shingle-roofing/, tile-roofing/, flat-roofing/,
+  rain-gutters/ and hoa-multi-family/ inside it), commercial-roofing/, service-areas/,
   blog/, contact-us/, …
                      One folder per page address; [service], [region], [city] and [slug] folders build one page per entry
   api/location/      The visitor's approximate location for the service area map

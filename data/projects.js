@@ -10,7 +10,7 @@
 //     city: 'pasadena',
 //     title: 'Tile Lift & Relay',                           // the work we did
 //     area: 'Bungalow Heaven',                              // optional neighborhood, shown above the title
-//     image: '/images/projects/pasadena-lift-and-relay.webp', // photo in public/images/projects/
+//     image: '/images/projects/pasadena-lift-and-relay/photo-1.webp', // photo in public/images/projects/<project-folder>/
 //     alt: 'Clay tile roof on a Craftsman home after a tile lift and relay',
 //   }
 // A tile with a photo opens it in the full-screen gallery (ProjectLightbox); tiles without one just show the
