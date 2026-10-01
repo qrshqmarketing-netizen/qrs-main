@@ -1,5 +1,6 @@
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
+import PartnerLogos from '@/components/sections/PartnerLogos';
 import ProjectCarousel from '@/components/sections/ProjectCarousel';
 import QrsStandard from '@/components/sections/QrsStandard';
 import ReviewStrip from '@/components/sections/ReviewStrip';
@@ -11,6 +12,7 @@ import JsonLd from '@/components/ui/JsonLd';
 import { COMMERCIAL_LINK, RESIDENTIAL } from '@/data/catalog';
 import { HOME_DESCRIPTION, HOME_TITLE } from '@/data/site';
 import { RECENT_WORK, RECENT_WORK_SUB } from '@/data/recentWork';
+import { ROOF_FINANCING } from '@/data/services/programs';
 import { openGraphBase, twitterBase } from '@/lib/seo';
 import { pageJsonLd } from '@/lib/structuredData';
 
@@ -72,10 +74,11 @@ export default function HomePage() {
         <Services items={HOME_SERVICES} compact cta={false} />
         <QrsStandard />
         <ReviewStrip />
-        <ServiceArea />
         <Services title="Roofing Systems" items={HOME_PRODUCTS} compact cta={false} pattern={false} slider id="roofing-systems" />
+        <ServiceArea />
         <WhyQrs />
         <ProjectCarousel heading="Recent Work" sub={RECENT_WORK_SUB} projects={RECENT_WORK} id="work" pattern />
+        <PartnerLogos {...ROOF_FINANCING.partners} />
         <RoofCheck />
         <FinalCta />
       </main>

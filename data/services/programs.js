@@ -9,6 +9,8 @@ export const EMERGENCY_ROOF_REPAIR = {
   metaTitle: 'Emergency Roof Repair in LA & OC',
   metaDescription:
     'Emergency roof repair in Los Angeles & Orange County: storm damage and sudden leaks assessed, photo-documented and repaired. Call us at (310) 340-1643.',
+  image: '/images/emergency-roof-repair-hero.webp',
+  imageAlt: 'Roofer reviewing storm damage with homeowners beside a blue roof tarp',
   hero: {
     intro:
       'Wind, heavy rain and sudden leaks never pick a good time. Emergency roof repair with QRS starts with a roofer’s assessment and photos, adds temporary protection if it’s needed, and finishes with a permanent repair priced in writing first.',
@@ -22,6 +24,8 @@ export const EMERGENCY_ROOF_REPAIR = {
   },
   process: {
     subheading: 'From your call to the finished repair',
+    image: '/images/homeowners-looking-at-leak-in-ceiling.webp',
+    imageAlt: 'Homeowners looking up at a ceiling leak dripping into a bucket',
     steps: [
       {
         title: 'You call and tell us what happened',
