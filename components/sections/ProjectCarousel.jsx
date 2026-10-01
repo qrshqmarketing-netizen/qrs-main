@@ -5,7 +5,7 @@ import './ProjectCarousel.css';
 // Where a real project is ("Bungalow Heaven, Pasadena"); stand-ins have no place, so they show their label instead
 const place = (p, city) => (p.city ? [p.area, findCity(p.city)?.city || city].filter(Boolean).join(', ') : '');
 
-// WebGL "morph" gallery of roofing project photos (city pages and the Projects page). projects: see data/projects.js.
+// WebGL crossfade gallery of roofing project photos (city pages and the Projects page). projects: see data/projects.js.
 // Only entries with a real photo are shown (the slider has no placeholder-art fallback).
 export default function ProjectCarousel({ city, heading, sub, projects = [], id = 'projects', pattern = false }) {
   const photos = projects.filter((p) => p.image);
@@ -26,10 +26,7 @@ export default function ProjectCarousel({ city, heading, sub, projects = [], id 
         <div className="project-carousel-frame">
           <MorphSlider
             items={photos.map((p) => ({ image: p.image, caption: caption(p), href: p.href }))}
-            transition="melt"
-            intensity={0.55}
-            aberration={0.35}
-            drift={0.4}
+            transition="fade"
             radius={5}
             autoplay
             loop

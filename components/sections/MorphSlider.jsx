@@ -6,7 +6,7 @@ import { Mesh, Program, Renderer, Texture, Triangle } from 'ogl';
 import { gsap } from 'gsap';
 import './MorphSlider.css';
 
-const TRANSITIONS = { melt: 0, ripple: 1, shear: 2, swirl: 3 };
+const TRANSITIONS = { melt: 0, ripple: 1, shear: 2, swirl: 3, fade: 4 };
 
 const vertexShader = `
 attribute vec2 position;
@@ -102,14 +102,18 @@ void main() {
 
   vec2 uv = vUv;
 
-  uv += vec2(sin(uTime * 0.25 + uv.y * 4.0), cos(uTime * 0.22 + uv.x * 4.0)) * uDrift * 0.008;
-  uv = (uv - 0.5) * (1.0 - uDrift * 0.02 * sin(uTime * 0.4)) + 0.5;
+  if (uMode != 4) {
+    uv += vec2(sin(uTime * 0.25 + uv.y * 4.0), cos(uTime * 0.22 + uv.x * 4.0)) * uDrift * 0.008;
+    uv = (uv - 0.5) * (1.0 - uDrift * 0.02 * sin(uTime * 0.4)) + 0.5;
+  }
 
   vec2 uvC = uv;
   vec2 uvN = uv;
   float m = smoothstep(0.0, 1.0, p);
 
-  if (uReduce < 0.5) {
+  if (uMode == 4) {
+    m = smoothstep(0.0, 1.0, p);
+  } else if (uReduce < 0.5) {
     if (uMode == 3) {
       vec2 c = uv - 0.5;
       float r = length(c);
@@ -149,7 +153,7 @@ void main() {
   vec2 sC = coverUV(uvC, uResolution, uCurrentSize);
   vec2 sN = coverUV(uvN, uResolution, uNextSize);
 
-  float ca = uReduce < 0.5 ? uAberration * env * 0.03 : 0.0;
+  float ca = uMode != 4 && uReduce < 0.5 ? uAberration * env * 0.03 : 0.0;
 
   vec3 colC = vec3(
     texture2D(tCurrent, sC + vec2(ca, 0.0)).r,
@@ -455,12 +459,12 @@ class MorphEngine {
   }
 }
 
-// WebGL "morph" image slider (React Bits: MorphSlider, JS+CSS variant, ogl + gsap powered).
+// WebGL image slider with clean crossfade transitions (ogl + gsap powered).
 // items: [{ image, caption? }]
 export default function MorphSlider({
   items = [],
   startIndex = 0,
-  transition = 'melt',
+  transition = 'fade',
   duration = 1.1,
   ease = 'power2.inOut',
   intensity = 0.55,
@@ -598,7 +602,7 @@ export default function MorphSlider({
       onMouseLeave={() => setHovering(false)}
       {...props}
     >
-      <div ref={containerRef} className="morph-slider-stage" role="group" aria-roledescription="carousel" aria-label="Image morph slider" tabIndex={0} onKeyDown={onKeyDown} />
+      <div ref={containerRef} className="morph-slider-stage" role="group" aria-roledescription="carousel" aria-label="Image slider" tabIndex={0} onKeyDown={onKeyDown} />
 
       {activeLink && (
         <Link
