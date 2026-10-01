@@ -1,3 +1,4 @@
+import FeatureBand from '@/components/sections/FeatureBand';
 import FinalCta from '@/components/sections/FinalCta';
 import Guarantee from '@/components/sections/Guarantee';
 import Hero from '@/components/sections/Hero';
@@ -27,10 +28,11 @@ export default function AboutPage() {
   return (
     <main id="top">
       <JsonLd data={schema} />
-      <Hero crumbs={CRUMBS} eyebrow={page.hero.eyebrow} title={page.hero.heading} image={HERO_IMAGE} imagePosition="center 40%" />
+      <Hero crumbs={CRUMBS} eyebrow={page.hero.eyebrow} title={page.hero.heading} intro={page.hero.intro} image={HERO_IMAGE} imagePosition="center 40%" />
       <Overview center heading={page.intro.heading} paragraphs={page.intro.paragraphs} />
       <ProofBar />
       <SplitFeature eyebrow={page.story.eyebrow} heading={page.story.heading} paragraphs={page.story.paragraphs} scene="scene-replace" />
+      <FeatureBand id="mission" {...page.mission} />
       <ValueGrid heading={page.team.heading} intro={page.team.intro} items={page.team.items} columns={2} />
       <ValueGrid heading={page.values.heading} items={page.values.items} tone="wash" />
       <WhyQrs heading="Why Homeowners Choose QRS" cta={{ label: 'Read Our Reviews', href: '#reviews' }} />

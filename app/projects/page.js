@@ -1,11 +1,10 @@
 import Breadcrumbs from '@/components/sections/Breadcrumbs';
-import ProjectCarousel from '@/components/sections/ProjectCarousel';
+import ProjectMap from '@/components/sections/ProjectMap';
 import Rich from '@/components/ui/Rich';
 import JsonLd from '@/components/ui/JsonLd';
 import { HOME, PROJECTS_LINK } from '@/data/catalog';
 import { MID_WILSHIRE_PROJECT } from '@/data/pages/mid-wilshire-project';
-import { PROJECTS_PAGE as page } from '@/data/pages/projects';
-import { RECENT_WORK, RECENT_WORK_SUB } from '@/data/recentWork';
+import { PROJECT_PAGES, PROJECTS_PAGE as page } from '@/data/pages/projects';
 import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
 import './projects.css';
@@ -35,13 +34,7 @@ export default function ProjectsPage() {
           </div>
         </div>
       </section>
-      <ProjectCarousel
-        heading={page.gallery.heading}
-        sub={RECENT_WORK_SUB}
-        projects={RECENT_WORK}
-        id="work"
-        pattern
-      />
+      <ProjectMap heading={page.map.heading} sub={page.map.sub} projects={PROJECT_PAGES} />
     </main>
   );
 }

@@ -1,4 +1,5 @@
 import Faq from '@/components/sections/Faq';
+import FeatureBand from '@/components/sections/FeatureBand';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
 import ProofBar from '@/components/sections/ProofBar';
@@ -41,6 +42,7 @@ export default function CareersPage() {
       />
       <ValueGrid heading={page.values.heading} items={page.values.items} tone="wash" pattern />
       <ProofBar />
+      <FeatureBand {...page.coreValues} tone="light" />
       <ValueGrid id="roles" heading={page.roles.heading} intro={page.roles.intro} items={page.roles.items} />
       <Faq heading="Careers FAQs" sub="Straight answers about working at QRS." faqs={page.faqs} cta={false} />
       <ProcessSteps

@@ -1,4 +1,11 @@
-// Projects page (/projects/). The projects themselves are in data/projects.js (temporary stand-ins until the CRM feed).
+// Projects page (/projects/): a map of every project that has its own page (components/sections/ProjectMap.jsx).
+
+import { MID_WILSHIRE_PROJECT } from './mid-wilshire-project';
+import { SAN_PEDRO_PROJECT } from './san-pedro-project';
+
+// Projects on the map, each linking to its page. To add one: give its data file a `place` and a `geo` pin
+// ([lat, lng] of the ZIP code's center, not the street address), then list it here.
+export const PROJECT_PAGES = [MID_WILSHIRE_PROJECT, SAN_PEDRO_PROJECT];
 
 export const PROJECTS_PAGE = {
   keyword: 'roofing projects',
@@ -10,8 +17,8 @@ export const PROJECTS_PAGE = {
     intro:
       'Browse roofing projects from homes, communities and commercial properties across Southern California, featuring tile, shingle and flat roof work.',
   },
-  gallery: {
-    heading: 'Recent Work',
-    sub: 'A look at the roofing projects our crews take on.',
+  map: {
+    heading: 'Projects Near You',
+    sub: 'Each pin is a finished QRS project. Enter your ZIP code to find the one closest to you.',
   },
 };

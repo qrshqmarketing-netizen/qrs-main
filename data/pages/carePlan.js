@@ -12,7 +12,7 @@ export const CARE_PLAN = {
   hero: {
     heading: 'Roof Maintenance Plans · *RoofCare Plan*',
     intro:
-      'The *RoofCare Plan* schedules tune-ups and maintenance before small wear turns into a surprise leak. Your roof is failing right now. Just slowly. Los Angeles gets twelve inches of rain a year — and three hundred days of sun. Roofs here don’t wear out from water; they wear out from heat, light and time, every single day, whether it rains or not. We come out twice a year and stay ahead of it.',
+      'Roof maintenance plans from QRS schedule one or two roofer visits a year, timed to the rains, so small wear on Los Angeles and Orange County homes is caught before it turns into a surprise leak. Visits include a full inspection, a written photo report, debris clearing and sealant top-offs, with three *RoofCare Plan* tiers priced by roof size.',
     highlights: ['Scheduled visits, before and after the rains', 'A written photo report every time', 'Pay after each visit — nothing up front'],
   },
   whatGoesWrong: {
@@ -20,7 +20,7 @@ export const CARE_PLAN = {
     items: [
       {
         title: 'The sun, not the storm',
-        text: 'Your roof heats and cools every day of the year. Sealant dries and cracks; shingles go brittle and shed granules. Nothing about that waits for rain — by the time water finds the gap, the damage is already years old.',
+        text: 'Los Angeles gets twelve inches of rain a year — and three hundred days of sun. Your roof heats and cools every day of the year. Sealant dries and cracks; shingles go brittle and shed granules. Nothing about that waits for rain — by the time water finds the gap, the damage is already years old.',
       },
       {
         title: 'Tile lasts. The felt underneath doesn’t.',

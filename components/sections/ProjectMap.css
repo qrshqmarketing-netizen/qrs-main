@@ -1,0 +1,19 @@
+/* ---------- Project map on /projects/ (shell and panel styles come from ServiceArea.css) ---------- */
+.proj-area{padding-top:24px}
+.proj-map{position:absolute;inset:0;background:#e8ebee}
+.loc-item.proj-item{display:grid;grid-template-columns:84px minmax(0,1fr);column-gap:14px;align-items:start;padding:16px 16px 16px 12px}
+.proj-thumb{width:84px;height:64px;object-fit:cover;display:block}
+.proj-place{display:block;color:var(--gold);font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-bottom:4px}
+.loc-item.proj-item h3{font-size:15px;line-height:1.35;margin:0 0 6px}
+.proj-link{color:#fff;font-size:13px;font-weight:700}
+.proj-link:hover{color:var(--gold)}
+@media (max-width:900px){
+  /* Allow page swipes over the map without letting Leaflet drag or pan it */
+  .proj-map{touch-action:pan-y pinch-zoom}
+}
+@media (min-width:901px){
+  .proj-area{padding-top:32px}
+  .proj-area .loc-wrap{grid-template-columns:330px 1fr}
+  .loc-item.proj-item{grid-template-columns:72px minmax(0,1fr);padding:18px 16px 18px 12px}
+  .proj-thumb{width:72px;height:56px}
+}

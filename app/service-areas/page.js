@@ -32,7 +32,7 @@ const schema = pageJsonLd({
 });
 
 // Each city card shows the one-line intro from that city's page
-const BLURBS = Object.fromEntries(Object.entries(LOCATION_PAGES).map(([slug, p]) => [slug, p.hero.sub]));
+const BLURBS = Object.fromEntries(Object.entries(LOCATION_PAGES).map(([slug, p]) => [slug, p.blurb]));
 
 // Service Areas page: offices, the map, every region and city page (content in data/pages/locations.js)
 export default function LocationsPage() {

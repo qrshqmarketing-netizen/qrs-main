@@ -158,7 +158,6 @@ export const FOOTER = {
         { label: 'Roofing Blog', href: '/blog/' },
         { label: 'Careers', href: '/careers/' },
         { label: 'Contractors', href: '/contractors/' },
-        { label: 'Connect an AI Agent', href: '/mcp/' },
       ],
     },
     {
@@ -193,5 +192,6 @@ export const FOOTER = {
     ...(PRIVACY_POLICY_URL ? [{ label: 'Privacy Policy', href: PRIVACY_POLICY_URL }] : []),
     { label: 'Terms & Conditions', href: '/terms-and-conditions/' },
     { label: 'Accessibility Statement', href: '/accessibility-statement/' },
+    { label: 'MCP', href: '/mcp/', newTab: true }, // the site's MCP server, for AI agents; opens in a new tab
   ],
 };

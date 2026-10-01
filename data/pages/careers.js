@@ -1,6 +1,9 @@
-// Careers page (/careers/). Update the roles as openings change.
+// Careers page (/careers/). Update the roles as openings change. The vision and core values come from COMPANY in data/site.js.
+
+import { COMPANY } from '@/data/site';
 
 const EMAIL = 'info@qualityroofingspecialists.com';
+const VALUE_NAMES = COMPANY.values.map((v) => v.title.toLowerCase());
 const apply = (role) => `mailto:${EMAIL}?subject=${encodeURIComponent(`Careers: ${role}`)}`;
 
 export const CAREERS_PAGE = {
@@ -12,7 +15,7 @@ export const CAREERS_PAGE = {
   hero: {
     heading: 'Roofing Jobs & Careers at QRS',
     intro:
-      'Looking for roofing jobs in Los Angeles and Orange County with a team that cares about doing it right? QRS is a detail-first crew: roofer-led inspections, written scopes and clean, careful installs.',
+      'Quality Roofing Specialists hires for roofing jobs across Los Angeles and Orange County: roofers and installers, crew leads, estimators, project managers and office staff. To apply, email us your info and the role you’re interested in. We’re building a team of dedicated professionals who share our core values and our mission of crafting top-quality roofs.',
   },
   values: {
     heading: 'What It’s Like to Work at QRS',
@@ -22,6 +25,13 @@ export const CAREERS_PAGE = {
       { title: 'Clear communication', text: 'Written scopes, photos and plain English, with homeowners and within the crew.' },
       { title: 'Local projects', text: 'Work across Los Angeles and Orange County, from tile lift & relay to full roof replacements.' },
     ],
+  },
+  coreValues: {
+    eyebrow: 'Our Core Values',
+    heading: 'Help Us Protect 6,000 Homes',
+    paragraphs: [COMPANY.vision, 'We’re building a team of dedicated professionals who align with these core values. If they sound like you, we’d like to meet you.'],
+    points: COMPANY.values,
+    cta: { label: 'See the roles we hire for', href: '#roles' },
   },
   roles: {
     heading: 'Roles We Hire For',
@@ -44,7 +54,7 @@ export const CAREERS_PAGE = {
   },
   faqs: [
     { q: 'Where are the jobs located?', a: 'Our projects are across Los Angeles County and Orange County, including [Los Angeles](/service-areas/la-county/los-angeles/), Pasadena, Long Beach, Irvine and the [other cities we serve](/service-areas/).' },
-    { q: 'What do you look for?', a: 'People who take pride in careful work, communicate clearly and treat homeowners’ property with respect.' },
+    { q: 'What do you look for?', a: `People who share our core values (${VALUE_NAMES.slice(0, -1).join(', ')} and ${VALUE_NAMES.at(-1)}), take pride in careful work and treat homeowners’ property with respect.` },
     { q: 'What if I don’t see an opening for my role?', a: 'Send us your info anyway. Openings change through the year, and we’re always glad to hear from people who share our standards.' },
     { q: 'How do I apply?', a: `Email [${EMAIL}](mailto:${EMAIL}) with the role you’re interested in and a little about your experience, or call us during business hours.` },
   ],

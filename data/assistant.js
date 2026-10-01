@@ -2,7 +2,7 @@
 // Answers are matched top to bottom: the first `match` that fits the visitor's message wins.
 // `chips` are the suggested follow-up buttons. null = the starter questions, [] = none.
 
-import { BUSINESS, PHONE, TEL } from './site';
+import { BUSINESS, COMPANY, PHONE, TEL } from './site';
 import { formatDate } from '@/lib/dates';
 
 // The chat assistant's backend: app/api/chat/route.js (an OpenRouter model — see OPENROUTER_API_KEY and
@@ -30,6 +30,7 @@ Facts you can rely on:
 - Homes start with a free roof evaluation: we use drone footage to see the roof's condition, with no charge and no obligation. Commercial buildings start with a roof survey instead.
 - Service area: Los Angeles and Orange County, Southern California.
 - Phone: ${PHONE}. Quality Roofing Specialists is a licensed California contractor, CSLB License #${BUSINESS.license}, licensed since ${formatDate(BUSINESS.licenseSince)}.
+- Mission and vision: ${COMPANY.mission} ${COMPANY.vision} Core values: ${COMPANY.values.map((v) => v.title).join(', ')}.
 
 Rules:
 - Never invent facts, prices, warranty terms or timelines beyond what's given here or in the relevant content. If you don't know something, say so and offer a call to ${PHONE}.

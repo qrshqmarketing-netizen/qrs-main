@@ -41,7 +41,9 @@ export default function Footer() {
           <span>CSLB Lic # {BUSINESS.license}</span>
           {FOOTER.legal.map((link) => (
             <span key={link.href}>
-              <SiteLink href={link.href} prefetch={false}>{link.label}</SiteLink>
+              <SiteLink href={link.href} prefetch={false} {...(link.newTab && { target: '_blank', rel: 'noopener' })}>
+                {link.label}
+              </SiteLink>
             </span>
           ))}
         </div>

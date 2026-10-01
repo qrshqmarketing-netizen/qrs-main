@@ -8,7 +8,7 @@ export const TILE_CONTENT = {
     metaDescription: 'Tile roofing in Los Angeles & Orange County: clay, concrete and slate tile repair, lift & relay, replacement and roof care. Start with a free roof evaluation.',
     hero: {
       heading: 'Tile Roofing Services',
-      intro: 'Clay, concrete and slate tiles often outlast the layers beneath them, so a tile roof is only as sound as the parts you can’t see. Our tile roofing work across Los Angeles and Orange County covers repairs, tune-ups, relays and replacement, and it starts with a roofer-led look at the whole system.',
+      intro: 'Tile roofing from QRS covers repairs, tune-ups, inspections, roof care, lift & relay and replacement for clay, concrete and slate tile roofs across Los Angeles and Orange County. Because the tiles often outlast the layers beneath them, we focus on the underlayment, flashings and valleys you can’t see. Every job starts with a free roof evaluation.',
       highlights: ['Clay, concrete and slate options', 'Focused on what’s under the tile', 'Free drone roof evaluation to start'],
     },
     overview: {
@@ -51,7 +51,7 @@ export const TILE_CONTENT = {
       image: '/images/tile-roof-replacement.webp',
       imageAlt: 'Finished clay barrel tile roof on a home, viewed from above',
       hero: {
-        intro: 'Sometimes the tiles themselves are finished. A tile roof replacement takes the roof down to the deck and builds a complete new system, from underlayment and flashings to the tile and ridge.',
+        intro: 'A tile roof replacement takes your roof down to the deck and builds a complete new system: underlayment, flashings, clay or concrete tile and ridge details. QRS replaces tile roofs across Los Angeles and Orange County when the tiles themselves are past saving, backed by our 10-year workmanship warranty. It starts with a free roof evaluation.',
         highlights: ['Full tear-off down to the deck', 'Clay or concrete tile to suit your home', '10-Year workmanship warranty'],
       },
       overview: {
@@ -100,7 +100,7 @@ export const TILE_CONTENT = {
       metaTitle: 'Tile Roof Repair in Los Angeles & OC',
       metaDescription: 'Tile roof repair in Los Angeles & Orange County: leaks traced to the source, cracked tiles matched and flashings fixed, with photos. Book a free roof evaluation.',
       hero: {
-        intro: 'Good tile roof repair starts with finding where water really gets in, which is often well away from the stain on your ceiling. We fix the tiles, flashings or underlayment responsible and show you photos of the repair.',
+        intro: 'Tile roof repair finds where water really gets in, often well away from the stain on your ceiling, and fixes the tiles, flashings or underlayment responsible. QRS repairs tile roofs across Los Angeles and Orange County with the closest available tile match and photos of the problem and the fix.',
         highlights: ['Leaks traced to where water gets in', 'Closest available tile match', 'Photos of the problem and the fix'],
       },
       overview: {
@@ -150,7 +150,7 @@ export const TILE_CONTENT = {
       image: '/images/tile-lift-off-and-reset-drone-view.webp',
       imageAlt: 'Aerial view of tiles lifted off a roof during a tile lift and relay, exposing the underlayment',
       hero: {
-        intro: 'Most tile roofs don’t fail at the tile; they fail at the underlayment beneath it. *SecondLife* Tile Reset replaces that hidden layer and puts your own tiles back, so your roof keeps its look.',
+        intro: 'A tile lift & relay removes your existing tiles, replaces the worn underlayment beneath them and resets the same tiles in their original pattern, so your roof keeps its look. QRS does it across Los Angeles and Orange County as our *SecondLife* Tile Reset, renewing worn battens and flashings and replacing only cracked or broken tiles.',
         highlights: ['Your tiles reused, broken ones matched', 'New underlayment and flashings', 'Written scope and price first'],
       },
       overview: {
@@ -200,7 +200,7 @@ export const TILE_CONTENT = {
       metaTitle: 'Tile Roof Inspection in Los Angeles',
       metaDescription: 'Tile roof inspection in Los Angeles & Orange County: a roofer checks tiles, flashings, valleys and visible underlayment, with photos. Book your free roof evaluation.',
       hero: {
-        intro: 'A tile roof can look perfect from the street while the layer underneath wears out. A tile roof inspection with our free roof evaluation puts a roofer’s eyes on the whole system, with photos and a plain-English next step.',
+        intro: 'A tile roof inspection is our free roof evaluation for tile: a roofer checks the tiles, ridges, flashings, valleys and visible underlayment on homes across Los Angeles and Orange County. Every finding is photographed and explained, with one plain-English next step: repair, monitor, maintain or replace.',
         highlights: ['Roofer-led, not a sales visit', 'Photo-documented findings', 'No deposit: pay after the visit'],
       },
       overview: {
@@ -247,7 +247,7 @@ export const TILE_CONTENT = {
       metaTitle: 'Tile Roof Tune-Up in Los Angeles & OC',
       metaDescription: 'Tile roof tune-up in Los Angeles & Orange County: slipped tiles reset, cracked tiles replaced, flashings resealed, valleys cleared. Book a free roof evaluation.',
       hero: {
-        intro: 'Small problems on a tile roof stay small for a while, and then they don’t. A tile roof tune-up is one focused visit that resets, reseals, replaces and clears the little things before the next rainy season finds them.',
+        intro: 'A tile roof tune-up is one focused visit that resets slipped tiles, replaces a few cracked ones, reseals vents and flashings and clears the valleys before small problems turn into leaks. QRS handles tune-ups across Los Angeles and Orange County, with a written scope and price before we start and photos of every fix.',
         highlights: ['Slipped and loose tiles reset', 'Vent and flashing seals renewed', 'Valleys and eaves cleared of debris'],
       },
       overview: {
@@ -293,7 +293,7 @@ export const TILE_CONTENT = {
       metaTitle: 'Tile Roof Care & Maintenance in LA',
       metaDescription: 'Ongoing tile roof care in Los Angeles & Orange County: seasonal checks, clear valleys and photo records that catch wear early. Start with a free roof evaluation.',
       hero: {
-        intro: 'A tile roof ages quietly, one slipped tile and clogged valley at a time. Scheduled tile roof care catches that wear early and keeps a photo record, so you can plan big decisions instead of reacting to a leak.',
+        intro: 'Tile roof care is a schedule of seasonal visits that keep valleys and eaves clear, check ridge mortar and bird stops and flag slipped or cracked tiles before a storm finds them. QRS provides it across Los Angeles and Orange County with photos from every visit, so you can plan big decisions instead of reacting to a leak.',
         highlights: ['Seasonal checks timed to the weather', 'Valleys, eaves and drains kept clear', 'Photo records, year over year'],
       },
       overview: {
@@ -340,7 +340,7 @@ export const TILE_CONTENT = {
       image: '/images/tile-roof-replacement.webp',
       imageAlt: 'Tile roof on a Southern California home',
       hero: {
-        intro: 'Slate tile roofing brings the natural color and texture of stone to a home. Before planning a slate roof, we review the existing structure, roof design and installation details so the scope fits the property.',
+        intro: 'Slate tile roofing gives a home the natural color and texture of stone, and QRS plans slate roofs across Los Angeles and Orange County from the structure up. Because slate is heavy, we review the framing and roof details first and put the full scope in writing before work begins. It starts with a roof evaluation.',
         highlights: ['Natural slate appearance', 'Roof structure and details reviewed', 'Written scope before work begins'],
       },
       overview: {
@@ -385,7 +385,7 @@ export const TILE_CONTENT = {
       image: '/images/tile-roof-replacement.webp',
       imageAlt: 'Concrete tile roof on a Southern California home',
       hero: {
-        intro: 'Concrete tile roofing offers a range of profiles and colors for homes across Southern California. The complete roof system matters just as much as the tiles, so we plan the underlayment, flashing and drainage alongside the finish.',
+        intro: 'Concrete tile roofing comes in a range of profiles and colors, and QRS installs it on homes across Los Angeles and Orange County as a complete roof system. We help you choose the profile and color, then plan the deck, underlayment, flashing and drainage alongside the tile, with a written scope before work begins.',
         highlights: ['Multiple profiles and color choices', 'Underlayment and flashing included in planning', 'Written scope before work begins'],
       },
       overview: {

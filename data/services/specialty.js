@@ -12,7 +12,7 @@ export const RAIN_GUTTERS = {
     'Rain gutter installation and repair in Los Angeles & Orange County: sized for your roof, sloped to drain and tied into the drip edge. Request an estimate.',
   hero: {
     intro:
-      'Gutters have one job: carry the water your roof sheds away from your walls, fascia and foundation. From new rain gutter installation to fixing a leaking corner, we help yours keep up when a Southern California storm finally arrives.',
+      'Rain gutter installation from QRS means new gutters and downspouts sized for your roof, sloped to drain and tied in with the drip edge, across Los Angeles and Orange County. We also repair leaking corners and sagging runs, so your gutters carry water away from your walls, fascia and foundation when a Southern California storm arrives.',
     highlights: ['Sized for the roof area they drain', 'A steady slope toward every downspout', 'Tied in with your roof’s drip edge'],
   },
   overview: {
@@ -107,7 +107,7 @@ export const HOA_MULTI_FAMILY = {
     'HOA and multi-family roofing in Los Angeles & Orange County: photo-documented reports, phased work and one point of contact. Request an estimate.',
   hero: {
     intro:
-      'The *ReserveReady* program helps HOA boards plan roofing across their community, with clear inspections, phased proposals and long-range budget planning. Residents get a heads-up, and the board has one point of contact throughout the work.',
+      'QRS provides HOA & multi-family roofing for boards and property managers across Los Angeles and Orange County, from roof inspections and repairs to replacements phased building by building. Our *ReserveReady* program gives your board photo reports, phased proposals and long-range budget planning, with one point of contact throughout. It starts with a roofer-led roof survey of each building.',
     highlights: ['Photo reports your board can review', 'Work phased building by building', 'One point of contact, start to finish'],
   },
   overview: {

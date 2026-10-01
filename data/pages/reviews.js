@@ -30,6 +30,6 @@ export const REVIEWS_PAGE = {
     image: '/images/reviews-hero-bg.webp',
     imageAlt: 'Homeowners sharing feedback outside their home',
     intro:
-      'Thanks for choosing Quality Roofing Specialists. Your customer reviews help other local property owners. Pick the location you worked with and a platform below to share your experience.',
+      'Leave customer reviews for Quality Roofing Specialists on Google or Yelp: pick the location you worked with below, then the platform you’d like to use. Thanks for choosing QRS — your review helps other local property owners.',
   },
 };

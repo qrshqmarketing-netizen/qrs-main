@@ -1,5 +1,5 @@
 import Breadcrumbs from '@/components/sections/Breadcrumbs';
-import ScrollParallaxImage from '@/components/sections/ScrollParallaxImage';
+import MorphSlider from '@/components/sections/MorphSlider';
 import JsonLd from '@/components/ui/JsonLd';
 import Rich from '@/components/ui/Rich';
 import { PROJECTS_LINK } from '@/data/catalog';
@@ -15,6 +15,9 @@ const CRUMBS = [
   PROJECTS_LINK,
   { label: page.title, href: page.path },
 ];
+// Slider photos (page.photos; the first is also page.image)
+const SLIDES = page.photos.map((p) => ({ image: p.src, caption: p.alt }));
+
 const schema = pageJsonLd({
   path: page.path,
   title: page.title,
@@ -30,7 +33,7 @@ export default function MidWilshireProjectPage() {
       <section className="project-detail-gallery" aria-label="Project photos">
         <div className="container">
           <figure className="project-detail-photo">
-            <ScrollParallaxImage src={page.image} alt={page.imageAlt} sizes="(max-width: 900px) 100vw, 1200px" preload />
+            <MorphSlider items={SLIDES} transition="melt" intensity={0.55} aberration={0.35} drift={0.4} radius={0} autoplay loop aria-label="Project photos" />
           </figure>
         </div>
       </section>

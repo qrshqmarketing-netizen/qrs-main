@@ -25,6 +25,23 @@ export const BUSINESS = {
   hours: [{ days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '08:00', closes: '18:00' }],
 };
 
+// The owner's mission, vision and core values: shown on the About and Careers pages, and given to the chat
+// assistant and the AI files (llms.txt, llms-full.txt, OKF).
+export const COMPANY = {
+  belief: 'At Quality Roofing Specialists, we believe a roof is more than just a structure — it’s protection, trust and peace of mind.',
+  mission: 'With passion and precision, we craft top-quality roofs that enhance homes, build trust and deliver lasting protection.',
+  vision: 'As a growing company, we’ve set a bold vision: to protect 6,000 homes with quality roofing over the next 10 years.',
+  values: [
+    { title: 'Integrity', text: 'We do what’s right, always.' },
+    { title: 'Respect', text: 'We treat clients and teammates with kindness and professionalism.' },
+    { title: 'Discipline', text: 'We stay focused, committed and consistent in our work.' },
+    { title: 'Accountability', text: 'We take ownership of our responsibilities and results.' },
+    { title: 'Transparency', text: 'We communicate openly and honestly.' },
+    { title: 'Alignment', text: 'We work together toward our shared vision and goals.' },
+    { title: 'Results Orientation', text: 'We strive for excellence and measurable success.' },
+  ],
+};
+
 // Offices, shown on the Service Areas page and on the city page each one sits in (citySlug, from data/locations.js).
 // The first is the main office (BUSINESS.address). All answer the same phone number. `image`: an optional photo for its card.
 export const OFFICES = [

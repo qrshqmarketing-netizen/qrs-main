@@ -1,6 +1,9 @@
 // Contact page (/contact-us/): the same address as the old WordPress site, so its links and rankings carry over.
 // Hours come from BUSINESS.hours and the offices from OFFICES (both in data/site.js).
 
+import { BUSINESS, PHONE, TEL } from '@/data/site';
+import { hoursText } from '@/lib/hours';
+
 export const CONTACT_PAGE = {
   keyword: 'contact quality roofing specialists',
   metaTitle: 'Contact',
@@ -8,8 +11,7 @@ export const CONTACT_PAGE = {
     'Contact Quality Roofing Specialists: call (310) 340-1643, visit our Los Angeles, Valley or Vernon office, or request a free roof evaluation online and get a clear next step.',
   hero: {
     heading: 'Contact Quality Roofing Specialists',
-    intro:
-      'Call, email or send us your project details, and our team will get back to you with a clear next step. Every roof we work on starts with a roofer-led [free roof evaluation](#roof-check), not a sales pitch.',
+    intro: `To contact Quality Roofing Specialists, call [${PHONE}](${TEL}) (${hoursText(BUSINESS.hours)}), email [${BUSINESS.email}](mailto:${BUSINESS.email}) or send your project details through the [estimate form](#roof-check). One number reaches all of our offices, and our team gets back to you with a clear next step.`,
   },
   ways: {
     heading: 'How to Reach Us',

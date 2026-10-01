@@ -13,7 +13,7 @@ export const EMERGENCY_ROOF_REPAIR = {
   imageAlt: 'Roofer reviewing storm damage with homeowners beside a blue roof tarp',
   hero: {
     intro:
-      'Wind, heavy rain and sudden leaks never pick a good time. Emergency roof repair with QRS starts with a roofer’s assessment and photos, adds temporary protection if it’s needed, and finishes with a permanent repair priced in writing first.',
+      'For emergency roof repair in Los Angeles and Orange County, stay off the roof, move belongings away from the leak and call QRS. A roofer assesses and photographs the storm damage or sudden leak, puts temporary protection such as a tarp in place when it’s needed, then makes the permanent repair, priced in writing first.',
     highlights: ['Damage assessed and photo-documented', 'Temporary protection, like a tarp, if needed', 'Permanent repair with a written scope'],
   },
   overview: {
@@ -139,7 +139,7 @@ export const ROOF_FINANCING = {
   },
   hero: {
     intro:
-      'A new roof is a big expense, and it rarely comes at a convenient time. Roof financing through Momnt Financing or Service Financing can spread the cost into monthly payments, subject to credit approval, and it starts only after you have a written scope and price.',
+      'Roof financing with QRS lets you spread the cost of a home roof replacement in Los Angeles and Orange County into monthly payments through Momnt Financing or Service Financing, subject to credit approval. You get a written scope and price before you apply, so you know exactly what you’re financing. Start with a free roof evaluation.',
     highlights: ['For home roof replacements', 'Through Momnt Financing or Service Financing', 'Written scope and price come first', 'Example payments in our Instant Quote'],
   },
   overview: {

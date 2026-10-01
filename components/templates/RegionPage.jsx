@@ -26,7 +26,7 @@ export default function RegionPage({ region, page }) {
   const offices = OFFICES.filter((o) => findCity(o.citySlug)?.region === region.slug);
   const photo = page.image ? { src: page.image, alt: page.imageAlt || '' } : PHOTOS[REGIONS.indexOf(region) % PHOTOS.length];
   const crumbs = [HOME, LOCATIONS_LINK, { label: region.name, href: path }];
-  const blurbs = Object.fromEntries(cities.map((l) => [l.slug, LOCATION_PAGES[l.slug]?.hero.sub]));
+  const blurbs = Object.fromEntries(cities.map((l) => [l.slug, LOCATION_PAGES[l.slug]?.blurb]));
   const schema = pageJsonLd({
     path,
     title: page.metaTitle,

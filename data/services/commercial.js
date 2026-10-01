@@ -7,7 +7,7 @@ export const COMMERCIAL_CONTENT = {
     metaDescription: 'Commercial roofing in LA & Orange County for offices, retail, churches, warehouses and more. Roofer-led surveys and written scopes. Request an estimate.',
     hero: {
       heading: 'Commercial Roofing Services',
-      intro: 'From office buildings and churches to warehouses and shopping centers, QRS provides commercial roofing across Los Angeles and Orange County. Every project starts with a roofer-led survey and a written scope, and the work is planned around how your building runs.',
+      intro: 'QRS provides commercial roofing across Los Angeles and Orange County, with repairs, replacement and scheduled maintenance for office buildings, retail stores, churches, warehouses, shopping centers and more. Every project starts with a roofer-led survey and a written scope, and the work is planned around how your building runs.',
       highlights: ['Roofer-led roof surveys', 'Work planned around your operations', 'Closeout photos for your records'],
     },
     overview: {
@@ -50,7 +50,7 @@ export const COMMERCIAL_CONTENT = {
       image: '/images/office-building-hero.webp',
       imageAlt: 'Modern office building exterior beneath a clear Southern California sky',
       hero: {
-        intro: 'When the roof leaks over an occupied office, the calls start coming in. We find where the water gets in, repair it with photo documentation and plan larger roof work so your tenants can keep working.',
+        intro: 'QRS provides office building roofing across Los Angeles and Orange County, from leak repairs to full replacement, with the work planned so your tenants can keep working. Every project starts with a roof survey that traces leaks to the source, from rooftop HVAC curbs to parapets and drains, with photo-documented findings for owners and property managers.',
         highlights: ['Work planned around your tenants', 'Curbs and flashings at rooftop HVAC', 'Photo-documented findings for owners'],
       },
       overview: {
@@ -98,7 +98,7 @@ export const COMMERCIAL_CONTENT = {
       metaTitle: 'Retail Store Roofing in Los Angeles',
       metaDescription: 'Retail store roofing in LA & Orange County: leak repairs, replacement and mansard or façade roofs, planned around your store hours. Request an estimate.',
       hero: {
-        intro: 'Customers never look up at your roof, but they notice a bucket in the aisle. We repair and replace retail roofs with the work planned around your store hours, entrances and deliveries.',
+        intro: 'QRS provides retail store roofing across Los Angeles and Orange County, repairing and replacing the low-slope roof over your sales floor and the mansard or façade sections out front. We trace sales-floor leaks to the source and plan the work around your store hours, entrances and deliveries, so the store can stay open.',
         highlights: ['Scheduled around store hours', 'Low-slope and mansard sections', 'Sales-floor leaks traced to the source'],
       },
       overview: {
@@ -146,7 +146,7 @@ export const COMMERCIAL_CONTENT = {
       metaTitle: 'Church Roofing in LA & Orange County',
       metaDescription: 'Church roofing in Los Angeles & Orange County: tile, shingle and low-slope roofs repaired or replaced around your services and events. Request a roof survey.',
       hero: {
-        intro: 'Church roofing usually covers more than one kind of roof, with a full calendar underneath. We repair and replace tile, shingle and low-slope sections, with the work planned around services, weddings and events.',
+        intro: 'QRS provides church roofing across Los Angeles and Orange County, repairing and replacing the tile, shingle and low-slope roofs over sanctuaries, fellowship halls and classrooms. We plan the work around services, weddings and events, and every project starts with a roof survey and findings your board can review.',
         highlights: ['Tile, shingle and low-slope sections', 'Scheduled around services and events', 'Findings your board can review'],
       },
       overview: {
@@ -194,7 +194,7 @@ export const COMMERCIAL_CONTENT = {
       metaTitle: 'Industrial Roofing in Los Angeles',
       metaDescription: 'Industrial roofing in LA & Orange County: surveys, repairs and replacement planned around production, rooftop equipment and safe access. Request an estimate.',
       hero: {
-        intro: 'Industrial roofs carry stacks, ducts and vents, plus the foot traffic of everyone who maintains them. We handle industrial roofing from survey to replacement, with the work planned around production and the people and equipment below.',
+        intro: 'QRS provides industrial roofing for manufacturing and industrial facilities across Los Angeles and Orange County, from surveys and repairs to full replacement, phased around production and the people and equipment below. We flash every stack and vent properly and plan safe roof access with your facility team before crews go up.',
         highlights: ['Every stack and vent flashed properly', 'Work phased around production', 'Access and safety planned first'],
       },
       overview: {
@@ -242,7 +242,7 @@ export const COMMERCIAL_CONTENT = {
       metaTitle: 'Shop & Small Business Roofing in LA',
       metaDescription: 'Shop and small business roofing in LA & Orange County: auto shops, workshops, studios and storefronts, with a written price first. Request an estimate.',
       hero: {
-        intro: 'Your building is where the work gets done, whether that’s fixing cars, building cabinets or recording music. We keep small business roofing simple, with repairs or replacement priced in writing up front and planned around your work days.',
+        intro: 'QRS provides small business roofing across Los Angeles and Orange County, repairing and replacing roofs on auto and repair shops, workshops, studios and storefront businesses. We keep it simple: a roofer shows you photos of what’s wrong, you get a written price before any work starts and the job is planned around your work days.',
         highlights: ['Small roofs, same attention to detail', 'Straight answers for the owner', 'Written price before any work'],
       },
       overview: {
@@ -290,7 +290,7 @@ export const COMMERCIAL_CONTENT = {
       metaTitle: 'Warehouse Roofing in Los Angeles & OC',
       metaDescription: 'Warehouse roofing in Los Angeles & Orange County: large low-slope roofs repaired or replaced in phases around inventory and loading docks. Request a survey.',
       hero: {
-        intro: 'On a warehouse, one small roof problem sits over a lot of inventory. We approach warehouse roofing section by section: survey first, urgent repairs next, and any replacement planned around your docks and racking.',
+        intro: 'QRS provides warehouse roofing across Los Angeles and Orange County, surveying, repairing and replacing large low-slope roofs section by section, with the inventory below in mind. We start with a survey, fix the urgent areas first and phase any replacement around your docks and racking so you can keep shipping.',
         highlights: ['Large roofs surveyed section by section', 'Drainage across long, flat spans', 'Work phased around docks and racking'],
       },
       overview: {
@@ -338,7 +338,7 @@ export const COMMERCIAL_CONTENT = {
       metaTitle: 'Mall & Shopping Center Roofing in LA',
       metaDescription: 'Mall and shopping center roofing in LA & Orange County: leak tracing, repairs and phased replacement across tenant spaces and common areas. Request an estimate.',
       hero: {
-        intro: 'Shopping center roofing means many roofs over many businesses. We survey, repair and replace them in phases, coordinated with center management so tenants and shoppers can carry on.',
+        intro: 'QRS provides shopping center roofing across Los Angeles and Orange County, surveying, repairing and replacing the many roofs over a center’s tenant spaces and common areas in phases. We coordinate the work with center management and plan it around store hours, deliveries, entrances and parking, so tenants and shoppers can carry on.',
         highlights: ['Phased across tenant spaces', 'Common areas and entrances planned', 'Photo records by roof section'],
       },
       overview: {

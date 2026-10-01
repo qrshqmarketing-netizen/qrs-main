@@ -6,7 +6,7 @@ export const CONTRACTORS_PAGE = {
   metaDescription: 'Need a roofing subcontractor in LA or Orange County? QRS partners with general contractors, builders and property managers, including white-label roofing.',
   hero: {
     heading: 'Partner With QRS as Your Roofing Subcontractor',
-    intro: 'General contractors, builders and remodelers across Los Angeles and Orange County bring us in as their roofing subcontractor. You get roofer-led assessments, written scopes you can build on and photo documentation for your records and your clients.',
+    intro: 'QRS works as a roofing subcontractor for general contractors, builders and remodelers across Los Angeles and Orange County. You get roofer-led assessments, written scopes you can build on and photo documentation for your records and your clients.',
     highlights: ['Roofer-led assessments and scopes', 'Photo documentation you can share', 'White-label service under your brand'],
   },
   overview: {

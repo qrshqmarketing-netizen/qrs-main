@@ -8,7 +8,7 @@ export const FLAT_CONTENT = {
     metaDescription: 'Flat roofing in Los Angeles & Orange County: modified bitumen and low-slope roofs installed, repaired and maintained around drainage. Book a free roof evaluation.',
     hero: {
       heading: 'Flat Roofing Services · *FlatGuard*',
-      intro: 'A flat roof can’t count on a steep pitch to shed water, so every drain, seam and flashing has to do its job. QRS handles flat roofing across Los Angeles and Orange County, from new installs and replacements to repairs and ongoing care. Our low-slope replacement and installation package is the *FlatGuard* Roof System.',
+      intro: 'Flat roofing from QRS covers new installs, replacements, repairs, inspections, tune-ups and ongoing care for modified bitumen and other low-slope roofs across Los Angeles and Orange County. Every drain, seam and flashing is detailed so water leaves the roof, and our *FlatGuard* Roof System covers low-slope replacements and new installs. Start with a free roof evaluation.',
       highlights: ['Modified bitumen and low-slope systems', 'Drains, scuppers and parapets detailed', 'Written scope and price before work starts'],
     },
     overview: {
@@ -51,7 +51,7 @@ export const FLAT_CONTENT = {
       image: '/images/flat-roof-replacement-completed-white-membrane.webp',
       imageAlt: 'Aerial view of a completed white flat roof membrane with tile coping',
       hero: {
-        intro: 'When patches stop holding and the membrane is worn out, it’s time to start over from the deck. With a flat roof replacement, we tear off the old layers, check the deck and install our *FlatGuard* low-slope system, planned around the way water leaves your roof.',
+        intro: 'A flat roof replacement removes the old roofing down to the deck, addresses any damaged decking and installs a new modified bitumen or other low-slope system planned around how your roof drains. QRS replaces worn-out flat roofs across Los Angeles and Orange County with our *FlatGuard* low-slope system, starting with a free roof evaluation.',
         highlights: ['Full tear-off down to the deck', 'Drainage planned into the new roof', '10-Year workmanship warranty'],
       },
       overview: {
@@ -101,7 +101,7 @@ export const FLAT_CONTENT = {
       metaTitle: 'Flat Roof Repair in Los Angeles',
       metaDescription: 'Flat roof repair in Los Angeles & Orange County: we trace leaks to the source and fix seams, blisters and flashings, with photos. Book a free roof evaluation.',
       hero: {
-        intro: 'On a flat roof, the stain on your ceiling can be a long way from the actual leak. We start every flat roof repair by tracing the water back to where it gets in, then show you photos of the problem and the fix.',
+        intro: 'QRS handles flat roof repair across Los Angeles and Orange County, tracing each leak back to where water gets in and fixing the open seam, blister, split or failed flashing behind it. A ceiling stain can sit far from the actual leak, so we check the whole area and show you photos of the problem and the fix.',
         highlights: ['Leaks traced to where water enters', 'Seams, blisters and flashings repaired', 'Photos of the damage and the fix'],
       },
       overview: {
@@ -149,7 +149,7 @@ export const FLAT_CONTENT = {
       metaTitle: 'Flat Roof Installation in Los Angeles',
       metaDescription: 'New flat roof installation for ADUs, additions, garages and patio covers in Los Angeles & Orange County, planned around slope and drains. Request an estimate.',
       hero: {
-        intro: 'Building an ADU, an addition or a new garage? For each new flat roof installation, we plan the slope, drains and tie-ins before the first layer of modified bitumen or another low-slope system goes down. It’s part of the *FlatGuard* Roof System.',
+        intro: 'A new flat roof installation puts a modified bitumen or other low-slope roof on an ADU, addition, garage or patio cover, with the slope, drains and tie-ins planned before the first layer goes down. QRS builds new flat roofs across Los Angeles and Orange County as part of the *FlatGuard* Roof System. Request an estimate to get started.',
         highlights: ['ADUs, additions, garages and patio covers', 'Slope and drain locations planned early', 'Clean tie-ins to your existing roof'],
       },
       overview: {
@@ -197,7 +197,7 @@ export const FLAT_CONTENT = {
       metaTitle: 'Flat Roof Inspection in Los Angeles',
       metaDescription: 'Roofer-led flat roof inspection in Los Angeles & Orange County: seams, drains, parapets and ponding, all photo-documented. Book your free roof evaluation today.',
       hero: {
-        intro: 'You usually can’t judge a flat roof from the ground. A flat roof inspection puts a roofer on top of yours to photo-document the membrane, seams, drains and flashings and explain the findings in plain English.',
+        intro: 'A flat roof inspection from QRS is a free, roofer-led roof evaluation that photo-documents the membrane, seams, drains and flashings on low-slope roofs across Los Angeles and Orange County. You get the photos, a plain-English explanation of what they show and one clear recommendation: repair, monitor, maintain or replace.',
         highlights: ['Roofer-led, not a sales pitch', 'Every problem area photographed', 'No deposit: pay after the visit'],
       },
       overview: {
@@ -245,7 +245,7 @@ export const FLAT_CONTENT = {
       metaTitle: 'Flat Roof Tune-Up in Los Angeles',
       metaDescription: 'Flat roof tune-up in Los Angeles & Orange County: flashings and laps resealed, small damage patched and drains cleared before the rain. Request an estimate.',
       hero: {
-        intro: 'Most flat roof leaks start small: a lifted lap, a cracked seal at a vent, a scupper packed with leaves. A tune-up is one focused visit that takes care of those details before the rainy season finds them.',
+        intro: 'A flat roof tune-up is one focused visit for a roof that’s still in decent shape, fixing the small issues that lead to leaks before the rainy season finds them. We reseal flashings, patch small blisters and splits, secure loose edge metal and clear drains and scuppers on flat roofs across Los Angeles and Orange County.',
         highlights: ['Flashings and penetrations resealed', 'Small blisters and splits patched', 'Drains and scuppers cleared'],
       },
       overview: {
@@ -293,7 +293,7 @@ export const FLAT_CONTENT = {
       metaTitle: 'Flat Roof Care & Maintenance in LA',
       metaDescription: 'Flat roof care in Los Angeles & Orange County: seasonal maintenance visits, clear drains and photos that track wear over time. Start with a free roof evaluation.',
       hero: {
-        intro: 'A flat roof does better with someone keeping an eye on it. Flat roof care from QRS keeps drains clear, checks seams and flashings each season and builds a photo history, so small changes are caught while they’re still small.',
+        intro: 'Flat roof care from QRS is scheduled, ongoing maintenance for low-slope roofs across Los Angeles and Orange County, with seasonal visits that keep drains clear and check seams and flashings. Each visit adds to a photo history of your roof, so small changes are caught while they’re still small. It starts with a free roof evaluation.',
         highlights: ['Seasonal checks around the rainy season', 'Drains and scuppers kept clear', 'A photo history of your roof'],
       },
       overview: {

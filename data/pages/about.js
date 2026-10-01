@@ -1,23 +1,33 @@
 // About page (/about-us/), linked from the footer ("About QRS") and the header ("Why QRS").
+// The mission, vision and core values come from COMPANY in data/site.js.
+
+import { BUSINESS, COMPANY } from '@/data/site';
 
 export const ABOUT_PAGE = {
   keyword: 'quality roofing specialists',
   metaTitle: 'About Us',
   metaDescription:
-    'About Quality Roofing Specialists: a detail-first roofing team, a licensed California contractor since 2020, serving homes across Los Angeles & Orange County.',
+    'Quality Roofing Specialists crafts top-quality roofs with passion and precision. A licensed California contractor since 2020 serving Los Angeles & Orange County.',
   hero: {
     eyebrow: 'About Our Company',
     heading: 'Meet Quality Roofing Specialists',
+    intro: `Quality Roofing Specialists (QRS) is a family-owned roofing contractor serving homes and businesses across Los Angeles and Orange County, licensed in California since 2020 (CSLB #${BUSINESS.license}). Co-founded by Tony and Adva Goldberg, QRS repairs and replaces tile, shingle and flat roofs, and every project starts with a roofer-led look at the roof.`,
   },
   intro: {
     heading: 'Your Detail-First Roofing Team',
     paragraphs: [
-      'Quality Roofing Specialists is a small, locally owned roofing company serving homeowners and property owners across Los Angeles and Orange County. Our local crews handle projects of every size, from a single roof repair to large residential, commercial and multi-family projects. We’re licensed, bonded and insured as a California contractor since 2020. Our approach is simple: a roofer should look at your roof before anyone tries to sell you one.',
+      `${COMPANY.belief} We’re a small, locally owned roofing company serving homeowners and property owners across Los Angeles and Orange County. Our local crews handle projects of every size, from a single roof repair to large residential, commercial and multi-family projects. We’re licensed, bonded and insured as a California contractor since 2020. Our approach is simple: a roofer should look at your roof before anyone tries to sell you one.`,
       'That’s why our work starts with a roofer-led [free roof evaluation](#roof-check), photo documentation and a plain-English explanation. Before any work begins you get a written scope and price. When the job is done, we walk the finished roof with you and back our installs with a 10-year workmanship warranty.',
     ],
   },
+  mission: {
+    eyebrow: 'Our Mission',
+    heading: 'Lasting Protection, Built With Precision',
+    paragraphs: [COMPANY.mission, COMPANY.vision, 'We’re building a team of dedicated professionals who share our core values.'],
+    points: COMPANY.values,
+  },
   values: {
-    heading: 'What We Stand For',
+    heading: 'What You Can Expect',
     items: [
       { title: 'Roofer first', text: 'A roofer, not a salesperson, looks at your roof and tells you what it actually needs.' },
       { title: 'Photos, not guesswork', text: 'We photo-document what we find and what we fix, so you can see it for yourself.' },

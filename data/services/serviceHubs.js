@@ -6,7 +6,7 @@ export const ROOF_REPAIR_HUB = {
   metaDescription: 'Roof repair in Los Angeles & Orange County for shingle, tile and flat roofs: leaks traced to the source, storm damage photographed. Book a free roof evaluation.',
   hero: {
     heading: 'Roof Repair Services · *LeakRescue*',
-    intro: 'A leak is a symptom, and patching the spot above the stain rarely cures it. Our *LeakRescue* repair service traces the water to its real source on shingle, tile and flat roofs, then fixes it with photos of the problem and the finished repair.',
+    intro: 'Roof repair from QRS finds where water is really getting into your shingle, tile or flat roof and fixes it at the source, across Los Angeles and Orange County. Our *LeakRescue* repair service shows you photos of the problem and the finished repair, with a written scope and price before any work. Start with a free roof evaluation.',
     highlights: ['Leaks traced to the real entry point', 'Storm damage assessed and photographed', 'Honest advice on repair vs. replace'],
   },
   overview: {
@@ -43,7 +43,7 @@ export const ROOF_REPLACEMENT_HUB = {
   metaDescription: 'Roof replacement in Los Angeles & Orange County: full tear-off, a new shingle, tile or flat roof and a written scope first. Book a free roof evaluation.',
   hero: {
     heading: 'Roof Replacement Services',
-    intro: 'A roof replacement is a big decision, so it should rest on your roof’s real condition, not a sales pitch. We start with a roofer-led [free roof evaluation](#roof-check), then tear the old roof off and build a complete new system suited to your home and to Southern California sun, wind and winter storms.',
+    intro: 'A roof replacement from QRS removes your old roof down to the deck and builds a complete new shingle, tile or flat roof system for homes across Los Angeles and Orange County. It starts with a roofer-led free roof evaluation, so the decision rests on your roof’s real condition, not a sales pitch.',
     highlights: ['Tear-off and a complete new roof system', 'Shingle, tile and flat roofing', 'Backed by a 10-year workmanship warranty'],
   },
   overview: {
@@ -80,7 +80,7 @@ export const ROOF_INSPECTION_HUB = {
   metaDescription: 'Roof inspection in Los Angeles & Orange County: a free, photo-documented roof evaluation with a clear next step, not a sales pitch. Book yours today.',
   hero: {
     heading: 'Roof Inspection Services · *RoofScan 360*',
-    intro: 'A roof inspection should tell you what’s really happening on your roof, not steer you toward a sale. Our *RoofScan 360* evaluation uses drone footage of your shingle, tile or flat roof to show what matters, explain it in plain English and give you one clear next step.',
+    intro: 'A roof inspection from QRS is a free, roofer-led roof evaluation for homes across Los Angeles and Orange County, checking the roofing, flashings, edges and gutters on shingle, tile and flat roofs. Our *RoofScan 360* evaluation uses drone footage to show what matters, explains every finding in plain English and ends with one clear next step.',
     highlights: ['A roofer on the roof, not a salesperson', 'Every finding photographed and explained', 'Free, with no obligation'],
   },
   overview: {
@@ -117,7 +117,7 @@ export const ROOF_TUNE_UP_HUB = {
   metaDescription: 'Roof tune-ups in Los Angeles & Orange County for shingle, tile, flat and commercial roofs: small fixes, drain clearing and photo-documented work.',
   hero: {
     heading: 'Roof Tune-Ups for Every Roof Type',
-    intro: 'A roof tune-up is a focused visit for the small issues that can be fixed before they turn into leaks. We check the roof, photograph what we find and handle practical upkeep on shingle, tile, flat and commercial roofs.',
+    intro: 'Roof tune-ups from QRS are focused visits that fix small issues on shingle, tile, flat and commercial roofs across Los Angeles and Orange County before they turn into leaks. We check the roof, photograph what we find and handle practical upkeep, from loose shingle tabs and slipped tiles to clogged roof drains.',
     highlights: ['Small fixes and loose details addressed', 'Debris and roof drains cleared where needed', 'Photos and a clear next step'],
   },
   overview: {
