@@ -3,7 +3,7 @@ import Rich from '@/components/ui/Rich';
 import ScrollParallaxImage from './ScrollParallaxImage';
 import './CardGrid.css';
 
-// Grid of page cards for hub pages. The whole card is clickable through its title link.
+// Grid of page cards for hub pages. The title link stretches across the full card.
 // cards: [{ title, text, href, scene, image? }]
 export default function CardGrid({ id, heading, intro, cards = [], tone }) {
   return (
@@ -27,9 +27,6 @@ export default function CardGrid({ id, heading, intro, cards = [], tone }) {
                   {card.text && <p>{card.text}</p>}
                 </div>
               </div>
-              <span className="btn btn-line cg-more" aria-hidden="true">
-                More Info <span className="arrow">→</span>
-              </span>
             </article>
           ))}
         </div>

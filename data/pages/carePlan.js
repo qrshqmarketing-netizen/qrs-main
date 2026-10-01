@@ -9,6 +9,8 @@ export const CARE_PLAN = {
   metaTitle: 'Roof Maintenance Plans & Pricing | The Roof Care Plan',
   metaDescription:
     'Roof maintenance plans and one-time tune-ups for Los Angeles & Orange County homes: three priced tiers, seasonal visits and a photo report every time.',
+  image: '/images/shingle-roof-inspection-overhead.webp',
+  imageAlt: 'Aerial overhead view of a finished shingle roof inspected for ongoing care',
   hero: {
     heading: 'Roof Maintenance Plans · *RoofCare Plan*',
     intro:
@@ -125,6 +127,8 @@ export const CARE_PLAN = {
   },
   schedule: {
     heading: 'Two Visits, Timed to the Season',
+    image: '/images/contractors-process-roofer-tablet.webp',
+    imageAlt: 'Roofer reviewing seasonal roof maintenance work on a tablet',
     steps: [
       {
         title: 'September & October — before the rains',

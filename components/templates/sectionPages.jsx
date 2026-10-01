@@ -111,6 +111,8 @@ export function ServiceHub({ page, actions }) {
       hub={page.hub}
       crumbs={[HOME, { label: page.label, href: page.href }]}
       eyebrow="Roof Services"
+      image={page.image}
+      imageAlt={page.imageAlt}
       scene={page.scenes[0]}
       cards={page.cards.map(cardFor).filter(Boolean)}
       process

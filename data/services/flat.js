@@ -103,6 +103,8 @@ export const FLAT_CONTENT = {
       card: 'Leaks, blisters, open seams and failed flashings traced to the source, repaired carefully and documented with photos.',
       metaTitle: 'Flat Roof Repair in Los Angeles',
       metaDescription: 'Flat roof repair in Los Angeles & Orange County: we trace leaks to the source and fix seams, blisters and flashings, with photos. Book a free roof evaluation.',
+      image: '/images/flat-roof-replacement-tear-off-drone-view.webp',
+      imageAlt: 'Aerial view of a flat roof with roofing work in progress',
       hero: {
         intro: 'QRS handles flat roof repair across Los Angeles and Orange County, tracing each leak back to where water gets in and fixing the open seam, blister, split or failed flashing behind it. A ceiling stain can sit far from the actual leak, so we check the whole area and show you photos of the problem and the fix.',
         highlights: ['Leaks traced to where water enters', 'Seams, blisters and flashings repaired', 'Photos of the damage and the fix'],
@@ -151,6 +153,8 @@ export const FLAT_CONTENT = {
       card: 'New low-slope roofs for ADUs, additions, garages and patio covers, with slope, drains and tie-ins planned from the start.',
       metaTitle: 'Flat Roof Installation in Los Angeles',
       metaDescription: 'New flat roof installation for ADUs, additions, garages and patio covers in Los Angeles & Orange County, planned around slope and drains. Request an estimate.',
+      image: '/images/flat-roof-torch-down-drone-view-services.webp',
+      imageAlt: 'Aerial view of a completed flat roof system',
       hero: {
         intro: 'A new flat roof installation puts a modified bitumen or other low-slope roof on an ADU, addition, garage or patio cover, with the slope, drains and tie-ins planned before the first layer goes down. QRS builds new flat roofs across Los Angeles and Orange County as part of the *FlatGuard* Roof System. Request an estimate to get started.',
         highlights: ['ADUs, additions, garages and patio covers', 'Slope and drain locations planned early', 'Clean tie-ins to your existing roof'],

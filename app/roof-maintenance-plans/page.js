@@ -20,18 +20,18 @@ const LINK = PROGRAMS.plans;
 export const metadata = pageMetadata({ title: page.metaTitle, description: page.metaDescription, path: LINK.href });
 
 const CRUMBS = [HOME, { label: LINK.label, href: LINK.href }];
-const schema = pageJsonLd({ path: LINK.href, title: page.metaTitle, description: page.metaDescription, crumbs: CRUMBS, faqs: page.faqs });
+const schema = pageJsonLd({ path: LINK.href, title: page.metaTitle, description: page.metaDescription, crumbs: CRUMBS, faqs: page.faqs, image: page.image });
 
 export default function RoofMaintenancePlansPage() {
   return (
     <main id="top">
       <JsonLd data={schema} />
-      <Hero crumbs={CRUMBS} eyebrow="Maintenance Plans" title={page.hero.heading} intro={page.hero.intro} stats />
+      <Hero crumbs={CRUMBS} eyebrow="Maintenance Plans" title={page.hero.heading} intro={page.hero.intro} image={page.image} imageAlt={page.imageAlt} stats />
       <ValueGrid heading={page.whatGoesWrong.heading} items={page.whatGoesWrong.items} tone="wash" pattern />
       <CarePlanPricing />
       <PlanScope />
       <ValueGrid id="roof-types" heading={page.byRoof.heading} intro={page.byRoof.intro} items={page.byRoof.items} columns={3} tone="wash" />
-      <ProcessSteps heading={page.schedule.heading} steps={page.schedule.steps} scene="scene-inspect" tone="white" />
+      <ProcessSteps heading={page.schedule.heading} steps={page.schedule.steps} scene="scene-inspect" image={page.schedule.image} imageAlt={page.schedule.imageAlt} tone="white" />
       <FeatureBand {...page.tuneUp} tone="light" />
       <FeatureBand eyebrow={page.memberBenefits.eyebrow} heading={page.memberBenefits.heading} paragraphs={page.memberBenefits.paragraphs} points={page.memberBenefits.points} cta={{ label: 'Get Started', href: '#roof-check' }} />
       <Faq heading="Roof Care Plan FAQs" sub="Straight answers about how the plan works." faqs={page.faqs} />

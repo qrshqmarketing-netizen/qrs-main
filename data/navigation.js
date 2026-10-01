@@ -5,17 +5,18 @@
 import { citiesIn, cityPath, REGIONS, regionPath } from './locations';
 import { PHONE, PRIVACY_POLICY_URL, TEL } from './site';
 
-// Roof Repair, Replacement, Inspection, Emergency and Maintenance Plans: shown in their own
-// top-level "Services" menu (below), not nested under Residential, since they serve every roof type.
+// Keep the broad service hubs and the highest-intent services easy to reach from one menu.
 export const SERVICES_MENU = {
   title: 'Roofing Services',
   links: [
+    { label: 'Residential Roofing', href: '/residential-roofing/' },
+    { label: 'Commercial Roofing', href: '/commercial-roofing/' },
     { label: 'Roof Repair', href: '/roof-repair/' },
     { label: 'Roof Replacement', href: '/roof-replacement/' },
     { label: 'Roof Inspection', href: '/roof-inspection/' },
     { label: 'Emergency & Storm Damage', href: '/emergency-roof-repair/', urgent: true },
-    { label: 'Roof Tune-Ups', href: '/roof-maintenance-plans/#tune-up' },
     { label: 'Roof Maintenance Plans', href: '/roof-maintenance-plans/' },
+    { label: 'Roof Financing', href: '/roof-financing/' },
   ],
 };
 
@@ -58,17 +59,24 @@ export const RESIDENTIAL_MENU = {
       ],
     },
   ],
-  // Links under the roof types
+  // Residential specialties are separate from the roof-material categories.
   hub: {
     title: 'All Residential Roofing',
     note: 'Every roof type and service we offer',
     href: '/residential-roofing/',
   },
-  feature: {
-    title: 'HOA & Multi-Family',
-    note: 'Multi-family & multi-tenant properties',
-    href: '/residential-roofing/hoa-multi-family/',
-  },
+  specialties: [
+    {
+      title: 'Rain Gutters',
+      note: 'Gutters and downspouts planned with your roof',
+      href: '/residential-roofing/rain-gutters/',
+    },
+    {
+      title: 'HOA & Multi-Family',
+      note: 'Roofing for multi-family and multi-tenant properties',
+      href: '/residential-roofing/hoa-multi-family/',
+    },
+  ],
   // Box on the right (wide screens only)
   promo: {
     title: 'Not sure what you need?',
@@ -108,13 +116,21 @@ export const COMMERCIAL_MENU = {
   },
 };
 
-// Service areas, grouped by region (regions and cities come from data/locations.js)
+// Service areas, grouped by county with a curated set of city pages.
 export const LOCATIONS_MENU = {
-  regions: REGIONS.map((r) => ({
-    title: r.name,
-    href: regionPath(r.slug),
-    links: citiesIn(r.slug).map((l) => ({ label: l.city, href: cityPath(l.slug) })),
-  })),
+  regions: REGIONS.map((r) => {
+    const featuredCities = r.slug === 'la-county'
+      ? ['los-angeles', 'santa-monica', 'pasadena', 'long-beach']
+      : ['anaheim', 'irvine', 'huntington-beach', 'newport-beach'];
+
+    return {
+      title: r.name,
+      href: regionPath(r.slug),
+      links: citiesIn(r.slug)
+        .filter((city) => featuredCities.includes(city.slug))
+        .map((city) => ({ label: city.city, href: cityPath(city.slug) })),
+    };
+  }),
   all: {
     title: 'All Service Areas',
     text: 'See every city we serve and check your ZIP code on the map.',
@@ -131,9 +147,7 @@ export const ABOUT_MENU = {
       { label: 'Why QRS', href: '/about-us/' },
       { label: 'Give a Review', href: '/reviews/' },
       { label: 'Our Guarantee', href: '/about-us/#guarantee' },
-      { label: 'Projects', href: '/projects/' },
       { label: 'Roofing Blog', href: '/blog/' },
-      { label: 'Contact Us', href: '/contact-us/' },
     ],
   },
   careers: {
@@ -146,7 +160,7 @@ export const ABOUT_MENU = {
 
 export const HEADER_CTA = { label: 'Get Pro Advice', href: '#roof-check' };
 
-// Footer: four short columns. Pages that dropped out of the header (Projects, Contractors) live here.
+// Footer: four short columns.
 export const FOOTER = {
   columns: [
     {

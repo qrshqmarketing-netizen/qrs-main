@@ -5,7 +5,7 @@ import BrandLogo from '@/components/ui/BrandLogo';
 import SiteLink from '@/components/ui/SiteLink';
 import Rich from '@/components/ui/Rich';
 import { ArrowRight, Caret, PhoneIcon } from '@/components/ui/icons';
-import { CONTRACTORS_LINK } from '@/data/catalog';
+import { CONTACT_LINK, CONTRACTORS_LINK, PROJECTS_LINK } from '@/data/catalog';
 import { ABOUT_MENU, COMMERCIAL_MENU, HEADER_CTA, LOCATIONS_MENU, RESIDENTIAL_MENU, SERVICES_MENU } from '@/data/navigation';
 import { PHONE, TEL } from '@/data/site';
 import './Header.css';
@@ -98,7 +98,7 @@ export default function Header() {
     onFocus: () => isDesktop() && setActiveGroup(i),
   });
 
-  const { groups, hub, feature, promo } = RESIDENTIAL_MENU;
+  const { groups, hub, specialties, promo } = RESIDENTIAL_MENU;
   const { services, buildings, partner } = COMMERCIAL_MENU;
 
   return (
@@ -167,7 +167,7 @@ export default function Header() {
                       </div>
                     </div>
                   ))}
-                  {[feature, hub].map((item) => (
+                  {[hub, ...specialties].map((item) => (
                     <MenuLink className="mega-link" href={item.href} key={item.href}>
                       <span>
                         <b><Rich text={item.title} /></b>
@@ -229,7 +229,39 @@ export default function Header() {
             </div>
           </div>
 
-          {/* About: company links + careers, then every service area (the former Service Areas menu) */}
+          <div {...dropdown('areas')}>
+            <button {...trigger('areas', 'megaAreas')}>
+              Service Areas
+              <Caret />
+            </button>
+            <div className="mega mega-areas" id="megaAreas" onClick={closeOnLink}>
+              <div className="mega-inner">
+                {LOCATIONS_MENU.regions.map((region) => (
+                  <div className="mega-card mega-card-list" key={region.title}>
+                    <MenuLink className="mega-card-head" href={region.href}>
+                      <b>{region.title}</b> <ArrowRight />
+                    </MenuLink>
+                    <ul>
+                      {region.links.map((link) => (
+                        <li key={link.href}>
+                          <MenuLink href={link.href}>{link.label}</MenuLink>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+                <MenuLink className="mega-card" href={LOCATIONS_MENU.all.href}>
+                  <b>{LOCATIONS_MENU.all.title}</b>
+                  <span>{LOCATIONS_MENU.all.text}</span>
+                  <em>
+                    {LOCATIONS_MENU.all.cta} <ArrowRight />
+                  </em>
+                </MenuLink>
+              </div>
+            </div>
+          </div>
+
+          {/* About: company information, reviews, careers and the blog */}
           <div {...dropdown('about')}>
             <button {...trigger('about', 'megaAbout')}>
               About
@@ -237,62 +269,42 @@ export default function Header() {
             </button>
             <div className="mega mega-about" id="megaAbout" onClick={closeOnLink}>
               <div className="mega-inner">
-                <div className="mega-col">
-                  <div className="mega-card mega-card-list">
-                    <MenuLink className="mega-card-head" href={ABOUT_MENU.about.href}>
-                      <b>{ABOUT_MENU.about.title}</b> <ArrowRight />
-                    </MenuLink>
-                    <ul>
-                      {ABOUT_MENU.about.links.map((link) => (
-                        <li key={link.label}>
-                          <MenuLink href={link.href}>{link.label}</MenuLink>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <MenuLink className="mega-card" href={ABOUT_MENU.careers.href}>
-                    <b>{ABOUT_MENU.careers.title}</b>
-                    <span>{ABOUT_MENU.careers.text}</span>
-                    <em>
-                      {ABOUT_MENU.careers.cta} <ArrowRight />
-                    </em>
+                <div className="mega-card mega-card-list">
+                  <MenuLink className="mega-card-head" href={ABOUT_MENU.about.href}>
+                    <b>{ABOUT_MENU.about.title}</b> <ArrowRight />
                   </MenuLink>
+                  <ul>
+                    {ABOUT_MENU.about.links.map((link) => (
+                      <li key={link.label}>
+                        <MenuLink href={link.href}>{link.label}</MenuLink>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                {LOCATIONS_MENU.regions.map((region, i) => (
-                  <div className="mega-col" key={region.title}>
-                    <div className="mega-card mega-card-list">
-                      <MenuLink className="mega-card-head" href={region.href}>
-                        <b>{region.title}</b> <ArrowRight />
-                      </MenuLink>
-                      <ul>
-                        {region.links.map((link) => (
-                          <li key={link.href}>
-                            <MenuLink href={link.href}>{link.label}</MenuLink>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    {i === LOCATIONS_MENU.regions.length - 1 && (
-                      <MenuLink className="mega-card" href={LOCATIONS_MENU.all.href}>
-                        <b>{LOCATIONS_MENU.all.title}</b>
-                        <span>{LOCATIONS_MENU.all.text}</span>
-                        <em>
-                          {LOCATIONS_MENU.all.cta} <ArrowRight />
-                        </em>
-                      </MenuLink>
-                    )}
-                  </div>
-                ))}
+                <MenuLink className="mega-card" href={ABOUT_MENU.careers.href}>
+                  <b>{ABOUT_MENU.careers.title}</b>
+                  <span>{ABOUT_MENU.careers.text}</span>
+                  <em>
+                    {ABOUT_MENU.careers.cta} <ArrowRight />
+                  </em>
+                </MenuLink>
               </div>
             </div>
           </div>
 
-          <MenuLink href={CONTRACTORS_LINK.href}>For Contractors</MenuLink>
+          <MenuLink href={PROJECTS_LINK.href}>Projects</MenuLink>
+          <MenuLink href={CONTACT_LINK.href}>Contact</MenuLink>
+          <MenuLink className="nav-contractors-menu" href={CONTRACTORS_LINK.href}>For Contractors</MenuLink>
+
         </nav>
 
-        {/* Gold: book a Roof Check. Red: call now (the number shows on wide screens, an icon elsewhere). */}
+        {/* Contractors stays beside the Roof Check CTA at every viewport width. */}
         <div className="nav-actions">
-          <SiteLink className="btn btn-gold nav-cta" href={HEADER_CTA.href}>{HEADER_CTA.label}</SiteLink>
+          <MenuLink className="nav-contractors" href={CONTRACTORS_LINK.href} onClick={() => setMenuOpen(false)}>For Contractors</MenuLink>
+          <SiteLink className="btn btn-gold nav-cta" href={HEADER_CTA.href} onClick={() => setMenuOpen(false)}>
+            <span className="nav-cta-full">{HEADER_CTA.label}</span>
+            <span className="nav-cta-compact">Estimate</span>
+          </SiteLink>
           <a className="btn btn-plum nav-call" href={TEL} aria-label={`Call ${PHONE}`}>
             <PhoneIcon />
             <span>{PHONE}</span>

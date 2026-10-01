@@ -104,6 +104,8 @@ export const SHINGLE_CONTENT = {
       card: 'Lifted tabs, cracked pipe boots, nail pops and flashing leaks, traced to their source and fixed properly, with photos of the problem and the repair.',
       metaTitle: 'Shingle Roof Repair in Los Angeles',
       metaDescription: 'Shingle roof repair in LA & Orange County: leaks traced to the source, and wind damage, pipe boots and flashing fixed with photos. Book a free roof evaluation.',
+      image: '/images/shingle-roof-repair-ridge-finish.webp',
+      imageAlt: 'A roofer working near the ridge of a finished shingle roof',
       hero: {
         intro: 'Shingle roof repair traces a leak or damage to its real source and fixes it properly, whether that’s a cracked pipe boot, a wind-lifted tab, a nail pop or failed flashing. QRS repairs shingle roofs across Los Angeles and Orange County, with photos of the problem and the fix and no push toward a new roof.',
         highlights: ['Leaks traced to where water gets in', 'Wind-damaged shingles replaced and sealed', 'Before-and-after repair photos'],

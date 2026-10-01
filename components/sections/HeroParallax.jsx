@@ -31,10 +31,8 @@ export default function HeroParallax({ image, mobileImage, imageAlt = '', imageP
     };
   }, []);
 
-  if (!image && !mobileImage) return null;
-
   return (
-    <div className="hero-background" ref={backgroundRef} aria-hidden="true">
+    <div className={'hero-background' + (!image && !mobileImage ? ' hero-background-fallback' : '')} ref={backgroundRef} aria-hidden="true">
       {image && (
         <div className={'hero-roof-texture' + (mobileImage ? ' hero-roof-texture-desktop' : '')}>
           <Image src={image} alt={imageAlt} fill preload sizes="100vw" style={imagePosition ? { objectPosition: imagePosition } : undefined} />

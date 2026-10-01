@@ -187,6 +187,8 @@ export const ROOF_INSPECTION = {
   ],
   process: {
     subheading: 'What happens during a roof inspection',
+    image: '/images/contractors-hero-roofer-tablet.webp',
+    imageAlt: 'Roofer on a rooftop reviewing the inspection on a tablet',
     steps: [
       { title: 'Tell us what you’ve noticed', text: 'A stain, a slipped tile, missing shingles, a recent storm or a home sale: knowing why you called helps the roofer focus on the right areas first.' },
       { title: 'A roofer checks the whole roof', text: 'The roofer looks at the roof covering, flashings, penetrations, edges and gutters, with drone footage from our *RoofScan 360* evaluation. On tile, we step only where tiles are supported, so the inspection doesn’t leave new cracks behind.' },

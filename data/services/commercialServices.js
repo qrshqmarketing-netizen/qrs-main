@@ -9,6 +9,8 @@ export const COMMERCIAL_SERVICES = [
     card: 'Leaks traced to where the water gets in, then repaired at drains, parapets, seams and rooftop equipment, with before-and-after photos.',
     metaTitle: 'Commercial Roof Repair in Los Angeles',
     metaDescription: 'Commercial roof repair in LA & Orange County: leaks traced at drains, parapets and rooftop units, fixed and photo-documented. Request an estimate.',
+    image: '/images/recent-work-commercial-flat-roof-drone-view.webp',
+    imageAlt: 'Aerial view of a completed low-slope commercial roof',
     hero: {
       intro: 'Commercial roof repair starts by tracing a leak back to where the water actually gets in, then fixes what failed, whether that’s a drain, a parapet, a seam or the flashing at rooftop equipment. QRS repairs commercial roofs across Los Angeles and Orange County while your building stays open, with before-and-after photos of every repair.',
       highlights: ['Leaks traced to where water enters', 'Drains, parapets and penetrations', 'Photo records for owners and tenants'],
@@ -57,6 +59,8 @@ export const COMMERCIAL_SERVICES = [
     card: 'When repairs stop adding up: a roofer-led survey, the right low-slope system for your building and phased work that keeps you open.',
     metaTitle: 'Commercial Roof Replacement in LA',
     metaDescription: 'Commercial roof replacement in LA & Orange County: a roofer-led survey, the right low-slope system and phased work that keeps you open. Request an estimate.',
+    image: '/images/flat-roof-replacement-completed-white-membrane.webp',
+    imageAlt: 'Aerial view of a completed white flat roof membrane with tile coping',
     hero: {
       intro: 'A commercial roof replacement tears off the worn roof in phases, section by section, and installs a new low-slope system chosen for your building, so your doors stay open. QRS replaces commercial roofs across Los Angeles and Orange County, starting with a roofer-led survey that shows whether replacement is due now or can wait.',
       highlights: ['Survey before any recommendation', 'System chosen for drainage and use', 'Phased so your building stays open'],
@@ -106,6 +110,8 @@ export const COMMERCIAL_SERVICES = [
     card: 'Scheduled inspections and upkeep for commercial roofs, with photo reports for owners, managers and boards, and drain and flashing issues caught early.',
     metaTitle: 'Commercial Roof Maintenance in LA',
     metaDescription: 'Commercial roof maintenance in LA & Orange County: scheduled inspections, photo reports and drains and flashings kept in check. Ask about a maintenance plan.',
+    image: '/images/flat-roof-torch-down-drone-view-services.webp',
+    imageAlt: 'Aerial view of a flat roof surface used for commercial roof maintenance',
     hero: {
       intro: 'Commercial roof maintenance means scheduled roofer visits that clear debris from drains and gutters, reseal flashings where needed and catch early wear before it becomes interior damage. QRS maintains commercial roofs across Los Angeles and Orange County, starting with a baseline roof survey, and every visit ends with a photo report for owners, managers or boards.',
       highlights: ['Scheduled visits with photo reports', 'Drains and flashings checked early', 'Reports owners and boards can follow'],

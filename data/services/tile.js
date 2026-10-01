@@ -101,6 +101,8 @@ export const TILE_CONTENT = {
       card: 'Cracked or slipped tiles, loose ridges, failed flashings and clogged valleys, traced to their source and fixed with photos of the work.',
       metaTitle: 'Tile Roof Repair in Los Angeles & OC',
       metaDescription: 'Tile roof repair in Los Angeles & Orange County: leaks traced to the source, cracked tiles matched and flashings fixed, with photos. Book a free roof evaluation.',
+      image: '/images/tile-lift-off-and-reset-drone-view-2.webp',
+      imageAlt: 'Tile roof repair and relay in progress, with tiles staged on the roof',
       hero: {
         intro: 'Tile roof repair finds where water really gets in, often well away from the stain on your ceiling, and fixes the tiles, flashings or underlayment responsible. QRS repairs tile roofs across Los Angeles and Orange County with the closest available tile match and photos of the problem and the fix.',
         highlights: ['Leaks traced to where water gets in', 'Closest available tile match', 'Photos of the problem and the fix'],

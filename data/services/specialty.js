@@ -10,6 +10,8 @@ export const RAIN_GUTTERS = {
   metaTitle: 'Rain Gutter Installation in LA & OC',
   metaDescription:
     'Rain gutter installation and repair in Los Angeles & Orange County: sized for your roof, sloped to drain and tied into the drip edge. Request an estimate.',
+  image: '/images/home-hero-shingle-neighborhood-drone-view.webp',
+  imageAlt: 'Aerial view of homes with shingle roofs in a Southern California neighborhood',
   hero: {
     intro:
       'Rain gutter installation from QRS means new gutters and downspouts sized for your roof, sloped to drain and tied in with the drip edge, across Los Angeles and Orange County. We also repair leaking corners and sagging runs, so your gutters carry water away from your walls, fascia and foundation when a Southern California storm arrives.',
@@ -105,6 +107,8 @@ export const HOA_MULTI_FAMILY = {
   metaTitle: 'HOA & Multi-Family Roofing in LA & OC',
   metaDescription:
     'HOA and multi-family roofing in Los Angeles & Orange County: photo-documented reports, phased work and one point of contact. Request an estimate.',
+  image: '/images/shingle-roof-care-multi-family.webp',
+  imageAlt: 'Aerial view of a multi-family property with a shingle roof',
   hero: {
     intro:
       'QRS provides HOA & multi-family roofing for boards and property managers across Los Angeles and Orange County, from roof inspections and repairs to replacements phased building by building. Our *ReserveReady* program gives your board photo reports, phased proposals and long-range budget planning, with one point of contact throughout. It starts with a roofer-led roof survey of each building.',

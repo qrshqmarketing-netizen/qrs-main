@@ -2,25 +2,30 @@
 /* A floating frosted-glass pill, fixed over every page and inset to the same margins as the page content
    (.container). Hero.css / BlogPost.css / LegalPage.css carry the top padding that clears it. */
 .site-header{position:fixed;top:0;left:0;right:0;z-index:100;padding-top:12px;color:#fff;pointer-events:none}
+.site-header > .container.nav{width:min(1540px,calc(100% - 40px))}
 .nav{
   position:relative;pointer-events:auto;
-  height:60px;display:flex;align-items:center;justify-content:space-between;gap:20px;
-  padding:0 8px 0 18px;border-radius:999px;
+  height:60px;display:flex;align-items:center;justify-content:space-between;gap:6px;
+  padding:0 4px 0 8px;border-radius:999px;
   background:rgba(6,45,87,.62);border:1px solid rgba(255,255,255,.14);
   -webkit-backdrop-filter:blur(18px) saturate(160%);backdrop-filter:blur(18px) saturate(160%);
   box-shadow:0 10px 30px rgba(0,0,0,.18);
 }
-.nav .brand-logo{height:36px}
-.menu-btn{display:block;flex:0 0 auto;border:0;background:transparent;color:#fff;width:44px;height:44px}
-.menu-btn span{display:block;width:22px;height:2px;background:var(--paper);margin:5px auto;border-radius:var(--radius)}
-.nav-actions{display:flex;align-items:center;gap:8px;flex-shrink:0;margin-left:auto}
-.nav-cta{display:none;min-height:44px;font-size:15px;border-color:#fff;border-radius:999px;text-transform:uppercase;letter-spacing:.03em;font-family:var(--font-head);font-weight:600}
+.nav .brand-logo{height:26px}
+.menu-btn{display:block;flex:0 0 auto;border:0;background:transparent;color:#fff;width:36px;height:36px;padding:0}
+.menu-btn span{display:block;width:20px;height:2px;background:var(--paper);margin:5px auto;border-radius:var(--radius)}
+.nav-actions{display:flex;align-items:center;gap:4px;flex-shrink:0;margin-left:auto}
+.nav-contractors{display:none;align-items:center;min-height:36px;padding:0 2px;color:#fff;font:700 13px/1 var(--font-head);letter-spacing:.02em;text-transform:uppercase;white-space:nowrap}
+.nav-contractors:hover{color:var(--gold)}
+.nav-cta{display:none;align-items:center;justify-content:center;min-height:36px;padding:7px 9px;font-size:13px;border-color:#fff;border-radius:999px;text-transform:uppercase;letter-spacing:.02em;font-family:var(--font-head);font-weight:700;white-space:nowrap}
+.nav-cta-full{display:none}
+.nav-cta-compact{display:inline}
 /* Red call button: always a round handset icon, so the pill stays compact */
-.nav-call{width:44px;min-height:44px;padding:0;border-radius:999px;box-shadow:none;border-color:#fff}
+.nav-call{display:inline-flex;width:32px;min-height:32px;padding:0;border-radius:999px;box-shadow:none;border-color:#fff}
 .nav-call span{display:none}
 
 /* Phone / tablet menu: slides down under the header */
-.navlinks{display:none;font-family:var(--font-head);font-size:16px;font-weight:600;line-height:27px}
+.navlinks{display:none;font-family:var(--font-head);font-size:16px;font-weight:700;line-height:27px}
 .navlinks a{opacity:.9}
 .navlinks a:hover{color:var(--gold)}
 /* Top-level menu items + dropdown triggers only (not nested mega-menu links) */
@@ -47,27 +52,50 @@
 
 @media (min-width:621px){
   .site-header{padding-top:16px}
-  .nav{height:64px;padding:0 10px 0 22px}
+  .nav{height:64px;gap:20px;padding:0 10px 0 22px}
+  .menu-btn{width:44px;height:44px}
   .nav .brand-logo{height:40px}
+  .nav-actions{gap:8px}
+  .nav-contractors,.nav-cta{display:inline-flex}
+  .nav-contractors{min-height:44px;padding:0 4px;font-size:13px}
+  .nav-call{display:inline-flex;width:44px;min-height:44px}
   .navlinks.mobile-open{max-height:calc(100dvh - 110px);padding:8px 24px 20px}
 }
 @media (min-width:901px){
   /* Tablet landscape / small laptop: menu button + visible CTA */
-  .nav-cta{display:inline-flex;white-space:nowrap;padding:9px 18px}
+  .nav-contractors{font-size:15px}
+  .nav-cta{min-height:44px;padding:9px 18px;font-size:15px;letter-spacing:.03em}
+  .nav-cta-full{display:inline}
+  .nav-cta-compact{display:none}
+}
+@media (max-width:360px){
+  .site-header > .container.nav{width:calc(100% - 40px)}
+  .nav{gap:4px;padding:0 4px 0 8px}
+  .nav .brand-logo{height:22px}
+  .menu-btn{width:36px;height:36px}
+  .nav-contractors{font-size:12px}
+  .nav-cta{padding:7px 8px;font-size:12px}
 }
 @media (min-width:1200px){
+  .site-header > .container.nav{width:min(1540px,calc(100% - 24px))}
   .menu-btn{display:none}
+  .nav-actions{gap:4px}
+  .nav-contractors{font-size:15px}
+  .nav-cta{padding:9px 10px;font-size:15px}
+  .nav-call{width:40px;min-height:40px}
   .navlinks,.navlinks.mobile-open{
-    display:flex;position:static;flex-direction:row;align-items:center;gap:22px;margin-left:auto;
+    display:flex;position:static;flex-direction:row;align-items:center;gap:clamp(12px,1.2vw,20px);margin:0 auto;
     max-height:none;overflow:visible;padding:0;background:transparent;border:0;border-radius:var(--radius);box-shadow:none;
     -webkit-backdrop-filter:none;backdrop-filter:none;
   }
   .navlinks.mobile-open > a,.nav-trigger{display:inline-flex;width:auto;min-height:0;padding:0;border:0;justify-content:normal}
   .navlinks > a,.navlinks .nav-trigger{white-space:nowrap;font-size:15px}
-  .nav-actions{margin-left:6px}
+  .nav-actions{margin-left:0}
+  .nav-contractors-menu{display:none}
 }
-@media (min-width:1300px){
-  .navlinks,.navlinks.mobile-open{gap:28px}
+@media (max-width:1199px){
+  .navlinks.mobile-open + .nav-actions .nav-contractors,
+  .navlinks.mobile-open + .nav-actions .nav-cta{display:none}
 }
 
 /* ---------- Navigation dropdowns (Residential / Commercial) ---------- */
@@ -160,10 +188,11 @@
   .mega-list li span{font-size:17px;color:var(--navy)}
   .mega-list li small{color:var(--muted)}
 
-  .mega-services .mega-inner{grid-template-columns:1fr;max-width:420px}
+  .mega-services .mega-inner{grid-template-columns:1fr;max-width:540px}
   .mega-com .mega-inner{grid-template-columns:1.4fr 1fr .9fr}
   .mega-card-single ul{grid-template-columns:1fr}
-  .mega-about .mega-inner{grid-template-columns:1.2fr 1fr 1fr}
+  .mega-about .mega-inner{grid-template-columns:1.2fr 1fr}
+  .mega-areas .mega-inner{grid-template-columns:1fr 1fr .8fr}
   .mega-card{padding:24px;margin:0;background:var(--wash);border-color:var(--line)}
   a.mega-card:hover{border-color:var(--gold);box-shadow:0 10px 24px rgba(0,0,0,.3)}
   /* Redefining --navy above (for text) would otherwise turn this into a white card, so it's set directly */
@@ -206,3 +235,6 @@
 
 /* Red dot on emergency links */
 .menu-urgent{display:inline-block;width:8px;height:8px;margin-right:9px;border-radius:var(--radius);background:var(--plum);box-shadow:0 0 0 3px rgba(107,37,69,.22);vertical-align:middle;position:relative;top:-1px}
+
+/* Keep menu links, descriptions and labels bold throughout the expanded header menus. */
+.site-header .mega *{font-weight:700}

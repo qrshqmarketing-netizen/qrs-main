@@ -45,6 +45,8 @@ export default function ContactPage() {
         eyebrow="Contact"
         title={page.hero.heading}
         intro={page.hero.intro}
+        image={page.hero.image}
+        imageAlt={page.hero.imageAlt}
         actions={[
           { label: `Call ${PHONE}`, href: TEL, style: 'plum' },
           { label: 'Request an Estimate', href: '#roof-check', style: 'line' },
