@@ -97,7 +97,7 @@ export const HOME_DESCRIPTION =
 
 // Short trust points in the bar under the hero
 export const PROOF_POINTS = [
-  { title: '3 Offices', text: 'LA, the Valley & Vernon' },
+  { title: 'Permits Handled', text: 'We pull the building permits' },
   { title: 'Google Reviews', text: 'Homes & businesses' },
   { title: '10-Year', text: 'Workmanship warranty' },
   { title: 'Roofer-Led', text: 'Inspections and estimates' },
