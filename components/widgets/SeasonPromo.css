@@ -7,7 +7,7 @@
   position:relative;isolation:isolate;overflow:hidden;width:100%;max-width:460px;min-height:540px;
   display:flex;flex-direction:column;padding:26px 22px 24px;color:#fff;
   background:#0b1a2b url(/images/season-promo-storm-over-los-angeles.webp) 45% 0%/auto 114% no-repeat; /* taller than the card, top-aligned: the skyline sits below the copy */
-  border:1px solid rgba(255,255,255,.14);border-radius:20px;box-shadow:0 30px 80px rgba(0,0,0,.5);
+  border:1px solid #fff;border-radius:20px;box-shadow:0 30px 80px rgba(0,0,0,.5);
   animation:promoIn .3s ease both;
 }
 .promo:before{
