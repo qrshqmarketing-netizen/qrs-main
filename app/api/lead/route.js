@@ -67,6 +67,12 @@ export async function POST(request) {
   };
 
   const result = await deliverLead(lead);
+  // Setup check: a request carrying the LEADS_SHEET_SECRET in an x-leads-diagnostic header gets each channel's
+  // result and error back, so email and spreadsheet problems can be traced without opening the server logs
+  const secret = (process.env.LEADS_SHEET_SECRET || '').trim();
+  if (secret && request.headers.get('x-leads-diagnostic') === secret) {
+    return Response.json({ ok: result.delivered, channels: { email: result.email, sheet: result.sheet, crm: result.crm }, errors: result.errors });
+  }
   // Local dev with nothing set up: accept the lead (it's in the server log). On the live site, say so when it
   // couldn't be delivered, so the form can ask the visitor to call instead.
   if (result.delivered || (!result.configured && process.env.NODE_ENV !== 'production')) return Response.json({ ok: true });

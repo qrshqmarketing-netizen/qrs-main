@@ -1,5 +1,8 @@
 import { REDIRECTS } from './data/redirects.js';
 
+// Bump this (any new value, e.g. today's date) to clear every visitor's cached copy of the site once (see headers())
+const CACHE_RESET = '2026-10-02';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Page URLs end with a slash (/shingle-roofing/), matching the links in the menus
@@ -7,7 +10,20 @@ const nextConfig = {
   // Search engines index the site only at its live address (SITE_URL in data/site.js). The same build served at any
   // other host, like the deployment's *.vercel.app URL, tells them to skip it.
   async headers() {
-    return [{ source: '/:path*', missing: [{ type: 'host', value: 'qualityroofingspecialists\\.com' }], headers: [{ key: 'X-Robots-Tag', value: 'noindex' }] }];
+    return [
+      { source: '/:path*', missing: [{ type: 'host', value: 'qualityroofingspecialists\\.com' }], headers: [{ key: 'X-Robots-Tag', value: 'noindex' }] },
+      // Cache buster: a browser that hasn't seen this CACHE_RESET version yet is told once to drop everything it
+      // cached for the site (old WordPress pages and files included), and gets a cookie so it only happens once.
+      // Change CACHE_RESET to make every visitor's browser start fresh again.
+      {
+        source: '/:path*',
+        missing: [{ type: 'cookie', key: 'qrs-cache-reset', value: CACHE_RESET }],
+        headers: [
+          { key: 'Clear-Site-Data', value: '"cache"' },
+          { key: 'Set-Cookie', value: `qrs-cache-reset=${CACHE_RESET}; Path=/; Max-Age=31536000; SameSite=Lax; Secure` },
+        ],
+      },
+    ];
   },
   // Old WordPress addresses → their new pages (permanent redirects, see data/redirects.js)
   async redirects() {
