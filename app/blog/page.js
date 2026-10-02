@@ -1,11 +1,8 @@
-import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
-import ProofBar from '@/components/sections/ProofBar';
 import PostCards from '@/components/sections/PostCards';
-import RoofCheck from '@/components/sections/RoofCheck';
 import JsonLd from '@/components/ui/JsonLd';
 import { BLOG_LINK, blogPath, HOME } from '@/data/catalog';
-import { BLOG_POSTS, PUBLISHED_POSTS } from '@/data/blog/posts';
+import { BLOG_POSTS, LATEST_POST, PUBLISHED_POSTS } from '@/data/blog/posts';
 import { BLOG_PAGE as page } from '@/data/pages/blog';
 import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
@@ -23,19 +20,20 @@ const schema = pageJsonLd({
   parts: PUBLISHED_POSTS.map((p) => ({ label: p.title, href: blogPath(p.slug) })),
 });
 
-// Blog index: every post in data/blog/posts.js, newest first
+// Blog index: the hero and every post in data/blog/posts.js, newest first, and nothing else (the posts carry the
+// estimate form and calls to action). The newest post's thumbnail is the hero background.
 export default function BlogPage() {
   return (
     <main id="top">
       <JsonLd data={schema} />
-      <Hero crumbs={CRUMBS} eyebrow="Roofing Blog" title={page.hero.heading} intro={page.hero.intro} />
-      <PostCards posts={BLOG_POSTS} heading="Coming Soon" />
-      <ProofBar />
-      <RoofCheck tone="white" />
-      <FinalCta
-        heading="Have a Question About Your Roof?"
-        text="An article only goes so far. A roofer, not a salesperson, can look at your roof and give you a clear next step with a written scope and price."
+      <Hero
+        crumbs={CRUMBS}
+        eyebrow="Roofing Blog"
+        title={page.hero.heading}
+        intro={page.hero.intro}
+        {...(LATEST_POST?.image && { image: LATEST_POST.heroImage || LATEST_POST.image, imageAlt: LATEST_POST.imageAlt, imagePosition: 'center 30%' })}
       />
+      <PostCards posts={BLOG_POSTS} heading={PUBLISHED_POSTS.length ? 'Latest Articles' : 'Coming Soon'} />
     </main>
   );
 }

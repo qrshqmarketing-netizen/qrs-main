@@ -37,6 +37,7 @@ function renderText(text, keyPrefix, registeredMark = true) {
 
 // Text from the data/ files can contain simple Markdown:
 //   [words](/residential-roofing/tile-roofing/)  → a link      **words** → bold      *words* → italic
+// Bold text can hold a link. Outside links (https://…) open in a new tab.
 
 export function renderRich(text, keyPrefix = 'r', registeredMark = true) {
   if (typeof text !== 'string') return text;
@@ -48,9 +49,11 @@ export function renderRich(text, keyPrefix = 'r', registeredMark = true) {
     const key = `${keyPrefix}${n++}`;
     out.push(
       m[1] !== undefined ? (
-        <SiteLink className="text-link" href={m[2]} key={key}>{renderRich(m[1], `${key}-`, registeredMark)}</SiteLink>
+        <SiteLink className="text-link" href={m[2]} key={key} {...(/^https?:/.test(m[2]) && { target: '_blank', rel: 'noopener' })}>
+          {renderRich(m[1], `${key}-`, registeredMark)}
+        </SiteLink>
       ) : m[3] !== undefined ? (
-        <strong key={key}>{m[3]}</strong>
+        <strong key={key}>{renderRich(m[3], `${key}-`, registeredMark)}</strong>
       ) : (
         PRODUCT_BRANDS.has(m[4]) ? renderBrand(m[4], key, registeredMark) : <em key={key}>{m[4]}</em>
       )

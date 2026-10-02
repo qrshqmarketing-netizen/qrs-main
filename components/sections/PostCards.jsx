@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import SiteLink from '@/components/ui/SiteLink';
 import { ArrowRight } from '@/components/ui/icons';
 import { blogPath } from '@/data/catalog';
@@ -6,7 +7,7 @@ import './PostCards.css';
 const SCENES = ['scene-shingle', 'scene-tile', 'scene-flat', 'scene-repair', 'scene-inspect', 'scene-replace'];
 export const postDate = (iso) => new Date(`${iso}T12:00:00Z`).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 
-// Blog index: a card per post (placeholder art rotates until posts have their own images)
+// Blog index: a card per post, with its thumbnail (placeholder art for a post without one)
 export default function PostCards({ posts = [], heading }) {
   return (
     <section className="post-cards tile-pattern">
@@ -19,7 +20,13 @@ export default function PostCards({ posts = [], heading }) {
         <div className="pc-grid">
           {posts.map((post, i) => (
             <article className="pc-card" key={post.slug}>
-              <div className={`pc-media art ${SCENES[i % SCENES.length]}`} aria-hidden="true"></div>
+              {post.image ? (
+                <div className="pc-media">
+                  <Image src={post.image} alt="" fill sizes="(min-width: 901px) 360px, (min-width: 621px) 50vw, 100vw" />
+                </div>
+              ) : (
+                <div className={`pc-media art ${SCENES[i % SCENES.length]}`} aria-hidden="true"></div>
+              )}
               <time dateTime={post.datePublished}>{postDate(post.datePublished)}</time>
               <h3>
                 <SiteLink className="pc-link" href={blogPath(post.slug)}>{post.title}</SiteLink>

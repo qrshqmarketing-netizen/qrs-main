@@ -49,19 +49,19 @@
   },
   "/residential-roofing/tile-roofing/": {
     "date": "2026-10-02",
-    "hash": "4600f1a3495c4004"
+    "hash": "c8dc7ba0151b6d25"
   },
   "/residential-roofing/tile-roofing/replacement/": {
     "date": "2026-10-02",
     "hash": "4b714afd379b9a35"
   },
   "/residential-roofing/tile-roofing/repair/": {
-    "date": "2026-10-01",
-    "hash": "00cb86b43c4082f0"
+    "date": "2026-10-02",
+    "hash": "37bd1b32bf401d15"
   },
   "/residential-roofing/tile-roofing/lift-and-relay/": {
-    "date": "2026-10-01",
-    "hash": "e136aeaabadaa887"
+    "date": "2026-10-02",
+    "hash": "840bddbf9baa5314"
   },
   "/residential-roofing/tile-roofing/slate/": {
     "date": "2026-10-01",
@@ -246,6 +246,14 @@
   "/contact-us/": {
     "date": "2026-10-02",
     "hash": "d2c9d84565ad2495"
+  },
+  "/blog/": {
+    "date": "2026-10-02",
+    "hash": "555ce45f97b82b60"
+  },
+  "/blog/tile-roof-underlayment/": {
+    "date": "2026-10-02",
+    "hash": "df6d73f76bb7c20a"
   },
   "/privacy-policy/": {
     "date": "2026-09-30",
