@@ -5,12 +5,14 @@ import { cityPath, findCity } from '@/data/locations';
 import { OFFICES, PHONE, TEL } from '@/data/site';
 import './Offices.css';
 
-// One office: address, phone, directions and (optionally) a link to the city page it sits in
-export function OfficeCard({ office, cityLink = true }) {
+// One office: address, phone, directions and (optionally) a link to the city page it sits in.
+// `photo={false}` leaves out the office's photo, so it matches cards without one.
+export function OfficeCard({ office, cityLink = true, photo = true }) {
   const { street, city, region, postalCode } = office.address;
+  const image = photo && office.image;
   return (
-    <div className={'office-card' + (office.image ? ' office-card-photo' : '')}>
-      {office.image && (
+    <div className={'office-card' + (image ? ' office-card-photo' : '')}>
+      {image && (
         <div className="office-photo">
           <ScrollParallaxImage src={office.image} alt={office.imageAlt || ''} sizes="(min-width: 901px) 560px, 100vw" />
         </div>
@@ -40,8 +42,8 @@ export function OfficeCard({ office, cityLink = true }) {
   );
 }
 
-// Service Areas page: every office (data/site.js)
-export default function Offices({ heading = 'Our Offices', sub, note }) {
+// Service Areas and Contact Us pages: every office (data/site.js). `photos={false}`: plain, matching cards.
+export default function Offices({ heading = 'Our Offices', sub, note, photos = true }) {
   return (
     <section className="offices tile-pattern">
       <div className="container">
@@ -51,7 +53,7 @@ export default function Offices({ heading = 'Our Offices', sub, note }) {
         </div>
         <div className="office-grid">
           {OFFICES.map((office) => (
-            <OfficeCard office={office} key={office.name} />
+            <OfficeCard office={office} photo={photos} key={office.name} />
           ))}
         </div>
         {note && <p className="office-note">{note}</p>}

@@ -52,7 +52,7 @@ export default function ContactPage() {
           { label: 'Request an Estimate', href: '#roof-check', style: 'line' },
         ]}
       />
-      <Offices sub="Visit or call any of our offices. One phone number reaches our whole team." note={`Hours: ${HOURS_LINE}`} />
+      <Offices sub="Visit or call any of our offices. One phone number reaches our whole team." note={`Hours: ${HOURS_LINE}`} photos={false} />
       <ProofBar />
       <ValueGrid heading={page.ways.heading} items={page.ways.items} />
       <RoofCheck />
