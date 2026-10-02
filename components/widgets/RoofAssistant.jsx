@@ -4,15 +4,16 @@ import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { ArrowRight, CloseIcon, RefreshIcon } from '@/components/ui/icons';
-import { ANSWERS, CHAT_ENDPOINT, CHIP_PROMPTS, FALLBACK_ANSWER, GREETING, STARTERS } from '@/data/assistant';
+import { ANSWERS, CHAT_ENDPOINT, CHIP_PROMPTS, CONTACT_ANSWERS, CONTACT_RE, FALLBACK_ANSWER, GREETING, STARTERS } from '@/data/assistant';
 import { PHONE, TEL } from '@/data/site';
 import { session } from '@/lib/storage';
 import './RoofAssistant.css';
 
 const esc = (s) => s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 
-// Built-in answers (used when no AI endpoint is set, or it fails)
-function localReply(text) {
+// Built-in answers (used when no AI endpoint is set, or it fails). `saved`: the backend has this chat's contact details.
+function localReply(text, saved) {
+  if (CONTACT_RE.test(text)) return { html: saved ? CONTACT_ANSWERS.saved : CONTACT_ANSWERS.notSaved, chips: [] };
   const t = text.toLowerCase();
   const hit = ANSWERS.find((entry) => entry.match.test(t));
   if (hit) return { html: hit.answer, chips: hit.chips === null ? STARTERS : hit.chips };
@@ -35,6 +36,7 @@ export default function RoofAssistant() {
   const busy = useRef(false);
   const started = useRef(false);
   const history = useRef([]);
+  const leadSaved = useRef(false); // set once the backend saved this chat's contact details, so it saves one lead per chat
   const logRef = useRef(null);
   const inputRef = useRef(null);
   const formRef = useRef(null);
@@ -81,15 +83,16 @@ export default function RoofAssistant() {
       const res = await fetch(CHAT_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ messages: history.current }),
+        body: JSON.stringify({ messages: history.current, leadSaved: leadSaved.current }),
       });
-      if (!res.ok) throw 0;
-      const data = await res.json();
-      if (!data.reply) throw 0;
+      // The backend saves contact details even when the AI reply fails, and says so either way
+      const data = await res.json().catch(() => ({}));
+      if (data.leadSaved) leadSaved.current = true;
+      if (!res.ok || !data.reply) throw 0;
       reply = { html: esc(String(data.reply)).replace(/\n/g, '<br>'), chips: [] };
     } catch {
       await new Promise((r) => setTimeout(r, 650 + Math.random() * 500));
-      reply = localReply(question);
+      reply = localReply(question, leadSaved.current);
     }
     setTyping(false);
     add('bot', reply.html);
@@ -127,6 +130,7 @@ export default function RoofAssistant() {
     busy.current = false;
     started.current = true;
     history.current = [];
+    leadSaved.current = false;
     setTyping(false);
     setChips([]);
     setText('');
@@ -232,6 +236,9 @@ export default function RoofAssistant() {
             <ArrowRight />
           </button>
         </form>
+        <p className="qa-consent">
+          By sharing your phone or email here, you agree QRS may contact you about your request by phone, text or email. <a href="/privacy-policy/">Privacy Policy</a>
+        </p>
         <div className="qa-foot">
           <span>AI assistant · answers may need confirming</span>
           <a href={TEL}>{PHONE}</a>

@@ -1,12 +1,13 @@
 // Backend for the Roof Assistant chat widget (components/widgets/RoofAssistant.jsx).
-// Calls an OpenRouter model (OPENROUTER_API_KEY, OPENROUTER_MODEL in .env.local) and, when the visitor has
-// shared enough to follow up with them, sends a lead through lib/leads.js (email + leads spreadsheet). Without OPENROUTER_API_KEY set, this
-// route returns an error and the widget falls back to its built-in canned answers — no code change needed.
+// Calls an OpenRouter model (OPENROUTER_API_KEY, OPENROUTER_MODEL in .env.local) and saves a lead through lib/leads.js
+// (email + leads spreadsheet) when the visitor shares a phone number or email. The lead doesn't depend on the model:
+// it's saved even when the model is slow, fails or isn't set up (the route then answers with an error and the widget
+// falls back to its built-in answers, which thank the visitor for their details).
+import { after } from 'next/server';
 import { SYSTEM_PROMPT } from '@/data/assistant';
 import { BUSINESS, SITE_URL } from '@/data/site';
 import { findRelevantPages } from '@/lib/chatRetrieval';
-import { after } from 'next/server';
-import { deliverLead } from '@/lib/leads';
+import { deliverLead, rateLimited } from '@/lib/leads';
 
 const OPENROUTER_URL = 'https://openrouter.ai/api/v1/chat/completions';
 const MODEL = process.env.OPENROUTER_MODEL || 'qwen/qwen3.8-27b:free';
@@ -15,35 +16,31 @@ const MODEL = process.env.OPENROUTER_MODEL || 'qwen/qwen3.8-27b:free';
 const MAX_MESSAGES = 16;
 const MAX_CHARS = 2000;
 
-const EMAIL_RE = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/;
-const PHONE_RE = /(\+?1[\s.-]?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}/;
+const EMAIL_RE = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g;
+const PHONE_RE = /(\+?1[\s.-]?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}/g;
+const ZIP_RE = /\b9\d{4}\b/g; // Southern California ZIPs
+// "my name is jo smith" / "name: jo" in any case; "I'm Jo" / "this is Jo Smith" only when the name is capitalized
+const NAME_RES = [
+  /\b(?:my name is|my name's|name:)\s*([a-z][a-z'-]+(?: [a-z][a-z'-]+)?)/i,
+  /\b(?:[Tt]his is|I'm|I am)\s+([A-Z][a-z'-]+(?: [A-Z][a-z'-]+)?)/,
+];
 
+const last = (text, re) => (text.match(re) || []).pop() || '';
+
+// The contact details in what the visitor typed (the latest of each)
 function findContact(text) {
-  return { email: (text.match(EMAIL_RE) || [])[0] || '', phone: (text.match(PHONE_RE) || [])[0] || '' };
+  return {
+    phone: last(text, PHONE_RE),
+    email: last(text, EMAIL_RE),
+    zip: last(text, ZIP_RE),
+    name: NAME_RES.map((re) => (text.match(re) || [])[1]).find(Boolean) || '',
+  };
 }
 
-function userText(messages) {
-  return messages.filter((m) => m.role === 'user').map((m) => m.content).join('\n');
-}
+const userText = (messages) => messages.filter((m) => m.role === 'user').map((m) => m.content).join('\n');
 
-export async function POST(request) {
-  const apiKey = process.env.OPENROUTER_API_KEY;
-  if (!apiKey) return Response.json({ error: 'not configured' }, { status: 503 });
-
-  let body;
-  try {
-    body = await request.json();
-  } catch {
-    return Response.json({ error: 'bad request' }, { status: 400 });
-  }
-
-  const incoming = Array.isArray(body?.messages) ? body.messages : [];
-  const messages = incoming
-    .filter((m) => m && (m.role === 'user' || m.role === 'assistant') && typeof m.content === 'string')
-    .slice(-MAX_MESSAGES)
-    .map((m) => ({ role: m.role, content: m.content.slice(0, MAX_CHARS) }));
-  if (!messages.length) return Response.json({ error: 'no messages' }, { status: 400 });
-
+// One call to the model; returns { reply, marker } or { error, status }
+async function askModel(apiKey, messages) {
   // Ground the reply in the site's actual page content: search PAGE_INDEX for pages relevant to the
   // visitor's latest message and hand the model plain-text blocks (including their specifics, not just a
   // summary) from the best matches.
@@ -59,75 +56,98 @@ export async function POST(request) {
     : null;
 
   let rawReply;
-  try {
-    const res = await fetch(OPENROUTER_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${apiKey}`,
-        'HTTP-Referer': SITE_URL,
-        'X-Title': BUSINESS.name,
-      },
-      body: JSON.stringify({
-        model: MODEL,
-        messages: [{ role: 'system', content: SYSTEM_PROMPT }, ...(context ? [context] : []), ...messages],
-        temperature: 0.4,
-        max_tokens: 400,
-      }),
-    });
-    if (!res.ok) {
-      console.error('[chat] OpenRouter error', res.status, await res.text().catch(() => ''));
-      return Response.json({ error: 'upstream error' }, { status: 502 });
+  // Free models sometimes answer with nothing at all; one retry usually gets a reply
+  for (let attempt = 0; attempt < 2 && !rawReply; attempt++) {
+    try {
+      const res = await fetch(OPENROUTER_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${apiKey}`,
+          'HTTP-Referer': SITE_URL,
+          'X-Title': BUSINESS.name,
+        },
+        body: JSON.stringify({
+          model: MODEL,
+          messages: [{ role: 'system', content: SYSTEM_PROMPT }, ...(context ? [context] : []), ...messages],
+          temperature: 0.4,
+          max_tokens: 400,
+        }),
+      });
+      if (!res.ok) {
+        console.error('[chat] OpenRouter error', res.status, await res.text().catch(() => ''));
+        return { error: 'upstream error', status: 502 };
+      }
+      const data = await res.json();
+      rawReply = data.choices?.[0]?.message?.content?.trim();
+    } catch (err) {
+      console.error('[chat] request to OpenRouter failed', err);
+      return { error: 'request failed', status: 502 };
     }
-    const data = await res.json();
-    rawReply = data.choices?.[0]?.message?.content;
-  } catch (err) {
-    console.error('[chat] request to OpenRouter failed', err);
-    return Response.json({ error: 'request failed' }, { status: 502 });
   }
-  if (!rawReply) return Response.json({ error: 'empty reply' }, { status: 502 });
+  if (!rawReply) return { error: 'empty reply', status: 502 };
 
   // Pull out the model's hidden [[LEAD]]{...} marker (see SYSTEM_PROMPT), if it added one, and never show it.
   // Cut everything from the marker onward regardless of what follows it, so a chatty model can never leak
   // raw JSON into the visitor-facing reply even if it doesn't stop right after the marker as asked.
-  let reply = rawReply;
-  let lead = null;
   const markerIndex = rawReply.indexOf('[[LEAD]]');
-  if (markerIndex !== -1) {
-    reply = rawReply.slice(0, markerIndex).trim();
-    const jsonMatch = rawReply.slice(markerIndex + '[[LEAD]]'.length).match(/\{[\s\S]*?\}/);
-    if (jsonMatch) {
-      try {
-        lead = JSON.parse(jsonMatch[0]);
-      } catch {
-        lead = null;
-      }
-    }
+  if (markerIndex === -1) return { reply: rawReply, marker: null };
+  let marker = null;
+  const json = rawReply.slice(markerIndex + '[[LEAD]]'.length).match(/\{[\s\S]*?\}/);
+  try {
+    marker = json ? JSON.parse(json[0]) : null;
+  } catch {}
+  return { reply: rawReply.slice(0, markerIndex).trim(), marker };
+}
+
+const str = (v, max) => (typeof v === 'string' ? v.trim().slice(0, max) : '');
+
+export async function POST(request) {
+  let body;
+  try {
+    body = await request.json();
+  } catch {
+    return Response.json({ error: 'bad request' }, { status: 400 });
   }
 
-  // Belt-and-suspenders: also watch the visitor's own messages for a phone/email the model's marker might
-  // have missed, and only fire once — when this turn introduces contact info that wasn't there before.
+  const incoming = Array.isArray(body?.messages) ? body.messages : [];
+  const messages = incoming
+    .filter((m) => m && (m.role === 'user' || m.role === 'assistant') && typeof m.content === 'string')
+    .slice(-MAX_MESSAGES)
+    .map((m) => ({ role: m.role, content: m.content.slice(0, MAX_CHARS) }));
+  if (!messages.length) return Response.json({ error: 'no messages' }, { status: 400 });
+
+  const apiKey = process.env.OPENROUTER_API_KEY;
+  const answer = apiKey ? await askModel(apiKey, messages) : { error: 'not configured', status: 503 };
+
+  // A lead when this message brings a phone or email the visitor hadn't typed before in this chat, or when the
+  // model's marker has one and no lead was saved yet (the widget sends leadSaved once one was, so a chat makes one row)
   const before = findContact(userText(messages.slice(0, -1)));
-  const after = findContact(userText(messages));
-  const gotNewContact = (after.email && after.email !== before.email) || (after.phone && after.phone !== before.phone);
-
-  if (lead || gotNewContact) {
-    const phone = lead?.phone || after.phone || '';
-    const email = lead?.email || after.email || '';
-    if (phone || email) {
-      // Delivered after the reply goes out, so the visitor doesn't wait on the email and spreadsheet
-      const captured = {
+  const now = findContact(userText(messages));
+  const digits = (phone) => phone.replace(/\D/g, '').slice(-10); // (310) 340-1643 and 310.340.1643 are one number
+  const newContact = (now.phone && digits(now.phone) !== digits(before.phone)) || (now.email && now.email.toLowerCase() !== before.email.toLowerCase());
+  const marker = answer.marker || {};
+  const markerPhone = last(str(marker.phone, 40), PHONE_RE);
+  const markerEmail = last(str(marker.email, 200), EMAIL_RE);
+  let leadSaved = false;
+  if (newContact || ((markerPhone || markerEmail) && !body.leadSaved)) {
+    const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || request.headers.get('x-real-ip') || 'unknown';
+    if (!rateLimited(`chat-lead:${ip}`)) {
+      const lead = {
         source: 'roof-assistant-chat',
-        name: lead?.name || '',
-        phone,
-        email,
-        zip: lead?.zip || '',
-        service: lead?.interest || '',
-        transcript: [...messages, { role: 'assistant', content: reply }],
+        name: str(marker.name, 120) || now.name,
+        phone: now.phone || markerPhone,
+        email: now.email || markerEmail,
+        zip: str(marker.zip, 10) || now.zip,
+        service: str(marker.interest, 120),
+        transcript: answer.reply ? [...messages, { role: 'assistant', content: answer.reply }] : messages,
       };
-      after(() => deliverLead(captured).catch(() => {}));
+      // Delivered after the response goes out, so the visitor doesn't wait on the email and spreadsheet
+      after(() => deliverLead(lead).catch((err) => console.error('[chat] lead delivery failed', err)));
+      leadSaved = true;
     }
   }
 
-  return Response.json({ reply });
+  if (answer.error) return Response.json({ error: answer.error, leadSaved }, { status: answer.status });
+  return Response.json({ reply: answer.reply, leadSaved });
 }

@@ -51,6 +51,7 @@ Rules:
 - Words QRS uses: homeowners are "homeowners"; property management companies and commercial building owners are "clients"; QRS's own employees are "roofers"; outside or partner workers are "crews", never "subs" or "subcontractors"; general contractors are "contractors".
 - Always be warm, friendly and helpful — keep answers short (2-4 sentences) and specific to roofing, and steer the visitor toward a clear next step on this site.
 - Answer in plain conversational text only. The chat window doesn't render Markdown or links, so never write [text](url) links, **bold**, bullet lists or headings — if you want to point to a page, just say its name in plain words (e.g. "our Financing page").
+- When the visitor wants a callback, an estimate, a visit or to talk to someone, offer to take their name and phone number (or email) right here in the chat; the team gets their details automatically. Ask for those two things only, never for an address unless they offer it.
 - If the visitor has shared enough for someone to follow up with them (their name, and a phone number or email), thank them naturally, mention someone from QRS will follow up, and end your reply with a line starting with [[LEAD]] followed by compact JSON with keys name, phone, email, zip, interest (use "" for anything not given). Only do this once, the first time you have a name and a phone or email — never repeat it later in the conversation, and never mention this line or show it to the visitor.`;
 
 export const STARTERS = ['I have a leak', 'Is the roof evaluation free?', 'How much does it cost?', 'What areas do you serve?'];
@@ -110,12 +111,12 @@ export const ANSWERS = [
   },
   {
     match: /book|schedule|appointment|sign up|get started|start/,
-    answer: 'Great! You can <a href="#estimate" data-qa-close>fill out the quick form</a> — it takes about two minutes — or call us at ' + call + '.',
+    answer: 'Great! Leave your name and phone number here and we\'ll call you to set it up, or <a href="#estimate" data-qa-close>fill out the quick form</a> (about two minutes), or call us at ' + call + '.',
     chips: ['Talk to a person'],
   },
   {
     match: /person|human|call|phone|talk|speak|contact|agent/,
-    answer: 'Of course — you can reach our team at ' + call + '. Or <a href="#estimate" data-qa-close>send us a request</a> and we\'ll follow up.',
+    answer: 'Of course — you can reach our team at ' + call + '. Or leave your name and phone number here and we\'ll call you back.',
     chips: [],
   },
   {
@@ -134,6 +135,14 @@ export const ANSWERS = [
     chips: null,
   },
 ];
+
+// When the visitor types a phone number or email and the built-in answers are in use (components/widgets/RoofAssistant.jsx):
+// `saved` once the backend (app/api/chat/route.js) has passed the details to the team, `notSaved` if it couldn't
+export const CONTACT_RE = /[\w.+-]+@[\w-]+(\.[\w-]+)+|\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}/;
+export const CONTACT_ANSWERS = {
+  saved: 'Thanks! Your details are with our team, and someone from QRS will follow up soon. If it\'s urgent, call us at ' + call + '.',
+  notSaved: 'Thanks! So we don\'t miss you, please call us at ' + call + ' or <a href="#estimate" data-qa-close>send the quick form</a>, and we\'ll follow up.',
+};
 
 // Used when nothing above matches
 export const FALLBACK_ANSWER =

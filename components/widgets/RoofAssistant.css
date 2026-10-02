@@ -73,6 +73,8 @@
 .qa-send:hover:not(:disabled){background:var(--gold-2);transform:translateY(-1px)}
 .qa-send:disabled{opacity:.45;cursor:default}
 .qa-send svg{width:20px;height:20px}
+.qa-consent{margin:0;padding:0 14px 6px;background:var(--paper);color:var(--muted);font-size:.66rem;line-height:1.4}
+.qa-consent a{color:inherit;text-decoration:underline;text-underline-offset:2px}
 .qa-foot{display:flex;justify-content:space-between;gap:10px;padding:0 14px 12px;padding-bottom:calc(12px + env(safe-area-inset-bottom));background:var(--paper);font-size:.72rem;color:var(--muted)}
 .qa-foot a{color:var(--navy);font-weight:800;white-space:nowrap}
 @media (min-width:621px){
