@@ -17,6 +17,7 @@ export const SEASON_PROMO = {
   exclude: ['/commercial-roofing/', '/residential-roofing/hoa-multi-family/', '/service-areas/la-county/vernon/', '/contractors/', '/careers/'],
 };
 
-// Subtle rain over every page's hero for the El Niño season (components/sections/HeroRain.jsx). While it's on, the
-// page's fade-in effects are off (app/layout.js); false switches the rain off and brings them back.
+// Subtle rain over the hero of the service and location pages for the El Niño season (components/sections/HeroRain.jsx;
+// pages opt in with Hero's `rain` prop, financing doesn't). While it's on, the site's fade-in effects are off
+// (app/layout.js); false switches the rain off and brings them back.
 export const HERO_RAIN = true;

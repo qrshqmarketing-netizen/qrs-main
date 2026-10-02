@@ -26,7 +26,7 @@ export default function RoofMaintenancePlansPage() {
   return (
     <main id="top">
       <JsonLd data={schema} />
-      <Hero crumbs={CRUMBS} eyebrow="Maintenance Plans" title={page.hero.heading} intro={page.hero.intro} image={page.image} imageAlt={page.imageAlt} stats />
+      <Hero crumbs={CRUMBS} eyebrow="Maintenance Plans" title={page.hero.heading} intro={page.hero.intro} image={page.image} imageAlt={page.imageAlt} stats rain />
       <ValueGrid heading={page.whatGoesWrong.heading} items={page.whatGoesWrong.items} tone="wash" pattern />
       <CarePlanPricing />
       <PlanScope />

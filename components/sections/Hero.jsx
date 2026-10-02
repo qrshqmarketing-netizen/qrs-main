@@ -23,7 +23,8 @@ const DEFAULT_ACTIONS = [
 // (QuoteTrigger) follows the actions, unless one of them already opens the drawer. Pass `mobileImage` (e.g. a portrait
 // crop of the same scene) to show a different photo below 621px instead of a cropped `image`. Below 621px a hero
 // with a photo stacks: the photo on its own band, then the copy below it (Hero.css .hero-stack). `stats` nests the
-// proof-bar stats in the hero; opt in only on the homepage and service pages.
+// proof-bar stats in the hero; opt in only on the homepage and service pages. `rain` adds the seasonal rain (HeroRain,
+// switched site-wide by HERO_RAIN in data/promo.js); only the service and location layouts turn it on.
 export default function Hero({
   crumbs,
   eyebrow = 'Roof Repair & Replacement in Southern California',
@@ -41,6 +42,7 @@ export default function Hero({
   h1 = 'title',
   align = 'left',
   stats = false,
+  rain = false,
   actions = DEFAULT_ACTIONS,
   className,
 }) {
@@ -51,7 +53,7 @@ export default function Hero({
       <section className={'hero hero-photo' + (image ? '' : ' hero-fallback') + (image || mobileImage ? ' hero-stack' : '') + (className ? ` ${className}` : '')} aria-label={label}>
         <HeroParallax image={image} mobileImage={mobileImage} imageAlt={imageAlt} imagePosition={imagePosition} />
         <div className="hero-glow" aria-hidden="true"></div>
-        {HERO_RAIN && <HeroRain />}
+        {HERO_RAIN && rain && <HeroRain />}
         <div className={'container hero-inner on-dark' + (align === 'left' ? ' hero-left' : '') + (className ? ` ${className}` : '')}>
           <div className="hero-copy">
             {eyebrow && <Eyebrow className="eyebrow">{eyebrow}</Eyebrow>}

@@ -39,6 +39,7 @@ export default function HubPage({ hub, crumbs, eyebrow, image, imageAlt, cards, 
         image={image}
         imageAlt={imageAlt}
         stats
+        rain
         {...(actions && { actions })}
       />
       <Overview heading={hub.overview.heading} paragraphs={hub.overview.paragraphs} />
