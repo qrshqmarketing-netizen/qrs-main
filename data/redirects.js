@@ -56,6 +56,8 @@ export const REDIRECTS = [
   ['/hoa-multi-family/', '/residential-roofing/hoa-multi-family/'],
   ['/emergency-roof-repair/', '/roof-repair/emergency/'],
   ['/project/tile-flat-roofing-in-mid-wilshire-90019/', '/projects/tile-flat-roofing-in-mid-wilshire-90019/'],
+  ['/commercial-roofing/roof-replacement/', '/commercial-roofing/replacement/'],
+  ['/residential-roofing/roof-inspection/', '/roof-inspection/'],
   // Service pages
   ['/residential-roofing-services/', '/residential-roofing/'],
   ['/residential-roofing-services/roof-repair/', '/roof-repair/'],
@@ -68,6 +70,7 @@ export const REDIRECTS = [
   ['/commercial-roofing-services/', '/commercial-roofing/'],
   ['/commercial-roofing-services/commercial-roof-repair/', '/commercial-roofing/repair/'],
   ['/commercial-roofing-services/commercial-roof-installation/', '/commercial-roofing/replacement/'],
+  ['/commercial-roofing-services/commercial-roof-replacement/', '/commercial-roofing/replacement/'],
   ['/commercial-roofing-services/commercial-roof-inspection/', '/commercial-roofing/maintenance/'],
   ['/commercial-roofing-contractor-los-angeles/', '/commercial-roofing/'],
   ['/los-angeles-commercial-roof-replacement/', '/commercial-roofing/replacement/'],
@@ -81,6 +84,15 @@ export const REDIRECTS = [
 
   // Blog posts
   ...Object.entries(BLOG_REDIRECTS).flatMap(([slug, to]) => [[`/${slug}/`, to], [`/blog/${slug}/`, to]]),
+  // WordPress archive pages: blog categories ("Roofing", "Roofing Repairs"), author pages and blog page 2, 3, …
+  ['/roofing/', R],
+  ['/roofing/page/:n/', R],
+  ['/roofing-repairs/', '/roof-repair/'],
+  ['/roofing-repairs/page/:n/', '/roof-repair/'],
+  ['/author/:name/', '/about-us/'],
+  ['/author/:name/page/:n/', '/about-us/'],
+  ['/blog/page/:n/', '/blog/'],
+  ['/blog/roofing-blog-updates/', '/blog/'], // the "coming soon" placeholder post, replaced by real articles
 
   // City pages at the site root
   ['/huntington-beach/', city(OC, 'huntington-beach')],
