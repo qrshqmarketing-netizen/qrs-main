@@ -19,7 +19,8 @@ const DEFAULT_ACTIONS = [
 // Instant Quote drawer instead of navigating. When `image` is omitted, a CSS-only dark navy/gold
 // background is used instead of a photo (Hero.css .hero-fallback). On phones a "Get an Instant Quote" button
 // (QuoteTrigger) follows the actions, unless one of them already opens the drawer. Pass `mobileImage` (e.g. a portrait
-// crop of the same scene) to show a different photo below 621px instead of a cropped `image`. `stats` nests the
+// crop of the same scene) to show a different photo below 621px instead of a cropped `image`. Below 621px a hero
+// with a photo stacks: the photo on its own band, then the copy below it (Hero.css .hero-stack). `stats` nests the
 // proof-bar stats in the hero; opt in only on the homepage and service pages.
 export default function Hero({
   crumbs,
@@ -45,7 +46,7 @@ export default function Hero({
   const Title = h1 === 'eyebrow' ? 'p' : 'h1';
   return (
     <>
-      <section className={'hero hero-photo' + (image ? '' : ' hero-fallback') + (className ? ` ${className}` : '')} aria-label={label}>
+      <section className={'hero hero-photo' + (image ? '' : ' hero-fallback') + (image || mobileImage ? ' hero-stack' : '') + (className ? ` ${className}` : '')} aria-label={label}>
         <HeroParallax image={image} mobileImage={mobileImage} imageAlt={imageAlt} imagePosition={imagePosition} />
         <div className="hero-glow" aria-hidden="true"></div>
         <div className={'container hero-inner on-dark' + (align === 'left' ? ' hero-left' : '') + (className ? ` ${className}` : '')}>

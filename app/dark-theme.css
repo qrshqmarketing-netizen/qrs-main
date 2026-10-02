@@ -43,9 +43,7 @@
 :root[data-theme="dark"] .gtee{background:linear-gradient(180deg,#0e2033 0%,#0c1c2e 45%,#0a1828 100%)}
 :root[data-theme="dark"] .gtee-badge text{fill:var(--navy)}
 :root[data-theme="dark"] .tst-name{color:var(--navy)}
-:root[data-theme="dark"] :is(.rv-toast, .cookie){border-color:#fff}
+:root[data-theme="dark"] .cookie{border-color:#fff}
 :root[data-theme="dark"] .qa-teaser{outline:1px solid #fff;outline-offset:-1px}
-:root[data-theme="dark"] .rv-name{color:var(--navy)}
-:root[data-theme="dark"] .rv-text{color:var(--muted)}
-:root[data-theme="dark"] .rv-close:hover{background:var(--wash);color:var(--navy)}
+/* The review toast stays light in both themes (ReviewToast.css) */
 :root[data-theme="dark"] .promo{border-color:var(--line)}

@@ -90,3 +90,16 @@
 }
 .hero-sub{animation:fadeUp .9s ease both}
 @media (prefers-reduced-motion:reduce){.hero-sub{animation:none}}
+
+/* Stacked hero (every hero with a photo; Hero.jsx adds "hero-stack"): on phones the photo sits on its own band
+   under the header and the copy, buttons and stats follow below it on navy. From 621px it's the usual full-bleed
+   photo hero. */
+/* Selectors are one class stronger than .hero.hero-top-pad / .hero-inner.hero-top-pad, so they win however the
+   stylesheets end up ordered. */
+@media (max-width:620px){
+  .hero.hero-stack.hero-stack{display:flex;flex-direction:column;align-items:stretch;min-height:0;background:#03192e}
+  .hero.hero-stack .hero-background{position:relative;inset:auto;height:clamp(300px,86vw,420px);transform:none}
+  /* The photo fades into the navy at the bottom, so the copy starts right where the photo ends */
+  .hero.hero-stack .hero-roof-texture:after{background:linear-gradient(180deg,rgba(3,27,52,.3) 0%,rgba(3,25,46,0) 35%,rgba(3,25,46,0) 60%,#03192e 100%)}
+  .hero.hero-stack > .hero-inner{margin:0 auto;padding:0 0 40px}
+}
