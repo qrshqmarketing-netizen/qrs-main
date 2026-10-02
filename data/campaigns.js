@@ -4,6 +4,9 @@
 // lead the visitor sends (lib/attribution.js). Only the campaign names listed here get a card, and the card shows the
 // words below, never text taken from the link. To add a profile, add a line with its utm_campaign name.
 //
+// SHOW_WELCOME_CARD switches the card on or off. Off, the visit's utm tags are still saved and attached to leads.
+export const SHOW_WELCOME_CARD = false;
+//
 // place: the profile's name in the heading; office: which office the card shows (citySlug in OFFICES, data/site.js);
 // line: one sentence about the work from that office; cta: label of the gold button (it goes to the page's estimate form).
 import { OFFICES } from '@/data/site';

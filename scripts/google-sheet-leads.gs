@@ -13,9 +13,9 @@
 
 const SECRET = ''; // the same value as LEADS_SHEET_SECRET in the website's environment variables
 
-// The UTM columns come last so rows added before them keep their columns; a missing header cell is filled in below
-const HEADERS = ['Received', 'Source', 'Name', 'Phone', 'Email', 'ZIP', 'How they found us', 'Service', 'Roof type', 'Address', 'Message', 'Quote details', 'Page', 'Chat transcript', 'UTM source', 'UTM medium', 'UTM campaign'];
-const KEYS = ['source', 'name', 'phone', 'email', 'zip', 'foundUs', 'service', 'roofType', 'address', 'message', 'quote', 'page', 'transcript', 'utmSource', 'utmMedium', 'utmCampaign'];
+// The UTM and landing page columns come last so rows added before them keep their columns; a missing header cell is filled in below
+const HEADERS = ['Received', 'Source', 'Name', 'Phone', 'Email', 'ZIP', 'How they found us', 'Service', 'Roof type', 'Address', 'Message', 'Quote details', 'Page', 'Chat transcript', 'UTM source', 'UTM medium', 'UTM campaign', 'Landing page'];
+const KEYS = ['source', 'name', 'phone', 'email', 'zip', 'foundUs', 'service', 'roofType', 'address', 'message', 'quote', 'page', 'transcript', 'utmSource', 'utmMedium', 'utmCampaign', 'landingPage'];
 
 function doPost(e) {
   const reply = (body) => ContentService.createTextOutput(JSON.stringify(body)).setMimeType(ContentService.MimeType.JSON);
