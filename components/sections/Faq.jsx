@@ -6,7 +6,7 @@ import './Faq.css';
 export default function Faq({
   id = 'faq',
   heading = 'Frequently Asked Questions',
-  sub = 'Straight answers to the questions homeowners ask us most.',
+  sub = 'Straight answers to the questions clients ask us most.',
   faqs = FAQS,
   cta = true,
 }) {

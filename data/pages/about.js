@@ -17,7 +17,7 @@ export const ABOUT_PAGE = {
   intro: {
     heading: 'Your Detail-First Roofing Team',
     paragraphs: [
-      `${COMPANY.belief} We’re a small, locally owned roofing company serving homeowners and property owners across Los Angeles and Orange County. Our local crews handle projects of every size, from a single roof repair to large residential, commercial and multi-family projects. We’re licensed, bonded and insured as a California contractor since 2020. Our approach is simple: a roofer should look at your roof before anyone tries to sell you one.`,
+      `${COMPANY.belief} We’re a small, locally owned roofing company serving clients across Los Angeles and Orange County. Our local crews handle projects of every size, from a single roof repair to large residential, commercial and multi-family projects. We’re licensed, bonded and insured as a California contractor since 2020. Our approach is simple: a roofer should look at your roof before anyone tries to sell you one.`,
       'That’s why our work starts with a roofer-led [free roof evaluation](#roof-check), photo documentation and a plain-English explanation. Before any work begins you get a written scope and price. When the job is done, we walk the finished roof with you and back our installs with a 10-year workmanship warranty.',
     ],
   },
@@ -48,10 +48,10 @@ export const ABOUT_PAGE = {
     heading: 'Our Team',
     intro: 'Real people behind every roof, from the office to the ridge line. Names and photos are on the way — here’s who does the work today.',
     items: [
-      { title: 'Field Inspectors & Lead Roofers', text: 'Every $199 Roof Check is done by a field inspector, lead roofer or estimator on our own team — never a subcontractor.' },
+      { title: 'Field Inspectors & Lead Roofers', text: 'Every $199 Roof Check is done by a field inspector, lead roofer or estimator on our own team — never an outside crew.' },
       { title: 'Senior Production Manager', text: '30 years overseeing roofing projects, managing our crews and quality control on every job.' },
-      { title: '12 Crews, Every Roof Type', text: 'Dedicated crews for shingle, tile and flat roofing, with vetted subcontractors brought in only during overflow.' },
-      { title: 'Bilingual Office & Field Staff', text: 'Our team communicates in English, Spanish and Tagalog.' },
+      { title: '12 Crews, Every Roof Type', text: 'Dedicated crews for shingle, tile and flat roofing, with vetted partner crews brought in only during overflow.' },
+      { title: 'Bilingual Office Team & Roofers', text: 'Our team communicates in English, Spanish and Tagalog.' },
     ],
   },
   services: {
@@ -65,21 +65,21 @@ export const ABOUT_PAGE = {
     eyebrow: 'Careers',
     heading: 'Build Something That Lasts',
     subheading: 'Join the QRS crew',
-    paragraphs: ['We like meeting roofers and team members who take pride in careful, clean work and clear communication with homeowners.'],
+    paragraphs: ['We like meeting roofers and team members who take pride in careful, clean work and clear communication with clients.'],
     cta: { label: 'Explore careers', href: '/careers/' },
   },
   faqs: [
     { q: 'Is Quality Roofing Specialists licensed and insured?', a: `Yes. QRS is licensed, bonded and insured as a California contractor: CSLB license #${BUSINESS.license}, licensed since ${formatDate(BUSINESS.licenseSince)}.` },
     { q: 'Who owns Quality Roofing Specialists?', a: 'QRS is family-owned, woman-owned and locally owned. It was co-founded by **Tony Goldberg** and **Adva Goldberg**, who serve as CEO and President. Tony did his first roofing job at 16.' },
     { q: 'What areas do you serve?', a: 'Homes and businesses across [Los Angeles County](/service-areas/la-county/) and [Orange County](/service-areas/orange-county/), from our offices in the Fairfax area of Los Angeles, Woodland Hills and Vernon.' },
-    { q: 'Do you use subcontractors?', a: 'Our own 12 crews do the work, with dedicated crews for shingle, tile and flat roofing. We bring in vetted subcontractors only during overflow, and every $199 Roof Check is done by a field inspector, lead roofer or estimator on our own team.' },
-    { q: 'What languages does your team speak?', a: 'Our office and field staff communicate in English, Spanish and Tagalog.' },
+    { q: 'Do you bring in outside crews?', a: 'Our own 12 crews do the work, with dedicated crews for shingle, tile and flat roofing. We bring in vetted partner crews only during overflow, and every $199 Roof Check is done by a field inspector, lead roofer or estimator on our own team.' },
+    { q: 'What languages does your team speak?', a: 'Our office team and roofers communicate in English, Spanish and Tagalog.' },
   ],
   partners: {
     eyebrow: 'Contractors',
     heading: 'Partner With QRS',
     subheading: 'A roofing team you can put your name next to',
-    paragraphs: ['General contractors, builders, remodelers and property managers work with QRS for roofer-led assessments, written scopes and photo-documented work.'],
+    paragraphs: ['Contractors, builders, remodelers and property management clients work with QRS for roofer-led assessments, written scopes and photo-documented work.'],
     cta: { label: 'Partner with us', href: '/contractors/' },
   },
 };

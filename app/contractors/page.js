@@ -28,7 +28,7 @@ const schema = pageJsonLd({
   description: page.metaDescription,
   crumbs: CRUMBS,
   faqs: page.faqs,
-  service: { name: 'Roofing Subcontractor Services', type: page.keyword },
+  service: { name: 'Roofing Crews for Contractors', type: page.keyword },
 });
 
 const RELATED = relatedLinks(['/commercial-roofing/', '/residential-roofing/hoa-multi-family/', '/residential-roofing/flat-roofing/', '/residential-roofing/']);
@@ -58,7 +58,7 @@ export default function ContractorsPage() {
       <DifferenceBand />
       <WhyChoose heading={page.why.heading} intro={page.why.intro} points={page.why.points} cta={{ label: 'Start a Conversation', href: '#roof-check' }} />
       <RelatedLinks heading="Related pages" links={RELATED} />
-      <Faq heading="Contractor FAQs" sub="Straight answers for contractors and property managers." faqs={page.faqs} cta={false} />
+      <Faq heading="Contractor FAQs" sub="Straight answers for contractors and property management clients." faqs={page.faqs} cta={false} />
       <RoofCheck tone="white" offer="commercial" />
       <FinalCta heading="Let’s Build Something Together" text="Tell us about your project and we’ll start with a roofer-led look at the roof." cta={{ label: 'Start a Conversation', href: '#roof-check' }} />
     </main>

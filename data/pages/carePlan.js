@@ -166,7 +166,7 @@ export const CARE_PLAN = {
       a: 'We replace it, at no charge to you. Tile breaks — anyone who tells you otherwise hasn’t walked enough of it. We minimize foot traffic, photograph what was already cracked before we start, and own what we break.',
     },
     {
-      q: 'Can an HOA board or property manager set up a plan?',
+      q: 'Can HOA boards and property management clients set up a plan?',
       a: 'Yes. A plan can cover the buildings across a community, including carports and common-area roofs — as long as it’s roofing material, not patio covers — with one point of contact for the board or manager. The photo reports are easy to share at board meetings, so decisions rest on what the roofs actually look like.',
     },
     {
@@ -199,7 +199,7 @@ export const CARE_PLAN = {
     },
     {
       q: 'Who actually does the maintenance visit?',
-      a: 'An experienced roofer on our own team, every time — never a call-center technician or a subcontractor.',
+      a: 'An experienced roofer on our own team, every time — never a call-center technician or an outside crew.',
     },
   ],
   final: {

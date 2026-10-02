@@ -112,17 +112,17 @@ export const HOA_MULTI_FAMILY = {
   imageAlt: 'Aerial view of a multi-family property with a shingle roof',
   hero: {
     intro:
-      'QRS provides HOA & multi-family roofing for boards and property managers across Los Angeles and Orange County, from roof inspections and repairs to replacements phased building by building. Our *ReserveReady* program gives your board photo reports, phased proposals and long-range budget planning, with one point of contact throughout. It starts with a roofer-led roof survey of each building.',
+      'QRS provides HOA & multi-family roofing for boards and property management clients across Los Angeles and Orange County, from roof inspections and repairs to replacements phased building by building. Our *ReserveReady* program gives your board photo reports, phased proposals and long-range budget planning, with one point of contact throughout. It starts with a roofer-led roof survey of each building.',
     highlights: ['Photo reports your board can review', 'Work phased building by building', 'One point of contact, start to finish'],
   },
   overview: {
     paragraphs: [
-      'Whether it’s a townhome community in Irvine or an apartment building in Long Beach, a multi-family property is really a collection of roofs. Buildings put up at the same time can age differently depending on sun, shade and drainage, and carports, clubhouses and other common-area roofs often use a different system altogether. Before a board or property manager can make a sound decision, they need a clear picture of every one of them. We inspect each roof, photo-document what we find and organize it into a **report your board can review**, building by building.',
+      'Whether it’s a townhome community in Irvine or an apartment building in Long Beach, a multi-family property is really a collection of roofs. Buildings put up at the same time can age differently depending on sun, shade and drainage, and carports, clubhouses and other common-area roofs often use a different system altogether. Before a board or property management client can make a sound decision, they need a clear picture of every one of them. We inspect each roof, photo-document what we find and organize it into a **report your board can review**, building by building.',
       'From there, we help you separate what’s urgent from what can be planned. Some roofs need repairs now, while others can be monitored or scheduled into a later phase so replacements fit your budget. Because we work on tile, shingle and flat roofs, the whole property can stay with one contractor. For office, retail or mixed-use buildings, see our [commercial roofing](/commercial-roofing/) services. To get started, [request an estimate](#roof-check) and we’ll set up a time to walk the property with you.',
     ],
   },
   process: {
-    subheading: 'How we work with boards and property managers',
+    subheading: 'How we work with boards and property management clients',
     steps: [
       {
         title: 'Property walk and roof inspections',

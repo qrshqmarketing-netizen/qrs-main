@@ -45,7 +45,7 @@ export const REGION_PAGES = {
       heading: 'Roofing Across Orange County',
       paragraphs: [
         'Many Orange County neighborhoods were built with concrete tile roofs, and plenty of those roofs are now old enough that the underlayment beneath the tiles has worn out. In master-planned communities like those in [Irvine](/service-areas/orange-county/irvine/), similar homes tend to reach that point around the same time. Along the coast in Huntington Beach and Newport Beach, salt air and ocean wind add wear to flashings, vents and ridge details, while inland cities like Anaheim and Santa Ana see more heat.',
-        'We start with photos and a plain-English explanation of what we find, then give you a written scope and price before any work begins. That might mean a [tile roof repair](/residential-roofing/tile-roofing/repair/), a [tile roof replacement](/residential-roofing/tile-roofing/replacement/) or a [roof maintenance plan](/roof-maintenance-plans/) for a whole community. Boards and property managers get one point of contact through our [HOA & multi-family roofing](/residential-roofing/hoa-multi-family/) work.',
+        'We start with photos and a plain-English explanation of what we find, then give you a written scope and price before any work begins. That might mean a [tile roof repair](/residential-roofing/tile-roofing/repair/), a [tile roof replacement](/residential-roofing/tile-roofing/replacement/) or a [roof maintenance plan](/roof-maintenance-plans/) for a whole community. Boards and property management clients get one point of contact through our [HOA & multi-family roofing](/residential-roofing/hoa-multi-family/) work.',
       ],
     },
     considerations: [

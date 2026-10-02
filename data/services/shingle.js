@@ -23,7 +23,7 @@ export const SHINGLE_CONTENT = {
       intro: 'From one wind-lifted tab to a complete tear-off, choose the service that fits where your shingle roof is today.',
     },
     highlights: {
-      heading: 'Why Homeowners Choose Shingle Roofs',
+      heading: 'Why Clients Choose Shingle Roofs',
       points: [
         { title: 'Clean lines and plenty of colors', text: 'Architectural shingles add depth and shadow lines, and they come in a wide range of colors that suit Craftsman, ranch and traditional homes alike.' },
         { title: 'Lighter than tile', text: 'Shingles weigh far less than clay or concrete tile, so they suit many roofs that were never framed to carry tile.' },
@@ -78,7 +78,7 @@ export const SHINGLE_CONTENT = {
         points: [
           { title: 'A roofer’s honest recommendation', text: 'A roofer who has been on your roof tells you whether it truly needs replacing, and if a [shingle roof tune-up](/roof-maintenance-plans/#tune-up) would keep it going, we’ll say so.' },
           { title: 'Photos of what gets covered up', text: 'Once the new roof is on, the deck and underlayment are hidden for good, so we photograph them while they’re still exposed.' },
-          { title: 'A clean site, start to finish', text: 'Tarps over landscaping, careful clean-up and a final sweep for nails leave your yard the way we found it, something homeowners mention in their Google reviews.' },
+          { title: 'A clean site, start to finish', text: 'Tarps over landscaping, careful clean-up and a final sweep for nails leave your yard the way we found it, something clients mention in their Google reviews.' },
           { title: 'Backed by The QRS Guarantee', text: 'Your new shingle roof comes with our 10-year workmanship warranty, and we go over exactly what it covers at the final walkthrough.' },
         ],
       },
@@ -190,7 +190,7 @@ export const SHINGLE_CONTENT = {
         { q: 'Do you pull the permits?', a: 'Yes. When your roofing project needs a building permit, we pull it for you.' },
         { q: 'Can the roof on my ADU match my house?', a: 'Usually, yes. We look for the same or a closely matching shingle and color, though a brand-new roof can look a little brighter next to one that’s been weathering for a while. If your main roof is near the end of its life, a [shingle roof replacement](/residential-roofing/shingle-roofing/replacement/) at the same time gives the whole property one consistent look.' },
         { q: 'Can you replace a wood shake roof with shingles?', a: 'We can. Wood shakes are often laid over spaced boards, so solid decking goes on before the underlayment and shingles. You end up with a smoother, more uniform roof, and asphalt shingles are commonly fire-rated.' },
-        { q: 'Do you work with builders and general contractors?', a: 'We do, on new homes, additions and ADUs across Los Angeles and Orange County, with a written scope and price that builders can plan around. See how we [work with contractors](/contractors/).' },
+        { q: 'Do you work with builders and contractors?', a: 'We do, on new homes, additions and ADUs across Los Angeles and Orange County, with a written scope and price that builders can plan around. See how we [work with contractors](/contractors/).' },
         { q: 'Should I switch my tile roof to shingles?', a: 'It can make sense if the tile is badly broken or you want a lighter roof, but it changes the character of the house. If you love your tile and the real problem is worn underlayment, a [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/) keeps the tiles and renews what’s underneath.' },
         { q: 'Where do the attic vents go on a new shingle roof?', a: 'Intake vents sit low, at the eaves or soffits, and exhaust vents sit high, at or near the ridge. Balancing the two lets hot air escape as cooler air comes in, and we avoid mixing exhaust types on one attic, since that can short-circuit the airflow.' },
       ],

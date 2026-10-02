@@ -8,7 +8,7 @@ export const BUSINESS = {
   shortName: 'QRS',
   tagline: 'DETAIL-FIRST ROOFING',
   description:
-    'Detail-first roof repair and replacement for homeowners across Southern California, licensed, bonded and insured and backed by a 10-year workmanship warranty. CSLB Lic # 1061942.',
+    'Detail-first roof repair and replacement for clients across Southern California, licensed, bonded and insured and backed by a 10-year workmanship warranty. CSLB Lic # 1061942.',
   email: 'info@qualityroofingspecialists.com',
   license: '1061942', // California CSLB contractor license number
   licenseSince: '2020-01-03', // CSLB license issue date

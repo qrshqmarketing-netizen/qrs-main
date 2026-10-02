@@ -105,7 +105,7 @@ export const COMMERCIAL_MENU = {
   },
   partner: {
     title: 'Contractors & White-Label',
-    text: 'Roofing subcontracting for GCs, builders and property managers, under our name or yours.',
+    text: 'Roofing crews for contractors, builders and property management clients, under our name or yours.',
     cta: 'Partner with us',
     href: '/contractors/',
   },

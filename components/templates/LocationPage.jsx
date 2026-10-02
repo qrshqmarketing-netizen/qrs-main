@@ -63,7 +63,7 @@ export default function LocationPage({ location, page, index = 0 }) {
         sub="Tile, shingle and flat roofing, done the detail-first way. Pick a project to see how we handle that kind of work."
         projects={projectsFor(slug)}
       />
-      <Faq heading={`${city} Roofing FAQs`} sub={`Straight answers for ${city} ${page.offer === 'commercial' ? 'property owners' : 'homeowners'}.`} faqs={page.faqs} cta={false} />
+      <Faq heading={`${city} Roofing FAQs`} sub={`Straight answers for ${city} clients.`} faqs={page.faqs} cta={false} />
       <RoofCheck offer={page.offer || 'home'} />
       <FinalCta heading={page.final.heading} text={page.final.text} />
     </main>

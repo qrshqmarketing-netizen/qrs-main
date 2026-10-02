@@ -28,7 +28,7 @@ export const REVIEWS_PAGE = {
   hero: {
     heading: 'Customer Reviews',
     image: '/images/reviews-hero-bg.webp',
-    imageAlt: 'Homeowners sharing feedback outside their home',
+    imageAlt: 'Clients sharing feedback outside their home',
     intro:
       'Leave customer reviews for Quality Roofing Specialists on Google or Yelp: pick the location you worked with below, then the platform you’d like to use. Thanks for choosing QRS — your review helps other local property owners.',
   },

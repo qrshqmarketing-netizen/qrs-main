@@ -35,7 +35,7 @@ export function SectionHub({ section }) {
     ? {
         eyebrow: 'Contractors',
         heading: 'Partner With QRS',
-        subheading: 'For general contractors, builders and property managers',
+        subheading: 'For contractors, builders and property management clients',
         paragraphs: ['Need a roofing partner for your projects? We bring roofer-led assessments, written scopes and photo-documented work to every job we do with you.'],
         cta: { label: 'Partner with us', href: CONTRACTORS_LINK.href },
         image: '/images/bottom-cta-background.webp',

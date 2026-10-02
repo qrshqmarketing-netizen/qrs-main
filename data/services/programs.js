@@ -10,7 +10,7 @@ export const EMERGENCY_ROOF_REPAIR = {
   metaDescription:
     'Emergency roof repair in Los Angeles & Orange County for active leaks and storm damage: after-hours calls, tarps when needed and photos for insurance.',
   image: '/images/emergency-roof-repair-hero.webp',
-  imageAlt: 'Roofer reviewing storm damage with homeowners beside a blue roof tarp',
+  imageAlt: 'Roofer reviewing storm damage with clients beside a blue roof tarp',
   hero: {
     intro:
       'For emergency roof repair in Los Angeles and Orange County, stay off the roof, move belongings away from the leak and call QRS, even after hours or on a weekend. A roofer assesses and photographs the storm damage or sudden leak, puts temporary protection such as a tarp in place when it’s needed, then makes the permanent repair, priced in writing first.',
@@ -25,7 +25,7 @@ export const EMERGENCY_ROOF_REPAIR = {
   process: {
     subheading: 'From your call to the finished repair',
     image: '/images/homeowners-looking-at-leak-in-ceiling.webp',
-    imageAlt: 'Homeowners looking up at a ceiling leak dripping into a bucket',
+    imageAlt: 'Clients looking up at a ceiling leak dripping into a bucket',
     steps: [
       {
         title: 'You call and tell us what happened',
@@ -235,7 +235,7 @@ export const ROOF_FINANCING = {
   metaDescription:
     'Roof financing in LA & Orange County: spread the cost of a home roof replacement into monthly payments through Momnt Financing or Service Financing. Book a free roof evaluation.',
   image: '/images/financing-hero-background.webp',
-  imageAlt: 'A roofing professional reviewing a project with homeowners',
+  imageAlt: 'A roofer reviewing a project with clients',
   showReviews: false,
   partners: {
     heading: 'Our Financing Partners',

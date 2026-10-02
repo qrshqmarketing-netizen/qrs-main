@@ -12,7 +12,7 @@ export const CONTACT_PAGE = {
   hero: {
     heading: 'Contact Quality Roofing Specialists',
     image: '/images/reviews-hero-bg.webp',
-    imageAlt: 'Homeowners sharing feedback outside their home',
+    imageAlt: 'Clients sharing feedback outside their home',
     intro: `To contact Quality Roofing Specialists, call [${PHONE}](${TEL}) (${hoursText(BUSINESS.hours)}), email [${BUSINESS.email}](mailto:${BUSINESS.email}) or send your project details through the [estimate form](#roof-check). One number reaches all of our offices, and our team gets back to you with a clear next step.`,
   },
   ways: {

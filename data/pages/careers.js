@@ -15,14 +15,14 @@ export const CAREERS_PAGE = {
   hero: {
     heading: 'Roofing Jobs & Careers at QRS',
     intro:
-      'Quality Roofing Specialists hires for roofing jobs across Los Angeles and Orange County: roofers and installers, crew leads, estimators, project managers and office staff. To apply, email us your info and the role you’re interested in. We’re building a team of dedicated professionals who share our core values and our mission of crafting top-quality roofs.',
+      'Quality Roofing Specialists hires for roofing jobs across Los Angeles and Orange County: roofers and installers, crew leads, estimators, project managers and office team members. To apply, email us your info and the role you’re interested in. We’re building a team of dedicated professionals who share our core values and our mission of crafting top-quality roofs.',
   },
   values: {
     heading: 'What It’s Like to Work at QRS',
     items: [
       { title: 'Detail-first standards', text: 'Clean lines, proper details and tidy job sites. We’d rather do it right than do it twice.' },
       { title: 'Roofers lead the work', text: 'Roofers inspect, scope and explain the work, so roofing skill sits at the center of every job.' },
-      { title: 'Clear communication', text: 'Written scopes, photos and plain English, with homeowners and within the crew.' },
+      { title: 'Clear communication', text: 'Written scopes, photos and plain English, with clients and within the crew.' },
       { title: 'Local projects', text: 'Work across Los Angeles and Orange County, from tile lift & relay to full roof replacements.' },
     ],
   },
@@ -39,7 +39,7 @@ export const CAREERS_PAGE = {
     items: [
       { title: 'Roofers & installers', text: 'Hands-on roofing work on tile, shingle and flat roofs, with pride in clean, careful installs.', link: { label: 'Ask about this role', href: apply('Roofer / installer') } },
       { title: 'Crew leads & foremen', text: 'Lead a crew on site, keep the work to the written scope and leave every job site clean.', link: { label: 'Ask about this role', href: apply('Crew lead / foreman') } },
-      { title: 'Estimators & project managers', text: 'Run roof checks, write clear scopes and keep homeowners informed from start to final walkthrough.', link: { label: 'Ask about this role', href: apply('Estimator / project manager') } },
+      { title: 'Estimators & project managers', text: 'Run roof checks, write clear scopes and keep clients informed from start to final walkthrough.', link: { label: 'Ask about this role', href: apply('Estimator / project manager') } },
       { title: 'Office & customer care', text: 'Schedule roof checks, answer calls and keep projects organized behind the scenes.', link: { label: 'Ask about this role', href: apply('Office / customer care') } },
     ],
   },
@@ -54,7 +54,7 @@ export const CAREERS_PAGE = {
   },
   faqs: [
     { q: 'Where are the jobs located?', a: 'Our projects are across Los Angeles County and Orange County, including [Los Angeles](/service-areas/la-county/los-angeles/), Pasadena, Long Beach, Irvine and the [other cities we serve](/service-areas/).' },
-    { q: 'What do you look for?', a: `People who share our core values (${VALUE_NAMES.slice(0, -1).join(', ')} and ${VALUE_NAMES.at(-1)}), take pride in careful work and treat homeowners’ property with respect.` },
+    { q: 'What do you look for?', a: `People who share our core values (${VALUE_NAMES.slice(0, -1).join(', ')} and ${VALUE_NAMES.at(-1)}), take pride in careful work and treat clients’ property with respect.` },
     { q: 'What if I don’t see an opening for my role?', a: 'Send us your info anyway. Openings change through the year, and we’re always glad to hear from people who share our standards.' },
     { q: 'How do I apply?', a: `Email [${EMAIL}](mailto:${EMAIL}) with the role you’re interested in and a little about your experience, or call us during business hours.` },
   ],

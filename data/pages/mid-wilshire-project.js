@@ -29,9 +29,9 @@ export const MID_WILSHIRE_PROJECT = {
   ],
   paragraphs: [
     'On this Spanish Revival multi-family building in Mid-Wilshire, QRS replaced both roof areas: the sloped sections with new curved clay tile as part of our *HardShell* tile roofing system, and the broad upper terrace with a reflective *FlatGuard* flat roof.',
-    'The property manager first contacted us after water appeared inside the building. They booked our $199 Roof Check so a roofer could assess the roof before we planned the replacement work.',
+    'The client first contacted us after water appeared inside the building. They booked our $199 Roof Check so a roofer could assess the roof before we planned the replacement work.',
     'The pitched sections were prepared with tile-rated synthetic underlayment and finished with new curved clay tile as part of our *HardShell* tile roofing system. For the terrace, our reflective *FlatGuard* low-slope system provides a light-colored finish. Flashing was shaped around vents and plumbing stacks and where the roof meets the walls.',
-    'Older multi-family properties across Los Angeles often combine traditional tile with usable rooftop terraces. QRS can coordinate [tile roof replacement](/residential-roofing/tile-roofing/replacement/) and [flat roof replacement](/residential-roofing/flat-roofing/replacement/) in one scope, including the transition details. Property managers and associations can also explore our [HOA and multi-family roofing services](/residential-roofing/hoa-multi-family/).',
+    'Older multi-family properties across Los Angeles often combine traditional tile with usable rooftop terraces. QRS can coordinate [tile roof replacement](/residential-roofing/tile-roofing/replacement/) and [flat roof replacement](/residential-roofing/flat-roofing/replacement/) in one scope, including the transition details. Property management clients and associations can also explore our [HOA and multi-family roofing services](/residential-roofing/hoa-multi-family/).',
     'We provide free roof evaluations throughout [our Los Angeles service area](/service-areas/) for property owners and managers considering similar work.',
   ],
 };

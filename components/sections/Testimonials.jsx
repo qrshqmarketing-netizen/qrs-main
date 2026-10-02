@@ -16,7 +16,7 @@ export default function Testimonials({ showVideo = true, showReviews = true }) {
               <p>
                 See the QRS process from start to finish &mdash; from the first roof check to the final walkthrough. With
                 us, there's no pressure and no mystery scope, just a clear written price and a commitment to detail-first
-                workmanship. We're a local roofing team built to be straightforward and reliable for homeowners across
+                workmanship. We're a local roofing team built to be straightforward and reliable for clients across
                 Southern California.
               </p>
             </div>
@@ -28,7 +28,7 @@ export default function Testimonials({ showVideo = true, showReviews = true }) {
           <div className="tst-grid">
             <div className="tst-intro">
               <h2>Don&rsquo;t Take Our Word For It</h2>
-              <p>See what SoCal homeowners have to say about their experience with QRS.</p>
+              <p>See what SoCal clients have to say about their experience with QRS.</p>
               <div className="g-badge">
                 <GoogleLogo className="g-logo" />
                 <div>

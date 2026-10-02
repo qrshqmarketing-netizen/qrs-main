@@ -34,7 +34,7 @@ export const COMMERCIAL_CONTENT = {
       { q: 'Can our building stay open while you work on the roof?', a: 'Usually, yes. Most commercial roofing happens while the building is in use, so we plan access, noise, staging and deliveries with you before work begins. If any step needs an area cleared, you’ll know ahead of time.' },
       { q: 'Do you repair commercial roofs, or only replace them?', a: 'Both. Many commercial leaks trace back to one failed flashing, a clogged drain or a worn seam, and a targeted repair is the right fix. When a roof is near the end of its life, the survey photos show it, so you can plan and budget for replacement.' },
       { q: 'Do you offer ongoing maintenance for commercial roofs?', a: 'Yes. Scheduled roof care covers seasonal checks, clearing drains and debris, and a photo record you can keep with your building files. It helps you catch wear early and deal with it before the rainy season.' },
-      { q: 'Do you work with general contractors and property managers?', a: 'Yes. We partner with general contractors, builders and property managers across [Los Angeles and Orange County](/service-areas/). Our [contractor partnerships](/contractors/) page explains how those projects run.' },
+      { q: 'Do you work with contractors and property management clients?', a: 'Yes. We partner with contractors, builders and property management clients across [Los Angeles and Orange County](/service-areas/). Our [contractor partnerships](/contractors/) page explains how those projects run.' },
     ],
   },
 
@@ -44,19 +44,19 @@ export const COMMERCIAL_CONTENT = {
       keyword: 'office building roofing',
       title: 'Office Building Roofing',
       navLabel: 'Office Buildings',
-      card: 'Roof surveys, repairs and replacement for office buildings, planned around your tenants and documented for owners and property managers.',
+      card: 'Roof surveys, repairs and replacement for office buildings, planned around your tenants and documented for owners and property management clients.',
       metaTitle: 'Office Building Roofing in Los Angeles',
       metaDescription: 'Office building roofing in Los Angeles & Orange County: leak repairs, rooftop HVAC flashing and replacement planned around tenants. Request a roof survey.',
       image: '/images/office-building-hero.webp',
       imageAlt: 'Modern office building exterior beneath a clear Southern California sky',
       hero: {
-        intro: 'QRS provides office building roofing across Los Angeles and Orange County, from leak repairs to full replacement, with the work planned so your tenants can keep working. Every project starts with a roof survey that traces leaks to the source, from rooftop HVAC curbs to parapets and drains, with photo-documented findings for owners and property managers.',
+        intro: 'QRS provides office building roofing across Los Angeles and Orange County, from leak repairs to full replacement, with the work planned so your tenants can keep working. Every project starts with a roof survey that traces leaks to the source, from rooftop HVAC curbs to parapets and drains, with photo-documented findings for owners and property management clients.',
         highlights: ['Work planned around your tenants', 'Curbs and flashings at rooftop HVAC', 'Photo-documented findings for owners'],
       },
       overview: {
         paragraphs: [
           'Office building roofing is detail work. Most office roofs are low-slope and crowded with HVAC units, exhaust fans, conduit and roof hatches, and many are ringed by parapet walls capped with coping. Each of those details is a place water can get in, and the first sign is often a stained ceiling tile in a top-floor suite. We follow the leak to its source, whether that’s a failed curb flashing, a split seam or a drain backing up, then repair or replace the [flat and low-slope roofing](/residential-roofing/flat-roofing/) with the right system for your building.',
-          'For owners and property managers, the roof is also a planning question. Is it worth repairing, or is replacement coming? What needs attention this year, and what can wait? Our roof survey answers with photos and plain-English findings you can share with ownership or keep with your building records. When larger work is due, we build the scope and work plan around your tenants, covering roof access, noise, staging and deliveries.',
+          'For commercial clients, the roof is also a planning question. Is it worth repairing, or is replacement coming? What needs attention this year, and what can wait? Our roof survey answers with photos and plain-English findings you can share with ownership or keep with your building records. When larger work is due, we build the scope and work plan around your tenants, covering roof access, noise, staging and deliveries.',
         ],
       },
       process: {
@@ -71,7 +71,7 @@ export const COMMERCIAL_CONTENT = {
       },
       why: {
         heading: 'Why Choose QRS for Office Building Roofing?',
-        intro: 'Property managers juggle tenants, ownership and budgets. A [roof survey](#roof-check) gives you facts and photos to work from.',
+        intro: 'Property management clients juggle tenants, ownership and budgets. A [roof survey](#roof-check) gives you facts and photos to work from.',
         points: [
           { title: 'Leaks traced, not guessed at', text: 'We follow water back to where it enters instead of patching the spot above the stain, and we show you the photos.' },
           { title: 'Findings ownership can follow', text: 'Plain-English findings and clear photos make it easier to explain a repair, or a replacement budget, up the chain.' },

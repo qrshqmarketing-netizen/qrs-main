@@ -3,7 +3,7 @@ import { GOOGLE_REVIEWS } from '@/data/reviews';
 import './ReviewGrid.css';
 
 // Every Google review (data/reviews.js) as a card, with a link to the review on Google
-export default function ReviewGrid({ heading = 'What Homeowners Say', reviews = GOOGLE_REVIEWS }) {
+export default function ReviewGrid({ heading = 'What Our Clients Say', reviews = GOOGLE_REVIEWS }) {
   return (
     <section className="review-grid tile-pattern" id="reviews">
       <div className="container">

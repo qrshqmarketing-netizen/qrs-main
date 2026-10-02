@@ -1,12 +1,12 @@
-// Contractors partner page (/contractors/): for general contractors, builders, remodelers and property managers.
+// Contractors partner page (/contractors/): for contractors, builders, remodelers and property management clients.
 
 export const CONTRACTORS_PAGE = {
-  keyword: 'roofing subcontractor',
-  metaTitle: 'Roofing Subcontractor in Los Angeles',
-  metaDescription: 'Need a roofing subcontractor in LA or Orange County? QRS partners with general contractors, builders and property managers, including white-label roofing.',
+  keyword: 'roofing crews for contractors',
+  metaTitle: 'Roofing Crews for Contractors in Los Angeles',
+  metaDescription: 'Need roofing crews for contractors in LA or Orange County? QRS partners with contractors, builders and property management clients, including white-label roofing.',
   hero: {
-    heading: 'Partner With QRS as Your Roofing Subcontractor',
-    intro: 'QRS works as a roofing subcontractor for general contractors, builders and remodelers across Los Angeles and Orange County. You get roofer-led assessments, written scopes you can build on and photo documentation for your records and your clients.',
+    heading: 'Partner With QRS: Roofing Crews for Contractors',
+    intro: 'QRS provides roofing crews for contractors, builders and remodelers across Los Angeles and Orange County. You get roofer-led assessments, written scopes you can build on and photo documentation for your records and your clients.',
     highlights: ['Roofer-led assessments and scopes', 'Photo documentation you can share', 'White-label service under your brand'],
   },
   overview: {
@@ -19,12 +19,12 @@ export const CONTRACTORS_PAGE = {
   audiences: {
     heading: 'Who We Work With',
     points: [
-      { title: 'General contractors', text: 'Bring us in for the roofing scope on remodels, additions and commercial projects. You get one roofing contact, a written scope and updates without the follow-up calls.' },
+      { title: 'Contractors', text: 'Bring us in for the roofing scope on remodels, additions and commercial projects. You get one roofing contact, a written scope and updates without the follow-up calls.' },
       { title: 'Builders and remodelers', text: 'From new construction and ADUs to a changed roofline on a remodel, we install tile, shingle and flat roofs that fit the plans and the rest of the home.' },
-      { title: 'Property managers', text: 'Keep one roofing partner across your buildings for surveys, repairs, replacements and scheduled roof care, with photo records for each property.' },
+      { title: 'Property management clients', text: 'Keep one roofing partner across your buildings for surveys, repairs, replacements and scheduled roof care, with photo records for each property.' },
       { title: 'HOA boards', text: 'Get roofer-led findings and written scopes your board can review together. Our [HOA & multi-family roofing](/residential-roofing/hoa-multi-family/) page explains how we plan community projects.' },
       { title: 'Solar companies', text: 'Bring us in to handle the roof around a solar install, from mounting-point flashing to a full replacement before panels go up.' },
-      { title: 'Roofing contractors', text: 'We take on overflow work from other roofing contractors, and bring in vetted subcontractors of our own when a job needs the extra capacity.' },
+      { title: 'Roofing contractors', text: 'We take on overflow work from other roofing contractors, and bring in vetted partner crews of our own when a job needs the extra capacity.' },
     ],
   },
   // White-label service: QRS does the roofing under the contractor's brand

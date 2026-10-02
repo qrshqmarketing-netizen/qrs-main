@@ -25,7 +25,7 @@ export const METAL_CONTENT = {
       intro: 'Pick the service that fits your project, from a new standing seam roof to rain gutters that keep water off your walls.',
     },
     highlights: {
-      heading: 'Why Homeowners Choose Metal',
+      heading: 'Why Clients Choose Metal',
       points: [
         {
           title: 'Noncombustible panels',
