@@ -2,8 +2,10 @@
 // Answers are matched top to bottom: the first `match` that fits the visitor's message wins.
 // `chips` are the suggested follow-up buttons. null = the starter questions, [] = none.
 
-import { BUSINESS, COMPANY, PHONE, TEL } from './site';
+import { BUSINESS, COMPANY, OFFICES, PHONE, TEL } from './site';
+import { SEASON_PROMO } from './promo';
 import { formatDate } from '@/lib/dates';
+import { hoursText } from '@/lib/hours';
 
 // The chat assistant's backend: app/api/chat/route.js (an OpenRouter model — see OPENROUTER_API_KEY and
 // OPENROUTER_MODEL in .env.local). Set NEXT_PUBLIC_CHAT_ENDPOINT only to point the widget at a different,
@@ -31,8 +33,11 @@ Facts you can rely on:
 - We pull the building permits when a roofing project needs one.
 - We help with insurance claims where we can: our photos and written scope can be shared with the insurance company. The team is small, so we can't always meet the adjuster.
 - Homes start with a free roof evaluation: we use drone footage to see the roof's condition, with no charge and no obligation. Commercial buildings start with a roof survey instead.
+- The optional $199 Roof Check is a tune-up where we seal the vents, pipes and flashings, where most leaks start. It's paid after the visit (no deposit), and the $199 counts toward a replacement if the homeowner moves forward.${SEASON_PROMO.active ? ' Right now the site promotes it as El Niño season prep: getting the roof ready before the rains.' : ''}
 - Service area: Los Angeles and Orange County, Southern California.
-- Phone: ${PHONE}. Quality Roofing Specialists is a licensed California contractor, CSLB License #${BUSINESS.license}, licensed since ${formatDate(BUSINESS.licenseSince)}.
+- Phone: ${PHONE}, which reaches all of our offices. Hours: ${hoursText(BUSINESS.hours)}. Email: ${BUSINESS.email}.
+- Offices: ${OFFICES.map((o) => `${o.name}, ${o.address.street}, ${o.address.city}`).join('; ')}.
+- Quality Roofing Specialists is a licensed California contractor, CSLB License #${BUSINESS.license}, licensed since ${formatDate(BUSINESS.licenseSince)}.
 - Mission and vision: ${COMPANY.mission} ${COMPANY.vision} Core values: ${COMPANY.values.map((v) => v.title).join(', ')}.
 
 Rules:
