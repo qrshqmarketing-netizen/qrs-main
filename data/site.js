@@ -84,11 +84,10 @@ export const SITE_VERIFICATION = {
 // LOAD_TRACKING in lib/seo.js), so previews and local dev don't add noise to the real analytics.
 export const CLARITY_ID = 'ynxdd3rck6';
 
-// Google Tag Manager container ID. Loads Google Analytics via the tags configured inside the container itself
-// (checked October 2026: GA4 G-0HTXYPMNC5, plus old Universal Analytics UA-208890652-1 tags that no longer collect).
-// The forms push a generate_lead event to it (lib/tracking.js).
-// Only loads on the live site (see LOAD_TRACKING in lib/seo.js), same as Clarity above.
-export const GTM_ID = 'GTM-P7Z3CMG';
+// Google Analytics 4 measurement ID, loaded straight with gtag.js (app/layout.js); it replaced Google Tag Manager
+// (GTM-P7Z3CMG, whose GA4 property was G-0HTXYPMNC5) in October 2026. The forms send a generate_lead event to it
+// (lib/tracking.js). Only loads on the live site (see LOAD_TRACKING in lib/seo.js), same as Clarity above.
+export const GA_ID = 'G-CJSKXDJCBF';
 
 // Home page title and description (search results + link previews)
 export const HOME_TITLE = 'Roof Repair & Replacement in Southern California | Quality Roofing Specialists';

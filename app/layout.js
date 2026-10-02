@@ -17,7 +17,7 @@ import RoofAssistant from '@/components/widgets/RoofAssistant';
 import RevealSections from '@/components/ui/RevealSections';
 import HelpfulTitles from '@/components/ui/HelpfulTitles';
 import { PAGE_ENTRANCES } from '@/data/promo';
-import { BUSINESS, CLARITY_ID, GTM_ID, HOME_DESCRIPTION, SITE_URL, SITE_VERIFICATION } from '@/data/site';
+import { BUSINESS, CLARITY_ID, GA_ID, HOME_DESCRIPTION, SITE_URL, SITE_VERIFICATION } from '@/data/site';
 import { ALLOW_INDEXING, LOAD_TRACKING, openGraphBase, twitterBase } from '@/lib/seo';
 
 // Google Fonts, downloaded at build time and served from this site
@@ -66,16 +66,6 @@ export default function RootLayout({ children }) {
       </head>
       {/* Pages show up at once: no heading fade-ups or scroll reveals unless PAGE_ENTRANCES is on (globals.css) */}
       <body className={PAGE_ENTRANCES ? undefined : 'no-entrance'}>
-        {LOAD_TRACKING && (
-          <noscript>
-            <iframe
-              src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
-              height="0"
-              width="0"
-              style={{ display: 'none', visibility: 'hidden' }}
-            />
-          </noscript>
-        )}
         <Header />
         {PAGE_ENTRANCES && <RevealSections />}
         <HelpfulTitles />
@@ -89,12 +79,13 @@ export default function RootLayout({ children }) {
         <CampaignWelcome />
         {LOAD_TRACKING && (
           <>
-            <Script id="gtm" strategy="afterInteractive">
-              {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','${GTM_ID}');`}
+            <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
+            <Script id="ga4" strategy="afterInteractive">
+              {`window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '${GA_ID}');`}
             </Script>
             <Script id="clarity" strategy="afterInteractive">
               {`(function(c,l,a,r,i,t,y){

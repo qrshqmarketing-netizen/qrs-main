@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { gtag } from '@/lib/tracking';
 
 export default function ReviewRedirect({ location, platform, url }) {
   const [redirecting, setRedirecting] = useState(false);
@@ -16,19 +17,17 @@ export default function ReviewRedirect({ location, platform, url }) {
     };
 
     fallbackTimer = window.setTimeout(redirect, 1800);
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      event: 'review_outbound_click',
+    gtag('event', 'review_outbound_click', {
       review_location: location,
       review_platform: platform.toLowerCase(),
       link_url: url,
       link_domain: new URL(url).hostname,
       outbound: true,
-      eventCallback: () => {
+      event_callback: () => {
         window.clearTimeout(fallbackTimer);
         redirect();
       },
-      eventTimeout: 1500,
+      event_timeout: 1500,
     });
     setRedirecting(true);
 
