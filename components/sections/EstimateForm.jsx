@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { FOUND_US_OPTIONS, ROOF_TYPES, SERVICE_OPTIONS } from '@/data/estimateOptions';
 import { PHONE, TEL } from '@/data/site';
+import { currentAttribution } from '@/lib/attribution';
 import { rememberLead, trackLead } from '@/lib/tracking';
 
 // Sends the request to app/api/lead/route.js, which emails it and adds it to the leads spreadsheet (lib/leads.js)
@@ -18,7 +19,7 @@ export default function EstimateForm() {
       const res = await fetch('/api/lead/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...data, roofType: data.roof, source: 'estimate-form', page: window.location.pathname }),
+        body: JSON.stringify({ ...data, roofType: data.roof, source: 'estimate-form', page: window.location.pathname, utm: currentAttribution() }),
       });
       if (!res.ok) throw new Error(String(res.status));
       setStatus('sent');

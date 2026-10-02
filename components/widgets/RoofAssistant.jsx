@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import { ArrowRight, CloseIcon, RefreshIcon } from '@/components/ui/icons';
 import { ANSWERS, CHAT_ENDPOINT, CHIP_PROMPTS, CONTACT_ANSWERS, CONTACT_RE, FALLBACK_ANSWER, GREETING, STARTERS } from '@/data/assistant';
 import { PHONE, TEL } from '@/data/site';
+import { currentAttribution } from '@/lib/attribution';
 import { session } from '@/lib/storage';
 import './RoofAssistant.css';
 
@@ -83,7 +84,7 @@ export default function RoofAssistant() {
       const res = await fetch(CHAT_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ messages: history.current, leadSaved: leadSaved.current }),
+        body: JSON.stringify({ messages: history.current, leadSaved: leadSaved.current, utm: currentAttribution() }),
       });
       // The backend saves contact details even when the AI reply fails, and says so either way
       const data = await res.json().catch(() => ({}));

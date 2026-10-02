@@ -5,6 +5,7 @@ import { flushSync } from 'react-dom';
 import { CloseIcon } from '@/components/ui/icons';
 import { FINANCE, FINANCING_URL, PRICING } from '@/data/instantQuote';
 import { FOUND_US_OPTIONS } from '@/data/estimateOptions';
+import { currentAttribution } from '@/lib/attribution';
 import { trackLead } from '@/lib/tracking';
 import { PHONE, TEL } from '@/data/site';
 import { loadLeaflet, qrsPin } from '@/lib/leaflet';
@@ -210,7 +211,7 @@ export default function InstantQuote() {
     fetch('/api/lead/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ ...q, foundUs: f.get('foundUs') || '', website: f.get('website') || '', source: 'instant-quote', page: window.location.pathname }),
+      body: JSON.stringify({ ...q, foundUs: f.get('foundUs') || '', website: f.get('website') || '', source: 'instant-quote', page: window.location.pathname, utm: currentAttribution() }),
       keepalive: true,
     })
       .then((res) => res.ok && trackLead('instant_quote'))

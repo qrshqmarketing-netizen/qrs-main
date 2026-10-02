@@ -8,6 +8,7 @@ import Script from 'next/script';
 import { Open_Sans, Roboto_Condensed } from 'next/font/google';
 import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
+import CampaignWelcome from '@/components/widgets/CampaignWelcome';
 import CookieNotice from '@/components/widgets/CookieNotice';
 import InstantQuote from '@/components/widgets/InstantQuote';
 import ReviewToast from '@/components/widgets/ReviewToast';
@@ -85,6 +86,7 @@ export default function RootLayout({ children }) {
         <InstantQuote />
         <CookieNotice />
         <SeasonPromo />
+        <CampaignWelcome />
         {LOAD_TRACKING && (
           <>
             <Script id="gtm" strategy="afterInteractive">

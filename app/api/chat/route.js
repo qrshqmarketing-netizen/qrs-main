@@ -7,6 +7,7 @@ import { after } from 'next/server';
 import { SYSTEM_PROMPT } from '@/data/assistant';
 import { BUSINESS, SITE_URL } from '@/data/site';
 import { findRelevantPages } from '@/lib/chatRetrieval';
+import { leadAttribution } from '@/lib/attribution';
 import { deliverLead, rateLimited } from '@/lib/leads';
 
 const OPENROUTER_URL = 'https://openrouter.ai/api/v1/chat/completions';
@@ -140,6 +141,7 @@ export async function POST(request) {
         email: now.email || markerEmail,
         zip: str(marker.zip, 10) || now.zip,
         service: str(marker.interest, 120),
+        ...leadAttribution(body?.utm),
         transcript: answer.reply ? [...messages, { role: 'assistant', content: answer.reply }] : messages,
       };
       // Delivered after the response goes out, so the visitor doesn't wait on the email and spreadsheet

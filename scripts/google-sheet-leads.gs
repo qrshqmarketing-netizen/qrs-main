@@ -13,8 +13,9 @@
 
 const SECRET = ''; // the same value as LEADS_SHEET_SECRET in the website's environment variables
 
-const HEADERS = ['Received', 'Source', 'Name', 'Phone', 'Email', 'ZIP', 'How they found us', 'Service', 'Roof type', 'Address', 'Message', 'Quote details', 'Page', 'Chat transcript'];
-const KEYS = ['source', 'name', 'phone', 'email', 'zip', 'foundUs', 'service', 'roofType', 'address', 'message', 'quote', 'page', 'transcript'];
+// The UTM columns come last so rows added before them keep their columns; a missing header cell is filled in below
+const HEADERS = ['Received', 'Source', 'Name', 'Phone', 'Email', 'ZIP', 'How they found us', 'Service', 'Roof type', 'Address', 'Message', 'Quote details', 'Page', 'Chat transcript', 'UTM source', 'UTM medium', 'UTM campaign'];
+const KEYS = ['source', 'name', 'phone', 'email', 'zip', 'foundUs', 'service', 'roofType', 'address', 'message', 'quote', 'page', 'transcript', 'utmSource', 'utmMedium', 'utmCampaign'];
 
 function doPost(e) {
   const reply = (body) => ContentService.createTextOutput(JSON.stringify(body)).setMimeType(ContentService.MimeType.JSON);
@@ -42,6 +43,14 @@ function doPost(e) {
     if (sheet.getLastRow() <= 1) {
       sheet.getRange(1, 1, 1, HEADERS.length).setValues([HEADERS]).setFontWeight('bold');
       sheet.setFrozenRows(1);
+    } else {
+      // A sheet that already has leads: add the header for any column this script has that the sheet doesn't (never
+      // renames a header that's there)
+      const row = sheet.getRange(1, 1, 1, HEADERS.length);
+      const current = row.getValues()[0];
+      HEADERS.forEach((title, i) => {
+        if (!current[i]) row.getCell(1, i + 1).setValue(title).setFontWeight('bold');
+      });
     }
     sheet.appendRow([new Date()].concat(KEYS.map((key) => cell(data[key]))));
   } finally {

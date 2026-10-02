@@ -1,6 +1,7 @@
 // Receives the estimate form (components/sections/EstimateForm.jsx) and the Instant Quote drawer
 // (components/widgets/InstantQuote.jsx), checks the fields and hands the lead to lib/leads.js (email + Google Sheet).
 import { FOUND_US_OPTIONS, ROOF_TYPES, SERVICE_OPTIONS } from '@/data/estimateOptions';
+import { leadAttribution } from '@/lib/attribution';
 import { deliverLead, rateLimited } from '@/lib/leads';
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
@@ -64,6 +65,7 @@ export async function POST(request) {
     message: clip(body?.message, 3000),
     quote: source === 'instant-quote' ? quoteSummary(body) : '',
     page: page.startsWith('/') ? page : '',
+    ...leadAttribution(body?.utm),
   };
 
   const result = await deliverLead(lead);
