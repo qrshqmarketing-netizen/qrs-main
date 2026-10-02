@@ -4,28 +4,28 @@
     "hash": "698f36509c04e1a3"
   },
   "/residential-roofing/": {
-    "date": "2026-10-01",
-    "hash": "82d84a556dfd4103"
+    "date": "2026-10-02",
+    "hash": "692eb56714ac0485"
   },
   "/roof-repair/": {
-    "date": "2026-10-01",
-    "hash": "fb87905bba2767aa"
+    "date": "2026-10-02",
+    "hash": "54f4f1ce26e3c89b"
   },
   "/roof-replacement/": {
     "date": "2026-10-01",
     "hash": "fd367d0ee2246e2c"
   },
-  "/emergency-roof-repair/": {
+  "/roof-repair/emergency/": {
     "date": "2026-10-01",
     "hash": "2351bb93d6b5d4cf"
   },
   "/roof-inspection/": {
-    "date": "2026-10-01",
-    "hash": "6e0f39586e049363"
+    "date": "2026-10-02",
+    "hash": "6fdf51778b37584d"
   },
   "/roof-financing/": {
-    "date": "2026-10-01",
-    "hash": "7823ef988f3def16"
+    "date": "2026-10-02",
+    "hash": "238b064cf523613a"
   },
   "/roof-maintenance-plans/": {
     "date": "2026-10-01",
@@ -36,8 +36,8 @@
     "hash": "1cc1cfd81dbd716f"
   },
   "/residential-roofing/shingle-roofing/replacement/": {
-    "date": "2026-10-01",
-    "hash": "6cfc2bbf48990137"
+    "date": "2026-10-02",
+    "hash": "bf7b9c4edf3f3be8"
   },
   "/residential-roofing/shingle-roofing/repair/": {
     "date": "2026-10-01",
@@ -72,12 +72,12 @@
     "hash": "2d0ec1aec2c09ea7"
   },
   "/residential-roofing/flat-roofing/": {
-    "date": "2026-10-01",
-    "hash": "ec724e1f6e64b565"
+    "date": "2026-10-02",
+    "hash": "004f9924937f5736"
   },
   "/residential-roofing/flat-roofing/replacement/": {
-    "date": "2026-10-01",
-    "hash": "74cf98143b65bb7a"
+    "date": "2026-10-02",
+    "hash": "b814b9a505208eca"
   },
   "/residential-roofing/flat-roofing/repair/": {
     "date": "2026-10-01",
@@ -87,13 +87,9 @@
     "date": "2026-10-01",
     "hash": "e552ce0ae6f1042d"
   },
-  "/residential-roofing/rain-gutters/": {
-    "date": "2026-10-01",
-    "hash": "ee93b7cb0c1101b5"
-  },
   "/residential-roofing/hoa-multi-family/": {
-    "date": "2026-10-01",
-    "hash": "644b03f9b56097a4"
+    "date": "2026-10-02",
+    "hash": "45edde8598e4d470"
   },
   "/commercial-roofing/": {
     "date": "2026-10-01",
@@ -116,8 +112,8 @@
     "hash": "0faff38eb3762080"
   },
   "/commercial-roofing/shops/": {
-    "date": "2026-10-01",
-    "hash": "0249c0a8cf2804ea"
+    "date": "2026-10-02",
+    "hash": "b3386c1cc6c209b9"
   },
   "/commercial-roofing/warehouses/": {
     "date": "2026-10-01",
@@ -128,8 +124,8 @@
     "hash": "b4481706bc7133f8"
   },
   "/commercial-roofing/repair/": {
-    "date": "2026-10-01",
-    "hash": "2005ea2a982d580b"
+    "date": "2026-10-02",
+    "hash": "29c12f8b13a2255a"
   },
   "/commercial-roofing/replacement/": {
     "date": "2026-10-01",
@@ -140,16 +136,16 @@
     "hash": "c27aa0aa25a2d9f2"
   },
   "/contractors/": {
-    "date": "2026-10-01",
-    "hash": "619328d316674a32"
+    "date": "2026-10-02",
+    "hash": "5e947d88619b8a44"
   },
   "/service-areas/": {
     "date": "2026-10-01",
     "hash": "159f664328ba7126"
   },
   "/service-areas/la-county/": {
-    "date": "2026-10-01",
-    "hash": "5037b582b8912f8b"
+    "date": "2026-10-02",
+    "hash": "9b09d60fd6faa33c"
   },
   "/service-areas/la-county/los-angeles/": {
     "date": "2026-10-01",
@@ -160,16 +156,16 @@
     "hash": "7c59334aff3af731"
   },
   "/service-areas/la-county/pasadena/": {
-    "date": "2026-10-01",
-    "hash": "d4c8ce2a1d11464d"
+    "date": "2026-10-02",
+    "hash": "cee3d57cbe010c9f"
   },
   "/service-areas/la-county/glendale/": {
     "date": "2026-10-01",
     "hash": "39356647d182c2a8"
   },
   "/service-areas/la-county/burbank/": {
-    "date": "2026-10-01",
-    "hash": "6ad719620e012461"
+    "date": "2026-10-02",
+    "hash": "8c96bbd2bbf7434e"
   },
   "/service-areas/la-county/woodland-hills/": {
     "date": "2026-10-01",
@@ -200,8 +196,8 @@
     "hash": "f00715cc18f43712"
   },
   "/service-areas/orange-county/huntington-beach/": {
-    "date": "2026-10-01",
-    "hash": "2b3a28cf931a67c9"
+    "date": "2026-10-02",
+    "hash": "ee5133956764df94"
   },
   "/service-areas/orange-county/irvine/": {
     "date": "2026-10-01",
@@ -248,19 +244,19 @@
     "hash": "0d8dc46f32fa1718"
   },
   "/contact-us/": {
-    "date": "2026-10-01",
-    "hash": "fed76e3428a64896"
+    "date": "2026-10-02",
+    "hash": "d2c9d84565ad2495"
   },
   "/privacy-policy/": {
-    "date": "2026-10-01",
+    "date": "2026-09-30",
     "hash": "2091f341735afec7"
   },
   "/terms-and-conditions/": {
-    "date": "2026-10-01",
+    "date": "2026-09-30",
     "hash": "cd3e68d378f92222"
   },
   "/accessibility-statement/": {
-    "date": "2026-10-01",
+    "date": "2026-09-25",
     "hash": "af3e766944c99298"
   }
 }

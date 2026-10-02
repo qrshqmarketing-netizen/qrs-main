@@ -1,4 +1,4 @@
-// Single service pages: /emergency-roof-repair/, /roof-inspection/, /roof-maintenance-plans/ (with one-time tune-ups) and /roof-financing/.
+// Single service pages: /roof-repair/emergency/, /roof-inspection/, /roof-maintenance-plans/ (with one-time tune-ups) and /roof-financing/.
 
 export const EMERGENCY_ROOF_REPAIR = {
   slug: 'emergency-roof-repair',
@@ -211,7 +211,7 @@ export const ROOF_INSPECTION = {
     { q: 'What do I get after the roof evaluation?', a: 'Photos of what we found, a plain-English explanation of what they show and one clear recommendation: repair, monitor, maintain or replace. If work is needed, you get a written scope and price before anything starts, with no pressure to decide on the spot.' },
     { q: 'I’m buying a home. Is a general home inspection enough for the roof?', a: 'A general home inspection looks at the whole house, and the roof is one item on a long list. A roofer’s evaluation focuses on the roof alone, with photos of the roofing, flashings and vents. That matters most on tile, which can look sound from the street even when its underlayment is near the end, and on homes with flat sections that are easy to miss from the ground.' },
     { q: 'Can you tell how much life my roof has left?', a: 'We can tell you what condition it’s in and what kind of wear to expect next, but nobody can promise an exact number of years. On tile, most of the underlayment is hidden, so we judge it from the areas we can see, the roof’s history and signs like leaks or stains. The photos help you plan ahead instead of reacting to a leak.' },
-    { q: 'Is a free roof evaluation worth it after a storm if nothing is leaking?', a: 'Often, yes. High winds and heavy rain can loosen flashings, shift tiles and break shingle seals without an immediate leak, and a noticeable earthquake can crack ridge mortar and nudge tiles out of place. Those weak spots tend to give way in the next storm. If water is already coming in, our [emergency roof repair](/emergency-roof-repair/) page explains how we handle it.' },
+    { q: 'Is a free roof evaluation worth it after a storm if nothing is leaking?', a: 'Often, yes. High winds and heavy rain can loosen flashings, shift tiles and break shingle seals without an immediate leak, and a noticeable earthquake can crack ridge mortar and nudge tiles out of place. Those weak spots tend to give way in the next storm. If water is already coming in, our [emergency roof repair](/roof-repair/emergency/) page explains how we handle it.' },
     { q: 'Do I have to hire you for the work after the roof evaluation?', a: 'No. The roof evaluation is free: you see the photos and decide what’s next, with no pressure either way. If you’d like us to do the work, you’ll get a written scope and price first.' },
     { q: 'What should I tell you before the roof evaluation?', a: 'Anything you’ve noticed: stains, drips, roofing pieces in the yard, past repairs, the roof’s age if you know it, a recent storm or an upcoming sale. That context points the roofer to likely trouble spots, and the rest of the roof still gets checked.' },
     { q: 'I’m selling my home. Should I have the roof inspected first?', a: 'It can help. Knowing the roof’s condition before you list gives you time to handle small repairs on your own schedule, plus photos you can share with buyers. That makes the roof less likely to become a surprise late in the sale.' },
@@ -322,7 +322,7 @@ export const ROOF_FINANCING = {
     },
     {
       q: 'Can financing help with storm damage?',
-      a: 'If storm damage calls for a full home roof replacement, financing through Momnt Financing or Service Financing may help spread the cost, subject to credit approval. Repairs, including storm repairs, aren’t financed. The permanent fix still starts with photos and a written scope, and our [emergency roof repair](/emergency-roof-repair/) page explains those steps.',
+      a: 'If storm damage calls for a full home roof replacement, financing through Momnt Financing or Service Financing may help spread the cost, subject to credit approval. Repairs, including storm repairs, aren’t financed. The permanent fix still starts with photos and a written scope, and our [emergency roof repair](/roof-repair/emergency/) page explains those steps.',
     },
   ],
   related: ['/roof-replacement/', '/roof-repair/', '/roof-inspection/'],

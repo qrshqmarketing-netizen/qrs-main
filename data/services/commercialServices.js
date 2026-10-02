@@ -42,13 +42,13 @@ export const COMMERCIAL_SERVICES = [
       ],
     },
     faqs: [
-      { q: 'Can you repair storm damage on a commercial roof?', a: 'Yes. When Santa Ana winds or a winter storm damage the roof or start a leak, call us: a roofer assesses and photo-documents the damage and adds temporary protection if it’s needed to limit further water damage. The permanent repair follows with a written scope and price, and our photos and scope can be shared with your insurance company. Learn more about [emergency and storm-damage roof repair](/emergency-roof-repair/).' },
+      { q: 'Can you repair storm damage on a commercial roof?', a: 'Yes. When Santa Ana winds or a winter storm damage the roof or start a leak, call us: a roofer assesses and photo-documents the damage and adds temporary protection if it’s needed to limit further water damage. The permanent repair follows with a written scope and price, and our photos and scope can be shared with your insurance company. Learn more about [emergency and storm-damage roof repair](/roof-repair/emergency/).' },
       { q: 'Our roof drain keeps backing up. Is that a roofing problem?', a: 'Often, yes. Debris can clog the strainer, the flashing around the drain bowl can fail, or low spots can keep water from reaching the drain at all. We check all three and repair the roofing side, and if the blockage is deeper in the drain line, we’ll tell you so a plumber can clear it.' },
       { q: 'Will you need access inside the building?', a: 'Sometimes. Seeing where water shows up inside helps us trace a leak, so we may ask to look at a ceiling or the area under a drain. Most repair work happens on the roof, and we’ll arrange any interior visit with you ahead of time.' },
       { q: 'Can you send the repair details to our owner or tenants?', a: 'Yes. Along with the written scope, you get before-and-after photos and a plain-English note on what failed and what we did. It’s easy to forward to ownership, file with your building records or share with the tenant who reported the leak.' },
       { q: 'How can we keep the next leak from happening?', a: 'Most commercial leaks start at details that wear gradually, like a drain that collects debris or sealant that dries out in the sun. Scheduled [commercial roof maintenance](/commercial-roofing/maintenance/) catches those early and ends each visit with a photo report. If a repair is due, you’ll see a written price first.' },
     ],
-    related: ['/commercial-roofing/replacement/', '/commercial-roofing/maintenance/', '/emergency-roof-repair/'],
+    related: ['/commercial-roofing/replacement/', '/commercial-roofing/maintenance/', '/roof-repair/emergency/'],
   },
 
   {

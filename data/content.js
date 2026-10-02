@@ -51,7 +51,8 @@ export const EMERGENCY = { ...PROGRAMS.emergency, page: EMERGENCY_ROOF_REPAIR };
 export const INSPECTION = { ...PROGRAMS.inspection, page: ROOF_INSPECTION };
 export const MAINTENANCE_PLANS = { ...PROGRAMS.plans, page: ROOF_MAINTENANCE_PLANS };
 export const FINANCING = { ...PROGRAMS.financing, page: ROOF_FINANCING };
-export const SINGLE_PAGES = [GUTTERS, HOA, EMERGENCY, INSPECTION, MAINTENANCE_PLANS, FINANCING];
+// GUTTERS is left out while Rain Gutters is hidden (app/residential-roofing/rain-gutters/page.js redirects)
+export const SINGLE_PAGES = [HOA, EMERGENCY, INSPECTION, MAINTENANCE_PLANS, FINANCING];
 
 // Service-first hubs: { ...structure, hub }
 export const REPAIR_HUB = { ...SERVICE_HUBS.repair, hub: ROOF_REPAIR_HUB };

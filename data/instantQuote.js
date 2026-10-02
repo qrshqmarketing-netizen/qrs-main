@@ -3,7 +3,7 @@
 
 // Pages where phones don't get that button: the quote only prices home roof replacements, so commercial, emergency,
 // partner and job pages skip it.
-export const QUOTE_EXCLUDE = ['/commercial-roofing/', '/emergency-roof-repair/', '/residential-roofing/hoa-multi-family/', '/service-areas/la-county/vernon/', '/contractors/', '/careers/'];
+export const QUOTE_EXCLUDE = ['/commercial-roofing/', '/roof-repair/emergency/', '/residential-roofing/hoa-multi-family/', '/service-areas/la-county/vernon/', '/contractors/', '/careers/'];
 
 // Google Maps Platform key with the Solar API and Geocoding API enabled. Set it as
 // NEXT_PUBLIC_GOOGLE_MAPS_KEY in .env.local, never in this file (the GitHub repo is public).

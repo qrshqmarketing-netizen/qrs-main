@@ -1,5 +1,6 @@
 // Single service pages: /residential-roofing/rain-gutters/ and /residential-roofing/hoa-multi-family/.
-// RAIN_GUTTERS is a stand-alone service page.
+// RAIN_GUTTERS is a stand-alone service page, hidden for now (app/residential-roofing/rain-gutters/page.js redirects);
+// its copy is kept here for when it comes back.
 
 export const RAIN_GUTTERS = {
   slug: 'rain-gutters',
@@ -190,8 +191,8 @@ export const HOA_MULTI_FAMILY = {
     },
     {
       q: 'Can carports and common-area roofs be included?',
-      a: 'Yes. Carports, clubhouses and other common-area roofs can be part of the same report and phasing plan. Many carports are flat or low-slope, so they get a [flat roofing](/residential-roofing/flat-roofing/) system planned around drainage, and we can add [rain gutters](/residential-roofing/rain-gutters/) and downspouts wherever buildings need them.',
+      a: 'Yes. Carports, clubhouses and other common-area roofs can be part of the same report and phasing plan. Many carports are flat or low-slope, so they get a [flat roofing](/residential-roofing/flat-roofing/) system planned around drainage.',
     },
   ],
-  related: ['/residential-roofing/rain-gutters/', '/residential-roofing/flat-roofing/replacement/', '/residential-roofing/tile-roofing/replacement/'],
+  related: ['/residential-roofing/flat-roofing/replacement/', '/residential-roofing/tile-roofing/replacement/'],
 };

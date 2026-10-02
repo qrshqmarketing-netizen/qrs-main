@@ -14,7 +14,7 @@ export const SERVICES_MENU = {
     { label: 'Roof Repair', href: '/roof-repair/' },
     { label: 'Roof Replacement', href: '/roof-replacement/' },
     { label: 'Roof Inspection', href: '/roof-inspection/' },
-    { label: 'Emergency & Storm Damage', href: '/emergency-roof-repair/', urgent: true },
+    { label: 'Emergency & Storm Damage', href: '/roof-repair/emergency/', urgent: true },
     { label: 'Roof Maintenance Plans', href: '/roof-maintenance-plans/' },
     { label: 'Roof Financing', href: '/roof-financing/' },
   ],
@@ -67,11 +67,6 @@ export const RESIDENTIAL_MENU = {
   },
   specialties: [
     {
-      title: 'Rain Gutters',
-      note: 'Gutters and downspouts planned with your roof',
-      href: '/residential-roofing/rain-gutters/',
-    },
-    {
       title: 'HOA & Multi-Family',
       note: 'Roofing for multi-family and multi-tenant properties',
       href: '/residential-roofing/hoa-multi-family/',
@@ -92,7 +87,7 @@ export const COMMERCIAL_MENU = {
       { label: 'Roof Repair', href: '/commercial-roofing/repair/' },
       { label: 'Roof Replacement', href: '/commercial-roofing/replacement/' },
       { label: 'Inspection & Maintenance', href: '/commercial-roofing/maintenance/' },
-      { label: 'Emergency & Storm Damage', href: '/emergency-roof-repair/', urgent: true },
+      { label: 'Emergency & Storm Damage', href: '/roof-repair/emergency/', urgent: true },
     ],
   },
   buildings: {

@@ -25,7 +25,7 @@ export const FLAT_CONTENT = {
     highlights: {
       heading: 'What a Well-Built Flat Roof Gets Right',
       points: [
-        { title: 'Slope that moves water', text: 'Water should flow steadily toward the drains and scuppers, then down through downspouts or [rain gutters](/residential-roofing/rain-gutters/). We look for low spots and ponding first, because standing water wears a roof out faster.' },
+        { title: 'Slope that moves water', text: 'Water should flow steadily toward the drains and scuppers, then down through downspouts or rain gutters. We look for low spots and ponding first, because standing water wears a roof out faster.' },
         { title: 'Laps that stay sealed', text: 'Flat roof leaks usually start at a joint, not out in the open field of the roof. Laps, the overlaps where one sheet meets the next, get extra care because that’s where water looks for a way in.' },
         { title: 'Flashing at every wall and curb', text: 'Parapet walls, HVAC curbs, vents and skylights all interrupt the membrane. Each one needs flashing detailed to direct water away, not just a bead of sealant.' },
       ],
@@ -89,7 +89,7 @@ export const FLAT_CONTENT = {
         { q: 'What are the signs a flat roof is past repairing?', a: 'Common signs include leaks in more than one spot, blisters and splits across much of the surface, soft areas in the deck and patches that keep failing. A [free roof evaluation](#roof-check) documents what we find with photos, so you can see the reasons behind our recommendation.' },
         { q: 'Can you put a new flat roof over the old one?', a: 'A full tear-off is the standard for a lasting result: taking the old layers off lets us check the deck, get rid of trapped moisture and give the new system a sound surface to start from, rather than hiding problems underneath it. On some commercial buildings, repairing or recoating an existing system that’s still sound can be the right call instead — your roof evaluation will tell you which situation you’re in.' },
         { q: 'Will a new roof stop water from ponding?', a: 'Replacement is the natural time to improve drainage, whether that means adding crickets, building up low spots or changing how water reaches the drains and scuppers. How much can change depends on the roof’s structure, and your written scope spells out the drainage work before anything starts.' },
-        { q: 'Should the gutters and downspouts be replaced at the same time?', a: 'Not always, but we check them as part of the scope, because a new roof can only drain as fast as its outlets. If yours are worn out or too small, our [rain gutter](/residential-roofing/rain-gutters/) service can be part of the same project.' },
+        { q: 'Should the gutters and downspouts be replaced at the same time?', a: 'Not always, but we check them as part of the scope, because a new roof can only drain as fast as its outlets.' },
         { q: 'Can a new flat roof have a lighter, reflective surface?', a: 'Usually, yes. Light-colored, reflective surfaces bounce back more of the sun’s heat than dark ones, which is worth considering on a roof that sits in full sun most of the year. We’ll go over the surface options that fit your system.' },
       ],
       related: ['/residential-roofing/flat-roofing/repair/', '/roof-inspection/#flat-roofs', '/residential-roofing/flat-roofing/installation/'],
@@ -193,7 +193,7 @@ export const FLAT_CONTENT = {
         { q: 'Can you coordinate with my general contractor?', a: 'Yes. We partner with contractors and can coordinate directly with yours on scheduling and roofing details. Learn more about our [contractor partnerships](/contractors/).' },
         { q: 'How is the price for a new flat roof worked out?', a: 'It depends on the roof’s size, the system, the drainage details and how the roof ties into the rest of the house. Each of those items is spelled out in your written scope, with the price, before work on the roof begins. To get the process moving, [request an estimate](#roof-check) and tell us about your project.' },
       ],
-      related: ['/residential-roofing/flat-roofing/replacement/', '/roof-maintenance-plans/', '/residential-roofing/rain-gutters/'],
+      related: ['/residential-roofing/flat-roofing/replacement/', '/roof-maintenance-plans/'],
     },
 
   ],

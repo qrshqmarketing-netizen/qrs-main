@@ -17,6 +17,7 @@ export const blogPath = (slug) => `/blog/${slug}/`;
 export const PRIVACY_LINK = { label: 'Privacy Policy', href: '/privacy-policy/' };
 export const TERMS_LINK = { label: 'Terms & Conditions', href: '/terms-and-conditions/' };
 export const ACCESSIBILITY_LINK = { label: 'Accessibility Statement', href: '/accessibility-statement/' };
+export const ROOF_REPAIR_LINK = { label: 'Roof Repair', href: '/roof-repair/' };
 
 // Sections with a hub page and service pages under it.
 // `scenes` are placeholder art for cards (rotated); `image` is a real photo for the hub hero, when there is one.
@@ -66,7 +67,7 @@ export const GROUPS = {
   },
 };
 
-// Stand-alone residential service pages
+// Stand-alone residential service pages (Rain Gutters is hidden for now: see app/residential-roofing/rain-gutters/page.js)
 export const SINGLES = {
   gutters: {
     key: 'gutters',
@@ -86,9 +87,10 @@ export const SINGLES = {
   },
 };
 
-// Stand-alone service pages for homes and commercial buildings alike (copy: data/services/programs.js)
+// Stand-alone service pages for homes and commercial buildings alike (copy: data/services/programs.js).
+// Emergency repair sits under the /roof-repair/ hub, so the two read as one repair cluster rather than rival pages.
 export const PROGRAMS = {
-  emergency: { key: 'emergency', label: 'Emergency & Storm Damage', href: '/emergency-roof-repair/', parent: null, scenes: ['scene-repair'] },
+  emergency: { key: 'emergency', label: 'Emergency & Storm Damage', href: '/roof-repair/emergency/', parent: ROOF_REPAIR_LINK, scenes: ['scene-repair'] },
   inspection: { key: 'inspection', label: 'Roof Inspection', href: '/roof-inspection/', parent: null, scenes: ['scene-inspect'] },
   plans: { key: 'plans', label: 'Roof Maintenance Plans', href: '/roof-maintenance-plans/', parent: null, scenes: ['scene-inspect'] },
   financing: { key: 'financing', label: 'Roof Financing', href: '/roof-financing/', parent: null, scenes: ['scene-replace'] },
@@ -98,12 +100,11 @@ export const PROGRAMS = {
 export const SERVICE_HUBS = {
   repair: {
     key: 'repair',
-    label: 'Roof Repair',
-    href: '/roof-repair/',
+    ...ROOF_REPAIR_LINK,
     scenes: ['scene-repair'],
     image: '/images/shingle-roof-repair-ridge-finish.webp',
     imageAlt: 'A roofer finishing work on a shingle roof ridge',
-    cards: ['/residential-roofing/shingle-roofing/repair/', '/residential-roofing/tile-roofing/repair/', '/residential-roofing/flat-roofing/repair/', '/residential-roofing/tile-roofing/lift-and-relay/', '/emergency-roof-repair/', '/commercial-roofing/repair/'],
+    cards: ['/residential-roofing/shingle-roofing/repair/', '/residential-roofing/tile-roofing/repair/', '/residential-roofing/flat-roofing/repair/', '/residential-roofing/tile-roofing/lift-and-relay/', '/roof-repair/emergency/', '/commercial-roofing/repair/'],
   },
   replacement: {
     key: 'replacement',

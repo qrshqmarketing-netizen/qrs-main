@@ -95,7 +95,6 @@ export const PLACEHOLDER_PROJECTS = [
     alt: 'Aerial view of a neighborhood of shingle-roofed homes',
     position: 'center 40%',
   },
-  { title: 'Rain Gutters', label: 'Gutters & drainage', scene: 'scene-gutter' },
 ];
 
 // Every project (Projects page): real projects first, then the placeholders to round out the gallery

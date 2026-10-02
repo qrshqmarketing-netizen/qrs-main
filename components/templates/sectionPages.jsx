@@ -83,7 +83,7 @@ export function SectionService({ section, slug }) {
   );
 }
 
-// ----- Stand-alone pages (/residential-roofing/rain-gutters/, /residential-roofing/hoa-multi-family/, /emergency-roof-repair/, /roof-inspection/, /roof-financing/) -----
+// ----- Stand-alone pages (/residential-roofing/hoa-multi-family/, /roof-repair/emergency/, /roof-inspection/, /roof-financing/) -----
 export const singleMetadata = (single) =>
   pageMetadata({ title: single.page.metaTitle, description: single.page.metaDescription, path: single.href });
 

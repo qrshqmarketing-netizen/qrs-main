@@ -5,11 +5,11 @@ export const RESIDENTIAL_PAGE = {
   keyword: 'residential roofing',
   metaTitle: 'Residential Roofing in Los Angeles',
   metaDescription:
-    'Residential roofing in Los Angeles & Orange County: shingle, tile and flat roofs, rain gutters and HOA roofing. Start with a free roof evaluation.',
+    'Residential roofing in Los Angeles & Orange County: shingle, tile and flat roofs, plus HOA and multi-family roofing. Start with a free roof evaluation.',
   hero: {
     heading: 'Residential Roofing Services',
     intro:
-      'Quality Roofing Specialists provides residential roofing for homes across Los Angeles and Orange County: repair, replacement and ongoing care for shingle, tile and flat roofs, plus rain gutters. From a leak on a tile roof to a full tear-off on a shingle home, every job starts with a free roof evaluation, not a sales pitch.',
+      'Quality Roofing Specialists provides residential roofing for homes across Los Angeles and Orange County: repair, replacement and ongoing care for shingle, tile and flat roofs. From a leak on a tile roof to a full tear-off on a shingle home, every job starts with a free roof evaluation, not a sales pitch.',
     highlights: ['Shingle, tile and flat roofs', 'Written scope and price before work', '10-Year workmanship warranty'],
   },
   overview: {
@@ -85,13 +85,10 @@ export const RESIDENTIAL_PAGE = {
         links: [{ label: 'Roof maintenance plans', href: '/roof-maintenance-plans/' }],
       },
       {
-        id: 'gutters-and-hoa',
-        title: 'Gutters & HOA Roofing',
-        text: 'Rain gutters planned with your roof, and roofing for HOA and multi-family properties.',
-        links: [
-          { label: 'Rain gutters', href: '/residential-roofing/rain-gutters/' },
-          { label: 'HOA & multi-family', href: '/residential-roofing/hoa-multi-family/' },
-        ],
+        id: 'hoa',
+        title: 'HOA & Multi-Family Roofing',
+        text: 'Roofing for HOA and multi-family properties, with one point of contact for the board or manager.',
+        links: [{ label: 'HOA & multi-family', href: '/residential-roofing/hoa-multi-family/' }],
       },
     ],
   },

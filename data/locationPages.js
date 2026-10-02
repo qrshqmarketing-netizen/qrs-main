@@ -94,7 +94,7 @@ export const LOCATION_PAGES = {
     considerations: [
       { title: 'Protecting historic character', text: 'Craftsman and Spanish Revival homes deserve materials and details that fit, from tile profiles to eave and trim work.' },
       { title: 'Summer heat in the San Gabriel Valley', text: 'Hot, dry summers bake roof coverings and underlayment, and attic ventilation plays a big part in how long shingles last.' },
-      { title: 'Mature trees and falling debris', text: 'Pasadena’s tall trees shade roofs and fill valleys and gutters with leaves that hold water against the roof. [Rain gutters](/residential-roofing/rain-gutters/) that drain well help.' },
+      { title: 'Mature trees and falling debris', text: 'Pasadena’s tall trees shade roofs and fill valleys and gutters with leaves that hold water against the roof.' },
     ],
     faqs: [
       { q: 'Do you work on Craftsman homes in Pasadena?', a: 'Yes. We work on Craftsman bungalows across Pasadena and pay close attention to the exposed rafter tails, trim and eave details that give these homes their look.' },
@@ -167,7 +167,6 @@ export const LOCATION_PAGES = {
       { q: 'Why does attic ventilation matter for my Burbank roof?', a: 'Heat that builds up in the attic cooks shingles from below. Balanced intake and exhaust ventilation helps shingles last, and it’s one of the things we look at during a [shingle roof inspection](/roof-inspection/#shingle-roofs).' },
       { q: 'Do you work on mid-century homes with flat sections?', a: 'Yes. We handle the low-slope additions and patio covers common on Burbank homes, and we plan them around drainage so water actually leaves the roof.' },
       { q: 'Which parts of Burbank do you serve?', a: 'All of Burbank, including Magnolia Park, the Media District, Downtown Burbank, the Rancho Equestrian District and the Burbank Hills.' },
-      { q: 'Can you add gutters when I replace my roof?', a: 'Yes. [Rain gutters](/residential-roofing/rain-gutters/) can be planned together with a roof replacement, so the drip edge, gutters and downspouts all work as one system.' },
     ],
     nearby: ['glendale', 'los-angeles', 'pasadena', 'woodland-hills'],
     final: { heading: 'Clear, Careful Roofing for Burbank', text: 'Get photos, plain-English answers and a written scope for your Burbank roof, starting with a free roof evaluation.' },
@@ -369,7 +368,7 @@ export const LOCATION_PAGES = {
       { q: 'Which Huntington Beach neighborhoods do you serve?', a: 'All of Huntington Beach, including Huntington Harbour, Sunset Beach, Seacliff, Edwards Hill and the downtown area.' },
       { q: 'How often should a coastal roof be checked?', a: 'A look once a year and after major storms is a sensible rhythm, since salt air works on metal parts steadily. Ongoing roof care keeps a photo record, so you can see changes over time.' },
       { q: 'Do you work on concrete tile roofs?', a: 'Yes. Concrete tile is common across Huntington Beach, and we repair it, re-lay it over new underlayment and replace it when the time comes.' },
-      { q: 'Can you replace rusted gutters and flashings?', a: 'Yes. We replace worn flashings as part of roof work, and [rain gutters](/residential-roofing/rain-gutters/) can be planned with your roof so the whole system drains properly.' },
+      { q: 'Can you replace rusted flashings?', a: 'Yes. We replace worn flashings as part of roof work, since salt air near the water is hard on metal flashings.' },
     ],
     nearby: ['newport-beach', 'long-beach', 'santa-ana'],
     final: { heading: 'Salt-Air-Ready Roofing for Huntington Beach', text: 'Start with a free roof evaluation and see exactly how the coast is treating your Huntington Beach roof.' },

@@ -27,7 +27,7 @@ export const REGION_PAGES = {
       { q: 'Which Los Angeles County cities do you serve?', a: 'Our city pages cover Los Angeles, Santa Monica, Pasadena, Glendale, Burbank, Woodland Hills, Torrance, Long Beach and Vernon, and we work in many nearby communities as well. Enter your ZIP code on the map to check your address.' },
       { q: 'Where are your Los Angeles County offices?', a: 'We have three: our Los Angeles office at 1444 N Poinsettia Pl, Unit 308, our Valley office at 22900 Ventura Blvd, Suite 124, in Woodland Hills, and our Vernon office at 2850 E 46th St, Unit B. All answer at (310) 340-1643.' },
       { q: 'Do you work on commercial buildings in LA County?', a: 'Yes. We roof offices, retail, warehouses, churches and other buildings across the county, and we plan the work so the building stays open. See our [commercial roofing](/commercial-roofing/) services.' },
-      { q: 'What should I do if a storm damages my roof?', a: 'Stay safe, move belongings away from any leak and take photos if you can. Then call us or see our [emergency roof repair](/emergency-roof-repair/) page for what happens next.' },
+      { q: 'What should I do if a storm damages my roof?', a: 'Stay safe, move belongings away from any leak and take photos if you can. Then call us or see our [emergency roof repair](/roof-repair/emergency/) page for what happens next.' },
     ],
   },
 

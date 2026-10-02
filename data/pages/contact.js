@@ -21,7 +21,7 @@ export const CONTACT_PAGE = {
       { title: 'Call us', text: 'Talk with our team at [(310) 340-1643](tel:+13103401643). One number reaches all of our offices.' },
       { title: 'Email us', text: 'Send questions or roof photos to [info@qualityroofingspecialists.com](mailto:info@qualityroofingspecialists.com).' },
       { title: 'Request an estimate', text: 'Tell us about the property in the [estimate form](#roof-check) and we’ll follow up to schedule.' },
-      { title: 'Storm damage or a leak', text: 'Roof damaged in a storm or leaking now? Call us and see [emergency roof repair](/emergency-roof-repair/) for what to do first.' },
+      { title: 'Storm damage or a leak', text: 'Roof damaged in a storm or leaking now? Call us and see [emergency roof repair](/roof-repair/emergency/) for what to do first.' },
     ],
   },
   faqs: [
