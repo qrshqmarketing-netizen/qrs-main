@@ -460,7 +460,8 @@ class MorphEngine {
 }
 
 // WebGL image slider with clean crossfade transitions (ogl + gsap powered).
-// items: [{ image, caption? }]
+// items: [{ image, caption? }]. captionBelowOnMobile: below 621px the caption shows as text under the slider (a sibling
+// after it) instead of on the photo; give the slider its own size then, since its parent also holds the caption.
 export default function MorphSlider({
   items = [],
   startIndex = 0,
@@ -479,6 +480,7 @@ export default function MorphSlider({
   showCaptions = true,
   showControls = true,
   showIndicators = true,
+  captionBelowOnMobile = false,
   className = '',
   ...props
 }) {
@@ -590,83 +592,92 @@ export default function MorphSlider({
   const hasCaptions = items.some((item) => item.caption);
   const activeLink = items[index]?.href;
 
+  const captionBelow = captionBelowOnMobile && hasCaptions;
+
   return (
-    <div
-      className={`morph-slider ${className}`.trim()}
-      style={{
-        borderRadius: `${radius}px`,
-        '--ms-swap': `${(duration * 0.66).toFixed(3)}s`,
-        '--ms-dot': `${(duration * 0.45).toFixed(3)}s`,
-      }}
-      onMouseEnter={() => setHovering(true)}
-      onMouseLeave={() => setHovering(false)}
-      {...props}
-    >
-      <div ref={containerRef} className="morph-slider-stage" role="group" aria-roledescription="carousel" aria-label="Image slider" tabIndex={0} onKeyDown={onKeyDown} />
+    <>
+      <div
+        className={`morph-slider${captionBelow ? ' has-caption-below' : ''} ${className}`.trim()}
+        style={{
+          borderRadius: `${radius}px`,
+          '--ms-swap': `${(duration * 0.66).toFixed(3)}s`,
+          '--ms-dot': `${(duration * 0.45).toFixed(3)}s`,
+        }}
+        onMouseEnter={() => setHovering(true)}
+        onMouseLeave={() => setHovering(false)}
+        {...props}
+      >
+        <div ref={containerRef} className="morph-slider-stage" role="group" aria-roledescription="carousel" aria-label="Image slider" tabIndex={0} onKeyDown={onKeyDown} />
 
-      {activeLink && (
-        <Link
-          className="morph-slider-project-link"
-          href={activeLink}
-          aria-label={`View project: ${items[index].caption || 'project details'}`}
-          title={`View project: ${items[index].caption || 'project details'}`}
-          onClick={(e) => {
-            if (draggedRef.current) {
-              e.preventDefault();
-              draggedRef.current = false;
-            }
-          }}
-        >
-          <span className="morph-slider-project-link-label">View project <span aria-hidden="true">↗</span></span>
-        </Link>
-      )}
+        {activeLink && (
+          <Link
+            className="morph-slider-project-link"
+            href={activeLink}
+            aria-label={`View project: ${items[index].caption || 'project details'}`}
+            title={`View project: ${items[index].caption || 'project details'}`}
+            onClick={(e) => {
+              if (draggedRef.current) {
+                e.preventDefault();
+                draggedRef.current = false;
+              }
+            }}
+          >
+            <span className="morph-slider-project-link-label">View project <span aria-hidden="true">↗</span></span>
+          </Link>
+        )}
 
-      {showCaptions && hasCaptions && (
-        <div className="morph-slider-caption" aria-live="polite">
-          {items.map((item, i) =>
-            item.caption ? (
-              <span key={i} aria-hidden={i === index ? undefined : true} className={`morph-slider-caption-text ${i === index ? 'is-active' : ''}`}>
-                {item.caption}
-              </span>
-            ) : null
-          )}
-        </div>
-      )}
+        {showCaptions && hasCaptions && (
+          <div className="morph-slider-caption" aria-live="polite">
+            {items.map((item, i) =>
+              item.caption ? (
+                <span key={i} aria-hidden={i === index ? undefined : true} className={`morph-slider-caption-text ${i === index ? 'is-active' : ''}`}>
+                  {item.caption}
+                </span>
+              ) : null
+            )}
+          </div>
+        )}
 
-      {showControls && (
-        <div className="morph-slider-controls">
-          <button type="button" className="morph-slider-btn" aria-label="Previous slide" onClick={handlePrev}>
-            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-              <path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </button>
-          <button type="button" className="morph-slider-btn" aria-label="Next slide" onClick={handleNext}>
-            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-              <path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </button>
-        </div>
-      )}
+        {showControls && (
+          <div className="morph-slider-controls">
+            <button type="button" className="morph-slider-btn" aria-label="Previous slide" onClick={handlePrev}>
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
+            <button type="button" className="morph-slider-btn" aria-label="Next slide" onClick={handleNext}>
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
+          </div>
+        )}
 
-      {showIndicators && (
-        <div className="morph-slider-indicators" role="tablist" aria-label="Slides">
-          {items.map((item, i) => (
-            <button
-              key={i}
-              type="button"
-              role="tab"
-              aria-selected={i === index}
-              aria-label={`Go to slide ${i + 1}`}
-              className={`morph-slider-dot ${i === index ? 'is-active' : ''}`}
-              onClick={() => {
-                const engine = engineRef.current;
-                if (!engine || i === index) return;
-                engine.goTo(i > index ? 1 : -1);
-              }}
-            />
-          ))}
-        </div>
+        {showIndicators && (
+          <div className="morph-slider-indicators" role="tablist" aria-label="Slides">
+            {items.map((item, i) => (
+              <button
+                key={i}
+                type="button"
+                role="tab"
+                aria-selected={i === index}
+                aria-label={`Go to slide ${i + 1}`}
+                className={`morph-slider-dot ${i === index ? 'is-active' : ''}`}
+                onClick={() => {
+                  const engine = engineRef.current;
+                  if (!engine || i === index) return;
+                  engine.goTo(i > index ? 1 : -1);
+                }}
+              />
+            ))}
+          </div>
+        )}
+      </div>
+      {captionBelow && (
+        <p className="morph-slider-caption-below" aria-live="polite">
+          <span key={index}>{items[index]?.caption}</span>
+        </p>
       )}
-    </div>
+    </>
   );
 }

@@ -22,7 +22,7 @@ export default function ProjectDetail({ page }) {
       <section className="project-detail-gallery" aria-label="Project photos">
         <div className="container">
           <figure className="project-detail-photo">
-            <MorphSlider items={slides} transition="fade" radius={0} autoplay loop aria-label="Project photos" />
+            <MorphSlider items={slides} transition="fade" radius={14} autoplay loop captionBelowOnMobile aria-label="Project photos" />
           </figure>
         </div>
       </section>

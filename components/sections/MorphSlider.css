@@ -178,6 +178,37 @@
   outline-offset: 2px;
 }
 
+/* captionBelowOnMobile: below 621px the caption moves under the slider as plain text */
+.morph-slider-caption-below {
+  display: none;
+}
+
+@media (max-width: 620px) {
+  .morph-slider.has-caption-below .morph-slider-caption {
+    display: none;
+  }
+
+  .morph-slider-caption-below {
+    display: block;
+    min-height: 4.35em; /* room for three lines, so the page doesn't jump between short and long captions */
+    margin: 12px 2px 0;
+    color: var(--ink);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.45;
+  }
+
+  .morph-slider-caption-below span {
+    display: block;
+    animation: msCaptionIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+}
+
+@keyframes msCaptionIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+
 @media (max-width: 420px) {
   .morph-slider-btn {
     width: 34px;
@@ -191,6 +222,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .morph-slider-caption-text,
+  .morph-slider-caption-below span,
   .morph-slider-btn,
   .morph-slider-dot {
     animation: none;
