@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import BrandLogo from '@/components/ui/BrandLogo';
 import SiteLink from '@/components/ui/SiteLink';
 import Rich from '@/components/ui/Rich';
-import { ArrowRight, Caret, PhoneIcon } from '@/components/ui/icons';
+import { ArrowRight, Caret, MoonIcon, PhoneIcon, SunIcon } from '@/components/ui/icons';
 import { CONTACT_LINK, CONTRACTORS_LINK, PROJECTS_LINK } from '@/data/catalog';
 import { ABOUT_MENU, COMMERCIAL_MENU, HEADER_CTA, LOCATIONS_MENU, RESIDENTIAL_MENU, SERVICES_MENU } from '@/data/navigation';
 import { PHONE, TEL } from '@/data/site';
@@ -23,12 +23,17 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false); // phone/tablet slide-down menu
   const [openItem, setOpenItem] = useState(null); // 'services' | 'res' | 'com' | 'about' | null
   const [activeGroup, setActiveGroup] = useState(0); // roof type shown in the Residential menu
+  const [theme, setTheme] = useState('light');
   const closeTimer = useRef(null);
   const triggers = useRef({});
 
   useEffect(() => {
     document.body.classList.toggle('menu-open', menuOpen);
   }, [menuOpen]);
+
+  useEffect(() => {
+    setTheme(document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light');
+  }, []);
 
   // Clicking anywhere outside a dropdown closes it
   useEffect(() => {
@@ -42,6 +47,18 @@ export default function Header() {
   const toggleMenu = () => {
     setMenuOpen((open) => !open);
     setOpenItem(null);
+  };
+
+  const toggleTheme = () => {
+    const nextTheme = theme === 'dark' ? 'light' : 'dark';
+    if (nextTheme === 'dark') document.documentElement.dataset.theme = 'dark';
+    else document.documentElement.removeAttribute('data-theme');
+    try {
+      window.localStorage.setItem('qrs-theme', nextTheme);
+    } catch {
+      // The current page still changes theme when browser storage is unavailable.
+    }
+    setTheme(nextTheme);
   };
 
   // Any link in the menu closes the phone menu
@@ -305,6 +322,16 @@ export default function Header() {
             <span className="nav-cta-full">{HEADER_CTA.label}</span>
             <span className="nav-cta-compact">Estimate</span>
           </SiteLink>
+          <button
+            className="nav-theme"
+            type="button"
+            aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+            aria-pressed={theme === 'dark'}
+            title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+            onClick={toggleTheme}
+          >
+            {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
+          </button>
           <a className="btn btn-plum nav-call" href={TEL} aria-label={`Call ${PHONE}`}>
             <PhoneIcon />
             <span>{PHONE}</span>

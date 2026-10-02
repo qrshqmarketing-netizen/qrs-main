@@ -1,6 +1,5 @@
-/* ---------- Dark theme (draft preview) ----------
-   Applies only when <html data-theme="dark">. For now that's set by adding ?theme=dark to a page address
-   (see the script in app/layout.js); visitors never see it unless that switch is used.
+/* ---------- Dark theme ----------
+   Applies when <html data-theme="dark">. The header control stores this choice between visits.
    Surfaces turn deep navy, text turns light, and navy bands, cards and buttons (--surface-navy) stay navy. */
 :root[data-theme="dark"]{
   color-scheme:dark;
@@ -27,7 +26,7 @@
 :root[data-theme="dark"] footer{background:linear-gradient(180deg,#0b2b4d 0%,#03111f 100%)}
 
 /* Form fields */
-:root[data-theme="dark"] :is(input, select, textarea){background:#0a1828;color:var(--ink);border-color:var(--line)}
+:root[data-theme="dark"] :is(input, select, textarea){background:#0a1828;color:var(--ink);border-color:#fff}
 :root[data-theme="dark"] :is(input, textarea)::placeholder{color:#7f93a8}
 
 /* Softer card shadows on dark backgrounds */
@@ -36,11 +35,17 @@
 /* Partner logos are dark artwork: keep them on a light card */
 :root[data-theme="dark"] .partner-logo-card{background:#f3f6f9}
 
+/* White outline on buttons so they stand apart from the dark surfaces (keyboard focus keeps its gold ring) */
+:root[data-theme="dark"] :is(.btn, .cookie-ok, .loc-form button, .loc-item .loc-btn, .qa-send):not(:focus-visible){outline:1px solid #fff;outline-offset:-1px}
+
 /* Sections and widgets with their own light colors */
 :root[data-theme="dark"] :is(.qrs-standard, .faq){background:var(--wash)}
+:root[data-theme="dark"] .gtee{background:linear-gradient(180deg,#0e2033 0%,#0c1c2e 45%,#0a1828 100%)}
+:root[data-theme="dark"] .gtee-badge text{fill:var(--navy)}
 :root[data-theme="dark"] .tst-name{color:var(--navy)}
-:root[data-theme="dark"] .rv-toast{border-color:var(--line)}
+:root[data-theme="dark"] :is(.rv-toast, .cookie){border-color:#fff}
+:root[data-theme="dark"] .qa-teaser{outline:1px solid #fff;outline-offset:-1px}
 :root[data-theme="dark"] .rv-name{color:var(--navy)}
 :root[data-theme="dark"] .rv-text{color:var(--muted)}
 :root[data-theme="dark"] .rv-close:hover{background:var(--wash);color:var(--navy)}
-:root[data-theme="dark"] :is(.cookie, .promo){border-color:var(--line)}
+:root[data-theme="dark"] .promo{border-color:var(--line)}

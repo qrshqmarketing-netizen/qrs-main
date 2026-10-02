@@ -2,7 +2,7 @@
 // styles (imported inside the components below).
 import 'leaflet/dist/leaflet.css';
 import './globals.css';
-import './dark-theme.css'; // draft dark theme, only active with ?theme=dark (see the script below)
+import './dark-theme.css'; // dark theme colors, toggled from the header and saved in local storage
 
 import Script from 'next/script';
 import { Open_Sans, Roboto_Condensed } from 'next/font/google';
@@ -59,8 +59,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={openSans.variable + ' ' + robotoCondensed.variable} data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
-        {/* Draft dark theme preview: add ?theme=dark to a page address (app/dark-theme.css). Runs before the page paints. */}
-        <script dangerouslySetInnerHTML={{ __html: "if(/[?&]theme=dark(&|$)/.test(location.search))document.documentElement.dataset.theme='dark'" }} />
+        {/* Restore the selected theme before the page paints; ?theme=dark remains available as a preview fallback. */}
+        <script dangerouslySetInnerHTML={{ __html: "try{const saved=localStorage.getItem('qrs-theme');const requested=new URLSearchParams(location.search).get('theme');if((saved||requested)==='dark')document.documentElement.dataset.theme='dark';else document.documentElement.removeAttribute('data-theme')}catch{if(/[?&]theme=dark(&|$)/.test(location.search))document.documentElement.dataset.theme='dark'}" }} />
       </head>
       <body>
         {ALLOW_INDEXING && (
