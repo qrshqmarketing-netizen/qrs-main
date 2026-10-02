@@ -4,9 +4,9 @@
    behind the buttons, leaving the skyline clear in between. */
 .promo-backdrop{position:fixed;inset:0;z-index:1400;display:grid;place-items:center;padding:16px;background:rgba(3,20,40,.72);animation:promoFade .25s ease both}
 .promo{
-  position:relative;isolation:isolate;overflow:hidden;width:100%;max-width:460px;min-height:500px;
+  position:relative;isolation:isolate;overflow:hidden;width:100%;max-width:460px;min-height:540px;
   display:flex;flex-direction:column;padding:26px 22px 24px;color:#fff;
-  background:#0b1a2b url(/images/season-promo-storm-over-los-angeles.webp) 45% 50%/cover no-repeat;
+  background:#0b1a2b url(/images/season-promo-storm-over-los-angeles.webp) 45% 0%/auto 114% no-repeat; /* taller than the card, top-aligned: the skyline sits below the copy */
   border:1px solid rgba(255,255,255,.14);border-radius:20px;box-shadow:0 30px 80px rgba(0,0,0,.5);
   animation:promoIn .3s ease both;
 }
@@ -24,7 +24,7 @@
 .promo-eyebrow{margin:0 34px 10px 0;color:var(--gold-2);font:600 12px/1.4 var(--font-head);letter-spacing:.14em;text-transform:uppercase;text-wrap:balance}
 .promo-eyebrow:before{content:"";display:inline-block;width:8px;height:8px;margin-right:9px;vertical-align:1px;border-radius:50%;background:#ff5b4f;animation:promoPing 1.6s ease-out infinite}
 .promo-title{
-  margin:0 24px 14px 0;color:#fff;font:700 46px/.96 var(--font-display);letter-spacing:.01em;text-transform:uppercase;text-wrap:balance;
+  margin:0 24px 14px 0;color:#fff;font:700 42px/.96 var(--font-display);letter-spacing:.01em;text-transform:uppercase;text-wrap:balance;
   text-shadow:0 2px 18px rgba(0,0,0,.45);animation:promoStrike 6s ease-out -4.8s infinite;
 }
 /* The longer "before you go" heading stays at the old size */
@@ -57,10 +57,10 @@ body.promo-open .qa-teaser{visibility:hidden}
 }
 @media (prefers-reduced-motion:reduce){.promo,.promo-backdrop,.promo:after,.promo-title,.promo-eyebrow:before{animation:none}}
 @media (min-width:621px){
-  .promo{min-height:520px;padding:32px 34px 30px}
-  .promo-title{font-size:58px}
+  .promo{min-height:560px;padding:32px 34px 30px}
+  .promo-title{font-size:52px}
   .promo-title.promo-title-exit{font-size:36px}
   .promo-text{font-size:16px}
 }
 /* Short phone screens in landscape: drop the poster height so the buttons stay on screen */
-@media (max-height:560px){.promo{min-height:0}}
+@media (max-height:620px){.promo{min-height:0}}

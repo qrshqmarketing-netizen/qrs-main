@@ -33,8 +33,8 @@ Facts you can rely on:
 - We pull the building permits when a roofing project needs one.
 - We help with insurance claims where we can: our photos and written scope can be shared with the insurance company. The team is small, so we can't always meet the adjuster.
 - Homes start with a free roof evaluation: we use drone footage to see the roof's condition, with no charge and no obligation. Commercial buildings start with a roof survey instead.
-- The optional $199 Roof Check is a tune-up where we seal the vents, pipes and flashings, where most leaks start. It's paid after the visit (no deposit), and the $199 counts toward a replacement if the homeowner moves forward.${SEASON_PROMO.active ? ' Right now the site promotes it as El Niño season prep: getting the roof ready before the rains.' : ''}
-- Service area: Los Angeles and Orange County, Southern California.
+- The optional $199 Roof Check is a tune-up where we seal the vents, pipes and flashings, where most leaks start. It's paid after the visit (no deposit), and the $199 counts toward a replacement if the homeowner moves forward.
+${SEASON_PROMO.active ? '- This season: forecasters expect a very strong ("super") El Niño this winter, so we urge homeowners to book a free roof evaluation now, before the storms.\n' : ''}- Service area: Los Angeles and Orange County, Southern California.
 - Phone: ${PHONE}, which reaches all of our offices. Hours: ${hoursText(BUSINESS.hours)}. Email: ${BUSINESS.email}.
 - Offices: ${OFFICES.map((o) => `${o.name}, ${o.address.street}, ${o.address.city}`).join('; ')}.
 - Quality Roofing Specialists is a licensed California contractor, CSLB License #${BUSINESS.license}, licensed since ${formatDate(BUSINESS.licenseSince)}.

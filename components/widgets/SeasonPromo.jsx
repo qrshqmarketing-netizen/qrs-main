@@ -19,7 +19,8 @@ const preloadPhoto = () => {
   new Image().src = PHOTO;
 };
 
-// The $199 Roof Check season promo (copy in data/promo.js): a centered modal over a dark overlay, at most once per visit.
+// The El Niño season promo for the free roof evaluation (copy in data/promo.js): a centered modal over a dark overlay,
+// at most once per visit. Preview it any time with ?promo (or ?promo=exit for the "before you go" version) on any page.
 // - first visit: shortly after the cookie notice is accepted (the review toast waits while it's open)
 // - later visits: on desktop when the pointer leaves through the top of the window; on phones and tablets when
 //   they flick quickly back up the page (reaching for the address bar) or come back after switching tabs or apps
@@ -39,6 +40,12 @@ export default function SeasonPromo() {
     !promo.active ||
     promo.exclude.some((p) => path.current.startsWith(p)) ||
     ['menu-open', 'rm-lock', 'cookie-open'].some((c) => document.body.classList.contains(c));
+
+  // Preview: ?promo or ?promo=exit opens the card right away, whatever this browser has seen before
+  useEffect(() => {
+    const preview = new URLSearchParams(window.location.search).get('promo');
+    if (preview !== null) setView(preview === 'exit' ? 'exit' : 'card');
+  }, []);
 
   // First visit
   useEffect(() => {
@@ -119,7 +126,7 @@ export default function SeasonPromo() {
 
   const close = () => setView(null);
 
-  // Pre-pick the Roof Check in the estimate form, then let the #roof-check link scroll to it
+  // Pre-pick the roof inspection in the estimate form, then let the #roof-check link scroll to it
   const claim = () => {
     local.set('promoClaimed', '1');
     const select = document.getElementById('service');
