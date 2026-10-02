@@ -46,4 +46,3 @@
 :root[data-theme="dark"] .cookie{border-color:#fff}
 :root[data-theme="dark"] .qa-teaser{outline:1px solid #fff;outline-offset:-1px}
 /* The review toast stays light in both themes (ReviewToast.css) */
-:root[data-theme="dark"] .promo{border-color:var(--line)}

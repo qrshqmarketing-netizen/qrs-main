@@ -12,6 +12,12 @@ import './SeasonPromo.css';
 const FIRST_MS = 3000, EXIT_ARM_MS = 8000;
 const FLICK_PX = 350, FLICK_MS = 300; // phones: an upward scroll this far this fast, once they're a screen down, reads as leaving
 const SERVICE = 'Roof inspection / roof check'; // estimate form option picked by the promo button (data/estimateOptions.js)
+const PHOTO = '/images/season-promo-storm-over-los-angeles.webp'; // the card's background (SeasonPromo.css)
+
+// Fetch the background photo a few seconds before the card can open, so it doesn't appear on an empty navy card
+const preloadPhoto = () => {
+  new Image().src = PHOTO;
+};
 
 // The $199 Roof Check season promo (copy in data/promo.js): a centered modal over a dark overlay, at most once per visit.
 // - first visit: shortly after the cookie notice is accepted (the review toast waits while it's open)
@@ -48,6 +54,7 @@ export default function SeasonPromo() {
       setView('card');
     };
     const start = () => {
+      preloadPhoto();
       t = setTimeout(show, FIRST_MS);
     };
     if (local.get(COOKIE_OK_KEY)) start();
@@ -62,7 +69,10 @@ export default function SeasonPromo() {
   useEffect(() => {
     if (!promo.active) return;
     let armed = false;
-    const arm = setTimeout(() => (armed = true), EXIT_ARM_MS);
+    const arm = setTimeout(() => {
+      armed = true;
+      if (!session.get('promoShown') && !local.get('promoClaimed')) preloadPhoto();
+    }, EXIT_ARM_MS);
     const showExit = () => {
       if (!armed || session.get('promoShown') || local.get('promoClaimed') || blocked()) return;
       session.set('promoShown', '1');

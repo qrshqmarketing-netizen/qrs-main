@@ -1,21 +1,34 @@
 /* ---------- Season promo: centered modal over a dark overlay (first visit and desktop exit) ---------- */
+/* Light copy over a storm rolling into downtown LA (public/images/season-promo-storm-over-los-angeles.webp, preloaded by
+   SeasonPromo.jsx). The card stays dark in both themes; its gradient darkens the clouds behind the copy and the rooftops
+   behind the buttons, leaving the skyline clear in between. */
 .promo-backdrop{position:fixed;inset:0;z-index:1400;display:grid;place-items:center;padding:16px;background:rgba(3,20,40,.72);animation:promoFade .25s ease both}
-.promo{position:relative;width:100%;max-width:440px;padding:24px 22px 24px;background:var(--paper);border-top:5px solid var(--gold);border-radius:18px;box-shadow:0 30px 80px rgba(0,0,0,.45);animation:promoIn .3s ease both}
-.promo-eyebrow{margin:0 34px 8px 0;color:var(--gold-ink);font:700 12px/1.3 var(--font-head);letter-spacing:.08em;text-transform:uppercase}
-.promo-title{margin:0 24px 10px 0;color:var(--navy);font:600 26px/1.05 var(--font-display);letter-spacing:.01em;text-transform:uppercase}
-.promo-text{margin:0 0 20px;color:var(--ink);font-size:15px;line-height:1.55}
-.promo-actions{display:flex;flex-direction:column;align-items:stretch;gap:14px}
-.promo-actions .btn{min-height:52px;padding:10px 20px;font-size:17px;white-space:nowrap}
+.promo{
+  position:relative;isolation:isolate;overflow:hidden;width:100%;max-width:460px;min-height:500px;
+  display:flex;flex-direction:column;padding:26px 22px 24px;color:#fff;
+  background:#0b1a2b url(/images/season-promo-storm-over-los-angeles.webp) 45% 50%/cover no-repeat;
+  border:1px solid rgba(255,255,255,.14);border-radius:20px;box-shadow:0 30px 80px rgba(0,0,0,.5);
+  animation:promoIn .3s ease both;
+}
+.promo:before{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(4,14,26,.8) 0%,rgba(4,14,26,.6) 34%,rgba(4,14,26,.12) 58%,rgba(4,14,26,.42) 76%,rgba(4,14,26,.86) 100%);
+}
+.promo-eyebrow{margin:0 34px 10px 0;color:var(--gold-2);font:600 12px/1.3 var(--font-head);letter-spacing:.14em;text-transform:uppercase}
+.promo-title{margin:0 24px 12px 0;color:#fff;font:500 28px/1.04 var(--font-display);letter-spacing:.015em;text-transform:uppercase;text-shadow:0 2px 18px rgba(0,0,0,.45)}
+.promo-text{margin:0 0 22px;color:rgba(255,255,255,.88);font-size:15px;font-weight:400;line-height:1.6;text-shadow:0 1px 10px rgba(0,0,0,.5)}
+.promo-actions{margin-top:auto;display:flex;flex-direction:column;align-items:stretch;gap:14px}
+.promo-actions .btn{min-height:52px;padding:10px 20px;font-size:17px;white-space:nowrap;box-shadow:0 12px 30px rgba(0,0,0,.35)}
 .promo-call,.promo-skip{align-self:center}
-.promo-call{white-space:nowrap;display:inline-flex;align-items:center;gap:6px;color:var(--navy);font:700 15px/1 var(--font-head);text-decoration:none}
-.promo-call svg{width:16px;height:16px}
-.promo-call:hover{text-decoration:underline;text-underline-offset:3px}
-.promo-skip{padding:6px 2px;border:0;background:none;color:var(--muted);font:600 14px/1 var(--font-head);cursor:pointer}
-.promo-skip:hover{color:var(--navy);text-decoration:underline;text-underline-offset:3px}
-.promo-close{position:absolute;top:10px;right:10px;width:34px;height:34px;display:grid;place-items:center;padding:0;border:0;border-radius:999px;background:transparent;color:#80868b;cursor:pointer}
-.promo-close:hover{background:#f1f3f4;color:#202124}
-.promo-close svg{width:14px;height:14px}
-.promo-close:focus-visible,.promo-skip:focus-visible,.promo-call:focus-visible{outline:3px solid rgba(212,181,114,.6);outline-offset:2px}
+.promo-call{white-space:nowrap;display:inline-flex;align-items:center;gap:7px;color:#fff;font:600 15px/1 var(--font-head);text-decoration:none;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+.promo-call svg{width:16px;height:16px;color:var(--gold-2)}
+.promo-call:hover{text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:4px}
+.promo-skip{padding:6px 2px;border:0;background:none;color:rgba(255,255,255,.72);font:500 14px/1 var(--font-head);cursor:pointer}
+.promo-skip:hover{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.promo-close{position:absolute;top:12px;right:12px;width:34px;height:34px;display:grid;place-items:center;padding:0;border:1px solid rgba(255,255,255,.18);border-radius:999px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.85);cursor:pointer;transition:background .2s ease,color .2s ease}
+.promo-close:hover{background:rgba(255,255,255,.2);color:#fff}
+.promo-close svg{width:13px;height:13px}
+.promo-close:focus-visible,.promo-skip:focus-visible,.promo-call:focus-visible{outline:3px solid rgba(212,181,114,.7);outline-offset:2px}
 body.promo-open{overflow:hidden}
 body.promo-open .qa-teaser{visibility:hidden}
 
@@ -23,7 +36,9 @@ body.promo-open .qa-teaser{visibility:hidden}
 @keyframes promoFade{from{opacity:0}to{opacity:1}}
 @media (prefers-reduced-motion:reduce){.promo,.promo-backdrop{animation:none}}
 @media (min-width:621px){
-  .promo{padding:30px 32px 30px}
-  .promo-title{font-size:32px}
+  .promo{min-height:520px;padding:32px 34px 30px}
+  .promo-title{font-size:34px}
   .promo-text{font-size:16px}
 }
+/* Short phone screens in landscape: drop the poster height so the buttons stay on screen */
+@media (max-height:560px){.promo{min-height:0}}
