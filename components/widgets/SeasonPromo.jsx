@@ -144,7 +144,7 @@ export default function SeasonPromo() {
           <CloseIcon />
         </button>
         <div className="promo-eyebrow">{promo.eyebrow}</div>
-        <p className="promo-title" id="promoTitle">
+        <p className={'promo-title' + (isExit ? ' promo-title-exit' : '')} id="promoTitle">
           {heading}
         </p>
         <p className="promo-text">{text}</p>
