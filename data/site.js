@@ -97,7 +97,7 @@ export const HOME_DESCRIPTION =
 
 // Short trust points in the bar under the hero
 export const PROOF_POINTS = [
-  { title: 'CSLB #1061942', text: 'Licensed, bonded & insured' },
+  { title: '3 Offices', text: 'LA, the Valley & Vernon' },
   { title: 'Google Reviews', text: 'Homes & businesses' },
   { title: '10-Year', text: 'Workmanship warranty' },
   { title: 'Roofer-Led', text: 'Inspections and estimates' },
