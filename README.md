@@ -124,23 +124,22 @@ Everything points at the live address, **https://qualityroofingspecialists.com**
 - **Structured data:** each page has one JSON-LD block (built by `lib/structuredData.js` from the same text as the page) describing the business, the page, its breadcrumbs, the service it offers and its FAQs. After launch, check pages with Google's [Rich Results Test](https://search.google.com/test/rich-results).
 - **AI files:** `/llms.txt` (a map of the site), `/llms-full.txt` (every page's main text and FAQs) and `/okf/` (the same knowledge as a Google Open Knowledge Format bundle) are rebuilt from the page content on every deploy (`lib/aiFiles.js`). They carry a `noindex` header so they don't show up in Google results. Google Search doesn't use them; they're for AI tools.
 - **Verification:** the Google Search Console code from the current WordPress site is in `SITE_VERIFICATION` (`data/site.js`), so the Search Console property stays verified after the switch. Add a Bing code there too if you use Bing Webmaster Tools.
-- **Staging copies stay out of Google:** only the live domain is indexed. On Vercel this is automatic (preview deployments, and production until the live domain is connected, tell search engines to stay away). On any other host, set the environment variable `SITE_NOINDEX=true` on staging servers.
+- **Staging copies stay out of Google:** only the live domain is indexed. On Vercel this is automatic: preview deployments tell search engines to stay away, and so does the production build when it's reached at any address other than qualityroofingspecialists.com (such as its *.vercel.app URL). On any other host, set the environment variable `SITE_NOINDEX=true` on staging servers.
 
 ## Settings and keys
 
 This project is on public GitHub, so **never put API keys in the code**. Copy `.env.example` to `.env.local` (which git ignores) and fill in what you use:
 
 - `NEXT_PUBLIC_GOOGLE_MAPS_KEY`: real roof measurements in the Instant Quote drawer (Google Solar + Geocoding APIs). Restrict the key to your domain in Google Cloud Console. Without it, the drawer runs in demo mode.
-- `NEXT_PUBLIC_LEAD_ENDPOINT`: where Instant Quote leads are sent as JSON (CRM webhook or form service). Each lead lists the pitches and roof types picked (`pitches`, `roofTypes`) and one estimate per material (`estimates`).
+- **Leads** (`lib/leads.js`): the estimate form and Instant Quote post to `/api/lead`; the chat assistant and AI agents use the same delivery. Every lead is emailed through Resend (`RESEND_API_KEY`, `LEADS_TO_EMAIL`, `LEADS_FROM_EMAIL`) and added as a row to the **QRS Website Leads** Google Sheet through the Apps Script web app in `scripts/google-sheet-leads.gs` (`LEADS_SHEET_WEBHOOK_URL`, `LEADS_SHEET_SECRET`; setup steps are at the top of that file). Successful form submissions push a `generate_lead` event to Google Tag Manager.
 - `OPENROUTER_API_KEY` and `OPENROUTER_MODEL`: the AI backend for the chat assistant (`app/api/chat/route.js`, via [OpenRouter](https://openrouter.ai)). Without a key, the widget falls back to the built-in canned answers in `data/assistant.js`. Double-check `OPENROUTER_MODEL`'s exact slug at [openrouter.ai/models](https://openrouter.ai/models) before going live.
-- `CRM_LEAD_ENDPOINT` and `CRM_LEAD_TOKEN`: where the chat assistant sends leads it captures from the conversation (name, phone, email, zip, interest and transcript), as JSON (`lib/crm.js`). Leave empty and captured leads are just logged to the server console until your CRM is ready.
+- `CRM_LEAD_ENDPOINT` and `CRM_LEAD_TOKEN`: optional; also sends every lead to a CRM webhook as JSON (`lib/leads.js`). With no lead channel set up, leads are just logged to the server console.
 - `NEXT_PUBLIC_CHAT_ENDPOINT`: only set this to point the chat widget at a different, separately hosted AI backend instead of the built-in one above.
 
 Restart `npm run dev` after changing `.env.local`. On your hosting service, add the same variables in its settings.
 
 **Not connected yet:**
-- The estimate form ("Tell us what you need") only shows a confirmation. Hook it up in `components/sections/EstimateForm.jsx`.
-- The chat assistant's lead capture logs to the server console until `CRM_LEAD_ENDPOINT` points at a real CRM.
+- Lead emails and spreadsheet rows start once the Resend and Google Sheet settings above are filled in (locally in `.env.local`, on the live site in Vercel's environment variables).
 
 ## Publishing
 

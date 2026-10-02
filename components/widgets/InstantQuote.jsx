@@ -3,7 +3,9 @@
 import { Fragment, useEffect, useRef, useState } from 'react';
 import { flushSync } from 'react-dom';
 import { CloseIcon } from '@/components/ui/icons';
-import { FINANCE, FINANCING_URL, LEAD_ENDPOINT, PRICING } from '@/data/instantQuote';
+import { FINANCE, FINANCING_URL, PRICING } from '@/data/instantQuote';
+import { FOUND_US_OPTIONS } from '@/data/estimateOptions';
+import { trackLead } from '@/lib/tracking';
 import { PHONE, TEL } from '@/data/site';
 import { loadLeaflet, qrsPin } from '@/lib/leaflet';
 import { buildingInsights, DEMO, fmt, geocode, money, monthly, myLocation, priceFor, styleOf, summarize } from '@/lib/roofQuote';
@@ -204,9 +206,15 @@ export default function InstantQuote() {
       return { material, low: est.low, high: est.high, monthly: Math.round(monthly((est.low + est.high) / 2, term)) };
     });
     setQuote(q);
-    if (LEAD_ENDPOINT) {
-      fetch(LEAD_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(q) }).catch(() => {});
-    }
+    // The lead goes to app/api/lead/route.js (email + leads spreadsheet) while the visitor sees their estimate
+    fetch('/api/lead/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ...q, foundUs: f.get('foundUs') || '', website: f.get('website') || '', source: 'instant-quote', page: window.location.pathname }),
+      keepalive: true,
+    })
+      .then((res) => res.ok && trackLead('instant_quote'))
+      .catch(() => {});
     setStep(4);
   };
 
@@ -417,6 +425,20 @@ export default function InstantQuote() {
                   Email <span className="rm-optional">(optional)</span>
                 </label>
                 <input id="rmEmail" name="email" type="email" autoComplete="email" placeholder="you@example.com" />
+              </div>
+              <div className="field">
+                <label htmlFor="rmFoundUs">
+                  How did you find us? <span className="rm-optional">(optional)</span>
+                </label>
+                <select id="rmFoundUs" name="foundUs" defaultValue="">
+                  <option value="">Choose one</option>
+                  {FOUND_US_OPTIONS.map((option) => <option key={option}>{option}</option>)}
+                </select>
+              </div>
+              {/* Spam trap: hidden from people, but bots fill it in (the server then quietly drops the request) */}
+              <div className="sr-only" aria-hidden="true">
+                <label htmlFor="rmWebsite">Leave this field empty</label>
+                <input id="rmWebsite" name="website" tabIndex={-1} autoComplete="off" />
               </div>
               <div className="rm-actions">
                 <button className="rm-back" type="button" onClick={() => setStep(2)}>Back</button>

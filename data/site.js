@@ -69,19 +69,22 @@ export const TEL = 'tel:+13103401643';
 export const PHONE_INTL = '+1-310-340-1643'; // format search engines expect
 
 // Search engine ownership codes, copied from Google Search Console and Bing Webmaster Tools.
-// The Google code is the one on the current WordPress site, so Search Console stays verified after the switch.
+// Google: the first code is the one on the current WordPress site, so its Search Console property stays verified
+// after the switch; the second is the owner's Search Console verification from October 2026. Each renders its own
+// <meta name="google-site-verification"> tag.
 export const SITE_VERIFICATION = {
-  google: 'SyZ2s7uoL4sqZ3pKCmqTSSx5jYHPnjFSlzjMfY2xktM',
+  google: ['SyZ2s7uoL4sqZ3pKCmqTSSx5jYHPnjFSlzjMfY2xktM', '5fisOww8_FxY7GGY_Z3-598E0O0neTwP2UyIUSuYDbU'],
   bing: '7EF115AF17F4DB7072BDE8A129257E53',
 };
 
 // Microsoft Clarity project ID (heatmaps/session recordings). Only loads on the live site (see
-// ALLOW_INDEXING in lib/seo.js), so previews and local dev don't add noise to the real analytics.
+// LOAD_TRACKING in lib/seo.js), so previews and local dev don't add noise to the real analytics.
 export const CLARITY_ID = 'ynxdd3rck6';
 
-// Google Tag Manager container ID, copied from the current WordPress site. Loads Google Analytics
-// (GA4 properties G-HCLLJLECZ2 and G-0HTXYPMNC5) via the tags configured inside the GTM container itself.
-// Only loads on the live site (see ALLOW_INDEXING in lib/seo.js), same as Clarity above.
+// Google Tag Manager container ID. Loads Google Analytics via the tags configured inside the container itself
+// (checked October 2026: GA4 G-0HTXYPMNC5, plus old Universal Analytics UA-208890652-1 tags that no longer collect).
+// The forms push a generate_lead event to it (lib/tracking.js).
+// Only loads on the live site (see LOAD_TRACKING in lib/seo.js), same as Clarity above.
 export const GTM_ID = 'GTM-P7Z3CMG';
 
 // Home page title and description (search results + link previews)

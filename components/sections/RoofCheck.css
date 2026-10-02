@@ -12,6 +12,9 @@
 .form-row{display:grid;grid-template-columns:1fr;gap:0 14px}
 .success{display:none;padding:17px;border-radius:var(--radius);background:#edf9f3;color:#176044;font-weight:800;margin-top:15px}
 .success.show{display:block}
+.form-error{display:none;padding:17px;border-radius:var(--radius);background:#fbeeee;color:#8a1f1f;font-weight:700;margin-top:15px}
+.form-error.show{display:block}
+.form-error a{color:inherit;text-decoration:underline}
 @media (min-width:621px){
   .check-card{border-radius:var(--radius);padding:34px}
   .check-card h2,.form-card h2{font-size:40px!important}

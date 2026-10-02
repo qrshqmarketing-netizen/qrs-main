@@ -1,11 +1,12 @@
 // Backend for the Roof Assistant chat widget (components/widgets/RoofAssistant.jsx).
 // Calls an OpenRouter model (OPENROUTER_API_KEY, OPENROUTER_MODEL in .env.local) and, when the visitor has
-// shared enough to follow up with them, sends a lead to lib/crm.js. Without OPENROUTER_API_KEY set, this
+// shared enough to follow up with them, sends a lead through lib/leads.js (email + leads spreadsheet). Without OPENROUTER_API_KEY set, this
 // route returns an error and the widget falls back to its built-in canned answers — no code change needed.
 import { SYSTEM_PROMPT } from '@/data/assistant';
 import { BUSINESS, SITE_URL } from '@/data/site';
 import { findRelevantPages } from '@/lib/chatRetrieval';
-import { sendLeadToCRM } from '@/lib/crm';
+import { after } from 'next/server';
+import { deliverLead } from '@/lib/leads';
 
 const OPENROUTER_URL = 'https://openrouter.ai/api/v1/chat/completions';
 const MODEL = process.env.OPENROUTER_MODEL || 'qwen/qwen3.8-27b:free';
@@ -114,16 +115,17 @@ export async function POST(request) {
     const phone = lead?.phone || after.phone || '';
     const email = lead?.email || after.email || '';
     if (phone || email) {
-      sendLeadToCRM({
+      // Delivered after the reply goes out, so the visitor doesn't wait on the email and spreadsheet
+      const captured = {
         source: 'roof-assistant-chat',
-        capturedAt: new Date().toISOString(),
         name: lead?.name || '',
         phone,
         email,
         zip: lead?.zip || '',
-        interest: lead?.interest || '',
+        service: lead?.interest || '',
         transcript: [...messages, { role: 'assistant', content: reply }],
-      }).catch(() => {});
+      };
+      after(() => deliverLead(captured).catch(() => {}));
     }
   }
 

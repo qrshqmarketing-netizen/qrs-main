@@ -11,9 +11,6 @@ export const QUOTE_EXCLUDE = ['/commercial-roofing/', '/roof-repair/emergency/',
 // Left empty, the drawer runs in demo mode with sample measurements.
 export const GOOGLE_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY || '';
 
-// Optional: URL that receives the lead as JSON (CRM webhook, form service, etc.). Set in .env.local.
-export const LEAD_ENDPOINT = process.env.NEXT_PUBLIC_LEAD_ENDPOINT || '';
-
 // ----- Pricing (EXAMPLE numbers: replace with your real installed rates) -----
 // Price per square foot of roof, low and high, for a full replacement
 export const PRICING = {

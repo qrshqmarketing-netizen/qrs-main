@@ -16,7 +16,7 @@ import RoofAssistant from '@/components/widgets/RoofAssistant';
 import RevealSections from '@/components/ui/RevealSections';
 import HelpfulTitles from '@/components/ui/HelpfulTitles';
 import { BUSINESS, CLARITY_ID, GTM_ID, HOME_DESCRIPTION, SITE_URL, SITE_VERIFICATION } from '@/data/site';
-import { ALLOW_INDEXING, openGraphBase, twitterBase } from '@/lib/seo';
+import { ALLOW_INDEXING, LOAD_TRACKING, openGraphBase, twitterBase } from '@/lib/seo';
 
 // Google Fonts, downloaded at build time and served from this site
 const openSans = Open_Sans({ subsets: ['latin'], weight: ['300', '400', '500', '600', '700', '800'], variable: '--font-open-sans' });
@@ -63,7 +63,7 @@ export default function RootLayout({ children }) {
         <script dangerouslySetInnerHTML={{ __html: "try{const saved=localStorage.getItem('qrs-theme');const requested=new URLSearchParams(location.search).get('theme');if((saved||requested)==='dark')document.documentElement.dataset.theme='dark';else document.documentElement.removeAttribute('data-theme')}catch{if(/[?&]theme=dark(&|$)/.test(location.search))document.documentElement.dataset.theme='dark'}" }} />
       </head>
       <body>
-        {ALLOW_INDEXING && (
+        {LOAD_TRACKING && (
           <noscript>
             <iframe
               src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
@@ -83,7 +83,7 @@ export default function RootLayout({ children }) {
         <InstantQuote />
         <CookieNotice />
         <SeasonPromo />
-        {ALLOW_INDEXING && (
+        {LOAD_TRACKING && (
           <>
             <Script id="gtm" strategy="afterInteractive">
               {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
