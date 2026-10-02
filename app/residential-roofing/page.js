@@ -44,7 +44,6 @@ export default function ResidentialRoofingPage() {
         imageAlt="Aerial view of a Southern California neighborhood of shingle-roofed homes"
         imagePosition="center 45%"
         stats
-        rain
       />
       <Overview heading={page.overview.heading} paragraphs={page.overview.paragraphs} />
       <ReviewStrip />

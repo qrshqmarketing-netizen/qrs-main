@@ -7,6 +7,7 @@ import { SEASON_PROMO as promo } from '@/data/promo';
 import { PHONE, TEL } from '@/data/site';
 import { COOKIE_OK_EVENT, COOKIE_OK_KEY } from '@/lib/events';
 import { local, session } from '@/lib/storage';
+import PromoRain from './PromoRain';
 import './SeasonPromo.css';
 
 const FIRST_MS = 3000, EXIT_ARM_MS = 8000;
@@ -147,6 +148,7 @@ export default function SeasonPromo() {
         aria-labelledby="promoTitle"
         onClick={(e) => e.stopPropagation()}
       >
+        {promo.rain && <PromoRain />}
         <button className="promo-close" type="button" aria-label="Close" onClick={close} ref={closeRef}>
           <CloseIcon />
         </button>

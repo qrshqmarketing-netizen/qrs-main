@@ -90,7 +90,7 @@ function processPhoto(page) {
 // props; defaults to page.final, else one worded around page.keyword). page.sections (optional): bands after the
 // overview, e.g. one per roof type on /roof-inspection/ ([{ eyebrow, heading, paragraphs, points }]). hub: the service-first
 // hub this page belongs to ({ label, href }); the overview links back to it, so the hub is the page for the general search.
-export default function ServicePage({ page, crumbs, eyebrow, scenes = [], offer, actions, hub, rain = true, finalCta = page.final || closingCta(page.keyword, offer) }) {
+export default function ServicePage({ page, crumbs, eyebrow, scenes = [], offer, actions, hub, finalCta = page.final || closingCta(page.keyword, offer) }) {
   const [heroScene = 'scene-shingle', processScene = heroScene] = scenes;
   const [processImage, processImageAlt] = page.process.image ? [page.process.image, page.process.imageAlt] : processPhoto(page);
   const schema = pageJsonLd({
@@ -113,7 +113,6 @@ export default function ServicePage({ page, crumbs, eyebrow, scenes = [], offer,
         image={page.image}
         imageAlt={page.imageAlt}
         stats
-        rain={rain}
         {...(actions && { actions })}
       />
       <Overview paragraphs={page.overview.paragraphs} cta={hub && { label: `Compare All ${hub.label} Options`, href: hub.href }} />

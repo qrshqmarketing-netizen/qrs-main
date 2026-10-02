@@ -9,7 +9,6 @@ export default function RoofFinancingPage() {
   return (
     <SinglePage
       single={FINANCING}
-      rain={false}
       actions={[
         { label: 'See Example Payments', drawer: true, style: 'gold' },
         { label: `Call ${PHONE}`, href: TEL, style: 'line' },

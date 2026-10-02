@@ -87,7 +87,7 @@ export function SectionService({ section, slug }) {
 export const singleMetadata = (single) =>
   pageMetadata({ title: single.page.metaTitle, description: single.page.metaDescription, path: single.href });
 
-export function SinglePage({ single, actions, finalCta, rain }) {
+export function SinglePage({ single, actions, finalCta }) {
   return (
     <ServicePage
       page={single.page}
@@ -97,7 +97,6 @@ export function SinglePage({ single, actions, finalCta, rain }) {
       scenes={[single.scenes[0], 'scene-inspect']}
       offer={single.key === 'hoa' ? 'commercial' : 'home'}
       actions={actions}
-      rain={rain}
       {...(finalCta && { finalCta })}
     />
   );

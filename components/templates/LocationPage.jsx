@@ -54,7 +54,6 @@ export default function LocationPage({ location, page, index = 0 }) {
         image={photo.src}
         imagePosition={photo.position}
         label={`QRS roofing in ${city}`}
-        rain
       />
       <LocalIntro city={city} heading={page.intro.heading} paragraphs={page.intro.paragraphs} offices={office ? [office] : []} neighborhoods={page.neighborhoods} considerations={page.considerations} />
       <ProofBar />

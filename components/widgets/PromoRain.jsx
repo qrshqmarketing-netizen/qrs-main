@@ -2,25 +2,25 @@
 
 import { useEffect, useRef } from 'react';
 
-// Seasonal rain over the hero (HERO_RAIN in data/promo.js): an empty canvas between the photo and the copy
-// (Hero.css .hero-rain). The animation itself (lib/heroRain.js) is a separate file, fetched only once the page has
-// finished loading and the browser is idle, so nothing about the rain slows the page down. Skipped for visitors who ask
-// for reduced motion or less data, and on low-end devices.
-export default function HeroRain() {
+// Seasonal rain inside the season promo popup (SEASON_PROMO.rain in data/promo.js): an empty canvas between the card's
+// photo and its copy (SeasonPromo.css .promo-rain). The animation itself (lib/promoRain.js) is a separate file, fetched
+// only once the page has finished loading and the browser is idle, so nothing about the rain slows the page down.
+// Skipped for visitors who ask for reduced motion or less data, and on low-end devices.
+export default function PromoRain() {
   const canvasRef = useRef(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    const hero = canvas?.parentElement;
-    if (!hero) return;
+    const card = canvas?.parentElement;
+    if (!card) return;
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || navigator.connection?.saveData) return;
     if (navigator.hardwareConcurrency <= 2 || navigator.deviceMemory <= 2) return;
 
     const hasIdle = 'requestIdleCallback' in window; // not in Safari: a short timeout instead
     let stop, idle, cancelled = false;
     const begin = async () => {
-      const { startRain } = await import('@/lib/heroRain');
-      if (!cancelled) stop = startRain(canvas, hero);
+      const { startRain } = await import('@/lib/promoRain');
+      if (!cancelled) stop = startRain(canvas, card);
     };
     const whenIdle = () => {
       idle = hasIdle ? requestIdleCallback(begin, { timeout: 3000 }) : setTimeout(begin, 500);
@@ -37,5 +37,5 @@ export default function HeroRain() {
     };
   }, []);
 
-  return <canvas className="hero-rain" ref={canvasRef} aria-hidden="true" />;
+  return <canvas className="promo-rain" ref={canvasRef} aria-hidden="true" />;
 }

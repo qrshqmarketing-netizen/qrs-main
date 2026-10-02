@@ -14,10 +14,10 @@ export const SEASON_PROMO = {
     text: 'Heavy El Niño rains are on the way. Book your free drone roof evaluation now and know exactly where your roof stands before the first big storm.',
   },
   cta: { label: 'Book My Free Evaluation Now', href: '#roof-check' },
+  rain: true, // faint rain falling inside the popup (components/widgets/PromoRain.jsx); false switches it off
   exclude: ['/commercial-roofing/', '/residential-roofing/hoa-multi-family/', '/service-areas/la-county/vernon/', '/contractors/', '/careers/'],
 };
 
-// Subtle rain over the hero of the service and location pages for the El Niño season (components/sections/HeroRain.jsx;
-// pages opt in with Hero's `rain` prop, financing doesn't). While it's on, the site's fade-in effects are off
-// (app/layout.js); false switches the rain off and brings them back.
-export const HERO_RAIN = true;
+// The site's heading fade-ups and scroll reveals are off (they were switched off while the hero rain ran, and stay off);
+// true brings them back (app/layout.js).
+export const PAGE_ENTRANCES = false;

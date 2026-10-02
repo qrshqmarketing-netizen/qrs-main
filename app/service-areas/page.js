@@ -47,7 +47,6 @@ export default function LocationsPage() {
         image={HERO_IMAGE}
         imageAlt="Row of homes with pitched roofs along a residential street"
         imagePosition="40% center"
-        rain
       />
       <Offices sub="Our Los Angeles and Valley offices serve homes and businesses across Los Angeles and Orange County. One number reaches both." />
       <ProofBar />
