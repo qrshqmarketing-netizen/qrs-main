@@ -17,7 +17,7 @@ export const ABOUT_PAGE = {
   intro: {
     heading: 'Your Detail-First Roofing Team',
     paragraphs: [
-      `${COMPANY.belief} We’re a small, locally owned roofing company serving clients across Los Angeles and Orange County. Our local crews handle projects of every size, from a single roof repair to large residential, commercial and multi-family projects. We’re licensed, bonded and insured as a California contractor since 2020. Our approach is simple: a roofer should look at your roof before anyone tries to sell you one.`,
+      `${COMPANY.belief} We’re a small, locally owned roofing company serving homeowners and property owners across Los Angeles and Orange County. Our local crews handle projects of every size, from a single roof repair to large residential, commercial and multi-family projects. We’re licensed, bonded and insured as a California contractor since 2020. Our approach is simple: a roofer should look at your roof before anyone tries to sell you one.`,
       'That’s why our work starts with a roofer-led [free roof evaluation](#roof-check), photo documentation and a plain-English explanation. Before any work begins you get a written scope and price. When the job is done, we walk the finished roof with you and back our installs with a 10-year workmanship warranty.',
     ],
   },
@@ -65,7 +65,7 @@ export const ABOUT_PAGE = {
     eyebrow: 'Careers',
     heading: 'Build Something That Lasts',
     subheading: 'Join the QRS crew',
-    paragraphs: ['We like meeting roofers and team members who take pride in careful, clean work and clear communication with clients.'],
+    paragraphs: ['We like meeting roofers and team members who take pride in careful, clean work and clear communication with homeowners.'],
     cta: { label: 'Explore careers', href: '/careers/' },
   },
   faqs: [

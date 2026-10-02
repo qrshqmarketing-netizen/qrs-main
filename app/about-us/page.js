@@ -36,7 +36,7 @@ export default function AboutPage() {
       <FeatureBand id="mission" {...page.mission} />
       <ValueGrid heading={page.team.heading} intro={page.team.intro} items={page.team.items} columns={2} />
       <ValueGrid heading={page.values.heading} items={page.values.items} tone="wash" />
-      <WhyQrs heading="Why Clients Choose QRS" cta={{ label: 'Read Our Reviews', href: '#reviews' }} />
+      <WhyQrs heading="Why Homeowners Choose QRS" cta={{ label: 'Read Our Reviews', href: '#reviews' }} />
       <Process />
       <Guarantee />
       <SplitFeature

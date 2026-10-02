@@ -23,7 +23,7 @@ export const SHINGLE_CONTENT = {
       intro: 'From one wind-lifted tab to a complete tear-off, choose the service that fits where your shingle roof is today.',
     },
     highlights: {
-      heading: 'Why Clients Choose Shingle Roofs',
+      heading: 'Why Homeowners Choose Shingle Roofs',
       points: [
         { title: 'Clean lines and plenty of colors', text: 'Architectural shingles add depth and shadow lines, and they come in a wide range of colors that suit Craftsman, ranch and traditional homes alike.' },
         { title: 'Lighter than tile', text: 'Shingles weigh far less than clay or concrete tile, so they suit many roofs that were never framed to carry tile.' },
@@ -78,7 +78,7 @@ export const SHINGLE_CONTENT = {
         points: [
           { title: 'A roofer’s honest recommendation', text: 'A roofer who has been on your roof tells you whether it truly needs replacing, and if a [shingle roof tune-up](/roof-maintenance-plans/#tune-up) would keep it going, we’ll say so.' },
           { title: 'Photos of what gets covered up', text: 'Once the new roof is on, the deck and underlayment are hidden for good, so we photograph them while they’re still exposed.' },
-          { title: 'A clean site, start to finish', text: 'Tarps over landscaping, careful clean-up and a final sweep for nails leave your yard the way we found it, something clients mention in their Google reviews.' },
+          { title: 'A clean site, start to finish', text: 'Tarps over landscaping, careful clean-up and a final sweep for nails leave your yard the way we found it, something homeowners mention in their Google reviews.' },
           { title: 'Backed by The QRS Guarantee', text: 'Your new shingle roof comes with our 10-year workmanship warranty, and we go over exactly what it covers at the final walkthrough.' },
         ],
       },

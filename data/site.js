@@ -8,7 +8,7 @@ export const BUSINESS = {
   shortName: 'QRS',
   tagline: 'DETAIL-FIRST ROOFING',
   description:
-    'Detail-first roof repair and replacement for clients across Southern California, licensed, bonded and insured and backed by a 10-year workmanship warranty. CSLB Lic # 1061942.',
+    'Detail-first roof repair and replacement for homeowners across Southern California, licensed, bonded and insured and backed by a 10-year workmanship warranty. CSLB Lic # 1061942.',
   email: 'info@qualityroofingspecialists.com',
   license: '1061942', // California CSLB contractor license number
   licenseSince: '2020-01-03', // CSLB license issue date
@@ -72,6 +72,9 @@ export const PHONE_INTL = '+1-310-340-1643'; // format search engines expect
 // Google: the first code is the one on the current WordPress site, so its Search Console property stays verified
 // after the switch; the second is the owner's Search Console verification from October 2026. Each renders its own
 // <meta name="google-site-verification"> tag.
+// Where website leads (forms, Instant Quote, chat, AI agents) are emailed (lib/leads.js). LEADS_TO_EMAIL overrides it.
+export const LEADS_EMAIL = 'scheduling@qualityroofingspecialists.com';
+
 export const SITE_VERIFICATION = {
   google: ['SyZ2s7uoL4sqZ3pKCmqTSSx5jYHPnjFSlzjMfY2xktM', '5fisOww8_FxY7GGY_Z3-598E0O0neTwP2UyIUSuYDbU'],
   bing: '7EF115AF17F4DB7072BDE8A129257E53',

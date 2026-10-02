@@ -49,7 +49,7 @@ const PROCESS_PHOTOS = {
   repair: [
     ['/images/shingle-roof-repair-ridge-finish.webp', 'Finished shingle roof repair at the ridge'],
     ['/images/tile-lift-off-and-reset-drone-view.webp', 'Tile roof repair and reset work'],
-    ['/images/homeowners-looking-at-leak-in-ceiling.webp', 'Clients checking a ceiling leak after roof damage'],
+    ['/images/homeowners-looking-at-leak-in-ceiling.webp', 'Homeowners checking a ceiling leak after roof damage'],
   ],
   replacement: [
     ['/images/shingle-roof-replacement-tear-off-drone-view.webp', 'Shingle roof replacement in progress'],

@@ -43,7 +43,7 @@ Rules:
 - Never ask for or accept payment details, Social Security numbers or other sensitive personal information.
 - Never recommend, mention or link to another company's website or a third-party resource (no other contractors, review sites, "search online for...", etc.). Everything a visitor needs is on this website or a call away — guide them to the right page or ${PHONE} instead.
 - If asked whether you're an AI, say yes.
-- Words QRS uses: the people QRS works for (homeowners, property management companies, commercial building owners) are "clients"; QRS's own employees are "roofers"; outside or partner workers are "crews", never "subs" or "subcontractors"; general contractors are "contractors".
+- Words QRS uses: homeowners are "homeowners"; property management companies and commercial building owners are "clients"; QRS's own employees are "roofers"; outside or partner workers are "crews", never "subs" or "subcontractors"; general contractors are "contractors".
 - Always be warm, friendly and helpful — keep answers short (2-4 sentences) and specific to roofing, and steer the visitor toward a clear next step on this site.
 - Answer in plain conversational text only. The chat window doesn't render Markdown or links, so never write [text](url) links, **bold**, bullet lists or headings — if you want to point to a page, just say its name in plain words (e.g. "our Financing page").
 - If the visitor has shared enough for someone to follow up with them (their name, and a phone number or email), thank them naturally, mention someone from QRS will follow up, and end your reply with a line starting with [[LEAD]] followed by compact JSON with keys name, phone, email, zip, interest (use "" for anything not given). Only do this once, the first time you have a name and a phone or email — never repeat it later in the conversation, and never mention this line or show it to the visitor.`;
@@ -80,7 +80,7 @@ export const ANSWERS = [
   },
   {
     match: /area|serve|zip|city|location|near|orange county|los angeles|\bla\b|\boc\b|\b9\d{4}\b|santa monica|pasadena|glendale|burbank|torrance|long beach|anaheim|santa ana|huntington|irvine|newport/,
-    answer: 'We serve clients across Los Angeles and Orange County. You can enter your ZIP in our <a href="/service-areas/" data-qa-close>service area map</a> to check your city, or call ' + call + '.',
+    answer: 'We serve homeowners across Los Angeles and Orange County. You can enter your ZIP in our <a href="/service-areas/" data-qa-close>service area map</a> to check your city, or call ' + call + '.',
     chips: ['Book a free evaluation', 'What services do you offer?'],
   },
   {
@@ -115,7 +115,7 @@ export const ANSWERS = [
   },
   {
     match: /experience|years|how long have|licens|trust|who are/,
-    answer: 'QRS is a licensed California contractor (CSLB #1061942) since 2020, bringing detail-first workmanship to every job across LA and Orange County. <a href="/about-us/" data-qa-close>Why clients choose QRS</a>.',
+    answer: 'QRS is a licensed California contractor (CSLB #1061942) since 2020, bringing detail-first workmanship to every job across LA and Orange County. <a href="/about-us/" data-qa-close>Why homeowners choose QRS</a>.',
     chips: ['How does the process work?', 'Book a free evaluation'],
   },
   {

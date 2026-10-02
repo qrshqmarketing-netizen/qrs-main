@@ -32,6 +32,6 @@ export const HOLLYWOOD_HILLS_PROJECT = {
     'Not every roof is a rectangle. On a roof with 12 sides, each section of the new system was cut to fit its own angle, as part of our *FlatGuard* flat roof system. The white reflective cap sheet on top helps keep the home cooler through Los Angeles summers.',
     'The roof also carries a rooftop deck. The crew sealed around every post of the deck railing so water can’t get in at the posts, and flashed the HVAC unit and every roof penetration for a watertight finish.',
     'Odd shapes, tight hillside access and rooftop decks are what we do best. If your home has a flat roof that other roofers have turned down, QRS crews handle [flat roof replacement](/residential-roofing/flat-roofing/replacement/) and [flat roof repair](/residential-roofing/flat-roofing/repair/) across the Hollywood Hills and the rest of [Los Angeles](/service-areas/la-county/los-angeles/).',
-    'For a roof like this, clients can request a [free roof evaluation](/contact-us/) anywhere in our [Los Angeles County service area](/service-areas/la-county/).',
+    'For a roof like this, homeowners can request a [free roof evaluation](/contact-us/) anywhere in our [Los Angeles County service area](/service-areas/la-county/).',
   ],
 };
