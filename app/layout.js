@@ -16,6 +16,7 @@ import SeasonPromo from '@/components/widgets/SeasonPromo';
 import RoofAssistant from '@/components/widgets/RoofAssistant';
 import RevealSections from '@/components/ui/RevealSections';
 import HelpfulTitles from '@/components/ui/HelpfulTitles';
+import { INSTANT_QUOTE_ENABLED } from '@/data/instantQuote';
 import { PAGE_ENTRANCES } from '@/data/promo';
 import { BUSINESS, CLARITY_ID, GA_ID, HOME_DESCRIPTION, SITE_URL, SITE_VERIFICATION } from '@/data/site';
 import { ALLOW_INDEXING, LOAD_TRACKING, openGraphBase, twitterBase } from '@/lib/seo';
@@ -73,7 +74,7 @@ export default function RootLayout({ children }) {
         <Footer />
         <ReviewToast />
         <RoofAssistant />
-        <InstantQuote />
+        {INSTANT_QUOTE_ENABLED && <InstantQuote />}
         <CookieNotice />
         <SeasonPromo />
         <CampaignWelcome />

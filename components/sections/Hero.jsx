@@ -2,6 +2,7 @@ import Rich from '@/components/ui/Rich';
 import QuoteTrigger from '@/components/ui/QuoteTrigger';
 import SiteLink from '@/components/ui/SiteLink';
 import { PhoneIcon } from '@/components/ui/icons';
+import { INSTANT_QUOTE_ENABLED } from '@/data/instantQuote';
 import { PHONE, TEL } from '@/data/site';
 import Breadcrumbs from './Breadcrumbs';
 import HeroParallax from './HeroParallax';
@@ -39,9 +40,11 @@ export default function Hero({
   h1 = 'title',
   align = 'left',
   stats = false,
-  actions = DEFAULT_ACTIONS,
+  actions: allActions = DEFAULT_ACTIONS,
   className,
 }) {
+  // Buttons that open the Instant Quote are left out while it's switched off (INSTANT_QUOTE_ENABLED in data/instantQuote.js)
+  const actions = INSTANT_QUOTE_ENABLED ? allActions : allActions?.filter((a) => !a.drawer);
   const Eyebrow = h1 === 'eyebrow' ? 'h1' : 'div';
   const Title = h1 === 'eyebrow' ? 'p' : 'h1';
   return (

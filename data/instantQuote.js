@@ -1,6 +1,11 @@
 // Instant Quote drawer (the "Instant Quote" tab on the right edge of the screen on tablets and desktops; on phones
 // the tab is hidden and the "Get an Instant Quote" button in the hero and closing CTA opens it instead).
 
+// The Instant Quote switch. false hides everything that opens it (the side tab, the phone buttons in the hero and closing
+// CTA, "See Example Payments" on the financing page) and leaves the drawer out of the page. Turn it on once the Google
+// Solar API key below is set (NEXT_PUBLIC_GOOGLE_MAPS_KEY).
+export const INSTANT_QUOTE_ENABLED = false;
+
 // Pages where phones don't get that button: the quote only prices home roof replacements, so commercial, emergency,
 // partner and job pages skip it.
 export const QUOTE_EXCLUDE = ['/commercial-roofing/', '/roof-repair/emergency/', '/residential-roofing/hoa-multi-family/', '/service-areas/la-county/vernon/', '/contractors/', '/careers/', '/thank-you/'];
