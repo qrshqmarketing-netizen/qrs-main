@@ -2,9 +2,11 @@ import Rich from '@/components/ui/Rich';
 import QuoteTrigger from '@/components/ui/QuoteTrigger';
 import SiteLink from '@/components/ui/SiteLink';
 import { PhoneIcon } from '@/components/ui/icons';
+import { HERO_RAIN } from '@/data/promo';
 import { PHONE, TEL } from '@/data/site';
 import Breadcrumbs from './Breadcrumbs';
 import HeroParallax from './HeroParallax';
+import HeroRain from './HeroRain';
 import ProofBar from './ProofBar';
 import './Hero.css';
 
@@ -49,6 +51,7 @@ export default function Hero({
       <section className={'hero hero-photo' + (image ? '' : ' hero-fallback') + (image || mobileImage ? ' hero-stack' : '') + (className ? ` ${className}` : '')} aria-label={label}>
         <HeroParallax image={image} mobileImage={mobileImage} imageAlt={imageAlt} imagePosition={imagePosition} />
         <div className="hero-glow" aria-hidden="true"></div>
+        {HERO_RAIN && <HeroRain />}
         <div className={'container hero-inner on-dark' + (align === 'left' ? ' hero-left' : '') + (className ? ` ${className}` : '')}>
           <div className="hero-copy">
             {eyebrow && <Eyebrow className="eyebrow">{eyebrow}</Eyebrow>}

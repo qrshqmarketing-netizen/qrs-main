@@ -15,3 +15,6 @@ export const SEASON_PROMO = {
   cta: { label: 'Book the $199 Roof Check', href: '#roof-check' },
   exclude: ['/commercial-roofing/', '/residential-roofing/hoa-multi-family/', '/service-areas/la-county/vernon/', '/contractors/', '/careers/'],
 };
+
+// Subtle rain over every page's hero for the El Niño season (components/sections/HeroRain.jsx). false switches it off.
+export const HERO_RAIN = true;
