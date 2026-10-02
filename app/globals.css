@@ -141,6 +141,9 @@ main h2{animation:fadeUp .9s ease .3s both}
 .reveal-on-scroll{opacity:0;transform:translateY(14px);transition:opacity .65s ease,transform .65s ease}
 .reveal-on-scroll.reveal-visible{opacity:1;transform:translateY(0)}
 @media (prefers-reduced-motion:reduce){.reveal-on-scroll,.reveal-on-scroll.reveal-visible{opacity:1;transform:none;transition:none}}
+/* While the hero rain is on (HERO_RAIN in data/promo.js), app/layout.js adds .no-entrance to <body> and leaves out the
+   scroll reveals: headings and the hero's intro line show at once, so the motion is the rain alone */
+.no-entrance main h2,.no-entrance .hero-sub{animation:none}
 
 /* Product names have a distinct serif italic treatment wherever rich text displays them. */
 .product-brand{font-family:Georgia,'Times New Roman',serif;font-style:italic;text-transform:none!important}

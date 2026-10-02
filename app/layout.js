@@ -15,6 +15,7 @@ import SeasonPromo from '@/components/widgets/SeasonPromo';
 import RoofAssistant from '@/components/widgets/RoofAssistant';
 import RevealSections from '@/components/ui/RevealSections';
 import HelpfulTitles from '@/components/ui/HelpfulTitles';
+import { HERO_RAIN } from '@/data/promo';
 import { BUSINESS, CLARITY_ID, GTM_ID, HOME_DESCRIPTION, SITE_URL, SITE_VERIFICATION } from '@/data/site';
 import { ALLOW_INDEXING, LOAD_TRACKING, openGraphBase, twitterBase } from '@/lib/seo';
 
@@ -62,7 +63,8 @@ export default function RootLayout({ children }) {
         {/* Restore the selected theme before the page paints; ?theme=dark remains available as a preview fallback. */}
         <script dangerouslySetInnerHTML={{ __html: "try{const saved=localStorage.getItem('qrs-theme');const requested=new URLSearchParams(location.search).get('theme');if((saved||requested)==='dark')document.documentElement.dataset.theme='dark';else document.documentElement.removeAttribute('data-theme')}catch{if(/[?&]theme=dark(&|$)/.test(location.search))document.documentElement.dataset.theme='dark'}" }} />
       </head>
-      <body>
+      {/* While the hero rain is on, the page shows up at once: no heading fade-ups or scroll reveals (globals.css) */}
+      <body className={HERO_RAIN ? 'no-entrance' : undefined}>
         {LOAD_TRACKING && (
           <noscript>
             <iframe
@@ -74,7 +76,7 @@ export default function RootLayout({ children }) {
           </noscript>
         )}
         <Header />
-        <RevealSections />
+        {!HERO_RAIN && <RevealSections />}
         <HelpfulTitles />
         {children}
         <Footer />
