@@ -5,8 +5,8 @@
 
 export const SEASON_PROMO = {
   active: true,
-  eyebrow: 'El Niño season prep',
-  heading: 'Get Your Roof Ready Before the Rain',
+  eyebrow: 'Get your roof ready before the rain',
+  heading: 'El Niño Season Prep',
   text: 'Our optional $199 Roof Check tune-up seals the vents, pipes and flashings where most leaks start. Not sure you need it? The drone roof evaluation is free.',
   exit: {
     heading: 'Before You Go: Beat the El Niño Rains',
