@@ -4,12 +4,14 @@
 //
 // Setup (once):
 // 1. Open the spreadsheet, then Extensions → Apps Script. Replace the editor's contents with this file and save.
-// 2. Project Settings (gear icon) → Script properties → Add script property:
-//    LEADS_SHEET_SECRET = the same value as LEADS_SHEET_SECRET in the website's environment variables.
+// 2. Put the website's LEADS_SHEET_SECRET value in SECRET below (or, instead, in Project Settings → Script
+//    properties as LEADS_SHEET_SECRET). Never commit a filled-in copy: this repo is public.
 // 3. Deploy → New deployment → type "Web app". Execute as: Me. Who has access: Anyone. Deploy, and allow access
 //    when Google asks.
 // 4. Copy the Web app URL (it ends in /exec) into the website's LEADS_SHEET_WEBHOOK_URL environment variable.
 // After editing this script later, use Deploy → Manage deployments → Edit → New version, so the URL stays the same.
+
+const SECRET = ''; // the same value as LEADS_SHEET_SECRET in the website's environment variables
 
 const HEADERS = ['Received', 'Source', 'Name', 'Phone', 'Email', 'ZIP', 'How they found us', 'Service', 'Roof type', 'Address', 'Message', 'Quote details', 'Page', 'Chat transcript'];
 const KEYS = ['source', 'name', 'phone', 'email', 'zip', 'foundUs', 'service', 'roofType', 'address', 'message', 'quote', 'page', 'transcript'];
@@ -23,7 +25,7 @@ function doPost(e) {
   } catch (err) {
     return reply({ ok: false, error: 'bad request' });
   }
-  const secret = PropertiesService.getScriptProperties().getProperty('LEADS_SHEET_SECRET');
+  const secret = PropertiesService.getScriptProperties().getProperty('LEADS_SHEET_SECRET') || SECRET;
   if (!secret || data.secret !== secret) return reply({ ok: false, error: 'unauthorized' });
 
   // Text that starts with = + - or @ would run as a formula in the sheet, so it's stored as plain text

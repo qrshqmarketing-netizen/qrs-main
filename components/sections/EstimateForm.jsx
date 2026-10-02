@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { FOUND_US_OPTIONS, ROOF_TYPES, SERVICE_OPTIONS } from '@/data/estimateOptions';
 import { PHONE, TEL } from '@/data/site';
-import { trackLead } from '@/lib/tracking';
+import { rememberLead, trackLead } from '@/lib/tracking';
 
 // Sends the request to app/api/lead/route.js, which emails it and adds it to the leads spreadsheet (lib/leads.js)
 export default function EstimateForm() {
@@ -22,8 +22,10 @@ export default function EstimateForm() {
       });
       if (!res.ok) throw new Error(String(res.status));
       setStatus('sent');
-      trackLead('estimate_form');
       form.reset();
+      // Off to the thank-you page, which reports the conversion; if storage is blocked, report it here instead
+      if (!rememberLead('estimate_form')) trackLead('estimate_form');
+      window.location.assign('/thank-you/');
     } catch {
       setStatus('error');
     }
