@@ -3,8 +3,8 @@
 import { useEffect, useRef } from 'react';
 
 const WIND = 0.12; // sideways drift per pixel of fall: drops lean slightly, falling down and to the left
-const AREA_PER_DROP = 8000; // px² of hero per drop (a 1440×820 hero gets about 150, a phone hero about 40)
-const MAX_DROPS = 180;
+const AREA_PER_DROP = 6000; // px² of hero per drop (a 1440×820 hero gets about 200, a phone hero about 55)
+const MAX_DROPS = 240;
 const NEAR_SHARE = 0.35; // the rest are fainter, shorter, slower drops further away
 
 const newDrop = (w, h, anywhere) => {
@@ -13,9 +13,9 @@ const newDrop = (w, h, anywhere) => {
     near,
     x: Math.random() * (w + h * WIND),
     y: anywhere ? Math.random() * h : -Math.random() * 120 - 30,
-    len: near ? 16 + Math.random() * 12 : 8 + Math.random() * 6,
+    len: near ? 18 + Math.random() * 14 : 9 + Math.random() * 7,
     speed: near ? 760 + Math.random() * 240 : 420 + Math.random() * 140, // px per second
-    alpha: near ? 0.2 + Math.random() * 0.1 : 0.1 + Math.random() * 0.08,
+    alpha: near ? 0.28 + Math.random() * 0.12 : 0.14 + Math.random() * 0.1,
   };
 };
 
@@ -56,7 +56,7 @@ export default function HeroRain() {
         d.x -= d.speed * WIND * dt;
         if (d.y - d.len > h) Object.assign(d, newDrop(w, h, false));
         ctx.globalAlpha = d.alpha;
-        ctx.lineWidth = d.near ? 1.2 : 1;
+        ctx.lineWidth = d.near ? 1.4 : 1.1;
         ctx.beginPath();
         ctx.moveTo(d.x, d.y);
         ctx.lineTo(d.x + d.len * WIND, d.y - d.len);
