@@ -68,9 +68,9 @@ export default function ServiceArea({
   };
 
   useEffect(() => {
-    let cancelled = false;
+    let cancelled = false, watcher;
     const mobileLayout = window.matchMedia('(max-width: 900px)').matches;
-    loadLeaflet().then(
+    const begin = () => loadLeaflet().then(
       (L) => {
         if (cancelled || !mapEl.current) return;
         const leafletMap = L.map(mapEl.current, {
@@ -123,11 +123,25 @@ export default function ServiceArea({
       },
       () => !cancelled && setOffline(true) // map library didn't load: the list still works
     );
+    // The map library and its tiles are fetched only once the map is about to scroll into view
+    const wrap = wrapRef.current;
+    if (wrap && 'IntersectionObserver' in window) {
+      watcher = new IntersectionObserver(([entry]) => {
+        if (entry.isIntersecting) {
+          watcher.disconnect();
+          begin();
+        }
+      }, { rootMargin: '400px' });
+      watcher.observe(wrap);
+    } else {
+      begin();
+    }
 
     const onFullscreen = () => setTimeout(() => map.current?.map.invalidateSize(), 150);
     document.addEventListener('fullscreenchange', onFullscreen);
     return () => {
       cancelled = true;
+      watcher?.disconnect();
       document.removeEventListener('fullscreenchange', onFullscreen);
       map.current?.map.remove();
       map.current = null;
