@@ -56,7 +56,7 @@ export default function ContactPage() {
       <ProofBar />
       <ValueGrid heading={page.ways.heading} items={page.ways.items} />
       <RoofCheck />
-      <ServiceArea heading="Check Your Service Area" sub="Enter your ZIP code or pick a city on the map to see its phone number, estimate link and city page." />
+      <ServiceArea heading="Check Your Service Area" sub="Enter your ZIP code to confirm we cover your address, or choose your city below." />
       <Faq heading="Contact FAQs" sub="Straight answers about reaching our team." faqs={FAQS} cta={false} />
       <FinalCta
         heading="Talk to a Roofer, Not a Call Center"

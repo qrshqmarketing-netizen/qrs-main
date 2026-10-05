@@ -46,6 +46,7 @@ To test the finished (production) version: `npm run build`, then `npm start`.
 | Sitemap last-modified dates (updated automatically when a page's text changes; runs before every build, or `npm run lastmod`) | `data/lastModified.json` (script: `scripts/lastmod.mjs`) |
 | Project photo gallery on the city pages | `data/projects.js` |
 | $199 Roof Check / roof survey card beside the estimate form | `data/offers.js` |
+| Home page hero photos (the newest projects, newest first) | `LATEST_PROJECTS` in `data/projectPages.js` |
 | Residential hub, About, Careers, Contractors (including white-label roofing), Locations pages | `data/pages/` |
 | Careers section on the home page | `CAREERS_TEASER` in `data/pages/careers.js` (roles come from the Careers page) |
 | Page names, addresses, card blurbs, placeholder art | `data/catalog.js` |
@@ -54,6 +55,7 @@ To test the finished (production) version: `npm run build`, then `npm start`.
 | Google reviews (hand-picked; also the fallback for the live ones) | `data/reviews.js` |
 | Live Google reviews in the testimonials slider (locations' Place IDs, which stars to show) | `data/places.js` (key: `GOOGLE_PLACES_KEY`) |
 | Service regions and cities (map, region and city pages) | `data/locations.js` |
+| Outline drawn on the service-area map (Los Angeles and Orange counties, western Riverside County) | `data/serviceAreaOutline.js` |
 | Chat assistant answers | `data/assistant.js` |
 | Google Business Profile welcome card (shown for links tagged `utm_campaign=gbp-<profile>`) | `data/campaigns.js` |
 | Instant Quote prices and financing (visitors can pick several pitches, roof types and materials to compare) | `data/instantQuote.js` |

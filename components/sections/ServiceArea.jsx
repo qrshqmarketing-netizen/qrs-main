@@ -3,75 +3,44 @@
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { ArrowRight } from '@/components/ui/icons';
-import { cityPath, LOCATIONS, SERVICE_RADIUS_MI } from '@/data/locations';
-import { PHONE, TEL } from '@/data/site';
-import { miles, nominatimSearch, zipPrefixServed } from '@/lib/geo';
-import { loadLeaflet, qrsPin } from '@/lib/leaflet';
+import { cityPath, citiesIn, LOCATIONS, REGIONS, SERVICE_RADIUS_MI } from '@/data/locations';
+import { PHONE } from '@/data/site';
+import { miles, nominatimSearch, pointInGeoJson, zipPrefixServed } from '@/lib/geo';
+import { loadLeaflet } from '@/lib/leaflet';
 import './ServiceArea.css';
 
-// The QRS location closest to a [lat, lng] point, optionally only within one region: { index, distance } (miles)
-function nearestLocation(point, region) {
-  let index = 0, distance = Infinity;
-  LOCATIONS.forEach((l, i) => {
-    if (region && l.region !== region) return;
+// The QRS location closest to a [lat, lng] point: { location, distance } (miles)
+function nearestLocation(point) {
+  let location = LOCATIONS[0], distance = Infinity;
+  LOCATIONS.forEach((l) => {
     const d = miles(point, [l.lat, l.lng]);
-    if (d < distance) { distance = d; index = i; }
+    if (d < distance) { distance = d; location = l; }
   });
-  return { index, distance };
+  return { location, distance };
 }
 
-// Locations from a visitor's IP address are approximate, so "nearby" gets a wider radius than a ZIP code check
-const IP_NEARBY_MI = SERVICE_RADIUS_MI * 2;
-
-// Service area map (Leaflet + OpenStreetMap tiles) with a city list and ZIP code lookup.
-// City pages pass `focus` (a city slug) to start zoomed in on that city; region pages pass `region` to fit its cities.
-// Elsewhere desktop maps may zoom to a nearby location from the visitor's approximate IP location. Mobile starts at
-// the full service-area view so the map and long city list don't shift while someone scrolls the page.
+// Service area map: a ZIP code check, the Los Angeles and Orange County borders plus western Riverside County (Corona, Riverside,
+// Menifee, Temecula) outlined on an OpenStreetMap map (data/serviceAreaOutline.js), and a link to every city page that exists
+// (the Riverside area has none yet). The map library, its tiles and the outline load only
+// when the map is about to scroll into view. Mobile keeps the map still so it never traps a page swipe.
 export default function ServiceArea({
   heading = 'Locations We Proudly Serve',
-  sub = 'Explore the map below to find out if your city is within our Southern California service area',
-  focus,
-  region,
+  sub = 'The outlined area is where we work: Los Angeles County, Orange County and western Riverside County. Enter your ZIP code to confirm we cover you.',
 }) {
   const wrapRef = useRef(null);
   const mapEl = useRef(null);
-  const listRef = useRef(null);
-  const itemRefs = useRef([]);
-  const map = useRef(null); // { L, map, markers, icon, searchPin, active }
+  const map = useRef(null); // { L, map, zipPin }
 
-  const [active, setActive] = useState(-1);
   const [zip, setZip] = useState('');
   const [msg, setMsg] = useState(null);
   const [offline, setOffline] = useState(false);
 
-  // Highlight a city (only uses refs and setActive, so the map's click handlers can call it)
-  const select = (i, fly) => {
-    const m = map.current;
-    if (!m) return;
-    if (m.active > -1) m.markers[m.active].setIcon(m.icon(false));
-    m.active = i;
-    m.markers[i].setIcon(m.icon(true));
-    setActive(i);
-
-    // Keep the selected city visible in the list
-    const list = listRef.current, li = itemRefs.current[i];
-    const top = li.offsetTop, bottom = top + li.offsetHeight;
-    if (window.matchMedia('(min-width: 901px)').matches
-      && (top < list.scrollTop || bottom > list.scrollTop + list.clientHeight)) {
-      list.scrollTo({ top: top - 8, behavior: 'smooth' });
-    }
-
-    if (fly) {
-      m.map.flyTo(m.markers[i].getLatLng(), 11, { duration: 0.8 });
-      m.markers[i].openPopup();
-    }
-  };
-
   useEffect(() => {
     let cancelled = false, watcher;
     const mobileLayout = window.matchMedia('(max-width: 900px)').matches;
-    const begin = () => loadLeaflet().then(
-      (L) => {
+    const begin = async () => {
+      try {
+        const [L, { SERVICE_AREA_OUTLINE, SERVICE_AREA_BOUNDS }] = await Promise.all([loadLeaflet(), import('@/data/serviceAreaOutline')]);
         if (cancelled || !mapEl.current) return;
         const leafletMap = L.map(mapEl.current, {
           dragging: !mobileLayout,
@@ -82,47 +51,23 @@ export default function ServiceArea({
           scrollWheelZoom: false,
           zoomControl: true,
           attributionControl: true,
-        })
-          .setView([33.9, -118.12], 9);
+        });
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
           maxZoom: 19,
           referrerPolicy: 'strict-origin-when-cross-origin',
           attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         }).addTo(leafletMap);
+        L.geoJSON(SERVICE_AREA_OUTLINE, {
+          interactive: false,
+          style: { color: '#062d57', weight: 3, opacity: 0.9, fillColor: '#d4b572', fillOpacity: 0.22 },
+        }).addTo(leafletMap);
+        leafletMap.fitBounds(SERVICE_AREA_BOUNDS);
+        map.current = { L, map: leafletMap, zipPin: null };
+      } catch {
+        if (!cancelled) setOffline(true); // map library didn't load: the ZIP check and the city links still work
+      }
+    };
 
-        const icon = (isActive) => qrsPin(L, isActive);
-        const markers = LOCATIONS.map(({ city, slug, lat, lng }, i) =>
-          L.marker([lat, lng], { icon: icon(false), title: 'QRS ' + city, alt: 'QRS ' + city })
-            .addTo(leafletMap)
-            .bindPopup('<b>QRS ' + city + '</b><a href="' + TEL + '">' + PHONE + '</a><br><a href="#estimate">Get an estimate →</a><br><a href="' + cityPath(slug) + '">' + city + ' roofing →</a>')
-            .on('click', () => select(i, false))
-        );
-        // Fit all pins (or this region's), or zoom in on this page's city
-        const shown = region ? markers.filter((_, i) => LOCATIONS[i].region === region) : markers;
-        leafletMap.fitBounds(L.featureGroup(shown).getBounds().pad(0.25));
-        map.current = { L, map: leafletMap, markers, icon, searchPin: null, active: -1 };
-        const focusIndex = LOCATIONS.findIndex((l) => l.slug === focus);
-        if (focusIndex > -1) {
-          leafletMap.setView(markers[focusIndex].getLatLng(), 11);
-          select(focusIndex, false);
-        } else if (!mobileLayout) {
-          fetch('/api/location/')
-            .then((res) => res.json())
-            .then(({ lat, lng }) => {
-              const m = map.current;
-              // Skip when there's no location, or the visitor already picked a city or searched a ZIP code
-              if (cancelled || !m || lat == null || m.active > -1) return;
-              const { index, distance } = nearestLocation([lat, lng], region);
-              if (distance > IP_NEARBY_MI) return;
-              m.map.setView(m.markers[index].getLatLng(), 10);
-              select(index, false);
-              setMsg((current) => current || <>Looks like you&rsquo;re near <b>QRS {LOCATIONS[index].city}</b>. Enter your ZIP code to confirm.</>);
-            })
-            .catch(() => {}); // no location: keep the overview of every city
-        }
-      },
-      () => !cancelled && setOffline(true) // map library didn't load: the list still works
-    );
     // The map library and its tiles are fetched only once the map is about to scroll into view
     const wrap = wrapRef.current;
     if (wrap && 'IntersectionObserver' in window) {
@@ -148,7 +93,8 @@ export default function ServiceArea({
     };
   }, []);
 
-  // ZIP lookup via OpenStreetMap Nominatim, with an LA/OC ZIP-prefix fallback
+  // ZIP lookup via OpenStreetMap Nominatim, with an LA/OC ZIP-prefix fallback. Three answers: within SERVICE_RADIUS_MI of one of
+  // our cities ("in our service area"), inside the outlined counties but farther out (call to confirm), or outside the outline.
   const onSearch = async (e) => {
     e.preventDefault();
     const z = zip.trim();
@@ -158,22 +104,24 @@ export default function ServiceArea({
     }
     setMsg('Checking ' + z + '…');
     try {
-      const m = map.current;
       const hit = await nominatimSearch('postalcode=' + z);
-      if (!hit || !m) throw new Error('none');
+      if (!hit) throw new Error('none');
       const pt = [+hit.lat, +hit.lon];
-      const { index: best, distance: bestD } = nearestLocation(pt);
-      m.searchPin?.remove();
-      m.searchPin = m.L.circleMarker(pt, { radius: 8, color: '#fff', weight: 3, fillColor: '#062d57', fillOpacity: 1 }).addTo(m.map);
-      const bounds = m.L.latLngBounds([pt, m.markers[best].getLatLng()]);
-      if (bestD <= SERVICE_RADIUS_MI) {
-        setMsg(<><b>Good news!</b> {z} is in our service area. Nearest: QRS {LOCATIONS[best].city}.</>);
-        select(best, false);
-        m.map.flyToBounds(bounds.pad(0.6), { duration: 0.8, maxZoom: 12 });
-      } else {
-        setMsg(<>{z} looks outside our current area. Call <b>{PHONE}</b> and we'll let you know.</>);
-        m.map.flyToBounds(bounds.pad(0.3), { duration: 0.8 });
+      const { location, distance } = nearestLocation(pt);
+      const inArea = distance <= SERVICE_RADIUS_MI;
+      const { SERVICE_AREA_OUTLINE } = await import('@/data/serviceAreaOutline');
+      const insideOutline = inArea || pointInGeoJson(pt, SERVICE_AREA_OUTLINE);
+      const m = map.current;
+      if (m) {
+        m.zipPin?.remove();
+        m.zipPin = m.L.circleMarker(pt, { radius: 8, color: '#fff', weight: 3, fillColor: '#062d57', fillOpacity: 1 }).addTo(m.map);
+        m.map.flyToBounds(m.L.latLngBounds([pt, [location.lat, location.lng]]).pad(inArea ? 0.6 : 0.3), { duration: 0.8, maxZoom: 12 });
       }
+      setMsg(inArea
+        ? <><b>Good news!</b> {z} is in our service area. Nearest: <Link href={cityPath(location.slug)} prefetch={false}>QRS {location.city}</Link>.</>
+        : insideOutline
+          ? <><b>Good news!</b> {z} is inside the area we serve, a longer drive from our nearest city. Call <b>{PHONE}</b> to confirm scheduling.</>
+          : <>{z} looks outside our current area. Call <b>{PHONE}</b> and we&rsquo;ll let you know.</>);
     } catch {
       setMsg(zipPrefixServed(z)
         ? <><b>Good news!</b> {z} is in our Southern California service area.</>
@@ -192,56 +140,30 @@ export default function ServiceArea({
         <h2>{heading}</h2>
         <p className="area-sub">{sub}</p>
 
-        <div className="loc-wrap" id="locWrap" ref={wrapRef}>
-          <aside className="loc-panel">
-            <div className="loc-search">
-              <div className="loc-search-title">
-                <svg viewBox="0 0 32 32" aria-hidden="true">
-                  <circle cx="16" cy="16" r="15" fill="none" stroke="#d4b572" strokeWidth="1.6" />
-                  <path d="M16 7.5a6 6 0 0 0-6 6c0 4.5 6 10.5 6 10.5s6-6 6-10.5a6 6 0 0 0-6-6Z" fill="#d4b572" />
-                  <circle cx="16" cy="13.5" r="2.3" fill="#0f2c55" />
-                </svg>
-                <span>Find Your Nearest QRS Service Area</span>
-              </div>
+        <div className="sa-wrap" id="locWrap" ref={wrapRef}>
+          <div className="loc-search">
+            <div className="loc-search-title">
+              <svg viewBox="0 0 32 32" aria-hidden="true">
+                <circle cx="16" cy="16" r="15" fill="none" stroke="#d4b572" strokeWidth="1.6" />
+                <path d="M16 7.5a6 6 0 0 0-6 6c0 4.5 6 10.5 6 10.5s6-6 6-10.5a6 6 0 0 0-6-6Z" fill="#d4b572" />
+                <circle cx="16" cy="13.5" r="2.3" fill="#0f2c55" />
+              </svg>
+              <span>Find Your Nearest QRS Service Area</span>
+            </div>
+            <div className="sa-zip">
               <form className="loc-form" id="locForm" noValidate onSubmit={onSearch}>
                 <label htmlFor="locZip" className="sr-only">ZIP code</label>
-                <input id="locZip" inputMode="numeric" maxLength={5} autoComplete="postal-code" placeholder="Enter Zip Code" value={zip} onChange={(e) => setZip(e.target.value)} />
+                <input id="locZip" inputMode="numeric" maxLength={5} autoComplete="postal-code" placeholder="Enter Zip Code" value={zip} onChange={(e) => setZip(e.target.value.replace(/\D/g, ''))} />
                 <button type="submit" aria-label="Search ZIP code">
                   <ArrowRight />
                 </button>
               </form>
               <div className="loc-msg" id="locMsg" role="status" aria-live="polite">{msg}</div>
             </div>
-
-            <ul className="loc-list" id="locList" ref={listRef}>
-              {LOCATIONS.map(({ city, slug }, i) => (
-                <li
-                  className={'loc-item' + (active === i ? ' active' : '')}
-                  tabIndex={0}
-                  key={city}
-                  ref={(el) => {
-                    itemRefs.current[i] = el;
-                  }}
-                  onClick={(e) => !e.target.closest('a') && select(i, true)}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                      e.preventDefault();
-                      select(i, true);
-                    }
-                  }}
-                >
-                  <h3>
-                    <Link href={cityPath(slug)} prefetch={false}>QRS {city}</Link>
-                  </h3>
-                  <a className="loc-phone" href={TEL}>{PHONE}</a>
-                  <a className="loc-btn" href="#estimate">Get Estimate</a>
-                </li>
-              ))}
-            </ul>
-          </aside>
+          </div>
 
           <div className="loc-map-box">
-            <div id="qrsMap" ref={mapEl} role="region" aria-label="Map of the QRS Southern California service area">
+            <div id="qrsMap" ref={mapEl} role="region" aria-label="Map outlining the Los Angeles County, Orange County and western Riverside County area QRS serves">
               {offline && (
                 <div style={{ display: 'grid', placeItems: 'center', height: '100%', color: '#cfdae5', fontSize: '.9rem' }}>Map unavailable offline</div>
               )}
@@ -253,6 +175,21 @@ export default function ServiceArea({
             </button>
           </div>
         </div>
+
+        <nav className="sa-cities" aria-label="Cities we serve">
+          {REGIONS.map((region) => (
+            <div key={region.slug}>
+              <h3>{region.name}</h3>
+              <ul>
+                {citiesIn(region.slug).map(({ city, slug }) => (
+                  <li key={slug}>
+                    <Link href={cityPath(slug)} prefetch={false}>{city} roofing</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </nav>
       </div>
     </section>
   );

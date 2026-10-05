@@ -50,7 +50,7 @@ export default function LocationsPage() {
       />
       <Offices sub="Our Los Angeles and Valley offices serve homes and businesses across Los Angeles and Orange County. One number reaches both." />
       <ProofBar />
-      <ServiceArea heading="Find Your Nearest QRS Service Area" sub="Enter your ZIP code or pick a city on the map to see its phone number, estimate link and city page." />
+      <ServiceArea heading="Find Your Nearest QRS Service Area" sub="Enter your ZIP code to confirm we cover your address, or choose your city below." />
       <CityCards blurbs={BLURBS} linkRegions />
       <DifferenceBand />
       <Faq heading="Service Area FAQs" sub="Straight answers about where we work." faqs={page.faqs} cta={false} />

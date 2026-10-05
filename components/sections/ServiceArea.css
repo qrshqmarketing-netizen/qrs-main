@@ -74,3 +74,27 @@
   .loc-list{max-height:none;background:transparent}
 }
 .loc-item h3 a:hover{text-decoration:underline;text-underline-offset:3px}
+
+/* ---------- Service area map, outlined-area layout (ServiceArea.jsx): ZIP check on top, the map, then the cities as links.
+   The .loc-list / .loc-item rules above stay for the Projects page map (ProjectMap.jsx). ---------- */
+.sa-wrap{display:flex;flex-direction:column;border-radius:var(--radius);overflow:hidden;background:#0f2c55;box-shadow:0 14px 40px rgba(6,45,87,.12)}
+.sa-wrap:fullscreen{height:100vh;border-radius:0}
+.sa-wrap .loc-search,.sa-wrap .loc-map-box{grid-row:auto}
+.sa-wrap .loc-map-box{flex:1 1 auto;height:320px}
+.sa-wrap:fullscreen .loc-map-box{height:auto}
+.sa-zip .loc-msg a{color:var(--gold);font-weight:700;text-decoration:underline;text-underline-offset:2px}
+.sa-cities{display:grid;grid-template-columns:1fr;gap:26px;margin:34px 0 0}
+.sa-cities h3{margin:0 0 8px;color:var(--gold-ink);font:700 13px/1.3 var(--font-head);letter-spacing:.12em;text-transform:uppercase}
+.sa-cities ul{list-style:none;margin:0;padding:0;columns:2;column-gap:20px}
+.sa-cities li{break-inside:avoid}
+.sa-cities a{display:block;padding:6px 0;color:var(--navy);font:600 16px/1.4 var(--font-head)}
+.sa-cities a:hover{text-decoration:underline;text-underline-offset:3px}
+@media (min-width:621px){
+  .sa-wrap .loc-map-box{height:420px}
+  .sa-cities{grid-template-columns:1.4fr 1fr;gap:44px}
+}
+@media (min-width:901px){
+  .sa-wrap .loc-map-box{height:520px}
+  .sa-wrap .loc-search{display:grid;grid-template-columns:1fr minmax(320px,430px);column-gap:28px;align-items:center;padding:20px 26px}
+  .sa-wrap .loc-search-title{margin-bottom:0}
+}
