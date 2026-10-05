@@ -19,13 +19,13 @@ export const AUTO_REPLY = {
   steps: {
     home: [
       { title: 'We reach out', text: 'Our team contacts you to talk through your roof and set up a time for your free roof evaluation.' },
-      { title: 'A roofer checks your roof', text: 'A roofer, not a salesperson, looks at your roof and photographs what they find, so you can see it for yourself.' },
+      { title: 'A dedicated roofing specialist will come out', text: 'They look at your roof and photograph what they find, so you can see it for yourself.' },
       { title: 'You get a written scope and price', text: 'You get one clear next step, with a written scope and price before any work begins. No pressure.' },
     ],
     // HOA, multi-family and commercial requests
     commercial: [
       { title: 'We reach out', text: 'Our team contacts you to learn about the building and set up a time for a roofer-led roof survey.' },
-      { title: 'A roofer surveys the roof', text: 'A roofer looks at the roof and photo-documents its condition, so owners, managers and tenants can all see it.' },
+      { title: 'A dedicated roofing specialist will come out', text: 'They look at the roof and photo-document its condition, so owners, managers and tenants can all see it.' },
       { title: 'You get a written scope and price', text: 'You get one clear next step, with a written scope and price before any work begins. No pressure.' },
     ],
   },
@@ -35,7 +35,6 @@ export const AUTO_REPLY = {
     home: [
       'Photos of any leak, stain or damage.',
       'About when the roof was last repaired or replaced, if you know.',
-      'Your insurance claim number and the adjuster’s contact, if you are filing a claim. We can share our photos and written scope with your insurance company.',
       'The best times to reach you.',
     ],
     commercial: [
