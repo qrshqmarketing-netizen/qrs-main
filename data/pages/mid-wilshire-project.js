@@ -2,6 +2,7 @@ export const MID_WILSHIRE_PROJECT = {
   path: '/projects/tile-flat-roofing-in-mid-wilshire-90019/',
   keyword: 'multi-family building in Mid-Wilshire',
   title: 'Tile & Flat Roofing at a Multi-Family Building in Mid-Wilshire 90019',
+  metaTitle: 'Tile & Flat Roofing, Multi-Family Building in Mid-Wilshire',
   description:
     'A multi-family building in Mid-Wilshire with new clay tile on its pitched roof and a reflective flat roof system over the rooftop terrace.',
   image: '/images/projects/tile-flat-roofing-in-mid-wilshire-90019/mid-wilshire-tile-flat-roof-8.webp', // also the first photo in `photos`

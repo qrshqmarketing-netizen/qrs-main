@@ -3,6 +3,7 @@ export const PANORAMA_CITY_PROJECT = {
   path: '/projects/shingle-roof-replacement-panorama-city-91402/',
   keyword: 'shingle roof replacement in Panorama City',
   title: 'Apartment Building Shingle Roof Replacement in Panorama City 91402',
+  metaTitle: 'Apartment Shingle Roof Replacement in Panorama City 91402',
   description:
     'Shingle roof replacement in Panorama City 91402: our TotalShield Shingle System on a two-story apartment building, with every AC platform and vent flashed.',
   image: '/images/projects/shingle-roof-replacement-panorama-city-91402/shingle-panorama-city-91402-01.webp', // also the first photo in `photos`

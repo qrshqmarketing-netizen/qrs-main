@@ -8,9 +8,10 @@ import { pageJsonLd } from '@/lib/structuredData';
 import './ProjectDetail.css';
 
 // A project page (e.g. /projects/shingle-roof-replacements-90731/): a photo slider, then the story.
-// page: a project from data/pages/ ({ path, title, description, image, photos: [{ src, alt }], paragraphs }).
+// page: a project from data/pages/ ({ path, title, metaTitle?, description, image, photos: [{ src, alt }], paragraphs }).
+// metaTitle: a shorter <title> than `title` (which is also the headline) when that one runs past ~60 characters.
 // The first photo in `photos` is also `image` (share image, structured data, Projects map).
-export const projectMetadata = (page) => pageMetadata({ title: page.title, description: page.description, path: page.path });
+export const projectMetadata = (page) => pageMetadata({ title: page.metaTitle || page.title, description: page.description, path: page.path });
 
 export default function ProjectDetail({ page }) {
   const crumbs = [HOME, PROJECTS_LINK, { label: page.title, href: page.path }];
