@@ -19,7 +19,6 @@ export const OFFERS = {
   },
   commercial: {
     eyebrow: 'Commercial, HOA & partner projects',
-    price: '$0.15/sq ft',
     heading: 'Start with a roofer-led roof survey.',
     text: 'Tell us about the building or project and we’ll start with a roofer’s look at the roof, not a sales pitch.',
     points: [
