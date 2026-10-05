@@ -1,5 +1,6 @@
 // Live Google reviews in the testimonials slider (components/sections/ReviewSlider.jsx), from Google's Places API
-// (app/api/google-reviews/route.js, lib/placesReviews.js). Each visit that reaches the slider asks Google for one
+// (app/api/google-reviews/route.js, lib/placesReviews.js) and the bottom-left review pop-up (components/widgets/ReviewToast.jsx).
+// Each page load that shows the pop-up or reaches the slider asks Google once (they share the answer, lib/liveReviews.js) for one
 // location's reviews: Google's rules don't allow storing reviews, so nothing is cached, and each request is billed
 // (Place Details "Enterprise + Atmosphere": the first 1,000 a month are free, then $25 per 1,000).
 //

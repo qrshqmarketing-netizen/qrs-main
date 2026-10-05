@@ -5,17 +5,24 @@ import { usePathname, useRouter } from 'next/navigation';
 import { CloseIcon, GoogleLogo } from '@/components/ui/icons';
 import { GOOGLE_REVIEWS } from '@/data/reviews';
 import { COOKIE_OK_EVENT, COOKIE_OK_KEY, SHOW_REVIEW_EVENT } from '@/lib/events';
+import { getLiveReviews } from '@/lib/liveReviews';
 import { local, session } from '@/lib/storage';
 import './ReviewToast.css';
 
-const SHOW_MS = 7000, GAP_MS = 9000, FIRST_MS = 6000;
-const REVIEWS = GOOGLE_REVIEWS.map((r) => ({ ...r, text: r.text.replace(/\s+/g, ' ').trim() }));
+const SHOW_MS = 7000, GAP_MS = 9000, FIRST_MS = 6000, LIVE_WAIT_MS = 2500;
+const COLORS = ['#1a73e8', '#188038', '#c5221f', '#b35900', '#7b1fa2', '#00796b'];
+const oneLine = (text) => text.replace(/\s+/g, ' ').trim();
+// The hand-picked reviews (data/reviews.js); the live Google reviews replace them when Google has some (lib/liveReviews.js)
+const REVIEWS = GOOGLE_REVIEWS.map((r) => ({ ...r, text: oneLine(r.text) }));
+const fromLive = (r, i) => ({ name: r.name, text: oneLine(r.text), photoUrl: r.photoUrl, color: COLORS[i % COLORS.length] });
 
-// Compact toast in the bottom-left corner that rotates the Google reviews (name, stars and a one-line quote). Closing it hides it for the rest of the visit.
+// Compact toast in the bottom-left corner that rotates the Google reviews (name, stars and a one-line quote): the live 5-star
+// reviews when Google has some, otherwise the hand-picked ones. Closing it hides it for the rest of the visit.
 export default function ReviewToast() {
   const [shown, setShown] = useState(null); // index of the review in the toast
   const [visible, setVisible] = useState(false);
   const loop = useRef({ next: 0, timer: null, hovering: false, reviewsOnScreen: false, stopped: false });
+  const list = useRef(REVIEWS); // the reviews this toast rotates through
   const pathname = usePathname();
   const router = useRouter();
 
@@ -40,14 +47,21 @@ export default function ReviewToast() {
           return;
         }
         setVisible(false);
-        s.next = (s.next + 1) % REVIEWS.length;
+        s.next = (s.next + 1) % list.current.length;
         s.timer = setTimeout(cycle, GAP_MS);
       }, SHOW_MS);
     };
 
-    // First visit: nothing until the visitor accepts the cookie notice, then the usual first delay
+    // First visit: nothing until the visitor accepts the cookie notice, then the usual first delay. Before the first review the
+    // live reviews are fetched (shared with the slider, one request per page load); if Google is slow or has none, the
+    // hand-picked ones are used.
     const start = () => {
-      s.timer = setTimeout(cycle, FIRST_MS);
+      s.timer = setTimeout(async () => {
+        const live = await Promise.race([getLiveReviews(), new Promise((resolve) => setTimeout(() => resolve(null), LIVE_WAIT_MS))]);
+        if (s.stopped) return;
+        if (live) list.current = live.reviews.map(fromLive);
+        cycle();
+      }, FIRST_MS);
     };
     if (local.get(COOKIE_OK_KEY)) start();
     else window.addEventListener(COOKIE_OK_EVENT, start, { once: true });
@@ -99,7 +113,7 @@ export default function ReviewToast() {
     reviews.scrollIntoView({ behavior: 'smooth', block: 'center' });
   };
 
-  const review = shown === null ? null : REVIEWS[shown];
+  const review = shown === null ? null : list.current[shown];
 
   return (
     <div
@@ -116,6 +130,7 @@ export default function ReviewToast() {
       <button className="rv-open" type="button" aria-label="Read this review" onClick={openReview}>
         <span className="rv-avatar" aria-hidden="true" style={review ? { background: review.color } : undefined}>
           {review?.name[0]}
+          {review?.photoUrl && <img className="rv-photo" key={shown} src={review.photoUrl} alt="" width="30" height="30" referrerPolicy="no-referrer" onError={(e) => { e.currentTarget.style.display = 'none'; }} />}
         </span>
         <span className="rv-body">
           <span className="rv-top">

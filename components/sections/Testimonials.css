@@ -49,11 +49,10 @@
 .tst-by{display:flex;align-items:center;gap:12px;min-height:50px}
 .tst-avatar{flex:0 0 40px;width:40px;height:40px;border-radius:var(--radius);display:grid;place-items:center;overflow:hidden;color:#fff;font:600 17px/1 var(--font-head)}
 .tst-photo{display:block;width:100%;height:100%;object-fit:cover}
-/* Live reviews: Google asks for a link to each review and a way to report it, plus a note on how they're chosen */
+/* Live reviews: Google asks for a link to each review and a way to report it */
 .tst-links{display:flex;flex-wrap:wrap;gap:2px 14px;margin-top:2px;font:500 13px/1.5 var(--font-head)}
 .tst-links a{color:var(--muted);text-decoration:underline;text-underline-offset:3px}
 .tst-links a:hover{color:var(--navy)}
-.tst-notice{margin:22px 0 0;color:var(--muted);font:500 13px/1.5 var(--font-head)}
 .tst-who{display:flex;flex-direction:column;min-width:0}
 a.tst-name:hover{text-decoration:underline;text-underline-offset:3px}
 .tst-who .tst-date{display:inline-flex;align-items:center;gap:5px;margin-top:0}
