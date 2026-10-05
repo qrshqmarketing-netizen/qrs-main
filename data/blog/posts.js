@@ -27,6 +27,8 @@ export const BLOG_POSTS = [
     dateModified: '2026-10-05',
     excerpt:
       'A ceiling stain rarely sits under the spot where water gets in. Here is how to read the signs of a roof leak, the usual causes on shingle, tile and flat roofs, and what to do while you wait for a repair.',
+    image: '/images/blog/roof-leak-source.webp',
+    imageAlt: 'A roofer looking up at a water-stained, dripping ceiling, with a close-up of a damaged shingle, under the title How to Find a Roof Leak: Signs, Causes and What to Do Next',
     intro: [
       'A roof leak is rarely where it seems to be. Water slips past a lifted shingle, a cracked tile or an open seam, runs along the underlayment or a rafter, and shows up somewhere else entirely.',
       'That is why a stain on the ceiling is a clue, not an address. Finding the real source takes a methodical look at the roof, starting above the stain and working across the details where leaks usually begin.',
@@ -148,6 +150,8 @@ export const BLOG_POSTS = [
     dateModified: '2026-10-05',
     excerpt:
       'After a long dry summer, the first heavy rain tests every weak spot on your roof. Use this roof maintenance checklist to check what you safely can, and to know what to leave to a roofer.',
+    image: '/images/blog/roof-maintenance-checklist.webp',
+    imageAlt: 'A roofer in a rain jacket writing on a clipboard in front of a rain-soaked roof and gutter, under the title Roof Maintenance Checklist for the Southern California Rainy Season',
     intro: [
       'Southern California roofs spend months in the sun, then meet heavy rain in a few storms. A roof maintenance checklist done before the rainy season is the cheapest way to find small problems before they become leaks.',
       'Most of the checklist can be done from the ground and from inside the house. A few items belong to a roofer, because they mean working on a sloped roof.',
@@ -266,6 +270,8 @@ export const BLOG_POSTS = [
     dateModified: '2026-10-05',
     excerpt:
       'Roof restoration can extend the life of a sound roof, but it will not save one that is worn out. Here is what restoration means, when it works and how to decide between restoring and replacing.',
+    image: '/images/blog/roof-restoration-vs-replacement.webp',
+    imageAlt: 'A roofer holding a tablet in front of a home, with close-ups labeled Restoration and Replacement, under the title Roof Restoration vs. Replacement: Which Does Your Roof Need?',
     intro: [
       'Roof restoration sounds like an easy answer: renew the roof you have instead of paying for a new one. Sometimes it is exactly right, and sometimes it only delays a bigger bill.',
       'The difference comes down to the condition of the roof, and the way to know is a careful inspection with photos, not a sales pitch.',
@@ -403,6 +409,8 @@ export const BLOG_POSTS = [
     dateModified: '2026-10-05',
     excerpt:
       'Wind and heavy rain can damage a roof in ways you cannot see from the street. Here are the signs of roof storm damage, the first steps to take and when it is time to call a roofer.',
+    image: '/images/blog/roof-storm-damage-signs.webp',
+    imageAlt: 'A roofer in a rain jacket checking a tablet while looking at a storm-damaged roof, with close-ups of wind and hail damage, under the title Roof Storm Damage: How to Spot It and What to Do Next',
     intro: [
       'Roof storm damage is not always dramatic. After a windy night or a heavy downpour, a roof can look fine from the street while a lifted shingle, a slipped tile or a loose flashing is quietly letting water in.',
       'Southern California roofs take a particular kind of punishment. Santa Ana winds can lift and crack roofing materials, and winter rain can arrive in heavy bursts after months of dry heat, which finds every weak spot.',
@@ -542,6 +550,8 @@ export const BLOG_POSTS = [
     dateModified: '2026-10-05',
     excerpt:
       'A tarp, a little sealant and a few precautions can limit water damage until a roofer can make the real repair. Here are the temporary options that work, what each one fixes and how to stay safe.',
+    image: '/images/blog/temporary-roof-repair-options.webp',
+    imageAlt: 'A roofer in a rain jacket securing a blue tarp over a shingle roof in the rain, with close-ups of the tarp and of roofing tape and a hammer, under the title Temporary Roof Repair: What Works Until a Roofer Arrives',
     intro: [
       'A roof leak does not wait for a convenient time. When water is coming in, temporary roof repair can limit the damage until a roofer can make the permanent fix.',
       'The options below are stop-gaps. They are meant to keep water out for days or a few weeks, not years, and some are best left to a roofer. Your safety comes first: a wet roof is slippery, and a fall from a roof can cause serious injury.',
@@ -666,6 +676,8 @@ export const BLOG_POSTS = [
     dateModified: '2026-10-05',
     excerpt:
       'Roof insurance claims go more smoothly when you document the damage, protect the roof from more harm and get a written repair scope. Here is what to do, what insurers usually cover and what a roofer can help with.',
+    image: '/images/blog/roof-insurance-claims-california.webp',
+    imageAlt: 'A roofer holding a tablet with photos of roof damage in front of a home, with close-ups of a damaged shingle, an insurance claim form and a house, under the title Roof Insurance Claims in California: What to Document and What to Expect',
     intro: [
       'Roof insurance claims go more smoothly when you document the damage well, act quickly to prevent more, and get a clear written scope of the repair.',
       'Whether a claim is approved depends on your policy and on what caused the damage, and your insurer makes that decision. What you control is how well the damage is documented and how quickly the roof is protected.',
@@ -784,8 +796,8 @@ export const BLOG_POSTS = [
     dateModified: '2026-10-05',
     excerpt:
       'Wood shakes and shingles look beautiful, but fire risk, upkeep and cost make a wooden roof a hard fit for most Southern California homes. Here are the real pros and cons, and the alternatives.',
-    image: '/images/blog/wooden-roof-pros-and-cons.webp',
-    imageAlt: 'Clay tile roof on a Spanish-style building in Los Angeles, one of the alternatives to a wooden roof',
+    image: '/images/blog/wooden-roof-pros-and-cons-graphic.webp',
+    imageAlt: 'A wood shake roof on a stone and wood home under a blue sky, with close-ups of new and weathered wood shakes and thumbs up and thumbs down icons, under the title Wooden Roof Pros and Cons: Is a Wood Roof Right for Your Home?',
     intro: [
       'A wooden roof has a warmth that other roofing materials struggle to copy. Cedar and redwood shakes and shingles age to a soft silver-gray, and a good wood roof gives a home real character.',
       'Before you choose one, it helps to know what a wooden roof asks of you in return. In Southern California, fire rules, sun, dry heat and cost all shape the decision, and for most homes the answer ends up being [tile](/residential-roofing/tile-roofing/) or [shingle](/residential-roofing/shingle-roofing/) instead.',
@@ -922,7 +934,7 @@ export const BLOG_POSTS = [
     author: 'Tony G.',
     excerpt:
       'Clay and concrete tiles can last for decades, but the waterproofing beneath them has a shorter service life. Here’s how to tell when tile roof underlayment needs replacing, and what the work involves.',
-    image: '/images/blog/tile-roof-underlayment.webp',
+    image: '/images/blog/tile-roof-underlayment-graphic.webp',
     heroImage: '/images/blog/tile-roof-underlayment-hero.webp',
     imageAlt: 'Roofer lifting clay tiles to expose the underlayment on a tile roof, with the downtown Los Angeles skyline in the distance',
     intro: [
@@ -1175,10 +1187,8 @@ export const BLOG_POSTS = [
 // Posts search engines and AI assistants should know about
 export const PUBLISHED_POSTS = BLOG_POSTS.filter((p) => !p.noindex);
 
-// The newest published post (its heroImage, else its thumbnail, is the blog index's hero background)
+// The newest published post; its thumbnail is shown beside the blog index's hero heading (components/sections/HeroLatestPost.jsx)
 export const LATEST_POST = [...PUBLISHED_POSTS].sort((a, b) => b.datePublished.localeCompare(a.datePublished))[0];
-// The newest post that has a picture: the blog index's hero background (a new post without a picture yet doesn't blank it)
-export const HERO_POST = [...PUBLISHED_POSTS].filter((p) => p.image).sort((a, b) => b.datePublished.localeCompare(a.datePublished))[0];
 
 // A heading's anchor for the table of contents: "Southern California’s Rainy Season" → "southern-californias-rainy-season"
 export const headingId = (heading) =>

@@ -23,7 +23,8 @@ const DEFAULT_ACTIONS = [
 // also `image`) turns the photo into a slider that rotates every 7 seconds (HeroSlides.jsx). Pass `mobileImage` (e.g. a portrait
 // crop of the same scene) to show a different photo below 621px instead of a cropped `image`. Below 621px a hero
 // with a photo stacks: the photo on its own band, then the copy below it (Hero.css .hero-stack). `stats` nests the
-// proof-bar stats in the hero; opt in only on the homepage and service pages.
+// proof-bar stats in the hero; opt in only on the homepage and service pages. `aside` puts something (a picture) beside the copy
+// from 901px, below it on phones (the blog index shows its latest article this way).
 export default function Hero({
   crumbs,
   eyebrow = 'Roof Repair & Replacement in Southern California',
@@ -42,6 +43,7 @@ export default function Hero({
   h1 = 'title',
   align = 'left',
   stats = false,
+  aside,
   actions: allActions = DEFAULT_ACTIONS,
   className,
 }) {
@@ -54,7 +56,7 @@ export default function Hero({
       <section className={'hero hero-photo' + (image ? '' : ' hero-fallback') + (image || mobileImage ? ' hero-stack' : '') + (className ? ` ${className}` : '')} aria-label={label}>
         <HeroParallax image={image} mobileImage={mobileImage} imageAlt={imageAlt} imagePosition={imagePosition} slides={slides} />
         <div className="hero-glow" aria-hidden="true"></div>
-        <div className={'container hero-inner on-dark' + (align === 'left' ? ' hero-left' : '') + (className ? ` ${className}` : '')}>
+        <div className={'container hero-inner on-dark' + (align === 'left' ? ' hero-left' : '') + (aside ? ' hero-has-aside' : '') + (className ? ` ${className}` : '')}>
           <div className="hero-copy">
             {eyebrow && <Eyebrow className="eyebrow">{eyebrow}</Eyebrow>}
             <Title className="hero-title"><Rich text={title} registeredMark /></Title>
@@ -83,6 +85,7 @@ export default function Hero({
               </div>
             )}
           </div>
+          {aside}
           {stats && <ProofBar onDark />}
         </div>
       </section>

@@ -107,3 +107,14 @@
   .hero.hero-stack .hero-roof-texture:after{background:linear-gradient(180deg,rgba(3,27,52,.3) 0%,rgba(3,25,46,0) 35%,rgba(3,25,46,0) 60%,#03192e 100%)}
   .hero.hero-stack > .hero-inner{margin:0 auto;padding:0 0 40px}
 }
+
+/* Hero with a picture beside the copy (`aside`, Hero.jsx): copy left and picture right from 901px, stacked below on phones */
+.hero-inner.hero-has-aside{display:grid;grid-template-columns:minmax(0,1fr);gap:34px;align-items:center;text-align:left}
+.hero-inner.hero-has-aside .hero-copy{margin:0;width:100%}
+.hero-inner.hero-has-aside .hero-title,.hero-inner.hero-has-aside .hero-sub{margin-left:0;margin-right:0}
+.hero-inner.hero-has-aside .hero-actions{justify-content:flex-start}
+@media (min-width:901px){
+  .hero-inner.hero-has-aside{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:56px}
+  .hero-inner.hero-has-aside .hero-title{font-size:68px}
+  .hero-inner.hero-has-aside .hero-sub{font-size:20px}
+}

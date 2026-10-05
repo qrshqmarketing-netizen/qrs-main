@@ -1,0 +1,8 @@
+/* ---------- Blog index hero: latest article picture ---------- */
+.hlp{display:grid;gap:10px}
+.hlp-label{color:var(--gold-2);font-family:var(--font-head);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-shadow:0 2px 16px rgba(0,0,0,.35)}
+.hlp-card{display:block;border-radius:var(--radius);overflow:hidden;box-shadow:0 22px 50px rgba(0,0,0,.35);transition:transform .2s ease,box-shadow .2s ease}
+.hlp-card:hover{transform:translateY(-3px);box-shadow:0 28px 60px rgba(0,0,0,.42)}
+.hlp-card:focus-visible{outline:3px solid rgba(212,181,114,.9);outline-offset:3px}
+.hlp-card img{display:block;width:100%;height:auto}
+@media (prefers-reduced-motion:reduce){.hlp-card{transition:none}.hlp-card:hover{transform:none}}

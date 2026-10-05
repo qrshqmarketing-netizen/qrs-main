@@ -1,9 +1,10 @@
 import Hero from '@/components/sections/Hero';
+import HeroLatestPost from '@/components/sections/HeroLatestPost';
 import IndexNote from '@/components/sections/IndexNote';
 import PostCards from '@/components/sections/PostCards';
 import JsonLd from '@/components/ui/JsonLd';
 import { BLOG_LINK, blogPath, HOME } from '@/data/catalog';
-import { BLOG_POSTS, HERO_POST, PUBLISHED_POSTS } from '@/data/blog/posts';
+import { BLOG_POSTS, LATEST_POST, PUBLISHED_POSTS } from '@/data/blog/posts';
 import { BLOG_PAGE as page } from '@/data/pages/blog';
 import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
@@ -22,8 +23,9 @@ const schema = pageJsonLd({
 });
 
 // Blog index: the hero and every post in data/blog/posts.js, newest first, and nothing else (the posts carry the
-// estimate form and calls to action). The newest post's thumbnail is the hero background.
+// estimate form and calls to action). The newest post's thumbnail sits beside the hero heading.
 export default function BlogPage() {
+  const featured = LATEST_POST?.image ? LATEST_POST : null; // shown large in the hero, so the list below starts with the next one
   return (
     <main id="top">
       <JsonLd data={schema} />
@@ -32,9 +34,9 @@ export default function BlogPage() {
         eyebrow="Roofing Blog"
         title={page.hero.heading}
         intro={page.hero.intro}
-        {...(HERO_POST && { image: HERO_POST.heroImage || HERO_POST.image, imageAlt: HERO_POST.imageAlt, imagePosition: 'center 30%' })}
+        {...(featured && { aside: <HeroLatestPost post={featured} /> })}
       />
-      <PostCards posts={BLOG_POSTS} heading={PUBLISHED_POSTS.length ? 'Latest Articles' : 'Coming Soon'} />
+      <PostCards posts={featured ? BLOG_POSTS.filter((post) => post !== featured) : BLOG_POSTS} heading={!PUBLISHED_POSTS.length ? 'Coming Soon' : featured ? 'More Articles' : 'Latest Articles'} />
       <IndexNote note={page.note} />
     </main>
   );
