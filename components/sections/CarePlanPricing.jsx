@@ -59,7 +59,7 @@ export default function CarePlanPricing() {
         </p>
         <p className="cp-download">
           <a className="text-link" href="/downloads/roof-care-plan.pdf" download>
-            Download the Roof Care Plan (PDF) →
+            Download the Roof Care Plan (PDF) <span className="arrow">→</span>
           </a>
         </p>
         <p className="form-note cp-fine">

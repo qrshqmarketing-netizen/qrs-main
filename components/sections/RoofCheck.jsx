@@ -41,7 +41,7 @@ export default function RoofCheck({ tone, offer = 'home' }) {
             ))}
           </div>
           <Link className="btn btn-gold" href={START_PATH}>
-            Start My Free Roof Evaluation →
+            Start My Free Roof Evaluation <span className="arrow">→</span>
           </Link>
         </div>
       </div>

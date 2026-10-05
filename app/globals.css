@@ -41,6 +41,9 @@
   --font-display:var(--font-condensed),"Arial Narrow",ui-sans-serif,system-ui,sans-serif;
   --font-head:var(--font-open-sans),ui-sans-serif,system-ui,sans-serif;
   --font-btn:var(--font-open-sans),ui-sans-serif,system-ui,sans-serif;
+  /* Arrows, checks and stars use the system's own symbol fonts. In Open Sans they fall in its "symbols" and "math" ranges, and a browser then
+     downloads two more font files (69 KB) before painting any page that shows one. */
+  --font-glyph:system-ui,"Segoe UI Symbol","Apple Symbols",Arial,sans-serif;
   --font-body:var(--font-open-sans),-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 
   /* Section heading size: 36–48px on phones, 60px from tablet up */
@@ -100,7 +103,7 @@ h1,h2,h3,.eyebrow,.hero-sub{text-wrap:balance}
 .btn-light{background:var(--paper);color:var(--navy)}
 .btn-outline{border-color:rgba(255,255,255,.32);color:#fff;background:rgba(255,255,255,.06)}
 .btn-outline:hover{background:rgba(255,255,255,.12)}
-.arrow{font-size:1.1em}
+.arrow{font-family:var(--font-glyph);font-size:1.1em}
 
 /* ---------- Form fields (estimate form + Instant Quote) ---------- */
 label{display:block;font-size:13px;font-weight:900;color:var(--navy);margin-bottom:6px}

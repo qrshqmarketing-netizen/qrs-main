@@ -222,7 +222,7 @@ export default function StartStepper() {
                   <strong>Call us now.</strong> The fastest way to reach a roofer is by phone, even after hours or on a weekend. You can also finish this request and we’ll follow up.
                 </p>
                 <a className="btn btn-plum" href={TEL}>Call {PHONE}</a>
-                <button className="btn btn-gold" type="button" onClick={() => go(firstOpen(answers))}>Continue my request →</button>
+                <button className="btn btn-gold" type="button" onClick={() => go(firstOpen(answers))}>Continue my request <span className="arrow">→</span></button>
               </div>
             )}
           </section>
@@ -235,7 +235,7 @@ export default function StartStepper() {
             {askTiming(answers) && chips('When would you like to start? (optional)', TIMINGS, 'timing')}
             {askRole(answers) && chips('Which best describes you? (optional)', ROLES, 'role')}
             <div className="st-actions">
-              <button className="btn btn-gold" type="button" disabled={!answers.roof} onClick={() => go('contact')}>Next →</button>
+              <button className="btn btn-gold" type="button" disabled={!answers.roof} onClick={() => go('contact')}>Next <span className="arrow">→</span></button>
             </div>
           </section>
         )}
@@ -296,7 +296,7 @@ export default function StartStepper() {
 
             <div className="st-actions">
               <button className="btn btn-gold" type="submit" disabled={status === 'sending' || status === 'sent'}>
-                {status === 'sending' ? 'Sending…' : status === 'sent' ? 'Request Sent ✓' : 'Request My Estimate →'}
+                {status === 'sending' ? 'Sending…' : status === 'sent' ? 'Request Sent ✓' : <>Request My Estimate <span className="arrow">→</span></>}
               </button>
             </div>
             <p className="form-note">

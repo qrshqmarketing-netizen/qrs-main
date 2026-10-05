@@ -6,6 +6,6 @@
 .ps-col h3{margin:0 0 16px;font-family:var(--font-display);font-size:1.1rem;color:var(--navy)}
 .ps-points{display:grid;gap:12px}
 .ps-points>div{display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.55;color:var(--ink)}
-.ps-points b{flex:none;color:var(--green);font-size:1.05em}
+.ps-points b{flex:none;color:var(--green);font-family:var(--font-glyph);font-size:1.05em}
 .ps-points-muted>div{color:var(--muted)}
 .ps-points-muted b{color:var(--muted)}
