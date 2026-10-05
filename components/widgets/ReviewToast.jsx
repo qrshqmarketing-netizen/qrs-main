@@ -5,7 +5,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import { CloseIcon, GoogleLogo } from '@/components/ui/icons';
 import { GOOGLE_REVIEWS } from '@/data/reviews';
 import { COOKIE_OK_EVENT, COOKIE_OK_KEY, SHOW_REVIEW_EVENT } from '@/lib/events';
-import { getLiveReviews } from '@/lib/liveReviews';
+import { getLiveReviews, officeForPath } from '@/lib/liveReviews';
 import { local, session } from '@/lib/storage';
 import './ReviewToast.css';
 
@@ -57,7 +57,7 @@ export default function ReviewToast() {
     // hand-picked ones are used.
     const start = () => {
       s.timer = setTimeout(async () => {
-        const live = await Promise.race([getLiveReviews(), new Promise((resolve) => setTimeout(() => resolve(null), LIVE_WAIT_MS))]);
+        const live = await Promise.race([getLiveReviews(officeForPath(window.location.pathname)), new Promise((resolve) => setTimeout(() => resolve(null), LIVE_WAIT_MS))]);
         if (s.stopped) return;
         if (live) list.current = live.reviews.map(fromLive);
         cycle();
