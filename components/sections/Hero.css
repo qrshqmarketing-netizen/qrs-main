@@ -18,6 +18,10 @@
   content:"";position:absolute;inset:0;
   background:linear-gradient(180deg,rgba(3,27,52,.20) 0%,rgba(3,27,52,.52) 52%,rgba(3,27,52,.78) 100%);
 }
+/* Hero photo slider (HeroSlides.jsx): the slides stack and cross-fade; the dark overlay above stays put */
+.hero-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.4s ease}
+.hero-slide.is-active{opacity:1}
+@media (prefers-reduced-motion:reduce){.hero-slide{transition:none}}
 /* When a separate mobileImage is supplied, swap it in below 621px instead of cropping the desktop photo */
 .hero-roof-texture-desktop{display:none}
 .hero-roof-texture-mobile{display:block}

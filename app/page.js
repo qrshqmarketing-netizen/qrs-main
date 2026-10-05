@@ -15,6 +15,7 @@ import { COMMERCIAL_LINK, RESIDENTIAL } from '@/data/catalog';
 import { FAQS } from '@/data/faqs';
 import { CAREERS_PAGE, CAREERS_TEASER } from '@/data/pages/careers';
 import { HOME_DESCRIPTION, HOME_TITLE } from '@/data/site';
+import { LATEST_PROJECTS } from '@/data/projectPages';
 import { RECENT_WORK, RECENT_WORK_SUB } from '@/data/recentWork';
 import { ROOF_FINANCING } from '@/data/services/programs';
 import { openGraphBase, twitterBase } from '@/lib/seo';
@@ -29,6 +30,9 @@ export const metadata = {
 };
 
 // The home page's "Roofing Services" section: just the two top-level categories from the nav.
+// The hero photo slider: the newest projects' cover photos, newest first (LATEST_PROJECTS in data/projectPages.js)
+const HERO_SLIDES = LATEST_PROJECTS.map((project) => ({ src: project.image, alt: project.imageAlt }));
+
 const HOME_SERVICES = [
   {
     title: 'Residential Roofing',
@@ -70,8 +74,9 @@ export default function HomePage() {
         <Hero
           h1="eyebrow"
           intro="Clear inspections. Straightforward estimates. Clean workmanship."
-          image="/images/home-hero-shingle-closeup-drone-view.webp"
-          imageAlt="Close aerial view of a dimensional shingle roof on a Southern California home"
+          image={HERO_SLIDES[0].src}
+          imageAlt={HERO_SLIDES[0].alt}
+          slides={HERO_SLIDES}
           className="hero-top-pad"
           stats
         />
