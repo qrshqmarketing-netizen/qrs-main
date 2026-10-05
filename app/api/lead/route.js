@@ -1,7 +1,10 @@
 // Receives the request steps on /start/ (components/sections/StartStepper.jsx) and the Instant Quote drawer
-// (components/widgets/InstantQuote.jsx), checks the fields and hands the lead to lib/leads.js (email + Google Sheet).
-import { FOUND_US_OPTIONS, ROOF_TYPES, SERVICE_OPTIONS } from '@/data/estimateOptions';
+// (components/widgets/InstantQuote.jsx), checks the fields and hands the lead to lib/leads.js (email + Google Sheet). A visitor who gave
+// an email also gets the confirmation email in lib/autoReply.js.
+import { after } from 'next/server';
+import { FOUND_US_OPTIONS, ROOF_TYPES, SERVICE_OPTIONS, VISIT_TIMES } from '@/data/estimateOptions';
 import { leadAttribution } from '@/lib/attribution';
+import { sendAutoReply } from '@/lib/autoReply';
 import { deliverLead, rateLimited } from '@/lib/leads';
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
@@ -9,6 +12,16 @@ const clip = (v, max) => (typeof v === 'string' ? v.trim().slice(0, max) : '');
 const list = (v, max = 6) => (Array.isArray(v) ? v.filter((s) => typeof s === 'string').slice(0, max).map((s) => s.slice(0, 40)) : []);
 const num = (v, max) => (Number.isFinite(Number(v)) && Number(v) >= 0 ? Math.min(Math.round(Number(v)), max) : 0);
 const usd = (n) => `$${n.toLocaleString('en-US')}`;
+
+// The preferred visit date (YYYY-MM-DD): a real day from yesterday (the visitor's calendar can be a day behind ours) to about a year out.
+// Anything else is left out; it never stops the request.
+function visitDate(value) {
+  const day = clip(value, 10);
+  const at = Date.parse(`${day}T12:00:00Z`);
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(day) || Number.isNaN(at) || new Date(at).toISOString().slice(0, 10) !== day) return '';
+  const ahead = (at - Date.parse(`${new Date().toISOString().slice(0, 10)}T12:00:00Z`)) / 86400000;
+  return ahead >= -1 && ahead <= 400 ? day : '';
+}
 
 // The Instant Quote's estimate as one readable line for the email and the spreadsheet
 function quoteSummary(q) {
@@ -61,6 +74,8 @@ export async function POST(request) {
     foundUs: FOUND_US_OPTIONS.includes(body?.foundUs) ? body.foundUs : '',
     service: SERVICE_OPTIONS.includes(body?.service) ? body.service : source === 'instant-quote' ? 'Roof replacement' : '',
     roofType: ROOF_TYPES.includes(body?.roofType) ? body.roofType : '',
+    preferredDate: visitDate(body?.preferredDate),
+    preferredTime: VISIT_TIMES.includes(body?.preferredTime) ? body.preferredTime : '',
     address: clip(body?.address, 300),
     message: clip(body?.message, 3000),
     quote: source === 'instant-quote' ? quoteSummary(body) : '',
@@ -68,13 +83,27 @@ export async function POST(request) {
     ...leadAttribution(body?.utm),
   };
 
-  const result = await deliverLead(lead);
   // Setup check: a request carrying the LEADS_SHEET_SECRET in an x-leads-diagnostic header gets each channel's
   // result and error back, so email and spreadsheet problems can be traced without opening the server logs
   const secret = (process.env.LEADS_SHEET_SECRET || '').trim();
-  if (secret && request.headers.get('x-leads-diagnostic') === secret) {
-    return Response.json({ ok: result.delivered, channels: { email: result.email, sheet: result.sheet, crm: result.crm }, errors: result.errors });
+  const diagnostic = Boolean(secret) && request.headers.get('x-leads-diagnostic') === secret;
+  // ...and with "autoReplyTest": true it sends only the confirmation email, marked TEST, to the email given (no lead email, no sheet row)
+  if (diagnostic && body?.autoReplyTest === true) {
+    try {
+      return Response.json({ ok: true, autoReply: await sendAutoReply(lead, { test: true }) });
+    } catch (err) {
+      return Response.json({ ok: false, autoReply: 'failed', error: String(err?.message || err).slice(0, 300) }, { status: 502 });
+    }
   }
+
+  const result = await deliverLead(lead);
+  // The confirmation goes out after the response, so the visitor doesn't wait on it; a failure only shows in the server log
+  const confirm = () => sendAutoReply(lead);
+  if (diagnostic) {
+    const autoReply = result.delivered ? await confirm().catch((err) => `failed: ${String(err?.message || err).slice(0, 200)}`) : 'skipped';
+    return Response.json({ ok: result.delivered, channels: { email: result.email, sheet: result.sheet, database: result.database, crm: result.crm, autoReply }, errors: result.errors });
+  }
+  if (result.delivered) after(() => confirm().catch((err) => console.error('[autoreply] failed:', err?.message || err)));
   // Local dev with nothing set up: accept the lead (it's in the server log). On the live site, say so when it
   // couldn't be delivered, so the form can ask the visitor to call instead.
   if (result.delivered || (!result.configured && process.env.NODE_ENV !== 'production')) return Response.json({ ok: true });

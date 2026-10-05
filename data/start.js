@@ -5,8 +5,8 @@
 // The steps adapt to the answers (stepsFor): the urgency question appears only for repairs, the roof screen adds a timing
 // question for repairs and replacements and a role question for HOA and commercial properties, and the page picks up answers
 // from the page the visitor came from (prefillForPath) and from the ?need= choice made on a page's start card.
-// Everything is sent to /api/lead/ in the fields it already has (service, roofType, zip, message…), so the email and the
-// spreadsheet need no changes.
+// Everything is sent to /api/lead/ in the fields it already has (service, roofType, zip, message…), plus the optional preferred
+// date and time of the visit (preferredDate, preferredTime), which have their own rows in the lead email and columns in the spreadsheet.
 
 export const START_PATH = '/start/';
 export const ROOF_CHECK_HASH = '#roof-check'; // what the data files link to; SiteLink sends it to START_PATH
@@ -117,6 +117,9 @@ export function leadFields(a, contact) {
     foundUs: contact.foundUs,
     service: askRole(a) ? 'Commercial or HOA roofing' : need?.service || '',
     roofType: a.roof || '',
+    // Not asked when water is coming in now: that's a call, not a visit to book
+    preferredDate: urgent ? '' : contact.date || '',
+    preferredTime: urgent ? '' : contact.time || '',
     message: lines.join('\n'),
   };
 }

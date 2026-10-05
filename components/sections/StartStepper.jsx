@@ -1,28 +1,32 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { FOUND_US_OPTIONS } from '@/data/estimateOptions';
+import { FOUND_US_OPTIONS, VISIT_TIMES } from '@/data/estimateOptions';
 import { OFFERS } from '@/data/offers';
-import { PHONE, TEL } from '@/data/site';
+import { BUSINESS, PHONE, TEL } from '@/data/site';
 import {
   askRole, askTiming, leadFields, NEEDS, prefillForPath, PROPERTIES, ROLES, ROOFS, START_PATH, stepDone, stepsFor, STEP_LABELS,
   TIMINGS, URGENCY, zipLikelyServed,
 } from '@/data/start';
 import { currentAttribution } from '@/lib/attribution';
 import { zipPrefixServed } from '@/lib/geo';
+import { hoursText } from '@/lib/hours';
 import { lastPage } from '@/lib/pageTrail';
 import { rememberLead, trackEvent, trackLead } from '@/lib/tracking';
 import './RoofCheck.css'; // the offer card and form card styles
 import './StartStepper.css';
 
 const ADVANCE_MS = 170; // a single-choice answer moves on after this short beat, so the pick is seen
+const isoDay = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; // the visitor's own calendar day
 
 // The request steps on /start/ (rules and wording in data/start.js). Questions that don't apply are left out, answers the visitor's
 // previous page implies are filled in, and the offer card beside it switches to the commercial survey for HOA and commercial
 // properties. Sends to /api/lead/ like the old estimate form did, then opens /thank-you/.
 export default function StartStepper() {
   const [answers, setAnswers] = useState({});
-  const [contact, setContact] = useState({ name: '', phone: '', email: '', zip: '', company: '', foundUs: '', message: '', website: '' });
+  const [contact, setContact] = useState({ name: '', phone: '', email: '', zip: '', company: '', foundUs: '', message: '', date: '', time: '', website: '' });
+  // Earliest and latest day the date picker offers (tomorrow to six months out). Set in the browser: this page is built ahead of time, so "today" isn't known yet.
+  const [days, setDays] = useState({ min: '', max: '' });
   const [step, setStep] = useState('need');
   const [prefilled, setPrefilled] = useState(false);
   const [status, setStatus] = useState('idle'); // 'idle' | 'sending' | 'sent' | 'error'
@@ -64,6 +68,13 @@ export default function StartStepper() {
   }, [step]);
 
   useEffect(() => () => clearTimeout(timer.current), []);
+
+  useEffect(() => {
+    const day = new Date();
+    const min = new Date(day.getFullYear(), day.getMonth(), day.getDate() + 1);
+    const max = new Date(day.getFullYear(), day.getMonth(), day.getDate() + 183);
+    setDays({ min: isoDay(min), max: isoDay(max) });
+  }, []);
 
   const go = (id) => {
     clearTimeout(timer.current);
@@ -120,6 +131,8 @@ export default function StartStepper() {
     answers.roof && `${ROOFS.find((r) => r.value === answers.roof)?.label} roof`,
   ].filter(Boolean);
   const outOfArea = contact.zip.length === 5 && !zipLikelyServed(contact.zip, zipPrefixServed);
+  const pickedDay = contact.date ? new Date(`${contact.date}T12:00:00`).getDay() : -1;
+  const weekend = pickedDay === 0 || pickedDay === 6;
 
   const choices = (items, field) => (
     <div className="st-choices">
@@ -270,6 +283,23 @@ export default function StartStepper() {
                 <input id="st-email" name="email" type="email" autoComplete="email" placeholder="you@example.com" value={contact.email} onChange={setField('email')} />
               </div>
             </div>
+            {!urgent && (
+              <div className="form-row">
+                <div className="field">
+                  <label htmlFor="st-date">Preferred date to visit (optional)</label>
+                  <input id="st-date" name="date" type="date" min={days.min} max={days.max} value={contact.date} onChange={setField('date')} />
+                  {weekend && <small className="st-hint">We’re open {hoursText(BUSINESS.hours)}, so we’ll suggest the closest weekday.</small>}
+                </div>
+                <div className="field">
+                  <label htmlFor="st-time">Preferred time (optional)</label>
+                  <select id="st-time" name="time" value={contact.time} onChange={setField('time')}>
+                    <option value="">No preference</option>
+                    {VISIT_TIMES.map((option) => <option key={option}>{option}</option>)}
+                  </select>
+                  <small className="st-hint">We’ll confirm the time with you.</small>
+                </div>
+              </div>
+            )}
             {askRole(answers) && (
               <div className="field">
                 <label htmlFor="st-company">Property or company name (optional)</label>
