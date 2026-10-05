@@ -11,6 +11,17 @@ const nextConfig = {
   // other host, like the deployment's *.vercel.app URL, tells them to skip it.
   async headers() {
     return [
+      // Basic security headers on every response: no content-type sniffing, no framing by other sites, a short referrer, and
+      // only this site may use the visitor's location (the Instant Quote's "use my location")
+      {
+        source: '/:path*',
+        headers: [
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(self), payment=()' },
+        ],
+      },
       { source: '/:path*', missing: [{ type: 'host', value: 'qualityroofingspecialists\\.com' }], headers: [{ key: 'X-Robots-Tag', value: 'noindex' }] },
       // Cache buster: a browser that hasn't seen this CACHE_RESET version yet is told once to drop everything it
       // cached for the site (old WordPress pages and files included), and gets a cookie so it only happens once.

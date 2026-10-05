@@ -2,6 +2,7 @@ import Faq from '@/components/sections/Faq';
 import FeatureBand from '@/components/sections/FeatureBand';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
+import RelatedLinks from '@/components/sections/RelatedLinks';
 import ReviewStrip from '@/components/sections/ReviewStrip';
 import Overview from '@/components/sections/Overview';
 import PartnerLogos from '@/components/sections/PartnerLogos';
@@ -9,6 +10,7 @@ import ProcessSteps from '@/components/sections/ProcessSteps';
 import RoofCheck from '@/components/sections/RoofCheck';
 import WhyChoose from '@/components/sections/WhyChoose';
 import JsonLd from '@/components/ui/JsonLd';
+import { projectsRelatedTo } from '@/data/projectPages';
 import { pageJsonLd } from '@/lib/structuredData';
 import { closingCta, faqSub } from './shared';
 
@@ -131,6 +133,7 @@ export default function ServicePage({ page, crumbs, eyebrow, scenes = [], offer,
       />
       <WhyChoose heading={page.why.heading} intro={page.why.intro} points={page.why.points} />
       {page.faqs?.length > 0 && <Faq heading="Frequently Asked Questions" sub={faqSub(page.keyword)} faqs={page.faqs} cta={false} />}
+      <RelatedLinks heading="Recent projects" links={projectsRelatedTo(crumbs.at(-1).href)} />
       <RoofCheck tone="white" offer={offer} />
       <FinalCta {...finalCta} />
     </main>

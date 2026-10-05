@@ -8,6 +8,11 @@ export const SAN_PEDRO_FULL_ROOF_PROJECT = {
   image: '/images/projects/full-roof-replacement-san-pedro-90732/san-pedro-full-roof-replacement-0.webp', // also the first photo in `photos`
   imageAlt: 'Overhead drone view of the finished roof, with warm tan architectural shingles across the hips and valleys and the white flat patio cover',
   // Map pin on /projects/: the center of the ZIP code, not the home's address, so the client's address stays private
+  // Short name for the "Recent projects" links on the service pages this project is listed under (`related`)
+  label: 'Full roof replacement, San Pedro 90732',
+  related: ['/residential-roofing/shingle-roofing/replacement/', '/residential-roofing/flat-roofing/replacement/', '/service-areas/la-county/los-angeles/'], // service and city pages: shown as "Related services" here, and this project is linked back from them
+  // An H2 above the paragraph at each position below (they describe the paragraphs, nothing is added to the story)
+  headings: { 1: 'From a roof repair request to a full replacement', 2: 'Architectural shingles and a reflective flat roof', 3: 'Vents, pipes and chimneys flashed', 4: 'A RoofCare Plan at handoff', 5: 'Roofing for homes with sloped and flat sections' },
   place: 'San Pedro, CA 90732',
   geo: [33.7481, -118.3069],
   // Photo slider at the top of the page. Full-size originals: assets/originals/projects/

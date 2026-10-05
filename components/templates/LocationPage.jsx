@@ -2,6 +2,7 @@ import Faq from '@/components/sections/Faq';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
 import ProofBar from '@/components/sections/ProofBar';
+import RelatedLinks from '@/components/sections/RelatedLinks';
 import ReviewStrip from '@/components/sections/ReviewStrip';
 import LocalIntro from '@/components/sections/LocalIntro';
 import ProjectCarousel from '@/components/sections/ProjectCarousel';
@@ -10,6 +11,7 @@ import JsonLd from '@/components/ui/JsonLd';
 import { HOME, LOCATIONS_LINK } from '@/data/catalog';
 import { cityPath, findRegion, regionPath } from '@/data/locations';
 import { projectsFor } from '@/data/projects';
+import { projectsRelatedTo } from '@/data/projectPages';
 import { SERVICES } from '@/data/services';
 import { OFFICES, SITE_URL } from '@/data/site';
 import { pageJsonLd } from '@/lib/structuredData';
@@ -65,6 +67,7 @@ export default function LocationPage({ location, page, index = 0 }) {
         sub="Tile, shingle and flat roofing, done the detail-first way. Pick a project to see how we handle that kind of work."
         projects={projectsFor(slug)}
       />
+      <RelatedLinks heading={`Recent projects in ${city}`} links={projectsRelatedTo(cityPath(slug))} />
       <Faq heading={`${city} Roofing FAQs`} sub={`Straight answers for ${city} ${page.offer === 'commercial' ? 'clients' : 'homeowners'}.`} faqs={page.faqs} cta={false} />
       <RoofCheck offer={page.offer || 'home'} />
       <FinalCta heading={page.final.heading} text={page.final.text} />

@@ -43,12 +43,12 @@ export const COMPANY = {
 };
 
 // Offices, shown on the Service Areas page and on the city page each one sits in (citySlug, from data/locations.js).
-// The first is the main office (BUSINESS.address). All answer the same phone number. `image`: an optional photo for its card.
+// The first is the main office (BUSINESS.address). All answer the same phone number. `gbpUrl`: the office's Google Business Profile (schema sameAs). `image`: an optional photo for its card.
 export const OFFICES = [
-  { name: 'Los Angeles Office', citySlug: 'los-angeles', address: BUSINESS.address, geo: BUSINESS.geo, mapUrl: BUSINESS.mapUrl },
+  { name: 'Los Angeles Office', citySlug: 'los-angeles', gbpUrl: 'https://maps.google.com/?cid=7072551311221462379', address: BUSINESS.address, geo: BUSINESS.geo, mapUrl: BUSINESS.mapUrl },
   {
     name: 'Valley Office',
-    citySlug: 'woodland-hills',
+    citySlug: 'woodland-hills', gbpUrl: 'https://maps.google.com/?cid=2545734132360308765',
     address: { street: '22900 Ventura Blvd, Suite 124', city: 'Woodland Hills', region: 'CA', postalCode: '91364', country: 'US' },
     geo: { latitude: 34.165009, longitude: -118.626272 },
     image: '/images/woodland-hills-office.webp',
@@ -57,7 +57,7 @@ export const OFFICES = [
   },
   {
     name: 'Vernon Office',
-    citySlug: 'vernon',
+    citySlug: 'vernon', gbpUrl: 'https://maps.google.com/?cid=7878802423193063666',
     address: { street: '2850 E 46th St, Unit B', city: 'Vernon', region: 'CA', postalCode: '90058', country: 'US' },
     geo: { latitude: 34.001813, longitude: -118.218411 },
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=2850+E+46th+St+Unit+B+Vernon+CA+90058',

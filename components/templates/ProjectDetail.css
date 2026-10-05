@@ -14,3 +14,5 @@
   .project-detail-gallery{padding-top:112px}
   .project-detail-story{padding-top:42px}
 }
+/* Subheadings inside the story: smaller than the site-wide H2 */
+.project-detail-copy h2{margin:34px 0 10px;font-size:clamp(26px,4vw,34px);line-height:1.15}

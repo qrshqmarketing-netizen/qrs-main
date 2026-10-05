@@ -9,6 +9,11 @@ export const HOLLYWOOD_HILLS_PROJECT = {
   imageAlt: 'Finished white reflective flat roof on a round, 12-sided home in the Hollywood Hills, with the rooftop deck railing and HVAC unit',
   // Map pin on /projects/: the neighborhood's center, not the home's address, so the client's address stays private
   // (the 90046 ZIP code's center falls in West Hollywood)
+  // Short name for the "Recent projects" links on the service pages this project is listed under (`related`)
+  label: 'Round flat roof, Hollywood Hills West',
+  related: ['/residential-roofing/flat-roofing/replacement/', '/residential-roofing/flat-roofing/repair/', '/service-areas/la-county/los-angeles/'], // service and city pages: shown as "Related services" here, and this project is linked back from them
+  // An H2 above the paragraph at each position below (they describe the paragraphs, nothing is added to the story)
+  headings: { 1: 'A 12-sided roof, cut to fit every angle', 2: 'Rooftop deck posts, HVAC and penetrations sealed', 3: 'Flat roofs other roofers have turned down' },
   place: 'Hollywood Hills West, Los Angeles, CA 90046',
   geo: [34.1105, -118.3734],
   // Photo slider at the top of the page: the finished roof, then the tear-off. Full-size originals: assets/originals/projects/

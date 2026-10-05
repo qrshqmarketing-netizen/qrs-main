@@ -9,6 +9,11 @@ export const PANORAMA_CITY_PROJECT = {
   image: '/images/projects/shingle-roof-replacement-panorama-city-91402/shingle-panorama-city-91402-01.webp', // also the first photo in `photos`
   imageAlt: 'Aerial view of the new light gray shingle roof on a two-story apartment building in Panorama City',
   // Map pin on /projects/: the center of the ZIP code, not the building's address, so the client's address stays private
+  // Short name for the "Recent projects" links on the service pages this project is listed under (`related`)
+  label: 'Apartment shingle roof, Panorama City',
+  related: ['/residential-roofing/shingle-roofing/replacement/', '/residential-roofing/hoa-multi-family/', '/service-areas/la-county/los-angeles/'], // service and city pages: shown as "Related services" here, and this project is linked back from them
+  // An H2 above the paragraph at each position below (they describe the paragraphs, nothing is added to the story)
+  headings: { 1: 'Every AC platform and vent flashed', 2: 'Ventilation and a clean, uniform finish', 3: 'Re-roofed while tenants stayed home', 4: 'Roofing for Valley apartment buildings and HOAs' },
   place: 'Panorama City, Los Angeles, CA 91402',
   geo: [34.2245, -118.4483],
   // Photo slider at the top of the page. Full-size originals: assets/originals/projects/

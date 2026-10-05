@@ -8,6 +8,11 @@ export const MID_WILSHIRE_PROJECT = {
   image: '/images/projects/tile-flat-roofing-in-mid-wilshire-90019/mid-wilshire-tile-flat-roof-8.webp', // also the first photo in `photos`
   imageAlt: 'Spanish-style multi-family building in Mid-Wilshire with clay tile and a rooftop flat roof deck',
   // Map pin on /projects/: the center of the ZIP code, not the building's address, so the client's address stays private
+  // Short name for the "Recent projects" links on the service pages this project is listed under (`related`)
+  label: 'Tile and flat roofing, Mid-Wilshire',
+  related: ['/residential-roofing/tile-roofing/replacement/', '/residential-roofing/flat-roofing/replacement/', '/residential-roofing/hoa-multi-family/', '/service-areas/la-county/los-angeles/'], // service and city pages: shown as "Related services" here, and this project is linked back from them
+  // An H2 above the paragraph at each position below (they describe the paragraphs, nothing is added to the story)
+  headings: { 1: 'From a leak to a $199 Roof Check', 2: 'Clay tile on the slopes, a reflective roof on the terrace', 3: 'Tile and terrace roofs for multi-family buildings' },
   place: 'Mid-Wilshire, Los Angeles, CA 90019',
   geo: [34.0486, -118.336],
   // Photo slider at the top of the page: the finished roof first, then the work in progress.

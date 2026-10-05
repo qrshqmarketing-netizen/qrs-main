@@ -8,6 +8,11 @@ export const SAN_PEDRO_PROJECT = {
   image: '/images/projects/shingle-roof-replacements-90731/san-pedro-shingle-roof-replacement-3.webp', // also the first photo in `photos`
   imageAlt: 'Overhead drone view of the new charcoal shingle roof on a two-story multi-family building in San Pedro',
   // Map pin on /projects/: the center of the ZIP code, not the home's address, so the client's address stays private
+  // Short name for the "Recent projects" links on the service pages this project is listed under (`related`)
+  label: 'Multi-family shingle roof, San Pedro 90731',
+  related: ['/residential-roofing/shingle-roofing/replacement/', '/residential-roofing/hoa-multi-family/', '/service-areas/la-county/los-angeles/'], // service and city pages: shown as "Related services" here, and this project is linked back from them
+  // An H2 above the paragraph at each position below (they describe the paragraphs, nothing is added to the story)
+  headings: { 1: 'Shingle roofing for homes and multi-family buildings in San Pedro' },
   place: 'San Pedro, CA 90731',
   geo: [33.7536, -118.2896],
   // Photo slider at the top of the page. Full-size originals: assets/originals/projects/

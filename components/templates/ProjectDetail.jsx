@@ -1,8 +1,11 @@
+import { Fragment } from 'react';
 import Breadcrumbs from '@/components/sections/Breadcrumbs';
 import MorphSlider from '@/components/sections/MorphSlider';
+import RelatedLinks from '@/components/sections/RelatedLinks';
 import JsonLd from '@/components/ui/JsonLd';
 import Rich from '@/components/ui/Rich';
 import { HOME, PROJECTS_LINK } from '@/data/catalog';
+import { relatedLinks } from '@/data/content';
 import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
 import './ProjectDetail.css';
@@ -10,6 +13,7 @@ import './ProjectDetail.css';
 // A project page (e.g. /projects/shingle-roof-replacements-90731/): a photo slider, then the story.
 // page: a project from data/pages/ ({ path, title, metaTitle?, description, image, photos: [{ src, alt }], paragraphs }).
 // metaTitle: a shorter <title> than `title` (which is also the headline) when that one runs past ~60 characters.
+// headings: { position: 'text' } puts an H2 above the paragraph at that position; related: pages shown as "Related services".
 // The first photo in `photos` is also `image` (share image, structured data, Projects map).
 export const projectMetadata = (page) => pageMetadata({ title: page.metaTitle || page.title, description: page.description, path: page.path });
 
@@ -32,14 +36,18 @@ export default function ProjectDetail({ page }) {
           <Breadcrumbs items={crumbs} />
           <div className="project-detail-copy">
             <h1>{page.title}</h1>
-            {page.paragraphs.map((paragraph) => (
-              <p key={paragraph}>
-                <Rich text={paragraph} />
-              </p>
+            {page.paragraphs.map((paragraph, i) => (
+              <Fragment key={paragraph}>
+                {page.headings?.[i] && <h2>{page.headings[i]}</h2>}
+                <p>
+                  <Rich text={paragraph} />
+                </p>
+              </Fragment>
             ))}
           </div>
         </div>
       </article>
+      <RelatedLinks heading="Related services" links={relatedLinks(page.related)} />
     </main>
   );
 }
