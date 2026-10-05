@@ -2,9 +2,9 @@
 // the tab is hidden and the "Get an Instant Quote" button in the hero and closing CTA opens it instead).
 
 // The Instant Quote switch. false hides everything that opens it (the side tab, the phone buttons in the hero and closing
-// CTA, "See Example Payments" on the financing page) and leaves the drawer out of the page. Turn it on once the Google
-// Solar API key below is set (NEXT_PUBLIC_GOOGLE_MAPS_KEY).
-export const INSTANT_QUOTE_ENABLED = false;
+// CTA, "See Example Payments" on the financing page) and leaves the drawer out of the page. It needs the Google key
+// below (NEXT_PUBLIC_GOOGLE_MAPS_KEY, set in Vercel); without one the drawer runs in demo mode with sample measurements.
+export const INSTANT_QUOTE_ENABLED = true;
 
 // Pages where phones don't get that button: the quote only prices home roof replacements, so commercial, emergency,
 // partner and job pages skip it.
@@ -12,7 +12,9 @@ export const QUOTE_EXCLUDE = ['/commercial-roofing/', '/roof-repair/emergency/',
 
 // Google Maps Platform key with the Solar API and Geocoding API enabled. Set it as
 // NEXT_PUBLIC_GOOGLE_MAPS_KEY in .env.local, never in this file (the GitHub repo is public).
-// Visitors' browsers can see it, so restrict it to your domain (HTTP referrers) in Google Cloud Console.
+// Visitors' browsers can see it, so in Google Cloud Console restrict it to those two APIs and cap their daily quotas. Don't
+// add a website (HTTP referrer) restriction: the Geocoding web service refuses referrer-restricted keys, so every address
+// would come back "not found".
 // Left empty, the drawer runs in demo mode with sample measurements.
 export const GOOGLE_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY || '';
 
