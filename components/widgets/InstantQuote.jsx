@@ -40,6 +40,8 @@ function toggle(list, value, order, alone) {
 
 // "Instant Quote" tab on the right edge: address → roof measurement → contact → price range + financing.
 // Prices and settings live in data/instantQuote.js; the measuring logic in lib/roofQuote.js.
+const MAX_FIXES = 5; // map taps per address (see pickBuilding)
+
 export default function InstantQuote() {
   const [open, setOpen] = useState(false);
   const [step, setStep] = useState(1);
@@ -63,6 +65,8 @@ export default function InstantQuote() {
   const mapEl = useRef(null);
   const map = useRef(null); // { map, layer }
   const busyRef = useRef(false);
+  const pickRef = useRef(null); // the latest pickBuilding, for the map's click handler
+  const fixes = useRef(0); // map taps used for this address
   const openerRef = useRef(null);
   const stepRef = useRef(step); // latest values for timers
   const openRef = useRef(open);
@@ -138,9 +142,29 @@ export default function InstantQuote() {
     }
   }
 
+  // Tapping the map re-measures the building at that spot, for when the address landed on a neighbor, a garage or an ADU.
+  // At most MAX_FIXES taps per address (each one is a Solar API lookup); a failed tap just keeps the current roof.
+  async function pickBuilding(latlng) {
+    if (busyRef.current || fixes.current >= MAX_FIXES || !roof) return;
+    fixes.current += 1;
+    busyRef.current = true;
+    setBusy(true);
+    try {
+      const pt = { lat: latlng.lat, lng: latlng.lng };
+      applyRoof(summarize(await buildingInsights(pt.lat, pt.lng), roof.label, pt));
+    } catch {
+      // no roof data at that spot: keep what's shown
+    } finally {
+      busyRef.current = false;
+      setBusy(false);
+    }
+  }
+  pickRef.current = pickBuilding;
+
   const onAddress = (e) => {
     e.preventDefault();
     const q = address.trim();
+    fixes.current = 0;
     if (q) measure(() => geocode(q));
   };
 
@@ -158,6 +182,7 @@ export default function InstantQuote() {
           maxZoom: 21,
           attribution: 'Imagery &copy; Esri',
         }).addTo(m);
+        m.on('click', (e) => pickRef.current?.(e.latlng));
         map.current = { map: m, layer: L.layerGroup().addTo(m) };
       }
       const { map: m, layer } = map.current;
@@ -325,8 +350,9 @@ export default function InstantQuote() {
 
           {/* Step 2: measurements */}
           <section data-panel="2" hidden={step !== 2}>
-            <div className="rm-map rm-measured" id="rmMap" ref={mapEl} role="img" aria-label="Satellite view of the property with a pin on the roof"></div>
+            <div className={'rm-map rm-measured' + (busy ? ' is-busy' : '')} id="rmMap" ref={mapEl} role="img" aria-label="Satellite view of the property with a pin on the roof" aria-busy={busy}></div>
             <p className="rm-addr rm-measured" id="rmAddrOut">{roof?.label}</p>
+            <p className="rm-maphint rm-measured">Wrong building? Tap your roof on the map.</p>
             <h3 className="rm-manual-only" id="rmManualTitle" hidden={!manual}>Tell us about your roof</h3>
             <p className="rm-manual-only" hidden={!manual}>An approximation is fine. We confirm every detail on site.</p>
             <div className="rm-stats">

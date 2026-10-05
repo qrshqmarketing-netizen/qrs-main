@@ -61,7 +61,10 @@ body.rm-lock{overflow:hidden}
 .rm-demo[hidden]{display:none} /* the class's display would otherwise override the hidden attribute: the badge showed on the live site */
 .rm-demo{display:inline-block;margin-bottom:12px;padding:4px 10px;border-radius:999px;background:#f1ecdf;color:var(--gold-ink);font:700 11px/1.4 var(--font-head);letter-spacing:.04em;text-transform:uppercase}
 
-.rm-map{position:relative;z-index:0;height:220px;border-radius:var(--radius);overflow:hidden;background:#1d2b3a}
+.rm-map{position:relative;z-index:0;height:220px;border-radius:var(--radius);overflow:hidden;background:#1d2b3a;transition:opacity .2s}
+.rm-map.is-busy{opacity:.55}
+.rm-map.leaflet-container{cursor:pointer}
+.rm-maphint{margin:-4px 0 12px;color:var(--muted);font-size:13px}
 .rm-addr{margin:10px 0 14px!important;color:var(--navy)!important;font-weight:700}
 .rm-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
 .rm-stat{padding:12px 14px;border-radius:var(--radius);background:var(--wash)}
