@@ -42,7 +42,7 @@ export default function ScrollParallaxImage({ src, alt = '', sizes = '100vw', pr
 
   return (
     <div className="scroll-parallax-layer" ref={layerRef}>
-      <Image src={src} alt={alt} fill sizes={sizes} preload={preload} />
+      <Image src={src} alt={alt} fill sizes={sizes} quality={60} preload={preload} />
     </div>
   );
 }

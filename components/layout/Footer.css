@@ -3,7 +3,7 @@ footer{background:linear-gradient(180deg,var(--navy) 0%,#03192e 100%);color:#fff
 footer .container{max-width:1080px}
 .ft-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px 20px}
 .ft-col{display:flex;flex-direction:column;align-items:flex-start;min-width:0}
-.ft-col h4{color:var(--gold);font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
+.ft-col h3{color:var(--gold);font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
 /* 40px tall rows on phones so every link is an easy tap target */
 .ft-col a{display:flex;align-items:center;min-height:40px;font-family:var(--font-head);font-size:15px;font-weight:500;line-height:1.35;color:rgba(255,255,255,.82)}
 .ft-col a:hover{color:var(--gold-2)}
@@ -21,7 +21,7 @@ footer .container{max-width:1080px}
 @media (min-width:621px){
   footer{padding:56px 0 18px}
   .ft-grid{grid-template-columns:repeat(4,1fr);gap:32px 24px}
-  .ft-col h4{margin-bottom:14px}
+  .ft-col h3{margin-bottom:14px}
   .ft-col a{min-height:0;margin-bottom:12px}
   .ft-social{gap:18px;margin:16px 0 0}
   .ft-social a{width:26px;height:26px}

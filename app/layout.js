@@ -22,10 +22,11 @@ import { PAGE_ENTRANCES } from '@/data/promo';
 import { BUSINESS, CLARITY_ID, GA_ID, HOME_DESCRIPTION, SITE_URL, SITE_VERIFICATION } from '@/data/site';
 import { ALLOW_INDEXING, LOAD_TRACKING, openGraphBase, twitterBase } from '@/lib/seo';
 
-// Google Fonts, downloaded at build time and served from this site
-const openSans = Open_Sans({ subsets: ['latin'], weight: ['300', '400', '500', '600', '700', '800'], variable: '--font-open-sans' });
+// Google Fonts, downloaded at build time and served from this site. Both are variable fonts, so no `weight` list: one file covers every
+// weight (the site uses 300-800 and 500-700), and the stylesheet carries 19 font rules instead of 83.
+const openSans = Open_Sans({ subsets: ['latin'], variable: '--font-open-sans' });
 // Uppercase condensed display face for every heading (h1–h6 and the hero headline)
-const robotoCondensed = Roboto_Condensed({ subsets: ['latin'], weight: ['500', '600', '700'], variable: '--font-condensed' });
+const robotoCondensed = Roboto_Condensed({ subsets: ['latin'], variable: '--font-condensed' });
 
 // Defaults for every page. A page's own `metadata` export overrides these.
 export const metadata = {
@@ -90,7 +91,8 @@ export default function RootLayout({ children }) {
 
   gtag('config', '${GA_ID}');`}
             </Script>
-            <Script id="clarity" strategy="lazyOnload">
+            {/* Not id="clarity": an element's id becomes window.clarity, which stops Clarity from starting */}
+            <Script id="clarity-loader" strategy="lazyOnload">
               {`(function(c,l,a,r,i,t,y){
     c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
     t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;

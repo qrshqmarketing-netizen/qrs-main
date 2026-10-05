@@ -89,12 +89,13 @@ export const CLARITY_ID = 'ynxdd3rck6';
 // (lib/tracking.js). Only loads on the live site (see LOAD_TRACKING in lib/seo.js), same as Clarity above.
 export const GA_ID = 'G-CJSKXDJCBF';
 
-// Home page title and description (search results + link previews). Worded after the searches that bring people to the home page
-// in Search Console ("roofing contractor Los Angeles", "roofing company Los Angeles"); the H1 (HOME_H1) uses the same phrase.
-export const HOME_TITLE = 'Los Angeles Roofing Contractor | Quality Roofing Specialists';
-export const HOME_H1 = 'Los Angeles Roofing Contractor: Roof Repair & Replacement';
+// Home page title and description (search results + link previews). Worded after the searches that bring people to the home page in
+// Search Console ("roofing contractor in Los Angeles") and after how Royal Roofing, the competitor that ranks #1 for "roofing company orange county",
+// words theirs: both counties in the title, description and H1. The H1 (HOME_H1) uses the same phrase; the brand name is in the description.
+export const HOME_TITLE = 'Roofing Contractor in Los Angeles & Orange County, CA';
+export const HOME_H1 = 'Roofing Contractor in Los Angeles & Orange County';
 export const HOME_DESCRIPTION =
-  'Los Angeles roofing contractor: roof repair & replacement across Southern California. Free roof evaluation, 10-year workmanship warranty. Call (310) 340-1643.';
+  'Quality Roofing Specialists: roofing contractor in Los Angeles & Orange County. Roof repair, replacement, free roof evaluation, 10-year warranty. (310) 340-1643';
 
 // Short trust points in the bar under the hero
 export const PROOF_POINTS = [

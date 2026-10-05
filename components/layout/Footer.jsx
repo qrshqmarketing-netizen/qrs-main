@@ -23,7 +23,7 @@ export default function Footer() {
         <div className="ft-grid">
           {FOOTER.columns.map((col) => (
             <nav className="ft-col" aria-label={col.title} key={col.title}>
-              <h4>{col.title}</h4>
+              <h3>{col.title}</h3>
               {links(col.links)}
             </nav>
           ))}
