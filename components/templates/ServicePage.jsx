@@ -110,7 +110,7 @@ export default function ServicePage({ page, crumbs, eyebrow, scenes = [], offer,
       <Hero
         crumbs={crumbs}
         eyebrow={eyebrow}
-        title={page.title}
+        title={page.h1 || page.title}
         intro={page.hero.intro}
         image={page.image}
         imageAlt={page.imageAlt}

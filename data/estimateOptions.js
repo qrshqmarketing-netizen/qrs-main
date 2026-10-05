@@ -1,4 +1,4 @@
-// Shared between the on-page estimate form (components/sections/EstimateForm.jsx), the Instant Quote
+// Shared between the /start/ request steps (data/start.js), the Instant Quote
 // (components/widgets/InstantQuote.jsx), the lead endpoint (app/api/lead/route.js) and the MCP request_estimate
 // tool (lib/mcpTools.js), so they all offer, and accept, the exact same choices.
 

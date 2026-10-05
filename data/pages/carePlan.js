@@ -6,7 +6,7 @@ import { PHONE } from '../site';
 
 export const CARE_PLAN = {
   keyword: 'roof maintenance plans',
-  metaTitle: 'Roof Maintenance Plans & Pricing | The Roof Care Plan',
+  metaTitle: 'Roof Maintenance Plans & Pricing in Los Angeles',
   metaDescription:
     'Roof maintenance plans and one-time tune-ups for Los Angeles & Orange County homes: three priced tiers, seasonal visits and a photo report every time.',
   image: '/images/shingle-roof-inspection-overhead.webp',

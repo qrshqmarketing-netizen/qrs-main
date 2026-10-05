@@ -97,7 +97,7 @@ export const REDIRECTS = [
   // City pages at the site root
   ['/huntington-beach/', city(OC, 'huntington-beach')],
   ['/woodland-hills-roofing-specialists/', city(LA, 'woodland-hills')],
-  ['/vernon-roofing-specialists/', LA],
+  ['/vernon-roofing-specialists/', city(LA, 'vernon')],
 
   // LA County: old city pages → our city page (same city or a bordering one) or the region page
   ...[

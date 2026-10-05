@@ -31,6 +31,7 @@ export default function ProjectsPage() {
           <div className="projects-hub-copy">
             <h1>{page.hero.heading}</h1>
             <p><Rich text={page.hero.intro} /></p>
+            {page.hero.more && <p className="projects-hub-more"><Rich text={page.hero.more} /></p>}
           </div>
         </div>
       </section>

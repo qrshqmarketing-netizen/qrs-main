@@ -1,12 +1,14 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import BrandLogo from '@/components/ui/BrandLogo';
 import SiteLink from '@/components/ui/SiteLink';
 import Rich from '@/components/ui/Rich';
 import { ArrowRight, Caret, MoonIcon, PhoneIcon, SunIcon } from '@/components/ui/icons';
 import { CONTACT_LINK, CONTRACTORS_LINK, PROJECTS_LINK } from '@/data/catalog';
 import { ABOUT_MENU, COMMERCIAL_MENU, HEADER_CTA, LOCATIONS_MENU, RESIDENTIAL_MENU, SERVICES_MENU } from '@/data/navigation';
+import { START_PATH } from '@/data/start';
 import { PHONE, TEL } from '@/data/site';
 import './Header.css';
 
@@ -24,6 +26,7 @@ export default function Header() {
   const [openItem, setOpenItem] = useState(null); // 'services' | 'res' | 'com' | 'about' | null
   const [activeGroup, setActiveGroup] = useState(0); // roof type shown in the Residential menu
   const [theme, setTheme] = useState('light');
+  const requestPage = usePathname() === START_PATH; // /start/ shows only the logo, theme switch and call button
   const closeTimer = useRef(null);
   const triggers = useRef({});
 
@@ -123,6 +126,7 @@ export default function Header() {
       <div className="container nav">
         <BrandLogo variant="dark-sm" preload />
 
+        {!requestPage && (
         <nav className={'navlinks' + (menuOpen ? ' mobile-open' : '')} id="navlinks" aria-label="Main" onClick={onNavClick}>
           <div {...dropdown('services')}>
             <button {...trigger('services', 'megaServices')}>
@@ -314,14 +318,19 @@ export default function Header() {
           <MenuLink className="nav-contractors-menu" href={CONTRACTORS_LINK.href}>For Contractors</MenuLink>
 
         </nav>
+        )}
 
         {/* Contractors stays beside the Roof Check CTA at every viewport width. */}
         <div className="nav-actions">
-          <MenuLink className="nav-contractors" href={CONTRACTORS_LINK.href} onClick={() => setMenuOpen(false)}>For Contractors</MenuLink>
-          <SiteLink className="btn btn-gold nav-cta" href={HEADER_CTA.href} onClick={() => setMenuOpen(false)}>
-            <span className="nav-cta-full">{HEADER_CTA.label}</span>
-            <span className="nav-cta-compact">Estimate</span>
-          </SiteLink>
+          {!requestPage && (
+            <>
+              <MenuLink className="nav-contractors" href={CONTRACTORS_LINK.href} onClick={() => setMenuOpen(false)}>For Contractors</MenuLink>
+              <SiteLink className="btn btn-gold nav-cta" href={HEADER_CTA.href} onClick={() => setMenuOpen(false)}>
+                <span className="nav-cta-full">{HEADER_CTA.label}</span>
+                <span className="nav-cta-compact">Estimate</span>
+              </SiteLink>
+            </>
+          )}
           <button
             className="nav-theme"
             type="button"
@@ -337,11 +346,13 @@ export default function Header() {
             <span>{PHONE}</span>
           </a>
         </div>
-        <button className="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded={menuOpen} onClick={toggleMenu}>
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        {!requestPage && (
+          <button className="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded={menuOpen} onClick={toggleMenu}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        )}
       </div>
     </header>
   );

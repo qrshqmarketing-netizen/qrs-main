@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import SiteLink from '@/components/ui/SiteLink';
 import { CloseIcon, PhoneIcon } from '@/components/ui/icons';
 import { GBP_PROFILES, SHOW_WELCOME_CARD } from '@/data/campaigns';
+import { START_PATH } from '@/data/start';
 import { PHONE, TEL } from '@/data/site';
 import { captureAttribution } from '@/lib/attribution';
 import './CampaignWelcome.css';
@@ -23,8 +24,7 @@ export default function CampaignWelcome() {
     const profile = SHOW_WELCOME_CARD && GBP_PROFILES[campaign.toLowerCase()];
     if (!profile) return;
     landing.current = window.location.pathname;
-    // The gold button goes to the estimate form when this page has one, otherwise to the contact page
-    setWelcome({ profile, target: document.getElementById('roof-check') ? '#roof-check' : '/contact-us/' });
+    setWelcome({ profile, target: START_PATH }); // the gold button opens the request steps
   }, []);
 
   useEffect(() => {

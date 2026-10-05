@@ -1,4 +1,5 @@
 import Hero from '@/components/sections/Hero';
+import IndexNote from '@/components/sections/IndexNote';
 import ReviewDestinations from '@/components/sections/ReviewDestinations';
 import JsonLd from '@/components/ui/JsonLd';
 import { HOME, REVIEWS_LINK } from '@/data/catalog';
@@ -18,6 +19,7 @@ export default function ReviewsPage() {
       <JsonLd data={schema} />
       <Hero crumbs={CRUMBS} eyebrow="Reviews" title={page.hero.heading} intro={page.hero.intro} image={page.hero.image} imageAlt={page.hero.imageAlt} actions={[]} />
       <ReviewDestinations />
+      <IndexNote note={page.note} />
     </main>
   );
 }

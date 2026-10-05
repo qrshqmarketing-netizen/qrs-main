@@ -9,3 +9,5 @@
 @media (min-width:901px){
   .projects-hub-intro{padding-top:112px;padding-bottom:24px}
 }
+
+.projects-hub-copy .projects-hub-more{margin-top:16px;font-family:inherit;font-size:clamp(15px,1.6vw,17px);font-weight:500;line-height:1.7;color:var(--ink)}

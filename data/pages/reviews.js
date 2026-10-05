@@ -32,4 +32,12 @@ export const REVIEWS_PAGE = {
     intro:
       'Leave customer reviews for Quality Roofing Specialists on Google or Yelp: pick the location you worked with below, then the platform you’d like to use. Thanks for choosing QRS — your review helps other local property owners.',
   },
+  // Text block under the location cards (components/sections/IndexNote.jsx)
+  note: {
+    heading: 'How Your Review Helps',
+    paragraphs: [
+      'Reviews on Google and Yelp help homeowners and clients choose a roofer. If you worked with QRS, a few sentences about your roof, the work we did and how it went will help the next person who is deciding. Choose the office that handled your project above: Woodland Hills, West Hollywood or Vernon.',
+      'Thinking about a roof of your own? See our [recent roofing projects](/projects/) or the [cities we serve](/service-areas/), then [contact us](/contact-us/) to start with a free roof evaluation.',
+    ],
+  },
 };

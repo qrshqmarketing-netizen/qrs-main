@@ -1,4 +1,5 @@
 import Rich from '@/components/ui/Rich';
+import SiteLink from '@/components/ui/SiteLink';
 import { FAQS } from '@/data/faqs';
 import './Faq.css';
 
@@ -28,7 +29,7 @@ export default function Faq({
         </div>
         {cta && (
           <div className="faq-cta">
-            <a className="btn btn-gold" href="#roof-check">Get Pro Advice</a>
+            <SiteLink className="btn btn-gold" href="#roof-check">Get Pro Advice</SiteLink>
           </div>
         )}
       </div>

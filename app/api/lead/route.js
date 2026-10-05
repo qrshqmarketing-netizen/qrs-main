@@ -1,4 +1,4 @@
-// Receives the estimate form (components/sections/EstimateForm.jsx) and the Instant Quote drawer
+// Receives the request steps on /start/ (components/sections/StartStepper.jsx) and the Instant Quote drawer
 // (components/widgets/InstantQuote.jsx), checks the fields and hands the lead to lib/leads.js (email + Google Sheet).
 import { FOUND_US_OPTIONS, ROOF_TYPES, SERVICE_OPTIONS } from '@/data/estimateOptions';
 import { leadAttribution } from '@/lib/attribution';

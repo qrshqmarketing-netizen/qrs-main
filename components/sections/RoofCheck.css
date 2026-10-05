@@ -35,3 +35,9 @@
 .form-card .lead{font-size:.95rem;margin-bottom:25px}
 .form-card .btn{width:100%}
 .check.check-white{background:var(--paper)}
+/* The start card: the first question, each choice opening /start/ with that answer given */
+.check-ask{margin:0 0 12px;font-weight:700;color:var(--navy)}
+.check-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.check-chip{padding:10px 16px;border:1.5px solid var(--line);border-radius:99px;background:var(--paper);color:var(--ink);font-size:15px;font-weight:600;text-decoration:none;transition:border-color .15s,background .15s}
+.check-chip:hover{border-color:var(--gold);background:rgba(212,181,114,.16)}
+.check-chip:focus-visible{outline:3px solid rgba(212,181,114,.85);outline-offset:2px}

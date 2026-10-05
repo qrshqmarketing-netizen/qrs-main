@@ -12,7 +12,6 @@ import './SeasonPromo.css';
 
 const FIRST_MS = 3000, EXIT_ARM_MS = 8000;
 const FLICK_PX = 350, FLICK_MS = 300; // phones: an upward scroll this far this fast, once they're a screen down, reads as leaving
-const SERVICE = 'Roof inspection / roof check'; // estimate form option picked by the promo button (data/estimateOptions.js)
 const PHOTO = '/images/season-promo-storm-over-los-angeles.webp'; // the card's background (SeasonPromo.css)
 
 // Fetch the background photo a few seconds before the card can open, so it doesn't appear on an empty navy card
@@ -127,11 +126,9 @@ export default function SeasonPromo() {
 
   const close = () => setView(null);
 
-  // Pre-pick the roof inspection in the estimate form, then let the #roof-check link scroll to it
+  // The button's link (data/promo.js) opens the request steps with the roof inspection picked; remember the claim and close the card
   const claim = () => {
     local.set('promoClaimed', '1');
-    const select = document.getElementById('service');
-    if (select) select.value = SERVICE;
     setView(null);
   };
 

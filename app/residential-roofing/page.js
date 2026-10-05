@@ -37,7 +37,7 @@ export default function ResidentialRoofingPage() {
       <JsonLd data={schema} />
       <Hero
         crumbs={CRUMBS}
-        eyebrow="Los Angeles & Orange County"
+        eyebrow="Homes, HOAs & Multi-Family"
         title={page.hero.heading}
         intro={page.hero.intro}
         image={HERO_IMAGE}

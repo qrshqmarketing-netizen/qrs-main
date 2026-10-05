@@ -14,7 +14,7 @@ import JsonLd from '@/components/ui/JsonLd';
 import { COMMERCIAL_LINK, RESIDENTIAL } from '@/data/catalog';
 import { FAQS } from '@/data/faqs';
 import { CAREERS_PAGE, CAREERS_TEASER } from '@/data/pages/careers';
-import { HOME_DESCRIPTION, HOME_TITLE } from '@/data/site';
+import { HOME_DESCRIPTION, HOME_H1, HOME_TITLE } from '@/data/site';
 import { LATEST_PROJECTS } from '@/data/projectPages';
 import { RECENT_WORK, RECENT_WORK_SUB } from '@/data/recentWork';
 import { ROOF_FINANCING } from '@/data/services/programs';
@@ -32,6 +32,9 @@ export const metadata = {
 // The home page's "Roofing Services" section: just the two top-level categories from the nav.
 // The hero photo slider: the newest projects' cover photos, newest first (LATEST_PROJECTS in data/projectPages.js)
 const HERO_SLIDES = LATEST_PROJECTS.map((project) => ({ src: project.image, alt: project.imageAlt }));
+
+// The "Recent Work" carousel (data/recentWork.js) is hidden for now: set this to true to show it again
+const SHOW_RECENT_WORK = false;
 
 const HOME_SERVICES = [
   {
@@ -73,6 +76,7 @@ export default function HomePage() {
         {/* The keyword line above the big headline is the page's H1 (matches the page title) */}
         <Hero
           h1="eyebrow"
+          eyebrow={HOME_H1}
           intro="Clear inspections. Straightforward estimates. Clean workmanship."
           image={HERO_SLIDES[0].src}
           imageAlt={HERO_SLIDES[0].alt}
@@ -86,7 +90,7 @@ export default function HomePage() {
         <Services title="Roofing Systems" items={HOME_PRODUCTS} compact cta={false} pattern={false} slider id="roofing-systems" />
         <ServiceArea />
         <WhyQrs />
-        <ProjectCarousel heading="Recent Work" sub={RECENT_WORK_SUB} projects={RECENT_WORK} id="work" pattern />
+        {SHOW_RECENT_WORK && <ProjectCarousel heading="Recent Work" sub={RECENT_WORK_SUB} projects={RECENT_WORK} id="work" pattern />}
         <PartnerLogos {...ROOF_FINANCING.partners} />
         <FeatureBand
           id="careers"

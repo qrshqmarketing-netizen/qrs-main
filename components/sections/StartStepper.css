@@ -1,0 +1,55 @@
+/* ---------- /start/: the request steps (StartStepper.jsx). The offer card and form card come from RoofCheck.css ---------- */
+.start{background:var(--wash);padding:96px 0 56px}
+/* Two rows at every width: the steps first, the offer card under them, each centred in a readable column */
+.check-grid.start-grid{grid-template-columns:minmax(0,880px);justify-content:center;gap:28px}
+.start-grid .form-card{order:-1}
+.check-grid.start-grid .check-card{position:static}
+.st-card h1{font-size:32px;line-height:1.05;margin:0 0 4px;color:var(--navy)}
+.st-card h2{font-size:22px!important;line-height:1.2;margin:22px 0 14px;color:var(--navy);outline:none}
+.st-progress{height:6px;border-radius:99px;background:var(--line);margin:18px 0 12px;overflow:hidden}
+.st-progress span{display:block;height:100%;background:var(--gold);border-radius:99px;transition:width .3s ease}
+.st-steps{display:flex;gap:6px 14px;flex-wrap:wrap;list-style:none;margin:0 0 4px;padding:0;font-size:13px;font-weight:700;color:var(--muted)}
+.st-steps li{display:flex;align-items:center}
+.st-steps button,.st-steps li>span{display:inline-flex;align-items:center;gap:6px;background:none;border:0;padding:2px 0;font:inherit;color:inherit}
+.st-steps button{cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.st-steps i{display:grid;place-items:center;width:20px;height:20px;border-radius:50%;border:1.5px solid var(--line);font-style:normal;font-size:11px}
+.st-steps .is-done i{background:var(--gold);border-color:var(--gold);color:#10243a}
+.st-steps .is-current{color:var(--navy)}
+.st-steps .is-current i{border-color:var(--navy);color:var(--navy)}
+.st-l{display:none}
+.st-steps .is-current .st-l{display:inline}
+.st-note,.st-summary,.st-hint{color:var(--muted);font-size:14px;line-height:1.5;margin:10px 0 0}
+.st-summary{color:var(--gold-ink);font-weight:700;margin:-4px 0 14px}
+.st-hint{display:block;margin-top:6px}
+.st-choices{display:grid;gap:10px}
+.st-choice{display:flex;flex-direction:column;gap:3px;text-align:left;width:100%;padding:15px 18px;background:var(--paper);border:1.5px solid var(--line);border-radius:var(--radius);color:var(--ink);font:inherit;cursor:pointer;transition:border-color .15s,background .15s}
+.st-choice b{color:var(--navy);font-size:17px;font-weight:700}
+.st-choice span{color:var(--muted);font-size:14px;line-height:1.4}
+.st-choice:hover{border-color:var(--gold)}
+.st-choice.is-on{border-color:var(--gold);background:rgba(212,181,114,.16);box-shadow:0 0 0 1px var(--gold) inset}
+.st-choice:focus-visible,.st-chip:focus-visible,.st-steps button:focus-visible,.st-back:focus-visible{outline:3px solid rgba(212,181,114,.85);outline-offset:2px}
+.st-group{border:0;padding:0;margin:0 0 20px;min-width:0}
+.st-group legend{padding:0;margin:0 0 10px;font-weight:700;color:var(--navy);font-size:15px}
+.st-chips{display:flex;flex-wrap:wrap;gap:8px}
+.st-chip{padding:10px 16px;border:1.5px solid var(--line);border-radius:99px;background:var(--paper);color:var(--ink);font:inherit;font-size:15px;font-weight:600;cursor:pointer;transition:border-color .15s,background .15s}
+.st-chip:hover{border-color:var(--gold)}
+.st-chip.is-on{border-color:var(--gold);background:rgba(212,181,114,.2);box-shadow:0 0 0 1px var(--gold) inset}
+.st-urgent{margin-top:16px;padding:16px 18px;border-radius:var(--radius);border:1.5px solid var(--plum);background:rgba(107,37,69,.07);display:grid;gap:12px}
+.st-urgent p{margin:0;color:var(--ink);font-size:15px;line-height:1.55}
+.st-urgent-line{margin:0 0 14px;padding:10px 14px;border-radius:var(--radius);background:rgba(107,37,69,.08);color:var(--ink);font-size:14px;font-weight:600}
+.st-urgent-line a{color:inherit;text-decoration:underline}
+.st-actions{margin-top:6px}
+.st-actions .btn:disabled{opacity:.5;cursor:not-allowed}
+.st-card .form-note{margin-top:14px}
+.st-back{margin-top:16px;padding:6px 0;background:none;border:0;color:var(--muted);font:inherit;font-weight:700;cursor:pointer}
+.st-back:hover{color:var(--navy)}
+@media (min-width:621px){
+  .start{padding:112px 0 72px}
+  .st-card h1{font-size:40px}
+  .st-card h2{font-size:26px!important}
+  .st-l{display:inline}
+  .check-grid.start-grid .check-points{grid-template-columns:1fr 1fr;gap:14px 28px}
+}
+@media (min-width:901px){
+  .start{padding:128px 0 88px}
+}

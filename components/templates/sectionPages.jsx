@@ -46,7 +46,7 @@ export function SectionHub({ section }) {
     <HubPage
       hub={section.hub}
       crumbs={sectionCrumbs(section)}
-      eyebrow={section.parent ? section.parent.label : 'Los Angeles & Orange County'}
+      eyebrow={section.parent ? section.parent.label : isCommercial(section) ? 'Offices, Retail & Warehouses' : 'Los Angeles & Orange County'}
       image={section.image}
       imageAlt={section.imageAlt}
       scene={section.scenes[0]}

@@ -1,4 +1,5 @@
 import Rich from '@/components/ui/Rich';
+import SiteLink from '@/components/ui/SiteLink';
 import './QrsStandard.css';
 
 const ABOUT = [
@@ -18,7 +19,7 @@ export default function QrsStandard() {
             <Rich text={p} />
           </p>
         ))}
-        <a className="btn btn-gold" href="#roof-check">Get Pro Advice</a>
+        <SiteLink className="btn btn-gold" href="#roof-check">Get Pro Advice</SiteLink>
       </div>
     </section>
   );

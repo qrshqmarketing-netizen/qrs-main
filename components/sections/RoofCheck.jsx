@@ -1,8 +1,10 @@
+import Link from 'next/link';
 import { OFFERS } from '@/data/offers';
-import EstimateForm from './EstimateForm';
+import { NEEDS, START_PATH, startHref } from '@/data/start';
 import './RoofCheck.css';
 
-// Offer card (data/offers.js) + estimate request form. Every page has one, so "Get Pro Advice" always has a target.
+// Offer card (data/offers.js) + a start card that opens the request steps at /start/ (components/sections/StartStepper.jsx). Every page
+// has one. The start card asks the first question: each choice opens /start/ with that answer already given.
 // tone="white" drops the pale blue background when the section above is also pale blue.
 export default function RoofCheck({ tone, offer = 'home' }) {
   const o = OFFERS[offer];
@@ -29,8 +31,18 @@ export default function RoofCheck({ tone, offer = 'home' }) {
         <div className="form-card" id="estimate">
           <div className="eyebrow">Start here</div>
           <h2>Tell us what you need.</h2>
-          <p className="lead">Two minutes. A clear next step. No pressure.</p>
-          <EstimateForm />
+          <p className="lead">A few quick steps. A clear next step. No pressure.</p>
+          <p className="check-ask" id="check-ask">What do you need help with?</p>
+          <div className="check-chips" role="group" aria-labelledby="check-ask">
+            {NEEDS.map((need) => (
+              <Link className="check-chip" href={startHref(need.id)} prefetch={false} key={need.id}>
+                {need.label}
+              </Link>
+            ))}
+          </div>
+          <Link className="btn btn-gold" href={START_PATH}>
+            Start My Free Roof Evaluation →
+          </Link>
         </div>
       </div>
     </section>

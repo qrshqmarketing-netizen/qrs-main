@@ -4,6 +4,7 @@ import SiteLink from '@/components/ui/SiteLink';
 import { FOOTER } from '@/data/navigation';
 import { BUSINESS, SOCIAL } from '@/data/site';
 import CopyrightYear from './CopyrightYear';
+import HideOnStart from './HideOnStart';
 import './Footer.css';
 
 const links = (list) =>
@@ -17,6 +18,8 @@ export default function Footer() {
   return (
     <footer>
       <div className="container">
+        {/* The request page (/start/) keeps only the small print below */}
+        <HideOnStart>
         <div className="ft-grid">
           {FOOTER.columns.map((col) => (
             <nav className="ft-col" aria-label={col.title} key={col.title}>
@@ -34,6 +37,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
+        </HideOnStart>
         <div className="ft-copy">
           <span>
             Copyright &copy; <CopyrightYear builtYear={new Date().getFullYear()} /> {BUSINESS.name}, All Rights Reserved

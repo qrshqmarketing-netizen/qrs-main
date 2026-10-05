@@ -99,6 +99,7 @@ export const FLAT_CONTENT = {
       slug: 'repair',
       keyword: 'flat roof repair',
       title: 'Flat Roof Repair',
+      h1: 'Flat Roof Repair in Los Angeles & Orange County',
       navLabel: 'Roof Repairs',
       card: 'Leaks, blisters, open seams and failed flashings traced to the source, repaired carefully and documented with photos.',
       metaTitle: 'Flat Roof Repair in Los Angeles',

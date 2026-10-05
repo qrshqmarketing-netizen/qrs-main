@@ -15,7 +15,7 @@ import { hoursText } from '@/lib/hours';
 export const CHAT_ENDPOINT = process.env.NEXT_PUBLIC_CHAT_ENDPOINT || '/api/chat/';
 
 const call = `<a href="${TEL}">${PHONE}</a>`;
-const check = '<a href="#roof-check" data-qa-close>free roof evaluation</a>';
+const check = '<a href="/start/" data-qa-close>free roof evaluation</a>';
 
 export const GREETING = [
   'Hi! I\'m the QRS Roof Assistant. 👋 I can answer questions about roof repairs, replacements, our free roof evaluation and more.',
@@ -71,7 +71,7 @@ export const ANSWERS = [
   },
   {
     match: /199|free|evaluat|roof check|inspect|inspection|look at/,
-    answer: 'Yes, the <a href="#roof-check" data-qa-close>roof evaluation</a> is free. We use drone footage to see your roof\'s condition, explain it in plain English and give you a clear next step: repair, monitor, maintain or replace. The $199 Roof Check is optional: a tune-up where we seal the vents, pipes and flashings, paid after the visit and credited toward a replacement if you move forward.',
+    answer: 'Yes, the <a href="/start/" data-qa-close>roof evaluation</a> is free. We use drone footage to see your roof\'s condition, explain it in plain English and give you a clear next step: repair, monitor, maintain or replace. The $199 Roof Check is optional: a tune-up where we seal the vents, pipes and flashings, paid after the visit and credited toward a replacement if you move forward.',
     chips: ['Book a free evaluation', 'What areas do you serve?'],
   },
   {
@@ -111,7 +111,7 @@ export const ANSWERS = [
   },
   {
     match: /book|schedule|appointment|sign up|get started|start/,
-    answer: 'Great! Leave your name and phone number here and we\'ll call you to set it up, or <a href="#estimate" data-qa-close>fill out the quick form</a> (about two minutes), or call us at ' + call + '.',
+    answer: 'Great! Leave your name and phone number here and we\'ll call you to set it up, or <a href="/start/" data-qa-close>fill out the quick form</a> (about two minutes), or call us at ' + call + '.',
     chips: ['Talk to a person'],
   },
   {
@@ -141,7 +141,7 @@ export const ANSWERS = [
 export const CONTACT_RE = /[\w.+-]+@[\w-]+(\.[\w-]+)+|\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}/;
 export const CONTACT_ANSWERS = {
   saved: 'Thanks! Your details are with our team, and someone from QRS will follow up soon. If it\'s urgent, call us at ' + call + '.',
-  notSaved: 'Thanks! So we don\'t miss you, please call us at ' + call + ' or <a href="#estimate" data-qa-close>send the quick form</a>, and we\'ll follow up.',
+  notSaved: 'Thanks! So we don\'t miss you, please call us at ' + call + ' or <a href="/start/" data-qa-close>send the quick form</a>, and we\'ll follow up.',
 };
 
 // Used when nothing above matches

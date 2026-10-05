@@ -1,3 +1,5 @@
+import { startHref } from './start';
+
 // Seasonal promo for the free roof evaluation (components/widgets/SeasonPromo.jsx): a centered modal on a visitor's
 // first visit, and a "before you go" version when a visitor looks like they are leaving (mouse to the top of the window on desktop;
 // a quick flick back up the page or returning from another tab or app on phones). Set `active: false`
@@ -13,9 +15,9 @@ export const SEASON_PROMO = {
     heading: 'Before You Go: Is Your Roof Ready for El Niño?',
     text: 'Heavy El Niño rains are on the way. Book your free drone roof evaluation now and know exactly where your roof stands before the first big storm.',
   },
-  cta: { label: 'Book My Free Evaluation Now', href: '#roof-check' },
+  cta: { label: 'Book My Free Evaluation Now', href: startHref('inspection') }, // the request steps with the roof inspection already picked
   rain: true, // faint rain falling inside the popup (components/widgets/PromoRain.jsx); false switches it off
-  exclude: ['/commercial-roofing/', '/residential-roofing/hoa-multi-family/', '/service-areas/la-county/vernon/', '/contractors/', '/careers/'],
+  exclude: ['/start/', '/thank-you/', '/commercial-roofing/', '/residential-roofing/hoa-multi-family/', '/service-areas/la-county/vernon/', '/contractors/', '/careers/'],
 };
 
 // The site's heading fade-ups and scroll reveals are off (they were switched off while the hero rain ran, and stay off);

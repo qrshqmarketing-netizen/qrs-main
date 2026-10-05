@@ -20,5 +20,8 @@ export const PROJECTS_PAGE = {
     heading: 'Our Roofing Projects Near You',
     intro:
       'Browse roofing projects from homes, communities and commercial properties across Southern California, featuring tile, shingle and flat roof work.',
+    // Second paragraph under the intro, smaller type. Describes only what the project pages show.
+    more:
+      'Each project page shows the finished roof in photos, where it is and how the work was done. So far that includes [shingle roof replacements](/residential-roofing/shingle-roofing/replacement/) on apartment and multi-family buildings in Panorama City and San Pedro, a single-story home in San Pedro, a round, 12-sided home with a new [flat roof](/residential-roofing/flat-roofing/replacement/) in Hollywood Hills West, and a Mid-Wilshire building with both [tile](/residential-roofing/tile-roofing/replacement/) and flat roofing. Use the map to find the project closest to you, or enter your ZIP code. Planning a roof of your own? [Contact us](/contact-us/) to start with a free roof evaluation.',
   },
 };

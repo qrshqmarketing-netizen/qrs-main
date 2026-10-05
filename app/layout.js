@@ -9,6 +9,7 @@ import { Open_Sans, Roboto_Condensed } from 'next/font/google';
 import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
 import CampaignWelcome from '@/components/widgets/CampaignWelcome';
+import PageTrail from '@/components/widgets/PageTrail';
 import CookieNotice from '@/components/widgets/CookieNotice';
 import InstantQuoteLoader from '@/components/widgets/InstantQuoteLoader';
 import ReviewToast from '@/components/widgets/ReviewToast';
@@ -78,6 +79,7 @@ export default function RootLayout({ children }) {
         <CookieNotice />
         <SeasonPromo />
         <CampaignWelcome />
+        <PageTrail />
         {LOAD_TRACKING && (
           <>
             <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="lazyOnload" />

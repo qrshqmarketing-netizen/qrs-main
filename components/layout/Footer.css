@@ -33,3 +33,5 @@ footer .container{max-width:1080px}
   .ft-grid{grid-template-columns:1.3fr repeat(4,1fr)}
   .ft-brand{grid-column:1;grid-row:1;justify-content:flex-start;margin-bottom:0}
 }
+/* /start/ shows only the small print (HideOnStart): no gap above it */
+footer .container > .ft-copy:first-child{margin-top:0}

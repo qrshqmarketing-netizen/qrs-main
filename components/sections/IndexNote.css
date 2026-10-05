@@ -1,0 +1,10 @@
+/* ---------- Index pages: closing text block ---------- */
+.index-note{background:var(--paper);padding:48px 0}
+.index-note-body{max-width:820px}
+.index-note h2{color:var(--navy);font-size:clamp(24px,3vw,32px);font-weight:500;line-height:1.15;margin:0 0 14px}
+.index-note p{color:var(--ink);font-size:16px;line-height:1.7;margin:0 0 14px}
+.index-note p:last-child{margin-bottom:0}
+@media (min-width:901px){
+  .index-note{padding:64px 0}
+  .index-note p{font-size:17px}
+}

@@ -40,13 +40,14 @@ To test the finished (production) version: `npm run build`, then `npm start`.
 | Emergency & storm damage, roof inspection and roof tune-ups (one page each for every roof type), maintenance plans and financing pages | `data/services/programs.js` (the maintenance plan page itself: `data/pages/carePlan.js`) |
 | Region pages (LA County, Orange County) | `data/regionPages.js` |
 | City pages (intro, neighborhoods, local FAQs) | `data/locationPages.js` |
-| Blog posts | `data/blog/posts.js` (blog index wording: `data/pages/blog.js`) |
+| Blog posts | `data/blog/posts.js` (blog index wording and its closing text block: `data/pages/blog.js`; the Reviews and Projects pages' text is in `data/pages/reviews.js` and `data/pages/projects.js`) |
 | Contact, Reviews, Projects, Privacy, Terms and Accessibility pages | `data/pages/contact.js`, `reviews.js`, `projects.js`, `legal.js` |
 | Redirects from the old WordPress addresses | `data/redirects.js` |
 | Sitemap last-modified dates (updated automatically when a page's text changes; runs before every build, or `npm run lastmod`) | `data/lastModified.json` (script: `scripts/lastmod.mjs`) |
 | Project photo gallery on the city pages | `data/projects.js` |
-| $199 Roof Check / roof survey card beside the estimate form | `data/offers.js` |
-| Home page hero photos (the newest projects, newest first) | `LATEST_PROJECTS` in `data/projectPages.js` |
+| $199 Roof Check / roof survey card beside the request steps | `data/offers.js` |
+| The step-by-step request form at `/start/` (questions, choices, how answers become a lead) | `data/start.js` |
+| Home page hero photos and the Projects page map (the project list, newest first) | `PROJECT_PAGES` in `data/pages/projects.js` |
 | Residential hub, About, Careers, Contractors (including white-label roofing), Locations pages | `data/pages/` |
 | Careers section on the home page | `CAREERS_TEASER` in `data/pages/careers.js` (roles come from the Careers page) |
 | Page names, addresses, card blurbs, placeholder art | `data/catalog.js` |
@@ -55,7 +56,7 @@ To test the finished (production) version: `npm run build`, then `npm start`.
 | Google reviews (hand-picked; also the fallback for the live ones) | `data/reviews.js` |
 | Live Google reviews in the testimonials slider (locations' Place IDs, which stars to show) | `data/places.js` (key: `GOOGLE_PLACES_KEY`) |
 | Service regions and cities (map, region and city pages) | `data/locations.js` |
-| Outline drawn on the service-area map (Los Angeles and Orange counties, western Riverside County) | `data/serviceAreaOutline.js` |
+| Outline drawn on the service-area map (Los Angeles and Orange counties, western Riverside County, southwest San Bernardino County) | `data/serviceAreaOutline.js` |
 | Chat assistant answers | `data/assistant.js` |
 | Google Business Profile welcome card (shown for links tagged `utm_campaign=gbp-<profile>`) | `data/campaigns.js` |
 | Instant Quote prices and financing (visitors can pick several pitches, roof types and materials to compare) | `data/instantQuote.js` |
@@ -135,7 +136,7 @@ Everything points at the live address, **https://qualityroofingspecialists.com**
 This project is on public GitHub, so **never put API keys in the code**. Copy `.env.example` to `.env.local` (which git ignores) and fill in what you use:
 
 - `NEXT_PUBLIC_GOOGLE_MAPS_KEY`: real roof measurements in the Instant Quote drawer (Google Solar + Geocoding APIs). Restrict the key to your domain in Google Cloud Console. Without it, the drawer runs in demo mode.
-- **Leads** (`lib/leads.js`): the estimate form and Instant Quote post to `/api/lead`; the chat assistant and AI agents use the same delivery. Every lead is emailed through Resend to scheduling@qualityroofingspecialists.com (`LEADS_EMAIL` in `data/site.js`; settings `RESEND_API_KEY`, `LEADS_TO_EMAIL` to override the address, `LEADS_FROM_EMAIL`) and added as a row to the **QRS Website Leads** Google Sheet through the Apps Script web app in `scripts/google-sheet-leads.gs` (`LEADS_SHEET_WEBHOOK_URL`, `LEADS_SHEET_SECRET`; setup steps are at the top of that file). Successful form submissions send a `generate_lead` event to Google Analytics 4 (`lib/tracking.js`). A visit's `utm_source`, `utm_medium` and `utm_campaign` (the Google Business Profile links) are noted on arrival (`lib/attribution.js`) and added to every lead as the **UTM source / medium / campaign** and **Landing page** rows in the email and columns in the sheet (after re-deploying the updated `scripts/google-sheet-leads.gs`, which adds those headers itself).
+- **Leads** (`lib/leads.js`): the request steps at `/start/` and Instant Quote post to `/api/lead`; the chat assistant and AI agents use the same delivery. Every lead is emailed through Resend to scheduling@qualityroofingspecialists.com (`LEADS_EMAIL` in `data/site.js`; settings `RESEND_API_KEY`, `LEADS_TO_EMAIL` to override the address, `LEADS_FROM_EMAIL`) and added as a row to the **QRS Website Leads** Google Sheet through the Apps Script web app in `scripts/google-sheet-leads.gs` (`LEADS_SHEET_WEBHOOK_URL`, `LEADS_SHEET_SECRET`; setup steps are at the top of that file). Successful form submissions send a `generate_lead` event to Google Analytics 4 (`lib/tracking.js`). A visit's `utm_source`, `utm_medium` and `utm_campaign` (the Google Business Profile links) are noted on arrival (`lib/attribution.js`) and added to every lead as the **UTM source / medium / campaign** and **Landing page** rows in the email and columns in the sheet (after re-deploying the updated `scripts/google-sheet-leads.gs`, which adds those headers itself).
 - `OPENROUTER_API_KEY` and `OPENROUTER_MODEL`: the AI backend for the chat assistant (`app/api/chat/route.js`, via [OpenRouter](https://openrouter.ai)). Without a key, the widget falls back to the built-in canned answers in `data/assistant.js`. Double-check `OPENROUTER_MODEL`'s exact slug at [openrouter.ai/models](https://openrouter.ai/models) before going live.
 - `CRM_LEAD_ENDPOINT` and `CRM_LEAD_TOKEN`: optional; also sends every lead to a CRM webhook as JSON (`lib/leads.js`). With no lead channel set up, leads are just logged to the server console.
 - `NEXT_PUBLIC_CHAT_ENDPOINT`: only set this to point the chat widget at a different, separately hosted AI backend instead of the built-in one above.

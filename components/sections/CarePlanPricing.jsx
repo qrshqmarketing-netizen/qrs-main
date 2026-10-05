@@ -1,6 +1,7 @@
 'use client';
 
 import { Fragment, useState } from 'react';
+import SiteLink from '@/components/ui/SiteLink';
 import { CARE_PLAN } from '@/data/pages/carePlan';
 import { PHONE, TEL } from '@/data/site';
 import './CarePlanPricing.css';
@@ -46,9 +47,9 @@ export default function CarePlanPricing() {
                 <span>/year</span>
               </div>
               <p className="cp-visits">{plan.visits}</p>
-              <a className={'btn ' + (plan.popular ? 'btn-gold' : 'btn-line')} href="#roof-check">
+              <SiteLink className={'btn ' + (plan.popular ? 'btn-gold' : 'btn-line')} href="#roof-check">
                 Get Started
-              </a>
+              </SiteLink>
             </div>
           ))}
         </div>

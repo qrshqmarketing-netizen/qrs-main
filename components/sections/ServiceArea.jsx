@@ -19,13 +19,13 @@ function nearestLocation(point) {
   return { location, distance };
 }
 
-// Service area map: a ZIP code check, the Los Angeles and Orange County borders plus western Riverside County (Corona, Riverside,
-// Menifee, Temecula) outlined on an OpenStreetMap map (data/serviceAreaOutline.js), and a link to every city page that exists
-// (the Riverside area has none yet). The map library, its tiles and the outline load only
+// Service area map: a ZIP code check, the Los Angeles and Orange County borders plus the Inland Empire (western Riverside County
+// and the southwest corner of San Bernardino County, from Pomona to Riverside, Corona and Temecula) outlined on an OpenStreetMap
+// map (data/serviceAreaOutline.js), and a link to every city page that exists (the Inland Empire has none yet). The map library, its tiles and the outline load only
 // when the map is about to scroll into view. Mobile keeps the map still so it never traps a page swipe.
 export default function ServiceArea({
   heading = 'Locations We Proudly Serve',
-  sub = 'The outlined area is where we work: Los Angeles County, Orange County and western Riverside County. Enter your ZIP code to confirm we cover you.',
+  sub = 'The outlined area is where we work: Los Angeles County, Orange County, and the Inland Empire from Pomona to Riverside, Corona and Temecula. Enter your ZIP code to confirm we cover you.',
 }) {
   const wrapRef = useRef(null);
   const mapEl = useRef(null);
@@ -163,7 +163,7 @@ export default function ServiceArea({
           </div>
 
           <div className="loc-map-box">
-            <div id="qrsMap" ref={mapEl} role="region" aria-label="Map outlining the Los Angeles County, Orange County and western Riverside County area QRS serves">
+            <div id="qrsMap" ref={mapEl} role="region" aria-label="Map outlining the Los Angeles County, Orange County and Inland Empire area QRS serves">
               {offline && (
                 <div style={{ display: 'grid', placeItems: 'center', height: '100%', color: '#cfdae5', fontSize: '.9rem' }}>Map unavailable offline</div>
               )}

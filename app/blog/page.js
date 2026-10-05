@@ -1,4 +1,5 @@
 import Hero from '@/components/sections/Hero';
+import IndexNote from '@/components/sections/IndexNote';
 import PostCards from '@/components/sections/PostCards';
 import JsonLd from '@/components/ui/JsonLd';
 import { BLOG_LINK, blogPath, HOME } from '@/data/catalog';
@@ -34,6 +35,7 @@ export default function BlogPage() {
         {...(LATEST_POST?.image && { image: LATEST_POST.heroImage || LATEST_POST.image, imageAlt: LATEST_POST.imageAlt, imagePosition: 'center 30%' })}
       />
       <PostCards posts={BLOG_POSTS} heading={PUBLISHED_POSTS.length ? 'Latest Articles' : 'Coming Soon'} />
+      <IndexNote note={page.note} />
     </main>
   );
 }

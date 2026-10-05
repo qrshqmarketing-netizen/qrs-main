@@ -6,8 +6,8 @@ export const COMMERCIAL_CONTENT = {
     metaTitle: 'Commercial Roofing in Los Angeles',
     metaDescription: 'Commercial roofing in LA & Orange County for offices, retail, churches, warehouses and more. Roofer-led surveys and written scopes. Request an estimate.',
     hero: {
-      heading: 'Commercial Roofing Services',
-      intro: 'QRS provides commercial roofing across Los Angeles and Orange County, with repairs, replacement and scheduled maintenance for office buildings, retail stores, churches, warehouses, shopping centers and more. Every project starts with a roofer-led survey and a written scope, and the work is planned around how your building runs.',
+      heading: 'Commercial Roofing in Los Angeles & Orange County',
+      intro: 'QRS is a commercial roofing contractor in Los Angeles and Orange County, with repairs, replacement and scheduled maintenance for office buildings, retail stores, churches, warehouses, shopping centers and more. Every project starts with a roofer-led survey and a written scope, and the work is planned around how your building runs.',
       highlights: ['Roofer-led roof surveys', 'Work planned around your operations', 'Closeout photos for your records'],
     },
     overview: {

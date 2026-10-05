@@ -4,11 +4,12 @@ export const EMERGENCY_ROOF_REPAIR = {
   slug: 'emergency-roof-repair',
   keyword: 'emergency roof repair',
   title: 'Emergency Roof Repair & Storm Damage',
+  h1: 'Emergency Roof Repair & Storm Damage in Los Angeles & OC',
   navLabel: 'Emergency & Storm Damage',
   card: 'Storm damage or a sudden leak? A roofer assesses and photographs the damage, adds temporary protection when it’s needed and follows with a permanent repair.',
   metaTitle: 'Emergency Roof Repair & Storm Damage in LA & OC',
   metaDescription:
-    'Emergency roof repair in Los Angeles & Orange County for active leaks and storm damage: after-hours calls, tarps when needed and photos for insurance.',
+    'Emergency roof repair in Los Angeles & Orange County for active leaks, storm and wind damage: after-hours calls, tarps when needed and photos for insurance.',
   image: '/images/emergency-roof-repair-hero.webp',
   imageAlt: 'Roofer reviewing storm damage with homeowners beside a blue roof tarp',
   hero: {
@@ -111,7 +112,7 @@ export const ROOF_MAINTENANCE_PLANS = {
   title: 'The Roof Care Plan',
   navLabel: 'Maintenance Plans',
   card: 'Three priced plans, scheduled before and after the rains, with a written photo report every visit — see pricing for your roof size.',
-  metaTitle: 'Roof Maintenance Plans & Pricing | The Roof Care Plan',
+  metaTitle: 'Roof Maintenance Plans & Pricing in Los Angeles',
   metaDescription:
     'Roof maintenance plans for Los Angeles & Orange County homes: three priced tiers, seasonal visits and a photo report every time. See Roof Care Plan pricing.',
 };
@@ -122,6 +123,7 @@ export const ROOF_INSPECTION = {
   slug: 'roof-inspection',
   keyword: 'roof inspection',
   title: 'Roof Inspection Services · *RoofScan 360*',
+  h1: 'Roof Inspection in Los Angeles & Orange County\u00a0· *RoofScan 360*',
   navLabel: 'Roof Inspection',
   card: 'Our free, roofer-led roof evaluation for shingle, tile and flat roofs: every finding photographed and explained, with one clear next step.',
   metaTitle: 'Roof Inspection in Los Angeles & OC',
