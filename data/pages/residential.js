@@ -85,6 +85,12 @@ export const RESIDENTIAL_PAGE = {
         links: [{ label: 'Roof maintenance plans', href: '/roof-maintenance-plans/' }],
       },
       {
+        id: 'attic-ventilation',
+        title: 'Attic Ventilation',
+        text: 'Vents checked, repaired or added so your attic can breathe, with photos of every vent.',
+        links: [{ label: 'Attic ventilation', href: '/residential-roofing/attic-ventilation/' }],
+      },
+      {
         id: 'hoa',
         title: 'HOA & Multi-Family Roofing',
         text: 'Roofing for HOA and multi-family properties, with one point of contact for the board or manager.',

@@ -71,6 +71,11 @@ export const RESIDENTIAL_MENU = {
       note: 'Roofing for multi-family and multi-tenant properties',
       href: '/residential-roofing/hoa-multi-family/',
     },
+    {
+      title: 'Attic Ventilation',
+      note: 'Vents and airflow for your attic',
+      href: '/residential-roofing/attic-ventilation/',
+    },
   ],
   // Box on the right (wide screens only)
   promo: {

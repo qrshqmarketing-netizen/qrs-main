@@ -66,7 +66,7 @@ export const REDIRECTS = [
   ['/residential-roofing-services/new-roof-installation/', '/roof-replacement/'],
   ['/residential-roofing-services/roof-storm-damage/', '/roof-repair/emergency/'],
   ['/residential-roofing-services/gutter-replacement/', R],
-  ['/residential-roofing-services/attic-ventilation/', '/residential-roofing/shingle-roofing/replacement/'],
+  ['/residential-roofing-services/attic-ventilation/', '/residential-roofing/attic-ventilation/'],
   ['/commercial-roofing-services/', '/commercial-roofing/'],
   ['/commercial-roofing-services/commercial-roof-repair/', '/commercial-roofing/repair/'],
   ['/commercial-roofing-services/commercial-roof-installation/', '/commercial-roofing/replacement/'],

@@ -1,4 +1,4 @@
-// Single service pages: /residential-roofing/rain-gutters/ and /residential-roofing/hoa-multi-family/.
+// Single service pages: /residential-roofing/rain-gutters/, /residential-roofing/hoa-multi-family/ and /residential-roofing/attic-ventilation/.
 // RAIN_GUTTERS is a stand-alone service page, hidden for now (app/residential-roofing/rain-gutters/page.js redirects);
 // its copy is kept here for when it comes back.
 
@@ -195,4 +195,108 @@ export const HOA_MULTI_FAMILY = {
     },
   ],
   related: ['/residential-roofing/flat-roofing/replacement/', '/residential-roofing/tile-roofing/replacement/'],
+};
+
+// Stand-alone residential service page: /residential-roofing/attic-ventilation/. It replaces the old WordPress page
+// /residential-roofing-services/attic-ventilation/ (redirected in data/redirects.js).
+export const ATTIC_VENTILATION = {
+  slug: 'attic-ventilation',
+  keyword: 'attic ventilation',
+  title: 'Attic Ventilation Repair & Installation',
+  h1: 'Attic Ventilation in Los Angeles & Orange County',
+  navLabel: 'Attic Ventilation',
+  card: 'Blocked, missing or mismatched vents found and fixed, so hot, humid air can leave your attic and cooler air can come in.',
+  metaTitle: 'Attic Ventilation Repair in Los Angeles & OC',
+  metaDescription: 'Attic ventilation repair and installation in Los Angeles & Orange County: vents inspected, airflow balanced, every finding photographed. Free roof evaluation.',
+  image: '/images/projects/shingle-roof-replacement-panorama-city-91402/shingle-panorama-city-91402-09.webp',
+  imageAlt: 'New box vents and pipe jacks flashed into a light gray shingle roof',
+  hero: {
+    intro:
+      'Attic ventilation from QRS means checking how air moves through your attic, fixing vents that are blocked, missing or mismatched, and adding the right ones when your roof is replaced, across Los Angeles and Orange County. A roofer inspects the vents, eaves and ridge, photographs what they find and gives you a written scope and price before any work. Start with a free roof evaluation.',
+    highlights: ['Intake and exhaust vents checked together', 'Photos of every vent and finding', 'Fixed on its own or built into a new roof'],
+  },
+  overview: {
+    paragraphs: [
+      'In Los Angeles and Orange County the sun beats on a roof for much of the year, and that heat goes straight into the attic. An attic that can’t vent gets hotter and more humid. Roofing materials age early, shingles can curl, blister and crack, moisture settles into the decking and insulation, and your air conditioner works harder to cool the rooms below. Everyday life adds to it, since showers, cooking and laundry all put moisture into the air. A working ventilation system is built to carry all of that out.',
+      'It works by keeping air moving. Cooler air comes in low, through vents at the eaves and soffits, and hot air leaves high, through vents at or near the ridge, so the flow continues as the roof heats up. The two sides have to match: exhaust vents with no intake, or intake blocked by insulation or paint, leave an attic stuffy no matter how many vents are on the roof. When we replace a roof, ventilation is planned with the new roof, as part of a [shingle roof replacement](/residential-roofing/shingle-roofing/replacement/). If you only suspect a problem, a [free roof evaluation](#roof-check) is the place to start.',
+    ],
+  },
+  process: {
+    subheading: 'How we check and fix your attic ventilation',
+    steps: [
+      {
+        title: 'Roof and attic check',
+        text: 'A roofer looks at your vents from the roof and, where it can be reached, from the attic: how many there are, what kinds, whether they’re open, and where air is meant to come in and go out.',
+        bullets: ['Ridge, box and other exhaust vents', 'Eave and soffit intake vents', 'Stained or damp decking and insulation', 'Curling or blistered shingles'],
+      },
+      {
+        title: 'Photos and a plain-English report',
+        text: 'We photograph each vent and any sign of trouble, then explain what is likely causing it. Sometimes it’s one blocked vent, and sometimes the system is missing a whole side.',
+        bullets: ['What is blocked, missing or mismatched', 'Where the air should enter and leave'],
+      },
+      {
+        title: 'Written scope and price',
+        text: 'Before any work starts you get a written scope and price: which vents to clear, repair, replace or add, and where they go.',
+      },
+      {
+        title: 'Repair or installation',
+        text: 'We free blocked intake, repair or replace failed vents and add vents where the system falls short, then flash every vent that goes through the roof so it doesn’t become a leak.',
+        bullets: ['Intake kept open at the eaves', 'Exhaust added or replaced near the ridge', 'Every vent flashed into the roof'],
+      },
+      {
+        title: 'Walkthrough and warranty',
+        text: 'We go through the photos of the finished work with you. Vents installed as part of a roof replacement are covered by our 10-year workmanship warranty, and repairs carry the manufacturer’s warranty on the materials used, which depends on the product.',
+      },
+    ],
+  },
+  why: {
+    heading: 'Why Choose QRS for Attic Ventilation?',
+    intro:
+      'Ventilation is part of how the whole roof ages, so we treat it as part of the roof. As a licensed California contractor since 2020, we look at your vents the way we look at everything else up there: closely, and with photos.',
+    points: [
+      {
+        title: 'A roofer checks the whole system',
+        text: 'We look at intake and exhaust together, because a new vent doesn’t help if the air has no way in.',
+      },
+      {
+        title: 'Photos, not guesswork',
+        text: 'You see each vent and each sign of trouble in photos, so you can tell what’s wrong and what it will take to fix.',
+      },
+      {
+        title: 'Fixed alone or with a new roof',
+        text: 'We can repair or add vents on their own. When a roof is near the end of its life, we’ll tell you if it makes more sense to do it with the replacement.',
+      },
+      {
+        title: 'Flashed so it doesn’t leak',
+        text: 'Every vent that goes through the roof is flashed into it, since a poorly sealed vent is a common place for a leak to start.',
+      },
+    ],
+  },
+  faqs: [
+    {
+      q: 'How can I tell if my attic isn’t ventilated well?',
+      a: 'Common signs are upstairs rooms that stay hot, an air conditioner that runs nearly all day, a musty smell, damp insulation, stained decking and shingles that curl or blister. Some of these have other causes, so a roofer’s inspection, with photos, is the way to find out which one you have.',
+    },
+    {
+      q: 'Do I need ridge vents or box vents?',
+      a: 'It depends on your roof’s shape and the intake you already have. What matters is balance: air coming in low at the eaves and leaving high near the ridge. We recommend vents based on what the photos show and put the plan in your written scope.',
+    },
+    {
+      q: 'Can you add ventilation without replacing my roof?',
+      a: 'Often, yes. Vents can be repaired, replaced or added on their own. If your roof is close to the end of its life, we’ll say so and show you why it may be better to do the ventilation with a [shingle roof replacement](/residential-roofing/shingle-roofing/replacement/) or a [tile roof replacement](/residential-roofing/tile-roofing/replacement/).',
+    },
+    {
+      q: 'Does a tile roof need attic ventilation too?',
+      a: 'Yes. Any pitched roof over an attic, tile or shingle, needs air moving through it. Our [roof inspection](/roof-inspection/) checks the vents on a tile roof the same way as on a shingle roof.',
+    },
+    {
+      q: 'What about a flat roof?',
+      a: 'A flat roof with no attic space has no attic vents to add. On a flat roof, how water drains matters more, so see our [flat roofing](/residential-roofing/flat-roofing/) services.',
+    },
+    {
+      q: 'Does your warranty cover ventilation work?',
+      a: 'Vents installed as part of a roof replacement are covered by our 10-year workmanship warranty. Repairs carry the manufacturer’s warranty on any materials used, which depends on the product and its warranty tier.',
+    },
+  ],
+  related: ['/residential-roofing/shingle-roofing/replacement/', '/residential-roofing/tile-roofing/', '/roof-inspection/'],
 };

@@ -33,7 +33,7 @@ import { FLAT_CONTENT } from './services/flat';
 import { EMERGENCY_ROOF_REPAIR, ROOF_FINANCING, ROOF_INSPECTION, ROOF_MAINTENANCE_PLANS } from './services/programs';
 import { ROOF_REPAIR_HUB, ROOF_REPLACEMENT_HUB } from './services/serviceHubs';
 import { SHINGLE_CONTENT } from './services/shingle';
-import { HOA_MULTI_FAMILY, RAIN_GUTTERS } from './services/specialty';
+import { ATTIC_VENTILATION, HOA_MULTI_FAMILY, RAIN_GUTTERS } from './services/specialty';
 import { TILE_CONTENT } from './services/tile';
 
 // Sections: { ...structure, hub, services }. Commercial also has serviceTypes (repair, replacement, maintenance)
@@ -47,12 +47,13 @@ export const SECTIONS = [SHINGLE, TILE, FLAT, COMMERCIAL];
 // Stand-alone pages: { ...structure, page }
 export const GUTTERS = { ...SINGLES.gutters, page: RAIN_GUTTERS };
 export const HOA = { ...SINGLES.hoa, page: HOA_MULTI_FAMILY };
+export const VENTILATION = { ...SINGLES.ventilation, page: ATTIC_VENTILATION };
 export const EMERGENCY = { ...PROGRAMS.emergency, page: EMERGENCY_ROOF_REPAIR };
 export const INSPECTION = { ...PROGRAMS.inspection, page: ROOF_INSPECTION };
 export const MAINTENANCE_PLANS = { ...PROGRAMS.plans, page: ROOF_MAINTENANCE_PLANS };
 export const FINANCING = { ...PROGRAMS.financing, page: ROOF_FINANCING };
 // GUTTERS is left out while Rain Gutters is hidden (app/residential-roofing/rain-gutters/page.js redirects)
-export const SINGLE_PAGES = [HOA, EMERGENCY, INSPECTION, MAINTENANCE_PLANS, FINANCING];
+export const SINGLE_PAGES = [HOA, VENTILATION, EMERGENCY, INSPECTION, MAINTENANCE_PLANS, FINANCING];
 
 // Service-first hubs: { ...structure, hub }
 export const REPAIR_HUB = { ...SERVICE_HUBS.repair, hub: ROOF_REPAIR_HUB };

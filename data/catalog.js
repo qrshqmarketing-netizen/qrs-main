@@ -77,6 +77,14 @@ export const SINGLES = {
     scenes: ['scene-gutter'],
     blurb: 'Gutters and downspouts planned with your roof, so rainwater leaves the house the way it should.',
   },
+  ventilation: {
+    key: 'ventilation',
+    label: 'Attic Ventilation',
+    href: '/residential-roofing/attic-ventilation/',
+    parent: RESIDENTIAL,
+    scenes: ['scene-inspect'],
+    blurb: 'Vents checked, repaired or added so hot, humid air can leave your attic and cooler air can come in.',
+  },
   hoa: {
     key: 'hoa',
     label: 'HOA & Multi-Family',
