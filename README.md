@@ -51,7 +51,8 @@ To test the finished (production) version: `npm run build`, then `npm start`.
 | Page names, addresses, card blurbs, placeholder art | `data/catalog.js` |
 | "The QRS Way" steps | `data/process.js` |
 | Accreditation logos | `data/credentials.js` + images in `public/images/badges/` |
-| Google reviews | `data/reviews.js` |
+| Google reviews (hand-picked; also the fallback for the live ones) | `data/reviews.js` |
+| Live Google reviews in the testimonials slider (locations' Place IDs, which stars to show) | `data/places.js` (key: `GOOGLE_PLACES_KEY`) |
 | Service regions and cities (map, region and city pages) | `data/locations.js` |
 | Chat assistant answers | `data/assistant.js` |
 | Google Business Profile welcome card (shown for links tagged `utm_campaign=gbp-<profile>`) | `data/campaigns.js` |
