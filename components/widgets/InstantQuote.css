@@ -58,6 +58,7 @@ body.rm-lock{overflow:hidden}
 .rm-err button{display:block;margin-top:6px;padding:0;border:0;background:none;color:var(--navy);font-weight:800;text-decoration:underline}
 .rm-spin{width:18px;height:18px;border-radius:50%;border:2.5px solid rgba(16,24,32,.25);border-top-color:#101820;animation:rmSpin .7s linear infinite}
 @keyframes rmSpin{to{transform:rotate(360deg)}}
+.rm-demo[hidden]{display:none} /* the class's display would otherwise override the hidden attribute: the badge showed on the live site */
 .rm-demo{display:inline-block;margin-bottom:12px;padding:4px 10px;border-radius:999px;background:#f1ecdf;color:var(--gold-ink);font:700 11px/1.4 var(--font-head);letter-spacing:.04em;text-transform:uppercase}
 
 .rm-map{position:relative;z-index:0;height:220px;border-radius:var(--radius);overflow:hidden;background:#1d2b3a}

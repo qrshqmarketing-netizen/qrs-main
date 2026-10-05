@@ -144,7 +144,7 @@ export default function InstantQuote() {
     if (q) measure(() => geocode(q));
   };
 
-  // Satellite view centered on the roof, with one pin on the building's center
+  // Satellite view fitted to the roof, with one pin on the building's center
   useEffect(() => {
     if (step !== 2 || !roof) return;
     let cancelled = false;
@@ -165,7 +165,9 @@ export default function InstantQuote() {
       layer.clearLayers();
       const point = [roof.center.latitude, roof.center.longitude];
       L.marker(point, { icon: qrsPin(L), interactive: false, keyboard: false }).addTo(layer);
-      m.setView(point, 20);
+      // A house fills the map at zoom 20; a larger building zooms out just enough to show the whole roof
+      if (roof.bounds) m.fitBounds(roof.bounds, { padding: [20, 20], maxZoom: 20 });
+      else m.setView(point, 20);
     }, 20);
     return () => {
       cancelled = true;
