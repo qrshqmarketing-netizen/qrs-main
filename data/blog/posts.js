@@ -6,7 +6,8 @@
 //   inspection, replacement, restoration, tile, shingle, flat, metal, wood, underlayment, commercial, ventilation; service and city pages
 //   show the articles whose topics match theirs, lib/articles.js), keyword (in the meta title, meta description, H1 and first 100 words), metaTitle,
 //   metaDescription, datePublished, dateModified, author, excerpt (blog index card), image + imageAlt (the thumbnail,
-//   in public/images/blog/), heroImage (optional: the same photo without its title text, used as the blog index's hero
+//   in public/images/blog/), cardImage (optional: a stand-in picture for the cards only, until the post has its own image; remove it
+//   when the image is added), heroImage (optional: the same photo without its title text, used as the blog index's hero
 //   background while the post is the newest), intro (paragraphs above the table of contents), sections (each one in the table of
 //   contents), faqs, closing (the last section, not in the table of contents) and related (service pages to suggest).
 //   A section is { heading, blocks }, and each block is one of:
@@ -18,6 +19,658 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  {
+    slug: 'how-to-choose-a-commercial-roofing-contractor',
+    title: 'How to Choose a Commercial Roofing Contractor in Los Angeles',
+    keyword: 'commercial roofing contractor',
+    topics: ['commercial', 'replacement', 'repair', 'inspection'],
+    metaTitle: 'How to Choose a Commercial Roofing Contractor',
+    metaDescription:
+      'Choosing a commercial roofing contractor in Los Angeles? See what to verify, ten questions to ask, red flags and what a good proposal includes.',
+    datePublished: '2026-10-05',
+    dateModified: '2026-10-05',
+    excerpt:
+      'A commercial roof is a big decision for an owner or property manager. Here is what to verify before you hire, the questions to ask, the red flags to watch for and what a good proposal should include.',
+    image: '/images/blog/how-to-choose-a-commercial-roofing-contractor.webp',
+    imageAlt: 'Two roofers in hard hats reviewing plans on a white commercial flat roof with the downtown Los Angeles skyline behind them, with close-ups of rooftop equipment, a handshake and a commercial building, under the title How to Choose a Commercial Roofing Contractor in Los Angeles',
+    intro: [
+      'Choosing a commercial roofing contractor is one of the larger decisions an owner or property manager makes. The roof protects the building, the tenants and everything inside, and a poor job can mean leaks, disruption and a second bill.',
+      'Prices differ from bid to bid, but price is the least useful way to compare them until you know that each contractor is offering the same work, backed by the same license, insurance and warranty.',
+      'This guide covers what to verify before you hire, ten questions to ask, the red flags to watch for and what a good written proposal includes.',
+    ],
+    sections: [
+      {
+        heading: 'What to Verify Before You Hire',
+        blocks: [
+          'Start with the basics that you can check yourself. A contractor who is happy to prove them is usually a contractor who has nothing to hide.',
+          {
+            list: [
+              '**A California contractor license.** Roofing contractors in California need a license, and you can look up any license number on the [Contractors State License Board](https://www.cslb.ca.gov/) website to see that it is active and in good standing.',
+              '**Insurance.** Ask for a certificate of insurance showing liability coverage and workers’ compensation, and ask whether you need to be named on it.',
+              '**Experience with your kind of roof.** A flat roof on a warehouse is a different job from a shingle roof on a house. Ask for photos of similar buildings.',
+              '**A local office.** A contractor with offices near the building can respond faster when something goes wrong.',
+            ],
+          },
+          'Quality Roofing Specialists is a licensed, bonded and insured California contractor, CSLB license #1061942, licensed since January 3, 2020.',
+        ],
+      },
+      {
+        heading: 'Ten Questions to Ask a Commercial Roofing Contractor',
+        blocks: [
+          'Put these to every contractor you consider and compare the answers side by side.',
+          {
+            steps: [
+              'Who will survey the roof, and will I see photos of what they find?',
+              'Will I get a written scope and price before any work starts?',
+              'What roof system do you recommend, and why is it right for this building?',
+              'How will the work be phased so the building can stay open?',
+              'Who pulls the permits?',
+              'What warranty comes with the work, and what exactly does it cover?',
+              'How do you protect the building, tenants and inventory during the work?',
+              'Who will be my point of contact, and how will you keep me updated?',
+              'What happens if you find damage to the deck or insulation once the old roof is off?',
+              'Can you give me a recent job to look at, or references from a similar building?',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'What a Good Commercial Roofing Proposal Includes',
+        blocks: [
+          'A proposal should let you compare contractors on the same terms. Look for these parts:',
+          {
+            table: {
+              head: ['Part of the proposal', 'What it should say'],
+              rows: [
+                ['Scope of work', 'Exactly what is removed, repaired and installed, section by section'],
+                ['Roof system and materials', 'The membrane or system, how it is attached, and any insulation or cover board'],
+                ['Flashing and details', 'How walls, curbs, penetrations, drains and edges will be handled'],
+                ['Phasing and schedule', 'The order of the work and how the building stays open'],
+                ['Permits', 'Who pulls them and whether the cost is included'],
+                ['Warranty', 'What the contractor warrants, for how long, and what the manufacturer covers'],
+                ['Exclusions', 'What is not included, such as concealed deck damage, and how it will be priced if found'],
+                ['Price and payment terms', 'The total and when payments are due'],
+              ],
+            },
+          },
+        ],
+      },
+      {
+        heading: 'Red Flags',
+        blocks: [
+          {
+            list: [
+              '**No license number, or one you cannot verify.**',
+              '**A verbal price with nothing in writing.**',
+              '**A vague scope** that says “new roof” without saying what is removed, repaired and installed.',
+              '**Pressure to sign today.**',
+              '**No answer on who pulls the permits.**',
+              '**A warranty that is hard to explain.**',
+              '**Door-to-door storm chasers** who promise things they cannot back up.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'How We Work With Commercial Clients',
+        blocks: [
+          'Every commercial project at QRS starts with a roofer-led roof survey and a written scope and price. We photo-document what we find, plan the work around how your building runs and keep your building open during the work.',
+          'We pull the building permits, and we hand over closeout photos for your records. Our installs are backed by a 10-year workmanship warranty, and the materials carry the manufacturer’s warranty, which depends on the product.',
+          'See our [commercial roofing](/commercial-roofing/) services, including [commercial roof repair](/commercial-roofing/repair/), [commercial roof replacement](/commercial-roofing/replacement/) and [commercial roof maintenance](/commercial-roofing/maintenance/).',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'How do I check a roofing contractor’s license in California?',
+        a: 'Look up the license number on the [Contractors State License Board](https://www.cslb.ca.gov/) website. It shows whether the license is active, its classification and any complaints on record.',
+      },
+      {
+        q: 'Should I get more than one bid for a commercial roof?',
+        a: 'Yes, for a major project. Make sure each bid covers the same scope, the same system and the same warranty, so the prices are comparable.',
+      },
+      {
+        q: 'What insurance should a commercial roofing contractor have?',
+        a: 'At minimum, liability insurance and workers’ compensation. Ask for a certificate of insurance, and ask your own insurer or attorney whether you need to be named on it.',
+      },
+      {
+        q: 'What is a roof survey?',
+        a: 'A roofer walks the roof section by section, photographs drains, seams, flashing and equipment, and reports the condition in plain English. At QRS the survey comes before any scope or price, and it shows whether the roof needs repair, maintenance or replacement.',
+      },
+      {
+        q: 'Can a commercial roof be replaced while the building stays open?',
+        a: 'Yes, when the work is phased. The roof is replaced section by section, with each section dried in as it is opened. See our guide to [commercial roof replacement planning](/blog/commercial-roof-replacement-planning/).',
+      },
+    ],
+    closing: {
+      heading: 'Choose on Facts, Not on the Lowest Number',
+      blocks: [
+        'The right commercial roofing contractor is the one who shows you what is wrong, writes down what they will do and stands behind it.',
+        'Quality Roofing Specialists provides commercial roofing across Los Angeles and Orange County, from offices and retail to warehouses and industrial buildings.',
+        'To start, request a roofer-led roof survey and get photos, a written scope and a price before any work begins.',
+        '**[Contact Quality Roofing Specialists](/contact-us/) to request a commercial roof survey.**',
+      ],
+    },
+    related: ['/commercial-roofing/', '/commercial-roofing/repair/', '/commercial-roofing/replacement/', '/commercial-roofing/maintenance/'],
+  },
+  {
+    slug: 'commercial-roof-leak-repair',
+    title: 'Commercial Roof Leak Repair: How to Find the Source on a Flat Roof',
+    keyword: 'commercial roof leak repair',
+    topics: ['commercial', 'leak', 'repair', 'flat', 'emergency'],
+    metaTitle: 'Commercial Roof Leak Repair: Finding the Source',
+    metaDescription:
+      'Commercial roof leak repair starts with finding the real source. Learn where flat roofs leak, what to do right away and how a roofer traces it.',
+    datePublished: '2026-10-05',
+    dateModified: '2026-10-05',
+    excerpt:
+      'On a commercial flat roof, water can travel a long way before it drips. Here is where commercial roofs leak, what to do right away and how a roofer traces the real source before repairing it.',
+    image: '/images/blog/commercial-roof-leak-repair.webp',
+    imageAlt: 'A roofer in a hard hat and safety vest kneeling on a white flat commercial roof to check the surface, with the downtown Los Angeles skyline and rooftop air conditioning units behind, and close-ups of a roof drain, a moisture meter on a cracked seam and rooftop equipment, under the title Commercial Roof Leak Repair: How to Find the Source on a Flat Roof',
+    intro: [
+      'Commercial roof leak repair starts with finding where the water really gets in, and on a large flat roof that is rarely where the stain is. Water travels across the deck and insulation before it reaches a ceiling tile.',
+      'Fixing the wrong spot wastes money and leaves the leak in place, so the first job is tracing it. After that, the repair itself is usually straightforward.',
+      'This guide covers where commercial roofs leak, what to do in the first hours, how a roofer traces a leak and when repair stops making sense.',
+    ],
+    sections: [
+      {
+        heading: 'Why Commercial Roof Leaks Are Hard to Trace',
+        blocks: [
+          'A commercial roof is large, low-slope and full of details. Water that gets in can run along the deck, through insulation and over a beam before it shows up as a drip, often over a different office, aisle or bay.',
+          'That is why patching directly above the stain so often fails. The opening is usually upslope or off to the side, at a detail that a patch over the stain never touches.',
+        ],
+      },
+      {
+        heading: 'Where Commercial Roofs Leak',
+        blocks: [
+          'Most leaks begin at details, not in the middle of an intact membrane.',
+          {
+            table: {
+              head: ['Where it leaks', 'What goes wrong'],
+              rows: [
+                ['Drains and scuppers', 'Debris blocks them, water ponds and finds the weak points'],
+                ['Seams and laps', 'Seams open, split or lose their bond over time'],
+                ['Flashing at walls and parapets', 'Flashing pulls away, cracks or loses its sealant'],
+                ['Rooftop equipment and curbs', 'Flashing around HVAC units and curbs fails, or the curb itself moves'],
+                ['Penetrations', 'Pipes, vents and conduits lose their seals'],
+                ['Skylights', 'Flashing and seals around them wear out'],
+                ['The membrane surface', 'Punctures, blisters and splits, often from foot traffic or debris'],
+                ['Roof edges', 'Edge metal loosens and lets water in'],
+              ],
+            },
+          },
+          'Not every drip is a roof leak. Condensate from an air conditioner or a plumbing leak can look the same, so a roofer checks those too.',
+        ],
+      },
+      {
+        heading: 'What to Do Right Away',
+        blocks: [
+          {
+            steps: [
+              'Protect people and property. Move inventory and equipment away from the drip, catch the water and keep clear of wet light fixtures and electrical panels.',
+              'Take photos. Photograph the ceiling, the floor and the date, so there is a record for the owner, the tenant and any insurance claim.',
+              'Note when it leaks. Does it happen only in heavy rain, in wind-driven rain, or after rain has stopped? That helps a roofer.',
+              'Stay off the roof unless your staff has fall protection and training. Wet flat roofs are slippery and edges are dangerous.',
+              'Call a roofer to trace and repair it. If water is coming in now, see [emergency roof repair](/roof-repair/emergency/).',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'How a Roofer Traces a Commercial Roof Leak',
+        blocks: [
+          'A roofer starts inside, noting where the water shows up, then moves to the roof and works upslope of those spots, section by section.',
+          {
+            list: [
+              'Check the drains, scuppers and any ponding.',
+              'Inspect the seams and laps across the area.',
+              'Check the flashing at walls, parapets and rooftop equipment.',
+              'Check each penetration, skylight and edge.',
+              'Photograph the cause before fixing it.',
+            ],
+          },
+          'At Quality Roofing Specialists, our [commercial roof repair](/commercial-roofing/repair/) traces the leak to where water actually gets in, repairs what failed, and keeps your building open while we work. Every repair comes with before-and-after photos.',
+        ],
+      },
+      {
+        heading: 'Repair or Replace?',
+        blocks: [
+          'A single failed flashing or open seam is a repair. A roof that leaks in many places, has widespread blisters or splits, or has wet insulation under much of its surface is telling you something different.',
+          'A roofer-led survey with photos shows which case you are in. See our guide to [commercial roof replacement planning](/blog/commercial-roof-replacement-planning/), or our [commercial roof replacement](/commercial-roofing/replacement/) page.',
+        ],
+      },
+      {
+        heading: 'Keeping Leaks From Coming Back',
+        blocks: [
+          'Most commercial leaks are preventable with regular attention to the details above. Clear drains and scuppers, reseal flashing where needed and catch early wear before it becomes interior damage.',
+          'Our [commercial roof maintenance](/commercial-roofing/maintenance/) program does this with scheduled roofer visits and a photo report for owners and managers.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'How do you find a leak on a flat commercial roof?',
+        a: 'By working upslope from where the water shows up inside, and checking each drain, seam, flashing, penetration and edge along the way. The cause is photographed before it is fixed.',
+      },
+      {
+        q: 'Can a commercial roof be repaired while the building stays open?',
+        a: 'Yes. We repair commercial roofs while the building stays open, and we plan the work around how your building runs.',
+      },
+      {
+        q: 'Why does my flat roof leak in some rains and not others?',
+        a: 'Heavy or wind-driven rain pushes water into details that light rain does not reach, such as flashing, edges and seams. The pattern is a clue a roofer can use to find the source.',
+      },
+      {
+        q: 'Should my maintenance staff patch the leak?',
+        a: 'A small, temporary patch may slow a leak, but it can also hide the source, and working on a roof is dangerous without training and fall protection. Have a roofer trace it. See our guide to [temporary roof repair options](/blog/temporary-roof-repair-options/).',
+      },
+      {
+        q: 'Will I know what a commercial roof repair costs before it starts?',
+        a: 'Yes. You get a written scope and price before any work begins, with photos of the problem.',
+      },
+    ],
+    closing: {
+      heading: 'Trace It First, Then Fix It',
+      blocks: [
+        'The cheapest commercial roof leak repair is the one that fixes the real source the first time.',
+        'Quality Roofing Specialists provides [commercial roof repair](/commercial-roofing/repair/), [emergency roof repair](/roof-repair/emergency/) and [commercial roof maintenance](/commercial-roofing/maintenance/) across Los Angeles and Orange County.',
+        'If you have a leak, request a roofer-led roof survey and get photos, a written scope and a price before any work starts.',
+        '**[Contact Quality Roofing Specialists](/contact-us/) to have your commercial roof leak traced and repaired.**',
+      ],
+    },
+    related: ['/commercial-roofing/repair/', '/roof-repair/emergency/', '/commercial-roofing/maintenance/', '/commercial-roofing/replacement/'],
+  },
+  {
+    slug: 'commercial-roof-replacement-planning',
+    title: 'Commercial Roof Replacement: How to Plan It and Keep Your Doors Open',
+    keyword: 'commercial roof replacement',
+    topics: ['commercial', 'replacement', 'flat', 'restoration'],
+    metaTitle: 'Commercial Roof Replacement: How to Plan It',
+    metaDescription:
+      'Commercial roof replacement works best when it is planned in phases. See the signs, the steps, what to plan around and what a written scope should say.',
+    datePublished: '2026-10-05',
+    dateModified: '2026-10-05',
+    excerpt:
+      'A commercial roof replacement does not have to close your business. Here are the signs it is time, how a phased replacement works, what to plan around and what a written scope should say.',
+    image: '/images/blog/commercial-roof-replacement-planning.webp',
+    imageAlt: 'Roofers in hard hats and safety vests laying new roofing across a white flat commercial roof with the downtown Los Angeles skyline behind them, with close-ups of roof plans and a hard hat, a crew working across the roof and a commercial building, under the title Commercial Roof Replacement: How to Plan It and Keep Your Doors Open',
+    intro: [
+      'A commercial roof replacement is a big project, but it does not have to stop your business. Planned well, the roof comes off and goes back on in sections, and your doors stay open.',
+      'The work goes best when the decision rests on facts: the condition of the roof, a clear plan for the phases and a written scope that says exactly what will be done.',
+      'This guide covers the signs it is time to replace, how a phased replacement works, what to plan around and what a good written scope includes.',
+    ],
+    sections: [
+      {
+        heading: 'Signs It Is Time to Replace a Commercial Roof',
+        blocks: [
+          'One leak does not mean a new roof. These signs together do:',
+          {
+            list: [
+              'Leaks in more than one place, or the same leaks returning after repairs.',
+              'Blisters, splits or open seams across much of the surface.',
+              'Ponding water that stays after the rain stops.',
+              'Wet or compressed insulation under the membrane.',
+              'A membrane that is worn, cracked or brittle across large areas.',
+              'Flashing at walls and equipment failing in many spots.',
+            ],
+          },
+          'A roofer-led roof survey with photos shows how widespread the problems are, which is the question that decides between repair and replacement.',
+        ],
+      },
+      {
+        heading: 'Repair, Restore or Replace?',
+        blocks: [
+          {
+            table: {
+              head: ['Option', 'Best when'],
+              rows: [
+                ['Repair', 'The roof is sound overall and the problem is local, such as a failed flashing or an open seam'],
+                ['Maintenance', 'The roof is in good shape and you want to keep it that way'],
+                ['Replacement', 'The roof is worn out or failing in many places'],
+              ],
+            },
+          },
+          'Restoration sits between repair and replacement, and only works on a sound roof. See our guide to [roof restoration vs. replacement](/blog/roof-restoration-vs-replacement/), or our [commercial roof repair](/commercial-roofing/repair/) page.',
+        ],
+      },
+      {
+        heading: 'How a Phased Commercial Roof Replacement Works',
+        blocks: [
+          'Phasing is what keeps the building open. The roof is replaced one section at a time, and each section is dried in before the crew stops for the day.',
+          {
+            steps: [
+              'Roofer-led survey. A roofer inspects and photographs the roof and decides what the new system must tie into.',
+              'Written scope and price. You get the system, the attachment method, the insulation, the flashings, the phases and the price in writing.',
+              'Permits. We pull the building permits.',
+              'Phase plan. The sections, the order and the access routes are agreed with you before work begins.',
+              'Tear-off and deck repair. The old roofing comes off in sections, and the deck is repaired where needed.',
+              'New roof system. The new system goes on, with walls, curbs, penetrations and drains flashed and detailed.',
+              'Closeout. We walk the roof with you and hand over photos for your records.',
+            ],
+          },
+          'Our [commercial roof replacement](/commercial-roofing/replacement/) follows this process, and our installs are backed by a 10-year workmanship warranty. The materials carry the manufacturer’s warranty, which depends on the product.',
+        ],
+      },
+      {
+        heading: 'What to Plan Around',
+        blocks: [
+          'Tell your roofer how the building runs. The more they know, the better the phases fit.',
+          {
+            checklist: [
+              '**Operating hours and busy periods.** When can noisy work happen, and when can it not?',
+              '**Tenants and customers.** Entrances, walkways and parking that need to stay open.',
+              '**Deliveries and loading.** Docks and routes that cannot be blocked.',
+              '**Rooftop equipment.** HVAC units, exhaust fans and anything that has to keep running.',
+              '**Access and staging.** Where materials and equipment can be kept.',
+              '**Inventory and equipment under the roof.** What needs to be covered or moved.',
+              '**Communication.** Who tells tenants, and how.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Choosing a Roof System',
+        blocks: [
+          'Flat and low-slope commercial roofs use systems built for them, such as single-ply membranes and layered asphalt-based systems. The right one depends on the building, the roof’s condition and what is on it.',
+          'TPO is one of the most common single-ply choices. See our guide to [TPO roofing for commercial buildings](/blog/tpo-roofing-pros-and-cons/), or our [TPO roofing](/commercial-roofing/tpo-roofing/) page.',
+        ],
+      },
+      {
+        heading: 'What a Written Scope Should Say',
+        blocks: [
+          {
+            list: [
+              'What will be removed, repaired and installed, section by section.',
+              'The roof system and how it is attached.',
+              'Insulation, cover board and flashing details.',
+              'The phases and how the building stays open.',
+              'Permits, and who pulls them.',
+              'The warranty on the work and on the materials.',
+              'What is excluded, such as concealed deck damage, and how it will be priced if found.',
+              'The price and payment terms.',
+            ],
+          },
+          'See also our guide to [choosing a commercial roofing contractor](/blog/how-to-choose-a-commercial-roofing-contractor/).',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Can the building stay open during a commercial roof replacement?',
+        a: 'Yes. We phase the work section by section and keep your building open during the work.',
+      },
+      {
+        q: 'How long does a commercial roof replacement take?',
+        a: 'It depends on the size of the roof, the system, the weather and how many phases are needed. Your written scope includes the schedule.',
+      },
+      {
+        q: 'Do I need a permit to replace a commercial roof?',
+        a: 'Commercial roof replacements typically need building permits. We pull the building permits for our projects.',
+      },
+      {
+        q: 'Can a new commercial roof go over the old one?',
+        a: 'Sometimes, if the existing roof is dry and sound and the code allows it. Often a tear-off is the better route, so you start from a clean, solid deck. The survey tells us which applies.',
+      },
+      {
+        q: 'What if you find hidden damage once the old roof is off?',
+        a: 'Concealed damage to the deck or insulation is possible on any tear-off. Your scope should say how it will be handled and priced, and we show you photos of anything we find.',
+      },
+    ],
+    closing: {
+      heading: 'Plan the Roof Around the Business',
+      blocks: [
+        'A good commercial roof replacement is one your tenants and customers barely notice.',
+        'Quality Roofing Specialists provides [commercial roof replacement](/commercial-roofing/replacement/), [commercial roof repair](/commercial-roofing/repair/) and [commercial roof maintenance](/commercial-roofing/maintenance/) across Los Angeles and Orange County.',
+        'To start, request a roofer-led roof survey and get photos, a written scope and a price before any work begins.',
+        '**[Contact Quality Roofing Specialists](/contact-us/) to plan your commercial roof replacement.**',
+      ],
+    },
+    related: ['/commercial-roofing/replacement/', '/commercial-roofing/tpo-roofing/', '/commercial-roofing/repair/', '/commercial-roofing/'],
+  },
+  {
+    slug: 'tpo-roofing-pros-and-cons',
+    title: 'TPO Roofing for Commercial Buildings: Pros, Cons and Questions to Ask',
+    keyword: 'tpo roofing',
+    topics: ['commercial', 'flat', 'replacement', 'tpo'],
+    metaTitle: 'TPO Roofing Pros and Cons for Commercial Roofs',
+    metaDescription:
+      'TPO roofing is a popular white membrane for flat commercial roofs. See the pros, the cons, how it compares with modified bitumen and what to ask.',
+    datePublished: '2026-10-05',
+    dateModified: '2026-10-05',
+    excerpt:
+      'TPO is one of the most common roofing membranes for flat commercial roofs. Here are its pros and cons, how it compares with modified bitumen and the questions to ask before you choose it.',
+    image: '/images/blog/tpo-roofing-pros-and-cons.webp',
+    imageAlt: 'A roofer in a hard hat and safety vest working along a seam on a white TPO roof with a second roofer and the downtown Los Angeles skyline behind, with close-ups of a roll of white membrane, a welded seam and a white warehouse roof, and thumbs up, thumbs down and checklist icons, under the title TPO Roofing for Commercial Buildings: Pros, Cons and Questions to Ask',
+    intro: [
+      'TPO roofing is one of the most common choices for flat and low-slope commercial roofs. It is a white, single-ply membrane that is welded at the seams, and it is popular in sunny places like Southern California.',
+      'It is a good fit for many buildings, but not all of them, and a TPO roof is only as good as the installation behind it.',
+      'This guide explains what TPO is, its pros and cons, how it compares with modified bitumen and what to ask before you choose it.',
+    ],
+    sections: [
+      {
+        heading: 'What Is TPO Roofing?',
+        blocks: [
+          'TPO stands for thermoplastic polyolefin. It is a single-ply roofing membrane that comes in wide rolls, usually white, and is laid over the roof and joined at the seams with hot air so the seams fuse together.',
+          'The membrane can be attached in different ways, including mechanically fastened, fully adhered or held down with ballast. The right method depends on the roof and the building.',
+        ],
+      },
+      {
+        heading: 'The Pros of TPO Roofing',
+        blocks: [
+          { h3: 'It reflects sunlight' },
+          'A white membrane reflects much of the sun’s energy instead of absorbing it, which can keep the roof surface cooler in Southern California’s heat.',
+          { h3: 'Welded seams' },
+          'Heat-welded seams form a continuous surface when they are done well, and wide rolls mean fewer seams across the roof.',
+          { h3: 'Fits many flat roofs' },
+          'TPO is made for flat and low-slope roofs, and it can be installed with different attachment methods to suit the deck.',
+          { h3: 'It can help meet cool roof rules' },
+          'California’s Title 24 energy code includes cool roof requirements for many low-slope commercial roofs, and a reflective membrane is one way to meet them. The exact requirement depends on the building and the product.',
+        ],
+      },
+      {
+        heading: 'The Cons of TPO Roofing',
+        blocks: [
+          { h3: 'Quality varies by product' },
+          'TPO membranes are made by many manufacturers, and they are not all the same. Ask which membrane is being proposed and what its manufacturer warranty covers.',
+          { h3: 'Workmanship matters a lot' },
+          'The seams, flashing and details decide how a TPO roof performs. A good membrane installed badly can still leak.',
+          { h3: 'It can be punctured' },
+          'Like other single-ply membranes, TPO can be punctured by dropped tools or heavy foot traffic. Walkway pads help in busy areas.',
+          { h3: 'Check what is on the roof' },
+          'Some rooftop exhaust, such as from kitchens, can deposit grease or oils on a roof. Tell your roofer what the building vents, since some membranes handle exposure better than others.',
+        ],
+      },
+      {
+        heading: 'TPO vs. Modified Bitumen',
+        blocks: [
+          'Both are used on flat commercial roofs, and they work differently.',
+          {
+            table: {
+              head: ['Compare', 'TPO', 'Modified bitumen'],
+              rows: [
+                ['What it is', 'A single-ply membrane in wide rolls', 'A layered, asphalt-based system'],
+                ['Seams', 'Welded with hot air', 'Overlapped and bonded'],
+                ['Typical look', 'White or light', 'Usually dark, unless it has a reflective cap'],
+                ['Where it often fits', 'Large flat roofs where reflectivity matters', 'Roofs that need extra layers or heavy wear resistance'],
+              ],
+            },
+          },
+          'Other single-ply membranes, such as PVC and EPDM, are also used on flat roofs. The right choice depends on your roof, so a roofer should compare them with you from the survey.',
+        ],
+      },
+      {
+        heading: 'Questions to Ask Before Choosing TPO',
+        blocks: [
+          {
+            steps: [
+              'Is TPO the right system for this roof, and why?',
+              'Which membrane and manufacturer are you proposing?',
+              'How will it be attached?',
+              'How will walls, curbs, penetrations and drains be flashed?',
+              'What does the warranty on the work cover, and what does the manufacturer’s cover?',
+              'What does the building vent onto the roof?',
+              'How will the work be phased so the building can stay open?',
+            ],
+          },
+          'At Quality Roofing Specialists, we survey the roof first and recommend TPO only when it suits the building. See our [TPO roofing](/commercial-roofing/tpo-roofing/) page, or our guide to [commercial roof replacement planning](/blog/commercial-roof-replacement-planning/).',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What does TPO stand for?',
+        a: 'Thermoplastic polyolefin. It is a type of single-ply roofing membrane widely used on flat commercial roofs.',
+      },
+      {
+        q: 'How long does a TPO roof last?',
+        a: 'It depends on the membrane, the installation, the details at walls and penetrations and how the roof is maintained. We do not promise a number of years. We focus on the installation, which is backed by our 10-year workmanship warranty.',
+      },
+      {
+        q: 'Is TPO good for Southern California?',
+        a: 'Often, because a white membrane reflects sunlight and can keep the roof surface cooler. Whether it fits your building depends on the roof, so a roofer should survey it first.',
+      },
+      {
+        q: 'Can you repair a TPO roof?',
+        a: 'Yes. Leaks on a TPO roof usually come from a seam, a flashing or a penetration. See our [commercial roof leak repair](/blog/commercial-roof-leak-repair/) guide and our [commercial roof repair](/commercial-roofing/repair/) page.',
+      },
+      {
+        q: 'Can TPO go over an existing roof?',
+        a: 'Sometimes, if the existing roof is dry and sound and the code allows it. Often a tear-off is the better route. The survey tells us which applies to your building.',
+      },
+    ],
+    closing: {
+      heading: 'Choose the System for the Building',
+      blocks: [
+        'TPO is a strong choice for many flat commercial roofs, and the installation matters as much as the membrane.',
+        'Quality Roofing Specialists provides [TPO roofing](/commercial-roofing/tpo-roofing/), [commercial roof replacement](/commercial-roofing/replacement/) and [commercial roof repair](/commercial-roofing/repair/) across Los Angeles and Orange County.',
+        'To find out whether TPO suits your building, request a roofer-led roof survey and get photos, a written scope and a price before any work begins.',
+        '**[Contact Quality Roofing Specialists](/contact-us/) to talk about TPO for your roof.**',
+      ],
+    },
+    related: ['/commercial-roofing/tpo-roofing/', '/commercial-roofing/replacement/', '/commercial-roofing/repair/', '/commercial-roofing/'],
+  },
+  {
+    slug: 'commercial-roof-inspection-checklist',
+    title: 'Commercial Roof Inspection Checklist: What to Check and How Often',
+    keyword: 'commercial roof inspection',
+    topics: ['commercial', 'inspection', 'maintenance', 'leak'],
+    metaTitle: 'Commercial Roof Inspection Checklist and Schedule',
+    metaDescription:
+      'A commercial roof inspection checklist for owners and managers: what to check, how often to inspect and what a roofer-led survey should include.',
+    datePublished: '2026-10-05',
+    dateModified: '2026-10-05',
+    excerpt:
+      'Regular inspections catch small commercial roof problems before they become leaks. Here is what to check, how often to inspect and what a roofer-led survey should include.',
+    image: '/images/blog/commercial-roof-inspection-checklist.webp',
+    imageAlt: 'A roofer in a hard hat and safety vest writing on an inspection clipboard on a white commercial roof with rooftop air conditioning units and the downtown Los Angeles skyline behind, with close-ups of a roof drain, flashing, a rooftop unit and an inspection checklist, under the title Commercial Roof Inspection Checklist: What to Check and How Often',
+    intro: [
+      'A commercial roof inspection finds small problems while they are still inexpensive to fix. A clogged drain, a lifted seam or a cracked flashing is a minor job today and an interior leak after the next rain.',
+      'Owners and property managers can do a basic walk-through safely from the ground and from inside the building. A fuller inspection of the roof itself belongs to a roofer, because working on a roof is dangerous without training and fall protection.',
+      'This checklist covers what to check, how often to inspect and what a roofer-led survey should deliver.',
+    ],
+    sections: [
+      {
+        heading: 'How Often to Inspect a Commercial Roof',
+        blocks: [
+          'A good rule is at least twice a year, and after any major storm.',
+          {
+            list: [
+              '**Before the rainy season.** Find and fix weak points while the weather is dry.',
+              '**After the rainy season.** Check for damage and wear the winter exposed.',
+              '**After major storms or high winds.**',
+              '**When you buy or lease a building,** so you know the roof’s condition up front.',
+              '**Before a manufacturer’s warranty period ends,** if your roof has one.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'The Commercial Roof Inspection Checklist',
+        blocks: [
+          'A roofer works through the following on the roof itself. You can check the first and last items yourself.',
+          {
+            checklist: [
+              '**Inside the building:** Ceiling stains, damp tiles, drips and musty smells.',
+              '**Drains, scuppers and gutters:** Clear of debris, and no standing water around them.',
+              '**Ponding:** Any water that stays on the roof after the rain stops.',
+              '**Seams and laps:** Open, split or lifting edges.',
+              '**The membrane surface:** Punctures, blisters, splits, cracks or worn areas.',
+              '**Flashing:** At walls, parapets, curbs and edges, for gaps, cracks and loose pieces.',
+              '**Rooftop equipment:** The flashing and curbs around HVAC units and exhaust fans.',
+              '**Penetrations:** Pipes, vents and conduits, and the seals around them.',
+              '**Skylights:** Seals and flashing around each one.',
+              '**Roof edges and parapets:** Loose metal, copings or damaged edges.',
+              '**Debris and traffic damage:** Loose items, and wear where people walk.',
+              '**Photos:** A dated photo record of every area, for comparison next time.',
+            ],
+          },
+          { note: '**Safety:** Do not send staff onto a roof without fall protection and training. Roof edges, skylights and wet surfaces are serious hazards.' },
+        ],
+      },
+      {
+        heading: 'What a Roofer-Led Roof Survey Should Include',
+        blocks: [
+          'A professional survey should leave you with more than a verbal “it looks fine.”',
+          {
+            list: [
+              'Photos of each area of the roof, including problems.',
+              'A plain-English report on the condition of the roof.',
+              'A list of what needs attention now and what can wait.',
+              'A written scope and price for any recommended work.',
+              'One clear next step: repair, maintain or replace.',
+            ],
+          },
+          'At Quality Roofing Specialists, every commercial project starts with a roofer-led survey, with photo-documented findings for owners and property management clients.',
+        ],
+      },
+      {
+        heading: 'Keep a Record',
+        blocks: [
+          'A simple log makes decisions easier. Keep dated photos and reports for each inspection, along with a note of repairs and who did them.',
+          'The record shows how the roof is aging, helps you budget for repairs or replacement, and supports any warranty or insurance claim. If your roof has a manufacturer’s warranty, check whether it requires regular maintenance.',
+        ],
+      },
+      {
+        heading: 'Inspection vs. a Maintenance Plan',
+        blocks: [
+          'An inspection looks at the roof once and tells you its condition. Maintenance goes further, with regular visits that clear drains and gutters, reseal flashing where needed and catch early wear.',
+          'Our [commercial roof maintenance](/commercial-roofing/maintenance/) starts with a baseline roof survey, and every visit ends with a photo report for owners, managers or boards.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'How often should a commercial roof be inspected?',
+        a: 'At least twice a year, before and after the rainy season, and after any major storm or windstorm.',
+      },
+      {
+        q: 'Who should inspect a commercial roof?',
+        a: 'A roofer. Staff can do a ground-level and indoor walk-through, but the roof itself is best checked by someone trained, with fall protection.',
+      },
+      {
+        q: 'What does a commercial roof inspection report include?',
+        a: 'Photos, a plain-English description of the roof’s condition, what needs attention now and what can wait, and a written scope and price for recommended work.',
+      },
+      {
+        q: 'Does a roof inspection find leaks?',
+        a: 'It can find the causes of leaks, such as open seams, failed flashing and clogged drains, and often finds problems before they leak. If you already have a leak, see our guide to [commercial roof leak repair](/blog/commercial-roof-leak-repair/).',
+      },
+      {
+        q: 'Do you inspect roofs for buyers and tenants?',
+        a: 'A roofer-led survey gives owners, managers and tenants a photo record of the roof’s condition, which is useful when buying, selling or leasing a building. Contact us to set one up.',
+      },
+    ],
+    closing: {
+      heading: 'Inspect Before the Rain, Not After the Leak',
+      blocks: [
+        'A regular commercial roof inspection is one of the least expensive ways to protect a building.',
+        'Quality Roofing Specialists provides [commercial roof maintenance](/commercial-roofing/maintenance/), [commercial roof repair](/commercial-roofing/repair/) and [commercial roof replacement](/commercial-roofing/replacement/) across Los Angeles and Orange County.',
+        'To start, request a roofer-led roof survey and get photos, a plain-English report and one clear next step.',
+        '**[Contact Quality Roofing Specialists](/contact-us/) to schedule a commercial roof survey.**',
+      ],
+    },
+    related: ['/commercial-roofing/maintenance/', '/commercial-roofing/repair/', '/commercial-roofing/', '/commercial-roofing/replacement/'],
+  },
   {
     slug: 'roof-leak-source',
     title: 'How to Find a Roof Leak: Signs, Causes and What to Do Next',
@@ -415,8 +1068,8 @@ export const BLOG_POSTS = [
     dateModified: '2026-10-05',
     excerpt:
       'Wind and heavy rain can damage a roof in ways you cannot see from the street. Here are the signs of roof storm damage, the first steps to take and when it is time to call a roofer.',
-    image: '/images/blog/roof-storm-damage-signs.webp',
-    imageAlt: 'A roofer in a rain jacket checking a tablet while looking at a storm-damaged roof, with close-ups of wind and hail damage, under the title Roof Storm Damage: How to Spot It and What to Do Next',
+    image: '/images/blog/roof-storm-damage-signs-graphic.webp',
+    imageAlt: 'A roofer in a rain jacket checking a tablet while looking at a storm-damaged roof under dark storm clouds, with close-ups of hail-damaged shingles and exposed roof decking, under the title Roof Storm Damage: How to Spot It and What to Do Next',
     intro: [
       'Roof storm damage is not always dramatic. After a windy night or a heavy downpour, a roof can look fine from the street while a lifted shingle, a slipped tile or a loose flashing is quietly letting water in.',
       'Southern California roofs take a particular kind of punishment. Santa Ana winds can lift and crack roofing materials, and winter rain can arrive in heavy bursts after months of dry heat, which finds every weak spot.',
@@ -1197,8 +1850,10 @@ export const BLOG_POSTS = [
 // Posts search engines and AI assistants should know about
 export const PUBLISHED_POSTS = BLOG_POSTS.filter((p) => !p.noindex);
 
-// The newest published post; its thumbnail is shown beside the blog index's hero heading (components/sections/HeroLatestPost.jsx)
-export const LATEST_POST = [...PUBLISHED_POSTS].sort((a, b) => b.datePublished.localeCompare(a.datePublished))[0];
+// The newest published post that has a picture (else the newest): its thumbnail is shown beside the blog index's hero heading
+// (components/sections/HeroLatestPost.jsx), so a new post without a picture yet doesn't empty the hero
+const byNewest = [...PUBLISHED_POSTS].sort((a, b) => b.datePublished.localeCompare(a.datePublished));
+export const LATEST_POST = byNewest.find((p) => p.image) || byNewest[0];
 
 // A heading's anchor for the table of contents: "Southern California’s Rainy Season" → "southern-californias-rainy-season"
 export const headingId = (heading) =>

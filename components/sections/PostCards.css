@@ -15,6 +15,25 @@
 .pc-card p{margin-top:0;margin-bottom:16px;color:var(--ink);font-size:15px;line-height:1.6}
 .pc-more{margin-top:auto;display:inline-flex;align-items:center;gap:8px;color:var(--gold-ink);font:700 13px/1.2 var(--font-head);letter-spacing:.03em;text-transform:uppercase}
 .pc-more svg{width:14px;height:14px}
+/* Filters, count and page buttons (BlogBrowser.jsx) */
+.pc-card[hidden]{display:none}
+.pc-filters{display:grid;gap:16px;margin:0 0 18px;scroll-margin-top:110px}
+.pc-group{display:grid;gap:8px}
+.pc-group-label{color:var(--gold-ink);font:700 12px/1.3 var(--font-head);letter-spacing:.08em;text-transform:uppercase}
+.pc-chips{display:flex;flex-wrap:wrap;gap:8px}
+.pc-chip{padding:9px 16px;border:1.5px solid var(--line);border-radius:99px;background:var(--paper);color:var(--ink);font:inherit;font-size:14px;font-weight:600;line-height:1.2;cursor:pointer;transition:border-color .15s,background .15s}
+.pc-chip:hover:not(:disabled){border-color:var(--gold)}
+.pc-chip[aria-pressed="true"]{border-color:var(--gold);background:rgba(212,181,114,.2);box-shadow:0 0 0 1px var(--gold) inset}
+.pc-chip:disabled{opacity:.4;cursor:not-allowed}
+.pc-chip:focus-visible,.pc-page:focus-visible,.pc-clear:focus-visible{outline:3px solid rgba(212,181,114,.85);outline-offset:2px}
+.pc-status{display:flex;flex-wrap:wrap;align-items:center;gap:6px 16px;margin:0 0 24px;color:var(--ink);font-size:15px}
+.pc-clear{padding:4px 0;border:0;background:none;color:var(--gold-ink);font:700 13px/1.2 var(--font-head);letter-spacing:.03em;text-transform:uppercase;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.pc-pages{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:40px}
+.pc-page{min-width:44px;min-height:44px;padding:0 14px;border:1.5px solid var(--line);border-radius:var(--radius);background:var(--paper);color:var(--ink);font:inherit;font-size:15px;font-weight:700;cursor:pointer;transition:border-color .15s,background .15s}
+.pc-page:hover:not(:disabled){border-color:var(--gold)}
+.pc-page[aria-current="page"]{border-color:var(--gold);background:rgba(212,181,114,.2);box-shadow:0 0 0 1px var(--gold) inset}
+.pc-page:disabled{opacity:.4;cursor:not-allowed}
+.pc-page-step{padding:0 18px}
 @media (min-width:621px){
   .post-cards{padding:88px 0}
   .pc-grid{grid-template-columns:1fr 1fr}

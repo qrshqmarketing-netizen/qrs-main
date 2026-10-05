@@ -18,9 +18,9 @@ export default function LatestArticles({ posts = [], heading = 'Latest Roofing A
         <div className="art-grid">
           {posts.map((post, i) => (
             <article className="art-card" key={post.slug}>
-              {post.image ? (
+              {post.image || post.cardImage ? (
                 <div className="art-media">
-                  <Image src={post.image} alt="" fill sizes="(min-width: 901px) 360px, (min-width: 621px) 50vw, 100vw" quality={60} />
+                  <Image src={post.image || post.cardImage} alt="" fill sizes="(min-width: 901px) 360px, (min-width: 621px) 50vw, 100vw" quality={60} />
                 </div>
               ) : (
                 <div className={`art-media art ${SCENES[i % SCENES.length]}`} aria-hidden="true"></div>

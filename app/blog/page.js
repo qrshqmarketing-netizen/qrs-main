@@ -1,7 +1,8 @@
 import Hero from '@/components/sections/Hero';
 import HeroLatestPost from '@/components/sections/HeroLatestPost';
 import IndexNote from '@/components/sections/IndexNote';
-import PostCards from '@/components/sections/PostCards';
+import BlogBrowser from '@/components/sections/BlogBrowser';
+import { postDate } from '@/components/sections/PostCards';
 import JsonLd from '@/components/ui/JsonLd';
 import { BLOG_LINK, blogPath, HOME } from '@/data/catalog';
 import { BLOG_POSTS, LATEST_POST, PUBLISHED_POSTS } from '@/data/blog/posts';
@@ -23,9 +24,22 @@ const schema = pageJsonLd({
 });
 
 // Blog index: the hero and every post in data/blog/posts.js, newest first, and nothing else (the posts carry the
-// estimate form and calls to action). The newest post's thumbnail sits beside the hero heading.
+// estimate form and calls to action). The newest post with a picture also sits beside the hero heading; its card joins the list
+// below when a filter is on (components/sections/BlogBrowser.jsx).
 export default function BlogPage() {
-  const featured = LATEST_POST?.image ? LATEST_POST : null; // shown large in the hero, so the list below starts with the next one
+  const featured = LATEST_POST?.image ? LATEST_POST : null;
+  const cards = BLOG_POSTS.map((post, i) => ({
+    slug: post.slug,
+    href: blogPath(post.slug),
+    title: post.title,
+    excerpt: post.excerpt,
+    datePublished: post.datePublished,
+    dateLabel: postDate(post.datePublished),
+    picture: post.image || post.cardImage || null,
+    scene: i,
+    topics: post.topics || [],
+    featured: post === featured,
+  }));
   return (
     <main id="top">
       <JsonLd data={schema} />
@@ -36,7 +50,7 @@ export default function BlogPage() {
         intro={page.hero.intro}
         {...(featured && { aside: <HeroLatestPost post={featured} /> })}
       />
-      <PostCards posts={featured ? BLOG_POSTS.filter((post) => post !== featured) : BLOG_POSTS} heading={!PUBLISHED_POSTS.length ? 'Coming Soon' : featured ? 'More Articles' : 'Latest Articles'} />
+      <BlogBrowser posts={cards} heading={PUBLISHED_POSTS.length ? 'Browse Articles' : 'Coming Soon'} />
       <IndexNote note={page.note} />
     </main>
   );
