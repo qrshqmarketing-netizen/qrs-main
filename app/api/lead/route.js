@@ -5,7 +5,7 @@ import { after } from 'next/server';
 import { FOUND_US_OPTIONS, ROOF_TYPES, SERVICE_OPTIONS, VISIT_TIMES } from '@/data/estimateOptions';
 import { leadAttribution } from '@/lib/attribution';
 import { sendAutoReply } from '@/lib/autoReply';
-import { deliverLead, rateLimited } from '@/lib/leads';
+import { deliverLead, leadChannelSettings, rateLimited } from '@/lib/leads';
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 const clip = (v, max) => (typeof v === 'string' ? v.trim().slice(0, max) : '');
@@ -55,6 +55,13 @@ export async function POST(request) {
   const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || request.headers.get('x-real-ip') || 'unknown';
   if (rateLimited(`lead:${ip}`)) return Response.json({ ok: false, error: 'too many requests' }, { status: 429 });
 
+  // Setup check: a request carrying the LEADS_SHEET_SECRET in an x-leads-diagnostic header gets each channel's result and error back,
+  // so email and spreadsheet problems can be traced without opening the server logs
+  const secret = (process.env.LEADS_SHEET_SECRET || '').trim();
+  const diagnostic = Boolean(secret) && request.headers.get('x-leads-diagnostic') === secret;
+  // ...with "configCheck": true it only reports which channels have their settings on this deployment (nothing is sent or saved)
+  if (diagnostic && body?.configCheck === true) return Response.json({ ok: true, settings: leadChannelSettings() });
+
   const source = body?.source === 'instant-quote' ? 'instant-quote' : 'estimate-form';
   const name = clip(body?.name, 120);
   const phone = clip(body?.phone, 40);
@@ -83,10 +90,6 @@ export async function POST(request) {
     ...leadAttribution(body?.utm),
   };
 
-  // Setup check: a request carrying the LEADS_SHEET_SECRET in an x-leads-diagnostic header gets each channel's
-  // result and error back, so email and spreadsheet problems can be traced without opening the server logs
-  const secret = (process.env.LEADS_SHEET_SECRET || '').trim();
-  const diagnostic = Boolean(secret) && request.headers.get('x-leads-diagnostic') === secret;
   // ...and with "autoReplyTest": true it sends only the confirmation email, marked TEST, to the email given (no lead email, no sheet row)
   if (diagnostic && body?.autoReplyTest === true) {
     try {
