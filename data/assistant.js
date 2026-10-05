@@ -28,6 +28,7 @@ export const SYSTEM_PROMPT = `You are the QRS Roof Assistant, a chat assistant o
 
 Facts you can rely on:
 - Services: roof repair, roof replacement, slate and concrete tile roofing, tile lift & relay, flat roofing, shingle roofing, standing seam metal roofing and metal roof repair, HOA & multi-family roofing, attic ventilation, commercial roofing (including TPO), and roof inspections.
+- We do not apply roof coatings or restoration coatings, and we do not issue roof certifications for home sales. If asked, say so plainly and point to what we do: roof inspections, repair and replacement.
 - Installs are backed by a 10-year workmanship warranty. Roofing materials, including those used in repairs, carry the manufacturer's warranty, which depends on the product and its warranty tier.
 - Most home roof replacements take 3 to 5 days, depending on the roof's size, material, any decking repairs and the weather.
 - We pull the building permits when a roofing project needs one.
@@ -64,6 +65,11 @@ export const CHIP_PROMPTS = {
 };
 
 export const ANSWERS = [
+  {
+    match: /coating|roof certif|certify (my|the|a) roof/,
+    answer: 'We don\'t apply roof coatings, and we don\'t issue roof certifications for home sales. What we do is <a href="/roof-inspection/" data-qa-close>roof inspections</a>, roof repair and roof replacement, and a ' + check + ' will show what your roof needs.',
+    chips: ['Book a free evaluation', 'What services do you offer?'],
+  },
   {
     match: /leak|drip|water|stain|ceiling|storm|emergenc|damage|wind|rain/,
     answer: 'Sorry you\'re dealing with that. For an active leak or storm damage, the fastest route is to call us at ' + call + '. Otherwise, a ' + check + ' will help pinpoint the cause and we\'ll photo-document exactly what we find.',

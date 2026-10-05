@@ -86,7 +86,7 @@ export const CARE_PLAN = {
       'Structural, decking or sheathing work',
       'Interior repairs, and storm or fire damage restoration',
       'Skylight, solar, chimney and gutter repair or replacement',
-      'Coatings, tree trimming, permits and code upgrades',
+      'Tree trimming, permits and code upgrades',
     ],
   },
   // What visits focus on for each roof type (this page replaced the separate shingle, tile and flat roof care pages)

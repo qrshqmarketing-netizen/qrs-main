@@ -940,7 +940,7 @@ export const BLOG_POSTS = [
         heading: 'What Roof Restoration Means',
         blocks: [
           'Roof restoration generally means repairing and renewing an existing roof instead of tearing it off. The exact work depends on the roof.',
-          'It can include repairing damaged pieces, resealing flashings, clearing debris, resetting tiles over new underlayment and, on some low-slope roofs, applying a coating over a sound surface.',
+          'It can include repairing damaged pieces, resealing flashings, clearing debris and resetting tiles over new underlayment. Some contractors also apply a coating over a sound low-slope roof. Quality Roofing Specialists does not apply roof coatings: when a roof is sound we repair it, and when it is worn out we replace it.',
           'The word is used loosely, so ask any contractor to spell out exactly what they would do to your roof, in writing.',
         ],
       },
