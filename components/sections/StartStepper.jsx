@@ -36,10 +36,17 @@ export default function StartStepper() {
   const index = Math.max(0, steps.indexOf(step));
   const openAt = steps.indexOf(firstOpen(answers)); // later steps can't be opened until the ones before them are answered
 
-  // Start from what the visitor already told us: the ?need= choice from a page's start card, and what the page they came from implies
+  // Start from what the visitor already told us: ?need= and ?property= in the link (a page's start card, the Google profile links), and what
+  // the page they came from implies
   useEffect(() => {
-    const need = new URLSearchParams(window.location.search).get('need');
-    const known = { ...prefillForPath(lastPage()), ...(NEEDS.some((n) => n.id === need) && { need }) };
+    const params = new URLSearchParams(window.location.search);
+    const need = params.get('need');
+    const property = params.get('property');
+    const known = {
+      ...prefillForPath(lastPage()),
+      ...(NEEDS.some((n) => n.id === need) && { need }),
+      ...(PROPERTIES.some((p) => p.id === property) && { property }),
+    };
     if (!Object.keys(known).length) return;
     setAnswers(known);
     setPrefilled(true);

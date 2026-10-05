@@ -13,23 +13,23 @@ const R = '/residential-roofing/';
 export const BLOG_REDIRECTS = {
   'flat-roof-repair-contractors': `${R}flat-roofing/repair/`,
   'commercial-roof-repair-services': '/commercial-roofing/repair/',
-  'signs-of-storm-damage': '/roof-repair/emergency/',
-  'signs-of-a-leaky-roof': '/roof-repair/',
+  'signs-of-storm-damage': '/blog/roof-storm-damage-signs/', // rewritten as a new blog post
+  'signs-of-a-leaky-roof': '/blog/roof-leak-source/', // covered by the new roof leak post
   'roof-coating-applications': `${R}flat-roofing/`,
-  'storm-damage-roof-repair-boost-home': '/roof-repair/emergency/',
-  'guide-to-roof-repair-vs-replacement': '/roof-repair/',
+  'storm-damage-roof-repair-boost-home': '/blog/roof-storm-damage-signs/', // covered by the new storm damage post
+  'guide-to-roof-repair-vs-replacement': '/blog/roof-restoration-vs-replacement/', // covered by the new restoration vs replacement post
   'how-to-repair-a-tiled-roof': `${R}tile-roofing/repair/`,
-  '5-temporary-roof-repair-options': '/roof-repair/emergency/',
-  '5-winter-roof-repair-tips': '/roof-repair/',
+  '5-temporary-roof-repair-options': '/blog/temporary-roof-repair-options/', // rewritten as a new blog post
+  '5-winter-roof-repair-tips': '/blog/roof-maintenance-checklist/', // covered by the new maintenance checklist
   'asphalt-shingle-roof-repair': `${R}shingle-roofing/repair/`,
   '6-diy-roof-repair-tips': '/roof-repair/',
-  '5-tips-roof-maintenance': '/roof-maintenance-plans/',
+  '5-tips-roof-maintenance': '/blog/roof-maintenance-checklist/', // covered by the new maintenance checklist
   'how-to-keep-your-roof-cool': `${R}flat-roofing/replacement/`,
   '5-signs-damaged-asphalt-shingle-roof': `${R}shingle-roofing/repair/`,
   'tile-roofs-frequently-asked-questions': `${R}tile-roofing/`,
-  'how-to-prolong-the-life-of-your-roof': '/roof-maintenance-plans/',
+  'how-to-prolong-the-life-of-your-roof': '/blog/roof-maintenance-checklist/', // covered by the new maintenance checklist
   '5-musts-reliable-roofing-specialist': '/about-us/',
-  'wooden-roofing-pros-cons': R,
+  'wooden-roofing-pros-cons': '/blog/wooden-roof-pros-and-cons/', // rewritten as a new blog post
   'how-to-remove-mold-from-roof': '/roof-maintenance-plans/',
   'solar-panel-tiles-are-they-worth-it': R,
   'how-often-should-you-clean-your-gutters': R, // Rain Gutters is hidden for now
@@ -74,7 +74,7 @@ export const REDIRECTS = [
   ['/commercial-roofing-services/commercial-roof-inspection/', '/commercial-roofing/maintenance/'],
   ['/commercial-roofing-contractor-los-angeles/', '/commercial-roofing/'],
   ['/los-angeles-commercial-roof-replacement/', '/commercial-roofing/replacement/'],
-  ['/roof-insurance-claims/', '/roof-repair/emergency/'],
+  ['/roof-insurance-claims/', '/blog/roof-insurance-claims-california/'], // rewritten as a new blog post
   ['/instant-quote-roof-replacement/', '/roof-replacement/'],
   ['/coupons-special-offers/', '/roof-inspection/'],
   ['/free-estimate/', '/contact-us/'],

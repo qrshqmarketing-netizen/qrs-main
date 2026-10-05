@@ -3,7 +3,7 @@ import IndexNote from '@/components/sections/IndexNote';
 import PostCards from '@/components/sections/PostCards';
 import JsonLd from '@/components/ui/JsonLd';
 import { BLOG_LINK, blogPath, HOME } from '@/data/catalog';
-import { BLOG_POSTS, LATEST_POST, PUBLISHED_POSTS } from '@/data/blog/posts';
+import { BLOG_POSTS, HERO_POST, PUBLISHED_POSTS } from '@/data/blog/posts';
 import { BLOG_PAGE as page } from '@/data/pages/blog';
 import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
@@ -32,7 +32,7 @@ export default function BlogPage() {
         eyebrow="Roofing Blog"
         title={page.hero.heading}
         intro={page.hero.intro}
-        {...(LATEST_POST?.image && { image: LATEST_POST.heroImage || LATEST_POST.image, imageAlt: LATEST_POST.imageAlt, imagePosition: 'center 30%' })}
+        {...(HERO_POST && { image: HERO_POST.heroImage || HERO_POST.image, imageAlt: HERO_POST.imageAlt, imagePosition: 'center 30%' })}
       />
       <PostCards posts={BLOG_POSTS} heading={PUBLISHED_POSTS.length ? 'Latest Articles' : 'Coming Soon'} />
       <IndexNote note={page.note} />

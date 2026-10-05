@@ -11,8 +11,12 @@
 export const START_PATH = '/start/';
 export const ROOF_CHECK_HASH = '#roof-check'; // what the data files link to; SiteLink sends it to START_PATH
 
-// ?need=repair on the start link pre-answers the first question (the start card on each page uses these)
-export const startHref = (need) => (need ? `${START_PATH}?need=${need}` : START_PATH);
+// ?need=repair on the start link pre-answers the first question (the start card on each page uses these); ?property=commercial (or
+// home, hoa) pre-answers the second, e.g. for the Vernon profile's link
+export const startHref = (need, property) => {
+  const q = [need && `need=${need}`, property && `property=${property}`].filter(Boolean).join('&');
+  return q ? `${START_PATH}?${q}` : START_PATH;
+};
 
 // Step 1. `service` is the value the lead email and spreadsheet use (data/estimateOptions.js SERVICE_OPTIONS).
 export const NEEDS = [
