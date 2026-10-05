@@ -3,7 +3,7 @@
 export const ROOF_REPAIR_HUB = {
   keyword: 'roof repair',
   metaTitle: 'Roof Repair in Los Angeles & OC',
-  metaDescription: 'Roof repair in Los Angeles & Orange County for shingle, tile and flat roofs: leaks traced to the source and fixed, with a written price first. Book a free roof evaluation.',
+  metaDescription: 'Roof repair in Los Angeles & Orange County for shingle, tile and flat roofs: leaks traced and fixed, with a written price first. Book a free roof evaluation.',
   hero: {
     heading: 'Roof Repair Services · *LeakRescue*',
     intro: 'Roof repair from QRS finds where water is really getting into your shingle, tile or flat roof and fixes it at the source, across Los Angeles and Orange County. Our *LeakRescue* repair service shows you photos of the problem and the finished repair, with a written scope and price before any work. Start with a free roof evaluation.',

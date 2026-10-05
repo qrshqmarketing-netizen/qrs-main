@@ -107,7 +107,7 @@ export const HOA_MULTI_FAMILY = {
   card: 'Roofing for HOA communities and multi-family properties, with photo-documented reports, work phased building by building and one point of contact.',
   metaTitle: 'HOA & Multi-Family Roofing in LA & OC',
   metaDescription:
-    'HOA and multi-family roofing in Los Angeles & Orange County: photo-documented reports, phased work and one point of contact. Request an estimate.',
+    'HOA & multi-family roofing in Los Angeles & Orange County: photo-documented reports, phased work and one point of contact. Request an estimate.',
   image: '/images/shingle-roof-care-multi-family.webp',
   imageAlt: 'Aerial view of a multi-family property with a shingle roof',
   hero: {

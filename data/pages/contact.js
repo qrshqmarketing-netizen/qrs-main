@@ -8,7 +8,7 @@ export const CONTACT_PAGE = {
   keyword: 'contact quality roofing specialists',
   metaTitle: 'Contact',
   metaDescription:
-    'Contact Quality Roofing Specialists: call (310) 340-1643, visit our Los Angeles, Valley or Vernon office, or request a free roof evaluation online and get a clear next step.',
+    'Contact Quality Roofing Specialists: call (310) 340-1643, visit our LA, Valley or Vernon office, or request a free roof evaluation online.',
   hero: {
     heading: 'Contact Quality Roofing Specialists',
     image: '/images/reviews-hero-bg.webp',

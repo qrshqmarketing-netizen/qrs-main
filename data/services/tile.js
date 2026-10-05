@@ -100,7 +100,7 @@ export const TILE_CONTENT = {
       navLabel: 'Roof Repairs',
       card: 'Cracked or slipped tiles, loose ridges, failed flashings and clogged valleys, traced to their source and fixed with photos of the work.',
       metaTitle: 'Tile Roof Repair in Los Angeles & OC',
-      metaDescription: 'Tile roof repair in Los Angeles & Orange County: leaks traced to the source, cracked tiles matched and flashings fixed, with photos. Book a free roof evaluation.',
+      metaDescription: 'Tile roof repair in Los Angeles & Orange County: leaks traced, cracked tiles matched and flashings fixed, with photos. Book a free roof evaluation.',
       image: '/images/tile-lift-off-and-reset-drone-view-2.webp',
       imageAlt: 'Tile roof repair and relay in progress, with tiles staged on the roof',
       hero: {
@@ -150,7 +150,7 @@ export const TILE_CONTENT = {
       navLabel: 'Lift & Relay',
       card: 'Keep the tile roof you love. We lift the tiles, replace the worn underlayment underneath and reset your roof in its original pattern.',
       metaTitle: 'Tile Lift & Relay in Los Angeles',
-      metaDescription: 'Tile lift & relay in Los Angeles & Orange County: new underlayment under your existing tiles, reset cleanly to keep your look. Start with a free roof evaluation.',
+      metaDescription: 'Tile lift & relay in LA & Orange County: new underlayment under your existing tiles, reset cleanly to keep your look. Start with a free roof evaluation.',
       image: '/images/tile-lift-off-and-reset-drone-view.webp',
       imageAlt: 'Aerial view of tiles lifted off a roof during a tile lift and relay, exposing the underlayment',
       hero: {
@@ -203,7 +203,7 @@ export const TILE_CONTENT = {
       navLabel: 'Slate Tile Roofing',
       card: 'A distinctive natural-stone roof option, planned around your home’s structure, roof details and the slate profile you want.',
       metaTitle: 'Slate Tile Roofing in Los Angeles & Orange County',
-      metaDescription: 'Slate tile roofing in Los Angeles & Orange County: plan a natural-stone roof with careful attention to structure, underlayment and flashing. Request a roof evaluation.',
+      metaDescription: 'Slate tile roofing in Los Angeles & Orange County: a natural-stone roof planned around structure, underlayment and flashing. Request a roof evaluation.',
       image: '/images/tile-roof-replacement.webp',
       imageAlt: 'Tile roof on a Southern California home',
       hero: {

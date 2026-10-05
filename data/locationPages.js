@@ -177,7 +177,7 @@ export const LOCATION_PAGES = {
     image: '/images/woodland-hills-office.webp', // hero photo: our Valley office building
     imagePosition: 'center 60%',
     metaTitle: 'Woodland Hills Roofing & Roof Repair',
-    metaDescription: 'Woodland Hills roofing from our Valley office on Ventura Blvd: tile, shingle and flat roof repair and replacement with written scopes. Book a free roof evaluation.',
+    metaDescription: 'Woodland Hills roofing from our Valley office on Ventura Blvd: tile, shingle and flat roof repair and replacement. Book a free roof evaluation.',
     blurb: 'Roofer-led inspections, written scopes and clean installs for homes across Woodland Hills and the West Valley.',
     hero: {
       heading: 'Woodland Hills roofing from our Valley office.',
@@ -447,7 +447,7 @@ export const LOCATION_PAGES = {
     imagePosition: 'center 55%',
     offer: 'commercial',
     metaTitle: 'Vernon Roofing & Commercial Roof Repair',
-    metaDescription: 'Vernon, CA roofing for the city’s warehouses, plants and commercial buildings: roof repair, replacement and inspection with written scopes. Request a roof survey.',
+    metaDescription: 'Vernon roofing for the city’s warehouses, plants and commercial buildings: repair, replacement and inspection with written scopes. Request a roof survey.',
     blurb: 'Roofer-led inspections and clean installs for the warehouses, manufacturing plants and commercial buildings across Vernon.',
     hero: {
       heading: 'Vernon roofing for an exclusively industrial city.',

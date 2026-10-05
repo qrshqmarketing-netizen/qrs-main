@@ -233,7 +233,7 @@ export const ROOF_FINANCING = {
   },
   metaTitle: 'Roof Financing in Los Angeles & Orange County',
   metaDescription:
-    'Roof financing in LA & Orange County: spread the cost of a home roof replacement into monthly payments through Momnt Financing or Service Financing. Book a free roof evaluation.',
+    'Roof financing in LA & Orange County: spread a home roof replacement into monthly payments through Momnt or Service Financing. Book a free roof evaluation.',
   image: '/images/financing-hero-background.webp',
   imageAlt: 'A roofer reviewing a project with homeowners',
   showReviews: false,

@@ -47,7 +47,7 @@ export const SHINGLE_CONTENT = {
       navLabel: 'Roof Replacement',
       card: 'A full tear-off and a complete new shingle system, from the deck and underlayment up to the ridge caps, with a written scope and price first.',
       metaTitle: 'Shingle Roof Replacement in LA & OC',
-      metaDescription: 'Shingle roof replacement in Los Angeles & Orange County: full tear-off, new underlayment, flashing and balanced ventilation. Book a free roof evaluation to start.',
+      metaDescription: 'Shingle roof replacement in Los Angeles & Orange County: full tear-off, new underlayment, flashing and balanced ventilation. Book a free roof evaluation.',
       image: '/images/shingle-roof-replacement-tear-off-drone-view.webp',
       imageAlt: 'Aerial view of a shingle roof tear-off in progress, with crew removing old shingles down to the deck',
       hero: {

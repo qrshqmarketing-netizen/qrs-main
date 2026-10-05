@@ -8,7 +8,7 @@ export const ABOUT_PAGE = {
   keyword: 'quality roofing specialists',
   metaTitle: 'About Us',
   metaDescription:
-    'Quality Roofing Specialists crafts top-quality roofs with passion and precision. A licensed California contractor since 2020 serving Los Angeles & Orange County.',
+    'Quality Roofing Specialists crafts top-quality roofs with passion and precision. Licensed California contractor since 2020, serving LA & Orange County.',
   hero: {
     eyebrow: 'About Our Company',
     heading: 'Meet Quality Roofing Specialists',

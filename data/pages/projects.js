@@ -15,7 +15,7 @@ export const PROJECTS_PAGE = {
   keyword: 'roofing projects',
   metaTitle: 'Roofing Projects',
   metaDescription:
-    'Roofing projects by Quality Roofing Specialists: tile, shingle and flat roofs for homes, HOAs and businesses across Southern California. Book a free roof evaluation.',
+    'Roofing projects by QRS: tile, shingle and flat roofs for homes, HOAs and businesses across Southern California. Book a free roof evaluation.',
   hero: {
     heading: 'Our Roofing Projects Near You',
     intro:

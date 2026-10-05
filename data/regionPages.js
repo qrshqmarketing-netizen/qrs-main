@@ -36,7 +36,7 @@ export const REGION_PAGES = {
     image: '/images/orange-county-drone-view.webp',
     imageAlt: 'Aerial view of Orange County suburban neighborhoods with hills in the background',
     metaTitle: 'Orange County Roofing Services',
-    metaDescription: 'Orange County roofing for homes, HOAs and businesses from Anaheim to Newport Beach: tile, shingle and flat roofs. Book a free roof evaluation for your home today.',
+    metaDescription: 'Orange County roofing for homes, HOAs and businesses from Anaheim to Newport Beach: tile, shingle and flat roofs. Book a free roof evaluation today.',
     hero: {
       heading: 'Orange County Roofing Services',
       intro: 'Orange County roofing from Quality Roofing Specialists covers homes, HOAs and businesses from Anaheim to Newport Beach, with tile, shingle and flat roof repair and replacement. Homes start with a free roof evaluation; commercial and larger HOA properties start with a roof survey.',
