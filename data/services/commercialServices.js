@@ -105,6 +105,109 @@ export const COMMERCIAL_SERVICES = [
   },
 
   {
+    slug: 'tpo-roofing',
+    keyword: 'tpo roofing',
+    title: 'TPO Roofing',
+    h1: 'TPO Roofing in Los Angeles & Orange County',
+    navLabel: 'TPO Roofing',
+    card: 'A white, heat-welded single-ply membrane for flat and low-slope commercial roofs, installed over a roof surface prepared for it.',
+    metaTitle: 'TPO Roofing in Los Angeles & Orange County',
+    metaDescription: 'TPO roofing in Los Angeles & Orange County: a reflective single-ply membrane for commercial flat roofs, seams welded, work phased so you stay open. Roof survey.',
+    image: '/images/home-services-commercial-flat-roof-drone-view.webp',
+    imageAlt: 'Aerial view of a white low-slope commercial roof',
+    hero: {
+      intro:
+        'TPO roofing from QRS puts a white, reflective single-ply membrane on flat and low-slope commercial roofs across Los Angeles and Orange County. A roofer surveys the roof first, photographs what is there and recommends TPO only if it suits the building, with a written scope and price before any work. The work is planned in phases so your building stays open.',
+      highlights: ['White membrane that reflects sunlight', 'Seams welded with hot air', 'Planned in phases so the building stays open'],
+    },
+    overview: {
+      paragraphs: [
+        'TPO stands for thermoplastic polyolefin. It is a single-ply roofing membrane, sold in wide rolls and usually white, that is laid over the roof and joined at the seams with hot air, so the seams fuse into one continuous surface. It is one of the most common choices for flat and low-slope commercial roofs.',
+        'In Southern California the appeal is mostly sun and heat. A white membrane reflects much of the sun’s energy instead of absorbing it, which can keep the roof surface cooler. California’s Title 24 energy code includes cool roof requirements for many low-slope commercial roofs, and a reflective membrane is one way to meet them. The exact requirement depends on the building and the product, so we check it as part of your scope.',
+        'TPO is not the right answer for every roof. A roofer checks the deck, the insulation, the drainage and what is on the roof now before recommending a system. For the full picture of replacing a commercial roof, see [commercial roof replacement](/commercial-roofing/replacement/).',
+      ],
+    },
+    process: {
+      subheading: 'How a TPO roof project works',
+      steps: [
+        {
+          title: 'Roofer-led roof survey',
+          text: 'A roofer inspects and photographs the roof, section by section, and notes what a new membrane will have to be tied into.',
+          bullets: ['Slope, drains and scuppers', 'Rooftop units, curbs and penetrations', 'Parapets and wall flashing', 'The condition of the deck and insulation where it can be seen'],
+        },
+        {
+          title: 'Written scope and price',
+          text: 'Before any work starts you get a written scope and price: the membrane and how it is attached, any insulation or cover board, the flashings, the phasing and the schedule.',
+        },
+        {
+          title: 'Roof prep in phases',
+          text: 'We remove the old roofing section by section where the scope calls for it, repair the deck as needed and prepare the surface, so each section is dried in the same day it is opened.',
+          bullets: ['Work phased around your operations', 'Deck repairs per your written scope', 'Photos before the membrane goes on'],
+        },
+        {
+          title: 'Membrane installation',
+          text: 'The TPO membrane is rolled out and attached the way the scope specifies, and each seam is welded with hot air. Walls, curbs, penetrations and drains are flashed and detailed, since that is where most flat roof leaks begin.',
+          bullets: ['Seams welded with hot air', 'Flashing at walls, curbs and penetrations', 'Drains and scuppers detailed'],
+        },
+        {
+          title: 'Closeout and warranty',
+          text: 'We walk the finished roof with you and hand over closeout photos for your records. Our installs are backed by a 10-year workmanship warranty, and the membrane carries the manufacturer’s warranty, which depends on the product.',
+        },
+      ],
+    },
+    why: {
+      heading: 'Why Choose QRS for TPO Roofing?',
+      intro:
+        'A TPO roof is only as good as its seams and its details. As a licensed California contractor since 2020, we plan and photograph both, and we plan the work around how your building runs.',
+      points: [
+        {
+          title: 'A roofer surveys first',
+          text: 'We recommend TPO when it suits your roof, and tell you plainly when another system would serve the building better.',
+        },
+        {
+          title: 'Photos for owners and tenants',
+          text: 'You get photos of the roof before, during and after the work, which owners, managers and tenants can all review.',
+        },
+        {
+          title: 'Phased so you stay open',
+          text: 'Work moves across the roof in sections, with each section dried in as it is opened, so your doors stay open.',
+        },
+        {
+          title: 'Details done right',
+          text: 'Walls, curbs, penetrations and drains get as much attention as the field of the roof, because that is where leaks start.',
+        },
+      ],
+    },
+    faqs: [
+      {
+        q: 'What is TPO roofing?',
+        a: 'TPO is a single-ply roofing membrane made of thermoplastic polyolefin. It is usually white, comes in wide rolls and is joined at the seams with hot air. It is widely used on flat and low-slope commercial roofs.',
+      },
+      {
+        q: 'Is TPO a good choice for Southern California?',
+        a: 'It often is, because a white membrane reflects sunlight and can keep the roof surface cooler, and California’s Title 24 energy code has cool roof requirements for many low-slope commercial roofs. Whether it fits your building depends on the roof, so a roofer should survey it first.',
+      },
+      {
+        q: 'How long does a TPO roof last?',
+        a: 'We won’t promise a number of years. How long a TPO roof lasts depends on the membrane, the installation, the details at walls and penetrations, and how the roof is maintained. We focus on the part we control: the installation, backed by our 10-year workmanship warranty.',
+      },
+      {
+        q: 'How is TPO different from modified bitumen?',
+        a: 'TPO is a single-ply membrane with welded seams. Modified bitumen is a layered, asphalt-based system. The right choice depends on your roof, so we compare them with you from the survey.',
+      },
+      {
+        q: 'Can TPO go over my existing roof?',
+        a: 'Sometimes, if the existing roof is dry and sound and the code allows it. Often a tear-off is the better route, so you start from a clean, solid deck. The survey tells us which applies to your building.',
+      },
+      {
+        q: 'Do you repair TPO roofs?',
+        a: 'Yes. A leak on a TPO roof usually traces to a seam, a flashing or a penetration. See our [commercial roof repair](/commercial-roofing/repair/) page for how we find and fix the source.',
+      },
+    ],
+    related: ['/commercial-roofing/replacement/', '/commercial-roofing/repair/', '/commercial-roofing/maintenance/', '/commercial-roofing/warehouses/'],
+  },
+
+  {
     slug: 'maintenance',
     keyword: 'commercial roof maintenance',
     title: 'Commercial Roof Maintenance & Inspections',

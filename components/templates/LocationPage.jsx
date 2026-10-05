@@ -1,4 +1,5 @@
 import Faq from '@/components/sections/Faq';
+import LatestArticles from '@/components/sections/LatestArticles';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
 import ProofBar from '@/components/sections/ProofBar';
@@ -15,6 +16,7 @@ import { projectsRelatedTo } from '@/data/projectPages';
 import { SERVICES } from '@/data/services';
 import { OFFICES, SITE_URL } from '@/data/site';
 import { pageJsonLd } from '@/lib/structuredData';
+import { articlesFor } from '@/lib/articles';
 
 // Hero photos rotate across city pages until each city has its own
 const PHOTOS = [
@@ -68,6 +70,7 @@ export default function LocationPage({ location, page, index = 0 }) {
         projects={projectsFor(slug)}
       />
       <RelatedLinks heading={`Recent projects in ${city}`} links={projectsRelatedTo(cityPath(slug))} />
+      <LatestArticles posts={articlesFor(cityPath(slug))} heading="Related Roofing Articles" />
       <Faq heading={`${city} Roofing FAQs`} sub={`Straight answers for ${city} ${page.offer === 'commercial' ? 'clients' : 'homeowners'}.`} faqs={page.faqs} cta={false} />
       <RoofCheck offer={page.offer || 'home'} />
       <FinalCta heading={page.final.heading} text={page.final.text} />

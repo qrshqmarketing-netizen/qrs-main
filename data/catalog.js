@@ -55,6 +55,14 @@ export const GROUPS = {
     cardImage: '/images/flat-roof-torch-down-drone-view-services.webp',
     blurb: 'Modified bitumen and low-slope systems planned around drainage and the way water moves across your roof.',
   },
+  metal: {
+    key: 'metal',
+    label: 'Metal Roofing',
+    href: '/residential-roofing/metal-roofing/',
+    parent: RESIDENTIAL,
+    scenes: ['scene-metal'],
+    blurb: 'Standing seam metal roofs with clean lines and concealed fasteners, plus repairs for leaks and loose fasteners.',
+  },
   commercial: {
     key: 'commercial',
     label: 'Commercial Roofing',
@@ -112,7 +120,7 @@ export const SERVICE_HUBS = {
     scenes: ['scene-repair'],
     image: '/images/shingle-roof-repair-ridge-finish.webp',
     imageAlt: 'A roofer finishing work on a shingle roof ridge',
-    cards: ['/residential-roofing/shingle-roofing/repair/', '/residential-roofing/tile-roofing/repair/', '/residential-roofing/flat-roofing/repair/', '/residential-roofing/tile-roofing/lift-and-relay/', '/roof-repair/emergency/', '/commercial-roofing/repair/'],
+    cards: ['/residential-roofing/shingle-roofing/repair/', '/residential-roofing/tile-roofing/repair/', '/residential-roofing/flat-roofing/repair/', '/residential-roofing/metal-roofing/repair/', '/residential-roofing/tile-roofing/lift-and-relay/', '/roof-repair/emergency/', '/commercial-roofing/repair/'],
   },
   replacement: {
     key: 'replacement',
@@ -121,12 +129,12 @@ export const SERVICE_HUBS = {
     scenes: ['scene-replace'],
     image: '/images/shingle-roof-replacement-tear-off-drone-view.webp',
     imageAlt: 'Aerial view of a shingle roof replacement in progress',
-    cards: ['/residential-roofing/shingle-roofing/replacement/', '/residential-roofing/tile-roofing/replacement/', '/residential-roofing/flat-roofing/replacement/', '/residential-roofing/tile-roofing/lift-and-relay/', '/commercial-roofing/replacement/'],
+    cards: ['/residential-roofing/shingle-roofing/replacement/', '/residential-roofing/tile-roofing/replacement/', '/residential-roofing/flat-roofing/replacement/', '/residential-roofing/tile-roofing/lift-and-relay/', '/residential-roofing/metal-roofing/standing-seam/', '/commercial-roofing/replacement/', '/commercial-roofing/tpo-roofing/'],
   },
 };
 
 // Residential roof types in menu order (for cards and the "Roofing Types" carousel)
-export const RESIDENTIAL_TYPES = [GROUPS.shingle, GROUPS.flat, GROUPS.tile];
+export const RESIDENTIAL_TYPES = [GROUPS.shingle, GROUPS.flat, GROUPS.metal, GROUPS.tile];
 
 export const typeCard = (t) => ({ title: t.label, text: t.blurb, href: t.href, scene: t.scenes[0], image: t.cardImage });
 

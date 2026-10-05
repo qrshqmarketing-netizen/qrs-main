@@ -1,6 +1,7 @@
 import CardCarousel from '@/components/sections/CardCarousel';
 import DifferenceBand from '@/components/sections/DifferenceBand';
 import Faq from '@/components/sections/Faq';
+import LatestArticles from '@/components/sections/LatestArticles';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
 import ReviewStrip from '@/components/sections/ReviewStrip';
@@ -13,6 +14,7 @@ import { HOME, RESIDENTIAL, RESIDENTIAL_TYPES, typeCard } from '@/data/catalog';
 import { RESIDENTIAL_PAGE as page } from '@/data/pages/residential';
 import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
+import { articlesFor } from '@/lib/articles';
 
 export const metadata = pageMetadata({ title: page.metaTitle, description: page.metaDescription, path: RESIDENTIAL.href });
 
@@ -50,6 +52,7 @@ export default function ResidentialRoofingPage() {
       <CardCarousel title={page.cards.heading} items={RESIDENTIAL_TYPES.map(typeCard)} idPrefix="roofTypes" tone="wash" />
       <ServiceFinder heading={page.finder.heading} intro={page.finder.intro} rows={page.finder.rows} />
       <DifferenceBand />
+      <LatestArticles posts={articlesFor(RESIDENTIAL.href)} heading="Related Roofing Articles" />
       <Faq heading="Frequently Asked Questions" sub="Straight answers about residential roofing." faqs={page.faqs} cta={false} />
       <RoofCheck tone="white" />
       <FinalCta {...closingCta(page.keyword)} />

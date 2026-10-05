@@ -45,6 +45,7 @@ export const ROOFS = [
   { value: 'Tile', label: 'Tile' },
   { value: 'Shingle', label: 'Shingle' },
   { value: 'Flat', label: 'Flat or low-slope' },
+  { value: 'Metal', label: 'Metal' },
   { value: 'Not sure', label: 'Not sure' },
 ];
 export const TIMINGS = ['As soon as possible', 'Within a month', 'In 1 to 3 months', 'Just exploring'];
@@ -82,6 +83,7 @@ export function prefillForPath(path = '') {
   if (has('/tile-roofing')) a.roof = 'Tile';
   if (has('/shingle-roofing')) a.roof = 'Shingle';
   if (has('/flat-roofing')) a.roof = 'Flat';
+  if (has('/metal-roofing')) a.roof = 'Metal';
   return a;
 }
 

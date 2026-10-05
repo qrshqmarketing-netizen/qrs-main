@@ -1,5 +1,6 @@
 import CardGrid from '@/components/sections/CardGrid';
 import Faq from '@/components/sections/Faq';
+import LatestArticles from '@/components/sections/LatestArticles';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
 import ReviewStrip from '@/components/sections/ReviewStrip';
@@ -11,6 +12,7 @@ import ValueGrid from '@/components/sections/ValueGrid';
 import JsonLd from '@/components/ui/JsonLd';
 import { pageJsonLd } from '@/lib/structuredData';
 import { closingCta, faqSub } from './shared';
+import { articlesFor } from '@/lib/articles';
 
 // A hub page (e.g. /residential-roofing/tile-roofing/ or /commercial-roofing/): intro, cards for every page in the section,
 // why-choose points and the Roof Check form. Content shape: `hub` in data/services/*.js.
@@ -48,6 +50,7 @@ export default function HubPage({ hub, crumbs, eyebrow, image, imageAlt, cards, 
       <ValueGrid heading={hub.highlights.heading} items={hub.highlights.points} columns={3} />
       {process && <Process />}
       {feature && <SplitFeature {...feature} tone="wash" />}
+      <LatestArticles posts={articlesFor(crumbs.at(-1).href)} heading="Related Roofing Articles" />
       {hub.faqs?.length > 0 && <Faq heading="Frequently Asked Questions" sub={faqSub(hub.keyword)} faqs={hub.faqs} cta={false} />}
       <RoofCheck tone="white" offer={offer} />
       <FinalCta {...closingCta(hub.keyword, offer)} />

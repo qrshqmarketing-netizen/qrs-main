@@ -2,7 +2,9 @@
 // noindex: true keeps a post out of search results, the sitemap and the AI files (the blog index still shows it).
 //
 // Post shape:
-//   slug, title (the H1), keyword (in the meta title, meta description, H1 and first 100 words), metaTitle,
+//   slug, title (the H1), topics (what it covers, most important first: leak, repair, emergency, storm, insurance, maintenance,
+//   inspection, replacement, restoration, tile, shingle, flat, metal, wood, underlayment, commercial, ventilation; service and city pages
+//   show the articles whose topics match theirs, lib/articles.js), keyword (in the meta title, meta description, H1 and first 100 words), metaTitle,
 //   metaDescription, datePublished, dateModified, author, excerpt (blog index card), image + imageAlt (the thumbnail,
 //   in public/images/blog/), heroImage (optional: the same photo without its title text, used as the blog index's hero
 //   background while the post is the newest), intro (paragraphs above the table of contents), sections (each one in the table of
@@ -20,6 +22,7 @@ export const BLOG_POSTS = [
     slug: 'roof-leak-source',
     title: 'How to Find a Roof Leak: Signs, Causes and What to Do Next',
     keyword: 'roof leak',
+    topics: ['leak', 'repair', 'shingle', 'tile', 'flat', 'inspection'],
     metaTitle: 'How to Find a Roof Leak: Signs, Causes and Fixes',
     metaDescription:
       'A roof leak rarely drips where the water gets in. Learn the signs, the usual causes on shingle, tile and flat roofs, and what to do next.',
@@ -143,6 +146,7 @@ export const BLOG_POSTS = [
     slug: 'roof-maintenance-checklist',
     title: 'Roof Maintenance Checklist for the Southern California Rainy Season',
     keyword: 'roof maintenance checklist',
+    topics: ['maintenance', 'inspection', 'storm', 'shingle', 'tile', 'flat'],
     metaTitle: 'Roof Maintenance Checklist Before the Rainy Season',
     metaDescription:
       'A roof maintenance checklist for Southern California homeowners: what to check before the rains, what to leave to a roofer and how often to inspect.',
@@ -263,6 +267,7 @@ export const BLOG_POSTS = [
     slug: 'roof-restoration-vs-replacement',
     title: 'Roof Restoration vs. Replacement: Which Does Your Roof Need?',
     keyword: 'roof restoration',
+    topics: ['replacement', 'restoration', 'repair', 'tile', 'flat', 'maintenance'],
     metaTitle: 'Roof Restoration vs. Replacement: Which Do You Need?',
     metaDescription:
       'Roof restoration can extend a roof’s life if the roof is sound. See what restoration means, when it works and when replacement is the better call.',
@@ -402,6 +407,7 @@ export const BLOG_POSTS = [
     slug: 'roof-storm-damage-signs',
     title: 'Roof Storm Damage: How to Spot It and What to Do Next',
     keyword: 'roof storm damage',
+    topics: ['storm', 'emergency', 'repair', 'insurance', 'leak'],
     metaTitle: 'Roof Storm Damage: Signs and What to Do Next',
     metaDescription:
       'Roof storm damage can hide from the ground. Learn the signs after wind and heavy rain in Southern California, the first steps and when to call a roofer.',
@@ -543,6 +549,7 @@ export const BLOG_POSTS = [
     slug: 'temporary-roof-repair-options',
     title: 'Temporary Roof Repair: What Works Until a Roofer Arrives',
     keyword: 'temporary roof repair',
+    topics: ['emergency', 'repair', 'leak', 'storm'],
     metaTitle: 'Temporary Roof Repair: What Works Until a Roofer Comes',
     metaDescription:
       'Temporary roof repair can limit water damage until a roofer arrives. See safe options, what each one fixes and when to call for help.',
@@ -669,6 +676,7 @@ export const BLOG_POSTS = [
     slug: 'roof-insurance-claims-california',
     title: 'Roof Insurance Claims in California: What to Document and What to Expect',
     keyword: 'roof insurance claims',
+    topics: ['insurance', 'storm', 'emergency', 'repair', 'replacement'],
     metaTitle: 'Roof Insurance Claims in California: What to Document',
     metaDescription:
       'Roof insurance claims in California go more smoothly with photos, fast protection from further damage and a written repair scope. See what to expect.',
@@ -789,6 +797,7 @@ export const BLOG_POSTS = [
     slug: 'wooden-roof-pros-and-cons',
     title: 'Wooden Roof Pros and Cons: Is a Wood Roof Right for Your Home?',
     keyword: 'wooden roof',
+    topics: ['wood', 'shingle', 'tile', 'replacement'],
     metaTitle: 'Wooden Roof Pros and Cons: Is Wood Worth It?',
     metaDescription:
       'A wooden roof looks warm and natural, but fire rules, upkeep and cost matter in Southern California. See the pros and cons and the alternatives.',
@@ -926,6 +935,7 @@ export const BLOG_POSTS = [
     slug: 'tile-roof-underlayment',
     title: 'Tile Roof Underlayment: When Should It Be Replaced?',
     keyword: 'tile roof underlayment',
+    topics: ['tile', 'underlayment', 'repair', 'replacement', 'leak'],
     metaTitle: 'Tile Roof Underlayment: When to Replace It',
     metaDescription:
       'Tile roof underlayment often wears out before clay or concrete tiles do. See the warning signs, lift & relay options and what affects cost in Los Angeles.',

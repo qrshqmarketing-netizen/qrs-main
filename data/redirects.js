@@ -94,6 +94,10 @@ export const REDIRECTS = [
   ['/blog/page/:n/', '/blog/'],
   ['/blog/roofing-blog-updates/', '/blog/'], // the "coming soon" placeholder post, replaced by real articles
 
+  // Metal roofing moved under Residential Roofing with the other roof types
+  ['/metal-roofing/', '/residential-roofing/metal-roofing/'],
+  ['/metal-roofing/:slug/', '/residential-roofing/metal-roofing/:slug/'],
+
   // City pages at the site root
   ['/huntington-beach/', city(OC, 'huntington-beach')],
   ['/woodland-hills-roofing-specialists/', city(LA, 'woodland-hills')],

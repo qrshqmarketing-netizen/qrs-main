@@ -1,4 +1,5 @@
 import Faq from '@/components/sections/Faq';
+import LatestArticles from '@/components/sections/LatestArticles';
 import FeatureBand from '@/components/sections/FeatureBand';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
@@ -18,6 +19,7 @@ import { HOME_DESCRIPTION, HOME_H1, HOME_TITLE } from '@/data/site';
 import { LATEST_PROJECTS } from '@/data/projectPages';
 import { RECENT_WORK, RECENT_WORK_SUB } from '@/data/recentWork';
 import { ROOF_FINANCING } from '@/data/services/programs';
+import { latestArticles } from '@/lib/articles';
 import { openGraphBase, twitterBase } from '@/lib/seo';
 import { pageJsonLd } from '@/lib/structuredData';
 
@@ -88,7 +90,7 @@ export default function HomePage() {
         <QrsStandard />
         <ReviewStrip />
         <Services title="Roofing Systems" items={HOME_PRODUCTS} compact cta={false} pattern={false} slider id="roofing-systems" />
-        <ServiceArea />
+        <ServiceArea citiesAfterSearch />
         <WhyQrs />
         {SHOW_RECENT_WORK && <ProjectCarousel heading="Recent Work" sub={RECENT_WORK_SUB} projects={RECENT_WORK} id="work" pattern />}
         <PartnerLogos {...ROOF_FINANCING.partners} />
@@ -98,6 +100,7 @@ export default function HomePage() {
           {...CAREERS_TEASER}
           points={CAREERS_PAGE.roles.items.map((role) => ({ title: role.title, text: role.text, href: '/careers/#roles' }))}
         />
+        <LatestArticles posts={latestArticles(3)} />
         <Faq cta={false} />
         <RoofCheck />
         <FinalCta />

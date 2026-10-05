@@ -14,7 +14,7 @@ export const SERVICE_OPTIONS = [
   'Not sure yet',
 ];
 
-export const ROOF_TYPES = ['Not sure', 'Tile', 'Shingle', 'Flat'];
+export const ROOF_TYPES = ['Not sure', 'Tile', 'Shingle', 'Flat', 'Metal'];
 
 // "How did you find us?" (optional). Shown in the lead email and its own spreadsheet column.
 export const FOUND_US_OPTIONS = [

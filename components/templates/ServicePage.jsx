@@ -1,4 +1,5 @@
 import Faq from '@/components/sections/Faq';
+import LatestArticles from '@/components/sections/LatestArticles';
 import FeatureBand from '@/components/sections/FeatureBand';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
@@ -13,6 +14,7 @@ import JsonLd from '@/components/ui/JsonLd';
 import { projectsRelatedTo } from '@/data/projectPages';
 import { pageJsonLd } from '@/lib/structuredData';
 import { closingCta, faqSub } from './shared';
+import { articlesFor } from '@/lib/articles';
 
 const PROCESS_PHOTOS = {
   tile: [
@@ -132,6 +134,7 @@ export default function ServicePage({ page, crumbs, eyebrow, scenes = [], offer,
         imageAlt={processImageAlt}
       />
       <WhyChoose heading={page.why.heading} intro={page.why.intro} points={page.why.points} />
+      <LatestArticles posts={articlesFor(crumbs.at(-1).href)} heading="Related Roofing Articles" />
       {page.faqs?.length > 0 && <Faq heading="Frequently Asked Questions" sub={faqSub(page.keyword)} faqs={page.faqs} cta={false} />}
       <RelatedLinks heading="Recent projects" links={projectsRelatedTo(crumbs.at(-1).href)} />
       <RoofCheck tone="white" offer={offer} />

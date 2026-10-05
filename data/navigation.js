@@ -58,6 +58,16 @@ export const RESIDENTIAL_MENU = {
         { label: 'Inspections', href: '/roof-inspection/#flat-roofs' },
       ],
     },
+    {
+      id: 'mega-metal',
+      label: 'Metal Roofing',
+      all: { label: 'All Metal Roofing', href: '/residential-roofing/metal-roofing/' },
+      links: [
+        { label: 'Standing Seam Roofs', note: 'New metal roof', href: '/residential-roofing/metal-roofing/standing-seam/' },
+        { label: 'Roof Repairs', href: '/residential-roofing/metal-roofing/repair/' },
+        { label: 'Inspections', href: '/roof-inspection/' },
+      ],
+    },
   ],
   // Residential specialties are separate from the roof-material categories.
   hub: {
@@ -91,6 +101,7 @@ export const COMMERCIAL_MENU = {
     links: [
       { label: 'Roof Repair', href: '/commercial-roofing/repair/' },
       { label: 'Roof Replacement', href: '/commercial-roofing/replacement/' },
+      { label: 'TPO Roofing', href: '/commercial-roofing/tpo-roofing/' },
       { label: 'Inspection & Maintenance', href: '/commercial-roofing/maintenance/' },
       { label: 'Emergency & Storm Damage', href: '/roof-repair/emergency/', urgent: true },
     ],

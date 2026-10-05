@@ -1,5 +1,6 @@
 import CarePlanPricing from '@/components/sections/CarePlanPricing';
 import Faq from '@/components/sections/Faq';
+import LatestArticles from '@/components/sections/LatestArticles';
 import FeatureBand from '@/components/sections/FeatureBand';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
@@ -10,6 +11,7 @@ import ValueGrid from '@/components/sections/ValueGrid';
 import JsonLd from '@/components/ui/JsonLd';
 import { HOME, PROGRAMS } from '@/data/catalog';
 import { CARE_PLAN as page } from '@/data/pages/carePlan';
+import { articlesFor } from '@/lib/articles';
 import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
 
@@ -34,6 +36,7 @@ export default function RoofMaintenancePlansPage() {
       <ProcessSteps heading={page.schedule.heading} steps={page.schedule.steps} scene="scene-inspect" image={page.schedule.image} imageAlt={page.schedule.imageAlt} tone="white" />
       <FeatureBand {...page.tuneUp} tone="light" />
       <FeatureBand eyebrow={page.memberBenefits.eyebrow} heading={page.memberBenefits.heading} paragraphs={page.memberBenefits.paragraphs} points={page.memberBenefits.points} cta={{ label: 'Get Started', href: '#roof-check' }} />
+      <LatestArticles posts={articlesFor(PROGRAMS.plans.href)} heading="Related Roofing Articles" />
       <Faq heading="Roof Care Plan FAQs" sub="Straight answers about how the plan works." faqs={page.faqs} />
       <RoofCheck />
       <FinalCta heading={page.final.heading} text={page.final.text} />
