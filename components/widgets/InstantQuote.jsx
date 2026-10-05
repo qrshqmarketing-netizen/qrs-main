@@ -42,7 +42,9 @@ function toggle(list, value, order, alone) {
 // Prices and settings live in data/instantQuote.js; the measuring logic in lib/roofQuote.js.
 const MAX_FIXES = 5; // map taps per address (see pickBuilding)
 
-export default function InstantQuote() {
+// openFrom: a button tapped before this was loaded (InstantQuoteLoader), which opens the drawer; onReady: told once the
+// drawer is mounted and listening for its own buttons.
+export default function InstantQuote({ openFrom = null, onReady }) {
   const [open, setOpen] = useState(false);
   const [step, setStep] = useState(1);
   const [busy, setBusy] = useState(false);
@@ -109,8 +111,18 @@ export default function InstantQuote() {
       }
     };
     document.addEventListener('click', onClick);
+    onReady?.(); // from here on the loader leaves clicks to this listener
     return () => document.removeEventListener('click', onClick);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  // A button was tapped while this was still loading: open after one paint, so the drawer slides in
+  useEffect(() => {
+    if (!openFrom) return undefined;
+    const t = setTimeout(() => openDrawer(openFrom), 40);
+    return () => clearTimeout(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [openFrom]);
 
   // ----- Step 1 → 2 -----
   // Step 2 works two ways: pre-filled from the Solar API, or entered by hand when there's no roof data

@@ -10,7 +10,7 @@ import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
 import CampaignWelcome from '@/components/widgets/CampaignWelcome';
 import CookieNotice from '@/components/widgets/CookieNotice';
-import InstantQuote from '@/components/widgets/InstantQuote';
+import InstantQuoteLoader from '@/components/widgets/InstantQuoteLoader';
 import ReviewToast from '@/components/widgets/ReviewToast';
 import SeasonPromo from '@/components/widgets/SeasonPromo';
 import RoofAssistant from '@/components/widgets/RoofAssistant';
@@ -74,7 +74,7 @@ export default function RootLayout({ children }) {
         <Footer />
         <ReviewToast />
         <RoofAssistant />
-        {INSTANT_QUOTE_ENABLED && <InstantQuote />}
+        {INSTANT_QUOTE_ENABLED && <InstantQuoteLoader />}
         <CookieNotice />
         <SeasonPromo />
         <CampaignWelcome />
