@@ -1,10 +1,11 @@
 -- The Supabase table for the website's leads (lib/leads.js saves every lead here as well as emailing it and adding the spreadsheet row).
 -- Run this once: Supabase dashboard -> SQL Editor -> New query -> paste this whole file -> Run. It is safe to run again.
 --
--- Then set two Environment Variables in Vercel (Settings -> Environment Variables) and redeploy:
---   SUPABASE_URL                the project URL (Project Settings -> API), like https://abcdefgh.supabase.co
---   SUPABASE_SERVICE_ROLE_KEY   the "service_role" (secret) key from the same page. NOT the anon / publishable key.
--- The service_role key can read and write everything, so it only goes in Vercel (and .env.local), never in the code: this repo is public.
+-- Then set two Environment Variables in Vercel (Settings -> Environment Variables, with Production ticked) and redeploy:
+--   SUPABASE_URL          the project URL, like https://abcdefgh.supabase.co (Dashboard -> Connect)
+--   SUPABASE_SECRET_KEY   a SECRET key, sb_secret_... (Dashboard -> Settings -> API Keys -> Secret keys). NOT the publishable / anon key.
+-- (The older "service_role" key also works, as SUPABASE_SERVICE_ROLE_KEY, until Supabase retires it.)
+-- A secret key can read and write everything, so it only goes in Vercel (and .env.local), never in the code: this repo is public.
 
 create table if not exists public.leads (
   id uuid primary key default gen_random_uuid(),
@@ -41,6 +42,9 @@ create index if not exists leads_email_idx on public.leads (lower(email));
 -- Leads are private: turn on row level security with no policies, so only the service_role key (the website's server) can touch the table
 alter table public.leads enable row level security;
 revoke all on public.leads from anon, authenticated;
+-- The website's secret key connects as service_role. It skips row level security, but a table still needs an explicit grant: where the project
+-- doesn't expose new tables automatically, a missing grant is a "permission denied" error even for service_role.
+grant select, insert, update, delete on public.leads to service_role;
 
 -- One row per person: the same phone number or email across the form, the Instant Quote and the chat is merged into one contact, with the
 -- latest details, how many times they sent something, which sources, and when they were first and last seen. Nothing is deleted from
@@ -66,3 +70,4 @@ join (
 ) s using (contact_key)
 order by k.contact_key, k.created_at desc;
 revoke all on public.lead_contacts from anon, authenticated;
+grant select on public.lead_contacts to service_role;
