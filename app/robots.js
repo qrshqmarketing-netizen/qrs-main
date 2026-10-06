@@ -1,6 +1,9 @@
 import { SITE_URL } from '@/data/site';
 import { ALLOW_INDEXING } from '@/lib/seo';
 
+// The team's dashboard (lib/adminAuth.js); it also sends noindex headers (next.config.mjs) and needs a login
+const PRIVATE = ['/admin/', '/api/admin/'];
+
 // AI assistants and AI search crawlers, allowed so QRS can be found and quoted in AI answers.
 // To keep one out, move its name into a rule with `disallow: '/'`.
 const AI_CRAWLERS = [
@@ -29,8 +32,8 @@ export default function robots() {
   }
   return {
     rules: [
-      { userAgent: '*', allow: '/' },
-      { userAgent: AI_CRAWLERS, allow: '/' },
+      { userAgent: '*', allow: '/', disallow: PRIVATE },
+      { userAgent: AI_CRAWLERS, allow: '/', disallow: PRIVATE },
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,
   };

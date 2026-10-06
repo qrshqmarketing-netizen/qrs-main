@@ -26,7 +26,7 @@ const PHOTOS = [
 
 // A city page (e.g. /service-areas/la-county/pasadena/): the home page's sections with local copy from data/locationPages.js
 // and a gallery of projects in the area (data/projects.js)
-export default function LocationPage({ location, page, index = 0 }) {
+export default async function LocationPage({ location, page, index = 0 }) {
   const { city, slug, county } = location;
   const region = findRegion(location.region);
   const photo = page.image ? { src: page.image, position: page.imagePosition } : PHOTOS[index % PHOTOS.length];
@@ -70,7 +70,7 @@ export default function LocationPage({ location, page, index = 0 }) {
         projects={projectsFor(slug)}
       />
       <RelatedLinks heading={`Recent projects in ${city}`} links={projectsRelatedTo(cityPath(slug))} />
-      <LatestArticles posts={articlesFor(cityPath(slug))} heading="Related Roofing Articles" />
+      <LatestArticles posts={await articlesFor(cityPath(slug))} heading="Related Roofing Articles" />
       <Faq heading={`${city} Roofing FAQs`} sub={`Straight answers for ${city} ${page.offer === 'commercial' ? 'clients' : 'homeowners'}.`} faqs={page.faqs} cta={false} />
       <RoofCheck offer={page.offer || 'home'} />
       <FinalCta heading={page.final.heading} text={page.final.text} />

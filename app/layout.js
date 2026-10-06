@@ -8,6 +8,7 @@ import Script from 'next/script';
 import { Open_Sans, Roboto_Condensed } from 'next/font/google';
 import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
+import SiteChrome from '@/components/layout/SiteChrome';
 import CampaignWelcome from '@/components/widgets/CampaignWelcome';
 import PageTrail from '@/components/widgets/PageTrail';
 import CookieNotice from '@/components/widgets/CookieNotice';
@@ -69,38 +70,42 @@ export default function RootLayout({ children }) {
       </head>
       {/* Pages show up at once: no heading fade-ups or scroll reveals unless PAGE_ENTRANCES is on (globals.css) */}
       <body className={PAGE_ENTRANCES ? undefined : 'no-entrance'}>
-        <Header />
-        {PAGE_ENTRANCES && <RevealSections />}
-        <HelpfulTitles />
+        <SiteChrome>
+          <Header />
+          {PAGE_ENTRANCES && <RevealSections />}
+          <HelpfulTitles />
+        </SiteChrome>
         {children}
-        <Footer />
-        <ReviewToast />
-        <RoofAssistant />
-        {INSTANT_QUOTE_ENABLED && <InstantQuoteLoader />}
-        <CookieNotice />
-        <SeasonPromo />
-        <CampaignWelcome />
-        <PageTrail />
-        {LOAD_TRACKING && (
-          <>
-            <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="lazyOnload" />
-            <Script id="ga4" strategy="afterInteractive">
-              {`window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        <SiteChrome>
+          <Footer />
+          <ReviewToast />
+          <RoofAssistant />
+          {INSTANT_QUOTE_ENABLED && <InstantQuoteLoader />}
+          <CookieNotice />
+          <SeasonPromo />
+          <CampaignWelcome />
+          <PageTrail />
+          {LOAD_TRACKING && (
+            <>
+              <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="lazyOnload" />
+              <Script id="ga4" strategy="afterInteractive">
+                {`window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', '${GA_ID}');`}
-            </Script>
-            {/* Not id="clarity": an element's id becomes window.clarity, which stops Clarity from starting */}
-            <Script id="clarity-loader" strategy="lazyOnload">
-              {`(function(c,l,a,r,i,t,y){
-    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-})(window, document, "clarity", "script", "${CLARITY_ID}");`}
-            </Script>
-          </>
-        )}
+    gtag('config', '${GA_ID}');`}
+              </Script>
+              {/* Not id="clarity": an element's id becomes window.clarity, which stops Clarity from starting */}
+              <Script id="clarity-loader" strategy="lazyOnload">
+                {`(function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "${CLARITY_ID}");`}
+              </Script>
+            </>
+          )}
+        </SiteChrome>
       </body>
     </html>
   );

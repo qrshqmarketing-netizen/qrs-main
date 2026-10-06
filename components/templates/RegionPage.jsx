@@ -23,7 +23,7 @@ const PHOTOS = [
 
 // A region page (e.g. /service-areas/la-county/): regional intro, the offices and cities in the region, a map of them,
 // services and FAQs. Copy comes from data/regionPages.js.
-export default function RegionPage({ region, page }) {
+export default async function RegionPage({ region, page }) {
   const path = regionPath(region.slug);
   const cities = citiesIn(region.slug);
   const offices = OFFICES.filter((o) => findCity(o.citySlug)?.region === region.slug);
@@ -53,7 +53,7 @@ export default function RegionPage({ region, page }) {
       <LocalIntro city={region.name} heading={page.intro.heading} paragraphs={page.intro.paragraphs} offices={offices} considerations={page.considerations} />
       <ProofBar />
       <CityCards regions={[region.slug]} blurbs={blurbs} heading={`Cities We Serve in ${region.name}`} />
-      <LatestArticles posts={articlesFor(path)} heading="Related Roofing Articles" />
+      <LatestArticles posts={await articlesFor(path)} heading="Related Roofing Articles" />
       <Faq heading={`${region.name} Roofing FAQs`} sub={`Straight answers for property owners across ${region.name}.`} faqs={page.faqs} cta={false} />
       <RoofCheck tone="white" />
       <FinalCta

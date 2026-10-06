@@ -1,16 +1,17 @@
+import { notFound } from 'next/navigation';
 import BlogPost from '@/components/templates/BlogPost';
 import { blogPath } from '@/data/catalog';
-import { BLOG_POSTS } from '@/data/blog/posts';
+import { getBlogPosts, getPost } from '@/lib/postsStore';
 import { pageMetadata } from '@/lib/pages';
 
-// One page per post in data/blog/posts.js (other addresses show the 404 page)
-export const dynamicParams = false;
-export const generateStaticParams = () => BLOG_POSTS.map((p) => ({ slug: p.slug }));
-
-const findPost = (slug) => BLOG_POSTS.find((p) => p.slug === slug);
+// One page per published article (lib/postsStore.js: Supabase, with data/blog/posts.js as the fallback). An article added in the dashboard
+// after the site was built gets its page the first time someone visits it; other addresses show the 404 page.
+export const dynamicParams = true;
+export const generateStaticParams = async () => (await getBlogPosts()).map((p) => ({ slug: p.slug }));
 
 export async function generateMetadata({ params }) {
-  const post = findPost((await params).slug);
+  const post = await getPost((await params).slug);
+  if (!post) return {};
   return pageMetadata({
     title: post.metaTitle,
     description: post.metaDescription,
@@ -22,5 +23,7 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function BlogPostPage({ params }) {
-  return <BlogPost post={findPost((await params).slug)} />;
+  const post = await getPost((await params).slug);
+  if (!post) notFound();
+  return <BlogPost post={post} />;
 }

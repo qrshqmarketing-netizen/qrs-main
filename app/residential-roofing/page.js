@@ -33,7 +33,7 @@ const schema = pageJsonLd({
 });
 
 // Residential hub: every roof type, then every service by roof type (content in data/pages/residential.js)
-export default function ResidentialRoofingPage() {
+export default async function ResidentialRoofingPage() {
   return (
     <main id="top">
       <JsonLd data={schema} />
@@ -52,7 +52,7 @@ export default function ResidentialRoofingPage() {
       <CardCarousel title={page.cards.heading} items={RESIDENTIAL_TYPES.map(typeCard)} idPrefix="roofTypes" tone="wash" />
       <ServiceFinder heading={page.finder.heading} intro={page.finder.intro} rows={page.finder.rows} />
       <DifferenceBand />
-      <LatestArticles posts={articlesFor(RESIDENTIAL.href)} heading="Related Roofing Articles" />
+      <LatestArticles posts={await articlesFor(RESIDENTIAL.href)} heading="Related Roofing Articles" />
       <Faq heading="Frequently Asked Questions" sub="Straight answers about residential roofing." faqs={page.faqs} cta={false} />
       <RoofCheck tone="white" />
       <FinalCta {...closingCta(page.keyword)} />

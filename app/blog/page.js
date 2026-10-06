@@ -5,30 +5,33 @@ import BlogBrowser from '@/components/sections/BlogBrowser';
 import { postDate } from '@/components/sections/PostCards';
 import JsonLd from '@/components/ui/JsonLd';
 import { BLOG_LINK, blogPath, HOME } from '@/data/catalog';
-import { BLOG_POSTS, LATEST_POST, PUBLISHED_POSTS } from '@/data/blog/posts';
+import { getBlogPosts, getLatestPost, getPublishedPosts } from '@/lib/postsStore';
 import { BLOG_PAGE as page } from '@/data/pages/blog';
 import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
 
-// Kept out of search results until there's a published post (data/blog/posts.js)
-export const metadata = pageMetadata({ title: page.metaTitle, description: page.metaDescription, path: BLOG_LINK.href, noindex: PUBLISHED_POSTS.length === 0 });
+// Kept out of search results until there's a published post
+export async function generateMetadata() {
+  const published = await getPublishedPosts();
+  return pageMetadata({ title: page.metaTitle, description: page.metaDescription, path: BLOG_LINK.href, noindex: published.length === 0 });
+}
 
 const CRUMBS = [HOME, BLOG_LINK];
-const schema = pageJsonLd({
-  path: BLOG_LINK.href,
-  title: page.metaTitle,
-  description: page.metaDescription,
-  type: 'CollectionPage',
-  crumbs: CRUMBS,
-  parts: PUBLISHED_POSTS.map((p) => ({ label: p.title, href: blogPath(p.slug) })),
-});
-
-// Blog index: the hero and every post in data/blog/posts.js, newest first, and nothing else (the posts carry the
+// Blog index: the hero and every published article (lib/postsStore.js), newest first, and nothing else (the articles carry the
 // estimate form and calls to action). The newest post with a picture also sits beside the hero heading; its card joins the list
 // below when a filter is on (components/sections/BlogBrowser.jsx).
-export default function BlogPage() {
-  const featured = LATEST_POST?.image ? LATEST_POST : null;
-  const cards = BLOG_POSTS.map((post, i) => ({
+export default async function BlogPage() {
+  const [posts, published, latest] = await Promise.all([getBlogPosts(), getPublishedPosts(), getLatestPost()]);
+  const schema = pageJsonLd({
+    path: BLOG_LINK.href,
+    title: page.metaTitle,
+    description: page.metaDescription,
+    type: 'CollectionPage',
+    crumbs: CRUMBS,
+    parts: published.map((p) => ({ label: p.title, href: blogPath(p.slug) })),
+  });
+  const featured = latest?.image ? latest : null;
+  const cards = posts.map((post, i) => ({
     slug: post.slug,
     href: blogPath(post.slug),
     title: post.title,
@@ -38,7 +41,7 @@ export default function BlogPage() {
     picture: post.image || post.cardImage || null,
     scene: i,
     topics: post.topics || [],
-    featured: post === featured,
+    featured: post.slug === featured?.slug,
   }));
   return (
     <main id="top">
@@ -50,7 +53,7 @@ export default function BlogPage() {
         intro={page.hero.intro}
         {...(featured && { aside: <HeroLatestPost post={featured} /> })}
       />
-      <BlogBrowser posts={cards} heading={PUBLISHED_POSTS.length ? 'Browse Articles' : 'Coming Soon'} />
+      <BlogBrowser posts={cards} heading={published.length ? 'Browse Articles' : 'Coming Soon'} />
       <IndexNote note={page.note} />
     </main>
   );

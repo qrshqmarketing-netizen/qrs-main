@@ -19,7 +19,7 @@ import { articlesFor } from '@/lib/articles';
 // cards: [{ title, text, href, scene, image? }]; extraGrid: optional { heading, intro, cards } shown before them
 // (commercial services); feature: optional SplitFeature props (e.g. contractors teaser); actions: hero buttons (Hero);
 // process: show the general "QRS Way" steps (the service-first hubs /roof-repair/ and /roof-replacement/).
-export default function HubPage({ hub, crumbs, eyebrow, image, imageAlt, cards, extraGrid, feature, offer, actions, process = false }) {
+export default async function HubPage({ hub, crumbs, eyebrow, image, imageAlt, cards, extraGrid, feature, offer, actions, process = false }) {
   const schema = pageJsonLd({
     path: crumbs.at(-1).href,
     title: hub.metaTitle,
@@ -50,7 +50,7 @@ export default function HubPage({ hub, crumbs, eyebrow, image, imageAlt, cards, 
       <ValueGrid heading={hub.highlights.heading} items={hub.highlights.points} columns={3} />
       {process && <Process />}
       {feature && <SplitFeature {...feature} tone="wash" />}
-      <LatestArticles posts={articlesFor(crumbs.at(-1).href)} heading="Related Roofing Articles" />
+      <LatestArticles posts={await articlesFor(crumbs.at(-1).href)} heading="Related Roofing Articles" />
       {hub.faqs?.length > 0 && <Faq heading="Frequently Asked Questions" sub={faqSub(hub.keyword)} faqs={hub.faqs} cta={false} />}
       <RoofCheck tone="white" offer={offer} />
       <FinalCta {...closingCta(hub.keyword, offer)} />

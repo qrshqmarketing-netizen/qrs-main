@@ -40,7 +40,7 @@ To test the finished (production) version: `npm run build`, then `npm start`.
 | Emergency & storm damage, roof inspection and roof tune-ups (one page each for every roof type), maintenance plans and financing pages | `data/services/programs.js` (the maintenance plan page itself: `data/pages/carePlan.js`) |
 | Region pages (LA County, Orange County) | `data/regionPages.js` |
 | City pages (intro, neighborhoods, local FAQs) | `data/locationPages.js` |
-| Blog posts | `data/blog/posts.js` (blog index wording and its closing text block: `data/pages/blog.js`; the Reviews and Projects pages' text is in `data/pages/reviews.js` and `data/pages/projects.js`) |
+| Blog articles | The team dashboard at `/admin/` (they live in the Supabase `posts` table; `data/blog/posts.js` is the starting copy and the fallback). The blog index wording and its closing text block: `data/pages/blog.js`; the Reviews and Projects pages' text is in `data/pages/reviews.js` and `data/pages/projects.js` |
 | Contact, Reviews, Projects, Privacy, Terms and Accessibility pages | `data/pages/contact.js`, `reviews.js`, `projects.js`, `legal.js` |
 | Redirects from the old WordPress addresses | `data/redirects.js` |
 | Sitemap last-modified dates (updated automatically when a page's text changes; runs before every build, or `npm run lastmod`) | `data/lastModified.json` (script: `scripts/lastmod.mjs`) |
@@ -108,7 +108,7 @@ assets/originals/    Full-size source images (not used by the site)
 - **A service page in an existing section:** add an entry to that section's `services` list in `data/services/`, then link it from the menu in `data/navigation.js`. The page, its breadcrumbs, cards and sitemap entry appear automatically.
 - **A city:** add it to `data/locations.js` (with its region) and give it an entry in `data/locationPages.js`. It gets a page at `/service-areas/<region>/<city>/`.
 - **A new region (expanding to a new market):** add it to `REGIONS` in `data/locations.js`, add its page copy to `data/regionPages.js`, then add its cities. The menus, map, sitemap and structured data pick it up automatically.
-- **A blog post:** add it to `BLOG_POSTS` in `data/blog/posts.js` (newest first).
+- **A blog article:** log in at `/admin/`, press New article (or edit one), and save: it is live in seconds, with no deploy. The same page picks which three articles are featured on the home page. First-time setup: run `scripts/supabase-posts.sql` in the Supabase SQL Editor, add `ADMIN_PASSWORD` in Vercel, then press "Import the articles from the site files" in the dashboard once. If Supabase can't be reached, the site shows the articles in `data/blog/posts.js` instead.
 - **An office:** add it to `OFFICES` in `data/site.js` with the slug of the city page it sits in. Its card appears on that city page and on the Service Areas page, and search engines see it as a branch of the business.
 - **A one-off page:** create a folder in `app/` with a `page.js` that combines sections from `components/sections/` (see `app/careers/page.js`). The header, footer and widgets appear automatically, and the browser tab reads "<title> | Quality Roofing Specialists". Also add its address to `ALL_PATHS` in `data/content.js` (sitemap) and an entry to `PAGE_INDEX` in `lib/pageIndex.js` (AI files), and give it structured data with `pageJsonLd` like the other pages.
 

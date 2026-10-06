@@ -24,7 +24,7 @@ export const metadata = pageMetadata({ title: page.metaTitle, description: page.
 const CRUMBS = [HOME, { label: LINK.label, href: LINK.href }];
 const schema = pageJsonLd({ path: LINK.href, title: page.metaTitle, description: page.metaDescription, crumbs: CRUMBS, faqs: page.faqs, image: page.image });
 
-export default function RoofMaintenancePlansPage() {
+export default async function RoofMaintenancePlansPage() {
   return (
     <main id="top">
       <JsonLd data={schema} />
@@ -36,7 +36,7 @@ export default function RoofMaintenancePlansPage() {
       <ProcessSteps heading={page.schedule.heading} steps={page.schedule.steps} scene="scene-inspect" image={page.schedule.image} imageAlt={page.schedule.imageAlt} tone="white" />
       <FeatureBand {...page.tuneUp} tone="light" />
       <FeatureBand eyebrow={page.memberBenefits.eyebrow} heading={page.memberBenefits.heading} paragraphs={page.memberBenefits.paragraphs} points={page.memberBenefits.points} cta={{ label: 'Get Started', href: '#roof-check' }} />
-      <LatestArticles posts={articlesFor(PROGRAMS.plans.href)} heading="Related Roofing Articles" />
+      <LatestArticles posts={await articlesFor(PROGRAMS.plans.href)} heading="Related Roofing Articles" />
       <Faq heading="Roof Care Plan FAQs" sub="Straight answers about how the plan works." faqs={page.faqs} />
       <RoofCheck />
       <FinalCta heading={page.final.heading} text={page.final.text} />

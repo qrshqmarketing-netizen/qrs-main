@@ -46,7 +46,7 @@ async function askModel(apiKey, messages) {
   // visitor's latest message and hand the model plain-text blocks (including their specifics, not just a
   // summary) from the best matches.
   const lastUserMessage = [...messages].reverse().find((m) => m.role === 'user')?.content || '';
-  const relevant = findRelevantPages(lastUserMessage);
+  const relevant = await findRelevantPages(lastUserMessage);
   const context = relevant.length
     ? {
         role: 'system',

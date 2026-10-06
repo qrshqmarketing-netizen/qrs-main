@@ -19,7 +19,7 @@ import { HOME_DESCRIPTION, HOME_H1, HOME_TITLE } from '@/data/site';
 import { LATEST_PROJECTS } from '@/data/projectPages';
 import { RECENT_WORK, RECENT_WORK_SUB } from '@/data/recentWork';
 import { ROOF_FINANCING } from '@/data/services/programs';
-import { latestArticles } from '@/lib/articles';
+import { homeArticles } from '@/lib/articles';
 import { openGraphBase, twitterBase } from '@/lib/seo';
 import { pageJsonLd } from '@/lib/structuredData';
 
@@ -70,7 +70,7 @@ const HOME_PRODUCTS = [
 // Home page: sections in order, top to bottom, matching the site's top-nav structure — an intro paragraph,
 // Services/Residential/Commercial together, Service Areas, About, Projects, then the
 // lead-capture "Get Pro Advice" form. Reorder or remove a line to change the page.
-export default function HomePage() {
+export default async function HomePage() {
   return (
     <>
       <JsonLd data={pageJsonLd({ path: '/', title: HOME_TITLE, description: HOME_DESCRIPTION, faqs: FAQS })} />
@@ -100,7 +100,7 @@ export default function HomePage() {
           {...CAREERS_TEASER}
           points={CAREERS_PAGE.roles.items.map((role) => ({ title: role.title, text: role.text, href: '/careers/#roles' }))}
         />
-        <LatestArticles posts={latestArticles(3)} />
+        <LatestArticles posts={await homeArticles(3)} />
         <Faq cta={false} />
         <RoofCheck />
         <FinalCta />

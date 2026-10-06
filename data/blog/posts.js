@@ -1,4 +1,7 @@
 // QRS blog posts, newest first. Each post is a page at /blog/<slug>/ (components/templates/BlogPost.jsx).
+// NOTE: the articles are now edited in the team dashboard at /admin/ (Supabase `posts` table, lib/postsStore.js). This file is the starting copy that
+// the dashboard imports once, and the fallback the site uses when Supabase isn't configured or can't be reached. It also still defines the
+// article shape below, and `headingId`.
 // noindex: true keeps a post out of search results, the sitemap and the AI files (the blog index still shows it).
 //
 // Post shape:

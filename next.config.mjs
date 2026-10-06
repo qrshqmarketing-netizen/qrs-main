@@ -33,6 +33,9 @@ const nextConfig = {
         ],
       },
       { source: '/:path*', missing: [{ type: 'host', value: 'qualityroofingspecialists\\.com' }], headers: [{ key: 'X-Robots-Tag', value: 'noindex' }] },
+      // The team's dashboard is never indexed, on any host, and its pages are never cached
+      { source: '/admin/:path*', headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }, { key: 'Cache-Control', value: 'no-store' }] },
+      { source: '/api/admin/:path*', headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }, { key: 'Cache-Control', value: 'no-store' }] },
       // Photos and logos in public/images: visitors keep them for 30 days instead of re-checking on every page view. A photo replaced
       // under the same file name shows up after that (or right away after a CACHE_RESET bump below); a new file name shows at once.
       { source: '/images/:path*', headers: [{ key: 'Cache-Control', value: 'public, max-age=2592000, stale-while-revalidate=86400' }] },

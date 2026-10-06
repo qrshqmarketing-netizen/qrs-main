@@ -6,6 +6,7 @@ import { FOUND_US_OPTIONS, ROOF_TYPES, SERVICE_OPTIONS, VISIT_TIMES } from '@/da
 import { leadAttribution } from '@/lib/attribution';
 import { sendAutoReply } from '@/lib/autoReply';
 import { deliverLead, leadChannelSettings, rateLimited } from '@/lib/leads';
+import { postsTableStatus } from '@/lib/postsStore';
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 const clip = (v, max) => (typeof v === 'string' ? v.trim().slice(0, max) : '');
@@ -60,7 +61,8 @@ export async function POST(request) {
   const secret = (process.env.LEADS_SHEET_SECRET || '').trim();
   const diagnostic = Boolean(secret) && request.headers.get('x-leads-diagnostic') === secret;
   // ...with "configCheck": true it only reports which channels have their settings on this deployment (nothing is sent or saved)
-  if (diagnostic && body?.configCheck === true) return Response.json({ ok: true, settings: leadChannelSettings() });
+  // (and whether the blog articles table exists, and how many articles it holds)
+  if (diagnostic && body?.configCheck === true) return Response.json({ ok: true, settings: { ...leadChannelSettings(), dashboardPassword: Boolean((process.env.ADMIN_PASSWORD || '').trim().length >= 12), articles: await postsTableStatus() } });
 
   const source = body?.source === 'instant-quote' ? 'instant-quote' : 'estimate-form';
   const name = clip(body?.name, 120);
