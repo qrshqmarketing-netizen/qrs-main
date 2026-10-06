@@ -6,7 +6,7 @@
 .project-detail-photo img{object-fit:cover}
 .project-detail-story{padding:36px 0 96px}
 .project-detail-story .crumbs ol{margin-bottom:32px}
-.project-detail-copy{max-width:780px;margin:0}
+.project-detail-copy{max-width:780px;margin:0 auto}
 .project-detail-copy h1{color:var(--navy);font-size:clamp(32px,5vw,54px);font-weight:800;line-height:1.08;letter-spacing:.01em;margin:0 0 24px}
 .project-detail-copy p{color:var(--ink);font-size:18px;line-height:1.7;margin:0 0 18px}
 @media (max-width:620px){.project-detail-gallery{padding-bottom:16px}}
