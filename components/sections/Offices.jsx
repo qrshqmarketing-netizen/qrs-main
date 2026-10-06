@@ -5,7 +5,7 @@ import { cityPath, findCity } from '@/data/locations';
 import { OFFICES, PHONE, TEL } from '@/data/site';
 import './Offices.css';
 
-// One office: address, phone, directions and (optionally) a link to the city page it sits in.
+// One office: address, phone and (optionally) a link to the city page it sits in.
 // `photo={false}` leaves out the office's photo, so it matches cards without one.
 export function OfficeCard({ office, cityLink = true, photo = true }) {
   const { street, city, region, postalCode } = office.address;
@@ -30,14 +30,13 @@ export function OfficeCard({ office, cityLink = true, photo = true }) {
         {city}, {region} {postalCode}
       </address>
       <a className="office-phone" href={TEL}>{PHONE}</a>
-      <div className="office-links">
-        <a href={office.mapUrl} target="_blank" rel="noopener">Get directions</a>
-        {cityLink && (
+      {cityLink && (
+        <div className="office-links">
           <SiteLink href={cityPath(office.citySlug)}>
             {findCity(office.citySlug).city} roofing <ArrowRight />
           </SiteLink>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 }

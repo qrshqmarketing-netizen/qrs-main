@@ -8,7 +8,7 @@
 }
 .why h2{color:var(--gold);font-size:var(--h2);font-weight:800;margin-bottom:28px;text-shadow:0 0 30px rgba(212,181,114,.28),0 3px 22px rgba(0,0,0,.6)}
 .why .cred-card{margin-bottom:32px}
-.why .btn{margin-top:32px;border-radius:999px;box-shadow:0 12px 34px rgba(0,0,0,.5)}
+.why .btn{margin-top:32px;border-radius:999px}
 @media (min-width:621px){
   .why{padding:88px 0 84px;min-height:480px}
   .why h2{margin-bottom:34px}

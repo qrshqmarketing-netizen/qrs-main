@@ -46,3 +46,11 @@
 :root[data-theme="dark"] .cookie{border-color:#fff}
 :root[data-theme="dark"] .qa-teaser{outline:1px solid #fff;outline-offset:-1px}
 /* The review toast stays light in both themes (ReviewToast.css) */
+
+/* White buttons turn into dark glass with light text (their text color is --navy, which is light in the dark theme) */
+:root[data-theme="dark"] :is(.btn-line,.btn-light){
+  color:#e8eef5;border-color:rgba(255,255,255,.22);
+  background:linear-gradient(180deg,#1d3d60 0%,#10263f 100%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.18),inset 0 -2px 0 rgba(0,0,0,.25),0 1px 2px rgba(0,0,0,.4),0 12px 26px -10px rgba(0,0,0,.6);
+}
+:root[data-theme="dark"] :is(.btn-line,.btn-light):hover{border-color:var(--gold)}

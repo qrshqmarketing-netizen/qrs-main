@@ -97,21 +97,65 @@ h1,h2,h3,.eyebrow,.hero-sub{text-wrap:balance}
 @media (min-width:621px){h1,h2,h3,.eyebrow,.hero-sub{text-wrap:wrap}}
 
 /* ---------- Buttons ---------- */
+/* Every button is a pill with real depth: a soft vertical gradient, a light edge along the top and a darker one along the bottom, layered
+   shadows, a slow light sheen across it on hover, a small lift, an arrow that leans forward, and a pressed state. Colors per variant below. */
 .btn{
+  position:relative;isolation:isolate;overflow:hidden;
   display:inline-flex;align-items:center;justify-content:center;gap:9px;
-  min-height:50px;padding:13px 20px;border-radius:999px;border:1px solid transparent;
-  font-family:var(--font-btn);font-weight:700;font-size:18px;line-height:27px;
-  transition:.2s ease;
+  min-height:50px;padding:13px 22px;border-radius:999px;border:1px solid transparent;
+  font-family:var(--font-btn);font-weight:700;font-size:18px;line-height:27px;letter-spacing:.012em;
+  cursor:pointer;-webkit-tap-highlight-color:transparent;
+  transition:transform .28s cubic-bezier(.2,.7,.2,1),box-shadow .28s ease,filter .28s ease,background-color .2s,border-color .2s,color .2s;
 }
-.btn:hover{transform:translateY(-2px)}
-.btn-gold{background:var(--gold);color:#101820;box-shadow:0 9px 22px rgba(212,181,114,.22)}
-.btn-plum{background:var(--plum);color:#fff;box-shadow:0 9px 22px rgba(107,37,69,.24)}
-.btn-plum:hover{background:var(--plum-2)}
+.btn:after{
+  content:"";position:absolute;inset:-1px;z-index:1;pointer-events:none;border-radius:inherit;
+  background:linear-gradient(105deg,rgba(255,255,255,0) 34%,rgba(255,255,255,.4) 50%,rgba(255,255,255,0) 66%);
+  transform:translateX(-130%);transition:transform .8s cubic-bezier(.2,.7,.2,1);
+}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.05) saturate(1.04)}
+.btn:hover:after{transform:translateX(130%)}
+.btn:active{transform:translateY(0) scale(.985);filter:brightness(.97);transition-duration:.08s}
+.btn:focus-visible{outline:3px solid var(--gold-2);outline-offset:3px}
+.btn .arrow,.btn > svg{transition:transform .28s cubic-bezier(.2,.7,.2,1)}
+.btn:hover .arrow,.btn:hover > svg{transform:translateX(4px)}
+.btn[disabled],.btn:disabled{opacity:.6;cursor:not-allowed;transform:none;filter:none}
+@media (prefers-reduced-motion:reduce){.btn,.btn:after,.btn .arrow,.btn > svg{transition:none}.btn:hover,.btn:active{transform:none}.btn:after{display:none}.btn:hover .arrow,.btn:hover > svg{transform:none}}
+/* Gold: the main action */
+.btn-gold{
+  color:#1b1406;border-color:rgba(146,108,36,.6);text-shadow:0 1px 0 rgba(255,255,255,.35);
+  background:linear-gradient(180deg,#efd9a2 0%,#d9bb7a 46%,#c29d55 100%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.65),inset 0 -2px 0 rgba(122,88,24,.28),0 1px 2px rgba(70,48,8,.28),0 12px 26px -8px rgba(196,154,72,.62);
+}
+.btn-gold:hover{box-shadow:inset 0 1px 0 rgba(255,255,255,.7),inset 0 -2px 0 rgba(122,88,24,.28),0 2px 4px rgba(70,48,8,.3),0 18px 34px -8px rgba(196,154,72,.78)}
+/* Plum: call now and emergencies */
+.btn-plum{
+  color:#fff;border-color:rgba(255,255,255,.16);text-shadow:0 1px 1px rgba(0,0,0,.3);
+  background:linear-gradient(180deg,#86335c 0%,#6b2545 52%,#531a35 100%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.26),inset 0 -2px 0 rgba(0,0,0,.22),0 1px 2px rgba(40,8,24,.4),0 12px 26px -8px rgba(107,37,69,.7);
+}
+.btn-plum:hover{box-shadow:inset 0 1px 0 rgba(255,255,255,.3),inset 0 -2px 0 rgba(0,0,0,.22),0 2px 4px rgba(40,8,24,.45),0 18px 34px -8px rgba(107,37,69,.85)}
 .btn-plum svg{width:19px;height:19px;flex:none}
-.btn-dark{background:var(--surface-navy);color:#fff}
-.btn-light{background:var(--paper);color:var(--navy)}
-.btn-outline{border-color:rgba(255,255,255,.32);color:#fff;background:rgba(255,255,255,.06)}
-.btn-outline:hover{background:rgba(255,255,255,.12)}
+/* Dark (navy) */
+.btn-dark{
+  color:#fff;border-color:rgba(255,255,255,.12);
+  background:linear-gradient(180deg,#134879 0%,var(--surface-navy) 55%,#04203f 100%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.22),inset 0 -2px 0 rgba(0,0,0,.25),0 1px 2px rgba(3,20,40,.4),0 12px 26px -8px rgba(6,45,87,.6);
+}
+.btn-dark:hover{box-shadow:inset 0 1px 0 rgba(255,255,255,.26),inset 0 -2px 0 rgba(0,0,0,.25),0 2px 4px rgba(3,20,40,.45),0 18px 34px -8px rgba(6,45,87,.75)}
+/* Light: white with a fine edge */
+.btn-light{
+  color:var(--navy);border-color:rgba(6,45,87,.14);
+  background:linear-gradient(180deg,#fff 0%,#f1f4f8 100%);
+  box-shadow:inset 0 1px 0 #fff,0 1px 2px rgba(6,45,87,.12),0 10px 22px -10px rgba(6,45,87,.35);
+}
+/* Outline: frosted glass for use on photos and navy */
+.btn-outline{
+  color:#fff;border-color:rgba(255,255,255,.36);
+  background:linear-gradient(180deg,rgba(255,255,255,.16),rgba(255,255,255,.05));
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.28),0 10px 24px -10px rgba(0,0,0,.45);
+}
+.btn-outline:hover{border-color:rgba(255,255,255,.6);background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.08))}
 .arrow{font-family:var(--font-glyph);font-size:1.1em}
 
 /* ---------- Form fields (estimate form + Instant Quote) ---------- */
@@ -195,8 +239,11 @@ h1 u,h2 u,h3 u,.hero-title u{
 .on-dark .text-link:hover{color:var(--gold-2)}
 
 /* Navy outline button */
-.btn-line{border-color:rgba(6,45,87,.28);color:var(--navy);background:var(--paper)}
-.btn-line:hover{border-color:var(--navy)}
+.btn-line{
+  border-color:rgba(6,45,87,.2);color:var(--navy);background:linear-gradient(180deg,#fff 0%,#eef2f7 100%);
+  box-shadow:inset 0 1px 0 #fff,inset 0 -2px 0 rgba(6,45,87,.07),0 1px 2px rgba(6,45,87,.14),0 12px 26px -10px rgba(6,45,87,.45);
+}
+.btn-line:hover{border-color:var(--gold);box-shadow:inset 0 1px 0 #fff,inset 0 -2px 0 rgba(6,45,87,.07),0 2px 4px rgba(6,45,87,.16),0 16px 30px -10px rgba(6,45,87,.55)}
 
 /* Heading + intro above a section's content */
 .section-head{max-width:760px;margin:0 auto 30px;text-align:center}

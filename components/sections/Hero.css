@@ -73,7 +73,7 @@
 /* Pages with no intro line under the headline still get room above the buttons */
 .hero-title + .hero-actions{margin-top:20px}
 /* Compact buttons: smaller than the site's standard button */
-.hero-actions .btn{width:100%;max-width:340px;min-height:46px;padding:10px 20px;font-size:16px;line-height:24px;box-shadow:0 10px 24px rgba(0,0,0,.18)}
+.hero-actions .btn{width:100%;max-width:340px;min-height:46px;padding:10px 20px;font-size:16px;line-height:24px}
 /* Left-justified copy (align="left" on a Hero; the default is centered) */
 .hero-inner.hero-left{display:block;text-align:left}
 .hero-inner.hero-left .hero-copy{margin:0}
