@@ -10,7 +10,7 @@ import { useEffect } from 'react';
 // fold (data-reveal) and turn the effect on (class "reveal-on" on <html>), so without JavaScript, or in print, everything is simply
 // there. Once a part has appeared its mark is removed again, so the component's own hover effects and transitions take over. Switch the
 // whole thing off with SCROLL_REVEALS in data/promo.js; give an element data-no-reveal to keep it still.
-const SECTIONS = 'main > section:not(.hero):not(.proofbar)';
+const SECTIONS = 'main > section:not(.hero):not(.home-hero):not(.proofbar)';
 // Parts that never move: sliders, maps and embeds (and anything marked data-no-reveal)
 const STILL = '[data-no-reveal], .svc-marquee, .svc-marquee-viewport, .project-carousel-frame, .morph-slider, .leaflet-container, .sa-wrap, .loc-wrap, iframe, video';
 const SKIP_TAGS = new Set(['SCRIPT', 'STYLE', 'NOSCRIPT', 'TEMPLATE']);

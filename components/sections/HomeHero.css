@@ -1,0 +1,73 @@
+/* ---------- Home hero: a collage of the newest projects and a navy panel with the headline (HomeHero.jsx) ---------- */
+.home-hero{
+  position:relative;isolation:isolate;overflow:hidden;background:#03192e;color:#fff;
+  display:grid;grid-template-columns:1fr 1fr;grid-template-rows:minmax(190px,40vw) auto;
+}
+.hh-tile{position:relative;overflow:hidden;background:#0e3b6e;min-height:0}
+.hh-photo{object-fit:cover;animation:hhIn .9s ease both}
+@keyframes hhIn{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.hh-photo{animation:none}}
+/* The header pill sits over the top of the photos: a shade keeps it readable */
+.hh-shade{position:absolute;left:0;right:0;top:0;height:140px;z-index:2;pointer-events:none;background:linear-gradient(180deg,rgba(3,27,52,.6),rgba(3,27,52,0))}
+/* "View this project": the project's name and a link with a gold rule under it, bottom-left of each photo */
+.hh-link{
+  position:absolute;left:0;right:0;bottom:0;z-index:2;display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:46px 16px 16px;color:#fff;
+  background:linear-gradient(0deg,rgba(3,27,52,.75),rgba(3,27,52,0));
+}
+.hh-link small{font:600 12px/1.3 var(--font-head);letter-spacing:.04em;opacity:.92;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.hh-link span{font:700 12px/1.4 var(--font-head);letter-spacing:.12em;text-transform:uppercase;padding-bottom:5px;border-bottom:3px solid var(--gold);text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.hh-link:hover span{color:var(--gold-2)}
+.hh-arrow{
+  position:absolute;top:calc(20vw + 0px);z-index:3;width:36px;height:72px;margin-top:-36px;display:grid;place-items:center;
+  border:0;border-radius:var(--radius-sm);background:rgba(3,27,52,.5);color:#fff;cursor:pointer;transition:background .2s;
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+}
+.hh-arrow:hover{background:rgba(3,27,52,.8)}
+.hh-arrow svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.hh-prev{left:10px}
+.hh-next{right:10px}
+.hh-arrow:focus-visible{outline:3px solid var(--gold-2);outline-offset:2px}
+/* The panel: centered copy on navy */
+.hh-panel{
+  grid-column:1 / -1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+  padding:36px 24px 40px;background:linear-gradient(160deg,#0c3a68 0%,#062d57 55%,#03192e 100%);
+}
+.hh-panel .eyebrow{margin:0 0 8px;color:var(--gold-2);font:600 13px/1.5 var(--font-head);letter-spacing:.06em}
+.hh-title{margin:0;max-width:640px;font:800 clamp(34px,9vw,44px)/1.06 var(--font-display);letter-spacing:.015em;text-transform:uppercase;text-wrap:balance}
+.hh-title u{text-decoration-color:var(--gold)}
+.hh-intro{margin:14px 0 22px;max-width:520px;font:500 16px/1.5 var(--font-head)}
+.hh-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;width:100%}
+.hh-actions .btn{width:100%;max-width:340px;min-height:46px;padding:10px 20px;font-size:16px;line-height:24px}
+@media (min-width:621px){
+  .home-hero{grid-template-columns:38% 62%;grid-template-rows:minmax(300px,44vw) auto}
+  .hh-arrow{top:22vw}
+  .hh-actions .btn{width:auto;max-width:none;min-width:200px}
+  .hh-panel .eyebrow{font-size:15px;letter-spacing:0}
+  .hh-intro{font-size:17px}
+}
+/* Desktop: two photos on top, the third photo and the panel underneath, as one screen-high collage */
+@media (min-width:901px){
+  .home-hero{
+    grid-template-columns:38% 62%;height:clamp(720px,92vh,900px);grid-template-rows:56% 44%;
+  }
+  .hh-c{grid-column:1;grid-row:2;width:100%}
+  .hh-panel{grid-column:2;grid-row:2;padding:36px 48px}
+  .hh-arrow{top:28%}
+  .hh-title{font-size:clamp(40px,3.6vw,52px)}
+  .hh-intro{font-size:18px}
+}
+/* Phones: two photos side by side, then the panel (the third photo is left out) */
+@media (max-width:900px){
+  .home-hero{grid-template-columns:1fr 1fr}
+  .hh-c{display:none}
+  .hh-link{padding:30px 10px 10px}
+  .hh-link small{font-size:11px}
+  .hh-link span{font-size:11px;letter-spacing:.08em}
+  .hh-arrow{top:calc(20vw)}
+}
+@media (max-width:620px){
+  .home-hero{grid-template-rows:minmax(210px,56vw) auto}
+  .hh-arrow{top:28vw;width:30px;height:60px;margin-top:-30px}
+  .hh-prev{left:6px}
+  .hh-next{right:6px}
+}
