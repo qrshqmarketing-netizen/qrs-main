@@ -2,6 +2,8 @@
 // `color` is the avatar circle behind the first letter of the name. Use \n for a line break.
 // `url` should be that reviewer's own Google Maps contributor link; when we don't have it yet, it falls
 // back to the business's Google Maps listing (BUSINESS.mapUrl) so the link is still real, not made up.
+// Each page shows the reviews closest to its topic first (lib/reviewTopics.js finds a review's topics from its words); add `topics: ['tile', 'repair']`
+// to a review to set them yourself (the names are the ones in lib/pageTopics.js).
 
 import { BUSINESS } from './site';
 

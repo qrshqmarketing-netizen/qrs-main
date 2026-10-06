@@ -1,11 +1,13 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import ArrowButton from '@/components/ui/ArrowButton';
 import { GoogleLogo, Star } from '@/components/ui/icons';
 import { GOOGLE_REVIEWS } from '@/data/reviews';
 import { SHOW_REVIEW_EVENT } from '@/lib/events';
 import { getLiveReviews } from '@/lib/liveReviews';
+import { sortReviewsFor } from '@/lib/reviewTopics';
 import './Testimonials.css';
 
 const withLineBreaks = (text) => text.split('\n').flatMap((line, i) => (i ? [<br key={i} />, line] : [line]));
@@ -27,12 +29,16 @@ function Avatar({ name, photoUrl, color }) {
 
 // One Google review at a time, with prev/next arrows (styles in Testimonials.css). It starts with the hand-picked
 // reviews in data/reviews.js; once the slider scrolls into view (or the pop-up sends someone here) it gets the live 5-star
-// reviews (lib/liveReviews.js, data/places.js) and swaps them in when Google has some. `office`: a location or city slug.
-export default function ReviewSlider({ office = '' }) {
+// reviews (lib/liveReviews.js, data/places.js) and swaps them in when Google has some. `office`: a location or city slug. The reviews are shown
+// closest to the page's topic first (lib/reviewTopics.js); `places` (a city page's city and neighborhoods) put the reviews that name them first.
+export default function ReviewSlider({ office = '', places = [] }) {
   const [index, setIndex] = useState(0);
   const [live, setLive] = useState(null); // { place, reviews } once Google answered with reviews
   const root = useRef(null);
-  const reviews = live ? live.reviews : GOOGLE_REVIEWS;
+  const pathname = usePathname();
+  const placeKey = places.join('|');
+  const placeList = useMemo(() => (placeKey ? placeKey.split('|') : []), [placeKey]);
+  const reviews = useMemo(() => sortReviewsFor(live ? live.reviews : GOOGLE_REVIEWS, pathname, placeList), [live, pathname, placeList]);
   const count = reviews.length;
   const move = (step) => setIndex((i) => (i + step + count) % count);
 
@@ -43,14 +49,16 @@ export default function ReviewSlider({ office = '' }) {
       const data = await getLiveReviews(office);
       if (cancelled) return;
       if (data) setLive(data);
-      setIndex(e.detail);
+      // the pop-up names the review it was showing; find it in this page's order
+      const at = sortReviewsFor(data ? data.reviews : GOOGLE_REVIEWS, pathname, placeList).findIndex((r) => r.name === e.detail?.name);
+      setIndex(at > -1 ? at : 0);
     };
     window.addEventListener(SHOW_REVIEW_EVENT, onShow);
     return () => {
       cancelled = true;
       window.removeEventListener(SHOW_REVIEW_EVENT, onShow);
     };
-  }, [office]);
+  }, [office, pathname, placeList]);
 
   // Live reviews: asked for once, when the slider is about to come into view
   useEffect(() => {

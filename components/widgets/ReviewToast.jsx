@@ -6,6 +6,7 @@ import { CloseIcon, GoogleLogo } from '@/components/ui/icons';
 import { GOOGLE_REVIEWS } from '@/data/reviews';
 import { COOKIE_OK_EVENT, COOKIE_OK_KEY, SHOW_REVIEW_EVENT } from '@/lib/events';
 import { getLiveReviews, officeForPath } from '@/lib/liveReviews';
+import { sortReviewsFor } from '@/lib/reviewTopics';
 import { local, session } from '@/lib/storage';
 import './ReviewToast.css';
 
@@ -17,12 +18,14 @@ const REVIEWS = GOOGLE_REVIEWS.map((r) => ({ ...r, text: oneLine(r.text) }));
 const fromLive = (r, i) => ({ name: r.name, text: oneLine(r.text), photoUrl: r.photoUrl, color: COLORS[i % COLORS.length] });
 
 // Compact toast in the bottom-left corner that rotates the Google reviews (name, stars and a one-line quote): the live 5-star
-// reviews when Google has some, otherwise the hand-picked ones. Closing it hides it for the rest of the visit.
+// reviews when Google has some, otherwise the hand-picked ones, the ones closest to the page's topic first (lib/reviewTopics.js). Closing it hides
+// it for the rest of the visit.
 export default function ReviewToast() {
   const [shown, setShown] = useState(null); // index of the review in the toast
   const [visible, setVisible] = useState(false);
   const loop = useRef({ next: 0, timer: null, hovering: false, reviewsOnScreen: false, stopped: false });
-  const list = useRef(REVIEWS); // the reviews this toast rotates through
+  const base = useRef(REVIEWS); // the reviews in their usual order (the live ones once Google has answered)
+  const list = useRef(REVIEWS); // the reviews this toast rotates through, in this page's order
   const pathname = usePathname();
   const router = useRouter();
 
@@ -59,7 +62,10 @@ export default function ReviewToast() {
       s.timer = setTimeout(async () => {
         const live = await Promise.race([getLiveReviews(officeForPath(window.location.pathname)), new Promise((resolve) => setTimeout(() => resolve(null), LIVE_WAIT_MS))]);
         if (s.stopped) return;
-        if (live) list.current = live.reviews.map(fromLive);
+        if (live) {
+          base.current = live.reviews.map(fromLive);
+          list.current = sortReviewsFor(base.current, window.location.pathname);
+        }
         cycle();
       }, FIRST_MS);
     };
@@ -71,6 +77,14 @@ export default function ReviewToast() {
       window.removeEventListener(COOKIE_OK_EVENT, start);
     };
   }, []);
+
+  // Each page starts with the reviews closest to its topic: re-ordered on the first page and whenever the visitor moves to another one
+  useEffect(() => {
+    list.current = sortReviewsFor(base.current, pathname);
+    loop.current.next = 0;
+    setVisible(false);
+    setShown(null);
+  }, [pathname]);
 
   // Don't show the toast while the reviews themselves are on screen (re-checked on every page)
   useEffect(() => {
@@ -109,7 +123,7 @@ export default function ReviewToast() {
       router.push('/#reviews');
       return;
     }
-    window.dispatchEvent(new CustomEvent(SHOW_REVIEW_EVENT, { detail: shown }));
+    window.dispatchEvent(new CustomEvent(SHOW_REVIEW_EVENT, { detail: { name: list.current[shown]?.name } }));
     reviews.scrollIntoView({ behavior: 'smooth', block: 'center' });
   };
 

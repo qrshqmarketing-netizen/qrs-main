@@ -63,7 +63,7 @@ export default async function LocationPage({ location, page, index = 0 }) {
         label={`QRS roofing in ${city}`}
       />
       <LocalIntro city={city} heading={page.intro.heading} paragraphs={page.intro.paragraphs} offices={office ? [office] : []} neighborhoods={page.neighborhoods} considerations={page.considerations} />
-      <ReviewStrip office={slug} />
+      <ReviewStrip office={slug} places={[city, ...page.neighborhoods]} />
       <ProjectCarousel
         city={city}
         heading={`Roofing Projects in ${city}`}
