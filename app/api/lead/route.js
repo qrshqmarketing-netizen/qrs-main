@@ -5,6 +5,7 @@ import { after } from 'next/server';
 import { FOUND_US_OPTIONS, ROOF_TYPES, SERVICE_OPTIONS, VISIT_TIMES } from '@/data/estimateOptions';
 import { leadAttribution } from '@/lib/attribution';
 import { sendAutoReply } from '@/lib/autoReply';
+import { cleanPassword } from '@/lib/adminPassword';
 import { deliverLead, leadChannelSettings, rateLimited } from '@/lib/leads';
 import { postsTableStatus } from '@/lib/postsStore';
 
@@ -62,7 +63,7 @@ export async function POST(request) {
   const diagnostic = Boolean(secret) && request.headers.get('x-leads-diagnostic') === secret;
   // ...with "configCheck": true it only reports which channels have their settings on this deployment (nothing is sent or saved)
   // (and whether the blog articles table exists, and how many articles it holds)
-  if (diagnostic && body?.configCheck === true) return Response.json({ ok: true, settings: { ...leadChannelSettings(), dashboardPassword: Boolean((process.env.ADMIN_PASSWORD || '').trim().length >= 12), articles: await postsTableStatus() } });
+  if (diagnostic && body?.configCheck === true) return Response.json({ ok: true, settings: { ...leadChannelSettings(), dashboardPassword: cleanPassword(process.env.ADMIN_PASSWORD).length >= 12, dashboardPasswordLength: cleanPassword(process.env.ADMIN_PASSWORD).length, dashboardPasswordHadQuotesOrName: cleanPassword(process.env.ADMIN_PASSWORD) !== String(process.env.ADMIN_PASSWORD || '').trim(), articles: await postsTableStatus() } });
 
   const source = body?.source === 'instant-quote' ? 'instant-quote' : 'estimate-form';
   const name = clip(body?.name, 120);

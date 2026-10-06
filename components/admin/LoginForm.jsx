@@ -8,6 +8,7 @@ import { adminApi } from './api';
 export default function LoginForm({ ready }) {
   const router = useRouter();
   const [password, setPassword] = useState('');
+  const [show, setShow] = useState(false);
   const [error, setError] = useState('');
   const [busy, setBusy] = useState(false);
 
@@ -33,7 +34,12 @@ export default function LoginForm({ ready }) {
       <form className="adm-card" onSubmit={submit}>
         <div className="adm-field">
           <label htmlFor="adm-password">Password</label>
-          <input id="adm-password" type="password" autoComplete="current-password" value={password} onChange={(e) => setPassword(e.target.value)} required autoFocus />
+          {/* "new-password" stops the browser from filling in an old saved password for this website (a wrong password would look like a broken login) */}
+          <input id="adm-password" name="dashboard-password" type={show ? 'text' : 'password'} autoComplete="new-password" autoCapitalize="none" autoCorrect="off" spellCheck={false} value={password} onChange={(e) => setPassword(e.target.value)} required autoFocus />
+          <label className="adm-check" style={{ marginTop: 8 }}>
+            <input type="checkbox" checked={show} onChange={(e) => setShow(e.target.checked)} />
+            <span>Show what I typed</span>
+          </label>
         </div>
         {error && <div className="adm-msg bad" role="alert">{error}</div>}
         <button className="adm-btn adm-btn-primary" type="submit" disabled={busy || !password}>
