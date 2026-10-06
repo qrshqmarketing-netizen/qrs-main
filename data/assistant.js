@@ -7,8 +7,8 @@ import { SEASON_PROMO } from './promo';
 import { formatDate } from '@/lib/dates';
 import { hoursText } from '@/lib/hours';
 
-// The chat assistant's backend: app/api/chat/route.js (an OpenRouter model — see OPENROUTER_API_KEY and
-// OPENROUTER_MODEL in .env.local). Set NEXT_PUBLIC_CHAT_ENDPOINT only to point the widget at a different,
+// The chat assistant's backend: app/api/chat/route.js (Google Gemini when GEMINI_API_KEY is set, else an OpenRouter model — see
+// OPENROUTER_API_KEY and OPENROUTER_MODEL in .env.local). Set NEXT_PUBLIC_CHAT_ENDPOINT only to point the widget at a different,
 // separately hosted backend instead. Either way, the backend receives POST {messages:[{role,content}]} and
 // returns {reply:"..."}; if it's unreachable or NEXT_PUBLIC_CHAT_ENDPOINT is explicitly set to nothing while
 // OPENROUTER_API_KEY is also unset, the built-in answers below are used instead.

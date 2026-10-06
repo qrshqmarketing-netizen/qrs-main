@@ -1,5 +1,6 @@
 // Backend for the Roof Assistant chat widget (components/widgets/RoofAssistant.jsx).
-// Calls an OpenRouter model (OPENROUTER_API_KEY, OPENROUTER_MODEL in .env.local) and saves a lead through lib/leads.js
+// Calls Google Gemini (GEMINI_API_KEY, optional GEMINI_MODEL) when it is set, else an OpenRouter model (OPENROUTER_API_KEY, OPENROUTER_MODEL);
+// if Gemini fails and OpenRouter is also set up, the OpenRouter model answers instead. Saves a lead through lib/leads.js
 // (email + leads spreadsheet) when the visitor shares a phone number or email. The lead doesn't depend on the model:
 // it's saved even when the model is slow, fails or isn't set up (the route then answers with an error and the widget
 // falls back to its built-in answers, which thank the visitor for their details).
@@ -12,6 +13,10 @@ import { deliverLead, rateLimited } from '@/lib/leads';
 
 const OPENROUTER_URL = 'https://openrouter.ai/api/v1/chat/completions';
 const MODEL = process.env.OPENROUTER_MODEL || 'qwen/qwen3.8-27b:free';
+// Gemini (generateContent, v1beta). gemini-3.8-flash is Google's current stable Flash model: fast enough for a chat widget, far better than the
+// free OpenRouter model. Set GEMINI_MODEL in Vercel to try another one (e.g. gemini-3.1-pro-preview, slower and costlier).
+const GEMINI_BASE = process.env.GEMINI_BASE_URL || 'https://generativelanguage.googleapis.com/v1beta';
+const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-3.8-flash';
 
 // Keep requests small: cap how much conversation we forward and how long each message can be.
 const MAX_MESSAGES = 16;
@@ -40,6 +45,79 @@ function findContact(text) {
 
 const userText = (messages) => messages.filter((m) => m.role === 'user').map((m) => m.content).join('\n');
 
+// Gemini: returns { reply } or { error, status }. The text parts of the first candidate (thought parts left out). Two tries: a model
+// sometimes returns nothing, and a model that doesn't take a thinking level answers the retry without one.
+async function callGemini(key, system, messages) {
+  // Gemini wants the turns to alternate and to start with the visitor: merge neighbours with the same role
+  const contents = [];
+  for (const m of messages) {
+    const role = m.role === 'assistant' ? 'model' : 'user';
+    if (contents.length && contents[contents.length - 1].role === role) contents[contents.length - 1].parts[0].text += `\n${m.content}`;
+    else contents.push({ role, parts: [{ text: m.content }] });
+  }
+  while (contents.length && contents[0].role !== 'user') contents.shift();
+  for (let attempt = 0; attempt < 2; attempt++) {
+    try {
+      const res = await fetch(`${GEMINI_BASE}/models/${encodeURIComponent(GEMINI_MODEL)}:generateContent`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'x-goog-api-key': key },
+        signal: AbortSignal.timeout(25000),
+        body: JSON.stringify({
+          systemInstruction: { parts: [{ text: system }] },
+          contents,
+          generationConfig: {
+            temperature: 0.4,
+            maxOutputTokens: 1200, // thinking tokens count against this, so it is well above the 400-token answers
+            ...(attempt === 0 && { thinkingConfig: { thinkingLevel: 'LOW' } }),
+          },
+        }),
+      });
+      if (!res.ok) {
+        console.error('[chat] Gemini error', res.status, (await res.text().catch(() => '')).slice(0, 400));
+        if (res.status === 400 && attempt === 0) continue; // maybe the thinking setting: try once without it
+        return { error: 'upstream error', status: 502 };
+      }
+      const data = await res.json();
+      const text = (data.candidates?.[0]?.content?.parts || []).filter((p) => !p.thought && typeof p.text === 'string').map((p) => p.text).join('').trim();
+      if (text) return { reply: text };
+      console.error('[chat] Gemini sent no text', data.candidates?.[0]?.finishReason, data.promptFeedback?.blockReason);
+    } catch (err) {
+      console.error('[chat] request to Gemini failed', err);
+      return { error: 'request failed', status: 502 };
+    }
+  }
+  return { error: 'empty reply', status: 502 };
+}
+
+// OpenRouter: returns { reply } or { error, status }. Free models sometimes answer with nothing at all; one retry usually gets a reply
+async function callOpenRouter(apiKey, system, messages) {
+  for (let attempt = 0; attempt < 2; attempt++) {
+    try {
+      const res = await fetch(OPENROUTER_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${apiKey}`,
+          'HTTP-Referer': SITE_URL,
+          'X-Title': BUSINESS.name,
+        },
+        body: JSON.stringify({ model: MODEL, messages: [{ role: 'system', content: system }, ...messages], temperature: 0.4, max_tokens: 400 }),
+      });
+      if (!res.ok) {
+        console.error('[chat] OpenRouter error', res.status, await res.text().catch(() => ''));
+        return { error: 'upstream error', status: 502 };
+      }
+      const data = await res.json();
+      const reply = data.choices?.[0]?.message?.content?.trim();
+      if (reply) return { reply };
+    } catch (err) {
+      console.error('[chat] request to OpenRouter failed', err);
+      return { error: 'request failed', status: 502 };
+    }
+  }
+  return { error: 'empty reply', status: 502 };
+}
+
 // One call to the model; returns { reply, marker } or { error, status }
 async function askModel(apiKey, messages) {
   // Ground the reply in the site's actual page content: search PAGE_INDEX for pages relevant to the
@@ -56,36 +134,21 @@ async function askModel(apiKey, messages) {
       }
     : null;
 
+  const system = [SYSTEM_PROMPT, context?.content].filter(Boolean).join('\n\n');
   let rawReply;
-  // Free models sometimes answer with nothing at all; one retry usually gets a reply
-  for (let attempt = 0; attempt < 2 && !rawReply; attempt++) {
-    try {
-      const res = await fetch(OPENROUTER_URL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${apiKey}`,
-          'HTTP-Referer': SITE_URL,
-          'X-Title': BUSINESS.name,
-        },
-        body: JSON.stringify({
-          model: MODEL,
-          messages: [{ role: 'system', content: SYSTEM_PROMPT }, ...(context ? [context] : []), ...messages],
-          temperature: 0.4,
-          max_tokens: 400,
-        }),
-      });
-      if (!res.ok) {
-        console.error('[chat] OpenRouter error', res.status, await res.text().catch(() => ''));
-        return { error: 'upstream error', status: 502 };
-      }
-      const data = await res.json();
-      rawReply = data.choices?.[0]?.message?.content?.trim();
-    } catch (err) {
-      console.error('[chat] request to OpenRouter failed', err);
-      return { error: 'request failed', status: 502 };
-    }
+  let failed = null;
+  if (process.env.GEMINI_API_KEY) {
+    const out = await callGemini(process.env.GEMINI_API_KEY, system, messages);
+    if (out.reply) rawReply = out.reply;
+    else failed = out;
   }
+  // OpenRouter: the only model when there is no Gemini key, and the backup when Gemini fails
+  if (!rawReply && apiKey) {
+    const out = await callOpenRouter(apiKey, system, messages);
+    if (out.reply) rawReply = out.reply;
+    else failed = out;
+  }
+  if (!rawReply && failed?.error) return failed;
   if (!rawReply) return { error: 'empty reply', status: 502 };
 
   // Pull out the model's hidden [[LEAD]]{...} marker (see SYSTEM_PROMPT), if it added one, and never show it.
@@ -119,7 +182,7 @@ export async function POST(request) {
   if (!messages.length) return Response.json({ error: 'no messages' }, { status: 400 });
 
   const apiKey = process.env.OPENROUTER_API_KEY;
-  const answer = apiKey ? await askModel(apiKey, messages) : { error: 'not configured', status: 503 };
+  const answer = apiKey || process.env.GEMINI_API_KEY ? await askModel(apiKey, messages) : { error: 'not configured', status: 503 };
 
   // A lead when this message brings a phone or email the visitor hadn't typed before in this chat, or when the
   // model's marker has one and no lead was saved yet (the widget sends leadSaved once one was, so a chat makes one row)
