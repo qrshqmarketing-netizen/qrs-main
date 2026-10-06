@@ -84,6 +84,7 @@ export default async function HomePage() {
           image={HERO_SLIDES[0].src}
           imageAlt={HERO_SLIDES[0].alt}
           slides={HERO_SLIDES}
+          align="center"
           className="hero-top-pad"
           stats
         />
@@ -91,7 +92,7 @@ export default async function HomePage() {
         <QrsStandard />
         <ReviewStrip />
         <Services title="Roofing __Systems__" items={HOME_PRODUCTS} compact cta={false} pattern={false} slider id="roofing-systems" />
-        <ServiceArea hideCities />
+        <ServiceArea hideCities allAreasLink />
         <WhyQrs />
         {SHOW_RECENT_WORK && <ProjectCarousel heading="Recent Work" sub={RECENT_WORK_SUB} projects={RECENT_WORK} id="work" pattern />}
         <PartnerLogos {...ROOF_FINANCING.partners} />

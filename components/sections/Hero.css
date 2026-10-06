@@ -47,8 +47,9 @@
   /* Top padding clears the fixed floating header pill (72px tall on phones, 80px from 621px) */
   padding:100px 0 30px;margin:auto auto 0;text-align:center;
 }
-/* A little extra breathing room above the eyebrow (home page only) */
-.hero-inner.hero-top-pad{padding-top:160px}
+/* Home hero: the copy is centered, across and down. The top padding is 80px more than the bottom, so the copy is centered in what the floating header pill leaves free */
+.hero.hero-top-pad{align-items:center}
+.hero-inner.hero-top-pad{margin:auto;padding:130px 0 50px}
 .hero-copy{width:min(900px,100%);margin:0 auto}
 .hero-copy .eyebrow{
   color:var(--gold-2);font-family:var(--font-head);font-size:13px;font-weight:600;letter-spacing:.06em;line-height:1.5;
@@ -83,7 +84,7 @@
   .hero{min-height:440px}
   .hero.hero-top-pad{min-height:660px}
   .hero-inner{padding:108px 0 34px}
-  .hero-inner.hero-top-pad{padding-top:200px}
+  .hero-inner.hero-top-pad{padding:140px 0 60px}
   .hero-copy .eyebrow{font-size:15px;letter-spacing:0;line-height:inherit;margin-bottom:8px}
   .hero-title{font-size:46px;line-height:1.08;text-wrap:balance}
   .hero-sub{font-size:17px;line-height:1.45;letter-spacing:-.01em;margin:14px auto 22px}
@@ -93,7 +94,7 @@
   .hero{min-height:clamp(460px,58vh,540px)}
   .hero.hero-top-pad{min-height:clamp(720px,88vh,860px)}
   .hero-inner{padding:116px 0 40px}
-  .hero-inner.hero-top-pad{padding-top:240px}
+  .hero-inner.hero-top-pad{padding:150px 0 70px}
   .hero-title{font-size:56px}
   .hero-sub{font-size:18px}
 }
@@ -131,9 +132,18 @@
 .hero-inner:not(.hero-left) .crumbs ol{justify-content:center}
 @media (min-width:621px){.hero-copy .crumbs ol{margin-bottom:12px;font-size:14px}}
 
-/* Home hero only (desktop and tablet): the shade is one diagonal, dark blue in the bottom-left corner (behind the copy) fading to clear in the top-right,
-   so the photo shows through. The usual darkening along the bottom is left off here. Phones keep the photo band that fades into the navy. */
+/* Home hero (desktop and tablet): a soft dark halo behind the centered copy keeps the gold line and the small type readable over bright parts of a photo */
 @media (min-width:621px){
-  .hero.hero-top-pad .hero-roof-texture:after{background:linear-gradient(to top right,rgba(3,27,52,.95) 0%,rgba(3,27,52,.8) 26%,rgba(3,27,52,.38) 56%,rgba(3,27,52,0) 88%)}
+  .hero.hero-top-pad .hero-copy{position:relative;isolation:isolate}
+  .hero.hero-top-pad .hero-copy:before{
+    content:"";position:absolute;inset:-60px -140px;z-index:-1;pointer-events:none;
+    background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(3,25,46,.58) 0%,rgba(3,25,46,.34) 48%,rgba(3,25,46,0) 100%);
+  }
+}
+
+/* Home hero only (desktop and tablet): the shade runs from dark blue along the bottom to clear at the top, so the photo shows through above the copy.
+   The usual darkening along the bottom is left off here. Phones keep the photo band that fades into the navy. */
+@media (min-width:621px){
+  .hero.hero-top-pad .hero-roof-texture:after{background:linear-gradient(to top,rgba(3,27,52,.94) 0%,rgba(3,27,52,.74) 24%,rgba(3,27,52,.4) 52%,rgba(3,27,52,0) 92%)}
   .hero.hero-top-pad:after{display:none}
 }

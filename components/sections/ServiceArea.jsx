@@ -26,6 +26,7 @@ function nearestLocation(point) {
 // when the map is about to scroll into view. Mobile keeps the map still so it never traps a page swipe.
 export default function ServiceArea({
   hideCities = false, // true: the city links under the map are never shown, not even after a ZIP search (home page); they stay in the page's HTML
+  allAreasLink = false, // true: a text link under the map goes to the all-locations hub, /service-areas/ (home page)
   heading = 'Locations We Proudly __Serve__',
   sub = 'The outlined area is where we work: Los Angeles County, Orange County, and the Inland Empire from Pomona to Riverside, Corona and Temecula. Enter your ZIP code to confirm we cover you.',
 }) {
@@ -193,6 +194,12 @@ export default function ServiceArea({
             </div>
           ))}
         </nav>
+
+        {allAreasLink && (
+          <p className="sa-all">
+            <Link className="text-link" href="/service-areas/" prefetch={false}>View all service areas</Link>
+          </p>
+        )}
       </div>
     </section>
   );

@@ -85,6 +85,9 @@
 .sa-zip .loc-msg a{color:var(--gold);font-weight:700;text-decoration:underline;text-underline-offset:2px}
 .sa-cities{display:grid;grid-template-columns:1fr;gap:26px;margin:34px 0 0}
 .sa-cities[hidden]{display:none}
+/* The text link to the all-locations hub, centered under the map (home page) */
+.sa-all{margin:26px 0 0;text-align:center}
+.sa-all a{font-size:17px}
 .sa-cities h3{margin:0 0 8px;color:var(--gold-ink);font:700 13px/1.3 var(--font-head);letter-spacing:.12em;text-transform:uppercase}
 .sa-cities ul{list-style:none;margin:0;padding:0;columns:2;column-gap:20px}
 .sa-cities li{break-inside:avoid}
