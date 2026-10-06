@@ -2,8 +2,7 @@ import Faq from '@/components/sections/Faq';
 import LatestArticles from '@/components/sections/LatestArticles';
 import FeatureBand from '@/components/sections/FeatureBand';
 import FinalCta from '@/components/sections/FinalCta';
-import HomeHero from '@/components/sections/HomeHero';
-import ProofBar from '@/components/sections/ProofBar';
+import Hero from '@/components/sections/Hero';
 import PartnerLogos from '@/components/sections/PartnerLogos';
 import ProjectCarousel from '@/components/sections/ProjectCarousel';
 import QrsStandard from '@/components/sections/QrsStandard';
@@ -33,8 +32,8 @@ export const metadata = {
 };
 
 // The home page's "Roofing Services" section: just the two top-level categories from the nav.
-// The hero collage: the newest projects' cover photos, newest first (LATEST_PROJECTS in data/projectPages.js)
-const HERO_SLIDES = LATEST_PROJECTS.map((project) => ({ path: project.path, image: project.image, imageAlt: project.imageAlt, label: project.label }));
+// The hero photo slider: the newest projects' cover photos, newest first (LATEST_PROJECTS in data/projectPages.js)
+const HERO_SLIDES = LATEST_PROJECTS.map((project) => ({ src: project.image, alt: project.imageAlt }));
 
 // The "Recent Work" carousel (data/recentWork.js) is hidden for now: set this to true to show it again
 const SHOW_RECENT_WORK = false;
@@ -77,13 +76,18 @@ export default async function HomePage() {
       <JsonLd data={pageJsonLd({ path: '/', title: HOME_TITLE, description: HOME_DESCRIPTION, faqs: FAQS })} />
       <main id="top">
         {/* The keyword line above the big headline is the page's H1 (matches the page title) */}
-        <HomeHero
-          projects={HERO_SLIDES}
+        <Hero
+          h1="eyebrow"
           eyebrow={HOME_H1}
           title={<>Come home to a roof you can <u>trust.</u></>}
           intro="Clear inspections. Straightforward estimates. Clean workmanship."
+          image={HERO_SLIDES[0].src}
+          imageAlt={HERO_SLIDES[0].alt}
+          slides={HERO_SLIDES}
+          align="center"
+          className="hero-top-pad"
+          stats
         />
-        <ProofBar strip />
         <Services items={HOME_SERVICES} compact cta={false} />
         <QrsStandard />
         <ReviewStrip />
