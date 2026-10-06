@@ -44,7 +44,7 @@ export default function Hero({
   label = 'QRS Southern California roofing',
   h1 = 'title',
   outcome,
-  align = 'left',
+  align = 'center',
   stats = false,
   aside,
   actions: allActions = DEFAULT_ACTIONS,

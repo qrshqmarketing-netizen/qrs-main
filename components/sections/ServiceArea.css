@@ -2,7 +2,7 @@
 .area{background:var(--paper);padding:64px 0}
 .area .container{max-width:1080px}
 .area h2{color:var(--navy);font-size:var(--h2);font-weight:800;line-height:1.1;letter-spacing:.01em;margin-bottom:14px}
-.area-sub{color:var(--navy);font-family:var(--font-head);font-size:19px;font-weight:500;letter-spacing:0;line-height:1.35;margin:0 0 26px}
+.area-sub{color:var(--navy);font-family:var(--font-head);font-size:19px;font-weight:500;letter-spacing:0;line-height:1.35;margin:0 auto 26px;max-width:900px;text-align:center}
 .loc-wrap{
   display:grid;grid-template-columns:1fr;grid-template-rows:auto 320px auto;height:auto;
   border-radius:var(--radius);overflow:hidden;background:#1d3a63;box-shadow:0 14px 40px rgba(6,45,87,.12);
@@ -83,7 +83,7 @@
 .sa-wrap .loc-map-box{flex:1 1 auto;height:320px}
 .sa-wrap:fullscreen .loc-map-box{height:auto}
 .sa-zip .loc-msg a{color:var(--gold);font-weight:700;text-decoration:underline;text-underline-offset:2px}
-.sa-cities{display:grid;grid-template-columns:1fr;gap:26px;margin:34px 0 0}
+.sa-cities{display:grid;grid-template-columns:1fr;gap:26px;margin:34px 0 0;text-align:center}
 .sa-cities[hidden]{display:none}
 /* The text link to the all-locations hub, centered under the map (home page) */
 .sa-all{margin:26px 0 0;text-align:center}
