@@ -14,6 +14,7 @@ import JsonLd from '@/components/ui/JsonLd';
 import { projectsRelatedTo } from '@/data/projectPages';
 import { pageJsonLd } from '@/lib/structuredData';
 import { closingCta, faqSub } from './shared';
+import { heroOutcome } from '@/data/heroOutcomes';
 import { articlesFor } from '@/lib/articles';
 
 const PROCESS_PHOTOS = {
@@ -113,6 +114,7 @@ export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], 
         crumbs={crumbs}
         eyebrow={eyebrow}
         title={page.h1 || page.title}
+        outcome={heroOutcome(crumbs.at(-1).href)}
         intro={page.hero.intro}
         image={page.image}
         imageAlt={page.imageAlt}

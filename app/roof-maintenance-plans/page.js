@@ -12,6 +12,7 @@ import JsonLd from '@/components/ui/JsonLd';
 import { HOME, PROGRAMS } from '@/data/catalog';
 import { CARE_PLAN as page } from '@/data/pages/carePlan';
 import { articlesFor } from '@/lib/articles';
+import { heroOutcome } from '@/data/heroOutcomes';
 import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
 
@@ -28,7 +29,7 @@ export default async function RoofMaintenancePlansPage() {
   return (
     <main id="top">
       <JsonLd data={schema} />
-      <Hero crumbs={CRUMBS} eyebrow="Maintenance Plans" title={page.hero.heading} intro={page.hero.intro} image={page.image} imageAlt={page.imageAlt} stats />
+      <Hero crumbs={CRUMBS} eyebrow="Maintenance Plans" title={page.hero.heading} outcome={heroOutcome(PROGRAMS.plans.href)} intro={page.hero.intro} image={page.image} imageAlt={page.imageAlt} stats />
       <ValueGrid heading={page.whatGoesWrong.heading} items={page.whatGoesWrong.items} tone="wash" pattern />
       <CarePlanPricing />
       <PlanScope />

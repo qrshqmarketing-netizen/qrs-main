@@ -3,7 +3,6 @@ import FeatureBand from '@/components/sections/FeatureBand';
 import FinalCta from '@/components/sections/FinalCta';
 import Guarantee from '@/components/sections/Guarantee';
 import Hero from '@/components/sections/Hero';
-import ProofBar from '@/components/sections/ProofBar';
 import Overview from '@/components/sections/Overview';
 import Process from '@/components/sections/Process';
 import RoofCheck from '@/components/sections/RoofCheck';
@@ -13,6 +12,7 @@ import WhyQrs from '@/components/sections/WhyQrs';
 import JsonLd from '@/components/ui/JsonLd';
 import { ABOUT_LINK, HOME } from '@/data/catalog';
 import { ABOUT_PAGE as page } from '@/data/pages/about';
+import { heroOutcome } from '@/data/heroOutcomes';
 import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
 
@@ -28,9 +28,8 @@ export default function AboutPage() {
   return (
     <main id="top">
       <JsonLd data={schema} />
-      <Hero crumbs={CRUMBS} eyebrow={page.hero.eyebrow} title={page.hero.heading} intro={page.hero.intro} image={HERO_IMAGE} imageAlt="Aerial view of a home with a new shingle roof in a Southern California neighborhood" imagePosition="center 45%" />
+      <Hero crumbs={CRUMBS} eyebrow={page.hero.eyebrow} title={page.hero.heading} outcome={heroOutcome('/about-us/')} intro={page.hero.intro} image={HERO_IMAGE} imageAlt="Aerial view of a home with a new shingle roof in a Southern California neighborhood" imagePosition="center 45%" stats />
       <Overview center heading={page.intro.heading} paragraphs={page.intro.paragraphs} />
-      <ProofBar />
       <SplitFeature
         eyebrow={page.story.eyebrow}
         heading={page.story.heading}

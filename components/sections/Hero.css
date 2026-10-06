@@ -1,11 +1,11 @@
 /* ---------- Hero ---------- */
 .hero{
   position:relative;overflow:hidden;isolation:isolate;
-  min-height:560px;display:flex;align-items:flex-end;
+  min-height:420px;display:flex;align-items:flex-end;
   color:#fff;background:#4f5960;
 }
-/* Taller hero, home page only */
-.hero.hero-top-pad{min-height:680px}
+/* A little taller, home page only */
+.hero.hero-top-pad{min-height:600px}
 /* No photo yet: keep the navy fallback gradient inside the same parallax layer as hero photos */
 .hero-fallback{background:#03192e}
 /* Oversized background layer leaves room for its subtle scroll parallax movement */
@@ -17,6 +17,10 @@
 .hero-roof-texture:after{
   content:"";position:absolute;inset:0;
   background:linear-gradient(180deg,rgba(3,27,52,.20) 0%,rgba(3,27,52,.52) 52%,rgba(3,27,52,.78) 100%);
+}
+/* A soft shade from the left, behind the copy, so the smaller type stays easy to read on a bright photo (desktop; phones stack the copy below the photo) */
+@media (min-width:621px){
+  .hero-roof-texture:after{background:linear-gradient(90deg,rgba(3,27,52,.62) 0%,rgba(3,27,52,.34) 45%,rgba(3,27,52,0) 82%),linear-gradient(180deg,rgba(3,27,52,.20) 0%,rgba(3,27,52,.52) 52%,rgba(3,27,52,.78) 100%)}
 }
 /* Hero photo slider (HeroSlides.jsx): the slides stack and cross-fade; the dark overlay above stays put */
 .hero-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.4s ease}
@@ -41,10 +45,10 @@
   position:relative;z-index:2;
   display:flex;justify-content:center;align-items:center;
   /* Top padding clears the fixed floating header pill (72px tall on phones, 80px from 621px) */
-  padding:112px 0 40px;margin:auto auto 0;text-align:center;
+  padding:100px 0 30px;margin:auto auto 0;text-align:center;
 }
 /* A little extra breathing room above the eyebrow (home page only) */
-.hero-inner.hero-top-pad{padding-top:170px}
+.hero-inner.hero-top-pad{padding-top:160px}
 .hero-copy{width:min(900px,100%);margin:0 auto}
 .hero-copy .eyebrow{
   color:var(--gold-2);font-family:var(--font-head);font-size:13px;font-weight:600;letter-spacing:.06em;line-height:1.5;
@@ -52,45 +56,46 @@
 }
 /* Big headline (an <h1>, or a <p> when the keyword line above it is the H1) */
 .hero-title{
-  max-width:900px;margin:12px auto 0;
-  font-family:var(--font-display);font-size:clamp(40px,12vw,52px);font-weight:600;line-height:1.02;letter-spacing:.01em;text-transform:uppercase;
+  max-width:860px;margin:8px auto 0;
+  font-family:var(--font-display);font-size:clamp(30px,8.6vw,38px);font-weight:600;line-height:1.06;letter-spacing:.01em;text-transform:uppercase;
   text-wrap:balance;text-shadow:0 4px 24px rgba(0,0,0,.32);
 }
 .hero-title span{color:#fff}
+/* The dream-outcome line inside the H1 (data/heroOutcomes.js): smaller, gold, sentence case, on its own line */
+.hero-title .hero-outcome{display:block;margin-top:.34em;color:var(--gold-2);font-family:var(--font-head);font-size:max(.46em,15px);font-weight:600;line-height:1.25;letter-spacing:0;text-transform:none;text-wrap:balance}
 .hero-title .product-brand sup{font-family:var(--font-head);font-size:.42em;font-style:normal;letter-spacing:0;vertical-align:super}
 .hero-sub{
-  font-family:var(--font-head);font-size:16px;font-weight:500;line-height:1.5;letter-spacing:-.01em;
-  color:#fff;max-width:760px;margin:16px auto 26px;text-shadow:0 2px 15px rgba(0,0,0,.35);
+  font-family:var(--font-head);font-size:15px;font-weight:500;line-height:1.5;letter-spacing:-.01em;
+  color:#fff;max-width:680px;margin:12px auto 20px;text-shadow:0 2px 15px rgba(0,0,0,.35);
 }
 .hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
 /* Pages with no intro line under the headline still get room above the buttons */
-.hero-title + .hero-actions{margin-top:26px}
-.hero-actions .btn{width:100%;max-width:340px;box-shadow:0 12px 30px rgba(0,0,0,.18)}
-/* Home page only (Hero align="left" stats): left-justified copy, proof-bar stats nested below it */
+.hero-title + .hero-actions{margin-top:20px}
+/* Compact buttons: smaller than the site's standard button */
+.hero-actions .btn{width:100%;max-width:340px;min-height:46px;padding:10px 20px;font-size:16px;line-height:24px;box-shadow:0 10px 24px rgba(0,0,0,.18)}
+/* Left-justified copy (the default) */
 .hero-inner.hero-left{display:block;text-align:left}
 .hero-inner.hero-left .hero-copy{margin:0}
 .hero-inner.hero-left .hero-title{margin-left:0;margin-right:0}
 .hero-inner.hero-left .hero-sub{margin-left:0;margin-right:0}
 .hero-inner.hero-left .hero-actions{justify-content:flex-start}
-.hero-inner.hero-left .proofbar{margin-top:36px}
 @media (min-width:621px){
-  .hero{min-height:600px}
-  .hero.hero-top-pad{min-height:740px}
-  .hero-inner{padding:120px 0 42px}
-  .hero-inner.hero-top-pad{padding-top:180px}
-  .hero-copy .eyebrow{font-size:18px;letter-spacing:0;line-height:inherit;margin-bottom:12px}
-  .hero-title{font-size:72px;line-height:1.05;text-wrap:wrap}
-  .hero-sub{font-size:19px;line-height:1.4;letter-spacing:-.01em;margin:22px auto 28px}
-  .hero-actions .btn{width:auto;max-width:none;min-width:245px}
-  .hero-inner.hero-left .proofbar{margin-top:48px}
+  .hero{min-height:440px}
+  .hero.hero-top-pad{min-height:660px}
+  .hero-inner{padding:108px 0 34px}
+  .hero-inner.hero-top-pad{padding-top:200px}
+  .hero-copy .eyebrow{font-size:15px;letter-spacing:0;line-height:inherit;margin-bottom:8px}
+  .hero-title{font-size:46px;line-height:1.08;text-wrap:balance}
+  .hero-sub{font-size:17px;line-height:1.45;letter-spacing:-.01em;margin:14px auto 22px}
+  .hero-actions .btn{width:auto;max-width:none;min-width:200px}
 }
 @media (min-width:901px){
-  .hero{min-height:clamp(640px,86vh,820px)}
-  .hero.hero-top-pad{min-height:clamp(760px,94vh,920px)}
-  .hero-inner{padding:130px 0 50px}
-  .hero-inner.hero-top-pad{padding-top:190px}
-  .hero-title{font-size:90px}
-  .hero-sub{font-size:22px}
+  .hero{min-height:clamp(460px,58vh,540px)}
+  .hero.hero-top-pad{min-height:clamp(720px,88vh,860px)}
+  .hero-inner{padding:116px 0 40px}
+  .hero-inner.hero-top-pad{padding-top:240px}
+  .hero-title{font-size:56px}
+  .hero-sub{font-size:18px}
 }
 .hero-sub{animation:fadeUp .9s ease both}
 @media (prefers-reduced-motion:reduce){.hero-sub{animation:none}}
@@ -102,19 +107,26 @@
    stylesheets end up ordered. */
 @media (max-width:620px){
   .hero.hero-stack.hero-stack{display:flex;flex-direction:column;align-items:stretch;min-height:0;background:#03192e}
-  .hero.hero-stack .hero-background{position:relative;inset:auto;height:clamp(300px,86vw,420px);transform:none}
+  .hero.hero-stack .hero-background{position:relative;inset:auto;height:clamp(210px,58vw,290px);transform:none}
   /* The photo fades into the navy at the bottom, so the copy starts right where the photo ends */
   .hero.hero-stack .hero-roof-texture:after{background:linear-gradient(180deg,rgba(3,27,52,.3) 0%,rgba(3,25,46,0) 35%,rgba(3,25,46,0) 60%,#03192e 100%)}
-  .hero.hero-stack > .hero-inner{margin:0 auto;padding:0 0 40px}
+  .hero.hero-stack > .hero-inner{margin:0 auto;padding:0 0 28px}
+  .hero.hero-stack.hero-top-pad .hero-background{height:clamp(280px,78vw,400px)}
 }
 
 /* Hero with a picture beside the copy (`aside`, Hero.jsx): copy left and picture right from 901px, stacked below on phones */
-.hero-inner.hero-has-aside{display:grid;grid-template-columns:minmax(0,1fr);gap:34px;align-items:center;text-align:left}
+.hero-inner.hero-has-aside{display:grid;grid-template-columns:minmax(0,1fr);gap:28px;align-items:center;text-align:left}
 .hero-inner.hero-has-aside .hero-copy{margin:0;width:100%}
 .hero-inner.hero-has-aside .hero-title,.hero-inner.hero-has-aside .hero-sub{margin-left:0;margin-right:0}
 .hero-inner.hero-has-aside .hero-actions{justify-content:flex-start}
 @media (min-width:901px){
-  .hero-inner.hero-has-aside{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:56px}
-  .hero-inner.hero-has-aside .hero-title{font-size:68px}
-  .hero-inner.hero-has-aside .hero-sub{font-size:20px}
+  .hero-inner.hero-has-aside{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:44px}
+  .hero-inner.hero-has-aside .hero-title{font-size:46px}
+  .hero-inner.hero-has-aside .hero-sub{font-size:17px}
 }
+
+/* Breadcrumb trail in the eyebrow's place (Hero.jsx): small, white on the photo, the current page in gold */
+.hero-copy .crumbs ol{margin:0 0 10px;font-size:13px;text-shadow:0 2px 14px rgba(0,0,0,.4)}
+.hero-copy .crumbs [aria-current]{color:var(--gold-2);font-weight:600}
+.hero-inner:not(.hero-left) .crumbs ol{justify-content:center}
+@media (min-width:621px){.hero-copy .crumbs ol{margin-bottom:12px;font-size:14px}}

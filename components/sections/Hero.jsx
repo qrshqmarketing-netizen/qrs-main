@@ -14,7 +14,9 @@ const DEFAULT_ACTIONS = [
   { label: `Call ${PHONE}`, href: TEL, style: 'line' },
 ];
 
-// Full-bleed photo hero, used site-wide. `h1` picks which line is the page's H1 for search engines:
+// Full-bleed photo hero, used site-wide. `crumbs` (the breadcrumb trail) takes the place of the small eyebrow line above the headline; `eyebrow`
+// shows only on a page without crumbs. `outcome` (data/heroOutcomes.js) is the dream-outcome line shown in gold under the headline, inside
+// the same H1, so the H1 holds both the keyword and the result the visitor wants. `h1` picks which line is the page's H1 for search engines:
 // the big headline ('title', the default) or the small keyword line above it ('eyebrow', home page only).
 // actions: [{ label, href, style: 'gold' | 'plum' | 'line' }]; an action with `drawer: true` opens the
 // Instant Quote drawer instead of navigating. When `image` is omitted, a CSS-only dark navy/gold
@@ -22,8 +24,8 @@ const DEFAULT_ACTIONS = [
 // (QuoteTrigger) follows the actions, unless one of them already opens the drawer. `slides` ([{ src, alt }], the first is
 // also `image`) turns the photo into a slider that rotates every 7 seconds (HeroSlides.jsx). Pass `mobileImage` (e.g. a portrait
 // crop of the same scene) to show a different photo below 621px instead of a cropped `image`. Below 621px a hero
-// with a photo stacks: the photo on its own band, then the copy below it (Hero.css .hero-stack). `stats` nests the
-// proof-bar stats in the hero; opt in only on the homepage and service pages. `aside` puts something (a picture) beside the copy
+// with a photo stacks: the photo on its own band, then the copy below it (Hero.css .hero-stack). `stats` adds the proof-point strip directly
+// under the hero (ProofBar `strip`). `aside` puts something (a picture) beside the copy
 // from 901px, below it on phones (the blog index shows its latest article this way).
 export default function Hero({
   crumbs,
@@ -41,6 +43,7 @@ export default function Hero({
   imagePosition,
   label = 'QRS Southern California roofing',
   h1 = 'title',
+  outcome,
   align = 'left',
   stats = false,
   aside,
@@ -58,8 +61,17 @@ export default function Hero({
         <div className="hero-glow" aria-hidden="true"></div>
         <div className={'container hero-inner on-dark' + (align === 'left' ? ' hero-left' : '') + (aside ? ' hero-has-aside' : '') + (className ? ` ${className}` : '')}>
           <div className="hero-copy">
-            {eyebrow && <Eyebrow className="eyebrow">{eyebrow}</Eyebrow>}
-            <Title className="hero-title"><Rich text={title} registeredMark /></Title>
+            {/* The breadcrumb trail takes the eyebrow's place (Home › Roof Repair). Only a page with no trail (the home page, the thank-you page) shows an eyebrow line. */}
+            {crumbs ? <Breadcrumbs items={crumbs} /> : eyebrow && <Eyebrow className="eyebrow">{eyebrow}</Eyebrow>}
+            <Title className="hero-title">
+              <Rich text={title} registeredMark />
+              {outcome && (
+                <>
+                  <span className="sr-only"> — </span>
+                  <span className="hero-outcome"><Rich text={outcome} /></span>
+                </>
+              )}
+            </Title>
             {intro && (
               <p className="hero-sub">
                 <Rich text={intro} />
@@ -86,16 +98,9 @@ export default function Hero({
             )}
           </div>
           {aside}
-          {stats && <ProofBar onDark />}
         </div>
       </section>
-      {crumbs && (
-        <div className="crumb-bar">
-          <div className="container">
-            <Breadcrumbs items={crumbs} />
-          </div>
-        </div>
-      )}
+      {stats && <ProofBar strip />}
     </>
   );
 }

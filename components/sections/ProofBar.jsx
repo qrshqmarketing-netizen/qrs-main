@@ -1,10 +1,11 @@
 import { PROOF_POINTS } from '@/data/site';
 import './ProofBar.css';
 
-// `onDark`: nested in the home hero (Hero.jsx), sitting directly on the photo instead of its own white bar
-export default function ProofBar({ onDark = false }) {
+// The four proof points. `strip`: the slim navy band directly under every hero (Hero.jsx `stats`); `onDark`: sitting directly on a photo
+// instead of its own white bar; neither: a white band.
+export default function ProofBar({ onDark = false, strip = false }) {
   return (
-    <section className={'proofbar' + (onDark ? ' on-dark' : '')}>
+    <section className={'proofbar' + (onDark ? ' on-dark' : '') + (strip ? ' proofbar-strip' : '')} aria-label="Why homeowners and clients choose QRS">
       <div className="container proof-grid">
         {PROOF_POINTS.map((point) => (
           <div className="proof-item" key={point.title}>

@@ -4,6 +4,7 @@ import ReviewDestinations from '@/components/sections/ReviewDestinations';
 import JsonLd from '@/components/ui/JsonLd';
 import { HOME, REVIEWS_LINK } from '@/data/catalog';
 import { REVIEWS_PAGE as page } from '@/data/pages/reviews';
+import { heroOutcome } from '@/data/heroOutcomes';
 import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
 
@@ -17,7 +18,7 @@ export default function ReviewsPage() {
   return (
     <main id="top">
       <JsonLd data={schema} />
-      <Hero crumbs={CRUMBS} eyebrow="Reviews" title={page.hero.heading} intro={page.hero.intro} image={page.hero.image} imageAlt={page.hero.imageAlt} actions={[]} />
+      <Hero crumbs={CRUMBS} eyebrow="Reviews" title={page.hero.heading} outcome={heroOutcome('/reviews/')} intro={page.hero.intro} image={page.hero.image} imageAlt={page.hero.imageAlt} actions={[]} />
       <ReviewDestinations />
       <IndexNote note={page.note} />
     </main>

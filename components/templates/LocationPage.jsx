@@ -2,7 +2,6 @@ import Faq from '@/components/sections/Faq';
 import LatestArticles from '@/components/sections/LatestArticles';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
-import ProofBar from '@/components/sections/ProofBar';
 import RelatedLinks from '@/components/sections/RelatedLinks';
 import ReviewStrip from '@/components/sections/ReviewStrip';
 import LocalIntro from '@/components/sections/LocalIntro';
@@ -16,6 +15,7 @@ import { projectsRelatedTo } from '@/data/projectPages';
 import { SERVICES } from '@/data/services';
 import { OFFICES, SITE_URL } from '@/data/site';
 import { pageJsonLd } from '@/lib/structuredData';
+import { heroOutcome } from '@/data/heroOutcomes';
 import { articlesFor } from '@/lib/articles';
 
 // Hero photos rotate across city pages until each city has its own
@@ -55,13 +55,14 @@ export default async function LocationPage({ location, page, index = 0 }) {
         crumbs={crumbs}
         eyebrow={`${city} Roofing · Roof Repair & Replacement`}
         title={page.hero.heading}
+        outcome={heroOutcome(cityPath(slug))}
+        stats
         intro={page.hero.sub}
         image={photo.src}
         imagePosition={photo.position}
         label={`QRS roofing in ${city}`}
       />
       <LocalIntro city={city} heading={page.intro.heading} paragraphs={page.intro.paragraphs} offices={office ? [office] : []} neighborhoods={page.neighborhoods} considerations={page.considerations} />
-      <ProofBar />
       <ReviewStrip office={slug} />
       <ProjectCarousel
         city={city}

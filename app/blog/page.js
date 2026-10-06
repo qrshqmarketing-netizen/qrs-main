@@ -7,6 +7,7 @@ import JsonLd from '@/components/ui/JsonLd';
 import { BLOG_LINK, blogPath, HOME } from '@/data/catalog';
 import { getBlogPosts, getLatestPost, getPublishedPosts } from '@/lib/postsStore';
 import { BLOG_PAGE as page } from '@/data/pages/blog';
+import { heroOutcome } from '@/data/heroOutcomes';
 import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
 
@@ -50,6 +51,7 @@ export default async function BlogPage() {
         crumbs={CRUMBS}
         eyebrow="Roofing Blog"
         title={page.hero.heading}
+        outcome={heroOutcome('/blog/')}
         intro={page.hero.intro}
         {...(featured && { aside: <HeroLatestPost post={featured} /> })}
       />

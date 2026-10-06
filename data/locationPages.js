@@ -12,7 +12,8 @@ export const LOCATION_PAGES = {
     metaDescription: 'Los Angeles roofing from a detail-first local team: tile, shingle and flat roof repair and replacement with written scopes. Book a free roof evaluation.',
     blurb: 'Roofer-led inspections, written scopes and clean installs for homes across the city, from the Hollywood Hills to the Valley.',
     hero: {
-      heading: 'Los Angeles roofing, done the detail-first way.',
+      // The keyword line; the result line under it is in data/heroOutcomes.js
+      heading: 'Los Angeles roofing',
       sub: 'For Los Angeles roofing, Quality Roofing Specialists repairs and replaces tile, shingle and flat roofs on homes from the Hollywood Hills to the Valley, with offices in the Fairfax area and Woodland Hills. Every job starts with a free roof evaluation.',
     },
     intro: {
@@ -46,7 +47,7 @@ export const LOCATION_PAGES = {
     metaDescription: 'Santa Monica roofing built for coastal conditions: tile, shingle and flat roof repair and replacement from a detail-first team. Book a free roof evaluation.',
     blurb: 'Clear inspections, written scopes and clean workmanship for homes from Ocean Park to North of Montana.',
     hero: {
-      heading: 'Santa Monica roofing, built for the coast.',
+      heading: 'Santa Monica roofing',
       sub: 'Santa Monica roofing from Quality Roofing Specialists means repairing and replacing clay tile, shingle and flat roofs on homes from Ocean Park to North of Montana, including modern homes with roof decks. Photos from a free roof evaluation show how your roof is holding up.',
     },
     intro: {
@@ -80,7 +81,7 @@ export const LOCATION_PAGES = {
     metaDescription: 'Pasadena roofing for Craftsman, Spanish Revival and mid-century homes: tile, shingle and flat roof repair and replacement. Book a free roof evaluation.',
     blurb: 'Detail-first roof repair and replacement for homes across Pasadena, from Bungalow Heaven to Linda Vista.',
     hero: {
-      heading: 'Pasadena roofing that respects your home’s character.',
+      heading: 'Pasadena roofing',
       sub: 'Quality Roofing Specialists handles Pasadena roofing for Craftsman, Spanish Revival and mid-century homes from Bungalow Heaven to Linda Vista, repairing and replacing tile, shingle and flat roofs without losing a home’s character. Every project starts with a free roof evaluation.',
     },
     intro: {
@@ -114,7 +115,7 @@ export const LOCATION_PAGES = {
     metaDescription: 'Glendale roofing for foothill, canyon and downtown homes: tile, shingle and flat roof repair and replacement with written scopes. Book a free roof evaluation.',
     blurb: 'Roofer-led inspections and clean workmanship for Glendale homes, including hillside and canyon properties.',
     hero: {
-      heading: 'Glendale roofing, from the foothills to downtown.',
+      heading: 'Glendale roofing',
       sub: 'Quality Roofing Specialists offers Glendale roofing for homes from Adams Hill to the foothills and canyons, repairing and replacing tile, shingle and flat roofs. A free roof evaluation comes first and shows whether Santa Ana winds have lifted shingles or shifted tiles.',
     },
     intro: {
@@ -147,7 +148,7 @@ export const LOCATION_PAGES = {
     metaDescription: 'Burbank roofing for Valley heat and mid-century homes: shingle, tile and flat roof repair and replacement with written scopes. Book a free roof evaluation.',
     blurb: 'Detail-first roof repair and replacement for Burbank homes, from Magnolia Park to the Burbank Hills.',
     hero: {
-      heading: 'Burbank roofing, built for Valley heat.',
+      heading: 'Burbank roofing',
       sub: 'Burbank roofing from Quality Roofing Specialists serves post-war and mid-century homes from Magnolia Park to the Burbank Hills, with repairs and replacements for shingle, tile and flat roofs. It starts with a free roof evaluation, often with a close look at attic ventilation.',
     },
     intro: {
@@ -180,7 +181,7 @@ export const LOCATION_PAGES = {
     metaDescription: 'Woodland Hills roofing from our Valley office on Ventura Blvd: tile, shingle and flat roof repair and replacement. Book a free roof evaluation.',
     blurb: 'Roofer-led inspections, written scopes and clean installs for homes across Woodland Hills and the West Valley.',
     hero: {
-      heading: 'Woodland Hills roofing from our Valley office.',
+      heading: 'Woodland Hills roofing',
       sub: 'Quality Roofing Specialists provides Woodland Hills roofing from its Valley office on Ventura Boulevard, repairing and replacing tile, shingle and flat roofs on homes from Corbin Palms to the hills south of the Boulevard. Crews are close by for a free roof evaluation.',
     },
     intro: {
@@ -214,7 +215,7 @@ export const LOCATION_PAGES = {
     metaDescription: 'Torrance roofing for South Bay homes: shingle, tile and flat roof repair and replacement with clear, written scopes. Book a roofer-led free roof evaluation.',
     blurb: 'Roofer-led inspections and detail-first installs for Torrance homes, from Old Torrance to the Hollywood Riviera.',
     hero: {
-      heading: 'Torrance roofing with clear scopes and clean work.',
+      heading: 'Torrance roofing',
       sub: 'Quality Roofing Specialists brings detail-first Torrance roofing to homes from the coastal Hollywood Riviera to warmer North Torrance, repairing and replacing shingle, tile and flat roofs and patio covers. A free roof evaluation photo-documents the roof, including past repairs, before we recommend anything.',
     },
     intro: {
@@ -246,7 +247,7 @@ export const LOCATION_PAGES = {
     metaDescription: 'Long Beach roofing for coastal and historic homes: tile, shingle and flat roof repair and replacement from a detail-first team. Book a free roof evaluation.',
     blurb: 'Clear inspections and clean workmanship for Long Beach homes near the water and farther inland.',
     hero: {
-      heading: 'Long Beach roofing, from Belmont Shore to Bixby Knolls.',
+      heading: 'Long Beach roofing',
       sub: 'Quality Roofing Specialists delivers Long Beach roofing for beach cottages in Naples and historic homes in California Heights, repairing and replacing tile, shingle and flat roofs. A free roof evaluation shows whether older clay tile needs a lift & relay or just a repair.',
     },
     intro: {
@@ -280,7 +281,7 @@ export const LOCATION_PAGES = {
     metaDescription: 'Anaheim roofing from Anaheim Hills to the Colony: shingle, tile and flat roof repair and replacement with written scopes. Book a free roof evaluation today.',
     blurb: 'Roofer-led inspections and detail-first installs for Anaheim homes, from the Colony to Anaheim Hills.',
     hero: {
-      heading: 'Anaheim roofing, done right the first time.',
+      heading: 'Anaheim roofing',
       sub: 'Anaheim roofing at Quality Roofing Specialists spans concrete tile, shingle and low-slope roofs on historic homes in the Anaheim Colony and hillside houses in Anaheim Hills, from targeted repairs to full replacements. Every project starts with a free roof evaluation.',
     },
     intro: {
@@ -314,7 +315,7 @@ export const LOCATION_PAGES = {
     metaDescription: 'Santa Ana roofing for historic and modern homes: tile, shingle and flat roof repair and replacement with written scopes. Book a free roof evaluation today.',
     blurb: 'Clear inspections and clean workmanship for Santa Ana homes, from Floral Park to Park Santiago.',
     hero: {
-      heading: 'Santa Ana roofing with no pressure and no surprises.',
+      heading: 'Santa Ana roofing',
       sub: 'Santa Ana roofing from Quality Roofing Specialists covers historic Spanish Revival and Craftsman homes in Floral Park and French Park as well as ranch homes and newer houses, with tile, shingle and flat roof repair and replacement. Original tile and trim get careful matching.',
     },
     intro: {
@@ -348,7 +349,7 @@ export const LOCATION_PAGES = {
     metaDescription: 'Huntington Beach roofing built for salt air and ocean wind: tile, shingle and flat roof repair and replacement. Book a roofer-led free roof evaluation today.',
     blurb: 'Roofer-led inspections and clean installs for homes from Huntington Harbour to Seacliff.',
     hero: {
-      heading: 'Huntington Beach roofing, ready for salt air.',
+      heading: 'Huntington Beach roofing',
       sub: 'For Huntington Beach roofing, Quality Roofing Specialists repairs and replaces concrete tile, shingle and low-slope roofs on homes from Huntington Harbour to Seacliff. Every free roof evaluation includes photos of the flashings, vents and fasteners that coastal air affects most.',
     },
     intro: {
@@ -382,7 +383,7 @@ export const LOCATION_PAGES = {
     metaDescription: 'Irvine roofing for concrete tile, shingle and flat roofs across the villages: repair, lift & relay and replacement. Book a roofer-led free roof evaluation.',
     blurb: 'Clear inspections, written scopes and clean workmanship for homes across Irvine’s villages.',
     hero: {
-      heading: 'Irvine roofing, detail-first from start to finish.',
+      heading: 'Irvine roofing',
       sub: 'Quality Roofing Specialists handles Irvine roofing from Woodbridge to Turtle Rock, repairing and replacing concrete tile, shingle and flat roofs. On older tile roofs the underlayment is usually what wears out, and a lift & relay can replace it while keeping your tiles.',
     },
     intro: {
@@ -416,7 +417,7 @@ export const LOCATION_PAGES = {
     metaDescription: 'Newport Beach roofing for coastal homes: tile, shingle and flat roof repair and replacement. Book a roofer-led free roof evaluation.',
     blurb: 'Roofer-led inspections and detail-first installs for homes from Corona del Mar to Newport Coast.',
     hero: {
-      heading: 'Newport Beach roofing, built for coastal living.',
+      heading: 'Newport Beach roofing',
       sub: 'Quality Roofing Specialists provides Newport Beach roofing from Balboa Island and Lido Isle to Corona del Mar and Newport Coast, repairing and replacing tile, shingle and flat roofs. A free roof evaluation shows how salt air and ocean wind are treating your roof.',
     },
     intro: {
@@ -450,7 +451,7 @@ export const LOCATION_PAGES = {
     metaDescription: 'Vernon roofing for the city’s warehouses, plants and commercial buildings: repair, replacement and inspection with written scopes. Request a roof survey.',
     blurb: 'Roofer-led inspections and clean installs for the warehouses, manufacturing plants and commercial buildings across Vernon.',
     hero: {
-      heading: 'Vernon roofing for an exclusively industrial city.',
+      heading: 'Vernon roofing',
       sub: 'Quality Roofing Specialists offers Vernon roofing from its local office, repairing, replacing and maintaining the large low-slope roofs on the city’s warehouses, manufacturing plants and food-processing facilities. It starts with a roofer-led roof survey, and we plan the work to keep the building operating.',
     },
     intro: {

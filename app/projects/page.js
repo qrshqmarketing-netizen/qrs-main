@@ -4,6 +4,7 @@ import Rich from '@/components/ui/Rich';
 import JsonLd from '@/components/ui/JsonLd';
 import { HOME, PROJECTS_LINK } from '@/data/catalog';
 import { MID_WILSHIRE_PROJECT } from '@/data/pages/mid-wilshire-project';
+import { heroOutcome } from '@/data/heroOutcomes';
 import { PROJECT_PAGES, PROJECTS_PAGE as page } from '@/data/pages/projects';
 import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
@@ -29,7 +30,11 @@ export default function ProjectsPage() {
         <div className="container">
           <Breadcrumbs items={CRUMBS} />
           <div className="projects-hub-copy">
-            <h1>{page.hero.heading}</h1>
+            <h1>
+              {page.hero.heading}
+              <span className="sr-only"> — </span>
+              <span className="projects-hub-outcome">{heroOutcome('/projects/')}</span>
+            </h1>
             <p><Rich text={page.hero.intro} /></p>
             {page.hero.more && <p className="projects-hub-more"><Rich text={page.hero.more} /></p>}
           </div>

@@ -3,7 +3,6 @@ import DifferenceBand from '@/components/sections/DifferenceBand';
 import Faq from '@/components/sections/Faq';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
-import ProofBar from '@/components/sections/ProofBar';
 import Offices from '@/components/sections/Offices';
 import RoofCheck from '@/components/sections/RoofCheck';
 import ServiceArea from '@/components/sections/ServiceArea';
@@ -12,6 +11,7 @@ import { HOME, LOCATIONS_LINK } from '@/data/catalog';
 import { LOCATION_PAGES } from '@/data/locationPages';
 import { cityPath, LOCATIONS } from '@/data/locations';
 import { LOCATIONS_PAGE as page } from '@/data/pages/locations';
+import { heroOutcome } from '@/data/heroOutcomes';
 import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
 
@@ -43,13 +43,14 @@ export default function LocationsPage() {
         crumbs={CRUMBS}
         eyebrow="Los Angeles & Orange County"
         title={page.hero.heading}
+        outcome={heroOutcome('/service-areas/')}
+        stats
         intro={page.hero.intro}
         image={HERO_IMAGE}
         imageAlt="Row of homes with pitched roofs along a residential street"
         imagePosition="40% center"
       />
       <Offices sub="Our Los Angeles and Valley offices serve homes and businesses across Los Angeles and Orange County. One number reaches both." />
-      <ProofBar />
       <ServiceArea heading="Find Your Nearest QRS Service Area" sub="Enter your ZIP code to confirm we cover your address, or choose your city below." />
       <CityCards blurbs={BLURBS} linkRegions />
       <DifferenceBand />

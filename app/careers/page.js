@@ -2,13 +2,13 @@ import Faq from '@/components/sections/Faq';
 import FeatureBand from '@/components/sections/FeatureBand';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
-import ProofBar from '@/components/sections/ProofBar';
 import ProcessSteps from '@/components/sections/ProcessSteps';
 import ValueGrid from '@/components/sections/ValueGrid';
 import JsonLd from '@/components/ui/JsonLd';
 import { CAREERS_LINK, HOME } from '@/data/catalog';
 import { CAREERS_PAGE as page } from '@/data/pages/careers';
 import { PHONE, TEL } from '@/data/site';
+import { heroOutcome } from '@/data/heroOutcomes';
 import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
 
@@ -30,6 +30,8 @@ export default function CareersPage() {
         crumbs={CRUMBS}
         eyebrow="Careers"
         title={page.hero.heading}
+        outcome={heroOutcome('/careers/')}
+        stats
         intro={page.hero.intro}
         image={HERO_IMAGE}
         mobileImage="/images/careers-hero-crew-shingle-roof-mobile.webp"
@@ -41,7 +43,6 @@ export default function CareersPage() {
         ]}
       />
       <ValueGrid heading={page.values.heading} items={page.values.items} tone="wash" pattern />
-      <ProofBar />
       <FeatureBand {...page.coreValues} tone="light" />
       <ValueGrid id="roles" heading={page.roles.heading} intro={page.roles.intro} items={page.roles.items} />
       <Faq heading="Careers FAQs" sub="Straight answers about working at QRS." faqs={page.faqs} cta={false} />

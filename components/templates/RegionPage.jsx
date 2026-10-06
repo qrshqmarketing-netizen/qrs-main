@@ -3,7 +3,6 @@ import Faq from '@/components/sections/Faq';
 import LatestArticles from '@/components/sections/LatestArticles';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
-import ProofBar from '@/components/sections/ProofBar';
 import LocalIntro from '@/components/sections/LocalIntro';
 import RoofCheck from '@/components/sections/RoofCheck';
 import JsonLd from '@/components/ui/JsonLd';
@@ -13,6 +12,7 @@ import { citiesIn, cityPath, findCity, REGIONS, regionPath } from '@/data/locati
 import { SERVICES } from '@/data/services';
 import { OFFICES } from '@/data/site';
 import { pageJsonLd } from '@/lib/structuredData';
+import { heroOutcome } from '@/data/heroOutcomes';
 import { articlesFor } from '@/lib/articles';
 
 // Hero photos rotate across region pages until each region has its own
@@ -49,9 +49,8 @@ export default async function RegionPage({ region, page }) {
   return (
     <main id="top">
       <JsonLd data={schema} />
-      <Hero crumbs={crumbs} eyebrow="Service Areas" title={page.hero.heading} intro={page.hero.intro} image={photo.src} imageAlt={photo.alt} imagePosition={photo.position} />
+      <Hero crumbs={crumbs} eyebrow="Service Areas" title={page.hero.heading} outcome={heroOutcome(path)} intro={page.hero.intro} image={photo.src} imageAlt={photo.alt} imagePosition={photo.position} stats />
       <LocalIntro city={region.name} heading={page.intro.heading} paragraphs={page.intro.paragraphs} offices={offices} considerations={page.considerations} />
-      <ProofBar />
       <CityCards regions={[region.slug]} blurbs={blurbs} heading={`Cities We Serve in ${region.name}`} />
       <LatestArticles posts={await articlesFor(path)} heading="Related Roofing Articles" />
       <Faq heading={`${region.name} Roofing FAQs`} sub={`Straight answers for property owners across ${region.name}.`} faqs={page.faqs} cta={false} />

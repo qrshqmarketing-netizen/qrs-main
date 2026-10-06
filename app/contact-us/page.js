@@ -1,7 +1,6 @@
 import Faq from '@/components/sections/Faq';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
-import ProofBar from '@/components/sections/ProofBar';
 import Offices from '@/components/sections/Offices';
 import RoofCheck from '@/components/sections/RoofCheck';
 import ServiceArea from '@/components/sections/ServiceArea';
@@ -11,6 +10,7 @@ import { CONTACT_LINK, HOME } from '@/data/catalog';
 import { CONTACT_PAGE as page } from '@/data/pages/contact';
 import { BUSINESS, PHONE, TEL } from '@/data/site';
 import { hoursList } from '@/lib/hours';
+import { heroOutcome } from '@/data/heroOutcomes';
 import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
 
@@ -44,6 +44,8 @@ export default function ContactPage() {
         crumbs={CRUMBS}
         eyebrow="Contact"
         title={page.hero.heading}
+        outcome={heroOutcome('/contact-us/')}
+        stats
         intro={page.hero.intro}
         image={page.hero.image}
         imageAlt={page.hero.imageAlt}
@@ -53,7 +55,6 @@ export default function ContactPage() {
         ]}
       />
       <Offices sub="Visit or call any of our offices. One phone number reaches our whole team." note={`Hours: ${HOURS_LINE}`} photos={false} />
-      <ProofBar />
       <ValueGrid heading={page.ways.heading} items={page.ways.items} />
       <RoofCheck />
       <ServiceArea heading="Check Your Service Area" sub="Enter your ZIP code to confirm we cover your address, or choose your city below." />

@@ -79,6 +79,7 @@ export default async function HomePage() {
         <Hero
           h1="eyebrow"
           eyebrow={HOME_H1}
+          title={<>Come home to a roof you can <span>trust.</span></>}
           intro="Clear inspections. Straightforward estimates. Clean workmanship."
           image={HERO_SLIDES[0].src}
           imageAlt={HERO_SLIDES[0].alt}

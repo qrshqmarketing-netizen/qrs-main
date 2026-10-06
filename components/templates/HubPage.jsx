@@ -12,6 +12,7 @@ import ValueGrid from '@/components/sections/ValueGrid';
 import JsonLd from '@/components/ui/JsonLd';
 import { pageJsonLd } from '@/lib/structuredData';
 import { closingCta, faqSub } from './shared';
+import { heroOutcome } from '@/data/heroOutcomes';
 import { articlesFor } from '@/lib/articles';
 
 // A hub page (e.g. /residential-roofing/tile-roofing/ or /commercial-roofing/): intro, cards for every page in the section,
@@ -37,6 +38,7 @@ export default async function HubPage({ hub, crumbs, eyebrow, image, imageAlt, c
         crumbs={crumbs}
         eyebrow={eyebrow}
         title={hub.hero.heading}
+        outcome={heroOutcome(crumbs.at(-1).href)}
         intro={hub.hero.intro}
         image={image}
         imageAlt={imageAlt}

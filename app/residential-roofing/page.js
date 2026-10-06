@@ -12,6 +12,7 @@ import { closingCta } from '@/components/templates/shared';
 import JsonLd from '@/components/ui/JsonLd';
 import { HOME, RESIDENTIAL, RESIDENTIAL_TYPES, typeCard } from '@/data/catalog';
 import { RESIDENTIAL_PAGE as page } from '@/data/pages/residential';
+import { heroOutcome } from '@/data/heroOutcomes';
 import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
 import { articlesFor } from '@/lib/articles';
@@ -41,6 +42,7 @@ export default async function ResidentialRoofingPage() {
         crumbs={CRUMBS}
         eyebrow="Homes, HOAs & Multi-Family"
         title={page.hero.heading}
+        outcome={heroOutcome(RESIDENTIAL.href)}
         intro={page.hero.intro}
         image={HERO_IMAGE}
         imageAlt="Aerial view of a Southern California neighborhood of shingle-roofed homes"

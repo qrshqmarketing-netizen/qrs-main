@@ -3,7 +3,6 @@ import Faq from '@/components/sections/Faq';
 import FeatureBand from '@/components/sections/FeatureBand';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
-import ProofBar from '@/components/sections/ProofBar';
 import Overview from '@/components/sections/Overview';
 import ProcessSteps from '@/components/sections/ProcessSteps';
 import RelatedLinks from '@/components/sections/RelatedLinks';
@@ -15,6 +14,7 @@ import { CONTRACTORS_LINK, HOME } from '@/data/catalog';
 import { relatedLinks } from '@/data/content';
 import { CONTRACTORS_PAGE as page } from '@/data/pages/contractors';
 import { PHONE, TEL } from '@/data/site';
+import { heroOutcome } from '@/data/heroOutcomes';
 import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
 
@@ -42,6 +42,8 @@ export default function ContractorsPage() {
         crumbs={CRUMBS}
         eyebrow="Contractor Partnerships"
         title={page.hero.heading}
+        outcome={heroOutcome('/contractors/')}
+        stats
         intro={page.hero.intro}
         image="/images/contractors-hero-roofer-tablet.webp"
         imageAlt="Roofer on a rooftop reviewing a scope on a tablet"
@@ -51,7 +53,6 @@ export default function ContractorsPage() {
         ]}
       />
       <Overview heading={page.overview.heading} paragraphs={page.overview.paragraphs} />
-      <ProofBar />
       <ValueGrid heading={page.audiences.heading} items={page.audiences.points} tone="wash" />
       <FeatureBand id="white-label" {...page.whiteLabel} />
       <ProcessSteps heading={page.process.heading} subheading={page.process.subheading} steps={page.process.steps} image="/images/contractors-process-roofer-tablet.webp" imageAlt="Roofer on a rooftop smiling while reviewing a scope on a tablet" tone="white" />
