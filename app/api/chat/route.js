@@ -16,7 +16,8 @@ const MODEL = process.env.OPENROUTER_MODEL || 'qwen/qwen3.8-27b:free';
 // Gemini (generateContent, v1beta). gemini-3.8-flash is Google's current stable Flash model: fast enough for a chat widget, far better than the
 // free OpenRouter model. Set GEMINI_MODEL in Vercel to try another one (e.g. gemini-3.1-pro-preview, slower and costlier).
 const GEMINI_BASE = process.env.GEMINI_BASE_URL || 'https://generativelanguage.googleapis.com/v1beta';
-const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-3.8-flash';
+const DEFAULT_GEMINI_MODEL = 'gemini-3.8-flash';
+const GEMINI_MODEL = process.env.GEMINI_MODEL || DEFAULT_GEMINI_MODEL;
 
 // Keep requests small: cap how much conversation we forward and how long each message can be.
 const MAX_MESSAGES = 16;
@@ -47,7 +48,7 @@ const userText = (messages) => messages.filter((m) => m.role === 'user').map((m)
 
 // Gemini: returns { reply } or { error, status }. The text parts of the first candidate (thought parts left out). Two tries: a model
 // sometimes returns nothing, and a model that doesn't take a thinking level answers the retry without one.
-async function callGemini(key, system, messages) {
+async function callGemini(key, system, messages, model = GEMINI_MODEL) {
   // Gemini wants the turns to alternate and to start with the visitor: merge neighbours with the same role
   const contents = [];
   for (const m of messages) {
@@ -58,7 +59,7 @@ async function callGemini(key, system, messages) {
   while (contents.length && contents[0].role !== 'user') contents.shift();
   for (let attempt = 0; attempt < 2; attempt++) {
     try {
-      const res = await fetch(`${GEMINI_BASE}/models/${encodeURIComponent(GEMINI_MODEL)}:generateContent`, {
+      const res = await fetch(`${GEMINI_BASE}/models/${encodeURIComponent(model)}:generateContent`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'x-goog-api-key': key },
         signal: AbortSignal.timeout(25000),
@@ -73,9 +74,10 @@ async function callGemini(key, system, messages) {
         }),
       });
       if (!res.ok) {
-        console.error('[chat] Gemini error', res.status, (await res.text().catch(() => '')).slice(0, 400));
+        const detail = (await res.text().catch(() => '')).slice(0, 400);
+        console.error('[chat] Gemini error', model, res.status, detail);
         if (res.status === 400 && attempt === 0) continue; // maybe the thinking setting: try once without it
-        return { error: 'upstream error', status: 502 };
+        return { error: 'upstream error', status: 502, detail: `${model}: ${res.status} ${detail}` };
       }
       const data = await res.json();
       const text = (data.candidates?.[0]?.content?.parts || []).filter((p) => !p.thought && typeof p.text === 'string').map((p) => p.text).join('').trim();
@@ -138,7 +140,13 @@ async function askModel(apiKey, messages) {
   let rawReply;
   let failed = null;
   if (process.env.GEMINI_API_KEY) {
-    const out = await callGemini(process.env.GEMINI_API_KEY, system, messages);
+    let out = await callGemini(process.env.GEMINI_API_KEY, system, messages);
+    // The chosen model isn't available to this key (a preview model, a quota, a typo): answer with the default Flash model instead
+    if (!out.reply && GEMINI_MODEL !== DEFAULT_GEMINI_MODEL) {
+      const first = out;
+      out = await callGemini(process.env.GEMINI_API_KEY, system, messages, DEFAULT_GEMINI_MODEL);
+      if (!out.reply) out = { ...out, detail: `${first.detail || first.error} | then ${out.detail || out.error}` };
+    }
     if (out.reply) rawReply = out.reply;
     else failed = out;
   }
@@ -213,6 +221,8 @@ export async function POST(request) {
     }
   }
 
-  if (answer.error) return Response.json({ error: answer.error, leadSaved }, { status: answer.status });
+  // The team's setup check (the same secret as /api/lead's) also gets the model's own error text
+  const diagnostic = Boolean(process.env.LEADS_SHEET_SECRET) && request.headers.get('x-leads-diagnostic') === process.env.LEADS_SHEET_SECRET;
+  if (answer.error) return Response.json({ error: answer.error, leadSaved, ...(diagnostic && { detail: answer.detail }) }, { status: answer.status });
   return Response.json({ reply: answer.reply, leadSaved });
 }
