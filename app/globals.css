@@ -66,6 +66,10 @@ body.menu-open{overflow:hidden}
 a{color:inherit;text-decoration:none}
 button,input,select,textarea{font:inherit}
 button{cursor:pointer}
+/* Phones first: no double-tap delay, and small links and buttons get a 44px hit area (an invisible extension, so nothing moves) */
+a,button,summary,input,select,textarea,label{touch-action:manipulation}
+.crumbs a,.tst-name,.tst-links a,.art-all a,.sa-cities a,.office-phone,a[href^="tel:"]:not(.btn),.ft-copy a,.text-link{position:relative}
+.crumbs a:before,.tst-name:before,.tst-links a:before,.art-all a:before,.office-phone:before,a[href^="tel:"]:not(.btn):before,.ft-copy a:before{content:"";position:absolute;inset:-12px -6px}
 /* Side gutters: 20px on phones, 40px from tablet up and 48px on wide screens, so text never sits against the screen edge or under the Instant
    Quote tab, and lines up with the logo inside the header pill (Header.css) */
 .container{width:min(var(--max),calc(100% - 40px));margin:auto}
@@ -112,12 +116,14 @@ h1,h2,h3,.eyebrow,.hero-sub{text-wrap:balance}
   background:linear-gradient(105deg,rgba(255,255,255,0) 34%,rgba(255,255,255,.4) 50%,rgba(255,255,255,0) 66%);
   transform:translateX(-130%);transition:transform .8s cubic-bezier(.2,.7,.2,1);
 }
-.btn:hover{transform:translateY(-2px);filter:brightness(1.05) saturate(1.04)}
-.btn:hover:after{transform:translateX(130%)}
+@media (hover:hover){
+  .btn:hover{transform:translateY(-2px);filter:brightness(1.05) saturate(1.04)}
+  .btn:hover:after{transform:translateX(130%)}
+}
 .btn:active{transform:translateY(0) scale(.985);filter:brightness(.97);transition-duration:.08s}
 .btn:focus-visible{outline:3px solid var(--gold-2);outline-offset:3px}
 .btn .arrow,.btn > svg{transition:transform .28s cubic-bezier(.2,.7,.2,1)}
-.btn:hover .arrow,.btn:hover > svg{transform:translateX(4px)}
+@media (hover:hover){.btn:hover .arrow,.btn:hover > svg{transform:translateX(4px)}}
 .btn[disabled],.btn:disabled{opacity:.6;cursor:not-allowed;transform:none;filter:none}
 @media (prefers-reduced-motion:reduce){.btn,.btn:after,.btn .arrow,.btn > svg{transition:none}.btn:hover,.btn:active{transform:none}.btn:after{display:none}.btn:hover .arrow,.btn:hover > svg{transform:none}}
 /* Gold: the main action */
@@ -185,7 +191,8 @@ textarea{min-height:105px;resize:vertical}
 .leaflet-popup-content a{color:var(--gold);font-weight:800;font-size:.8rem}
 .leaflet-container a.leaflet-popup-close-button{color:#fff}
 .leaflet-control-attribution{font-size:.62rem;background:rgba(255,255,255,.7)!important}
-.leaflet-control-zoom a{color:var(--navy)!important}
+.leaflet-control-zoom a{color:var(--navy)!important;width:42px!important;height:42px!important;line-height:42px!important;font-size:20px!important}
+@media (hover:hover) and (pointer:fine){.leaflet-control-zoom a{width:30px!important;height:30px!important;line-height:30px!important;font-size:18px!important}}
 
 /* ---------- Entrance animations ---------- */
 @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}

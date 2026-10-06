@@ -1,7 +1,7 @@
 /* ---------- Review toast — compact, bottom left ---------- */
 /* Always light, in the dark theme too: fixed colors here, no --paper/--navy tokens */
 .rv-toast{
-  position:fixed;left:12px;bottom:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:1150;
+  position:fixed;left:12px;bottom:16px;bottom:calc(16px + var(--bar-h,0px) + env(safe-area-inset-bottom));z-index:1150;
   width:max-content;max-width:calc(100% - 100px);
   background:#fff;color:#202124;border-radius:18px;border:1px solid #e3e6ea;box-shadow:0 10px 28px rgba(6,45,87,.18);
   opacity:0;visibility:hidden;transform:translateY(12px);
@@ -23,6 +23,6 @@
 .rv-close:hover{background:#f1f3f4;color:#202124}
 .rv-close svg{width:12px;height:12px}
 @media (min-width:621px){
-  .rv-toast{left:24px;bottom:24px;max-width:320px}
+  .rv-toast{left:24px;bottom:calc(24px + var(--bar-h,0px));max-width:320px}
 }
 @media (prefers-reduced-motion:reduce){.rv-toast,.rv-toast.show{transition:none;transform:none}}

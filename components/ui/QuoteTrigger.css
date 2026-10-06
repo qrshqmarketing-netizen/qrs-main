@@ -1,7 +1,7 @@
-/* Phones only (the Instant Quote side tab takes over from 621px up) */
-.quote-trigger{display:none}
-@media (max-width:620px){
-  .quote-trigger{display:inline-flex}
+/* Phones first: shown by default, gone from 621px up (the Instant Quote side tab takes over there) */
+.quote-trigger{display:inline-flex}
+@media (min-width:621px){
+  .quote-trigger{display:none}
 }
 /* Not in the hero of a mouse-driven desktop window, even a narrow one (only touch screens get the phone button there) */
 @media (hover:hover) and (pointer:fine){

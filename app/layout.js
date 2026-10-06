@@ -13,6 +13,7 @@ import CampaignWelcome from '@/components/widgets/CampaignWelcome';
 import PageTrail from '@/components/widgets/PageTrail';
 import CookieNotice from '@/components/widgets/CookieNotice';
 import InstantQuoteLoader from '@/components/widgets/InstantQuoteLoader';
+import MobileActionBar from '@/components/widgets/MobileActionBar';
 import ReviewToast from '@/components/widgets/ReviewToast';
 import SeasonPromo from '@/components/widgets/SeasonPromo';
 import RoofAssistant from '@/components/widgets/RoofAssistant';
@@ -79,6 +80,7 @@ export default function RootLayout({ children }) {
         {children}
         <SiteChrome>
           <Footer />
+          <MobileActionBar />
           <ReviewToast />
           <RoofAssistant />
           {INSTANT_QUOTE_ENABLED && <InstantQuoteLoader />}

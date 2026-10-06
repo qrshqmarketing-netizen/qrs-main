@@ -113,8 +113,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 50%;
   color: #fff;
@@ -210,11 +210,6 @@
 }
 
 @media (max-width: 420px) {
-  .morph-slider-btn {
-    width: 34px;
-    height: 34px;
-  }
-
   .morph-slider-caption-text {
     font-size: 13px;
   }
