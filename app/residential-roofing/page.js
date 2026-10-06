@@ -55,7 +55,7 @@ export default async function ResidentialRoofingPage() {
       <ServiceFinder heading={page.finder.heading} intro={page.finder.intro} rows={page.finder.rows} />
       <DifferenceBand />
       <LatestArticles posts={await articlesFor(RESIDENTIAL.href)} heading="Related Roofing Articles" />
-      <Faq heading="Frequently Asked Questions" sub="Straight answers about residential roofing." faqs={page.faqs} cta={false} />
+      <Faq heading="Frequently Asked __Questions__" sub="Straight answers about residential roofing." faqs={page.faqs} cta={false} />
       <RoofCheck tone="white" />
       <FinalCta {...closingCta(page.keyword)} />
     </main>

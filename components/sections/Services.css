@@ -15,7 +15,7 @@
   position:absolute;left:0;right:0;bottom:0;z-index:1;padding:16px;margin:0;
   font-family:var(--font-body);font-size:15px;font-weight:500;line-height:1.65;color:#fff;
 }
-.svc-caption h3{color:#fff;font-size:24px;font-weight:600;line-height:1.1;letter-spacing:.01em;margin:0 0 8px}
+.svc-caption h3{color:#fff;font-size:24px;font-weight:800;line-height:1.1;letter-spacing:.01em;margin:0 0 8px}
 .svc-caption p{margin:0;color:#fff}
 
 @media (min-width:621px){

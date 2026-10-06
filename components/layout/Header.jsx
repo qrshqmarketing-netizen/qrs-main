@@ -13,7 +13,7 @@ import { PHONE, TEL } from '@/data/site';
 import './Header.css';
 
 // Wide screens show the full menu with hover dropdowns; smaller screens use the menu button
-const isDesktop = () => window.matchMedia('(min-width:1200px)').matches;
+const isDesktop = () => window.matchMedia('(min-width:1366px)').matches;
 
 // Menu links don't prefetch: there are dozens of them in the (hidden) dropdowns
 const MenuLink = (props) => <SiteLink prefetch={false} {...props} />;
@@ -324,7 +324,10 @@ export default function Header() {
         <div className="nav-actions">
           {!requestPage && (
             <>
-              <MenuLink className="nav-contractors" href={CONTRACTORS_LINK.href} onClick={() => setMenuOpen(false)}>For Contractors</MenuLink>
+              <MenuLink className="nav-contractors" href={CONTRACTORS_LINK.href} onClick={() => setMenuOpen(false)}>
+                <span className="nc-full">For Contractors</span>
+                <span className="nc-short">Contractors</span>
+              </MenuLink>
               <SiteLink className="btn btn-gold nav-cta" href={HEADER_CTA.href} onClick={() => setMenuOpen(false)}>
                 <span className="nav-cta-full">{HEADER_CTA.label}</span>
                 <span className="nav-cta-compact">Estimate</span>

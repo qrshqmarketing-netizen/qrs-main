@@ -62,7 +62,7 @@ To test the finished (production) version: `npm run build`, then `npm start`.
 | Google Business Profile welcome card (shown for links tagged `utm_campaign=gbp-<profile>`) | `data/campaigns.js` |
 | Instant Quote prices and financing (visitors can pick several pitches, roof types and materials to compare) | `data/instantQuote.js` |
 | Section order on the home page | `app/page.js` |
-| Site-wide colors, fonts, buttons, form fields | `app/globals.css` |
+| Site-wide colors, fonts (headings: Big Shoulders; body: Libre Franklin), corner radius, buttons, form fields, underlined heading words (`__word__`, `components/ui/Mark.jsx`), scroll reveals | `app/globals.css` |
 | One section's look | the `.css` file next to it in `components/` |
 
 In the `data/` files, `[words](/path/)` makes a link and `**words**` makes bold text. Each page has a `keyword` (its main search phrase) that also appears in its meta title, meta description, H1 and first 100 words; keep it there when you edit.

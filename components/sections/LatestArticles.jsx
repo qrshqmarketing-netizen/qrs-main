@@ -4,17 +4,18 @@ import { ArrowRight } from '@/components/ui/icons';
 import { BLOG_LINK, blogPath } from '@/data/catalog';
 import { articleDate } from '@/lib/articles';
 import './LatestArticles.css';
+import Mark from '@/components/ui/Mark';
 
 const SCENES = ['scene-shingle', 'scene-tile', 'scene-flat', 'scene-repair', 'scene-inspect', 'scene-replace']; // art for a post without a picture yet
 
 // A row of roofing blog article cards: the picture, the date, the title and a "Read the article" link. posts: from lib/articles.js
 // (latestArticles for the home page, articlesFor(path) for a service or city page).
-export default function LatestArticles({ posts = [], heading = 'Latest Roofing Articles' }) {
+export default function LatestArticles({ posts = [], heading = 'Latest Roofing __Articles__' }) {
   if (!posts.length) return null;
   return (
     <section className="articles" aria-labelledby="articles-title">
       <div className="container">
-        <h2 id="articles-title">{heading}</h2>
+        <h2 id="articles-title"><Mark text={heading} /></h2>
         <div className="art-grid">
           {posts.map((post, i) => (
             <article className="art-card" key={post.slug}>

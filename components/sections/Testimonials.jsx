@@ -2,6 +2,7 @@ import { GoogleLogo } from '@/components/ui/icons';
 import ProcessVideo from './ProcessVideo';
 import ReviewSlider from './ReviewSlider';
 import './Testimonials.css';
+import Mark from '@/components/ui/Mark';
 
 // Process video + Google reviews. showVideo/showReviews let a page show just one half (see app/page.js,
 // which places the bare ReviewSlider higher up the page and keeps the video block here on its own).
@@ -27,7 +28,7 @@ export default function Testimonials({ showVideo = true, showReviews = true }) {
         {showReviews && (
           <div className="tst-grid">
             <div className="tst-intro">
-              <h2>Don&rsquo;t Take Our Word For It</h2>
+              <h2>Don&rsquo;t Take Our <Mark text="__Word__" /> For It</h2>
               <p>See what SoCal homeowners have to say about their experience with QRS.</p>
               <div className="g-badge">
                 <GoogleLogo className="g-logo" />

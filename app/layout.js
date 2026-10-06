@@ -5,7 +5,7 @@ import './globals.css';
 import './dark-theme.css'; // dark theme colors, toggled from the header and saved in local storage
 
 import Script from 'next/script';
-import { Open_Sans, Roboto_Condensed } from 'next/font/google';
+import { Big_Shoulders, Libre_Franklin } from 'next/font/google';
 import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
 import SiteChrome from '@/components/layout/SiteChrome';
@@ -19,15 +19,16 @@ import RoofAssistant from '@/components/widgets/RoofAssistant';
 import RevealSections from '@/components/ui/RevealSections';
 import HelpfulTitles from '@/components/ui/HelpfulTitles';
 import { INSTANT_QUOTE_ENABLED } from '@/data/instantQuote';
-import { PAGE_ENTRANCES } from '@/data/promo';
+import { PAGE_ENTRANCES, SCROLL_REVEALS } from '@/data/promo';
 import { BUSINESS, CLARITY_ID, GA_ID, HOME_DESCRIPTION, SITE_URL, SITE_VERIFICATION } from '@/data/site';
 import { ALLOW_INDEXING, LOAD_TRACKING, openGraphBase, twitterBase } from '@/lib/seo';
 
 // Google Fonts, downloaded at build time and served from this site. Both are variable fonts, so no `weight` list: one file covers every
-// weight (the site uses 300-800 and 500-700), and the stylesheet carries 19 font rules instead of 83.
-const openSans = Open_Sans({ subsets: ['latin'], variable: '--font-open-sans' });
-// Uppercase condensed display face for every heading (h1–h6 and the hero headline)
-const robotoCondensed = Roboto_Condensed({ subsets: ['latin'], variable: '--font-condensed' });
+// weight (the site uses 300-900), and the stylesheet carries only a few font rules instead of dozens.
+// Body, menus, buttons and labels: Libre Franklin, a sturdy American-gothic text face that sits well under the condensed headings.
+const bodyFont = Libre_Franklin({ subsets: ['latin'], variable: '--font-text' });
+// Uppercase condensed display face for every heading (h1–h6 and the hero headline): Big Shoulders, a tall, sturdy, signage-style face
+const bigShoulders = Big_Shoulders({ subsets: ['latin'], variable: '--font-condensed' });
 
 // Defaults for every page. A page's own `metadata` export overrides these.
 export const metadata = {
@@ -63,16 +64,16 @@ export const viewport = {
 // Header, footer and the floating widgets appear on every page
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={openSans.variable + ' ' + robotoCondensed.variable} data-scroll-behavior="smooth" suppressHydrationWarning>
+    <html lang="en" className={bodyFont.variable + ' ' + bigShoulders.variable} data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
         {/* Restore the selected theme before the page paints; ?theme=dark remains available as a preview fallback. */}
         <script dangerouslySetInnerHTML={{ __html: "try{const saved=localStorage.getItem('qrs-theme');const requested=new URLSearchParams(location.search).get('theme');if((saved||requested)==='dark')document.documentElement.dataset.theme='dark';else document.documentElement.removeAttribute('data-theme')}catch{if(/[?&]theme=dark(&|$)/.test(location.search))document.documentElement.dataset.theme='dark'}" }} />
       </head>
-      {/* Pages show up at once: no heading fade-ups or scroll reveals unless PAGE_ENTRANCES is on (globals.css) */}
+      {/* Pages show up at once: no heading fade-ups unless PAGE_ENTRANCES is on; the subtle scroll reveals are SCROLL_REVEALS (globals.css) */}
       <body className={PAGE_ENTRANCES ? undefined : 'no-entrance'}>
         <SiteChrome>
           <Header />
-          {PAGE_ENTRANCES && <RevealSections />}
+          {SCROLL_REVEALS && <RevealSections />}
           <HelpfulTitles />
         </SiteChrome>
         {children}

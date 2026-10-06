@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { OFFERS } from '@/data/offers';
 import { NEEDS, START_PATH, startHref } from '@/data/start';
 import './RoofCheck.css';
+import Mark from '@/components/ui/Mark';
 
 // Offer card (data/offers.js) + a start card that opens the request steps at /start/ (components/sections/StartStepper.jsx). Every page
 // has one. The start card asks the first question: each choice opens /start/ with that answer already given.
@@ -30,7 +31,7 @@ export default function RoofCheck({ tone, offer = 'home' }) {
 
         <div className="form-card" id="estimate">
           <div className="eyebrow">Start here</div>
-          <h2>Tell us what you need.</h2>
+          <h2>Tell us what you <Mark text="__need__" />.</h2>
           <p className="lead">A few quick steps. A clear next step. No pressure.</p>
           <p className="check-ask" id="check-ask">What do you need help with?</p>
           <div className="check-chips" role="group" aria-labelledby="check-ask">

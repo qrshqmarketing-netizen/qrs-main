@@ -3,7 +3,7 @@
 .split-wash{background:var(--wash)}
 .split-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:30px;align-items:center}
 .split .eyebrow{color:var(--gold-ink)}
-.split h2{color:var(--gold-ink);font-size:var(--h2);font-weight:700;line-height:1.05;margin-bottom:12px}
+.split h2{color:var(--gold-ink);font-size:var(--h2);font-weight:800;line-height:1.05;margin-bottom:12px}
 .split-sub{color:var(--navy);font:600 22px/1.25 var(--font-head);letter-spacing:-.02em;margin:0 0 18px}
 .split-copy p{color:var(--navy);font-size:17px;line-height:1.7;margin:0 0 22px}
 .split-copy .btn{border-radius:999px}

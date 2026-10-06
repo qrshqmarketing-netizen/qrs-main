@@ -11,7 +11,7 @@
   box-shadow:0 8px 24px rgba(6,45,87,.05);transition:border-color .15s,box-shadow .15s,transform .15s;
 }
 .city-card:hover{border-color:var(--gold);box-shadow:0 14px 32px rgba(6,45,87,.10);transform:translateY(-2px)}
-.city-card h3{margin:0;color:var(--navy);font-size:24px;font-weight:600;line-height:1.1;letter-spacing:.01em}
+.city-card h3{margin:0;color:var(--navy);font-size:24px;font-weight:800;line-height:1.1;letter-spacing:.01em}
 .city-card span{color:var(--ink);font-size:15px;line-height:1.6}
 .city-card em{margin-top:auto;padding-top:6px;display:inline-flex;align-items:center;gap:8px;color:var(--gold-ink);font:700 14px/1.2 var(--font-head);font-style:normal;text-transform:uppercase;letter-spacing:.03em}
 .city-card em svg{width:15px;height:15px}

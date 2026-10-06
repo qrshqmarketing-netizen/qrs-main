@@ -9,7 +9,7 @@
 .adm-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:18px 18px 20px;margin:0 0 18px;box-shadow:0 6px 18px rgba(6,45,87,.04)}
 .adm-card>h2{margin:0 0 4px;color:var(--navy);font-size:18px;line-height:1.25;letter-spacing:.01em}
 .adm-help{margin:0 0 12px;color:var(--muted);font-size:14px}
-.adm-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:40px;padding:8px 16px;border:1.5px solid var(--line);border-radius:var(--radius);background:var(--paper);color:var(--navy);font:inherit;font-weight:700;font-size:14px;text-decoration:none;cursor:pointer;transition:border-color .15s,background .15s}
+.adm-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:40px;padding:8px 16px;border:1.5px solid var(--line);border-radius:var(--radius-sm);background:var(--paper);color:var(--navy);font:inherit;font-weight:700;font-size:14px;text-decoration:none;cursor:pointer;transition:border-color .15s,background .15s}
 .adm-btn:hover:not(:disabled){border-color:var(--gold)}
 .adm-btn:disabled{opacity:.5;cursor:not-allowed}
 .adm .adm-btn-primary,.adm a.adm-btn-primary{background:var(--surface-navy);border-color:var(--surface-navy);color:#fff}
@@ -17,7 +17,7 @@
 .adm a.adm-btn{text-decoration:none}
 .adm-btn-danger{color:var(--danger,#a32d2d);border-color:rgba(163,45,45,.35)}
 .adm-btn:focus-visible,.adm a:focus-visible,.adm input:focus-visible,.adm select:focus-visible,.adm textarea:focus-visible{outline:3px solid rgba(212,181,114,.85);outline-offset:2px}
-.adm-msg{margin:0 0 16px;padding:12px 14px;border-radius:var(--radius);border:1px solid var(--line);background:var(--paper);font-size:14px}
+.adm-msg{margin:0 0 16px;padding:12px 14px;border-radius:var(--radius-sm);border:1px solid var(--line);background:var(--paper);font-size:14px}
 .adm-msg.ok{border-color:rgba(36,128,76,.4);background:rgba(36,128,76,.08)}
 .adm-msg.bad{border-color:rgba(163,45,45,.4);background:rgba(163,45,45,.07)}
 .adm-msg.warn{border-color:rgba(212,181,114,.7);background:rgba(212,181,114,.15)}
@@ -28,7 +28,7 @@
 /* fields */
 .adm-field{margin:0 0 14px}
 .adm-field label,.adm-label{display:block;margin:0 0 5px;color:var(--navy);font-size:13px;font-weight:700}
-.adm-field input[type=text],.adm-field input[type=password],.adm-field input[type=date],.adm-field select,.adm-field textarea{width:100%;padding:9px 11px;border:1.5px solid var(--line);border-radius:var(--radius);background:var(--paper);color:var(--ink);font:inherit}
+.adm-field input[type=text],.adm-field input[type=password],.adm-field input[type=date],.adm-field select,.adm-field textarea{width:100%;padding:9px 11px;border:1.5px solid var(--line);border-radius:var(--radius-sm);background:var(--paper);color:var(--ink);font:inherit}
 .adm-field textarea{resize:vertical;min-height:90px}
 .adm-field textarea.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13.5px;line-height:1.55;min-height:420px}
 .adm-field input[readonly]{background:var(--wash);color:var(--muted)}
@@ -39,8 +39,8 @@
 .adm-check input{margin-top:4px}
 .adm-details{margin:0 0 14px;font-size:14px}
 .adm-details summary{cursor:pointer;color:var(--navy);font-weight:700}
-.adm-details pre{margin:8px 0 0;padding:12px;border:1px solid var(--line);border-radius:var(--radius);background:var(--wash);font-size:12.5px;line-height:1.5;overflow:auto;white-space:pre-wrap}
-.adm-thumb{display:block;max-width:220px;margin:8px 0 0;border:1px solid var(--line);border-radius:var(--radius)}
+.adm-details pre{margin:8px 0 0;padding:12px;border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--wash);font-size:12.5px;line-height:1.5;overflow:auto;white-space:pre-wrap}
+.adm-thumb{display:block;max-width:220px;margin:8px 0 0;border:1px solid var(--line);border-radius:var(--radius-sm)}
 
 /* the list */
 .adm-table{width:100%;border-collapse:collapse;font-size:14px}

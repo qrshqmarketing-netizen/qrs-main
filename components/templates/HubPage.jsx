@@ -53,7 +53,7 @@ export default async function HubPage({ hub, crumbs, eyebrow, image, imageAlt, c
       {process && <Process />}
       {feature && <SplitFeature {...feature} tone="wash" />}
       <LatestArticles posts={await articlesFor(crumbs.at(-1).href)} heading="Related Roofing Articles" />
-      {hub.faqs?.length > 0 && <Faq heading="Frequently Asked Questions" sub={faqSub(hub.keyword)} faqs={hub.faqs} cta={false} />}
+      {hub.faqs?.length > 0 && <Faq heading="Frequently Asked __Questions__" sub={faqSub(hub.keyword)} faqs={hub.faqs} cta={false} />}
       <RoofCheck tone="white" offer={offer} />
       <FinalCta {...closingCta(hub.keyword, offer)} />
     </main>

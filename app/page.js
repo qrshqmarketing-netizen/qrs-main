@@ -79,7 +79,7 @@ export default async function HomePage() {
         <Hero
           h1="eyebrow"
           eyebrow={HOME_H1}
-          title={<>Come home to a roof you can <span>trust.</span></>}
+          title={<>Come home to a roof you can <u>trust.</u></>}
           intro="Clear inspections. Straightforward estimates. Clean workmanship."
           image={HERO_SLIDES[0].src}
           imageAlt={HERO_SLIDES[0].alt}
@@ -90,8 +90,8 @@ export default async function HomePage() {
         <Services items={HOME_SERVICES} compact cta={false} />
         <QrsStandard />
         <ReviewStrip />
-        <Services title="Roofing Systems" items={HOME_PRODUCTS} compact cta={false} pattern={false} slider id="roofing-systems" />
-        <ServiceArea citiesAfterSearch />
+        <Services title="Roofing __Systems__" items={HOME_PRODUCTS} compact cta={false} pattern={false} slider id="roofing-systems" />
+        <ServiceArea hideCities />
         <WhyQrs />
         {SHOW_RECENT_WORK && <ProjectCarousel heading="Recent Work" sub={RECENT_WORK_SUB} projects={RECENT_WORK} id="work" pattern />}
         <PartnerLogos {...ROOF_FINANCING.partners} />

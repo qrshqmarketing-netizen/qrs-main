@@ -8,3 +8,9 @@
   .qrs-standard p{margin-bottom:24px;font-size:18px;line-height:1.7}
   .qrs-standard .btn{margin-top:6px}
 }
+/* Two columns of copy from tablet width (stacked and centered on phones); the line above the button and the button stay centered */
+@media (min-width:761px){
+  .qs-cols{display:grid;grid-template-columns:1fr 1fr;gap:0 56px;max-width:1120px;margin:34px auto 6px;text-align:left}
+  .qs-cols p{max-width:none;margin:0 0 20px;font-size:17px}
+  .qrs-standard p.qs-cta-line{margin-bottom:22px;font-weight:700}
+}

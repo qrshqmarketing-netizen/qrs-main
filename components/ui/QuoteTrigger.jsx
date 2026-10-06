@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation';
 import { INSTANT_QUOTE_ENABLED, QUOTE_EXCLUDE } from '@/data/instantQuote';
 import './QuoteTrigger.css';
 
-// Phones only: opens the Instant Quote drawer (its side tab is hidden on phones). Shown in the hero and closing
+// Phones only: opens the Instant Quote drawer (its side tab is hidden on phones). Shown in the hero (touch screens only) and closing
 // CTA button groups, except on pages the quote doesn't cover (QUOTE_EXCLUDE in data/instantQuote.js).
 export default function QuoteTrigger({ label = 'Get an Instant Quote' }) {
   const pathname = usePathname();

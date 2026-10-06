@@ -137,7 +137,7 @@ export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], 
       />
       <WhyChoose heading={page.why.heading} intro={page.why.intro} points={page.why.points} />
       <LatestArticles posts={await articlesFor(crumbs.at(-1).href)} heading="Related Roofing Articles" />
-      {page.faqs?.length > 0 && <Faq heading="Frequently Asked Questions" sub={faqSub(page.keyword)} faqs={page.faqs} cta={false} />}
+      {page.faqs?.length > 0 && <Faq heading="Frequently Asked __Questions__" sub={faqSub(page.keyword)} faqs={page.faqs} cta={false} />}
       <RelatedLinks heading="Recent projects" links={projectsRelatedTo(crumbs.at(-1).href)} />
       <RoofCheck tone="white" offer={offer} />
       <FinalCta {...finalCta} />

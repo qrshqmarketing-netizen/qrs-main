@@ -20,6 +20,9 @@ export const SEASON_PROMO = {
   exclude: ['/start/', '/thank-you/', '/commercial-roofing/', '/residential-roofing/hoa-multi-family/', '/service-areas/la-county/vernon/', '/contractors/', '/careers/'],
 };
 
-// The site's heading fade-ups and scroll reveals are off (they were switched off while the hero rain ran, and stay off);
-// true brings them back (app/layout.js).
+// The old heading fade-ups (every h2 faded up on load) are off and stay off; true brings them back (app/layout.js).
 export const PAGE_ENTRANCES = false;
+
+// The subtle scroll reveals (components/ui/RevealSections.jsx): parts of each page fade up a few pixels, once, as they scroll into view.
+// They never touch the hero or anything above the fold, skip visitors who ask for reduced motion, and shift nothing. false switches them off.
+export const SCROLL_REVEALS = true;

@@ -1,0 +1,30 @@
+/* ---------- Aurora background (AuroraBackground.jsx) ---------- */
+/* The CSS poster: the same night sky, glow and rooftops painted with gradients and two small SVG tiles. It is what shows before the WebGL
+   engine has drawn, without JavaScript or WebGL, with Data Saver on, and in print. The shader's rooftops replace the tiles once it is live. */
+.aurora{
+  position:absolute;inset:0;z-index:-2;overflow:hidden;pointer-events:none;
+  background:
+    radial-gradient(70% 38% at 18% 100%,rgba(212,181,114,.62) 0%,rgba(212,181,114,0) 100%),
+    radial-gradient(60% 34% at 86% 92%,rgba(212,181,114,.5) 0%,rgba(212,181,114,0) 100%),
+    radial-gradient(60% 55% at 78% 30%,rgba(40,110,215,.5) 0%,rgba(40,110,215,0) 100%),
+    radial-gradient(55% 50% at 14% 24%,rgba(107,37,69,.6) 0%,rgba(107,37,69,0) 100%),
+    repeating-linear-gradient(90deg,rgba(255,255,255,.05) 0 2px,rgba(255,255,255,0) 2px 26px),
+    linear-gradient(180deg,#052145 0%,#020e1d 100%);
+}
+.aurora:before,.aurora:after{content:"";position:absolute;left:0;right:0;bottom:0;pointer-events:none}
+.aurora:before{height:60px;background:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22640%22 height=%2276%22 viewBox=%220 0 640 76%22%3E%3Cpath d=%22M0.0%2C76.0 L0.0%2C50.0 L75.0%2C28.0 L150.0%2C50.0 L150.0%2C60.0 L205.0%2C42.0 L260.0%2C60.0 L260.0%2C44.0 L325.0%2C18.0 L390.0%2C44.0 L390.0%2C54.0 L450.0%2C34.0 L510.0%2C54.0 L510.0%2C58.0 L575.0%2C36.0 L640.0%2C58.0 L640.0%2C76.0 Z%22 fill=%22%230b2340%22/%3E%3Crect x=%22220.8%22 y=%2234.5%22 width=%228%22 height=%2241.5%22 fill=%22%230b2340%22/%3E%3Crect x=%22594.4%22 y=%2229.9%22 width=%228%22 height=%2246.1%22 fill=%22%230b2340%22/%3E%3C/svg%3E") repeat-x 40px 100%/auto 100%;opacity:.9}
+.aurora:after{height:60px;background:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22560%22 height=%2276%22 viewBox=%220 0 560 76%22%3E%3Cpath d=%22M0.0%2C76.0 L0.0%2C58.0 L60.0%2C28.0 L120.0%2C58.0 L120.0%2C46.0 L165.0%2C22.0 L210.0%2C46.0 L210.0%2C62.0 L280.0%2C28.0 L350.0%2C62.0 L350.0%2C42.0 L400.0%2C20.0 L450.0%2C42.0 L450.0%2C54.0 L505.0%2C26.0 L560.0%2C54.0 L560.0%2C76.0 Z%22 fill=%22%23020e1d%22/%3E%3Crect x=%2277.6%22 y=%2224.8%22 width=%228%22 height=%2251.2%22 fill=%22%23020e1d%22/%3E%3Crect x=%22414.0%22 y=%2213.9%22 width=%228%22 height=%2262.1%22 fill=%22%23020e1d%22/%3E%3C/svg%3E") repeat-x 0 100%/auto 100%}
+/* The footer's dusk: violet and blue high up, a warm glow along the horizon behind the rooftops */
+.aurora-footer{
+  background:
+    radial-gradient(90% 22% at 50% 100%,rgba(212,181,114,.38) 0%,rgba(107,37,69,.34) 55%,rgba(107,37,69,0) 100%),
+    radial-gradient(70% 36% at 80% 28%,rgba(40,110,215,.36) 0%,rgba(40,110,215,0) 100%),
+    radial-gradient(60% 34% at 16% 20%,rgba(107,37,69,.5) 0%,rgba(107,37,69,0) 100%),
+    repeating-linear-gradient(90deg,rgba(255,255,255,.035) 0 2px,rgba(255,255,255,0) 2px 30px),
+    linear-gradient(180deg,#041a35 0%,#020e1d 100%);
+}
+.aurora-footer:before,.aurora-footer:after{height:76px}
+.aurora canvas{position:absolute;inset:0;width:100%;height:100%;display:block;opacity:0;transition:opacity 1.4s ease}
+.aurora.is-live canvas{opacity:1}
+.aurora.is-live:before,.aurora.is-live:after{opacity:0;transition:opacity 1.4s ease}
+@media print{.aurora canvas{display:none}}

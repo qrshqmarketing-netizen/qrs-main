@@ -1,5 +1,8 @@
 /* ---------- Footer (dark) ---------- */
-footer{background:linear-gradient(180deg,var(--navy) 0%,#03192e 100%);color:#fff;padding:44px 0 96px} /* bottom room so the chat bubble never covers the copyright */
+footer{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(180deg,var(--navy) 0%,#03192e 100%);color:#fff;padding:44px 0 96px} /* bottom room so the chat bubble never covers the copyright */
+/* The aurora sits behind everything (AuroraBackground.jsx, z-index -2); this scrim keeps the links easy to read over it */
+footer:before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(180deg,rgba(2,12,24,.5) 0%,rgba(2,12,24,.3) 55%,rgba(2,12,24,.08) 100%)}
+footer .container{position:relative}
 footer .container{max-width:1080px}
 .ft-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px 20px}
 .ft-col{display:flex;flex-direction:column;align-items:flex-start;min-width:0}

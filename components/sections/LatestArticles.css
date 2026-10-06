@@ -8,7 +8,7 @@
 .art-media img{object-fit:cover;object-position:center 30%} /* keeps the top of a picture that carries a logo and title */
 .art-body{display:flex;flex-direction:column;gap:10px;flex:1;padding:20px 22px 22px}
 .art-card time{color:var(--gold-ink);font:700 12px/1.3 var(--font-head);letter-spacing:.08em;text-transform:uppercase}
-.art-card h3{margin:0;color:var(--navy);font-size:21px;font-weight:600;line-height:1.25;letter-spacing:.01em}
+.art-card h3{margin:0;color:var(--navy);font-size:21px;font-weight:800;line-height:1.25;letter-spacing:.01em}
 .art-link{color:inherit;text-decoration:none}
 .art-link:after{content:"";position:absolute;inset:0}
 .art-link:focus-visible{outline:none}

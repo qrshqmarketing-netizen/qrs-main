@@ -1,12 +1,13 @@
 import { STEP_ICONS } from '@/components/ui/stepIcons';
 import { PROCESS_STEPS } from '@/data/process';
 import './Process.css';
+import Mark from '@/components/ui/Mark';
 
 export default function Process() {
   return (
     <section className="qrs-way" id="process">
       <div className="container">
-        <h2>Roofing, The QRS Way</h2>
+        <h2>Roofing, The QRS <Mark text="__Way__" /></h2>
         <div className="steps">
           {PROCESS_STEPS.map((step, i) => (
             <div className="step" key={step.title}>

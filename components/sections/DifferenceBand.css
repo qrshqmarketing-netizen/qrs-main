@@ -3,7 +3,7 @@
 .difference h2{color:#fff;font-size:var(--h2);margin-bottom:36px}
 .difference-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:34px;max-width:1080px;margin:0 auto}
 .difference-icon{width:60px;height:60px;color:var(--gold);margin:0 auto 16px;display:block}
-.difference-item h3{color:#fff;font:600 20px/1.2 var(--font-display);letter-spacing:.02em;text-transform:uppercase;margin:0 0 10px}
+.difference-item h3{color:#fff;font:800 20px/1.2 var(--font-display);letter-spacing:.02em;text-transform:uppercase;margin:0 0 10px}
 .difference-item p{color:#d5e1eb;font-size:16px;line-height:1.65;max-width:340px;margin:0 auto}
 @media (min-width:621px){
   .difference{padding:88px 0}

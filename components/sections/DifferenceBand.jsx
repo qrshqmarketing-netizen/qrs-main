@@ -1,5 +1,6 @@
 import { STEP_ICONS } from '@/components/ui/stepIcons';
 import './DifferenceBand.css';
+import Mark from '@/components/ui/Mark';
 
 const POINTS = [
   {
@@ -20,11 +21,11 @@ const POINTS = [
 ];
 
 // Navy band with the three things that make QRS different
-export default function DifferenceBand({ heading = 'The QRS Difference', points = POINTS }) {
+export default function DifferenceBand({ heading = 'The QRS __Difference__', points = POINTS }) {
   return (
     <section className="difference tile-pattern on-dark">
       <div className="container">
-        <h2>{heading}</h2>
+        <h2><Mark text={heading} /></h2>
         <div className="difference-grid">
           {points.map((point) => (
             <div className="difference-item" key={point.title}>

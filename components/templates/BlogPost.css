@@ -34,7 +34,7 @@
 /* Checklist: boxes to tick off on paper or in your head (not form fields) */
 .post-checklist{list-style:none;padding-left:0}
 .post-checklist li{position:relative;padding-left:32px}
-.post-checklist li:before{content:"";position:absolute;left:0;top:.38em;width:18px;height:18px;border:2px solid var(--gold);border-radius:4px}
+.post-checklist li:before{content:"";position:absolute;left:0;top:.38em;width:18px;height:18px;border:2px solid var(--gold);border-radius:6px}
 
 /* Tables scroll sideways on narrow screens instead of squeezing the columns */
 .post-table{margin:6px 0 20px;overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius)}

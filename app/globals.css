@@ -5,14 +5,15 @@
      @media (min-width:381px)   large phones
      @media (min-width:621px)   tablets
      @media (min-width:901px)   desktop (menu button + CTA in the header)
-     @media (min-width:1200px)  full header menu
+     @media (min-width:1366px)  full header menu
      @media (min-width:1300px)  wide desktop
    Rows with four columns on desktop become a 2 × 2 grid on phones.
    ===================================================================== */
 
 /* ---------- Tokens ---------- */
 :root{
-  --radius:5px; /* corner radius for cards, panels, photos and form fields (pill buttons and circles keep their own) */
+  --radius:16px; /* corner radius for cards, panels and photos (pill buttons and circles keep their own) */
+  --radius-sm:12px; /* form fields, icon boxes, avatars, small chips and thumbnails */
   --navy:#062d57;
   --navy-2:#0a3969;
   /* Gold from the logo: --gold is the bright highlight of the logo gradient (buttons, accents), --gold-2 a lighter hover,
@@ -36,15 +37,16 @@
   --shadow:0 18px 50px rgba(6,45,87,.12);
   --max:1540px;
 
-  /* Headings (h1–h6): Roboto Condensed, uppercase (--font-display). Body, UI and buttons: Open Sans, paragraphs at
-     medium (500). Both are self-hosted Google Fonts set by next/font in app/layout.js. */
-  --font-display:var(--font-condensed),"Arial Narrow",ui-sans-serif,system-ui,sans-serif;
-  --font-head:var(--font-open-sans),ui-sans-serif,system-ui,sans-serif;
-  --font-btn:var(--font-open-sans),ui-sans-serif,system-ui,sans-serif;
-  /* Arrows, checks and stars use the system's own symbol fonts. In Open Sans they fall in its "symbols" and "math" ranges, and a browser then
+  /* Headings (h1–h6): Big Shoulders, uppercase, weight 800 (--font-display). Body, UI and buttons: Libre Franklin, paragraphs at
+     medium (500). Both are self-hosted Google Fonts set by next/font in app/layout.js. Product names (HardShell, TotalShield...) keep
+     their own serif italic (.product-brand). */
+  --font-display:var(--font-condensed),"Arial Narrow",Impact,ui-sans-serif,system-ui,sans-serif;
+  --font-head:var(--font-text),ui-sans-serif,system-ui,sans-serif;
+  --font-btn:var(--font-text),ui-sans-serif,system-ui,sans-serif;
+  /* Arrows, checks and stars use the system's own symbol fonts. In the web fonts they fall in "symbols" and "math" ranges, and a browser then
      downloads two more font files (69 KB) before painting any page that shows one. */
   --font-glyph:system-ui,"Segoe UI Symbol","Apple Symbols",Arial,sans-serif;
-  --font-body:var(--font-open-sans),-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  --font-body:var(--font-text),-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 
   /* Section heading size: 36–48px on phones, 60px from tablet up */
   --h2:clamp(36px,10.6vw,48px);
@@ -64,8 +66,11 @@ body.menu-open{overflow:hidden}
 a{color:inherit;text-decoration:none}
 button,input,select,textarea{font:inherit}
 button{cursor:pointer}
+/* Side gutters: 20px on phones, 40px from tablet up and 48px on wide screens, so text never sits against the screen edge or under the Instant
+   Quote tab, and lines up with the logo inside the header pill (Header.css) */
 .container{width:min(var(--max),calc(100% - 40px));margin:auto}
-@media (min-width:1200px){.container{width:min(var(--max),calc(100% - 24px))}}
+@media (min-width:621px){.container{width:min(var(--max),calc(100% - 80px))}}
+@media (min-width:1200px){.container{width:min(var(--max),calc(100% - 96px))}}
 .section{padding:64px 0}
 @media (min-width:621px){.section{padding:88px 0}}
 
@@ -74,7 +79,7 @@ button{cursor:pointer}
   text-transform:uppercase;margin-bottom:12px;
 }
 h1,h2,h3,p{margin-top:0}
-h1,h2,h3,h4,h5,h6{font-family:var(--font-display);font-weight:600;letter-spacing:.01em;line-height:1.05;text-transform:uppercase}
+h1,h2,h3,h4,h5,h6{font-family:var(--font-display);font-weight:800;letter-spacing:.015em;line-height:1.05;text-transform:uppercase}
 h1{font-size:clamp(2.8rem,14vw,4.4rem);margin-bottom:22px}
 h2{font-size:2.35rem;margin-bottom:16px}
 h3{font-size:1.25rem;margin-bottom:9px}
@@ -108,7 +113,7 @@ h1,h2,h3,.eyebrow,.hero-sub{text-wrap:balance}
 /* ---------- Form fields (estimate form + Instant Quote) ---------- */
 label{display:block;font-size:13px;font-weight:900;color:var(--navy);margin-bottom:6px}
 input,select,textarea{
-  width:100%;min-height:50px;border:1px solid #d7e0e8;border-radius:var(--radius);padding:13px 14px;
+  width:100%;min-height:50px;border:1px solid #d7e0e8;border-radius:var(--radius-sm);padding:13px 14px;
   background:var(--paper);color:var(--ink);outline:none;font-size:16px; /* 16px stops iOS zooming in on focus */
 }
 input:focus,select:focus,textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(212,181,114,.15)}
@@ -140,13 +145,27 @@ textarea{min-height:105px;resize:vertical}
 main h2{animation:fadeUp .9s ease .3s both}
 @media (prefers-reduced-motion:reduce){main h2{animation:none}}
 
-/* Sections reveal as they enter the viewport; content stays visible when scripts are unavailable. */
-.reveal-on-scroll{opacity:0;transform:translateY(14px);transition:opacity .65s ease,transform .65s ease}
-.reveal-on-scroll.reveal-visible{opacity:1;transform:translateY(0)}
-@media (prefers-reduced-motion:reduce){.reveal-on-scroll,.reveal-on-scroll.reveal-visible{opacity:1;transform:none;transition:none}}
-/* While PAGE_ENTRANCES (data/promo.js) is off, app/layout.js adds .no-entrance to <body> and leaves out the scroll
-   reveals: headings and the hero's intro line show at once */
+/* Subtle scroll reveals (components/ui/RevealSections.jsx): a part that is still below the fold fades up a few pixels, once, as it scrolls into
+   view. The script adds .reveal-on to <html> and marks parts with data-reveal only after the page has loaded, and takes the mark off again
+   when a part has appeared, so nothing is hidden without JavaScript, in print or for reduced motion. Opacity and transform only: no layout shift. */
+@media (prefers-reduced-motion:no-preference){
+  html.reveal-on [data-reveal]{
+    opacity:0;transform:translate3d(0,14px,0);
+    transition:opacity .7s cubic-bezier(.2,.65,.3,1) var(--reveal-delay,0ms),transform .7s cubic-bezier(.2,.65,.3,1) var(--reveal-delay,0ms);
+  }
+  html.reveal-on [data-reveal="in"]{opacity:1;transform:none}
+}
+@media (min-width:901px){html.reveal-on [data-reveal]{transform:translate3d(0,18px,0)}html.reveal-on [data-reveal="in"]{transform:none}}
+@media print{html.reveal-on [data-reveal]{opacity:1!important;transform:none!important;transition:none!important}}
+/* While PAGE_ENTRANCES (data/promo.js) is off, app/layout.js adds .no-entrance to <body>: headings and the hero's intro line show at once */
 .no-entrance main h2,.no-entrance .hero-sub{animation:none}
+
+/* Underlined words in headings (__word__ in a heading, rendered by components/ui/Mark.jsx; the hero headline uses <u> directly): a thick gold
+   line under the word, set clear of the letters so it never cuts through them. */
+h1 u,h2 u,h3 u,.hero-title u{
+  text-decoration-line:underline;text-decoration-color:var(--gold);text-decoration-thickness:.09em;
+  text-underline-offset:.16em;text-decoration-skip-ink:none;
+}
 
 /* Product names have a distinct serif italic treatment wherever rich text displays them. */
 .product-brand{font-family:Georgia,'Times New Roman',serif;font-style:italic;text-transform:none!important}

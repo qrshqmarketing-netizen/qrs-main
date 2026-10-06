@@ -57,7 +57,7 @@
 /* Big headline (an <h1>, or a <p> when the keyword line above it is the H1) */
 .hero-title{
   max-width:860px;margin:8px auto 0;
-  font-family:var(--font-display);font-size:clamp(30px,8.6vw,38px);font-weight:600;line-height:1.06;letter-spacing:.01em;text-transform:uppercase;
+  font-family:var(--font-display);font-size:clamp(30px,8.6vw,38px);font-weight:800;line-height:1.06;letter-spacing:.01em;text-transform:uppercase;
   text-wrap:balance;text-shadow:0 4px 24px rgba(0,0,0,.32);
 }
 .hero-title span{color:#fff}
@@ -130,3 +130,10 @@
 .hero-copy .crumbs [aria-current]{color:var(--gold-2);font-weight:600}
 .hero-inner:not(.hero-left) .crumbs ol{justify-content:center}
 @media (min-width:621px){.hero-copy .crumbs ol{margin-bottom:12px;font-size:14px}}
+
+/* Home hero only (desktop and tablet): the shade is one diagonal, dark blue in the bottom-left corner (behind the copy) fading to clear in the top-right,
+   so the photo shows through. The usual darkening along the bottom is left off here. Phones keep the photo band that fades into the navy. */
+@media (min-width:621px){
+  .hero.hero-top-pad .hero-roof-texture:after{background:linear-gradient(to top right,rgba(3,27,52,.95) 0%,rgba(3,27,52,.8) 26%,rgba(3,27,52,.38) 56%,rgba(3,27,52,0) 88%)}
+  .hero.hero-top-pad:after{display:none}
+}

@@ -8,6 +8,7 @@ import { PHONE } from '@/data/site';
 import { miles, nominatimSearch, pointInGeoJson, zipPrefixServed } from '@/lib/geo';
 import { loadLeaflet } from '@/lib/leaflet';
 import './ServiceArea.css';
+import Mark from '@/components/ui/Mark';
 
 // The QRS location closest to a [lat, lng] point: { location, distance } (miles)
 function nearestLocation(point) {
@@ -24,8 +25,8 @@ function nearestLocation(point) {
 // map (data/serviceAreaOutline.js), and a link to every city page that exists (the Inland Empire has none yet). The map library, its tiles and the outline load only
 // when the map is about to scroll into view. Mobile keeps the map still so it never traps a page swipe.
 export default function ServiceArea({
-  citiesAfterSearch = false, // true: the city links under the map stay hidden until the visitor searches a ZIP code (home page)
-  heading = 'Locations We Proudly Serve',
+  hideCities = false, // true: the city links under the map are never shown, not even after a ZIP search (home page); they stay in the page's HTML
+  heading = 'Locations We Proudly __Serve__',
   sub = 'The outlined area is where we work: Los Angeles County, Orange County, and the Inland Empire from Pomona to Riverside, Corona and Temecula. Enter your ZIP code to confirm we cover you.',
 }) {
   const wrapRef = useRef(null);
@@ -35,7 +36,6 @@ export default function ServiceArea({
   const [zip, setZip] = useState('');
   const [msg, setMsg] = useState(null);
   const [offline, setOffline] = useState(false);
-  const [searched, setSearched] = useState(false);
 
   useEffect(() => {
     let cancelled = false, watcher;
@@ -105,7 +105,6 @@ export default function ServiceArea({
       return;
     }
     setMsg('Checking ' + z + '…');
-    setSearched(true); // reveals the city links when they're set to appear after a search
     try {
       const hit = await nominatimSearch('postalcode=' + z);
       if (!hit) throw new Error('none');
@@ -140,7 +139,7 @@ export default function ServiceArea({
   return (
     <section className="area" id="service-area">
       <div className="container">
-        <h2>{heading}</h2>
+        <h2><Mark text={heading} /></h2>
         <p className="area-sub">{sub}</p>
 
         <div className="sa-wrap" id="locWrap" ref={wrapRef}>
@@ -179,8 +178,8 @@ export default function ServiceArea({
           </div>
         </div>
 
-        {/* Still in the page's HTML when hidden, so the links stay crawlable; shown once a ZIP code has been searched */}
-        <nav className="sa-cities" aria-label="Cities we serve" hidden={citiesAfterSearch && !searched}>
+        {/* Still in the page's HTML when hidden, so the links stay crawlable; a ZIP search never shows them */}
+        <nav className="sa-cities" aria-label="Cities we serve" hidden={hideCities}>
           {REGIONS.map((region) => (
             <div key={region.slug}>
               <h3>{region.name}</h3>

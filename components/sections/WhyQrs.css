@@ -1,25 +1,16 @@
-/* ---------- Why QRS + accreditations ---------- */
-.why{position:relative;overflow:hidden;isolation:isolate;color:#fff;text-align:center;padding:64px 0;background:#1c242b}
-/* CSS-only roof texture. Swap for a real photo with: .why-roof{background:url(your-roof.jpg) center/cover} */
-.why-roof{
-  position:absolute;inset:-45% -25%;z-index:-2;
-  transform:perspective(900px) rotateX(28deg) rotateZ(-16deg) scale(1.2);
-  background:
-    repeating-linear-gradient(32deg,rgba(255,255,255,.13) 0 2px,transparent 2px 20px),
-    repeating-linear-gradient(-58deg,rgba(0,0,0,.4) 0 3px,transparent 3px 24px),
-    radial-gradient(circle at 78% 35%,#98a3aa 0%,#5d6a73 38%,#303a42 70%,#1b2228 100%);
-}
+/* ---------- Why QRS ---------- */
+/* The background is the aurora (AuroraBackground.jsx, at z-index -2); the :before scrim keeps the headline and button readable over it */
+.why{position:relative;overflow:hidden;isolation:isolate;color:#fff;text-align:center;padding:64px 0;background:#020e1d;min-height:400px;display:flex;align-items:center}
+.why .container{position:relative}
 .why:before{
-  content:"";position:absolute;inset:0;z-index:-1;
-  background:
-    linear-gradient(90deg,rgba(0,0,0,.9) 0%,rgba(0,0,0,.62) 30%,rgba(0,0,0,.28) 62%,rgba(0,0,0,.12) 100%),
-    linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.35));
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse 50% 58% at 50% 50%,rgba(2,12,24,.55) 0%,rgba(2,12,24,.18) 62%,rgba(2,12,24,0) 100%);
 }
-.why h2{color:var(--gold);font-size:var(--h2);font-weight:700;margin-bottom:28px;text-shadow:0 3px 20px rgba(0,0,0,.35)}
+.why h2{color:var(--gold);font-size:var(--h2);font-weight:800;margin-bottom:28px;text-shadow:0 0 30px rgba(212,181,114,.28),0 3px 22px rgba(0,0,0,.6)}
 .why .cred-card{margin-bottom:32px}
-.why .btn{margin-top:32px;border-radius:999px}
+.why .btn{margin-top:32px;border-radius:999px;box-shadow:0 12px 34px rgba(0,0,0,.5)}
 @media (min-width:621px){
-  .why{padding:88px 0 84px}
+  .why{padding:88px 0 84px;min-height:480px}
   .why h2{margin-bottom:34px}
   .why .cred-card{margin-bottom:44px}
   .why .btn{margin-top:44px}
