@@ -147,3 +147,14 @@
   .hero.hero-top-pad .hero-roof-texture:after{background:linear-gradient(to top,rgba(3,27,52,.94) 0%,rgba(3,27,52,.74) 24%,rgba(3,27,52,.4) 52%,rgba(3,27,52,0) 92%)}
   .hero.hero-top-pad:after{display:none}
 }
+
+/* Home hero headline: larger than the inner pages' (Big Shoulders is narrow, so it can be big). Phones first, then wider screens */
+.hero.hero-top-pad .hero-title{font-size:clamp(44px,13vw,56px);line-height:1.02}
+@media (min-width:621px){
+  .hero.hero-top-pad .hero-copy{width:min(1100px,100%)}
+  .hero.hero-top-pad .hero-title{max-width:1100px;font-size:72px}
+}
+@media (min-width:901px){
+  .hero.hero-top-pad .hero-title{font-size:92px}
+  .hero.hero-top-pad .hero-sub{font-size:20px}
+}
