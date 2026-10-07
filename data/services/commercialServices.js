@@ -129,6 +129,8 @@ export const COMMERCIAL_SERVICES = [
     },
     process: {
       subheading: 'How a TPO roof project works',
+      image: '/images/recent-work-commercial-flat-roof-drone-view.webp', // a commercial flat roof (not the residential photo the page would otherwise pick)
+      imageAlt: 'Aerial view of a large white commercial flat roof with its rooftop units, above a parking lot',
       steps: [
         {
           title: 'Roofer-led roof survey',
