@@ -1,11 +1,8 @@
-// Project photos for the bento gallery on each city page (/service-areas/<region>/<city>/).
+// Project photos for the gallery on each city page (/service-areas/<region>/<city>/). Only real projects show, and only ones in or near that city
+// (projectsNear below: a project is matched by its city tag, or by its project page's ZIP code pin); a city with none nearby has no gallery.
 //
-// TEMPORARY: until projects come from the CRM, every city shows PLACEHOLDER_PROJECTS: the same stand-in photos and
-// roof-type artwork, captioned by service (not by city). Swap in real local projects before launch, or set
-// SHOW_PLACEHOLDER_GALLERY to false to hide the gallery on cities that don't have projects yet.
-//
-// Real projects go in PROJECTS, tagged with the city's slug from data/locations.js. A city with projects shows only
-// its own (up to 6; the grid is designed for 6, 4, 3, 2 or 1 tiles). Each project:
+// Projects with their own page need nothing here: add them to PROJECT_PAGES (data/pages/projects.js) with a `geo` pin and they appear on the
+// pages of the cities within 12 miles. Photo-only projects go in PROJECTS, tagged with the city's slug from data/locations.js (up to 6 show). Each project:
 //   {
 //     city: 'pasadena',
 //     title: 'Tile Lift & Relay',                           // the work we did
@@ -16,15 +13,10 @@
 // A tile with a photo opens it in the full-screen gallery (ProjectLightbox); tiles without one just show the
 // roof-type artwork below and aren't clickable.
 
-import { MID_WILSHIRE_PROJECT } from './pages/mid-wilshire-project';
+import { findCity } from './locations';
+import { PROJECT_PAGES } from './pages/projects';
 
 export const PROJECTS = [
-  {
-    title: 'Multi-Family Tile & Flat Roofing in Mid-Wilshire 90019',
-    image: MID_WILSHIRE_PROJECT.image,
-    alt: MID_WILSHIRE_PROJECT.imageAlt,
-    href: MID_WILSHIRE_PROJECT.path,
-  },
   {
     city: 'vernon',
     title: 'Shingle Roof Replacement',
@@ -101,9 +93,25 @@ export const PLACEHOLDER_PROJECTS = [
 // (ProjectGallery's `all` mode splits any length into full-sized bento grids, so this can grow freely)
 export const allProjects = () => [...PROJECTS, ...(SHOW_PLACEHOLDER_GALLERY ? PLACEHOLDER_PROJECTS : [])];
 
-// A city's gallery: its own projects when it has any, otherwise the placeholders (or nothing)
-export function projectsFor(slug) {
-  const own = PROJECTS.filter((p) => p.city === slug);
-  if (own.length > 0) return own;
-  return SHOW_PLACEHOLDER_GALLERY ? PLACEHOLDER_PROJECTS : [];
+// The gallery on a city page: only real projects in or near that city, never stand-ins. A project counts when it is tagged with the city
+// (`city` above), or when its own page's pin (`geo`: the ZIP code's center, the same pin as on the Projects map) is within NEAR_MI miles of the
+// city's center, nearest first, up to 6. Returns { projects, local }: `local` is true when at least one project is in the city itself (tagged, or
+// its place names the city), so the page can say "in" instead of "near". No projects nearby: an empty list, and the gallery isn't shown.
+export const NEAR_MI = 12;
+const milesBetween = ([lat1, lng1], [lat2, lng2]) => {
+  const rad = (d) => (d * Math.PI) / 180;
+  const a = Math.sin(rad(lat2 - lat1) / 2) ** 2 + Math.cos(rad(lat1)) * Math.cos(rad(lat2)) * Math.sin(rad(lng2 - lng1) / 2) ** 2;
+  return 3958.8 * 2 * Math.asin(Math.sqrt(a));
+};
+
+export function projectsNear(slug) {
+  const center = findCity(slug);
+  if (!center) return { projects: [], local: false };
+  const tagged = PROJECTS.filter((p) => p.city === slug && p.image);
+  const nearby = PROJECT_PAGES.map((page) => ({ page, miles: page.geo ? milesBetween([center.lat, center.lng], page.geo) : Infinity }))
+    .filter(({ page, miles }) => miles <= NEAR_MI || page.place?.includes(center.city))
+    .sort((a, b) => a.miles - b.miles)
+    .map(({ page }) => ({ title: page.title, caption: (page.place || page.title).replace(/,?\s*CA\b/, ''), image: page.image, alt: page.imageAlt, href: page.path, place: page.place }));
+  const projects = [...tagged, ...nearby].slice(0, 6);
+  return { projects, local: tagged.length > 0 || nearby.some((p) => p.place?.includes(center.city)) };
 }

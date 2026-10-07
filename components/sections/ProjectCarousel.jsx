@@ -12,6 +12,7 @@ export default function ProjectCarousel({ city, heading, sub, projects = [], id 
   if (!photos.length) return null;
 
   const caption = (p) => {
+    if (p.caption) return p.caption; // a project with its own page: its place and ZIP
     const where = place(p, city);
     return where ? `${where} — ${p.title}` : p.title;
   };

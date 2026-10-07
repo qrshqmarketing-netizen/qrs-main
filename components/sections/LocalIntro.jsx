@@ -18,7 +18,7 @@ export default function LocalIntro({ city, heading, paragraphs = [], offices = [
         </div>
         <aside className="local-aside">
           {offices.map((office) => (
-            <OfficeCard office={office} cityLink={offices.length > 1} key={office.name} />
+            <OfficeCard office={office} cityLink={offices.length > 1} photo={false} key={office.name} />
           ))}
           {neighborhoods.length > 0 && (
             <div className="local-card">
