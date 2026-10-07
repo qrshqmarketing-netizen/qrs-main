@@ -24,6 +24,8 @@ import { PUBLISHED_POSTS } from './blog/posts';
 import { HOLLYWOOD_HILLS_PROJECT } from './pages/hollywood-hills-project';
 import { MID_WILSHIRE_PROJECT } from './pages/mid-wilshire-project';
 import { PANORAMA_CITY_PROJECT } from './pages/panorama-city-project';
+import { VENICE_PROJECT } from './pages/venice-project';
+import { WHITE_FLAT_PROJECT } from './pages/white-flat-roof-project';
 import { SAN_PEDRO_FULL_ROOF_PROJECT } from './pages/san-pedro-full-roof-project';
 import { SAN_PEDRO_PROJECT } from './pages/san-pedro-project';
 import { cityPath, LOCATIONS, REGIONS, regionPath } from './locations';
@@ -122,6 +124,8 @@ export const ALL_PATHS = [
   SAN_PEDRO_FULL_ROOF_PROJECT.path,
   HOLLYWOOD_HILLS_PROJECT.path,
   PANORAMA_CITY_PROJECT.path,
+  VENICE_PROJECT.path,
+  WHITE_FLAT_PROJECT.path,
   REVIEWS_LINK.href,
   // The blog index is listed once it has a published post (until then it's a "coming soon" page, kept out of search)
   ...(PUBLISHED_POSTS.length > 0 ? [BLOG_LINK.href] : []),
