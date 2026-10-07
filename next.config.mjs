@@ -14,6 +14,8 @@ const nextConfig = {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
     qualities: [60, 75],
     minimumCacheTTL: 2592000, // 30 days
+    // Pictures uploaded in the dashboard live in the Supabase Storage bucket `site-images` (scripts/supabase-storage.sql) and are shown through next/image
+    remotePatterns: [{ protocol: 'https', hostname: '*.supabase.co', pathname: '/storage/v1/object/public/site-images/**' }],
   },
   // Page URLs end with a slash (/shingle-roofing/), matching the links in the menus
   trailingSlash: true,

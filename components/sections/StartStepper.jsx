@@ -12,6 +12,7 @@ import { currentAttribution } from '@/lib/attribution';
 import { zipPrefixServed } from '@/lib/geo';
 import { hoursText } from '@/lib/hours';
 import { lastPage } from '@/lib/pageTrail';
+import { postLead } from '@/lib/endpoints';
 import { rememberLead, trackEvent, trackLead } from '@/lib/tracking';
 import './RoofCheck.css'; // the offer card and form card styles
 import './StartStepper.css';
@@ -21,7 +22,7 @@ const isoDay = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2,
 
 // The request steps on /start/ (rules and wording in data/start.js). Questions that don't apply are left out, answers the visitor's
 // previous page implies are filled in, and the offer card beside it switches to the commercial survey for HOA and commercial
-// properties. Sends to /api/lead/ like the old estimate form did, then opens /thank-you/.
+// properties. Sends to the lead endpoint (lib/endpoints.js: /api/lead/ or the Supabase function) like the old estimate form did, then opens /thank-you/.
 export default function StartStepper() {
   const [answers, setAnswers] = useState({});
   const [contact, setContact] = useState({ name: '', phone: '', email: '', zip: '', company: '', foundUs: '', message: '', date: '', time: '', website: '' });
@@ -107,12 +108,8 @@ export default function StartStepper() {
     setError('');
     setStatus('sending');
     try {
-      const res = await fetch('/api/lead/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        // `page` is the page the visitor was on before /start/, so the lead says where it came from
-        body: JSON.stringify({ ...leadFields(answers, contact), website: contact.website, source: 'estimate-form', page: lastPage() || START_PATH, utm: currentAttribution() }),
-      });
+      // `page` is the page the visitor was on before /start/, so the lead says where it came from
+      const res = await postLead({ ...leadFields(answers, contact), website: contact.website, source: 'estimate-form', page: lastPage() || START_PATH, utm: currentAttribution() });
       if (!res.ok) throw new Error(String(res.status));
       setStatus('sent');
       // Off to the thank-you page, which reports the conversion; if storage is blocked, report it here instead

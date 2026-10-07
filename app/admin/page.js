@@ -1,12 +1,12 @@
 import LoginForm from '@/components/admin/LoginForm';
 import PostList from '@/components/admin/PostList';
-import { adminReady, isAdmin } from '@/lib/adminAuth';
+import { adminReady, authMode, isAdmin } from '@/lib/adminAuth';
 import { adminListPosts } from '@/lib/postsStore';
 import { dbConfigured } from '@/lib/supabase';
 
 // /admin/: the login, then the list of articles with the home page's featured spots
 export default async function AdminPage() {
-  if (!(await isAdmin())) return <LoginForm ready={adminReady()} />;
+  if (!(await isAdmin())) return <LoginForm ready={adminReady()} withEmail={authMode()} />;
   let posts = [];
   let problem = '';
   if (!dbConfigured()) {

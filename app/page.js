@@ -14,13 +14,13 @@ import Services from '@/components/sections/Services';
 import WhyQrs from '@/components/sections/WhyQrs';
 import JsonLd from '@/components/ui/JsonLd';
 import { COMMERCIAL_LINK, RESIDENTIAL } from '@/data/catalog';
-import { FAQS } from '@/data/faqs';
 import { CAREERS_PAGE, CAREERS_TEASER } from '@/data/pages/careers';
 import { HOME_DESCRIPTION, HOME_H1, HOME_TITLE } from '@/data/site';
 import { LATEST_PROJECTS } from '@/data/projectPages';
 import { RECENT_WORK, RECENT_WORK_SUB } from '@/data/recentWork';
 import { ROOF_FINANCING } from '@/data/services/programs';
 import { homeArticles } from '@/lib/articles';
+import { getHomeFaqs } from '@/lib/contentStore';
 import { openGraphBase, twitterBase } from '@/lib/seo';
 import { pageJsonLd } from '@/lib/structuredData';
 
@@ -73,9 +73,10 @@ const HOME_PRODUCTS = [
 // why QRS, financing partners, articles, careers (for job seekers, so low), the FAQ, then the request card and closing call to action.
 // Reorder or remove a line to change the page.
 export default async function HomePage() {
+  const faqs = await getHomeFaqs(); // from the dashboard (lib/contentStore.js), else data/faqs.js
   return (
     <>
-      <JsonLd data={pageJsonLd({ path: '/', title: HOME_TITLE, description: HOME_DESCRIPTION, faqs: FAQS })} />
+      <JsonLd data={pageJsonLd({ path: '/', title: HOME_TITLE, description: HOME_DESCRIPTION, faqs })} />
       <main id="top">
         {/* The keyword line above the big headline is the page's H1 (matches the page title) */}
         <Hero
@@ -106,7 +107,7 @@ export default async function HomePage() {
           {...CAREERS_TEASER}
           points={CAREERS_PAGE.roles.items.map((role) => ({ title: role.title, text: role.text, href: '/careers/#roles' }))}
         />
-        <Faq cta={false} />
+        <Faq cta={false} faqs={faqs} />
         <RoofCheck />
         <FinalCta />
       </main>

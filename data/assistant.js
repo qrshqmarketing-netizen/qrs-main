@@ -8,11 +8,12 @@ import { formatDate } from '@/lib/dates';
 import { hoursText } from '@/lib/hours';
 
 // The chat assistant's backend: app/api/chat/route.js (Google Gemini when GEMINI_API_KEY is set, else an OpenRouter model — see
-// OPENROUTER_API_KEY and OPENROUTER_MODEL in .env.local). Set NEXT_PUBLIC_CHAT_ENDPOINT only to point the widget at a different,
-// separately hosted backend instead. Either way, the backend receives POST {messages:[{role,content}]} and
+// OPENROUTER_API_KEY and OPENROUTER_MODEL in .env.local). Set NEXT_PUBLIC_CHAT_ENDPOINT to the Supabase function (supabase/functions/chat) to run the
+// assistant there instead; /api/chat/ then stays as the backup (components/widgets/RoofAssistant.jsx). Either way, the backend receives POST {messages:[{role,content}]} and
 // returns {reply:"..."}; if it's unreachable or NEXT_PUBLIC_CHAT_ENDPOINT is explicitly set to nothing while
 // OPENROUTER_API_KEY is also unset, the built-in answers below are used instead.
-export const CHAT_ENDPOINT = process.env.NEXT_PUBLIC_CHAT_ENDPOINT || '/api/chat/';
+export const SITE_CHAT_ENDPOINT = '/api/chat/'; // the site's own route, also the backup when the endpoint below can't be reached
+export const CHAT_ENDPOINT = process.env.NEXT_PUBLIC_CHAT_ENDPOINT || SITE_CHAT_ENDPOINT;
 
 const call = `<a href="${TEL}">${PHONE}</a>`;
 const check = '<a href="/start/" data-qa-close>free roof evaluation</a>';

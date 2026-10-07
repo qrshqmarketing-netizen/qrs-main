@@ -53,6 +53,7 @@ export default function PostList({ posts, problem }) {
         <h1>Blog articles</h1>
         <nav>
           <Link className="adm-btn adm-btn-primary" href="/admin/new">New article</Link>
+          <Link className="adm-btn" href="/admin/content">Home page FAQ</Link>
           <a className="adm-btn" href="/" target="_blank" rel="noopener">View the site</a>
           <button className="adm-btn" type="button" onClick={logout}>Log out</button>
         </nav>

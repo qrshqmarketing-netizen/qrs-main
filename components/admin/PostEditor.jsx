@@ -26,6 +26,40 @@ A paragraph. It can have [a link](/roof-repair/) and **bold** words.
 | --- | --- |
 | A cell | Another cell |`;
 
+// "Upload a picture" under an address box: sends the file to /api/admin/upload/ and puts the new address in the box
+function UploadButton({ onUploaded }) {
+  const [state, setState] = useState({ busy: false, error: '' });
+  const pick = async (e) => {
+    const file = e.target.files?.[0];
+    e.target.value = '';
+    if (!file) return;
+    setState({ busy: true, error: '' });
+    try {
+      const body = new FormData();
+      body.append('file', file);
+      const res = await fetch('/api/admin/upload/', { method: 'POST', body });
+      const data = await res.json().catch(() => ({}));
+      if (res.ok && data.url) {
+        onUploaded(data.url);
+        setState({ busy: false, error: '' });
+      } else setState({ busy: false, error: data.error || 'The upload did not work.' });
+    } catch {
+      setState({ busy: false, error: 'Could not reach the site. Check your connection and try again.' });
+    }
+  };
+  return (
+    <div className="adm-upload">
+      <label className="adm-btn">
+        {state.busy ? 'Uploading…' : 'Upload a picture'}
+        <input type="file" accept="image/jpeg,image/png,image/webp,image/avif" onChange={pick} disabled={state.busy} hidden />
+      </label>
+      {state.error && <span className="adm-msg bad" role="alert">{state.error}</span>}
+    </div>
+  );
+}
+
+const isShown = (v) => v.startsWith('/images/') || v.startsWith('https://');
+
 function Field({ id, label, hint, children }) {
   return (
     <div className="adm-field">
@@ -55,6 +89,12 @@ export default function PostEditor({ initial, isNew }) {
       if (key === 'title' && isNew && !slugTouched) next.slug = slugify(value);
       return next;
     });
+  };
+
+  // For the upload buttons: put an address in a field
+  const setValue = (key) => (value) => {
+    setDirty(true);
+    setForm((f) => ({ ...f, [key]: value }));
   };
 
   useEffect(() => {
@@ -174,9 +214,10 @@ export default function PostEditor({ initial, isNew }) {
             <textarea id="excerpt" rows={3} value={form.excerpt} onChange={set('excerpt')} />
           </Field>
           <div className="adm-grid two">
-            <Field id="image" label="Image" hint="The picture's address on the site, like /images/blog/roof-leak-source.webp. A picture that replaces a live one needs a new file name.">
+            <Field id="image" label="Image" hint="Upload a picture (JPEG, PNG, WebP or AVIF, up to 4 MB), or type an address on the site like /images/blog/roof-leak-source.webp. Uploads always get a new file name, so a replaced picture shows at once.">
               <input id="image" type="text" value={form.image} onChange={set('image')} />
-              {form.image.startsWith('/images/') && <img className="adm-thumb" src={form.image} alt="" />}
+              <UploadButton onUploaded={setValue('image')} />
+              {isShown(form.image) && <img className="adm-thumb" src={form.image} alt="" />}
             </Field>
             <Field id="imageAlt" label="Image description (alt text)">
               <textarea id="imageAlt" rows={3} value={form.imageAlt} onChange={set('imageAlt')} />
@@ -184,6 +225,7 @@ export default function PostEditor({ initial, isNew }) {
           </div>
           <Field id="cardImage" label="Stand-in card picture (optional)" hint="Only for the cards, until the article has its own image.">
             <input id="cardImage" type="text" value={form.cardImage} onChange={set('cardImage')} />
+            <UploadButton onUploaded={setValue('cardImage')} />
           </Field>
         </section>
 
@@ -218,6 +260,7 @@ export default function PostEditor({ initial, isNew }) {
           <div className="adm-grid two">
             <Field id="heroImage" label="Hero image (optional)">
               <input id="heroImage" type="text" value={form.heroImage} onChange={set('heroImage')} />
+              <UploadButton onUploaded={setValue('heroImage')} />
             </Field>
             <Field id="author" label="Author (optional)" hint="Leave empty to show the company as the author.">
               <input id="author" type="text" value={form.author} onChange={set('author')} />

@@ -8,6 +8,7 @@ import { FOUND_US_OPTIONS } from '@/data/estimateOptions';
 import { currentAttribution } from '@/lib/attribution';
 import { trackLead } from '@/lib/tracking';
 import { PHONE, TEL } from '@/data/site';
+import { postLead } from '@/lib/endpoints';
 import { loadLeaflet, qrsPin } from '@/lib/leaflet';
 import { buildingInsights, DEMO, fmt, geocode, money, monthly, myLocation, priceFor, styleOf, summarize } from '@/lib/roofQuote';
 import './InstantQuote.css';
@@ -246,13 +247,8 @@ export default function InstantQuote({ openFrom = null, onReady }) {
       return { material, low: est.low, high: est.high, monthly: Math.round(monthly((est.low + est.high) / 2, term)) };
     });
     setQuote(q);
-    // The lead goes to app/api/lead/route.js (email + leads spreadsheet) while the visitor sees their estimate
-    fetch('/api/lead/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ ...q, foundUs: f.get('foundUs') || '', website: f.get('website') || '', source: 'instant-quote', page: window.location.pathname, utm: currentAttribution() }),
-      keepalive: true,
-    })
+    // The lead goes to the lead endpoint (lib/endpoints.js: email + leads spreadsheet + database) while the visitor sees their estimate
+    postLead({ ...q, foundUs: f.get('foundUs') || '', website: f.get('website') || '', source: 'instant-quote', page: window.location.pathname, utm: currentAttribution() }, { keepalive: true })
       .then((res) => res.ok && trackLead('instant_quote'))
       .catch(() => {});
     setStep(4);

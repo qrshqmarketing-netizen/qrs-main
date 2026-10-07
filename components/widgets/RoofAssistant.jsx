@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { ArrowRight, CloseIcon, RefreshIcon } from '@/components/ui/icons';
-import { ANSWERS, CHAT_ENDPOINT, CHIP_PROMPTS, CONTACT_ANSWERS, CONTACT_RE, FALLBACK_ANSWER, GREETING, STARTERS } from '@/data/assistant';
+import { ANSWERS, CHAT_ENDPOINT, SITE_CHAT_ENDPOINT, CHIP_PROMPTS, CONTACT_ANSWERS, CONTACT_RE, FALLBACK_ANSWER, GREETING, STARTERS } from '@/data/assistant';
 import { PHONE, TEL } from '@/data/site';
 import { currentAttribution } from '@/lib/attribution';
 import { session } from '@/lib/storage';
@@ -81,15 +81,20 @@ export default function RoofAssistant() {
     let reply;
     try {
       if (!CHAT_ENDPOINT) throw 0;
-      const res = await fetch(CHAT_ENDPOINT, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ messages: history.current, leadSaved: leadSaved.current, utm: currentAttribution() }),
-      });
+      // The Supabase function first (NEXT_PUBLIC_CHAT_ENDPOINT); if it can't be reached or isn't ready, the site's own /api/chat/ answers.
+      // No second try once the first one saved a lead (it would be saved twice); the built-in answers cover that case.
+      const payload = JSON.stringify({ messages: history.current, leadSaved: leadSaved.current, utm: currentAttribution() });
+      const send = async (url) => {
+        const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: payload });
+        return { res, data: await res.json().catch(() => ({})) };
+      };
+      let { res, data } = await send(CHAT_ENDPOINT).catch(() => ({ res: null, data: {} }));
+      if ((!res || !res.ok || !data.reply) && !data?.leadSaved && res?.status !== 429 && CHAT_ENDPOINT !== SITE_CHAT_ENDPOINT) {
+        ({ res, data } = await send(SITE_CHAT_ENDPOINT));
+      }
       // The backend saves contact details even when the AI reply fails, and says so either way
-      const data = await res.json().catch(() => ({}));
       if (data.leadSaved) leadSaved.current = true;
-      if (!res.ok || !data.reply) throw 0;
+      if (!res?.ok || !data.reply) throw 0;
       reply = { html: esc(String(data.reply)).replace(/\n/g, '<br>'), chips: [] };
     } catch {
       await new Promise((r) => setTimeout(r, 650 + Math.random() * 500));
