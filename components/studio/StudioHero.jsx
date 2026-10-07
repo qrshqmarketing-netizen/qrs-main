@@ -1,8 +1,7 @@
-import HeroParallax from '@/components/sections/HeroParallax';
+import StudioHeroSlider from './StudioHeroSlider';
 import SiteLink from '@/components/ui/SiteLink';
 import { PhoneIcon } from '@/components/ui/icons';
 import { HOME_H1, PHONE, TEL } from '@/data/site';
-import '@/components/sections/Hero.css'; // the photo layer's own styles (.hero-background, the slider)
 import './Studio.css';
 
 // The home page's studio-style hero: a full-height photo slider (the newest projects' covers), the keyword line as a small label (it is the page's
@@ -10,7 +9,7 @@ import './Studio.css';
 export default function StudioHero({ slides }) {
   return (
     <section className="st-hero" aria-label="QRS Southern California roofing">
-      <HeroParallax image={slides[0].src} imageAlt={slides[0].alt} slides={slides} />
+      <StudioHeroSlider slides={slides} />
       <div className="st-hero-shade" aria-hidden="true"></div>
       <div className="container st-hero-inner">
         <h1 className="st-kicker">{HOME_H1}</h1>

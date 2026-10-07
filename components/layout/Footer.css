@@ -34,7 +34,7 @@ footer .container{position:relative;max-width:1540px}
 .ft-copy a:hover{color:var(--gold-2)}
 
 @media (min-width:621px){
-  footer{padding:96px 0 26px}
+  footer{padding:96px 0 64px} /* the floating review pop-up and chat bubble sit in the bottom corners: room so they don't cover the company name */
   .ft-offices{grid-template-columns:repeat(3,1fr);gap:28px}
   .ft-grid{grid-template-columns:repeat(4,1fr);gap:40px 28px}
   .ft-col a{min-height:0;margin-bottom:12px}
@@ -50,5 +50,10 @@ footer .container{position:relative;max-width:1540px}
   .ft-brand{grid-column:1}
   .ft-social{margin-left:-11px}
 }
+/* The company name across the bottom, in the heading font */
+.ft-name{margin-top:36px;user-select:none}
+.ft-name svg{display:block;width:100%;height:auto}
+.ft-name text{font:600 56px var(--font-text),sans-serif;fill:rgba(255,255,255,.13)}
+@media (min-width:901px){.ft-name{margin-top:48px}}
 /* /start/ shows only the small print (HideOnStart): no gap above it */
 footer .container > .ft-copy:first-child{margin-top:0;border-top:0;padding-top:0}

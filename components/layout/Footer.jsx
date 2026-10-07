@@ -74,6 +74,14 @@ export default function Footer() {
             </span>
           ))}
         </div>
+        <HideOnStart>
+          {/* The company name as a quiet row across the bottom: an SVG, so it always spans the full width exactly */}
+          <div className="ft-name" aria-hidden="true">
+            <svg viewBox="0 0 1000 60" preserveAspectRatio="xMidYMid meet">
+              <text x="0" y="47" textLength="1000" lengthAdjust="spacingAndGlyphs">QUALITY ROOFING SPECIALISTS</text>
+            </svg>
+          </div>
+        </HideOnStart>
       </div>
     </footer>
   );

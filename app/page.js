@@ -34,7 +34,7 @@ export const metadata = {
 
 // The home page's "Roofing Services" section: just the two top-level categories from the nav.
 // The hero photo slider: the newest projects' cover photos, newest first (LATEST_PROJECTS in data/projectPages.js)
-const HERO_SLIDES = LATEST_PROJECTS.map((project) => ({ src: project.image, alt: project.imageAlt }));
+const HERO_SLIDES = LATEST_PROJECTS.map((project) => ({ src: project.image, alt: project.imageAlt, title: project.label, place: project.place.replace(/,?\s*CA\b/, '') }));
 
 const HOME_SERVICES = [
   {
