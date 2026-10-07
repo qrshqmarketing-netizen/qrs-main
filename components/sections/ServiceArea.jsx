@@ -3,40 +3,73 @@
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { ArrowRight } from '@/components/ui/icons';
-import { cityPath, citiesIn, LOCATIONS, REGIONS, SERVICE_RADIUS_MI } from '@/data/locations';
-import { PHONE } from '@/data/site';
+import { ALSO_SERVING, cityPath, citiesIn, LOCATIONS, REGIONS, SERVICE_RADIUS_MI } from '@/data/locations';
+import { PHONE, TEL } from '@/data/site';
 import { miles, nominatimSearch, pointInGeoJson, zipPrefixServed } from '@/lib/geo';
-import { loadLeaflet } from '@/lib/leaflet';
+import { loadLeaflet, qrsPin } from '@/lib/leaflet';
 import './ServiceArea.css';
 import Mark from '@/components/ui/Mark';
 
-// The QRS location closest to a [lat, lng] point: { location, distance } (miles)
+// The QRS location closest to a [lat, lng] point: { location, index, distance } (miles)
 function nearestLocation(point) {
-  let location = LOCATIONS[0], distance = Infinity;
-  LOCATIONS.forEach((l) => {
+  let location = LOCATIONS[0], index = 0, distance = Infinity;
+  LOCATIONS.forEach((l, i) => {
     const d = miles(point, [l.lat, l.lng]);
-    if (d < distance) { distance = d; location = l; }
+    if (d < distance) { distance = d; location = l; index = i; }
   });
-  return { location, distance };
+  return { location, index, distance };
 }
 
 // Service area map: a ZIP code check, the Los Angeles and Orange County borders plus the Inland Empire (western Riverside County
 // and the southwest corner of San Bernardino County, from Pomona to Riverside, Corona and Temecula) outlined on an OpenStreetMap
-// map (data/serviceAreaOutline.js), and a link to every city page that exists (the Inland Empire has none yet). The map library, its tiles and the outline load only
-// when the map is about to scroll into view. Mobile keeps the map still so it never traps a page swipe.
+// map (data/serviceAreaOutline.js), a pin for each location with a page and, beside the map (under it on phones), a column of those locations
+// labelled "Roofers Santa Monica" and so on. Tapping a label flies the map to that pin and opens its popup; the popup and the label's "Page" link
+// go to the city's page. Under the component, the other places in the area that have no page are listed as plain text, with no links
+// (ALSO_SERVING in data/locations.js). The map library, its tiles and the outline load only when the map is about to scroll into view. Mobile
+// keeps the map still so it never traps a page swipe.
 export default function ServiceArea({
-  hideCities = false, // true: the city links under the map are never shown, not even after a ZIP search (home page); they stay in the page's HTML
   allAreasLink = false, // true: a text link under the map goes to the all-locations hub, /service-areas/ (home page)
   heading = 'Locations We Proudly __Serve__',
   sub = 'The outlined area is where we work: Los Angeles County, Orange County, and the Inland Empire from Pomona to Riverside, Corona and Temecula. Enter your ZIP code to confirm we cover you.',
 }) {
   const wrapRef = useRef(null);
   const mapEl = useRef(null);
-  const map = useRef(null); // { L, map, zipPin }
+  const mapBox = useRef(null);
+  const listRef = useRef(null);
+  const itemRefs = useRef([]);
+  const pending = useRef(null); // a location picked before the map was ready
+  const map = useRef(null); // { L, map, markers, zipPin, active }
 
   const [zip, setZip] = useState('');
   const [msg, setMsg] = useState(null);
   const [offline, setOffline] = useState(false);
+  const [active, setActive] = useState(-1);
+
+  // Highlight a location in the column and on the map (only uses refs and setActive, so the map's pin clicks can call it). fly: also move the map to
+  // it and open its popup; toMap: on phones, scroll the page so the map is in view (the column sits under the map there).
+  const select = (i, fly, toMap = false) => {
+    setActive(i);
+    const m = map.current;
+    if (!m) {
+      pending.current = fly ? i : null; // the map isn't ready yet: do it when it is
+      return;
+    }
+    if (m.active > -1) m.markers[m.active].setIcon(qrsPin(m.L, false));
+    m.active = i;
+    m.markers[i].setIcon(qrsPin(m.L, true));
+
+    // Keep the selected location visible in the column (when it is a column beside the map)
+    const list = listRef.current, li = itemRefs.current[i];
+    if (list && li && window.matchMedia('(min-width: 901px)').matches) {
+      const top = li.offsetTop, bottom = top + li.offsetHeight;
+      if (top < list.scrollTop || bottom > list.scrollTop + list.clientHeight) list.scrollTo({ top: top - 48, behavior: 'smooth' });
+    }
+    if (fly) {
+      m.map.flyTo(m.markers[i].getLatLng(), 11, { duration: 0.8 });
+      m.markers[i].openPopup();
+      if (toMap && window.matchMedia('(max-width: 900px)').matches) mapBox.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  };
 
   useEffect(() => {
     let cancelled = false, watcher;
@@ -65,7 +98,17 @@ export default function ServiceArea({
           style: { color: '#062d57', weight: 3, opacity: 0.9, fillColor: '#d4b572', fillOpacity: 0.22 },
         }).addTo(leafletMap);
         leafletMap.fitBounds(SERVICE_AREA_BOUNDS);
-        map.current = { L, map: leafletMap, zipPin: null };
+
+        // A pin for every location with a page: its popup names it and links to its page
+        const markers = LOCATIONS.map(({ city, slug, lat, lng }, i) =>
+          L.marker([lat, lng], { icon: qrsPin(L, false), title: 'Roofers ' + city, alt: 'Roofers ' + city })
+            .addTo(leafletMap)
+            .bindPopup('<b>Roofers ' + city + '</b><a href="' + cityPath(slug) + '">' + city + ' roofing page →</a><br><a href="' + TEL + '">' + PHONE + '</a>')
+            .on('click', () => select(i, false))
+        );
+        map.current = { L, map: leafletMap, markers, zipPin: null, active: -1 };
+        if (pending.current !== null) select(pending.current, true); // a label was tapped while the map was loading
+        pending.current = null;
       } catch {
         if (!cancelled) setOffline(true); // map library didn't load: the ZIP check and the city links still work
       }
@@ -110,7 +153,7 @@ export default function ServiceArea({
       const hit = await nominatimSearch('postalcode=' + z);
       if (!hit) throw new Error('none');
       const pt = [+hit.lat, +hit.lon];
-      const { location, distance } = nearestLocation(pt);
+      const { location, index, distance } = nearestLocation(pt);
       const inArea = distance <= SERVICE_RADIUS_MI;
       const { SERVICE_AREA_OUTLINE } = await import('@/data/serviceAreaOutline');
       const insideOutline = inArea || pointInGeoJson(pt, SERVICE_AREA_OUTLINE);
@@ -120,8 +163,9 @@ export default function ServiceArea({
         m.zipPin = m.L.circleMarker(pt, { radius: 8, color: '#fff', weight: 3, fillColor: '#062d57', fillOpacity: 1 }).addTo(m.map);
         m.map.flyToBounds(m.L.latLngBounds([pt, [location.lat, location.lng]]).pad(inArea ? 0.6 : 0.3), { duration: 0.8, maxZoom: 12 });
       }
+      if (inArea) select(index, false);
       setMsg(inArea
-        ? <><b>Good news!</b> {z} is in our service area. Nearest: <Link href={cityPath(location.slug)} prefetch={false}>QRS {location.city}</Link>.</>
+        ? <><b>Good news!</b> {z} is in our service area. Nearest: <Link href={cityPath(location.slug)} prefetch={false}>Roofers {location.city}</Link>.</>
         : insideOutline
           ? <><b>Good news!</b> {z} is inside the area we serve, a longer drive from our nearest city. Call <b>{PHONE}</b> to confirm scheduling.</>
           : <>{z} looks outside our current area. Call <b>{PHONE}</b> and we&rsquo;ll let you know.</>);
@@ -165,7 +209,7 @@ export default function ServiceArea({
             </div>
           </div>
 
-          <div className="loc-map-box">
+          <div className="loc-map-box" ref={mapBox}>
             <div id="qrsMap" ref={mapEl} role="region" aria-label="Map outlining the Los Angeles County, Orange County and Inland Empire area QRS serves">
               {offline && (
                 <div style={{ display: 'grid', placeItems: 'center', height: '100%', color: '#cfdae5', fontSize: '.9rem' }}>Map unavailable offline</div>
@@ -177,23 +221,50 @@ export default function ServiceArea({
               </svg>
             </button>
           </div>
+
+          {/* The locations: "Roofers Santa Monica" and so on. The label moves the map to that pin; "Page" opens the city's page. */}
+          <div className="sa-list" ref={listRef} role="group" aria-label="Our locations">
+            {REGIONS.map((region) => (
+              <div className="sa-region" key={region.slug}>
+                <h3>{region.name}</h3>
+                <ul>
+                  {citiesIn(region.slug).map(({ city, slug }) => {
+                    const i = LOCATIONS.findIndex((l) => l.slug === slug);
+                    return (
+                      <li className={'sa-item' + (active === i ? ' active' : '')} key={slug} ref={(el) => { itemRefs.current[i] = el; }}>
+                        <button type="button" className="sa-pick" aria-pressed={active === i} onClick={() => select(i, true, true)}>
+                          Roofers {city}
+                        </button>
+                        <Link className="sa-go" href={cityPath(slug)} prefetch={false} aria-label={`${city} roofing page`}>
+                          Page <ArrowRight />
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* Still in the page's HTML when hidden, so the links stay crawlable; a ZIP search never shows them */}
-        <nav className="sa-cities" aria-label="Cities we serve" hidden={hideCities}>
-          {REGIONS.map((region) => (
-            <div key={region.slug}>
-              <h3>{region.name}</h3>
-              <ul>
-                {citiesIn(region.slug).map(({ city, slug }) => (
-                  <li key={slug}>
-                    <Link href={cityPath(slug)} prefetch={false}>{city} roofing</Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </nav>
+        {/* Other places in the area with no page of their own: plain text, no links */}
+        <div className="sa-also">
+          <h3>We Also Serve</h3>
+          <p className="sa-also-sub">Our service area reaches well beyond the cities above. If you are near any of these places, we cover you.</p>
+          <div className="sa-also-grid">
+            {ALSO_SERVING.map((group) => (
+              <div className="sa-also-group" key={group.name}>
+                <h4>{group.name}</h4>
+                <ul>
+                  {group.places.map((place) => (
+                    <li key={place}>{place}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <p className="sa-also-note">Don&rsquo;t see your area? Enter your ZIP code above or call <b>{PHONE}</b> and we&rsquo;ll let you know.</p>
+        </div>
 
         {allAreasLink && (
           <p className="sa-all">

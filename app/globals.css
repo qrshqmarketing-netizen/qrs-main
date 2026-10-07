@@ -68,7 +68,7 @@ button,input,select,textarea{font:inherit}
 button{cursor:pointer}
 /* Phones first: no double-tap delay, and small links and buttons get a 44px hit area (an invisible extension, so nothing moves) */
 a,button,summary,input,select,textarea,label{touch-action:manipulation}
-.crumbs a,.tst-name,.tst-links a,.art-all a,.sa-cities a,.office-phone,a[href^="tel:"]:not(.btn),.ft-copy a,.text-link{position:relative}
+.crumbs a,.tst-name,.tst-links a,.art-all a,.office-phone,a[href^="tel:"]:not(.btn),.ft-copy a,.text-link{position:relative}
 .crumbs a:before,.tst-name:before,.tst-links a:before,.art-all a:before,.office-phone:before,a[href^="tel:"]:not(.btn):before,.ft-copy a:before{content:"";position:absolute;inset:-12px -6px}
 /* Side gutters: 20px on phones, 40px from tablet up and 48px on wide screens, so text never sits against the screen edge or under the Instant
    Quote tab, and lines up with the logo inside the header pill (Header.css) */

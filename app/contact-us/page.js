@@ -57,7 +57,7 @@ export default function ContactPage() {
       <Offices sub="Visit or call any of our offices. One phone number reaches our whole team." note={`Hours: ${HOURS_LINE}`} photos={false} />
       <ValueGrid heading={page.ways.heading} items={page.ways.items} />
       <RoofCheck />
-      <ServiceArea heading="Check Your Service Area" sub="Enter your ZIP code to confirm we cover your address, or choose your city below." />
+      <ServiceArea heading="Check Your Service Area" sub="Enter your ZIP code to confirm we cover your address, or pick your city from the list." />
       <Faq heading="Contact FAQs" sub="Straight answers about reaching our team." faqs={FAQS} cta={false} />
       <FinalCta
         heading="Talk to a Roofer, Not a Call Center"

@@ -94,7 +94,7 @@ export default async function HomePage() {
         <ReviewStrip />
         <Services title="Roofing __Systems__" items={HOME_PRODUCTS} compact cta={false} pattern={false} slider id="roofing-systems" />
         <PromoSection />
-        <ServiceArea hideCities allAreasLink />
+        <ServiceArea allAreasLink />
         <QrsStandard />
         <WhyQrs />
         {SHOW_RECENT_WORK && <ProjectCarousel heading="Recent Work" sub={RECENT_WORK_SUB} projects={RECENT_WORK} id="work" pattern />}

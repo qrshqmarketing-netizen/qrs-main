@@ -7,12 +7,19 @@ import { postDate } from '@/components/sections/PostCards';
 import JsonLd from '@/components/ui/JsonLd';
 import Rich from '@/components/ui/Rich';
 import { headingId } from '@/data/blog/posts';
+import { visualFor } from '@/data/blog/visuals';
+import ReadingProgress from '@/components/blog/ReadingProgress';
+import renderSection from '@/components/blog/PostVisuals';
 import { BLOG_LINK, blogPath, HOME } from '@/data/catalog';
 import { relatedLinks } from '@/data/content';
 import { pageJsonLd } from '@/lib/structuredData';
 import './BlogPost.css';
 
 const FAQ_HEADING = 'Frequently Asked Questions';
+
+// Minutes to read the article, from its own words (about 220 words a minute), shown beside the date
+const words = (value) => (typeof value === 'string' ? value.replace(/[*\[\]()]/g, ' ').split(/\s+/).filter(Boolean).length : Array.isArray(value) ? value.reduce((n, v) => n + words(v), 0) : value && typeof value === 'object' ? Object.values(value).reduce((n, v) => n + words(v), 0) : 0);
+const readMinutes = (post) => Math.max(1, Math.round(words([post.intro, post.sections, post.faqs, post.closing]) / 220));
 
 // One block of a post section (the block types are listed in data/blog/posts.js)
 function Block({ block }) {
@@ -84,13 +91,14 @@ function Block({ block }) {
   return null;
 }
 
-function PostSection({ section, id }) {
+function PostSection({ section, id, slug }) {
+  const plain = (block, i) => <Block block={block} key={i} />;
+  // A section can be shown as a richer component (data/blog/visuals.js); everything else stays plain text
+  const spec = slug && visualFor(slug, section.heading);
   return (
     <section aria-labelledby={id}>
       <h2 id={id}>{section.heading}</h2>
-      {section.blocks.map((block, i) => (
-        <Block block={block} key={i} />
-      ))}
+      {spec ? renderSection(section.blocks, spec, plain, { slug, id }) : section.blocks.map(plain)}
     </section>
   );
 }
@@ -114,6 +122,7 @@ export default function BlogPost({ post }) {
   return (
     <main id="top">
       <JsonLd data={schema} />
+      <ReadingProgress />
       <article className="post">
         <div className="container post-inner">
           <Breadcrumbs items={crumbs} />
@@ -130,7 +139,8 @@ export default function BlogPost({ post }) {
               <>
                 {' '}· Updated <time dateTime={post.dateModified}>{postDate(post.dateModified)}</time>
               </>
-            )}
+            )}{' '}
+            · {readMinutes(post)} min read
           </p>
           {post.image && (
             <figure className="post-image">
@@ -155,7 +165,7 @@ export default function BlogPost({ post }) {
             </nav>
           )}
           {post.sections.map((section) => (
-            <PostSection section={section} id={headingId(section.heading)} key={section.heading} />
+            <PostSection section={section} id={headingId(section.heading)} slug={post.slug} key={section.heading} />
           ))}
           {faqs.length > 0 && (
             <section className="post-faqs" aria-labelledby={headingId(FAQ_HEADING)}>

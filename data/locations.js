@@ -25,6 +25,16 @@ export const LOCATIONS = [
   { city: 'Vernon', slug: 'vernon', county: 'Los Angeles County', region: 'la-county', lat: 34.0018, lng: -118.2184 },
 ];
 
+// Places inside the outlined service area (data/serviceAreaOutline.js) that have no page of their own: shown as plain text, with no links, under the
+// service area map (components/sections/ServiceArea.jsx). The Inland Empire groups come first (Riverside County, and the southwest corner of San Bernardino
+// County between Pomona and Riverside); the others are more of the two counties. Every place was checked to sit inside the outline. Edit freely.
+export const ALSO_SERVING = [
+  { name: 'Inland Empire: Riverside County', places: ['Riverside', 'Corona', 'Norco', 'Eastvale', 'Jurupa Valley', 'Moreno Valley', 'Perris', 'Menifee', 'Lake Elsinore', 'Murrieta', 'Temecula'] },
+  { name: 'Inland Empire: San Bernardino County', places: ['Chino', 'Chino Hills', 'Ontario', 'Montclair', 'Upland', 'Rancho Cucamonga', 'Fontana', 'Rialto', 'Colton', 'Grand Terrace'] },
+  { name: 'More of Los Angeles County', places: ['Beverly Hills', 'West Hollywood', 'Culver City', 'Sherman Oaks', 'Encino', 'Van Nuys', 'Calabasas', 'Inglewood', 'Alhambra', 'Arcadia', 'Pomona', 'West Covina', 'Whittier', 'Downey', 'Redondo Beach', 'Manhattan Beach'] },
+  { name: 'More of Orange County', places: ['Fullerton', 'Brea', 'Yorba Linda', 'Orange', 'Tustin', 'Garden Grove', 'Costa Mesa', 'Mission Viejo', 'Lake Forest', 'Laguna Niguel', 'Laguna Beach', 'Dana Point', 'San Clemente', 'Seal Beach'] },
+];
+
 // A ZIP code within this many miles of a city above counts as "in our service area"
 export const SERVICE_RADIUS_MI = 15;
 
