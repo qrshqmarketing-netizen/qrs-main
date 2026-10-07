@@ -26,13 +26,30 @@ export default function Header() {
   const [openItem, setOpenItem] = useState(null); // 'services' | 'res' | 'com' | 'about' | null
   const [activeGroup, setActiveGroup] = useState(0); // roof type shown in the Residential menu
   const [theme, setTheme] = useState('light');
-  const requestPage = usePathname() === START_PATH; // /start/ shows only the logo, theme switch and call button
+  const pathname = usePathname();
+  const [pastHero, setPastHero] = useState(false); // scrolled below the photo hero: the bar turns solid
+  const requestPage = pathname === START_PATH; // /start/ shows only the logo, theme switch and call button
   const closeTimer = useRef(null);
   const triggers = useRef({});
 
   useEffect(() => {
     document.body.classList.toggle('menu-open', menuOpen);
   }, [menuOpen]);
+
+  // Over a photo hero the bar is transparent; once the hero has scrolled up under it, it turns solid (CSS: Header.css, the data-solid attribute below)
+  useEffect(() => {
+    const update = () => {
+      const hero = document.querySelector('.hero, .st-hero');
+      setPastHero(Boolean(hero) && hero.getBoundingClientRect().bottom < 90);
+    };
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    return () => {
+      window.removeEventListener('scroll', update);
+      window.removeEventListener('resize', update);
+    };
+  }, [pathname]);
 
   useEffect(() => {
     setTheme(document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light');
@@ -122,9 +139,9 @@ export default function Header() {
   const { services, buildings, partner } = COMMERCIAL_MENU;
 
   return (
-    <header className="site-header">
+    <header className="site-header" data-solid={pastHero || menuOpen || openItem ? 'true' : undefined}>
       <div className="container nav">
-        <BrandLogo variant="dark-sm" preload />
+        <BrandLogo variant="adaptive" preload />
 
         {!requestPage && (
         <nav className={'navlinks' + (menuOpen ? ' mobile-open' : '')} id="navlinks" aria-label="Main" onClick={onNavClick}>
