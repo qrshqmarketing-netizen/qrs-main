@@ -1,8 +1,10 @@
+import Image from 'next/image';
 import BrandLogo from '@/components/ui/BrandLogo';
 import { FacebookIcon, InstagramIcon, LinkedInIcon, YouTubeIcon } from '@/components/ui/icons';
 import SiteLink from '@/components/ui/SiteLink';
 import { FOOTER } from '@/data/navigation';
-import { BUSINESS, SOCIAL } from '@/data/site';
+import { BUSINESS, OFFICES, PHONE, SOCIAL, TEL } from '@/data/site';
+import { hoursText } from '@/lib/hours';
 import CopyrightYear from './CopyrightYear';
 import HideOnStart from './HideOnStart';
 import './Footer.css';
@@ -14,29 +16,50 @@ const links = (list) =>
     </SiteLink>
   ));
 
+// The studio-style footer: a neighborhood photo under a deep navy shade, the phone number large with the three offices beside it, the logo and link
+// columns under a hairline, and the small print last. The request page (/start/) keeps only the small print (HideOnStart).
 export default function Footer() {
   return (
     <footer>
+      <Image className="ft-photo" src="/images/home-hero-shingle-neighborhood-drone-view.webp" alt="" fill sizes="100vw" quality={55} loading="lazy" />
+      <div className="ft-shade" aria-hidden="true"></div>
       <div className="container">
-        {/* The request page (/start/) keeps only the small print below */}
         <HideOnStart>
-        <div className="ft-grid">
-          {FOOTER.columns.map((col) => (
-            <nav className="ft-col" aria-label={col.title} key={col.title}>
-              <h3>{col.title}</h3>
-              {links(col.links)}
-            </nav>
-          ))}
-          <div className="ft-col ft-brand">
-            <BrandLogo variant="dark" />
-            <div className="ft-social">
-              {SOCIAL.facebook && <a href={SOCIAL.facebook} aria-label="Facebook"><FacebookIcon /></a>}
-              {SOCIAL.instagram && <a href={SOCIAL.instagram} aria-label="Instagram"><InstagramIcon /></a>}
-              {SOCIAL.linkedin && <a href={SOCIAL.linkedin} aria-label="LinkedIn"><LinkedInIcon /></a>}
-              {SOCIAL.youtube && <a href={SOCIAL.youtube} aria-label="YouTube"><YouTubeIcon /></a>}
+          <div className="ft-top">
+            <div className="ft-call">
+              <p className="ft-label">Talk to a roofer</p>
+              <a className="ft-phone" href={TEL}>{PHONE}</a>
+              <p className="ft-hours">{hoursText(BUSINESS.hours)}. One number reaches all three offices.</p>
+            </div>
+            <div className="ft-offices">
+              {OFFICES.map((office) => (
+                <address key={office.name}>
+                  <b>{office.name}</b>
+                  {office.address.street}
+                  <br />
+                  {office.address.city}, {office.address.region} {office.address.postalCode}
+                </address>
+              ))}
             </div>
           </div>
-        </div>
+
+          <div className="ft-grid">
+            <div className="ft-col ft-brand">
+              <BrandLogo variant="dark" />
+              <div className="ft-social">
+                {SOCIAL.facebook && <a href={SOCIAL.facebook} aria-label="Facebook"><FacebookIcon /></a>}
+                {SOCIAL.instagram && <a href={SOCIAL.instagram} aria-label="Instagram"><InstagramIcon /></a>}
+                {SOCIAL.linkedin && <a href={SOCIAL.linkedin} aria-label="LinkedIn"><LinkedInIcon /></a>}
+                {SOCIAL.youtube && <a href={SOCIAL.youtube} aria-label="YouTube"><YouTubeIcon /></a>}
+              </div>
+            </div>
+            {FOOTER.columns.map((col) => (
+              <nav className="ft-col" aria-label={col.title} key={col.title}>
+                <h3>{col.title}</h3>
+                {links(col.links)}
+              </nav>
+            ))}
+          </div>
         </HideOnStart>
         <div className="ft-copy">
           <span>

@@ -1,38 +1,54 @@
-/* ---------- Footer (dark) ---------- */
-footer{position:relative;isolation:isolate;overflow:hidden;background:var(--surface-navy);color:#fff;padding:44px 0 96px} /* bottom room so the chat bubble never covers the copyright */
-footer .container{position:relative}
-footer .container{max-width:1080px}
-.ft-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px 20px}
+/* ---------- Footer: the studio look ----------
+   A neighborhood photo under a deep navy shade. The phone number is the big line, with the three offices beside it; the logo and link columns sit
+   under a hairline and the small print comes last. Always dark, in both themes. Mobile first. */
+footer{position:relative;isolation:isolate;overflow:hidden;background:#071a2e;color:#fff;padding:72px 0 96px} /* bottom room so the chat bubble never covers the copyright */
+.ft-photo{object-fit:cover;object-position:center 40%;z-index:-2}
+.ft-shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(5,22,40,.94) 0%,rgba(5,22,40,.84) 45%,rgba(5,22,40,.94) 100%)}
+footer .container{position:relative;max-width:1540px}
+.ft-label{margin:0 0 16px;display:flex;align-items:center;gap:12px;font:600 12px/1.2 var(--font-text),sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.62)}
+.ft-label:before{content:"";width:28px;height:1px;background:currentColor}
+
+.ft-top{display:grid;gap:40px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.18)}
+.ft-phone{display:inline-block;white-space:nowrap;font:300 clamp(34px,9.4vw,76px)/1 var(--font-text),sans-serif;letter-spacing:-.04em;color:#fff;transition:color .2s ease}
+.ft-phone:hover{color:var(--gold-2)}
+.ft-hours{margin:16px 0 0;max-width:36ch;font-size:15px;line-height:1.6;color:rgba(255,255,255,.72)}
+.ft-offices{display:grid;gap:22px}
+.ft-offices address{font-style:normal;font-size:15px;line-height:1.6;color:rgba(255,255,255,.72)}
+.ft-offices b{display:block;margin-bottom:4px;font:500 17px/1.3 var(--font-text),sans-serif;letter-spacing:-.01em;color:#fff}
+
+.ft-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px 20px;padding:48px 0 8px}
 .ft-col{display:flex;flex-direction:column;align-items:flex-start;min-width:0}
-.ft-col h3{color:var(--gold);font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
+.ft-col h3{margin:0 0 14px;font:600 12px/1.2 var(--font-text),sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.55)}
 /* 40px tall rows on phones so every link is an easy tap target */
-.ft-col a{display:flex;align-items:center;min-height:40px;font-family:var(--font-head);font-size:15px;font-weight:500;line-height:1.35;color:rgba(255,255,255,.82)}
+.ft-col a{display:flex;align-items:center;min-height:40px;font:400 16px/1.35 var(--font-text),sans-serif;color:rgba(255,255,255,.88);transition:color .2s ease}
 .ft-col a:hover{color:var(--gold-2)}
-.ft-brand{grid-column:1/-1;grid-row:1;align-items:flex-start;justify-content:space-between;margin-bottom:8px}
-.ft-brand .brand-logo{height:56px}
-.ft-social{display:flex;gap:4px;margin:12px 0 0 -11px}
-.ft-social a{width:44px;height:44px;color:rgba(255,255,255,.55);display:grid;place-items:center}
+.ft-brand{grid-column:1/-1}
+.ft-brand .brand-logo{height:52px}
+.ft-social{display:flex;gap:6px;margin:14px 0 0 -11px}
+.ft-social a{width:44px;height:44px;color:rgba(255,255,255,.6);display:grid;place-items:center}
 .ft-social a:hover{color:var(--gold)}
-.ft-social svg{width:24px;height:24px}
-.ft-copy{
-  margin:28px 0 0;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);color:rgba(255,255,255,.78);
-  padding:16px 18px;font-size:13px;font-weight:600;line-height:1.5;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;
-}
+.ft-social svg{width:22px;height:22px}
+
+.ft-copy{margin:40px 0 0;padding-top:22px;border-top:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.62);font-size:13px;line-height:1.6;display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center}
+.ft-copy a{color:inherit;transition:color .2s ease}
 .ft-copy a:hover{color:var(--gold-2)}
+
 @media (min-width:621px){
-  footer{padding:56px 0 18px}
-  .ft-grid{grid-template-columns:repeat(4,1fr);gap:32px 24px}
-  .ft-col h3{margin-bottom:14px}
+  footer{padding:96px 0 26px}
+  .ft-offices{grid-template-columns:repeat(3,1fr);gap:28px}
+  .ft-grid{grid-template-columns:repeat(4,1fr);gap:40px 28px}
   .ft-col a{min-height:0;margin-bottom:12px}
-  .ft-social{gap:18px;margin:16px 0 0}
-  .ft-social a{width:26px;height:26px}
-  .ft-copy{margin-top:44px;padding:18px 20px;font-size:.8rem;line-height:inherit;gap:10px 14px}
-  .ft-copy span+span{padding-left:14px;border-left:1px solid rgba(255,255,255,.2)}
+  .ft-copy{gap:8px 22px}
+  .ft-copy span+span{padding-left:22px;border-left:1px solid rgba(255,255,255,.22)}
 }
 @media (min-width:901px){
-  /* Logo and social icons on the left, the four link columns beside them */
-  .ft-grid{grid-template-columns:1.3fr repeat(4,1fr)}
-  .ft-brand{grid-column:1;grid-row:1;justify-content:flex-start;margin-bottom:0}
+  footer{padding-top:120px}
+  .ft-phone{font-size:clamp(48px,5.4vw,92px)}
+  .ft-top{grid-template-columns:1.25fr 1fr;align-items:end;gap:72px;padding-bottom:64px}
+  .ft-offices{grid-template-columns:repeat(3,1fr)}
+  .ft-grid{grid-template-columns:1.3fr repeat(4,1fr);padding-top:60px}
+  .ft-brand{grid-column:1}
+  .ft-social{margin-left:-11px}
 }
 /* /start/ shows only the small print (HideOnStart): no gap above it */
-footer .container > .ft-copy:first-child{margin-top:0}
+footer .container > .ft-copy:first-child{margin-top:0;border-top:0;padding-top:0}
