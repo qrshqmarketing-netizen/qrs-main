@@ -2,7 +2,6 @@ import Faq from '@/components/sections/Faq';
 import LatestArticles from '@/components/sections/LatestArticles';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
-import RelatedLinks from '@/components/sections/RelatedLinks';
 import ReviewStrip from '@/components/sections/ReviewStrip';
 import LocalIntro from '@/components/sections/LocalIntro';
 import StudioProjects from '@/components/studio/StudioProjects';
@@ -11,7 +10,6 @@ import JsonLd from '@/components/ui/JsonLd';
 import { HOME, LOCATIONS_LINK } from '@/data/catalog';
 import { cityPath, findRegion, regionPath } from '@/data/locations';
 import { projectsNear } from '@/data/projects';
-import { projectsRelatedTo } from '@/data/projectPages';
 import { SERVICES } from '@/data/services';
 import { OFFICES, SITE_URL } from '@/data/site';
 import { pageJsonLd } from '@/lib/structuredData';
@@ -73,7 +71,6 @@ export default async function LocationPage({ location, page, index = 0 }) {
         projects={nearby.projects}
         allLink={false}
       />
-      <RelatedLinks heading={`Recent projects in ${city}`} links={projectsRelatedTo(cityPath(slug))} />
       <LatestArticles posts={await articlesFor(cityPath(slug))} heading="Related Roofing Articles" />
       <Faq heading={`${city} Roofing FAQs`} sub={`Straight answers for ${city} ${page.offer === 'commercial' ? 'clients' : 'homeowners'}.`} faqs={page.faqs} cta={false} />
       <RoofCheck offer={page.offer || 'home'} />

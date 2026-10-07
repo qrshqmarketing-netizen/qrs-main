@@ -11,3 +11,6 @@ export const LATEST_PROJECTS = PROJECT_PAGES;
 
 // Links to the projects that list `href` (a service or city page) as related: [{ href, label }]
 export const projectsRelatedTo = (href) => PROJECT_PAGES.filter((p) => p.related?.includes(href)).map((p) => ({ href: p.path, label: p.label }));
+
+// The project pages that list `href` (a service or city page) as related, newest first, as full project objects (for the stacked project cards)
+export const projectPagesFor = (href, limit = 4) => PROJECT_PAGES.filter((p) => p.related?.includes(href)).slice(0, limit);

@@ -3,7 +3,6 @@ import LatestArticles from '@/components/sections/LatestArticles';
 import FeatureBand from '@/components/sections/FeatureBand';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
-import RelatedLinks from '@/components/sections/RelatedLinks';
 import ReviewStrip from '@/components/sections/ReviewStrip';
 import Overview from '@/components/sections/Overview';
 import PartnerLogos from '@/components/sections/PartnerLogos';
@@ -11,7 +10,8 @@ import ProcessSteps from '@/components/sections/ProcessSteps';
 import RoofCheck from '@/components/sections/RoofCheck';
 import WhyChoose from '@/components/sections/WhyChoose';
 import JsonLd from '@/components/ui/JsonLd';
-import { projectsRelatedTo } from '@/data/projectPages';
+import { projectPagesFor } from '@/data/projectPages';
+import StudioProjects from '@/components/studio/StudioProjects';
 import { pageJsonLd } from '@/lib/structuredData';
 import { closingCta, faqSub } from './shared';
 import { heroOutcome } from '@/data/heroOutcomes';
@@ -138,7 +138,8 @@ export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], 
       <WhyChoose heading={page.why.heading} intro={page.why.intro} points={page.why.points} />
       <LatestArticles posts={await articlesFor(crumbs.at(-1).href)} heading="Related Roofing Articles" />
       {page.faqs?.length > 0 && <Faq heading="Frequently Asked __Questions__" sub={faqSub(page.keyword)} faqs={page.faqs} cta={false} />}
-      <RelatedLinks heading="Recent projects" links={projectsRelatedTo(crumbs.at(-1).href)} />
+      {/* The projects that list this page as related, as stacked photo cards (shown only when there are any) */}
+      <StudioProjects projects={projectPagesFor(crumbs.at(-1).href)} heading="This work, on real roofs" />
       <RoofCheck tone="white" offer={offer} />
       <FinalCta {...finalCta} />
     </main>
