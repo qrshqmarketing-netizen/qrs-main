@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import { LINE_REVEALS } from '@/data/promo';
 
 // Subtle scroll reveals: as a visitor scrolls down, the parts of each section (its heading, text, cards, images) fade up a few pixels, once,
 // as they come into view; the cards of a grid follow each other a moment apart. Nothing moves above the fold or on the hero, nothing shifts
@@ -13,6 +14,8 @@ import { useEffect } from 'react';
 const SECTIONS = 'main > section:not(.hero):not(.home-hero):not(.proofbar)';
 // Parts that never move: sliders, maps and embeds (and anything marked data-no-reveal)
 const STILL = '[data-no-reveal], .svc-marquee, .svc-marquee-viewport, .project-carousel-frame, .morph-slider, .leaflet-container, .sa-wrap, .loc-wrap, iframe, video';
+// Headings (and the home page's big statement) reveal word by word instead (components/studio/StudioMotion.jsx), so they are not faded here as well
+const HEADING = 'h2, .st-lead';
 const SKIP_TAGS = new Set(['SCRIPT', 'STYLE', 'NOSCRIPT', 'TEMPLATE']);
 const BLOCK_GAP_MS = 90; // between a section's own parts (heading, then text), at most two steps
 const CARD_GAP_MS = 80; // between the cards of one row
@@ -76,6 +79,14 @@ export default function RevealSections() {
       const display = getComputedStyle(block).display;
       const group = (display === 'grid' || display === 'flex' || block.matches('ul, ol')) && items.length >= 2 && items.length <= 16 && !items.some(isStill);
       if (!group) {
+        if (LINE_REVEALS) {
+          // a heading is left to the line reveal; a wrapper around one reveals its other parts one by one
+          if (block.matches(HEADING)) return;
+          if (block.querySelector(HEADING)) {
+            [...block.children].forEach((k, i) => collect(k, index + i));
+            return;
+          }
+        }
         track(block, base);
         return;
       }

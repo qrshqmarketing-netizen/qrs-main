@@ -19,6 +19,7 @@ import ReviewToast from '@/components/widgets/ReviewToast';
 import SeasonPromo from '@/components/widgets/SeasonPromo';
 import RoofAssistant from '@/components/widgets/RoofAssistant';
 import RevealSections from '@/components/ui/RevealSections';
+import StudioMotion from '@/components/studio/StudioMotion';
 import HelpfulTitles from '@/components/ui/HelpfulTitles';
 import { INSTANT_QUOTE_ENABLED } from '@/data/instantQuote';
 import { PAGE_ENTRANCES, SCROLL_REVEALS, STUDIO_THEME } from '@/data/promo';
@@ -76,6 +77,7 @@ export default function RootLayout({ children }) {
         <SiteChrome>
           <Header />
           {SCROLL_REVEALS && <RevealSections />}
+          <StudioMotion />
           <HelpfulTitles />
         </SiteChrome>
         {children}

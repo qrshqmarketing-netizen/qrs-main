@@ -37,3 +37,9 @@ export const promoLandingHref = (medium) => `${PROMO_LANDING_PATH}?utm_source=we
 // The studio look (components/studio/StudioSite.css) on every page: light sentence-case headings and quiet labels, like the home page. false returns the other
 // pages to the condensed uppercase headings.
 export const STUDIO_THEME = true;
+
+// The three scroll effects of components/studio/StudioMotion.jsx (each can be switched off on its own; none runs for visitors who ask for reduced motion):
+// headings (and the home page's big statement) slide up word by word out of a mask, photos drift a little inside their frames, and the mouse wheel and trackpad glide.
+export const LINE_REVEALS = true;
+export const IMAGE_PARALLAX = true;
+export const SMOOTH_SCROLL = true;
