@@ -160,3 +160,17 @@ body.studio-site .post .crumbs ol{font-size:11px;letter-spacing:.12em;margin-bot
 @media (max-width:620px){
   body.studio-site .hero.hero-stack .hero-inner{padding-top:22px;padding-bottom:34px}
 }
+
+/* ---------- centered section headings ----------
+   Stand-alone section headings (with their short line under them) are centered, like "Locations We Proudly Serve": the service area map, the FAQ,
+   related articles, the QRS Way steps, the difference band, partners and every .section-head. Headings that sit beside other content (the label
+   and heading split on the home page, an overview, a split with a picture, process steps beside a picture) stay left, and so do heroes and article titles. */
+body.studio-site main :is(.area,.faq,.articles,.qrs-way,.difference,.partner-logos,.section-head) :is(h2,.eyebrow,.area-sub,.faq-sub,.art-all,p):not(.final *):not(.st-hero *){text-align:center}
+body.studio-site main :is(.area,.faq,.articles,.qrs-way,.difference,.partner-logos,.section-head) :is(h2,.faq-sub,.area-sub,.section-head > p):not(.final *):not(.st-hero *){margin-left:auto;margin-right:auto}
+body.studio-site main :is(.faq,.articles,.qrs-way,.difference) h2{max-width:none}
+body.studio-site main :is(.section-head,.faq,.articles) .eyebrow{justify-content:center}
+body.studio-site main :is(.section-head,.faq,.articles) .eyebrow:before{display:none}
+body.studio-site .section-head,body.studio-site .section-head.center{margin-left:auto;margin-right:auto;text-align:center}
+body.studio-site .difference{text-align:center}
+body.studio-site .difference-icon{margin-left:auto}
+body.studio-site .difference-item p{margin-left:auto;margin-right:auto}
