@@ -97,8 +97,8 @@ export const COMMERCIAL_CONTENT = {
       card: 'Roofing for retail stores, from the low-slope roof over the sales floor to mansard and façade sections, scheduled around store hours.',
       metaTitle: 'Retail Store Roofing in Los Angeles',
       metaDescription: 'Retail store roofing in LA & Orange County: leak repairs, replacement and mansard or façade roofs, planned around your store hours. Request an estimate.',
-      image: '/images/recent-work-commercial-flat-roof-drone-view.webp',
-      imageAlt: 'Aerial view of a completed low-slope commercial roof',
+      image: '/images/recent-work-spanish-tile-flat-roof-street-view.webp',
+      imageAlt: 'Aerial view of a building with a clay tile roof section in front and a flat roof behind it',
       hero: {
         intro: 'QRS provides retail store roofing across Los Angeles and Orange County, repairing and replacing the low-slope roof over your sales floor and the mansard or façade sections out front. We trace sales-floor leaks to the source and plan the work around your store hours, entrances and deliveries, so the store can stay open.',
         highlights: ['Scheduled around store hours', 'Low-slope and mansard sections', 'Sales-floor leaks traced to the source'],
@@ -249,8 +249,8 @@ export const COMMERCIAL_CONTENT = {
       card: 'Roof repairs and replacement for small commercial buildings: workshops, auto and repair shops, studios and storefront businesses.',
       metaTitle: 'Shop & Small Business Roofing in LA',
       metaDescription: 'Shop and small business roofing in LA & Orange County: auto shops, workshops, studios and storefronts, with a written price first. Request an estimate.',
-      image: '/images/recent-work-commercial-flat-roof-drone-view.webp',
-      imageAlt: 'Aerial view of a completed low-slope commercial roof',
+      image: '/images/cta-white-flat-roof-tile-coping-drone-view.webp',
+      imageAlt: 'Aerial view of a white flat roof with a clay tile edge and rooftop equipment',
       hero: {
         intro: 'QRS provides small business roofing across Los Angeles and Orange County, repairing and replacing roofs on auto and repair shops, workshops, studios and storefront businesses. We keep it simple: a roofer shows you photos of what’s wrong, you get a written price before any work starts and the job is planned around your work days.',
         highlights: ['Small roofs, same attention to detail', 'Straight answers for the owner', 'Written price before any work'],
@@ -300,7 +300,7 @@ export const COMMERCIAL_CONTENT = {
       metaTitle: 'Warehouse Roofing in Los Angeles & OC',
       metaDescription: 'Warehouse roofing in Los Angeles & Orange County: large low-slope roofs repaired or replaced in phases around inventory and loading docks. Request a survey.',
       image: '/images/recent-work-commercial-flat-roof-drone-view.webp',
-      imageAlt: 'Aerial view of a completed low-slope commercial roof',
+      imageAlt: 'Aerial view of a large white flat roof with rooftop units above a parking lot',
       hero: {
         intro: 'QRS provides warehouse roofing across Los Angeles and Orange County, surveying, repairing and replacing large low-slope roofs section by section, with the inventory below in mind. We start with a survey, fix the urgent areas first and phase any replacement around your docks and racking so you can keep shipping.',
         highlights: ['Large roofs surveyed section by section', 'Drainage across long, flat spans', 'Work phased around docks and racking'],
@@ -349,8 +349,8 @@ export const COMMERCIAL_CONTENT = {
       card: 'Roofing for malls and shopping centers, phased across tenant spaces and common areas and planned to keep the center open for business.',
       metaTitle: 'Mall & Shopping Center Roofing in LA',
       metaDescription: 'Mall and shopping center roofing in LA & Orange County: leak tracing, repairs and phased replacement across tenant spaces and common areas. Request an estimate.',
-      image: '/images/recent-work-commercial-flat-roof-drone-view.webp',
-      imageAlt: 'Aerial view of a completed low-slope commercial roof',
+      image: '/images/flat-roof-replacement-completed-white-membrane.webp',
+      imageAlt: 'Aerial view of a white flat roof membrane with roofers working across a large roof',
       hero: {
         intro: 'QRS provides shopping center roofing across Los Angeles and Orange County, surveying, repairing and replacing the many roofs over a center’s tenant spaces and common areas in phases. We coordinate the work with center management and plan it around store hours, deliveries, entrances and parking, so tenants and shoppers can carry on.',
         highlights: ['Phased across tenant spaces', 'Common areas and entrances planned', 'Photo records by roof section'],
