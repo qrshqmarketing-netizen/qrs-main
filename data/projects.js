@@ -107,7 +107,7 @@ const milesBetween = ([lat1, lng1], [lat2, lng2]) => {
 export function projectsNear(slug) {
   const center = findCity(slug);
   if (!center) return { projects: [], local: false };
-  const tagged = PROJECTS.filter((p) => p.city === slug && p.image);
+  const tagged = PROJECTS.filter((p) => p.city === slug && p.image).map((p) => ({ ...p, place: [p.area, center.city].filter(Boolean).join(', ') }));
   const nearby = PROJECT_PAGES.map((page) => ({ page, miles: page.geo ? milesBetween([center.lat, center.lng], page.geo) : Infinity }))
     .filter(({ page, miles }) => miles <= NEAR_MI || page.place?.includes(center.city))
     .sort((a, b) => a.miles - b.miles)

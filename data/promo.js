@@ -33,3 +33,7 @@ export const SCROLL_REVEALS = true;
 export const PROMO_NAME = 'el-nino-2026';
 export const PROMO_LANDING_PATH = '/el-nino-roof-check/';
 export const promoLandingHref = (medium) => `${PROMO_LANDING_PATH}?utm_source=website&utm_medium=${medium}&utm_campaign=${PROMO_NAME}`;
+
+// The studio look (components/studio/StudioSite.css) on every page: light sentence-case headings and quiet labels, like the home page. false returns the other
+// pages to the condensed uppercase headings.
+export const STUDIO_THEME = true;

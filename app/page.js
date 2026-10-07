@@ -2,22 +2,22 @@ import Faq from '@/components/sections/Faq';
 import LatestArticles from '@/components/sections/LatestArticles';
 import FeatureBand from '@/components/sections/FeatureBand';
 import FinalCta from '@/components/sections/FinalCta';
-import Hero from '@/components/sections/Hero';
 import PartnerLogos from '@/components/sections/PartnerLogos';
+import ProofBar from '@/components/sections/ProofBar';
 import PromoSection from '@/components/sections/PromoSection';
-import ProjectCarousel from '@/components/sections/ProjectCarousel';
-import QrsStandard from '@/components/sections/QrsStandard';
 import ReviewStrip from '@/components/sections/ReviewStrip';
 import RoofCheck from '@/components/sections/RoofCheck';
 import ServiceArea from '@/components/sections/ServiceArea';
-import Services from '@/components/sections/Services';
-import WhyQrs from '@/components/sections/WhyQrs';
+import StudioHero from '@/components/studio/StudioHero';
+import StudioIntro from '@/components/studio/StudioIntro';
+import StudioProcess from '@/components/studio/StudioProcess';
+import StudioProjects from '@/components/studio/StudioProjects';
+import StudioServices from '@/components/studio/StudioServices';
 import JsonLd from '@/components/ui/JsonLd';
 import { COMMERCIAL_LINK, RESIDENTIAL } from '@/data/catalog';
 import { CAREERS_PAGE, CAREERS_TEASER } from '@/data/pages/careers';
 import { HOME_DESCRIPTION, HOME_H1, HOME_TITLE } from '@/data/site';
 import { LATEST_PROJECTS } from '@/data/projectPages';
-import { RECENT_WORK, RECENT_WORK_SUB } from '@/data/recentWork';
 import { ROOF_FINANCING } from '@/data/services/programs';
 import { homeArticles } from '@/lib/articles';
 import { getHomeFaqs } from '@/lib/contentStore';
@@ -35,9 +35,6 @@ export const metadata = {
 // The home page's "Roofing Services" section: just the two top-level categories from the nav.
 // The hero photo slider: the newest projects' cover photos, newest first (LATEST_PROJECTS in data/projectPages.js)
 const HERO_SLIDES = LATEST_PROJECTS.map((project) => ({ src: project.image, alt: project.imageAlt }));
-
-// The "Recent Work" carousel (data/recentWork.js) is hidden for now: set this to true to show it again
-const SHOW_RECENT_WORK = false;
 
 const HOME_SERVICES = [
   {
@@ -72,33 +69,25 @@ const HOME_PRODUCTS = [
 // (residential and commercial), what other customers say, the roofing systems, the current El Niño offer, the service area check,
 // why QRS, financing partners, articles, careers (for job seekers, so low), the FAQ, then the request card and closing call to action.
 // Reorder or remove a line to change the page.
+// Home page, studio style (components/studio/*, scoped by the `studio` class): a full-height photo hero, a quiet intro, the services as photo cards and a
+// hover list, large featured projects, three steps, then the sections shared with other pages (reviews, the El Niño offer, the service area map,
+// partners, articles, careers, FAQ, request card and closing call to action). The page's H1 is the hero's small
+// keyword line. Reorder or remove a line to change the page.
 export default async function HomePage() {
   const faqs = await getHomeFaqs(); // from the dashboard (lib/contentStore.js), else data/faqs.js
   return (
     <>
       <JsonLd data={pageJsonLd({ path: '/', title: HOME_TITLE, description: HOME_DESCRIPTION, faqs })} />
-      <main id="top">
-        {/* The keyword line above the big headline is the page's H1 (matches the page title) */}
-        <Hero
-          h1="eyebrow"
-          eyebrow={HOME_H1}
-          title={<>Come home to a roof you can <u>trust.</u></>}
-          intro="Clear inspections. Straightforward estimates. Clean workmanship."
-          image={HERO_SLIDES[0].src}
-          imageAlt={HERO_SLIDES[0].alt}
-          slides={HERO_SLIDES}
-          align="center"
-          className="hero-top-pad"
-          stats
-        />
-        <Services items={HOME_SERVICES} compact cta={false} />
+      <main id="top" className="studio">
+        <StudioHero slides={HERO_SLIDES} />
+        <ProofBar strip />
+        <StudioIntro />
+        <StudioServices categories={HOME_SERVICES} items={HOME_PRODUCTS} />
+        <StudioProjects projects={LATEST_PROJECTS.slice(0, 3)} />
+        <StudioProcess />
         <ReviewStrip />
-        <Services title="Roofing __Systems__" items={HOME_PRODUCTS} compact cta={false} pattern={false} slider id="roofing-systems" />
         <PromoSection />
         <ServiceArea allAreasLink />
-        <QrsStandard />
-        <WhyQrs />
-        {SHOW_RECENT_WORK && <ProjectCarousel heading="Recent Work" sub={RECENT_WORK_SUB} projects={RECENT_WORK} id="work" pattern />}
         <PartnerLogos {...ROOF_FINANCING.partners} />
         <LatestArticles posts={await homeArticles(3)} />
         <FeatureBand

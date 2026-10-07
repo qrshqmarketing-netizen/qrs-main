@@ -3,6 +3,7 @@
 import 'leaflet/dist/leaflet.css';
 import './globals.css';
 import './dark-theme.css'; // dark theme colors, toggled from the header and saved in local storage
+import '@/components/studio/StudioSite.css'; // the studio look for every page (STUDIO_THEME in data/promo.js)
 
 import Script from 'next/script';
 import { Big_Shoulders, Libre_Franklin } from 'next/font/google';
@@ -20,7 +21,7 @@ import RoofAssistant from '@/components/widgets/RoofAssistant';
 import RevealSections from '@/components/ui/RevealSections';
 import HelpfulTitles from '@/components/ui/HelpfulTitles';
 import { INSTANT_QUOTE_ENABLED } from '@/data/instantQuote';
-import { PAGE_ENTRANCES, SCROLL_REVEALS } from '@/data/promo';
+import { PAGE_ENTRANCES, SCROLL_REVEALS, STUDIO_THEME } from '@/data/promo';
 import { BUSINESS, CLARITY_ID, GA_ID, HOME_DESCRIPTION, SITE_URL, SITE_VERIFICATION } from '@/data/site';
 import { ALLOW_INDEXING, LOAD_TRACKING, openGraphBase, twitterBase } from '@/lib/seo';
 
@@ -71,7 +72,7 @@ export default function RootLayout({ children }) {
         <script dangerouslySetInnerHTML={{ __html: "try{const saved=localStorage.getItem('qrs-theme');const requested=new URLSearchParams(location.search).get('theme');if((saved||requested)==='dark')document.documentElement.dataset.theme='dark';else document.documentElement.removeAttribute('data-theme')}catch{if(/[?&]theme=dark(&|$)/.test(location.search))document.documentElement.dataset.theme='dark'}" }} />
       </head>
       {/* Pages show up at once: no heading fade-ups unless PAGE_ENTRANCES is on; the subtle scroll reveals are SCROLL_REVEALS (globals.css) */}
-      <body className={PAGE_ENTRANCES ? undefined : 'no-entrance'}>
+      <body className={[PAGE_ENTRANCES ? '' : 'no-entrance', STUDIO_THEME ? 'studio-site' : ''].filter(Boolean).join(' ') || undefined}>
         <SiteChrome>
           <Header />
           {SCROLL_REVEALS && <RevealSections />}

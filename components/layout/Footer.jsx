@@ -1,6 +1,5 @@
 import BrandLogo from '@/components/ui/BrandLogo';
 import { FacebookIcon, InstagramIcon, LinkedInIcon, YouTubeIcon } from '@/components/ui/icons';
-import AuroraBackground from '@/components/sections/AuroraBackground';
 import SiteLink from '@/components/ui/SiteLink';
 import { FOOTER } from '@/data/navigation';
 import { BUSINESS, SOCIAL } from '@/data/site';
@@ -18,10 +17,6 @@ const links = (list) =>
 export default function Footer() {
   return (
     <footer>
-      {/* The aurora and rooftops behind the footer (a calmer dusk than the "Why Choose QRS" band); left out on the /start/ request page */}
-      <HideOnStart>
-        <AuroraBackground variant="footer" />
-      </HideOnStart>
       <div className="container">
         {/* The request page (/start/) keeps only the small print below */}
         <HideOnStart>

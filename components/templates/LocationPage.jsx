@@ -5,7 +5,7 @@ import Hero from '@/components/sections/Hero';
 import RelatedLinks from '@/components/sections/RelatedLinks';
 import ReviewStrip from '@/components/sections/ReviewStrip';
 import LocalIntro from '@/components/sections/LocalIntro';
-import ProjectCarousel from '@/components/sections/ProjectCarousel';
+import StudioProjects from '@/components/studio/StudioProjects';
 import RoofCheck from '@/components/sections/RoofCheck';
 import JsonLd from '@/components/ui/JsonLd';
 import { HOME, LOCATIONS_LINK } from '@/data/catalog';
@@ -65,12 +65,13 @@ export default async function LocationPage({ location, page, index = 0 }) {
       />
       <LocalIntro city={city} heading={page.intro.heading} paragraphs={page.intro.paragraphs} offices={office ? [office] : []} neighborhoods={page.neighborhoods} considerations={page.considerations} />
       <ReviewStrip office={slug} places={[city, ...page.neighborhoods]} />
-      {/* Only real projects in or near this city (by the project's ZIP code pin); with none nearby, no gallery */}
-      <ProjectCarousel
-        city={city}
+      {/* Only real projects in or near this city (by the project's ZIP code pin), stacked as cards; with none nearby, no section */}
+      <StudioProjects
+        id="projects"
+        label={nearby.local ? `Projects in ${city}` : `Projects near ${city}`}
         heading={nearby.local ? `Roofing Projects in ${city}` : `Recent Roofing Projects Near ${city}`}
-        sub={nearby.local ? 'Roofs we have finished here. Pick a project to see how we handled it.' : 'Roofs we have finished close by. Pick a project to see how we handled it.'}
         projects={nearby.projects}
+        allLink={false}
       />
       <RelatedLinks heading={`Recent projects in ${city}`} links={projectsRelatedTo(cityPath(slug))} />
       <LatestArticles posts={await articlesFor(cityPath(slug))} heading="Related Roofing Articles" />

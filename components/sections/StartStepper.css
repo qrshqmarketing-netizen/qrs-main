@@ -8,8 +8,9 @@
 .st-card h2{font-size:22px!important;line-height:1.2;margin:22px 0 14px;color:var(--navy);outline:none}
 .st-progress{height:6px;border-radius:99px;background:var(--line);margin:18px 0 12px;overflow:hidden}
 .st-progress span{display:block;height:100%;background:var(--gold);border-radius:99px;transition:width .3s ease}
-.st-steps{display:flex;gap:6px 14px;flex-wrap:wrap;list-style:none;margin:0 0 4px;padding:0;font-size:13px;font-weight:700;color:var(--muted)}
-.st-steps li{display:flex;align-items:center}
+.st-steps{display:flex;gap:8px 12px;flex-wrap:nowrap;justify-content:space-between;overflow-x:auto;scrollbar-width:none;list-style:none;margin:0 0 4px;padding:0;font-size:13px;font-weight:700;color:var(--muted)}
+.st-steps li{display:flex;align-items:center;flex:none;padding:0;border:0}
+.st-steps::-webkit-scrollbar{display:none}
 .st-steps button,.st-steps li>span{display:inline-flex;align-items:center;gap:6px;background:none;border:0;padding:2px 0;font:inherit;color:inherit}
 .st-steps button{cursor:pointer;text-decoration:underline;text-underline-offset:3px}
 .st-steps i{display:grid;place-items:center;width:20px;height:20px;border-radius:50%;border:1.5px solid var(--line);font-style:normal;font-size:11px}
