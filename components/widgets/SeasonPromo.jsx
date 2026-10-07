@@ -5,12 +5,11 @@ import { usePathname } from 'next/navigation';
 import { CloseIcon, PhoneIcon } from '@/components/ui/icons';
 import { SEASON_PROMO as promo } from '@/data/promo';
 import { PHONE, TEL } from '@/data/site';
-import { COOKIE_OK_EVENT, COOKIE_OK_KEY } from '@/lib/events';
 import { local, session } from '@/lib/storage';
 import PromoRain from './PromoRain';
 import './SeasonPromo.css';
 
-const FIRST_MS = 3000, EXIT_ARM_MS = 8000;
+const FIRST_MS = 15000, EXIT_ARM_MS = 8000; // the card opens 15 seconds after the page loads
 const FLICK_PX = 350, FLICK_MS = 300; // phones: an upward scroll this far this fast, once they're a screen down, reads as leaving
 const PHOTO = '/images/season-promo-storm-over-los-angeles.webp'; // the card's background (SeasonPromo.css)
 
@@ -21,7 +20,7 @@ const preloadPhoto = () => {
 
 // The El Niño season promo for the free roof evaluation (copy in data/promo.js): a centered modal over a dark overlay,
 // at most once per visit. Preview it any time with ?promo (or ?promo=exit for the "before you go" version) on any page.
-// - first visit: shortly after the cookie notice is accepted (the review toast waits while it's open)
+// - first visit: 15 seconds after the page loads, whether or not the cookie notice has been answered (it no longer waits for it)
 // - later visits: on desktop when the pointer leaves through the top of the window; on phones and tablets when
 //   they flick quickly back up the page (reaching for the address bar) or come back after switching tabs or apps
 // Click outside, Esc or ✕ closes it (the exit version also has "No thanks"); once someone books from it, it never shows again.
@@ -36,10 +35,10 @@ export default function SeasonPromo() {
     if (promo.exclude.some((p) => pathname.startsWith(p))) setView(null);
   }, [pathname]);
 
-  const blocked = () =>
+  const blocked = (ignore = []) =>
     !promo.active ||
     promo.exclude.some((p) => path.current.startsWith(p)) ||
-    ['menu-open', 'rm-lock', 'cookie-open'].some((c) => document.body.classList.contains(c));
+    ['menu-open', 'rm-lock', 'cookie-open'].filter((c) => !ignore.includes(c)).some((c) => document.body.classList.contains(c));
 
   // Preview: ?promo or ?promo=exit opens the card right away, whatever this browser has seen before
   useEffect(() => {
@@ -51,8 +50,11 @@ export default function SeasonPromo() {
   useEffect(() => {
     if (!promo.active || local.get('promoSeen')) return;
     let t;
+    // The timer runs from page load and doesn't wait for the cookie notice; it only holds off while the phone menu or the
+    // Instant Quote drawer is open, or after the visitor has already seen the exit version in this visit
     const show = () => {
-      if (blocked()) {
+      if (session.get('promoShown')) return;
+      if (blocked(['cookie-open'])) {
         t = setTimeout(show, 2000);
         return;
       }
@@ -60,15 +62,11 @@ export default function SeasonPromo() {
       session.set('promoShown', '1');
       setView('card');
     };
-    const start = () => {
-      preloadPhoto();
-      t = setTimeout(show, FIRST_MS);
-    };
-    if (local.get(COOKIE_OK_KEY)) start();
-    else window.addEventListener(COOKIE_OK_EVENT, start, { once: true });
+    const photo = setTimeout(preloadPhoto, FIRST_MS - 4000);
+    t = setTimeout(show, FIRST_MS);
     return () => {
+      clearTimeout(photo);
       clearTimeout(t);
-      window.removeEventListener(COOKIE_OK_EVENT, start);
     };
   }, []);
 
