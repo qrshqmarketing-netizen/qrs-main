@@ -68,3 +68,43 @@ body.promo-open .qa-teaser{visibility:hidden}
 }
 /* Short phone screens in landscape: drop the poster height so the buttons stay on screen */
 @media (max-height:620px){.promo{min-height:0}}
+
+/* ---------- The card on the page: the home page section (.promo-inline) and the landing page's top (.promo-landing) ---------- */
+/* Same card as the popup (PromoCard.jsx): storm photo, red ping, lightning on the heading and rain, but wide and centered. These two draw
+   the photo with next/image (.promo-photo) instead of the popup's CSS background. Phones first. */
+.promo-band{background:var(--paper);padding:56px 0}
+.promo-photo{object-fit:cover;object-position:50% 25%;z-index:-2}
+.promo.promo-inline,.promo.promo-landing{
+  max-width:1120px;min-height:0;margin:0 auto;align-items:center;text-align:center;background-image:none;animation:none;
+}
+.promo-inline .promo-eyebrow,.promo-landing .promo-eyebrow{margin:0 0 12px}
+.promo-inline .promo-title,.promo-landing .promo-title{margin:0 0 16px;max-width:900px}
+.promo-inline .promo-text,.promo-landing .promo-text{max-width:640px;margin:0 auto 24px;font-size:16px}
+.promo-inline .promo-actions,.promo-landing .promo-actions{margin-top:0;align-items:center}
+.promo-inline .promo-actions .btn,.promo-landing .promo-actions .btn{width:100%;max-width:380px}
+.promo.promo-inline{padding:52px 22px 46px;border-color:rgba(255,255,255,.45)}
+.promo.promo-inline:before{background:linear-gradient(180deg,rgba(4,14,26,.78) 0%,rgba(4,14,26,.52) 46%,rgba(4,14,26,.82) 100%)}
+.promo-inline .promo-title{font-size:clamp(38px,10vw,60px);line-height:.98}
+/* The landing page's top: the full width of the page, under the header pill */
+.promo.promo-landing{
+  width:100%;max-width:none;min-height:clamp(560px,86vh,760px);justify-content:center;padding:130px 20px 64px;
+  border:0;border-radius:0;box-shadow:none;
+}
+.promo.promo-landing:before{background:linear-gradient(180deg,rgba(4,14,26,.72) 0%,rgba(4,14,26,.5) 40%,rgba(4,14,26,.4) 62%,rgba(4,14,26,.88) 100%)}
+.promo-landing .promo-title{font-size:clamp(46px,13vw,104px);line-height:.96;max-width:1000px}
+.promo-landing .promo-text{font-size:17px}
+.promo-points{display:flex;flex-direction:column;align-items:center;gap:8px;margin:28px 0 0;padding:0;list-style:none;font:600 14px/1.4 var(--font-head);color:rgba(255,255,255,.9);text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.promo-points li:before{content:"✓";margin-right:8px;color:var(--gold-2);font-family:var(--font-glyph)}
+@media (min-width:621px){
+  .promo-band{padding:72px 0}
+  .promo.promo-inline{padding:76px 48px 68px}
+  .promo-inline .promo-text,.promo-landing .promo-text{font-size:19px}
+  .promo-inline .promo-actions,.promo-landing .promo-actions{flex-direction:row;justify-content:center;gap:24px}
+  .promo-inline .promo-actions .btn,.promo-landing .promo-actions .btn{width:auto;min-width:300px}
+  .promo.promo-landing{padding:150px 40px 80px}
+  .promo-points{flex-direction:row;flex-wrap:wrap;justify-content:center;gap:10px 28px;font-size:15px}
+}
+@media (min-width:901px){
+  .promo-landing .promo-text{font-size:21px}
+  .promo.promo-landing{min-height:clamp(640px,88vh,820px)}
+}

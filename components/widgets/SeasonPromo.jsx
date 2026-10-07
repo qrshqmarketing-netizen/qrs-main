@@ -2,11 +2,9 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import { CloseIcon, PhoneIcon } from '@/components/ui/icons';
-import { SEASON_PROMO as promo } from '@/data/promo';
-import { PHONE, TEL } from '@/data/site';
+import { SEASON_PROMO as promo, promoLandingHref } from '@/data/promo';
 import { local, session } from '@/lib/storage';
-import PromoRain from './PromoRain';
+import PromoCard from './PromoCard';
 import './SeasonPromo.css';
 
 const FIRST_MS = 15000, EXIT_ARM_MS = 8000; // the card opens 15 seconds after the page loads
@@ -123,50 +121,28 @@ export default function SeasonPromo() {
   if (!view) return null;
 
   const close = () => setView(null);
-
-  // The button's link (data/promo.js) opens the request steps with the roof inspection picked; remember the claim and close the card
-  const claim = () => {
-    local.set('promoClaimed', '1');
-    setView(null);
-  };
-
   const isExit = view === 'exit';
-  const heading = isExit ? promo.exit.heading : promo.heading;
-  const text = isExit ? promo.exit.text : promo.text;
+
+  // The button opens the El Niño landing page (data/promo.js), tagged with which popup it was
+  const cta = { label: promo.cta.label, href: promoLandingHref(isExit ? 'modal-exit' : 'modal-timed') };
 
   return (
     <div className="promo-backdrop" onClick={close}>
-      <div
-        className="promo"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="promoTitle"
-        onClick={(e) => e.stopPropagation()}
-      >
-        {promo.rain && <PromoRain />}
-        <button className="promo-close" type="button" aria-label="Close" onClick={close} ref={closeRef}>
-          <CloseIcon />
-        </button>
-        <div className="promo-eyebrow">{promo.eyebrow}</div>
-        <p className={'promo-title' + (isExit ? ' promo-title-exit' : '')} id="promoTitle">
-          {heading}
-        </p>
-        <p className="promo-text">{text}</p>
-        <div className="promo-actions">
-          <a className="btn btn-gold" href={promo.cta.href} onClick={claim}>
-            {promo.cta.label}
-          </a>
-          {isExit ? (
-            <button className="promo-skip" type="button" onClick={close}>
-              No thanks
-            </button>
-          ) : (
-            <a className="promo-call" href={TEL}>
-              <PhoneIcon /> {PHONE}
-            </a>
-          )}
-        </div>
-      </div>
+      <PromoCard
+        variant="modal"
+        track={isExit ? 'modal-exit' : 'modal-timed'}
+        exit={isExit}
+        eyebrow={promo.eyebrow}
+        heading={isExit ? promo.exit.heading : promo.heading}
+        headingId="promoTitle"
+        text={isExit ? promo.exit.text : promo.text}
+        cta={cta}
+        rain={promo.rain}
+        onClose={close}
+        closeRef={closeRef}
+        onSkip={isExit ? close : undefined}
+        onClaim={close}
+      />
     </div>
   );
 }

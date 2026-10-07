@@ -4,6 +4,7 @@ import FeatureBand from '@/components/sections/FeatureBand';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
 import PartnerLogos from '@/components/sections/PartnerLogos';
+import PromoSection from '@/components/sections/PromoSection';
 import ProjectCarousel from '@/components/sections/ProjectCarousel';
 import QrsStandard from '@/components/sections/QrsStandard';
 import ReviewStrip from '@/components/sections/ReviewStrip';
@@ -67,9 +68,10 @@ const HOME_PRODUCTS = [
   { title: '*ReserveReady* HOA Roofing', text: 'Roof inspections, clear scopes and planning support for community boards.', href: '/residential-roofing/hoa-multi-family/', scene: 'scene-hoa', image: '/images/shingle-roof-care-multi-family.webp' },
 ];
 
-// Home page: sections in order, top to bottom, matching the site's top-nav structure — an intro paragraph,
-// Services/Residential/Commercial together, Service Areas, About, Projects, then the
-// lead-capture "Get Pro Advice" form. Reorder or remove a line to change the page.
+// Home page: sections in order, top to bottom, with what a customer wants first near the top: the hero and proof strip, what we do
+// (residential and commercial), what other customers say, the roofing systems, the current El Niño offer, the service area check,
+// why QRS, financing partners, articles, careers (for job seekers, so low), the FAQ, then the request card and closing call to action.
+// Reorder or remove a line to change the page.
 export default async function HomePage() {
   return (
     <>
@@ -89,20 +91,21 @@ export default async function HomePage() {
           stats
         />
         <Services items={HOME_SERVICES} compact cta={false} />
-        <QrsStandard />
         <ReviewStrip />
         <Services title="Roofing __Systems__" items={HOME_PRODUCTS} compact cta={false} pattern={false} slider id="roofing-systems" />
+        <PromoSection />
         <ServiceArea hideCities allAreasLink />
+        <QrsStandard />
         <WhyQrs />
         {SHOW_RECENT_WORK && <ProjectCarousel heading="Recent Work" sub={RECENT_WORK_SUB} projects={RECENT_WORK} id="work" pattern />}
         <PartnerLogos {...ROOF_FINANCING.partners} />
+        <LatestArticles posts={await homeArticles(3)} />
         <FeatureBand
           id="careers"
           tone="light"
           {...CAREERS_TEASER}
           points={CAREERS_PAGE.roles.items.map((role) => ({ title: role.title, text: role.text, href: '/careers/#roles' }))}
         />
-        <LatestArticles posts={await homeArticles(3)} />
         <Faq cta={false} />
         <RoofCheck />
         <FinalCta />
