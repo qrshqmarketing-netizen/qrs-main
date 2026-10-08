@@ -1,0 +1,10 @@
+/* ---------- "Rated on Yelp" row under the reviews (ReviewSites.jsx), the studio look: a flat hairline pill ---------- */
+.rs-row{list-style:none;margin:26px auto 0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.rs-badge{display:inline-flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 12px;padding:12px 20px;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--navy);font:500 14px/1.3 var(--font-text),sans-serif;transition:border-color .2s ease}
+.rs-badge:hover{border-color:var(--gold-ink)}
+.rs-site{font:700 15px/1 var(--font-text),sans-serif;letter-spacing:-.01em;color:#d32323}
+.rs-stars{display:inline-flex;gap:2px;color:var(--gold)}
+.rs-stars svg{width:15px;height:15px}
+.rs-text b{font-weight:700}
+.rs-go{font:600 13px/1 var(--font-text),sans-serif;color:var(--gold-ink)}
+.rg-sites{margin-top:8px}

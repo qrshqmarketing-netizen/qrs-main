@@ -1,5 +1,6 @@
 import { REVIEW_DESTINATIONS } from '@/data/pages/reviews';
 import ReviewLink from './ReviewLink';
+import ReviewSites from './ReviewSites';
 import './ReviewDestinations.css';
 
 export default function ReviewDestinations() {
@@ -24,6 +25,7 @@ export default function ReviewDestinations() {
             </article>
           ))}
         </div>
+        <ReviewSites />
       </div>
     </section>
   );

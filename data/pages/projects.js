@@ -16,7 +16,9 @@ import { SAN_PEDRO_PROJECT } from './san-pedro-project';
 // Projects on the map, each linking to its page, newest first. To add one: put its WebP photos in a folder named after the
 // page's address (public/images/projects/<page-slug>/), give its data file a `place` and a `geo` pin ([lat, lng] of the
 // ZIP code's center, not the street address), then list it here.
-export const PROJECT_PAGES = [HACIENDA_HEIGHTS_PROJECT, GRANADA_HILLS_PROJECT, GARDEN_GROVE_PROJECT, LA_90057_PROJECT, LA_90061_PROJECT, WHITE_FLAT_PROJECT, VENICE_PROJECT, PANORAMA_CITY_PROJECT, MID_WILSHIRE_PROJECT, HOLLYWOOD_HILLS_PROJECT, SAN_PEDRO_PROJECT, SAN_PEDRO_FULL_ROOF_PROJECT];
+// Garden Grove is switched off until all of its photos are in: set SHOW_GARDEN_GROVE to true to bring its page, its map pin and its place in the lists back
+export const SHOW_GARDEN_GROVE = false;
+export const PROJECT_PAGES = [HACIENDA_HEIGHTS_PROJECT, GRANADA_HILLS_PROJECT, ...(SHOW_GARDEN_GROVE ? [GARDEN_GROVE_PROJECT] : []), LA_90057_PROJECT, LA_90061_PROJECT, WHITE_FLAT_PROJECT, VENICE_PROJECT, PANORAMA_CITY_PROJECT, MID_WILSHIRE_PROJECT, HOLLYWOOD_HILLS_PROJECT, SAN_PEDRO_PROJECT, SAN_PEDRO_FULL_ROOF_PROJECT];
 
 export const PROJECTS_PAGE = {
   keyword: 'roofing projects',

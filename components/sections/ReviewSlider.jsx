@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import ArrowButton from '@/components/ui/ArrowButton';
+import ReviewSites from './ReviewSites';
 import { GoogleLogo, Star } from '@/components/ui/icons';
 import { GOOGLE_REVIEWS } from '@/data/reviews';
 import { SHOW_REVIEW_EVENT } from '@/lib/events';
@@ -126,6 +127,7 @@ export default function ReviewSlider({ office = '', places = [] }) {
         <ArrowButton direction="prev" id="tstPrev" aria-label="Previous review" onClick={() => move(-1)} />
         <ArrowButton direction="next" id="tstNext" aria-label="Next review" onClick={() => move(1)} />
       </div>
+      <ReviewSites />
     </div>
   );
 }

@@ -25,6 +25,7 @@ import { HOLLYWOOD_HILLS_PROJECT } from './pages/hollywood-hills-project';
 import { MID_WILSHIRE_PROJECT } from './pages/mid-wilshire-project';
 import { PANORAMA_CITY_PROJECT } from './pages/panorama-city-project';
 import { GARDEN_GROVE_PROJECT } from './pages/garden-grove-project';
+import { SHOW_GARDEN_GROVE } from './pages/projects';
 import { GRANADA_HILLS_PROJECT } from './pages/granada-hills-project';
 import { HACIENDA_HEIGHTS_PROJECT } from './pages/hacienda-heights-project';
 import { LA_90057_PROJECT } from './pages/la-90057-project';
@@ -131,7 +132,7 @@ export const ALL_PATHS = [
   PANORAMA_CITY_PROJECT.path,
   VENICE_PROJECT.path,
   WHITE_FLAT_PROJECT.path,
-  GARDEN_GROVE_PROJECT.path,
+  ...(SHOW_GARDEN_GROVE ? [GARDEN_GROVE_PROJECT.path] : []),
   LA_90057_PROJECT.path,
   GRANADA_HILLS_PROJECT.path,
   HACIENDA_HEIGHTS_PROJECT.path,
