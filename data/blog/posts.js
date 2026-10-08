@@ -34,8 +34,8 @@ export const BLOG_POSTS = [
     dateModified: '2026-10-05',
     excerpt:
       'A commercial roof is a big decision for an owner or property manager. Here is what to verify before you hire, the questions to ask, the red flags to watch for and what a good proposal should include.',
-    image: '/images/blog/how-to-choose-a-commercial-roofing-contractor.webp',
-    imageAlt: 'Two roofers in hard hats reviewing plans on a white commercial flat roof with the downtown Los Angeles skyline behind them, with close-ups of rooftop equipment, a handshake and a commercial building, under the title How to Choose a Commercial Roofing Contractor in Los Angeles',
+    image: '/images/blog/how-to-choose-a-commercial-roofing-contractor-site-walk.webp',
+    imageAlt: 'Three people in hard hats on a flat commercial roof, a roofer kneeling with a tablet and pointing at the surface while a man and a woman with a clipboard look on, with rooftop equipment behind',
     intro: [
       'Choosing a commercial roofing contractor is one of the larger decisions an owner or property manager makes. The roof protects the building, the tenants and everything inside, and a poor job can mean leaks, disruption and a second bill.',
       'Prices differ from bid to bid, but price is the least useful way to compare them until you know that each contractor is offering the same work, backed by the same license, insurance and warranty.',
@@ -168,8 +168,8 @@ export const BLOG_POSTS = [
     dateModified: '2026-10-05',
     excerpt:
       'On a commercial flat roof, water can travel a long way before it drips. Here is where commercial roofs leak, what to do right away and how a roofer traces the real source before repairing it.',
-    image: '/images/blog/commercial-roof-leak-repair.webp',
-    imageAlt: 'A roofer in a hard hat and safety vest kneeling on a white flat commercial roof to check the surface, with the downtown Los Angeles skyline and rooftop air conditioning units behind, and close-ups of a roof drain, a moisture meter on a cracked seam and rooftop equipment, under the title Commercial Roof Leak Repair: How to Find the Source on a Flat Roof',
+    image: '/images/blog/commercial-roof-leak-repair-flat-roof-source.webp',
+    imageAlt: 'A roofer in a navy cap and orange safety vest kneeling on a flat commercial roof and pointing at standing water near a roof drain, with a rooftop air conditioning unit and the downtown Los Angeles skyline behind',
     intro: [
       'Commercial roof leak repair starts with finding where the water really gets in, and on a large flat roof that is rarely where the stain is. Water travels across the deck and insulation before it reaches a ceiling tile.',
       'Fixing the wrong spot wastes money and leaves the leak in place, so the first job is tracing it. After that, the repair itself is usually straightforward.',
@@ -295,8 +295,8 @@ export const BLOG_POSTS = [
     dateModified: '2026-10-05',
     excerpt:
       'A commercial roof replacement does not have to close your business. Here are the signs it is time, how a phased replacement works, what to plan around and what a written scope should say.',
-    image: '/images/blog/commercial-roof-replacement-planning.webp',
-    imageAlt: 'Roofers in hard hats and safety vests laying new roofing across a white flat commercial roof with the downtown Los Angeles skyline behind them, with close-ups of roof plans and a hard hat, a crew working across the roof and a commercial building, under the title Commercial Roof Replacement: How to Plan It and Keep Your Doors Open',
+    image: '/images/blog/commercial-roof-replacement-planning-roof-install.webp',
+    imageAlt: 'Roofers in hard hats and safety vests peeling back old roofing and rolling out a white membrane on a large flat commercial roof, with loading docks and the downtown Los Angeles skyline behind',
     intro: [
       'A commercial roof replacement is a big project, but it does not have to stop your business. Planned well, the roof comes off and goes back on in sections, and your doors stay open.',
       'The work goes best when the decision rests on facts: the condition of the roof, a clear plan for the phases and a written scope that says exactly what will be done.',
@@ -442,8 +442,8 @@ export const BLOG_POSTS = [
     dateModified: '2026-10-05',
     excerpt:
       'TPO is one of the most common roofing membranes for flat commercial roofs. Here are its pros and cons, how it compares with modified bitumen and the questions to ask before you choose it.',
-    image: '/images/blog/tpo-roofing-pros-and-cons.webp',
-    imageAlt: 'A roofer in a hard hat and safety vest working along a seam on a white TPO roof with a second roofer and the downtown Los Angeles skyline behind, with close-ups of a roll of white membrane, a welded seam and a white warehouse roof, and thumbs up, thumbs down and checklist icons, under the title TPO Roofing for Commercial Buildings: Pros, Cons and Questions to Ask',
+    image: '/images/blog/tpo-roofing-pros-and-cons-membrane-install.webp',
+    imageAlt: 'Roofers in hard hats and safety vests rolling out a white single-ply membrane across a large flat commercial roof, with rooftop equipment and the downtown Los Angeles skyline behind',
     intro: [
       'TPO roofing is one of the most common choices for flat and low-slope commercial roofs. It is a white, single-ply membrane that is welded at the seams, and it is popular in sunny places like Southern California.',
       'It is a good fit for many buildings, but not all of them, and a TPO roof is only as good as the installation behind it.',
@@ -564,8 +564,8 @@ export const BLOG_POSTS = [
     dateModified: '2026-10-05',
     excerpt:
       'Regular inspections catch small commercial roof problems before they become leaks. Here is what to check, how often to inspect and what a roofer-led survey should include.',
-    image: '/images/blog/commercial-roof-inspection-checklist.webp',
-    imageAlt: 'A roofer in a hard hat and safety vest writing on an inspection clipboard on a white commercial roof with rooftop air conditioning units and the downtown Los Angeles skyline behind, with close-ups of a roof drain, flashing, a rooftop unit and an inspection checklist, under the title Commercial Roof Inspection Checklist: What to Check and How Often',
+    image: '/images/blog/commercial-roof-inspection-checklist-seam-check.webp',
+    imageAlt: 'A roofer in a hard hat and safety vest kneeling on a flat commercial roof with a tablet, pointing at a seam, with rooftop air conditioning units and skylights behind',
     intro: [
       'A commercial roof inspection finds small problems while they are still inexpensive to fix. A clogged drain, a lifted seam or a cracked flashing is a minor job today and an interior leak after the next rain.',
       'Owners and property managers can do a basic walk-through safely from the ground and from inside the building. A fuller inspection of the roof itself belongs to a roofer, because working on a roof is dangerous without training and fall protection.',
@@ -686,8 +686,8 @@ export const BLOG_POSTS = [
     dateModified: '2026-10-05',
     excerpt:
       'A ceiling stain rarely sits under the spot where water gets in. Here is how to read the signs of a roof leak, the usual causes on shingle, tile and flat roofs, and what to do while you wait for a repair.',
-    image: '/images/blog/roof-leak-source.webp',
-    imageAlt: 'A roofer looking up at a water-stained, dripping ceiling, with a close-up of a damaged shingle, under the title How to Find a Roof Leak: Signs, Causes and What to Do Next',
+    image: '/images/blog/roof-leak-source-ceiling-drip.webp',
+    imageAlt: 'A homeowner holding a tablet and looking up at a stained ceiling where water drips into a bucket set on a stepladder',
     intro: [
       'A roof leak is rarely where it seems to be. Water slips past a lifted shingle, a cracked tile or an open seam, runs along the underlayment or a rafter, and shows up somewhere else entirely.',
       'That is why a stain on the ceiling is a clue, not an address. Finding the real source takes a methodical look at the roof, starting above the stain and working across the details where leaks usually begin.',
@@ -810,8 +810,8 @@ export const BLOG_POSTS = [
     dateModified: '2026-10-05',
     excerpt:
       'After a long dry summer, the first heavy rain tests every weak spot on your roof. Use this roof maintenance checklist to check what you safely can, and to know what to leave to a roofer.',
-    image: '/images/blog/roof-maintenance-checklist.webp',
-    imageAlt: 'A roofer in a rain jacket writing on a clipboard in front of a rain-soaked roof and gutter, under the title Roof Maintenance Checklist for the Southern California Rainy Season',
+    image: '/images/blog/roof-maintenance-checklist-wet-shingle-check.webp',
+    imageAlt: 'A roofer in a rain jacket and cap kneeling on a wet shingle roof and checking the shingles beside a roof vent, holding a tablet',
     intro: [
       'Southern California roofs spend months in the sun, then meet heavy rain in a few storms. A roof maintenance checklist done before the rainy season is the cheapest way to find small problems before they become leaks.',
       'Most of the checklist can be done from the ground and from inside the house. A few items belong to a roofer, because they mean working on a sloped roof.',
@@ -931,8 +931,8 @@ export const BLOG_POSTS = [
     dateModified: '2026-10-05',
     excerpt:
       'Roof restoration can extend the life of a sound roof, but it will not save one that is worn out. Here is what restoration means, when it works and how to decide between restoring and replacing.',
-    image: '/images/blog/roof-restoration-vs-replacement.webp',
-    imageAlt: 'A roofer holding a tablet in front of a home, with close-ups labeled Restoration and Replacement, under the title Roof Restoration vs. Replacement: Which Does Your Roof Need?',
+    image: '/images/blog/roof-restoration-vs-replacement-side-by-side.webp',
+    imageAlt: 'Two roofers side by side: on the left one cleaning an older shingle roof with a pressure washer, on the right one kneeling to install new dark shingles with a nail gun',
     intro: [
       'Roof restoration sounds like an easy answer: renew the roof you have instead of paying for a new one. Sometimes it is exactly right, and sometimes it only delays a bigger bill.',
       'The difference comes down to the condition of the roof, and the way to know is a careful inspection with photos, not a sales pitch.',
@@ -1071,8 +1071,8 @@ export const BLOG_POSTS = [
     dateModified: '2026-10-05',
     excerpt:
       'Wind and heavy rain can damage a roof in ways you cannot see from the street. Here are the signs of roof storm damage, the first steps to take and when it is time to call a roofer.',
-    image: '/images/blog/roof-storm-damage-signs-graphic.webp',
-    imageAlt: 'A roofer in a rain jacket checking a tablet while looking at a storm-damaged roof under dark storm clouds, with close-ups of hail-damaged shingles and exposed roof decking, under the title Roof Storm Damage: How to Spot It and What to Do Next',
+    image: '/images/blog/roof-storm-damage-signs-lifted-shingles.webp',
+    imageAlt: 'A roofer in a rain jacket on a ladder lifting storm-damaged shingles to show the exposed roof deck, with broken branches and leaves scattered across the roof',
     intro: [
       'Roof storm damage is not always dramatic. After a windy night or a heavy downpour, a roof can look fine from the street while a lifted shingle, a slipped tile or a loose flashing is quietly letting water in.',
       'Southern California roofs take a particular kind of punishment. Santa Ana winds can lift and crack roofing materials, and winter rain can arrive in heavy bursts after months of dry heat, which finds every weak spot.',
@@ -1213,8 +1213,8 @@ export const BLOG_POSTS = [
     dateModified: '2026-10-05',
     excerpt:
       'A tarp, a little sealant and a few precautions can limit water damage until a roofer can make the real repair. Here are the temporary options that work, what each one fixes and how to stay safe.',
-    image: '/images/blog/temporary-roof-repair-options.webp',
-    imageAlt: 'A roofer in a rain jacket securing a blue tarp over a shingle roof in the rain, with close-ups of the tarp and of roofing tape and a hammer, under the title Temporary Roof Repair: What Works Until a Roofer Arrives',
+    image: '/images/blog/temporary-roof-repair-options-patch.webp',
+    imageAlt: 'A roofer in a rain jacket and cap kneeling on a wet shingle roof and cutting a sheet of waterproof patch material, with a bucket of sealant and a roll of tape beside him and a vent behind',
     intro: [
       'A roof leak does not wait for a convenient time. When water is coming in, temporary roof repair can limit the damage until a roofer can make the permanent fix.',
       'The options below are stop-gaps. They are meant to keep water out for days or a few weeks, not years, and some are best left to a roofer. Your safety comes first: a wet roof is slippery, and a fall from a roof can cause serious injury.',
@@ -1340,8 +1340,8 @@ export const BLOG_POSTS = [
     dateModified: '2026-10-05',
     excerpt:
       'Roof insurance claims go more smoothly when you document the damage, protect the roof from more harm and get a written repair scope. Here is what to do, what insurers usually cover and what a roofer can help with.',
-    image: '/images/blog/roof-insurance-claims-california.webp',
-    imageAlt: 'A roofer holding a tablet with photos of roof damage in front of a home, with close-ups of a damaged shingle, an insurance claim form and a house, under the title Roof Insurance Claims in California: What to Document and What to Expect',
+    image: '/images/blog/roof-insurance-claims-california-photo-documentation.webp',
+    imageAlt: 'A roofer in a navy cap on a ladder photographing storm-damaged shingles and exposed roof decking with a tablet, to document the damage',
     intro: [
       'Roof insurance claims go more smoothly when you document the damage well, act quickly to prevent more, and get a clear written scope of the repair.',
       'Whether a claim is approved depends on your policy and on what caused the damage, and your insurer makes that decision. What you control is how well the damage is documented and how quickly the roof is protected.',
@@ -1461,8 +1461,8 @@ export const BLOG_POSTS = [
     dateModified: '2026-10-05',
     excerpt:
       'Wood shakes and shingles look beautiful, but fire risk, upkeep and cost make a wooden roof a hard fit for most Southern California homes. Here are the real pros and cons, and the alternatives.',
-    image: '/images/blog/wooden-roof-pros-and-cons-graphic.webp',
-    imageAlt: 'A wood shake roof on a stone and wood home under a blue sky, with close-ups of new and weathered wood shakes and thumbs up and thumbs down icons, under the title Wooden Roof Pros and Cons: Is a Wood Roof Right for Your Home?',
+    image: '/images/blog/wooden-roof-pros-and-cons-cedar-shake.webp',
+    imageAlt: 'A wood shake roof on a home with gabled dormers and a stone chimney, in natural daylight with tall evergreen trees behind',
     intro: [
       'A wooden roof has a warmth that other roofing materials struggle to copy. Cedar and redwood shakes and shingles age to a soft silver-gray, and a good wood roof gives a home real character.',
       'Before you choose one, it helps to know what a wooden roof asks of you in return. In Southern California, fire rules, sun, dry heat and cost all shape the decision, and for most homes the answer ends up being [tile](/residential-roofing/tile-roofing/) or [shingle](/residential-roofing/shingle-roofing/) instead.',
@@ -1600,9 +1600,8 @@ export const BLOG_POSTS = [
     author: 'Tony G.',
     excerpt:
       'Clay and concrete tiles can last for decades, but the waterproofing beneath them has a shorter service life. Here’s how to tell when tile roof underlayment needs replacing, and what the work involves.',
-    image: '/images/blog/tile-roof-underlayment-graphic.webp',
-    heroImage: '/images/blog/tile-roof-underlayment-hero.webp',
-    imageAlt: 'Roofer lifting clay tiles to expose the underlayment on a tile roof, with the downtown Los Angeles skyline in the distance',
+    image: '/images/blog/tile-roof-underlayment-replacement.webp',
+    imageAlt: 'A roofer in a cap and safety harness kneeling on a clay tile roof that has been stripped to new underlayment with wooden battens, with stacks of clay tiles ready to be set back',
     intro: [
       `[Clay and concrete roof tiles](${TILE}) can protect a Southern California home for decades, but the waterproofing layer beneath them has a different job and a different service life.`,
       'When tile roof underlayment deteriorates, water can reach the roof deck and create leaks even when the tiles appear intact.',

@@ -9,7 +9,9 @@ import { clientIp, corsHeaders, hashIp, json } from './util.js';
 
 const DEFAULT_GEMINI_MODEL = 'gemini-3.8-flash';
 const MAX_MESSAGES = 16;
-const MAX_CHARS = 2000;
+const MAX_CHARS = 500; // a visitor's message (CHAT_MAX_CHARS in data/assistant.js); the assistant's own earlier replies may be longer
+const MAX_REPLY_CHARS = 1500;
+const MAX_BODY = 20000; // bytes: nothing a real chat sends comes close
 
 const EMAIL_RE = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g;
 const PHONE_RE = /(\+?1[\s.-]?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}/g;
@@ -166,6 +168,7 @@ export async function handleChat(request, ctx) {
   if (request.method !== 'POST') return json({ error: 'method not allowed' }, 405, cors);
   const started = Date.now();
 
+  if (Number(request.headers.get('content-length')) > MAX_BODY) return json({ error: 'too long' }, 413, cors);
   let body;
   try {
     body = await request.json();
@@ -175,7 +178,7 @@ export async function handleChat(request, ctx) {
   const messages = (Array.isArray(body?.messages) ? body.messages : [])
     .filter((m) => m && (m.role === 'user' || m.role === 'assistant') && typeof m.content === 'string')
     .slice(-MAX_MESSAGES)
-    .map((m) => ({ role: m.role, content: m.content.slice(0, MAX_CHARS) }));
+    .map((m) => ({ role: m.role, content: m.content.slice(0, m.role === 'user' ? MAX_CHARS : MAX_REPLY_CHARS) }));
   if (!messages.length) return json({ error: 'no messages' }, 400, cors);
 
   const ip = await hashIp(clientIp(request), env.IP_SALT || '');

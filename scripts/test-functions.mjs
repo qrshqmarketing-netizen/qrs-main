@@ -162,6 +162,17 @@ await test('chat: no contact details, no lead; model down answers an error the w
   assert.equal((await handleChat(post({ messages: [] }), ctxFor(world()))).status, 400);
 });
 
+await test('chat: a long pasted message is cut to 500 characters and an oversized request is refused', async () => {
+  const w = world();
+  const ctx = ctxFor(w);
+  await handleChat(post({ messages: [{ role: 'user', content: 'roof leak ' + 'spam '.repeat(400) }] }), ctx);
+  await ctx.settle();
+  const sent = w.calls.find((c) => c.url.includes('generativelanguage')).body.contents[0].parts[0].text;
+  assert.equal(sent.length, 500);
+  const big = new Request('https://x.test/fn', { method: 'POST', headers: { 'content-type': 'application/json', 'content-length': '50000', origin: 'https://qualityroofingspecialists.com' }, body: '{}' });
+  assert.equal((await handleChat(big, ctxFor(world()))).status, 413);
+});
+
 await test('chat: rate limit after 30 messages', async () => {
   const w = world();
   let last;

@@ -6,6 +6,7 @@ import { FOOTER } from '@/data/navigation';
 import { BUSINESS, OFFICES, PHONE, SOCIAL, TEL } from '@/data/site';
 import { hoursText } from '@/lib/hours';
 import CopyrightYear from './CopyrightYear';
+import FooterWord from './FooterWord';
 import HideOnStart from './HideOnStart';
 import './Footer.css';
 
@@ -75,12 +76,8 @@ export default function Footer() {
           ))}
         </div>
         <HideOnStart>
-          {/* The brand word, large, across the bottom: an SVG, so it always spans the full width exactly */}
-          <div className="ft-name" aria-hidden="true">
-            <svg viewBox="0 0 1000 205" preserveAspectRatio="xMidYMid meet">
-              <text x="0" y="165" textLength="1000" lengthAdjust="spacingAndGlyphs">QUALITY</text>
-            </svg>
-          </div>
+          {/* The brand word, large, across the bottom: each letter slides up when it scrolls into view */}
+          <FooterWord />
         </HideOnStart>
       </div>
     </footer>

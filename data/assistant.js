@@ -12,6 +12,10 @@ import { hoursText } from '@/lib/hours';
 // assistant there instead; /api/chat/ then stays as the backup (components/widgets/RoofAssistant.jsx). Either way, the backend receives POST {messages:[{role,content}]} and
 // returns {reply:"..."}; if it's unreachable or NEXT_PUBLIC_CHAT_ENDPOINT is explicitly set to nothing while
 // OPENROUTER_API_KEY is also unset, the built-in answers below are used instead.
+// The most a visitor can type or paste into one chat message. The box stops at this many characters, and both servers (app/api/chat, the Supabase function)
+// enforce it again, so a long pasted block can't get through. Real questions are a sentence or two.
+export const CHAT_MAX_CHARS = 500;
+
 export const SITE_CHAT_ENDPOINT = '/api/chat/'; // the site's own route, also the backup when the endpoint below can't be reached
 export const CHAT_ENDPOINT = process.env.NEXT_PUBLIC_CHAT_ENDPOINT || SITE_CHAT_ENDPOINT;
 

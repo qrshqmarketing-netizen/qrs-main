@@ -203,12 +203,7 @@ body.studio-site :is(.review-destination-actions,.section,.value-grid,.card-grid
 :root[data-theme="dark"] body.studio-site :is(.btn-line,.btn-light){background:transparent;border-color:rgba(255,255,255,.4);color:#e8eef5;box-shadow:none}
 :root[data-theme="dark"] body.studio-site :is(.btn-line,.btn-light):hover{background:#e8eef5;border-color:#e8eef5;color:#062d57}
 :root[data-theme="dark"] body.studio-site .btn-gold{color:#10243a}
-/* The header's own buttons keep their sizes: round outline call button, compact gold estimate button */
-body.studio-site .site-header .nav-call{width:42px;height:42px;min-height:42px;padding:0;background:transparent;border-color:color-mix(in srgb,currentColor 38%,transparent);color:inherit}
-body.studio-site .site-header .nav-call:hover{background:color-mix(in srgb,currentColor 10%,transparent);border-color:currentColor;color:inherit}
-body.studio-site .site-header .nav-cta{min-height:42px;padding:0 20px;font-size:14px}
-@media (min-width:901px){body.studio-site .site-header .nav-cta{padding:0 22px;font-size:15px}}
-@media (max-width:360px){body.studio-site .site-header .nav-call{width:38px;height:38px;min-height:38px}}
+/* The header's buttons are styled in Header.css (compact header) */
 
 
 /* ---------- scroll motion (components/studio/StudioMotion.jsx) ---------- */

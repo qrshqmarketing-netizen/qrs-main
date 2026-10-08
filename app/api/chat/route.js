@@ -21,7 +21,9 @@ const GEMINI_MODEL = process.env.GEMINI_MODEL || DEFAULT_GEMINI_MODEL;
 
 // Keep requests small: cap how much conversation we forward and how long each message can be.
 const MAX_MESSAGES = 16;
-const MAX_CHARS = 2000;
+const MAX_CHARS = 500; // a visitor's message (CHAT_MAX_CHARS in data/assistant.js); the assistant's own earlier replies may be longer
+const MAX_REPLY_CHARS = 1500;
+const MAX_BODY = 20000; // bytes: nothing a real chat sends comes close
 
 const EMAIL_RE = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g;
 const PHONE_RE = /(\+?1[\s.-]?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}/g;
@@ -175,6 +177,7 @@ async function askModel(apiKey, messages) {
 const str = (v, max) => (typeof v === 'string' ? v.trim().slice(0, max) : '');
 
 export async function POST(request) {
+  if (Number(request.headers.get('content-length')) > MAX_BODY) return Response.json({ error: 'too long' }, { status: 413 });
   let body;
   try {
     body = await request.json();
@@ -186,7 +189,7 @@ export async function POST(request) {
   const messages = incoming
     .filter((m) => m && (m.role === 'user' || m.role === 'assistant') && typeof m.content === 'string')
     .slice(-MAX_MESSAGES)
-    .map((m) => ({ role: m.role, content: m.content.slice(0, MAX_CHARS) }));
+    .map((m) => ({ role: m.role, content: m.content.slice(0, m.role === 'user' ? MAX_CHARS : MAX_REPLY_CHARS) }));
   if (!messages.length) return Response.json({ error: 'no messages' }, { status: 400 });
 
   const apiKey = process.env.OPENROUTER_API_KEY;

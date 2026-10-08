@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { ArrowRight, CloseIcon, RefreshIcon } from '@/components/ui/icons';
-import { ANSWERS, CHAT_ENDPOINT, SITE_CHAT_ENDPOINT, CHIP_PROMPTS, CONTACT_ANSWERS, CONTACT_RE, FALLBACK_ANSWER, GREETING, STARTERS } from '@/data/assistant';
+import { ANSWERS, CHAT_ENDPOINT, CHAT_MAX_CHARS, SITE_CHAT_ENDPOINT, CHIP_PROMPTS, CONTACT_ANSWERS, CONTACT_RE, FALLBACK_ANSWER, GREETING, STARTERS } from '@/data/assistant';
 import { PHONE, TEL } from '@/data/site';
 import { currentAttribution } from '@/lib/attribution';
 import { session } from '@/lib/storage';
@@ -170,7 +170,7 @@ export default function RoofAssistant() {
   };
 
   const onInput = (e) => {
-    setText(e.target.value);
+    setText(e.target.value.slice(0, CHAT_MAX_CHARS));
     const el = e.target;
     el.style.height = 'auto';
     el.style.height = Math.min(el.scrollHeight, 120) + 'px';
@@ -237,7 +237,8 @@ export default function RoofAssistant() {
 
         <form className="qa-form" id="qaForm" ref={formRef} onSubmit={onSubmit}>
           <label htmlFor="qaInput" className="sr-only">Message</label>
-          <textarea id="qaInput" rows={1} placeholder="Ask about your roof…" autoComplete="off" ref={inputRef} value={text} onChange={onInput} onKeyDown={onInputKeyDown} />
+          <textarea id="qaInput" rows={1} maxLength={CHAT_MAX_CHARS} placeholder="Ask about your roof…" autoComplete="off" ref={inputRef} value={text} onChange={onInput} onKeyDown={onInputKeyDown} />
+          {text.length >= CHAT_MAX_CHARS - 100 && <span className="qa-count" aria-live="polite">{CHAT_MAX_CHARS - text.length} left</span>}
           <button className="qa-send" type="submit" id="qaSend" aria-label="Send message" disabled={!text.trim()}>
             <ArrowRight />
           </button>

@@ -98,3 +98,7 @@
   .qa-bubble:before,.qa-typing i{animation:none}
   .qa-panel,.qa-msg,.qa-teaser{transition:none;animation:none}
 }
+
+/* Characters left, shown only near the limit */
+.qa-form{position:relative}
+.qa-count{position:absolute;right:62px;top:-18px;padding:2px 8px;border-radius:999px;background:var(--paper);border:1px solid var(--line);color:var(--muted);font:600 11px/1.4 var(--font-text),sans-serif}
