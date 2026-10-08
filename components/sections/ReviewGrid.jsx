@@ -1,6 +1,5 @@
 import { GoogleLogo, Star } from '@/components/ui/icons';
 import { GOOGLE_REVIEWS } from '@/data/reviews';
-import ReviewSites from './ReviewSites';
 import './ReviewGrid.css';
 
 // Every Google review (data/reviews.js) as a card, with a link to the review on Google
@@ -34,7 +33,6 @@ export default function ReviewGrid({ heading = 'What Homeowners Say', reviews = 
             </figure>
           ))}
         </div>
-        <ReviewSites />
       </div>
     </section>
   );
