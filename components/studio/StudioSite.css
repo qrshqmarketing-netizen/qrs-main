@@ -301,3 +301,51 @@ body.studio-site :is(.st-chip,.st-choice){border-radius:999px}
 body.studio-site .final h2{font:500 clamp(34px,6.4vw,76px)/1.04 var(--font-text),sans-serif;letter-spacing:-.035em;text-shadow:none}
 body.studio-site .final p{text-shadow:none}
 body.studio-site .final-trust li{font-weight:500}
+
+/* ======================================================================================================================================
+   Sub pages, third pass: the last heavy navy blocks and old patterns on the service, hub, city and commercial pages become light hairline
+   sections (the offer card and the closing call to action stay navy: they are the two places meant to stand out).
+   ====================================================================================================================================== */
+
+/* "The QRS Difference": a light band, outline icons, hairline columns */
+body.studio-site .difference{background:var(--wash);color:var(--ink)}
+body.studio-site .difference h2{color:var(--navy)}
+body.studio-site .difference-grid{gap:0;border-top:1px solid var(--line);max-width:none}
+body.studio-site .difference-item{padding:30px 0;border-bottom:1px solid var(--line);text-align:left}
+body.studio-site .difference-icon{width:44px;height:44px;margin:0 0 16px;color:var(--gold-ink)}
+body.studio-site .difference-item h3{color:var(--navy)}
+body.studio-site .difference-item p{color:var(--muted);max-width:40ch;margin-left:0}
+@media (min-width:901px){
+  body.studio-site .difference-grid{grid-template-columns:repeat(3,1fr);border-top:0}
+  body.studio-site .difference-item{padding:34px 36px 40px 0;border-top:1px solid var(--line);border-bottom:0}
+  body.studio-site .difference-item+.difference-item{padding-left:36px;border-left:1px solid var(--line)}
+}
+body.studio-site .difference,body.studio-site .difference-item{text-align:left}
+body.studio-site .difference h2{text-align:center}
+
+/* City and region pages: the "roof conditions we plan for" card is a hairline card, not a navy block */
+body.studio-site .local-card-navy{background:var(--paper);border:1px solid var(--line)}
+body.studio-site .local-card-navy h3{color:var(--navy)}
+body.studio-site .local-card-navy .local-notes b{color:var(--navy)}
+body.studio-site .local-card-navy .local-notes span{color:var(--muted)}
+body.studio-site .local-notes li{border-left:1px solid var(--gold-ink);padding-left:16px}
+body.studio-site .local-card h3{font-weight:500;letter-spacing:-.015em}
+body.studio-site .local-card{box-shadow:none}
+body.studio-site .local-copy .eyebrow{color:var(--muted)}
+body.studio-site .local-areas li{font-weight:500}
+
+/* Service-first lists, plan and pricing cards, and offices: flat */
+body.studio-site :is(.cp-card,.cc-card,.city-card,.office-card,.finder-row,.plan-card){box-shadow:none;border:1px solid var(--line)}
+body.studio-site .office-card h3{font-weight:500;letter-spacing:-.015em}
+body.studio-site :is(.cp-card,.cc-card) h3{font-weight:500}
+
+/* Light "tone" sections that still carry an old pattern or shadow */
+body.studio-site :is(.split-media,.cg-media,.process-block-media,.gtee-card){box-shadow:none}
+body.studio-site .gtee{background:var(--wash)}
+body.studio-site .gtee-card{background:var(--paper);color:var(--ink);border:1px solid var(--line)}
+body.studio-site .gtee-title h2{color:var(--navy);font-weight:500}
+body.studio-site .difference-item p{margin:0;text-align:left}
+body.studio-site .local-card-navy .text-link{color:var(--navy)}
+body.studio-site .local-card-navy .text-link:hover{color:var(--gold-ink)}
+body.studio-site .tst-standalone{padding:26px 22px 22px;background:var(--paper)}
+@media (min-width:760px){body.studio-site .tst-standalone{padding:40px 44px 34px}}
