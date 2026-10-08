@@ -221,3 +221,83 @@ html.lenis.lenis-smooth iframe{pointer-events:none}
 /* The El Niño card (popup, home section, landing page top) keeps its centered heading */
 body.studio-site main .promo.promo.promo :is(h1,h2,.promo-title,.promo-eyebrow):not(.x):not(.y):not(.z){text-align:center;margin-left:auto;margin-right:auto}
 body.studio-site main .promo.promo.promo .promo-eyebrow{justify-content:center}
+
+/* ======================================================================================================================================
+   Components restyled to the studio look (second pass): the service area and project maps, the review slider, the partner logos, the careers band,
+   the request card and the closing call to action. Same recipe as the rest: hairlines instead of shadows, light type, small spaced labels,
+   flat rounded panels in the theme colors (so dark mode follows), no navy blocks with heavy borders.
+   ====================================================================================================================================== */
+
+/* ---------- service area map and project map: a light panel, hairlines, a flat ZIP field ---------- */
+body.studio-site .area{background:var(--paper)}
+body.studio-site .area .container{max-width:1240px}
+body.studio-site .area-sub{font:400 clamp(18px,2.4vw,24px)/1.45 var(--font-text),sans-serif;letter-spacing:-.01em;color:var(--muted);max-width:44ch;margin:0 auto 40px}
+body.studio-site :is(.sa-wrap,.loc-wrap){background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:var(--radius);box-shadow:none}
+body.studio-site :is(.sa-wrap,.loc-wrap) .loc-search{background:var(--wash);color:var(--navy);border-bottom:1px solid var(--line)}
+body.studio-site .loc-search-title{color:var(--navy);font:600 12px/1.3 var(--font-text),sans-serif;letter-spacing:.14em;text-transform:uppercase}
+body.studio-site .loc-search-title svg circle:first-child{stroke:var(--line)}
+body.studio-site .loc-search-title svg path{fill:var(--gold-ink)}
+body.studio-site .loc-search-title svg circle:last-child{fill:var(--wash)}
+body.studio-site .loc-form{height:48px;padding:3px 3px 3px 20px;border:1px solid var(--line);border-radius:999px;background:var(--paper)}
+body.studio-site .loc-form:focus-within{border-color:var(--gold-ink)}
+body.studio-site .loc-form input{color:var(--ink);font-size:15px}
+body.studio-site .loc-form input::placeholder{color:var(--muted);opacity:1}
+body.studio-site .loc-form button{width:42px;height:42px;flex-basis:42px;background:var(--gold);color:#10243a}
+body.studio-site .loc-msg{color:var(--muted)}
+body.studio-site .loc-msg b{color:var(--navy)}
+body.studio-site .sa-zip .loc-msg a{color:var(--gold-ink)}
+body.studio-site .loc-full{background:var(--paper);color:var(--navy);border:1px solid var(--line)}
+/* the list of places */
+body.studio-site :is(.sa-list,.loc-list){background:var(--paper);color:var(--ink);border-color:var(--line);scrollbar-color:var(--line) transparent}
+body.studio-site .sa-region h3{background:var(--wash);color:var(--muted);font:600 11px/1.2 var(--font-text),sans-serif;letter-spacing:.16em;text-transform:uppercase;border-bottom:1px solid var(--line)}
+body.studio-site .sa-item{border-bottom:1px solid var(--line);border-left:2px solid transparent}
+body.studio-site .sa-item:hover{background:var(--wash)}
+body.studio-site .sa-item.active{background:var(--wash);border-left-color:var(--gold)}
+body.studio-site .sa-pick{color:var(--navy);font:500 16px/1.3 var(--font-text),sans-serif;letter-spacing:-.01em}
+body.studio-site .sa-go{color:var(--gold-ink);font:600 11px/1 var(--font-text),sans-serif;letter-spacing:.14em}
+body.studio-site .sa-go:hover{color:var(--navy)}
+body.studio-site .loc-item{border-bottom:1px solid var(--line);border-left:2px solid transparent}
+body.studio-site .loc-item:hover{background:var(--wash)}
+body.studio-site .loc-item.active{background:var(--wash);border-left-color:var(--gold)}
+body.studio-site .loc-item h3{color:var(--navy);font-weight:500;letter-spacing:-.01em}
+body.studio-site .loc-item .loc-phone{color:var(--muted);font-weight:500}
+body.studio-site .loc-item .loc-btn{background:transparent;border:1px solid var(--line);color:var(--navy)}
+body.studio-site .proj-place{color:var(--muted);font-size:11px;letter-spacing:.14em}
+body.studio-site .proj-link{color:var(--gold-ink)}
+body.studio-site .proj-link:hover{color:var(--navy)}
+/* also serving */
+body.studio-site .sa-also-group{background:transparent}
+body.studio-site .area .sa-also-group h4{color:var(--muted);font:600 11px/1.2 var(--font-text),sans-serif;letter-spacing:.16em}
+body.studio-site .sa-also-group li{background:transparent;color:var(--ink);font-weight:500}
+
+/* ---------- reviews: flat cards ---------- */
+body.studio-site :is(.tst-slide,.tst-standalone,.rg-card,.review-card){box-shadow:none}
+body.studio-site .tst-standalone{border:1px solid var(--line);border-radius:var(--radius)}
+body.studio-site :is(.tst-name,.tst-who b){font-weight:500}
+
+/* ---------- partner logos: flat cards, centered heading kept ---------- */
+body.studio-site .partner-logo-card{box-shadow:none;border:1px solid var(--line);border-radius:var(--radius)}
+body.studio-site .partner-logos{background:var(--wash)}
+
+/* ---------- the careers band and other light feature bands ---------- */
+body.studio-site .band-light{background:var(--wash)}
+body.studio-site .band-light .band-points li{background:var(--paper);border:1px solid var(--line);box-shadow:none;border-radius:var(--radius)}
+body.studio-site .band-light .band-points h3{font:500 clamp(19px,2.2vw,23px)/1.2 var(--font-text),sans-serif;letter-spacing:-.02em}
+body.studio-site .band-light .band-points h3 a{text-decoration:none}
+body.studio-site .band-light .band-points li:before{background:transparent;border:1px solid var(--gold-ink);color:var(--gold-ink)}
+body.studio-site .band .eyebrow{color:var(--muted)}
+body.studio-site .band-light h2{max-width:16ch}
+
+/* ---------- request card (the offer card and the start card) ---------- */
+body.studio-site :is(.check-card,.form-card,.start-card){box-shadow:none;border-radius:var(--radius)}
+body.studio-site .form-card{border:1px solid var(--line);background:var(--paper)}
+body.studio-site .check-card{border:0}
+body.studio-site .check-card h2,body.studio-site .form-card h2{font-weight:500;letter-spacing:-.03em}
+body.studio-site .check-card .eyebrow:before{background:currentColor}
+body.studio-site .check-card :is(.check-big,.check-free){font-weight:500;letter-spacing:-.04em}
+body.studio-site :is(.st-chip,.st-choice){border-radius:999px}
+
+/* ---------- closing call to action ---------- */
+body.studio-site .final h2{font:500 clamp(34px,6.4vw,76px)/1.04 var(--font-text),sans-serif;letter-spacing:-.035em;text-shadow:none}
+body.studio-site .final p{text-shadow:none}
+body.studio-site .final-trust li{font-weight:500}
