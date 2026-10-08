@@ -138,6 +138,7 @@ export default function PostList({ posts, problem }) {
           </table>
         )}
         {!problem && (
+          <>
           <div className="adm-actions">
             <button
               className="adm-btn"
@@ -149,6 +150,18 @@ export default function PostList({ posts, problem }) {
             </button>
             <span className="adm-hint">Safe to press any time: an article that is already here is never overwritten.</span>
           </div>
+          <div className="adm-actions">
+            <button
+              className="adm-btn"
+              type="button"
+              disabled={busy}
+              onClick={() => run({ action: 'syncImages' }, (r) => (r.changed ? `Updated the pictures of ${r.changed} article${r.changed === 1 ? '' : 's'}. The site is refreshing.` : 'Every article already has the newest pictures.'))}
+            >
+              Update the article pictures from the site files
+            </button>
+            <span className="adm-hint">Switches each article to the picture set in the site files. It changes only the picture and its description, never the text.</span>
+          </div>
+          </>
         )}
       </section>
     </div>

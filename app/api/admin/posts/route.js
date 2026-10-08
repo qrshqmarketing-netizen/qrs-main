@@ -3,7 +3,7 @@
 import { isAdmin, sameOrigin } from '@/lib/adminAuth';
 import { knownPaths, refreshSite, today } from '@/lib/adminActions';
 import { checkPost, formToPost } from '@/lib/articleFormat';
-import { HOME_SLOTS, adminDeletePost, adminGetPost, adminImportFilePosts, adminSavePost, adminSetHomeSlot, adminSetStatus } from '@/lib/postsStore';
+import { HOME_SLOTS, adminSyncFileImages, adminDeletePost, adminGetPost, adminImportFilePosts, adminSavePost, adminSetHomeSlot, adminSetStatus } from '@/lib/postsStore';
 import { dbConfigured } from '@/lib/supabase';
 
 const fail = (status, error, extra = {}) => Response.json({ ok: false, error, ...extra }, { status });
@@ -70,6 +70,11 @@ export async function POST(request) {
       }
       case 'import': {
         const result = await adminImportFilePosts();
+        await refreshSite();
+        return Response.json({ ok: true, ...result });
+      }
+      case 'syncImages': {
+        const result = await adminSyncFileImages();
         await refreshSite();
         return Response.json({ ok: true, ...result });
       }
