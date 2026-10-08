@@ -9,7 +9,7 @@
 .pd-hero .crumbs a{color:#fff;font-weight:600}
 .pd-hero .crumbs [aria-current]{color:var(--gold-2)}
 .pd-hero-bottom{display:grid;gap:22px;align-items:end}
-.pd-hero h1{margin:0;max-width:22ch;text-align:left;font:500 clamp(36px,9.4vw,108px)/1.02 var(--font-text),sans-serif;letter-spacing:-.035em;color:#fff}
+.pd-hero h1{margin:0;max-width:22ch;text-align:left;font:500 clamp(34px,8.2vw,92px)/1.04 var(--font-text),sans-serif;letter-spacing:-.035em;color:#fff}
 .pd-hero h1 span{display:block}
 @media (min-width:901px){
   .pd-hero{min-height:max(640px,100svh)}

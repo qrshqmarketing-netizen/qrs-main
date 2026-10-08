@@ -1,5 +1,5 @@
 import Breadcrumbs from '@/components/sections/Breadcrumbs';
-import StudioProjects from '@/components/studio/StudioProjects';
+import ProjectMap from '@/components/sections/ProjectMap';
 import JsonLd from '@/components/ui/JsonLd';
 import { HOME, PROJECTS_LINK } from '@/data/catalog';
 import { MID_WILSHIRE_PROJECT } from '@/data/pages/mid-wilshire-project';
@@ -37,7 +37,7 @@ export default function ProjectsPage() {
           </div>
         </div>
       </section>
-      <StudioProjects projects={PROJECT_PAGES} label="All projects" heading="Every project, newest first" allLink={false} />
+      <ProjectMap projects={PROJECT_PAGES} />
     </main>
   );
 }
