@@ -3,8 +3,14 @@ import { REDIRECTS } from './data/redirects.js';
 // Bump this (any new value, e.g. today's date) to clear every visitor's cached copy of the site once (see headers())
 const CACHE_RESET = '2026-10-02';
 
+// The public address of the Supabase Storage bucket `site-images` (lib/media.js). Photos are read from the site's own files (public/images) unless MEDIA_FROM_BUCKET=1
+// is set in Vercel, once the photos have been uploaded to the bucket under the same paths.
+const SUPABASE = (process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL || '').trim().replace(/\/+$/, '');
+const MEDIA_BASE = process.env.MEDIA_FROM_BUCKET === '1' && SUPABASE ? `${SUPABASE}/storage/v1/object/public/site-images` : '';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  env: { NEXT_PUBLIC_MEDIA_BASE: MEDIA_BASE },
   // Photos: served as AVIF where the browser can show it (about a third smaller than WebP), WebP otherwise. imageSizes adds finer
   // steps below the smallest device width, so a 230 px card photo gets a file near 450-580 px instead of jumping to 640.
   // `qualities` lists the quality settings the site uses (75 is the default; the small card photos use 60).
