@@ -1,0 +1,8 @@
+/* The rolling number (ProjectCounter.jsx): used on project pages and the About page */
+.pd-counter{display:flex;align-items:baseline;gap:14px}
+.pd-digits{display:inline-flex;font:300 clamp(40px,10vw,120px)/1 var(--font-text),sans-serif;letter-spacing:-.04em;color:#fff}
+.pd-digit{display:inline-block;height:1em;overflow:hidden}
+.pd-strip{display:flex;flex-direction:column;transition:transform 1.5s cubic-bezier(.17,.84,.44,1);transition-delay:calc(var(--i,0) * 90ms);transform:translate3d(0,var(--to,0),0)}
+.pd-strip.is-zero{transform:none;transition:none}
+.pd-strip > span{display:block;height:1em;line-height:1em;text-align:center}
+.pd-counter-label{font:600 11px/1 var(--font-text),sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.7)}

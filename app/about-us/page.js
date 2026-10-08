@@ -1,14 +1,8 @@
 import Faq from '@/components/sections/Faq';
-import FeatureBand from '@/components/sections/FeatureBand';
 import FinalCta from '@/components/sections/FinalCta';
-import Guarantee from '@/components/sections/Guarantee';
 import Hero from '@/components/sections/Hero';
-import Overview from '@/components/sections/Overview';
-import Process from '@/components/sections/Process';
+import { AboutCards, AboutIntro, AboutMission, AboutNumbers, AboutOffices, AboutRecognition, AboutServices, AboutStory, AboutTeam } from '@/components/about/AboutSections';
 import RoofCheck from '@/components/sections/RoofCheck';
-import SplitFeature from '@/components/sections/SplitFeature';
-import ValueGrid from '@/components/sections/ValueGrid';
-import WhyQrs from '@/components/sections/WhyQrs';
 import JsonLd from '@/components/ui/JsonLd';
 import { ABOUT_LINK, HOME } from '@/data/catalog';
 import { ABOUT_PAGE as page } from '@/data/pages/about';
@@ -23,36 +17,21 @@ const HERO_IMAGE = '/images/home-hero-drone-view.webp';
 
 const schema = pageJsonLd({ path: ABOUT_LINK.href, title: page.metaTitle, description: page.metaDescription, type: 'AboutPage', crumbs: CRUMBS, faqs: page.faqs, image: HERO_IMAGE });
 
-// About page (content in data/pages/about.js)
+// About page (content in data/pages/about.js and data/site.js), in the studio style: components/about/AboutSections.jsx
 export default function AboutPage() {
   return (
     <main id="top">
       <JsonLd data={schema} />
       <Hero crumbs={CRUMBS} eyebrow={page.hero.eyebrow} title={page.hero.heading} outcome={heroOutcome('/about-us/')} intro={page.hero.intro} image={HERO_IMAGE} imageAlt="Aerial view of a home with a new shingle roof in a Southern California neighborhood" imagePosition="center 45%" stats />
-      <Overview center heading={page.intro.heading} paragraphs={page.intro.paragraphs} />
-      <SplitFeature
-        eyebrow={page.story.eyebrow}
-        heading={page.story.heading}
-        paragraphs={page.story.paragraphs}
-        image="/images/home-hero-shingle-neighborhood-drone-view.webp"
-        imageAlt="Aerial view of shingle roofs on homes in a Southern California neighborhood"
-      />
-      <FeatureBand id="mission" {...page.mission} />
-      <ValueGrid heading={page.team.heading} intro={page.team.intro} items={page.team.items} columns={2} />
-      <ValueGrid heading={page.values.heading} items={page.values.items} tone="wash" />
-      <WhyQrs heading="Why Homeowners Choose QRS" cta={{ label: 'Read Our Reviews', href: '/reviews/' }} />
-      <Process />
-      <Guarantee />
-      <SplitFeature
-        heading={page.services.heading}
-        paragraphs={page.services.paragraphs}
-        cta={page.services.cta}
-        image="/images/tile-lift-off-and-reset-drone-view-2.webp"
-        imageAlt="Aerial view of a Spanish-style tile roof during a tile lift and reset"
-        tone="wash"
-      />
-      <SplitFeature {...page.careers} image="/images/careers-hero-crew-shingle-roof.webp" imageAlt="Roofers working on a shingle roof" reverse />
-      <SplitFeature {...page.partners} image="/images/contractors-hero-roofer-tablet.webp" imageAlt="Roofer documenting a roof inspection on a tablet" tone="wash" />
+      <AboutIntro page={page} />
+      <AboutNumbers />
+      <AboutStory story={{ ...page.story, paragraphs: page.story.paragraphs.slice(0, 1) }} />
+      <AboutOffices />
+      <AboutMission mission={page.mission} />
+      <AboutTeam team={page.team} />
+      <AboutRecognition giving={page.story.paragraphs[1]} />
+      <AboutServices services={page.services} />
+      <AboutCards careers={page.careers} partners={page.partners} />
       <Faq heading="About QRS: FAQs" sub="Straight answers about who we are and how we work." faqs={page.faqs} cta={false} />
       <RoofCheck />
       <FinalCta
