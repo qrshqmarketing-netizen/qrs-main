@@ -58,7 +58,7 @@ export default function PromoCard({
       {variant !== 'modal' && (
         <Image className="promo-photo" src={PHOTO} alt="" fill sizes="100vw" {...(variant === 'landing' && { preload: true, fetchPriority: 'high' })} />
       )}
-      {rain && <PromoRain />}
+      {rain && <PromoRain rich={variant === 'landing'} />}
       {onClose && (
         <button className="promo-close" type="button" aria-label="Close" onClick={onClose} ref={closeRef}>
           <CloseIcon />

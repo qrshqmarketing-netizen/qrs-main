@@ -2,11 +2,12 @@
 
 import { useEffect, useRef } from 'react';
 
+// `rich` (the landing page's full-width hero) makes the rain denser and a little brighter than in the small popup.
 // Seasonal rain inside the season promo popup (SEASON_PROMO.rain in data/promo.js): an empty canvas between the card's
 // photo and its copy (SeasonPromo.css .promo-rain). The animation itself (lib/promoRain.js) is a separate file, fetched
 // only once the page has finished loading and the browser is idle, so nothing about the rain slows the page down.
 // Skipped for visitors who ask for reduced motion or less data, and on low-end devices.
-export default function PromoRain() {
+export default function PromoRain({ rich = false }) {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -37,5 +38,5 @@ export default function PromoRain() {
     };
   }, []);
 
-  return <canvas className="promo-rain" ref={canvasRef} aria-hidden="true" />;
+  return <canvas className="promo-rain" ref={canvasRef} data-rich={rich ? '1' : undefined} aria-hidden="true" />;
 }

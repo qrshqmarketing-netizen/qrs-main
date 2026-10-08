@@ -222,3 +222,7 @@ html.lenis.lenis-smooth{scroll-behavior:auto!important}
 html.lenis.lenis-smooth [data-lenis-prevent]{overscroll-behavior:contain}
 html.lenis.lenis-stopped{overflow:clip}
 html.lenis.lenis-smooth iframe{pointer-events:none}
+
+/* The El Niño card (popup, home section, landing page top) keeps its centered heading */
+body.studio-site main .promo.promo.promo :is(h1,h2,.promo-title,.promo-eyebrow):not(.x):not(.y):not(.z){text-align:center;margin-left:auto;margin-right:auto}
+body.studio-site main .promo.promo.promo .promo-eyebrow{justify-content:center}
