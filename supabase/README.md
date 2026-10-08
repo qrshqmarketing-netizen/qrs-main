@@ -68,7 +68,7 @@ The website itself (Next.js on Vercel) and the AI-agent (MCP) route stay on Verc
 
    To go back, remove them: the site uses its own routes again.
 
-8. **Dashboard logins.** Create each team member in Supabase → Authentication → Users, turn off new sign-ups, run `scripts/supabase-admin-users.sql`, then add `SUPABASE_PUBLISHABLE_KEY` in Vercel and redeploy. Create and test your own login first: with the key set, the shared password stops working. Removing the key brings it back.
+8. **Dashboard logins.** Create each team member in Supabase → Authentication → Users, turn off new sign-ups, run `scripts/supabase-admin-users.sql`, then add `SUPABASE_PUBLISHABLE_KEY` and `ADMIN_AUTH=supabase` in Vercel and redeploy. Create and test your own login first: with the key set, the shared password stops working. Removing the key brings it back.
 
 ## Pictures and site text in the dashboard
 
