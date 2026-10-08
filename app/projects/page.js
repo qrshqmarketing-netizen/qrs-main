@@ -1,7 +1,5 @@
 import Breadcrumbs from '@/components/sections/Breadcrumbs';
-import ProjectMap from '@/components/sections/ProjectMap';
 import StudioProjects from '@/components/studio/StudioProjects';
-import Rich from '@/components/ui/Rich';
 import JsonLd from '@/components/ui/JsonLd';
 import { HOME, PROJECTS_LINK } from '@/data/catalog';
 import { MID_WILSHIRE_PROJECT } from '@/data/pages/mid-wilshire-project';
@@ -36,12 +34,9 @@ export default function ProjectsPage() {
               <span className="sr-only"> — </span>
               <span className="projects-hub-outcome">{heroOutcome('/projects/')}</span>
             </h1>
-            <p><Rich text={page.hero.intro} /></p>
-            {page.hero.more && <p className="projects-hub-more"><Rich text={page.hero.more} /></p>}
           </div>
         </div>
       </section>
-      <ProjectMap projects={PROJECT_PAGES} />
       <StudioProjects projects={PROJECT_PAGES} label="All projects" heading="Every project, newest first" allLink={false} />
     </main>
   );
