@@ -36,6 +36,8 @@ export const VISUALIZER_BRANDS = [
 export const VISUALIZER_CATALOG = VISUALIZER_BRANDS.map((b) => ({ id: b.id, name: b.name, line: b.line, kind: b.kind, generic: Boolean(b.generic), colors: b.colors.map((c) => ({ id: c.id, name: c.name, hex: c.hex, ...(c.swatch && { swatch: c.swatch }) })) }));
 
 export const VISUALIZER_PATH = '/roof-visualizer/';
+// "Use my address": the roof seen from above, found with Google's Solar API (lib/aerialRoof.js). false hides it and leaves only the photo upload.
+export const AERIAL_ENABLED = true;
 export const VISUALIZER_TOKEN_KEY = 'qrs-visualizer'; // localStorage: the visitor's signed pass (name and email already given)
 
 // Where the browser sends the visualizer's requests: the site's own route, or the Supabase Edge Function when NEXT_PUBLIC_VISUALIZE_ENDPOINT is set
@@ -45,7 +47,7 @@ export const VISUALIZE_ENDPOINT = process.env.NEXT_PUBLIC_VISUALIZE_ENDPOINT || 
 export const VISUALIZER_COPY = {
   label: 'Roof Visualizer',
   heading: 'See your roof in a __new color__ before you decide',
-  sub: 'Take a photo of your house, choose a roof color, and we show you the new roof on your own photo. Free, and it takes about a minute.',
+  sub: 'Enter your address and we pull up an aerial picture of your own roof, or upload a photo. Choose a roof color and see it on your house. Free, and it takes about a minute.',
   gateTitle: 'Get your free preview',
   gateText: 'Enter your name and email to use the visualizer. We’ll also send you roofing tips and offers from Quality Roofing Specialists, Inc. You can unsubscribe at any time.',
   consent: 'Yes, email me roofing tips and offers from Quality Roofing Specialists, Inc.',

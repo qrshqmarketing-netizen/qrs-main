@@ -5,6 +5,8 @@ import { makeDb } from '../supabase/functions/_shared/db.js';
 import { handleLead } from '../supabase/functions/_shared/leadHandler.js';
 import { buildPrompt, handleVisualizer, makePass, readPass } from '../supabase/functions/_shared/visualizer.js';
 import { VISUALIZER_CATALOG } from '../data/roofVisualizer.js';
+import { aerialRoof, cropBox, roofComponent, softMask } from '../lib/aerialRoof.js';
+import { writeArrayBuffer } from 'geotiff';
 import { autoReplyContent as shared } from '../supabase/functions/_shared/autoReply.js';
 import { autoReplyContent as site } from '../lib/autoReply.js';
 
@@ -301,6 +303,45 @@ await test('visualizer: a color with a swatch picture sends it to Gemini with th
   const res = await handleVisualizer(new Request('https://x.test/v', { method: 'POST', body: JSON.stringify({ action: 'render', token, image: 'data:image/jpeg;base64,/9j/4AAQSkZJRg==', brand: 'g', color: 'c' }) }), ctx);
   assert.equal(res.status, 200);
   assert.equal(seen[0], 'https://example.test/images/visualizer/teak.webp');
+});
+
+await test('visualizer address lookup: finds the roof under the address (not the neighbor), crops it and returns a picture and a soft mask', async () => {
+  // A 60x40 aerial picture with two "buildings": the house under the address (x 10-34, y 8-31) and a neighbor (x 42-56, y 8-31)
+  const w = 60;
+  const h = 40;
+  const mask = new Uint8Array(w * h);
+  for (let y = 8; y < 32; y++) for (let x = 10; x < 57; x++) mask[y * w + x] = x < 35 || x >= 42 ? 1 : 0;
+  const comp = roofComponent(mask, w, h, 22, 20);
+  assert.equal(comp[20 * w + 22], 1);
+  assert.equal(comp[20 * w + 50], 0); // the neighbor is not part of it
+  const box = cropBox(comp, w, h);
+  assert.ok(box.x0 <= 10 && box.x1 >= 34 && box.y0 <= 8 && box.y1 >= 31);
+  assert.equal(roofComponent(new Uint8Array(w * h), w, h, 30, 20), null);
+  const soft = softMask(comp, w, h);
+  assert.equal(soft[20 * w + 22], 255);
+  assert.ok(soft[20 * w + 9] > 0 && soft[20 * w + 9] < 255); // the edge blends
+
+  const rgbTiff = writeArrayBuffer(Uint8Array.from({ length: w * h * 3 }, (_, i) => 90 + (i % 7)), { width: w, height: h, SamplesPerPixel: 3, BitsPerSample: [8, 8, 8], PhotometricInterpretation: 2, PlanarConfiguration: 1 });
+  const maskTiff = writeArrayBuffer(mask, { width: w, height: h, SamplesPerPixel: 1, BitsPerSample: [8], PhotometricInterpretation: 1 });
+  const calls = [];
+  const fetchFn = async (url) => {
+    const u = String(url);
+    calls.push(u.replace(/key=.*/, 'key=K'));
+    if (u.includes('geocode')) return Response.json({ status: 'OK', results: [{ formatted_address: '1 Main St, Los Angeles, CA 90001, USA', geometry: { location: { lat: 34.05, lng: -118.25 } } }] });
+    if (u.includes('dataLayers') && u.includes('requiredQuality=HIGH')) return new Response('', { status: 404 }); // no 10 cm imagery here...
+    if (u.includes('dataLayers')) return Response.json({ rgbUrl: 'https://solar.test/rgb?id=1', maskUrl: 'https://solar.test/mask?id=1', imageryDate: { year: 2025, month: 4, day: 2 }, imageryQuality: 'MEDIUM' }); // ...so MEDIUM is used
+    return new Response(u.includes('/rgb') ? rgbTiff : maskTiff, { status: 200 });
+  };
+  const env = { GOOGLE_MAPS_KEY: 'K' };
+  const out = await aerialRoof({ env, fetch: fetchFn, address: '1 Main St, Los Angeles' });
+  assert.match(out.before, /^data:image\/jpeg;base64,/);
+  assert.match(out.mask, /^data:image\/png;base64,/);
+  assert.ok(out.width >= 25 && out.height >= 24);
+  assert.equal(out.label, '1 Main St, Los Angeles, CA 90001');
+  assert.equal(out.imageryDate, '2025-04');
+  assert.ok(calls.some((c) => c.includes('requiredQuality=MEDIUM') && c.includes('pixelSizeMeters=0.25')));
+  await assert.rejects(aerialRoof({ env: {}, fetch: fetchFn, address: 'x' }), (e) => e === 'config');
+  await assert.rejects(aerialRoof({ env, fetch: async () => Response.json({ status: 'ZERO_RESULTS' }), address: 'nowhere' }), (e) => e === 'addr');
 });
 
 console.log(`\n${passed} tests passed`);

@@ -46,7 +46,7 @@ export async function readPass(secret, token, now = Date.now()) {
   }
 }
 
-const secretOf = (env) => (env.VISUALIZER_SECRET || env.SUPABASE_SERVICE_ROLE_KEY || env.SUPABASE_SECRET_KEYS || env.ADMIN_PASSWORD || '').trim();
+export const secretOf = (env) => (env.VISUALIZER_SECRET || env.SUPABASE_SERVICE_ROLE_KEY || env.SUPABASE_SECRET_KEYS || env.ADMIN_PASSWORD || '').trim();
 
 // What to ask Gemini for. The photo is the first part; everything except the roof must stay exactly as it is.
 export function buildPrompt(brand, color) {

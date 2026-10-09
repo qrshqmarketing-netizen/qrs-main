@@ -45,6 +45,17 @@
 .viz-ba-tag.after{right:12px}
 .viz-ba input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize}
 
+
+/* "Use my address" and the tabs above the roof step */
+.viz-tabs{display:inline-flex;gap:4px;margin:0 0 16px;padding:4px;border:1px solid var(--line);border-radius:999px;background:var(--wash)}
+.viz-tabs button{min-height:40px;padding:0 18px;border:0;border-radius:999px;background:transparent;color:var(--muted);font:600 14px/1 var(--font-text),sans-serif;cursor:pointer;transition:background .2s ease,color .2s ease}
+.viz-tabs button.on{background:var(--paper);color:var(--navy);box-shadow:0 1px 3px rgba(6,45,87,.12)}
+.viz-address-row{display:grid;gap:10px}
+.viz-address-row input{width:100%}
+.viz-found{margin-top:12px}
+.viz-link{padding:0;border:0;background:none;color:var(--gold-ink);font:inherit;text-decoration:underline;cursor:pointer}
+@media (min-width:621px){.viz-address-row{grid-template-columns:minmax(0,1fr) auto}}
+
 /* the gate */
 .viz-gate{display:grid;gap:14px;max-width:460px;margin:0 auto;padding:28px;border:1px solid var(--line);border-radius:var(--radius);background:var(--paper)}
 .viz-gate.compact{max-width:none;margin:0;padding:24px}

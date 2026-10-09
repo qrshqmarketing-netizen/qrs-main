@@ -16,6 +16,9 @@ export async function postVisualizer(payload) {
   return send(SITE_VISUALIZE_ENDPOINT);
 }
 
+// The address lookup only runs on the site's own server (it decodes GeoTIFF pictures), never on the Edge Function; it uses the same signed pass
+export const postAerial = (payload) => fetch(SITE_VISUALIZE_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+
 export const savedPass = () => {
   try {
     return window.localStorage.getItem(VISUALIZER_TOKEN_KEY) || '';
