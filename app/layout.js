@@ -13,6 +13,7 @@ import SiteChrome from '@/components/layout/SiteChrome';
 import CampaignWelcome from '@/components/widgets/CampaignWelcome';
 import PageTrail from '@/components/widgets/PageTrail';
 import ScrollToTop from '@/components/ui/ScrollToTop';
+import ScrollDraw from '@/components/ui/ScrollDraw';
 import CookieNotice from '@/components/widgets/CookieNotice';
 import InstantQuoteLoader from '@/components/widgets/InstantQuoteLoader';
 import MobileActionBar from '@/components/widgets/MobileActionBar';
@@ -93,6 +94,7 @@ export default function RootLayout({ children }) {
           <CampaignWelcome />
           <PageTrail />
           <ScrollToTop />
+          <ScrollDraw />
           {LOAD_TRACKING && (
             <>
               <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="lazyOnload" />

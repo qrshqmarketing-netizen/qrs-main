@@ -211,6 +211,9 @@ body.studio-site :is(.review-destination-actions,.section,.value-grid,.card-grid
 .lr-wm{display:inline-block;vertical-align:top;overflow:clip;padding:0 .06em .16em;margin:0 -.06em -.16em}
 .lr-ready .lr-wi{display:inline-block;transform:translate3d(0,108%,0)}
 .lr-ready.lr-in .lr-wi{transform:none;transition:transform 1.1s cubic-bezier(.17,.84,.44,1);transition-delay:calc(var(--l,0) * 100ms)}
+/* A heading's hand-drawn underline waits for the words to slide in */
+.lr-ready .hand-line{transition:opacity .7s ease .6s}
+.lr-ready:not(.lr-in) .hand-line{opacity:0}
 @media print,(prefers-reduced-motion:reduce){.lr-ready .lr-wi{transform:none!important;transition:none!important}}
 /* Image parallax: photos are 10% larger than their frame and drift a few percent (the offset is set from the scroll position) */
 body.studio-site img.px{transform:translate3d(0,var(--py,0%),0) scale(1.1)!important;transition:none!important;will-change:transform}

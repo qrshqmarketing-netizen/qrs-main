@@ -2,6 +2,7 @@ import CardSlider from '@/components/ui/CardSlider';
 import SliderCard from '@/components/ui/SliderCard';
 import '@/components/ui/CardSlider.css';
 import './CardGrid.css';
+import Mark from '@/components/ui/Mark';
 
 // Row of page cards for hub pages, as a horizontal slider. The whole card is the link.
 // cards: [{ title, text, href, scene, image? }]
@@ -11,7 +12,7 @@ export default function CardGrid({ id, heading, intro, cards = [], tone }) {
       <div className="container">
         {(heading || intro) && (
           <div className="section-head">
-            {heading && <h2>{heading}</h2>}
+            {heading && <h2><Mark text={heading} auto /></h2>}
             {intro && <p>{intro}</p>}
           </div>
         )}

@@ -8,7 +8,13 @@ import { useEffect, useRef } from 'react';
 // under the fixed header, so this does it explicitly. The browser's Back and Forward buttons keep their own scroll position, and a
 // change of the address's ?query on the same page (the blog filters) or a #section link is left alone. A click on a link to the page
 // you are already on scrolls up to the top.
-const toTop = (behavior) => window.scrollTo({ top: 0, left: 0, behavior });
+// The smooth-scroll library (StudioMotion.jsx) keeps gliding toward the old page's position unless it is told too, so it is reset as well.
+function toTop(behavior) {
+  const lenis = window.__qrsLenis;
+  if (lenis) lenis.scrollTo(0, behavior === 'instant' ? { immediate: true, force: true } : {});
+  else window.scrollTo({ top: 0, left: 0, behavior });
+  if (behavior === 'instant') window.scrollTo({ top: 0, left: 0, behavior });
+}
 
 export default function ScrollToTop() {
   const pathname = usePathname();
@@ -40,8 +46,24 @@ export default function ScrollToTop() {
     if (popped.current) { popped.current = false; return; }
     if (window.location.hash) return;
     toTop('instant');
-    const id = requestAnimationFrame(() => toTop('instant')); // once more after the new page has painted
-    return () => cancelAnimationFrame(id);
+    // Once more after the new page has painted and a little later, unless the visitor has already started scrolling the new page
+    let touched = false;
+    const mark = () => { touched = true; };
+    window.addEventListener('wheel', mark, { passive: true });
+    window.addEventListener('touchstart', mark, { passive: true });
+    window.addEventListener('keydown', mark);
+    const again = () => { if (!touched && window.scrollY > 0) toTop('instant'); };
+    const id = requestAnimationFrame(again);
+    const t1 = setTimeout(again, 150);
+    const t2 = setTimeout(again, 450);
+    return () => {
+      cancelAnimationFrame(id);
+      clearTimeout(t1);
+      clearTimeout(t2);
+      window.removeEventListener('wheel', mark);
+      window.removeEventListener('touchstart', mark);
+      window.removeEventListener('keydown', mark);
+    };
   }, [pathname]);
 
   return null;

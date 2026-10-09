@@ -2,6 +2,7 @@ import Rich from '@/components/ui/Rich';
 import SiteLink from '@/components/ui/SiteLink';
 import ScrollParallaxImage from './ScrollParallaxImage';
 import './SplitFeature.css';
+import Mark from '@/components/ui/Mark';
 
 // Text beside a photo (or scene art). reverse puts the picture on the left.
 export default function SplitFeature({ eyebrow, heading, subheading, paragraphs = [], cta, image, imageAlt = '', scene = 'scene-replace', reverse, tone }) {
@@ -10,7 +11,7 @@ export default function SplitFeature({ eyebrow, heading, subheading, paragraphs 
       <div className="container split-grid">
         <div className="split-copy">
           {eyebrow && <div className="eyebrow">{eyebrow}</div>}
-          <h2>{heading}</h2>
+          <h2><Mark text={heading} auto /></h2>
           {subheading && <p className="split-sub">{subheading}</p>}
           {paragraphs.map((p) => (
             <p key={p}>

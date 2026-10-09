@@ -1,13 +1,14 @@
 import Rich from '@/components/ui/Rich';
 import SiteLink from '@/components/ui/SiteLink';
 import './Overview.css';
+import Mark from '@/components/ui/Mark';
 
 // Heading on the left and large intro copy on the right (or both centered), over a faint clay-tile pattern
 export default function Overview({ heading = 'Overview', paragraphs = [], id, center, cta }) {
   return (
     <section className={'overview tile-pattern' + (center ? ' overview-center' : '')} id={id}>
       <div className="container overview-grid">
-        <h2>{heading}</h2>
+        <h2><Mark text={heading} auto /></h2>
         <div className="overview-body">
           {paragraphs.map((p) => (
             <p key={p}>

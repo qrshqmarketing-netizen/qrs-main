@@ -1,6 +1,7 @@
 import { GoogleLogo, Star } from '@/components/ui/icons';
 import { GOOGLE_REVIEWS } from '@/data/reviews';
 import './ReviewGrid.css';
+import Mark from '@/components/ui/Mark';
 
 // Every Google review (data/reviews.js) as a card, with a link to the review on Google
 export default function ReviewGrid({ heading = 'What Homeowners Say', reviews = GOOGLE_REVIEWS }) {
@@ -8,7 +9,7 @@ export default function ReviewGrid({ heading = 'What Homeowners Say', reviews = 
     <section className="review-grid tile-pattern" id="reviews">
       <div className="container">
         <div className="section-head">
-          <h2>{heading}</h2>
+          <h2><Mark text={heading} auto /></h2>
         </div>
         <div className="rg-grid">
           {reviews.map((review) => (

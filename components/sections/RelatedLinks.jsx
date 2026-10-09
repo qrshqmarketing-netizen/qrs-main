@@ -2,6 +2,7 @@ import SiteLink from '@/components/ui/SiteLink';
 import Rich from '@/components/ui/Rich';
 import { ArrowRight } from '@/components/ui/icons';
 import './RelatedLinks.css';
+import Mark from '@/components/ui/Mark';
 
 // A short row of links to closely related pages. links: [{ label, href }]
 export default function RelatedLinks({ heading = 'Related services', links = [] }) {
@@ -9,7 +10,7 @@ export default function RelatedLinks({ heading = 'Related services', links = [] 
   return (
     <section className="related-links">
       <div className="container">
-        <h2>{heading}</h2>
+        <h2><Mark text={heading} auto /></h2>
         <ul className="chips">
           {links.map((link) => (
             <li key={link.href}>

@@ -1,10 +1,11 @@
+import Mark from '@/components/ui/Mark';
 import Rich from '@/components/ui/Rich';
 import SiteLink from '@/components/ui/SiteLink';
 import { ArrowRight } from '@/components/ui/icons';
 import { BUSINESS, OFFICES } from '@/data/site';
 
 const LEAD =
-  'At Quality Roofing Specialists, we believe roofing should be detail-first: clear scopes, no pressure and no mystery pricing, from a licensed, bonded and insured California contractor.';
+  'At Quality Roofing Specialists, we believe roofing should be __detail-first__: clear scopes, no pressure and no mystery pricing, from a licensed, bonded and insured California contractor.';
 const MORE = [
   'Before any work starts, you get a written scope and price. We document what we find with photos, explain it in plain English and back our installs with a 10-year workmanship warranty. Straightforward, honest work from a local roofing team across [Southern California](/service-areas/).',
   'Every [roof replacement](/roof-replacement/), roof repair, [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/) and [flat](/residential-roofing/flat-roofing/) or [shingle roof](/residential-roofing/shingle-roofing/) gets the same care.',
@@ -22,7 +23,7 @@ export default function StudioIntro() {
       <div className="container st-split">
         <p className="st-label">The QRS standard</p>
         <div>
-          <p className="st-lead">{LEAD}</p>
+          <p className="st-lead"><Mark text={LEAD} /></p>
           <div className="st-cols">
             {MORE.map((p) => (
               <p key={p}>

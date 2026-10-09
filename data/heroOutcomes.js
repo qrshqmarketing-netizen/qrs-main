@@ -5,6 +5,8 @@
 // short enough for two lines, in plain words. Never a guarantee or a number (no "leak-free", "forever", "guaranteed", years or prices) and
 // nothing the page doesn't already say. Homeowners and clients stay "homeowners" and "clients" (data/pages terminology rule).
 //
+// The underlined word in each page's H1 is in HERO_UNDERLINES below (a hand-drawn gold line that draws itself).
+//
 // The home page's big headline ("Come home to a roof you can trust.") is in app/page.js: there the keyword line above it is the H1.
 
 export const HERO_OUTCOMES = {
@@ -88,5 +90,74 @@ export const HERO_OUTCOMES = {
   '/contact-us/': 'Talk to a real roofer and get a clear next step.',
   '/blog/': 'Know your roof before the next storm.',
 };
+
+// The word or phrase underlined (by hand, animated) in each page's H1 (components/sections/Hero.jsx). It must appear in the H1's text exactly; one short
+// distinguishing word, not the whole keyword. A page with no entry has no underline.
+export const HERO_UNDERLINES = {
+  '/residential-roofing/': 'Residential',
+  '/roof-repair/': 'Repair',
+  '/roof-replacement/': 'Replacement',
+  '/roof-repair/emergency/': 'Emergency',
+  '/roof-inspection/': 'Inspection',
+  '/roof-financing/': 'Financing',
+  '/roof-maintenance-plans/': 'Maintenance',
+  '/residential-roofing/shingle-roofing/': 'Shingle',
+  '/residential-roofing/shingle-roofing/replacement/': 'Replacement',
+  '/residential-roofing/shingle-roofing/repair/': 'Repair',
+  '/residential-roofing/shingle-roofing/installation/': 'Installation',
+  '/residential-roofing/tile-roofing/': 'Tile',
+  '/residential-roofing/tile-roofing/replacement/': 'Replacement',
+  '/residential-roofing/tile-roofing/repair/': 'Repair',
+  '/residential-roofing/tile-roofing/lift-and-relay/': 'Lift & Relay',
+  '/residential-roofing/tile-roofing/slate/': 'Slate',
+  '/residential-roofing/tile-roofing/concrete/': 'Concrete',
+  '/residential-roofing/flat-roofing/': 'Flat',
+  '/residential-roofing/flat-roofing/replacement/': 'Replacement',
+  '/residential-roofing/flat-roofing/repair/': 'Repair',
+  '/residential-roofing/flat-roofing/installation/': 'Installation',
+  '/residential-roofing/metal-roofing/': 'Metal',
+  '/residential-roofing/metal-roofing/standing-seam/': 'Standing Seam',
+  '/residential-roofing/metal-roofing/repair/': 'Repair',
+  '/residential-roofing/hoa-multi-family/': 'HOA',
+  '/residential-roofing/attic-ventilation/': 'Attic',
+  '/commercial-roofing/': 'Commercial',
+  '/commercial-roofing/repair/': 'Repair',
+  '/commercial-roofing/replacement/': 'Replacement',
+  '/commercial-roofing/tpo-roofing/': 'TPO',
+  '/commercial-roofing/maintenance/': 'Maintenance',
+  '/commercial-roofing/office-buildings/': 'Office Building',
+  '/commercial-roofing/retail/': 'Retail',
+  '/commercial-roofing/churches/': 'Church',
+  '/commercial-roofing/industrial/': 'Industrial',
+  '/commercial-roofing/shops/': 'Shop',
+  '/commercial-roofing/warehouses/': 'Warehouse',
+  '/commercial-roofing/malls/': 'Mall',
+  '/contractors/': 'Partner',
+  '/service-areas/': 'Service Areas',
+  '/service-areas/la-county/': 'Los Angeles',
+  '/service-areas/orange-county/': 'Orange County',
+  '/service-areas/la-county/los-angeles/': 'Los Angeles',
+  '/service-areas/la-county/santa-monica/': 'Santa Monica',
+  '/service-areas/la-county/pasadena/': 'Pasadena',
+  '/service-areas/la-county/glendale/': 'Glendale',
+  '/service-areas/la-county/burbank/': 'Burbank',
+  '/service-areas/la-county/woodland-hills/': 'Woodland Hills',
+  '/service-areas/la-county/torrance/': 'Torrance',
+  '/service-areas/la-county/long-beach/': 'Long Beach',
+  '/service-areas/la-county/vernon/': 'Vernon',
+  '/service-areas/orange-county/anaheim/': 'Anaheim',
+  '/service-areas/orange-county/santa-ana/': 'Santa Ana',
+  '/service-areas/orange-county/huntington-beach/': 'Huntington Beach',
+  '/service-areas/orange-county/irvine/': 'Irvine',
+  '/service-areas/orange-county/newport-beach/': 'Newport Beach',
+  '/projects/': 'Projects',
+  '/reviews/': 'Reviews',
+  '/about-us/': 'Specialists',
+  '/careers/': 'Careers',
+  '/contact-us/': 'Contact',
+  '/blog/': 'Tips',
+};
+
+export const heroUnderline = (path) => HERO_UNDERLINES[path];
 
 export const heroOutcome = (path) => HERO_OUTCOMES[path];

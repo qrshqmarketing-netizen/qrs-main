@@ -1,6 +1,7 @@
 import Rich from '@/components/ui/Rich';
 import { OfficeCard } from './Offices';
 import './LocalIntro.css';
+import Mark from '@/components/ui/Mark';
 
 // City and region pages: local intro copy, the offices there (if any), the neighborhoods we serve and local roof considerations
 export default function LocalIntro({ city, heading, paragraphs = [], offices = [], neighborhoods = [], considerations = [] }) {
@@ -9,7 +10,7 @@ export default function LocalIntro({ city, heading, paragraphs = [], offices = [
       <div className="container local-grid">
         <div className="local-copy">
           <div className="eyebrow">Local roofing · {city}</div>
-          <h2>{heading}</h2>
+          <h2><Mark text={heading} auto /></h2>
           {paragraphs.map((p) => (
             <p key={p}>
               <Rich text={p} />

@@ -2,6 +2,8 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
+import CircledWord from '@/components/ui/HandCircle';
+import Mark from '@/components/ui/Mark';
 import Rich from '@/components/ui/Rich';
 import SiteLink from '@/components/ui/SiteLink';
 import { ArrowRight } from '@/components/ui/icons';
@@ -16,15 +18,15 @@ export default function StudioServices({ categories, items }) {
       <div className="container">
         <div className="st-split st-head">
           <p className="st-label">Services</p>
-          <h2>Roofing for every home and building we work on</h2>
+          <h2><Mark text="Roofing for every __home__ and building we work on" /></h2>
         </div>
 
         <div className="st-cats">
-          {categories.map((c) => (
+          {categories.map((c, i) => (
             <SiteLink className="st-cat" href={c.href} key={c.title}>
               <Image src={c.image} alt="" fill sizes="(min-width: 901px) 50vw, 100vw" quality={60} />
               <span className="st-cat-body">
-                <b>{c.title}</b>
+                <b><CircledWord variant={i}>{c.title.split(' ')[0]}</CircledWord> {c.title.split(' ').slice(1).join(' ')}</b>
                 <span>{c.text}</span>
                 <i className="st-round" aria-hidden="true"><ArrowRight /></i>
               </span>

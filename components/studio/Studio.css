@@ -91,6 +91,8 @@ main.studio .st-label,main.studio .st-head h2{text-align:left}
 .st-cat-body{position:absolute;left:24px;right:24px;bottom:22px;display:grid;gap:8px;padding-right:56px}
 .st-cat-body b{font:500 clamp(24px,4vw,34px)/1.1 var(--font-text),sans-serif;letter-spacing:-.02em}
 .st-cat-body span{font-size:15px;line-height:1.5;color:rgba(255,255,255,.84);max-width:42ch}
+.st-cat-body b .hand-circled,.st-proj-card b .hand-circled{display:inline-block;max-width:none;gap:0;font:inherit;letter-spacing:inherit;color:inherit}
+.st-proj-card b .hand-circle,.st-cat-body b .hand-circle{width:118%;height:134%;margin:0}
 .st-round{position:absolute;right:0;bottom:0;display:grid;place-items:center;width:44px;height:44px;border:1px solid rgba(255,255,255,.5);border-radius:50%;font-style:normal;transition:background .25s ease,color .25s ease}
 .st-round svg{width:17px;height:17px}
 @media (hover:hover){.st-cat:hover img{transform:scale(1.04)}.st-cat:hover .st-round{background:#fff;color:var(--navy)}}

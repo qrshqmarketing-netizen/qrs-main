@@ -217,10 +217,35 @@ main h2{animation:fadeUp .9s ease .3s both}
 
 /* Underlined words in headings (__word__ in a heading, rendered by components/ui/Mark.jsx; the hero headline uses <u> directly): a thick gold
    line under the word, set clear of the letters so it never cuts through them. */
-h1 u,h2 u,h3 u,.hero-title u{
+h1 u,h2 u,h3 u,.hero-title u,.st-hero-title u,.st-lead u{text-decoration:none;position:relative;display:inline-block;white-space:nowrap}
+/* The line is a hand-drawn SVG (components/ui/HandUnderline.jsx) under the word. Without it (an older <u> with no drawing) the plain gold line returns. */
+h1 u:not(:has(.hand-line)),h2 u:not(:has(.hand-line)),h3 u:not(:has(.hand-line)),.hero-title u:not(:has(.hand-line)),.st-hero-title u:not(:has(.hand-line)),.st-lead u:not(:has(.hand-line)){
   text-decoration-line:underline;text-decoration-color:var(--gold);text-decoration-thickness:.09em;
   text-underline-offset:.16em;text-decoration-skip-ink:none;
 }
+.hand-line{position:absolute;left:-3%;bottom:-.2em;width:106%;height:.34em;overflow:visible;pointer-events:none}
+.hand-line path{fill:none;stroke:var(--gold);stroke-linecap:round;stroke-linejoin:round;stroke-width:3.4}
+.hand-line .hl-second{stroke-width:2.2;opacity:.8}
+/* The outcome line is small type, so its pen is thicker and sits a little lower to stay visible */
+/* In a big hero headline the line sits closer, so it stays clear of the next line */
+.hero-title .hand-line{height:.24em;bottom:-.1em}
+/* Heroes: the pen draws the main stroke, then a quick second pass under it. Reduced motion: the finished line shows at once. */
+.hand-draw path{stroke-dasharray:1;stroke-dashoffset:1;animation:handDraw .85s cubic-bezier(.45,.05,.25,1) .7s forwards}
+.hand-draw .hl-second{animation-duration:.55s;animation-delay:1.45s}
+@keyframes handDraw{to{stroke-dashoffset:0}}
+/* A hand-drawn circle around a word (components/ui/HandCircle.jsx) */
+.hand-circled{position:relative;display:inline-block;white-space:nowrap}
+.hand-circle{position:absolute;left:-9%;top:-17%;width:118%;height:134%;overflow:visible;pointer-events:none}
+.hand-circle path{fill:none;stroke:var(--gold);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.st-proj-card .hand-circle path{stroke:var(--gold-ink)}
+/* Every page (components/ui/ScrollDraw.jsx): drawings below the first screen wait, then the pen draws them as they scroll into view */
+.hand-wait path{stroke-dasharray:1;stroke-dashoffset:1}
+.hand-wait.hand-go path{stroke-dashoffset:0;transition:stroke-dashoffset .9s cubic-bezier(.45,.05,.25,1) .45s}
+.hand-wait.hand-go .hl-second{transition-duration:.55s;transition-delay:1.25s}
+@media (prefers-reduced-motion:reduce){.hand-wait path{stroke-dasharray:none;stroke-dashoffset:0}}
+@media print{.hand-wait path{stroke-dasharray:none;stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.hand-draw path{animation:none;stroke-dashoffset:0}}
+@media print{.hand-draw path{animation:none;stroke-dashoffset:0}}
 
 /* Product names have a distinct serif italic treatment wherever rich text displays them. */
 .product-brand{font-family:Georgia,'Times New Roman',serif;font-style:italic;text-transform:none!important}

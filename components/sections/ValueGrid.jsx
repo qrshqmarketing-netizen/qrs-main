@@ -1,6 +1,7 @@
 import Rich from '@/components/ui/Rich';
 import SiteLink from '@/components/ui/SiteLink';
 import './ValueGrid.css';
+import Mark from '@/components/ui/Mark';
 
 // Grid of short titled points (values, audiences, roles). Items can have an optional link.
 // items: [{ title, text, link?: { label, href } }]
@@ -10,7 +11,7 @@ export default function ValueGrid({ id, heading, intro, items = [], columns = 4,
       <div className="container">
         {(heading || intro) && (
           <div className="section-head center">
-            {heading && <h2>{heading}</h2>}
+            {heading && <h2><Mark text={heading} auto /></h2>}
             {intro && (
               <p>
                 <Rich text={intro} />

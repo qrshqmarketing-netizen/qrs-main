@@ -1,6 +1,7 @@
 import Rich from '@/components/ui/Rich';
 import ScrollParallaxImage from './ScrollParallaxImage';
 import './ProcessSteps.css';
+import Mark from '@/components/ui/Mark';
 
 // Numbered steps with optional bullet lists, beside a photo (or scene art) that stays in view while scrolling.
 // The photo only shows at 901px+ by default; pass `showOnMobile` to also show it (in-flow, not sticky) below 901px.
@@ -10,7 +11,7 @@ export default function ProcessSteps({ heading = 'Our Process', subheading, step
     <section className={'process-block' + (tone === 'white' ? ' process-block-white' : '')}>
       <div className="container process-block-grid">
         <div className="process-block-copy">
-          <h2>{heading}</h2>
+          <h2><Mark text={heading} auto /></h2>
           {subheading && <p className="process-block-sub">{subheading}</p>}
           <ol className="process-list">
             {steps.map((step, i) => (

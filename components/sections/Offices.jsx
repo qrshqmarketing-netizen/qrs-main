@@ -4,6 +4,7 @@ import { ArrowRight } from '@/components/ui/icons';
 import { cityPath, findCity } from '@/data/locations';
 import { OFFICES, PHONE, TEL } from '@/data/site';
 import './Offices.css';
+import Mark from '@/components/ui/Mark';
 
 // One office: address, phone and (optionally) a link to the city page it sits in.
 // `photo={false}` leaves out the office's photo, so it matches cards without one.
@@ -47,7 +48,7 @@ export default function Offices({ heading = 'Our Offices', sub, note, photos = t
     <section className="offices tile-pattern">
       <div className="container">
         <div className="section-head">
-          <h2>{heading}</h2>
+          <h2><Mark text={heading} auto /></h2>
           {sub && <p>{sub}</p>}
         </div>
         <div className="office-grid">

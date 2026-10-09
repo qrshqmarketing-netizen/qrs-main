@@ -6,6 +6,7 @@ import { ArrowRight } from '@/components/ui/icons';
 import { BUSINESS, COMPANY, OFFICES, PHONE, TEL } from '@/data/site';
 import { cityPath } from '@/data/locations';
 import './about.css';
+import Mark from '@/components/ui/Mark';
 
 // The About page's sections in the studio style (layout adapted from the owner's reference digidop.com/about-us): a lead statement with the year we were
 // licensed rolling up, a grid of numbers, the story beside a photo, the offices, the mission with the values as numbered rows, the team, recognition,
@@ -52,7 +53,7 @@ export function AboutNumbers() {
       <div className="container">
         <div className="ab-split ab-head">
           <Label>By the numbers</Label>
-          <h2>A few numbers about us</h2>
+          <h2><Mark text="A few numbers about us" auto /></h2>
         </div>
         <dl className="ab-grid">
           {NUMBERS.map((n) => (
@@ -77,7 +78,7 @@ export function AboutStory({ story }) {
         <Label>{story.eyebrow}</Label>
         <div className="ab-story-grid">
           <div>
-            <h2>{story.heading}</h2>
+            <h2><Mark text={story.heading} auto /></h2>
             {story.paragraphs.map((p) => (
               <p key={p}>
                 <Rich text={p} />
@@ -228,7 +229,7 @@ export function AboutServices({ services }) {
       <div className="container ab-split">
         <Label>What we do</Label>
         <div>
-          <h2>{services.heading}</h2>
+          <h2><Mark text={services.heading} auto /></h2>
           {services.paragraphs.map((p) => (
             <p key={p}>
               <Rich text={p} />

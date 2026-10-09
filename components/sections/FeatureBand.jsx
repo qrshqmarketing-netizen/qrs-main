@@ -1,6 +1,7 @@
 import Rich from '@/components/ui/Rich';
 import SiteLink from '@/components/ui/SiteLink';
 import './FeatureBand.css';
+import Mark from '@/components/ui/Mark';
 
 // Heading, intro and a call to action beside a list of check-marked points.
 // tone: 'navy' (default, e.g. white-label roofing on /contractors/) or 'light' (e.g. careers on the home page).
@@ -11,7 +12,7 @@ export default function FeatureBand({ id, eyebrow, heading, paragraphs = [], poi
       <div className="container band-grid">
         <div className="band-copy">
           {eyebrow && <div className="eyebrow">{eyebrow}</div>}
-          <h2>{heading}</h2>
+          <h2><Mark text={heading} auto /></h2>
           {paragraphs.map((p) => (
             <p key={p}>
               <Rich text={p} />

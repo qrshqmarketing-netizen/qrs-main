@@ -1,6 +1,7 @@
 import Rich from '@/components/ui/Rich';
 import SiteLink from '@/components/ui/SiteLink';
 import './WhyChoose.css';
+import Mark from '@/components/ui/Mark';
 
 // "Why Choose QRS for …?" — heading, intro, a grid of reasons and a call to action
 export default function WhyChoose({ heading, intro, points = [], cta = { label: 'Get Your Estimate', href: '#roof-check' } }) {
@@ -8,7 +9,7 @@ export default function WhyChoose({ heading, intro, points = [], cta = { label: 
     <section className="why-choose">
       <div className="container">
         <div className="section-head">
-          <h2>{heading}</h2>
+          <h2><Mark text={heading} auto /></h2>
           {intro && (
             <p>
               <Rich text={intro} />

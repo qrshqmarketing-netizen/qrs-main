@@ -1,8 +1,10 @@
+import HandUnderline from '@/components/ui/HandUnderline';
 import Rich from '@/components/ui/Rich';
 import QuoteTrigger from '@/components/ui/QuoteTrigger';
 import SiteLink from '@/components/ui/SiteLink';
 import { PhoneIcon } from '@/components/ui/icons';
 import { INSTANT_QUOTE_ENABLED } from '@/data/instantQuote';
+import { heroUnderline } from '@/data/heroOutcomes';
 import { PHONE, TEL } from '@/data/site';
 import Breadcrumbs from './Breadcrumbs';
 import HeroParallax from './HeroParallax';
@@ -26,7 +28,22 @@ const DEFAULT_ACTIONS = [
 // crop of the same scene) to show a different photo below 621px instead of a cropped `image`. Below 621px a hero
 // with a photo stacks: the photo on its own band, then the copy below it (Hero.css .hero-stack). `stats` adds the proof-point strip directly
 // under the hero (ProofBar `strip`). `aside` puts something (a picture) beside the copy
-// from 901px, below it on phones (the blog index shows its latest article this way).
+// from 901px, below it on phones (the blog index shows its latest article this way). `underline` (default: the page's entry in HERO_UNDERLINES,
+// data/heroOutcomes.js) is the word in the headline that gets the hand-drawn animated underline.
+// The headline, with one word or phrase underlined by hand (it draws itself). `phrase` must appear in the text; otherwise the headline is shown as it is.
+function HeadlineText({ title, phrase }) {
+  const at = typeof title === 'string' && phrase ? title.indexOf(phrase) : -1;
+  if (at < 0) return <Rich text={title} registeredMark />;
+  const after = title.slice(at + phrase.length);
+  return (
+    <>
+      {at > 0 && <Rich text={title.slice(0, at)} registeredMark />}
+      <u>{phrase}<HandUnderline animate /></u>
+      {after && <Rich text={after} registeredMark />}
+    </>
+  );
+}
+
 export default function Hero({
   crumbs,
   eyebrow = 'Roof Repair & Replacement in Southern California',
@@ -45,6 +62,7 @@ export default function Hero({
   h1 = 'title',
   outcome,
   align = 'center',
+  underline,
   stats = false,
   aside,
   actions: allActions = DEFAULT_ACTIONS,
@@ -64,7 +82,7 @@ export default function Hero({
             {/* The breadcrumb trail takes the eyebrow's place (Home › Roof Repair). Only a page with no trail (the home page, the thank-you page) shows an eyebrow line. */}
             {crumbs ? <Breadcrumbs items={crumbs} /> : eyebrow && <Eyebrow className="eyebrow">{eyebrow}</Eyebrow>}
             <Title className="hero-title">
-              <Rich text={title} registeredMark />
+              <HeadlineText title={title} phrase={underline ?? (crumbs?.length ? heroUnderline(crumbs.at(-1).href) : undefined)} />
               {outcome && (
                 <>
                   <span className="sr-only"> — </span>

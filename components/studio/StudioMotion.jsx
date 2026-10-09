@@ -144,6 +144,7 @@ async function startSmoothScroll() {
     prevent: (node) =>
       Boolean(node.closest('[data-lenis-prevent], .navlinks.mobile-open, .mega, .qa-log, .rm-body, .sa-list, .loc-list, .leaflet-container, textarea, select, .adm')),
   });
+  window.__qrsLenis = lenis; // components/ui/ScrollToTop.jsx resets it on every page change (else its glide carries on to the old page's position)
   const LOCKS = ['menu-open', 'rm-lock', 'promo-open'];
   const sync = () => (LOCKS.some((c) => document.body.classList.contains(c)) ? lenis.stop() : lenis.start());
   const mo = new MutationObserver(sync);
@@ -151,6 +152,7 @@ async function startSmoothScroll() {
   sync();
   return () => {
     mo.disconnect();
+    if (window.__qrsLenis === lenis) delete window.__qrsLenis;
     lenis.destroy();
   };
 }

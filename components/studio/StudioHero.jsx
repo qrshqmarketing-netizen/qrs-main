@@ -1,5 +1,6 @@
 import StudioHeroSlider from './StudioHeroSlider';
 import SiteLink from '@/components/ui/SiteLink';
+import HandUnderline from '@/components/ui/HandUnderline';
 import { PhoneIcon } from '@/components/ui/icons';
 import { HOME_H1, PHONE, TEL } from '@/data/site';
 import './Studio.css';
@@ -14,7 +15,7 @@ export default function StudioHero({ slides }) {
       <div className="container st-hero-inner">
         <h1 className="st-kicker">{HOME_H1}</h1>
         <p className="st-hero-title">
-          Come home to a roof you can <u>trust.</u>
+          Come home to a roof you can <u>trust.<HandUnderline animate /></u>
         </p>
         <p className="st-hero-sub">Clear inspections. Straightforward estimates. Clean workmanship.</p>
         <div className="st-actions">

@@ -8,14 +8,17 @@ export default function ReadingProgress() {
   const bar = useRef(null);
   useEffect(() => {
     const article = document.querySelector('article.post');
-    if (!article || !bar.current) return undefined;
+    const el = bar.current;
+    if (!article || !el) return undefined;
     let raf = 0;
+    let gone = false; // a scroll or frame that arrives while the page is being left (the new page is scrolled to its top) must not touch the old bar
     const update = () => {
       raf = 0;
+      if (gone || !el.isConnected) return;
       const rect = article.getBoundingClientRect();
       const total = rect.height - window.innerHeight * 0.6;
       const read = Math.min(1, Math.max(0, (-rect.top + window.innerHeight * 0.25) / Math.max(total, 1)));
-      bar.current.style.transform = `scaleX(${read})`;
+      el.style.transform = `scaleX(${read})`;
     };
     const onScroll = () => {
       if (!raf) raf = requestAnimationFrame(update);
@@ -24,6 +27,7 @@ export default function ReadingProgress() {
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', onScroll);
     return () => {
+      gone = true;
       window.removeEventListener('scroll', onScroll);
       window.removeEventListener('resize', onScroll);
       if (raf) cancelAnimationFrame(raf);

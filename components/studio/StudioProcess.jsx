@@ -1,3 +1,4 @@
+import Mark from '@/components/ui/Mark';
 // How a job goes, in three quiet cards. Every line comes from what the site already says (the FAQ and "The QRS standard").
 const STEPS = [
   { n: '01', title: 'A free roof evaluation', text: 'We use drone footage to see the condition of your roof, explain what we find in plain English and give you a clear next step: repair, monitor, maintain or replace.' },
@@ -11,7 +12,7 @@ export default function StudioProcess() {
       <div className="container">
         <div className="st-split st-head">
           <p className="st-label">How it works</p>
-          <h2>Three steps, no surprises</h2>
+          <h2><Mark text="Three steps, no __surprises__" /></h2>
         </div>
         <ol className="st-process-steps">
           {STEPS.map((s) => (
