@@ -377,3 +377,14 @@ a.chip:hover{border-color:var(--navy)}
   html.page-entering :is(main,body > footer){animation:pageFadeIn .32s cubic-bezier(.27,0,.51,1) both}
 }
 @keyframes pageFadeIn{from{opacity:0}to{opacity:1}}
+
+/* Ken Burns: a slow zoom with a little drift on the hero photos (sub-page heroes, their photo sliders, the home hero slider and the project cover). Transform only,
+   so no layout shift and the LCP is not delayed; the photo is always scaled up, so its edges never show. A slider photo's motion restarts each time it fades in.
+   Off for reduced motion and in print. */
+@keyframes kenBurns{from{transform:scale(1.02) translate3d(0,0,0)}to{transform:scale(1.14) translate3d(-1.6%,-1.2%,0)}}
+@media (prefers-reduced-motion:no-preference){
+  .hero-roof-texture > img,.pd-hero-img{animation:kenBurns 24s cubic-bezier(.3,.1,.4,1) both;will-change:transform}
+  .hero-slide.is-active > img{animation:kenBurns 12s linear both;will-change:transform}
+  .st-hero-bg img.on{animation:kenBurns 10s linear both;will-change:transform}
+}
+@media print{.hero-roof-texture > img,.pd-hero-img,.hero-slide > img,.st-hero-bg img{animation:none!important}}
