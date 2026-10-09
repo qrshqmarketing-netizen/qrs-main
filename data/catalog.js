@@ -9,6 +9,7 @@ export const LOCATIONS_LINK = { label: 'Service Areas', href: '/service-areas/' 
 export const ABOUT_LINK = { label: 'About QRS', href: '/about-us/' };
 export const CAREERS_LINK = { label: 'Careers', href: '/careers/' };
 export const CONTRACTORS_LINK = { label: 'Contractors', href: '/contractors/' };
+export const ROOF_VISUALIZER_LINK = { label: 'Roof Visualizer', href: '/roof-visualizer/' };
 export const CONTACT_LINK = { label: 'Contact Us', href: '/contact-us/' };
 export const REVIEWS_LINK = { label: 'Reviews', href: '/reviews/' };
 export const PROJECTS_LINK = { label: 'Projects', href: '/projects/' };

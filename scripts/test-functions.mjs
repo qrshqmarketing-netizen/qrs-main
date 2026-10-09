@@ -3,6 +3,8 @@ import assert from 'node:assert/strict';
 import { handleChat } from '../supabase/functions/_shared/chat.js';
 import { makeDb } from '../supabase/functions/_shared/db.js';
 import { handleLead } from '../supabase/functions/_shared/leadHandler.js';
+import { buildPrompt, handleVisualizer, makePass, readPass } from '../supabase/functions/_shared/visualizer.js';
+import { VISUALIZER_CATALOG } from '../data/roofVisualizer.js';
 import { autoReplyContent as shared } from '../supabase/functions/_shared/autoReply.js';
 import { autoReplyContent as site } from '../lib/autoReply.js';
 
@@ -229,6 +231,76 @@ await test('home FAQ text round-trips through the Q:/A: format', () => {
   const faqs = [{ q: 'Is it free?', a: 'Yes, see [pricing](/roof-repair/).' }, { q: 'Second?', a: 'Two lines\nbecome one.' }];
   assert.deepEqual(textToFaqs(faqsToText(faqs)).map((f) => f.q), ['Is it free?', 'Second?']);
   assert.equal(textToFaqs(faqsToText(faqs))[1].a, 'Two lines become one.');
+});
+
+await test('visualizer: the gate issues a signed pass; render needs it, checks the choice and photo, and returns Gemini\'s picture', async () => {
+  const lines = [];
+  const limits = new Map();
+  const ctx = {
+    env: { VISUALIZER_SECRET: 'secret-secret-secret', GEMINI_API_KEY: 'g', ALLOWED_ORIGINS: 'https://qualityroofingspecialists.com' },
+    catalog: VISUALIZER_CATALOG,
+    rateLimited: async (key, max) => { const n = (limits.get(key) || 0) + 1; limits.set(key, n); return n > max; },
+    deliverLead: async (lead) => { lines.push(lead); return { delivered: true, configured: true }; },
+    waitUntil: () => {},
+    fetch: async (url, opts) => {
+      const body = JSON.parse(opts.body);
+      assert.match(String(url), /gemini-2\.5-flash-image:generateContent/);
+      assert.match(body.contents[0].parts[0].text, /asphalt shingles in the color "Mountainside"/);
+      assert.equal(body.contents[0].parts[1].inlineData.mimeType, 'image/jpeg');
+      return new Response(JSON.stringify({ candidates: [{ content: { parts: [{ text: 'ok' }, { inlineData: { mimeType: 'image/png', data: 'QUJD' } }] } }] }), { status: 200 });
+    },
+  };
+  const post = (body) => handleVisualizer(new Request('https://x.test/v', { method: 'POST', headers: { origin: 'https://qualityroofingspecialists.com', 'content-type': 'application/json' }, body: JSON.stringify(body) }), ctx);
+  // the gate: name, a real email and the consent box
+  assert.equal((await post({ action: 'subscribe', name: 'J', email: 'jo@example.com', consent: true })).status, 400);
+  assert.equal((await post({ action: 'subscribe', name: 'Jo Smith', email: 'nope', consent: true })).status, 400);
+  assert.equal((await post({ action: 'subscribe', name: 'Jo Smith', email: 'jo@example.com', consent: false })).status, 400);
+  const sub = await post({ action: 'subscribe', name: 'Jo Smith', email: 'Jo@Example.com', consent: true });
+  assert.equal(sub.status, 200);
+  const { token } = await sub.json();
+  assert.equal(lines[0].source, 'roof-visualizer');
+  assert.equal(lines[0].email, 'jo@example.com');
+  assert.deepEqual(await readPass(ctx.env.VISUALIZER_SECRET, token), { name: 'Jo Smith', email: 'jo@example.com' });
+  // a forged, expired or foreign pass is refused
+  assert.equal(await readPass('other-secret-other', token), null);
+  assert.equal(await readPass(ctx.env.VISUALIZER_SECRET, token.slice(0, -2) + 'xx'), null);
+  assert.equal(await readPass(ctx.env.VISUALIZER_SECRET, await makePass(ctx.env.VISUALIZER_SECRET, { name: 'A', email: 'a@b.co' }, Date.now() - 40 * 86400000)), null);
+  const photo = 'data:image/jpeg;base64,/9j/4AAQSkZJRg==';
+  assert.equal((await post({ action: 'render', token: 'bad.token', image: photo, brand: 'popular', color: 'mountainside' })).status, 401);
+  assert.equal((await post({ action: 'render', token, image: photo, brand: 'nobody', color: 'driftwood' })).status, 400);
+  assert.equal((await post({ action: 'render', token, image: 'data:text/html;base64,PGI+', brand: 'popular', color: 'mountainside' })).status, 400);
+  const ok = await post({ action: 'render', token, image: photo, brand: 'popular', color: 'mountainside' });
+  assert.equal(ok.status, 200);
+  const out = await ok.json();
+  assert.equal(out.image, 'data:image/png;base64,QUJD');
+  assert.equal(out.color, 'Mountainside');
+  assert.equal(lines.length, 2); // the first preview of the day notes what they tried
+  await post({ action: 'render', token, image: photo, brand: 'popular', color: 'mountainside' });
+  assert.equal(lines.length, 2); // ...but only once a day
+  assert.doesNotMatch(buildPrompt(VISUALIZER_CATALOG[0], VISUALIZER_CATALOG[0].colors[1]), /Popular|Asphalt shingle |Owens|Duration/);
+  assert.match(buildPrompt({ id: 'x', name: 'Acme', line: 'Pro', kind: 'shingle', generic: false }, { name: 'Gray', hex: '#777' }), /Acme Pro asphalt shingles/);
+});
+
+await test('visualizer: a color with a swatch picture sends it to Gemini with the photo', async () => {
+  const seen = [];
+  const catalog = [{ id: 'g', name: 'G', line: 'L', kind: 'shingle', generic: true, colors: [{ id: 'c', name: 'Teak', hex: '#7b5b45', swatch: '/images/visualizer/teak.webp' }] }];
+  const env = { VISUALIZER_SECRET: 'secret-secret-secret', GEMINI_API_KEY: 'g', SITE_URL: 'https://example.test' };
+  const token = await makePass(env.VISUALIZER_SECRET, { name: 'Jo', email: 'jo@example.com' });
+  const ctx = {
+    env, catalog, rateLimited: async () => false, deliverLead: async () => ({ delivered: true }), waitUntil: () => {},
+    fetch: async (url, opts = {}) => {
+      seen.push(String(url));
+      if (String(url).includes('example.test')) return new Response(new Uint8Array([1, 2, 3]), { status: 200, headers: { 'content-type': 'image/webp' } });
+      const parts = JSON.parse(opts.body).contents[0].parts;
+      assert.equal(parts.length, 3);
+      assert.match(parts[0].text, /second image is a swatch/);
+      assert.equal(parts[2].inlineData.mimeType, 'image/webp');
+      return new Response(JSON.stringify({ candidates: [{ content: { parts: [{ inlineData: { mimeType: 'image/png', data: 'QUJD' } }] } }] }), { status: 200 });
+    },
+  };
+  const res = await handleVisualizer(new Request('https://x.test/v', { method: 'POST', body: JSON.stringify({ action: 'render', token, image: 'data:image/jpeg;base64,/9j/4AAQSkZJRg==', brand: 'g', color: 'c' }) }), ctx);
+  assert.equal(res.status, 200);
+  assert.equal(seen[0], 'https://example.test/images/visualizer/teak.webp');
 });
 
 console.log(`\n${passed} tests passed`);

@@ -9,6 +9,7 @@ export const SOURCE_LABELS = {
   'estimate-form': 'Estimate form',
   'instant-quote': 'Instant Quote',
   'roof-assistant-chat': 'Roof Assistant chat',
+  'roof-visualizer': 'Roof Visualizer',
   mcp: 'AI agent (MCP)',
 };
 

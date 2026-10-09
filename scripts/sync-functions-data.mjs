@@ -7,6 +7,7 @@ import { BUSINESS, LEADS_EMAIL, PHONE, SITE_URL, TEL } from '../data/site.js';
 import { AUTO_REPLY } from '../data/autoReply.js';
 import { FOUND_US_OPTIONS, ROOF_TYPES, SERVICE_OPTIONS, VISIT_TIMES } from '../data/estimateOptions.js';
 import { SYSTEM_PROMPT } from '../data/assistant.js';
+import { VISUALIZER_CATALOG } from '../data/roofVisualizer.js';
 import { formatDate } from '../lib/dates.js';
 import { hoursText } from '../lib/hours.js';
 
@@ -25,6 +26,7 @@ const generated = {
   AUTO_REPLY,
   OPTIONS: { SERVICE_OPTIONS, ROOF_TYPES, VISIT_TIMES, FOUND_US_OPTIONS },
   SYSTEM_PROMPT,
+  VISUALIZER: VISUALIZER_CATALOG,
 };
 
 const file = new URL('../supabase/functions/_shared/generated.js', import.meta.url);

@@ -1,4 +1,4 @@
-# Supabase project settings used by the CLI (supabase functions deploy). The website calls these two functions straight from the visitor's
+# Supabase project settings used by the CLI (supabase functions deploy). The website calls these functions straight from the visitor's
 # browser, without a Supabase login, so the JWT check is off; each function does its own checks (allowed websites, rate limits, honeypot).
 project_id = "qrs"
 
@@ -6,4 +6,7 @@ project_id = "qrs"
 verify_jwt = false
 
 [functions.lead]
+verify_jwt = false
+
+[functions.visualize]
 verify_jwt = false

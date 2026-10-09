@@ -194,6 +194,7 @@ export const FOOTER = {
         { label: 'Roof Repair', href: '/roof-repair/' },
         { label: 'Roof Replacement', href: '/roof-replacement/' },
         { label: 'Maintenance Plans', href: '/roof-maintenance-plans/' },
+        { label: 'Roof Color Visualizer', href: '/roof-visualizer/' },
         { label: 'Roof Financing', href: '/roof-financing/' },
       ],
     },
