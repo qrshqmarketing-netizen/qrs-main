@@ -45,6 +45,7 @@ export default function VisualizerGate({ redirect = false, onDone, compact = fal
     try {
       const res = await postVisualizer({ action: 'subscribe', name, email, consent, website, page: window.location.pathname, utm: currentAttribution() || undefined });
       const data = await res.json().catch(() => ({}));
+      if (res.status === 503) throw new Error('The visualizer is not available right now. Please call us and we will help.');
       if (!res.ok || !data.token) throw new Error(data.error && res.status < 500 ? data.error : 'Something went wrong. Please try again, or call us.');
       try {
         window.localStorage.setItem(VISUALIZER_TOKEN_KEY, data.token);
