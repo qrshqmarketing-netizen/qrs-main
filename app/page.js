@@ -14,6 +14,7 @@ import StudioProcess from '@/components/studio/StudioProcess';
 import StudioProjects from '@/components/studio/StudioProjects';
 import StudioServices from '@/components/studio/StudioServices';
 import StudioVisualizer from '@/components/studio/StudioVisualizer';
+import { SHOW_ON_HOME as SHOW_VISUALIZER } from '@/data/roofVisualizer';
 import JsonLd from '@/components/ui/JsonLd';
 import { COMMERCIAL_LINK, RESIDENTIAL } from '@/data/catalog';
 import { CAREERS_PAGE, CAREERS_TEASER } from '@/data/pages/careers';
@@ -86,7 +87,7 @@ export default async function HomePage() {
         <StudioServices categories={HOME_SERVICES} items={HOME_PRODUCTS} />
         <StudioProjects projects={LATEST_PROJECTS.slice(0, 3)} />
         <StudioProcess />
-        <StudioVisualizer />
+        {SHOW_VISUALIZER && <StudioVisualizer />}
         <ReviewStrip />
         <PromoSection />
         <ServiceArea allAreasLink />
