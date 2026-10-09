@@ -7,7 +7,7 @@ export const GRANADA_HILLS_PROJECT = {
   keyword: 'shingle roof replacement in Granada Hills',
   title: 'Shingle Roof Replacement in Granada Hills 91344',
   description:
-    "Shingle roof replacement in Granada Hills 91344: a single-story home with a many-sided hip roof re-roofed in new gray shingles, with its chimney, skylights and vents flashed.",
+    "Shingle roof replacement in Granada Hills 91344: a single-story home with a many-sided hip roof re-roofed in new gray shingles, fully flashed.",
   image: mediaUrl('projects/shingle-roof-replacement-granada-hills-91344/shingle-granada-hills-91344-01.webp'), // also the first photo in `photos`
   imageAlt: "Aerial view of a single-story home in Granada Hills with a new gray shingle roof wrapped around a garden, with a brick chimney and two skylights",
   // Map pin on /projects/: the center of the ZIP code, not the property's address, so the client's address stays private

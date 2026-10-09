@@ -9,6 +9,9 @@
 //
 // The home page's big headline ("Come home to a roof you can trust.") is in app/page.js: there the keyword line above it is the H1.
 
+import { LOCATION_PAGES } from './locationPages';
+import { cityPath, LOCATIONS } from './locations';
+
 export const HERO_OUTCOMES = {
   // Residential hubs and programs
   '/residential-roofing/': 'A home that stays dry, comfortable and protected.',
@@ -67,6 +70,8 @@ export const HERO_OUTCOMES = {
   '/service-areas/': 'Roofing help close to home, across LA and OC.',
   '/service-areas/la-county/': 'A dry, protected home from the coast to the Valley.',
   '/service-areas/orange-county/': 'Protected homes from Anaheim to Newport Beach.',
+  '/service-areas/riverside-county/': 'A roof built for the Inland Empire sun.',
+  '/service-areas/san-bernardino-county/': 'A roof ready for the heat and the Santa Ana winds.',
   '/service-areas/la-county/los-angeles/': 'A roof you can trust, done the detail-first way.',
   '/service-areas/la-county/santa-monica/': 'A roof that’s ready for the coast.',
   '/service-areas/la-county/pasadena/': 'Protect your home without losing its character.',
@@ -136,6 +141,8 @@ export const HERO_UNDERLINES = {
   '/service-areas/': 'Service Areas',
   '/service-areas/la-county/': 'Los Angeles',
   '/service-areas/orange-county/': 'Orange County',
+  '/service-areas/riverside-county/': 'Riverside',
+  '/service-areas/san-bernardino-county/': 'San Bernardino',
   '/service-areas/la-county/los-angeles/': 'Los Angeles',
   '/service-areas/la-county/santa-monica/': 'Santa Monica',
   '/service-areas/la-county/pasadena/': 'Pasadena',
@@ -157,6 +164,14 @@ export const HERO_UNDERLINES = {
   '/contact-us/': 'Contact',
   '/blog/': 'Tips',
 };
+
+// City pages added with their copy (data/locationPages.js): the result line is the page's `outcome`, the underlined word is the city's name
+for (const l of LOCATIONS) {
+  const path = cityPath(l.slug);
+  const outcome = LOCATION_PAGES[l.slug]?.outcome;
+  if (outcome && !HERO_OUTCOMES[path]) HERO_OUTCOMES[path] = outcome;
+  if (!HERO_UNDERLINES[path]) HERO_UNDERLINES[path] = l.city;
+}
 
 export const heroUnderline = (path) => HERO_UNDERLINES[path];
 

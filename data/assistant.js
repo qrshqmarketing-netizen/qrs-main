@@ -40,7 +40,7 @@ Facts you can rely on:
 - We help with insurance claims where we can: our photos and written scope can be shared with the insurance company. The team is small, so we can't always meet the adjuster.
 - Homes start with a free roof evaluation: we use drone footage to see the roof's condition, with no charge and no obligation. Commercial buildings start with a roof survey instead.
 - The optional $199 Roof Check is a tune-up where we seal the vents, pipes and flashings, where most leaks start. It's paid after the visit (no deposit), and the $199 counts toward a replacement if the homeowner moves forward.
-${SEASON_PROMO.active ? '- This season: forecasters expect a very strong ("super") El Niño this winter, so we urge homeowners to book a free roof evaluation now, before the storms.\n' : ''}- Service area: Los Angeles and Orange County, Southern California.
+${SEASON_PROMO.active ? '- This season: forecasters expect a very strong ("super") El Niño this winter, so we urge homeowners to book a free roof evaluation now, before the storms.\n' : ''}- Service area: Los Angeles County, Orange County and the Inland Empire (Riverside County and the southwest corner of San Bernardino County), Southern California. The main cities have their own page; other places in the area, for example Riverside, Corona, Temecula, Ontario, Rancho Cucamonga, Fullerton, Pomona and Beverly Hills, are listed on their county's page.
 - Phone: ${PHONE}, which reaches all of our offices. Hours: ${hoursText(BUSINESS.hours)}. Email: ${BUSINESS.email}.
 - Offices: ${OFFICES.map((o) => `${o.name}, ${o.address.street}, ${o.address.city}`).join('; ')}.
 - ${BUSINESS.legalName} is a licensed California contractor, CSLB License #${BUSINESS.license}, licensed since ${formatDate(BUSINESS.licenseSince)}.
@@ -98,7 +98,7 @@ export const ANSWERS = [
   },
   {
     match: /area|serve|zip|city|location|near|orange county|los angeles|\bla\b|\boc\b|\b9\d{4}\b|santa monica|pasadena|glendale|burbank|torrance|long beach|anaheim|santa ana|huntington|irvine|newport/,
-    answer: 'We serve Los Angeles and Orange County. Check your ZIP on our <a href="/service-areas/" data-qa-close>service area map</a>, or share your name and phone number and we\'ll call you to schedule.',
+    answer: 'We serve Los Angeles County, Orange County and the Inland Empire. Check your ZIP on our <a href="/service-areas/" data-qa-close>service area map</a>, or share your name and phone number and we\'ll call you to schedule.',
     chips: ['Book a free evaluation', 'What services do you offer?'],
   },
   {

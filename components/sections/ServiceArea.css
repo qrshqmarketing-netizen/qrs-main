@@ -127,6 +127,7 @@
 .area .sa-also-group h4{margin:0 0 12px;color:var(--gold-ink);font:800 16px/1.2 var(--font-display);letter-spacing:.1em;text-transform:uppercase}
 .sa-also-group ul{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
 .sa-also-group li{padding:8px 14px;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--navy);font:600 14.5px/1.2 var(--font-head)}
+.sa-also-grid.sa-also-one{grid-template-columns:minmax(0,1fr)!important}
 .sa-also-note{margin:22px auto 0;max-width:560px;color:var(--muted);font-size:15px;line-height:1.6}
 .sa-also-note b{color:var(--navy)}
 

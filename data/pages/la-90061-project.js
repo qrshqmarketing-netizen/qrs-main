@@ -4,7 +4,7 @@ export const LA_90061_PROJECT = {
   keyword: 'shingle roof replacement in South Los Angeles',
   title: 'Shingle Roof Replacement in South Los Angeles 90061',
   description:
-    "Shingle roof replacement in South Los Angeles 90061: a long single-story home and its rear building re-roofed in new brown shingles, with the flat sections finished in white.",
+    "Shingle roof replacement in South Los Angeles 90061: a long single-story home and its rear building re-roofed in new brown shingles and white flat sections.",
   image: '/images/projects/shingle-roof-replacement-los-angeles-90061/shingle-los-angeles-90061-01.webp', // also the first photo in `photos`
   imageAlt: "Aerial view of a long single-story home in South Los Angeles with a new brown shingle roof, white flat roof sections at the sides and a palm tree beside it",
   // Map pin on /projects/: the center of the ZIP code, not the property's address, so the client's address stays private

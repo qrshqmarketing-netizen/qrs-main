@@ -1,3 +1,4 @@
+import AlsoServing from '@/components/sections/AlsoServing';
 import CityCards from '@/components/sections/CityCards';
 import DifferenceBand from '@/components/sections/DifferenceBand';
 import Faq from '@/components/sections/Faq';
@@ -9,7 +10,7 @@ import ServiceArea from '@/components/sections/ServiceArea';
 import JsonLd from '@/components/ui/JsonLd';
 import { HOME, LOCATIONS_LINK } from '@/data/catalog';
 import { LOCATION_PAGES } from '@/data/locationPages';
-import { cityPath, LOCATIONS } from '@/data/locations';
+import { ALL_PLACES, cityPath, LOCATIONS } from '@/data/locations';
 import { LOCATIONS_PAGE as page } from '@/data/pages/locations';
 import { heroOutcome } from '@/data/heroOutcomes';
 import { pageMetadata } from '@/lib/pages';
@@ -41,7 +42,7 @@ export default function LocationsPage() {
       <JsonLd data={schema} />
       <Hero
         crumbs={CRUMBS}
-        eyebrow="Los Angeles & Orange County"
+        eyebrow="Los Angeles, Orange County & the Inland Empire"
         title={page.hero.heading}
         outcome={heroOutcome('/service-areas/')}
         stats
@@ -50,14 +51,15 @@ export default function LocationsPage() {
         imageAlt="Row of homes with pitched roofs along a residential street"
         imagePosition="40% center"
       />
-      <Offices sub="Our Los Angeles and Valley offices serve homes and businesses across Los Angeles and Orange County. One number reaches both." />
+      <Offices sub="Our Los Angeles and Valley offices serve homes and businesses across Los Angeles County, Orange County and the Inland Empire. One number reaches both." />
       <ServiceArea heading="Find Your Nearest QRS Service Area" sub="Enter your ZIP code to confirm we cover your address, or pick your city from the list." />
       <CityCards blurbs={BLURBS} linkRegions />
+      <AlsoServing />
       <DifferenceBand />
       <Faq heading="Service Area FAQs" sub="Straight answers about where we work." faqs={page.faqs} cta={false} />
       <RoofCheck tone="white" />
       <FinalCta
-        heading="Local Roofers Across LA & Orange County"
+        heading="Local Roofers Across Southern California"
         text="Wherever you are in our service area, a local roofer looks at your roof and gives you a clear next step with a written scope and price."
       />
     </main>

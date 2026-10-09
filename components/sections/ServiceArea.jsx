@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { ArrowRight } from '@/components/ui/icons';
-import { ALSO_SERVING, cityPath, citiesIn, LOCATIONS, REGIONS, SERVICE_RADIUS_MI } from '@/data/locations';
+import { ALL_PLACES, hasPage, placePath, REGIONS, regionPath, SERVICE_RADIUS_MI } from '@/data/locations';
 import { PHONE, TEL } from '@/data/site';
 import { miles, nominatimSearch, pointInGeoJson, zipPrefixServed } from '@/lib/geo';
 import { loadLeaflet, qrsPin } from '@/lib/leaflet';
@@ -12,8 +12,8 @@ import Mark from '@/components/ui/Mark';
 
 // The QRS location closest to a [lat, lng] point: { location, index, distance } (miles)
 function nearestLocation(point) {
-  let location = LOCATIONS[0], index = 0, distance = Infinity;
-  LOCATIONS.forEach((l, i) => {
+  let location = ALL_PLACES[0], index = 0, distance = Infinity;
+  ALL_PLACES.forEach((l, i) => {
     const d = miles(point, [l.lat, l.lng]);
     if (d < distance) { distance = d; location = l; index = i; }
   });
@@ -22,13 +22,12 @@ function nearestLocation(point) {
 
 // Service area map: a ZIP code check, the Los Angeles and Orange County borders plus the Inland Empire (western Riverside County
 // and the southwest corner of San Bernardino County, from Pomona to Riverside, Corona and Temecula) outlined on an OpenStreetMap
-// map (data/serviceAreaOutline.js), a pin for each location with a page and, beside the map (under it on phones), a column of those locations
-// labelled "Santa Monica Area" and so on. Tapping a label flies the map to that pin and opens its popup; the popup and the label's "Page" link
-// go to the city's page. Under the component, the other places in the area that have no page are listed as plain text, with no links
-// (ALSO_SERVING in data/locations.js). The map library, its tiles and the outline load only when the map is about to scroll into view. Mobile
+// map (data/serviceAreaOutline.js), a pin for every place and, beside the map (under it on phones), a column of those places
+// labelled "Santa Monica Area" and so on. Tapping a label flies the map to that pin and opens its popup; the popup and the label's link
+// go to the city's page (a place with no page of its own links to its county page, labelled "County"). The places with no page are also listed by county
+// in components/sections/AlsoServing.jsx (OTHER_PLACES in data/locations.js). The map library, its tiles and the outline load only when the map is about to scroll into view. Mobile
 // keeps the map still so it never traps a page swipe.
 export default function ServiceArea({
-  alsoServing = false, // true: adds the plain-text "We Also Serve" list under the map (the home page)
   allAreasLink = false, // true: a text link under the map goes to the all-locations hub, /service-areas/ (home page)
   heading = 'Locations We Proudly __Serve__',
   sub = 'The outlined area is where we work: Los Angeles County, Orange County, and the Inland Empire from Pomona to Riverside, Corona and Temecula. Enter your ZIP code to confirm we cover you.',
@@ -100,13 +99,15 @@ export default function ServiceArea({
         }).addTo(leafletMap);
         leafletMap.fitBounds(SERVICE_AREA_BOUNDS);
 
-        // A pin for every location with a page: its popup names it and links to its page
-        const markers = LOCATIONS.map(({ city, slug, lat, lng }, i) =>
-          L.marker([lat, lng], { icon: qrsPin(L, false), title: city + ' Area', alt: city + ' Area' })
+        // A pin for every place: its popup names it and links to its page (a place with no page of its own links to its county's page)
+        const markers = ALL_PLACES.map((place, i) => {
+          const { city, lat, lng } = place;
+          const link = hasPage(place) ? city + ' roofing page →' : REGIONS.find((r) => r.slug === place.region).name + ' roofing →';
+          return L.marker([lat, lng], { icon: qrsPin(L, false), title: city + ' Area', alt: city + ' Area' })
             .addTo(leafletMap)
-            .bindPopup('<b>' + city + ' Area</b><a href="' + cityPath(slug) + '">' + city + ' roofing page →</a><br><a href="' + TEL + '">' + PHONE + '</a>')
-            .on('click', () => select(i, false))
-        );
+            .bindPopup('<b>' + city + ' Area</b><a href="' + placePath(place) + '">' + link + '</a><br><a href="' + TEL + '">' + PHONE + '</a>')
+            .on('click', () => select(i, false));
+        });
         map.current = { L, map: leafletMap, markers, zipPin: null, active: -1 };
         if (pending.current !== null) select(pending.current, true); // a label was tapped while the map was loading
         pending.current = null;
@@ -166,7 +167,7 @@ export default function ServiceArea({
       }
       if (inArea) select(index, false);
       setMsg(inArea
-        ? <><b>Good news!</b> {z} is in our service area. Nearest: <Link href={cityPath(location.slug)} prefetch={false}>{location.city} Area</Link>.</>
+        ? <><b>Good news!</b> {z} is in our service area. Nearest: <Link href={placePath(location)} prefetch={false}>{location.city} Area</Link>.</>
         : insideOutline
           ? <><b>Good news!</b> {z} is inside the area we serve, a longer drive from our nearest city. Call <b>{PHONE}</b> to confirm scheduling.</>
           : <>{z} looks outside our current area. Call <b>{PHONE}</b> and we&rsquo;ll let you know.</>);
@@ -229,15 +230,16 @@ export default function ServiceArea({
               <div className="sa-region" key={region.slug}>
                 <h3>{region.name}</h3>
                 <ul>
-                  {citiesIn(region.slug).map(({ city, slug }) => {
-                    const i = LOCATIONS.findIndex((l) => l.slug === slug);
+                  {ALL_PLACES.filter((p) => p.region === region.slug).map((place) => {
+                    const { city, slug } = place;
+                    const i = ALL_PLACES.indexOf(place);
                     return (
                       <li className={'sa-item' + (active === i ? ' active' : '')} key={slug} ref={(el) => { itemRefs.current[i] = el; }}>
                         <button type="button" className="sa-pick" aria-pressed={active === i} onClick={() => select(i, true, true)}>
                           {city} Area
                         </button>
-                        <Link className="sa-go" href={cityPath(slug)} prefetch={false} aria-label={`${city} roofing page`}>
-                          Page <ArrowRight />
+                        <Link className="sa-go" href={placePath(place)} prefetch={false} aria-label={hasPage(place) ? `${city} roofing page` : `${region.name} roofing page`}>
+                          {hasPage(place) ? 'Page' : 'County'} <ArrowRight />
                         </Link>
                       </li>
                     );
@@ -247,27 +249,6 @@ export default function ServiceArea({
             ))}
           </div>
         </div>
-
-        {/* Other places in the area with no page of their own: plain text, no links */}
-        {alsoServing && (
-        <div className="sa-also">
-          <h3>We Also Serve</h3>
-          <p className="sa-also-sub">Our service area reaches well beyond the cities above. If you are near any of these places, we cover you.</p>
-          <div className="sa-also-grid">
-            {ALSO_SERVING.map((group) => (
-              <div className="sa-also-group" key={group.name}>
-                <h4>{group.name}</h4>
-                <ul>
-                  {group.places.map((place) => (
-                    <li key={place}>{place}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          <p className="sa-also-note">Don&rsquo;t see your area? Enter your ZIP code above or call <b>{PHONE}</b> and we&rsquo;ll let you know.</p>
-        </div>
-        )}
 
         {allAreasLink && (
           <p className="sa-all">

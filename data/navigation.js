@@ -130,9 +130,10 @@ export const COMMERCIAL_MENU = {
 // Service areas, grouped by county with a curated set of city pages.
 export const LOCATIONS_MENU = {
   regions: REGIONS.map((r) => {
-    const featuredCities = r.slug === 'la-county'
-      ? ['los-angeles', 'santa-monica', 'pasadena', 'long-beach']
-      : ['anaheim', 'irvine', 'huntington-beach', 'newport-beach'];
+    const featuredCities = {
+      'la-county': ['los-angeles', 'santa-monica', 'pasadena', 'long-beach'],
+      'orange-county': ['anaheim', 'irvine', 'huntington-beach', 'newport-beach'],
+    }[r.slug] || [];
 
     return {
       title: r.name,

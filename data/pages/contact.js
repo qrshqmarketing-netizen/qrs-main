@@ -27,6 +27,6 @@ export const CONTACT_PAGE = {
   faqs: [
     { q: 'Which office should I contact?', a: 'Any of them. All of our offices share one phone number, so calling (310) 340-1643 reaches our team wherever your property is.' },
     { q: 'Can I send photos of my roof before a visit?', a: 'Yes. Email them with the property address and a short note about what you’re seeing. A roofer still confirms everything in person during the roof evaluation.' },
-    { q: 'Do you work in my area?', a: 'We serve homes and businesses across [Los Angeles County](/service-areas/la-county/) and [Orange County](/service-areas/orange-county/). Enter your ZIP code on the map on this page to check your address.' },
+    { q: 'Do you work in my area?', a: 'We serve homes and businesses across [Los Angeles County](/service-areas/la-county/), [Orange County](/service-areas/orange-county/) and the Inland Empire ([Riverside County](/service-areas/riverside-county/) and [San Bernardino County](/service-areas/san-bernardino-county/)). Enter your ZIP code on the map on this page to check your address.' },
   ],
 };

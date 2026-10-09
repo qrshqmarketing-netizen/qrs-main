@@ -1,3 +1,4 @@
+import AlsoServing from '@/components/sections/AlsoServing';
 import CityCards from '@/components/sections/CityCards';
 import Faq from '@/components/sections/Faq';
 import LatestArticles from '@/components/sections/LatestArticles';
@@ -8,7 +9,7 @@ import RoofCheck from '@/components/sections/RoofCheck';
 import JsonLd from '@/components/ui/JsonLd';
 import { HOME, LOCATIONS_LINK } from '@/data/catalog';
 import { LOCATION_PAGES } from '@/data/locationPages';
-import { citiesIn, cityPath, findCity, REGIONS, regionPath } from '@/data/locations';
+import { ALL_PLACES, citiesIn, cityPath, findCity, REGIONS, regionPath } from '@/data/locations';
 import { SERVICES } from '@/data/services';
 import { OFFICES } from '@/data/site';
 import { pageJsonLd } from '@/lib/structuredData';
@@ -40,7 +41,10 @@ export default async function RegionPage({ region, page }) {
     service: {
       name: `Roofing in ${region.name}, ${region.state}`,
       type: 'roofing',
-      area: { '@type': 'AdministrativeArea', name: `${region.name}, ${region.state}` },
+      area: [
+        { '@type': 'AdministrativeArea', name: `${region.name}, ${region.state}`, containedInPlace: { '@type': 'State', name: 'California' } },
+        ...ALL_PLACES.filter((p) => p.region === region.slug).map((p) => ({ '@type': 'City', name: `${p.city}, ${region.state}` })),
+      ],
       catalog: SERVICES.map((s) => ({ name: s.schemaName, href: s.href })),
     },
     faqs: page.faqs,
@@ -52,6 +56,7 @@ export default async function RegionPage({ region, page }) {
       <Hero crumbs={crumbs} eyebrow="Service Areas" title={page.hero.heading} outcome={heroOutcome(path)} intro={page.hero.intro} image={photo.src} imageAlt={photo.alt} imagePosition={photo.position} stats />
       <LocalIntro city={region.name} heading={page.intro.heading} paragraphs={page.intro.paragraphs} offices={offices} considerations={page.considerations} />
       <CityCards regions={[region.slug]} blurbs={blurbs} heading={`Cities We Serve in ${region.name}`} />
+      <AlsoServing region={region.slug} heading={cities.length ? `More of ${region.name} We __Serve__` : `Cities We __Serve__ in ${region.name}`} sub={cities.length ? undefined : `Every city below is inside the area we serve and has a pin on our service area map. If you are in or near one, we cover you.`} />
       <LatestArticles posts={await articlesFor(path)} heading="Related Roofing Articles" />
       <Faq heading={`${region.name} Roofing FAQs`} sub={`Straight answers for property owners across ${region.name}.`} faqs={page.faqs} cta={false} />
       <RoofCheck tone="white" />

@@ -4,7 +4,7 @@ export const WHITE_FLAT_PROJECT = {
   keyword: 'white flat roof in Los Angeles',
   title: 'White Flat Roof in Los Angeles 90049',
   description:
-    'White flat roof in Los Angeles 90049: a bright, reflective flat roof on a mid-century home, with every skylight, vent and the chimney detailed and the edges finished clean.',
+    'White flat roof in Los Angeles 90049: a bright, reflective flat roof on a mid-century home, with every skylight, vent and the chimney detailed.',
   image: '/images/projects/white-flat-roof-los-angeles-90049/flat-white-los-angeles-90049-11.webp', // also the first photo in `photos`
   imageAlt: 'Aerial view of the new white flat roof on a two-story mid-century home in Los Angeles, with its skylights, brick chimney and raised window box',
   // Map pin on /projects/: the center of the ZIP code, not the home's address, so the client's address stays private

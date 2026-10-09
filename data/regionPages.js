@@ -60,4 +60,60 @@ export const REGION_PAGES = {
       { q: 'How does a project start?', a: 'With a free roof evaluation. You get photos of your roof’s condition, a plain-English explanation and a written scope and price for anything it needs.' },
     ],
   },
+
+  'riverside-county': {
+    keyword: 'riverside county roofing',
+    metaTitle: 'Riverside County Roofing Services',
+    metaDescription: 'Riverside County roofing for homes, HOAs and businesses from Riverside and Corona to Temecula: tile, shingle and flat roofs. Book a free roof evaluation today.',
+    hero: {
+      heading: 'Riverside County Roofing Services',
+      intro: 'Riverside County roofing from Quality Roofing Specialists covers homes, HOAs and businesses from Riverside and Corona to Murrieta and Temecula, with tile, shingle and flat roof repair and replacement. Every project starts with a free roof evaluation, photos of what we find and a written scope and price before any work begins.',
+    },
+    intro: {
+      heading: 'Roofing Across the Inland Empire',
+      paragraphs: [
+        'Western Riverside County is hot and sunny for much of the year, and that heat is hard on a roof. It dries out underlayment, bakes sealants and ages shingles from above and from below, especially on south- and west-facing slopes. In Riverside, Corona, Menifee and Temecula, a roof that still looks fine from the street can be wearing out where you can’t see it.',
+        'We start with photos and a plain-English explanation of what we find, then give you a written scope and price before any work begins. That might mean a [roof repair](/roof-repair/), a [tile](/residential-roofing/tile-roofing/) or [shingle](/residential-roofing/shingle-roofing/) replacement, or a plan for an [HOA](/residential-roofing/hoa-multi-family/) community. Our offices are in Los Angeles, Woodland Hills and Vernon, and one number reaches all of them.',
+      ],
+    },
+    considerations: [
+      { title: 'Heat and sun', text: 'Long, hot summers dry out underlayment and sealants, and poorly vented attics age roofing from below.' },
+      { title: 'Santa Ana winds', text: 'Dry, gusty winds loosen tiles, lift shingle edges and put wear on flashings and ridge details.' },
+      { title: 'Planned communities and HOAs', text: 'Neighborhoods of similar homes call for board-ready reports, phased schedules and clear communication with residents.' },
+    ],
+    faqs: [
+      { q: 'Which Riverside County cities do you serve?', a: 'We serve Riverside, Corona, Norco, Eastvale, Jurupa Valley, Moreno Valley, Perris, Menifee, Lake Elsinore, Murrieta and Temecula, all listed on this page and marked on our [service areas](/service-areas/) map. Check your ZIP code there, or call us if you’re nearby.' },
+      { q: 'What roof types do you work on in Riverside County?', a: 'The common ones: [tile](/residential-roofing/tile-roofing/), [shingle](/residential-roofing/shingle-roofing/), [flat](/residential-roofing/flat-roofing/) and [metal](/residential-roofing/metal-roofing/) roofs, plus [HOA and multi-family](/residential-roofing/hoa-multi-family/) and [commercial](/commercial-roofing/) buildings.' },
+      { q: 'Does the summer heat shorten a roof’s life?', a: 'Sun and heat are hard on every roofing material. A free roof evaluation shows how your roof is holding up, with photos, so you know whether to repair, monitor, maintain or replace.' },
+      { q: 'How does a project start?', a: 'With a free roof evaluation. You get photos of your roof’s condition, a plain-English explanation and a written scope and price for anything it needs.' },
+    ],
+  },
+
+  'san-bernardino-county': {
+    keyword: 'san bernardino county roofing',
+    metaTitle: 'San Bernardino County Roofing Services',
+    metaDescription: 'San Bernardino County roofing for homes, HOAs and businesses in Chino, Ontario, Rancho Cucamonga and nearby: tile, shingle and flat roofs. Book a free roof evaluation.',
+    hero: {
+      heading: 'San Bernardino County Roofing Services',
+      intro: 'San Bernardino County roofing from Quality Roofing Specialists covers homes, HOAs and businesses in the southwest corner of the county, from Chino Hills and Ontario to Rancho Cucamonga, Fontana and Colton, with tile, shingle and flat roof repair and replacement. Every project starts with a free roof evaluation and a written scope and price.',
+    },
+    intro: {
+      heading: 'Roofing in the Southwest Corner of the County',
+      paragraphs: [
+        'The part of San Bernardino County we serve sits between Pomona and Riverside: Chino, Ontario, Upland, Rancho Cucamonga, Fontana and the cities around them. Summers are hot and dry, and the Santa Ana winds can be strong, so roofs here deal with a lot of sun and wear.',
+        'We start with photos and a plain-English explanation of what we find, then give you a written scope and price before any work begins. Whether you need a [roof repair](/roof-repair/), a [roof replacement](/roof-replacement/) or a plan for an [HOA](/residential-roofing/hoa-multi-family/) community, you get one clear next step. Our offices are in Los Angeles, Woodland Hills and Vernon, and one number reaches all of them.',
+      ],
+    },
+    considerations: [
+      { title: 'Heat and sun', text: 'Hot, dry summers age shingles, dry out underlayment and wear on sealants, flashings and vents.' },
+      { title: 'Santa Ana winds', text: 'Strong, dry winds loosen tiles and lift shingle edges, so loose or missing pieces are worth checking after a windy stretch.' },
+      { title: 'Newer and older homes side by side', text: 'Neighborhoods here mix older homes with newer planned communities, and each calls for its own approach to repair, replacement and HOA planning.' },
+    ],
+    faqs: [
+      { q: 'Which San Bernardino County cities do you serve?', a: 'We serve Chino, Chino Hills, Ontario, Montclair, Upland, Rancho Cucamonga, Fontana, Rialto, Colton and Grand Terrace, in the southwest corner of the county. If you’re elsewhere in the county, call us and we’ll tell you if we can help.' },
+      { q: 'Do you serve all of San Bernardino County?', a: 'We serve the southwest corner of the county shown on our [service areas](/service-areas/) map. For an address outside it, call us and tell us where the property is.' },
+      { q: 'What roof types do you work on?', a: 'The common ones: [tile](/residential-roofing/tile-roofing/), [shingle](/residential-roofing/shingle-roofing/), [flat](/residential-roofing/flat-roofing/) and [metal](/residential-roofing/metal-roofing/) roofs, plus [HOA and multi-family](/residential-roofing/hoa-multi-family/) and [commercial](/commercial-roofing/) buildings.' },
+      { q: 'How does a project start?', a: 'With a free roof evaluation. You get photos of your roof’s condition, a plain-English explanation and a written scope and price for anything it needs.' },
+    ],
+  },
 };

@@ -10,7 +10,7 @@ export default function CityCards({ blurbs = {}, regions = REGIONS.map((r) => r.
   return (
     <section className="city-cards" id="cities">
       <div className="container">
-        {REGIONS.filter((r) => regions.includes(r.slug)).map((r) => (
+        {REGIONS.filter((r) => regions.includes(r.slug) && citiesIn(r.slug).length).map((r) => (
           <div className="city-county" key={r.slug}>
             <h2>
               {heading ||

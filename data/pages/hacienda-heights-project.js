@@ -7,7 +7,7 @@ export const HACIENDA_HEIGHTS_PROJECT = {
   keyword: 'shingle roof replacement in Hacienda Heights',
   title: 'Shingle Roof Replacement in Hacienda Heights 91745',
   description:
-    "Shingle roof replacement in Hacienda Heights 91745: a large single-story home re-roofed in new light gray shingles, with every vent set in and the hips and valleys finished clean.",
+    "Shingle roof replacement in Hacienda Heights 91745: a large single-story home re-roofed in new light gray shingles, with the hips and valleys finished clean.",
   image: mediaUrl('projects/shingle-roof-replacement-hacienda-heights-91745/shingle-hacienda-heights-91745-01.webp'), // also the first photo in `photos`
   imageAlt: "Aerial view of a large single-story home in Hacienda Heights with a new light gray shingle roof, white box vents and clean ridge caps",
   // Map pin on /projects/: the center of the ZIP code, not the property's address, so the client's address stays private
