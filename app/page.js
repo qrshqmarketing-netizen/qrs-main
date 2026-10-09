@@ -16,7 +16,7 @@ import StudioServices from '@/components/studio/StudioServices';
 import StudioVisualizer from '@/components/studio/StudioVisualizer';
 import { SHOW_ON_HOME as SHOW_VISUALIZER } from '@/data/roofVisualizer';
 import JsonLd from '@/components/ui/JsonLd';
-import { COMMERCIAL_LINK, RESIDENTIAL } from '@/data/catalog';
+import { SERVICE_CATEGORIES } from '@/data/serviceCategories';
 import { CAREERS_PAGE, CAREERS_TEASER } from '@/data/pages/careers';
 import { HOME_DESCRIPTION, HOME_H1, HOME_TITLE } from '@/data/site';
 import { LATEST_PROJECTS } from '@/data/projectPages';
@@ -37,25 +37,6 @@ export const metadata = {
 // The home page's "Roofing Services" section: just the two top-level categories from the nav.
 // The hero photo slider: the newest projects' cover photos, newest first (LATEST_PROJECTS in data/projectPages.js)
 const HERO_SLIDES = LATEST_PROJECTS.map((project) => ({ src: project.image, alt: project.imageAlt, title: project.label, place: project.place.replace(/,?\s*CA\b/, '') }));
-
-const HOME_SERVICES = [
-  {
-    title: 'Residential Roofing',
-    schemaName: 'Residential Roofing',
-    scene: 'scene-shingle',
-    image: '/images/home-services-residential-shingle-drone-view.webp',
-    text: 'Every residential roof type under one roofer-led process, from a single repair to a full tear-off.',
-    href: RESIDENTIAL.href,
-  },
-  {
-    title: 'Commercial Roofing',
-    schemaName: 'Commercial Roofing',
-    scene: 'scene-commercial',
-    image: '/images/home-services-commercial-flat-roof-drone-view.webp',
-    text: 'Roofing for offices, retail, churches and warehouses, with written scopes built around your building.',
-    href: COMMERCIAL_LINK.href,
-  },
-];
 
 const HOME_PRODUCTS = [
   { title: '*TotalShield* Shingle Systems', text: 'Complete shingle replacements and new installations, built from the deck up.', href: '/residential-roofing/shingle-roofing/replacement/', scene: 'scene-shingle', image: '/images/shingle-roof-completed-drone-view.webp' },
@@ -84,7 +65,7 @@ export default async function HomePage() {
         <StudioHero slides={HERO_SLIDES} />
         <ProofBar strip />
         <StudioIntro />
-        <StudioServices categories={HOME_SERVICES} items={HOME_PRODUCTS} />
+        <StudioServices categories={SERVICE_CATEGORIES} items={HOME_PRODUCTS} />
         <StudioProjects projects={LATEST_PROJECTS.slice(0, 3)} />
         <StudioProcess />
         {SHOW_VISUALIZER && <StudioVisualizer />}

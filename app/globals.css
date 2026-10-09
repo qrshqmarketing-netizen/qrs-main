@@ -369,3 +369,11 @@ a.chip:hover{border-color:var(--navy)}
   repeating-linear-gradient(90deg,transparent 0 64px,rgba(0,0,0,.2) 64px 67px),
   repeating-linear-gradient(-28deg,transparent 0 18px,rgba(255,255,255,.12) 19px 21px,transparent 22px 38px),
   linear-gradient(170deg,#b86b43 0%,#8f4d2e 55%,#4f2717 100%)}
+
+/* Page fade (components/ui/PageTransition.jsx): the page and the footer fade out when a link is clicked and fade in on the next page; the header and the floating
+   widgets stay put. Easing: the same soft curve as the Framer template it was modelled on. Off for reduced motion. */
+@media (prefers-reduced-motion:no-preference){
+  html.page-leaving :is(main,body > footer){opacity:0;transition:opacity .2s cubic-bezier(.27,0,.51,1)}
+  html.page-entering :is(main,body > footer){animation:pageFadeIn .32s cubic-bezier(.27,0,.51,1) both}
+}
+@keyframes pageFadeIn{from{opacity:0}to{opacity:1}}

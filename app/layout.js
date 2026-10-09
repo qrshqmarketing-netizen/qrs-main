@@ -13,6 +13,7 @@ import SiteChrome from '@/components/layout/SiteChrome';
 import CampaignWelcome from '@/components/widgets/CampaignWelcome';
 import PageTrail from '@/components/widgets/PageTrail';
 import ScrollToTop from '@/components/ui/ScrollToTop';
+import PageTransition from '@/components/ui/PageTransition';
 import ScrollDraw from '@/components/ui/ScrollDraw';
 import CookieNotice from '@/components/widgets/CookieNotice';
 import InstantQuoteLoader from '@/components/widgets/InstantQuoteLoader';
@@ -94,6 +95,7 @@ export default function RootLayout({ children }) {
           <CampaignWelcome />
           <PageTrail />
           <ScrollToTop />
+          <PageTransition />
           <ScrollDraw />
           {LOAD_TRACKING && (
             <>

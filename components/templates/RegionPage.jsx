@@ -1,4 +1,5 @@
 import AlsoServing from '@/components/sections/AlsoServing';
+import CardCarousel from '@/components/sections/CardCarousel';
 import CityCards from '@/components/sections/CityCards';
 import Faq from '@/components/sections/Faq';
 import LatestArticles from '@/components/sections/LatestArticles';
@@ -6,8 +7,9 @@ import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
 import LocalIntro from '@/components/sections/LocalIntro';
 import RoofCheck from '@/components/sections/RoofCheck';
+import ServiceCategories from '@/components/sections/ServiceCategories';
 import JsonLd from '@/components/ui/JsonLd';
-import { HOME, LOCATIONS_LINK } from '@/data/catalog';
+import { HOME, LOCATIONS_LINK, RESIDENTIAL_TYPES, typeCard } from '@/data/catalog';
 import { LOCATION_PAGES } from '@/data/locationPages';
 import { ALL_PLACES, citiesIn, cityPath, findCity, REGIONS, regionPath } from '@/data/locations';
 import { SERVICES } from '@/data/services';
@@ -55,6 +57,8 @@ export default async function RegionPage({ region, page }) {
       <JsonLd data={schema} />
       <Hero crumbs={crumbs} eyebrow="Service Areas" title={page.hero.heading} outcome={heroOutcome(path)} intro={page.hero.intro} image={photo.src} imageAlt={photo.alt} imagePosition={photo.position} stats />
       <LocalIntro city={region.name} heading={page.intro.heading} paragraphs={page.intro.paragraphs} offices={offices} considerations={page.considerations} />
+      <ServiceCategories place={region.name} />
+      <CardCarousel title={`Roof types we work on in __${region.name}__`} items={RESIDENTIAL_TYPES.map(typeCard)} idPrefix="roofTypes" tone="wash" />
       <CityCards regions={[region.slug]} blurbs={blurbs} heading={`Cities We Serve in ${region.name}`} />
       <AlsoServing region={region.slug} heading={cities.length ? `More of ${region.name} We __Serve__` : `Cities We __Serve__ in ${region.name}`} sub={cities.length ? undefined : `Every city below is inside the area we serve and has a pin on our service area map. If you are in or near one, we cover you.`} />
       <LatestArticles posts={await articlesFor(path)} heading="Related Roofing Articles" />
