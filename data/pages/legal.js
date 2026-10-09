@@ -5,7 +5,7 @@
 // Text can link with [words](/path/).
 
 const UPDATED = 'September 25, 2026';
-const CONTACT = 'email [info@qualityroofingspecialists.com](mailto:info@qualityroofingspecialists.com), call [(310) 340-1643](tel:+13103401643) or write to Quality Roofing Specialists, 1444 N Poinsettia Pl, Unit 308, Los Angeles, CA 90046';
+const CONTACT = 'email [info@qualityroofingspecialists.com](mailto:info@qualityroofingspecialists.com), call [(310) 340-1643](tel:+13103401643) or write to Quality Roofing Specialists, Inc., 1444 N Poinsettia Pl, Unit 308, Los Angeles, CA 90046';
 
 export const PRIVACY_POLICY = {
   keyword: 'privacy policy',
@@ -13,7 +13,7 @@ export const PRIVACY_POLICY = {
   metaDescription: 'Privacy policy for Quality Roofing Specialists: what our website collects, how we use it, who we share it with, and your choices and California privacy rights.',
   title: 'Privacy Policy',
   updated: UPDATED,
-  intro: 'This privacy policy explains what information Quality Roofing Specialists (“QRS,” “we,” “us”) collects through qualityroofingspecialists.com, how we use it and the choices you have. It covers this website and the requests you send us through it.',
+  intro: 'This privacy policy explains what information Quality Roofing Specialists, Inc. (“QRS,” “we,” “us”) collects through qualityroofingspecialists.com, how we use it and the choices you have. It covers this website and the requests you send us through it.',
   sections: [
     {
       heading: 'Information you give us',
@@ -114,7 +114,7 @@ export const TERMS = {
   metaDescription: 'Terms and conditions for using the Quality Roofing Specialists website, including estimates, the Instant Quote, financing examples and how we contact you.',
   title: 'Terms & Conditions',
   updated: UPDATED,
-  intro: 'These terms and conditions apply to your use of qualityroofingspecialists.com, the website of Quality Roofing Specialists (“QRS,” “we,” “us”). By using the site, you agree to them. Roofing work itself is covered by the written scope and agreement you sign with us.',
+  intro: 'These terms and conditions apply to your use of qualityroofingspecialists.com, the website of Quality Roofing Specialists, Inc. (“QRS,” “we,” “us”). By using the site, you agree to them. Roofing work itself is covered by the written scope and agreement you sign with us.',
   sections: [
     {
       heading: 'Information on this website',
@@ -154,7 +154,7 @@ export const TERMS = {
     },
     {
       heading: 'Contractor license',
-      paragraphs: ['Quality Roofing Specialists is a licensed California contractor, CSLB License #1061942, licensed since January 3, 2020. You can verify a contractor’s license with the [Contractors State License Board](https://www.cslb.ca.gov/).'],
+      paragraphs: ['Quality Roofing Specialists, Inc. is a licensed California contractor, CSLB License #1061942, licensed since January 3, 2020. You can verify a contractor’s license with the [Contractors State License Board](https://www.cslb.ca.gov/).'],
     },
     {
       heading: 'Governing law and changes',
@@ -173,7 +173,7 @@ export const ACCESSIBILITY = {
   metaDescription: 'Quality Roofing Specialists is committed to a website that works for everyone. Read our accessibility statement and how to reach us about accessibility.',
   title: 'Accessibility Statement',
   updated: UPDATED,
-  intro: 'Quality Roofing Specialists (“QRS,” “we,” “us”) wants everyone, including people with disabilities, to be able to use qualityroofingspecialists.com.',
+  intro: 'Quality Roofing Specialists, Inc. (“QRS,” “we,” “us”) wants everyone, including people with disabilities, to be able to use qualityroofingspecialists.com.',
   sections: [
     {
       heading: 'Our approach',

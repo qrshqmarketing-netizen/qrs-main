@@ -23,8 +23,8 @@ const call = `<a href="${TEL}">${PHONE}</a>`;
 const check = '<a href="/start/" data-qa-close>free roof evaluation</a>';
 
 export const GREETING = [
-  'Hi! I\'m the QRS Roof Assistant. 👋 I can answer questions about roof repairs, replacements, our free roof evaluation and more.',
-  'What can I help you with?',
+  'Hi! I\'m the QRS Roof Assistant. 👋 Ask me anything about your roof.',
+  'I can also book your free roof evaluation. What do you need?',
 ];
 
 // System prompt for the AI backend (app/api/chat/route.js). Keep facts here in sync with data/site.js and
@@ -43,7 +43,7 @@ Facts you can rely on:
 ${SEASON_PROMO.active ? '- This season: forecasters expect a very strong ("super") El Niño this winter, so we urge homeowners to book a free roof evaluation now, before the storms.\n' : ''}- Service area: Los Angeles and Orange County, Southern California.
 - Phone: ${PHONE}, which reaches all of our offices. Hours: ${hoursText(BUSINESS.hours)}. Email: ${BUSINESS.email}.
 - Offices: ${OFFICES.map((o) => `${o.name}, ${o.address.street}, ${o.address.city}`).join('; ')}.
-- Quality Roofing Specialists is a licensed California contractor, CSLB License #${BUSINESS.license}, licensed since ${formatDate(BUSINESS.licenseSince)}.
+- ${BUSINESS.legalName} is a licensed California contractor, CSLB License #${BUSINESS.license}, licensed since ${formatDate(BUSINESS.licenseSince)}.
 - Mission and vision: ${COMPANY.mission} ${COMPANY.vision} Core values: ${COMPANY.values.map((v) => v.title).join(', ')}.
 
 Rules:
@@ -55,9 +55,10 @@ Rules:
 - Never recommend, mention or link to another company's website or a third-party resource (no other contractors, review sites, "search online for...", etc.). Everything a visitor needs is on this website or a call away — guide them to the right page or ${PHONE} instead.
 - If asked whether you're an AI, say yes.
 - Words QRS uses: homeowners are "homeowners"; property management companies and commercial building owners are "clients"; QRS's own employees are "roofers"; outside or partner workers are "crews", never "subs" or "subcontractors"; general contractors are "contractors".
-- Always be warm, friendly and helpful — keep answers short (2-4 sentences) and specific to roofing, and steer the visitor toward a clear next step on this site.
+- Be concise: answer in 1-3 short sentences (about 50 words at most), with no preamble, no filler and no repeating the question. Be warm and plain-spoken.
+- Your goal is to book a call to schedule the visitor's free roof evaluation (an estimate visit). Always answer the question first, specifically and honestly, then close with one short nudge toward booking, for example "Want me to set up a quick call for your free roof evaluation? Just share your name and phone number." Never push twice in a row if they decline, and never hold back an answer to force a booking.
 - Answer in plain conversational text only. The chat window doesn't render Markdown or links, so never write [text](url) links, **bold**, bullet lists or headings — if you want to point to a page, just say its name in plain words (e.g. "our Financing page").
-- When the visitor wants a callback, an estimate, a visit or to talk to someone, offer to take their name and phone number (or email) right here in the chat; the team gets their details automatically. Ask for those two things only, never for an address unless they offer it.
+- When the visitor wants a callback, an estimate, a visit or to talk to someone, or after you have answered their question, offer to take their name and phone number (or email) right here in the chat so the team can call to schedule; the team gets their details automatically. Ask for those two things only, never for an address unless they offer it. For an active leak or storm damage, give the phone number first.
 - If the visitor has shared enough for someone to follow up with them (their name, and a phone number or email), thank them naturally, mention someone from QRS will follow up, and end your reply with a line starting with [[LEAD]] followed by compact JSON with keys name, phone, email, zip, interest (use "" for anything not given). Only do this once, the first time you have a name and a phone or email — never repeat it later in the conversation, and never mention this line or show it to the visitor.`;
 
 export const STARTERS = ['I have a leak', 'Is the roof evaluation free?', 'How much does it cost?', 'What areas do you serve?'];
@@ -77,67 +78,67 @@ export const ANSWERS = [
   },
   {
     match: /leak|drip|water|stain|ceiling|storm|emergenc|damage|wind|rain/,
-    answer: 'Sorry you\'re dealing with that. For an active leak or storm damage, the fastest route is to call us at ' + call + '. Otherwise, a ' + check + ' will help pinpoint the cause and we\'ll photo-document exactly what we find.',
+    answer: 'Sorry about that. For an active leak, call ' + call + ' now. Otherwise, a ' + check + ' pinpoints the cause. Want us to call you to schedule it?',
     chips: ['Book a free evaluation', 'Talk to a person'],
   },
   {
     match: /199|free|evaluat|roof check|inspect|inspection|look at/,
-    answer: 'Yes, the <a href="/start/" data-qa-close>roof evaluation</a> is free. We use drone footage to see your roof\'s condition, explain it in plain English and give you a clear next step: repair, monitor, maintain or replace. The $199 Roof Check is optional: a tune-up where we seal the vents, pipes and flashings, paid after the visit and credited toward a replacement if you move forward.',
+    answer: 'Yes, the <a href="/start/" data-qa-close>roof evaluation</a> is free: drone footage, a plain-English report and a clear next step. Want to schedule it? Share your name and phone number.',
     chips: ['Book a free evaluation', 'What areas do you serve?'],
   },
   {
     match: /cost|price|how much|quote|estimate|expensive|afford|pricing/,
-    answer: 'Every roof is different, so we don\'t guess at prices. After a ' + check + ' you get a written scope and price before any work starts — no pressure and no mystery pricing.',
+    answer: 'Every roof is different, so we price after a ' + check + '. You get a written scope and price before any work starts. Want a call to schedule it?',
     chips: ['Book a free evaluation', 'Do I need a new roof?'],
   },
   {
     match: /warrant|guarantee/,
-    answer: 'Our installs are backed by a 10-year workmanship warranty, and roofing materials carry the manufacturer\'s warranty, which depends on the product and its warranty tier. At the final walkthrough we go over your warranty with you in plain English. <a href="#guarantee" data-qa-close>See the QRS Guarantee</a>.',
+    answer: 'Installs carry a 10-year workmanship warranty, plus the manufacturer\'s warranty on materials. <a href="#guarantee" data-qa-close>See the QRS Guarantee</a>. Want to book your free evaluation?',
     chips: ['How does the process work?', 'Book a free evaluation'],
   },
   {
     match: /area|serve|zip|city|location|near|orange county|los angeles|\bla\b|\boc\b|\b9\d{4}\b|santa monica|pasadena|glendale|burbank|torrance|long beach|anaheim|santa ana|huntington|irvine|newport/,
-    answer: 'We serve homeowners across Los Angeles and Orange County. You can enter your ZIP in our <a href="/service-areas/" data-qa-close>service area map</a> to check your city, or call ' + call + '.',
+    answer: 'We serve Los Angeles and Orange County. Check your ZIP on our <a href="/service-areas/" data-qa-close>service area map</a>, or share your name and phone number and we\'ll call you to schedule.',
     chips: ['Book a free evaluation', 'What services do you offer?'],
   },
   {
     match: /replace|new roof|re-?roof|need a new|old roof|age/,
-    answer: 'Not always! Many roofs just need a targeted repair or a tile lift &amp; relay. A ' + check + ' tells you what your roof actually needs, so you don\'t pay for work you don\'t need.',
+    answer: 'Not always. Many roofs just need a repair or a tile lift &amp; relay. A ' + check + ' shows what yours needs. Want to schedule one?',
     chips: ['What is tile lift & relay?', 'Book a free evaluation'],
   },
   {
     match: /tile lift|relay|underlayment/,
-    answer: 'With a tile lift &amp; relay, we lift your existing tiles, replace the worn underlayment underneath and reset the roof cleanly — keeping the look you already love.',
+    answer: 'We lift your tiles, replace the worn underlayment and reset them, keeping the look you have. Want a free evaluation to see if it fits your roof?',
     chips: ['Book a free evaluation', 'What services do you offer?'],
   },
   {
     match: /service|offer|do you do|tile|shingle|flat|type/,
-    answer: 'We handle roof replacements, roof repairs, tile lift &amp; relay, flat roofing, shingle roofing, and inspections &amp; roof care. <a href="/residential-roofing/" data-qa-close>See all services</a>.',
+    answer: 'Roof repair, replacement, tile, shingle, flat and metal roofing, and inspections. <a href="/residential-roofing/" data-qa-close>See all services</a>. Want to book your free evaluation?',
     chips: ['Do I need a new roof?', 'Book a free evaluation'],
   },
   {
     match: /process|how does|how it works|step|work with/,
-    answer: 'It\'s four steps: <b>1.</b> Roof Evaluation — free, with drone footage of your roof. <b>2.</b> Clear Quote — a written scope and price. <b>3.</b> Expert Install — done cleanly and to spec. <b>4.</b> Final Walkthrough — we review the roof and your warranty with you.',
+    answer: 'Four steps: <b>1.</b> free roof evaluation, <b>2.</b> clear written quote, <b>3.</b> expert install, <b>4.</b> final walkthrough. Ready to start with the evaluation?',
     chips: ['How much does it cost?', 'Book a free evaluation'],
   },
   {
     match: /book|schedule|appointment|sign up|get started|start/,
-    answer: 'Great! Leave your name and phone number here and we\'ll call you to set it up, or <a href="/start/" data-qa-close>fill out the quick form</a> (about two minutes), or call us at ' + call + '.',
+    answer: 'Great! Type your name and phone number here and we\'ll call to schedule, or <a href="/start/" data-qa-close>use the quick form</a>, or call ' + call + '.',
     chips: ['Talk to a person'],
   },
   {
     match: /person|human|call|phone|talk|speak|contact|agent/,
-    answer: 'Of course — you can reach our team at ' + call + '. Or leave your name and phone number here and we\'ll call you back.',
+    answer: 'Of course: call ' + call + ', or type your name and phone number here and we\'ll call you back.',
     chips: [],
   },
   {
     match: /experience|years|how long have|licens|trust|who are/,
-    answer: 'QRS is a licensed California contractor (CSLB #1061942) since 2020, bringing detail-first workmanship to every job across LA and Orange County. <a href="/about-us/" data-qa-close>Why homeowners choose QRS</a>.',
+    answer: 'Quality Roofing Specialists, Inc. is a licensed California contractor (CSLB #1061942) since 2020. <a href="/about-us/" data-qa-close>About us</a>. Want to book your free evaluation?',
     chips: ['How does the process work?', 'Book a free evaluation'],
   },
   {
     match: /^(hi|hello|hey|yo|good (morning|afternoon|evening))\b/,
-    answer: 'Hi there! What can I help you with today?',
+    answer: 'Hi! What can I help you with?',
     chips: null,
   },
   {
@@ -151,10 +152,10 @@ export const ANSWERS = [
 // `saved` once the backend (app/api/chat/route.js) has passed the details to the team, `notSaved` if it couldn't
 export const CONTACT_RE = /[\w.+-]+@[\w-]+(\.[\w-]+)+|\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}/;
 export const CONTACT_ANSWERS = {
-  saved: 'Thanks! Your details are with our team, and someone from QRS will follow up soon. If it\'s urgent, call us at ' + call + '.',
+  saved: 'Thanks! Our team will call you soon to schedule. Urgent? Call ' + call + '.',
   notSaved: 'Thanks! So we don\'t miss you, please call us at ' + call + ' or <a href="/start/" data-qa-close>send the quick form</a>, and we\'ll follow up.',
 };
 
 // Used when nothing above matches
 export const FALLBACK_ANSWER =
-  'Good question — I don\'t want to guess on that one. Our team can give you a straight answer at ' + call + ', or start with a ' + check + '.';
+  'I don\'t want to guess on that. Call ' + call + ' for a straight answer, or book a ' + check + '.';

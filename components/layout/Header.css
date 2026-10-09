@@ -138,6 +138,26 @@ a.mega-card:hover{border-color:var(--gold)}
   .nav-cta-compact{display:none}
   .site-header .nav-cta{padding:0 20px;font-size:15px}
 }
+/* Desktop: every header element is 40% larger than on phones and tablets (logo, pill, menu button, chips, buttons, icons) */
+@media (min-width:901px){
+  .site-header{padding-top:18px}
+  .site-header > .container.nav{height:76px;gap:14px}
+  .nav-left,.nav-actions{gap:14px;height:62px;margin-top:7px}
+  .nav-phone,.nav-cta,.nav-theme,.nav-call{height:56px;min-height:56px;border-radius:17px;font-size:20px}
+  .nav-phone{padding:0 20px}
+  .nav-theme,.nav-call{width:56px}
+  .nav-theme svg,.nav-call svg{width:24px;height:24px}
+  .site-header .nav-cta{padding:0 28px;font-size:21px}
+  .nav-pill{width:274px;border-radius:20px}
+  .nav-pill.open{width:min(700px,calc(100vw - 64px));border-radius:22px}
+  .nav-pill-row{height:76px;padding:0 12px 0 26px}
+  .nav-pill .brand-logo{height:45px}
+  .menu-btn{width:53px;height:53px;gap:7px;border-radius:14px}
+  .menu-btn span{width:25px;height:2px}
+  .menu-btn[aria-expanded="true"] span:first-child{transform:translateY(4.5px) rotate(45deg)}
+  .menu-btn[aria-expanded="true"] span:last-child{transform:translateY(-4.5px) rotate(-45deg)}
+  .navlinks{max-height:calc(100dvh - 120px)}
+}
 @media (max-width:360px){
   .site-header > .container.nav{width:calc(100% - 24px)}
   .nav-pill{width:150px}

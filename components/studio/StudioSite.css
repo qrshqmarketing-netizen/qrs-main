@@ -30,34 +30,43 @@ body.studio-site :is(.section,.card-grid,.value-grid,.why-choose,.overview,.spli
 }
 body.studio-site :is(.card-grid-wash,.value-grid-wash,.split-wash,.articles,.post-cards,.process-block){background:var(--wash)}
 
-/* ---------- hero: photo first, copy at the bottom left ---------- */
-body.studio-site .hero{align-items:flex-end}
-body.studio-site .hero .hero-inner{display:block;margin:0 auto;padding:130px 0 44px;text-align:left}
+/* ---------- hero: the home hero's pattern (components/studio/Studio.css .st-hero) ----------
+   A tall, full-bleed photo with one dark shade rising from the bottom, the trail as a small spaced label, a large light headline at the bottom left,
+   a short line and two flat pill buttons. On phones too the photo runs behind the copy (no separate photo band). */
+body.studio-site .hero{align-items:flex-end;min-height:max(600px,88svh);background:#0a1b2c}
+body.studio-site .hero .hero-inner{display:block;margin:0 auto;padding:120px 0 44px;text-align:left}
 body.studio-site .hero .hero-copy{margin:0;width:min(980px,100%)}
 body.studio-site .hero .hero-title,body.studio-site .hero .hero-sub{margin-left:0;margin-right:0;text-align:left;text-shadow:none}
-body.studio-site .hero .hero-title{max-width:20ch}
-body.studio-site .hero .hero-sub{max-width:58ch;margin-top:18px}
-body.studio-site .hero .hero-actions{justify-content:flex-start;margin-top:26px}
+body.studio-site .hero .hero-title{max-width:20ch;font-size:clamp(40px,10.4vw,80px);line-height:1.02}
+body.studio-site .hero .hero-sub{max-width:52ch;margin-top:20px;font-size:clamp(16px,2.4vw,19px);line-height:1.5;color:rgba(255,255,255,.86)}
+body.studio-site .hero .hero-actions{justify-content:flex-start;margin-top:28px}
+body.studio-site .hero .hero-actions .btn{width:auto;max-width:none;min-width:0;min-height:50px;padding:0 24px;font-size:16px;line-height:1;white-space:nowrap}
 body.studio-site .hero .hero-inner:not(.hero-left) .crumbs ol{justify-content:flex-start}
 body.studio-site .hero .hero-copy .eyebrow{color:rgba(255,255,255,.85);text-shadow:none}
-body.studio-site .hero .hero-copy .crumbs ol{font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-shadow:none}
-body.studio-site .hero .hero-title .hero-outcome{display:block;margin-top:.5em;max-width:34ch;font-size:max(.36em,18px);font-weight:400;color:rgba(255,255,255,.9);text-wrap:pretty}
-body.studio-site .hero-roof-texture:after{background:linear-gradient(0deg,rgba(3,22,40,.88) 0%,rgba(3,22,40,.5) 42%,rgba(3,22,40,.16) 100%)}
-body.studio-site .hero.hero-photo:after{display:none}
+body.studio-site .hero .hero-copy .crumbs ol{margin-bottom:20px;font:600 12px/1.4 var(--font-text),sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.82);text-shadow:none}
+body.studio-site .hero .hero-title .hero-outcome{display:block;margin-top:.5em;max-width:34ch;font-size:clamp(17px,2.2vw,22px);line-height:1.4;font-weight:400;letter-spacing:-.01em;color:rgba(255,255,255,.9);text-wrap:pretty}
+body.studio-site .hero-roof-texture:after{background:linear-gradient(0deg,rgba(3,22,40,.86) 0%,rgba(3,22,40,.5) 38%,rgba(3,22,40,.12) 100%)}
+body.studio-site .hero.hero-photo:after,body.studio-site .hero-glow{display:none}
 body.studio-site .hero.hero-top-pad .hero-copy:before{display:none}
 @media (min-width:901px){
-  body.studio-site .hero{min-height:clamp(520px,72vh,680px)}
-  body.studio-site .hero .hero-inner{padding:150px 0 60px}
+  body.studio-site .hero{min-height:clamp(640px,86svh,820px)}
+  body.studio-site .hero .hero-inner{padding:164px 0 56px}
+  body.studio-site .hero .hero-title{font-size:clamp(48px,5.4vw,80px)}
+}
+/* Phones: the photo stays behind the copy (the old stacked photo band is gone), like the home hero */
+@media (max-width:620px){
+  body.studio-site .hero.hero-stack.hero-stack{display:flex;flex-direction:column;justify-content:flex-end;align-items:stretch;min-height:max(600px,88svh);background:#0a1b2c}
+  body.studio-site .hero.hero-stack .hero-background{position:absolute;inset:-10% 0;height:auto;transform:translate3d(0,var(--hero-parallax-y,0px),0)}
+  body.studio-site .hero.hero-stack .hero-roof-texture:after{background:linear-gradient(0deg,rgba(3,22,40,.88) 0%,rgba(3,22,40,.55) 45%,rgba(3,22,40,.16) 100%)}
+  body.studio-site .hero.hero-stack > .hero-inner{margin:0 auto;padding:120px 0 36px}
 }
 
 /* ---------- cards: flat, hairline, no shadow ---------- */
 body.studio-site :is(.vg-item,.why-choose-item,.faq-item,.pc-card,.art-card,.office-card,.local-card,.cc-card,.city-card,.cp-card,.form-card){box-shadow:none}
 body.studio-site :is(.vg-item,.why-choose-item,.pc-card,.art-card){border-color:var(--line);background:var(--paper)}
 body.studio-site :is(.pc-card:hover,.art-card:hover){box-shadow:none;transform:none;border-color:var(--gold-ink)}
-body.studio-site .cg-media,body.studio-site .process-block-media,body.studio-site .split-media{box-shadow:none}
-body.studio-site .cg-card:hover .cg-media{box-shadow:none}
-body.studio-site .vg-item h3,body.studio-site .why-choose-item h3,body.studio-site .pc-card h3,body.studio-site .art-card h3,body.studio-site .cg-card h3{font-weight:500;letter-spacing:-.02em}
-body.studio-site .cg-card h3{font-size:clamp(22px,3vw,28px)}
+body.studio-site .process-block-media,body.studio-site .split-media{box-shadow:none}
+body.studio-site .vg-item h3,body.studio-site .why-choose-item h3,body.studio-site .pc-card h3,body.studio-site .art-card h3{font-weight:500;letter-spacing:-.02em}
 body.studio-site :is(.vg-num){font:500 clamp(28px,4vw,40px)/1 var(--font-text),sans-serif;letter-spacing:-.03em;color:var(--gold-ink)}
 body.studio-site :is(.art-card time,.pc-card time,.art-more,.pc-more){color:var(--muted)}
 body.studio-site .why-choose-check{background:transparent;border:1px solid var(--line);color:var(--gold-ink)}
@@ -150,11 +159,6 @@ body.studio-site .post .crumbs li{font-size:inherit;line-height:1.5;margin:0}
 body.studio-site .post .crumbs ol{font-size:11px;letter-spacing:.12em;margin-bottom:26px}
 @media (max-width:620px){body.studio-site .post .crumbs li:last-child,body.studio-site .project-detail-story .crumbs li:last-child{display:none}}
 
-/* Phones: a hero with a photo stacks (the photo on its own band, the copy under it on navy), so the copy starts just under the photo instead of
-   keeping the desktop's top padding that clears the header over the photo */
-@media (max-width:620px){
-  body.studio-site .hero.hero-stack .hero-inner{padding-top:22px;padding-bottom:34px}
-}
 
 /* ---------- centered section headings ----------
    Stand-alone section headings (with their short line under them) are centered, like "Locations We Proudly Serve": the service area map, the FAQ,
@@ -340,7 +344,7 @@ body.studio-site .office-card h3{font-weight:500;letter-spacing:-.015em}
 body.studio-site :is(.cp-card,.cc-card) h3{font-weight:500}
 
 /* Light "tone" sections that still carry an old pattern or shadow */
-body.studio-site :is(.split-media,.cg-media,.process-block-media,.gtee-card){box-shadow:none}
+body.studio-site :is(.split-media,.process-block-media,.gtee-card){box-shadow:none}
 body.studio-site .gtee{background:var(--wash)}
 body.studio-site .gtee-card{background:var(--paper);color:var(--ink);border:1px solid var(--line)}
 body.studio-site .gtee-title h2{color:var(--navy);font-weight:500}

@@ -5,6 +5,7 @@ export const SITE_URL = 'https://qualityroofingspecialists.com';
 
 export const BUSINESS = {
   name: 'Quality Roofing Specialists',
+  legalName: 'Quality Roofing Specialists, Inc.', // the company's full name: copyright, legal pages, structured data, emails
   shortName: 'QRS',
   tagline: 'DETAIL-FIRST ROOFING',
   description:

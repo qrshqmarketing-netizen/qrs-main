@@ -93,8 +93,8 @@
 @media (min-width:901px){
   .hero{min-height:clamp(460px,58vh,540px)}
   .hero.hero-top-pad{min-height:clamp(720px,88vh,860px)}
-  .hero-inner{padding:116px 0 40px}
-  .hero-inner.hero-top-pad{padding:150px 0 70px}
+  .hero-inner{padding:140px 0 40px}
+  .hero-inner.hero-top-pad{padding:174px 0 70px}
   .hero-title{font-size:56px}
   .hero-sub{font-size:18px}
 }

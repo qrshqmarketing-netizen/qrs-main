@@ -48,7 +48,7 @@ export function autoReplyContent(lead) {
     A.sooner.heading.toUpperCase(),
     sooner,
     '',
-    `${SITE.name}`,
+    `${SITE.legalName}`,
     `${license}`,
     '',
     A.notYou,
@@ -87,7 +87,7 @@ export function autoReplyContent(lead) {
 <p style="margin:0">${linked(A.sooner.text)}</p>
 </td></tr>
 <tr><td style="padding:18px 28px 22px;border-top:1px solid #e4eaf0;font:12px/1.6 Arial,Helvetica,sans-serif;color:#5a6b82">
-<strong style="color:#062d57">${escapeHtml(SITE.name)}</strong><br>${escapeHtml(license)}<br>
+<strong style="color:#062d57">${escapeHtml(SITE.legalName)}</strong><br>${escapeHtml(license)}<br>
 <a href="https://qualityroofingspecialists.com/" style="color:#5a6b82">qualityroofingspecialists.com</a>
 <p style="margin:14px 0 0">${escapeHtml(A.notYou)}</p>
 </td></tr>

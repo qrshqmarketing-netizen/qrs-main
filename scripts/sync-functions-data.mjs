@@ -13,6 +13,7 @@ import { hoursText } from '../lib/hours.js';
 const generated = {
   SITE: {
     name: BUSINESS.name,
+    legalName: BUSINESS.legalName,
     siteUrl: SITE_URL,
     phone: PHONE,
     tel: TEL,

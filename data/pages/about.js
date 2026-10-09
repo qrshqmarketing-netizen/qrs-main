@@ -12,7 +12,7 @@ export const ABOUT_PAGE = {
   hero: {
     eyebrow: 'About Our Company',
     heading: 'Meet Quality Roofing Specialists',
-    intro: `Quality Roofing Specialists (QRS) is a family-owned roofing contractor serving homes and businesses across Los Angeles and Orange County, licensed in California since 2020 (CSLB #${BUSINESS.license}). Co-founded by Tony and Adva Goldberg, QRS repairs and replaces tile, shingle and flat roofs, and every project starts with a roofer-led look at the roof.`,
+    intro: `Quality Roofing Specialists, Inc. (QRS) is a family-owned roofing contractor serving homes and businesses across Los Angeles and Orange County, licensed in California since 2020 (CSLB #${BUSINESS.license}). Co-founded by Tony and Adva Goldberg, QRS repairs and replaces tile, shingle and flat roofs, and every project starts with a roofer-led look at the roof.`,
   },
   intro: {
     heading: 'Your Detail-First Roofing Team',
@@ -40,7 +40,7 @@ export const ABOUT_PAGE = {
     eyebrow: 'Our Story',
     heading: 'Family-Owned, Locally Built',
     paragraphs: [
-      'Quality Roofing Specialists was incorporated in July 2019 and licensed as a California contractor in January 2020, co-founded by **Tony Goldberg** and **Adva Goldberg**, who serve as CEO and President. Tony did his first roofing job at 16 and never looked back — after years working in the roofing departments of other companies, he went out on his own when his uncle, who ran his own roofing business, retired.',
+      'Quality Roofing Specialists, Inc. was incorporated in July 2019 and licensed as a California contractor in January 2020, co-founded by **Tony Goldberg** and **Adva Goldberg**, who serve as CEO and President. Tony did his first roofing job at 16 and never looked back — after years working in the roofing departments of other companies, he went out on his own when his uncle, who ran his own roofing business, retired.',
       'QRS is a family-owned, woman-owned and locally owned business, and giving back is part of how we operate: we’ve donated a full roof to a local church and contribute roofing work to senior living communities and elderly assistance programs in the neighborhoods we serve.',
     ],
   },

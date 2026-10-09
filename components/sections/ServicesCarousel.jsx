@@ -2,6 +2,9 @@ import SiteLink from '@/components/ui/SiteLink';
 import Rich from '@/components/ui/Rich';
 import { SERVICES } from '@/data/services';
 import ScrollParallaxImage from './ScrollParallaxImage';
+import CardSlider from '@/components/ui/CardSlider';
+import SliderCard from '@/components/ui/SliderCard';
+import '@/components/ui/CardSlider.css';
 import './Services.css';
 import Mark from '@/components/ui/Mark';
 import { unmark } from '@/lib/richText';
@@ -26,7 +29,7 @@ export default function ServicesCarousel({ title = 'Roofing __Services__', items
     </li>
   ));
   return (
-    <div className={'svc-layout' + (compact ? ' svc-compact' : '') + (slider ? ' svc-slider-layout' : '')}>
+    <div className={'svc-layout' + (compact || !slider ? ' svc-compact' : '') + (slider ? ' svc-slider-layout' : '')}>
       <div className="svc-intro">
         <div className="eyebrow">What We Offer</div>
         <h2 id={titleId}><Mark text={title} /></h2>
@@ -45,7 +48,9 @@ export default function ServicesCarousel({ title = 'Roofing __Services__', items
           </div>
         </div>
       ) : (
-        <ul className="svc-grid" aria-labelledby={titleId}>{cards(false)}</ul>
+        <CardSlider label={unmark(title)}>
+          {items.map((item) => <SliderCard card={item} key={item.href} />)}
+        </CardSlider>
       )}
     </div>
   );

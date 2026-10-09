@@ -64,7 +64,7 @@ export default function Footer() {
         </HideOnStart>
         <div className="ft-copy">
           <span>
-            Copyright &copy; <CopyrightYear builtYear={new Date().getFullYear()} /> {BUSINESS.name}, All Rights Reserved
+            Copyright &copy; <CopyrightYear builtYear={new Date().getFullYear()} /> {BUSINESS.legalName}, All Rights Reserved
           </span>
           <span>CSLB Lic # {BUSINESS.license}</span>
           {FOOTER.legal.map((link) => (

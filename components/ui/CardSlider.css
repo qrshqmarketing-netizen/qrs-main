@@ -1,0 +1,43 @@
+/* ---------- Horizontal card slider (hub and sub-page cards) ---------- */
+.cs{position:relative}
+.cs-track{list-style:none;margin:0;padding:0 0 4px;display:flex;gap:14px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;overscroll-behavior-x:contain;scroll-padding-left:0;-webkit-overflow-scrolling:touch}
+.cs-track::-webkit-scrollbar{display:none}
+.cs-track:focus-visible{outline:3px solid rgba(212,181,114,.7);outline-offset:4px;border-radius:var(--radius)}
+.cs-slide{flex:0 0 min(82%,340px);scroll-snap-align:start;min-width:0}
+.cs-card{position:relative;display:block;aspect-ratio:4/5;overflow:hidden;border-radius:var(--radius);color:#fff;isolation:isolate;background:#0a1b2c;text-decoration:none}
+.cs-card .scroll-parallax-layer,.cs-card img{z-index:-2}
+.cs-card img{object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.cs-card:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(3,22,40,.62) 0,rgba(3,22,40,.06) 40%,rgba(3,22,40,.86) 100%);pointer-events:none}
+.cs-top{position:absolute;left:20px;right:20px;top:18px}
+.cs-top h3{color:#fff;margin:0;font:500 clamp(24px,3.2vw,32px)/1.08 var(--font-text),sans-serif;letter-spacing:-.02em;text-transform:none;text-align:left}
+.cs-bottom{position:absolute;left:20px;right:20px;bottom:18px;min-height:44px;padding-right:56px;display:flex;align-items:flex-end}
+.cs-bottom p{margin:0;color:rgba(255,255,255,.88);font-size:15px;line-height:1.5}
+.cs-go{position:absolute;right:0;bottom:0;display:grid;place-items:center;width:44px;height:44px;border:1px solid rgba(255,255,255,.55);border-radius:var(--radius-sm);transition:background .25s ease,color .25s ease}
+.cs-go svg{width:17px;height:17px}
+.cs-card:focus-visible{outline:3px solid var(--gold-2);outline-offset:3px}
+@media (hover:hover){.cs-card:hover img{transform:scale(1.04)}.cs-card:hover .cs-go{background:#fff;color:var(--navy)}}
+
+.cs-controls{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:20px}
+.cs-dots{display:flex;align-items:center;gap:0}
+.cs-dots button{position:relative;width:22px;height:44px;padding:0;border:0;background:none;cursor:pointer}
+.cs-dots button:before{content:"";position:absolute;left:50%;top:50%;width:7px;height:7px;margin:-3.5px 0 0 -3.5px;border-radius:50%;background:var(--ink);opacity:.25;transition:opacity .2s ease,transform .2s ease}
+.cs-dots button.on:before{opacity:1;transform:scale(1.25)}
+.cs-arrows{display:flex;gap:10px}
+.cs-arrow{display:grid;place-items:center;width:44px;height:44px;padding:0;border:1px solid var(--ink);border-radius:var(--radius-sm);background:transparent;color:var(--ink);cursor:pointer;transition:background .2s ease,color .2s ease,opacity .2s ease}
+.cs-arrow svg{width:18px;height:18px}
+.cs-arrow:disabled{opacity:.3;cursor:default}
+@media (hover:hover){.cs-arrow:not(:disabled):hover{background:var(--ink);color:var(--paper)}}
+.cs-arrow:focus-visible,.cs-dots button:focus-visible{outline:3px solid var(--gold-2);outline-offset:2px}
+
+@media (min-width:621px){
+  .cs-track{gap:18px}
+  .cs-slide{flex-basis:calc((100% - 18px) / 2.15)}
+  .cs-top{left:24px;right:24px;top:22px}
+  .cs-bottom{left:24px;right:24px;bottom:22px}
+}
+@media (min-width:901px){
+  .cs-track{gap:20px}
+  .cs-slide{flex-basis:calc((100% - 40px) / 3.15)}
+  .cs-card{aspect-ratio:1/1.08}
+}
+@media (prefers-reduced-motion:reduce){.cs-track{scroll-behavior:auto}}

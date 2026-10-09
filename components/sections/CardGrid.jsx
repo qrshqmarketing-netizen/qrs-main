@@ -1,9 +1,9 @@
-import SiteLink from '@/components/ui/SiteLink';
-import Rich from '@/components/ui/Rich';
-import ScrollParallaxImage from './ScrollParallaxImage';
+import CardSlider from '@/components/ui/CardSlider';
+import SliderCard from '@/components/ui/SliderCard';
+import '@/components/ui/CardSlider.css';
 import './CardGrid.css';
 
-// Grid of page cards for hub pages. The title link stretches across the full card.
+// Row of page cards for hub pages, as a horizontal slider. The whole card is the link.
 // cards: [{ title, text, href, scene, image? }]
 export default function CardGrid({ id, heading, intro, cards = [], tone }) {
   return (
@@ -15,21 +15,9 @@ export default function CardGrid({ id, heading, intro, cards = [], tone }) {
             {intro && <p>{intro}</p>}
           </div>
         )}
-        <div className="cg-grid">
-          {cards.map((card) => (
-            <article className="cg-card" key={card.href}>
-              <div className={`cg-media art ${card.scene || 'scene-shingle'}`}>
-                {card.image && <ScrollParallaxImage src={card.image} sizes="(min-width: 901px) 380px, (min-width: 621px) 50vw, 100vw" />}
-                <div className="cg-overlay">
-                  <h3>
-                    <SiteLink className="cg-link" href={card.href}><Rich text={card.title} /></SiteLink>
-                  </h3>
-                  {card.text && <p>{card.text}</p>}
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
+        <CardSlider label={heading}>
+          {cards.map((card) => <SliderCard card={card} key={card.href} />)}
+        </CardSlider>
       </div>
     </section>
   );
