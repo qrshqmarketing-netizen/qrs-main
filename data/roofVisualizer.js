@@ -38,6 +38,9 @@ export const VISUALIZER_CATALOG = VISUALIZER_BRANDS.map((b) => ({ id: b.id, name
 export const VISUALIZER_PATH = '/roof-visualizer/';
 // The home page section (components/studio/StudioVisualizer.jsx). Switched off for now; the page itself and its footer link are unchanged.
 export const SHOW_ON_HOME = false;
+// Whether the page is public: linked in the footer menu, listed in the sitemap, llms.txt and the AI files, and open to search engines. While false the page is
+// still reachable at its address (for testing) but has a noindex tag and no links to it.
+export const VISUALIZER_PUBLIC = false;
 // "Use my address": the roof seen from above, found with Google's Solar API (lib/aerialRoof.js). false hides it and leaves only the photo upload.
 export const AERIAL_ENABLED = true;
 export const VISUALIZER_TOKEN_KEY = 'qrs-visualizer'; // localStorage: the visitor's signed pass (name and email already given)

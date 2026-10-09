@@ -8,14 +8,15 @@ import JsonLd from '@/components/ui/JsonLd';
 import RoofVisualizer from '@/components/visualizer/RoofVisualizer';
 import { HOME, ROOF_VISUALIZER_LINK } from '@/data/catalog';
 import { relatedLinks } from '@/data/content';
-import { VISUALIZER_COPY } from '@/data/roofVisualizer';
+import { VISUALIZER_COPY, VISUALIZER_PUBLIC } from '@/data/roofVisualizer';
 import { ROOF_VISUALIZER_PAGE as page } from '@/data/pages/roofVisualizer';
 import { heroOutcome } from '@/data/heroOutcomes';
 import { PHONE, TEL } from '@/data/site';
 import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
 
-export const metadata = pageMetadata({ title: page.metaTitle, description: page.metaDescription, path: ROOF_VISUALIZER_LINK.href });
+// Hidden for now (VISUALIZER_PUBLIC in data/roofVisualizer.js): not linked, not in the sitemap or AI files, and noindex
+export const metadata = pageMetadata({ title: page.metaTitle, description: page.metaDescription, path: ROOF_VISUALIZER_LINK.href, noindex: !VISUALIZER_PUBLIC });
 
 const CRUMBS = [HOME, ROOF_VISUALIZER_LINK];
 
