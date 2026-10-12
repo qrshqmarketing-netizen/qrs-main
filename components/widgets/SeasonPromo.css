@@ -134,3 +134,6 @@ body.studio-site .promo h1.promo-title{font-family:var(--font-display);font-weig
 /* The home page's hero: a little taller than the landing page's (most of the screen, with the proof strip peeking in below) */
 .promo.promo-landing.promo-home{min-height:max(600px,92svh)}
 @media (min-width:901px){.promo.promo-landing.promo-home{min-height:clamp(700px,92svh,940px)}}
+/* The home page's hero heading in the studio look's type (light Libre Franklin, sentence case, like the other heroes); the storm card's effects stay:
+   the lightning glow on the heading, the rain, the red ping and the photo */
+body.studio-site .promo-home .promo-title{font:500 clamp(44px,11vw,104px)/1.02 var(--font-text),sans-serif;letter-spacing:-.035em;text-transform:none;text-wrap:balance}

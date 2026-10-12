@@ -7,7 +7,7 @@ export const SEASON_PROMO = {
   active: true,
   eyebrow: 'Get your roof ready before the rain',
   // Forecasters (NOAA, fall 2026) give a very strong, "super" El Niño good odds for November–January
-  heading: 'Be Prepared for a Super El Niño',
+  heading: 'Be prepared for a super El Niño', // sentence case shows on the home hero; the popup and the El Niño page set it in capitals
   text: 'Forecasters expect a very strong El Niño this winter. Book your free drone roof evaluation now and find the weak spots before the storms do.',
   exit: {
     heading: 'Before You Go: Is Your Roof Ready for El Niño?',
