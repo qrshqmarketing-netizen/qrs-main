@@ -27,6 +27,10 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false); // phone/tablet slide-down menu
   const [openItem, setOpenItem] = useState(null); // 'services' | 'res' | 'com' | 'about' | null
   const [activeGroup, setActiveGroup] = useState(0); // roof type shown in the Residential menu
+  // The dropdowns' links are built the first time the menu is about to open (pointer over or focus on the menu button, or opening it), not in the
+  // page's HTML: otherwise ~200 menu words came before <main> for crawlers, AI agents and screen readers. Every page they link to is also linked
+  // from the page bodies, the footer and the sitemap (checked by crawling the built site).
+  const [menuSeen, setMenuSeen] = useState(false);
   const [theme, setTheme] = useState('light');
   const pathname = usePathname();
   const [pastHero, setPastHero] = useState(false); // scrolled below the photo hero: the bar turns solid
@@ -36,6 +40,7 @@ export default function Header() {
 
   useEffect(() => {
     document.body.classList.toggle('menu-open', menuOpen);
+    if (menuOpen) setMenuSeen(true);
   }, [menuOpen]);
 
   // Over a photo hero the bar is transparent; once the hero has scrolled up under it, it turns solid (CSS: Header.css, the data-solid attribute below)
@@ -164,7 +169,7 @@ export default function Header() {
           <div className="nav-pill-row">
             <BrandLogo variant="adaptive" preload />
             {!requestPage && (
-              <button className="menu-btn" id="menuBtn" type="button" aria-label={menuOpen ? 'Close menu' : 'Open menu'} aria-expanded={menuOpen} aria-controls="navlinks" onClick={toggleMenu}>
+              <button className="menu-btn" id="menuBtn" type="button" aria-label={menuOpen ? 'Close menu' : 'Open menu'} aria-expanded={menuOpen} aria-controls="navlinks" onClick={toggleMenu} onPointerEnter={() => setMenuSeen(true)} onFocus={() => setMenuSeen(true)}>
                 <span></span>
                 <span></span>
               </button>
@@ -178,21 +183,23 @@ export default function Header() {
                 <Caret />
               </button>
               <div className="mega mega-services" id="megaServices" onClick={closeOnLink}>
-                <div className="mega-inner">
-                  <div className="mega-card mega-card-list">
-                    <b>{SERVICES_MENU.title}</b>
-                    <ul>
-                      {SERVICES_MENU.links.map((link) => (
-                        <li key={link.href}>
-                          <MenuLink href={link.href}>
-                            {link.urgent && <UrgentDot />}
-                            <Rich text={link.label} />
-                          </MenuLink>
-                        </li>
-                      ))}
-                    </ul>
+                {menuSeen && (
+                  <div className="mega-inner">
+                    <div className="mega-card mega-card-list">
+                      <b>{SERVICES_MENU.title}</b>
+                      <ul>
+                        {SERVICES_MENU.links.map((link) => (
+                          <li key={link.href}>
+                            <MenuLink href={link.href}>
+                              {link.urgent && <UrgentDot />}
+                              <Rich text={link.label} />
+                            </MenuLink>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             </div>
 
@@ -202,52 +209,54 @@ export default function Header() {
                 <Caret />
               </button>
               <div className="mega mega-res" id="megaRes" onClick={closeOnLink}>
-                <div className="mega-inner">
-                  <div className="mega-types">
-                    {groups.map((group, i) => (
-                      <div className={'mega-group' + (activeGroup === i ? ' active' : '')} key={group.id}>
-                        <button {...tabProps(i)} aria-controls={group.id}>
-                          <Rich text={group.label} />
-                          <Caret />
-                        </button>
-                        <div className="mega-list" id={group.id}>
-                          {group.all && (
-                            <MenuLink className="mega-all" href={group.all.href}>
-                              <Rich text={group.all.label} /> <ArrowRight />
-                            </MenuLink>
-                          )}
-                          <ul>
-                            {group.links.map((link) => (
-                              <li key={link.href}>
-                                <MenuLink href={link.href}>
-                                  <span>
-                                    {link.urgent && <UrgentDot />}
-                                    <Rich text={link.label} />
-                                  </span>
-                                  {link.note && <small>{link.note}</small>}
-                                </MenuLink>
-                              </li>
-                            ))}
-                          </ul>
+                {menuSeen && (
+                  <div className="mega-inner">
+                    <div className="mega-types">
+                      {groups.map((group, i) => (
+                        <div className={'mega-group' + (activeGroup === i ? ' active' : '')} key={group.id}>
+                          <button {...tabProps(i)} aria-controls={group.id}>
+                            <Rich text={group.label} />
+                            <Caret />
+                          </button>
+                          <div className="mega-list" id={group.id}>
+                            {group.all && (
+                              <MenuLink className="mega-all" href={group.all.href}>
+                                <Rich text={group.all.label} /> <ArrowRight />
+                              </MenuLink>
+                            )}
+                            <ul>
+                              {group.links.map((link) => (
+                                <li key={link.href}>
+                                  <MenuLink href={link.href}>
+                                    <span>
+                                      {link.urgent && <UrgentDot />}
+                                      <Rich text={link.label} />
+                                    </span>
+                                    {link.note && <small>{link.note}</small>}
+                                  </MenuLink>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
                         </div>
-                      </div>
-                    ))}
-                    {[hub, ...specialties].map((item) => (
-                      <MenuLink className="mega-link" href={item.href} key={item.href}>
-                        <span>
-                          <b><Rich text={item.title} /></b>
-                          <small><Rich text={item.note} /></small>
-                        </span>
-                        <ArrowRight />
-                      </MenuLink>
-                    ))}
+                      ))}
+                      {[hub, ...specialties].map((item) => (
+                        <MenuLink className="mega-link" href={item.href} key={item.href}>
+                          <span>
+                            <b><Rich text={item.title} /></b>
+                            <small><Rich text={item.note} /></small>
+                          </span>
+                          <ArrowRight />
+                        </MenuLink>
+                      ))}
+                    </div>
+                    <aside className="mega-promo">
+                      <b>{promo.title}</b>
+                      <p>{promo.text}</p>
+                      <SiteLink className="btn btn-gold" href={promo.cta.href}>{promo.cta.label}</SiteLink>
+                    </aside>
                   </div>
-                  <aside className="mega-promo">
-                    <b>{promo.title}</b>
-                    <p>{promo.text}</p>
-                    <SiteLink className="btn btn-gold" href={promo.cta.href}>{promo.cta.label}</SiteLink>
-                  </aside>
-                </div>
+                )}
               </div>
             </div>
 
@@ -257,40 +266,42 @@ export default function Header() {
                 <Caret />
               </button>
               <div className="mega mega-com" id="megaCom" onClick={closeOnLink}>
-                <div className="mega-inner">
-                  <div className="mega-card mega-card-list">
-                    <MenuLink className="mega-card-head" href={buildings.href}>
-                      <b>{buildings.title}</b> <ArrowRight />
+                {menuSeen && (
+                  <div className="mega-inner">
+                    <div className="mega-card mega-card-list">
+                      <MenuLink className="mega-card-head" href={buildings.href}>
+                        <b>{buildings.title}</b> <ArrowRight />
+                      </MenuLink>
+                      <ul>
+                        {buildings.links.map((link) => (
+                          <li key={link.href}>
+                            <MenuLink href={link.href}><Rich text={link.label} /></MenuLink>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="mega-card mega-card-list mega-card-single">
+                      <b>{services.title}</b>
+                      <ul>
+                        {services.links.map((link) => (
+                          <li key={link.href}>
+                            <MenuLink href={link.href}>
+                              {link.urgent && <UrgentDot />}
+                              <Rich text={link.label} />
+                            </MenuLink>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <MenuLink className="mega-card" href={partner.href}>
+                      <b>{partner.title}</b>
+                      <span>{partner.text}</span>
+                      <em>
+                        {partner.cta} <ArrowRight />
+                      </em>
                     </MenuLink>
-                    <ul>
-                      {buildings.links.map((link) => (
-                        <li key={link.href}>
-                          <MenuLink href={link.href}><Rich text={link.label} /></MenuLink>
-                        </li>
-                      ))}
-                    </ul>
                   </div>
-                  <div className="mega-card mega-card-list mega-card-single">
-                    <b>{services.title}</b>
-                    <ul>
-                      {services.links.map((link) => (
-                        <li key={link.href}>
-                          <MenuLink href={link.href}>
-                            {link.urgent && <UrgentDot />}
-                            <Rich text={link.label} />
-                          </MenuLink>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <MenuLink className="mega-card" href={partner.href}>
-                    <b>{partner.title}</b>
-                    <span>{partner.text}</span>
-                    <em>
-                      {partner.cta} <ArrowRight />
-                    </em>
-                  </MenuLink>
-                </div>
+                )}
               </div>
             </div>
 
@@ -300,29 +311,31 @@ export default function Header() {
                 <Caret />
               </button>
               <div className="mega mega-areas" id="megaAreas" onClick={closeOnLink}>
-                <div className="mega-inner">
-                  {LOCATIONS_MENU.regions.map((region) => (
-                    <div className="mega-card mega-card-list" key={region.title}>
-                      <MenuLink className="mega-card-head" href={region.href}>
-                        <b>{region.title}</b> <ArrowRight />
-                      </MenuLink>
-                      <ul>
-                        {region.links.map((link) => (
-                          <li key={link.href}>
-                            <MenuLink href={link.href}>{link.label}</MenuLink>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                  <MenuLink className="mega-card" href={LOCATIONS_MENU.all.href}>
-                    <b>{LOCATIONS_MENU.all.title}</b>
-                    <span>{LOCATIONS_MENU.all.text}</span>
-                    <em>
-                      {LOCATIONS_MENU.all.cta} <ArrowRight />
-                    </em>
-                  </MenuLink>
-                </div>
+                {menuSeen && (
+                  <div className="mega-inner">
+                    {LOCATIONS_MENU.regions.map((region) => (
+                      <div className="mega-card mega-card-list" key={region.title}>
+                        <MenuLink className="mega-card-head" href={region.href}>
+                          <b>{region.title}</b> <ArrowRight />
+                        </MenuLink>
+                        <ul>
+                          {region.links.map((link) => (
+                            <li key={link.href}>
+                              <MenuLink href={link.href}>{link.label}</MenuLink>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                    <MenuLink className="mega-card" href={LOCATIONS_MENU.all.href}>
+                      <b>{LOCATIONS_MENU.all.title}</b>
+                      <span>{LOCATIONS_MENU.all.text}</span>
+                      <em>
+                        {LOCATIONS_MENU.all.cta} <ArrowRight />
+                      </em>
+                    </MenuLink>
+                  </div>
+                )}
               </div>
             </div>
 
@@ -333,27 +346,29 @@ export default function Header() {
                 <Caret />
               </button>
               <div className="mega mega-about" id="megaAbout" onClick={closeOnLink}>
-                <div className="mega-inner">
-                  <div className="mega-card mega-card-list">
-                    <MenuLink className="mega-card-head" href={ABOUT_MENU.about.href}>
-                      <b>{ABOUT_MENU.about.title}</b> <ArrowRight />
+                {menuSeen && (
+                  <div className="mega-inner">
+                    <div className="mega-card mega-card-list">
+                      <MenuLink className="mega-card-head" href={ABOUT_MENU.about.href}>
+                        <b>{ABOUT_MENU.about.title}</b> <ArrowRight />
+                      </MenuLink>
+                      <ul>
+                        {ABOUT_MENU.about.links.map((link) => (
+                          <li key={link.label}>
+                            <MenuLink href={link.href}>{link.label}</MenuLink>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <MenuLink className="mega-card" href={ABOUT_MENU.careers.href}>
+                      <b>{ABOUT_MENU.careers.title}</b>
+                      <span>{ABOUT_MENU.careers.text}</span>
+                      <em>
+                        {ABOUT_MENU.careers.cta} <ArrowRight />
+                      </em>
                     </MenuLink>
-                    <ul>
-                      {ABOUT_MENU.about.links.map((link) => (
-                        <li key={link.label}>
-                          <MenuLink href={link.href}>{link.label}</MenuLink>
-                        </li>
-                      ))}
-                    </ul>
                   </div>
-                  <MenuLink className="mega-card" href={ABOUT_MENU.careers.href}>
-                    <b>{ABOUT_MENU.careers.title}</b>
-                    <span>{ABOUT_MENU.careers.text}</span>
-                    <em>
-                      {ABOUT_MENU.careers.cta} <ArrowRight />
-                    </em>
-                  </MenuLink>
-                </div>
+                )}
               </div>
             </div>
 
@@ -361,20 +376,22 @@ export default function Header() {
             <MenuLink href={CONTACT_LINK.href}>Contact</MenuLink>
             <MenuLink className="nav-contractors-menu" href={CONTRACTORS_LINK.href}>For Contractors</MenuLink>
 
-            <div className="menu-lately">
-              <p className="menu-lately-label">Lately at QRS</p>
-              <div className="menu-lately-row">
-                {PROJECT_PAGES.slice(0, 3).map((project) => (
-                  <MenuLink className="menu-lately-card" href={project.path} key={project.path}>
-                    <span className="menu-lately-img">
-                      <Image src={project.image} alt="" fill sizes="220px" quality={55} loading="lazy" />
-                    </span>
-                    <small>{project.place.replace(/,?\s*CA\b/, '')}</small>
-                    <b>{project.label}</b>
-                  </MenuLink>
-                ))}
+            {menuSeen && (
+              <div className="menu-lately">
+                <p className="menu-lately-label">Lately at QRS</p>
+                <div className="menu-lately-row">
+                  {PROJECT_PAGES.slice(0, 3).map((project) => (
+                    <MenuLink className="menu-lately-card" href={project.path} key={project.path}>
+                      <span className="menu-lately-img">
+                        <Image src={project.image} alt="" fill sizes="220px" quality={55} loading="lazy" />
+                      </span>
+                      <small>{project.place.replace(/,?\s*CA\b/, '')}</small>
+                      <b>{project.label}</b>
+                    </MenuLink>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
 
           </nav>
           )}

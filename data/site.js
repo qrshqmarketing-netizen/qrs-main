@@ -106,6 +106,13 @@ export const PROOF_POINTS = [
   { title: 'Roofer-Led', text: 'Inspections and estimates' },
 ];
 
+// Hero annotations: the few decisive facts shown as small check marks right under a hero's buttons, next to the action they support (Hero.jsx). Only owner-
+// confirmed facts. Commercial pages get their own set: a commercial roof survey has no price on the site, so it is never called free.
+export const HERO_ANNOTATIONS = {
+  home: ['Free roof evaluation', 'Written price before any work', '10-year workmanship warranty', `CSLB #${BUSINESS.license}`],
+  commercial: ['Roofer-led roof survey', 'Written scope and price before any work', 'Permits pulled', `CSLB #${BUSINESS.license}`],
+};
+
 // Process video. Set `embed` to a YouTube embed URL like 'https://www.youtube.com/embed/VIDEO_ID'.
 // Optional `poster`: a photo in public/images shown before the video plays, like '/images/video-poster.webp'.
 export const PROCESS_VIDEO = { embed: '', poster: '' };

@@ -5,7 +5,7 @@ import SiteLink from '@/components/ui/SiteLink';
 import { PhoneIcon } from '@/components/ui/icons';
 import { INSTANT_QUOTE_ENABLED } from '@/data/instantQuote';
 import { heroUnderline } from '@/data/heroOutcomes';
-import { PHONE, TEL } from '@/data/site';
+import { HERO_ANNOTATIONS, PHONE, TEL } from '@/data/site';
 import Breadcrumbs from './Breadcrumbs';
 import HeroParallax from './HeroParallax';
 import ProofBar from './ProofBar';
@@ -28,7 +28,8 @@ const DEFAULT_ACTIONS = [
 // crop of the same scene) to show a different photo below 621px instead of a cropped `image`. Below 621px a hero
 // with a photo stacks: the photo on its own band, then the copy below it (Hero.css .hero-stack). `stats` adds the proof-point strip directly
 // under the hero (ProofBar `strip`). `aside` puts something (a picture) beside the copy
-// from 901px, below it on phones (the blog index shows its latest article this way). `underline` (default: the page's entry in HERO_UNDERLINES,
+// from 901px, below it on phones (the blog index shows its latest article this way). Under the buttons, a row of check marks names the decisive facts
+// (`annotations`, default HERO_ANNOTATIONS in data/site.js: the commercial set on commercial and partner pages; false hides it). `underline` (default: the page's entry in HERO_UNDERLINES,
 // data/heroOutcomes.js) is the word in the headline that gets the hand-drawn animated underline.
 // The headline, with one word or phrase underlined by hand (it draws itself). `phrase` must appear in the text; otherwise the headline is shown as it is.
 function HeadlineText({ title, phrase }) {
@@ -66,10 +67,17 @@ export default function Hero({
   stats = false,
   aside,
   actions: allActions = DEFAULT_ACTIONS,
+  annotations,
   className,
 }) {
   // Buttons that open the Instant Quote are left out while it's switched off (INSTANT_QUOTE_ENABLED in data/instantQuote.js)
   const actions = INSTANT_QUOTE_ENABLED ? allActions : allActions?.filter((a) => !a.drawer);
+  // The decisive facts under the buttons (data/site.js HERO_ANNOTATIONS): commercial and partner pages get their own set; `annotations={false}` turns them off
+  const path = crumbs?.at(-1)?.href || '';
+  const skip = /^\/(careers|blog)\//.test(path); // job and article pages: the roofing facts don't belong there
+  const notes = annotations === false || skip || !actions?.length ? [] : annotations || HERO_ANNOTATIONS[/^\/(commercial-roofing|contractors)\//.test(path) ? 'commercial' : 'home'];
+  // The intro's closing "Start with / Book a free roof evaluation." is left out when the facts row already says it (the keyword stays in the first sentence)
+  const lead = notes.some((n) => /free roof evaluation/i.test(n)) ? intro?.replace(/\s*(Start with|Book) a free roof evaluation\.\s*$/, '') : intro;
   const Eyebrow = h1 === 'eyebrow' ? 'h1' : 'div';
   const Title = h1 === 'eyebrow' ? 'p' : 'h1';
   return (
@@ -90,9 +98,9 @@ export default function Hero({
                 </>
               )}
             </Title>
-            {intro && (
+            {lead && (
               <p className="hero-sub">
-                <Rich text={intro} />
+                <Rich text={lead} />
               </p>
             )}
             {actions?.length > 0 && (
@@ -113,6 +121,13 @@ export default function Hero({
                 )}
                 {!actions.some((a) => a.drawer) && <QuoteTrigger />}
               </div>
+            )}
+            {notes.length > 0 && (
+              <ul className="hero-notes" aria-label="What you get">
+                {notes.map((n) => (
+                  <li key={n}>{n}</li>
+                ))}
+              </ul>
             )}
           </div>
           {aside}

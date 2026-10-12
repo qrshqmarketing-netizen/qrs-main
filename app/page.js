@@ -21,7 +21,7 @@ import { SHOW_ROOF_COLORS } from '@/data/roofColors';
 import JsonLd from '@/components/ui/JsonLd';
 import { SERVICE_CATEGORIES } from '@/data/serviceCategories';
 import { CAREERS_PAGE, CAREERS_TEASER } from '@/data/pages/careers';
-import { HOME_DESCRIPTION, HOME_H1, HOME_TITLE } from '@/data/site';
+import { HERO_ANNOTATIONS, HOME_DESCRIPTION, HOME_H1, HOME_TITLE } from '@/data/site';
 import { LATEST_PROJECTS } from '@/data/projectPages';
 import { ROOF_FINANCING } from '@/data/services/programs';
 import { homeArticles } from '@/lib/articles';
@@ -40,7 +40,8 @@ export const metadata = {
 // The home page's "Roofing Services" section: just the two top-level categories from the nav.
 // The hero photo slider: the newest projects' cover photos, newest first (LATEST_PROJECTS in data/projectPages.js)
 const HERO_SLIDES = LATEST_PROJECTS.map((project) => ({ src: project.image, alt: project.imageAlt, title: project.label, place: project.place.replace(/,?\s*CA\b/, ''), href: project.path }));
-const EL_NINO_POINTS = EL_NINO_PAGE.hero.points;
+// The home hero's facts under the button: the offer's first and last points, plus the warranty and license (HERO_ANNOTATIONS.home)
+const EL_NINO_POINTS = [EL_NINO_PAGE.hero.points[0], EL_NINO_PAGE.hero.points.at(-1), ...HERO_ANNOTATIONS.home.slice(2)];
 
 const HOME_PRODUCTS = [
   { title: '*TotalShield* Shingle Systems', text: 'Complete shingle replacements and new installations, built from the deck up.', href: '/residential-roofing/shingle-roofing/replacement/', scene: 'scene-shingle', image: '/images/shingle-roof-completed-drone-view.webp' },

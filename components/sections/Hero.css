@@ -158,3 +158,11 @@
   .hero.hero-top-pad .hero-title{font-size:92px}
   .hero.hero-top-pad .hero-sub{font-size:20px}
 }
+
+/* Hero annotations (Hero.jsx `annotations`): the decisive facts as a row of check marks under the buttons */
+.hero-notes{display:flex;flex-wrap:wrap;gap:8px 18px;margin:18px 0 0;padding:0;list-style:none;font:500 13.5px/1.4 var(--font-text),sans-serif;color:rgba(255,255,255,.9);text-shadow:0 1px 8px rgba(0,0,0,.45)}
+.hero-notes li{display:flex;align-items:center;gap:7px}
+.hero-notes li:before{content:"✓";color:var(--gold-2);font-family:var(--font-glyph);font-weight:700}
+.hero-inner:not(.hero-left) .hero-notes{justify-content:center}
+body.studio-site .hero .hero-notes{justify-content:flex-start}
+@media (min-width:621px){.hero-notes{font-size:14.5px}}
