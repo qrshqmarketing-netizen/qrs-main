@@ -8,7 +8,6 @@ import {
   CAREERS_LINK,
   CONTACT_LINK,
   CONTRACTORS_LINK,
-  ROOF_VISUALIZER_LINK,
   GROUPS,
   HOME,
   LOCATIONS_LINK,
@@ -45,7 +44,6 @@ import { ROOF_REPAIR_HUB, ROOF_REPLACEMENT_HUB } from './services/serviceHubs';
 import { SHINGLE_CONTENT } from './services/shingle';
 import { ATTIC_VENTILATION, HOA_MULTI_FAMILY, RAIN_GUTTERS } from './services/specialty';
 import { TILE_CONTENT } from './services/tile';
-import { VISUALIZER_PUBLIC } from './roofVisualizer';
 
 // Sections: { ...structure, hub, services }. Commercial also has serviceTypes (repair, replacement, maintenance)
 // next to its building-type pages; both live at /commercial-roofing/<slug>/.
@@ -107,7 +105,6 @@ const LABELS = new Map([
   [ABOUT_LINK.href, ABOUT_LINK.label],
   [CAREERS_LINK.href, CAREERS_LINK.label],
   [CONTRACTORS_LINK.href, 'Contractor Partnerships'],
-  [ROOF_VISUALIZER_LINK.href, 'Roof Color Visualizer'],
   [CONTACT_LINK.href, CONTACT_LINK.label],
   ...SECTIONS.flatMap((s) => [[s.href, s.label], ...sectionPages(s).map((svc) => [serviceHref(s, svc), svc.title])]),
   ...SINGLE_PAGES.map((p) => [p.href, p.page.title]),
@@ -125,7 +122,6 @@ export const ALL_PATHS = [
   ...SECTIONS.flatMap((s) => [s.href, ...sectionPages(s).map((svc) => serviceHref(s, svc))]),
   ...SINGLE_PAGES.map((p) => p.href),
   CONTRACTORS_LINK.href,
-  ...(VISUALIZER_PUBLIC ? [ROOF_VISUALIZER_LINK.href] : []),
   LOCATIONS_LINK.href,
   ...REGIONS.flatMap((r) => [regionPath(r.slug), ...LOCATIONS.filter((l) => l.region === r.slug).map((l) => cityPath(l.slug))]),
   PROJECTS_LINK.href,

@@ -9,12 +9,15 @@ import ReviewStrip from '@/components/sections/ReviewStrip';
 import RoofCheck from '@/components/sections/RoofCheck';
 import ServiceArea from '@/components/sections/ServiceArea';
 import StudioHero from '@/components/studio/StudioHero';
+import PromoCard from '@/components/widgets/PromoCard';
+import { EL_NINO_PAGE } from '@/data/pages/elNino';
+import { SEASON_PROMO as promo, promoLandingHref } from '@/data/promo';
 import StudioIntro from '@/components/studio/StudioIntro';
 import StudioProcess from '@/components/studio/StudioProcess';
 import StudioProjects from '@/components/studio/StudioProjects';
 import StudioServices from '@/components/studio/StudioServices';
-import StudioVisualizer from '@/components/studio/StudioVisualizer';
-import { SHOW_ON_HOME as SHOW_VISUALIZER } from '@/data/roofVisualizer';
+import RoofColors from '@/components/roofColors/RoofColors';
+import { SHOW_ROOF_COLORS } from '@/data/roofColors';
 import JsonLd from '@/components/ui/JsonLd';
 import { SERVICE_CATEGORIES } from '@/data/serviceCategories';
 import { CAREERS_PAGE, CAREERS_TEASER } from '@/data/pages/careers';
@@ -36,7 +39,8 @@ export const metadata = {
 
 // The home page's "Roofing Services" section: just the two top-level categories from the nav.
 // The hero photo slider: the newest projects' cover photos, newest first (LATEST_PROJECTS in data/projectPages.js)
-const HERO_SLIDES = LATEST_PROJECTS.map((project) => ({ src: project.image, alt: project.imageAlt, title: project.label, place: project.place.replace(/,?\s*CA\b/, '') }));
+const HERO_SLIDES = LATEST_PROJECTS.map((project) => ({ src: project.image, alt: project.imageAlt, title: project.label, place: project.place.replace(/,?\s*CA\b/, ''), href: project.path }));
+const EL_NINO_POINTS = EL_NINO_PAGE.hero.points;
 
 const HOME_PRODUCTS = [
   { title: '*TotalShield* Shingle Systems', text: 'Complete shingle replacements and new installations, built from the deck up.', href: '/residential-roofing/shingle-roofing/replacement/', scene: 'scene-shingle', image: '/images/shingle-roof-completed-drone-view.webp' },
@@ -62,15 +66,33 @@ export default async function HomePage() {
     <>
       <JsonLd data={pageJsonLd({ path: '/', title: HOME_TITLE, description: HOME_DESCRIPTION, faqs })} />
       <main id="top" className="studio">
-        <StudioHero slides={HERO_SLIDES} />
+        {/* While the El Niño offer runs (SEASON_PROMO.active), its storm card is the hero (the keyword line above the headline is the H1); otherwise the
+            newest projects' photo slider is the hero again */}
+        {promo.active ? (
+          <PromoCard
+            as="section"
+            variant="landing"
+            track="home-hero"
+            className="promo-home"
+            eyebrow={HOME_H1}
+            eyebrowTag="h1"
+            heading={promo.heading}
+            text={promo.text}
+            cta={{ label: promo.cta.label, href: promoLandingHref('home-hero') }}
+            points={EL_NINO_POINTS}
+            rain={promo.rain}
+          />
+        ) : (
+          <StudioHero slides={HERO_SLIDES} />
+        )}
         <ProofBar strip />
         <StudioIntro />
         <StudioServices categories={SERVICE_CATEGORIES} items={HOME_PRODUCTS} />
         <StudioProjects projects={LATEST_PROJECTS.slice(0, 3)} />
         <StudioProcess />
-        {SHOW_VISUALIZER && <StudioVisualizer />}
+        {SHOW_ROOF_COLORS && <RoofColors />}
         <ReviewStrip />
-        <PromoSection />
+        {!promo.active && <PromoSection />}
         <ServiceArea allAreasLink />
         <PartnerLogos {...ROOF_FINANCING.partners} />
         <LatestArticles posts={await homeArticles(3)} />

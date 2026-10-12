@@ -4,7 +4,6 @@
 
 import { citiesIn, cityPath, REGIONS, regionPath } from './locations';
 import { PHONE, PRIVACY_POLICY_URL, TEL } from './site';
-import { VISUALIZER_PUBLIC } from './roofVisualizer';
 
 // Keep the broad service hubs and the highest-intent services easy to reach from one menu.
 export const SERVICES_MENU = {
@@ -195,7 +194,6 @@ export const FOOTER = {
         { label: 'Roof Repair', href: '/roof-repair/' },
         { label: 'Roof Replacement', href: '/roof-replacement/' },
         { label: 'Maintenance Plans', href: '/roof-maintenance-plans/' },
-        ...(VISUALIZER_PUBLIC ? [{ label: 'Roof Color Visualizer', href: '/roof-visualizer/' }] : []),
         { label: 'Roof Financing', href: '/roof-financing/' },
       ],
     },

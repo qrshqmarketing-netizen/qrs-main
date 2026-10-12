@@ -383,8 +383,8 @@ a.chip:hover{border-color:var(--navy)}
    Off for reduced motion and in print. */
 @keyframes kenBurns{from{transform:scale(1.02) translate3d(0,0,0)}to{transform:scale(1.14) translate3d(-1.6%,-1.2%,0)}}
 @media (prefers-reduced-motion:no-preference){
-  .hero-roof-texture > img,.pd-hero-img{animation:kenBurns 24s cubic-bezier(.3,.1,.4,1) both;will-change:transform}
+  .hero-roof-texture > img,.pd-hero-img,.promo-landing .promo-photo{animation:kenBurns 24s cubic-bezier(.3,.1,.4,1) both;will-change:transform}
   .hero-slide.is-active > img{animation:kenBurns 12s linear both;will-change:transform}
   .st-hero-bg img.on{animation:kenBurns 10s linear both;will-change:transform}
 }
-@media print{.hero-roof-texture > img,.pd-hero-img,.hero-slide > img,.st-hero-bg img{animation:none!important}}
+@media print{.hero-roof-texture > img,.pd-hero-img,.promo-landing .promo-photo,.hero-slide > img,.st-hero-bg img{animation:none!important}}

@@ -3,10 +3,6 @@ import assert from 'node:assert/strict';
 import { handleChat } from '../supabase/functions/_shared/chat.js';
 import { makeDb } from '../supabase/functions/_shared/db.js';
 import { handleLead } from '../supabase/functions/_shared/leadHandler.js';
-import { buildPrompt, handleVisualizer, makePass, readPass } from '../supabase/functions/_shared/visualizer.js';
-import { VISUALIZER_CATALOG } from '../data/roofVisualizer.js';
-import { aerialRoof, cropBox, roofComponent, softMask } from '../lib/aerialRoof.js';
-import { writeArrayBuffer } from 'geotiff';
 import { autoReplyContent as shared } from '../supabase/functions/_shared/autoReply.js';
 import { autoReplyContent as site } from '../lib/autoReply.js';
 
@@ -235,113 +231,7 @@ await test('home FAQ text round-trips through the Q:/A: format', () => {
   assert.equal(textToFaqs(faqsToText(faqs))[1].a, 'Two lines become one.');
 });
 
-await test('visualizer: the gate issues a signed pass; render needs it, checks the choice and photo, and returns Gemini\'s picture', async () => {
-  const lines = [];
-  const limits = new Map();
-  const ctx = {
-    env: { VISUALIZER_SECRET: 'secret-secret-secret', GEMINI_API_KEY: 'g', ALLOWED_ORIGINS: 'https://qualityroofingspecialists.com' },
-    catalog: VISUALIZER_CATALOG,
-    rateLimited: async (key, max) => { const n = (limits.get(key) || 0) + 1; limits.set(key, n); return n > max; },
-    deliverLead: async (lead) => { lines.push(lead); return { delivered: true, configured: true }; },
-    waitUntil: () => {},
-    fetch: async (url, opts) => {
-      const body = JSON.parse(opts.body);
-      assert.match(String(url), /gemini-2\.5-flash-image:generateContent/);
-      assert.match(body.contents[0].parts[0].text, /asphalt shingles in the color "Mountainside"/);
-      assert.equal(body.contents[0].parts[1].inlineData.mimeType, 'image/jpeg');
-      return new Response(JSON.stringify({ candidates: [{ content: { parts: [{ text: 'ok' }, { inlineData: { mimeType: 'image/png', data: 'QUJD' } }] } }] }), { status: 200 });
-    },
-  };
-  const post = (body) => handleVisualizer(new Request('https://x.test/v', { method: 'POST', headers: { origin: 'https://qualityroofingspecialists.com', 'content-type': 'application/json' }, body: JSON.stringify(body) }), ctx);
-  // the gate: name, a real email and the consent box
-  assert.equal((await post({ action: 'subscribe', name: 'J', email: 'jo@example.com', consent: true })).status, 400);
-  assert.equal((await post({ action: 'subscribe', name: 'Jo Smith', email: 'nope', consent: true })).status, 400);
-  assert.equal((await post({ action: 'subscribe', name: 'Jo Smith', email: 'jo@example.com', consent: false })).status, 400);
-  const sub = await post({ action: 'subscribe', name: 'Jo Smith', email: 'Jo@Example.com', consent: true });
-  assert.equal(sub.status, 200);
-  const { token } = await sub.json();
-  assert.equal(lines[0].source, 'roof-visualizer');
-  assert.equal(lines[0].email, 'jo@example.com');
-  assert.deepEqual(await readPass(ctx.env.VISUALIZER_SECRET, token), { name: 'Jo Smith', email: 'jo@example.com' });
-  // a forged, expired or foreign pass is refused
-  assert.equal(await readPass('other-secret-other', token), null);
-  assert.equal(await readPass(ctx.env.VISUALIZER_SECRET, token.slice(0, -2) + 'xx'), null);
-  assert.equal(await readPass(ctx.env.VISUALIZER_SECRET, await makePass(ctx.env.VISUALIZER_SECRET, { name: 'A', email: 'a@b.co' }, Date.now() - 40 * 86400000)), null);
-  const photo = 'data:image/jpeg;base64,/9j/4AAQSkZJRg==';
-  assert.equal((await post({ action: 'render', token: 'bad.token', image: photo, brand: 'popular', color: 'mountainside' })).status, 401);
-  assert.equal((await post({ action: 'render', token, image: photo, brand: 'nobody', color: 'driftwood' })).status, 400);
-  assert.equal((await post({ action: 'render', token, image: 'data:text/html;base64,PGI+', brand: 'popular', color: 'mountainside' })).status, 400);
-  const ok = await post({ action: 'render', token, image: photo, brand: 'popular', color: 'mountainside' });
-  assert.equal(ok.status, 200);
-  const out = await ok.json();
-  assert.equal(out.image, 'data:image/png;base64,QUJD');
-  assert.equal(out.color, 'Mountainside');
-  assert.equal(lines.length, 2); // the first preview of the day notes what they tried
-  await post({ action: 'render', token, image: photo, brand: 'popular', color: 'mountainside' });
-  assert.equal(lines.length, 2); // ...but only once a day
-  assert.doesNotMatch(buildPrompt(VISUALIZER_CATALOG[0], VISUALIZER_CATALOG[0].colors[1]), /Popular|Asphalt shingle |Owens|Duration/);
-  assert.match(buildPrompt({ id: 'x', name: 'Acme', line: 'Pro', kind: 'shingle', generic: false }, { name: 'Gray', hex: '#777' }), /Acme Pro asphalt shingles/);
-});
 
-await test('visualizer: a color with a swatch picture sends it to Gemini with the photo', async () => {
-  const seen = [];
-  const catalog = [{ id: 'g', name: 'G', line: 'L', kind: 'shingle', generic: true, colors: [{ id: 'c', name: 'Teak', hex: '#7b5b45', swatch: '/images/visualizer/teak.webp' }] }];
-  const env = { VISUALIZER_SECRET: 'secret-secret-secret', GEMINI_API_KEY: 'g', SITE_URL: 'https://example.test' };
-  const token = await makePass(env.VISUALIZER_SECRET, { name: 'Jo', email: 'jo@example.com' });
-  const ctx = {
-    env, catalog, rateLimited: async () => false, deliverLead: async () => ({ delivered: true }), waitUntil: () => {},
-    fetch: async (url, opts = {}) => {
-      seen.push(String(url));
-      if (String(url).includes('example.test')) return new Response(new Uint8Array([1, 2, 3]), { status: 200, headers: { 'content-type': 'image/webp' } });
-      const parts = JSON.parse(opts.body).contents[0].parts;
-      assert.equal(parts.length, 3);
-      assert.match(parts[0].text, /second image is a swatch/);
-      assert.equal(parts[2].inlineData.mimeType, 'image/webp');
-      return new Response(JSON.stringify({ candidates: [{ content: { parts: [{ inlineData: { mimeType: 'image/png', data: 'QUJD' } }] } }] }), { status: 200 });
-    },
-  };
-  const res = await handleVisualizer(new Request('https://x.test/v', { method: 'POST', body: JSON.stringify({ action: 'render', token, image: 'data:image/jpeg;base64,/9j/4AAQSkZJRg==', brand: 'g', color: 'c' }) }), ctx);
-  assert.equal(res.status, 200);
-  assert.equal(seen[0], 'https://example.test/images/visualizer/teak.webp');
-});
 
-await test('visualizer address lookup: finds the roof under the address (not the neighbor), crops it and returns a picture and a soft mask', async () => {
-  // A 60x40 aerial picture with two "buildings": the house under the address (x 10-34, y 8-31) and a neighbor (x 42-56, y 8-31)
-  const w = 60;
-  const h = 40;
-  const mask = new Uint8Array(w * h);
-  for (let y = 8; y < 32; y++) for (let x = 10; x < 57; x++) mask[y * w + x] = x < 35 || x >= 42 ? 1 : 0;
-  const comp = roofComponent(mask, w, h, 22, 20);
-  assert.equal(comp[20 * w + 22], 1);
-  assert.equal(comp[20 * w + 50], 0); // the neighbor is not part of it
-  const box = cropBox(comp, w, h);
-  assert.ok(box.x0 <= 10 && box.x1 >= 34 && box.y0 <= 8 && box.y1 >= 31);
-  assert.equal(roofComponent(new Uint8Array(w * h), w, h, 30, 20), null);
-  const soft = softMask(comp, w, h);
-  assert.equal(soft[20 * w + 22], 255);
-  assert.ok(soft[20 * w + 9] > 0 && soft[20 * w + 9] < 255); // the edge blends
-
-  const rgbTiff = writeArrayBuffer(Uint8Array.from({ length: w * h * 3 }, (_, i) => 90 + (i % 7)), { width: w, height: h, SamplesPerPixel: 3, BitsPerSample: [8, 8, 8], PhotometricInterpretation: 2, PlanarConfiguration: 1 });
-  const maskTiff = writeArrayBuffer(mask, { width: w, height: h, SamplesPerPixel: 1, BitsPerSample: [8], PhotometricInterpretation: 1 });
-  const calls = [];
-  const fetchFn = async (url) => {
-    const u = String(url);
-    calls.push(u.replace(/key=.*/, 'key=K'));
-    if (u.includes('geocode')) return Response.json({ status: 'OK', results: [{ formatted_address: '1 Main St, Los Angeles, CA 90001, USA', geometry: { location: { lat: 34.05, lng: -118.25 } } }] });
-    if (u.includes('dataLayers') && u.includes('requiredQuality=HIGH')) return new Response('', { status: 404 }); // no 10 cm imagery here...
-    if (u.includes('dataLayers')) return Response.json({ rgbUrl: 'https://solar.test/rgb?id=1', maskUrl: 'https://solar.test/mask?id=1', imageryDate: { year: 2025, month: 4, day: 2 }, imageryQuality: 'MEDIUM' }); // ...so MEDIUM is used
-    return new Response(u.includes('/rgb') ? rgbTiff : maskTiff, { status: 200 });
-  };
-  const env = { GOOGLE_MAPS_KEY: 'K' };
-  const out = await aerialRoof({ env, fetch: fetchFn, address: '1 Main St, Los Angeles' });
-  assert.match(out.before, /^data:image\/jpeg;base64,/);
-  assert.match(out.mask, /^data:image\/png;base64,/);
-  assert.ok(out.width >= 25 && out.height >= 24);
-  assert.equal(out.label, '1 Main St, Los Angeles, CA 90001');
-  assert.equal(out.imageryDate, '2025-04');
-  assert.ok(calls.some((c) => c.includes('requiredQuality=MEDIUM') && c.includes('pixelSizeMeters=0.25')));
-  await assert.rejects(aerialRoof({ env: {}, fetch: fetchFn, address: 'x' }), (e) => e === 'config');
-  await assert.rejects(aerialRoof({ env, fetch: async () => Response.json({ status: 'ZERO_RESULTS' }), address: 'nowhere' }), (e) => e === 'addr');
-});
 
 console.log(`\n${passed} tests passed`);

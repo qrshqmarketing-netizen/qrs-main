@@ -1,0 +1,27 @@
+/* ---------- Home page: shingle colors (components/roofColors/RoofColors.jsx) ---------- */
+.rc-grid{display:grid;gap:24px;grid-template-areas:'head' 'photo' 'pick'}
+.rc-head{grid-area:head}
+.rc-photo{grid-area:photo}
+.rc-pick{grid-area:pick}
+.rc-head h2{margin:0;text-align:left}
+.rc-sub{margin:18px 0 0;max-width:52ch;color:var(--muted);font-size:16px;line-height:1.65}
+.rc-swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:8px;margin:0}
+.rc-swatch{display:grid;gap:7px;padding:8px;text-align:left;border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--paper);color:var(--navy);cursor:pointer;transition:border-color .2s ease,box-shadow .2s ease}
+.rc-swatch i{display:block;height:38px;border-radius:8px;background-size:cover;box-shadow:inset 0 0 0 1px rgba(0,0,0,.12)}
+.rc-original i{background:linear-gradient(135deg,var(--wash) 0 50%,var(--line) 50% 100%)}
+.rc-swatch span{font:500 12.5px/1.2 var(--font-text),sans-serif}
+.rc-swatch.on{border-color:var(--gold);box-shadow:0 0 0 2px color-mix(in srgb,var(--gold) 50%,transparent)}
+.rc-swatch:focus-visible{outline:3px solid var(--gold-2);outline-offset:2px}
+.rc-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.rc-actions svg{width:17px;height:17px;flex:none}
+.rc-note{margin:14px 0 0;color:var(--muted);font-size:13px;line-height:1.5}
+.rc-photo{position:relative;aspect-ratio:4/3;overflow:hidden;border-radius:var(--radius);background:#0a1b2c;isolation:isolate}
+.rc-photo>img{object-fit:cover}
+.rc-painted{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:rcIn .7s ease both}
+@keyframes rcIn{from{opacity:0}to{opacity:1}}
+.rc-sweep{position:absolute;top:0;bottom:0;left:0;z-index:2;width:3px;background:#fff;box-shadow:0 0 14px 4px rgba(255,255,255,.5);opacity:0;pointer-events:none;animation:rcSweep 1.1s cubic-bezier(.45,.05,.25,1)}
+@keyframes rcSweep{0%{left:0;opacity:0}10%{opacity:1}90%{opacity:1}100%{left:100%;opacity:0}}
+.rc-chip{position:absolute;z-index:3;left:12px;bottom:12px;padding:8px 12px;border-radius:999px;background:rgba(3,22,40,.72);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:#fff;font:500 13px/1 var(--font-text),sans-serif}
+@media (min-width:621px){.rc-swatches{grid-template-columns:repeat(4,1fr)}}
+@media (min-width:901px){.rc-grid{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);grid-template-areas:'head photo' 'pick photo';grid-template-rows:auto 1fr;column-gap:64px;row-gap:26px;align-items:start}.rc-photo{align-self:center}.rc-swatches{grid-template-columns:repeat(4,1fr)}}
+@media (prefers-reduced-motion:reduce){.rc-painted,.rc-sweep{animation:none}.rc-sweep{display:none}}

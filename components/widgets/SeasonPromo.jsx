@@ -22,6 +22,9 @@ const preloadPhoto = () => {
 // - later visits: on desktop when the pointer leaves through the top of the window; on phones and tablets when
 //   they flick quickly back up the page (reaching for the address bar) or come back after switching tabs or apps
 // Click outside, Esc or ✕ closes it (the exit version also has "No thanks"); once someone books from it, it never shows again.
+// '/' means the home page only; any other entry covers that page and the pages under it
+const excluded = (entry, path) => (entry === '/' ? path === '/' : path.startsWith(entry));
+
 export default function SeasonPromo() {
   const [view, setView] = useState(null); // 'card' | 'exit' | null
   const pathname = usePathname();
@@ -30,12 +33,12 @@ export default function SeasonPromo() {
 
   useEffect(() => {
     path.current = pathname;
-    if (promo.exclude.some((p) => pathname.startsWith(p))) setView(null);
+    if (promo.exclude.some((p) => excluded(p, pathname))) setView(null);
   }, [pathname]);
 
   const blocked = (ignore = []) =>
     !promo.active ||
-    promo.exclude.some((p) => path.current.startsWith(p)) ||
+    promo.exclude.some((p) => excluded(p, path.current)) ||
     ['menu-open', 'rm-lock', 'cookie-open'].filter((c) => !ignore.includes(c)).some((c) => document.body.classList.contains(c));
 
   // Preview: ?promo or ?promo=exit opens the card right away, whatever this browser has seen before

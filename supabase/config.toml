@@ -7,6 +7,3 @@ verify_jwt = false
 
 [functions.lead]
 verify_jwt = false
-
-[functions.visualize]
-verify_jwt = false

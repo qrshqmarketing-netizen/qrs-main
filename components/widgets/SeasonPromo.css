@@ -108,3 +108,29 @@ body.promo-open .qa-teaser{visibility:hidden}
   .promo-landing .promo-text{font-size:21px}
   .promo.promo-landing{min-height:clamp(640px,88vh,820px)}
 }
+
+/* The copy wrapper only matters in two columns; everywhere else its children lay out exactly as before */
+.promo-copy{display:contents}
+/* Two columns (the El Niño landing page: `aside` is the quick request form): copy on the left, the form on the right; stacked on phones */
+.promo.promo-landing.promo-split{display:grid;gap:30px;align-items:center;text-align:left;justify-content:stretch}
+.promo-split .promo-copy{display:flex;flex-direction:column;align-items:flex-start}
+.promo-split .promo-title{max-width:none}
+.promo-split .promo-text{margin-left:0;margin-right:0}
+.promo-split .promo-actions{justify-content:flex-start;align-items:flex-start}
+.promo-split .promo-points{align-items:flex-start;justify-content:flex-start;margin-top:22px}
+.promo-aside{width:100%;max-width:460px;justify-self:center}
+@media (min-width:901px){
+  .promo.promo-landing.promo-split{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:56px;padding:150px max(40px,calc((100% - 1320px) / 2)) 80px}
+  .promo-split .promo-title{font-size:clamp(48px,6.2vw,92px)}
+  .promo-aside{justify-self:end}
+}
+
+/* The home page's hero: the eyebrow is the page's H1 (the keyword line), kept in the eyebrow's small gold capitals */
+body.studio-site .promo h1.promo-eyebrow{font:600 12px/1.4 var(--font-head);letter-spacing:.14em;text-transform:uppercase;color:var(--gold-2);text-align:center}
+@media (min-width:621px){body.studio-site .promo h1.promo-eyebrow{font-size:13px}}
+/* The landing page's heading is its H1: keep the card's condensed capitals (the studio look sets light sentence case on every heading) */
+body.studio-site .promo h1.promo-title{font-family:var(--font-display);font-weight:800;letter-spacing:.01em;text-transform:uppercase;line-height:.96}
+.promo-split .promo-eyebrow{align-self:flex-start;text-align:left}
+/* The home page's hero: a little taller than the landing page's (most of the screen, with the proof strip peeking in below) */
+.promo.promo-landing.promo-home{min-height:max(600px,92svh)}
+@media (min-width:901px){.promo.promo-landing.promo-home{min-height:clamp(700px,92svh,940px)}}
