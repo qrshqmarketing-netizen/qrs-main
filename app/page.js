@@ -40,8 +40,8 @@ export const metadata = {
 // The home page's "Roofing Services" section: just the two top-level categories from the nav.
 // The hero photo slider: the newest projects' cover photos, newest first (LATEST_PROJECTS in data/projectPages.js)
 const HERO_SLIDES = LATEST_PROJECTS.map((project) => ({ src: project.image, alt: project.imageAlt, title: project.label, place: project.place.replace(/,?\s*CA\b/, ''), href: project.path }));
-// The home hero's facts under the button: the offer's first and last points, plus the warranty and license (HERO_ANNOTATIONS.home)
-const EL_NINO_POINTS = [EL_NINO_PAGE.hero.points[0], EL_NINO_PAGE.hero.points.at(-1), ...HERO_ANNOTATIONS.home.slice(2)];
+// The home hero's facts under the button: the offer's first and last points, plus the warranty (no license number here: owner's choice)
+const EL_NINO_POINTS = [EL_NINO_PAGE.hero.points[0], EL_NINO_PAGE.hero.points.at(-1), HERO_ANNOTATIONS.home[2]];
 
 const HOME_PRODUCTS = [
   { title: '*TotalShield* Shingle Systems', text: 'Complete shingle replacements and new installations, built from the deck up.', href: '/residential-roofing/shingle-roofing/replacement/', scene: 'scene-shingle', image: '/images/shingle-roof-completed-drone-view.webp' },
