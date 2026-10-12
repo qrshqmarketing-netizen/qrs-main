@@ -33,6 +33,7 @@ export const STORY_ADJ = { '1 story': 1, '2 stories': 1.06, '3+ stories': 1.12, 
 export const MIN_JOB = 3500; // smallest job you quote
 
 // ----- Financing (the owner's terms, October 2026) -----
-// apr: the example loan's APR %; terms: loan terms in years. promo: the 0% offer shown beside the example payment (on approved credit, "OAC").
-export const FINANCE = { apr: 9.99, terms: [5, 10, 15], defaultTerm: 10, promo: { apr: 0, months: 18, label: '0% APR for 18 months', note: 'OAC' } };
+// apr: the example loan's APR %; terms: loan terms in years. An optional `promo: { months, label, note }` adds a 0% line beside the example payment
+// (InstantQuote.jsx); the owner took the 0% for 18 months offer out in October 2026.
+export const FINANCE = { apr: 9.99, terms: [5, 10, 15], defaultTerm: 10 };
 export const FINANCING_URL = ''; // your lender's application link; empty = call button
