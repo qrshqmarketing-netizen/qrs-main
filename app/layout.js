@@ -14,6 +14,7 @@ import CampaignWelcome from '@/components/widgets/CampaignWelcome';
 import PageTrail from '@/components/widgets/PageTrail';
 import ScrollToTop from '@/components/ui/ScrollToTop';
 import PageTransition from '@/components/ui/PageTransition';
+import WebMcpTools from '@/components/widgets/WebMcpTools';
 import ScrollDraw from '@/components/ui/ScrollDraw';
 import CookieNotice from '@/components/widgets/CookieNotice';
 import InstantQuoteLoader from '@/components/widgets/InstantQuoteLoader';
@@ -72,6 +73,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={bodyFont.variable + ' ' + bigShoulders.variable} data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
+        {/* WebMCP origin trial (components/widgets/WebMcpTools.jsx): set NEXT_PUBLIC_WEBMCP_OT_TOKEN to Google's token for this domain */}
+        {process.env.NEXT_PUBLIC_WEBMCP_OT_TOKEN && <meta httpEquiv="origin-trial" content={process.env.NEXT_PUBLIC_WEBMCP_OT_TOKEN} />}
         {/* Restore the selected theme before the page paints; ?theme=dark remains available as a preview fallback. */}
         <script dangerouslySetInnerHTML={{ __html: "try{const saved=localStorage.getItem('qrs-theme');const requested=new URLSearchParams(location.search).get('theme');if((saved||requested)==='dark')document.documentElement.dataset.theme='dark';else document.documentElement.removeAttribute('data-theme')}catch{if(/[?&]theme=dark(&|$)/.test(location.search))document.documentElement.dataset.theme='dark'}" }} />
       </head>
@@ -96,6 +99,7 @@ export default function RootLayout({ children }) {
           <PageTrail />
           <ScrollToTop />
           <PageTransition />
+          <WebMcpTools />
           <ScrollDraw />
           {LOAD_TRACKING && (
             <>
