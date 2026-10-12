@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 import { CloseIcon, PhoneIcon } from '@/components/ui/icons';
+import Mark from '@/components/ui/Mark';
 import { PROMO_NAME } from '@/data/promo';
 import { PHONE, TEL } from '@/data/site';
 import { local } from '@/lib/storage';
@@ -68,7 +69,7 @@ export default function PromoCard({
       <div className="promo-copy">
         <Eyebrow className="promo-eyebrow">{eyebrow}</Eyebrow>
         <Heading className={'promo-title' + (exit ? ' promo-title-exit' : '')} id={headingId}>
-          {heading}
+          <Mark text={heading} animate />
         </Heading>
         <p className="promo-text">{text}</p>
         <div className="promo-actions">

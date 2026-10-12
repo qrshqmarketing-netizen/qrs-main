@@ -77,7 +77,7 @@ export default async function HomePage() {
             className="promo-home"
             eyebrow={HOME_H1}
             eyebrowTag="h1"
-            heading={promo.heading}
+            heading={promo.heading.replace('El Niño', '__El Niño__')}
             text={promo.text}
             cta={{ label: promo.cta.label, href: promoLandingHref('home-hero') }}
             points={EL_NINO_POINTS}
