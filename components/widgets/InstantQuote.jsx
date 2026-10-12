@@ -413,6 +413,12 @@ export default function InstantQuote({ openFrom = null, onReady }) {
                     <em>{fmt(f.sqft)} sq ft</em>
                   </li>
                 ))}
+                {roof?.otherSqft > 0 && (
+                  <li>
+                    Other roof areas
+                    <em>{fmt(roof.otherSqft)} sq ft</em>
+                  </li>
+                )}
               </ul>
             </details>
             <fieldset className="rm-types">
