@@ -182,6 +182,7 @@ export const FOOTER = {
         { label: 'Projects', href: '/projects/' },
         { label: 'Give a Review', href: '/reviews/' },
         { label: 'Roofing Blog', href: '/blog/' },
+        { label: 'Credentials', href: '/credentials/' },
         { label: 'Careers', href: '/careers/' },
         { label: 'Contractors', href: '/contractors/' },
       ],

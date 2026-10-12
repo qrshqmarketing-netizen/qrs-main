@@ -65,6 +65,7 @@ export const HERO_OUTCOMES = {
   '/commercial-roofing/warehouses/': 'Protect your inventory without shutting down.',
   '/commercial-roofing/malls/': 'Protect every tenant space and keep the center open.',
   '/contractors/': 'A roofing crew you can count on, job after job.',
+  '/credentials/': 'Know exactly who is working on your roof.',
 
   // Service areas
   '/service-areas/': 'Roofing help close to home, across LA and OC.',
@@ -138,6 +139,7 @@ export const HERO_UNDERLINES = {
   '/commercial-roofing/warehouses/': 'Warehouse',
   '/commercial-roofing/malls/': 'Mall',
   '/contractors/': 'Partner',
+  '/credentials/': 'credentials',
   '/service-areas/': 'Service Areas',
   '/service-areas/la-county/': 'Los Angeles',
   '/service-areas/orange-county/': 'Orange County',
