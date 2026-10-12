@@ -67,6 +67,13 @@ export default function StudioProjects({ projects, label = 'Featured projects', 
             );
           })}
         </div>
+        {allLink && (
+          <p className="st-proj-more">
+            <SiteLink className="st-link" href="/projects/">
+              See all our roofing projects <ArrowRight />
+            </SiteLink>
+          </p>
+        )}
       </div>
     </section>
   );

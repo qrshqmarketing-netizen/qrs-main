@@ -68,7 +68,7 @@ export default function QuickLeadForm({ title = 'Book your free roof evaluation'
       </div>
       <label className="qlf-hp" aria-hidden="true">
         <span>Leave this field empty</span>
-        <input name="website" tabIndex={-1} autoComplete="off" value={f.website} onChange={set('website')} />
+        <input name="qlf-leave-empty" tabIndex={-1} autoComplete="off" data-1p-ignore data-lpignore="true" value={f.website} onChange={set('website')} />
       </label>
       {state.error && <p className="qlf-error" role="alert">{state.error}</p>}
       <button className="btn btn-gold" type="submit" disabled={state.status === 'sending'}>

@@ -127,6 +127,8 @@ body.rm-lock{overflow:hidden}
 .rm-fin-row span{color:var(--muted);font-size:.85rem;font-weight:700}
 .rm-fin-row b{color:var(--navy);font:600 1.5rem/1 var(--font-head)}
 .rm-fin-row b small{font-size:.8rem;color:var(--muted)}
+.rm-fin-promo{margin-top:8px;background:color-mix(in srgb,var(--gold) 14%,var(--wash))}
+.rm-fin-promo span small{margin-left:4px;font-weight:600;letter-spacing:.06em;color:var(--gold-ink)}
 .rm-fin-row b.rm-range-pay{font-size:1.2rem;white-space:nowrap} /* a payment range when comparing materials */
 .rm-fin p{margin:10px 0 12px!important;font-size:11.5px!important;line-height:1.45!important}
 .rm-fin .btn{min-height:44px;font-size:16px}

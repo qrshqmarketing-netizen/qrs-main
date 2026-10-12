@@ -18,18 +18,21 @@ export const QUOTE_EXCLUDE = ['/commercial-roofing/', '/roof-repair/emergency/',
 // Left empty, the drawer runs in demo mode with sample measurements.
 export const GOOGLE_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY || '';
 
-// ----- Pricing (EXAMPLE numbers: replace with your real installed rates) -----
-// Price per square foot of roof, low and high, for a full replacement
+// ----- Pricing (the owner's installed rates, October 2026) -----
+// Price per square foot of roof, low and high. A roofing "square" is 100 sq ft, so tile lift & relay at $800–$1,100 per square is $8–$11 per sq ft.
+// The key is the name on the drawer's material choice and in the lead; `label` is the price line's heading.
 export const PRICING = {
-  Shingle: { label: 'Shingle roof replacement', low: 5.5, high: 8.5 },
-  Tile: { label: 'Tile roof replacement', low: 12, high: 18 },
-  Flat: { label: 'Flat roof replacement', low: 7, high: 11 },
+  Shingle: { label: 'Shingle roof replacement', low: 6.5, high: 8 },
+  Tile: { label: 'Tile roof replacement', low: 12, high: 16 },
+  'Lift & Relay': { label: 'Tile lift & relay', low: 8, high: 11 },
+  Flat: { label: 'Flat roof replacement', low: 7.5, high: 10 },
 };
 export const WASTE = 1.1; // +10% for cuts, starter and ridge
 export const PITCH_ADJ = { Flat: 1, Low: 1, Conventional: 1.08, Steep: 1.25, 'Not sure': 1.08 };
 export const STORY_ADJ = { '1 story': 1, '2 stories': 1.06, '3+ stories': 1.12, '': 1 };
-export const MIN_JOB = 6000; // smallest job you quote
+export const MIN_JOB = 3500; // smallest job you quote
 
-// ----- Financing (EXAMPLE terms: match your lender's real offer) -----
-export const FINANCE = { apr: 9.99, terms: [5, 10, 15], defaultTerm: 10 }; // APR %, loan terms in years
+// ----- Financing (the owner's terms, October 2026) -----
+// apr: the example loan's APR %; terms: loan terms in years. promo: the 0% offer shown beside the example payment (on approved credit, "OAC").
+export const FINANCE = { apr: 9.99, terms: [5, 10, 15], defaultTerm: 10, promo: { apr: 0, months: 18, label: '0% APR for 18 months', note: 'OAC' } };
 export const FINANCING_URL = ''; // your lender's application link; empty = call button

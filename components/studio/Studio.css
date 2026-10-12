@@ -124,6 +124,8 @@ main.studio .st-label,main.studio .st-head h2{text-align:left}
 
 /* ---------- projects: cards that pin and stack as the page scrolls ---------- */
 .st-proj-list{display:block;padding-bottom:8px}
+.st-proj-more{margin:28px 0 0;text-align:center}
+.st-proj-more .st-link{margin-top:0}
 .st-proj{position:sticky;top:calc(92px + var(--i,0) * 14px);height:min(66svh,560px);min-height:340px;margin-bottom:28px;overflow:hidden;border-radius:var(--radius);background:#0a1b2c;isolation:isolate;box-shadow:0 -10px 30px rgba(3,22,40,.28)}
 .st-proj:last-child{margin-bottom:0}
 .st-proj img{object-fit:cover;z-index:-1}

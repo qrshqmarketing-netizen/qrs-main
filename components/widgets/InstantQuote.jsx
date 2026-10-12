@@ -225,8 +225,9 @@ export default function InstantQuote({ openFrom = null, onReady }) {
   const onContact = (e) => {
     e.preventDefault();
     const f = new FormData(e.target);
-    // The estimate starts with what's on the roof now. "Not sure" is priced as shingle (or flat, if every pitch picked is flat).
-    const current = roofTypes.filter((t) => PRICING[t]);
+    // The estimate starts with what's on the roof now. "Not sure" is priced as shingle (or flat, if every pitch picked is flat). A tile roof is
+    // compared with tile lift & relay too (keeping the tiles and replacing what's under them).
+    const current = roofTypes.filter((t) => PRICING[t]).flatMap((t) => (t === 'Tile' && PRICING['Lift & Relay'] ? ['Tile', 'Lift & Relay'] : [t]));
     const flatOnly = pitches.length > 0 && pitches.every((p) => p === 'Flat');
     const q = {
       name: f.get('name'),
@@ -562,9 +563,23 @@ export default function InstantQuote({ openFrom = null, onReady }) {
                   ) : '—'}
                 </b>
               </div>
+              {FINANCE.promo && (
+                <div className="rm-fin-row rm-fin-promo">
+                  <span>{FINANCE.promo.label} <small>{FINANCE.promo.note}</small></span>
+                  <b>
+                    {ests.length ? (
+                      <>
+                        {money(Math.min(...ests.map((e) => (e.low + e.high) / 2)) / FINANCE.promo.months)}
+                        {ests.length > 1 && ' – ' + money(Math.max(...ests.map((e) => (e.low + e.high) / 2)) / FINANCE.promo.months)}
+                        <small>/mo</small>
+                      </>
+                    ) : '—'}
+                  </b>
+                </div>
+              )}
               <p id="rmFinNote">
                 {ests.length > 0 &&
-                  `Example ${ests.length > 1 ? 'payments on the middle of each material’s range' : 'payment on the middle of your range'}, ${term} years at ${FINANCE.apr}% APR through Momnt Financing or Service Financing. For illustration only, not an offer of credit. Subject to credit approval.`}
+                  `Example ${ests.length > 1 ? 'payments on the middle of each material’s range' : 'payment on the middle of your range'}, ${term} years at ${FINANCE.apr}% APR${FINANCE.promo ? `, or ${FINANCE.promo.label.replace(' APR', '')} (${FINANCE.promo.months} equal payments, on approved credit)` : ''}, through Momnt Financing or Service Financing. For illustration only, not an offer of credit. Subject to credit approval.`}
               </p>
               <a className="btn btn-dark" id="rmFinBtn" href={FINANCING_URL || TEL} {...(FINANCING_URL ? { target: '_blank', rel: 'noopener' } : {})}>
                 Check my financing options
