@@ -41,3 +41,8 @@
 .check-chip{padding:10px 16px;border:1.5px solid var(--line);border-radius:99px;background:var(--paper);color:var(--ink);font-size:15px;font-weight:600;text-decoration:none;transition:border-color .15s,background .15s}
 .check-chip:hover{border-color:var(--gold);background:rgba(212,181,114,.16)}
 .check-chip:focus-visible{outline:3px solid rgba(212,181,114,.85);outline-offset:2px}
+.check-steps{margin:14px 0 0;font-size:14px;color:var(--muted)}
+.check-steps a{color:var(--gold-ink);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.form-card textarea{min-height:96px}
+.field label small{font-weight:400;color:var(--muted)}
+#estimate,#roof-check{scroll-margin-top:84px}

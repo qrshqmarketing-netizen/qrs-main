@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import { OFFERS } from '@/data/offers';
-import { NEEDS, START_PATH, startHref } from '@/data/start';
+import { START_PATH } from '@/data/start';
+import EstimateForm from './EstimateForm';
 import './RoofCheck.css';
 import Mark from '@/components/ui/Mark';
 
-// Offer card (data/offers.js) + a start card that opens the request steps at /start/ (components/sections/StartStepper.jsx). Every page
-// has one. The start card asks the first question: each choice opens /start/ with that answer already given.
+// Offer card (data/offers.js) + the estimate form (EstimateForm.jsx). Every page has one, so "Get Pro Advice" always has a target on the page
+// (SiteLink scrolls to #roof-check); a small link still opens the step-by-step form at /start/.
 // tone="white" drops the pale blue background when the section above is also pale blue.
 export default function RoofCheck({ tone, offer = 'home' }) {
   const o = OFFERS[offer];
@@ -32,18 +33,11 @@ export default function RoofCheck({ tone, offer = 'home' }) {
         <div className="form-card" id="estimate">
           <div className="eyebrow">Start here</div>
           <h2>Tell us what you <Mark text="__need__" />.</h2>
-          <p className="lead">A few quick steps. A clear next step. No pressure.</p>
-          <p className="check-ask" id="check-ask">What do you need help with?</p>
-          <div className="check-chips" role="group" aria-labelledby="check-ask">
-            {NEEDS.map((need) => (
-              <Link className="check-chip" href={startHref(need.id)} prefetch={false} key={need.id}>
-                {need.label}
-              </Link>
-            ))}
-          </div>
-          <Link className="btn btn-gold" href={START_PATH}>
-            Start My Free Roof Evaluation <span className="arrow">→</span>
-          </Link>
+          <p className="lead">Two minutes. A clear next step. No pressure.</p>
+          <EstimateForm />
+          <p className="check-steps">
+            Prefer to answer a few questions instead? <Link href={START_PATH} prefetch={false}>Use the step-by-step form</Link>
+          </p>
         </div>
       </div>
     </section>

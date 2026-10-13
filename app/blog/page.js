@@ -10,6 +10,7 @@ import { BLOG_PAGE as page } from '@/data/pages/blog';
 import { heroOutcome } from '@/data/heroOutcomes';
 import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
+import RoofCheck from '@/components/sections/RoofCheck';
 
 // Kept out of search results until there's a published post
 export async function generateMetadata() {
@@ -57,6 +58,7 @@ export default async function BlogPage() {
       />
       <BlogBrowser posts={cards} heading={published.length ? 'Browse Articles' : 'Coming Soon'} />
       <IndexNote note={page.note} />
+      <RoofCheck tone="white" />
     </main>
   );
 }

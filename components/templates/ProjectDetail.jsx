@@ -17,6 +17,7 @@ import { PROJECT_PAGES } from '@/data/pages/projects';
 import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
 import './ProjectDetail.css';
+import RoofCheck from '@/components/sections/RoofCheck';
 
 // A project page (e.g. /projects/shingle-roof-replacements-90731/), in the studio style: a full-bleed cover photo with the title and the ZIP code rolling up
 // like an odometer; a facts column (where, what, how many photos) beside the story's lead paragraph; for a project with a matching pair, the job photo
@@ -144,6 +145,7 @@ export default function ProjectDetail({ page }) {
       )}
 
       <RelatedLinks heading="Related services" links={relatedLinks(page.related)} />
+      <RoofCheck tone="white" />
       <FinalCta />
     </main>
   );

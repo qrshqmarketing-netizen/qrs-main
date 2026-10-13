@@ -8,6 +8,7 @@ import { PROJECT_PAGES, PROJECTS_PAGE as page } from '@/data/pages/projects';
 import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
 import './projects.css';
+import RoofCheck from '@/components/sections/RoofCheck';
 
 export const metadata = pageMetadata({ title: page.metaTitle, description: page.metaDescription, path: PROJECTS_LINK.href });
 
@@ -38,6 +39,7 @@ export default function ProjectsPage() {
         </div>
       </section>
       <ProjectMap projects={PROJECT_PAGES} />
+      <RoofCheck tone="white" />
     </main>
   );
 }
