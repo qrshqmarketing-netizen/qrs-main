@@ -9,9 +9,8 @@ import ReviewMarquee from '@/components/sections/ReviewMarquee';
 import RoofCheck from '@/components/sections/RoofCheck';
 import ServiceArea from '@/components/sections/ServiceArea';
 import StudioHero from '@/components/studio/StudioHero';
-import PromoCard from '@/components/widgets/PromoCard';
-import { EL_NINO_PAGE } from '@/data/pages/elNino';
-import { SEASON_PROMO as promo, promoLandingHref } from '@/data/promo';
+import { SEASON_PROMO as promo } from '@/data/promo';
+import { HOLLYWOOD_HILLS_PROJECT } from '@/data/pages/hollywood-hills-project';
 import StudioIntro from '@/components/studio/StudioIntro';
 import StudioProcess from '@/components/studio/StudioProcess';
 import StudioProjects from '@/components/studio/StudioProjects';
@@ -21,10 +20,10 @@ import { SHOW_ROOF_COLORS } from '@/data/roofColors';
 import JsonLd from '@/components/ui/JsonLd';
 import { SERVICE_CATEGORIES } from '@/data/serviceCategories';
 import { CAREERS_PAGE, CAREERS_TEASER } from '@/data/pages/careers';
-import { HERO_ANNOTATIONS, HOME_DESCRIPTION, HOME_H1, HOME_TITLE } from '@/data/site';
+import { HOME_DESCRIPTION, HOME_TITLE } from '@/data/site';
 import { LATEST_PROJECTS } from '@/data/projectPages';
 import { ROOF_FINANCING } from '@/data/services/programs';
-import { homeArticles } from '@/lib/articles';
+import { latestArticles } from '@/lib/articles';
 import { getHomeFaqs } from '@/lib/contentStore';
 import { openGraphBase, twitterBase } from '@/lib/seo';
 import { pageJsonLd } from '@/lib/structuredData';
@@ -38,10 +37,9 @@ export const metadata = {
 };
 
 // The home page's "Roofing Services" section: just the two top-level categories from the nav.
-// The hero photo slider: the newest projects' cover photos, newest first (LATEST_PROJECTS in data/projectPages.js)
-const HERO_SLIDES = LATEST_PROJECTS.map((project) => ({ src: project.image, alt: project.imageAlt, title: project.label, place: project.place.replace(/,?\s*CA\b/, ''), href: project.path }));
-// The home hero's facts under the button: the offer's first and last points, plus the warranty (no license number here: owner's choice)
-const EL_NINO_POINTS = [EL_NINO_PAGE.hero.points[0], EL_NINO_PAGE.hero.points.at(-1), HERO_ANNOTATIONS.home[2]];
+// The hero photo: the cover of the Hollywood Hills West round flat roof project (owner's choice). To go back to the newest projects' covers
+// cross-fading, use LATEST_PROJECTS here instead of [HOLLYWOOD_HILLS_PROJECT].
+const HERO_SLIDES = [HOLLYWOOD_HILLS_PROJECT].map((project) => ({ src: project.image, alt: project.imageAlt, title: project.label, place: project.place.replace(/,?\s*CA\b/, ''), href: project.path }));
 
 const HOME_PRODUCTS = [
   { title: '*TotalShield* Shingle Systems', text: 'Complete shingle replacements and new installations, built from the deck up.', href: '/residential-roofing/shingle-roofing/replacement/', scene: 'scene-shingle', image: '/images/shingle-roof-completed-drone-view.webp' },
@@ -67,25 +65,9 @@ export default async function HomePage() {
     <>
       <JsonLd data={pageJsonLd({ path: '/', title: HOME_TITLE, description: HOME_DESCRIPTION, faqs })} />
       <main id="top" className="studio">
-        {/* While the El Niño offer runs (SEASON_PROMO.active), its storm card is the hero (the keyword line above the headline is the H1); otherwise the
-            newest projects' photo slider is the hero again */}
-        {promo.active ? (
-          <PromoCard
-            as="section"
-            variant="landing"
-            track="home-hero"
-            className="promo-home"
-            eyebrow={HOME_H1}
-            eyebrowTag="h1"
-            heading={promo.heading.replace('El Niño', '__El Niño__')}
-            text={promo.text}
-            cta={{ label: promo.cta.label, href: promoLandingHref('home-hero') }}
-            points={EL_NINO_POINTS}
-            rain={promo.rain}
-          />
-        ) : (
-          <StudioHero slides={HERO_SLIDES} />
-        )}
+        {/* The studio hero ("Come home to a roof you can trust.") on one photo: the finished round flat roof in Hollywood Hills West. The El Niño offer
+            shows as the pop-up (SEASON_PROMO in data/promo.js); its storm card version of this hero is kept in PromoCard (variant="landing"). */}
+        <StudioHero slides={HERO_SLIDES} />
         <ProofBar strip />
         <StudioIntro />
         <StudioServices categories={SERVICE_CATEGORIES} items={HOME_PRODUCTS} />
@@ -96,7 +78,7 @@ export default async function HomePage() {
         {!promo.active && <PromoSection />}
         <ServiceArea allAreasLink />
         <PartnerLogos {...ROOF_FINANCING.partners} />
-        <LatestArticles posts={await homeArticles(3)} />
+        <LatestArticles posts={await latestArticles(3)} />
         <FeatureBand
           id="careers"
           tone="light"
