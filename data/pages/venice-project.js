@@ -21,6 +21,8 @@ export const VENICE_PROJECT = {
     5: 'Roofing for Venice and the Westside',
   },
   place: 'Venice, Los Angeles, CA 90291',
+  // The wipe from the tear-off to the finished roof (ProjectReveal): photo 6 is shot from the same side as the cover (`image`)
+  reveal: { before: 6 },
   geo: [33.9937, -118.4627],
   // Photo slider at the top of the page, in job order: tear-off, underlayment, new shingles, the upper roof, the finish
   photos: [

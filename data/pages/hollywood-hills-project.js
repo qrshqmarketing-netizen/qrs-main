@@ -15,6 +15,8 @@ export const HOLLYWOOD_HILLS_PROJECT = {
   // An H2 above the paragraph at each position below (they describe the paragraphs, nothing is added to the story)
   headings: { 1: 'A 12-sided roof, cut to fit every angle', 2: 'Rooftop deck posts, HVAC and penetrations sealed', 3: 'Flat roofs other roofers have turned down' },
   place: 'Hollywood Hills West, Los Angeles, CA 90046',
+  // The wipe from the stripped deck to the finished roof (ProjectReveal): photo 4 is shot from straight above, like the cover
+  reveal: { before: 4 },
   geo: [34.1105, -118.3734],
   // Photo slider at the top of the page: the finished roof, then the tear-off. Full-size originals: assets/originals/projects/
   photos: [

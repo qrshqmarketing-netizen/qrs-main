@@ -1,10 +1,12 @@
 import Image from 'next/image';
-import { Fragment } from 'react';
 import Breadcrumbs from '@/components/sections/Breadcrumbs';
 import FinalCta from '@/components/sections/FinalCta';
 import RelatedLinks from '@/components/sections/RelatedLinks';
+import ProjectChapters from '@/components/project/ProjectChapters';
 import ProjectCounter from '@/components/project/ProjectCounter';
 import ProjectGallery from '@/components/project/ProjectGallery';
+import ProjectReveal from '@/components/project/ProjectReveal';
+import ReviewSlider from '@/components/sections/ReviewSlider';
 import JsonLd from '@/components/ui/JsonLd';
 import Rich from '@/components/ui/Rich';
 import SiteLink from '@/components/ui/SiteLink';
@@ -17,11 +19,14 @@ import { pageJsonLd } from '@/lib/structuredData';
 import './ProjectDetail.css';
 
 // A project page (e.g. /projects/shingle-roof-replacements-90731/), in the studio style: a full-bleed cover photo with the title and the ZIP code rolling up
-// like an odometer; a facts column (where, what, how many photos) beside the story's lead paragraph; the rest of the story in sections; every photo in a
-// gallery you can switch between Detail (editorial rows), Grid and Slider, each opening full screen; then the next project and the related services.
+// like an odometer; a facts column (where, what, how many photos) beside the story's lead paragraph; for a project with a matching pair, the job photo
+// wiping away to the finished roof as you scroll (ProjectReveal); the rest of the story as numbered chapters with job photos between them, pinned and
+// sliding sideways on desktop (ProjectChapters; both adapted from fluid.glass/approach); every photo in a gallery you can switch between Detail
+// (editorial rows), Grid and Slider, each opening full screen; Google reviews, led by the ones naming the area and the kind of roof; then the next
+// project and the related services.
 // page: a project from data/pages/ ({ path, title, metaTitle?, description, image, imageAlt, place, label, photos: [{ src, alt }], paragraphs, headings?, related? }).
 // metaTitle: a shorter <title> than `title` (which is also the headline) when that one runs past ~60 characters.
-// headings: { position: 'text' } labels the paragraph at that position; related: pages shown as "Related services".
+// headings: { position: 'text' } labels the paragraph at that position; related: pages shown as "Related services"; reveal: see revealOf below.
 // The first photo in `photos` is also `image` (share image, structured data, Projects map). The facts come from the data: `place`, the work named in the
 // title (the words before the last " in ") and the photo count; the number is the ZIP code found in `place`.
 export const projectMetadata = (page) => pageMetadata({ title: page.metaTitle || page.title, description: page.description, path: page.path });
@@ -31,12 +36,40 @@ const workOf = (title) => {
   return at > 0 ? title.slice(0, at) : title;
 };
 
+// The story after the lead paragraph as chapters, each but the last followed by a photo from the job, spread evenly through the photos that
+// aren't already the cover or in the during/finished wipe (a project with few photos gives the first chapters one each).
+function chaptersOf(page, used) {
+  const rest = page.paragraphs.slice(1);
+  const pool = page.photos.filter((photo, i) => i > 0 && !used.includes(photo.src));
+  const wanted = Math.min(rest.length - 1, pool.length);
+  return rest.map((text, i) => ({
+    heading: page.headings?.[i + 1] || '',
+    text,
+    photo: i < wanted ? pool[Math.floor(((i + 0.5) * pool.length) / wanted)] : null,
+  }));
+}
+
+// The during/finished wipe, when the data names a photo from during the job taken from about the same spot as the finished one
+// (`reveal: { before: <index in photos>, after?: <index>, heading? }`; `after` defaults to the cover photo)
+function revealOf(page) {
+  const r = page.reveal;
+  const before = r && page.photos[r.before];
+  if (!before) return null;
+  const after = r.after != null ? page.photos[r.after] : { src: page.image, alt: page.imageAlt || '' };
+  return { before, after, heading: r.heading || 'From tear-off to finished roof' };
+}
+
+// Words that tie a Google review to this project's area: the neighborhood and city from `place` (not the state or ZIP code)
+const placesOf = (place = '') => place.split(',').map((s) => s.trim()).filter((s) => s && !/^CA\b/.test(s));
+
 export default function ProjectDetail({ page }) {
   const crumbs = [HOME, PROJECTS_LINK, { label: page.title, href: page.path }];
   const schema = pageJsonLd({ path: page.path, title: page.title, description: page.description, crumbs, image: page.image });
   const place = (page.place || '').replace(/,?\s*CA\b/, '');
   const zip = (page.place || '').match(/\b9\d{4}\b/)?.[0];
-  const [lead, ...rest] = page.paragraphs;
+  const lead = page.paragraphs[0];
+  const reveal = revealOf(page);
+  const chapters = chaptersOf(page, [page.image, reveal?.before.src, reveal?.after.src]);
   const at = PROJECT_PAGES.findIndex((p) => p.path === page.path);
   const next = PROJECT_PAGES.length > 1 ? PROJECT_PAGES[(at + 1) % PROJECT_PAGES.length] : null;
   const words = page.title.split(' ');
@@ -82,27 +115,29 @@ export default function ProjectDetail({ page }) {
         </div>
       </section>
 
+      {reveal && <ProjectReveal {...reveal} />}
+
+      {chapters.length > 0 && <ProjectChapters chapters={chapters} />}
+
       <ProjectGallery photos={page.photos} name={page.title} />
 
-      <article className="pd-story">
-        <div className="container">
-          {rest.map((paragraph, i) => (
-            <Fragment key={paragraph}>
-              <div className="pd-story-row">
-                <h2>{page.headings?.[i + 1] || ''}</h2>
-                <p>
-                  <Rich text={paragraph} />
-                </p>
-              </div>
-            </Fragment>
-          ))}
+      <section className="pd-reviews" aria-label="Google reviews">
+        <div className="container pd-reviews-grid">
+          <div className="pd-reviews-intro">
+            <p className="pd-label">Client stories</p>
+            <h2>In their own words</h2>
+            <p>Reviews from the people we roof for, on Google.</p>
+          </div>
+          <div className="tst-standalone">
+            <ReviewSlider places={placesOf(page.place)} />
+          </div>
         </div>
-      </article>
+      </section>
 
       {next && next.path !== page.path && (
         <section className="pd-next" aria-label="Next project">
           <div className="container">
-            <p className="pd-next-label">Next project</p>
+            <p className="pd-label">Next project</p>
             <SiteLink className="pd-next-card" href={next.path}>
               <span className="pd-next-img">
                 <Image src={next.image} alt="" fill sizes="(min-width: 901px) 50vw, 100vw" quality={65} loading="lazy" />

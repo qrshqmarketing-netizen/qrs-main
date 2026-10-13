@@ -1,0 +1,31 @@
+/* "During the job → finished" (ProjectReveal.jsx). Without motion: two labelled photos side by side. With motion (.is-live): the frame is
+   pinned in the middle of the screen for a stretch of scrolling while the job photo wipes up off the finished roof. */
+.pd-reveal{padding:16px 0 72px}
+.pd-reveal-head{margin-bottom:28px}
+.pd-reveal-head h2,body.studio-site main .pd-reveal-head h2{margin:0;max-width:20ch;text-align:left;font:400 clamp(28px,4.4vw,52px)/1.08 var(--font-text),sans-serif;letter-spacing:-.03em;color:var(--navy)}
+.pd-reveal-frame{display:grid;gap:16px}
+.pd-reveal-pic{position:relative;margin:0;aspect-ratio:4/3;border-radius:var(--radius);overflow:hidden;background:var(--line)}
+.pd-reveal-pic img{object-fit:cover}
+.pd-reveal-before{order:-1}
+.pd-reveal-pic figcaption{position:absolute;left:14px;bottom:14px;padding:8px 13px;border-radius:999px;background:rgba(3,22,40,.72);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);color:#fff;font:600 11px/1 var(--font-text),sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.pd-reveal-after figcaption{background:var(--gold);color:#0a1b2c}
+.pd-reveal-edge{display:none}
+@media (min-width:621px){.pd-reveal-frame{grid-template-columns:1fr 1fr;gap:22px}}
+@media (min-width:901px){.pd-reveal{padding:24px 0 112px}.pd-reveal-head{margin-bottom:8px}}
+
+/* Pinned wipe: the track is taller than the screen, the stage sticks while it passes, --w (0 → 1) is the share of the job photo wiped away
+   and --p (0 → 1) the progress through the section (set in ProjectReveal.jsx) */
+.pd-reveal.is-live{padding-bottom:24px}
+.pd-reveal.is-live .pd-reveal-track{height:230svh}
+.pd-reveal.is-live .pd-reveal-stage{position:sticky;top:0;height:100svh;display:flex;align-items:center;padding-top:56px}
+.pd-reveal.is-live .pd-reveal-frame{position:relative;display:block;width:min(100%,calc((100svh - 190px) * 4 / 5));margin:0 auto;aspect-ratio:4/5;border-radius:var(--radius);overflow:hidden;background:var(--line)} /* phones: a taller crop fills the screen better */
+@media (min-width:621px){.pd-reveal.is-live .pd-reveal-frame{width:min(100%,calc((100svh - 170px) * 4 / 3));aspect-ratio:4/3}}
+.pd-reveal.is-live .pd-reveal-pic{position:absolute;inset:0;aspect-ratio:auto;border-radius:0}
+.pd-reveal.is-live .pd-reveal-pic img{transform:scale(calc(1.08 - var(--p,0) * .08));will-change:transform}
+.pd-reveal.is-live .pd-reveal-before{z-index:1;clip-path:inset(0 0 calc(var(--w,0) * 100%) 0)}
+.pd-reveal.is-live .pd-reveal-before figcaption{top:14px;bottom:auto}
+/* A gold pen line rides the edge of the wipe (a full-height box whose top border is the line, moved with transform only) */
+.pd-reveal.is-live .pd-reveal-edge{display:block;position:absolute;inset:0;z-index:2;border-top:3px solid var(--gold);pointer-events:none;
+  transform:translateY(calc((1 - var(--w,0)) * 100%));opacity:calc(min(var(--w,0) * 30, 1) * min((1 - var(--w,0)) * 30, 1))}
+@media (min-width:901px){.pd-reveal.is-live .pd-reveal-pic figcaption{left:20px;bottom:20px}.pd-reveal.is-live .pd-reveal-before figcaption{top:20px;bottom:auto}}
+@media print{.pd-reveal.is-live .pd-reveal-track{height:auto}.pd-reveal.is-live .pd-reveal-stage{position:static;height:auto}}
