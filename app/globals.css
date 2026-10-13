@@ -397,3 +397,37 @@ a.chip:hover{border-color:var(--navy)}
 .promo-home.hero-scene :is(.promo-eyebrow,.promo-title,.promo-text,.promo-actions,.promo-points){translate:0 calc(var(--hero-p,0) * 14vh);opacity:calc(1 - var(--hero-p,0) * 1.15)}
 .expand-scene{clip-path:inset(0 calc((1 - var(--ex,1)) * 4vw) round calc((1 - var(--ex,1)) * 28px))}
 @media print{.hero-scene *,.expand-scene{translate:none!important;opacity:1!important;clip-path:none!important}}
+
+/* Page transitions (components/ui/PageTransition.jsx, adapted from exoape.com). While html.vt-cover is on, the browser's view transition animates
+   two pictures of the page: the old one drifts up, tilts a little and darkens, and the new one rises from the bottom as a sheet, tilted and
+   straightening as it comes. The header and the floating widgets get their own names, so they are not in either picture and stay put on top.
+   The overlay is navy, so any corner the tilt uncovers is dark. Then html.page-arrive lets the new headline rise into place. */
+html.vt-cover .site-header{view-transition-name:vt-header}
+html.vt-cover .mab{view-transition-name:vt-mab}
+html.vt-cover .qa{view-transition-name:vt-qa}
+html.vt-cover .rm-tab{view-transition-name:vt-rmtab}
+html.vt-cover .rv-toast{view-transition-name:vt-toast}
+html.vt-cover .cookie{view-transition-name:vt-cookie}
+html.vt-cover .cw{view-transition-name:vt-cw}
+html.vt-cover .rp{view-transition-name:vt-rp}
+html.vt-cover::view-transition{background:#0a1b2c;pointer-events:none}
+html.vt-cover::view-transition-image-pair(root){isolation:auto}
+html.vt-cover::view-transition-old(root),html.vt-cover::view-transition-new(root){mix-blend-mode:normal;animation-duration:.95s;animation-timing-function:cubic-bezier(.76,0,.24,1);animation-fill-mode:both}
+html.vt-cover::view-transition-old(root){animation-name:vtLeave;transform-origin:50% 0}
+html.vt-cover::view-transition-new(root){animation-name:vtRise;transform-origin:0 0}
+@keyframes vtLeave{to{transform:translate3d(0,-14%,0) rotate(-1.5deg);filter:brightness(.42)}}
+@keyframes vtRise{from{transform:translate3d(0,100%,0) rotate(3deg)}to{transform:none}}
+/* The fixed pieces: no animation, the new one shown as it is, above the pages */
+html.vt-cover::view-transition-group(vt-header),html.vt-cover::view-transition-group(vt-mab),html.vt-cover::view-transition-group(vt-qa),
+html.vt-cover::view-transition-group(vt-rmtab),html.vt-cover::view-transition-group(vt-toast),html.vt-cover::view-transition-group(vt-cookie),
+html.vt-cover::view-transition-group(vt-cw),html.vt-cover::view-transition-group(vt-rp){animation:none;z-index:100}
+html.vt-cover::view-transition-old(vt-header),html.vt-cover::view-transition-old(vt-mab),html.vt-cover::view-transition-old(vt-qa),
+html.vt-cover::view-transition-old(vt-rmtab),html.vt-cover::view-transition-old(vt-toast),html.vt-cover::view-transition-old(vt-cookie),
+html.vt-cover::view-transition-old(vt-cw),html.vt-cover::view-transition-old(vt-rp){display:none}
+html.vt-cover::view-transition-new(vt-header),html.vt-cover::view-transition-new(vt-mab),html.vt-cover::view-transition-new(vt-qa),
+html.vt-cover::view-transition-new(vt-rmtab),html.vt-cover::view-transition-new(vt-toast),html.vt-cover::view-transition-new(vt-cookie),
+html.vt-cover::view-transition-new(vt-cw),html.vt-cover::view-transition-new(vt-rp){animation:none}
+/* The new page's headline rises from below its own line as the sheet settles (a static mask: the clip moves against the slide) */
+@keyframes headRise{from{translate:0 .55em;clip-path:inset(-.55em 0 .55em 0);opacity:0}to{translate:0 0;clip-path:inset(-.2em 0 -.2em 0);opacity:1}}
+html.page-arrive :is(main .hero-title,.pd-hero h1,.promo-home .promo-title){animation:headRise .9s cubic-bezier(.17,.84,.44,1) .5s both}
+@media (prefers-reduced-motion:reduce){html.page-arrive :is(main .hero-title,.pd-hero h1,.promo-home .promo-title){animation:none}}
