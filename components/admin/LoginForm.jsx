@@ -29,7 +29,7 @@ export default function LoginForm({ ready, withEmail = false }) {
       <p className="adm-help">Quality Roofing Specialists. Log in to edit the blog articles.</p>
       {!ready && (
         <div className="adm-msg warn">
-          The dashboard isn't set up yet. In Vercel, add <strong>ADMIN_PASSWORD</strong> (at least 12 characters) next to the Supabase settings, then redeploy.
+          The dashboard isn't set up yet. In Vercel, add <strong>ADMIN_PASSWORD</strong> (at least 8 characters) next to the Supabase settings, then redeploy.
         </div>
       )}
       <form className="adm-card" onSubmit={submit}>
