@@ -134,6 +134,10 @@ body.studio-site .promo h1.promo-title{font-family:var(--font-display);font-weig
 /* The home page's hero: a little taller than the landing page's (most of the screen, with the proof strip peeking in below) */
 .promo.promo-landing.promo-home{min-height:max(600px,92svh)}
 @media (min-width:901px){.promo.promo-landing.promo-home{min-height:clamp(700px,92svh,940px)}}
+/* Home hero photo: centered at the bottom (the city), and the slow zoom grows up from the bottom edge so it never opens a gap there */
+.promo-home .promo-photo{object-position:50% 100%;transform-origin:50% 100%}
+@keyframes kenBurnsBottom{from{transform:scale(1.02)}to{transform:scale(1.14) translate3d(-1.6%,0,0)}}
+@media (prefers-reduced-motion:no-preference){.promo-landing.promo-home .promo-photo{animation-name:kenBurnsBottom}}
 /* The home page's hero heading in the studio look's type (light Libre Franklin, sentence case, like the other heroes); the storm card's effects stay:
    the lightning glow on the heading, the rain, the red ping and the photo */
 body.studio-site .promo-home .promo-title{font:500 clamp(44px,11vw,104px)/1.02 var(--font-text),sans-serif;letter-spacing:-.035em;text-transform:none;text-wrap:balance}
