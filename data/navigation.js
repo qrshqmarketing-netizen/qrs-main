@@ -205,6 +205,8 @@ export const FOOTER = {
         { label: 'Projects', href: '/projects/' },
         { label: 'Give a Review', href: '/reviews/' },
         { label: 'Roofing Blog', href: '/blog/' },
+        { label: 'Roofing FAQ', href: '/roofing-faq/' },
+        { label: 'Roofing Glossary', href: '/roofing-glossary/' },
         { label: 'Credentials', href: '/credentials/' },
         { label: 'Careers', href: '/careers/' },
         { label: 'Contractors', href: '/contractors/' },

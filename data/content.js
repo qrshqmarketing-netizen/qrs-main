@@ -46,6 +46,8 @@ import { SHINGLE_CONTENT } from './services/shingle';
 import { ATTIC_VENTILATION, HOA_MULTI_FAMILY, RAIN_GUTTERS } from './services/specialty';
 import { TILE_CONTENT } from './services/tile';
 import { CREDENTIALS_PUBLIC } from './pages/credentials';
+import { GLOSSARY_PAGE } from './pages/glossary';
+import { FAQ_PAGE } from './pages/roofingFaq';
 
 // Sections: { ...structure, hub, services }. Commercial also has serviceTypes (repair, replacement, maintenance)
 // next to its building-type pages; both live at /commercial-roofing/<slug>/.
@@ -108,6 +110,8 @@ const LABELS = new Map([
   [CAREERS_LINK.href, CAREERS_LINK.label],
   [CONTRACTORS_LINK.href, 'Contractor Partnerships'],
   [CREDENTIALS_LINK.href, 'Credentials'],
+  [GLOSSARY_PAGE.path, 'Roofing Glossary'],
+  [FAQ_PAGE.path, 'Roofing FAQ'],
   [CONTACT_LINK.href, CONTACT_LINK.label],
   ...SECTIONS.flatMap((s) => [[s.href, s.label], ...sectionPages(s).map((svc) => [serviceHref(s, svc), svc.title])]),
   ...SINGLE_PAGES.map((p) => [p.href, p.page.title]),
@@ -126,6 +130,8 @@ export const ALL_PATHS = [
   ...SINGLE_PAGES.map((p) => p.href),
   CONTRACTORS_LINK.href,
   ...(CREDENTIALS_PUBLIC ? [CREDENTIALS_LINK.href] : []),
+  FAQ_PAGE.path,
+  GLOSSARY_PAGE.path,
   LOCATIONS_LINK.href,
   ...REGIONS.flatMap((r) => [regionPath(r.slug), ...LOCATIONS.filter((l) => l.region === r.slug).map((l) => cityPath(l.slug))]),
   PROJECTS_LINK.href,
