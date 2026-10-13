@@ -23,6 +23,1023 @@ const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
   {
+    slug: 'asphalt-shingle-vs-tile-roof',
+    title: 'Asphalt Shingle vs. Tile Roof: Cost, Weight and Upkeep in Los Angeles',
+    keyword: 'shingle vs. tile roof',
+    topics: ['replacement', 'shingle', 'tile', 'underlayment'],
+    metaTitle: 'Shingle vs. Tile Roof: Which Is Right for Your Home?',
+    metaDescription:
+      'Shingle vs. tile roof for a Los Angeles home: cost per square foot, weight, how each one ages, fire rating, upkeep and which homes each roof suits best.',
+    datePublished: '2026-10-13',
+    dateModified: '2026-10-13',
+    excerpt:
+      'Asphalt shingles and tile are the two roofs you see most across Los Angeles. Here is how they compare on cost, weight, aging, fire rating and upkeep, and how to tell which one your home is built for.',
+    image: '/images/blog/asphalt-shingle-vs-tile-roof.webp',
+    imageAlt: 'Side by side: a gray asphalt shingle roof in Granada Hills and a new clay tile roof in Mid-Wilshire, both QRS projects',
+    intro: [
+      'Shingle vs. tile roof is the first choice many Los Angeles homeowners face when a roof needs replacing. You see asphalt shingles on many ranch homes and newer houses, and clay and concrete tile on Spanish Revival and Mediterranean homes across the city.',
+      'Both can make a sound roof. They differ in cost, weight, how they age and what they need over the years. This guide compares them side by side and helps you see which one your home is built for.',
+    ],
+    sections: [
+      {
+        heading: 'Shingle vs. Tile at a Glance',
+        blocks: [
+          {
+            table: {
+              head: ['Compare', 'Asphalt shingle', 'Tile (clay or concrete)'],
+              rows: [
+                ['Price per square foot (our Instant Quote range)', '$6.50 to $8.00', '$12 to $16 for a new tile roof'],
+                ['Weight per square (100 sq ft)', 'About 200 to 350 lbs', 'About 600 to 1,100 lbs'],
+                ['How it ages', 'The shingles wear out: the sun breaks down the asphalt and the granules wash off', 'The tiles can last for decades; the underlayment under them wears out first'],
+                ['Fire rating', 'Most are Class A', 'Class A'],
+                ['Walking on it', 'Easy for a roofer to work on', 'Tiles can crack underfoot'],
+                ['Look', 'Many colors, dimensional or flat', 'Spanish, Mediterranean and many other profiles'],
+              ],
+            },
+          },
+        ],
+      },
+      {
+        heading: 'Cost: Tile Costs More Up Front',
+        blocks: [
+          'At the ranges our Instant Quote uses, a shingle roof runs $6.50 to $8.00 per square foot of roof and a new tile roof $12 to $16. On a 2,000 square foot roof, with about 10% added for waste, that is about $14,300 to $17,600 for shingles against about $26,400 to $35,200 for new tile, before adjustments for pitch and height.',
+          'A tile roof whose tiles are still sound often doesn’t need new tile at all. A [tile lift and relay](/residential-roofing/tile-roofing/lift-and-relay/) replaces the underlayment and puts your own tiles back, for $8 to $11 per square foot at our ranges. See our full guide to [roof replacement cost](/blog/roof-replacement-cost-los-angeles/).',
+        ],
+      },
+      {
+        heading: 'Weight: Tile Needs a Roof Built for It',
+        blocks: [
+          'Tile weighs several times as much as asphalt shingles. A home designed for tile has framing sized for that load; a home built for shingles may not.',
+          { note: '**Switching from shingles to tile?** The framing has to be checked first, and it may need reinforcing. Going the other way, from tile to shingles, takes weight off the roof.' },
+        ],
+      },
+      {
+        heading: 'How Each Roof Ages',
+        blocks: [
+          { h3: 'Asphalt shingles' },
+          'Southern California sun breaks down the asphalt a little every summer. The granules that shield it wash off, and the shingles turn brittle, then curl or cup. Once that wear is across the whole roof, it is time for a [shingle roof replacement](/residential-roofing/shingle-roofing/replacement/). Balanced attic ventilation helps shingles last, because heat trapped in the attic shortens their life.',
+          { h3: 'Tile' },
+          'Clay and concrete tile can protect a home for decades, but the tiles are not what keeps water out on their own. The underlayment beneath them does most of that work, and it dries out and cracks well before the tile does. Our guide to [tile roof underlayment](/blog/tile-roof-underlayment/) explains the signs.',
+        ],
+      },
+      {
+        heading: 'Fire, Wind and Upkeep',
+        blocks: [
+          {
+            list: [
+              '**Fire.** Tile is Class A, and so are most fiberglass asphalt shingles. Either way, vents and the open ends of tile at the eaves matter as much as the covering. See [fire-resistant roofs](/blog/wildfire-resistant-roof-los-angeles/).',
+              '**Wind.** Strong Santa Ana winds can lift shingles whose seal has broken, and can loosen tiles that are not fastened well.',
+              '**Upkeep on shingles.** Replace lifted or missing shingles and cracked pipe boots, and keep valleys clear.',
+              '**Upkeep on tile.** Reset slipped tiles, replace cracked ones and plan for new underlayment as the roof ages.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Which Is Right for Your Home?',
+        blocks: [
+          {
+            table: {
+              head: ['Option', 'Best when', 'Keep in mind'],
+              rows: [
+                ['Asphalt shingle', 'The home was built for shingles and you want a sound roof for the lowest cost', 'It will need replacing sooner than the tiles on a tile roof'],
+                ['New tile roof', 'The home was built for tile, or its style calls for it', 'Higher cost, and the framing must carry the weight'],
+                ['Tile lift and relay', 'You have tile, the tiles are sound and the underlayment has failed', 'Only works when the tiles can be reused'],
+              ],
+            },
+          },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Is a tile roof more expensive than shingles?',
+        a: 'Yes. At our Instant Quote ranges a new tile roof is $12 to $16 per square foot of roof, against $6.50 to $8.00 for asphalt shingles. If your tiles are still sound, a lift and relay is $8 to $11.',
+      },
+      {
+        q: 'Can I put a tile roof on a house that had shingles?',
+        a: 'Sometimes. Tile is several times heavier than shingles, so the roof framing has to be checked first and may need reinforcing.',
+      },
+      {
+        q: 'Which lasts longer, tile or shingles?',
+        a: 'The tiles themselves outlast asphalt shingles, but the underlayment beneath tile wears out much sooner than the tile does, so a tile roof needs that layer renewed during its life.',
+      },
+      {
+        q: 'Can I replace a tile roof with shingles?',
+        a: 'Yes. It takes weight off the roof and costs less, though it changes the look of the home. Check any HOA rules first.',
+      },
+    ],
+    closing: {
+      heading: 'Not Sure Which Your Roof Needs?',
+      blocks: [
+        '[Book a free roof evaluation](/contact-us/). A roofer looks at your roof, explains your options in plain English and gives you a written scope and price before any work.',
+      ],
+    },
+    related: ['/residential-roofing/shingle-roofing/replacement/', '/residential-roofing/tile-roofing/replacement/', '/residential-roofing/tile-roofing/lift-and-relay/'],
+  },
+  {
+    slug: 'tile-lift-and-relay-vs-new-tile-roof',
+    title: 'Tile Lift and Relay vs. a New Tile Roof: Which Does Your Roof Need?',
+    keyword: 'tile lift and relay',
+    topics: ['tile', 'underlayment', 'restoration', 'repair', 'replacement', 'leak'],
+    metaTitle: 'Tile Lift and Relay vs. a New Tile Roof',
+    metaDescription:
+      'Tile lift and relay or a new tile roof? How each works, what each costs per square foot and the signs that point to one or the other.',
+    datePublished: '2026-10-13',
+    dateModified: '2026-10-13',
+    excerpt:
+      'When a tile roof leaks, the tiles are often fine and the underlayment beneath them is not. Here is how a lift and relay compares with a new tile roof, and how to tell which one your roof needs.',
+    image: '/images/blog/tile-lift-and-relay-vs-new-tile-roof.webp',
+    imageAlt: 'Side by side: clay tiles stacked on a roof during a tile lift and relay, and a finished clay tile roof seen from above',
+    intro: [
+      'A tile lift and relay and a new tile roof both end with a tile roof that keeps water out. The difference is what happens to your tiles: a relay lifts them off, renews the layers underneath and puts the same tiles back, while a new roof replaces the tiles too.',
+      'This guide compares the two, with prices, the signs that point to each and the questions to ask.',
+    ],
+    sections: [
+      {
+        heading: 'Lift and Relay vs. New Tile Roof at a Glance',
+        blocks: [
+          {
+            table: {
+              head: ['Compare', 'Tile lift and relay', 'New tile roof'],
+              rows: [
+                ['What happens to the tiles', 'Your tiles come off by hand and go back in their pattern; only cracked or broken ones are replaced', 'New tile throughout'],
+                ['Underlayment, battens and flashings', 'Renewed', 'Renewed'],
+                ['Price per square foot (our Instant Quote range)', '$8 to $11', '$12 to $16'],
+                ['Look afterward', 'The same roof, with its original tile', 'A new look, in the profile and color you choose'],
+                ['Best for', 'Sound tiles over failed underlayment', 'Worn, brittle or mismatched tile, or a new look'],
+              ],
+            },
+          },
+        ],
+      },
+      {
+        heading: 'Why Tile Roofs Leak When the Tiles Look Fine',
+        blocks: [
+          'Clay and concrete tiles can last for decades, but the underlayment that actually keeps water out wears out much sooner. After years of Southern California heat it dries out and cracks, and water that slips past the tiles has nowhere to go but into the deck.',
+          'That is why a leak on a tile roof often has no broken tile above it, and why patching tiles does not stop it. Our guide to [tile roof underlayment](/blog/tile-roof-underlayment/) walks through the signs.',
+        ],
+      },
+      {
+        heading: 'How a Tile Lift and Relay Works',
+        blocks: [
+          {
+            steps: [
+              'A roofer inspects the roof and photographs the underlayment wherever it can be seen, the tiles, the valleys and the flashings.',
+              'The tiles come off by hand and are stacked with care. Older tiles sometimes break anyway, so matching replacements are planned from the start.',
+              'New underlayment goes down across the roof, and worn battens, flashings and valley metal are renewed as the written scope calls for.',
+              'The same tiles go back in their original pattern, with cracked or broken ones replaced by the closest available match.',
+            ],
+          },
+          'At QRS this is our *SecondLife* Tile Reset. Where a match is not exact, replacement tiles can go on less visible slopes, so the originals stay where people see them.',
+        ],
+      },
+      {
+        heading: 'When a New Tile Roof Makes More Sense',
+        blocks: [
+          {
+            list: [
+              '**The tiles themselves are worn.** Concrete tile can turn brittle and porous as its surface wears away, and clay can crack after years of foot traffic and shaking.',
+              '**Too many tiles are broken or mismatched** from years of repairs.',
+              '**You want a different look,** profile or color.',
+              '**The deck or framing needs major work** that a relay would not cover.',
+            ],
+          },
+          'See [tile roof replacement](/residential-roofing/tile-roofing/replacement/) for how a new tile roof is built.',
+        ],
+      },
+      {
+        heading: 'Which Does Your Roof Need?',
+        blocks: [
+          {
+            table: {
+              head: ['Option', 'Best when', 'What it involves'],
+              rows: [
+                ['Tile repair', 'One area leaks and the underlayment is otherwise sound', 'Fixing the failed spot: slipped or cracked tiles, a flashing, a valley'],
+                ['Tile lift and relay', 'The tiles are sound but the underlayment has failed across the roof', 'Lifting the tiles, renewing the layers underneath and resetting the same tiles'],
+                ['New tile roof', 'The tiles are worn out, or you want a new look', 'A full tear-off and a new tile roof system'],
+              ],
+            },
+          },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Is a lift and relay cheaper than a new tile roof?',
+        a: 'Usually, because the tiles are reused. At our Instant Quote ranges a lift and relay is $8 to $11 per square foot of roof, against $12 to $16 for a new tile roof. Your written scope shows the price before any work.',
+      },
+      {
+        q: 'Will my roof look the same after a lift and relay?',
+        a: 'That is the point of a relay. Your tiles are reused wherever they are sound, and broken ones are replaced with the closest available match.',
+      },
+      {
+        q: 'How do I know if my tile roof needs a lift and relay?',
+        a: 'Common signs are leaks with no visibly broken tiles, ceiling stains after heavy rain, repeated repairs in different spots and underlayment that is brittle or torn where it can be seen. A roof inspection confirms it with photos.',
+      },
+      {
+        q: 'Can concrete tiles be reused in a lift and relay?',
+        a: 'Often, yes, as long as they are still sound. Concrete tile whose surface has worn brittle and porous is a reason to consider a new tile roof instead.',
+      },
+    ],
+    closing: {
+      heading: 'Find Out What Your Tile Roof Needs',
+      blocks: [
+        '[Book a free roof evaluation](/contact-us/). A roofer checks the underlayment, flashings and tiles, shows you the photos and gives you a written scope and price before any work.',
+      ],
+    },
+    related: ['/residential-roofing/tile-roofing/lift-and-relay/', '/residential-roofing/tile-roofing/replacement/', '/residential-roofing/tile-roofing/repair/'],
+  },
+  {
+    slug: 'clay-vs-concrete-tile-roof',
+    title: 'Clay vs. Concrete Tile Roofs: How They Differ and Which to Choose',
+    keyword: 'clay vs. concrete tile',
+    topics: ['tile', 'replacement', 'underlayment', 'repair'],
+    metaTitle: 'Clay vs. Concrete Tile Roofs: Key Differences',
+    metaDescription:
+      'Clay vs. concrete tile for a Southern California roof: what each is made of, weight, color, how they age and how to tell which you have.',
+    datePublished: '2026-10-13',
+    dateModified: '2026-10-13',
+    excerpt:
+      'Clay and concrete tile can look alike from the street, but they are made differently, weigh differently and age differently. Here is how to tell them apart and which one suits your home.',
+    image: '/images/blog/clay-vs-concrete-tile-roof.webp',
+    imageAlt: 'Illustration: orange clay barrel tiles beside gray flat concrete roof tiles',
+    intro: [
+      'Clay vs. concrete tile is a choice most tile roof owners in Southern California face sooner or later, whether they are replacing a roof or just matching a few broken pieces. From the street the two can look alike, but they are made from different materials and behave differently on a roof.',
+      'This guide explains the differences, how to tell which you have and what to weigh when you choose.',
+    ],
+    sections: [
+      {
+        heading: 'Clay vs. Concrete Tile at a Glance',
+        blocks: [
+          {
+            table: {
+              head: ['Compare', 'Clay tile', 'Concrete tile'],
+              rows: [
+                ['What it is', 'Natural clay, shaped and fired in a kiln', 'Sand, cement and water, molded and cured'],
+                ['Weight per square (100 sq ft)', 'About 600 to 950 lbs', 'About 820 to 1,100 lbs'],
+                ['Color', 'Fired into the clay, holds its color', 'Mixed in or on the surface, can fade over time'],
+                ['Water absorption', 'Lower', 'Higher, so it can stain or grow moss in shade'],
+                ['Profiles', 'Barrel (Spanish), S and flat', 'Many, including looks that copy clay, slate and wood shake'],
+                ['Cost', 'Usually more', 'Usually less'],
+              ],
+            },
+          },
+        ],
+      },
+      {
+        heading: 'How to Tell Which Tile You Have',
+        blocks: [
+          {
+            list: [
+              '**Look at a broken edge.** Clay is one fired color all the way through. Concrete shows gray cement and sand inside, even when the surface is colored.',
+              '**Look at the surface.** Clay stays smooth and keeps its color. Older concrete tile often looks rough or sandy, with faded color.',
+              '**Check the age and style of the home.** Many older Spanish Revival homes have clay tile; many newer tract homes have concrete.',
+              '**Ask a roofer.** A roof inspection identifies the tile and its condition, with photos.',
+            ],
+          },
+          { note: '**Stay off the roof.** Tiles of both kinds crack underfoot, and a wet tile roof is slippery.' },
+        ],
+      },
+      {
+        heading: 'How Clay and Concrete Tile Age',
+        blocks: [
+          'Both can protect a home for decades. Clay holds its color and surface well. Concrete tile can turn brittle and porous as its surface wears away, which is one reason older concrete roofs sometimes need new tile rather than a reset.',
+          'With either one, the underlayment beneath the tile wears out well before the tile itself. Our guide to [tile roof underlayment](/blog/tile-roof-underlayment/) explains why, and a [tile lift and relay](/residential-roofing/tile-roofing/lift-and-relay/) renews it while keeping sound tiles.',
+        ],
+      },
+      {
+        heading: 'Weight Matters When You Switch',
+        blocks: [
+          'Concrete tile is generally heavier than clay. Replacing clay with concrete, or putting tile on a home built for shingles, means the framing has to be checked first and may need reinforcing.',
+        ],
+      },
+      {
+        heading: 'Matching Tiles for Repairs',
+        blocks: [
+          'Matching an older tile, especially a clay tile whose color has aged, can take some searching. Salvaged or close-match tiles can go on less visible slopes, so the original tiles stay where people see them. See [tile roof repair](/residential-roofing/tile-roofing/repair/).',
+        ],
+      },
+      {
+        heading: 'Which Should You Choose?',
+        blocks: [
+          {
+            table: {
+              head: ['Option', 'Best when', 'Keep in mind'],
+              rows: [
+                ['Clay tile', 'The home’s style calls for it, or you want color that holds', 'Usually costs more; matching aged clay takes care'],
+                ['Concrete tile', 'You want a tile roof at a lower cost, or a profile clay does not come in', 'Heavier, and its color and surface can wear'],
+                ['Keep your tiles (lift and relay)', 'Your existing tiles are still sound', 'Only works when the tiles can be reused'],
+              ],
+            },
+          },
+          'QRS installs [concrete tile](/residential-roofing/tile-roofing/concrete/) and clay tile roofs, and [slate tile](/residential-roofing/tile-roofing/slate/), across Los Angeles and Orange County.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Which is better, clay or concrete tile?',
+        a: 'Neither is better for every home. Clay holds its color and is generally lighter; concrete usually costs less and comes in more profiles but is heavier and can fade. The home’s style, framing and budget decide it.',
+      },
+      {
+        q: 'Is concrete tile heavier than clay?',
+        a: 'Generally, yes: about 820 to 1,100 pounds per 100 square feet for concrete against about 600 to 950 for clay, depending on the profile.',
+      },
+      {
+        q: 'Can I replace a few clay tiles with concrete ones?',
+        a: 'It is better to match the material and profile. A close match placed on a less visible slope keeps the roof looking right and sheds water the same way.',
+      },
+      {
+        q: 'How do I know if my roof is clay or concrete tile?',
+        a: 'A broken edge tells you: clay is one fired color all the way through, while concrete shows gray cement and sand inside. A roof inspection confirms it.',
+      },
+    ],
+    closing: {
+      heading: 'Get Your Tile Roof Checked',
+      blocks: [
+        '[Book a free roof evaluation](/contact-us/). A roofer identifies your tile, checks it and the underlayment, and gives you a written scope and price before any work.',
+      ],
+    },
+    related: ['/residential-roofing/tile-roofing/', '/residential-roofing/tile-roofing/concrete/', '/residential-roofing/tile-roofing/lift-and-relay/'],
+  },
+  {
+    slug: 'metal-roof-vs-shingles',
+    title: 'Metal Roof vs. Shingles: What Los Angeles Homeowners Should Know',
+    keyword: 'metal roof vs. shingles',
+    topics: ['metal', 'shingle', 'replacement'],
+    metaTitle: 'Metal Roof vs. Shingles: Pros and Cons for LA Homes',
+    metaDescription:
+      'Metal roof vs. shingles for a Los Angeles home: cost, weight, fire, heat, noise, repairs and looks, and when standing seam metal is worth it.',
+    datePublished: '2026-10-13',
+    dateModified: '2026-10-13',
+    excerpt:
+      'Standing seam metal is showing up on more Los Angeles homes. Here is how it compares with asphalt shingles on cost, weight, fire, heat, noise and repairs, and when it is worth it.',
+    image: '/images/blog/metal-roof-vs-shingles.webp',
+    imageAlt: 'Illustration: dark asphalt shingles beside a dark standing seam metal roof with raised seams',
+    intro: [
+      'Metal roof vs. shingles is a question we hear more often in Los Angeles, especially from homeowners near brush and canyons and from those building ADUs and modern additions. Asphalt shingles remain the most common roof on homes here; standing seam metal costs more but brings a different set of strengths.',
+      'This guide compares the two on what matters most for a home in Southern California.',
+    ],
+    sections: [
+      {
+        heading: 'Metal vs. Shingles at a Glance',
+        blocks: [
+          {
+            table: {
+              head: ['Compare', 'Asphalt shingles', 'Standing seam metal'],
+              rows: [
+                ['Cost', 'Lower ($6.50 to $8.00 per square foot at our Instant Quote range)', 'Higher up front'],
+                ['Weight', 'About 200 to 350 lbs per square', 'Lighter than shingles'],
+                ['Fire', 'Most are Class A', 'The panels are noncombustible'],
+                ['Heat', 'Cool-rated shingles are available', 'Reflective finishes suited to Southern California heat'],
+                ['Fasteners', 'Nailed under the course above', 'Hidden under the seams, held by clips'],
+                ['Repairs', 'Simple: replace the damaged shingles', 'Panels and trims need matching, specialized work'],
+                ['Look', 'Familiar, many colors', 'Clean, modern lines'],
+              ],
+            },
+          },
+        ],
+      },
+      {
+        heading: 'How Standing Seam Works',
+        blocks: [
+          'Standing seam metal uses long panels that run from ridge to eave, joined along seams that stand up above the flat of each panel. Concealed clips under those seams hold everything down, so no screws pierce the face of the metal. The clips also let each panel expand in the afternoon sun and contract at night without working fasteners loose.',
+          'QRS installs standing seam as our *LockSeam* Metal System. See [standing seam metal roofing](/residential-roofing/metal-roofing/standing-seam/).',
+        ],
+      },
+      {
+        heading: 'Where Metal Stands Out',
+        blocks: [
+          {
+            list: [
+              '**Fire.** The panels themselves won’t burn, a real consideration for homes near brush, hillsides and canyons. See [fire-resistant roofs](/blog/wildfire-resistant-roof-los-angeles/).',
+              '**Heat.** Reflective finishes help keep the roof cooler in the sun.',
+              '**Fewer openings.** With the fasteners hidden under the seams, there are fewer places for water to get in.',
+              '**Small roofs and additions.** Standing seam is common on porch roofs, patio covers and ADUs.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Where Shingles Win',
+        blocks: [
+          {
+            list: [
+              '**Cost.** Shingles cost less up front.',
+              '**Repairs.** A damaged shingle is simple to replace; metal panels and trims take matching and specialized work.',
+              '**Familiar look.** Shingles suit most traditional homes and neighborhoods.',
+            ],
+          },
+          'See [shingle roof replacement](/residential-roofing/shingle-roofing/replacement/) for how a new shingle roof is built.',
+        ],
+      },
+      {
+        heading: 'Is a Metal Roof Noisy?',
+        blocks: [
+          'Not usually on a home. Over a solid deck with underlayment and an insulated attic, rain on metal sounds much like rain on other roofs. The drumming people remember comes from panels over open framing, like a barn or a metal patio cover.',
+        ],
+      },
+      {
+        heading: 'How Long Does Each Last?',
+        blocks: [
+          'Metal roofs are known for long service lives, but we won’t promise you a number of years. How long a roof lasts depends on the material and finish, the sun and salt air it faces, how well it is ventilated and how it is installed. Asphalt shingles age faster in Southern California sun as the asphalt breaks down and the granules wash off.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Is a metal roof better than shingles?',
+        a: 'It depends on the home. Metal brings noncombustible panels, hidden fasteners and a modern look at a higher cost; shingles cost less and are simpler to repair. Homes near brush and canyons, and modern designs, often lean toward metal.',
+      },
+      {
+        q: 'Does a metal roof cost more than shingles?',
+        a: 'Yes, up front. Shingles run $6.50 to $8.00 per square foot of roof at our Instant Quote range; a standing seam roof is priced from a roof evaluation and a written scope.',
+      },
+      {
+        q: 'Is a metal roof noisy in the rain?',
+        a: 'Not usually on a home. Over a solid deck with underlayment and an insulated attic, rain sounds much like it does on other roofs.',
+      },
+      {
+        q: 'What is oil-canning on a metal roof?',
+        a: 'A slight waviness that can appear in the flat part of metal panels, most visible in low light. It is cosmetic and does not change how the roof keeps water out.',
+      },
+    ],
+    closing: {
+      heading: 'Talk Through Your Options',
+      blocks: [
+        '[Book a free roof evaluation](/contact-us/). A roofer looks at your roof, slope and exposure and gives you a written scope and price for the roof you choose.',
+      ],
+    },
+    related: ['/residential-roofing/metal-roofing/', '/residential-roofing/metal-roofing/standing-seam/', '/residential-roofing/shingle-roofing/replacement/'],
+  },
+  {
+    slug: 'architectural-vs-3-tab-shingles',
+    title: 'Architectural vs. 3-Tab Shingles: The Difference and Which to Choose',
+    keyword: 'architectural vs. 3-tab shingles',
+    topics: ['shingle', 'replacement', 'repair', 'storm'],
+    metaTitle: 'Architectural vs. 3-Tab Shingles: Which to Choose',
+    metaDescription:
+      'Architectural vs. 3-tab shingles: how they are made and look, weight, wind resistance, cost and repairs, and which to choose for a new roof.',
+    datePublished: '2026-10-13',
+    dateModified: '2026-10-13',
+    excerpt:
+      'Architectural and 3-tab shingles are both asphalt, but they are built differently. Here is how they compare on looks, weight, wind and cost, and what it means when you repair or replace a shingle roof.',
+    image: '/images/blog/architectural-vs-3-tab-shingles.webp',
+    imageAlt: 'Illustration: flat, even 3-tab shingles beside layered, dimensional architectural shingles',
+    intro: [
+      'Architectural vs. 3-tab shingles is the main choice within asphalt shingles. Both are made from the same basic materials, but a 3-tab shingle is one flat layer cut into three tabs, while an architectural shingle is two or more layers bonded together for a thicker, dimensional look.',
+      'Here is how they compare, and what the difference means when you repair or replace a shingle roof.',
+    ],
+    sections: [
+      {
+        heading: 'Architectural vs. 3-Tab at a Glance',
+        blocks: [
+          {
+            table: {
+              head: ['Compare', '3-tab shingles', 'Architectural shingles'],
+              rows: [
+                ['How it is made', 'One flat layer with three tabs', 'Two or more layers laminated together'],
+                ['Look', 'Flat and uniform', 'Dimensional, with shadow lines'],
+                ['Weight per square', 'About 200 to 240 lbs', 'About 240 to 320 lbs or more'],
+                ['Wind resistance', 'Generally lower ratings', 'Generally higher ratings'],
+                ['Cost', 'Less per square', 'A little more per square'],
+                ['Availability', 'Fewer product lines today', 'The standard on most new roofs'],
+              ],
+            },
+          },
+        ],
+      },
+      {
+        heading: 'How They Look on the Roof',
+        blocks: [
+          'A 3-tab roof shows neat, even rows of identical tabs. An architectural roof has tabs of different widths and layers that cast shadow lines, so it reads as more textured, closer to wood shake or slate from the street. Most homeowners choosing a new roof today pick architectural shingles for that look.',
+        ],
+      },
+      {
+        heading: 'Wind and Weather',
+        blocks: [
+          'Because it is thicker and heavier, an architectural shingle generally carries a higher wind rating than a 3-tab shingle. Wind ratings depend on the specific product and how it is installed, so check the rating of the shingle line in your scope. Strong Santa Ana winds can lift shingles whose seal has broken; see [roof storm damage](/blog/roof-storm-damage-signs/).',
+        ],
+      },
+      {
+        heading: 'Repairs on an Older 3-Tab Roof',
+        blocks: [
+          'Many older Los Angeles homes still have 3-tab shingles. A repair needs shingles that match in shape and color, and with fewer 3-tab lines made today, a close match can take some searching. When a 3-tab roof is worn across the whole surface, replacing it is usually the better spend. See [shingle roof repair](/residential-roofing/shingle-roofing/repair/).',
+        ],
+      },
+      {
+        heading: 'Warranties',
+        blocks: [
+          'Manufacturers offer different warranties for different shingle lines and warranty tiers, so compare what each one covers. That is separate from the roofer’s workmanship warranty: QRS backs its installs with a 10-year workmanship warranty.',
+        ],
+      },
+      {
+        heading: 'Which Should You Choose?',
+        blocks: [
+          'For a new roof, architectural shingles are the usual choice: the look most homeowners want, generally better wind resistance and the widest choice of colors, for a little more per square. Our *TotalShield* Shingle System is the whole roof, not just the shingles: a full tear-off, a deck check, underlayment, flashings and balanced attic ventilation. See [shingle roof replacement](/residential-roofing/shingle-roofing/replacement/).',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What is the difference between architectural and 3-tab shingles?',
+        a: 'A 3-tab shingle is one flat layer cut into three tabs. An architectural shingle is two or more layers bonded together, so it is thicker, heavier and has a dimensional look.',
+      },
+      {
+        q: 'Are architectural shingles worth the extra cost?',
+        a: 'For most new roofs, yes. They cost a little more per square, and in return you get the dimensional look, generally higher wind ratings and the widest choice of colors.',
+      },
+      {
+        q: 'Can I repair a 3-tab roof with architectural shingles?',
+        a: 'It is better to match the existing shingle. A repair with a different shingle can look out of place and may not seal into the rows around it the same way.',
+      },
+      {
+        q: 'How long does a shingle roof replacement take?',
+        a: 'Most home roof replacements take 3 to 5 days, depending on the roof’s size, any decking repairs and the weather.',
+      },
+    ],
+    closing: {
+      heading: 'Planning a New Shingle Roof?',
+      blocks: [
+        '[Book a free roof evaluation](/contact-us/). A roofer checks your roof, helps you choose the shingle style and color and gives you a written scope and price before any work.',
+      ],
+    },
+    related: ['/residential-roofing/shingle-roofing/replacement/', '/residential-roofing/shingle-roofing/repair/', '/residential-roofing/shingle-roofing/'],
+  },
+  {
+    slug: 'roof-replacement-cost-los-angeles',
+    title: 'Roof Replacement Cost in Los Angeles: Price per Square Foot by Roof Type',
+    keyword: 'roof replacement cost',
+    topics: ['replacement', 'shingle', 'tile', 'flat', 'restoration'],
+    metaTitle: 'Roof Replacement Cost in Los Angeles by Roof Type',
+    metaDescription:
+      'Roof replacement cost in Los Angeles by roof type: shingle, tile, lift and relay and flat roofs per square foot, what moves the price and how to compare bids.',
+    datePublished: '2026-10-13',
+    dateModified: '2026-10-13',
+    excerpt:
+      'What a new roof costs in Los Angeles per square foot for shingle, tile and flat roofs, a worked example, why your roof is not your home’s square footage, and how to compare bids line by line.',
+    cardImage: '/images/shingle-roof-replacement-tear-off-drone-view.webp',
+    intro: [
+      'Roof replacement cost in Los Angeles depends mostly on three things: the size of the roof, the roof type and how hard the roof is to work on. Roofers price by the square foot of roof surface, or by the square, which is 100 square feet.',
+      'This guide gives the price ranges our Instant Quote uses for each roof type, works through an example, explains why your roof’s size is not your home’s square footage, and shows what to check when you compare bids.',
+    ],
+    sections: [
+      {
+        heading: 'Roof Replacement Cost per Square Foot in Los Angeles',
+        blocks: [
+          'These are the ranges our Instant Quote uses, per square foot of roof surface, for a full [roof replacement](/roof-replacement/) with tear-off. Where your roof lands depends on its size, pitch, height, access and details.',
+          {
+            table: {
+              head: ['Roof type', 'Per square foot of roof', 'Per square (100 sq ft)'],
+              rows: [
+                ['Asphalt shingle', '$6.50 to $8.00', '$650 to $800'],
+                ['Tile (new tile roof)', '$12 to $16', '$1,200 to $1,600'],
+                ['Tile lift and relay (your tiles reused)', '$8 to $11', '$800 to $1,100'],
+                ['Flat roof', '$7.50 to $10', '$750 to $1,000'],
+              ],
+            },
+          },
+          { note: '**Minimum job:** $3,500. Small jobs still need setup, permits and cleanup.' },
+        ],
+      },
+      {
+        heading: 'Example: What a 2,000 Square Foot Roof Costs',
+        blocks: [
+          'Take a roof that measures 2,000 square feet. Roofers order about 10% extra material for cuts, starter rows, hips and ridges, so the job is priced on about 2,200 square feet.',
+          {
+            table: {
+              head: ['Roof type', '2,200 sq ft at the range above'],
+              rows: [
+                ['Asphalt shingle', 'about $14,300 to $17,600'],
+                ['Tile (new tile roof)', 'about $26,400 to $35,200'],
+                ['Tile lift and relay', 'about $17,600 to $24,200'],
+                ['Flat roof', 'about $16,500 to $22,000'],
+              ],
+            },
+          },
+          'A steep roof or a two- or three-story home adds to these numbers, because the work takes longer and needs more safety equipment. The Instant Quote asks for both and adjusts the range.',
+        ],
+      },
+      {
+        heading: 'Your Roof Is Not Your Home’s Square Footage',
+        blocks: [
+          'Listing sites show a home’s living area, added up across every floor. A roof covers the footprint of the house plus the overhangs, and a sloped roof has more surface than the flat area under it.',
+          {
+            list: [
+              '**A one-story home** usually has a roof a little larger than its living area, because of the overhangs and the slope.',
+              '**A two-story home** can have a roof about half its living area, because two floors sit under one roof.',
+              '**Slope adds area.** A 4/12 roof has about 5% more surface than the ground it covers, a 6/12 roof about 12% more and an 8/12 roof about 20% more.',
+            ],
+          },
+          'That is why we measure the roof itself, from satellite imagery for a quick range and on the roof before a final price.',
+        ],
+      },
+      {
+        heading: 'What Changes the Price of a New Roof',
+        blocks: [
+          {
+            list: [
+              '**Roof type and material.** Tile costs more than shingles to install; a lift and relay saves the cost of new tile when the tiles are still sound.',
+              '**Size and shape.** Every hip, valley and extra roof plane adds cutting and flashing.',
+              '**Pitch and height.** Steeper roofs and taller homes take longer and need more safety work.',
+              '**What comes off.** More than one layer of old roofing means more tear-off and disposal.',
+              '**The roof deck.** Soft or damaged decking found under the old roof has to be replaced. A good written scope says how that will be handled before work starts.',
+              '**Penetrations and details.** Skylights, chimneys, vents, equipment and parapet walls each need flashing and time.',
+              '**Flat roof drainage.** Low spots, drains and scuppers may need extra work so water clears the roof.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Repair, Lift and Relay, or Replace?',
+        blocks: [
+          'Not every old roof needs a full replacement. A local problem can often be repaired. On a tile roof whose tiles are still sound, a [tile lift and relay](/residential-roofing/tile-roofing/lift-and-relay/) replaces the worn underlayment and puts your own tiles back, for less than a new tile roof.',
+          'When wear is spread across the whole roof, repairs buy less time each round. Our guide to [roof restoration vs. replacement](/blog/roof-restoration-vs-replacement/) walks through how to tell the difference.',
+        ],
+      },
+      {
+        heading: 'How to Compare Roofing Bids',
+        blocks: [
+          'Two bids with different totals often describe different jobs. Put them side by side and compare the scope, not just the price.',
+          {
+            checklist: [
+              'Is it a full tear-off down to the deck, or an overlay?',
+              'How is damaged decking handled, and at what price?',
+              'Which underlayment, and which flashings are replaced rather than reused?',
+              'Are vents and ventilation included?',
+              'Who pulls the permit?',
+              'What is the workmanship warranty, and what does the manufacturer’s warranty cover?',
+              'Is the price written down before any work starts?',
+              'How is the site protected and cleaned up each day?',
+            ],
+          },
+          'At QRS you get a written scope and price before any work starts, we pull the permits, and our installs carry a 10-year workmanship warranty. We price it right the first time; if you have a written bid from another licensed roofer, show it to us and we can match it.',
+        ],
+      },
+      {
+        heading: 'Paying for a New Roof',
+        blocks: [
+          'Most homeowners spread the cost of a new roof over time. See [roof financing](/roof-financing/) for monthly payment options; the Instant Quote shows an example monthly payment next to each price range.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'How much does a new roof cost in Los Angeles?',
+        a: 'Per square foot of roof, our Instant Quote ranges are $6.50 to $8.00 for asphalt shingles, $12 to $16 for a new tile roof, $8 to $11 for a tile lift and relay and $7.50 to $10 for a flat roof, with a $3,500 minimum. A 2,000 square foot shingle roof works out to about $14,300 to $17,600 before adjustments for pitch and height.',
+      },
+      {
+        q: 'How much is a roof per square?',
+        a: 'A square is 100 square feet of roof. At our ranges that is about $650 to $800 a square for shingles, $1,200 to $1,600 for a new tile roof, $800 to $1,100 for a tile lift and relay and $750 to $1,000 for a flat roof.',
+      },
+      {
+        q: 'Is a tile lift and relay cheaper than a new tile roof?',
+        a: 'Usually, yes. A [lift and relay](/residential-roofing/tile-roofing/lift-and-relay/) reuses your tiles and replaces the underlayment beneath them, so you pay for labor and underlayment rather than new tile: $8 to $11 per square foot at our ranges, against $12 to $16 for a new tile roof.',
+      },
+      {
+        q: 'Why is my roof size different from my home’s square footage?',
+        a: 'Square footage counts the living area on every floor. A roof covers the footprint plus the overhangs, and slope adds surface. A two-story home can have a roof about half its living area; a one-story home usually has a roof a little larger than its living area.',
+      },
+      {
+        q: 'Is the roof estimate free?',
+        a: 'For homes, yes. The roof evaluation is free, and you get a written scope and price before any work starts.',
+      },
+    ],
+    closing: {
+      heading: 'Get a Price for Your Roof',
+      blocks: [
+        'For a quick range, the Instant Quote measures your roof from satellite imagery in about a minute. For a firm price, [book a free roof evaluation](/contact-us/): a roofer looks at your roof and gives you a written scope and price before any work.',
+      ],
+    },
+    related: ['/roof-replacement/', '/residential-roofing/tile-roofing/lift-and-relay/', '/roof-financing/'],
+  },
+  {
+    slug: 'torch-down-roofing-app-vs-sbs',
+    title: 'Torch-Down Roofing: APP vs. SBS Modified Bitumen for Flat Roofs',
+    keyword: 'torch-down roofing',
+    topics: ['flat', 'replacement', 'repair', 'commercial'],
+    metaTitle: 'Torch-Down Roofing: APP vs. SBS for Flat Roofs',
+    metaDescription:
+      'Torch-down roofing explained: how APP and SBS modified bitumen differ, how a two-layer flat roof is built, signs it needs repair and how it compares with TPO.',
+    datePublished: '2026-10-13',
+    dateModified: '2026-10-13',
+    excerpt:
+      'Torch-down is the flat roof you see across Los Angeles. Here is how APP and SBS modified bitumen differ, how a torch-down roof is built layer by layer, the signs it needs work and how it compares with TPO.',
+    cardImage: '/images/flat-roof-torch-down-drone-view-services.webp',
+    intro: [
+      'Torch-down roofing is one of the most common flat roofs in Los Angeles, on homes and on commercial buildings. It is built from rolls of modified bitumen, an asphalt sheet strengthened with polymers, that are heated with a torch so each layer fuses to the one below.',
+      'This guide explains the two main types, APP and SBS, how a torch-down roof is put together, what wears out first and how it compares with TPO.',
+    ],
+    sections: [
+      {
+        heading: 'What Is Torch-Down Roofing?',
+        blocks: [
+          'A torch-down roof is a modified bitumen roof applied with heat. The roofer unrolls the sheet and warms its underside with a torch until the asphalt softens, then presses it into place. The seams where sheets overlap melt together, so the finished roof is one continuous waterproof surface.',
+          'Most torch-down roofs have two layers: a **base sheet** on the deck and a **cap sheet** on top. The cap sheet is usually covered in mineral granules that shield the asphalt from the sun, often in white or light colors to reflect heat.',
+        ],
+      },
+      {
+        heading: 'APP vs. SBS Modified Bitumen',
+        blocks: [
+          'The letters name the polymer blended into the asphalt, and it changes how the sheet behaves.',
+          {
+            table: {
+              head: ['', 'APP (atactic polypropylene)', 'SBS (styrene-butadiene-styrene)'],
+              rows: [
+                ['Feel', 'Stiffer, plastic-like', 'Flexible, rubber-like'],
+                ['How it is applied', 'Almost always torched', 'Torched, set in hot asphalt, cold adhesive or self-adhered'],
+                ['Strengths', 'Holds up well to heat and sun', 'Stretches and recovers, flexible in cold'],
+                ['Where it fits', 'Sunny, warm climates', 'Roofs that move, colder climates, places where a torch should not be used'],
+              ],
+            },
+          },
+          'In Southern California’s mild climate both work well. The details matter more than the letters: a sound deck, a good base sheet, a cap sheet that protects the asphalt from the sun and careful flashing at every wall, drain and penetration.',
+        ],
+      },
+      {
+        heading: 'How a Torch-Down Roof Is Built',
+        blocks: [
+          {
+            steps: [
+              'Tear the old roof off down to the deck and replace any soft or damaged boards.',
+              'Fasten or bond the base sheet to the deck.',
+              'Torch the cap sheet over the base sheet, overlapping and fusing every seam.',
+              'Flash the edges, walls, parapets, drains and every penetration with matching membrane.',
+              'Check that water drains to the drains and scuppers rather than sitting in low spots.',
+            ],
+          },
+          'On every flat roof replacement QRS does a full tear-off, so the deck can be checked before the new roof goes on. Our flat roofs, part of our *FlatGuard* flat roof system, can be finished with a white reflective cap sheet, as on this [round flat roof in Hollywood Hills West](/projects/flat-roof-replacement-hollywood-hills-west-90046/).',
+        ],
+      },
+      {
+        heading: 'Is Torch-Down Roofing Safe?',
+        blocks: [
+          'Torch-down uses an open flame, so it needs trained roofers who work carefully around wood, parapet walls, vents and anything that can burn. Where a flame is the wrong tool, such as against wood siding or tight details, a self-adhered SBS sheet can be used instead.',
+        ],
+      },
+      {
+        heading: 'Signs a Torch-Down Roof Needs Work',
+        blocks: [
+          {
+            list: [
+              '**Blisters** where air or moisture is trapped between layers.',
+              '**Open or lifting seams** at the overlaps.',
+              '**Cracked or pulled flashing** at walls, parapets and penetrations.',
+              '**Ponding water** that sits long after rain.',
+              '**Bare patches** where the granules have worn off the cap sheet.',
+              '**Water stains** inside, often far from where water gets in. See [how to find a roof leak](/blog/roof-leak-source/).',
+            ],
+          },
+          'Many of these can be repaired on their own. When the problems are spread across the roof, see [flat roof replacement](/residential-roofing/flat-roofing/replacement/).',
+        ],
+      },
+      {
+        heading: 'Torch-Down vs. TPO',
+        blocks: [
+          'TPO is a single-ply membrane, usually white, whose seams are welded with hot air rather than a torch. It is common on larger commercial roofs. Torch-down is a thicker, multi-layer asphalt system that stands up well to foot traffic and is common on homes and smaller buildings. Our guide to [TPO roofing pros and cons](/blog/tpo-roofing-pros-and-cons/) covers TPO in detail, and QRS installs [TPO roofing](/commercial-roofing/tpo-roofing/) on commercial buildings.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What is the difference between APP and SBS torch-down?',
+        a: 'Both are modified bitumen. APP is blended with a plastic-like polymer, is stiffer and is almost always torched; it holds up well to heat and sun. SBS is blended with a rubber-like polymer, stays flexible in cold and can be torched, set in hot asphalt, glued or self-adhered.',
+      },
+      {
+        q: 'Can a torch-down roof go over an old roof?',
+        a: 'It is better to tear the old roof off so the deck can be checked and repaired. QRS does a full tear-off on every flat roof replacement.',
+      },
+      {
+        q: 'Can a torch-down roof be repaired?',
+        a: 'Yes. Open seams, blisters and failed flashing can usually be repaired with matching membrane. See [flat roof repair](/residential-roofing/flat-roofing/repair/).',
+      },
+      {
+        q: 'Is torch-down roofing good for Los Angeles?',
+        a: 'Yes. It suits the mild climate and the sun, especially with a granulated or reflective cap sheet, and it is one of the most common flat roofs on Los Angeles homes and small buildings.',
+      },
+    ],
+    closing: {
+      heading: 'Get Your Flat Roof Checked',
+      blocks: [
+        'QRS installs and repairs torch-down flat roofs on homes and commercial buildings across Los Angeles and Orange County. [Book a free roof evaluation](/contact-us/) for a home, and you get a written scope and price before any work.',
+      ],
+    },
+    related: ['/residential-roofing/flat-roofing/replacement/', '/residential-roofing/flat-roofing/repair/', '/commercial-roofing/tpo-roofing/'],
+  },
+  {
+    slug: 'cool-roof-southern-california',
+    title: 'Cool Roofs in Southern California: What They Are and When You Need One',
+    keyword: 'cool roof',
+    topics: ['flat', 'replacement', 'ventilation', 'commercial'],
+    metaTitle: 'Cool Roofs in Southern California: Homeowner Guide',
+    metaDescription:
+      'What a cool roof is, how reflectance and emittance work, cool options for flat, shingle, tile and metal roofs, and when California’s energy code calls for one.',
+    datePublished: '2026-10-13',
+    dateModified: '2026-10-13',
+    excerpt:
+      'A cool roof reflects more of the sun and sheds heat faster. Here is how that works, the cool options for each roof type, when the energy code comes into it and what to ask when your roof is replaced.',
+    cardImage: '/images/flat-roof-replacement-completed-white-membrane.webp',
+    intro: [
+      'A cool roof is a roof surface that reflects more sunlight and gives off the heat it does absorb more easily than a standard roof. On a hot day it stays cooler, and so does the attic or the room under it.',
+      'In the inland valleys of Los Angeles and Orange County, where roofs bake for much of the year, that can make a real difference. This guide explains how cool roofs work, the options for each roof type and when California’s energy code comes into it.',
+    ],
+    sections: [
+      {
+        heading: 'How a Cool Roof Works',
+        blocks: [
+          'Two numbers describe a cool roof:',
+          {
+            list: [
+              '**Solar reflectance:** how much of the sun’s energy the surface reflects instead of absorbing.',
+              '**Thermal emittance:** how readily the surface gives off the heat it has absorbed.',
+            ],
+          },
+          'The Cool Roof Rating Council tests and lists roofing products by these numbers, so you can compare them. A dark roof can run far hotter than the air on a sunny day; a reflective one stays much closer to it.',
+        ],
+      },
+      {
+        heading: 'Cool Roof Options by Roof Type',
+        blocks: [
+          { h3: 'Flat roofs' },
+          'A flat roof can be finished with a white or light reflective surface: a white granulated cap sheet on a [torch-down roof](/blog/torch-down-roofing-app-vs-sbs/), or a white TPO membrane, common on commercial buildings. See our [white flat roof in Brentwood](/projects/white-flat-roof-los-angeles-90049/).',
+          { h3: 'Shingle roofs' },
+          'Several manufacturers make cool-rated asphalt shingles, with reflective granules, in a range of colors, not just white.',
+          { h3: 'Tile roofs' },
+          'Lighter clay and concrete tiles reflect more sun, and some tiles are rated as cool products. Air moving under the tiles also helps carry heat away.',
+          { h3: 'Metal roofs' },
+          'Factory-finished metal panels come in cool-rated colors that reflect sunlight and shed heat quickly.',
+        ],
+      },
+      {
+        heading: 'Is a Cool Roof Required in California?',
+        blocks: [
+          'California’s energy code (Title 24, Part 6) includes cool roof requirements for some new roofs and roof replacements. Whether they apply depends on the type of building, the slope of the roof and the climate zone, and the permit for the job sets what is needed.',
+          { note: '**Before you choose a material,** ask your roofer whether the permit for your job will call for a cool roof, and get the product written into the scope.' },
+        ],
+      },
+      {
+        heading: 'Cool Roofs and Your Attic',
+        blocks: [
+          'A cool surface keeps heat from getting into the roof in the first place. [Attic ventilation](/residential-roofing/attic-ventilation/) moves out the heat that does get in. The two work together: a cool roof over an attic that cannot breathe still traps hot, humid air.',
+        ],
+      },
+      {
+        heading: 'Things to Know Before You Choose One',
+        blocks: [
+          {
+            list: [
+              '**Dirt lowers reflectance.** A white roof works best when it is kept clear of debris.',
+              '**Light colors show stains** more than dark ones.',
+              '**The roof is only part of it.** Insulation, ventilation and windows also affect how hot a home gets.',
+              '**Coatings are one route some roofers offer.** QRS does not apply roof coatings; we use cool-rated materials when a roof is replaced or a flat roof is redone.',
+            ],
+          },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Does a cool roof have to be white?',
+        a: 'No. White is the most reflective, but cool-rated shingles, tiles and metal come in many colors, using reflective granules and pigments.',
+      },
+      {
+        q: 'Is a cool roof required in California?',
+        a: 'Sometimes. California’s energy code (Title 24, Part 6) has cool roof requirements for some new roofs and replacements, depending on the building, the roof slope and the climate zone. The permit for the job sets what applies.',
+      },
+      {
+        q: 'Will a cool roof lower my energy bill?',
+        a: 'It keeps the roof and the space under it cooler on sunny days, which can reduce how hard air conditioning works. How much depends on the home, its insulation and ventilation and how it is cooled.',
+      },
+      {
+        q: 'Can you turn my existing roof into a cool roof?',
+        a: 'QRS does not apply roof coatings. We use cool-rated materials when a roof is replaced, or when a flat roof is redone with a white reflective cap sheet.',
+      },
+    ],
+    closing: {
+      heading: 'Talk to a Roofer About Your Roof',
+      blocks: [
+        'Thinking about a new roof? [Book a free roof evaluation](/contact-us/). A roofer looks at your roof and gives you a written scope and price, with the materials named, before any work.',
+      ],
+    },
+    related: ['/residential-roofing/flat-roofing/', '/commercial-roofing/tpo-roofing/', '/residential-roofing/attic-ventilation/'],
+  },
+  {
+    slug: 'wildfire-resistant-roof-los-angeles',
+    title: 'Fire-Resistant Roofs in Los Angeles: Class A Roofing, Vents and Embers',
+    keyword: 'fire-resistant roof',
+    topics: ['replacement', 'tile', 'shingle', 'metal', 'ventilation', 'maintenance'],
+    metaTitle: 'Fire-Resistant Roofs in Los Angeles: What Matters',
+    metaDescription:
+      'A fire-resistant roof in Los Angeles is more than its shingles: Class A ratings, ember-resistant vents, tile eave closures and the upkeep that keeps embers out.',
+    datePublished: '2026-10-13',
+    dateModified: '2026-10-13',
+    excerpt:
+      'In a wildfire, embers carried on the wind are a bigger threat to a roof than the fire front. Here is what a Class A rating means, where embers get in, and what to check and fix before fire season.',
+    cardImage: '/images/tile-roof-replacement-drone-view.webp',
+    intro: [
+      'A fire-resistant roof matters in Los Angeles, where homes sit against brush-covered hills and canyons and fire season comes with strong, dry winds. During a wildfire, burning embers can travel far ahead of the flames and land on roofs, in vents and in piles of dry leaves.',
+      'This guide explains what a Class A fire rating means, which roofing materials reach it, the weak spots where embers get in and what you can check before fire season.',
+    ],
+    sections: [
+      {
+        heading: 'Why Embers Are the Biggest Threat to a Roof',
+        blocks: [
+          'Fire researchers have found that many homes lost in wildfires are ignited by wind-blown embers and small fires they start, not by the main fire front. Embers settle in roof valleys, against walls and in debris, and they get into attics through open vents and gaps.',
+          'So a fire-resistant roof is two things: a covering that won’t catch fire easily, and details that keep embers out.',
+        ],
+      },
+      {
+        heading: 'What a Class A Fire Rating Means',
+        blocks: [
+          'Roof coverings are rated Class A, B or C in standard fire tests. Class A is the highest rating: the roof resists severe fire exposure from outside.',
+          {
+            table: {
+              head: ['Material', 'Fire rating'],
+              rows: [
+                ['Clay and concrete tile', 'Class A'],
+                ['Metal', 'Class A (noncombustible panels; some as part of a rated assembly)'],
+                ['Asphalt shingles (fiberglass)', 'Most are Class A'],
+                ['Wood shakes', 'Untreated shakes are not Class A; treated ones can reach a higher rating with special underlayment'],
+              ],
+            },
+          },
+          'Some materials reach Class A only as part of a tested assembly, with a specific underlayment. Our guide to [wooden roof pros and cons](/blog/wooden-roof-pros-and-cons/) covers wood in more detail.',
+        ],
+      },
+      {
+        heading: 'California’s Rules for Homes in Fire Zones',
+        blocks: [
+          'In California’s fire hazard severity zones, the building code (Chapter 7A) sets wildfire-resistant requirements for roofs, vents and other parts of a home, and a roof replacement may have to meet them. The permit for the job confirms which rules apply to your address.',
+          'In a fire hazard zone, attic and soffit vents have to be fire-rated and listed by the State Fire Marshal.',
+        ],
+      },
+      {
+        heading: 'Where Embers Get Into a Roof',
+        blocks: [
+          {
+            list: [
+              '**Attic, soffit and gable vents.** Open or torn screens let embers into the attic. Ember-resistant vents use fine metal mesh or baffles. See [attic ventilation](/residential-roofing/attic-ventilation/).',
+              '**The open ends of tile at the eaves.** Barrel tiles leave gaps at the eave where embers and debris collect; eave closures (bird stops) close them.',
+              '**Gaps at ridges and hips** where caps have slipped or cracked.',
+              '**Valleys and corners full of leaves and needles,** which catch embers and burn.',
+              '**Missing or broken pieces** that expose the underlayment and deck.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Before Fire Season: What to Check',
+        blocks: [
+          {
+            checklist: [
+              'Clear leaves, needles and debris from the roof, the valleys and against walls.',
+              'Look for torn, clogged or missing vent screens.',
+              'Check that tile eave closures are in place.',
+              'Replace cracked, slipped or missing tiles and shingles.',
+              'Trim branches that hang over the roof.',
+              'Photograph the roof so you have a record of its condition.',
+            ],
+          },
+          'Our [Roof Care Plan](/roof-maintenance-plans/) includes a fire-code vent check: attic and soffit vent screens and eave closures checked and photographed.',
+          { note: '**Stay off the roof.** Look from the ground or a secure ladder at the eaves, and leave climbing to a roofer.' },
+        ],
+      },
+      {
+        heading: 'Replacing a Roof With Fire in Mind',
+        blocks: [
+          'When a roof is due for replacement, it is the moment to choose a Class A covering and fix the details: tile, Class A shingles or a [metal roof](/residential-roofing/metal-roofing/), whose panels won’t burn, with ember-resistant vents and closed eaves. Ask for the fire rating and the vents to be written into the scope.',
+          'QRS replaces [tile](/residential-roofing/tile-roofing/replacement/), [shingle](/residential-roofing/shingle-roofing/replacement/) and metal roofs across Los Angeles and Orange County, with a written scope and price before any work and permits pulled.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What is a Class A roof?',
+        a: 'A roof covering with the highest rating in standard fire tests. Clay and concrete tile, metal and most fiberglass asphalt shingles reach Class A, some as part of a tested assembly with a specific underlayment.',
+      },
+      {
+        q: 'Is a tile roof fire resistant?',
+        a: 'Clay and concrete tile are rated Class A. The weak spots on a tile roof are the open tile ends at the eaves, slipped ridge caps and debris in the valleys, where embers can lodge.',
+      },
+      {
+        q: 'Are asphalt shingles fire resistant?',
+        a: 'Most fiberglass asphalt shingles are rated Class A. Check the rating of the specific product and the underlayment it is tested with.',
+      },
+      {
+        q: 'What vents are required in a fire zone?',
+        a: 'In a California fire hazard zone, attic and soffit vents have to be fire-rated and listed by the State Fire Marshal. The permit for the job confirms the rules for your address.',
+      },
+    ],
+    closing: {
+      heading: 'Get Your Roof Ready Before Fire Season',
+      blocks: [
+        '[Book a free roof evaluation](/contact-us/). A roofer checks the roof, the vents and the eaves, photographs what they find and gives you a written scope and price before any work.',
+      ],
+    },
+    related: ['/residential-roofing/tile-roofing/replacement/', '/residential-roofing/metal-roofing/', '/roof-maintenance-plans/'],
+  },
+  {
     slug: 'how-to-choose-a-commercial-roofing-contractor',
     title: 'How to Choose a Commercial Roofing Contractor in Los Angeles',
     keyword: 'commercial roofing contractor',

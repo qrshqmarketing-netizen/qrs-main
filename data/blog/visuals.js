@@ -18,6 +18,25 @@
 //   table: 'cards'          rows to compare as cards with labelled lines
 //   table: 'hotspots'       "where / what goes wrong" rows as an interactive picture of a flat commercial roof
 export const POST_VISUALS = {
+  'asphalt-shingle-vs-tile-roof': {
+    'Shingle vs. Tile at a Glance': { table: 'versus' },
+    'Which Is Right for Your Home?': { table: 'decide' },
+  },
+  'tile-lift-and-relay-vs-new-tile-roof': {
+    'Lift and Relay vs. New Tile Roof at a Glance': { table: 'versus' },
+    'How a Tile Lift and Relay Works': { steps: 'timeline' },
+    'Which Does Your Roof Need?': { table: 'decide' },
+  },
+  'clay-vs-concrete-tile-roof': {
+    'Clay vs. Concrete Tile at a Glance': { table: 'versus' },
+    'Which Should You Choose?': { table: 'decide' },
+  },
+  'metal-roof-vs-shingles': {
+    'Metal vs. Shingles at a Glance': { table: 'versus' },
+  },
+  'architectural-vs-3-tab-shingles': {
+    'Architectural vs. 3-Tab at a Glance': { table: 'versus' },
+  },
   'how-to-choose-a-commercial-roofing-contractor': {
     'What to Verify Before You Hire': { list: 'facts' },
     'Ten Questions to Ask a Commercial Roofing Contractor': { steps: 'timeline' },
