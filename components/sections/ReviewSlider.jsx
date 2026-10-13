@@ -10,11 +10,11 @@ import { getLiveReviews } from '@/lib/liveReviews';
 import { sortReviewsFor } from '@/lib/reviewTopics';
 import './Testimonials.css';
 
-const withLineBreaks = (text) => text.split('\n').flatMap((line, i) => (i ? [<br key={i} />, line] : [line]));
-const COLORS = ['#1a73e8', '#188038', '#c5221f', '#b35900', '#7b1fa2', '#00796b'];
+export const withLineBreaks = (text) => text.split('\n').flatMap((line, i) => (i ? [<br key={i} />, line] : [line]));
+export const COLORS = ['#1a73e8', '#188038', '#c5221f', '#b35900', '#7b1fa2', '#00796b'];
 
 // A live reviewer's Google profile photo, or their first initial when there's no photo (or it doesn't load)
-function Avatar({ name, photoUrl, color }) {
+export function Avatar({ name, photoUrl, color }) {
   const [broken, setBroken] = useState(false);
   return (
     <span className="tst-avatar" style={{ background: color }} aria-hidden="true">

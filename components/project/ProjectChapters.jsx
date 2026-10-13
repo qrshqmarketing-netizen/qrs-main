@@ -96,7 +96,7 @@ export default function ProjectChapters({ chapters }) {
               </div>
               {chapter.photo && (
                 <figure className="pd-ch-photo">
-                  <Image src={chapter.photo.src} alt={chapter.photo.alt} fill sizes="(min-width: 901px) 70vw, 100vw" quality={70} loading="lazy" />
+                  <Image src={chapter.photo.src} alt={chapter.photo.alt} fill sizes="(min-width: 901px) 70vw, 100vw" quality={60} loading="lazy" />
                 </figure>
               )}
             </Fragment>

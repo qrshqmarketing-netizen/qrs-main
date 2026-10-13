@@ -388,3 +388,12 @@ a.chip:hover{border-color:var(--navy)}
   .st-hero-bg img.on{animation:kenBurns 10s linear both;will-change:transform}
 }
 @media print{.hero-roof-texture > img,.pd-hero-img,.promo-landing .promo-photo,.hero-slide > img,.st-hero-bg img{animation:none!important}}
+
+/* Scroll scenes (components/ui/ScrollScenes.jsx, adapted from fluid.glass). The hero: its photo dims and its copy drifts down and fades as it
+   scrolls away (--hero-p 0 → 1). Bands with data-expand (the closing call to action): an inset, rounded card that opens to the full width as it
+   rises into view (--ex 0 → 1). Without the script, or for reduced motion, the defaults leave everything as it was. */
+.hero-scene :is(.hero-background,.pd-hero-img,.promo-photo){opacity:calc(1 - var(--hero-p,0) * .55)}
+.hero-scene :is(.hero-inner,.pd-hero-inner),
+.promo-home.hero-scene :is(.promo-eyebrow,.promo-title,.promo-text,.promo-actions,.promo-points){translate:0 calc(var(--hero-p,0) * 14vh);opacity:calc(1 - var(--hero-p,0) * 1.15)}
+.expand-scene{clip-path:inset(0 calc((1 - var(--ex,1)) * 4vw) round calc((1 - var(--ex,1)) * 28px))}
+@media print{.hero-scene *,.expand-scene{translate:none!important;opacity:1!important;clip-path:none!important}}

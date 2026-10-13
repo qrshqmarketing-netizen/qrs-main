@@ -9,7 +9,7 @@ import Mark from '@/components/ui/Mark';
 const TRUST = ['CSLB licensed, bonded & insured', '10-year workmanship warranty', 'Google customer reviews'];
 
 // Closing call to action above the footer: white copy over a darkened job-site photo, the main button plus a
-// call button, and a short trust row. Pages can change the words and the main button (cta.style: 'gold', or
+// call button, and a short trust row. It opens from an inset card to the full width as it scrolls into view (data-expand, components/ui/ScrollScenes.jsx). Pages can change the words and the main button (cta.style: 'gold', or
 // 'plum' for a "call now" button — the separate call button is then left out). trust={false} hides the trust row.
 export default function FinalCta({
   heading = 'Detail-First __Roofing__',
@@ -19,7 +19,7 @@ export default function FinalCta({
 }) {
   const isCall = cta.href.startsWith('tel:');
   return (
-    <section className="final">
+    <section className="final" data-expand="">
       <CtaParallax />
       <div className="container final-inner">
         <h2><Mark text={heading} /></h2>

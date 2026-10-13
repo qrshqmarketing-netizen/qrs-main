@@ -5,7 +5,7 @@ import FinalCta from '@/components/sections/FinalCta';
 import PartnerLogos from '@/components/sections/PartnerLogos';
 import ProofBar from '@/components/sections/ProofBar';
 import PromoSection from '@/components/sections/PromoSection';
-import ReviewStrip from '@/components/sections/ReviewStrip';
+import ReviewMarquee from '@/components/sections/ReviewMarquee';
 import RoofCheck from '@/components/sections/RoofCheck';
 import ServiceArea from '@/components/sections/ServiceArea';
 import StudioHero from '@/components/studio/StudioHero';
@@ -89,10 +89,10 @@ export default async function HomePage() {
         <ProofBar strip />
         <StudioIntro />
         <StudioServices categories={SERVICE_CATEGORIES} items={HOME_PRODUCTS} />
-        <StudioProjects projects={LATEST_PROJECTS.slice(0, 3)} />
+        <StudioProjects projects={LATEST_PROJECTS.slice(0, 3)} more={LATEST_PROJECTS.slice(3)} />
         <StudioProcess />
         {SHOW_ROOF_COLORS && <RoofColors />}
-        <ReviewStrip />
+        <ReviewMarquee heading="What people say after the job" />
         {!promo.active && <PromoSection />}
         <ServiceArea allAreasLink />
         <PartnerLogos {...ROOF_FINANCING.partners} />

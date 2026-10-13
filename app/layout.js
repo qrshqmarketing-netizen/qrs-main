@@ -16,6 +16,7 @@ import ScrollToTop from '@/components/ui/ScrollToTop';
 import PageTransition from '@/components/ui/PageTransition';
 import WebMcpTools from '@/components/widgets/WebMcpTools';
 import ScrollDraw from '@/components/ui/ScrollDraw';
+import ScrollScenes from '@/components/ui/ScrollScenes';
 import CookieNotice from '@/components/widgets/CookieNotice';
 import InstantQuoteLoader from '@/components/widgets/InstantQuoteLoader';
 import MobileActionBar from '@/components/widgets/MobileActionBar';
@@ -101,6 +102,7 @@ export default function RootLayout({ children }) {
           <PageTransition />
           <WebMcpTools />
           <ScrollDraw />
+          <ScrollScenes />
           {LOAD_TRACKING && (
             <>
               <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="lazyOnload" />

@@ -132,8 +132,10 @@ body.studio-site .promo h1.promo-eyebrow{font:600 12px/1.4 var(--font-head);lett
 body.studio-site .promo h1.promo-title{font-family:var(--font-display);font-weight:800;letter-spacing:.01em;text-transform:uppercase;line-height:.96}
 .promo-split .promo-eyebrow{align-self:flex-start;text-align:left}
 /* The home page's hero: a little taller than the landing page's (most of the screen, with the proof strip peeking in below) */
-.promo.promo-landing.promo-home{min-height:max(600px,92svh)}
-@media (min-width:901px){.promo.promo-landing.promo-home{min-height:clamp(700px,92svh,940px)}}
+/* Full screen, like the hero on fluid.glass (the owner's reference): the photo fills the whole first screen at every size and the copy sits low on it,
+   so the sky and the storm read first; the proof strip starts right at the fold */
+.promo.promo-landing.promo-home{min-height:max(640px,100svh);justify-content:flex-end;padding-bottom:clamp(40px,8svh,96px)}
+@media (min-width:901px){.promo.promo-landing.promo-home{min-height:max(720px,100svh);padding-bottom:clamp(56px,9svh,120px)}}
 /* Home hero photo: centered at the bottom (the city), and the slow zoom grows up from the bottom edge so it never opens a gap there */
 .promo-home .promo-photo{object-position:50% 100%;transform-origin:50% 100%}
 @keyframes kenBurnsBottom{from{transform:scale(1.02)}to{transform:scale(1.14) translate3d(-1.6%,0,0)}}

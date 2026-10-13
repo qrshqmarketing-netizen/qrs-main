@@ -3,6 +3,7 @@ import CircledWord from '@/components/ui/HandCircle';
 import Mark from '@/components/ui/Mark';
 import SiteLink from '@/components/ui/SiteLink';
 import { ArrowRight } from '@/components/ui/icons';
+import StudioProjectIndex from './StudioProjectIndex';
 import './Studio.css';
 
 // Projects as large photos that stack: each card is pinned just below the header while the next one scrolls up over it, so the cards pile on top of each
@@ -22,7 +23,8 @@ function circleZip(title) {
   );
 }
 
-export default function StudioProjects({ projects, label = 'Featured projects', heading = 'Roofs we have finished, from tear-off to the __last row__', allLink = true, id }) {
+// more: further project pages listed as rows under the cards (StudioProjectIndex), as on the home page.
+export default function StudioProjects({ projects, label = 'Featured projects', heading = 'Roofs we have finished, from tear-off to the __last row__', allLink = true, more, id }) {
   if (!projects?.length) return null;
   return (
     <section className="st-section st-projects tinted" id={id}>
@@ -67,6 +69,9 @@ export default function StudioProjects({ projects, label = 'Featured projects', 
             );
           })}
         </div>
+        {more?.length > 0 && (
+          <StudioProjectIndex projects={more.map((p) => ({ path: p.path, title: p.title, label: p.label, image: p.image, photos: p.photos?.length || 0 }))} />
+        )}
         {allLink && (
           <p className="st-proj-more">
             <SiteLink className="st-link" href="/projects/">

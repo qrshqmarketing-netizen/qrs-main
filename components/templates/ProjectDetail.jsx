@@ -6,7 +6,7 @@ import ProjectChapters from '@/components/project/ProjectChapters';
 import ProjectCounter from '@/components/project/ProjectCounter';
 import ProjectGallery from '@/components/project/ProjectGallery';
 import ProjectReveal from '@/components/project/ProjectReveal';
-import ReviewSlider from '@/components/sections/ReviewSlider';
+import ReviewMarquee from '@/components/sections/ReviewMarquee';
 import JsonLd from '@/components/ui/JsonLd';
 import Rich from '@/components/ui/Rich';
 import SiteLink from '@/components/ui/SiteLink';
@@ -121,18 +121,7 @@ export default function ProjectDetail({ page }) {
 
       <ProjectGallery photos={page.photos} name={page.title} />
 
-      <section className="pd-reviews" aria-label="Google reviews">
-        <div className="container pd-reviews-grid">
-          <div className="pd-reviews-intro">
-            <p className="pd-label">Client stories</p>
-            <h2>In their own words</h2>
-            <p>Reviews from the people we roof for, on Google.</p>
-          </div>
-          <div className="tst-standalone">
-            <ReviewSlider places={placesOf(page.place)} />
-          </div>
-        </div>
-      </section>
+      <ReviewMarquee places={placesOf(page.place)} />
 
       {next && next.path !== page.path && (
         <section className="pd-next" aria-label="Next project">

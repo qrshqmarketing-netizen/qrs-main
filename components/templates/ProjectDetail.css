@@ -87,14 +87,6 @@
 .pd-label{margin:0 0 16px;display:flex;align-items:center;gap:12px;font:600 12px/1.2 var(--font-text),sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
 .pd-label:before{content:"";flex:none;width:28px;height:1px;background:currentColor}
 
-/* Google reviews: the label and heading at the left, the slider at the right */
-.pd-reviews{padding:72px 0}
-.pd-reviews-grid{display:grid;gap:28px}
-.pd-reviews-intro h2,body.studio-site main .pd-reviews-intro h2{margin:0 0 12px;text-align:left;font:400 clamp(28px,4.4vw,52px)/1.08 var(--font-text),sans-serif;letter-spacing:-.03em;color:var(--navy)}
-.pd-reviews-intro p:last-child{margin:0;max-width:34ch;font-size:16px;line-height:1.6;color:var(--muted)}
-.pd-reviews .tst-standalone{margin:0;max-width:none}
-@media (min-width:901px){.pd-reviews{padding:112px 0}.pd-reviews-grid{grid-template-columns:minmax(260px,1fr) 2fr;gap:64px;align-items:center}}
-
 /* Next project */
 .pd-next{padding:0 0 72px}
 .pd-next-card{display:grid;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:var(--paper);color:var(--navy)}

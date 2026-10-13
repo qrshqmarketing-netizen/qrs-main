@@ -1,0 +1,32 @@
+/* More projects as rows (StudioProjectIndex.jsx). Phones: a thumbnail, the name and two small tags per row. With a mouse (from 901px): no
+   thumbnails; the name, the tags and an arrow in one line, the other rows fade back while one is hovered, and the hovered project's photo
+   floats beside the pointer (.spi-preview, moved with transform by the component). */
+.spi{margin-top:56px}
+.spi-label{margin:0 0 18px}
+.spi-list{margin:0;padding:0;list-style:none;border-top:1px solid var(--line)}
+.spi-row{position:relative;display:grid;grid-template-columns:64px 1fr auto;grid-template-areas:"thumb name arrow" "thumb tags arrow";align-items:center;gap:4px 16px;padding:16px 0;border-bottom:1px solid var(--line);color:var(--navy);text-decoration:none;transition:opacity .3s}
+.spi-thumb{grid-area:thumb;position:relative;width:64px;height:48px;border-radius:var(--radius-sm);overflow:hidden;background:var(--line)}
+.spi-thumb img{object-fit:cover}
+.spi-name{grid-area:name;font:500 17px/1.3 var(--font-text),sans-serif;letter-spacing:-.01em}
+.spi-tags{grid-area:tags;display:flex;flex-wrap:wrap;gap:6px}
+.spi-tags span{padding:4px 9px;border:1px solid var(--line);border-radius:999px;font:600 10.5px/1.2 var(--font-text),sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.spi-row svg{grid-area:arrow;width:16px;height:16px;color:var(--gold-ink);transition:transform .3s}
+.spi-preview{display:none}
+@media (min-width:901px){
+  .spi{margin-top:88px}
+  .spi-row{grid-template-columns:minmax(220px,1.1fr) 2fr auto;grid-template-areas:"name tags arrow";gap:24px;padding:22px 0}
+  .spi-thumb{display:none}
+  .spi-name{font-size:clamp(20px,1.8vw,26px);font-weight:400;letter-spacing:-.02em}
+}
+@media (min-width:901px) and (hover:hover) and (pointer:fine){
+  .spi-list:hover .spi-row{opacity:.4}
+  .spi-list:hover .spi-row:hover,.spi-list .spi-row:focus-visible{opacity:1}
+  .spi-row:hover svg{transform:translateX(4px) rotate(-45deg)}
+  .spi-preview{display:block;position:fixed;left:0;top:0;z-index:30;width:340px;aspect-ratio:4/3;border-radius:var(--radius);overflow:hidden;pointer-events:none;
+    opacity:0;scale:.86;transition:opacity .3s ease,scale .45s cubic-bezier(.17,.84,.44,1);will-change:transform;box-shadow:0 24px 60px rgba(3,14,26,.28)}
+  .spi.is-hover .spi-preview{opacity:1;scale:1}
+  .spi-pv{position:absolute;inset:0;opacity:0;transition:opacity .35s ease}
+  .spi-pv.on{opacity:1}
+  .spi-pv img{object-fit:cover}
+}
+@media (prefers-reduced-motion:reduce){.spi-preview{transition:none}.spi-row svg{transition:none}}
