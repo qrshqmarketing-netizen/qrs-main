@@ -20,11 +20,12 @@ const PHOTO = '/images/season-promo-storm-over-los-angeles.webp';
 //                     where `aside` (the quick request form) sits beside the copy in two columns and the heading is the H1. Without `cta` only the call link shows.
 // `track` names the piece for Google Analytics (promo_view when it is shown, promo_click and promo_call when its buttons are used) and
 // is the utm_medium of the button's address (promoLandingHref in data/promo.js). Clicking the main button also means the visitor has
-// taken the offer, so the popup never comes back. `exit` is the "before you go" wording (smaller heading, "No thanks" under the button).
+// taken the offer, so the popup never comes back (`onClaim` gets the click, so it can send the visitor elsewhere: the popup scrolls to the page's form). `exit` is the "before you go" wording (smaller heading, "No thanks" under the button).
+// `backdrop`: an element drawn over the photo and under the shade and copy (the home hero's 3D roof).
 // Only simple values go in from a server component: strings, and `points` (a list of short lines under the button).
 export default function PromoCard({
   variant = 'modal', as: Tag = 'div', track, eyebrow, eyebrowTag: Eyebrow = 'div', heading, headingTag: Heading = 'p', headingId, text, cta, exit = false, rain = true,
-  points, aside, className, onClaim, onClose, onSkip, closeRef,
+  points, aside, backdrop, className, onClaim, onClose, onSkip, closeRef,
 }) {
   const root = useRef(null);
   const event = (name, extra = {}) => trackEvent(name, { promo_name: PROMO_NAME, promo_variant: track || variant, ...extra });
@@ -47,10 +48,10 @@ export default function PromoCard({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [variant, track]);
 
-  const claim = () => {
+  const claim = (e) => {
     local.set('promoClaimed', '1');
     event('promo_click', { cta: 'primary' });
-    onClaim?.();
+    onClaim?.(e);
   };
 
   const dialog = variant === 'modal' && { role: 'dialog', 'aria-modal': 'true', 'aria-labelledby': headingId, onClick: (e) => e.stopPropagation() };
@@ -60,6 +61,7 @@ export default function PromoCard({
       {variant !== 'modal' && (
         <Image className="promo-photo" src={PHOTO} alt="" fill sizes="100vw" {...(variant === 'landing' && { preload: true, fetchPriority: 'high' })} />
       )}
+      {backdrop}
       {rain && <PromoRain rich={variant === 'landing'} />}
       {onClose && (
         <button className="promo-close" type="button" aria-label="Close" onClick={onClose} ref={closeRef}>

@@ -13,7 +13,7 @@ export const SEASON_PROMO = {
     heading: 'Before You Go: Is Your Roof Ready for El Niño?',
     text: 'Heavy El Niño rains are on the way. Book your free drone roof evaluation now and know exactly where your roof stands before the first big storm.',
   },
-  cta: { label: 'Claim My Free Evaluation' }, // goes to the El Niño landing page (promoLandingHref below), tagged with where it was clicked
+  cta: { label: 'Claim My Free Evaluation' }, // the popup's button scrolls to the estimate form on the page (SeasonPromo.jsx); on a page without one it opens the El Niño landing page (promoLandingHref below), tagged with where it was clicked
   rain: true, // faint rain falling inside the popup (components/widgets/PromoRain.jsx); false switches it off
   // '/': the offer is the home page's hero itself, so no popup there
   exclude: ['/', '/start/', '/thank-you/', '/el-nino-roof-check/', '/commercial-roofing/', '/residential-roofing/hoa-multi-family/', '/service-areas/la-county/vernon/', '/contractors/', '/careers/'],

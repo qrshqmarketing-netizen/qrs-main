@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { FOUND_US_OPTIONS, ROOF_TYPES, SERVICE_OPTIONS } from '@/data/estimateOptions';
 import { PHONE, TEL } from '@/data/site';
@@ -30,6 +30,8 @@ const ROOF_BY_PATH = [
   [/metal|standing-seam/, 'Metal'],
 ];
 const fromPath = (table, path, fallback) => table.find(([re]) => re.test(path))?.[1] || fallback;
+// Another part of the page can pick the service before sending the visitor here: the El Niño popup picks the roof inspection
+export const PREFILL_EVENT = 'qrs:estimate-prefill';
 
 export default function EstimateForm() {
   const pathname = usePathname() || '/';
@@ -44,6 +46,11 @@ function Form({ pathname }) {
   });
   const [state, setState] = useState({ status: 'idle', error: '' });
   const set = (k) => (e) => setF((v) => ({ ...v, [k]: e.target.value }));
+  useEffect(() => {
+    const onPrefill = (e) => e.detail?.service && setF((v) => ({ ...v, service: e.detail.service }));
+    window.addEventListener(PREFILL_EVENT, onPrefill);
+    return () => window.removeEventListener(PREFILL_EVENT, onPrefill);
+  }, []);
 
   async function submit(e) {
     e.preventDefault();

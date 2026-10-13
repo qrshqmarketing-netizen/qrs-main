@@ -2,7 +2,9 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import { SEASON_PROMO as promo, promoLandingHref } from '@/data/promo';
+import { PROMO_NAME, SEASON_PROMO as promo, promoLandingHref } from '@/data/promo';
+import { PREFILL_EVENT } from '@/components/sections/EstimateForm';
+import { noteAttribution } from '@/lib/attribution';
 import { local, session } from '@/lib/storage';
 import PromoCard from './PromoCard';
 import './SeasonPromo.css';
@@ -126,8 +128,27 @@ export default function SeasonPromo() {
   const close = () => setView(null);
   const isExit = view === 'exit';
 
-  // The button opens the El Niño landing page (data/promo.js), tagged with which popup it was
-  const cta = { label: promo.cta.label, href: promoLandingHref(isExit ? 'modal-exit' : 'modal-timed') };
+  // The button takes the visitor to the estimate form at the bottom of the page they're on (RoofCheck, #estimate): the popup closes, the page
+  // glides down to the form with "Roof inspection / roof check" picked, and the popup's tags (utm_medium modal-timed or modal-exit) go with the
+  // lead. A page without the form (legal pages, careers) opens the El Niño landing page instead, tagged the same way.
+  const medium = isExit ? 'modal-exit' : 'modal-timed';
+  const form = document.getElementById('estimate');
+  const cta = { label: promo.cta.label, href: form ? '#estimate' : promoLandingHref(medium) };
+  const claim = (e) => {
+    close();
+    if (!form) return;
+    e?.preventDefault();
+    noteAttribution({ source: 'website', medium, campaign: PROMO_NAME });
+    window.dispatchEvent(new CustomEvent(PREFILL_EVENT, { detail: { service: 'Roof inspection / roof check' } }));
+    // after the popup has gone (smooth scrolling is paused while it is open)
+    setTimeout(() => {
+      const lenis = window.__qrsLenis;
+      if (lenis) lenis.scrollTo(form, { offset: -84, force: true });
+      else form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // with a mouse, the cursor waits in the name field (on phones that would pop the keyboard up mid-glide)
+      if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) form.querySelector('#ef-name')?.focus({ preventScroll: true });
+    }, 60);
+  };
 
   return (
     <div className="promo-backdrop" onClick={close}>
@@ -144,7 +165,7 @@ export default function SeasonPromo() {
         onClose={close}
         closeRef={closeRef}
         onSkip={isExit ? close : undefined}
-        onClaim={close}
+        onClaim={claim}
       />
     </div>
   );
