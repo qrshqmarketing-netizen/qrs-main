@@ -172,6 +172,29 @@ export const ABOUT_MENU = {
 
 export const HEADER_CTA = { label: 'Get Pro Advice', href: '#roof-check' };
 
+// The header (October 2026, modelled on thekithmore.com): no dropdowns. HEADER_LINKS sit in the bar from 1240px (in the menu panel below that),
+// each one a hub page; the menu button opens HEADER_MORE, the rest of the site. The old menus above are no longer shown in the header.
+export const HEADER_LINKS = [
+  { label: 'Residential', href: '/residential-roofing/' },
+  { label: 'Commercial', href: '/commercial-roofing/' },
+  { label: 'Roof Repair', href: '/roof-repair/' },
+  { label: 'Replacement', href: '/roof-replacement/' },
+  { label: 'Service Areas', href: '/service-areas/' },
+  { label: 'Projects', href: '/projects/' },
+];
+export const HEADER_MORE = [
+  { label: 'Emergency Repair', href: '/roof-repair/emergency/', urgent: true },
+  { label: 'About QRS', href: '/about-us/' },
+  { label: 'Reviews', href: '/reviews/' },
+  { label: 'Credentials', href: '/credentials/' },
+  { label: 'Maintenance Plans', href: '/roof-maintenance-plans/' },
+  { label: 'Financing', href: '/roof-financing/' },
+  { label: 'Roofing Blog', href: '/blog/' },
+  { label: 'Careers', href: '/careers/' },
+  { label: 'For Contractors', href: '/contractors/' },
+  { label: 'Contact', href: '/contact-us/' },
+];
+
 // Footer: four short columns.
 export const FOOTER = {
   columns: [

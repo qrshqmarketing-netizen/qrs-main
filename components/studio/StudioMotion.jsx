@@ -142,7 +142,7 @@ async function startSmoothScroll() {
     anchors: true,
     autoRaf: true,
     prevent: (node) =>
-      Boolean(node.closest('[data-lenis-prevent], .navlinks.mobile-open, .mega, .qa-log, .rm-body, .sa-list, .loc-list, .leaflet-container, textarea, select, .adm')),
+      Boolean(node.closest('[data-lenis-prevent], .hd-panel, .qa-log, .rm-body, .sa-list, .loc-list, .leaflet-container, textarea, select, .adm')),
   });
   window.__qrsLenis = lenis; // components/ui/ScrollToTop.jsx resets it on every page change (else its glide carries on to the old page's position)
   const LOCKS = ['menu-open', 'rm-lock', 'promo-open'];

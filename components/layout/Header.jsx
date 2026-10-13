@@ -4,50 +4,46 @@ import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import BrandLogo from '@/components/ui/BrandLogo';
 import SiteLink from '@/components/ui/SiteLink';
-import Rich from '@/components/ui/Rich';
-import { ArrowRight, Caret, MoonIcon, PhoneIcon, SunIcon } from '@/components/ui/icons';
-import { CONTACT_LINK, CONTRACTORS_LINK, PROJECTS_LINK } from '@/data/catalog';
-import { ABOUT_MENU, COMMERCIAL_MENU, HEADER_CTA, LOCATIONS_MENU, RESIDENTIAL_MENU, SERVICES_MENU } from '@/data/navigation';
+import { MoonIcon, PhoneIcon, SunIcon } from '@/components/ui/icons';
+import { HEADER_CTA, HEADER_LINKS, HEADER_MORE } from '@/data/navigation';
 import { START_PATH } from '@/data/start';
 import { PHONE, TEL } from '@/data/site';
-import { PROJECT_PAGES } from '@/data/pages/projects';
-import Image from 'next/image';
 import './Header.css';
 
-// The compact header opens the same click menu at every width, so there is no hover mode any more
-const isDesktop = () => false;
-
-// Menu links don't prefetch: there are dozens of them in the (hidden) dropdowns
-const MenuLink = (props) => <SiteLink prefetch={false} {...props} />;
-
-// Red dot on emergency links (`urgent: true` in data/navigation.js)
-const UrgentDot = () => <i className="menu-urgent" aria-hidden="true" />;
+// The header, modelled on thekithmore.com (the owner's reference): one slim bar split by hairlines: the logo, the main links (each one a hub page,
+// HEADER_LINKS in data/navigation.js, no dropdowns), the phone number, the gold "Get Pro Advice" cell, the theme switch and a two-line menu button.
+// The menu button drops a small panel from the bar with the rest of the site (HEADER_MORE; below 1240px the main links are at the top of it).
+// Over a photo hero the bar is see-through with white type; once the hero has scrolled away (or the menu is open) it turns solid (data-solid).
+// /start/ shows only the logo, the theme switch and the phone. Escape, the backdrop or a link closes the panel.
+const HEROES = '.hero, .st-hero, .promo-home, .pd-hero';
+const isCurrent = (pathname, href) => href !== '/' && pathname.startsWith(href);
 
 export default function Header() {
-  const [menuOpen, setMenuOpen] = useState(false); // phone/tablet slide-down menu
-  const [openItem, setOpenItem] = useState(null); // 'services' | 'res' | 'com' | 'about' | null
-  const [activeGroup, setActiveGroup] = useState(0); // roof type shown in the Residential menu
-  // The dropdowns' links are built the first time the menu is about to open (pointer over or focus on the menu button, or opening it), not in the
-  // page's HTML: otherwise ~200 menu words came before <main> for crawlers, AI agents and screen readers. Every page they link to is also linked
-  // from the page bodies, the footer and the sitemap (checked by crawling the built site).
-  const [menuSeen, setMenuSeen] = useState(false);
+  const [open, setOpen] = useState(false);
   const [theme, setTheme] = useState('light');
+  const [past, setPast] = useState(false); // scrolled below the photo hero
   const pathname = usePathname();
-  const [pastHero, setPastHero] = useState(false); // scrolled below the photo hero: the bar turns solid
-  const requestPage = pathname === START_PATH; // /start/ shows only the logo, theme switch and call button
-  const closeTimer = useRef(null);
-  const triggers = useRef({});
+  const requestPage = pathname === START_PATH;
+  const button = useRef(null);
 
   useEffect(() => {
-    document.body.classList.toggle('menu-open', menuOpen);
-    if (menuOpen) setMenuSeen(true);
-  }, [menuOpen]);
+    document.body.classList.toggle('menu-open', open);
+  }, [open]);
 
-  // Over a photo hero the bar is transparent; once the hero has scrolled up under it, it turns solid (CSS: Header.css, the data-solid attribute below)
+  // A new page closes the panel
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    setTheme(document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light');
+  }, []);
+
+  // Over a photo hero the bar is see-through (CSS, from the page itself); once the hero has scrolled up under it, it turns solid
   useEffect(() => {
     const update = () => {
-      const hero = document.querySelector('.hero, .st-hero');
-      setPastHero(Boolean(hero) && hero.getBoundingClientRect().bottom < 90);
+      const hero = document.querySelector(HEROES);
+      setPast(Boolean(hero) && hero.getBoundingClientRect().bottom < 72);
     };
     update();
     window.addEventListener('scroll', update, { passive: true });
@@ -58,36 +54,17 @@ export default function Header() {
     };
   }, [pathname]);
 
+  // Escape closes the panel and puts the focus back on the menu button
   useEffect(() => {
-    setTheme(document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light');
-  }, []);
-
-  // Clicking anywhere outside a dropdown closes it
-  useEffect(() => {
-    const onClick = (e) => {
-      if (!e.target.closest('.nav-item')) setOpenItem(null);
+    if (!open) return undefined;
+    const onKey = (e) => {
+      if (e.key !== 'Escape') return;
+      setOpen(false);
+      button.current?.focus();
     };
-    document.addEventListener('click', onClick);
-    return () => document.removeEventListener('click', onClick);
-  }, []);
-
-  // Escape or a click outside the pill closes the menu
-  useEffect(() => {
-    if (!menuOpen) return undefined;
-    const onKey = (e) => e.key === 'Escape' && setMenuOpen(false);
-    const onDown = (e) => !e.target.closest('.nav-pill') && setMenuOpen(false);
     document.addEventListener('keydown', onKey);
-    document.addEventListener('pointerdown', onDown);
-    return () => {
-      document.removeEventListener('keydown', onKey);
-      document.removeEventListener('pointerdown', onDown);
-    };
-  }, [menuOpen]);
-
-  const toggleMenu = () => {
-    setMenuOpen((open) => !open);
-    setOpenItem(null);
-  };
+    return () => document.removeEventListener('keydown', onKey);
+  }, [open]);
 
   const toggleTheme = () => {
     const nextTheme = theme === 'dark' ? 'light' : 'dark';
@@ -101,315 +78,43 @@ export default function Header() {
     setTheme(nextTheme);
   };
 
-  // Any link in the menu closes the phone menu
-  const onNavClick = (e) => {
-    if (e.target.closest('a')) setMenuOpen(false);
+  const close = () => setOpen(false);
+  const link = (l, className) => {
+    const on = isCurrent(pathname, l.href);
+    return (
+      <SiteLink className={className + (on ? ' on' : '')} href={l.href} prefetch={false} aria-current={on ? 'page' : undefined} onClick={close}>
+        {l.urgent && <i className="hd-urgent" aria-hidden="true" />}
+        {l.label}
+      </SiteLink>
+    );
   };
-
-  // Props for a dropdown (Services / Residential / Commercial / About)
-  const dropdown = (key) => ({
-    className: 'nav-item' + (openItem === key ? ' open' : ''),
-    onMouseEnter: () => {
-      if (!isDesktop()) return;
-      clearTimeout(closeTimer.current);
-      setOpenItem(key);
-    },
-    onMouseLeave: () => {
-      if (!isDesktop()) return;
-      closeTimer.current = setTimeout(() => setOpenItem((cur) => (cur === key ? null : cur)), 180);
-    },
-    onKeyDown: (e) => {
-      if (e.key === 'Escape' && openItem === key) {
-        setOpenItem(null);
-        triggers.current[key]?.focus();
-      }
-    },
-  });
-
-  const trigger = (key, controls) => ({
-    className: 'nav-trigger',
-    type: 'button',
-    'aria-expanded': openItem === key,
-    'aria-controls': controls,
-    ref: (el) => {
-      triggers.current[key] = el;
-    },
-    onClick: () => setOpenItem((cur) => (cur === key ? null : key)),
-  });
-
-  // Clicking a link inside a dropdown closes it
-  const closeOnLink = (e) => {
-    if (e.target.closest('a')) setOpenItem(null);
-  };
-
-  // Roof-type tabs: hover/focus switches on desktop, tap opens/closes on phones
-  const tabProps = (i) => ({
-    className: 'mega-tab',
-    type: 'button',
-    'aria-expanded': activeGroup === i,
-    onClick: () => {
-      const toggle = !isDesktop();
-      setActiveGroup((cur) => (toggle && cur === i ? null : i));
-    },
-    onMouseEnter: () => isDesktop() && setActiveGroup(i),
-    onFocus: () => isDesktop() && setActiveGroup(i),
-  });
-
-  const { groups, hub, specialties, promo } = RESIDENTIAL_MENU;
-  const { services, buildings, partner } = COMMERCIAL_MENU;
 
   return (
-    <header className="site-header" data-solid={pastHero || menuOpen || openItem ? 'true' : undefined}>
-      <div className={'nav-backdrop' + (menuOpen ? ' on' : '')} onClick={() => setMenuOpen(false)} aria-hidden="true"></div>
-      <div className="container nav">
-        <div className="nav-left">
-          <a className="nav-phone" href={TEL}>{PHONE}</a>
+    <header className={'site-header' + (open ? ' is-open' : '') + (requestPage ? ' is-start' : '')} data-solid={past || open ? 'true' : undefined}>
+      <div className="hd-backdrop" onClick={close} aria-hidden="true"></div>
+      <div className="hd-bar">
+        <div className="hd-brand">
+          <BrandLogo variant="adaptive" preload />
         </div>
-        <div className={'nav-pill' + (menuOpen ? ' open' : '')}>
-          <div className="nav-pill-row">
-            <BrandLogo variant="adaptive" preload />
-            {!requestPage && (
-              <button className="menu-btn" id="menuBtn" type="button" aria-label={menuOpen ? 'Close menu' : 'Open menu'} aria-expanded={menuOpen} aria-controls="navlinks" onClick={toggleMenu} onPointerEnter={() => setMenuSeen(true)} onFocus={() => setMenuSeen(true)}>
-                <span></span>
-                <span></span>
-              </button>
-            )}
-          </div>
-          {!requestPage && (
-          <nav className={'navlinks' + (menuOpen ? ' mobile-open' : '')} id="navlinks" aria-label="Main" onClick={onNavClick}>
-            <div {...dropdown('services')}>
-              <button {...trigger('services', 'megaServices')}>
-                Services
-                <Caret />
-              </button>
-              <div className="mega mega-services" id="megaServices" onClick={closeOnLink}>
-                {menuSeen && (
-                  <div className="mega-inner">
-                    <div className="mega-card mega-card-list">
-                      <b>{SERVICES_MENU.title}</b>
-                      <ul>
-                        {SERVICES_MENU.links.map((link) => (
-                          <li key={link.href}>
-                            <MenuLink href={link.href}>
-                              {link.urgent && <UrgentDot />}
-                              <Rich text={link.label} />
-                            </MenuLink>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-
-            <div {...dropdown('res')}>
-              <button {...trigger('res', 'megaRes')}>
-                Residential
-                <Caret />
-              </button>
-              <div className="mega mega-res" id="megaRes" onClick={closeOnLink}>
-                {menuSeen && (
-                  <div className="mega-inner">
-                    <div className="mega-types">
-                      {groups.map((group, i) => (
-                        <div className={'mega-group' + (activeGroup === i ? ' active' : '')} key={group.id}>
-                          <button {...tabProps(i)} aria-controls={group.id}>
-                            <Rich text={group.label} />
-                            <Caret />
-                          </button>
-                          <div className="mega-list" id={group.id}>
-                            {group.all && (
-                              <MenuLink className="mega-all" href={group.all.href}>
-                                <Rich text={group.all.label} /> <ArrowRight />
-                              </MenuLink>
-                            )}
-                            <ul>
-                              {group.links.map((link) => (
-                                <li key={link.href}>
-                                  <MenuLink href={link.href}>
-                                    <span>
-                                      {link.urgent && <UrgentDot />}
-                                      <Rich text={link.label} />
-                                    </span>
-                                    {link.note && <small>{link.note}</small>}
-                                  </MenuLink>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        </div>
-                      ))}
-                      {[hub, ...specialties].map((item) => (
-                        <MenuLink className="mega-link" href={item.href} key={item.href}>
-                          <span>
-                            <b><Rich text={item.title} /></b>
-                            <small><Rich text={item.note} /></small>
-                          </span>
-                          <ArrowRight />
-                        </MenuLink>
-                      ))}
-                    </div>
-                    <aside className="mega-promo">
-                      <b>{promo.title}</b>
-                      <p>{promo.text}</p>
-                      <SiteLink className="btn btn-gold" href={promo.cta.href}>{promo.cta.label}</SiteLink>
-                    </aside>
-                  </div>
-                )}
-              </div>
-            </div>
-
-            <div {...dropdown('com')}>
-              <button {...trigger('com', 'megaCom')}>
-                Commercial
-                <Caret />
-              </button>
-              <div className="mega mega-com" id="megaCom" onClick={closeOnLink}>
-                {menuSeen && (
-                  <div className="mega-inner">
-                    <div className="mega-card mega-card-list">
-                      <MenuLink className="mega-card-head" href={buildings.href}>
-                        <b>{buildings.title}</b> <ArrowRight />
-                      </MenuLink>
-                      <ul>
-                        {buildings.links.map((link) => (
-                          <li key={link.href}>
-                            <MenuLink href={link.href}><Rich text={link.label} /></MenuLink>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div className="mega-card mega-card-list mega-card-single">
-                      <b>{services.title}</b>
-                      <ul>
-                        {services.links.map((link) => (
-                          <li key={link.href}>
-                            <MenuLink href={link.href}>
-                              {link.urgent && <UrgentDot />}
-                              <Rich text={link.label} />
-                            </MenuLink>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <MenuLink className="mega-card" href={partner.href}>
-                      <b>{partner.title}</b>
-                      <span>{partner.text}</span>
-                      <em>
-                        {partner.cta} <ArrowRight />
-                      </em>
-                    </MenuLink>
-                  </div>
-                )}
-              </div>
-            </div>
-
-            <div {...dropdown('areas')}>
-              <button {...trigger('areas', 'megaAreas')}>
-                Service Areas
-                <Caret />
-              </button>
-              <div className="mega mega-areas" id="megaAreas" onClick={closeOnLink}>
-                {menuSeen && (
-                  <div className="mega-inner">
-                    {LOCATIONS_MENU.regions.map((region) => (
-                      <div className="mega-card mega-card-list" key={region.title}>
-                        <MenuLink className="mega-card-head" href={region.href}>
-                          <b>{region.title}</b> <ArrowRight />
-                        </MenuLink>
-                        <ul>
-                          {region.links.map((link) => (
-                            <li key={link.href}>
-                              <MenuLink href={link.href}>{link.label}</MenuLink>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                    <MenuLink className="mega-card" href={LOCATIONS_MENU.all.href}>
-                      <b>{LOCATIONS_MENU.all.title}</b>
-                      <span>{LOCATIONS_MENU.all.text}</span>
-                      <em>
-                        {LOCATIONS_MENU.all.cta} <ArrowRight />
-                      </em>
-                    </MenuLink>
-                  </div>
-                )}
-              </div>
-            </div>
-
-            {/* About: company information, reviews, careers and the blog */}
-            <div {...dropdown('about')}>
-              <button {...trigger('about', 'megaAbout')}>
-                About
-                <Caret />
-              </button>
-              <div className="mega mega-about" id="megaAbout" onClick={closeOnLink}>
-                {menuSeen && (
-                  <div className="mega-inner">
-                    <div className="mega-card mega-card-list">
-                      <MenuLink className="mega-card-head" href={ABOUT_MENU.about.href}>
-                        <b>{ABOUT_MENU.about.title}</b> <ArrowRight />
-                      </MenuLink>
-                      <ul>
-                        {ABOUT_MENU.about.links.map((link) => (
-                          <li key={link.label}>
-                            <MenuLink href={link.href}>{link.label}</MenuLink>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <MenuLink className="mega-card" href={ABOUT_MENU.careers.href}>
-                      <b>{ABOUT_MENU.careers.title}</b>
-                      <span>{ABOUT_MENU.careers.text}</span>
-                      <em>
-                        {ABOUT_MENU.careers.cta} <ArrowRight />
-                      </em>
-                    </MenuLink>
-                  </div>
-                )}
-              </div>
-            </div>
-
-            <MenuLink href={PROJECTS_LINK.href}>Projects</MenuLink>
-            <MenuLink href={CONTACT_LINK.href}>Contact</MenuLink>
-            <MenuLink className="nav-contractors-menu" href={CONTRACTORS_LINK.href}>For Contractors</MenuLink>
-
-            {menuSeen && (
-              <div className="menu-lately">
-                <p className="menu-lately-label">Lately at QRS</p>
-                <div className="menu-lately-row">
-                  {PROJECT_PAGES.slice(0, 3).map((project) => (
-                    <MenuLink className="menu-lately-card" href={project.path} key={project.path}>
-                      <span className="menu-lately-img">
-                        <Image src={project.image} alt="" fill sizes="220px" quality={55} loading="lazy" />
-                      </span>
-                      <small>{project.place.replace(/,?\s*CA\b/, '')}</small>
-                      <b>{project.label}</b>
-                    </MenuLink>
-                  ))}
-                </div>
-              </div>
-            )}
-
+        {!requestPage && (
+          <nav className="hd-links" aria-label="Main">
+            {HEADER_LINKS.map((l) => (
+              <span key={l.href}>{link(l, 'hd-link')}</span>
+            ))}
           </nav>
-          )}
-        </div>
-
-
-        {/* Contractors stays beside the Roof Check CTA at every viewport width. */}
-        <div className="nav-actions">
+        )}
+        <div className="hd-actions">
+          <a className="hd-cell hd-phone" href={TEL} aria-label={`Call ${PHONE}`}>
+            <PhoneIcon />
+            <span>{PHONE}</span>
+          </a>
           {!requestPage && (
-            <>
-              <SiteLink className="btn btn-gold nav-cta" href={HEADER_CTA.href} onClick={() => setMenuOpen(false)}>
-                <span className="nav-cta-full">{HEADER_CTA.label}</span>
-                <span className="nav-cta-compact">Estimate</span>
-              </SiteLink>
-            </>
+            <SiteLink className="hd-cell hd-cta" href={HEADER_CTA.href} onClick={close}>
+              {HEADER_CTA.label}
+            </SiteLink>
           )}
           <button
-            className="nav-theme"
+            className="hd-cell hd-theme"
             type="button"
             aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
             aria-pressed={theme === 'dark'}
@@ -418,12 +123,44 @@ export default function Header() {
           >
             {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
           </button>
-          <a className="btn btn-plum nav-call" href={TEL} aria-label={`Call ${PHONE}`}>
-            <PhoneIcon />
-            <span>{PHONE}</span>
-          </a>
+          {!requestPage && (
+            <button
+              className="hd-cell hd-menu"
+              type="button"
+              ref={button}
+              aria-label={open ? 'Close menu' : 'Open menu'}
+              aria-expanded={open}
+              aria-controls="hdPanel"
+              onClick={() => setOpen((o) => !o)}
+            >
+              <span></span>
+              <span></span>
+            </button>
+          )}
         </div>
       </div>
+      {!requestPage && (
+        <div className="hd-panel" id="hdPanel" inert={!open} data-lenis-prevent="">
+          <nav aria-label="Menu">
+            <ul className="hd-primary">
+              {HEADER_LINKS.map((l, i) => (
+                <li key={l.href} style={{ '--n': i }}>{link(l, 'hd-row hd-row-big')}</li>
+              ))}
+            </ul>
+            <ul className="hd-more">
+              {HEADER_MORE.map((l, i) => (
+                <li key={l.href} style={{ '--n': i }}>{link(l, 'hd-row')}</li>
+              ))}
+            </ul>
+          </nav>
+          <div className="hd-panel-foot">
+            <a href={TEL}>{PHONE}</a>
+            <SiteLink className="btn btn-gold" href={HEADER_CTA.href} onClick={close}>
+              {HEADER_CTA.label} <span className="arrow">→</span>
+            </SiteLink>
+          </div>
+        </div>
+      )}
     </header>
   );
 }
