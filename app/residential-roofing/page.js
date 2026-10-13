@@ -1,3 +1,4 @@
+import RoofScene3D from '@/components/widgets/roof3d/RoofScene3D';
 import CardCarousel from '@/components/sections/CardCarousel';
 import DifferenceBand from '@/components/sections/DifferenceBand';
 import Faq from '@/components/sections/Faq';
@@ -47,6 +48,7 @@ export default async function ResidentialRoofingPage() {
         image={HERO_IMAGE}
         imageAlt="Aerial view of a Southern California neighborhood of shingle-roofed homes"
         imagePosition="center 45%"
+        backdrop={<RoofScene3D scene="house" />}
         stats
       />
       <Overview heading={page.overview.heading} paragraphs={page.overview.paragraphs} />

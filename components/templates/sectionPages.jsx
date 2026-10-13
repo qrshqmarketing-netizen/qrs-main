@@ -29,7 +29,7 @@ const SHARED_CARDS = [PROGRAMS.inspection.href, PROGRAMS.plans.href];
 export const hubMetadata = (section) =>
   pageMetadata({ title: section.hub.metaTitle, description: section.hub.metaDescription, path: section.href });
 
-export function SectionHub({ section }) {
+export function SectionHub({ section, backdrop }) {
   const cards = [...serviceCards(section), ...(isCommercial(section) ? [] : SHARED_CARDS.map(cardFor))];
   const feature = isCommercial(section)
     ? {
@@ -54,6 +54,7 @@ export function SectionHub({ section }) {
       extraGrid={section.serviceTypes ? { heading: 'Commercial Roofing Services', intro: 'Repairs, replacement and ongoing care for any commercial roof.', cards: serviceTypeCards(section) } : null}
       feature={feature}
       offer={isCommercial(section) ? 'commercial' : 'home'}
+      backdrop={backdrop}
     />
   );
 }
@@ -105,7 +106,7 @@ export function SinglePage({ single, actions, finalCta }) {
 // ----- Service-first hubs (/roof-repair/, /roof-replacement/) -----
 export const serviceHubMetadata = (page) => pageMetadata({ title: page.hub.metaTitle, description: page.hub.metaDescription, path: page.href });
 
-export function ServiceHub({ page, actions }) {
+export function ServiceHub({ page, actions, backdrop }) {
   return (
     <HubPage
       hub={page.hub}
@@ -118,6 +119,7 @@ export function ServiceHub({ page, actions }) {
       process
       offer="home"
       actions={actions}
+      backdrop={backdrop}
     />
   );
 }

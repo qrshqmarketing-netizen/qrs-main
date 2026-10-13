@@ -431,3 +431,21 @@ html.vt-cover::view-transition-new(vt-cw),html.vt-cover::view-transition-new(vt-
 @keyframes headRise{from{translate:0 .55em;clip-path:inset(-.55em 0 .55em 0);opacity:0}to{translate:0 0;clip-path:inset(-.2em 0 -.2em 0);opacity:1}}
 html.page-arrive :is(main .hero-title,.pd-hero h1,.promo-home .promo-title){animation:headRise .9s cubic-bezier(.17,.84,.44,1) .5s both}
 @media (prefers-reduced-motion:reduce){html.page-arrive :is(main .hero-title,.pd-hero h1,.promo-home .promo-title){animation:none}}
+
+/* Hero overlays (owner, October 13 2026): every hero gets the same cinematic black overlay over its photo or 3D scene, with no color glows
+   (sub-page heroes, the home hero, project covers, the El Niño landing hero, the 3D backdrops): a light overall dim, a deep vignette toward the
+   corners, darker bands at the top and bottom like a film frame, and a faint film grain. All black, no color. Change the strength in --hero-dim and
+   the vignette/bands in --hero-cine; the words keep a soft shadow for the bright parts of a photo.
+   (!important because the old shades live in several stylesheets loaded in a different order.) */
+:root{
+  --hero-dim:rgba(0,0,0,.24);
+  --hero-grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+  --hero-cine:var(--hero-grain),radial-gradient(ellipse 85% 75% at 50% 45%,rgba(0,0,0,0) 35%,rgba(0,0,0,.42) 78%,rgba(0,0,0,.72) 100%),linear-gradient(180deg,rgba(0,0,0,.5) 0%,rgba(0,0,0,0) 22%,rgba(0,0,0,0) 58%,rgba(0,0,0,.62) 100%),linear-gradient(var(--hero-dim),var(--hero-dim));
+}
+.hero-roof-texture:after,.st-hero-bg:after,.pd-hero-shade,.promo.promo-landing:before{background:var(--hero-cine)!important}
+.roof3d:after{content:"";position:absolute;inset:0;background:var(--hero-cine);pointer-events:none}
+.hero.hero-top-pad .hero-copy:before{background:none!important}
+.hero:after,.hero-breath,.hero-glow{display:none!important}
+:is(.hero,.st-hero,.pd-hero,.promo-landing) :is(h1,.hero-title,.hero-sub,.hero-outcome,.hero-notes,.crumbs ol,.eyebrow,.st-kicker,.st-hero-title,.st-hero-sub,.pd-hero-bottom,.promo-eyebrow,.promo-title,.promo-text,.promo-points){
+  text-shadow:0 1px 3px rgba(0,0,0,.45),0 2px 18px rgba(0,0,0,.5)!important;
+}

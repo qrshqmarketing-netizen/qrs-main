@@ -8,6 +8,7 @@ import Offices from '@/components/sections/Offices';
 import RoofCheck from '@/components/sections/RoofCheck';
 import ServiceArea from '@/components/sections/ServiceArea';
 import JsonLd from '@/components/ui/JsonLd';
+import RoofScene3D from '@/components/widgets/roof3d/RoofScene3D';
 import { HOME, LOCATIONS_LINK } from '@/data/catalog';
 import { LOCATION_PAGES } from '@/data/locationPages';
 import { ALL_PLACES, cityPath, LOCATIONS } from '@/data/locations';
@@ -50,6 +51,7 @@ export default function LocationsPage() {
         image={HERO_IMAGE}
         imageAlt="Row of homes with pitched roofs along a residential street"
         imagePosition="40% center"
+        backdrop={<RoofScene3D scene="street" />}
       />
       <Offices sub="Our Los Angeles and Valley offices serve homes and businesses across Los Angeles County, Orange County and the Inland Empire. One number reaches both." />
       <ServiceArea heading="Find Your Nearest QRS Service Area" sub="Enter your ZIP code to confirm we cover your address, or pick your city from the list." />

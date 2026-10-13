@@ -7,11 +7,13 @@ import './Studio.css';
 
 // The home page's studio-style hero: a full-height photo slider (the newest projects' covers), the keyword line as a small label (it is the page's
 // H1), a large light headline at the bottom left, two buttons. The proof-point marquee sits directly under it (app/page.js).
-export default function StudioHero({ slides }) {
+// backdrop: an element drawn instead of (or over) the photos (the home page's 3D roof, RoofScene3D); the shade moves on top of it. With no `slides`
+// there is no photo at all, just the navy background until the backdrop draws.
+export default function StudioHero({ slides, backdrop }) {
   return (
     <section className="st-hero" aria-label="QRS Southern California roofing">
-      <StudioHeroSlider slides={slides} />
-      <div className="st-hero-shade" aria-hidden="true"></div>
+      {slides?.length > 0 && <StudioHeroSlider slides={slides} />}
+      {backdrop}
       <div className="container st-hero-inner">
         <h1 className="st-kicker">{HOME_H1}</h1>
         <p className="st-hero-title">

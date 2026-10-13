@@ -19,8 +19,9 @@ import { articlesFor } from '@/lib/articles';
 // why-choose points and the Roof Check form. Content shape: `hub` in data/services/*.js.
 // cards: [{ title, text, href, scene, image? }]; extraGrid: optional { heading, intro, cards } shown before them
 // (commercial services); feature: optional SplitFeature props (e.g. contractors teaser); actions: hero buttons (Hero);
+// backdrop: an animated background in the hero in place of the photo (the Commercial Roofing page's 3D building, Hero `backdrop`);
 // process: show the general "QRS Way" steps (the service-first hubs /roof-repair/ and /roof-replacement/).
-export default async function HubPage({ hub, crumbs, eyebrow, image, imageAlt, cards, extraGrid, feature, offer, actions, process = false }) {
+export default async function HubPage({ hub, crumbs, eyebrow, image, imageAlt, cards, extraGrid, feature, offer, actions, process = false, backdrop }) {
   const schema = pageJsonLd({
     path: crumbs.at(-1).href,
     title: hub.metaTitle,
@@ -43,6 +44,7 @@ export default async function HubPage({ hub, crumbs, eyebrow, image, imageAlt, c
         image={image}
         imageAlt={imageAlt}
         stats
+        backdrop={backdrop}
         {...(actions && { actions })}
       />
       <Overview heading={hub.overview.heading} paragraphs={hub.overview.paragraphs} />
