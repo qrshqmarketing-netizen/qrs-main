@@ -42,7 +42,8 @@ const nextConfig = {
       },
       // Points crawlers and AI agents at the machine-readable files from any page (the sitemap, llms.txt, llms-full.txt, the OKF bundle and the MCP manifest are also in robots.txt/llms.txt)
       { source: '/:path*', headers: [{ key: 'Link', value: '</sitemap.xml>; rel="sitemap"; type="application/xml", </llms.txt>; rel="alternate"; type="text/plain"; title="llms.txt", </llms-full.txt>; rel="alternate"; type="text/plain"; title="llms-full.txt", </.well-known/mcp.json>; rel="describedby"; type="application/json"; title="MCP server manifest"' }] },
-      { source: '/:path*', missing: [{ type: 'host', value: 'qualityroofingspecialists\\.com' }], headers: [{ key: 'X-Robots-Tag', value: 'noindex' }] },
+      // noindex on every other host (*.vercel.app previews); the www host only redirects to the main one, so it isn't tagged either
+      { source: '/:path*', missing: [{ type: 'host', value: '(www\\.)?qualityroofingspecialists\\.com' }], headers: [{ key: 'X-Robots-Tag', value: 'noindex' }] },
       // The team's dashboard is never indexed, on any host, and its pages are never cached
       { source: '/admin/:path*', headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }, { key: 'Cache-Control', value: 'no-store' }] },
       { source: '/api/admin/:path*', headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }, { key: 'Cache-Control', value: 'no-store' }] },
