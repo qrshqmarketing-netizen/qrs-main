@@ -16,7 +16,7 @@ export const SEASON_PROMO = {
   cta: { label: 'Claim My Free Evaluation' }, // goes to the El Niño landing page (promoLandingHref below), tagged with where it was clicked
   rain: true, // faint rain falling inside the popup (components/widgets/PromoRain.jsx); false switches it off
   // '/': the offer is the home page's hero itself, so no popup there
-  exclude: ['/start/', '/thank-you/', '/el-nino-roof-check/', '/commercial-roofing/', '/residential-roofing/hoa-multi-family/', '/service-areas/la-county/vernon/', '/contractors/', '/careers/'],
+  exclude: ['/', '/start/', '/thank-you/', '/el-nino-roof-check/', '/commercial-roofing/', '/residential-roofing/hoa-multi-family/', '/service-areas/la-county/vernon/', '/contractors/', '/careers/'],
 };
 
 // The old heading fade-ups (every h2 faded up on load) are off and stay off; true brings them back (app/layout.js).
