@@ -97,8 +97,8 @@ export const COMMERCIAL_CONTENT = {
       card: 'Roofing for retail stores, from the low-slope roof over the sales floor to mansard and façade sections, scheduled around store hours.',
       metaTitle: 'Retail Store Roofing in Los Angeles',
       metaDescription: 'Retail store roofing in LA & Orange County: leak repairs, replacement and mansard or façade roofs, planned around your store hours. Request an estimate.',
-      image: '/images/recent-work-spanish-tile-flat-roof-street-view.webp',
-      imageAlt: 'Aerial view of a building with a clay tile roof section in front and a flat roof behind it',
+      image: '/images/commercial-retail-flat-roof-tear-off-drone-view.webp',
+      imageAlt: 'Aerial view of a retail strip center during a flat roof replacement: roof stripped to the plywood deck, rooftop HVAC units, tarps along the edges and roofers at work',
       hero: {
         intro: 'QRS provides retail store roofing across Los Angeles and Orange County, repairing and replacing the low-slope roof over your sales floor and the mansard or façade sections out front. We trace sales-floor leaks to the source and plan the work around your store hours, entrances and deliveries, so the store can stay open.',
         highlights: ['Scheduled around store hours', 'Low-slope and mansard sections', 'Sales-floor leaks traced to the source'],
