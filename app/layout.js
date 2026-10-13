@@ -30,6 +30,7 @@ import { INSTANT_QUOTE_ENABLED } from '@/data/instantQuote';
 import { PAGE_ENTRANCES, SCROLL_REVEALS, STUDIO_THEME } from '@/data/promo';
 import { BUSINESS, CLARITY_ID, GA_ID, HOME_DESCRIPTION, SITE_URL, SITE_VERIFICATION } from '@/data/site';
 import { ALLOW_INDEXING, LOAD_TRACKING, openGraphBase, twitterBase } from '@/lib/seo';
+import ThemeScript from '@/components/ui/ThemeScript';
 
 // Google Fonts, downloaded at build time and served from this site. Both are variable fonts, so no `weight` list: one file covers every
 // weight (the site uses 300-900), and the stylesheet carries only a few font rules instead of dozens.
@@ -76,8 +77,8 @@ export default function RootLayout({ children }) {
       <head>
         {/* WebMCP origin trial (components/widgets/WebMcpTools.jsx): set NEXT_PUBLIC_WEBMCP_OT_TOKEN to Google's token for this domain */}
         {process.env.NEXT_PUBLIC_WEBMCP_OT_TOKEN && <meta httpEquiv="origin-trial" content={process.env.NEXT_PUBLIC_WEBMCP_OT_TOKEN} />}
-        {/* Restore the selected theme before the page paints; ?theme=dark remains available as a preview fallback. */}
-        <script dangerouslySetInnerHTML={{ __html: "try{const saved=localStorage.getItem('qrs-theme');const requested=new URLSearchParams(location.search).get('theme');if((saved||requested)==='dark')document.documentElement.dataset.theme='dark';else document.documentElement.removeAttribute('data-theme')}catch{if(/[?&]theme=dark(&|$)/.test(location.search))document.documentElement.dataset.theme='dark'}" }} />
+        {/* Restore the selected theme before the page paints; ?theme=dark remains available as a preview fallback (components/ui/ThemeScript.jsx). */}
+        <ThemeScript />
       </head>
       {/* Pages show up at once: no heading fade-ups unless PAGE_ENTRANCES is on; the subtle scroll reveals are SCROLL_REVEALS (globals.css) */}
       <body className={[PAGE_ENTRANCES ? '' : 'no-entrance', STUDIO_THEME ? 'studio-site' : ''].filter(Boolean).join(' ') || undefined}>

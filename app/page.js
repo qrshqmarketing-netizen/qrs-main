@@ -11,7 +11,7 @@ import ServiceArea from '@/components/sections/ServiceArea';
 import StudioHero from '@/components/studio/StudioHero';
 import PromoCard from '@/components/widgets/PromoCard';
 import { EL_NINO_PAGE } from '@/data/pages/elNino';
-import { SEASON_PROMO as promo, promoLandingHref } from '@/data/promo';
+import { SEASON_PROMO as promo } from '@/data/promo';
 import StudioIntro from '@/components/studio/StudioIntro';
 import StudioProcess from '@/components/studio/StudioProcess';
 import StudioProjects from '@/components/studio/StudioProjects';
@@ -61,6 +61,13 @@ const HOME_PRODUCTS = [
 // hover list, large featured projects, three steps, then the sections shared with other pages (reviews, the El Niño offer, the service area map,
 // partners, articles, careers, FAQ, request card and closing call to action). The page's H1 is the hero's small
 // keyword line. Reorder or remove a line to change the page.
+// The home hero's background video (the storm over Los Angeles), slowed 30% when it was encoded: WebM first, H.264 MP4 for Safari and older browsers;
+// the storm photo underneath is the first paint and the fallback (PromoCard `video`, HeroVideo.jsx)
+const HERO_VIDEO = [
+  { src: '/videos/home-hero-el-nino.webm', type: 'video/webm' },
+  { src: '/videos/home-hero-el-nino-h264.mp4', type: 'video/mp4' },
+];
+
 export default async function HomePage() {
   const faqs = await getHomeFaqs(); // from the dashboard (lib/contentStore.js), else data/faqs.js
   return (
@@ -68,7 +75,9 @@ export default async function HomePage() {
       <JsonLd data={pageJsonLd({ path: '/', title: HOME_TITLE, description: HOME_DESCRIPTION, faqs })} />
       <main id="top" className="studio">
         {/* While the El Niño offer runs (SEASON_PROMO.active), its storm card is the hero (the keyword line above the headline is the H1); otherwise the
-            newest projects' photo slider is the hero again */}
+            newest projects' photo slider is the hero again. For now its button jumps to the estimate form at the bottom of this page (RoofCheck,
+            #estimate) instead of opening the El Niño landing page; to send it there again: href: promoLandingHref('home-hero') from data/promo.js.
+            The headline is the home page's own question (the popup and the El Niño page keep promo.heading) */}
         {promo.active ? (
           <PromoCard
             as="section"
@@ -77,11 +86,12 @@ export default async function HomePage() {
             className="promo-home"
             eyebrow={HOME_H1}
             eyebrowTag="h1"
-            heading={promo.heading.replace('El Niño', '__El Niño__')}
+            heading="Is Your Roof Ready for a Super __El Niño__?"
             text={promo.text}
-            cta={{ label: promo.cta.label, href: promoLandingHref('home-hero') }}
+            cta={{ label: promo.cta.label, href: '#estimate' }}
             points={EL_NINO_POINTS}
             rain={promo.rain}
+            video={HERO_VIDEO}
           />
         ) : (
           <StudioHero slides={HERO_SLIDES} />

@@ -8,6 +8,7 @@ import { PROMO_NAME } from '@/data/promo';
 import { PHONE, TEL } from '@/data/site';
 import { local } from '@/lib/storage';
 import { trackEvent } from '@/lib/tracking';
+import HeroVideo from './HeroVideo';
 import PromoRain from './PromoRain';
 import './SeasonPromo.css';
 
@@ -21,10 +22,11 @@ const PHOTO = '/images/season-promo-storm-over-los-angeles.webp';
 // `track` names the piece for Google Analytics (promo_view when it is shown, promo_click and promo_call when its buttons are used) and
 // is the utm_medium of the button's address (promoLandingHref in data/promo.js). Clicking the main button also means the visitor has
 // taken the offer, so the popup never comes back. `exit` is the "before you go" wording (smaller heading, "No thanks" under the button).
+// `video` ([{ src, type }]): a muted looping background video over the photo (the home hero), loaded after the page; the photo stays as the fallback.
 // Only simple values go in from a server component: strings, and `points` (a list of short lines under the button).
 export default function PromoCard({
   variant = 'modal', as: Tag = 'div', track, eyebrow, eyebrowTag: Eyebrow = 'div', heading, headingTag: Heading = 'p', headingId, text, cta, exit = false, rain = true,
-  points, aside, className, onClaim, onClose, onSkip, closeRef,
+  points, aside, video, className, onClaim, onClose, onSkip, closeRef,
 }) {
   const root = useRef(null);
   const event = (name, extra = {}) => trackEvent(name, { promo_name: PROMO_NAME, promo_variant: track || variant, ...extra });
@@ -60,6 +62,7 @@ export default function PromoCard({
       {variant !== 'modal' && (
         <Image className="promo-photo" src={PHOTO} alt="" fill sizes="100vw" {...(variant === 'landing' && { preload: true, fetchPriority: 'high' })} />
       )}
+      {video && <HeroVideo sources={video} className="promo-video" />}
       {rain && <PromoRain rich={variant === 'landing'} />}
       {onClose && (
         <button className="promo-close" type="button" aria-label="Close" onClick={onClose} ref={closeRef}>

@@ -132,14 +132,38 @@ body.studio-site .promo h1.promo-eyebrow{font:600 12px/1.4 var(--font-head);lett
 body.studio-site .promo h1.promo-title{font-family:var(--font-display);font-weight:800;letter-spacing:.01em;text-transform:uppercase;line-height:.96}
 .promo-split .promo-eyebrow{align-self:flex-start;text-align:left}
 /* The home page's hero: a little taller than the landing page's (most of the screen, with the proof strip peeking in below) */
-/* Full screen, like the hero on fluid.glass (the owner's reference): the photo fills the whole first screen at every size and the copy sits low on it,
-   so the sky and the storm read first; the proof strip starts right at the fold */
-.promo.promo-landing.promo-home{min-height:max(640px,100svh);justify-content:flex-end;padding-bottom:clamp(40px,8svh,96px)}
-@media (min-width:901px){.promo.promo-landing.promo-home{min-height:max(720px,100svh);padding-bottom:clamp(56px,9svh,120px)}}
+/* Full screen, like the hero on fluid.glass (the owner's reference): the photo or video fills the whole first screen at every size; the copy sits at the
+   top center (owner, October 13 2026), so the storm and the city show below it; the proof strip starts right at the fold */
+.promo.promo-landing.promo-home{min-height:max(640px,100svh);justify-content:flex-start;padding-top:clamp(104px,15svh,150px);padding-bottom:clamp(40px,8svh,96px)}
+@media (min-width:901px){.promo.promo-landing.promo-home{min-height:max(720px,100svh);padding-top:clamp(120px,16svh,170px);padding-bottom:clamp(56px,9svh,120px)}}
 /* Home hero photo: centered at the bottom (the city), and the slow zoom grows up from the bottom edge so it never opens a gap there */
 .promo-home .promo-photo{object-position:50% 100%;transform-origin:50% 100%}
+/* The home hero's background video (HeroVideo.jsx): over the photo, centered at the bottom, fading in once it plays */
+.promo-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 100%;z-index:-2;opacity:0;transition:opacity 1.2s ease;pointer-events:none}
+.promo-video.on{opacity:1}
+@media print{.promo-video{display:none}}
 @keyframes kenBurnsBottom{from{transform:scale(1.02)}to{transform:scale(1.14) translate3d(-1.6%,0,0)}}
 @media (prefers-reduced-motion:no-preference){.promo-landing.promo-home .promo-photo{animation-name:kenBurnsBottom}}
 /* The home page's hero heading in the studio look's type (light Libre Franklin, sentence case, like the other heroes); the storm card's effects stay:
    the lightning glow on the heading, the rain, the red ping and the photo */
 body.studio-site .promo-home .promo-title{font:500 clamp(44px,11vw,104px)/1.02 var(--font-text),sans-serif;letter-spacing:-.035em;text-transform:none;text-wrap:balance}
+/* Home hero layout (owner, October 13 2026): the keyword line and the headline at the top center, the storm in the middle, the excerpt at the bottom
+   left and the buttons (with the three check points under them) at the bottom right. Phones stack it: the headline at the top, then the excerpt,
+   the excerpt centered right under it, then the buttons one above the other and the points, all centered. (.promo-copy is display:contents, so these are the hero's own children.) */
+.promo-home :is(.promo-text,.promo-actions,.promo-points){align-self:stretch}
+.promo-landing.promo-home .promo-text{margin:4px auto 0;text-align:center;max-width:560px;font-size:19px;line-height:1.5}
+.promo-home .promo-actions{margin-top:24px;align-items:center}
+.promo-landing.promo-home .promo-actions .btn{width:100%;max-width:none}
+.promo-home .promo-points{align-items:center;margin-top:20px}
+@media (min-width:621px){.promo-landing.promo-home .promo-text{font-size:22px}}
+@media (min-width:901px){
+  .promo.promo-landing.promo-home{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto auto 1fr auto auto;column-gap:48px;padding-left:clamp(40px,4vw,72px);padding-right:clamp(40px,4vw,72px)}
+  .promo-home .promo-eyebrow{grid-column:1/-1;grid-row:1;justify-self:center}
+  body.studio-site .promo-home .promo-title{grid-column:1/-1;grid-row:2;justify-self:center;font-size:clamp(38px,4.6vw,96px);white-space:nowrap;max-width:none}
+  .promo-landing.promo-home .promo-text{grid-column:1;grid-row:4/span 2;align-self:end;justify-self:start;margin:0;text-align:left;max-width:640px;font-size:clamp(22px,1.75vw,30px)}
+  .promo-home :is(.promo-actions,.promo-points){align-self:end}
+  .promo-home .promo-actions{grid-column:2;grid-row:4;align-self:end;justify-self:end;flex-direction:row;justify-content:flex-end;align-items:center;gap:20px;margin-top:0;padding-top:0}
+  .promo.promo-landing.promo-home{padding-bottom:clamp(96px,13svh,150px)} /* the bottom row clears the chat bubble */
+  .promo-landing.promo-home .promo-actions .btn{width:auto;min-width:0}
+  .promo-home .promo-points{grid-column:2;grid-row:5;justify-self:end;flex-direction:column;align-items:flex-end;gap:6px;margin:18px 0 0}
+}
