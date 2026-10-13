@@ -376,7 +376,13 @@ export default function InstantQuote({ openFrom = null, onReady }) {
                 Roof size <output id="rmSqftOut" htmlFor="rmSqft">{fmt(sqft.value)} sq ft</output>
               </label>
               <input type="range" id="rmSqft" min="500" max={sqft.max} step={sqft.step} value={sqft.value} onChange={(e) => setSqft((s) => ({ ...s, value: Number(e.target.value) }))} />
-              <small id="rmSqftHint">{manual ? 'Not sure? A typical LA home roof is 1,500–2,500 sq ft.' : 'Drag to adjust if it looks off.'}</small>
+              <small id="rmSqftHint">
+                {manual
+                  ? 'Not sure? A typical LA home roof is 1,500–2,500 sq ft.'
+                  : roof?.partial
+                    ? 'Trees or shade may hide part of this roof from the satellite, so it can measure small. Drag to adjust if you know the size.'
+                    : 'Drag to adjust if it looks off.'}
+              </small>
             </div>
             <fieldset className="rm-pitch">
               <legend>
@@ -413,12 +419,6 @@ export default function InstantQuote({ openFrom = null, onReady }) {
                     <em>{fmt(f.sqft)} sq ft</em>
                   </li>
                 ))}
-                {roof?.otherSqft > 0 && (
-                  <li>
-                    Other roof areas
-                    <em>{fmt(roof.otherSqft)} sq ft</em>
-                  </li>
-                )}
               </ul>
             </details>
             <fieldset className="rm-types">
