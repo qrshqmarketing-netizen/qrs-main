@@ -166,3 +166,19 @@
 .hero-inner:not(.hero-left) .hero-notes{justify-content:center}
 body.studio-site .hero .hero-notes{justify-content:flex-start}
 @media (min-width:621px){.hero-notes{font-size:14.5px}}
+
+/* The breathing light (Hero.jsx .hero-breath): three soft glows over the photo, under the copy. Gold low at the right, plum high at the left and a
+   deep blue across the middle, each on its own slow loop (18-26 s), drifting, swelling and fading so the light never repeats the same way; the
+   whole layer breathes in and out on top. Screen blending lifts the photo's colors without washing the text. Transform and opacity only.
+   Reduced motion and print: a still glow. */
+.hero-breath{position:absolute;inset:0;z-index:-1;overflow:hidden;pointer-events:none;mix-blend-mode:screen;opacity:.9;animation:breathAll 11s ease-in-out infinite alternate}
+.hero-breath i{position:absolute;width:64vmax;height:64vmax;border-radius:50%;will-change:transform,opacity}
+.hero-breath i:nth-child(1){right:-18vmax;bottom:-30vmax;background:radial-gradient(circle,rgba(226,176,86,.58) 0%,rgba(226,176,86,.22) 36%,rgba(226,176,86,0) 64%);animation:breathA 19s ease-in-out infinite alternate}
+.hero-breath i:nth-child(2){left:-22vmax;top:-30vmax;background:radial-gradient(circle,rgba(168,64,132,.55) 0%,rgba(168,64,132,.2) 38%,rgba(168,64,132,0) 64%);animation:breathB 23s ease-in-out infinite alternate}
+.hero-breath i:nth-child(3){left:46%;top:-6%;width:52vmax;height:52vmax;background:radial-gradient(circle,rgba(56,128,196,.44) 0%,rgba(56,128,196,.14) 40%,rgba(56,128,196,0) 64%);animation:breathC 26s ease-in-out infinite alternate}
+@keyframes breathAll{from{opacity:.7}to{opacity:1}}
+@keyframes breathA{0%{transform:translate3d(0,0,0) scale(.9);opacity:.75}50%{transform:translate3d(-6vmax,-4vmax,0) scale(1.12);opacity:1}100%{transform:translate3d(-12vmax,2vmax,0) scale(.98);opacity:.85}}
+@keyframes breathB{0%{transform:translate3d(0,0,0) scale(1);opacity:.85}50%{transform:translate3d(8vmax,6vmax,0) scale(1.18);opacity:.6}100%{transform:translate3d(4vmax,12vmax,0) scale(.92);opacity:1}}
+@keyframes breathC{0%{transform:translate3d(0,0,0) scale(.85);opacity:.5}50%{transform:translate3d(10vmax,-6vmax,0) scale(1.1);opacity:.9}100%{transform:translate3d(-8vmax,4vmax,0) scale(1);opacity:.65}}
+@media (prefers-reduced-motion:reduce){.hero-breath,.hero-breath i{animation:none}}
+@media print{.hero-breath{display:none}}

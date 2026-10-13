@@ -68,6 +68,7 @@ export default function Hero({
   aside,
   actions: allActions = DEFAULT_ACTIONS,
   annotations,
+  breath = true,
   className,
 }) {
   // Buttons that open the Instant Quote are left out while it's switched off (INSTANT_QUOTE_ENABLED in data/instantQuote.js)
@@ -85,6 +86,8 @@ export default function Hero({
       <section className={'hero hero-photo' + (image ? '' : ' hero-fallback') + (image || mobileImage ? ' hero-stack' : '') + (className ? ` ${className}` : '')} aria-label={label}>
         <HeroParallax image={image} mobileImage={mobileImage} imageAlt={imageAlt} imagePosition={imagePosition} slides={slides} />
         <div className="hero-glow" aria-hidden="true"></div>
+        {/* A slow "breathing" light over the photo: three soft color glows that drift, swell and fade (CSS: .hero-breath in Hero.css); breath={false} leaves it out (the blog index) */}
+        {breath && <div className="hero-breath" aria-hidden="true"><i></i><i></i><i></i></div>}
         <div className={'container hero-inner on-dark' + (align === 'left' ? ' hero-left' : '') + (aside ? ' hero-has-aside' : '') + (className ? ` ${className}` : '')}>
           <div className="hero-copy">
             {/* The breadcrumb trail takes the eyebrow's place (Home › Roof Repair). Only a page with no trail (the home page, the thank-you page) shows an eyebrow line. */}
