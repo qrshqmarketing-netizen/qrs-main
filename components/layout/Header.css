@@ -94,3 +94,25 @@ body:has(main :is(.hero,.st-hero,.promo-home,.pd-hero)) .site-header:not([data-s
   .hd-link:after{left:16px;right:16px}
 }
 @media (prefers-reduced-motion:reduce){.hd-panel,.hd-panel li,.hd-backdrop,.hd-menu span,.hd-link:after{transition:none!important}}
+
+/* A four-point sparkle at the left of the current page's link in the bar, and of any link under the mouse (owner, October 14 2026):
+   public/images/menu-sparkle.webp (white star on transparent) used as a mask, so CSS paints it: a gold gradient with a light glint that sweeps
+   across it every few seconds and a slow twinkle. Darker gold on the solid paper bar, brighter gold over a photo hero and in dark mode (the gold
+   tokens are lightened there). It sits partly in the gap before the link, so the links don't move; on hover it grows in (`scale`, which adds to
+   the twinkle's `transform`). Still for reduced motion. */
+.hd-link:before{
+  content:"";position:absolute;left:-5px;top:50%;width:15px;height:15px;margin-top:-7.5px;pointer-events:none;
+  -webkit-mask:url(/images/menu-sparkle.webp) center/contain no-repeat;mask:url(/images/menu-sparkle.webp) center/contain no-repeat;
+  background:linear-gradient(115deg,var(--gold-ink) 0%,var(--gold) 38%,#fff4d2 50%,var(--gold) 62%,var(--gold-ink) 100%) 100% 0/300% 100%;
+  opacity:0;scale:0;transition:opacity .3s ease,scale .45s cubic-bezier(.17,.84,.44,1);
+  animation:hdSparkleGlint 4.5s ease-in-out infinite,hdSparkleTwinkle 4.5s ease-in-out infinite;
+}
+.hd-link.on:before{opacity:1;scale:1}
+@media (hover:hover){.hd-link:hover:before{opacity:1;scale:1}}
+:root[data-theme="dark"] .hd-link:before,
+body:has(main :is(.hero,.st-hero,.promo-home,.pd-hero)) .site-header:not([data-solid]) .hd-link:before{
+  background-image:linear-gradient(115deg,var(--gold) 0%,var(--gold-2) 38%,#fffaf0 50%,var(--gold-2) 62%,var(--gold) 100%);
+}
+@keyframes hdSparkleGlint{0%,55%{background-position:100% 0}85%,100%{background-position:0 0}}
+@keyframes hdSparkleTwinkle{0%,55%,100%{transform:scale(1) rotate(0)}70%{transform:scale(1.25) rotate(45deg)}}
+@media (prefers-reduced-motion:reduce){.hd-link:before{animation:none;transition:none;background-position:50% 0}}

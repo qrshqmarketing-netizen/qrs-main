@@ -66,7 +66,7 @@ export default function Footer() {
           <span>
             Copyright &copy; <CopyrightYear builtYear={new Date().getFullYear()} /> {BUSINESS.legalName}, All Rights Reserved
           </span>
-          <span>CSLB Lic # {BUSINESS.license}</span>
+          <span className="ft-license">CSLB Lic # {BUSINESS.license}</span>
           {FOOTER.legal.map((link) => (
             <span key={link.href}>
               <SiteLink href={link.href} prefetch={false} {...(link.newTab && { target: '_blank', rel: 'noopener' })}>

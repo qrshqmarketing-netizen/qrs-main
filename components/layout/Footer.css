@@ -31,6 +31,7 @@ footer .container{position:relative;max-width:1540px}
 
 .ft-copy{margin:40px 0 0;padding-top:22px;border-top:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.62);font-size:13px;line-height:1.6;display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center}
 .ft-copy a{color:inherit;transition:color .2s ease}
+.ft-copy .ft-license{color:#fff} /* the license number stands out in white (owner, October 14 2026) */
 .ft-copy a:hover{color:var(--gold-2)}
 
 @media (min-width:621px){
