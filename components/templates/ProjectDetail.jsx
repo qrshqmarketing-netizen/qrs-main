@@ -38,7 +38,8 @@ const workOf = (title) => {
 };
 
 // The story after the lead paragraph as chapters, each but the last followed by a photo from the job, spread evenly through the photos that
-// aren't already the cover or in the during/finished wipe (a project with few photos gives the first chapters one each).
+// aren't already the cover or in the during/finished wipe (a project with few photos gives the first chapters one each). `chapterPhotos`
+// ({ <chapter number, as in headings>: <index in photos> }) picks the photo after a chapter by hand, so it shows what that chapter tells.
 function chaptersOf(page, used) {
   const rest = page.paragraphs.slice(1);
   const pool = page.photos.filter((photo, i) => i > 0 && !used.includes(photo.src));
@@ -46,7 +47,7 @@ function chaptersOf(page, used) {
   return rest.map((text, i) => ({
     heading: page.headings?.[i + 1] || '',
     text,
-    photo: i < wanted ? pool[Math.floor(((i + 0.5) * pool.length) / wanted)] : null,
+    photo: page.photos[page.chapterPhotos?.[i + 1]] || (i < wanted ? pool[Math.floor(((i + 0.5) * pool.length) / wanted)] : null),
   }));
 }
 

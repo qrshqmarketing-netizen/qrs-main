@@ -29,6 +29,7 @@ import { GARDEN_GROVE_PROJECT } from './pages/garden-grove-project';
 import { SHOW_GARDEN_GROVE } from './pages/projects';
 import { GRANADA_HILLS_PROJECT } from './pages/granada-hills-project';
 import { HACIENDA_HEIGHTS_PROJECT } from './pages/hacienda-heights-project';
+import { PICO_RIVERA_PROJECT } from './pages/pico-rivera-project';
 import { LA_90057_PROJECT } from './pages/la-90057-project';
 import { LA_90061_PROJECT } from './pages/la-90061-project';
 import { VENICE_PROJECT } from './pages/venice-project';
@@ -146,6 +147,7 @@ export const ALL_PATHS = [
   LA_90057_PROJECT.path,
   GRANADA_HILLS_PROJECT.path,
   HACIENDA_HEIGHTS_PROJECT.path,
+  PICO_RIVERA_PROJECT.path,
   LA_90061_PROJECT.path,
   REVIEWS_LINK.href,
   // The blog index is listed once it has a published post (until then it's a "coming soon" page, kept out of search)

@@ -6,6 +6,7 @@ import { PANORAMA_CITY_PROJECT } from './panorama-city-project';
 import { GARDEN_GROVE_PROJECT } from './garden-grove-project';
 import { GRANADA_HILLS_PROJECT } from './granada-hills-project';
 import { HACIENDA_HEIGHTS_PROJECT } from './hacienda-heights-project';
+import { PICO_RIVERA_PROJECT } from './pico-rivera-project';
 import { LA_90057_PROJECT } from './la-90057-project';
 import { LA_90061_PROJECT } from './la-90061-project';
 import { VENICE_PROJECT } from './venice-project';
@@ -18,7 +19,7 @@ import { SAN_PEDRO_PROJECT } from './san-pedro-project';
 // ZIP code's center, not the street address), then list it here.
 // Garden Grove is switched off until all of its photos are in: set SHOW_GARDEN_GROVE to true to bring its page, its map pin and its place in the lists back
 export const SHOW_GARDEN_GROVE = false;
-export const PROJECT_PAGES = [HACIENDA_HEIGHTS_PROJECT, GRANADA_HILLS_PROJECT, ...(SHOW_GARDEN_GROVE ? [GARDEN_GROVE_PROJECT] : []), LA_90057_PROJECT, LA_90061_PROJECT, WHITE_FLAT_PROJECT, VENICE_PROJECT, PANORAMA_CITY_PROJECT, MID_WILSHIRE_PROJECT, HOLLYWOOD_HILLS_PROJECT, SAN_PEDRO_PROJECT, SAN_PEDRO_FULL_ROOF_PROJECT];
+export const PROJECT_PAGES = [PICO_RIVERA_PROJECT, HACIENDA_HEIGHTS_PROJECT, GRANADA_HILLS_PROJECT, ...(SHOW_GARDEN_GROVE ? [GARDEN_GROVE_PROJECT] : []), LA_90057_PROJECT, LA_90061_PROJECT, WHITE_FLAT_PROJECT, VENICE_PROJECT, PANORAMA_CITY_PROJECT, MID_WILSHIRE_PROJECT, HOLLYWOOD_HILLS_PROJECT, SAN_PEDRO_PROJECT, SAN_PEDRO_FULL_ROOF_PROJECT];
 
 export const PROJECTS_PAGE = {
   keyword: 'roofing projects',
@@ -31,6 +32,6 @@ export const PROJECTS_PAGE = {
       'Browse roofing projects from homes, communities and commercial properties across Southern California, featuring tile, shingle and flat roof work.',
     // Second paragraph under the intro, smaller type. Describes only what the project pages show.
     more:
-      'Each project page shows the finished roof in photos, where it is and how the work was done. So far that includes [shingle roof replacements](/residential-roofing/shingle-roofing/replacement/) on apartment and multi-family buildings in Panorama City and San Pedro, a single-story home in San Pedro, a round, 12-sided home with a new [flat roof](/residential-roofing/flat-roofing/replacement/) in Hollywood Hills West, and a Mid-Wilshire building with both [tile](/residential-roofing/tile-roofing/replacement/) and flat roofing, a canal-side home in Venice re-roofed in new charcoal shingles with its flat roof section rebuilt, a white flat roof on a mid-century home in Los Angeles 90049, a shingle roof replacement in Garden Grove, and shingle roof replacements in Westlake, South Los Angeles, Granada Hills and Hacienda Heights. Use the map to find the project closest to you, or enter your ZIP code. Planning a roof of your own? [Contact us](/contact-us/) to start with a free roof evaluation.',
+      'Each project page shows the finished roof in photos, where it is and how the work was done. So far that includes [shingle roof replacements](/residential-roofing/shingle-roofing/replacement/) on apartment and multi-family buildings in Panorama City and San Pedro, a single-story home in San Pedro, a round, 12-sided home with a new [flat roof](/residential-roofing/flat-roofing/replacement/) in Hollywood Hills West, and a Mid-Wilshire building with both [tile](/residential-roofing/tile-roofing/replacement/) and flat roofing, a canal-side home in Venice re-roofed in new charcoal shingles with its flat roof section rebuilt, a white flat roof on a mid-century home in Los Angeles 90049, a shingle roof replacement in Garden Grove, shingle roof replacements in Westlake, South Los Angeles, Granada Hills and Hacienda Heights, and a roof replacement under solar panels in Pico Rivera, with the array taken down, stored and put back on the new roof. Use the map to find the project closest to you, or enter your ZIP code. Planning a roof of your own? [Contact us](/contact-us/) to start with a free roof evaluation.',
   },
 };
