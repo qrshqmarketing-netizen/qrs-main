@@ -1,4 +1,5 @@
 import CardCarousel from '@/components/sections/CardCarousel';
+import ReviewMarquee from '@/components/sections/ReviewMarquee';
 import DifferenceBand from '@/components/sections/DifferenceBand';
 import Faq from '@/components/sections/Faq';
 import LatestArticles from '@/components/sections/LatestArticles';
@@ -51,6 +52,8 @@ export default async function ResidentialRoofingPage() {
       <Overview heading={page.overview.heading} paragraphs={page.overview.paragraphs} />
       <CardCarousel title={page.cards.heading} items={RESIDENTIAL_TYPES.map(typeCard)} idPrefix="roofTypes" tone="wash" />
       <ServiceFinder heading={page.finder.heading} intro={page.finder.intro} rows={page.finder.rows} />
+      {/* Google reviews, a few sections below the hero (owner, October 14 2026) */}
+      <ReviewMarquee />
       <DifferenceBand />
       <LatestArticles posts={await articlesFor(RESIDENTIAL.href)} heading="Related Roofing Articles" />
       <Faq heading="Frequently Asked __Questions__" sub="Straight answers about residential roofing." faqs={page.faqs} cta={false} />

@@ -44,7 +44,6 @@ export default function ContractorsPage() {
         title={page.hero.heading}
         outcome={heroOutcome('/contractors/')}
         stats
-        reviews={false}
         intro={page.hero.intro}
         image="/images/contractors-hero-roofer-tablet.webp"
         imageAlt="Roofer on a rooftop reviewing a scope on a tablet"

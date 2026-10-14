@@ -32,7 +32,6 @@ export default function CareersPage() {
         title={page.hero.heading}
         outcome={heroOutcome('/careers/')}
         stats
-        reviews={false}
         intro={page.hero.intro}
         image={HERO_IMAGE}
         mobileImage="/images/careers-hero-crew-shingle-roof-mobile.webp"

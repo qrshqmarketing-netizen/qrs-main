@@ -1,4 +1,5 @@
 import Faq from '@/components/sections/Faq';
+import ReviewMarquee from '@/components/sections/ReviewMarquee';
 import LatestArticles from '@/components/sections/LatestArticles';
 import CardCarousel from '@/components/sections/CardCarousel';
 import FinalCta from '@/components/sections/FinalCta';
@@ -57,8 +58,6 @@ export default async function LocationPage({ location, page, index = 0 }) {
         title={page.hero.heading}
         outcome={heroOutcome(cityPath(slug))}
         stats
-        reviewOffice={slug}
-        reviewPlaces={[city, ...page.neighborhoods]}
         intro={page.hero.sub}
         image={photo.src}
         imagePosition={photo.position}
@@ -68,6 +67,8 @@ export default async function LocationPage({ location, page, index = 0 }) {
       <ServiceCategories place={city} />
       <CardCarousel title={`Roof types we work on in __${city}__`} items={RESIDENTIAL_TYPES.map(typeCard)} idPrefix="roofTypes" tone="wash" />
       {/* Only real projects in or near this city (by the project's ZIP code pin), stacked as cards; with none nearby, no section */}
+      {/* Google reviews, a few sections below the hero (owner, October 14 2026) */}
+      <ReviewMarquee office={slug} places={[city, ...page.neighborhoods]} />
       <StudioProjects
         id="projects"
         label={nearby.local ? `Projects in ${city}` : `Projects near ${city}`}

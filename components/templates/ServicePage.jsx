@@ -1,4 +1,5 @@
 import Faq from '@/components/sections/Faq';
+import ReviewMarquee from '@/components/sections/ReviewMarquee';
 import LatestArticles from '@/components/sections/LatestArticles';
 import FeatureBand from '@/components/sections/FeatureBand';
 import FinalCta from '@/components/sections/FinalCta';
@@ -118,7 +119,6 @@ export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], 
         image={page.image}
         imageAlt={page.imageAlt}
         stats
-        reviews={page.showReviews !== false}
         {...(actions && { actions })}
       />
       <Overview paragraphs={page.overview.paragraphs} cta={hub && { label: `Compare All ${hub.label} Options`, href: hub.href }} />
@@ -134,6 +134,8 @@ export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], 
         image={processImage}
         imageAlt={processImageAlt}
       />
+      {/* Google reviews, a few sections below the hero (owner, October 14 2026) */}
+      {page.showReviews !== false && <ReviewMarquee />}
       <WhyChoose heading={page.why.heading} intro={page.why.intro} points={page.why.points} />
       <LatestArticles posts={await articlesFor(crumbs.at(-1).href)} heading="Related Roofing Articles" />
       {page.faqs?.length > 0 && <Faq heading="Frequently Asked __Questions__" sub={faqSub(page.keyword)} faqs={page.faqs} cta={false} />}

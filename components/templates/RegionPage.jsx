@@ -1,4 +1,5 @@
 import AlsoServing from '@/components/sections/AlsoServing';
+import ReviewMarquee from '@/components/sections/ReviewMarquee';
 import CardCarousel from '@/components/sections/CardCarousel';
 import CityCards from '@/components/sections/CityCards';
 import Faq from '@/components/sections/Faq';
@@ -59,6 +60,8 @@ export default async function RegionPage({ region, page }) {
       <LocalIntro city={region.name} heading={page.intro.heading} paragraphs={page.intro.paragraphs} offices={offices} considerations={page.considerations} />
       <ServiceCategories place={region.name} />
       <CardCarousel title={`Roof types we work on in __${region.name}__`} items={RESIDENTIAL_TYPES.map(typeCard)} idPrefix="roofTypes" tone="wash" />
+      {/* Google reviews, a few sections below the hero (owner, October 14 2026) */}
+      <ReviewMarquee />
       <CityCards regions={[region.slug]} blurbs={blurbs} heading={`Cities We Serve in ${region.name}`} />
       <AlsoServing region={region.slug} heading={cities.length ? `More of ${region.name} We __Serve__` : `Cities We __Serve__ in ${region.name}`} sub={cities.length ? undefined : `Every city below is inside the area we serve and has a pin on our service area map. If you are in or near one, we cover you.`} />
       <LatestArticles posts={await articlesFor(path)} heading="Related Roofing Articles" />

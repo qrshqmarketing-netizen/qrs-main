@@ -108,11 +108,11 @@ export default async function HomePage() {
           <StudioHero slides={HERO_SLIDES} />
         )}
         <ProofBar strip />
-        {/* Reviews right under the hero (as on royalroofing.com): what people say comes before what we say */}
-        <ReviewMarquee heading="What people say after the job" />
         <StudioIntro />
         <StudioServices categories={SERVICE_CATEGORIES} items={HOME_PRODUCTS} />
         <StudioWhy />
+        {/* Reviews after the intro, services and "Why QRS" (owner, October 14 2026: moved down from right under the hero) */}
+        <ReviewMarquee heading="What people say after the job" />
         <StudioProjects projects={LATEST_PROJECTS.slice(0, 3)} more={LATEST_PROJECTS.slice(3)} />
         <StudioProcess />
         {SHOW_ROOF_COLORS && <RoofColors />}

@@ -1,4 +1,5 @@
 import Faq from '@/components/sections/Faq';
+import ReviewMarquee from '@/components/sections/ReviewMarquee';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
 import { AboutCards, AboutIntro, AboutMission, AboutNumbers, AboutOffices, AboutRecognition, AboutServices, AboutStory, AboutTeam } from '@/components/about/AboutSections';
@@ -26,6 +27,8 @@ export default function AboutPage() {
       <AboutIntro page={page} />
       <AboutNumbers />
       <AboutStory story={{ ...page.story, paragraphs: page.story.paragraphs.slice(0, 1) }} />
+      {/* Google reviews, a few sections below the hero (owner, October 14 2026) */}
+      <ReviewMarquee />
       <AboutOffices />
       <AboutMission mission={page.mission} />
       <AboutTeam team={page.team} />

@@ -1,4 +1,5 @@
 import CardGrid from '@/components/sections/CardGrid';
+import ReviewMarquee from '@/components/sections/ReviewMarquee';
 import Faq from '@/components/sections/Faq';
 import LatestArticles from '@/components/sections/LatestArticles';
 import FinalCta from '@/components/sections/FinalCta';
@@ -47,6 +48,8 @@ export default async function HubPage({ hub, crumbs, eyebrow, image, imageAlt, c
       <Overview heading={hub.overview.heading} paragraphs={hub.overview.paragraphs} />
       {extraGrid && <CardGrid id="services" heading={extraGrid.heading} intro={extraGrid.intro} cards={extraGrid.cards} tone="wash" />}
       <CardGrid id={extraGrid ? 'buildings' : 'services'} heading={hub.cards.heading} intro={hub.cards.intro} cards={cards} tone={extraGrid ? undefined : 'wash'} />
+      {/* Google reviews, a few sections below the hero (owner, October 14 2026) */}
+      <ReviewMarquee />
       <ValueGrid heading={hub.highlights.heading} items={hub.highlights.points} columns={3} />
       {process && <Process />}
       {feature && <SplitFeature {...feature} tone="wash" />}

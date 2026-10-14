@@ -133,7 +133,8 @@ body.studio-site .promo h1.promo-title{font-family:var(--font-display);font-weig
 /* The home page's hero: a little taller than the landing page's (most of the screen, with the proof strip peeking in below) */
 /* Full screen, like the hero on fluid.glass (the owner's reference): the photo or video fills the whole first screen at every size; the copy sits at the
    top center (owner, October 13 2026), so the storm and the city show below it; the proof strip starts right at the fold */
-.promo.promo-landing.promo-home{min-height:max(640px,100svh);justify-content:flex-start;padding-top:clamp(104px,15svh,150px);padding-bottom:clamp(40px,8svh,96px)}
+/* Phones: the hero is as tall as its content (owner, October 14 2026: no empty band under the points); from 901px it fills the first screen */
+.promo.promo-landing.promo-home{min-height:0;justify-content:flex-start;padding-top:clamp(96px,14svh,132px);padding-bottom:44px}
 @media (min-width:901px){.promo.promo-landing.promo-home{min-height:max(720px,100svh);padding-top:clamp(120px,16svh,170px);padding-bottom:clamp(56px,9svh,120px)}}
 /* Home hero photo: centered at the bottom (the city), and the slow zoom grows up from the bottom edge so it never opens a gap there */
 .promo-home .promo-photo{object-position:50% 100%;transform-origin:50% 100%}

@@ -39,7 +39,6 @@ export default function CredentialsPage() {
         image={page.hero.image}
         imageAlt={page.hero.imageAlt}
         stats
-        reviews={false}
       />
       <Credentials page={page} />
       <Faq heading="Credentials FAQs" sub="Straight answers about our license, insurance and certifications." faqs={page.faqs} cta={false} />

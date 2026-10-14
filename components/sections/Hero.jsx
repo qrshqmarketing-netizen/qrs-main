@@ -9,7 +9,6 @@ import { HERO_ANNOTATIONS, PHONE, TEL } from '@/data/site';
 import Breadcrumbs from './Breadcrumbs';
 import HeroParallax from './HeroParallax';
 import ProofBar from './ProofBar';
-import ReviewMarquee from './ReviewMarquee';
 import './Hero.css';
 
 const DEFAULT_ACTIONS = [
@@ -28,7 +27,7 @@ const DEFAULT_ACTIONS = [
 // also `image`) turns the photo into a slider that rotates every 7 seconds (HeroSlides.jsx). Pass `mobileImage` (e.g. a portrait
 // crop of the same scene) to show a different photo below 621px instead of a cropped `image`. Below 621px a hero
 // with a photo stacks: the photo on its own band, then the copy below it (Hero.css .hero-stack). `stats` adds the proof-point strip directly
-// under the hero (ProofBar `strip`) and the Google reviews marquee after it (`reviews`, `reviewPlaces`, `reviewOffice`). `aside` puts something (a picture) beside the copy
+// under the hero (ProofBar `strip`). The Google reviews marquee is placed by each page, a few sections further down. `aside` puts something (a picture) beside the copy
 // from 901px, below it on phones (the blog index shows its latest article this way). Under the buttons, a row of check marks names the decisive facts
 // (`annotations`, default HERO_ANNOTATIONS in data/site.js: the commercial set on commercial and partner pages; false hides it). `underline` (default: the page's entry in HERO_UNDERLINES,
 // data/heroOutcomes.js) is the word in the headline that gets the hand-drawn animated underline.
@@ -70,9 +69,6 @@ export default function Hero({
   actions: allActions = DEFAULT_ACTIONS,
   annotations,
   breath = true,
-  reviews = true,
-  reviewPlaces,
-  reviewOffice,
   className,
 }) {
   // Buttons that open the Instant Quote are left out while it's switched off (INSTANT_QUOTE_ENABLED in data/instantQuote.js)
@@ -141,9 +137,6 @@ export default function Hero({
         </div>
       </section>
       {stats && <ProofBar strip />}
-      {/* The Google reviews as the home page shows them (two drifting rows, ReviewMarquee), right after the proof strip on every sub page that has
-          one (owner, October 14 2026). reviews={false} leaves them out; reviewPlaces / reviewOffice put the reviews naming a city first. */}
-      {stats && reviews && <ReviewMarquee places={reviewPlaces} office={reviewOffice} />}
     </>
   );
 }

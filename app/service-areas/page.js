@@ -1,4 +1,5 @@
 import AlsoServing from '@/components/sections/AlsoServing';
+import ReviewMarquee from '@/components/sections/ReviewMarquee';
 import CityCards from '@/components/sections/CityCards';
 import DifferenceBand from '@/components/sections/DifferenceBand';
 import Faq from '@/components/sections/Faq';
@@ -54,6 +55,8 @@ export default function LocationsPage() {
       <Offices sub="Our Los Angeles and Valley offices serve homes and businesses across Los Angeles County, Orange County and the Inland Empire. One number reaches both." />
       <ServiceArea heading="Find Your Nearest QRS Service Area" sub="Enter your ZIP code to confirm we cover your address, or pick your city from the list." />
       <CityCards blurbs={BLURBS} linkRegions />
+      {/* Google reviews, a few sections below the hero (owner, October 14 2026) */}
+      <ReviewMarquee />
       <AlsoServing />
       <DifferenceBand />
       <Faq heading="Service Area FAQs" sub="Straight answers about where we work." faqs={page.faqs} cta={false} />
