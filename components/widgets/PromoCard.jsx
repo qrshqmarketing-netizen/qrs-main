@@ -51,10 +51,10 @@ export default function PromoCard({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [variant, track]);
 
-  const claim = () => {
+  const claim = (e) => {
     if (track !== false) local.set('promoClaimed', '1');
     event('promo_click', { cta: 'primary' });
-    onClaim?.();
+    onClaim?.(e);
   };
 
   const dialog = variant === 'modal' && { role: 'dialog', 'aria-modal': 'true', 'aria-labelledby': headingId, onClick: (e) => e.stopPropagation() };

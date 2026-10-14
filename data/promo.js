@@ -8,15 +8,15 @@ export const SEASON_PROMO = {
   eyebrow: 'Get your roof ready before the rain',
   // Forecasters (NOAA, fall 2026) give a very strong, "super" El Niño good odds for November–January
   heading: 'Be prepared for a super El Niño', // sentence case shows on the home hero; the popup and the El Niño page set it in capitals
+  modalHeading: 'Is Your Roof Ready for a Super El Niño?', // the first-visit popup and the "before you go" popup (the El Niño page and home section keep `heading`)
   text: 'Forecasters expect a very strong El Niño this winter. Book your free drone roof evaluation now and find the weak spots before the storms do.',
   exit: {
-    heading: 'Before You Go: Is Your Roof Ready for El Niño?',
     text: 'Heavy El Niño rains are on the way. Book your free drone roof evaluation now and know exactly where your roof stands before the first big storm.',
   },
-  cta: { label: 'Claim My Free Evaluation' }, // goes to the El Niño landing page (promoLandingHref below), tagged with where it was clicked
+  cta: { label: 'Claim My Free Evaluation' }, // jumps to the estimate form on the current page (the El Niño landing page on a page without one)
   rain: true, // faint rain falling inside the popup (components/widgets/PromoRain.jsx); false switches it off
-  // '/': the offer is the home page's hero itself, so no popup there
-  exclude: ['/', '/start/', '/thank-you/', '/el-nino-roof-check/', '/commercial-roofing/', '/residential-roofing/hoa-multi-family/', '/service-areas/la-county/vernon/', '/contractors/', '/careers/'],
+  // The home page shows it too now that its hero is the drone video (add '/' to keep it off the home page only)
+  exclude: ['/start/', '/thank-you/', '/el-nino-roof-check/', '/commercial-roofing/', '/residential-roofing/hoa-multi-family/', '/service-areas/la-county/vernon/', '/contractors/', '/careers/'],
 };
 
 // The old heading fade-ups (every h2 faded up on load) are off and stay off; true brings them back (app/layout.js).

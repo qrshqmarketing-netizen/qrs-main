@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { SEASON_PROMO as promo, promoLandingHref } from '@/data/promo';
 import { local, session } from '@/lib/storage';
 import PromoCard from './PromoCard';
@@ -10,6 +10,7 @@ import './SeasonPromo.css';
 const FIRST_MS = 15000, EXIT_ARM_MS = 8000; // the card opens 15 seconds after the page loads
 const FLICK_PX = 350, FLICK_MS = 300; // phones: an upward scroll this far this fast, once they're a screen down, reads as leaving
 const PHOTO = '/images/season-promo-storm-over-los-angeles.webp'; // the card's background (SeasonPromo.css)
+const FORM_ID = 'estimate'; // the estimate form card at the bottom of each page (RoofCheck.jsx)
 
 // Fetch the background photo a few seconds before the card can open, so it doesn't appear on an empty navy card
 const preloadPhoto = () => {
@@ -28,6 +29,7 @@ const excluded = (entry, path) => (entry === '/' ? path === '/' : path.startsWit
 export default function SeasonPromo() {
   const [view, setView] = useState(null); // 'card' | 'exit' | null
   const pathname = usePathname();
+  const router = useRouter();
   const path = useRef(pathname);
   const closeRef = useRef(null);
 
@@ -125,9 +127,24 @@ export default function SeasonPromo() {
 
   const close = () => setView(null);
   const isExit = view === 'exit';
+  const landing = promoLandingHref(isExit ? 'modal-exit' : 'modal-timed');
 
-  // The button opens the El Niño landing page (data/promo.js), tagged with which popup it was
-  const cta = { label: promo.cta.label, href: promoLandingHref(isExit ? 'modal-exit' : 'modal-timed') };
+  // The button jumps to the estimate form on the page the visitor is on (#estimate, RoofCheck); a page without the form
+  // (legal pages, careers) opens the El Niño landing page instead (data/promo.js), tagged with which popup it was
+  const cta = { label: promo.cta.label, href: `#${FORM_ID}` };
+  const claim = (e) => {
+    const form = document.getElementById(FORM_ID);
+    e.preventDefault();
+    close();
+    if (!form) return router.push(landing);
+    // Smooth scrolling (Lenis) is paused while the popup is open, so scroll once it has closed; scroll-margin-top clears the header
+    requestAnimationFrame(() => {
+      const lenis = window.__qrsLenis;
+      if (lenis) lenis.scrollTo(form, { offset: -(parseFloat(getComputedStyle(form).scrollMarginTop) || 0), force: true });
+      else form.scrollIntoView({ behavior: 'smooth' });
+      history.replaceState(history.state, '', `#${FORM_ID}`);
+    });
+  };
 
   return (
     <div className="promo-backdrop" onClick={close}>
@@ -136,7 +153,7 @@ export default function SeasonPromo() {
         track={isExit ? 'modal-exit' : 'modal-timed'}
         exit={isExit}
         eyebrow={promo.eyebrow}
-        heading={isExit ? promo.exit.heading : promo.heading}
+        heading={promo.modalHeading}
         headingId="promoTitle"
         text={isExit ? promo.exit.text : promo.text}
         cta={cta}
@@ -144,7 +161,7 @@ export default function SeasonPromo() {
         onClose={close}
         closeRef={closeRef}
         onSkip={isExit ? close : undefined}
-        onClaim={close}
+        onClaim={claim}
       />
     </div>
   );
