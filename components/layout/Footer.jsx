@@ -6,7 +6,7 @@ import { FOOTER } from '@/data/navigation';
 import { BUSINESS, OFFICES, PHONE, SOCIAL, TEL } from '@/data/site';
 import { hoursText } from '@/lib/hours';
 import CopyrightYear from './CopyrightYear';
-import FooterWord from './FooterWord';
+import ParticleText from '@/components/ui/ParticleText';
 import HideOnStart from './HideOnStart';
 import './Footer.css';
 
@@ -76,8 +76,30 @@ export default function Footer() {
           ))}
         </div>
         <HideOnStart>
-          {/* The brand word, large, across the bottom: each letter slides up when it scrolls into view */}
-          <FooterWord />
+          {/* The brand word, large, across the bottom, in white particles (React Bits ParticleText): they gather into the word once, the first
+              time it scrolls into view and then stand still; the pointer pushes them aside as it passes and they settle back (the word never
+              scatters and re-forms again; the drawing stops while nothing moves). Decorative: the real text is the logo, the page title and
+              the copyright line. */}
+          <div className="ft-name" aria-hidden="true">
+            <ParticleText
+              text="Quality"
+              particleSize={2}
+              density={4}
+              color="#ffffff"
+              highlightColor="#ffffff"
+              scatter={180}
+              gatherDuration={1600}
+              stagger={420}
+              pointerRepel={40}
+              repelRadius={120}
+              idleDrift={0}
+              trigger="mount"
+              fontSize="25vw"
+              fontWeight={700}
+              fontFamily="inherit"
+              glow
+            />
+          </div>
         </HideOnStart>
       </div>
     </footer>

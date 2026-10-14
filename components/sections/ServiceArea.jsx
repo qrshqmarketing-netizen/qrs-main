@@ -202,7 +202,9 @@ export default function ServiceArea({
             <div className="sa-zip">
               <form className="loc-form" id="locForm" noValidate onSubmit={onSearch}>
                 <label htmlFor="locZip" className="sr-only">ZIP code</label>
-                <input id="locZip" inputMode="numeric" maxLength={5} autoComplete="postal-code" placeholder="Enter Zip Code" value={zip} onChange={(e) => setZip(e.target.value.replace(/\D/g, ''))} />
+                {/* A lookup box, not an address form: password managers are told to leave it alone (LastPass otherwise inserts its icon into the form
+                    before React loads, which breaks hydration) */}
+                <input id="locZip" inputMode="numeric" maxLength={5} autoComplete="off" data-lpignore="true" data-1p-ignore data-bwignore data-form-type="other" placeholder="Enter Zip Code" value={zip} onChange={(e) => setZip(e.target.value.replace(/\D/g, ''))} />
                 <button type="submit" aria-label="Search ZIP code">
                   <ArrowRight />
                 </button>
