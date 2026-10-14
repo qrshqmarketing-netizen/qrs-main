@@ -23,13 +23,15 @@ const PHOTO = '/images/season-promo-storm-over-los-angeles.webp';
 // is the utm_medium of the button's address (promoLandingHref in data/promo.js). Clicking the main button also means the visitor has
 // taken the offer, so the popup never comes back. `exit` is the "before you go" wording (smaller heading, "No thanks" under the button).
 // `video` ([{ src, type }]): a muted looping background video over the photo (the home hero), loaded after the page; the photo stays as the fallback.
+// `photo`: a different background photo (the home hero uses the drone video's first frame, so the poster and the video match).
 // Only simple values go in from a server component: strings, and `points` (a list of short lines under the button).
 export default function PromoCard({
   variant = 'modal', as: Tag = 'div', track, eyebrow, eyebrowTag: Eyebrow = 'div', heading, headingTag: Heading = 'p', headingId, text, cta, exit = false, rain = true,
-  points, aside, video, className, onClaim, onClose, onSkip, closeRef,
+  points, aside, video, photo = PHOTO, className, onClaim, onClose, onSkip, closeRef,
 }) {
   const root = useRef(null);
-  const event = (name, extra = {}) => trackEvent(name, { promo_name: PROMO_NAME, promo_variant: track || variant, ...extra });
+  // track={false}: the card is used for something that isn't the El Niño offer (the home hero): no promo events, and its button doesn't count as taking the offer
+  const event = (name, extra = {}) => track !== false && trackEvent(name, { promo_name: PROMO_NAME, promo_variant: track || variant, ...extra });
 
   // Shown: a popup counts when it opens, the other pieces when 40% of them has scrolled into view
   useEffect(() => {
@@ -50,7 +52,7 @@ export default function PromoCard({
   }, [variant, track]);
 
   const claim = () => {
-    local.set('promoClaimed', '1');
+    if (track !== false) local.set('promoClaimed', '1');
     event('promo_click', { cta: 'primary' });
     onClaim?.();
   };
@@ -60,7 +62,7 @@ export default function PromoCard({
   return (
     <Tag className={`promo promo-${variant}` + (aside ? ' promo-split' : '') + (className ? ` ${className}` : '')} ref={root} {...dialog}>
       {variant !== 'modal' && (
-        <Image className="promo-photo" src={PHOTO} alt="" fill sizes="100vw" {...(variant === 'landing' && { preload: true, fetchPriority: 'high' })} />
+        <Image className="promo-photo" src={photo} alt="" fill sizes="100vw" {...(variant === 'landing' && { preload: true, fetchPriority: 'high' })} />
       )}
       {video && <HeroVideo sources={video} className="promo-video" />}
       {rain && <PromoRain rich={variant === 'landing'} />}

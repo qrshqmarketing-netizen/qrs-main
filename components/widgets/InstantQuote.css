@@ -1,27 +1,4 @@
-/* ---------- Roof measure — vertical tab + slide-out drawer (Google Solar API) ---------- */
-.rm-tab{
-  position:fixed;right:0;top:50%;z-index:1100;transform:translateY(-50%);
-  display:flex;align-items:center;gap:8px;writing-mode:vertical-rl;
-  padding:14px 8px;border:0;border-radius:var(--radius) 0 0 var(--radius);background:var(--plum);color:#fff; /* flush with the screen's right edge */
-  font:600 13px/1 var(--font-head);letter-spacing:.02em;
-  box-shadow:-6px 10px 28px rgba(107,37,69,.3),inset 0 0 0 1px rgba(255,255,255,.16);
-  transition:padding .2s ease,opacity .2s ease;
-}
-.rm-tab:hover{padding-right:12px}
-/* Beam border: a highlight that travels around the tab's edge */
-@property --rm-beam{syntax:'<angle>';inherits:false;initial-value:0deg}
-.rm-tab:before{
-  content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;pointer-events:none;
-  background:conic-gradient(from var(--rm-beam),transparent 0 72%,rgba(255,255,255,.22) 82%,var(--plum-2) 92%,#a35877 95%,var(--plum-2) 97%,transparent);
-  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;
-  mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);
-  animation:rmBeam 4.5s linear infinite;
-}
-@keyframes rmBeam{to{--rm-beam:360deg}}
-@media (prefers-reduced-motion:reduce){.rm-tab:before{animation:none;opacity:.6}}
-.rm-tab:focus-visible{outline:3px solid var(--plum);outline-offset:2px}
-.rm-tab svg{width:18px;height:18px;color:#fff}
-.rm.open .rm-tab{opacity:0;pointer-events:none}
+/* ---------- Roof measure — slide-out drawer (Google Solar API), opened from the header's quote button ---------- */
 body.rm-lock{overflow:hidden}
 
 .rm-shade{position:fixed;inset:0;z-index:1290;background:rgba(6,20,40,.5);opacity:0;visibility:hidden;transition:opacity .3s ease,visibility 0s linear .3s}
@@ -133,12 +110,7 @@ body.rm-lock{overflow:hidden}
 .rm-fin p{margin:10px 0 12px!important;font-size:11.5px!important;line-height:1.45!important}
 .rm-fin .btn{min-height:44px;font-size:16px}
 .rm-quote .btn{margin-bottom:8px}
-/* Phones: no side tab; the "Get an Instant Quote" buttons (components/ui/QuoteTrigger.jsx) open the drawer */
-@media (max-width:620px){
-  .rm-tab{display:none}
-}
 @media (min-width:621px){
-  .rm-tab{padding:18px 10px;font-size:14px}
   .rm-drawer{width:440px}
   .rm-body{padding:24px 26px}
   .rm-steps{padding:14px 26px 0}

@@ -3,7 +3,6 @@ import LatestArticles from '@/components/sections/LatestArticles';
 import CardCarousel from '@/components/sections/CardCarousel';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
-import ReviewStrip from '@/components/sections/ReviewStrip';
 import LocalIntro from '@/components/sections/LocalIntro';
 import StudioProjects from '@/components/studio/StudioProjects';
 import RoofCheck from '@/components/sections/RoofCheck';
@@ -58,6 +57,8 @@ export default async function LocationPage({ location, page, index = 0 }) {
         title={page.hero.heading}
         outcome={heroOutcome(cityPath(slug))}
         stats
+        reviewOffice={slug}
+        reviewPlaces={[city, ...page.neighborhoods]}
         intro={page.hero.sub}
         image={photo.src}
         imagePosition={photo.position}
@@ -66,7 +67,6 @@ export default async function LocationPage({ location, page, index = 0 }) {
       <LocalIntro city={city} heading={page.intro.heading} paragraphs={page.intro.paragraphs} offices={office ? [office] : []} neighborhoods={page.neighborhoods} considerations={page.considerations} />
       <ServiceCategories place={city} />
       <CardCarousel title={`Roof types we work on in __${city}__`} items={RESIDENTIAL_TYPES.map(typeCard)} idPrefix="roofTypes" tone="wash" />
-      <ReviewStrip office={slug} places={[city, ...page.neighborhoods]} />
       {/* Only real projects in or near this city (by the project's ZIP code pin), stacked as cards; with none nearby, no section */}
       <StudioProjects
         id="projects"

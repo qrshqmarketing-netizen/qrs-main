@@ -13,7 +13,7 @@
 .rmq-back .rmq-track{animation-direction:reverse}
 .rmq-set{display:flex;gap:16px;margin:0;padding:0 16px 0 0;list-style:none}
 @keyframes rmqSlide{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
-.rmq-row:hover .rmq-track,.rmq-row:focus-within .rmq-track,.rmq-row:has(.rmq-card.open) .rmq-track,.rmq.has-lit .rmq-track{animation-play-state:paused}
+.rmq:not(.go) .rmq-track,.rmq-row:hover .rmq-track,.rmq-row:focus-within .rmq-track,.rmq-row:has(.rmq-card.open) .rmq-track,.rmq.has-lit .rmq-track{animation-play-state:paused}
 
 .rmq-card{display:flex;flex-direction:column;flex:none;width:300px;padding:22px 22px 20px;border:1px solid var(--line);border-radius:var(--radius);background:var(--paper);transition:border-color .3s}
 .rmq-card .g-stars{height:auto;margin:0 0 12px;gap:2px}

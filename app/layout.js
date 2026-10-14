@@ -20,7 +20,6 @@ import ScrollScenes from '@/components/ui/ScrollScenes';
 import CookieNotice from '@/components/widgets/CookieNotice';
 import InstantQuoteLoader from '@/components/widgets/InstantQuoteLoader';
 import MobileActionBar from '@/components/widgets/MobileActionBar';
-import ReviewToast from '@/components/widgets/ReviewToast';
 import SeasonPromo from '@/components/widgets/SeasonPromo';
 import RoofAssistant from '@/components/widgets/RoofAssistant';
 import RevealSections from '@/components/ui/RevealSections';
@@ -92,7 +91,6 @@ export default function RootLayout({ children }) {
         <SiteChrome>
           <Footer />
           <MobileActionBar />
-          <ReviewToast />
           <RoofAssistant />
           {INSTANT_QUOTE_ENABLED && <InstantQuoteLoader />}
           <CookieNotice />

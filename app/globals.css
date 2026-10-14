@@ -405,8 +405,6 @@ a.chip:hover{border-color:var(--navy)}
 html.vt-cover .site-header{view-transition-name:vt-header}
 html.vt-cover .mab{view-transition-name:vt-mab}
 html.vt-cover .qa{view-transition-name:vt-qa}
-html.vt-cover .rm-tab{view-transition-name:vt-rmtab}
-html.vt-cover .rv-toast{view-transition-name:vt-toast}
 html.vt-cover .cookie{view-transition-name:vt-cookie}
 html.vt-cover .cw{view-transition-name:vt-cw}
 html.vt-cover .rp{view-transition-name:vt-rp}

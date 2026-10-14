@@ -301,14 +301,7 @@ export default function InstantQuote({ openFrom = null, onReady }) {
 
   return (
     <div className={'rm' + (open ? ' open' : '') + (manual ? ' rm-manual' : '')} id="rm" data-step={step}>
-      <button className="rm-tab" type="button" id="rmTab" ref={tabRef} aria-controls="rmDrawer" aria-expanded={open} onClick={() => openDrawer()}>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-          <path d="M3 11 12 4l9 7" />
-          <path d="M5 10v10h14V10" />
-          <path d="M9 20v-5h6v5" />
-        </svg>
-        <span>Instant Quote</span>
-      </button>
+      {/* The side tab is gone (October 2026): the Instant Quote opens from the header's quote button and any other [data-rm-open] button */}
       <div className="rm-shade" id="rmShade" onClick={closeDrawer}></div>
 
       <aside className="rm-drawer" id="rmDrawer" ref={drawerRef} role="dialog" aria-modal="true" aria-labelledby="rmTitle" inert={!open} onKeyDown={onDrawerKeyDown}>

@@ -4,14 +4,17 @@ import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import BrandLogo from '@/components/ui/BrandLogo';
 import SiteLink from '@/components/ui/SiteLink';
-import { MoonIcon, PhoneIcon, SunIcon } from '@/components/ui/icons';
+import { ChatIcon, MoonIcon, PhoneIcon, QuoteIcon, SunIcon } from '@/components/ui/icons';
 import { HEADER_CTA, HEADER_LINKS, HEADER_MORE } from '@/data/navigation';
 import { START_PATH } from '@/data/start';
+import { INSTANT_QUOTE_ENABLED } from '@/data/instantQuote';
+import { ASSISTANT_EVENT, ASSISTANT_STATE_EVENT } from '@/lib/events';
 import { PHONE, TEL } from '@/data/site';
 import './Header.css';
 
 // The header, modelled on thekithmore.com (the owner's reference): one slim bar split by hairlines: the logo, the main links (each one a hub page,
-// HEADER_LINKS in data/navigation.js, no dropdowns), the phone number, the gold "Get Pro Advice" cell, the theme switch and a two-line menu button.
+// HEADER_LINKS in data/navigation.js, no dropdowns), the phone number, the gold "Get Pro Advice" cell, the chat and Instant Quote buttons, the theme switch
+// and a two-line menu button.
 // The menu button drops a small panel from the bar with the rest of the site (HEADER_MORE; below 1240px the main links are at the top of it).
 // Over a photo hero the bar is see-through with white type; once the hero has scrolled away (or the menu is open) it turns solid (data-solid).
 // /start/ shows only the logo, the theme switch and the phone. Escape, the backdrop or a link closes the panel.
@@ -21,6 +24,7 @@ const isCurrent = (pathname, href) => href !== '/' && pathname.startsWith(href);
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [theme, setTheme] = useState('light');
+  const [chatOpen, setChatOpen] = useState(false);
   const [past, setPast] = useState(false); // scrolled below the photo hero
   const pathname = usePathname();
   const requestPage = pathname === START_PATH;
@@ -65,6 +69,17 @@ export default function Header() {
     document.addEventListener('keydown', onKey);
     return () => document.removeEventListener('keydown', onKey);
   }, [open]);
+
+  // The chat button shows whether the assistant is open (it tells us through ASSISTANT_STATE_EVENT)
+  useEffect(() => {
+    const onState = (e) => setChatOpen(Boolean(e.detail?.open));
+    window.addEventListener(ASSISTANT_STATE_EVENT, onState);
+    return () => window.removeEventListener(ASSISTANT_STATE_EVENT, onState);
+  }, []);
+  const toggleChat = (e) => {
+    close();
+    window.dispatchEvent(new CustomEvent(ASSISTANT_EVENT, { detail: { opener: e.currentTarget } }));
+  };
 
   const toggleTheme = () => {
     const nextTheme = theme === 'dark' ? 'light' : 'dark';
@@ -112,6 +127,18 @@ export default function Header() {
             <SiteLink className="hd-cell hd-cta" href={HEADER_CTA.href} onClick={close}>
               {HEADER_CTA.label}
             </SiteLink>
+          )}
+          {/* The AI assistant and the Instant Quote open from here (October 2026: they used to float over the page). The quote button works
+              through its data-rm-open attribute (InstantQuoteLoader / InstantQuote). Not on /start/. */}
+          {!requestPage && (
+            <button className="hd-cell hd-theme hd-tool" type="button" aria-label={chatOpen ? 'Close the chat' : 'Chat with the QRS assistant'} aria-expanded={chatOpen} aria-controls="qaPanel" title="Chat with the QRS assistant" onClick={toggleChat}>
+              <ChatIcon />
+            </button>
+          )}
+          {!requestPage && INSTANT_QUOTE_ENABLED && (
+            <button className="hd-cell hd-theme hd-tool" type="button" data-rm-open="" aria-label="Get an instant roof quote" title="Instant Quote" onClick={close}>
+              <QuoteIcon />
+            </button>
           )}
           <button
             className="hd-cell hd-theme"

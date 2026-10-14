@@ -60,6 +60,21 @@ export default function ReviewMarquee({ office = '', places = [], label = 'Clien
     };
   }, [office]);
 
+  // The rows wait at their start until the section is in view, so the reviews closest to the page's topic (sorted first, and the first card of each
+  // row) are what people see, instead of having drifted away while the visitor read the hero
+  const [go, setGo] = useState(false);
+  useEffect(() => {
+    const el = root.current;
+    if (!el || !('IntersectionObserver' in window)) return setGo(true);
+    const watcher = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) return;
+      watcher.disconnect();
+      setGo(true);
+    }, { threshold: 0.35 });
+    watcher.observe(el);
+    return () => watcher.disconnect();
+  }, []);
+
   // The pop-up's "read it" link: the rows stop and that review's card lights up for a few seconds
   useEffect(() => {
     let timer;
@@ -114,7 +129,7 @@ export default function ReviewMarquee({ office = '', places = [], label = 'Clien
   };
 
   return (
-    <section className={'rmq' + (lit ? ' has-lit' : '')} id="reviews" ref={root} aria-label="Google reviews" data-no-reveal="">
+    <section className={'rmq' + (lit ? ' has-lit' : '') + (go ? ' go' : '')} id="reviews" ref={root} aria-label="Google reviews" data-no-reveal="">
       <div className="container rmq-head">
         <p className="rmq-label">{label}</p>
         <h2>{heading}</h2>

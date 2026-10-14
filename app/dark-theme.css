@@ -44,8 +44,6 @@
 :root[data-theme="dark"] .gtee-badge text{fill:var(--navy)}
 :root[data-theme="dark"] .tst-name{color:var(--navy)}
 :root[data-theme="dark"] .cookie{border-color:#fff}
-:root[data-theme="dark"] .qa-teaser{outline:1px solid #fff;outline-offset:-1px}
-/* The review toast stays light in both themes (ReviewToast.css) */
 
 /* White buttons turn into dark glass with light text (their text color is --navy, which is light in the dark theme) */
 :root[data-theme="dark"] :is(.btn-line,.btn-light){

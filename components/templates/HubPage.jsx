@@ -3,7 +3,6 @@ import Faq from '@/components/sections/Faq';
 import LatestArticles from '@/components/sections/LatestArticles';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
-import ReviewStrip from '@/components/sections/ReviewStrip';
 import Overview from '@/components/sections/Overview';
 import Process from '@/components/sections/Process';
 import RoofCheck from '@/components/sections/RoofCheck';
@@ -46,7 +45,6 @@ export default async function HubPage({ hub, crumbs, eyebrow, image, imageAlt, c
         {...(actions && { actions })}
       />
       <Overview heading={hub.overview.heading} paragraphs={hub.overview.paragraphs} />
-      <ReviewStrip />
       {extraGrid && <CardGrid id="services" heading={extraGrid.heading} intro={extraGrid.intro} cards={extraGrid.cards} tone="wash" />}
       <CardGrid id={extraGrid ? 'buildings' : 'services'} heading={hub.cards.heading} intro={hub.cards.intro} cards={cards} tone={extraGrid ? undefined : 'wash'} />
       <ValueGrid heading={hub.highlights.heading} items={hub.highlights.points} columns={3} />

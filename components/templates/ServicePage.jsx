@@ -3,7 +3,6 @@ import LatestArticles from '@/components/sections/LatestArticles';
 import FeatureBand from '@/components/sections/FeatureBand';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
-import ReviewStrip from '@/components/sections/ReviewStrip';
 import Overview from '@/components/sections/Overview';
 import PartnerLogos from '@/components/sections/PartnerLogos';
 import ProcessSteps from '@/components/sections/ProcessSteps';
@@ -119,13 +118,13 @@ export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], 
         image={page.image}
         imageAlt={page.imageAlt}
         stats
+        reviews={page.showReviews !== false}
         {...(actions && { actions })}
       />
       <Overview paragraphs={page.overview.paragraphs} cta={hub && { label: `Compare All ${hub.label} Options`, href: hub.href }} />
       {page.sections?.map((section, i) => (
         <FeatureBand key={section.heading} {...section} tone={i % 2 ? 'navy' : 'light'} />
       ))}
-      {page.showReviews !== false && <ReviewStrip />}
       {page.partners && <PartnerLogos {...page.partners} />}
       <ProcessSteps
         heading={page.process.heading}

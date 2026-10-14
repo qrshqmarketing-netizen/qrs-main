@@ -4,7 +4,6 @@ import Faq from '@/components/sections/Faq';
 import LatestArticles from '@/components/sections/LatestArticles';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
-import ReviewStrip from '@/components/sections/ReviewStrip';
 import Overview from '@/components/sections/Overview';
 import RoofCheck from '@/components/sections/RoofCheck';
 import ServiceFinder from '@/components/sections/ServiceFinder';
@@ -50,7 +49,6 @@ export default async function ResidentialRoofingPage() {
         stats
       />
       <Overview heading={page.overview.heading} paragraphs={page.overview.paragraphs} />
-      <ReviewStrip />
       <CardCarousel title={page.cards.heading} items={RESIDENTIAL_TYPES.map(typeCard)} idPrefix="roofTypes" tone="wash" />
       <ServiceFinder heading={page.finder.heading} intro={page.finder.intro} rows={page.finder.rows} />
       <DifferenceBand />
