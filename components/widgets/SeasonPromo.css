@@ -174,3 +174,24 @@ body.studio-site .promo-home .promo-title{font:500 clamp(44px,11vw,104px)/1.02 v
 .promo-calm .promo-title{animation:none;text-shadow:0 2px 18px rgba(0,0,0,.45)}
 .promo-calm .promo-eyebrow:before{display:none}
 
+
+/* Home hero video overlay (owner, October 14 2026): the drone clips are upscaled 640x360 copies, so three overlays hide the softness instead of
+   sharpening it again: (1) a fine dot screen (a 4px grid of dark dots), (2) a soft vignette that darkens the edges and pulls the eye to the
+   roof in the center, both layered over the usual dark shade in :before, and (3) a moving film grain in :after (the storm hero's lightning
+   flash, off on the calm home hero). Paint and compositing only; the grain stands still for reduced motion and is left out of print. */
+.promo.promo-landing.promo-home:before{
+  background:
+    radial-gradient(circle,rgba(4,14,26,.32) 0 1px,transparent 1.5px) 0 0/4px 4px,
+    radial-gradient(ellipse 90% 80% at 50% 50%,transparent 50%,rgba(4,14,26,.55) 100%),
+    linear-gradient(180deg,rgba(4,14,26,.72) 0%,rgba(4,14,26,.5) 40%,rgba(4,14,26,.4) 62%,rgba(4,14,26,.88) 100%);
+}
+.promo.promo-calm.promo-home:after{
+  display:block;inset:-50%;z-index:-1;opacity:.2;mix-blend-mode:overlay;animation:heroGrain .9s steps(6) infinite;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+}
+@keyframes heroGrain{
+  0%{transform:translate(0,0)}17%{transform:translate(-6%,4%)}33%{transform:translate(5%,-7%)}
+  50%{transform:translate(-3%,8%)}67%{transform:translate(8%,2%)}83%{transform:translate(-8%,-4%)}100%{transform:translate(0,0)}
+}
+@media (prefers-reduced-motion:reduce){.promo.promo-calm.promo-home:after{animation:none}}
+@media print{.promo.promo-calm.promo-home:after{display:none}}
