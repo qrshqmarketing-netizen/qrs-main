@@ -116,3 +116,23 @@ body:has(main :is(.hero,.st-hero,.promo-home,.pd-hero)) .site-header:not([data-s
 @keyframes hdSparkleGlint{0%,55%{background-position:100% 0}85%,100%{background-position:0 0}}
 @keyframes hdSparkleTwinkle{0%,55%,100%{transform:scale(1) rotate(0)}70%{transform:scale(1.25) rotate(45deg)}}
 @media (prefers-reduced-motion:reduce){.hd-link:before{animation:none;transition:none;background-position:50% 0}}
+
+/* The chat button's icon is the same sparkle (owner, October 14 2026): a large one with two small ones beside it that pop in and out in turn,
+   all painted with the shimmering gold (the mask and keyframes above). Hover spins the large one a quarter turn; while the chat is open the small
+   ones stay out. Still for reduced motion. */
+.hd-spark{position:relative;display:block;width:22px;height:22px;flex:none}
+.hd-spark i{position:absolute;display:block;
+  -webkit-mask:url(/images/menu-sparkle.webp) center/contain no-repeat;mask:url(/images/menu-sparkle.webp) center/contain no-repeat;
+  background:linear-gradient(115deg,var(--gold-ink) 0%,var(--gold) 38%,#fff4d2 50%,var(--gold) 62%,var(--gold-ink) 100%) 100% 0/300% 100%;
+  animation:hdSparkleGlint 4.5s ease-in-out infinite}
+.hd-spark i:nth-child(1){left:0;top:4px;width:17px;height:17px;animation:hdSparkleGlint 4.5s ease-in-out infinite,hdSparkleTwinkle 4.5s ease-in-out infinite;transition:rotate .5s cubic-bezier(.17,.84,.44,1)}
+.hd-spark i:nth-child(2){left:13px;top:0;width:9px;height:9px;animation:hdSparkleGlint 4.5s ease-in-out infinite,hdSparkPop 3s ease-in-out infinite}
+.hd-spark i:nth-child(3){left:15px;top:14px;width:6px;height:6px;animation:hdSparkleGlint 4.5s ease-in-out infinite,hdSparkPop 3s ease-in-out 1.5s infinite}
+:root[data-theme="dark"] .hd-spark i,
+body:has(main :is(.hero,.st-hero,.promo-home,.pd-hero)) .site-header:not([data-solid]) .hd-spark i{
+  background-image:linear-gradient(115deg,var(--gold) 0%,var(--gold-2) 38%,#fffaf0 50%,var(--gold-2) 62%,var(--gold) 100%);
+}
+@media (hover:hover){.hd-tool:hover .hd-spark i:nth-child(1){rotate:90deg}}
+.hd-tool[aria-expanded="true"] .hd-spark i:nth-child(n+2){animation-name:hdSparkleGlint;opacity:1;transform:none}
+@keyframes hdSparkPop{0%,100%{opacity:0;transform:scale(.2) rotate(-45deg)}35%,65%{opacity:1;transform:scale(1) rotate(0)}}
+@media (prefers-reduced-motion:reduce){.hd-spark i{animation:none!important;background-position:50% 0;transition:none}}

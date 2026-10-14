@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import BrandLogo from '@/components/ui/BrandLogo';
 import SiteLink from '@/components/ui/SiteLink';
-import { ChatIcon, MoonIcon, PhoneIcon, QuoteIcon, SunIcon } from '@/components/ui/icons';
+import { MoonIcon, PhoneIcon, QuoteIcon, SunIcon } from '@/components/ui/icons';
 import { HEADER_CTA, HEADER_LINKS, HEADER_MORE } from '@/data/navigation';
 import { START_PATH } from '@/data/start';
 import { INSTANT_QUOTE_ENABLED } from '@/data/instantQuote';
@@ -132,7 +132,7 @@ export default function Header() {
               through its data-rm-open attribute (InstantQuoteLoader / InstantQuote). Not on /start/. */}
           {!requestPage && (
             <button className="hd-cell hd-theme hd-tool" type="button" aria-label={chatOpen ? 'Close the chat' : 'Chat with the QRS assistant'} aria-expanded={chatOpen} aria-controls="qaPanel" title="Chat with the QRS assistant" onClick={toggleChat}>
-              <ChatIcon />
+              <span className="hd-spark" aria-hidden="true"><i></i><i></i><i></i></span>
             </button>
           )}
           {!requestPage && INSTANT_QUOTE_ENABLED && (
