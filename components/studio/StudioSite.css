@@ -401,3 +401,24 @@ body.studio-site .hero .hero-breath,body.studio-site .hero .hero-glow{display:no
    answer text. Covers the shared FAQ accordion (Faq.jsx) and the /roofing-faq/ page's groups. */
 body.studio-site :is(.faq-item,.gl-faq) > :not(summary),body.studio-site :is(.faq-item,.gl-faq) > :not(summary) *{text-align:left}
 
+
+/* Sub-page hero overlay, like the home hero video's (owner, October 14 2026; the last block of SeasonPromo.css): over the usual dark shade, a fine dot
+   screen (4px grid of dark dots) and a soft vignette in the photo layer's :after, and a moving film grain in its :before (above the photo and the
+   shade; the photo layer's .hero-background clips it). Same grain steps as the home hero (heroGrain, also defined in
+   SeasonPromo.css with the same values). Grain still for reduced motion, hidden in print. */
+body.studio-site .hero.hero.hero .hero-roof-texture:after{
+  background:
+    radial-gradient(circle,rgba(4,14,26,.32) 0 1px,transparent 1.5px) 0 0/4px 4px,
+    radial-gradient(ellipse 90% 80% at 50% 50%,transparent 50%,rgba(4,14,26,.55) 100%),
+    linear-gradient(180deg,rgba(4,14,26,.72) 0%,rgba(4,14,26,.5) 40%,rgba(4,14,26,.4) 62%,rgba(4,14,26,.88) 100%);
+}
+body.studio-site .hero .hero-roof-texture:before{
+  content:"";position:absolute;inset:-50%;z-index:1;pointer-events:none;opacity:.2;mix-blend-mode:overlay;animation:heroGrain .9s steps(6) infinite;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+}
+@keyframes heroGrain{
+  0%{transform:translate(0,0)}17%{transform:translate(-6%,4%)}33%{transform:translate(5%,-7%)}
+  50%{transform:translate(-3%,8%)}67%{transform:translate(8%,2%)}83%{transform:translate(-8%,-4%)}100%{transform:translate(0,0)}
+}
+@media (prefers-reduced-motion:reduce){body.studio-site .hero .hero-roof-texture:before{animation:none}}
+@media print{body.studio-site .hero .hero-roof-texture:before{display:none}}
