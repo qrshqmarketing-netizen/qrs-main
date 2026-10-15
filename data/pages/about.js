@@ -54,7 +54,7 @@ export const ABOUT_PAGE = {
     items: [
       { title: 'Tony Goldberg', text: 'Co-founder and CEO. Tony co-founded QRS with Adva; his own roofing story is above.' },
       { title: 'Adva Goldberg', text: 'Co-founder and President. Adva co-founded QRS with Tony, and QRS is a family-owned, woman-owned business.' },
-      { title: 'Field Inspectors & Lead Roofers', text: 'Every $199 Roof Check is done by a field inspector, lead roofer or estimator on our own team — never an outside crew.' },
+      { title: 'Field Inspectors & Lead Roofers', text: 'Your free drone roof evaluation and every $199 Roof Check (the visit where we seal and maintain the roof) are done by a field inspector, lead roofer or estimator on our own team — never an outside crew.' },
       { title: 'Senior Production Manager', text: '30 years overseeing roofing projects, managing our crews and quality control on every job.' },
       { title: '12 Crews, Every Roof Type', text: 'Dedicated crews for shingle, tile and flat roofing, with vetted partner crews brought in only during overflow.' },
       { title: 'Bilingual Office Team & Roofers', text: 'Our team communicates in English, Spanish and Tagalog.' },
@@ -78,7 +78,7 @@ export const ABOUT_PAGE = {
     { q: 'Is Quality Roofing Specialists licensed and insured?', a: `Yes. QRS is licensed, bonded and insured as a California contractor: CSLB license #${BUSINESS.license}, licensed since ${formatDate(BUSINESS.licenseSince)}.` },
     { q: 'Who owns Quality Roofing Specialists?', a: 'QRS is family-owned, woman-owned and locally owned. It was co-founded by **Tony Goldberg** and **Adva Goldberg**, who serve as CEO and President. Tony did his first roofing job at 16.' },
     { q: 'What areas do you serve?', a: 'Homes and businesses across [Los Angeles County](/service-areas/la-county/), [Orange County](/service-areas/orange-county/) and the Inland Empire ([Riverside County](/service-areas/riverside-county/) and [San Bernardino County](/service-areas/san-bernardino-county/)), from our offices in the Fairfax area of Los Angeles, Woodland Hills and Vernon.' },
-    { q: 'Do you bring in outside crews?', a: 'Our own 12 crews do the work, with dedicated crews for shingle, tile and flat roofing. We bring in vetted partner crews only during overflow, and every $199 Roof Check is done by a field inspector, lead roofer or estimator on our own team.' },
+    { q: 'Do you bring in outside crews?', a: 'Our own 12 crews do the work, with dedicated crews for shingle, tile and flat roofing. We bring in vetted partner crews only during overflow, and every $199 Roof Check (our sealing and maintenance visit) is done by a field inspector, lead roofer or estimator on our own team.' },
     { q: 'What languages does your team speak?', a: 'Our office team and roofers communicate in English, Spanish and Tagalog.' },
   ],
   partners: {
