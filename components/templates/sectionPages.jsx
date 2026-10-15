@@ -29,7 +29,7 @@ const SHARED_CARDS = [PROGRAMS.inspection.href, PROGRAMS.plans.href];
 export const hubMetadata = (section) =>
   pageMetadata({ title: section.hub.metaTitle, description: section.hub.metaDescription, path: section.href });
 
-export function SectionHub({ section }) {
+export function SectionHub({ section, extra }) {
   const cards = [...serviceCards(section), ...(isCommercial(section) ? [] : SHARED_CARDS.map(cardFor))];
   const feature = isCommercial(section)
     ? {
@@ -54,6 +54,7 @@ export function SectionHub({ section }) {
       extraGrid={section.serviceTypes ? { heading: 'Commercial Roofing Services', intro: 'Repairs, replacement and ongoing care for any commercial roof.', cards: serviceTypeCards(section) } : null}
       feature={feature}
       offer={isCommercial(section) ? 'commercial' : 'home'}
+      extra={extra}
     />
   );
 }

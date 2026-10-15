@@ -14,11 +14,13 @@ export const ABOUT_PAGE = {
     heading: 'Meet Quality Roofing Specialists',
     intro: `Quality Roofing Specialists, Inc. (QRS) is a family-owned roofing contractor serving homes and businesses across Los Angeles and Orange County, licensed in California since 2020 (CSLB #${BUSINESS.license}). Co-founded by Tony and Adva Goldberg, QRS repairs and replaces tile, shingle and flat roofs, and every project starts with a roofer-led look at the roof.`,
   },
+  // "Who we are" (owner, October 15 2026, after the story approach of maben.com.au): what we do and where, then who owns us. How a job runs is
+  // said once, in `process` below.
   intro: {
     heading: 'Your Detail-First Roofing Team',
     paragraphs: [
-      `${COMPANY.belief} We’re a small, locally owned roofing company serving homeowners and property owners across Los Angeles and Orange County. Our local crews handle projects of every size, from a single roof repair to large residential, commercial and multi-family projects. We’re licensed, bonded and insured as a California contractor since 2020. Our approach is simple: a roofer should look at your roof before anyone tries to sell you one.`,
-      'That’s why our work starts with a roofer-led [free roof evaluation](#roof-check), photo documentation and a plain-English explanation. Before any work begins you get a written scope and price. When the job is done, we walk the finished roof with you and back our installs with a 10-year workmanship warranty.',
+      'We repair and replace tile, shingle and flat roofs on homes, [HOA and multi-family](/residential-roofing/hoa-multi-family/) buildings and [commercial](/commercial-roofing/) properties across Los Angeles, Orange County and the Inland Empire, from a single [roof repair](/roof-repair/) to a full [roof replacement](/roof-replacement/). Our approach is simple: a roofer should look at your roof before anyone tries to sell you one.',
+      `QRS is family-owned, woman-owned and locally owned. It was co-founded by **Tony Goldberg** and **Adva Goldberg**, and has been a licensed, bonded and insured California contractor since 2020 (CSLB #${BUSINESS.license}).`,
     ],
   },
   mission: {
@@ -27,13 +29,15 @@ export const ABOUT_PAGE = {
     paragraphs: [COMPANY.mission, COMPANY.vision, 'We’re building a team of dedicated professionals who share our core values.'],
     points: COMPANY.values,
   },
-  values: {
-    heading: 'What You Can Expect',
+  // "Our process": how every job runs, in four stages (shown as numbered rows, AboutProcess)
+  process: {
+    label: 'Our process',
+    heading: 'From the first look to the final walk-through',
     items: [
-      { title: 'Roofer first', text: 'A roofer, not a salesperson, looks at your roof and tells you what it actually needs.' },
-      { title: 'Photos, not guesswork', text: 'We photo-document what we find and what we fix, so you can see it for yourself.' },
-      { title: 'No mystery pricing', text: 'You get a written scope and price before any work starts. No pressure and no surprises.' },
-      { title: 'Done right, then walked', text: 'We review the finished roof with you and go over your 10-year workmanship warranty in plain English.' },
+      { title: 'Roof evaluation', text: 'A field inspector, lead roofer or estimator on our own team looks at your roof, with drone footage of the areas of concern, and photo-documents what they find.' },
+      { title: 'Written scope and price', text: 'We explain what we found in plain English and give you a clear next step: repair, monitor, maintain or replace. Before any work starts, you get a written scope and price.' },
+      { title: 'The work', text: 'Dedicated crews for shingle, tile and flat roofing do the job, with our senior production manager overseeing quality control. We pull the permits, tarp the landscaping and sweep for nails every day.' },
+      { title: 'Walk-through and warranty', text: 'When the job is done, we walk the finished roof with you and go over your 10-year workmanship warranty in plain English.' },
     ],
   },
   story: {
@@ -48,6 +52,8 @@ export const ABOUT_PAGE = {
     heading: 'Our Team',
     intro: 'Real people behind every roof, from the office to the ridge line. Names and photos are on the way — here’s who does the work today.',
     items: [
+      { title: 'Tony Goldberg', text: 'Co-founder and CEO. Tony co-founded QRS with Adva; his own roofing story is above.' },
+      { title: 'Adva Goldberg', text: 'Co-founder and President. Adva co-founded QRS with Tony, and QRS is a family-owned, woman-owned business.' },
       { title: 'Field Inspectors & Lead Roofers', text: 'Every $199 Roof Check is done by a field inspector, lead roofer or estimator on our own team — never an outside crew.' },
       { title: 'Senior Production Manager', text: '30 years overseeing roofing projects, managing our crews and quality control on every job.' },
       { title: '12 Crews, Every Roof Type', text: 'Dedicated crews for shingle, tile and flat roofing, with vetted partner crews brought in only during overflow.' },

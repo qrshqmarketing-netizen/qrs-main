@@ -2,26 +2,20 @@ import Mark from '@/components/ui/Mark';
 import Rich from '@/components/ui/Rich';
 import SiteLink from '@/components/ui/SiteLink';
 import { ArrowRight } from '@/components/ui/icons';
-import { BUSINESS, OFFICES } from '@/data/site';
 
-const LEAD =
-  'At Quality Roofing Specialists, we believe roofing should be __detail-first__: clear scopes, no pressure and no mystery pricing, from a licensed, bonded and insured California contractor.';
+// The belief statement (owner, October 15 2026, after the story approach of maben.com.au: one confident first-person statement and one "learn more"
+// link; the facts it used to list are now each said once, in "How we work", StudioHowWeWork.jsx). The lead is the About page's own line.
+const LEAD = 'At QRS, a roofer should look at your roof before anyone tries to __sell__ you one.';
 const MORE = [
-  'Before any work starts, you get a written scope and price. We document what we find with photos, explain it in plain English and back our installs with a 10-year workmanship warranty. Straightforward, honest work from a local roofing team across [Southern California](/service-areas/).',
-  'Every [roof replacement](/roof-replacement/), roof repair, [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/) and [flat](/residential-roofing/flat-roofing/) or [shingle roof](/residential-roofing/shingle-roofing/) gets the same care.',
-];
-const STATS = [
-  { value: '10', unit: 'year', label: 'Workmanship warranty' },
-  { value: String(OFFICES.length), unit: '', label: 'Southern California offices' },
-  { value: String(new Date(BUSINESS.licenseSince).getUTCFullYear()), unit: '', label: 'Licensed California contractor since' },
+  'That’s how every job starts: a free roof evaluation, photos of what we find and a written scope and price before any work begins. Every [roof replacement](/roof-replacement/), [roof repair](/roof-repair/), [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/) and [flat](/residential-roofing/flat-roofing/) or [shingle roof](/residential-roofing/shingle-roofing/) across [Southern California](/service-areas/) gets the same care.',
 ];
 
-// "The QRS standard": a small section label at the left, a large lead statement at the right, then two quiet paragraphs, three numbers and one link.
+// "Who we are": a small section label at the left, the large belief statement at the right, one quiet paragraph and one link.
 export default function StudioIntro() {
   return (
     <section className="st-section st-intro">
       <div className="container st-split">
-        <p className="st-label">The QRS standard</p>
+        <p className="st-label">Who we are</p>
         <div>
           <p className="st-lead"><Mark text={LEAD} /></p>
           <div className="st-cols">
@@ -31,19 +25,8 @@ export default function StudioIntro() {
               </p>
             ))}
           </div>
-          <dl className="st-stats">
-            {STATS.map((s) => (
-              <div key={s.label}>
-                <dt>
-                  {s.value}
-                  {s.unit && <small>{s.unit}</small>}
-                </dt>
-                <dd>{s.label}</dd>
-              </div>
-            ))}
-          </dl>
-          <SiteLink className="st-link" href="#roof-check">
-            Start with a free roof evaluation <ArrowRight />
+          <SiteLink className="st-link" href="/about-us/">
+            More about QRS <ArrowRight />
           </SiteLink>
         </div>
       </div>

@@ -8,6 +8,7 @@ import { ArrowRight, PhoneIcon } from '@/components/ui/icons';
 import { ROOF_COLORS, ROOF_COLORS_COPY } from '@/data/roofColors';
 import { PHONE, TEL } from '@/data/site';
 import { paintRoof, prepareRoof } from './recolor';
+import '@/components/studio/Studio.css'; // .st-section and .st-label (the section moved from the home page to the shingle roofing page)
 import './RoofColors.css';
 
 // The home page's shingle color section: a finished roof seen from above and the color swatches. Tapping a swatch repaints only the roof (recolor.js keeps the

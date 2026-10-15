@@ -10,7 +10,7 @@ import ProcessSteps from '@/components/sections/ProcessSteps';
 import RoofCheck from '@/components/sections/RoofCheck';
 import WhyChoose from '@/components/sections/WhyChoose';
 import JsonLd from '@/components/ui/JsonLd';
-import { projectPagesFor } from '@/data/projectPages';
+import { projectsShownOn } from '@/data/projectPages';
 import StudioProjects from '@/components/studio/StudioProjects';
 import { pageJsonLd } from '@/lib/structuredData';
 import { closingCta, faqSub } from './shared';
@@ -98,6 +98,7 @@ function processPhoto(page) {
 export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], offer, actions, hub, finalCta = page.final || closingCta(page.keyword, offer) }) {
   const [heroScene = 'scene-shingle', processScene = heroScene] = scenes;
   const [processImage, processImageAlt] = page.process.image ? [page.process.image, page.process.imageAlt] : processPhoto(page);
+  const work = projectsShownOn(crumbs.at(-1).href);
   const schema = pageJsonLd({
     path: crumbs.at(-1).href,
     title: page.metaTitle,
@@ -125,7 +126,6 @@ export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], 
       {page.sections?.map((section, i) => (
         <FeatureBand key={section.heading} {...section} tone={i % 2 ? 'navy' : 'light'} />
       ))}
-      {page.partners && <PartnerLogos {...page.partners} />}
       <ProcessSteps
         heading={page.process.heading}
         subheading={page.process.subheading}
@@ -134,13 +134,15 @@ export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], 
         image={processImage}
         imageAlt={processImageAlt}
       />
+      {/* The story in order (owner, October 15 2026, after maben.com.au): what we do, how we do it, then the work itself on real roofs, what people
+          say, why QRS, and the questions. The projects used to sit at the bottom, under the FAQ. */}
+      <StudioProjects projects={work.projects} heading={work.exact ? 'This work, on real roofs' : 'Recent roofing projects'} />
       {/* Google reviews, a few sections below the hero (owner, October 14 2026) */}
       {page.showReviews !== false && <ReviewMarquee />}
       <WhyChoose heading={page.why.heading} intro={page.why.intro} points={page.why.points} />
+      {page.partners && <PartnerLogos {...page.partners} />}
       <LatestArticles posts={await articlesFor(crumbs.at(-1).href)} heading="Related Roofing Articles" />
       {page.faqs?.length > 0 && <Faq heading="Frequently Asked __Questions__" sub={faqSub(page.keyword)} faqs={page.faqs} cta={false} />}
-      {/* The projects that list this page as related, as stacked photo cards (shown only when there are any) */}
-      <StudioProjects projects={projectPagesFor(crumbs.at(-1).href)} heading="This work, on real roofs" />
       <RoofCheck tone="white" offer={offer} />
       <FinalCta {...finalCta} />
     </main>

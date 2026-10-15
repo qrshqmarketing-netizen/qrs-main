@@ -3,7 +3,7 @@
 // left out. `hex` is an approximation, enough to preview a look; a color's `swatch` ('/images/roof-colors/<id>.webp') shows the official swatch picture on the
 // chip instead of the flat color.
 
-export const SHOW_ROOF_COLORS = true; // the section on the home page
+export const SHOW_ROOF_COLORS = true; // the section on the shingle roofing page (it was on the home page until October 15 2026)
 
 export const ROOF_COLORS = [
   { id: 'night-sky', name: 'Night Sky', hex: '#3d4147' },

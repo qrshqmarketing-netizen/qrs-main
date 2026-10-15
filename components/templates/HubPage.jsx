@@ -9,18 +9,21 @@ import Process from '@/components/sections/Process';
 import RoofCheck from '@/components/sections/RoofCheck';
 import SplitFeature from '@/components/sections/SplitFeature';
 import ValueGrid from '@/components/sections/ValueGrid';
+import StudioProjects from '@/components/studio/StudioProjects';
 import JsonLd from '@/components/ui/JsonLd';
 import { pageJsonLd } from '@/lib/structuredData';
 import { closingCta, faqSub } from './shared';
 import { heroOutcome } from '@/data/heroOutcomes';
 import { articlesFor } from '@/lib/articles';
+import { projectsShownOn } from '@/data/projectPages';
 
 // A hub page (e.g. /residential-roofing/tile-roofing/ or /commercial-roofing/): intro, cards for every page in the section,
 // why-choose points and the Roof Check form. Content shape: `hub` in data/services/*.js.
 // cards: [{ title, text, href, scene, image? }]; extraGrid: optional { heading, intro, cards } shown before them
 // (commercial services); feature: optional SplitFeature props (e.g. contractors teaser); actions: hero buttons (Hero);
 // process: show the general "QRS Way" steps (the service-first hubs /roof-repair/ and /roof-replacement/).
-export default async function HubPage({ hub, crumbs, eyebrow, image, imageAlt, cards, extraGrid, feature, offer, actions, process = false }) {
+// `extra`: a section of the hub's own, after its highlights (the shingle roofing page's shingle colors)
+export default async function HubPage({ hub, crumbs, eyebrow, image, imageAlt, cards, extraGrid, feature, offer, actions, process = false, extra }) {
   const schema = pageJsonLd({
     path: crumbs.at(-1).href,
     title: hub.metaTitle,
@@ -49,8 +52,11 @@ export default async function HubPage({ hub, crumbs, eyebrow, image, imageAlt, c
       {extraGrid && <CardGrid id="services" heading={extraGrid.heading} intro={extraGrid.intro} cards={extraGrid.cards} tone="wash" />}
       <CardGrid id={extraGrid ? 'buildings' : 'services'} heading={hub.cards.heading} intro={hub.cards.intro} cards={cards} tone={extraGrid ? undefined : 'wash'} />
       {/* Google reviews, a few sections below the hero (owner, October 14 2026) */}
+      {/* The work itself, right after the services (owner, October 15 2026, after maben.com.au): projects on this hub's pages, newest first */}
+      <StudioProjects projects={projectsShownOn(crumbs.at(-1).href).projects} heading="Recent roofing projects" />
       <ReviewMarquee />
       <ValueGrid heading={hub.highlights.heading} items={hub.highlights.points} columns={3} />
+      {extra}
       {process && <Process />}
       {feature && <SplitFeature {...feature} tone="wash" />}
       <LatestArticles posts={await articlesFor(crumbs.at(-1).href)} heading="Related Roofing Articles" />

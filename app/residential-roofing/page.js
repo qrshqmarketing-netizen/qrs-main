@@ -8,6 +8,8 @@ import Hero from '@/components/sections/Hero';
 import Overview from '@/components/sections/Overview';
 import RoofCheck from '@/components/sections/RoofCheck';
 import ServiceFinder from '@/components/sections/ServiceFinder';
+import StudioProjects from '@/components/studio/StudioProjects';
+import { projectsShownOn } from '@/data/projectPages';
 import { closingCta } from '@/components/templates/shared';
 import JsonLd from '@/components/ui/JsonLd';
 import { HOME, RESIDENTIAL, RESIDENTIAL_TYPES, typeCard } from '@/data/catalog';
@@ -52,6 +54,8 @@ export default async function ResidentialRoofingPage() {
       <Overview heading={page.overview.heading} paragraphs={page.overview.paragraphs} />
       <CardCarousel title={page.cards.heading} items={RESIDENTIAL_TYPES.map(typeCard)} idPrefix="roofTypes" tone="wash" />
       <ServiceFinder heading={page.finder.heading} intro={page.finder.intro} rows={page.finder.rows} />
+      {/* The work itself, after the service finder (owner, October 15 2026, after maben.com.au) */}
+      <StudioProjects projects={projectsShownOn(RESIDENTIAL.href).projects} heading="Recent roofing projects" />
       {/* Google reviews, a few sections below the hero (owner, October 14 2026) */}
       <ReviewMarquee />
       <DifferenceBand />

@@ -1,6 +1,5 @@
 import Faq from '@/components/sections/Faq';
 import LatestArticles from '@/components/sections/LatestArticles';
-import FeatureBand from '@/components/sections/FeatureBand';
 import FinalCta from '@/components/sections/FinalCta';
 import PartnerLogos from '@/components/sections/PartnerLogos';
 import ProofBar from '@/components/sections/ProofBar';
@@ -12,16 +11,11 @@ import StudioHero from '@/components/studio/StudioHero';
 import PromoCard from '@/components/widgets/PromoCard';
 import { SEASON_PROMO as promo } from '@/data/promo';
 import StudioIntro from '@/components/studio/StudioIntro';
-import StudioProcess from '@/components/studio/StudioProcess';
+import StudioHowWeWork from '@/components/studio/StudioHowWeWork';
 import StudioProjects from '@/components/studio/StudioProjects';
 import StudioServices from '@/components/studio/StudioServices';
-import { StudioCredentials, StudioGiving, StudioWhy } from '@/components/studio/StudioTrust';
-import { ABOUT_PAGE } from '@/data/pages/about';
-import RoofColors from '@/components/roofColors/RoofColors';
-import { SHOW_ROOF_COLORS } from '@/data/roofColors';
 import JsonLd from '@/components/ui/JsonLd';
 import { SERVICE_CATEGORIES } from '@/data/serviceCategories';
-import { CAREERS_PAGE, CAREERS_TEASER } from '@/data/pages/careers';
 import { HERO_ANNOTATIONS, HOME_DESCRIPTION, HOME_H1, HOME_TITLE } from '@/data/site';
 import { LATEST_PROJECTS } from '@/data/projectPages';
 import { ROOF_FINANCING } from '@/data/services/programs';
@@ -110,24 +104,16 @@ export default async function HomePage() {
         <ProofBar strip />
         <StudioIntro />
         <StudioServices categories={SERVICE_CATEGORIES} items={HOME_PRODUCTS} />
-        <StudioWhy />
-        {/* Reviews after the intro, services and "Why QRS" (owner, October 14 2026: moved down from right under the hero) */}
+        {/* The home page's story (owner, October 15 2026, after maben.com.au): the belief statement (StudioIntro), the services, then "How we work"
+            (four principles, pinned while it scrolls; it replaces "Why QRS", the process steps and the credentials strip), the reviews and the projects.
+            The shingle colors moved to the shingle roofing page; "Giving back" (on the About page) and the careers band were taken off. */}
+        <StudioHowWeWork />
         <ReviewMarquee heading="What people say after the job" />
         <StudioProjects projects={LATEST_PROJECTS.slice(0, 3)} more={LATEST_PROJECTS.slice(3)} />
-        <StudioProcess />
-        {SHOW_ROOF_COLORS && <RoofColors />}
-        <StudioCredentials />
         {!promo.active && <PromoSection />}
         <ServiceArea allAreasLink />
         <PartnerLogos {...ROOF_FINANCING.partners} />
         <LatestArticles posts={await latestArticles(3)} />
-        <StudioGiving text={ABOUT_PAGE.story.paragraphs.find((p) => /giving back/i.test(p))} />
-        <FeatureBand
-          id="careers"
-          tone="light"
-          {...CAREERS_TEASER}
-          points={CAREERS_PAGE.roles.items.map((role) => ({ title: role.title, text: role.text, href: '/careers/#roles' }))}
-        />
         <Faq cta={false} faqs={faqs} />
         <RoofCheck />
         <FinalCta />

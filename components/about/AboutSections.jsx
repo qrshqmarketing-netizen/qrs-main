@@ -43,7 +43,7 @@ const NUMBERS = [
   { value: '12', unit: '', label: 'Crews for shingle, tile and flat roofs' },
   { value: String(OFFICES.length), unit: '', label: 'Offices across Los Angeles' },
   { value: '3', unit: '', label: 'Languages: English, Spanish and Tagalog' },
-  { value: '2', unit: 'counties', label: 'Los Angeles and Orange County' },
+  { value: '4', unit: 'counties', label: 'Los Angeles, Orange, Riverside and San Bernardino' },
   { value: '6,000', unit: '', label: 'Homes we aim to protect in the next 10 years' },
 ];
 
@@ -147,6 +147,29 @@ export function AboutMission({ mission }) {
           <Label>Our values</Label>
           <ol className="ab-values">
             {COMPANY.values.map((v, i) => (
+              <li key={v.title}>
+                <span className="ab-num">{String(i + 1).padStart(2, '0')}</span>
+                <b>{v.title}</b>
+                <span>{v.text}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// "Our process" (owner, October 15 2026, after maben.com.au's About page): the four stages of every job as numbered rows, in the values' style
+export function AboutProcess({ process }) {
+  return (
+    <section className="ab-section ab-process">
+      <div className="container ab-split ab-values-wrap">
+        <Label>{process.label}</Label>
+        <div>
+          <h2><Mark text={process.heading} auto /></h2>
+          <ol className="ab-values">
+            {process.items.map((v, i) => (
               <li key={v.title}>
                 <span className="ab-num">{String(i + 1).padStart(2, '0')}</span>
                 <b>{v.title}</b>

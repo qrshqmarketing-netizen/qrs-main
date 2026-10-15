@@ -2,7 +2,7 @@ import Faq from '@/components/sections/Faq';
 import ReviewMarquee from '@/components/sections/ReviewMarquee';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
-import { AboutCards, AboutIntro, AboutMission, AboutNumbers, AboutOffices, AboutRecognition, AboutServices, AboutStory, AboutTeam } from '@/components/about/AboutSections';
+import { AboutCards, AboutIntro, AboutMission, AboutNumbers, AboutOffices, AboutProcess, AboutRecognition, AboutStory, AboutTeam } from '@/components/about/AboutSections';
 import RoofCheck from '@/components/sections/RoofCheck';
 import JsonLd from '@/components/ui/JsonLd';
 import { ABOUT_LINK, HOME } from '@/data/catalog';
@@ -27,13 +27,15 @@ export default function AboutPage() {
       <AboutIntro page={page} />
       <AboutNumbers />
       <AboutStory story={{ ...page.story, paragraphs: page.story.paragraphs.slice(0, 1) }} />
+      {/* Maben-style order (owner, October 15 2026): who we are, our story, our process, our team, then the proof. "Roofing we do every day"
+          (AboutServices) was taken off: the intro now says it, with the same links. */}
+      <AboutProcess process={page.process} />
+      <AboutTeam team={page.team} />
       {/* Google reviews, a few sections below the hero (owner, October 14 2026) */}
       <ReviewMarquee />
       <AboutOffices />
       <AboutMission mission={page.mission} />
-      <AboutTeam team={page.team} />
       <AboutRecognition giving={page.story.paragraphs[1]} />
-      <AboutServices services={page.services} />
       <AboutCards careers={page.careers} partners={page.partners} />
       <Faq heading="About QRS: FAQs" sub="Straight answers about who we are and how we work." faqs={page.faqs} cta={false} />
       <RoofCheck />
