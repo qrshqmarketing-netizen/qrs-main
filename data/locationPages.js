@@ -8,22 +8,24 @@ export const LOCATION_PAGES = {
     keyword: 'los angeles roofing',
     image: '/images/los-angeles-drone-view.webp',
     imagePosition: 'center 40%',
-    metaTitle: 'Los Angeles Roofing & Roof Repair',
-    metaDescription: 'Los Angeles roofing from a detail-first local team: tile, shingle and flat roof repair and replacement with written scopes. Book a free roof evaluation.',
-    blurb: 'Roofer-led inspections, written scopes and clean installs for homes across the city, from the Hollywood Hills to the Valley.',
+    // Written for West Hollywood too (owner, October 15 2026): our Los Angeles office (1444 N Poinsettia Pl) is next to it, and West Hollywood has no page of its own
+    metaTitle: 'Los Angeles Roofing & Roof Repair Near West Hollywood',
+    metaDescription: 'Los Angeles roofing from our office near West Hollywood: tile, shingle and flat roof repair and replacement with written scopes. Book a free roof evaluation.',
+    blurb: 'Roofer-led inspections, written scopes and clean installs for homes across the city and West Hollywood, from the Hollywood Hills to the Valley.',
     hero: {
       // The keyword line; the result line under it is in data/heroOutcomes.js
       heading: 'Los Angeles roofing',
-      sub: 'For Los Angeles roofing, Quality Roofing Specialists repairs and replaces tile, shingle and flat roofs on homes from the Hollywood Hills to the Valley, with offices in the Fairfax area and Woodland Hills. Every job starts with a free roof evaluation.',
+      sub: 'For Los Angeles roofing, Quality Roofing Specialists repairs and replaces tile, shingle and flat roofs on homes, condos and apartment buildings from West Hollywood and the Hollywood Hills to the Valley, with our Los Angeles office near West Hollywood and a second office in Woodland Hills. Every job starts with a free roof evaluation.',
     },
     intro: {
       heading: 'Roofing for Every Kind of Los Angeles Home',
       paragraphs: [
-        'Los Angeles roofing covers more ground than most cities: Spanish Revival homes with clay tile in Los Feliz, mid-century houses with low-slope roofs in the hills, Craftsman bungalows with shingles in Highland Park and Eagle Rock. Our Los Angeles office is in the Fairfax area, with a second office in Woodland Hills for the Valley, and our crews bring the same detail-first process to every roof across the city.',
+        'Los Angeles roofing covers more ground than most cities: Spanish Revival homes with clay tile in Los Feliz, mid-century houses with low-slope roofs in the hills, Craftsman bungalows with shingles in Highland Park and Eagle Rock. Our Los Angeles office is at 1444 N Poinsettia Pl, in the Fairfax area next to West Hollywood, with a second office in Woodland Hills for the Valley, and our crews bring the same detail-first process to every roof across the city.',
+        '**West Hollywood roofing** is part of the same everyday work, minutes from our office: flat and low-slope roofs on condos and [multi-family buildings](/residential-roofing/hoa-multi-family/), and tile and shingle roofs on the homes around them. Lots are tight and neighbors are close, so access, staging and protection for the buildings next door are planned in the written scope before work starts.',
         'It starts with a roofer-led [free roof evaluation](#roof-check), not a sales pitch. We photo-document what we find, explain it in plain English and give you a written scope and price before any work begins. Whether your roof needs a [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/), a [flat roof repair](/residential-roofing/flat-roofing/repair/) or a full replacement, you’ll know exactly what you’re paying for.',
       ],
     },
-    neighborhoods: ['Hollywood Hills', 'Los Feliz', 'Silver Lake', 'Hancock Park', 'Mid-Wilshire', 'Fairfax', 'Eagle Rock', 'Highland Park', 'Sherman Oaks', 'Encino'],
+    neighborhoods: ['West Hollywood', 'Hollywood Hills', 'Los Feliz', 'Silver Lake', 'Hancock Park', 'Mid-Wilshire', 'Fairfax', 'Eagle Rock', 'Highland Park', 'Sherman Oaks', 'Encino'],
     considerations: [
       { title: 'Sun and heat on every slope', text: 'Strong sun dries out underlayment and ages shingles and sealants, especially on south- and west-facing slopes.' },
       { title: 'Hillside homes and tight streets', text: 'Steep lots and narrow roads in the hills mean planning access, deliveries and safety before the first day of work.' },
@@ -31,12 +33,13 @@ export const LOCATION_PAGES = {
     ],
     faqs: [
       { q: 'Do you serve my Los Angeles neighborhood?', a: 'We work across the city, from the Hollywood Hills and Silver Lake to Sherman Oaks and Encino, with offices in the Fairfax area and in Woodland Hills. Check your ZIP code on the map on this page, or give us a call.' },
+      { q: 'Do you work in West Hollywood?', a: 'Yes. Our Los Angeles office at 1444 N Poinsettia Pl, Unit 308 is next to West Hollywood, and we repair and replace roofs there on single-family homes, condos and [multi-family buildings](/residential-roofing/hoa-multi-family/). Book a free roof evaluation or call (310) 340-1643.' },
       { q: 'What roof types do you work on in Los Angeles?', a: 'All of the common ones: [tile](/residential-roofing/tile-roofing/), [shingle](/residential-roofing/shingle-roofing/) and [flat](/residential-roofing/flat-roofing/) roofs. Plenty of homes here have more than one type, and one roof evaluation covers them all.' },
       { q: 'Can you work on hillside homes?', a: 'Yes. Steep lots and narrow streets take extra planning for access, material deliveries and safety, and we build that into the written scope before work starts.' },
       { q: 'How do I get started?', a: 'Book a free roof evaluation. A roofer inspects your roof, photo-documents its condition and gives you a clear next step: repair, monitor, maintain or replace.' },
     ],
     nearby: ['woodland-hills', 'glendale', 'burbank', 'santa-monica'],
-    final: { heading: 'Let’s Take a Look at Your Los Angeles Roof', text: 'No pressure, no mystery scope and no surprises. Start with a free roof evaluation for your Los Angeles home.' },
+    final: { heading: 'Let’s Take a Look at Your Los Angeles Roof', text: 'No pressure, no mystery scope and no surprises. Start with a free roof evaluation for your Los Angeles or West Hollywood home.' },
   },
 
   'santa-monica': {

@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { ArrowRight } from '@/components/ui/icons';
-import { ALL_PLACES, hasPage, placePath, REGIONS, regionPath, SERVICE_RADIUS_MI } from '@/data/locations';
+import { ALL_PLACES, hasPage, placeLinkName, placePath, REGIONS, regionPath, SERVICE_RADIUS_MI } from '@/data/locations';
 import { PHONE, TEL } from '@/data/site';
 import { miles, nominatimSearch, pointInGeoJson, zipPrefixServed } from '@/lib/geo';
 import { loadLeaflet, qrsPin } from '@/lib/leaflet';
@@ -102,7 +102,7 @@ export default function ServiceArea({
         // A pin for every place: its popup names it and links to its page (a place with no page of its own links to its county's page)
         const markers = ALL_PLACES.map((place, i) => {
           const { city, lat, lng } = place;
-          const link = hasPage(place) ? city + ' roofing page →' : REGIONS.find((r) => r.slug === place.region).name + ' roofing →';
+          const link = placeLinkName(place) + ' roofing page →';
           return L.marker([lat, lng], { icon: qrsPin(L, false), title: city + ' Area', alt: city + ' Area' })
             .addTo(leafletMap)
             .bindPopup('<b>' + city + ' Area</b><a href="' + placePath(place) + '">' + link + '</a><br><a href="' + TEL + '">' + PHONE + '</a>')
@@ -240,8 +240,8 @@ export default function ServiceArea({
                         <button type="button" className="sa-pick" aria-pressed={active === i} onClick={() => select(i, true, true)}>
                           {city} Area
                         </button>
-                        <Link className="sa-go" href={placePath(place)} prefetch={false} aria-label={hasPage(place) ? `${city} roofing page` : `${region.name} roofing page`}>
-                          {hasPage(place) ? 'Page' : 'County'} <ArrowRight />
+                        <Link className="sa-go" href={placePath(place)} prefetch={false} aria-label={`${placeLinkName(place)} roofing page`}>
+                          {hasPage(place) || place.servedBy ? 'Page' : 'County'} <ArrowRight />
                         </Link>
                       </li>
                     );

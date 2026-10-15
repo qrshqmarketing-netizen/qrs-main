@@ -33,7 +33,8 @@ export const LOCATIONS = [
 // LOCATIONS and add its copy to data/locationPages.js (drafts for these places are in data/locationCopy/). Every place was checked to sit inside the outline.
 export const OTHER_PLACES = [
   { city: 'Beverly Hills', slug: 'beverly-hills', county: 'Los Angeles County', region: 'la-county', lat: 34.0736, lng: -118.4004 },
-  { city: 'West Hollywood', slug: 'west-hollywood', county: 'Los Angeles County', region: 'la-county', lat: 34.09, lng: -118.3617 },
+  // servedBy: the city page that covers this place (West Hollywood: the Los Angeles page, written for it too; our LA office on N Poinsettia Pl is next to it)
+  { city: 'West Hollywood', slug: 'west-hollywood', county: 'Los Angeles County', region: 'la-county', lat: 34.09, lng: -118.3617, servedBy: 'los-angeles' },
   { city: 'Culver City', slug: 'culver-city', county: 'Los Angeles County', region: 'la-county', lat: 34.0211, lng: -118.3965 },
   { city: 'Sherman Oaks', slug: 'sherman-oaks', county: 'Los Angeles County', region: 'la-county', lat: 34.1511, lng: -118.4492 },
   { city: 'Encino', slug: 'encino', county: 'Los Angeles County', region: 'la-county', lat: 34.1592, lng: -118.5019 },
@@ -89,8 +90,11 @@ export const OTHER_PLACES = [
 export const ALL_PLACES = [...LOCATIONS, ...OTHER_PLACES];
 export const placesIn = (region) => OTHER_PLACES.filter((p) => p.region === region);
 export const hasPage = (place) => LOCATIONS.some((l) => l.slug === place.slug);
-// Where a place's pin and label lead: its own page, or else its county page
-export const placePath = (place) => (hasPage(place) ? cityPath(place.slug) : regionPath(place.region));
+// Where a place's pin and label lead: its own page, the city page that covers it (`servedBy`), or else its county page
+export const placePath = (place) => (hasPage(place) ? cityPath(place.slug) : place.servedBy ? cityPath(place.servedBy) : regionPath(place.region));
+// The words for that link: "Santa Monica roofing page", "Los Angeles roofing page" (West Hollywood), "Los Angeles County roofing page"
+export const placeLinkName = (place) =>
+  hasPage(place) ? place.city : place.servedBy ? findCity(place.servedBy).city : REGIONS.find((r) => r.slug === place.region).name;
 
 // The places without a page, by county, as plain names (the "We also serve" lists)
 export const ALSO_SERVING = REGIONS.map((r) => ({ name: r.name, region: r.slug, places: placesIn(r.slug).map((p) => p.city) })).filter((g) => g.places.length);

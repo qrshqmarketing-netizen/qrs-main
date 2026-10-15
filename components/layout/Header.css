@@ -136,3 +136,18 @@ body:has(main :is(.hero,.st-hero,.promo-home,.pd-hero)) .site-header:not([data-s
 .hd-tool[aria-expanded="true"] .hd-spark i:nth-child(n+2){animation-name:hdSparkleGlint;opacity:1;transform:none}
 @keyframes hdSparkPop{0%,100%{opacity:0;transform:scale(.2) rotate(-45deg)}35%,65%{opacity:1;transform:scale(1) rotate(0)}}
 @media (prefers-reduced-motion:reduce){.hd-spark i{animation:none!important;background-position:50% 0;transition:none}}
+
+/* Frosted glass bar (owner, October 15 2026): the bar's own colors, a little see-through, with the page blurred behind them. It is drawn on
+   .hd-bar:before (a backdrop-filter on the bar itself would make it the containing block for the fixed menu panel and backdrop). The solid bar
+   is paper at 72% (dark navy in the dark theme, as --paper follows the theme); over a photo hero it is the usual navy shade, blurred. Browsers
+   without backdrop-filter get the solid colors as before. */
+.hd-bar{background:transparent}
+.hd-bar:before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:var(--paper);transition:background .35s ease}
+@supports ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){
+  .hd-bar:before{background:color-mix(in srgb,var(--paper) 72%,transparent);-webkit-backdrop-filter:blur(18px) saturate(1.6);backdrop-filter:blur(18px) saturate(1.6)}
+}
+body:has(main :is(.hero,.st-hero,.promo-home,.pd-hero)) .site-header:not([data-solid]) .hd-bar{background:transparent}
+body:has(main :is(.hero,.st-hero,.promo-home,.pd-hero)) .site-header:not([data-solid]) .hd-bar:before{background:linear-gradient(180deg,rgba(3,14,26,.5),rgba(3,14,26,.12))}
+@supports ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){
+  body:has(main :is(.hero,.st-hero,.promo-home,.pd-hero)) .site-header:not([data-solid]) .hd-bar:before{background:linear-gradient(180deg,rgba(3,14,26,.42),rgba(3,14,26,.18))}
+}

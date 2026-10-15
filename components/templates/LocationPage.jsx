@@ -10,7 +10,7 @@ import RoofCheck from '@/components/sections/RoofCheck';
 import ServiceCategories from '@/components/sections/ServiceCategories';
 import JsonLd from '@/components/ui/JsonLd';
 import { HOME, LOCATIONS_LINK, RESIDENTIAL_TYPES, typeCard } from '@/data/catalog';
-import { cityPath, findRegion, regionPath } from '@/data/locations';
+import { cityPath, findRegion, OTHER_PLACES, regionPath } from '@/data/locations';
 import { projectsNear } from '@/data/projects';
 import { SERVICES } from '@/data/services';
 import { OFFICES, SITE_URL } from '@/data/site';
@@ -40,7 +40,12 @@ export default async function LocationPage({ location, page, index = 0 }) {
     service: {
       name: `Roofing in ${city}, CA`,
       type: 'roofing',
-      area: { '@type': 'City', name: `${city}, CA`, containedInPlace: { '@type': 'AdministrativeArea', name: `${county}, CA` } },
+      // The city, plus any place without a page of its own that this page covers (`servedBy` in data/locations.js: West Hollywood on the Los Angeles page)
+      area: [{ name: city, county }, ...OTHER_PLACES.filter((p) => p.servedBy === slug).map((p) => ({ name: p.city, county: p.county }))].map((a) => ({
+        '@type': 'City',
+        name: `${a.name}, CA`,
+        containedInPlace: { '@type': 'AdministrativeArea', name: `${a.county}, CA` },
+      })),
       catalog: SERVICES.map((s) => ({ name: s.schemaName, href: s.href })),
       // A city with a branch office is served from that office (see the offices in lib/structuredData.js)
       provider: office && office !== OFFICES[0] ? `${SITE_URL}${cityPath(slug)}#office` : undefined,
