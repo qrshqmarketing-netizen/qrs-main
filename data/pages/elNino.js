@@ -7,7 +7,7 @@ import { PROMO_LANDING_PATH } from '../promo';
 export const EL_NINO_PAGE = {
   path: PROMO_LANDING_PATH,
   keyword: 'El Niño roof inspection',
-  metaTitle: 'Free El Niño Roof Inspection in Los Angeles & OC',
+  metaTitle: 'Free El Niño Roof Inspection in Los Angeles & Orange County',
   metaDescription:
     'Book a free El Niño roof inspection in Los Angeles and Orange County: a roofer-led drone evaluation, photos and a written scope before any work.',
   hero: {

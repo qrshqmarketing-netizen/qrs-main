@@ -4,7 +4,7 @@ import { ALL_PLACES } from '../locations';
 
 export const LOCATIONS_PAGE = {
   keyword: 'roofing service areas',
-  metaTitle: 'Roofing Service Areas in LA & OC',
+  metaTitle: 'Roofing Service Areas in Los Angeles & Orange County',
   metaDescription:
     'Roofing service areas across LA & Orange County, from Santa Monica and Pasadena to Long Beach and Irvine. Check your ZIP and book a free roof evaluation.',
   hero: {

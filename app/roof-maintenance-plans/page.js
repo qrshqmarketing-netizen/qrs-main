@@ -16,6 +16,7 @@ import { articlesFor } from '@/lib/articles';
 import { heroOutcome } from '@/data/heroOutcomes';
 import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
+import { searchHeading } from '@/lib/headings';
 
 // The Roof Care Plan (content in data/pages/carePlan.js): three priced maintenance tiers with an
 // interactive size-based pricing table (components/sections/CarePlanPricing.jsx).
@@ -30,7 +31,7 @@ export default async function RoofMaintenancePlansPage() {
   return (
     <main id="top">
       <JsonLd data={schema} />
-      <Hero crumbs={CRUMBS} eyebrow="Maintenance Plans" title={page.hero.heading} outcome={heroOutcome(PROGRAMS.plans.href)} intro={page.hero.intro} image={page.image} imageAlt={page.imageAlt} stats />
+      <Hero crumbs={CRUMBS} eyebrow="Maintenance Plans" title={searchHeading(page.hero.heading)} outcome={heroOutcome(PROGRAMS.plans.href)} intro={page.hero.intro} image={page.image} imageAlt={page.imageAlt} stats />
       <ValueGrid heading={page.whatGoesWrong.heading} items={page.whatGoesWrong.items} tone="wash" pattern />
       <CarePlanPricing />
       <PlanScope />

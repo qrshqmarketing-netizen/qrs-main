@@ -8,7 +8,7 @@ export const RAIN_GUTTERS = {
   title: 'Rain Gutter Installation & Repair',
   navLabel: 'Rain Gutters',
   card: 'New gutters and downspouts sized for your roof and sloped to drain, plus repairs for leaking corners, sagging runs and overflow that stains your walls.',
-  metaTitle: 'Rain Gutter Installation in LA & OC',
+  metaTitle: 'Rain Gutter Installation in Los Angeles & Orange County',
   metaDescription:
     'Rain gutter installation and repair in Los Angeles & Orange County: sized for your roof, sloped to drain and tied into the drip edge. Request an estimate.',
   image: '/images/home-hero-shingle-neighborhood-drone-view.webp',
@@ -105,7 +105,7 @@ export const HOA_MULTI_FAMILY = {
   title: 'HOA & Multi-Family Roofing · *ReserveReady*',
   navLabel: 'HOA & Multi-Family',
   card: 'Roofing for HOA communities and multi-family properties, with photo-documented reports, work phased building by building and one point of contact.',
-  metaTitle: 'HOA & Multi-Family Roofing in LA & OC',
+  metaTitle: 'HOA & Multi-Family Roofing in Los Angeles & Orange County',
   metaDescription:
     'HOA & multi-family roofing in Los Angeles & Orange County: photo-documented reports, phased work and one point of contact. Request an estimate.',
   image: '/images/shingle-roof-care-multi-family.webp',
@@ -206,7 +206,7 @@ export const ATTIC_VENTILATION = {
   h1: 'Attic Ventilation in Los Angeles & Orange County',
   navLabel: 'Attic Ventilation',
   card: 'Blocked, missing or mismatched vents found and fixed, so hot, humid air can leave your attic and cooler air can come in.',
-  metaTitle: 'Attic Ventilation Repair in Los Angeles & OC',
+  metaTitle: 'Attic Ventilation Repair in Los Angeles & Orange County',
   metaDescription: 'Attic ventilation repair and installation in Los Angeles & Orange County: vents inspected, airflow balanced, every finding photographed. Free roof evaluation.',
   image: '/images/projects/shingle-roof-replacement-panorama-city-91402/shingle-panorama-city-91402-09.webp',
   imageAlt: 'New box vents and pipe jacks flashed into a light gray shingle roof',

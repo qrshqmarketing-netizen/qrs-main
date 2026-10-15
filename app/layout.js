@@ -103,24 +103,30 @@ export default function RootLayout({ children }) {
           <ScrollDraw />
           <ScrollScenes />
           {LOAD_TRACKING && (
-            <>
-              <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="lazyOnload" />
-              <Script id="ga4" strategy="afterInteractive">
-                {`window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', '${GA_ID}');`}
-              </Script>
-              {/* Not id="clarity": an element's id becomes window.clarity, which stops Clarity from starting */}
-              <Script id="clarity-loader" strategy="lazyOnload">
-                {`(function(c,l,a,r,i,t,y){
-      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-  })(window, document, "clarity", "script", "${CLARITY_ID}");`}
-              </Script>
-            </>
+            /* Google Analytics and Clarity, each only if the visitor's cookie choice allows it (lib/consent.js; the key, the old "Got it" key and
+               the Global Privacy Control default must match it). Google's consent mode starts from that choice; the scripts load after the page
+               has loaded, like the lazyOnload they replace. Not id="clarity": an element's id becomes window.clarity, which stops Clarity from starting. */
+            <Script id="qrs-tracking" strategy="afterInteractive">
+              {`(function(){
+  var c=null;
+  var gpc=navigator.globalPrivacyControl===true;
+  try{c=JSON.parse(localStorage.getItem('qrs-consent'));if(!c&&!gpc&&localStorage.getItem('cookieNoticeOk'))c={analytics:true,clarity:true};}catch(e){}
+  function ok(k){return c?c[k]!==false:!gpc;}
+  window.dataLayer=window.dataLayer||[];
+  window.gtag=function(){dataLayer.push(arguments);};
+  gtag('consent','default',{analytics_storage:ok('analytics')?'granted':'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});
+  gtag('js',new Date());
+  gtag('config','${GA_ID}');
+  var done={};
+  window.__qrsLoadTracking=function(){
+    try{c=JSON.parse(localStorage.getItem('qrs-consent'))||c;}catch(e){}
+    if(ok('analytics')&&!done.ga){done.ga=1;var g=document.createElement('script');g.async=1;g.src='https://www.googletagmanager.com/gtag/js?id=${GA_ID}';document.head.appendChild(g);}
+    if(ok('clarity')&&!done.cl){done.cl=1;(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","${CLARITY_ID}");}
+  };
+  function later(){(window.requestIdleCallback||setTimeout)(window.__qrsLoadTracking);}
+  if(document.readyState==='complete')later();else addEventListener('load',later,{once:true});
+})();`}
+            </Script>
           )}
         </SiteChrome>
       </body>

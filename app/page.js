@@ -16,7 +16,7 @@ import StudioProjects from '@/components/studio/StudioProjects';
 import StudioServices from '@/components/studio/StudioServices';
 import JsonLd from '@/components/ui/JsonLd';
 import { SERVICE_CATEGORIES } from '@/data/serviceCategories';
-import { HERO_ANNOTATIONS, HOME_DESCRIPTION, HOME_H1, HOME_TITLE } from '@/data/site';
+import { GOOGLE_REVIEWS, HERO_ANNOTATIONS, HOME_DESCRIPTION, HOME_H1, HOME_TITLE } from '@/data/site';
 import { LATEST_PROJECTS } from '@/data/projectPages';
 import { ROOF_FINANCING } from '@/data/services/programs';
 import { latestArticles } from '@/lib/articles';
@@ -108,7 +108,7 @@ export default async function HomePage() {
             (four principles, pinned while it scrolls; it replaces "Why QRS", the process steps and the credentials strip), the reviews and the projects.
             The shingle colors moved to the shingle roofing page; "Giving back" (on the About page) and the careers band were taken off. */}
         <StudioHowWeWork />
-        <ReviewMarquee heading="What people say after the job" />
+        <ReviewMarquee heading="What people say after the job" text={`${GOOGLE_REVIEWS.count} reviews from the people we roof for, on Google.`} />
         <StudioProjects projects={LATEST_PROJECTS.slice(0, 3)} more={LATEST_PROJECTS.slice(3)} />
         {!promo.active && <PromoSection />}
         <ServiceArea allAreasLink />

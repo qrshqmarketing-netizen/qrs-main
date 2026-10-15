@@ -4,7 +4,7 @@
 export const FLAT_CONTENT = {
   hub: {
     keyword: 'flat roofing',
-    metaTitle: 'Residential Flat Roofing in LA & Orange County',
+    metaTitle: 'Residential Flat Roofing in Los Angeles & Orange County',
     metaDescription: 'Residential flat roofing in Los Angeles & Orange County: modified bitumen roofs for homes, ADUs, garages and patio covers, planned around drainage.',
     hero: {
       heading: 'Flat Roofing Services · *FlatGuard*',

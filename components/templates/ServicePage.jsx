@@ -16,6 +16,7 @@ import { pageJsonLd } from '@/lib/structuredData';
 import { closingCta, faqSub } from './shared';
 import { heroOutcome } from '@/data/heroOutcomes';
 import { articlesFor } from '@/lib/articles';
+import { searchHeading } from '@/lib/headings';
 
 const PROCESS_PHOTOS = {
   tile: [
@@ -114,7 +115,7 @@ export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], 
       <Hero
         crumbs={crumbs}
         eyebrow={eyebrow}
-        title={page.h1 || page.title}
+        title={searchHeading(page.h1 || page.title)}
         outcome={heroOutcome(crumbs.at(-1).href)}
         intro={page.hero.intro}
         image={page.image}

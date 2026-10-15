@@ -25,6 +25,15 @@ export const LOCATIONS = [
   { city: 'Irvine', slug: 'irvine', county: 'Orange County', region: 'orange-county', lat: 33.6846, lng: -117.8265 },
   { city: 'Newport Beach', slug: 'newport-beach', county: 'Orange County', region: 'orange-county', lat: 33.6189, lng: -117.9298 },
   { city: 'Vernon', slug: 'vernon', county: 'Los Angeles County', region: 'la-county', lat: 34.0018, lng: -118.2184 },
+  // Pages for places with something real behind them (owner, October 15 2026): our Google listing (West Hollywood) or a finished project
+  { city: 'West Hollywood', slug: 'west-hollywood', county: 'Los Angeles County', region: 'la-county', lat: 34.09, lng: -118.3617 },
+  { city: 'Venice', slug: 'venice', county: 'Los Angeles County', region: 'la-county', lat: 33.985, lng: -118.4695 },
+  { city: 'Hollywood Hills', slug: 'hollywood-hills', county: 'Los Angeles County', region: 'la-county', lat: 34.1155, lng: -118.3545 },
+  { city: 'San Pedro', slug: 'san-pedro', county: 'Los Angeles County', region: 'la-county', lat: 33.7361, lng: -118.2923 },
+  { city: 'Panorama City', slug: 'panorama-city', county: 'Los Angeles County', region: 'la-county', lat: 34.2242, lng: -118.4492 },
+  { city: 'Granada Hills', slug: 'granada-hills', county: 'Los Angeles County', region: 'la-county', lat: 34.2647, lng: -118.5233 },
+  { city: 'Pico Rivera', slug: 'pico-rivera', county: 'Los Angeles County', region: 'la-county', lat: 33.9831, lng: -118.0967 },
+  { city: 'Hacienda Heights', slug: 'hacienda-heights', county: 'Los Angeles County', region: 'la-county', lat: 33.9931, lng: -117.9687 },
 ];
 
 // Places inside the outlined service area (data/serviceAreaOutline.js) that have no page of their own. They have a pin and a label on the service area map
@@ -33,8 +42,6 @@ export const LOCATIONS = [
 // LOCATIONS and add its copy to data/locationPages.js (drafts for these places are in data/locationCopy/). Every place was checked to sit inside the outline.
 export const OTHER_PLACES = [
   { city: 'Beverly Hills', slug: 'beverly-hills', county: 'Los Angeles County', region: 'la-county', lat: 34.0736, lng: -118.4004 },
-  // servedBy: the city page that covers this place (West Hollywood: the Los Angeles page, written for it too; our LA office on N Poinsettia Pl is next to it)
-  { city: 'West Hollywood', slug: 'west-hollywood', county: 'Los Angeles County', region: 'la-county', lat: 34.09, lng: -118.3617, servedBy: 'los-angeles' },
   { city: 'Culver City', slug: 'culver-city', county: 'Los Angeles County', region: 'la-county', lat: 34.0211, lng: -118.3965 },
   { city: 'Sherman Oaks', slug: 'sherman-oaks', county: 'Los Angeles County', region: 'la-county', lat: 34.1511, lng: -118.4492 },
   { city: 'Encino', slug: 'encino', county: 'Los Angeles County', region: 'la-county', lat: 34.1592, lng: -118.5019 },

@@ -29,9 +29,9 @@ export const PRIVACY_POLICY = {
       heading: 'Information collected automatically',
       items: [
         '**Approximate location.** When you view our service area map, the site asks our hosting provider for your approximate, city-level location based on your internet connection (IP address), so it can show the QRS location nearest you. We don’t store it.',
-        '**Browser storage.** We use your browser’s local storage to remember simple choices, such as closing the cookie notice or the review pop-up. This stays in your browser.',
+        '**Browser storage.** We use your browser’s local storage to remember simple choices, such as your light or dark theme and your cookie choice. This stays in your browser.',
         '**Technical logs.** Like most websites, our hosting provider records technical information such as IP address, browser type and the pages requested, to keep the site running and secure.',
-        '**Cookies and analytics.** If we use analytics tools such as Google Analytics, they may set cookies that help us understand how visitors use the site. You can block or delete cookies in your browser settings.',
+        '**Cookies and analytics.** With your OK, we use Google Analytics (which pages are visited and how people found us) and Microsoft Clarity (clicks and scrolling, to see where the site is hard to use). Both set cookies. The cookie bar at the bottom of the site lets you accept them, keep only the necessary ones or choose in its settings, and you can change your choice any time with **Cookie settings** at the bottom of every page. If your browser sends a Global Privacy Control signal, both start switched off. You can also block or delete cookies in your browser settings.',
       ],
     },
     {

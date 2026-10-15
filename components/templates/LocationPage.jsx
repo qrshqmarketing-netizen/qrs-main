@@ -18,6 +18,7 @@ import { pageJsonLd } from '@/lib/structuredData';
 import { heroOutcome } from '@/data/heroOutcomes';
 import { articlesFor } from '@/lib/articles';
 
+
 // Hero photos rotate across city pages until each city has its own
 const PHOTOS = [
   { src: '/images/home-hero-drone-view.webp', position: 'center 40%' },
@@ -60,7 +61,7 @@ export default async function LocationPage({ location, page, index = 0 }) {
       <Hero
         crumbs={crumbs}
         eyebrow={`${city} Roofing · Roof Repair & Replacement`}
-        title={page.hero.heading}
+        title={page.metaTitle}
         outcome={heroOutcome(cityPath(slug))}
         stats
         intro={page.hero.sub}

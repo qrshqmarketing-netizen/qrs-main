@@ -4,7 +4,7 @@
 export const METAL_CONTENT = {
   hub: {
     keyword: 'metal roofing',
-    metaTitle: 'Metal Roofing in Los Angeles & OC',
+    metaTitle: 'Metal Roofing in Los Angeles & Orange County',
     metaDescription:
       'Metal roofing for Los Angeles & Orange County homes: standing seam panels, concealed fasteners, leak repairs and a written scope first. Free roof evaluation.',
     hero: {
@@ -71,7 +71,7 @@ export const METAL_CONTENT = {
       title: 'Standing Seam Metal Roofing · *LockSeam*',
       navLabel: 'Standing Seam',
       card: 'Clean vertical panels joined by raised seams, held by hidden clips that let the metal move with the heat. Suited to modern homes, ADUs and patio covers.',
-      metaTitle: 'Standing Seam Metal Roofing in LA',
+      metaTitle: 'Standing Seam Metal Roofing in Los Angeles',
       metaDescription:
         'Standing seam metal roofing in Los Angeles & Orange County: concealed clips, a flat, sound deck and clean flashings. Schedule a free roof evaluation.',
       hero: {
@@ -168,7 +168,7 @@ export const METAL_CONTENT = {
       h1: 'Metal Roof Repair in Los Angeles & Orange County',
       navLabel: 'Roof Repairs',
       card: 'Leaks at fasteners, seams, sealant and flashings traced to the source and repaired, with photos of the problem and the fix.',
-      metaTitle: 'Metal Roof Repair in Los Angeles & OC',
+      metaTitle: 'Metal Roof Repair in Los Angeles & Orange County',
       metaDescription: 'Metal roof repair in Los Angeles & Orange County: leaks traced to loose fasteners, worn sealant and failed flashing, fixed with photos. Free roof evaluation.',
       hero: {
         intro:

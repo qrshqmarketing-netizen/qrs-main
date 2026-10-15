@@ -16,6 +16,7 @@ import { closingCta, faqSub } from './shared';
 import { heroOutcome } from '@/data/heroOutcomes';
 import { articlesFor } from '@/lib/articles';
 import { projectsShownOn } from '@/data/projectPages';
+import { searchHeading } from '@/lib/headings';
 
 // A hub page (e.g. /residential-roofing/tile-roofing/ or /commercial-roofing/): intro, cards for every page in the section,
 // why-choose points and the Roof Check form. Content shape: `hub` in data/services/*.js.
@@ -40,7 +41,7 @@ export default async function HubPage({ hub, crumbs, eyebrow, image, imageAlt, c
       <Hero
         crumbs={crumbs}
         eyebrow={eyebrow}
-        title={hub.hero.heading}
+        title={searchHeading(hub.hero.heading)}
         outcome={heroOutcome(crumbs.at(-1).href)}
         intro={hub.hero.intro}
         image={image}

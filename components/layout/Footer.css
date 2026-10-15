@@ -33,6 +33,8 @@ footer .container{position:relative;max-width:1540px}
 .ft-copy a{color:inherit;transition:color .2s ease}
 .ft-copy .ft-license{color:#fff} /* the license number stands out in white (owner, October 14 2026) */
 .ft-copy a:hover{color:var(--gold-2)}
+.ft-cookie{padding:6px 0;margin:-6px 0;border:0;background:none;color:inherit;font:inherit;cursor:pointer;transition:color .2s ease} /* Cookie settings (opens the cookie bar) */
+@media (hover:hover){.ft-cookie:hover{color:var(--gold-2)}}
 
 @media (min-width:621px){
   footer{padding:96px 0 64px} /* the floating review pop-up and chat bubble sit in the bottom corners: room so they don't cover the company name */

@@ -98,10 +98,14 @@ export const HOME_H1 = 'Roofing Contractor in Los Angeles & Orange County';
 export const HOME_DESCRIPTION =
   'Quality Roofing Specialists: roofing contractor in Los Angeles & Orange County. Repair, replacement, free roof evaluation, 10-year warranty: call for details.';
 
+// The number of Google reviews across our listings (owner, October 15 2026: 269). Update it by hand from Google now and then; it shows on the
+// proof strip under every hero and in the home page's review section. No star rating is shown (not given by the owner).
+export const GOOGLE_REVIEWS = { count: 269, asOf: '2026-10-15' };
+
 // Short trust points in the bar under the hero
 export const PROOF_POINTS = [
   { title: 'Permits Handled', text: 'We pull the building permits' },
-  { title: 'Google Reviews', text: 'Homes & businesses' },
+  { title: `${GOOGLE_REVIEWS.count} Google Reviews`, text: 'Homes & businesses' },
   { title: '10-Year', text: 'Workmanship warranty, call for details' },
   { title: 'Roofer-Led', text: 'Inspections and estimates' },
 ];

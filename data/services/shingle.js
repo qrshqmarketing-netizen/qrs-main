@@ -4,7 +4,7 @@
 export const SHINGLE_CONTENT = {
   hub: {
     keyword: 'shingle roofing',
-    metaTitle: 'Shingle Roofing in Los Angeles & OC',
+    metaTitle: 'Shingle Roofing in Los Angeles & Orange County',
     metaDescription: 'Shingle roofing for Los Angeles & Orange County homes: replacement, repairs, new installs, inspections, tune-ups and roof care. Book a free roof evaluation.',
     hero: {
       heading: 'Shingle Roofing Services · *TotalShield*',
@@ -46,7 +46,7 @@ export const SHINGLE_CONTENT = {
       title: 'Shingle Roof Replacement · *TotalShield*',
       navLabel: 'Roof Replacement',
       card: 'A full tear-off and a complete new shingle system, from the deck and underlayment up to the ridge caps, with a written scope and price first.',
-      metaTitle: 'Shingle Roof Replacement in LA & OC',
+      metaTitle: 'Shingle Roof Replacement in Los Angeles & Orange County',
       metaDescription: 'Shingle roof replacement in Los Angeles & Orange County: full tear-off, new underlayment, flashing and balanced ventilation. Book a free roof evaluation.',
       image: '/images/shingle-roof-replacement-tear-off-drone-view.webp',
       imageAlt: 'Aerial view of a shingle roof tear-off in progress, with crew removing old shingles down to the deck',
@@ -150,7 +150,7 @@ export const SHINGLE_CONTENT = {
       title: 'New Shingle Roof Installation · *TotalShield*',
       navLabel: 'New Installations',
       card: 'Shingle roofs for new homes, additions and ADUs, or a switch from wood shakes or tile, built as a complete system with ventilation designed in.',
-      metaTitle: 'New Shingle Roof Installation in LA',
+      metaTitle: 'New Shingle Roof Installation in Los Angeles',
       metaDescription: 'New shingle roof installation for homes, additions and ADUs in Los Angeles & Orange County, built to the manufacturer’s requirements. Request an estimate.',
       image: '/images/shingle-roof-repair-ridge-finish.webp',
       imageAlt: 'Aerial view of a nearly finished light grey shingle roof, with a roofer working near the ridge',

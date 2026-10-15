@@ -7,7 +7,7 @@ export const EMERGENCY_ROOF_REPAIR = {
   h1: 'Emergency Roof Repair & Storm Damage in Los Angeles & OC',
   navLabel: 'Emergency & Storm Damage',
   card: 'Storm damage or a sudden leak? A roofer assesses and photographs the damage, adds temporary protection when it’s needed and follows with a permanent repair.',
-  metaTitle: 'Emergency Roof Repair & Storm Damage in LA & OC',
+  metaTitle: 'Emergency Roof Repair & Storm Damage in Los Angeles',
   metaDescription:
     'Emergency roof repair in Los Angeles & Orange County for active leaks, storm and wind damage: after-hours calls, tarps when needed and photos for insurance.',
   image: '/images/emergency-roof-repair-hero.webp',
@@ -126,7 +126,7 @@ export const ROOF_INSPECTION = {
   h1: 'Roof Inspection in Los Angeles & Orange County\u00a0· *RoofScan 360*',
   navLabel: 'Roof Inspection',
   card: 'Our free, roofer-led roof evaluation for shingle, tile and flat roofs: every finding photographed and explained, with one clear next step.',
-  metaTitle: 'Roof Inspection in Los Angeles & OC',
+  metaTitle: 'Roof Inspection in Los Angeles & Orange County',
   metaDescription: 'Roof inspection in Los Angeles & Orange County: a free, photo-documented roof evaluation with a clear next step, not a sales pitch. Book yours today.',
   image: '/images/shingle-roof-inspection-overhead.webp',
   imageAlt: 'Aerial overhead view of a finished dark grey shingle roof',

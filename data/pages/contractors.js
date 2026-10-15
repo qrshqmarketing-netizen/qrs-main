@@ -5,7 +5,7 @@ export const CONTRACTORS_PAGE = {
   metaTitle: 'Roofing Crews for Contractors in Los Angeles',
   metaDescription: 'Roofing crews for contractors in LA & Orange County: QRS partners with contractors, builders and property management clients, including white-label roofing.',
   hero: {
-    heading: 'Partner With QRS: Roofing Crews for Contractors',
+    heading: 'Roofing Crews for Contractors in Los Angeles',
     intro: 'QRS provides roofing crews for contractors, builders and remodelers across Los Angeles and Orange County. You get roofer-led assessments, written scopes you can build on and photo documentation for your records and your clients.',
     highlights: ['Roofer-led assessments and scopes', 'Photo documentation you can share', 'White-label service under your brand'],
   },

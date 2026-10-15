@@ -2,7 +2,7 @@
 
 export const ROOF_REPAIR_HUB = {
   keyword: 'roof repair',
-  metaTitle: 'Roof Repair in Los Angeles & OC',
+  metaTitle: 'Roof Repair in Los Angeles & Orange County',
   metaDescription: 'Roof repair in Los Angeles & Orange County for shingle, tile and flat roofs: leaks traced and fixed, with a written price first. Book a free roof evaluation.',
   hero: {
     heading: 'Roof Repair in Los Angeles & Orange County\u00a0· *LeakRescue*',
@@ -42,7 +42,7 @@ export const ROOF_REPAIR_HUB = {
 
 export const ROOF_REPLACEMENT_HUB = {
   keyword: 'roof replacement',
-  metaTitle: 'Roof Replacement in Los Angeles & OC',
+  metaTitle: 'Roof Replacement in Los Angeles & Orange County',
   metaDescription: 'Roof replacement in Los Angeles & Orange County: full tear-off, a new shingle, tile or flat roof and a written scope first. Book a free roof evaluation.',
   hero: {
     heading: 'Roof Replacement in Los Angeles & Orange County',

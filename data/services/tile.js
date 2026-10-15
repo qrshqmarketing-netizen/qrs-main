@@ -4,7 +4,7 @@
 export const TILE_CONTENT = {
   hub: {
     keyword: 'tile roofing',
-    metaTitle: 'Tile Roofing in LA & Orange County',
+    metaTitle: 'Tile Roofing in Los Angeles & Orange County',
     metaDescription: 'Tile roofing in Los Angeles & Orange County: clay, concrete and slate tile repair, lift & relay, replacement and roof care. Start with a free roof evaluation.',
     hero: {
       heading: 'Tile Roofing Services',
@@ -99,7 +99,7 @@ export const TILE_CONTENT = {
       title: 'Tile Roof Repair',
       navLabel: 'Roof Repairs',
       card: 'Cracked or slipped tiles, loose ridges, failed flashings and clogged valleys, traced to their source and fixed with photos of the work.',
-      metaTitle: 'Tile Roof Repair in Los Angeles & OC',
+      metaTitle: 'Tile Roof Repair in Los Angeles & Orange County',
       metaDescription: 'Tile roof repair in Los Angeles & Orange County: leaks traced, cracked tiles matched and flashings fixed, with photos. Book a free roof evaluation.',
       image: '/images/tile-lift-off-and-reset-drone-view-2.webp',
       imageAlt: 'Tile roof repair and relay in progress, with tiles staged on the roof',

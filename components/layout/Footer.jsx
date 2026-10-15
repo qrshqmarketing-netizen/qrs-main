@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import BrandLogo from '@/components/ui/BrandLogo';
 import { FacebookIcon, InstagramIcon, LinkedInIcon, YouTubeIcon } from '@/components/ui/icons';
+import CookieSettingsLink from '@/components/ui/CookieSettingsLink';
 import SiteLink from '@/components/ui/SiteLink';
 import { FOOTER } from '@/data/navigation';
 import { BUSINESS, OFFICES, PHONE, SOCIAL, TEL } from '@/data/site';
@@ -74,6 +75,9 @@ export default function Footer() {
               </SiteLink>
             </span>
           ))}
+          <span>
+            <CookieSettingsLink className="ft-cookie" />
+          </span>
         </div>
         <HideOnStart>
           {/* The brand word, large, across the bottom, in white particles (React Bits ParticleText): they gather into the word once, the first

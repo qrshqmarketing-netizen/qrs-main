@@ -33,7 +33,7 @@ export const LOCATION_PAGES = {
     ],
     faqs: [
       { q: 'Do you serve my Los Angeles neighborhood?', a: 'We work across the city, from the Hollywood Hills and Silver Lake to Sherman Oaks and Encino, with offices in the Fairfax area and in Woodland Hills. Check your ZIP code on the map on this page, or give us a call.' },
-      { q: 'Do you work in West Hollywood?', a: 'Yes. Our Los Angeles office at 1444 N Poinsettia Pl, Unit 308 is next to West Hollywood, and we repair and replace roofs there on single-family homes, condos and [multi-family buildings](/residential-roofing/hoa-multi-family/). Book a free roof evaluation or call (310) 340-1643.' },
+      { q: 'Do you work in West Hollywood?', a: 'Yes. Our Los Angeles office at 1444 N Poinsettia Pl, Unit 308 is next to West Hollywood, which now has its own [West Hollywood roofing](/service-areas/la-county/west-hollywood/) page, and we repair and replace roofs there on single-family homes, condos and [multi-family buildings](/residential-roofing/hoa-multi-family/). Book a free roof evaluation or call (310) 340-1643.' },
       { q: 'What roof types do you work on in Los Angeles?', a: 'All of the common ones: [tile](/residential-roofing/tile-roofing/), [shingle](/residential-roofing/shingle-roofing/) and [flat](/residential-roofing/flat-roofing/) roofs. Plenty of homes here have more than one type, and one roof evaluation covers them all.' },
       { q: 'Can you work on hillside homes?', a: 'Yes. Steep lots and narrow streets take extra planning for access, material deliveries and safety, and we build that into the written scope before work starts.' },
       { q: 'How do I get started?', a: 'Book a free roof evaluation. A roofer inspects your roof, photo-documents its condition and gives you a clear next step: repair, monitor, maintain or replace.' },
@@ -478,5 +478,265 @@ export const LOCATION_PAGES = {
     ],
     nearby: ['los-angeles'],
     final: { heading: 'A Clear Scope for Your Vernon Building', text: 'Start with a roofer-led roof survey and get a written scope and price for your Vernon warehouse, plant or commercial building.' },
+  },
+
+  // ----- Pages for places with something real behind them (owner, October 15 2026: option A, after "about 50 of the 65 cities share county
+  // pages"): West Hollywood (our Google listing and its reviews, next to the Los Angeles office) and seven places where we finished a project.
+  // Each is built around that work; the local details (neighborhood names, building types) still need the owner's check.
+
+  'west-hollywood': {
+    keyword: 'west hollywood roofing',
+    metaTitle: 'West Hollywood Roofing & Roof Repair',
+    metaDescription: 'West Hollywood roofing from our office next door: flat, tile and shingle roof repair and replacement for homes, condos and apartment buildings.',
+    blurb: 'Roof repair and replacement for West Hollywood homes, condos and apartment buildings, from our Los Angeles office next door.',
+    hero: {
+      heading: 'West Hollywood roofing',
+      sub: 'For West Hollywood roofing, Quality Roofing Specialists repairs and replaces flat, tile and shingle roofs on homes, condos and multi-family buildings, from our Los Angeles office on N Poinsettia Pl, a few minutes away. Every job starts with a free roof evaluation.',
+    },
+    intro: {
+      heading: 'Roofing for a Compact, Busy City',
+      paragraphs: [
+        'West Hollywood roofing is a mix of building types packed into a small city: bungalows and cottages, condos and multi-family buildings, many with flat or low-slope roofs. Tight lots, shared walls and neighbors close on every side make planning important, so we work out access, staging and protection for the buildings next door before work starts.',
+        'Our Los Angeles office at 1444 N Poinsettia Pl is next to West Hollywood, and the Google listing for it is where many of our reviews come from. Every job begins with a roofer-led [free roof evaluation](#roof-check), with photos of drains, flashings and seams, and owners of larger buildings get the same process through our [HOA and multi-family roofing](/residential-roofing/hoa-multi-family/) work.',
+      ],
+    },
+    neighborhoods: ['West Hollywood West', 'Norma Triangle', 'West Hollywood East', 'Sunset Strip', 'Melrose District'],
+    considerations: [
+      { title: 'Flat roofs on multi-family buildings', text: 'Low-slope roofs depend on drainage and clean flashing details, so drains, seams and wall tie-ins get a close look.' },
+      { title: 'Tight lots and close neighbors', text: 'Shared walls and small lots mean careful staging, debris control and protecting the property next door throughout the job.' },
+      { title: 'Rooftop equipment', text: 'Roofs that carry AC units, vents or a deck wear faster around the equipment, and those spots need regular checks.' },
+    ],
+    faqs: [
+      { q: 'Is your office close to West Hollywood?', a: 'Yes. Our Los Angeles office is at 1444 N Poinsettia Pl, Unit 308, next to West Hollywood, and it answers at (310) 340-1643.' },
+      { q: 'Do you roof condos and apartment buildings?', a: 'Yes. We handle [HOA and multi-family roofing](/residential-roofing/hoa-multi-family/) as well as single-family homes, and for larger buildings we give the property manager or board a clear written scope.' },
+      { q: 'Can you repair a flat roof that holds water?', a: 'In many cases, yes. We look at slope, drains and flashings to find why water is standing, then give you a written scope for a [flat roof repair](/residential-roofing/flat-roofing/repair/) or replacement.' },
+      { q: 'How do I get started?', a: 'Book a free roof evaluation. A roofer inspects your roof with drone footage and photos, explains what they find and gives you a clear next step: repair, monitor, maintain or replace.' },
+    ],
+    nearby: ['los-angeles', 'hollywood-hills', 'santa-monica'],
+    final: { heading: 'A Closer Look at Your West Hollywood Roof', text: 'Whether it’s a single home or a whole building, start with a free roof evaluation and a written scope.' },
+  },
+
+  venice: {
+    keyword: 'venice roofing',
+    image: '/images/projects/shingle-roof-replacement-venice-90291/shingle-venice-90291-23.webp',
+    metaTitle: 'Venice Roofing & Roof Replacement',
+    metaDescription: 'Venice roofing from a team that re-roofed a canal-side home here: shingle, flat and tile roof repair and replacement. Book a free roof evaluation.',
+    blurb: 'Roof repair and replacement for Venice homes, from the canals to Oakwood, by the team that re-roofed a canal-side home here.',
+    hero: {
+      heading: 'Venice roofing',
+      sub: 'For Venice roofing, Quality Roofing Specialists repairs and replaces shingle, flat and tile roofs on homes near the beach, including a full shingle roof replacement on a canal-side home in 90291. Every job starts with a free roof evaluation.',
+    },
+    intro: {
+      heading: 'Roofs Close to the Beach',
+      paragraphs: [
+        'Venice roofing has its own mix: older homes with many-sided roofs, flat upper roofs carrying HVAC units and skylights, and terraces and decks tied into the roof. On a [canal-side home in Venice](/projects/shingle-roof-replacement-venice-90291/), our roofers took the whole roof off down to the deck and built it back around a river-stone chimney, the skylights and every plumbing vent, covering each section with underlayment as it came off.',
+        'Every job starts with a roofer-led [free roof evaluation](#roof-check): photos of what we find, a plain-English explanation and a written scope and price before any work begins. Our Los Angeles office covers Venice, with crews for [shingle](/residential-roofing/shingle-roofing/), [flat](/residential-roofing/flat-roofing/) and [tile](/residential-roofing/tile-roofing/) roofs.',
+      ],
+    },
+    neighborhoods: ['Venice Canals', 'Oakwood', 'Abbot Kinney', 'Marina Peninsula'],
+    considerations: [
+      { title: 'Salt air and sun', text: 'Homes near the ocean see salt air on metal flashings and fasteners and strong sun on every slope, so those details get a close look.' },
+      { title: 'Roofs with a lot going on', text: 'Chimneys, skylights, rooftop HVAC and decks all pass through or sit on the roof, and each needs its own flashing.' },
+      { title: 'Tight streets and close neighbors', text: 'Small lots and narrow streets mean planning deliveries, debris and protection for the homes next door before the first day.' },
+    ],
+    faqs: [
+      { q: 'Have you worked in Venice?', a: 'Yes. We replaced the shingle roof on a [canal-side home in Venice 90291](/projects/shingle-roof-replacement-venice-90291/), working around its stone chimney, skylights, rear terrace and a flat upper roof crowded with HVAC units.' },
+      { q: 'Can you replace a roof that has skylights and rooftop equipment?', a: 'Yes. Each skylight, vent and equipment curb is flashed as part of the new roof, since those are the points where leaks usually start.' },
+      { q: 'How do I get started?', a: 'Book a free roof evaluation. A roofer inspects your roof with drone footage and photos, explains what they find and gives you a clear next step: repair, monitor, maintain or replace.' },
+    ],
+    nearby: ['santa-monica', 'los-angeles', 'west-hollywood'],
+    final: { heading: 'Let’s Take a Look at Your Venice Roof', text: 'Start with a free roof evaluation, drone footage and a written scope for your Venice home.' },
+  },
+
+  'hollywood-hills': {
+    keyword: 'hollywood hills roofing',
+    image: '/images/projects/flat-roof-replacement-hollywood-hills-west-90046/hollywood-hills-west-round-flat-roof-finished.webp',
+    metaTitle: 'Hollywood Hills Roofing & Flat Roof Replacement',
+    metaDescription: 'Hollywood Hills roofing for hillside homes, from the team that re-roofed a 12-sided round house here: flat, tile and shingle roof repair and replacement.',
+    blurb: 'Roofing for hillside homes in the Hollywood Hills, including a new flat roof on a 12-sided round house in 90046.',
+    hero: {
+      heading: 'Hollywood Hills roofing',
+      sub: 'For Hollywood Hills roofing, Quality Roofing Specialists repairs and replaces flat, tile and shingle roofs on hillside homes, including a new flat roof on a one-of-a-kind round house with 12 sides in Hollywood Hills West. Every job starts with a free roof evaluation.',
+    },
+    intro: {
+      heading: 'Roofs for Homes That Aren’t Ordinary',
+      paragraphs: [
+        'Hollywood Hills roofing means steep lots, narrow streets and homes with unusual shapes. On a [round home with 12 sides](/projects/flat-roof-replacement-hollywood-hills-west-90046/) in Hollywood Hills West, we installed a new torch-down flat roof, cutting each section to its own angle, finishing it with a white reflective cap sheet and sealing around every post of the rooftop deck.',
+        'Our Los Angeles office on N Poinsettia Pl sits at the foot of the hills. Every job starts with a roofer-led [free roof evaluation](#roof-check), and access, deliveries and safety on a hillside lot are planned in the written scope before work begins.',
+      ],
+    },
+    neighborhoods: ['Hollywood Hills West', 'Laurel Canyon', 'Nichols Canyon', 'Beachwood Canyon', 'Outpost Estates'],
+    considerations: [
+      { title: 'Hillside access', text: 'Steep driveways and narrow roads mean planning material deliveries, debris removal and safety before the first day.' },
+      { title: 'Flat roofs and roof decks', text: 'Many hillside homes have flat sections or decks on the roof, where railing posts and equipment need careful sealing.' },
+      { title: 'Sun on every side', text: 'Homes high on a slope take sun all day, so a reflective cap sheet or cool roofing material can help keep them cooler.' },
+    ],
+    faqs: [
+      { q: 'Have you worked in the Hollywood Hills?', a: 'Yes. We replaced the flat roof on a [12-sided round home in Hollywood Hills West 90046](/projects/flat-roof-replacement-hollywood-hills-west-90046/), with a white reflective cap sheet and every deck post sealed.' },
+      { q: 'Can you work on a steep hillside lot?', a: 'Yes. Access, deliveries and safety are planned for each property and written into the scope before work starts.' },
+      { q: 'How do I get started?', a: 'Book a free roof evaluation. A roofer inspects your roof with drone footage and photos, explains what they find and gives you a clear next step: repair, monitor, maintain or replace.' },
+    ],
+    nearby: ['west-hollywood', 'los-angeles', 'burbank'],
+    final: { heading: 'Let’s Take a Look at Your Hillside Roof', text: 'Start with a free roof evaluation and a written scope for your Hollywood Hills home.' },
+  },
+
+  'san-pedro': {
+    keyword: 'san pedro roofing',
+    image: '/images/projects/full-roof-replacement-san-pedro-90732/san-pedro-full-roof-replacement-0.webp',
+    metaTitle: 'San Pedro Roofing & Roof Replacement',
+    metaDescription: 'San Pedro roofing from the team behind two re-roofs here: shingle and flat roof repair and replacement for homes and multi-family buildings.',
+    blurb: 'Roof repair and replacement for San Pedro homes and multi-family buildings, with two finished projects in 90731 and 90732.',
+    hero: {
+      heading: 'San Pedro roofing',
+      sub: 'For San Pedro roofing, Quality Roofing Specialists repairs and replaces shingle and flat roofs on homes and multi-family buildings, with two finished roof replacements here, in 90731 and 90732. Every job starts with a free roof evaluation.',
+    },
+    intro: {
+      heading: 'Two Roofs Finished in San Pedro',
+      paragraphs: [
+        'In San Pedro 90732, a homeowner first called us about a repair. After looking at the intersecting slopes and the patio cover, we recommended a [full roof replacement](/projects/full-roof-replacement-san-pedro-90732/): new architectural shingles on the main roof and garage wing, and a torch-down roof with a white reflective cap sheet over the back patio. In 90731, we put a new charcoal shingle roof on a [two-story multi-family building](/projects/shingle-roof-replacements-90731/), covering every hip, ridge and gable.',
+        'Every job starts with a roofer-led [free roof evaluation](#roof-check): photos of what we find, a plain-English explanation and a written scope and price. When a repair will do, that’s what we recommend; when the whole roof is worn, we show you why.',
+      ],
+    },
+    neighborhoods: ['Point Fermin', 'Vinegar Hill', 'South Shores'],
+    considerations: [
+      { title: 'Ocean air', text: 'Homes near the harbor and the coast see salt air and morning damp, which wear flashings and fasteners first.' },
+      { title: 'Pitched and flat roofs on one house', text: 'Many homes pair a shingle main roof with a flat patio cover or addition, and each needs its own system and a clean tie-in.' },
+      { title: 'Multi-family buildings', text: 'Apartment buildings need a plan for residents, parking and access, written into the scope before work starts.' },
+    ],
+    faqs: [
+      { q: 'Have you worked in San Pedro?', a: 'Yes, twice: a [full roof replacement in 90732](/projects/full-roof-replacement-san-pedro-90732/), shingles plus a flat patio roof, and a [multi-family shingle roof in 90731](/projects/shingle-roof-replacements-90731/).' },
+      { q: 'Can you replace a shingle roof and a flat patio roof at the same time?', a: 'Yes. Handling both together means one scope, one crew schedule and a clean tie-in where the two roofs meet.' },
+      { q: 'How do I get started?', a: 'Book a free roof evaluation. A roofer inspects your roof with drone footage and photos, explains what they find and gives you a clear next step: repair, monitor, maintain or replace.' },
+    ],
+    nearby: ['torrance', 'long-beach', 'los-angeles'],
+    final: { heading: 'Let’s Take a Look at Your San Pedro Roof', text: 'Start with a free roof evaluation and a written scope for your San Pedro home or building.' },
+  },
+
+  'panorama-city': {
+    keyword: 'panorama city roofing',
+    image: '/images/projects/shingle-roof-replacement-panorama-city-91402/shingle-panorama-city-91402-01.webp',
+    metaTitle: 'Panorama City Roofing & Roof Replacement',
+    metaDescription: 'Panorama City roofing from our Valley office: shingle roof replacement for homes and apartment buildings, like our re-roof here in 91402.',
+    blurb: 'Roofing for Panorama City homes and apartment buildings from our Valley office, with a finished apartment re-roof in 91402.',
+    hero: {
+      heading: 'Panorama City roofing',
+      sub: 'For Panorama City roofing, Quality Roofing Specialists repairs and replaces roofs on homes and apartment buildings from our Valley office in Woodland Hills, including a full shingle roof on a two-story apartment building in 91402. Every job starts with a free roof evaluation.',
+    },
+    intro: {
+      heading: 'Roofs Built for the Valley Sun',
+      paragraphs: [
+        'On a [two-story apartment building in Panorama City 91402](/projects/shingle-roof-replacement-panorama-city-91402/), our crew installed a new light gray shingle roof around three pairs of AC condensers on equipment platforms and dozens of plumbing stacks and vents, giving every one its own flashing, with new box vents for the attic.',
+        'Our Valley office in Woodland Hills covers Panorama City. Every job starts with a roofer-led [free roof evaluation](#roof-check), and apartment owners get the same written scope through our [HOA and multi-family roofing](/residential-roofing/hoa-multi-family/) work.',
+      ],
+    },
+    neighborhoods: ['Panorama City', 'Van Nuys', 'North Hills', 'Arleta'],
+    considerations: [
+      { title: 'Long, hot summers', text: 'Valley heat dries out shingles and sealants and bakes attics, so ventilation matters as much as the roofing itself.' },
+      { title: 'Rooftop AC on apartment buildings', text: 'Condensers and equipment platforms on the roof need their own flashing, since that’s where water usually finds a way in.' },
+      { title: 'Many penetrations', text: 'Plumbing stacks and vents on multi-unit buildings add up, and each one gets a new pipe jack or flashing.' },
+    ],
+    faqs: [
+      { q: 'Have you worked in Panorama City?', a: 'Yes. We replaced the shingle roof on a [two-story apartment building in 91402](/projects/shingle-roof-replacement-panorama-city-91402/), flashing every AC platform and vent and adding new box vents.' },
+      { q: 'Which office serves Panorama City?', a: 'Our Valley office in Woodland Hills, which answers at the same number as all our offices, (310) 340-1643.' },
+      { q: 'How do I get started?', a: 'Book a free roof evaluation. A roofer inspects your roof with drone footage and photos, explains what they find and gives you a clear next step: repair, monitor, maintain or replace.' },
+    ],
+    nearby: ['granada-hills', 'woodland-hills', 'burbank'],
+    final: { heading: 'Let’s Take a Look at Your Panorama City Roof', text: 'Start with a free roof evaluation and a written scope for your home or apartment building.' },
+  },
+
+  'granada-hills': {
+    keyword: 'granada hills roofing',
+    image: '/images/projects/shingle-roof-replacement-granada-hills-91344/shingle-granada-hills-91344-01.webp',
+    metaTitle: 'Granada Hills Roofing & Roof Replacement',
+    metaDescription: 'Granada Hills roofing from our Valley office: shingle roof replacement with clean hips, valleys and flashing, like our re-roof here in 91344.',
+    blurb: 'Roof repair and replacement for Granada Hills homes from our Valley office, with a finished shingle re-roof in 91344.',
+    hero: {
+      heading: 'Granada Hills roofing',
+      sub: 'For Granada Hills roofing, Quality Roofing Specialists repairs and replaces roofs on Valley homes from our office in Woodland Hills, including a new shingle roof on a large single-story home in 91344. Every job starts with a free roof evaluation.',
+    },
+    intro: {
+      heading: 'Big Single-Story Homes, Lots of Roof Lines',
+      paragraphs: [
+        'On a [large single-story home in Granada Hills 91344](/projects/shingle-roof-replacement-granada-hills-91344/) that wraps around a garden, our roofers laid new gray shingles over hips, ridges and valleys running around the courtyard and the garage, and built the brick chimney, skylights and vents into the new roof with their own flashing.',
+        'Our Valley office in Woodland Hills covers Granada Hills. Every job starts with a roofer-led [free roof evaluation](#roof-check): photos of what we find, a plain-English explanation and a written scope and price before any work begins.',
+      ],
+    },
+    neighborhoods: ['Granada Hills North', 'Granada Hills South', 'Knollwood', 'Balboa Highlands'],
+    considerations: [
+      { title: 'Valley heat', text: 'Long, hot summers age shingles and sealants faster on south- and west-facing slopes.' },
+      { title: 'Ranch homes with many lines', text: 'Wide single-story homes have long runs of hips and valleys, and each needs to be finished straight and sealed.' },
+      { title: 'Chimneys and skylights', text: 'Brick chimneys and skylights are where older roofs leak most, so they get new flashing with the new roof.' },
+    ],
+    faqs: [
+      { q: 'Have you worked in Granada Hills?', a: 'Yes. We replaced the shingle roof on a [large single-story home in 91344](/projects/shingle-roof-replacement-granada-hills-91344/), with its chimney, skylights and vents built into the new roof.' },
+      { q: 'Which office serves Granada Hills?', a: 'Our Valley office in Woodland Hills, which answers at (310) 340-1643.' },
+      { q: 'How do I get started?', a: 'Book a free roof evaluation. A roofer inspects your roof with drone footage and photos, explains what they find and gives you a clear next step: repair, monitor, maintain or replace.' },
+    ],
+    nearby: ['woodland-hills', 'panorama-city', 'burbank'],
+    final: { heading: 'Let’s Take a Look at Your Granada Hills Roof', text: 'Start with a free roof evaluation and a written scope for your Granada Hills home.' },
+  },
+
+  'pico-rivera': {
+    keyword: 'pico rivera roofing',
+    image: '/images/projects/shingle-roof-replacement-solar-pico-rivera-90660/solar-shingle-pico-rivera-90660-33.webp',
+    metaTitle: 'Pico Rivera Roofing & Roof Replacement',
+    metaDescription: 'Pico Rivera roofing from the team that replaced a roof under solar panels here: shingle roof repair and replacement. Book a free roof evaluation.',
+    blurb: 'Roof repair and replacement for Pico Rivera homes, including a new roof under a solar array in 90660.',
+    hero: {
+      heading: 'Pico Rivera roofing',
+      sub: 'For Pico Rivera roofing, Quality Roofing Specialists repairs and replaces roofs on homes across the city, including a full roof replacement under a solar array in 90660. Every job starts with a free roof evaluation.',
+    },
+    intro: {
+      heading: 'A New Roof Under the Solar Panels',
+      paragraphs: [
+        'On a [home in Pico Rivera 90660](/projects/shingle-roof-replacement-solar-pico-rivera-90660/), the roof needed replacing under a solar array. The array’s position was measured and marked before anything came off, the old plank deck with gaps between the boards was covered with new OSB sheathing, and the new shingle roof went on with every mounting point flashed before the panels went back in place.',
+        'Every job starts with a roofer-led [free roof evaluation](#roof-check): photos of what we find, a plain-English explanation and a written scope and price before any work begins, from our offices across Los Angeles County.',
+      ],
+    },
+    neighborhoods: ['Pico Rivera', 'Whittier', 'Montebello', 'Downey'],
+    considerations: [
+      { title: 'Solar on the roof', text: 'A roof under solar has to last as long as the array, and every mounting point needs flashing in the new roof.' },
+      { title: 'Older plank decks', text: 'Many older homes have plank decking with gaps, which may need new sheathing before a new roof goes on.' },
+      { title: 'Inland heat', text: 'Hot summers age shingles and underlayment, so ventilation and underlayment choices matter.' },
+    ],
+    faqs: [
+      { q: 'Have you worked in Pico Rivera?', a: 'Yes. We replaced the roof under a solar array on a [home in 90660](/projects/shingle-roof-replacement-solar-pico-rivera-90660/), with new OSB over the old plank deck and every mounting point flashed.' },
+      { q: 'What if my old roof has gaps in the decking?', a: 'If the deck under the old roof is plank decking with gaps, new sheathing goes over it so the new roof has a solid base. It’s listed in the written scope.' },
+      { q: 'How do I get started?', a: 'Book a free roof evaluation. A roofer inspects your roof with drone footage and photos, explains what they find and gives you a clear next step: repair, monitor, maintain or replace.' },
+    ],
+    nearby: ['hacienda-heights', 'vernon', 'los-angeles'],
+    final: { heading: 'Let’s Take a Look at Your Pico Rivera Roof', text: 'Start with a free roof evaluation and a written scope for your Pico Rivera home.' },
+  },
+
+  'hacienda-heights': {
+    keyword: 'hacienda heights roofing',
+    image: '/images/projects/shingle-roof-replacement-hacienda-heights-91745/shingle-hacienda-heights-91745-01.webp',
+    metaTitle: 'Hacienda Heights Roofing & Roof Replacement',
+    metaDescription: 'Hacienda Heights roofing: shingle roof repair and replacement with clean lines and flashed vents, like our re-roof here in 91745. Free roof evaluation.',
+    blurb: 'Roof repair and replacement for Hacienda Heights homes, with a finished shingle re-roof in 91745.',
+    hero: {
+      heading: 'Hacienda Heights roofing',
+      sub: 'For Hacienda Heights roofing, Quality Roofing Specialists repairs and replaces roofs on homes in the hills and along the valley floor, including a new shingle roof on a large single-story home in 91745. Every job starts with a free roof evaluation.',
+    },
+    intro: {
+      heading: 'Wide Roofs, Clean Lines',
+      paragraphs: [
+        'On a [large single-story home in Hacienda Heights 91745](/projects/shingle-roof-replacement-hacienda-heights-91745/) with many hips and valleys, our roofers laid new light gray shingles in even courses across every slope, capped the ridges and hips in straight runs and flashed every box vent and pipe vent into the new roof.',
+        'Every job starts with a roofer-led [free roof evaluation](#roof-check): photos of what we find, a plain-English explanation and a written scope and price before any work begins.',
+      ],
+    },
+    neighborhoods: ['Hacienda Heights', 'Rowland Heights', 'Whittier', 'La Puente'],
+    considerations: [
+      { title: 'Hillside and valley homes', text: 'Homes up the hills deal with access and wind, and homes on the valley floor with heat, and the plan for each reflects that.' },
+      { title: 'Wide roofs with many valleys', text: 'Large single-story homes have long valleys that carry a lot of water, so they need to be formed cleanly.' },
+      { title: 'Vents and attic heat', text: 'Box vents and pipe vents are where leaks often start, and good ventilation keeps the attic cooler in summer.' },
+    ],
+    faqs: [
+      { q: 'Have you worked in Hacienda Heights?', a: 'Yes. We replaced the shingle roof on a [large single-story home in 91745](/projects/shingle-roof-replacement-hacienda-heights-91745/), with every vent flashed into the new roof.' },
+      { q: 'Do you replace roofs on large single-story homes?', a: 'Yes. Wide roofs with many hips and valleys are common for us, and each line is finished and sealed on its own.' },
+      { q: 'How do I get started?', a: 'Book a free roof evaluation. A roofer inspects your roof with drone footage and photos, explains what they find and gives you a clear next step: repair, monitor, maintain or replace.' },
+    ],
+    nearby: ['pico-rivera', 'los-angeles', 'anaheim'],
+    final: { heading: 'Let’s Take a Look at Your Hacienda Heights Roof', text: 'Start with a free roof evaluation and a written scope for your Hacienda Heights home.' },
   },
 };
