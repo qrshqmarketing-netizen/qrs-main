@@ -111,7 +111,7 @@ export function projectsNear(slug) {
   const nearby = PROJECT_PAGES.map((page) => ({ page, miles: page.geo ? milesBetween([center.lat, center.lng], page.geo) : Infinity }))
     .filter(({ page, miles }) => miles <= NEAR_MI || page.place?.includes(center.city))
     .sort((a, b) => a.miles - b.miles)
-    .map(({ page }) => ({ title: page.title, caption: (page.place || page.title).replace(/,?\s*CA\b/, ''), image: page.image, alt: page.imageAlt, href: page.path, place: page.place }));
+    .map(({ page }) => ({ title: page.title, caption: (page.place || page.title).replace(/,?\s*CA\b/, ''), image: page.image, alt: page.imageAlt, href: page.path, place: page.place, label: page.label, photos: page.photos?.length || 0 }));
   const projects = [...tagged, ...nearby].slice(0, 6);
   return { projects, local: tagged.length > 0 || nearby.some((p) => p.place?.includes(center.city)) };
 }

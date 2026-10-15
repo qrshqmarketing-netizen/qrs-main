@@ -72,7 +72,7 @@ export default async function LocationPage({ location, page, index = 0 }) {
       <LocalIntro city={city} heading={page.intro.heading} paragraphs={page.intro.paragraphs} offices={office ? [office] : []} neighborhoods={page.neighborhoods} considerations={page.considerations} />
       <ServiceCategories place={city} />
       <CardCarousel title={`Roof types we work on in __${city}__`} items={RESIDENTIAL_TYPES.map(typeCard)} idPrefix="roofTypes" tone="wash" />
-      {/* Only real projects in or near this city (by the project's ZIP code pin), stacked as cards; with none nearby, no section */}
+      {/* Only real projects in or near this city (by the project's ZIP code pin), as a list with the hover photo (owner, October 15 2026); with none nearby, no section */}
       {/* Google reviews, a few sections below the hero (owner, October 14 2026) */}
       <ReviewMarquee office={slug} places={[city, ...page.neighborhoods]} />
       <StudioProjects
@@ -81,6 +81,7 @@ export default async function LocationPage({ location, page, index = 0 }) {
         heading={nearby.local ? `Roofing Projects in ${city}` : `Recent Roofing Projects Near ${city}`}
         projects={nearby.projects}
         allLink={false}
+        layout="list"
       />
       <LatestArticles posts={await articlesFor(cityPath(slug))} heading="Related Roofing Articles" />
       <Faq heading={`${city} Roofing FAQs`} sub={`Straight answers for ${city} ${page.offer === 'commercial' ? 'clients' : 'homeowners'}.`} faqs={page.faqs} cta={false} />

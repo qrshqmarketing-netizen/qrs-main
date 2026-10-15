@@ -6,6 +6,9 @@ import SiteLink from '@/components/ui/SiteLink';
 import { ArrowRight } from '@/components/ui/icons';
 import './StudioProjectIndex.css';
 
+// A row is a link to its project page; a tagged job photo with no page of its own is a plain row
+const Row = ({ href, ...props }) => (href ? <SiteLink href={href} {...props} /> : <div {...props} />);
+
 // The work named in a project's title: the words before the last " in " ("Round Flat Roof Replacement in Hollywood Hills West 90046")
 const workOf = (title) => {
   const at = title.lastIndexOf(' in ');
@@ -16,7 +19,8 @@ const workOf = (title) => {
 // hovered row's cover photo floats beside the pointer and follows it with a little lag (one fixed frame, transform only, drawn only while the list is
 // hovered); the other rows fade back. On touch screens each row shows a small thumbnail instead. Every row is a plain link to the project page.
 // projects: [{ path, title, label, image, photos (how many) }], trimmed by StudioProjects so the page doesn't send whole project files.
-export default function StudioProjectIndex({ projects }) {
+// label: the small label above the rows (null for none, when the section's own heading says it)
+export default function StudioProjectIndex({ projects, label = 'More projects' }) {
   const [active, setActive] = useState(0);
   const [hover, setHover] = useState(false);
   const preview = useRef(null);
@@ -49,11 +53,11 @@ export default function StudioProjectIndex({ projects }) {
 
   return (
     <div className={'spi' + (hover ? ' is-hover' : '')} onPointerMove={onMove} onPointerLeave={() => setHover(false)}>
-      <p className="st-label spi-label">More projects</p>
+      {label && <p className="st-label spi-label">{label}</p>}
       <ul className="spi-list">
         {projects.map((p, i) => (
-          <li key={p.path}>
-            <SiteLink className={'spi-row' + (i === active ? ' on' : '')} href={p.path} onPointerEnter={() => setActive(i)} onFocus={() => setActive(i)}>
+          <li key={p.path || p.image}>
+            <Row className={'spi-row' + (i === active ? ' on' : '')} href={p.path} onPointerEnter={() => setActive(i)} onFocus={() => setActive(i)}>
               <span className="spi-thumb" aria-hidden="true">
                 <Image src={p.image} alt="" fill sizes="72px" quality={60} loading="lazy" />
               </span>
@@ -62,14 +66,14 @@ export default function StudioProjectIndex({ projects }) {
                 <span>{workOf(p.title)}</span>
                 {p.photos > 1 && <span>{p.photos} photos</span>}
               </span>
-              <ArrowRight />
-            </SiteLink>
+              {p.path && <ArrowRight />}
+            </Row>
           </li>
         ))}
       </ul>
       <div className="spi-preview" ref={preview} aria-hidden="true">
         {projects.map((p, i) => (
-          <span className={'spi-pv' + (i === active ? ' on' : '')} key={p.path}>
+          <span className={'spi-pv' + (i === active ? ' on' : '')} key={p.path || p.image}>
             <Image src={p.image} alt="" fill sizes="380px" quality={60} loading="lazy" />
           </span>
         ))}

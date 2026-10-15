@@ -24,7 +24,11 @@ function circleZip(title) {
 }
 
 // more: further project pages listed as rows under the cards (StudioProjectIndex), as on the home page.
-export default function StudioProjects({ projects, label = 'Featured projects', heading = 'Roofs we have finished, from tear-off to the __last row__', allLink = true, more, id }) {
+// A project as an index row: its page, title, short name, cover photo and photo count (project pages, or the city pages' nearby list)
+const toRow = (p) => ({ path: p.path || p.href, title: p.title, label: p.label || p.caption || p.title, image: p.image, photos: typeof p.photos === 'number' ? p.photos : p.photos?.length || 0 });
+
+// layout="list": every project as a hairline row with the hover photo (StudioProjectIndex) instead of the stacked cards (the city pages, to mix it up).
+export default function StudioProjects({ projects, label = 'Featured projects', heading = 'Roofs we have finished, from tear-off to the __last row__', allLink = true, more, id, layout = 'cards' }) {
   if (!projects?.length) return null;
   return (
     <section className="st-section st-projects tinted" id={id}>
@@ -40,6 +44,9 @@ export default function StudioProjects({ projects, label = 'Featured projects', 
             )}
           </div>
         </div>
+        {layout === 'list' ? (
+          <StudioProjectIndex label={null} projects={projects.map(toRow)} />
+        ) : (
         <div className="st-proj-list">
           {projects.map((p, i) => {
             const href = p.href || p.path;
@@ -69,8 +76,9 @@ export default function StudioProjects({ projects, label = 'Featured projects', 
             );
           })}
         </div>
+        )}
         {more?.length > 0 && (
-          <StudioProjectIndex projects={more.map((p) => ({ path: p.path, title: p.title, label: p.label, image: p.image, photos: p.photos?.length || 0 }))} />
+          <StudioProjectIndex projects={more.map(toRow)} />
         )}
         {allLink && (
           <p className="st-proj-more">
