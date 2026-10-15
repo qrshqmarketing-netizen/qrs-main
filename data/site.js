@@ -9,7 +9,7 @@ export const BUSINESS = {
   shortName: 'QRS',
   tagline: 'DETAIL-FIRST ROOFING',
   description:
-    'Detail-first roof repair and replacement for homeowners across Southern California, licensed, bonded and insured and backed by a 10-year workmanship warranty. CSLB Lic # 1061942.',
+    'Detail-first roof repair and replacement for homeowners across Southern California, licensed, bonded and insured and backed by a 10-year workmanship warranty (call for details). CSLB Lic # 1061942.',
   email: 'info@qualityroofingspecialists.com',
   license: '1061942', // California CSLB contractor license number
   licenseSince: '2020-01-03', // CSLB license issue date
@@ -96,20 +96,20 @@ export const GA_ID = 'G-CJSKXDJCBF';
 export const HOME_TITLE = 'Roofing Contractor in Los Angeles & Orange County, CA';
 export const HOME_H1 = 'Roofing Contractor in Los Angeles & Orange County';
 export const HOME_DESCRIPTION =
-  'Quality Roofing Specialists: roofing contractor in Los Angeles & Orange County. Roof repair, replacement, free roof evaluation, 10-year warranty. (310) 340-1643';
+  'Quality Roofing Specialists: roofing contractor in Los Angeles & Orange County. Repair, replacement, free roof evaluation, 10-year warranty: call for details.';
 
 // Short trust points in the bar under the hero
 export const PROOF_POINTS = [
   { title: 'Permits Handled', text: 'We pull the building permits' },
   { title: 'Google Reviews', text: 'Homes & businesses' },
-  { title: '10-Year', text: 'Workmanship warranty' },
+  { title: '10-Year', text: 'Workmanship warranty, call for details' },
   { title: 'Roofer-Led', text: 'Inspections and estimates' },
 ];
 
 // Hero annotations: the few decisive facts shown as small check marks right under a hero's buttons, next to the action they support (Hero.jsx). Only owner-
 // confirmed facts. Commercial pages get their own set: a commercial roof survey has no price on the site, so it is never called free.
 export const HERO_ANNOTATIONS = {
-  home: ['Free roof evaluation', 'Written price before any work', '10-year workmanship warranty', `CSLB #${BUSINESS.license}`],
+  home: ['Free roof evaluation', 'Written price before any work', '10-year workmanship warranty (call for details)', `CSLB #${BUSINESS.license}`],
   commercial: ['Roofer-led roof survey', 'Written scope and price before any work', 'Permits pulled', `CSLB #${BUSINESS.license}`],
 };
 

@@ -40,7 +40,7 @@ const PRINCIPLES = [
   },
   {
     title: 'Clean sites. Work that’s backed.',
-    text: `We pull the permits, tarp the landscaping and sweep for nails every day. Installs are backed by a 10-year workmanship warranty, from a licensed, bonded and insured California contractor (CSLB #${BUSINESS.license}) certified with the manufacturers we install.`,
+    text: `We pull the permits, tarp the landscaping and sweep for nails every day. Installs are backed by a 10-year workmanship warranty (call for details), from a licensed, bonded and insured California contractor (CSLB #${BUSINESS.license}) certified with the manufacturers we install.`,
     image: '/images/shingle-roof-completed-drone-view.webp',
     alt: 'Drone view of a finished gray shingle roof on a two-story home',
     link: { label: 'See our credentials', href: CREDENTIALS_PAGE.path },

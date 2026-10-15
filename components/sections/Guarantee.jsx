@@ -45,7 +45,7 @@ export default function Guarantee() {
           </div>
           <p>
             At Quality Roofing Specialists, doing the job right is the whole point. Every roof we install is backed by our
-            10-year workmanship warranty covering our installation labor &mdash; separate from the manufacturer&rsquo;s own
+            10-year workmanship warranty (call for details) covering our installation labor &mdash; separate from the manufacturer&rsquo;s own
             material warranty &mdash; with its full terms set out in the written agreement you sign before work begins, so
             you always know exactly what&rsquo;s covered. We&rsquo;re certified with our manufacturers and register your
             material warranty for you, so that coverage is in place without any extra paperwork on your end.

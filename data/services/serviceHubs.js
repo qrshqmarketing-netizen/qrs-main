@@ -30,7 +30,7 @@ export const ROOF_REPAIR_HUB = {
   },
   faqs: [
     { q: 'How much does a roof repair cost?', a: 'It depends on what failed and how much needs fixing. A cracked pipe boot or a few slipped tiles is a small job, while a failed valley, flashing or damaged decking takes more work. We trace the leak to its source first, then give you a written scope and price before any repair begins, so you know the cost up front.' },
-    { q: 'Is there a warranty on roof repairs?', a: 'The materials in a repair carry the manufacturer’s warranty, and what it covers depends on the product and its warranty tier. Our 10-year workmanship warranty applies to new roof installs.' },
+    { q: 'Is there a warranty on roof repairs?', a: 'The materials in a repair carry the manufacturer’s warranty, and what it covers depends on the product and its warranty tier. Our 10-year workmanship warranty applies to new roof installs (call for details).' },
     { q: 'Do you work with insurance adjusters?', a: 'Yes, as our schedule allows. Our team is small, so we can’t always be there when the adjuster visits, but we’ll help you where we can, and our photos and written scope give you clear documentation to share with your insurance company.' },
     { q: 'A storm just damaged my roof. What happens first?', a: 'Call us. A roofer assesses the damage and photo-documents it, and when it’s needed, we put temporary protection such as a tarp in place to limit further water damage. Permanent repairs follow with a written scope and price, and our photos and written scope can be shared with your insurance company. Our [emergency roof repair](/roof-repair/emergency/) page has more detail.' },
     { q: 'When does repairing an older roof stop making sense?', a: 'When repairs keep chasing new leaks, or the roof covering is worn out across most of its surface, more patching only postpones the bigger job. Age alone isn’t the test, though; condition is. A [free roof evaluation](#roof-check) photographs the whole roof so you can see which side of that line yours is on.' },
@@ -47,7 +47,7 @@ export const ROOF_REPLACEMENT_HUB = {
   hero: {
     heading: 'Roof Replacement in Los Angeles & Orange County',
     intro: 'A roof replacement from QRS removes your old roof down to the deck and builds a complete new shingle, tile or flat roof system for homes across Los Angeles and Orange County. It starts with a roofer-led free roof evaluation, so the decision rests on your roof’s real condition, not a sales pitch.',
-    highlights: ['Tear-off and a complete new roof system', 'Shingle, tile and flat roofing', 'Backed by a 10-year workmanship warranty'],
+    highlights: ['Tear-off and a complete new roof system', 'Shingle, tile and flat roofing', 'Backed by a 10-year workmanship warranty (call for details)'],
   },
   overview: {
     heading: 'When a New Roof Is the Right Call',
@@ -76,7 +76,7 @@ export const ROOF_REPLACEMENT_HUB = {
     { q: 'Can I finance a roof replacement?', a: 'Yes. [Roof financing](/roof-financing/) options are available to help spread the cost of your new roof into monthly payments, subject to credit approval. The Instant Quote on this site shows example monthly payments, and your written scope and price come first, so you know exactly what you’re financing.' },
     { q: 'Do I have to replace the whole roof at once?', a: 'Not always. A single section, such as a flat roof over an addition or a detached garage, sometimes wears out well before the rest and can be handled on its own. When the wear is spread across the roof, replacing it all at once is usually the more sensible choice. The roof evaluation photos show which situation you’re in.' },
     { q: 'How is my yard protected during a tear-off?', a: 'We lay tarps to protect your landscaping and catch debris as the old roof comes off, and every job ends with a nail sweep and clean-up. If there’s something close to the house you’re worried about, like a fragile planter or patio furniture, point it out before work starts.' },
-    { q: 'What happens at the end of a roof replacement?', a: 'We do a final walkthrough with you, review the finished roof and go over your 10-year workmanship warranty in plain English. It’s also your chance to ask questions and point out anything you’d like us to look at again.' },
+    { q: 'What happens at the end of a roof replacement?', a: 'We do a final walkthrough with you, review the finished roof and go over your 10-year workmanship warranty in plain English (call for details). It’s also your chance to ask questions and point out anything you’d like us to look at again.' },
     { q: 'Do you replace roofs on commercial and HOA buildings?', a: 'Yes. A [commercial roof replacement](/commercial-roofing/replacement/) is planned so the building stays open during the work. HOA and multi-family projects get one point of contact for the whole job.' },
   ],
 };

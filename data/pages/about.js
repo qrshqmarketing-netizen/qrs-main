@@ -37,7 +37,7 @@ export const ABOUT_PAGE = {
       { title: 'Roof evaluation', text: 'A field inspector, lead roofer or estimator on our own team looks at your roof, with drone footage of the areas of concern, and photo-documents what they find.' },
       { title: 'Written scope and price', text: 'We explain what we found in plain English and give you a clear next step: repair, monitor, maintain or replace. Before any work starts, you get a written scope and price.' },
       { title: 'The work', text: 'Dedicated crews for shingle, tile and flat roofing do the job, with our senior production manager overseeing quality control. We pull the permits, tarp the landscaping and sweep for nails every day.' },
-      { title: 'Walk-through and warranty', text: 'When the job is done, we walk the finished roof with you and go over your 10-year workmanship warranty in plain English.' },
+      { title: 'Walk-through and warranty', text: 'When the job is done, we walk the finished roof with you and go over your 10-year workmanship warranty in plain English (call for details).' },
     ],
   },
   story: {

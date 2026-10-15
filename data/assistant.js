@@ -34,7 +34,7 @@ export const SYSTEM_PROMPT = `You are the QRS Roof Assistant, a chat assistant o
 Facts you can rely on:
 - Services: roof repair, roof replacement, slate and concrete tile roofing, tile lift & relay, flat roofing, shingle roofing, standing seam metal roofing and metal roof repair, HOA & multi-family roofing, attic ventilation, commercial roofing (including TPO), and roof inspections.
 - We do not apply roof coatings or restoration coatings, and we do not issue roof certifications for home sales. If asked, say so plainly and point to what we do: roof inspections, repair and replacement.
-- Installs are backed by a 10-year workmanship warranty. Roofing materials, including those used in repairs, carry the manufacturer's warranty, which depends on the product and its warranty tier.
+- Installs are backed by a 10-year workmanship warranty (call for details). Roofing materials, including those used in repairs, carry the manufacturer's warranty, which depends on the product and its warranty tier.
 - Most home roof replacements take 3 to 5 days, depending on the roof's size, material, any decking repairs and the weather.
 - We pull the building permits when a roofing project needs one.
 - We help with insurance claims where we can: our photos and written scope can be shared with the insurance company. The team is small, so we can't always meet the adjuster.
@@ -93,7 +93,7 @@ export const ANSWERS = [
   },
   {
     match: /warrant|guarantee/,
-    answer: 'Installs carry a 10-year workmanship warranty, plus the manufacturer\'s warranty on materials. <a href="#guarantee" data-qa-close>See the QRS Guarantee</a>. Want to book your free evaluation?',
+    answer: 'Installs carry a 10-year workmanship warranty (call for details), plus the manufacturer\'s warranty on materials. <a href="#guarantee" data-qa-close>See the QRS Guarantee</a>. Want to book your free evaluation?',
     chips: ['How does the process work?', 'Book a free evaluation'],
   },
   {

@@ -16,7 +16,7 @@ const POINTS = [
   {
     icon: 'walkthrough',
     title: '10-Year workmanship',
-    text: 'Our installs are backed by a 10-year workmanship warranty, and we walk the finished roof with you before we call it done.',
+    text: 'Our installs are backed by a 10-year workmanship warranty (call for details), and we walk the finished roof with you before we call it done.',
   },
 ];
 

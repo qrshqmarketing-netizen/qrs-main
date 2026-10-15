@@ -47,7 +47,7 @@ export const RAIN_GUTTERS = {
       },
       {
         title: 'Clean-up and final walkthrough',
-        text: 'We clear away the old gutters and debris, then walk the new runs with you, from the first outlet to the last downspout, and go over the 10-year workmanship warranty on your new gutters.',
+        text: 'We clear away the old gutters and debris, then walk the new runs with you, from the first outlet to the last downspout, and go over the 10-year workmanship warranty on your new gutters (call for details).',
       },
     ],
   },
@@ -145,7 +145,7 @@ export const HOA_MULTI_FAMILY = {
       },
       {
         title: 'Walkthrough and closeout',
-        text: 'We review the completed work with your manager or board contact, hand over photos of each building and go over the 10-year workmanship warranty that backs our installs.',
+        text: 'We review the completed work with your manager or board contact, hand over photos of each building and go over the 10-year workmanship warranty that backs our installs (call for details).',
       },
     ],
   },
@@ -245,7 +245,7 @@ export const ATTIC_VENTILATION = {
       },
       {
         title: 'Walkthrough and warranty',
-        text: 'We go through the photos of the finished work with you. Vents installed as part of a roof replacement are covered by our 10-year workmanship warranty, and repairs carry the manufacturer’s warranty on the materials used, which depends on the product.',
+        text: 'We go through the photos of the finished work with you. Vents installed as part of a roof replacement are covered by our 10-year workmanship warranty (call for details), and repairs carry the manufacturer’s warranty on the materials used, which depends on the product.',
       },
     ],
   },
@@ -295,7 +295,7 @@ export const ATTIC_VENTILATION = {
     },
     {
       q: 'Does your warranty cover ventilation work?',
-      a: 'Vents installed as part of a roof replacement are covered by our 10-year workmanship warranty. Repairs carry the manufacturer’s warranty on any materials used, which depends on the product and its warranty tier.',
+      a: 'Vents installed as part of a roof replacement are covered by our 10-year workmanship warranty (call for details). Repairs carry the manufacturer’s warranty on any materials used, which depends on the product and its warranty tier.',
     },
   ],
   related: ['/residential-roofing/shingle-roofing/replacement/', '/residential-roofing/tile-roofing/', '/roof-inspection/'],

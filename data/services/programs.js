@@ -255,7 +255,7 @@ export const ROOF_FINANCING = {
   overview: {
     paragraphs: [
       'Roofs don’t wait for a good moment to wear out. A leak turns out to be worn underlayment across the whole roof, a storm finishes off shingles that were already tired, or an inspection for a home sale shows the roof is near the end of its life. Financing is available through **Momnt Financing** and **Service Financing** to help spread the cost of a [home roof replacement](/roof-replacement/) into monthly payments, subject to credit approval. To get a feel for the numbers, the **Instant Quote** on this site gives a ballpark replacement price for your roof and shows example monthly payments alongside it.',
-      'Your actual price starts with a [free roof evaluation](#roof-check), where a roofer inspects and photo-documents the roof and tells you plainly whether it needs a repair or a replacement. Then you get a written scope and price, so you know exactly what you’re financing before you apply. Financing is available for home roof replacements — repairs and commercial projects are paid another way. However you choose to pay, qualified crews do the work cleanly and to spec, and installs are backed by our 10-year workmanship warranty.',
+      'Your actual price starts with a [free roof evaluation](#roof-check), where a roofer inspects and photo-documents the roof and tells you plainly whether it needs a repair or a replacement. Then you get a written scope and price, so you know exactly what you’re financing before you apply. Financing is available for home roof replacements — repairs and commercial projects are paid another way. However you choose to pay, qualified crews do the work cleanly and to spec, and installs are backed by our 10-year workmanship warranty (call for details).',
     ],
   },
   process: {
@@ -279,7 +279,7 @@ export const ROOF_FINANCING = {
       },
       {
         title: 'Install and final walkthrough',
-        text: 'Qualified crews complete the work in your written scope, then we walk the finished roof with you and go over your 10-year workmanship warranty.',
+        text: 'Qualified crews complete the work in your written scope, then we walk the finished roof with you and go over your 10-year workmanship warranty (call for details).',
       },
     ],
   },
@@ -301,7 +301,7 @@ export const ROOF_FINANCING = {
       },
       {
         title: 'The same detail-first install',
-        text: 'Every install gets the same clean, to-spec work and the same 10-year workmanship warranty, however it’s paid for.',
+        text: 'Every install gets the same clean, to-spec work and the same 10-year workmanship warranty (call for details), however it’s paid for.',
       },
     ],
   },

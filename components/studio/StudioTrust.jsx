@@ -27,7 +27,7 @@ const REASONS = [
   },
   {
     title: 'Licensed, permitted and warrantied',
-    text: `A licensed, bonded and insured California contractor (CSLB #${BUSINESS.license}). We pull the permits, tarp the landscaping, sweep for nails every day, and back installs with a 10-year workmanship warranty.`,
+    text: `A licensed, bonded and insured California contractor (CSLB #${BUSINESS.license}). We pull the permits, tarp the landscaping, sweep for nails every day, and back installs with a 10-year workmanship warranty (call for details).`,
   },
 ];
 
@@ -93,7 +93,7 @@ export function StudioCredentials() {
           </div>
           <div>
             <dt>Workmanship</dt>
-            <dd>10-year warranty on installs</dd>
+            <dd>10-year warranty on installs, call for details</dd>
           </div>
         </dl>
         <SiteLink className="st-link" href={CREDENTIALS_PAGE.path}>

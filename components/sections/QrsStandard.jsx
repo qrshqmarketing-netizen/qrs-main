@@ -5,7 +5,7 @@ import Mark from '@/components/ui/Mark';
 
 const ABOUT = [
   'At Quality Roofing Specialists, we believe roofing should be detail-first. As a licensed, bonded and insured California contractor since 2020, our crews bring the same care to every [roof replacement](/roof-replacement/), roof repair, [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/) and [flat](/residential-roofing/flat-roofing/) or [shingle roof](/residential-roofing/shingle-roofing/) — with clear scopes, no pressure and no mystery pricing.',
-  'Before any work starts, you get a written scope and price. We document what we find with photos, explain it in plain English and back our installs with a 10-year workmanship warranty. Straightforward, honest work from a local roofing team across [Southern California](/service-areas/).',
+  'Before any work starts, you get a written scope and price. We document what we find with photos, explain it in plain English and back our installs with a 10-year workmanship warranty (call for details). Straightforward, honest work from a local roofing team across [Southern California](/service-areas/).',
   'Not sure what your roof needs? Start with a free roof evaluation.',
 ];
 

@@ -9,7 +9,7 @@ export const SHINGLE_CONTENT = {
     hero: {
       heading: 'Shingle Roofing Services · *TotalShield*',
       intro: 'Shingle roofing from QRS covers replacement, new installs, repairs, inspections, tune-ups and ongoing roof care for homes across Los Angeles and Orange County. We give the underlayment, flashings and attic ventilation the same care as the shingles, and our complete replacement and new-install package is the *TotalShield* Shingle System. Each one starts with a free roof evaluation.',
-      highlights: ['Premium shingle systems, installed to spec', 'Proper ventilation and tidy detailing', '10-Year workmanship warranty on installs'],
+      highlights: ['Premium shingle systems, installed to spec', 'Proper ventilation and tidy detailing', '10-Year workmanship warranty on installs (call for details)'],
     },
     overview: {
       heading: 'Shingle Roofs Built for Southern California',
@@ -79,7 +79,7 @@ export const SHINGLE_CONTENT = {
           { title: 'A roofer’s honest recommendation', text: 'A roofer who has been on your roof tells you whether it truly needs replacing, and if a [shingle roof tune-up](/roof-maintenance-plans/#tune-up) would keep it going, we’ll say so.' },
           { title: 'Photos of what gets covered up', text: 'Once the new roof is on, the deck and underlayment are hidden for good, so we photograph them while they’re still exposed.' },
           { title: 'A clean site, start to finish', text: 'Tarps over landscaping, careful clean-up and a final sweep for nails leave your yard the way we found it, something homeowners mention in their Google reviews.' },
-          { title: 'Backed by The QRS Guarantee', text: 'Your new shingle roof comes with our 10-year workmanship warranty, and we go over exactly what it covers at the final walkthrough.' },
+          { title: 'Backed by The QRS Guarantee', text: 'Your new shingle roof comes with our 10-year workmanship warranty (call for details), and we go over exactly what it covers at the final walkthrough.' },
         ],
       },
       faqs: [
@@ -183,7 +183,7 @@ export const SHINGLE_CONTENT = {
           { title: 'Ventilation planned from the start', text: 'Balanced intake and exhaust are designed into the roof rather than added later, because attic heat can age shingles early.' },
           { title: 'Careful tie-ins and wall flashing', text: 'Where an addition meets the existing roof or a stucco wall, we detail the flashing, including kick-out flashing where a roof edge runs into a wall, so water goes into the gutter instead of behind the wall.' },
           { title: 'A tidy site for the next trade', text: 'We clean up as we go, so builders and the trades that follow walk onto a clear site.' },
-          { title: '10-Year workmanship warranty', text: 'Every roof we install is backed by The QRS Guarantee, and we explain how it works in plain English at the final walkthrough.' },
+          { title: '10-Year workmanship warranty', text: 'Every roof we install is backed by The QRS Guarantee (call for details), and we explain how it works in plain English at the final walkthrough.' },
         ],
       },
       faqs: [

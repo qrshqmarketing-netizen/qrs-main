@@ -10,7 +10,7 @@ export const RESIDENTIAL_PAGE = {
     heading: 'Residential Roofing in Los Angeles & Orange County',
     intro:
       'Quality Roofing Specialists provides residential roofing for homes across Los Angeles and Orange County: repair, replacement and ongoing care for shingle, tile and flat roofs. From a leak on a tile roof to a full tear-off on a shingle home, every job starts with a free roof evaluation, not a sales pitch.',
-    highlights: ['Shingle, tile and flat roofs', 'Written scope and price before work', '10-Year workmanship warranty'],
+    highlights: ['Shingle, tile and flat roofs', 'Written scope and price before work', '10-Year workmanship warranty (call for details)'],
   },
   overview: {
     heading: 'One Team for Every Roof on Your Home',
@@ -30,7 +30,7 @@ export const RESIDENTIAL_PAGE = {
       {
         id: 'roof-replacement',
         title: 'Roof Replacement',
-        text: 'A full tear-off and a new roof system, installed to spec with a written scope and a 10-year workmanship warranty.',
+        text: 'A full tear-off and a new roof system, installed to spec with a written scope and a 10-year workmanship warranty (call for details).',
         links: [
           { label: 'Shingle', href: '/residential-roofing/shingle-roofing/replacement/' },
           { label: 'Tile', href: '/residential-roofing/tile-roofing/replacement/' },

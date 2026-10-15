@@ -97,7 +97,7 @@ export const GLOSSARY_PAGE = {
         { term: 'Lift and relay', def: 'A tile roof repair where the tiles are lifted off, the worn underlayment beneath them is replaced, and the same tiles are put back.', href: '/residential-roofing/tile-roofing/lift-and-relay/' },
         { term: 'Scope of work', def: 'The written list of exactly what a roofer will do: materials, details, how damage found during the job is handled and the price. Compare scopes, not just totals.' },
         { term: 'Building permit', def: 'Approval from the city or county for the roof work, followed by an inspection. QRS pulls the permits for its jobs.' },
-        { term: 'Workmanship warranty', def: 'The roofer’s own guarantee on how the roof was installed, separate from the manufacturer’s warranty on the materials. QRS backs its installs with a 10-year workmanship warranty.' },
+        { term: 'Workmanship warranty', def: 'The roofer’s own guarantee on how the roof was installed, separate from the manufacturer’s warranty on the materials. QRS backs its installs with a 10-year workmanship warranty (call for details).' },
         { term: 'Manufacturer’s warranty', def: 'The material maker’s warranty on its products. The coverage depends on the product and the warranty tier.' },
         { term: 'CSLB license', def: 'California’s Contractors State License Board licenses roofers. You can look up any contractor’s license number on the CSLB website before you hire.', href: '/credentials/' },
       ],

@@ -531,7 +531,7 @@ export const BLOG_POSTS = [
       {
         heading: 'Warranties',
         blocks: [
-          'Manufacturers offer different warranties for different shingle lines and warranty tiers, so compare what each one covers. That is separate from the roofer’s workmanship warranty: QRS backs its installs with a 10-year workmanship warranty.',
+          'Manufacturers offer different warranties for different shingle lines and warranty tiers, so compare what each one covers. That is separate from the roofer’s workmanship warranty: QRS backs its installs with a 10-year workmanship warranty (call for details).',
         ],
       },
       {
@@ -674,7 +674,7 @@ export const BLOG_POSTS = [
               'How is the site protected and cleaned up each day?',
             ],
           },
-          'At QRS you get a written scope and price before any work starts, we pull the permits, and our installs carry a 10-year workmanship warranty. We price it right the first time; if you have a written bid from another licensed roofer, show it to us and we can match it.',
+          'At QRS you get a written scope and price before any work starts, we pull the permits, and our installs carry a 10-year workmanship warranty (call for details). We price it right the first time; if you have a written bid from another licensed roofer, show it to us and we can match it.',
         ],
       },
       {
@@ -1135,7 +1135,7 @@ export const BLOG_POSTS = [
         heading: 'How We Work With Commercial Clients',
         blocks: [
           'Every commercial project at QRS starts with a roofer-led roof survey and a written scope and price. We photo-document what we find, plan the work around how your building runs and keep your building open during the work.',
-          'We pull the building permits, and we hand over closeout photos for your records. Our installs are backed by a 10-year workmanship warranty, and the materials carry the manufacturer’s warranty, which depends on the product.',
+          'We pull the building permits, and we hand over closeout photos for your records. Our installs are backed by a 10-year workmanship warranty (call for details), and the materials carry the manufacturer’s warranty, which depends on the product.',
           'See our [commercial roofing](/commercial-roofing/) services, including [commercial roof repair](/commercial-roofing/repair/), [commercial roof replacement](/commercial-roofing/replacement/) and [commercial roof maintenance](/commercial-roofing/maintenance/).',
         ],
       },
@@ -1368,7 +1368,7 @@ export const BLOG_POSTS = [
               'Closeout. We walk the roof with you and hand over photos for your records.',
             ],
           },
-          'Our [commercial roof replacement](/commercial-roofing/replacement/) follows this process, and our installs are backed by a 10-year workmanship warranty. The materials carry the manufacturer’s warranty, which depends on the product.',
+          'Our [commercial roof replacement](/commercial-roofing/replacement/) follows this process, and our installs are backed by a 10-year workmanship warranty (call for details). The materials carry the manufacturer’s warranty, which depends on the product.',
         ],
       },
       {
@@ -1543,7 +1543,7 @@ export const BLOG_POSTS = [
       },
       {
         q: 'How long does a TPO roof last?',
-        a: 'It depends on the membrane, the installation, the details at walls and penetrations and how the roof is maintained. We do not promise a number of years. We focus on the installation, which is backed by our 10-year workmanship warranty.',
+        a: 'It depends on the membrane, the installation, the details at walls and penetrations and how the roof is maintained. We do not promise a number of years. We focus on the installation, which is backed by our 10-year workmanship warranty (call for details).',
       },
       {
         q: 'Is TPO good for Southern California?',
@@ -2024,7 +2024,7 @@ export const BLOG_POSTS = [
               'Ask what the warranty covers for each option, and who stands behind it.',
             ],
           },
-          'At QRS, our installs are backed by a 10-year workmanship warranty, and repairs carry the manufacturer’s warranty on the materials used, which depends on the product. See also our [roof repair](/roof-repair/) services.',
+          'At QRS, our installs are backed by a 10-year workmanship warranty (call for details), and repairs carry the manufacturer’s warranty on the materials used, which depends on the product. See also our [roof repair](/roof-repair/) services.',
         ],
       },
       {

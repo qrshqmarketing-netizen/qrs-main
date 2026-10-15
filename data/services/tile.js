@@ -51,8 +51,8 @@ export const TILE_CONTENT = {
       image: '/images/tile-roof-replacement.webp',
       imageAlt: 'Finished clay barrel tile roof on a home, viewed from above',
       hero: {
-        intro: 'A tile roof replacement takes your roof down to the deck and builds a complete new system: underlayment, flashings, clay or concrete tile and ridge details. QRS replaces tile roofs across Los Angeles and Orange County when the tiles themselves are past saving, backed by our 10-year workmanship warranty. It starts with a free roof evaluation.',
-        highlights: ['Full tear-off down to the deck', 'Clay or concrete tile to suit your home', '10-Year workmanship warranty'],
+        intro: 'A tile roof replacement takes your roof down to the deck and builds a complete new system: underlayment, flashings, clay or concrete tile and ridge details. QRS replaces tile roofs across Los Angeles and Orange County when the tiles themselves are past saving, backed by our 10-year workmanship warranty (call for details). It starts with a free roof evaluation.',
+        highlights: ['Full tear-off down to the deck', 'Clay or concrete tile to suit your home', '10-Year workmanship warranty (call for details)'],
       },
       overview: {
         paragraphs: [
@@ -69,7 +69,7 @@ export const TILE_CONTENT = {
           { title: 'Choose your tile', text: 'We talk through clay and concrete options, profiles and colors, and help you pick a tile that suits your home and budget.', bullets: ['Clay barrel or S tile', 'Flat or S concrete tile', 'Colors that suit your home’s style'] },
           { title: 'Tear-off to the deck', text: 'The old tile, underlayment and battens come off, and the deck gets a close look while it’s exposed.', bullets: ['Old roof removed down to the deck', 'Deck damage photographed', 'Debris cleared as we go'] },
           { title: 'New tile system installed', text: 'Qualified crews install the new system cleanly and to spec, layer by layer, exactly as your scope describes.', bullets: ['New underlayment across the deck', 'Battens where the tile system calls for them', 'Flashings, valley metal and eave closures', 'New tile set and fastened to spec', 'Ridge and hip details finished'] },
-          { title: 'Final walkthrough with you', text: 'We walk the finished roof with you, share photos from each stage and go over your 10-year workmanship warranty in plain English.' },
+          { title: 'Final walkthrough with you', text: 'We walk the finished roof with you, share photos from each stage and go over your 10-year workmanship warranty in plain English (call for details).' },
         ],
       },
       why: {
@@ -79,7 +79,7 @@ export const TILE_CONTENT = {
           { title: 'A straight answer on relay vs. replace', text: 'It starts with a [free roof evaluation](#roof-check). If your tiles can be saved, we’ll say so, and replacement is only recommended when the roof truly needs it.' },
           { title: 'Built for Southern California', text: 'Underlayment, flashings and fastening are planned for intense sun, Santa Ana winds and heavy winter rain, not just for how the tile looks.' },
           { title: 'A clean site, start to finish', text: 'Tile tear-offs are heavy, dusty work. We keep the job site clean throughout, and it’s something customers praise in their Google reviews.' },
-          { title: '10-Year workmanship warranty', text: 'Every new tile roof we install is backed by the QRS Guarantee, and our follow-through doesn’t end when the crew packs up.' },
+          { title: '10-Year workmanship warranty', text: 'Every new tile roof we install is backed by the QRS Guarantee (call for details), and our follow-through doesn’t end when the crew packs up.' },
         ],
       },
       faqs: [
@@ -172,7 +172,7 @@ export const TILE_CONTENT = {
           { title: 'Careful tile removal', text: 'Tiles are heavy and can crack if mishandled, so they come off by hand and are stacked with care until they go back in the same pattern. Some older tiles break anyway, which is why matching replacements are planned from the start.' },
           { title: 'New underlayment and flashings', text: 'We install new underlayment, then address worn battens, flashings, valley metal and other details your written scope calls for.', bullets: ['New underlayment across the roof', 'Worn battens replaced', 'Flashings, valleys and vents addressed', 'Deck checked while it’s exposed'] },
           { title: 'Reset and match', text: 'Sound tiles go back in their original pattern, and broken ones are replaced with the closest available match.', bullets: ['Ridge and hip tiles reset', 'Bird stops and eave closures in place', 'Tiles secured as your scope specifies'] },
-          { title: 'Final walkthrough', text: 'We review the finished roof with you, share photos of the work and go over your 10-year workmanship warranty.' },
+          { title: 'Final walkthrough', text: 'We review the finished roof with you, share photos of the work and go over your 10-year workmanship warranty (call for details).' },
         ],
       },
       why: {
@@ -182,7 +182,7 @@ export const TILE_CONTENT = {
           { title: 'Roofer-led assessment', text: 'A roofer, not a salesperson, tells you whether a relay is right for your roof or whether a smaller repair will do.' },
           { title: 'Photo-documented work', text: 'You see the old underlayment, the new layers going in and the finished roof.' },
           { title: 'Written scope and price', text: 'You know exactly what’s included, from underlayment and battens to flashings and ridge details, before work starts.' },
-          { title: '10-Year workmanship warranty', text: 'Every relay is backed by the QRS Guarantee, and [ongoing tile roof care](/roof-maintenance-plans/#roof-types) afterward helps keep the new underlayment protected.' },
+          { title: '10-Year workmanship warranty', text: 'Every relay is backed by the QRS Guarantee (call for details), and [ongoing tile roof care](/roof-maintenance-plans/#roof-types) afterward helps keep the new underlayment protected.' },
         ],
       },
       faqs: [

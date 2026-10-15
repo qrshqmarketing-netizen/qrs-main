@@ -34,7 +34,7 @@ export const FAQS = [
   },
   {
     q: 'What kind of warranty do you offer?',
-    a: 'Our installs are backed by a 10-year workmanship warranty, and the roofing materials carry the manufacturer’s warranty, which depends on the product and its warranty tier. At the final walkthrough we go over your warranty with you in plain English.',
+    a: 'Our installs are backed by a 10-year workmanship warranty (call for details), and the roofing materials carry the manufacturer’s warranty, which depends on the product and its warranty tier. At the final walkthrough we go over your warranty with you in plain English.',
   },
   {
     q: 'Is Quality Roofing Specialists a licensed roofing contractor in Los Angeles?',

@@ -43,7 +43,7 @@ export const CREDENTIALS_PAGE = {
   standards: {
     heading: 'On every __job__',
     items: [
-      { title: 'A 10-year workmanship warranty', text: 'Our installs are backed by a 10-year workmanship warranty. Roofing materials carry the manufacturer’s warranty, which depends on the product and its warranty tier.' },
+      { title: 'A 10-year workmanship warranty', text: 'Our installs are backed by a 10-year workmanship warranty (call for details). Roofing materials carry the manufacturer’s warranty, which depends on the product and its warranty tier.' },
       { title: 'Permits pulled', text: 'We pull the building permits when a roofing project needs one.' },
       { title: 'A roofer-led evaluation', text: 'A trained in-house roofer looks at your roof, in under an hour, with drone footage of the areas of concern, and you get a written scope and price before any work.' },
       { title: 'A clean site', text: 'Tarps over the landscaping, nail sweeps with a magnet, and cleanup at the end of every day.' },
@@ -53,6 +53,6 @@ export const CREDENTIALS_PAGE = {
     { q: 'Is Quality Roofing Specialists licensed?', a: `Yes. We are a licensed California contractor, CSLB license #${BUSINESS.license}, licensed since ${formatDate(BUSINESS.licenseSince)}. You can verify it on the Contractors State License Board website.` },
     { q: 'Are you bonded and insured?', a: 'Yes. We are licensed, bonded and insured as a California contractor.' },
     { q: 'Which roofing manufacturers are you certified with?', a: 'Owens Corning, IKO, GAF, CertainTeed (Master Craftsman) and Polyglass (Premio Pro).' },
-    { q: 'What warranty comes with a new roof?', a: 'Our installs are backed by a 10-year workmanship warranty, and the roofing materials carry the manufacturer’s warranty, which depends on the product and its warranty tier. We go over yours with you at the final walkthrough.' },
+    { q: 'What warranty comes with a new roof?', a: 'Our installs are backed by a 10-year workmanship warranty (call for details), and the roofing materials carry the manufacturer’s warranty, which depends on the product and its warranty tier. We go over yours with you at the final walkthrough.' },
   ],
 };

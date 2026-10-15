@@ -15,7 +15,7 @@ export const FLAT_CONTENT = {
       heading: 'Flat Roofs Need Their Own Kind of Detail',
       paragraphs: [
         'Low-slope roofs are everywhere in Southern California: on mid-century and modern homes, over garages, patio covers and room additions, on new backyard ADUs, and tucked behind the parapet walls of Spanish-style houses. Every one of them still has to drain. That takes a gentle, deliberate slope that carries rainwater to a drain, a scupper (an opening through the parapet) or a gutter instead of letting it sit. When that slope is missing or a drain is blocked, water ponds, the sun bakes the membrane, and seams and flashings start to give way.',
-        'We install **modified bitumen and other low-slope systems**, chosen for your roof’s condition, how it drains and what sits on it, from HVAC equipment to skylights. Our advice comes from a roofer on your roof, not a salesperson at your kitchen table. The [free roof evaluation](#roof-check) photo-documents the membrane, seams, drains and flashings, explains the findings in plain English and ends with a clear next step: repair, monitor, maintain or replace. You see a written scope and price before any work begins, and finished installs carry our 10-year workmanship warranty.',
+        'We install **modified bitumen and other low-slope systems**, chosen for your roof’s condition, how it drains and what sits on it, from HVAC equipment to skylights. Our advice comes from a roofer on your roof, not a salesperson at your kitchen table. The [free roof evaluation](#roof-check) photo-documents the membrane, seams, drains and flashings, explains the findings in plain English and ends with a clear next step: repair, monitor, maintain or replace. You see a written scope and price before any work begins, and finished installs carry our 10-year workmanship warranty (call for details).',
       ],
     },
     cards: {
@@ -53,7 +53,7 @@ export const FLAT_CONTENT = {
       imageAlt: 'Aerial view of a completed white flat roof membrane with tile coping',
       hero: {
         intro: 'A flat roof replacement removes the old roofing down to the deck, addresses any damaged decking and installs a new modified bitumen or other low-slope system planned around how your roof drains. QRS replaces worn-out flat roofs across Los Angeles and Orange County with our *FlatGuard* low-slope system, starting with a free roof evaluation.',
-        highlights: ['Full tear-off down to the deck', 'Drainage planned into the new roof', '10-Year workmanship warranty'],
+        highlights: ['Full tear-off down to the deck', 'Drainage planned into the new roof', '10-Year workmanship warranty (call for details)'],
       },
       overview: {
         paragraphs: [
@@ -70,7 +70,7 @@ export const FLAT_CONTENT = {
           { title: 'Tear-off to the deck', text: 'The old roofing comes off down to the deck, and we keep debris contained and cleaned up as we go.', bullets: ['Old layers removed, not roofed over', 'Decking inspected and photographed'] },
           { title: 'Drainage and edge prep', text: 'Before the new roof goes on, we prepare the edges, drains and scuppers and build any crickets your scope calls for.' },
           { title: 'New low-slope system', text: 'We install the modified bitumen or other low-slope system named in your scope, sealing every lap and flashing each parapet, curb, vent and skylight.', bullets: ['Laps and seams sealed', 'Parapet and wall flashings', 'HVAC curbs, vents and skylights'] },
-          { title: 'Final walkthrough', text: 'When the roof is done, we sit down with you, walk through the photos from tear-off to finish and explain your 10-year workmanship warranty.' },
+          { title: 'Final walkthrough', text: 'When the roof is done, we sit down with you, walk through the photos from tear-off to finish and explain your 10-year workmanship warranty (call for details).' },
         ],
       },
       why: {
@@ -80,7 +80,7 @@ export const FLAT_CONTENT = {
           { title: 'Drainage comes first', text: 'We plan the new roof around where water actually goes, not simply around what the old roof looked like.' },
           { title: 'Nothing covered up', text: 'A full tear-off means the deck gets seen, and any damage is photographed and explained instead of buried under new layers.' },
           { title: 'Scope and price in writing', text: 'Before the tear-off begins, you know the system, the drainage work and the price.' },
-          { title: '10-Year workmanship warranty', text: 'Your new roof is backed by the QRS Guarantee, our 10-year workmanship warranty, and we review it with you once the roof is finished.' },
+          { title: '10-Year workmanship warranty', text: 'Your new roof is backed by the QRS Guarantee, our 10-year workmanship warranty (call for details), and we review it with you once the roof is finished.' },
         ],
       },
       faqs: [
@@ -173,7 +173,7 @@ export const FLAT_CONTENT = {
           { title: 'Written scope and price', text: 'You get a written scope naming the roof system, flashings and drainage details, along with the price, before work starts.' },
           { title: 'Edges, drains and flashings', text: 'Once the deck is ready, we prepare the roof edges and build the flashing details at drains, scuppers, walls and curbs.' },
           { title: 'Membrane and tie-ins', text: 'We install the roof system named in your scope and build the transition to your existing roof so water flows away from the joint, not into it.', bullets: ['Sealed laps across the whole roof', 'Tie-ins to tile or shingle roofs', 'Vents, skylights and HVAC curbs'] },
-          { title: 'Final walkthrough', text: 'Before we call the job done, we show you the finished roof, including photos of the layers underneath, and explain your 10-year workmanship warranty.' },
+          { title: 'Final walkthrough', text: 'Before we call the job done, we show you the finished roof, including photos of the layers underneath, and explain your 10-year workmanship warranty (call for details).' },
         ],
       },
       why: {
@@ -183,7 +183,7 @@ export const FLAT_CONTENT = {
           { title: 'Early drainage input', text: 'We’ll tell you where water will go before the roof exists, so you’re not dealing with ponding after move-in.' },
           { title: 'Careful tie-ins', text: 'The joint between new and existing roofs gets flashing detailed for how water actually flows across it.' },
           { title: 'Photo-documented details', text: 'We photograph the base layers, flashings and tie-ins as the roof goes on, so there’s a record of work that’s hidden once it’s finished.' },
-          { title: 'The QRS Guarantee', text: 'Every new roof we install is backed by our 10-year workmanship warranty, so you know we stand behind the work.' },
+          { title: 'The QRS Guarantee', text: 'Every new roof we install is backed by our 10-year workmanship warranty (call for details), so you know we stand behind the work.' },
         ],
       },
       faqs: [

@@ -3,7 +3,7 @@ import Mark from '@/components/ui/Mark';
 const STEPS = [
   { n: '01', title: 'A free roof evaluation', text: 'We use drone footage to see the condition of your roof, explain what we find in plain English and give you a clear next step: repair, monitor, maintain or replace.' },
   { n: '02', title: 'A written scope and price', text: 'Before any work begins, you get a written scope and price. No pressure, no mystery pricing and no surprises.' },
-  { n: '03', title: 'Careful, documented work', text: 'We document what we find with photos, and our installs are backed by a 10-year workmanship warranty.' },
+  { n: '03', title: 'Careful, documented work', text: 'We document what we find with photos, and our installs are backed by a 10-year workmanship warranty (call for details).' },
 ];
 
 export default function StudioProcess() {

@@ -39,7 +39,7 @@ export function AboutIntro({ page }) {
 }
 
 const NUMBERS = [
-  { value: '10', unit: 'year', label: 'Workmanship warranty on our installs' },
+  { value: '10', unit: 'year', label: 'Workmanship warranty on our installs, call for details' },
   { value: '12', unit: '', label: 'Crews for shingle, tile and flat roofs' },
   { value: String(OFFICES.length), unit: '', label: 'Offices across Los Angeles' },
   { value: '3', unit: '', label: 'Languages: English, Spanish and Tagalog' },
