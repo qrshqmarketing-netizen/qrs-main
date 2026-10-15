@@ -11,7 +11,7 @@ import './Studio.css';
 // "How we work" on the home page (owner, October 15 2026; the story approach of the owner's reference maben.com.au, adapted to QRS): four
 // principles with short two-beat headings, each with one paragraph and a photo. It replaces the home page's "Why QRS", process steps and
 // credentials strip, which said the same things three times. Every fact is one the site already states (data/site.js, the About page,
-// the credentials page). Photos: existing job photos until the owner has photos of the team.
+// the credentials page). Photos: home and commercial properties we roofed, no people (owner, October 15 2026).
 // From 901px with motion the section is pinned while it scrolls: the four headings stay listed at the left, the current one bright with a
 // gold bar filling under it, its paragraph below the list and its photo at the right, all changing as the page scrolls (transform and
 // opacity only, no layout shift). Phones, reduced motion and no JavaScript show the four as a plain stacked list. Styles: "How we work"
@@ -29,14 +29,14 @@ const PRINCIPLES = [
   {
     title: 'Clear answers. Plain English.',
     text: 'We photo-document what we find and explain it in plain English, then give you a clear next step: repair, monitor, maintain or replace. You decide with the facts in front of you.',
-    image: '/images/contractors-hero-roofer-tablet.webp',
-    alt: 'Roofer in a safety harness holding a tablet on a roof',
+    image: '/images/recent-work-commercial-flat-roof-drone-view.webp',
+    alt: 'Drone view looking down on a white flat roof on a commercial building',
   },
   {
     title: 'Family-owned. Local crews.',
     text: `QRS is family-owned, woman-owned and locally owned, with ${offices} across Southern California and one phone number that reaches them all. Our 12 crews work on shingle, tile and flat roofs, and we speak English, Spanish and Tagalog.`,
-    image: '/images/careers-process-roofer-crew.webp',
-    alt: 'Roofer looking up at a crew working on a shingle roof',
+    image: '/images/tile-roof-replacement-drone-view.webp',
+    alt: 'Spanish-style home with a red clay tile roof',
   },
   {
     title: 'Clean sites. Work that’s backed.',
