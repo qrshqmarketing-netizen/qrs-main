@@ -2,6 +2,7 @@
 // (components/widgets/InstantQuote.jsx), checks the fields and hands the lead to lib/leads.js (email + Google Sheet). A visitor who gave
 // an email also gets the confirmation email in lib/autoReply.js.
 import { after } from 'next/server';
+import { callrailStatus } from '@/lib/callrail';
 import { FOUND_US_OPTIONS, ROOF_TYPES, SERVICE_OPTIONS, VISIT_TIMES } from '@/data/estimateOptions';
 import { leadAttribution } from '@/lib/attribution';
 import { sendAutoReply } from '@/lib/autoReply';
@@ -63,7 +64,7 @@ export async function POST(request) {
   const diagnostic = Boolean(secret) && request.headers.get('x-leads-diagnostic') === secret;
   // ...with "configCheck": true it only reports which channels have their settings on this deployment (nothing is sent or saved)
   // (and whether the blog articles table exists, and how many articles it holds)
-  if (diagnostic && body?.configCheck === true) return Response.json({ ok: true, settings: { ...leadChannelSettings(), dashboardPassword: cleanPassword(process.env.ADMIN_PASSWORD).length >= 12, dashboardPasswordLength: cleanPassword(process.env.ADMIN_PASSWORD).length, dashboardPasswordHadQuotesOrName: cleanPassword(process.env.ADMIN_PASSWORD) !== String(process.env.ADMIN_PASSWORD || '').trim(), articles: await postsTableStatus() } });
+  if (diagnostic && body?.configCheck === true) return Response.json({ ok: true, settings: { ...leadChannelSettings(), dashboardPassword: cleanPassword(process.env.ADMIN_PASSWORD).length >= 12, dashboardPasswordLength: cleanPassword(process.env.ADMIN_PASSWORD).length, dashboardPasswordHadQuotesOrName: cleanPassword(process.env.ADMIN_PASSWORD) !== String(process.env.ADMIN_PASSWORD || '').trim(), articles: await postsTableStatus(), callrail: await callrailStatus() } });
 
   const source = body?.source === 'instant-quote' ? 'instant-quote' : 'estimate-form';
   const name = clip(body?.name, 120);

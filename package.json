@@ -7,11 +7,12 @@
     "dev": "next dev",
     "prebuild": "npm run lastmod",
     "build": "next build",
-    "postbuild": "npm run assistant:sync -- --deploy",
+    "postbuild": "npm run assistant:sync -- --deploy && npm run callrail:setup -- --deploy",
     "start": "next start",
     "lastmod": "node --no-warnings --import ./scripts/alias.mjs scripts/lastmod.mjs",
     "functions:sync": "node --no-warnings --import ./scripts/alias.mjs scripts/sync-functions-data.mjs",
     "assistant:sync": "node --no-warnings --import ./scripts/alias.mjs scripts/sync-assistant.mjs",
+    "callrail:setup": "node --no-warnings --import ./scripts/alias.mjs scripts/callrail-setup.mjs",
     "functions:test": "node --no-warnings --import ./scripts/alias.mjs scripts/test-functions.mjs"
   },
   "dependencies": {

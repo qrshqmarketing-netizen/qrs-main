@@ -14,7 +14,7 @@ import './CookieNotice.css';
 
 const KINDS = [
   { key: 'necessary', title: 'Necessary', text: 'Keep the site working: your light or dark theme, this cookie choice and the details a request form needs. Always on.', locked: true },
-  { key: 'analytics', title: 'Analytics', text: 'Google Analytics counts which pages are visited and how people found us, so we know what helps.' },
+  { key: 'analytics', title: 'Analytics', text: 'Google Analytics counts which pages are visited and how people found us, and CallRail may show a tracking phone number so we know how callers found us.' },
   { key: 'clarity', title: 'Site improvement', text: 'Microsoft Clarity records clicks and scrolling (not what you type) so we can see where the site is hard to use.' },
 ];
 

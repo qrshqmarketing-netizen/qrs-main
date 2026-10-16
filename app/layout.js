@@ -11,6 +11,7 @@ import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
 import SiteChrome from '@/components/layout/SiteChrome';
 import CampaignWelcome from '@/components/widgets/CampaignWelcome';
+import CallRailSwap from '@/components/widgets/CallRailSwap';
 import PageTrail from '@/components/widgets/PageTrail';
 import ScrollToTop from '@/components/ui/ScrollToTop';
 import PageTransition from '@/components/ui/PageTransition';
@@ -30,6 +31,7 @@ import { PAGE_ENTRANCES, SCROLL_REVEALS, STUDIO_THEME } from '@/data/promo';
 import { BUSINESS, CLARITY_ID, GA_ID, HOME_DESCRIPTION, SITE_URL, SITE_VERIFICATION } from '@/data/site';
 import { ALLOW_INDEXING, LOAD_TRACKING, openGraphBase, twitterBase } from '@/lib/seo';
 import ThemeScript from '@/components/ui/ThemeScript';
+import { callrailSwapScript } from '@/lib/callrail';
 import SplashScript from '@/components/ui/SplashScript';
 
 // Google Fonts, downloaded at build time and served from this site. Both are variable fonts, so no `weight` list: one file covers every
@@ -71,7 +73,9 @@ export const viewport = {
 };
 
 // Header, footer and the floating widgets appear on every page
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  // CallRail's number-swap script (lib/callrail.js), production only; null without a key or company
+  const callrailSwap = LOAD_TRACKING ? await callrailSwapScript() : null;
   return (
     <html lang="en" className={bodyFont.variable + ' ' + bigShoulders.variable} data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
@@ -99,6 +103,7 @@ export default function RootLayout({ children }) {
           <CookieNotice />
           <SeasonPromo />
           <CampaignWelcome />
+          {callrailSwap && <CallRailSwap />}
           <PageTrail />
           <ScrollToTop />
           <PageTransition />
@@ -106,7 +111,7 @@ export default function RootLayout({ children }) {
           <ScrollDraw />
           <ScrollScenes />
           {LOAD_TRACKING && (
-            /* Google Analytics and Clarity, each only if the visitor's cookie choice allows it (lib/consent.js; the key, the old "Got it" key and
+            /* Google Analytics, Clarity and CallRail's number swapping (with Analytics), each only if the visitor's cookie choice allows it (lib/consent.js; the key, the old "Got it" key and
                the Global Privacy Control default must match it). Google's consent mode starts from that choice; the scripts load after the page
                has loaded, like the lazyOnload they replace. Not id="clarity": an element's id becomes window.clarity, which stops Clarity from starting. */
             <Script id="qrs-tracking" strategy="afterInteractive">
@@ -124,6 +129,7 @@ export default function RootLayout({ children }) {
   window.__qrsLoadTracking=function(){
     try{c=JSON.parse(localStorage.getItem('qrs-consent'))||c;}catch(e){}
     if(ok('analytics')&&!done.ga){done.ga=1;var g=document.createElement('script');g.async=1;g.src='https://www.googletagmanager.com/gtag/js?id=${GA_ID}';document.head.appendChild(g);}
+    if(${JSON.stringify(Boolean(callrailSwap))}&&ok('analytics')&&!done.cr){done.cr=1;var s=document.createElement('script');s.async=1;s.src=${JSON.stringify(callrailSwap || '')};document.head.appendChild(s);}
     if(ok('clarity')&&!done.cl){done.cl=1;(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","${CLARITY_ID}");}
   };
   function later(){(window.requestIdleCallback||setTimeout)(window.__qrsLoadTracking);}
