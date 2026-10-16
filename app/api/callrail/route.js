@@ -4,7 +4,7 @@ import { dbConfigured, dbRequest } from '@/lib/supabase';
 
 // CallRail's post-call webhook (registered by scripts/callrail-setup.mjs on each production deploy; helpers in lib/callrail.js).
 // Every finished inbound call becomes a row of the Supabase `leads` table, next to the form and chat leads; a missed call or a voicemail also
-// goes to the lead email and the Google Sheet, so someone calls back. A request is trusted with a valid CallRail `Signature` (HMAC-SHA1 of the
+// gets a row in the Google Sheet, so someone calls back. Calls are never emailed: CallRail already emails the team about them. A request is trusted with a valid CallRail `Signature` (HMAC-SHA1 of the
 // raw body with the company's signing key); without one (an API key that can't read the signing key), the call is looked up in the account
 // through the API and CallRail's own record is saved, so a forged request saves nothing. CallRail retries a call it couldn't deliver, so the
 // same call is never saved twice (its CallRail id is in the message).
@@ -51,7 +51,8 @@ export async function POST(request) {
   }
 
   const { missed, lead } = callToLead(call);
-  const result = await deliverLead(lead, missed ? {} : { only: ['database'] });
+  // Never emailed (CallRail already emails the team about calls, owner's choice): a missed call or voicemail also goes to the sheet
+  const result = await deliverLead(lead, { only: missed ? ['database', 'sheet'] : ['database'] });
   if (!result.delivered) console.error('[callrail] call not saved:', call.id, JSON.stringify(result.errors));
   // A 5xx makes CallRail try again later; only ask for that when nothing took the call
   return Response.json({ ok: result.delivered, missed }, { status: result.delivered || !result.configured ? 200 : 502 });
