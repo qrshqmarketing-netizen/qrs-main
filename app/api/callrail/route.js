@@ -1,12 +1,13 @@
-import { callrailConfigured, callToLead, verifyCallrailSignature } from '@/lib/callrail';
+import { callrailConfigured, callToLead, confirmCallWithApi, verifyCallrailSignature } from '@/lib/callrail';
 import { deliverLead } from '@/lib/leads';
 import { dbConfigured, dbRequest } from '@/lib/supabase';
 
 // CallRail's post-call webhook (registered by scripts/callrail-setup.mjs on each production deploy; helpers in lib/callrail.js).
 // Every finished inbound call becomes a row of the Supabase `leads` table, next to the form and chat leads; a missed call or a voicemail also
-// goes to the lead email and the Google Sheet, so someone calls back. A request is accepted only with a valid CallRail `Signature` (HMAC-SHA1
-// of the raw body with the company's signing key, read through the API). CallRail retries a call it couldn't deliver, so the same call is
-// never saved twice (its CallRail id is in the message).
+// goes to the lead email and the Google Sheet, so someone calls back. A request is trusted with a valid CallRail `Signature` (HMAC-SHA1 of the
+// raw body with the company's signing key); without one (an API key that can't read the signing key), the call is looked up in the account
+// through the API and CallRail's own record is saved, so a forged request saves nothing. CallRail retries a call it couldn't deliver, so the
+// same call is never saved twice (its CallRail id is in the message).
 export const dynamic = 'force-dynamic';
 
 export async function POST(request) {
@@ -16,18 +17,26 @@ export async function POST(request) {
   try {
     valid = await verifyCallrailSignature(raw, request.headers.get('signature'));
   } catch (e) {
-    console.error('[callrail] signature check failed:', e.message);
-    return Response.json({ ok: false, error: 'could not check the signature' }, { status: 503 }); // CallRail will retry
+    console.warn('[callrail] signature check unavailable, confirming the call through the API:', e.message);
   }
-  if (!valid) return Response.json({ ok: false, error: 'bad signature' }, { status: 401 });
-
   let call;
   try {
     call = JSON.parse(raw);
   } catch {
     return Response.json({ ok: false, error: 'not JSON' }, { status: 400 });
   }
-  if (!call?.id || (call.direction && call.direction !== 'inbound')) return Response.json({ ok: true, skipped: 'not an inbound call' });
+  if (!call?.id) return Response.json({ ok: false, error: 'no call id' }, { status: 400 });
+  if (!valid) {
+    // No valid signature (or no signing key readable with this API key): only a call CallRail confirms is saved, from CallRail's own record
+    try {
+      call = await confirmCallWithApi(call);
+    } catch (e) {
+      console.error('[callrail] could not confirm the call:', e.message);
+      return Response.json({ ok: false, error: 'could not confirm the call' }, { status: 503 }); // CallRail will retry
+    }
+    if (!call) return Response.json({ ok: false, error: 'unknown call' }, { status: 401 });
+  }
+  if (call.direction && call.direction !== 'inbound') return Response.json({ ok: true, skipped: 'not an inbound call' });
 
   if (dbConfigured()) {
     try {
