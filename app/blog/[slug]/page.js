@@ -3,6 +3,7 @@ import BlogPost from '@/components/templates/BlogPost';
 import { blogPath } from '@/data/catalog';
 import { getBlogPosts, getPost } from '@/lib/postsStore';
 import { pageMetadata } from '@/lib/pages';
+import { authorOf } from '@/data/authors';
 
 // One page per published article (lib/postsStore.js: Supabase, with data/blog/posts.js as the fallback). An article added in the dashboard
 // after the site was built gets its page the first time someone visits it; other addresses show the 404 page.
@@ -18,7 +19,7 @@ export async function generateMetadata({ params }) {
     path: blogPath(post.slug),
     noindex: post.noindex,
     ...(post.image && { image: { url: post.image, width: 1536, height: 1024, alt: post.imageAlt } }),
-    article: { publishedTime: post.datePublished, modifiedTime: post.dateModified, author: post.author },
+    article: { publishedTime: post.datePublished, modifiedTime: post.dateModified, author: authorOf(post).name },
   });
 }
 

@@ -1,9 +1,9 @@
 /* ---------- Footer: the studio look ----------
    A neighborhood photo under a deep navy shade. The phone number is the big line, with the three offices beside it; the logo and link columns sit
    under a hairline and the small print comes last. Always dark, in both themes. Mobile first. */
-footer{position:relative;isolation:isolate;overflow:hidden;background:#071a2e;color:#fff;padding:72px 0 96px} /* bottom room so the chat bubble never covers the copyright */
+footer{position:relative;isolation:isolate;overflow:hidden;background:#0b2440;color:#fff;padding:72px 0 96px} /* bottom room so the chat bubble never covers the copyright */
 .ft-photo{object-fit:cover;object-position:center 40%;z-index:-2}
-.ft-shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(5,22,40,.94) 0%,rgba(5,22,40,.84) 45%,rgba(5,22,40,.94) 100%)}
+.ft-shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(5,22,40,.86) 0%,rgba(5,22,40,.72) 45%,rgba(5,22,40,.84) 100%)} /* a little lighter (owner, October 16 2026) */
 footer .container{position:relative;max-width:1540px}
 .ft-label{margin:0 0 16px;display:flex;align-items:center;gap:12px;font:600 12px/1.2 var(--font-text),sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.62)}
 .ft-label:before{content:"";width:28px;height:1px;background:currentColor}
@@ -53,14 +53,17 @@ footer .container{position:relative;max-width:1540px}
   .ft-brand{grid-column:1}
   .ft-social{margin-left:-11px}
 }
-/* The brand word, large, across the bottom: QRS, the letters spread edge to edge, each in its own mask (FooterWord.jsx); the size comes from the letter
-   count (--n), so the word fills the footer's width at every screen size */
-.ft-name{container-type:inline-size;display:flex;justify-content:space-between;margin-top:36px;user-select:none;line-height:1}
-.ft-l{display:block;overflow:clip;padding:0 .02em .12em;margin-bottom:-.12em}
-.ft-l > span{display:block;font:600 calc(120vw / var(--n,7))/0.95 var(--font-text),sans-serif;font:600 calc(124cqw / var(--n,7))/0.95 var(--font-text),sans-serif;color:rgba(255,255,255,.13);text-transform:uppercase}
+/* The brand word, large, across the bottom: QRS® (FooterWord.jsx), tight letters that fill the footer's width at every screen size (the size is a share
+   of the container width, --fit, measured for this word in this font), each letter in its own mask sliding up into view. Inversion effect: the
+   letters are white with mix-blend-mode difference, so they show the footer photo and shade inverted (light where the footer is dark). */
+.ft-name{--fit:40.7cqw;container-type:inline-size;display:flex;align-items:flex-start;margin-top:36px;user-select:none;line-height:1;mix-blend-mode:difference}
+.ft-l{display:block;overflow:clip;padding:0 0 .1em;margin-bottom:-.1em}
+.ft-l > span{display:block;font:700 var(--fit)/.8 var(--font-text),sans-serif;letter-spacing:.04em;color:#fff;text-transform:uppercase}
+.ft-reg > span{font-size:calc(var(--fit) * .2);line-height:1;letter-spacing:0;margin:.35em 0 0 .25em}
 .ft-name.is-ready .ft-l > span{transform:translate3d(0,105%,0)}
 .ft-name.is-in .ft-l > span{transform:none;transition:transform 1.1s cubic-bezier(.17,.84,.44,1);transition-delay:calc(var(--i,0) * 90ms)}
 @media print,(prefers-reduced-motion:reduce){.ft-name.is-ready .ft-l > span{transform:none}}
+@media print{.ft-name{mix-blend-mode:normal}.ft-l > span{color:rgba(0,0,0,.15)}}
 @media (min-width:901px){.ft-name{margin-top:48px}}
 /* /start/ shows only the small print (HideOnStart): no gap above it */
 footer .container > .ft-copy:first-child{margin-top:0;border-top:0;padding-top:0}

@@ -217,9 +217,9 @@ main h2{animation:fadeUp .9s ease .3s both}
 
 /* Underlined words in headings (__word__ in a heading, rendered by components/ui/Mark.jsx; the hero headline uses <u> directly): a thick gold
    line under the word, set clear of the letters so it never cuts through them. */
-h1 u,h2 u,h3 u,.hero-title u,.st-hero-title u,.st-lead u,.promo-title u{text-decoration:none;position:relative;display:inline-block;white-space:nowrap}
+h1 u,h2 u,h3 u,.hero-title u,.st-hero-title u,.st-lead u,.sv-statement u,.promo-title u{text-decoration:none;position:relative;display:inline-block;white-space:nowrap}
 /* The line is a hand-drawn SVG (components/ui/HandUnderline.jsx) under the word. Without it (an older <u> with no drawing) the plain gold line returns. */
-h1 u:not(:has(.hand-line)),h2 u:not(:has(.hand-line)),h3 u:not(:has(.hand-line)),.hero-title u:not(:has(.hand-line)),.st-hero-title u:not(:has(.hand-line)),.st-lead u:not(:has(.hand-line)){
+h1 u:not(:has(.hand-line)),h2 u:not(:has(.hand-line)),h3 u:not(:has(.hand-line)),.hero-title u:not(:has(.hand-line)),.st-hero-title u:not(:has(.hand-line)),.st-lead u:not(:has(.hand-line)),.sv-statement u:not(:has(.hand-line)){
   text-decoration-line:underline;text-decoration-color:var(--gold);text-decoration-thickness:.09em;
   text-underline-offset:.16em;text-decoration-skip-ink:none;
 }

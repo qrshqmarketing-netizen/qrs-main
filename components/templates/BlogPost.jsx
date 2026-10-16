@@ -13,6 +13,8 @@ import renderSection from '@/components/blog/PostVisuals';
 import { BLOG_LINK, blogPath, HOME } from '@/data/catalog';
 import { relatedLinks } from '@/data/content';
 import { pageJsonLd } from '@/lib/structuredData';
+import { authorOf } from '@/data/authors';
+import SiteLink from '@/components/ui/SiteLink';
 import './BlogPost.css';
 
 const FAQ_HEADING = 'Frequently Asked Questions';
@@ -109,6 +111,7 @@ export default function BlogPost({ post }) {
   const path = blogPath(post.slug);
   const crumbs = [HOME, BLOG_LINK, { label: post.title, href: path }];
   const faqs = post.faqs || [];
+  const author = authorOf(post); // Tony G., the owner, unless the article names another known author (data/authors.js)
   const schema = pageJsonLd({
     path,
     title: post.metaTitle,
@@ -116,7 +119,7 @@ export default function BlogPost({ post }) {
     crumbs,
     faqs,
     image: post.image,
-    article: { headline: post.title, datePublished: post.datePublished, dateModified: post.dateModified, author: post.author },
+    article: { headline: post.title, datePublished: post.datePublished, dateModified: post.dateModified, author },
   });
   const toc = [...post.sections.map((s) => ({ id: headingId(s.heading), label: s.heading })), ...(faqs.length ? [{ id: headingId(FAQ_HEADING), label: FAQ_HEADING }] : [])];
   return (
@@ -129,11 +132,11 @@ export default function BlogPost({ post }) {
           <div className="eyebrow">Roofing Blog</div>
           <h1>{post.title}</h1>
           <p className="post-meta">
-            {post.author && (
-              <>
-                By <span className="post-author">{post.author}</span>, Quality Roofing Specialists ·{' '}
-              </>
-            )}
+            By{' '}
+            <SiteLink className="post-author" href={author.href} rel="author">
+              {author.name}
+            </SiteLink>
+            , {author.role}, Quality Roofing Specialists ·{' '}
             <time dateTime={post.datePublished}>{postDate(post.datePublished)}</time>
             {post.dateModified && post.dateModified !== post.datePublished && (
               <>
@@ -181,6 +184,16 @@ export default function BlogPost({ post }) {
             </section>
           )}
           {post.closing && <PostSection section={post.closing} id={headingId(post.closing.heading)} />}
+          {/* Who wrote it (E-E-A-T): the author's name, role and a short bio from the About page, with a link there */}
+          <aside className="post-author-box" aria-label="About the author">
+            <span className="post-author-mark" aria-hidden="true">{author.name.charAt(0)}</span>
+            <div>
+              <p className="post-author-name">
+                Written by <SiteLink href={author.href} rel="author">{author.name}</SiteLink>, {author.role}
+              </p>
+              <p>{author.bio}</p>
+            </div>
+          </aside>
         </div>
       </article>
       <RelatedLinks heading="Related services" links={relatedLinks(post.related)} />

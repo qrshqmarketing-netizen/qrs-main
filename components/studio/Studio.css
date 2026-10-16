@@ -222,3 +222,9 @@ main.studio .section,main.studio .faq,main.studio .latest-articles{background-im
   .st-how-frame.on{opacity:1;transform:none}
   .st-how-frame img{object-fit:cover}
 }
+
+/* "Who we are": the paragraph under the statement, larger, revealed word by word on scroll (WordReveal.jsx) */
+.st-intro .st-intro-reveal{grid-template-columns:1fr;max-width:52rem}
+.st-intro .st-intro-reveal p{font-size:clamp(19px,1.75vw,25px);line-height:1.55;letter-spacing:-.01em;color:var(--ink)}
+.st-intro .st-intro-reveal a{color:inherit;text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--gold) 70%,transparent);text-decoration-thickness:.07em;text-underline-offset:.18em}
+.wr-w{will-change:opacity}

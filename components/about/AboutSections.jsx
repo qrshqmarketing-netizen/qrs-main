@@ -185,7 +185,7 @@ export function AboutProcess({ process }) {
 
 export function AboutTeam({ team }) {
   return (
-    <section className="ab-section ab-team tinted">
+    <section className="ab-section ab-team tinted" id="team">
       <div className="container">
         <div className="ab-split ab-head">
           <Label>{team.heading}</Label>

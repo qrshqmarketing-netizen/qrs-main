@@ -55,32 +55,19 @@ export const FLAT_CONTENT = {
         intro: 'A flat roof replacement removes the old roofing down to the deck, addresses any damaged decking and installs a new modified bitumen or other low-slope system planned around how your roof drains. QRS replaces worn-out flat roofs across Los Angeles and Orange County with our *FlatGuard* low-slope system, starting with a free roof evaluation.',
         highlights: ['Full tear-off down to the deck', 'Drainage planned into the new roof', '10-Year workmanship warranty (call for details)'],
       },
-      overview: {
-        paragraphs: [
-          'Flat roofs rarely fail all at once. They wear out: the surface dries and cracks under the Southern California sun, blisters rise where moisture is trapped, laps start to open, and patches pile up around the same drains and walls. Once the problems are spread across the roof, or water has reached the deck, more patching stops making sense. A **full tear-off** lets us remove layers that may be holding moisture, address damaged decking and build the new roof on a clean, sound surface instead of covering old problems up.',
-          'Replacement is also the moment to improve how the roof drains. We study the slope, the low spots where water has been ponding, and whether the drains, scuppers and downspouts can keep up with a winter storm. Where it helps, the scope can include crickets, small raised sections that steer water around curbs and toward the outlets. Not sure your roof has reached this point? A [flat roof inspection](/roof-inspection/#flat-roofs) shows you, with photos, whether a [flat roof repair](/residential-roofing/flat-roofing/repair/) would still do the job.',
-        ],
-      },
-      process: {
-        subheading: 'How a flat roof replacement works',
+      // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
+      story: {
+        label: 'Flat roof replacement',
+        lead: 'Flat roofs rarely fail all at once. They wear __out__.',
+        text: 'The surface dries and cracks under the sun, blisters rise where moisture is trapped, laps open and patches pile up around the same drains and walls. Once the problems are spread across the roof, or water has reached the deck, more patching stops making sense.',
+        heading: 'How we replace a flat roof',
         image: '/images/flat-roof-replacement-tear-off-drone-view.webp',
         imageAlt: 'Aerial view of a flat roof tear-off in progress, down to the plywood deck with new curbs framed in',
-        steps: [
-          { title: 'Roof Evaluation and written scope', text: 'We walk the roof, photo-document the membrane, drains and flashings, and put the full scope and price in writing before anything is torn off.', bullets: ['Membrane wear, blisters and splits', 'Ponding and drainage patterns', 'Parapets, curbs and penetrations'] },
-          { title: 'Tear-off to the deck', text: 'The old roofing comes off down to the deck, and we keep debris contained and cleaned up as we go.', bullets: ['Old layers removed, not roofed over', 'Decking inspected and photographed'] },
-          { title: 'Drainage and edge prep', text: 'Before the new roof goes on, we prepare the edges, drains and scuppers and build any crickets your scope calls for.' },
-          { title: 'New low-slope system', text: 'We install the modified bitumen or other low-slope system named in your scope, sealing every lap and flashing each parapet, curb, vent and skylight.', bullets: ['Laps and seams sealed', 'Parapet and wall flashings', 'HVAC curbs, vents and skylights'] },
-          { title: 'Final walkthrough', text: 'When the roof is done, we sit down with you, walk through the photos from tear-off to finish and explain your 10-year workmanship warranty (call for details).' },
-        ],
-      },
-      why: {
-        heading: 'Why Choose QRS for Flat Roof Replacement?',
-        intro: 'A new flat roof is only as good as its drainage and its details, and both are decided long before the last lap is sealed.',
-        points: [
-          { title: 'Drainage comes first', text: 'We plan the new roof around where water actually goes, not simply around what the old roof looked like.' },
-          { title: 'Nothing covered up', text: 'A full tear-off means the deck gets seen, and any damage is photographed and explained instead of buried under new layers.' },
-          { title: 'Scope and price in writing', text: 'Before the tear-off begins, you know the system, the drainage work and the price.' },
-          { title: '10-Year workmanship warranty', text: 'Your new roof is backed by the QRS Guarantee, our 10-year workmanship warranty (call for details), and we review it with you once the roof is finished.' },
+        principles: [
+          { title: 'Tear it off. Don’t roof over it.', text: 'The old layers come off down to the deck, so anything holding moisture goes with them, and damaged decking is found, photographed and explained instead of buried under new layers.', bullets: ['Membrane wear, blisters and splits', 'Ponding and drainage patterns', 'Parapets, curbs and penetrations'] },
+          { title: 'Plan the roof around the water.', text: 'We study the slope, the low spots where water has been ponding and whether the drains, scuppers and downspouts can keep up with a winter storm. Where it helps, the scope includes crickets, small raised sections that steer water around curbs toward the outlets.' },
+          { title: 'Every lap sealed, every curb flashed.', text: 'The modified bitumen or other low-slope system named in your scope goes on with every lap sealed and every parapet, curb, vent and skylight flashed.', bullets: ['Laps and seams sealed', 'Parapet and wall flashings', 'HVAC curbs, vents and skylights'] },
+          { title: 'In writing first, in photos after.', text: 'You know the system, the drainage work and the price before the tear-off begins. When the roof is done, we walk through the photos from tear-off to finish and explain our 10-year workmanship warranty (call for details). Not sure it’s time? A [flat roof inspection](/roof-inspection/#flat-roofs) shows whether a [flat roof repair](/residential-roofing/flat-roofing/repair/) would still do.' },
         ],
       },
       faqs: [
@@ -110,30 +97,17 @@ export const FLAT_CONTENT = {
         intro: 'QRS handles flat roof repair across Los Angeles and Orange County, tracing each leak back to where water gets in and fixing the open seam, blister, split or failed flashing behind it. A ceiling stain can sit far from the actual leak, so we check the whole area and show you photos of the problem and the fix.',
         highlights: ['Leaks traced to where water enters', 'Seams, blisters and flashings repaired', 'Photos of the damage and the fix'],
       },
-      overview: {
-        paragraphs: [
-          'Water on a flat roof moves slowly and finds every weakness. The usual culprits are a seam or lap that has opened, a blister that has cracked, a split in the membrane, or flashing that has pulled away at a parapet wall, HVAC curb, vent or skylight. Clogged drains and scuppers make everything worse by letting water stand where it was never meant to. Because water can travel under the membrane before it drips, we check the whole area around a leak, not just the spot above the stain.',
-          'A targeted repair makes sense when the rest of the roof is still in reasonable shape. If the membrane is worn out across the surface, we’ll tell you plainly that more patching would only delay a [flat roof replacement](/residential-roofing/flat-roofing/replacement/). Either way, you get a written scope and price before we start, along with photos of the damage and, afterward, the finished repair. If a storm just came through and you’re seeing new stains, book a [free roof evaluation](#roof-check) and we’ll show you exactly what the rain found.',
-        ],
-      },
-      process: {
-        subheading: 'How we repair a flat roof',
-        steps: [
-          { title: 'Trace the leak', text: 'We inspect the roof around and upslope of the leak, checking seams, flashings, drains and penetrations until we find where water is getting in.', bullets: ['Seams, laps and blisters', 'Parapet caps and wall flashings', 'Drains, scuppers and curbs'] },
-          { title: 'Photos and a repair scope', text: 'You see photos of the problem and get a written scope and price for the repair before any work begins.' },
-          { title: 'Repair the problem area', text: 'We remove damaged membrane, reseal open laps and rebuild failed flashings, using materials compatible with your existing roof system.', bullets: ['Cracked blisters and splits patched', 'Open laps and seams resealed', 'Loose or failed flashings rebuilt'] },
-          { title: 'Check the drainage path', text: 'We make sure nearby drains and scuppers are open, because a repair holds up better when water isn’t sitting on it.' },
-          { title: 'Photos of the finished repair', text: 'You get photos of the completed work and a plain-English rundown of what caused the leak.' },
-        ],
-      },
-      why: {
-        heading: 'Why Choose QRS for Flat Roof Repair?',
-        intro: 'A flat roof repair only works if it fixes the real problem, so we take the time to find it before we pick up a tool.',
-        points: [
-          { title: 'Source, not symptoms', text: 'Your ceiling stain tells us where to start looking, not where to patch.' },
-          { title: 'Honest repair-or-replace advice', text: 'If your roof is past repairing, we’ll say so and show you the photos that explain why.' },
-          { title: 'No mystery pricing', text: 'The repair scope and price are in writing before we start, with nothing vague tucked into the fine print.' },
-          { title: 'A clean job site', text: 'We clean up as we go and leave your property as tidy as we found it.' },
+      // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
+      story: {
+        label: 'Flat roof repair',
+        lead: 'Water on a flat roof moves slowly and finds every __weakness__.',
+        text: 'It can travel under the membrane before it drips, so the stain on your ceiling may sit far from the opening. That’s why we check the whole area around a leak, not just the spot above the stain.',
+        heading: 'How we repair a flat roof',
+        principles: [
+          { title: 'Check the whole area. Find the opening.', text: 'A roofer works around and upslope of the leak until the cause is found, and photographs it before anything is fixed.', bullets: ['Seams, laps and blisters', 'Parapet caps and wall flashings', 'Drains, scuppers and equipment curbs', 'Vents and skylights'] },
+          { title: 'Repair with what your roof is made of.', text: 'Damaged membrane is cut out, open laps are resealed and failed flashings are rebuilt, with materials that work with your existing roof system.' },
+          { title: 'Open drains. A repair that stays dry.', text: 'We make sure nearby drains and scuppers are clear, because a repair lasts longer when water isn’t standing on it.' },
+          { title: 'Patch or replace, said plainly.', text: 'A targeted repair makes sense when the rest of the roof is in reasonable shape. If the membrane is worn out across the surface, we’ll tell you that more patching only delays a [flat roof replacement](/residential-roofing/flat-roofing/replacement/). Either way, the scope and price are in writing before we start, and you get photos of the finished repair.' },
         ],
       },
       faqs: [
@@ -160,30 +134,17 @@ export const FLAT_CONTENT = {
         intro: 'A new flat roof installation puts a modified bitumen or other low-slope roof on an ADU, addition, garage or patio cover, with the slope, drains and tie-ins planned before the first layer goes down. QRS builds new flat roofs across Los Angeles and Orange County as part of the *FlatGuard* Roof System. Request an estimate to get started.',
         highlights: ['ADUs, additions, garages and patio covers', 'Slope and drain locations planned early', 'Clean tie-ins to your existing roof'],
       },
-      overview: {
-        paragraphs: [
-          'New low-slope roofs are a big part of how homes in Los Angeles and Orange County grow: backyard ADUs, room additions, new garages, solid patio covers, contemporary homes built from scratch and remodels that change part of a house to a low-slope roof. With no old roof to work around, this is the one chance to get the fundamentals right. That means enough slope for water to move, drains and scuppers in the right places, and clean flashing wherever the new roof meets a wall, a parapet or an existing roof.',
-          'The earlier we see your plans, the more we can help, because the slope is usually built into the framing and those decisions are far easier to make on paper than to correct later. Once the deck is on, our crews install **modified bitumen or another low-slope system** matched to how the roof will drain and what it will carry, whether that’s a rooftop HVAC unit, a skylight or nothing at all. Already have a worn flat roof? Then a [flat roof replacement](/residential-roofing/flat-roofing/replacement/) is the service you’re looking for.',
-        ],
-      },
-      process: {
-        subheading: 'How a new flat roof installation works',
-        steps: [
-          { title: 'Plans and site review', text: 'We review your plans or visit the site to look at the planned slope, the deck and where water will leave the roof.', bullets: ['Slope and drainage direction', 'Drain and scupper locations', 'Walls, parapets and tie-ins'] },
-          { title: 'Written scope and price', text: 'You get a written scope naming the roof system, flashings and drainage details, along with the price, before work starts.' },
-          { title: 'Edges, drains and flashings', text: 'Once the deck is ready, we prepare the roof edges and build the flashing details at drains, scuppers, walls and curbs.' },
-          { title: 'Membrane and tie-ins', text: 'We install the roof system named in your scope and build the transition to your existing roof so water flows away from the joint, not into it.', bullets: ['Sealed laps across the whole roof', 'Tie-ins to tile or shingle roofs', 'Vents, skylights and HVAC curbs'] },
-          { title: 'Final walkthrough', text: 'Before we call the job done, we show you the finished roof, including photos of the layers underneath, and explain your 10-year workmanship warranty (call for details).' },
-        ],
-      },
-      why: {
-        heading: 'Why Choose QRS for New Flat Roof Installation?',
-        intro: 'On new construction, a roofer’s input matters most before the roof is built, while slope and drain locations can still change.',
-        points: [
-          { title: 'Early drainage input', text: 'We’ll tell you where water will go before the roof exists, so you’re not dealing with ponding after move-in.' },
-          { title: 'Careful tie-ins', text: 'The joint between new and existing roofs gets flashing detailed for how water actually flows across it.' },
-          { title: 'Photo-documented details', text: 'We photograph the base layers, flashings and tie-ins as the roof goes on, so there’s a record of work that’s hidden once it’s finished.' },
-          { title: 'The QRS Guarantee', text: 'Every new roof we install is backed by our 10-year workmanship warranty (call for details), so you know we stand behind the work.' },
+      // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
+      story: {
+        label: 'Flat roof installation',
+        lead: 'A new flat roof is the one chance to get the __slope__ right.',
+        text: 'Backyard ADUs, room additions, new garages, solid patio covers and contemporary homes all grow with low-slope roofs. With no old roof to work around, the slope, the drains and the tie-ins can be planned properly, and they’re far easier to decide on paper than to correct later.',
+        heading: 'How we install a new flat roof',
+        principles: [
+          { title: 'See the plans early.', text: 'We review your plans or visit the site, because the slope is usually built into the framing. You’ll know where water will go before the roof exists, so you’re not dealing with ponding after move-in.', bullets: ['Slope and drainage direction', 'Drain and scupper locations', 'Walls, parapets and tie-ins'] },
+          { title: 'Matched to what the roof carries.', text: 'Once the deck is ready, the edges and the flashings at drains, scuppers, walls and curbs are built, and the modified bitumen or other low-slope system goes on, matched to how the roof drains and whether it carries an HVAC unit, a skylight or nothing at all.' },
+          { title: 'A tie-in that sends water away.', text: 'Where the new roof meets an existing tile or shingle roof, the transition is flashed for how water actually flows across it, so it runs away from the joint, not into it.', bullets: ['Sealed laps across the whole roof', 'Tie-ins to tile or shingle roofs', 'Vents, skylights and HVAC curbs'] },
+          { title: 'A record of what’s hidden.', text: 'The scope names the system, flashings and drainage details with the price before work starts, and we photograph the base layers, flashings and tie-ins as they go on. Already have a worn flat roof? [Flat roof replacement](/residential-roofing/flat-roofing/replacement/) is the service you’re looking for.' },
         ],
       },
       faqs: [

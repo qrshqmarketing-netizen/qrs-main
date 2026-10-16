@@ -17,61 +17,19 @@ export const EMERGENCY_ROOF_REPAIR = {
       'For emergency roof repair in Los Angeles and Orange County, stay off the roof, move belongings away from the leak and call QRS, even after hours or on a weekend. A roofer assesses and photographs the storm damage or sudden leak, puts temporary protection such as a tarp in place when it’s needed, then makes the permanent repair, priced in writing first.',
     highlights: ['Damage assessed and photo-documented', 'Temporary protection, like a tarp, if needed', 'Permanent repair with a written scope'],
   },
-  overview: {
-    paragraphs: [
-      'Southern California roofs can go months without a real test, then face Santa Ana gusts that lift shingles and loosen tiles, or a winter storm that drops heavy rain in a few hours. When water starts coming in, put safety first. Stay off the roof, keep away from water near light fixtures and outlets, and don’t stand under a sagging ceiling. If a tree has come through the roof or a power line is down, keep everyone clear and call 911. Then move furniture, rugs and electronics away from the leak, set out buckets and take photos of the damage.',
-      'Next, call us. A roofer assesses the damage, traces where water is getting in and **photo-documents** what we find, including the spots you can’t see from the ground. If the permanent fix can’t happen right away, we can put temporary protection in place, such as a tarp over the damaged area, to limit further water damage. The permanent [roof repair](/roof-repair/) follows, with a written scope and price you approve before work starts. Not sure whether what you’re seeing is urgent? [Request an estimate](#roof-check) and tell us about it.',
-    ],
-  },
-  process: {
-    subheading: 'From your call to the finished repair',
+  // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
+  story: {
+    label: 'Emergency roof repair',
+    lead: 'When water is coming in, the first job is to stop more __damage__.',
+    text: 'Stay off the roof, keep away from water near light fixtures and outlets, and don’t stand under a sagging ceiling. If a tree has come through the roof or a power line is down, keep everyone clear and call 911. Then move furniture, rugs and electronics away from the leak, set out buckets, take photos and call us.',
+    heading: 'How we handle a roof emergency',
     image: '/images/homeowners-looking-at-leak-in-ceiling.webp',
     imageAlt: 'Homeowners looking up at a ceiling leak dripping into a bucket',
-    steps: [
-      {
-        title: 'You call and tell us what happened',
-        text: 'Describe what the storm did and what you’re seeing inside and out, and we’ll let you know when a roofer can come out to assess the damage.',
-      },
-      {
-        title: 'Assessment and photos',
-        text: 'A roofer inspects the damaged area and the roof around it, follows the water’s path and photographs everything we find.',
-        bullets: ['Missing, lifted or broken shingles and tiles', 'Torn flashings and damaged roof edges', 'Where water is getting inside', 'Branches and debris on the roof'],
-      },
-      {
-        title: 'Temporary protection if needed',
-        text: 'When the permanent repair has to wait, we can cover the damaged area, for example with a tarp, to limit further water damage in the meantime.',
-      },
-      {
-        title: 'Written scope and price',
-        text: 'Before the permanent repair starts, you get a written scope and price along with the photos, so you know exactly what you’re approving.',
-        bullets: ['Photos of the damage we found', 'What the permanent repair includes', 'Photos and scope you can share with your insurance company'],
-      },
-      {
-        title: 'Permanent repair and clean-up',
-        text: 'We make the repair as scoped, finish with a nail sweep and a tidy clean-up, and show you photos of the completed work.',
-      },
-    ],
-  },
-  why: {
-    heading: 'Why Choose QRS for Emergency Roof Repair?',
-    intro: 'After a storm, you need to know what happened to your roof and what it will take to fix it, explained in plain English.',
-    points: [
-      {
-        title: 'A roofer on your roof',
-        text: 'A roofer, not a salesperson, assesses the damage and tells you plainly what needs attention now and what can wait.',
-      },
-      {
-        title: 'Photos of every stage',
-        text: 'You get photos of the damage, any temporary protection and the finished repair, so you know exactly what was done up there.',
-      },
-      {
-        title: 'Fixes sized to the damage',
-        text: 'Storm damage is often limited to one part of the roof, and when a repair will fix it, that’s what we recommend. If the roof was already failing, our photos show why and we’ll explain your [roof replacement](/roof-replacement/) options.',
-      },
-      {
-        title: 'Every roof type, one team',
-        text: 'As a licensed California contractor since 2020, we work on tile, shingle and flat roofs, and storm damage shows up differently on each one.',
-      },
+    principles: [
+      { title: 'You call. A roofer comes out.', text: 'Tell us what the storm did and what you’re seeing inside and out. Our field techs take emergency calls on weekdays and weekends outside regular office hours, and we’ll tell you when a roofer can be there.' },
+      { title: 'Find every spot the storm opened.', text: 'A roofer inspects the damaged area and the roof around it, follows the water’s path and photographs everything, including what you can’t see from the ground.', bullets: ['Missing, lifted or broken shingles and tiles', 'Torn flashings and damaged roof edges', 'Where water is getting inside', 'Branches and debris on the roof'] },
+      { title: 'Stop the water now. Fix it properly next.', text: 'When the permanent repair has to wait, we can cover the damaged area, for example with a tarp, to limit further water damage. Storm damage is often limited to one part of the roof, and when a repair will fix it, that’s what we recommend; if the roof was already failing, the photos show why and we’ll explain your [roof replacement](/roof-replacement/) options.' },
+      { title: 'Photos you can share. A price in writing.', text: 'Before the permanent repair starts, you get a written scope and price with the photos, ready to share with your insurance company. We finish with a nail sweep, a tidy clean-up and photos of the completed work.' },
     ],
   },
   faqs: [

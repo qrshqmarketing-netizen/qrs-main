@@ -10,6 +10,8 @@ import RoofCheck from '@/components/sections/RoofCheck';
 import SplitFeature from '@/components/sections/SplitFeature';
 import ValueGrid from '@/components/sections/ValueGrid';
 import StudioProjects from '@/components/studio/StudioProjects';
+import RoofDiagram from '@/components/sections/RoofDiagram';
+import { diagramFor } from '@/data/roofDiagrams';
 import JsonLd from '@/components/ui/JsonLd';
 import { pageJsonLd } from '@/lib/structuredData';
 import { closingCta, faqSub } from './shared';
@@ -53,6 +55,8 @@ export default async function HubPage({ hub, crumbs, eyebrow, image, imageAlt, c
       {extraGrid && <CardGrid id="services" heading={extraGrid.heading} intro={extraGrid.intro} cards={extraGrid.cards} tone="wash" />}
       <CardGrid id={extraGrid ? 'buildings' : 'services'} heading={hub.cards.heading} intro={hub.cards.intro} cards={cards} tone={extraGrid ? undefined : 'wash'} />
       {/* Google reviews, a few sections below the hero (owner, October 14 2026) */}
+      {/* The blog's roof illustration where it explains this hub (data/roofDiagrams.js) */}
+      <RoofDiagram diagram={diagramFor(crumbs.at(-1).href)} />
       {/* The work itself, right after the services (owner, October 15 2026, after maben.com.au): projects on this hub's pages, newest first */}
       <StudioProjects projects={projectsShownOn(crumbs.at(-1).href).projects} heading="Recent roofing projects" />
       <ReviewMarquee />

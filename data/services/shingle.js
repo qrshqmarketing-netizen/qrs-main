@@ -54,32 +54,19 @@ export const SHINGLE_CONTENT = {
         intro: 'A shingle roof replacement removes your old roof down to the deck and installs a complete new system: underlayment, flashings, balanced attic ventilation and new shingles, built to the manufacturer’s requirements. QRS replaces shingle roofs across Los Angeles and Orange County with our *TotalShield* Shingle System, starting with a free roof evaluation.',
         highlights: ['Full tear-off down to the deck', 'Balanced attic intake and exhaust', 'Your choice of shingle style and color'],
       },
-      overview: {
-        paragraphs: [
-          'Asphalt shingles give up a little ground every summer. Southern California sun breaks down the asphalt, the granules that shield it wash into the gutters, and the shingles grow brittle, then curl or cup at the edges. Once that wear is spread across the whole roof, repairs turn into a chase from one leak to the next. A **full tear-off** ends the chase: we remove the old shingles and underlayment down to the deck, check the decking for soft or damaged spots and build the new roof from the bottom layer up.',
-          'A new roof is also the time to fix what the old one got wrong. We plan balanced attic ventilation, with intake low at the eaves and exhaust near the ridge, because heat trapped in the attic shortens shingle life. Flashing at walls, chimneys and skylights is part of the plan too, since that’s where many shingle leaks begin. If your roof isn’t at that point yet, a [shingle roof repair](/residential-roofing/shingle-roofing/repair/) may be enough, and a [free roof evaluation](#roof-check) will tell you which way to go.',
-        ],
-      },
-      process: {
-        subheading: 'How a shingle roof replacement works',
+      // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
+      story: {
+        label: 'Shingle roof replacement',
+        lead: 'When the wear is roof-wide, patching becomes a __chase__.',
+        text: 'Southern California sun breaks down the asphalt, the granules that shield it wash off, and the shingles turn brittle, then curl or cup at the edges. Once that wear is spread across the whole roof, a full tear-off ends the chase from one leak to the next.',
+        heading: 'How we replace a shingle roof',
         image: '/images/shingle-roof-grey-roofing-services-card.webp',
         imageAlt: 'Close-up of a finished grey shingle roof',
-        steps: [
-          { title: 'Roof Evaluation and photos', text: 'A roofer inspects the roof, photographs the wear and tells you plainly whether replacement is the right call.', bullets: ['Granule loss, curling and brittleness', 'Flashings, valleys and penetrations', 'Attic intake and exhaust vents'] },
-          { title: 'Clear quote and shingle choice', text: 'You pick the shingle style and color, then get a written scope and price for the full system before any work begins.' },
-          { title: 'Tear-off and deck check', text: 'We protect your landscaping, strip the old roof down to the deck and look for soft, delaminated or damaged decking while it’s exposed.', bullets: ['Old shingles, nails and underlayment removed', 'Decking checked and photographed', 'Debris hauled off as we go'] },
-          { title: 'New shingle system installed', text: 'The new layers go on in order, each one lapped so water sheds over the layer below it.', bullets: ['Drip edge and underlayment', 'Starter strips at eaves and rakes', 'Shingles with step flashing at walls', 'Pipe boots, vents and ridge caps'] },
-          { title: 'Clean-up and final walkthrough', text: 'Once the site is clean, we review the finished roof with you and share photos from each stage of the job.' },
-        ],
-      },
-      why: {
-        heading: 'Why Choose QRS for Shingle Roof Replacement?',
-        intro: 'A new roof is a major investment, so we keep every step visible and every price in writing.',
-        points: [
-          { title: 'A roofer’s honest recommendation', text: 'A roofer who has been on your roof tells you whether it truly needs replacing, and if a [shingle roof tune-up](/roof-maintenance-plans/#tune-up) would keep it going, we’ll say so.' },
-          { title: 'Photos of what gets covered up', text: 'Once the new roof is on, the deck and underlayment are hidden for good, so we photograph them while they’re still exposed.' },
-          { title: 'A clean site, start to finish', text: 'Tarps over landscaping, careful clean-up and a final sweep for nails leave your yard the way we found it, something homeowners mention in their Google reviews.' },
-          { title: 'Backed by The QRS Guarantee', text: 'Your new shingle roof comes with our 10-year workmanship warranty (call for details), and we go over exactly what it covers at the final walkthrough.' },
+        principles: [
+          { title: 'Replace it only when it’s worn out.', text: 'A roofer inspects the roof, photographs the wear and tells you plainly whether replacement is the right call. If a repair or a [shingle roof tune-up](/roof-maintenance-plans/#tune-up) would keep it going, we say so.', bullets: ['Granule loss, curling and brittleness', 'Flashings, valleys and penetrations', 'Attic intake and exhaust vents'] },
+          { title: 'Down to the deck, photographed while it’s open.', text: 'With your landscaping covered, the old shingles, nails and underlayment come off, and the decking is checked for soft or delaminated spots. Once the new roof is on, the deck is hidden for good, so we photograph it while it’s exposed.' },
+          { title: 'Built in layers, with the attic breathing.', text: 'Each new layer laps over the one below so water sheds down the roof, and the attic gets balanced ventilation, intake low at the eaves and exhaust near the ridge, because trapped heat shortens shingle life.', bullets: ['Drip edge and underlayment', 'Starter strips at eaves and rakes', 'Step flashing at walls and chimneys', 'Pipe boots, vents and ridge caps'] },
+          { title: 'Your color, your price, in writing.', text: 'You pick the shingle style and color and get a written scope and price for the whole system before work begins. We finish with a clean-up and a sweep for nails, then walk the roof with you, with photos from each stage and our 10-year workmanship warranty (call for details).' },
         ],
       },
       faqs: [
@@ -109,29 +96,17 @@ export const SHINGLE_CONTENT = {
         intro: 'Shingle roof repair traces a leak or damage to its real source and fixes it properly, whether that’s a cracked pipe boot, a wind-lifted tab, a nail pop or failed flashing. QRS repairs shingle roofs across Los Angeles and Orange County, with photos of the problem and the fix and no push toward a new roof.',
         highlights: ['Leaks traced to where water gets in', 'Wind-damaged shingles replaced and sealed', 'Before-and-after repair photos'],
       },
-      overview: {
-        paragraphs: [
-          'On a shingle roof, water rarely comes in where the ceiling stain appears. It slips past a failed seal, runs along the underlayment or a rafter and drips somewhere else, which is why guesswork leads to patches that miss. We trace the leak back to where it starts, whether that’s a split rubber collar on a plumbing vent, step flashing pulled away from a stucco wall, a popped nail or a valley packed with leaves. Then we photograph it, so you can see the cause for yourself before anything is fixed.',
-          'A good repair is built like the rest of the roof. When we replace shingles, we lift the courses above them carefully, nail the new pieces in the manufacturer’s nailing zone and reseal the tabs we disturbed. Failed flashing gets reset or replaced, not just covered with another layer of sealant. If the wear turns out to be roof-wide, we’ll say so plainly and explain when a [shingle roof replacement](/residential-roofing/shingle-roofing/replacement/) makes more sense. Not sure what’s going on up there? Start with a [free roof evaluation](#roof-check).',
-        ],
-      },
-      process: {
-        subheading: 'How we repair a shingle roof',
-        steps: [
-          { title: 'Trace the leak or damage', text: 'A roofer inspects the problem area and the likely entry points around it, photographing anything that looks wrong.', bullets: ['Pipe boots and vent collars', 'Step, counter and chimney flashing', 'Lifted, creased or missing shingles', 'Nail pops and exposed fasteners'] },
-          { title: 'Written repair scope', text: 'Before we start, you get a written scope and price for the repair, with photos that show what needs attention and why.' },
-          { title: 'Repair the problem properly', text: 'We replace damaged shingles, flashings or pipe boots and reseal the shingles around them so they lie flat and seal down again.', bullets: ['Closest available shingle match', 'Correct nailing and hand-sealed tabs', 'Flashing reset or replaced'] },
-          { title: 'Show you the finished repair', text: 'You see photos of the completed work, and we explain what to watch for so a small problem stays small.' },
-        ],
-      },
-      why: {
-        heading: 'Why Choose QRS for Shingle Roof Repair?',
-        intro: 'A repair should solve the problem you called about, and you should be able to see that it did.',
-        points: [
-          { title: 'Repair first, when repair will do', text: 'If a repair solves it, that’s what we recommend. A cracked pipe boot is not a reason to sell you a new roof.' },
-          { title: 'Leak tracing, not guesswork', text: 'We follow the water’s path back to the entry point, so the fix goes where the problem actually is.' },
-          { title: 'Proof you can see', text: 'You get photos of the damaged flashing or shingle before we touch it and of the finished repair afterward.' },
-          { title: 'Local weather know-how', text: 'We repair shingle roofs all over [Los Angeles and Orange County](/service-areas/), so we know how coastal air, valley heat and Santa Ana winds each wear a roof down.' },
+      // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then four principles, each fact said once
+      story: {
+        label: 'Shingle roof repair',
+        lead: 'A shingle roof rarely leaks where the __stain__ is.',
+        text: 'Water slips past a failed seal, runs along the underlayment or a rafter and drips somewhere else, which is why a patch made under the ceiling stain so often misses. So we start where the water gets in, and you see the cause in photos before anything is fixed.',
+        heading: 'How we repair a shingle roof',
+        principles: [
+          { title: 'Find the entry point. Then fix it.', text: 'A roofer works up the roof from the leak, checking the places shingle roofs let water in, and photographs anything that looks wrong.', bullets: ['Pipe boots and vent collars', 'Step, counter and chimney flashing', 'Lifted, creased or missing shingles', 'Nail pops and exposed fasteners'] },
+          { title: 'A repair that matches the roof.', text: 'New shingles go in with the courses above lifted carefully, nailed in the manufacturer’s nailing zone and hand-sealed, in the closest available match. Failed flashing is reset or replaced, not covered with another layer of sealant.' },
+          { title: 'Repair first. Replace when it’s worn out.', text: 'A cracked pipe boot is not a reason to sell you a new roof. If the wear turns out to be roof-wide, we show you the photos and explain when a [shingle roof replacement](/residential-roofing/shingle-roofing/replacement/) makes more sense.' },
+          { title: 'A written price first. Photos after.', text: 'You get a written scope and price before the work starts, and photos of the finished repair afterward, with what to watch for so a small problem stays small.' },
         ],
       },
       faqs: [
@@ -158,32 +133,19 @@ export const SHINGLE_CONTENT = {
         intro: 'A shingle roof installation is a complete new roof, planned from the deck up, for a new home, addition, ADU or garage, or for a switch from wood shakes or tile. QRS installs new shingle roofs across Los Angeles and Orange County with our *TotalShield* Shingle System, settling ventilation, flashing and edge details before the first bundle goes on.',
         highlights: ['New homes, additions, ADUs and garages', 'Clean tie-ins to your existing roof', 'Switches from shake and other roof types'],
       },
-      overview: {
-        paragraphs: [
-          'A new shingle roof starts with decisions that are hard to change later: how the attic will breathe, where the water will run and how the roof meets the walls and the rest of the house. On an ADU, a garage or a room addition, we plan the intake and exhaust vents, the flashing at each wall and the drip edge at the gutters before the shingles arrive. That way the shingles go onto a deck that’s ready for them, and the new roof looks like it belongs on your home.',
-          'Switching roof types counts as a new installation too. Moving from wood shakes or tile to shingles changes what the deck needs underneath, and the roof has to have enough pitch for shingles to shed water. Very shallow sections, like a porch roof or a patio cover, aren’t a fit for shingles and are better served by a [flat roof installation](/residential-roofing/flat-roofing/installation/). Whatever the project, you’ll have the scope and price in writing before work starts.',
-        ],
-      },
-      process: {
-        subheading: 'How a new shingle roof comes together',
+      // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
+      story: {
+        label: 'Shingle roof installation',
+        lead: 'On a new roof, the hardest decisions come before the first __bundle__.',
+        text: 'How the attic will breathe, where the water will run and how the roof meets the walls are hard to change later. Settling them first means the shingles go onto a deck that’s ready for them, and the new roof looks like it belongs on your home.',
+        heading: 'How we install a new shingle roof',
         image: '/images/shingle-roof-installation-underlayment.webp',
         imageAlt: 'Roofers installing felt underlayment during a shingle roof installation, with materials staged on the roof',
-        steps: [
-          { title: 'Plan the roof', text: 'We go over the plans or the existing roof with you or your builder, from pitch and decking to vents and wall flashing.', bullets: ['Pitch suited to shingles', 'Intake and exhaust vent layout', 'Wall and tie-in flashing details'] },
-          { title: 'Clear written quote', text: 'Your quote lists the shingle, underlayment and ventilation plan along with the price, so you and your builder work from the same plan.' },
-          { title: 'Deck prep and underlayment', text: 'Once the deck is solid and clean, drip edge and underlayment go down to keep the structure dry until the shingles are on.', bullets: ['Solid decking confirmed or added', 'Drip edge at eaves and rakes', 'Underlayment across the whole roof'] },
-          { title: 'Shingles, flashing and vents', text: 'Starter strips, shingles, step flashing, pipe boots and ridge vents go on to the manufacturer’s requirements, in clean, straight courses.' },
-          { title: 'Final walkthrough', text: 'We review the finished roof with you or your builder, including the photos we took before each layer was covered.' },
-        ],
-      },
-      why: {
-        heading: 'Why Choose QRS for a New Shingle Roof?',
-        intro: 'On a new roof, the details are easiest to get right before anything is covered up, and if you’re converting an existing roof, a [free roof evaluation](#roof-check) is the place to start.',
-        points: [
-          { title: 'Ventilation planned from the start', text: 'Balanced intake and exhaust are designed into the roof rather than added later, because attic heat can age shingles early.' },
-          { title: 'Careful tie-ins and wall flashing', text: 'Where an addition meets the existing roof or a stucco wall, we detail the flashing, including kick-out flashing where a roof edge runs into a wall, so water goes into the gutter instead of behind the wall.' },
-          { title: 'A tidy site for the next trade', text: 'We clean up as we go, so builders and the trades that follow walk onto a clear site.' },
-          { title: '10-Year workmanship warranty', text: 'Every roof we install is backed by The QRS Guarantee (call for details), and we explain how it works in plain English at the final walkthrough.' },
+        principles: [
+          { title: 'One plan for you and your builder.', text: 'We go over the plans or the existing roof with you or your builder, and the written quote lists the shingle, the underlayment, the ventilation plan and the price, so everyone works from the same page.', bullets: ['Pitch suited to shingles', 'Intake and exhaust vent layout', 'Wall and tie-in flashing details'] },
+          { title: 'Tie-ins that send water to the gutter.', text: 'Where an addition meets the existing roof or a stucco wall, the flashing is detailed, including kick-out flashing where a roof edge runs into a wall, so water goes into the gutter instead of behind the wall.' },
+          { title: 'Switching from shake or tile.', text: 'A change of roof type changes what the deck needs underneath, and the roof needs enough pitch for shingles to shed water. Very shallow sections, like a porch roof or a patio cover, are better served by a [flat roof installation](/residential-roofing/flat-roofing/installation/).' },
+          { title: 'Clean courses, and a clear site for the next trade.', text: 'On a solid deck, the drip edge and underlayment go down first, then starter strips, shingles, step flashing, pipe boots and ridge vents to the manufacturer’s requirements. We clean up as we go and walk the finished roof with you, with photos taken before each layer was covered.' },
         ],
       },
       faqs: [

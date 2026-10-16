@@ -1,0 +1,38 @@
+/* ---------- Service story (ServiceStory.jsx): a service page told the home page's way ----------
+   The same studio look as the home page's "Who we are" and "How we work": a small spaced label at the left, a large statement, then numbered
+   principles with two-beat headings and the process photo beside them from 901px. Theme tokens, so dark mode follows. Mobile first. */
+.sv-split{display:grid;gap:18px}
+.sv-label{margin:0;display:flex;align-items:center;gap:12px;font:600 12px/1.2 var(--font-text),sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);text-align:left}
+.sv-label:before{content:"";width:28px;height:1px;background:currentColor}
+body.studio-site main .sv-statement{margin:0;max-width:28ch;font:400 clamp(26px,4.6vw,46px)/1.18 var(--font-text),sans-serif;letter-spacing:-.025em;color:var(--ink);text-align:left}
+.sv-text{margin:24px 0 0;max-width:62ch;font-size:17px;line-height:1.7;color:var(--muted)}
+.sv-lead{padding-bottom:24px}
+
+.sv-how{padding-top:40px}
+body.studio-site main .sv-head h2{margin:0;text-align:left}
+.sv-body{display:grid;gap:32px;margin-top:36px}
+.sv-list{margin:0;padding:0;list-style:none;border-top:1px solid var(--line)}
+.sv-list > li{display:grid;grid-template-columns:2.6em 1fr;gap:4px;padding:24px 0;border-bottom:1px solid var(--line)}
+.sv-n{padding-top:6px;color:var(--gold-ink);font:600 13px/1 var(--font-text),sans-serif;letter-spacing:.08em}
+body.studio-site main .sv-list h3{margin:0;color:var(--ink);font:400 clamp(22px,2.4vw,30px)/1.2 var(--font-text),sans-serif;letter-spacing:-.02em;text-align:left;text-wrap:balance}
+.sv-list p{margin:10px 0 0;max-width:60ch;color:var(--muted);font-size:16px;line-height:1.65}
+.sv-bullets{margin:12px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px 8px}
+.sv-bullets li{padding:6px 12px;border:1px solid var(--line);border-radius:999px;color:var(--ink);font-size:13px;line-height:1.3}
+.sv-photo{position:relative;aspect-ratio:4/3;border-radius:var(--radius);overflow:hidden;background:var(--wash)}
+.sv-photo-in{position:absolute;inset:0} /* a positioned box for the fill image (the frame itself is sticky on desktop) */
+.sv-photo img{object-fit:cover}
+
+@media (min-width:901px){
+  .sv-split{grid-template-columns:minmax(150px,1fr) 4fr;gap:40px;align-items:start}
+  .sv-body{margin-top:44px}
+  .sv-body.has-photo{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(40px,5vw,88px);align-items:start}
+  .sv-body.has-photo .sv-photo{position:sticky;top:calc(var(--hd-h,84px) + 32px);aspect-ratio:4/5}
+  .sv-list > li{padding:30px 0}
+}
+
+/* Roof illustration from the blog on a service page (RoofDiagram.jsx) */
+.sv-diagram .sv-text{margin-top:14px}
+.sv-diagram-art{max-width:980px;margin:32px auto 0}
+.sv-diagram-link{display:inline-flex;align-items:center;gap:8px;margin:18px 0 0;color:var(--navy);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.sv-diagram-link svg{width:16px;height:16px}
+@media (min-width:901px){.sv-diagram-art{margin-top:40px}.sv-diagram-link{margin-left:calc((100% - 980px) / 2)}}

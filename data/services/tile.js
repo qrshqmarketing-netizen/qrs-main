@@ -54,32 +54,19 @@ export const TILE_CONTENT = {
         intro: 'A tile roof replacement takes your roof down to the deck and builds a complete new system: underlayment, flashings, clay or concrete tile and ridge details. QRS replaces tile roofs across Los Angeles and Orange County when the tiles themselves are past saving, backed by our 10-year workmanship warranty (call for details). It starts with a free roof evaluation.',
         highlights: ['Full tear-off down to the deck', 'Clay or concrete tile to suit your home', '10-Year workmanship warranty (call for details)'],
       },
-      overview: {
-        paragraphs: [
-          'Tile is durable, but it isn’t permanent. Older concrete tile can turn brittle and porous as its surface wears away, clay can crack after years of foot traffic and shaking, and some roofs carry so many mismatched patches that little is left worth saving. When the tiles are failing along with the underlayment, relaying them only puts worn material back on your house. In that case, **starting fresh** is the lasting fix: new underlayment, flashings and tile, built for Southern California sun, wind and winter storms.',
-          'If your tiles are still sound, a [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/) usually costs less and keeps the original look, and we’ll tell you when that’s the better route. When replacement is the right call, it’s also your chance to choose the tile profile and color that suit your home. Your written scope spells out the tile, underlayment, flashings, ridge details and clean-up before work starts, so you know exactly what you’re paying for.',
-        ],
-      },
-      process: {
-        subheading: 'How a tile roof replacement works',
+      // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
+      story: {
+        label: 'Tile roof replacement',
+        lead: 'Most of what makes a tile roof last sits __under__ the tile.',
+        text: 'Tile is durable, but not permanent: older concrete tile turns brittle and porous, clay cracks after years of foot traffic, and some roofs carry more patches than sound tile. When the tiles fail along with the underlayment, relaying them only puts worn material back on your house.',
+        heading: 'How we replace a tile roof',
         image: '/images/tile-roof-replacement-drone-view.webp',
-        imageAlt: 'Aerial view of a large finished clay tile roof on a commercial building',
-        steps: [
-          { title: 'Roof Evaluation and recommendation', text: 'We inspect the roof and photo-document the tile, flashing and underlayment condition, so the case for replacement is clear to you, not just to us.' },
-          { title: 'Choose your tile', text: 'We talk through clay and concrete options, profiles and colors, and help you pick a tile that suits your home and budget.', bullets: ['Clay barrel or S tile', 'Flat or S concrete tile', 'Colors that suit your home’s style'] },
-          { title: 'Tear-off to the deck', text: 'The old tile, underlayment and battens come off, and the deck gets a close look while it’s exposed.', bullets: ['Old roof removed down to the deck', 'Deck damage photographed', 'Debris cleared as we go'] },
-          { title: 'New tile system installed', text: 'Qualified crews install the new system cleanly and to spec, layer by layer, exactly as your scope describes.', bullets: ['New underlayment across the deck', 'Battens where the tile system calls for them', 'Flashings, valley metal and eave closures', 'New tile set and fastened to spec', 'Ridge and hip details finished'] },
-          { title: 'Final walkthrough with you', text: 'We walk the finished roof with you, share photos from each stage and go over your 10-year workmanship warranty in plain English (call for details).' },
-        ],
-      },
-      why: {
-        heading: 'Why Choose QRS for Tile Roof Replacement?',
-        intro: 'A new tile roof is a long-term investment, and most of what makes it last sits under the tile.',
-        points: [
-          { title: 'A straight answer on relay vs. replace', text: 'It starts with a [free roof evaluation](#roof-check). If your tiles can be saved, we’ll say so, and replacement is only recommended when the roof truly needs it.' },
-          { title: 'Built for Southern California', text: 'Underlayment, flashings and fastening are planned for intense sun, Santa Ana winds and heavy winter rain, not just for how the tile looks.' },
-          { title: 'A clean site, start to finish', text: 'Tile tear-offs are heavy, dusty work. We keep the job site clean throughout, and it’s something customers praise in their Google reviews.' },
-          { title: '10-Year workmanship warranty', text: 'Every new tile roof we install is backed by the QRS Guarantee (call for details), and our follow-through doesn’t end when the crew packs up.' },
+        imageAlt: 'Aerial view of a large finished clay tile roof',
+        principles: [
+          { title: 'Relay or replace? A straight answer.', text: 'A roofer-led evaluation photographs the tile, flashing and underlayment, so the case is clear to you, not just to us. If your tiles can be saved, a [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/) usually costs less and keeps the original look, and we’ll tell you so.' },
+          { title: 'The tile that suits your home.', text: 'Replacement is your chance to choose the profile and color. We talk through the clay and concrete options and help you pick one that suits your home and budget.', bullets: ['Clay barrel or S tile', 'Flat or S concrete tile', 'Colors that suit your home’s style'] },
+          { title: 'Built for sun, Santa Anas and winter rain.', text: 'The old tile, underlayment and battens come off and the deck is checked and photographed while it’s exposed. Then the new system goes on layer by layer, exactly as the written scope describes.', bullets: ['New underlayment across the deck', 'Battens where the tile system calls for them', 'Flashings, valley metal and eave closures', 'Ridge and hip details finished'] },
+          { title: 'A clean site and a walkthrough.', text: 'Tile tear-offs are heavy, dusty work, so the site is kept clean throughout. At the end we walk the finished roof with you, share photos from each stage and go over our 10-year workmanship warranty (call for details).' },
         ],
       },
       faqs: [
@@ -107,30 +94,17 @@ export const TILE_CONTENT = {
         intro: 'Tile roof repair finds where water really gets in, often well away from the stain on your ceiling, and fixes the tiles, flashings or underlayment responsible. QRS repairs tile roofs across Los Angeles and Orange County with the closest available tile match and photos of the problem and the fix.',
         highlights: ['Leaks traced to where water gets in', 'Closest available tile match', 'Photos of the problem and the fix'],
       },
-      overview: {
-        paragraphs: [
-          'Tile roofs shed water in layers. The tiles turn away most rain, and the underlayment beneath catches what slips past. So when water shows up inside, the cause could be a cracked or slipped tile, a valley clogged with leaves, a failed flashing at a wall or chimney, or worn underlayment in one section of the roof. Water can also run a long way along the underlayment before it finds a way in. Finding the **real entry point**, instead of patching the spot that happens to drip, is what makes a repair last.',
-          'Once the source is clear, the fix is targeted. Cracked tiles are replaced with the closest available match, loose ridge and hip tiles are reset, and failing mortar or flashings are repaired or replaced. If your roof has a handful of small issues rather than one leak, a [tile roof tune-up](/roof-maintenance-plans/#tune-up) can handle them in one visit. And if the underlayment is worn across the whole roof, we’ll tell you that a [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/) is the lasting fix instead of selling you repair after repair.',
-        ],
-      },
-      process: {
-        subheading: 'How a tile roof repair works',
-        steps: [
-          { title: 'Trace the leak', text: 'We inspect the roof above and around the problem area and photo-document what we find, tracing water back to where it actually gets in.', bullets: ['Broken or shifted tiles', 'Flashings at walls, chimneys and vents', 'Valleys, ridges and eave closures'] },
-          { title: 'Written repair scope', text: 'You approve a written scope and price for the repair before any work starts, including which tiles will be replaced.' },
-          { title: 'Careful access', text: 'We step only where tiles are supported and lift the overlapping courses by hand, so fixing one problem doesn’t create another.' },
-          { title: 'Repair and reset', text: 'Damaged pieces are replaced, flashings or underlayment are repaired as scoped, and the surrounding tiles go back in their original pattern.', bullets: ['Replacement tiles matched as closely as possible', 'Mortar and fasteners renewed where needed', 'Surrounding tiles reset and secured'] },
-          { title: 'Photos and follow-through', text: 'We show you before-and-after photos of the repair and explain, in plain English, what to keep an eye on next.' },
-        ],
-      },
-      why: {
-        heading: 'Why Choose QRS for Tile Roof Repair?',
-        intro: 'A tile repair should fix the cause, not just the drip, without leaving a trail of cracked tiles behind.',
-        points: [
-          { title: 'Experience with how tile is built', text: 'As a licensed California contractor since 2020, we know how clay and concrete tile roofs are layered, fastened and flashed, and that’s what finding a leak depends on.' },
-          { title: 'Honest when a repair won’t hold', text: 'A [free roof evaluation](#roof-check) gives you photos and a straight answer on whether a repair will last or the roof needs more.' },
-          { title: 'Photo proof of every fix', text: 'You get photos of the damage and the finished repair, so you’re never just taking our word for it.' },
-          { title: 'Matching that doesn’t stand out', text: 'We look for the closest available color and profile, so a repair on a front-facing slope doesn’t draw the eye.' },
+      // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
+      story: {
+        label: 'Tile roof repair',
+        lead: 'A tile roof keeps water out in __two__ layers, and a leak can start in either.',
+        text: 'The tiles turn away most of the rain and the underlayment beneath catches what slips past, so water can run a long way before it finds a way in. Finding the real entry point, instead of patching the spot that drips, is what makes a tile repair last.',
+        heading: 'How we repair a tile roof',
+        principles: [
+          { title: 'Trace the water. Then touch the tiles.', text: 'A roofer inspects the roof above and around the problem, photographs what they find and follows the water back to where it gets in. You approve a written scope and price, including which tiles will be replaced, before work starts.', bullets: ['Broken or shifted tiles', 'Flashings at walls, chimneys and vents', 'Valleys, ridges and eave closures'] },
+          { title: 'Step where the tiles are supported.', text: 'We walk only where tiles are supported and lift the overlapping courses by hand, so fixing one problem doesn’t crack the tiles around it.' },
+          { title: 'Matched tiles. The original pattern.', text: 'Damaged pieces are replaced with the closest available color and profile, mortar and fasteners are renewed where needed, and the surrounding tiles go back in their original pattern. You see before-and-after photos of the repair.' },
+          { title: 'A repair, a tune-up or a relay.', text: 'One leak gets a targeted repair. A handful of small issues can be handled in one [tile roof tune-up](/roof-maintenance-plans/#tune-up). If the underlayment is worn across the whole roof, we’ll tell you a [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/) is the lasting fix, instead of selling you repair after repair.' },
         ],
       },
       faqs: [
@@ -157,32 +131,19 @@ export const TILE_CONTENT = {
         intro: 'A tile lift & relay removes your existing tiles, replaces the worn underlayment beneath them and resets the same tiles in their original pattern, so your roof keeps its look. QRS does it across Los Angeles and Orange County as our *SecondLife* Tile Reset, renewing worn battens and flashings and replacing only cracked or broken tiles.',
         highlights: ['Your tiles reused, broken ones matched', 'New underlayment and flashings', 'Written scope and price first'],
       },
-      overview: {
-        paragraphs: [
-          'Clay and concrete tiles can last for decades, but the underlayment that actually keeps water out wears out much sooner. Once it dries out and cracks after years of Southern California heat, water that slips past the tiles has nowhere to go but into the deck. A **lift & relay** fixes the problem at its source: we remove the tiles, install new underlayment, renew worn battens and flashings, and reset the same tiles, replacing only the ones that are cracked or broken.',
-          'A relay is often the right middle ground between a patch and a full [tile roof replacement](/residential-roofing/tile-roofing/replacement/). It’s especially worth considering on Spanish Revival homes, where the original clay tile is part of the character and an exact match can be hard to find. Not sure which your roof needs? Our [free roof evaluation](#roof-check) looks at the underlayment, flashings and tile condition, then gives you a clear recommendation in plain English.',
-        ],
-      },
-      process: {
-        subheading: 'How a tile lift & relay works',
+      // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
+      story: {
+        label: 'Tile lift & relay',
+        lead: 'Your tiles can last for decades. The layer __beneath__ them can’t.',
+        text: 'Underlayment dries out and cracks after years of Southern California heat, and water that slips past the tiles then has nowhere to go but into the deck. A lift & relay fixes it at the source and keeps your roof’s look.',
+        heading: 'How we do a tile lift & relay',
         image: '/images/tile-lift-off-and-reset-drone-view-2.webp',
         imageAlt: 'Aerial view of a tile roof mid lift and relay, with tiles staged and a crew member on a ladder',
-        steps: [
-          { title: 'Roof Evaluation and scope', text: 'We inspect the roof and photo-document what we find, including the underlayment wherever it can be seen, so the case for a relay is clear.', bullets: ['Underlayment condition', 'Cracked, slipped or missing tiles', 'Valleys, flashings and penetrations'] },
-          { title: 'Careful tile removal', text: 'Tiles are heavy and can crack if mishandled, so they come off by hand and are stacked with care until they go back in the same pattern. Some older tiles break anyway, which is why matching replacements are planned from the start.' },
-          { title: 'New underlayment and flashings', text: 'We install new underlayment, then address worn battens, flashings, valley metal and other details your written scope calls for.', bullets: ['New underlayment across the roof', 'Worn battens replaced', 'Flashings, valleys and vents addressed', 'Deck checked while it’s exposed'] },
-          { title: 'Reset and match', text: 'Sound tiles go back in their original pattern, and broken ones are replaced with the closest available match.', bullets: ['Ridge and hip tiles reset', 'Bird stops and eave closures in place', 'Tiles secured as your scope specifies'] },
-          { title: 'Final walkthrough', text: 'We review the finished roof with you, share photos of the work and go over your 10-year workmanship warranty (call for details).' },
-        ],
-      },
-      why: {
-        heading: 'Why Choose QRS for Tile Lift & Relay?',
-        intro: 'A lift & relay touches every tile on your roof twice. How the tiles come off, what goes under them and how they go back decides how well the finished roof performs.',
-        points: [
-          { title: 'Roofer-led assessment', text: 'A roofer, not a salesperson, tells you whether a relay is right for your roof or whether a smaller repair will do.' },
-          { title: 'Photo-documented work', text: 'You see the old underlayment, the new layers going in and the finished roof.' },
-          { title: 'Written scope and price', text: 'You know exactly what’s included, from underlayment and battens to flashings and ridge details, before work starts.' },
-          { title: '10-Year workmanship warranty', text: 'Every relay is backed by the QRS Guarantee (call for details), and [ongoing tile roof care](/roof-maintenance-plans/#roof-types) afterward helps keep the new underlayment protected.' },
+        principles: [
+          { title: 'A relay, a repair or a new roof.', text: 'A roofer photographs the underlayment wherever it can be seen, along with the tiles and details, and tells you whether a relay is right, a smaller repair will do, or the tiles are past saving and a [tile roof replacement](/residential-roofing/tile-roofing/replacement/) makes more sense.', bullets: ['Underlayment condition', 'Cracked, slipped or missing tiles', 'Valleys, flashings and penetrations'] },
+          { title: 'Off by hand, stacked with care.', text: 'Tiles are heavy and crack if mishandled, so they come off by hand and are stacked until they go back in the same pattern. Some older tiles break anyway, which is why matching replacements are planned from the start.' },
+          { title: 'New underlayment, renewed details.', text: 'With the tiles off, new underlayment goes on across the roof and the worn details beneath are renewed, as your written scope and price spell out before work starts.', bullets: ['New underlayment across the roof', 'Worn battens replaced', 'Flashings, valleys and vents addressed', 'Deck checked while it’s exposed'] },
+          { title: 'The same tiles, back in their pattern.', text: 'Sound tiles go back in their original pattern and broken ones are replaced with the closest available match, with ridge and hip tiles, bird stops and eave closures in place. On a Spanish Revival home, where the original clay is part of the character, that matters. We finish with a walkthrough, photos and our 10-year workmanship warranty (call for details).' },
         ],
       },
       faqs: [

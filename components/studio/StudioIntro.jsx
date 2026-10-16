@@ -1,7 +1,7 @@
 import Mark from '@/components/ui/Mark';
-import Rich from '@/components/ui/Rich';
 import SiteLink from '@/components/ui/SiteLink';
 import { ArrowRight } from '@/components/ui/icons';
+import WordReveal from './WordReveal';
 
 // The belief statement (owner, October 15 2026, after the story approach of maben.com.au: one confident first-person statement and one "learn more"
 // link; the facts it used to list are now each said once, in "How we work", StudioHowWeWork.jsx). The lead is the About page's own line.
@@ -18,13 +18,8 @@ export default function StudioIntro() {
         <p className="st-label">Who we are</p>
         <div>
           <p className="st-lead"><Mark text={LEAD} /></p>
-          <div className="st-cols">
-            {MORE.map((p) => (
-              <p key={p}>
-                <Rich text={p} />
-              </p>
-            ))}
-          </div>
+          {/* Bigger, and each word lights up as it scrolls through (GSAP, WordReveal; owner, October 16 2026) */}
+          <WordReveal className="st-cols st-intro-reveal" paragraphs={MORE} />
           <SiteLink className="st-link" href="/about-us/">
             More about QRS <ArrowRight />
           </SiteLink>

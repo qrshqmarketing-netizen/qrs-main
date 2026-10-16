@@ -76,65 +76,21 @@ export const METAL_CONTENT = {
         'Standing seam metal roofing in Los Angeles & Orange County: concealed clips, a flat, sound deck and clean flashings. Schedule a free roof evaluation.',
       hero: {
         intro:
-          'The *LockSeam* Metal System is built around the parts you can’t see as well as the panels: the deck and underlayment beneath them, the clips under the seams and the flashings at every wall and vent. We plan and install each with care.',
+          'Standing seam metal roofing from QRS is our *LockSeam* Metal System, built around the parts you can’t see as well as the panels: the deck and underlayment beneath them, the clips under the seams and the flashings at every wall and vent. We plan and install each with care.',
         highlights: ['Concealed clips, no screws through panels', 'Flat, sound deck to limit oil-canning', 'Matching trims, flashings and closures'],
       },
-      overview: {
-        paragraphs: [
-          '**Standing seam metal roofing** uses long panels that run from ridge to eave, joined along seams that stand up above the flat of each panel. Concealed clips under those seams hold everything down, so no screws pierce the face of the metal. The clips also give each panel room to expand as it heats up in the afternoon sun and contract as it cools at night, which helps keep the metal from buckling or working fasteners loose over time. The result is a crisp, clean-lined roof that’s noncombustible, long-lasting and available in reflective finishes suited to Southern California heat.',
-          'Across Los Angeles and Orange County, you’ll see standing seam on everything from modern hillside homes to backyard ADUs, porch roofs and patio covers. Wherever it goes, metal shows the quality of the installation: a wavy deck or a clip fastened too tight can show up as ripples in the finished panels. Our [free roof evaluation](#roof-check) looks closely at your slope, existing flashings and how water leaves the roof, so the plan accounts for every edge, wall and vent before a single panel is ordered.',
-        ],
-      },
-      process: {
-        subheading: 'How we install a standing seam roof',
-        steps: [
-          {
-            title: 'Roof Evaluation and panel plan',
-            text: 'We inspect and photo-document the roof, confirm the slope and talk through panel profile, metal and color with you. Your written scope then lists the panels, underlayment, trims and flashings, with the price.',
-            bullets: ['Slope and roof condition', 'Walls, valleys, vents and skylights', 'Sun, wind and salt-air exposure'],
-          },
-          {
-            title: 'Deck prep and underlayment',
-            text: 'On a replacement, the old roof comes off and we check the deck closely, since metal panels show every dip and hump beneath them. Underlayment suited to the heat under metal then goes down across the roof.',
-            bullets: ['Soft or uneven spots addressed per your scope', 'Photos taken before panels go on'],
-          },
-          {
-            title: 'Panels, clips and seams',
-            text: 'Each panel is set straight and square and held by concealed clips that grip the seam while leaving the metal room to move. The seams are then locked together along their full length.',
-            bullets: ['Clip spacing and fastening to spec', 'Panel ends cut and hemmed cleanly', 'Seams engaged from ridge to eave'],
-          },
-          {
-            title: 'Trims, flashings and closures',
-            text: 'We finish the eaves, rakes, ridge, valleys and walls with matching trims and flashings, and seal the open ends of the panels with closures that keep out wind-driven rain, pests and debris.',
-            bullets: ['Eave, rake and ridge trims', 'Valley, wall and chimney flashings', 'Pipe and vent flashings made for metal'],
-          },
-          {
-            title: 'Final walkthrough',
-            text: 'We look over the finished roof together, including photos of the deck and underlayment now hidden under the panels, and talk through your 10-year workmanship warranty (call for details).',
-          },
-        ],
-      },
-      why: {
-        heading: 'Why Choose QRS for Standing Seam Roofing?',
-        intro:
-          'Standing seam shows every shortcut in the finished panels, so we don’t take any. Each install is backed by the QRS Guarantee, our 10-year workmanship warranty (call for details).',
-        points: [
-          {
-            title: 'A straight answer on fit',
-            text: 'A roofer checks your slope, flashings and exposure before recommending metal, and tells you plainly if another roof would suit your home better.',
-          },
-          {
-            title: 'Installed to move with heat',
-            text: 'Clips, trims and flashings are set so the panels can expand and contract without binding, which helps the roof stay straight and tight through hot summers.',
-          },
-          {
-            title: 'Photos of the hidden layers',
-            text: 'You see the deck and underlayment before the panels cover them, then the finished seams, trims and flashings, so you know what’s under your roof, not just what’s on it.',
-          },
-          {
-            title: 'Repairs too',
-            text: 'If a metal roof you already have starts to leak, we can find the cause and repair it, with photos. See [metal roof repair](/residential-roofing/metal-roofing/repair/).',
-          },
+      // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
+      story: {
+        label: 'Standing seam metal roofing',
+        lead: 'Metal shows the quality of the __installation__.',
+        text: 'Standing seam panels run from ridge to eave, held by concealed clips under seams that stand above the flat of the panel, so no screws pierce the face of the metal. A wavy deck or a clip fastened too tight shows up as ripples in the finished roof, so we don’t take shortcuts.',
+        heading: 'How we install a standing seam roof',
+        image: false,
+        principles: [
+          { title: 'A straight answer on fit.', text: 'A roofer checks your slope, flashings and exposure and talks through profile, metal and color with you, and tells you plainly if another roof would suit your home better. The written scope lists the panels, underlayment, trims and flashings with the price.', bullets: ['Slope and roof condition', 'Walls, valleys, vents and skylights', 'Sun, wind and salt-air exposure'] },
+          { title: 'A flat deck under every panel.', text: 'On a replacement, the old roof comes off and the deck is checked closely, since metal shows every dip and hump beneath it. Underlayment suited to the heat under metal goes down, and we photograph it before the panels cover it.' },
+          { title: 'Clips that let the metal move.', text: 'Each panel is set straight and square and held by concealed clips that grip the seam while leaving the metal room to expand in the afternoon sun and contract at night, which keeps it from buckling or working fasteners loose. The seams are locked together from ridge to eave.' },
+          { title: 'Trims, flashings and closures to finish.', text: 'Eaves, rakes, ridge, valleys and walls get matching trims and flashings, and the panel ends get closures that keep out wind-driven rain, pests and debris. We walk the finished roof with you and go over our 10-year workmanship warranty (call for details). For a metal roof that already leaks, see [metal roof repair](/residential-roofing/metal-roofing/repair/).', bullets: ['Eave, rake and ridge trims', 'Valley, wall and chimney flashings', 'Pipe and vent flashings made for metal'] },
         ],
       },
       faqs: [
@@ -175,60 +131,18 @@ export const METAL_CONTENT = {
           'Metal roof repair from QRS finds where water is really getting in and fixes it at the source, across Los Angeles and Orange County. On a metal roof the cause is often a loose fastener, tired sealant or failed flashing rather than the panels themselves. We show you photos of the problem and the finished repair, with a written scope and price before any work. Start with a free roof evaluation.',
         highlights: ['Leaks traced to the real entry point', 'Fasteners, seams, sealant and flashing checked', 'Photos of the problem and the fix'],
       },
-      overview: {
-        paragraphs: [
-          'Metal sheds water well, so when a metal roof leaks the cause is usually in the details. On exposed-fastener roofs, screws back out and the rubber washers under them crack in the sun. Sealant dries and shrinks, seams open, flashing at walls, vents and skylights pulls loose, and corrosion can start where moisture sits or where different metals touch.',
-          'Water runs along metal panels and under their laps before it drips, so the stain inside is rarely under the opening. A roofer starts upslope, checks each line of fasteners, each seam, trim and penetration, and photographs the cause before anything is fixed. When the roof is sound overall, a targeted repair is the sensible fix. When the panels are failing across the roof, we’ll say so. See our [roof repair](/roof-repair/) page for how we handle every repair, or [standing seam metal roofing](/residential-roofing/metal-roofing/standing-seam/) if replacement is the better call.',
-        ],
-      },
-      process: {
-        subheading: 'How we find and fix a metal roof leak',
-        steps: [
-          {
-            title: 'Roof evaluation and leak trace',
-            text: 'A roofer inspects and photographs the roof, starting upslope of the stain and working across the places leaks usually begin.',
-            bullets: ['Lines of fasteners and their washers', 'Seams, laps and trims', 'Sealant at vents, pipes and walls', 'Signs of corrosion'],
-          },
-          {
-            title: 'Photos and a plain-English report',
-            text: 'We show you what we found and what is causing the leak, so you can see it for yourself instead of taking our word for it.',
-          },
-          {
-            title: 'Written scope and price',
-            text: 'Before any work starts you get a written scope and price: which fasteners, sealant, flashing or panels will be repaired or replaced.',
-          },
-          {
-            title: 'The repair',
-            text: 'We replace or tighten failed fasteners, reseal and re-flash penetrations and walls, and repair or replace damaged trims and panels. Where corrosion has started, we address it where the metal is still sound.',
-            bullets: ['Fasteners replaced or tightened', 'Penetrations and walls re-flashed and sealed', 'Damaged trims or panels repaired or replaced'],
-          },
-          {
-            title: 'Walkthrough and warranty',
-            text: 'We go through the photos of the finished repair with you. Repairs carry the manufacturer’s warranty on the materials used, which depends on the product.',
-          },
-        ],
-      },
-      why: {
-        heading: 'Why Choose QRS for Metal Roof Repair?',
-        intro:
-          'A metal roof leak is detective work. As a licensed California contractor since 2020, we trace it first and then repair what is actually wrong.',
-        points: [
-          {
-            title: 'Leaks traced, not guessed',
-            text: 'We work from the stain upslope and check every likely entry point, because a patch placed over the stain often fails.',
-          },
-          {
-            title: 'Photos of the cause',
-            text: 'You see the loose fastener, the open seam or the failed flashing in a photo, then the finished repair.',
-          },
-          {
-            title: 'Repair or replace, honestly',
-            text: 'When the roof is sound, a repair is the right fix. When it is worn out across the whole roof, we’ll tell you and show you why.',
-          },
-          {
-            title: 'Matched to your metal',
-            text: 'Fasteners, sealants and flashing are chosen to suit your roof’s metal and finish, so the repair doesn’t cause corrosion where different metals meet.',
-          },
+      // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
+      story: {
+        label: 'Metal roof repair',
+        lead: 'When a metal roof leaks, the panels are rarely the __problem__.',
+        text: 'Metal sheds water well, so leaks come from the details: screws that back out, washers cracked by the sun, sealant that shrinks, seams that open and flashing that pulls loose at walls, vents and skylights. Water runs along the panels and under their laps before it drips, so the stain inside is rarely under the opening.',
+        heading: 'How we repair a metal roof',
+        image: false, // no metal roof photos yet: no photo rather than a shingle one
+        principles: [
+          { title: 'Start upslope. Check every line.', text: 'A roofer works up from the stain across the places metal roofs leak, and photographs the cause before anything is fixed.', bullets: ['Lines of fasteners and their washers', 'Seams, laps and trims', 'Sealant at vents, pipes and walls', 'Signs of corrosion'] },
+          { title: 'Fix the detail. Keep the roof.', text: 'Failed fasteners are replaced or tightened, penetrations and walls are re-flashed and sealed, and damaged trims or panels are repaired or replaced. Where corrosion has started, we deal with it while the metal is still sound.' },
+          { title: 'Matched to your metal.', text: 'Fasteners, sealants and flashing are chosen for your roof’s metal and finish, so the repair doesn’t start corrosion where different metals meet.' },
+          { title: 'In writing before. In photos after.', text: 'The written scope lists the fasteners, sealant, flashing or panels involved and the price, before any work. Afterward we walk you through photos of the finished repair; repair materials carry the manufacturer’s warranty, which depends on the product. If the panels are failing across the roof, [standing seam metal roofing](/residential-roofing/metal-roofing/standing-seam/) may be the better call.' },
         ],
       },
       faqs: [

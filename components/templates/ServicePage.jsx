@@ -7,6 +7,9 @@ import Hero from '@/components/sections/Hero';
 import Overview from '@/components/sections/Overview';
 import PartnerLogos from '@/components/sections/PartnerLogos';
 import ProcessSteps from '@/components/sections/ProcessSteps';
+import ServiceStory from '@/components/sections/ServiceStory';
+import RoofDiagram from '@/components/sections/RoofDiagram';
+import { diagramFor } from '@/data/roofDiagrams';
 import RoofCheck from '@/components/sections/RoofCheck';
 import WhyChoose from '@/components/sections/WhyChoose';
 import JsonLd from '@/components/ui/JsonLd';
@@ -98,7 +101,7 @@ function processPhoto(page) {
 // hub this page belongs to ({ label, href }); the overview links back to it, so the hub is the page for the general search.
 export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], offer, actions, hub, finalCta = page.final || closingCta(page.keyword, offer) }) {
   const [heroScene = 'scene-shingle', processScene = heroScene] = scenes;
-  const [processImage, processImageAlt] = page.process.image ? [page.process.image, page.process.imageAlt] : processPhoto(page);
+  const [processImage, processImageAlt] = page.process?.image ? [page.process.image, page.process.imageAlt] : processPhoto(page);
   const work = projectsShownOn(crumbs.at(-1).href);
   const schema = pageJsonLd({
     path: crumbs.at(-1).href,
@@ -123,24 +126,34 @@ export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], 
         stats
         {...(actions && { actions })}
       />
-      <Overview paragraphs={page.overview.paragraphs} cta={hub && { label: `Compare All ${hub.label} Options`, href: hub.href }} />
+      {/* Pages rewritten the home page's way have a `story` (ServiceStory: statement + "How we …" principles), which replaces the overview, the
+          process steps and "Why choose QRS"; the rest keep those three (owner, October 16 2026: page by page) */}
+      {page.story ? (
+        <ServiceStory story={page.story} image={page.story.image === false ? null : page.story.image || processImage} imageAlt={page.story.image ? page.story.imageAlt : processImageAlt} />
+      ) : (
+        <Overview paragraphs={page.overview.paragraphs} cta={hub && { label: `Compare All ${hub.label} Options`, href: hub.href }} />
+      )}
+      {/* The blog's roof illustration where it explains this service (data/roofDiagrams.js) */}
+      <RoofDiagram diagram={diagramFor(crumbs.at(-1).href)} />
       {page.sections?.map((section, i) => (
         <FeatureBand key={section.heading} {...section} tone={i % 2 ? 'navy' : 'light'} />
       ))}
-      <ProcessSteps
-        heading={page.process.heading}
-        subheading={page.process.subheading}
-        steps={page.process.steps}
-        scene={processScene}
-        image={processImage}
-        imageAlt={processImageAlt}
-      />
+      {!page.story && (
+        <ProcessSteps
+          heading={page.process.heading}
+          subheading={page.process.subheading}
+          steps={page.process.steps}
+          scene={processScene}
+          image={processImage}
+          imageAlt={processImageAlt}
+        />
+      )}
       {/* The story in order (owner, October 15 2026, after maben.com.au): what we do, how we do it, then the work itself on real roofs, what people
           say, why QRS, and the questions. The projects used to sit at the bottom, under the FAQ. */}
       <StudioProjects projects={work.projects} heading={work.exact ? 'This work, on real roofs' : 'Recent roofing projects'} />
       {/* Google reviews, a few sections below the hero (owner, October 14 2026) */}
       {page.showReviews !== false && <ReviewMarquee />}
-      <WhyChoose heading={page.why.heading} intro={page.why.intro} points={page.why.points} />
+      {!page.story && <WhyChoose heading={page.why.heading} intro={page.why.intro} points={page.why.points} />}
       {page.partners && <PartnerLogos {...page.partners} />}
       <LatestArticles posts={await articlesFor(crumbs.at(-1).href)} heading="Related Roofing Articles" />
       {page.faqs?.length > 0 && <Faq heading="Frequently Asked __Questions__" sub={faqSub(page.keyword)} faqs={page.faqs} cta={false} />}
