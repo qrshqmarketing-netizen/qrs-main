@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import { SEASON_PROMO as promo, promoLandingHref } from '@/data/promo';
 import { local, session } from '@/lib/storage';
+import { afterSplash } from '@/lib/splash';
 import PromoCard from './PromoCard';
 import './SeasonPromo.css';
 
@@ -65,9 +66,14 @@ export default function SeasonPromo() {
       session.set('promoShown', '1');
       setView('card');
     };
-    const photo = setTimeout(preloadPhoto, FIRST_MS - 4000);
-    t = setTimeout(show, FIRST_MS);
+    // The count starts once the opening splash (first visit to the home page, lib/splash.js) has finished
+    let photo;
+    const stop = afterSplash(() => {
+      photo = setTimeout(preloadPhoto, FIRST_MS - 4000);
+      t = setTimeout(show, FIRST_MS);
+    });
     return () => {
+      stop();
       clearTimeout(photo);
       clearTimeout(t);
     };

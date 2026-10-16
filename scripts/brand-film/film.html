@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>QRS brand film</title>
+<!-- The QRS brand film for the home page, modelled on zaro.ai's launch film (the owner's reference, analysed with ffmpeg: kinetic
+     decoding headlines on a pale grid with small accent squares, photos slotted between words, UI push-ins with a cursor, a dark
+     "Allowed. Blocked. Audited." act, a dotted-leader closing line and the logo). Everything is drawn from seek(t), so
+     render.mjs can step through it frame by frame in headless Chrome and pipe the frames to ffmpeg. Open it in a browser to watch it
+     play in real time (?t=12 starts at 12 s). Every claim is one the site already makes. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300..700&display=block" rel="stylesheet">
+<style>
+:root{--paper:#f5f8fb;--line:#dfe6ee;--ink:#10243a;--muted:#8b98aa;--ghost:#c9d2dd;--gold:#d4b572;--gold-ink:#826a35;--navy:#062d57;--night:#071a2e;--plum:#6b2545;--card:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1920px;height:1080px;overflow:hidden;background:var(--paper)}
+body{font-family:'Libre Franklin',system-ui,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+#stage{position:relative;width:1920px;height:1080px;overflow:hidden;background:var(--paper)}
+.layer{position:absolute;inset:0}
+.scene{position:absolute;inset:0;display:none}
+.center{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+/* Background: hairline grid and the four gold squares on the edges of the current frame */
+#grid line{stroke:var(--line);stroke-width:1.5}
+.mk{position:absolute;width:22px;height:22px;margin:-11px 0 0 -11px;background:var(--gold)}
+#dark{background:radial-gradient(120% 90% at 70% 10%,#0b3460 0%,var(--night) 60%,#050f1c 100%);opacity:0}
+#dark .dgrid line{stroke:rgba(255,255,255,.06);stroke-width:1.5}
+/* Decoding text */
+.h{font-weight:500;letter-spacing:-.04em;line-height:.98;white-space:nowrap}
+.c{position:relative;display:inline-block;white-space:pre}
+.c .g{position:absolute;left:0;top:0;width:100%;text-align:center}
+.c.hb:before{content:"";position:absolute;inset:.12em -.02em .02em;border:1.5px solid rgba(16,36,58,.13);
+  background:repeating-linear-gradient(135deg,rgba(16,36,58,.09) 0 1.5px,transparent 1.5px 7px)}
+.on-dark .c.hb:before{border-color:rgba(255,255,255,.16);background:repeating-linear-gradient(135deg,rgba(255,255,255,.1) 0 1.5px,transparent 1.5px 7px)}
+.lines{text-align:center}
+/* Photo chips, cards */
+.chip{position:absolute;border-radius:16px;overflow:hidden;box-shadow:0 18px 40px -22px rgba(6,45,87,.5);background:#dde4ec}
+.chip img,.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.tag{position:absolute;left:0;right:0;bottom:-34px;text-align:center;font:600 15px/1 'Libre Franklin';letter-spacing:.14em;text-transform:uppercase;color:var(--gold-ink)}
+.card{background:var(--card);border:1.5px solid var(--line);border-radius:22px;box-shadow:0 30px 70px -40px rgba(6,45,87,.55)}
+.pill{display:inline-flex;align-items:center;gap:12px;background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:12px 22px;font:500 24px/1 'Libre Franklin';color:var(--ink);white-space:nowrap}
+.pill i{width:12px;height:12px;border-radius:50%;background:var(--gold);flex:none}
+.label{font:600 17px/1 'Libre Franklin';letter-spacing:.18em;text-transform:uppercase;color:var(--gold-ink)}
+.cursor{position:absolute;width:34px;height:42px;z-index:20;pointer-events:none}
+.ph{position:absolute;overflow:hidden;border-radius:18px}
+.caret{display:inline-block;width:3px;height:1em;background:var(--ink);vertical-align:-.12em;margin-left:4px}
+.qrsav img{display:block}
+/* Scene-specific */
+#sQuery .bar{position:absolute;left:50%;top:50%;width:1040px;height:112px;margin:-56px 0 0 -520px;display:flex;align-items:center;gap:22px;padding:0 26px 0 34px}
+#sQuery .bar .plus{font:300 44px/1 'Libre Franklin';color:var(--muted)}
+#sQuery .bar .txt{flex:1;font:400 36px/1 'Libre Franklin';letter-spacing:-.02em;color:var(--ink);white-space:nowrap;overflow:hidden}
+#sQuery .bar .send{width:62px;height:62px;border-radius:14px;background:var(--navy);display:grid;place-items:center}
+#sQuery .q{position:absolute;right:300px;top:150px;display:flex;align-items:center;gap:18px}
+#sQuery .q .bub{background:#e9eef4;border-radius:22px;padding:18px 26px;font:400 28px/1.2 'Libre Franklin';letter-spacing:-.01em}
+.av{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;font:600 24px/1 'Libre Franklin';color:#fff;flex:none}
+#sQuery .think{position:absolute;left:300px;top:300px}
+#sQuery .think .row{display:flex;align-items:center;gap:18px;font:400 40px/1 'Libre Franklin';letter-spacing:-.02em;color:var(--muted)}
+#sQuery .src{display:flex;align-items:center;gap:14px;margin:22px 0 0 92px;font:500 30px/1 'Libre Franklin';color:var(--ink)}
+#sQuery .src b{font-weight:400;color:var(--muted)}
+#sQuery .src i{width:14px;height:14px;border-radius:4px;background:var(--gold)}
+#sQuery .ans{position:absolute;left:300px;top:270px;width:1320px;padding:0}
+#sQuery .ans p{font:400 28px/1.45 'Libre Franklin';color:var(--ink)}
+#sQuery table{width:100%;border-collapse:collapse;margin-top:26px;font:400 24px/1.35 'Libre Franklin'}
+#sQuery th{text-align:left;font-weight:600;background:#eef2f7;padding:16px 20px;border:1.5px solid var(--line)}
+#sQuery td{padding:18px 20px;border:1.5px solid var(--line);vertical-align:top;background:#fff}
+#sQuery td:first-child{width:34%;font-weight:500}
+.doc{position:absolute;width:600px;padding:34px 38px}
+.doc h4{font:600 30px/1.15 'Libre Franklin';letter-spacing:-.02em}
+.doc .sub{font:400 20px/1.3 'Libre Franklin';color:var(--muted);margin-top:8px}
+.doc .sec{margin-top:24px;font:600 15px/1 'Libre Franklin';letter-spacing:.16em;text-transform:uppercase;color:var(--gold-ink)}
+.doc ul{list-style:none;margin-top:12px}
+.doc li{display:flex;gap:14px;align-items:baseline;font:400 23px/1.35 'Libre Franklin';padding:9px 0;border-bottom:1.5px solid var(--line)}
+.doc li:before{content:"";width:9px;height:9px;border-radius:2px;background:var(--gold);flex:none;transform:translateY(-3px)}
+.btnx{display:inline-flex;align-items:center;gap:12px;border-radius:999px;padding:16px 30px;font:600 22px/1 'Libre Franklin';background:var(--gold);color:var(--night)}
+.rowp{display:flex;align-items:center;gap:22px;font:500 30px/1 'Libre Franklin';color:#fff;margin:0 0 22px}
+.rowp .k{width:300px;color:rgba(255,255,255,.85)}
+.rowp .box{background:rgba(255,255,255,.95);color:var(--ink);border-radius:12px;padding:14px 20px;font:500 24px/1 'Libre Franklin';min-width:260px}
+.rowp .ok{background:#2f7d4f;color:#fff;border-radius:12px;padding:14px 20px;font:600 22px/1 'Libre Franklin'}
+.phone{position:absolute;width:470px;height:900px;border-radius:56px;background:#fff;box-shadow:0 40px 90px -40px rgba(0,0,0,.8);overflow:hidden;padding:70px 34px 0}
+.msg{display:flex;gap:16px;margin-bottom:28px}
+.msg .who{font:600 21px/1.2 'Libre Franklin';color:var(--ink)}
+.msg .who span{font-weight:400;color:var(--muted);margin-left:8px;font-size:17px}
+.msg .t{font:400 22px/1.38 'Libre Franklin';color:var(--ink);margin-top:6px}
+.msg .badge{display:inline-flex;gap:8px;align-items:center;margin-top:10px;border-radius:8px;padding:7px 12px;font:600 16px/1 'Libre Franklin';background:#e3f1e8;color:#2f7d4f}
+.msg .att{margin-top:12px;border-radius:12px;overflow:hidden;width:260px;height:150px}
+.qrsav{width:52px;height:52px;border-radius:14px;background:var(--navy);display:grid;place-items:center;flex:none}
+.list{position:absolute;left:150px;top:50%;transform:translateY(-50%);font:500 96px/1.08 'Libre Franklin';letter-spacing:-.04em}
+.list div{display:flex;align-items:center;gap:30px;color:rgba(255,255,255,.28)}
+.list div.on{color:#fff}
+.list div b{width:20px;height:20px;background:var(--gold);opacity:0}
+.list div.on b{opacity:1}
+.corner .lab{position:absolute;top:-30px;left:0;font:600 15px/1 'Libre Franklin';letter-spacing:.16em;color:rgba(255,255,255,.7)}
+.corner .lab:after{content:"";position:absolute;right:-26px;top:0;width:12px;height:12px;background:var(--gold)}
+.pcard{position:absolute;width:300px;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 26px 60px -30px rgba(0,0,0,.75)}
+.pcard .im{height:170px}
+.pcard .im img{width:100%;height:100%;object-fit:cover;display:block}
+.pcard .tx{padding:14px 16px 16px;font:600 17px/1.25 'Libre Franklin';color:var(--ink)}
+.pcard .tx span{display:block;font-weight:400;color:var(--muted);font-size:15px;margin-top:4px}
+.lead{display:flex;align-items:baseline;gap:0;font:500 84px/1 'Libre Franklin';letter-spacing:-.03em;color:#fff}
+.dots{display:inline-block;height:8px;margin:0 26px;background:radial-gradient(circle,rgba(212,181,114,.85) 2.6px,transparent 3.2px) 0 0/18px 8px repeat-x}
+</style>
+</head>
+<body>
+<div id="stage">
+  <!-- light background -->
+  <div class="layer" id="light">
+    <svg id="grid" width="1920" height="1080"><line x1="96" y1="0" x2="96" y2="1080"/><line x1="1824" y1="0" x2="1824" y2="1080"/><line x1="0" y1="64" x2="1920" y2="64"/><line x1="0" y1="1016" x2="1920" y2="1016"/>
+      <line id="gx1" x1="0" y1="0" x2="0" y2="1080"/><line id="gx2" x1="0" y1="0" x2="0" y2="1080"/><line id="gy1" x1="0" y1="0" x2="1920" y2="0"/><line id="gy2" x1="0" y1="0" x2="1920" y2="0"/></svg>
+    <div class="mk" id="mkT"></div><div class="mk" id="mkB"></div><div class="mk" id="mkL"></div><div class="mk" id="mkR"></div>
+  </div>
+  <div class="layer" id="dark"><svg class="dgrid" width="1920" height="1080"><line x1="96" y1="0" x2="96" y2="1080"/><line x1="1824" y1="0" x2="1824" y2="1080"/><line x1="0" y1="64" x2="1920" y2="64"/><line x1="0" y1="1016" x2="1920" y2="1016"/></svg></div>
+
+  <!-- A: Protect your home -->
+  <div class="scene" id="sA"><div class="center"><div class="h lines" style="font-size:168px"><div id="a1"></div><div id="a2"></div><div id="a3"></div></div></div></div>
+
+  <!-- B: with [mark] QRS -->
+  <div class="scene" id="sB"><div class="center"><div class="h" style="font-size:150px;display:flex;align-items:center;gap:40px">
+    <span id="b1"></span>
+    <img class="mark" id="bMark" src="qrs-mark.png" alt="" style="height:120px">
+    <span id="b2"></span></div></div></div>
+
+  <!-- C: Every kind of roof. / Looked at first. -->
+  <div class="scene" id="sC"><div id="cChips"></div><div class="center"><div class="h" id="cT" style="font-size:96px"></div></div></div>
+
+  <!-- D: RoofScan 360 -->
+  <div class="scene" id="sD">
+    <div class="label" id="dLab" style="position:absolute;left:360px;top:180px">RoofScan 360</div>
+    <div class="ph" id="dPh" style="left:360px;top:220px;width:1200px;height:670px"><img src="../../public/images/roofscan-360-roofer-chimney-flashing.webp" alt="">
+      <div id="dScan" style="position:absolute;left:0;right:0;height:3px;background:var(--gold);box-shadow:0 0 30px 8px rgba(212,181,114,.55)"></div>
+      <div id="dShade" style="position:absolute;inset:0;background:rgba(6,45,87,.28)"></div>
+      <div id="dPin" style="position:absolute;left:74.5%;top:63%;width:0;height:0">
+        <div id="dRing" style="position:absolute;left:-40px;top:-40px;width:80px;height:80px;border-radius:50%;border:3px solid var(--gold)"></div>
+        <div style="position:absolute;left:-9px;top:-9px;width:18px;height:18px;border-radius:50%;background:var(--gold);border:3px solid #fff"></div>
+        <div id="dCard" class="pill" style="position:absolute;right:58px;top:-30px">Found: chimney flashing</div>
+      </div>
+    </div>
+    <div class="pill" id="dStat" style="position:absolute;left:50%;top:555px;transform:translate(-50%,-50%)"><svg id="dSpin" width="26" height="26" viewBox="0 0 26 26"><circle cx="13" cy="13" r="10" stroke="var(--line)" stroke-width="3" fill="none"/><path d="M13 3a10 10 0 0 1 10 10" stroke="var(--gold-ink)" stroke-width="3" fill="none" stroke-linecap="round"/></svg><span id="dStatT">Scanning the roof…</span></div>
+  </div>
+
+  <!-- E: the question -->
+  <div class="scene" id="sQuery">
+    <div class="card bar" id="eBar"><span class="plus">+</span><span class="txt" id="eTxt"></span><span class="send"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg></span></div>
+    <div class="q" id="eQ"><div class="bub">Why does my ceiling stain after it rains?</div><div class="av" style="background:var(--plum)">K</div></div>
+    <div class="think" id="eThink">
+      <div class="row"><span class="qrsav"><img class="mk-s" src="qrs-mark.png" alt="" style="width:38px"></span><span id="eThinkT">Checking your roof…</span></div>
+      <div class="src" id="eS1"><i></i>Drone footage <b>of the problem areas</b></div>
+      <div class="src" id="eS2"><i></i>Photos <b>of what we found</b></div>
+      <div class="src" id="eS3"><i></i>Flashing &amp; vents <b>checked</b></div>
+    </div>
+    <div class="ans" id="eAns">
+      <div class="row" style="display:flex;align-items:center;gap:18px;font:500 26px/1 'Libre Franklin';color:var(--muted)"><span class="qrsav"><img class="mk-s" src="qrs-mark.png" alt="" style="width:38px"></span>Your roofer checked the roof.</div>
+      <p style="margin-top:26px">We found where the water gets in. Here is what we saw:</p>
+      <table><tr><th>What</th><th>What we saw</th></tr>
+        <tr class="tr"><td>Chimney flashing</td><td>Lifted at the back corner, so rain runs in behind it.</td></tr>
+        <tr class="tr"><td>Shingles around it</td><td>Worn edges where the water has been sitting.</td></tr>
+        <tr class="tr"><td>Next step</td><td>A written scope and price, before any work starts.</td></tr></table>
+    </div>
+  </div>
+
+  <!-- F: Everything [cards] in writing. -->
+  <div class="scene" id="sF"><div class="center"><div class="h" style="font-size:92px;display:flex;align-items:center;gap:60px">
+    <span id="f1"></span><div id="fStack" style="position:relative;width:360px;height:520px"></div><span id="f2"></span></div></div></div>
+
+  <!-- G: Say yes [doc] when you're ready. -->
+  <div class="scene" id="sG">
+    <div class="h" id="g1" style="position:absolute;left:0;right:0;top:110px;text-align:center;font-size:88px"></div>
+    <div class="card doc" id="gDoc" style="left:660px;top:250px">
+      <div style="display:flex;justify-content:space-between;align-items:center"><span class="label">Written scope &amp; price</span><img class="mk-s" src="qrs-mark.png" alt="" style="width:50px"></div>
+      <h4 style="margin-top:16px">Chimney flashing repair</h4><div class="sub">Prepared by your QRS roofer, with photos</div>
+      <div class="sec">What we'll do</div>
+      <ul><li>Replace the chimney flashing</li><li>Replace the worn shingles around it</li><li>Clean up and haul away the debris</li></ul>
+      <div class="sec">Price</div>
+      <div style="font:400 23px/1.35 'Libre Franklin';margin-top:10px">In writing, before any work starts.</div>
+      <div style="display:flex;align-items:center;gap:20px;margin-top:26px"><span class="btnx" id="gBtn">Approve</span><span style="font:400 19px/1.3 'Libre Franklin';color:var(--muted)">No pressure. Take your time.</span></div>
+    </div>
+    <div class="h" id="g2" style="position:absolute;left:0;right:0;top:880px;text-align:center;font-size:88px"></div>
+  </div>
+
+  <!-- H: Clean [photo] sites. + the checks -->
+  <div class="scene" id="sH">
+    <div class="ph" id="hPh"><img id="hImg1" src="../../public/images/how-we-work-clean-site-tile-roof.webp" alt=""><img id="hImg2" src="../../public/images/how-we-work-clean-site-multi-family-shingle.webp" alt="" style="position:absolute;inset:0"></div>
+    <div class="center" id="hWords"><div class="h" style="font-size:110px;display:flex;align-items:center;gap:0"><span id="h1"></span><span id="hGap" style="display:inline-block"></span><span id="h2"></span></div></div>
+    <div id="hRows" style="position:absolute;left:300px;top:340px">
+      <div class="pill" id="hNew" style="font-size:30px;padding:18px 30px;margin-bottom:46px"><span style="font-weight:300;font-size:38px;line-height:0">+</span> Every job</div>
+      <div class="rowp" id="hR1"><span class="k">Landscaping</span><span class="box">Covered in tarps</span><span class="ok">✓ Done</span></div>
+      <div class="rowp" id="hR2"><span class="k">Permits</span><span class="box">Pulled</span><span class="ok">✓ Done</span></div>
+      <div class="rowp" id="hR3"><span class="k">Nails</span><span class="box">Swept every day</span><span class="ok">✓ Done</span></div>
+    </div>
+  </div>
+
+  <!-- I: dark act -->
+  <div class="scene on-dark" id="sI">
+    <div class="list" id="iList"><div><b></b>Looked at.</div><div><b></b>Written.</div><div><b></b>Backed.</div></div>
+    <div class="phone" id="iPhone"><div id="iMsgs"></div></div>
+  </div>
+
+  <!-- J: Every roof. -->
+  <div class="scene on-dark" id="sJ">
+    <div class="ph corner" id="j1" style="left:170px;top:170px;width:400px;height:250px"><img src="../../public/images/home-services-residential-shingle-drone-view.webp" alt=""></div>
+    <div class="ph corner" id="j2" style="left:1350px;top:150px;width:400px;height:250px"><img src="../../public/images/tile-roof-replacement-drone-view.webp" alt=""></div>
+    <div class="ph corner" id="j3" style="left:210px;top:690px;width:400px;height:250px"><img src="../../public/images/flat-roof-torch-down-drone-view-services.webp" alt=""></div>
+    <div class="ph corner" id="j4" style="left:1320px;top:670px;width:400px;height:250px"><img src="../../public/images/home-services-commercial-flat-roof-drone-view.webp" alt=""></div>
+    <div class="lab" id="jl1" style="position:absolute;left:170px;top:138px">SHINGLE</div><div class="lab" id="jl2" style="position:absolute;left:1350px;top:118px">TILE</div>
+    <div class="lab" id="jl3" style="position:absolute;left:210px;top:658px">FLAT</div><div class="lab" id="jl4" style="position:absolute;left:1320px;top:638px">COMMERCIAL</div>
+    <div class="center"><div class="h" style="font-size:110px;color:#fff"><span id="jT"></span><span class="caret" id="jCaret" style="background:#fff"></span></div></div>
+  </div>
+
+  <!-- K: Handled end to end. -->
+  <div class="scene on-dark" id="sK"><div id="kCards"></div><div class="center"><div class="h lines" id="kT" style="font-size:110px;color:#fff"><div id="k1"></div><div id="k2"></div></div></div>
+    <div class="pill" id="kRev" style="position:absolute;left:50%;top:760px;transform:translateX(-50%);background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18);color:#fff"><i></i>269 Google reviews</div></div>
+
+  <!-- L: A roof ··· you ··· can trust. -->
+  <div class="scene on-dark" id="sL"><div class="center"><div class="lead"><span id="l1">A roof</span><span class="dots" id="ld1"></span><span id="l2">you</span><span class="dots" id="ld2"></span><span id="l3">can trust.</span></div></div></div>
+
+  <!-- M: logo -->
+  <div class="scene on-dark" id="sM"><div class="center" style="flex-direction:column;gap:40px">
+    <div style="display:flex;align-items:center;gap:34px"><img class="mark" id="mMark" src="qrs-mark.png" alt="" style="height:130px"><div class="h" id="mT" style="font-size:150px;color:#fff;letter-spacing:.02em;font-weight:600"></div></div>
+    <div id="mSub" style="font:500 26px/1 'Libre Franklin';letter-spacing:.32em;text-transform:uppercase;color:var(--gold)">Quality Roofing Specialists</div>
+    <div id="mUrl" style="font:400 30px/1 'Libre Franklin';color:rgba(255,255,255,.8);letter-spacing:.01em;margin-top:10px">qualityroofingspecialists.com</div>
+  </div></div>
+
+  <!-- cursor -->
+  <svg class="cursor" id="cur" viewBox="0 0 24 30"><path d="M2 2v22l6-5.5 4 9 4-1.8-4-8.7 8-.5z" fill="#10243a" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>
+</div>
+
+<script>
+const IMG = (p) => '../../public/images/' + p;
+const DURATION = 62;
+const $ = (id) => document.getElementById(id);
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const lerp = (a, b, p) => a + (b - a) * p;
+const P = (t, a, b) => clamp((t - a) / (b - a));
+const eOut = (p) => 1 - Math.pow(1 - p, 3);
+const eIn = (p) => p * p * p;
+const eIO = (p) => (p < .5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2);
+const eExpo = (p) => (p >= 1 ? 1 : 1 - Math.pow(2, -10 * p));
+const eQuart = (p) => (p < .5 ? 8 * p ** 4 : 1 - Math.pow(-2 * p + 2, 4) / 2);
+const rnd = (i, k) => { const x = Math.sin(i * 12.9898 + k * 78.233) * 43758.5453; return x - Math.floor(x); };
+const GLYPHS = '$&<>%#@*+=/?!§¤{}[]0123456789';
+
+// The roof mark is the logo's own (qrs-mark.png, cut from assets/originals/qrs-logo.png); it is revealed by a soft diagonal wipe
+const MARK = '';
+function drawMark(img, p) {
+  const x = lerp(-20, 120, eIO(clamp(p)));
+  const m = `linear-gradient(65deg,#000 ${x - 14}%,transparent ${x + 6}%)`;
+  img.style.webkitMaskImage = m; img.style.maskImage = m;
+}
+// Decoding text: each letter flickers through symbols over a hatched box, then settles, left to right.
+// p: 0 hidden, 1 fully readable. The layout never moves: the real letter keeps its place while a symbol is drawn over it.
+function decode(el, text, p, t, opts = {}) {
+  const n = text.length, span = opts.span ?? .45, out = [];
+  const settled = opts.color || 'currentColor';
+  for (let i = 0; i < n; i++) {
+    const ch = text[i];
+    if (ch === ' ') { out.push('<span class="c"> </span>'); continue; }
+    const r = (i / Math.max(1, n - 1)) * (1 - span);
+    const q = clamp((p - r) / span);
+    if (q <= 0) { out.push(`<span class="c" style="color:transparent">${ch}</span>`); continue; }
+    if (q >= .999) { out.push(`<span class="c" style="color:${settled}">${ch}</span>`); continue; }
+    const k = Math.floor(t * 24) + i * 7;
+    const g = q > .72 ? ch : GLYPHS[Math.floor(rnd(i, k) * GLYPHS.length)];
+    const col = q > .72 ? (i === n - 1 || rnd(i, 3) > .8 ? 'var(--gold)' : 'var(--ghost)') : (rnd(i, k + 1) > .7 ? 'var(--gold)' : (opts.dark ? 'rgba(255,255,255,.55)' : 'var(--muted)'));
+    const hb = q < .85 && rnd(i, 9) > .35 ? ' hb' : '';
+    out.push(`<span class="c${hb}"><span style="color:transparent">${ch}</span><span class="g" style="color:${col}">${g}</span></span>`);
+  }
+  el.innerHTML = out.join('');
+}
+// In and out: p rises over [a, a+d], falls over [b, b+d2]
+const io = (t, a, d, b, d2 = .45) => (t < b ? P(t, a, a + d) : 1 - P(t, b, b + d2));
+
+// Background frame: the gold squares sit on the edges of a centred box whose size eases between scenes
+const FRAMES = [[0, 1500, 820], [4.2, 1250, 520], [7, 1460, 760], [11, 1360, 820], [15.5, 1560, 860], [22.5, 1400, 760], [26.5, 1500, 900], [31.5, 1400, 700], [36.5, 1400, 700]];
+function frameAt(t) {
+  let a = FRAMES[0], b = FRAMES[0];
+  for (let i = 0; i < FRAMES.length; i++) { if (t >= FRAMES[i][0]) { a = FRAMES[i]; b = FRAMES[i + 1] || FRAMES[i]; } }
+  const p = eQuart(P(t, a[0] - .1, a[0] + .8));
+  const prev = FRAMES[Math.max(0, FRAMES.indexOf(a) - 1)];
+  return [lerp(prev[1], a[1], p), lerp(prev[2], a[2], p)];
+}
+function background(t) {
+  const [w, h] = frameAt(t), cx = 960, cy = 540;
+  const pos = { mkT: [cx, cy - h / 2], mkB: [cx, cy + h / 2], mkL: [cx - w / 2, cy], mkR: [cx + w / 2, cy] };
+  const show = 1 - P(t, 36.2, 36.8);
+  for (const [id, [x, y]] of Object.entries(pos)) { const m = $(id); m.style.left = x + 'px'; m.style.top = y + 'px'; m.style.opacity = show * eOut(P(t, .1, .6)); }
+  $('gx1').setAttribute('x1', cx - w / 2); $('gx1').setAttribute('x2', cx - w / 2);
+  $('gx2').setAttribute('x1', cx + w / 2); $('gx2').setAttribute('x2', cx + w / 2);
+  $('gy1').setAttribute('y1', cy - h / 2); $('gy1').setAttribute('y2', cy - h / 2);
+  $('gy2').setAttribute('y1', cy + h / 2); $('gy2').setAttribute('y2', cy + h / 2);
+  // light to dark: the night sky rises over the paper at 36.5 s
+  const d = eIO(P(t, 36.3, 37.3));
+  $('dark').style.opacity = 1;
+  $('dark').style.clipPath = `inset(${(1 - d) * 100}% 0 0 0)`;
+}
+function show(id, t, a, b) { const on = t >= a && t < b; $(id).style.display = on ? 'block' : 'none'; return on; }
+
+function cursor(t, keys) {
+  // keys: [time, x, y, pressed]
+  const c = $('cur');
+  if (!keys || t < keys[0][0] - .3 || t > keys[keys.length - 1][0] + .4) { c.style.display = 'none'; return; }
+  c.style.display = 'block';
+  let x = keys[0][1], y = keys[0][2], down = false;
+  for (let i = 0; i < keys.length - 1; i++) {
+    const [t0, x0, y0] = keys[i], [t1, x1, y1, d1] = keys[i + 1];
+    if (t >= t0 && t <= t1) { const p = eIO(P(t, t0, t1)); x = lerp(x0, x1, p); y = lerp(y0, y1, p); }
+    if (t > t1) { x = x1; y = y1; }
+    if (d1 && t > t1 && t < t1 + .18) down = true;
+  }
+  c.style.left = x + 'px'; c.style.top = y + 'px';
+  c.style.transform = `scale(${down ? .86 : 1})`;
+  c.style.opacity = eOut(P(t, keys[0][0] - .3, keys[0][0])) * (1 - P(t, keys[keys.length - 1][0], keys[keys.length - 1][0] + .4));
+}
+
+// ---------- scenes ----------
+function sceneA(t) {
+  if (!show('sA', t, 0, 4.3)) return;
+  const out = P(t, 3.6, 4.2);
+  decode($('a1'), 'Protect', out ? 1 - out : P(t, .3, 1.3), t);
+  decode($('a2'), 'your', out ? 1 - out : P(t, .7, 1.6), t);
+  decode($('a3'), 'home', out ? 1 - out : P(t, 1.1, 2.1), t, { span: .55 });
+  $('sA').firstElementChild.style.transform = `scale(${lerp(.97, 1.02, P(t, 0, 4.2))})`;
+}
+function sceneB(t) {
+  if (!show('sB', t, 4.2, 7.1)) return;
+  const out = P(t, 6.45, 7.0);
+  decode($('b1'), 'with', out ? 1 - out : P(t, 4.3, 5.0), t);
+  drawMark($('bMark'), P(t, 4.6, 5.8));
+  $('bMark').style.opacity = 1 - out;
+  $('bMark').style.transform = `scale(${lerp(.9, 1, eOut(P(t, 4.6, 5.6))) * (1 - out * .2)})`;
+  decode($('b2'), 'QRS', out ? 1 - out : P(t, 5.1, 5.9), t, { span: .6 });
+}
+const C_CHIPS = [
+  ['home-services-residential-shingle-drone-view.webp', -540, -250], ['tile-roof-replacement-drone-view.webp', 520, -270], ['flat-roof-torch-down-drone-view-services.webp', -640, 60],
+  ['home-services-commercial-flat-roof-drone-view.webp', 640, 40], ['shingle-roof-care-multi-family.webp', -420, 270], ['flat-roof-replacement-completed-white-membrane.webp', 420, 280],
+  ['tile-lift-off-and-reset-drone-view.webp', -120, -330], ['recent-work-spanish-tile-flat-roof-street-view.webp', 130, 330],
+];
+$('cChips').innerHTML = C_CHIPS.map(([src], i) => `<div class="chip" id="cc${i}" style="width:${i % 3 ? 190 : 230}px;height:${i % 3 ? 130 : 150}px"><img src="${IMG(src)}" alt=""></div>`).join('');
+function sceneC(t) {
+  if (!show('sC', t, 7.0, 11.1)) return;
+  const swap = 9.2;
+  if (t < swap) decode($('cT'), 'Every kind of roof.', t < 8.9 ? P(t, 7.15, 8.0) : 1 - P(t, 8.9, 9.2), t);
+  else decode($('cT'), 'Looked at first.', t < 10.55 ? P(t, swap, swap + .7) : 1 - P(t, 10.55, 11.0), t);
+  C_CHIPS.forEach(([, x, y], i) => {
+    const el = $('cc' + i), w = el.offsetWidth, h = el.offsetHeight;
+    const inP = eExpo(P(t, 7.1 + i * .07, 7.9 + i * .07));
+    const gather = eIO(P(t, 9.1, 10.2));
+    const outP = eIn(P(t, 10.4, 11.0));
+    const a = t * .35 + i;
+    const fx = lerp(x * 1.8, x, inP) + Math.sin(a) * 14, fy = lerp(y * 1.8, y, inP) + Math.cos(a * 1.2) * 12;
+    const gx = lerp(fx, fx * .82, gather), gy = lerp(fy, fy * .78 + Math.sign(fy) * 40, gather);
+    el.style.left = 960 + gx - w / 2 + 'px'; el.style.top = 540 + gy - h / 2 + 'px';
+    el.style.opacity = inP * (1 - outP);
+    el.style.transform = `scale(${lerp(.6, 1, inP) * lerp(1, .7, gather) * (1 - outP * .4)}) rotate(${Math.sin(a * .7) * 2}deg)`;
+  });
+}
+function sceneD(t) {
+  if (!show('sD', t, 11.0, 15.6)) return;
+  const inP = eExpo(P(t, 11.0, 11.9)), outP = eIn(P(t, 15.0, 15.55));
+  const ph = $('dPh');
+  ph.style.opacity = inP * (1 - outP);
+  ph.style.transform = `scale(${lerp(.82, 1, inP) * lerp(1, 1.06, outP)})`;
+  $('dLab').style.opacity = eOut(P(t, 11.4, 11.9)) * (1 - outP);
+  $('dLab').style.transform = `translateY(${(1 - eOut(P(t, 11.4, 11.9))) * 14}px)`;
+  const sc = P(t, 11.7, 13.4);
+  $('dScan').style.top = sc * 100 + '%';
+  $('dScan').style.opacity = sc > 0 && sc < 1 ? 1 : 0;
+  $('dShade').style.opacity = 1 - P(t, 13.3, 13.8);
+  const found = t > 13.4;
+  $('dSpin').style.transform = `rotate(${t * 400}deg)`;
+  $('dSpin').style.display = found ? 'none' : 'block';
+  $('dStatT').textContent = found ? 'One spot to fix, photographed' : 'Scanning the roof…';
+  const st = $('dStat');
+  st.style.opacity = eOut(P(t, 11.6, 12.0)) * (1 - P(t, 14.1, 14.5)) * (1 - outP);
+  st.style.top = (found ? lerp(555, 940, eIO(P(t, 13.4, 13.9))) : 555) + 'px';
+  const pin = eOut(P(t, 13.5, 14.0));
+  $('dPin').style.opacity = pin;
+  $('dRing').style.transform = `scale(${1 + ((t * 1.2) % 1) * .9})`;
+  $('dRing').style.opacity = 1 - ((t * 1.2) % 1);
+  $('dCard').style.opacity = eOut(P(t, 13.8, 14.2));
+  $('dCard').style.transform = `translateX(${(1 - eOut(P(t, 13.8, 14.2))) * 20}px)`;
+}
+const QUESTION = 'Why does my ceiling stain after it rains?';
+function sceneE(t) {
+  if (!show('sQuery', t, 15.5, 22.6)) { return; }
+  const bar = $('eBar');
+  const barIn = eExpo(P(t, 15.55, 16.2)), barOut = eIO(P(t, 17.9, 18.4));
+  bar.style.opacity = barIn * (1 - barOut);
+  bar.style.transform = `translateY(${lerp(30, 0, barIn) - barOut * 340}px) scale(${lerp(.96, 1, barIn) * lerp(1, .8, barOut)})`;
+  const typed = Math.floor(QUESTION.length * P(t, 16.1, 17.55));
+  const blink = Math.floor(t * 2.4) % 2 === 0 || (t > 16.1 && t < 17.6);
+  $('eTxt').innerHTML = (typed ? QUESTION.slice(0, typed) : '<span style="color:var(--muted)">Ask about your roof</span>') + (blink ? '<span class="caret"></span>' : '');
+  const q = eOut(P(t, 18.15, 18.6));
+  $('eQ').style.opacity = q; $('eQ').style.transform = `translateY(${(1 - q) * 30}px)`;
+  const th = $('eThink');
+  const thIn = eOut(P(t, 18.5, 18.9)), thOut = P(t, 20.1, 20.4);
+  th.style.opacity = thIn * (1 - thOut);
+  const dots = '.'.repeat(1 + (Math.floor(t * 3) % 3));
+  $('eThinkT').textContent = 'Checking your roof' + dots;
+  ['eS1', 'eS2', 'eS3'].forEach((id, i) => { const p = eOut(P(t, 18.8 + i * .32, 19.15 + i * .32)); $(id).style.opacity = p; $(id).style.transform = `translateX(${(1 - p) * -24}px)`; });
+  const an = eOut(P(t, 20.3, 20.8)), anOut = eIn(P(t, 22.05, 22.5));
+  $('eAns').style.opacity = an * (1 - anOut);
+  $('eAns').style.transform = `translateY(${(1 - an) * 24 - anOut * 30}px)`;
+  document.querySelectorAll('#eAns .tr').forEach((r, i) => (r.style.opacity = eOut(P(t, 20.7 + i * .28, 21.0 + i * .28))));
+  $('eQ').style.opacity = q * (1 - anOut);
+}
+const F_CARDS = [
+  ['Photos of the problem', 'roofscan-360-roofer-chimney-flashing.webp'], ['Written scope', 'how-we-work-roofer-tablet-report.webp'],
+  ['Written price', 'how-we-work-plain-english-homeowners.webp'], ['Your options, explained', 'shingle-roof-inspection-overhead.webp'],
+];
+$('fStack').innerHTML = F_CARDS.map(([t, src], i) => `<div class="card" id="fc${i}" style="position:absolute;left:0;top:0;width:360px;overflow:hidden;border-radius:18px"><div style="height:200px"><img src="${IMG(src)}" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></div><div style="padding:18px 20px;font:600 24px/1.2 'Libre Franklin';letter-spacing:-.01em">${t}<div style="font:400 17px/1.3 'Libre Franklin';color:var(--muted);margin-top:6px">From your roofer</div></div></div>`).join('');
+function sceneF(t) {
+  if (!show('sF', t, 22.5, 26.6)) return;
+  const out = P(t, 26.0, 26.5);
+  decode($('f1'), 'Everything', out ? 1 - out : P(t, 22.6, 23.3), t);
+  decode($('f2'), 'in writing.', out ? 1 - out : P(t, 22.9, 23.6), t);
+  // the cards scroll up through the slot, the middle one in focus
+  const s = P(t, 23.0, 26.0) * 2.4;
+  F_CARDS.forEach((_, i) => {
+    const el = $('fc' + i), d = i - s;
+    const y = 160 + d * 230;
+    el.style.top = y - 40 + 'px';
+    const f = clamp(1 - Math.abs(d) * .55);
+    el.style.transform = `scale(${lerp(.62, 1, f)})`;
+    el.style.opacity = clamp(1.2 - Math.abs(d) * .7) * eOut(P(t, 22.7, 23.2)) * (1 - out);
+    el.style.zIndex = String(10 - Math.round(Math.abs(d) * 2));
+  });
+}
+function sceneG(t) {
+  if (!show('sG', t, 26.5, 31.6)) return;
+  const out = P(t, 31.0, 31.5);
+  decode($('g1'), 'Say yes', out ? 1 - out : P(t, 26.6, 27.3), t);
+  decode($('g2'), "when you're ready.", out ? 1 - out : P(t, 26.9, 27.7), t);
+  const din = eExpo(P(t, 26.7, 27.5));
+  const doc = $('gDoc');
+  doc.style.opacity = din * (1 - out);
+  doc.style.transform = `translateY(${(1 - din) * 60}px) scale(${lerp(.92, 1, din) * lerp(1, 1.04, eIO(P(t, 28.2, 30.6)))})`;
+  const done = t > 29.75;
+  const b = $('gBtn');
+  b.textContent = done ? 'Approved  ✓' : 'Approve';
+  b.style.background = done ? '#2f7d4f' : 'var(--gold)';
+  b.style.color = done ? '#fff' : 'var(--night)';
+  b.style.transform = `scale(${t > 29.55 && t < 29.8 ? .95 : 1})`;
+  cursor(t, [[28.0, 1500, 980], [29.5, 770, 815, true], [30.6, 760, 800]]);
+}
+function sceneH(t) {
+  if (!show('sH', t, 31.5, 36.9)) { return; }
+  const out = P(t, 33.6, 34.0);
+  decode($('h1'), 'Clean', out ? 1 - out : P(t, 31.6, 32.2), t);
+  decode($('h2'), 'sites.', out ? 1 - out : P(t, 31.8, 32.4), t);
+  const gapIn = eExpo(P(t, 31.7, 32.5));
+  const expand = eIO(P(t, 33.7, 34.6));
+  const gw = lerp(0, 330, gapIn) + 60;
+  $('hGap').style.width = gw * (1 - expand) + 'px';
+  // the photo sits in the gap between the words, then opens to the full frame and blurs behind the checks
+  const ph = $('hPh');
+  const w0 = 330 * gapIn, h0 = 210 * gapIn;
+  const w = lerp(w0, 1920, expand), h = lerp(h0, 1080, expand);
+  ph.style.width = w + 'px'; ph.style.height = h + 'px';
+  ph.style.left = 960 - w / 2 + 'px'; ph.style.top = 540 - h / 2 + 'px';
+  ph.style.borderRadius = lerp(18, 0, expand) + 'px';
+  ph.style.opacity = gapIn ? 1 : 0;
+  $('hImg2').style.opacity = eIO(P(t, 32.6, 33.2));
+  ph.querySelectorAll('img').forEach((im) => (im.style.filter = `blur(${expand * 14}px) brightness(${1 - expand * .45})`));
+  ph.querySelectorAll('img').forEach((im) => (im.style.transform = `scale(${1 + expand * .08})`));
+  $('hWords').style.opacity = 1 - expand;
+  const rows = [['hNew', 34.4], ['hR1', 34.9], ['hR2', 35.3], ['hR3', 35.7]];
+  rows.forEach(([id, a]) => { const p = eOut(P(t, a, a + .4)); $(id).style.opacity = p * (1 - P(t, 36.5, 36.9)); $(id).style.transform = `translateY(${(1 - p) * 26}px)`; });
+  document.querySelectorAll('#hRows .ok').forEach((o, i) => (o.style.opacity = eOut(P(t, 35.2 + i * .4, 35.5 + i * .4))));
+}
+const I_STEPS = [
+  { a: 37.3, html: `<div class="msg"><span class="qrsav"><img class="mk-s" src="qrs-mark.png" alt="" style="width:38px"></span><div><div class="who">QRS<span>Just now</span></div><div class="t">Your roofer looked at the roof and took drone footage of the problem areas.</div><div class="att"><img src="${IMG('roofscan-360-roofer-chimney-flashing.webp')}" alt="" style="width:100%;height:100%;object-fit:cover"></div></div></div>` },
+  { a: 40.0, html: `<div class="msg"><span class="qrsav"><img class="mk-s" src="qrs-mark.png" alt="" style="width:38px"></span><div><div class="who">QRS<span>Just now</span></div><div class="t">Your written scope and price are ready. Nothing starts until you say yes.</div><div class="badge">✓ Written scope &amp; price</div></div></div><div class="msg"><span class="av" style="background:var(--plum);width:52px;height:52px">K</span><div><div class="who">Kelly R.<span>1 min ago</span></div><div class="t">Looks good. Let's go ahead.</div></div></div>` },
+  { a: 42.6, html: `<div class="msg"><span class="qrsav"><img class="mk-s" src="qrs-mark.png" alt="" style="width:38px"></span><div><div class="who">QRS<span>Just now</span></div><div class="t">All done. We walked the job with you and cleaned up. Your work is backed by our 10-year workmanship warranty (call for details).</div><div class="badge">✓ Licensed, bonded &amp; insured</div></div></div>` },
+];
+let iBuilt = -1;
+function sceneI(t) {
+  if (!show('sI', t, 37.0, 45.6)) return;
+  const inP = eOut(P(t, 37.0, 37.7)), out = P(t, 45.0, 45.5);
+  $('iList').style.opacity = inP * (1 - out);
+  const step = t < 40.0 ? 0 : t < 42.6 ? 1 : 2;
+  [...$('iList').children].forEach((d, i) => d.classList.toggle('on', i === step));
+  const ph = $('iPhone');
+  ph.style.left = '1240px';
+  ph.style.top = lerp(1100, 160, eExpo(P(t, 37.1, 38.0))) - out * 120 + 'px';
+  ph.style.opacity = 1 - out;
+  if (iBuilt !== step) { $('iMsgs').innerHTML = I_STEPS.slice(0, step + 1).map((s, i) => `<div class="im" data-i="${i}">${s.html}</div>`).join(''); iBuilt = step;  }
+  // scroll the conversation up as it grows, each new message rising in
+  document.querySelectorAll('#iMsgs .im').forEach((m) => { const s = I_STEPS[+m.dataset.i]; const p = eOut(P(t, s.a + .2, s.a + .7)); m.style.opacity = p; m.style.transform = `translateY(${(1 - p) * 40}px)`; });
+  const shift = step === 2 ? eIO(P(t, 42.6, 43.1)) * 330 : 0;
+  $('iMsgs').style.transform = `translateY(${-shift}px)`;
+}
+function sceneJ(t) {
+  if (!show('sJ', t, 45.5, 49.6)) return;
+  const out = P(t, 49.0, 49.5);
+  const word = 'Every roof.';
+  const n = Math.floor(word.length * P(t, 45.8, 46.7));
+  $('jT').textContent = word.slice(0, n);
+  $('jCaret').style.opacity = (Math.floor(t * 2.4) % 2 === 0 || (t > 45.8 && t < 46.8) ? 1 : 0) * (1 - out);
+  $('jT').style.opacity = 1 - out;
+  ['j1', 'j2', 'j3', 'j4'].forEach((id, i) => {
+    const p = eExpo(P(t, 46.3 + i * .18, 47.2 + i * .18));
+    const el = $(id);
+    el.style.opacity = p * (1 - out);
+    el.style.transform = `translateY(${(1 - p) * 40 + (t - 47) * -8}px) scale(${lerp(.9, 1, p)})`;
+    $('jl' + (i + 1)).style.opacity = eOut(P(t, 46.7 + i * .18, 47.1 + i * .18)) * (1 - out);
+    $('jl' + (i + 1)).style.color = 'rgba(255,255,255,.75)';
+    $('jl' + (i + 1)).style.font = "600 15px/1 'Libre Franklin'";
+    $('jl' + (i + 1)).style.letterSpacing = '.18em';
+  });
+}
+const K_CARDS = [
+  ['projects/shingle-roof-replacement-solar-pico-rivera-90660/solar-shingle-pico-rivera-90660-33.webp', 'Roof replacement under solar', 'Pico Rivera, CA 90660', 170, 150],
+  ['projects/shingle-roof-replacement-hacienda-heights-91745/shingle-hacienda-heights-91745-01.webp', 'Shingle roof replacement', 'Hacienda Heights, CA 91745', 1450, 120],
+  ['projects/flat-roof-replacement-hollywood-hills-west-90046/hollywood-hills-west-round-flat-roof-finished.webp', 'Round flat roof', 'Hollywood Hills West, Los Angeles', 120, 660],
+  ['projects/tile-flat-roofing-in-mid-wilshire-90019/mid-wilshire-tile-flat-roof-8.webp', 'Tile and flat roofing', 'Mid-Wilshire, Los Angeles', 1490, 650],
+  ['projects/shingle-roof-replacement-granada-hills-91344/shingle-granada-hills-91344-01.webp', 'Shingle roof replacement', 'Granada Hills, CA 91344', 560, 40],
+  ['projects/shingle-roof-replacement-venice-90291/shingle-venice-90291-23.webp', 'Shingle roof replacement', 'Venice, Los Angeles', 1080, 790],
+];
+$('kCards').innerHTML = K_CARDS.map(([src, a, b], i) => `<div class="pcard" id="kc${i}"><div class="im"><img src="${IMG(src)}" alt=""></div><div class="tx">${a}<span>${b}</span></div></div>`).join('');
+function sceneK(t) {
+  if (!show('sK', t, 49.5, 53.6)) return;
+  const out = P(t, 53.0, 53.5);
+  decode($('k1'), 'Handled', out ? 1 - out : P(t, 49.6, 50.3), t, { color: '#fff', dark: true });
+  decode($('k2'), 'end to end.', out ? 1 - out : P(t, 49.9, 50.7), t, { color: '#fff', dark: true });
+  K_CARDS.forEach(([, , , x, y], i) => {
+    const p = eExpo(P(t, 49.7 + i * .14, 50.6 + i * .14));
+    const el = $('kc' + i);
+    el.style.left = x + 'px'; el.style.top = y + Math.sin(t * .8 + i) * 10 + 'px';
+    el.style.opacity = p * (1 - out);
+    el.style.transform = `translateY(${(1 - p) * 70}px) rotate(${(i % 2 ? 1 : -1) * 1.5}deg) scale(${lerp(.85, 1, p)})`;
+  });
+  const r = eOut(P(t, 51.0, 51.5));
+  $('kRev').style.opacity = r * (1 - out);
+}
+function sceneL(t) {
+  if (!show('sL', t, 53.5, 57.1)) return;
+  const out = P(t, 56.6, 57.0);
+  [['l1', 53.7], ['l2', 54.5], ['l3', 55.3]].forEach(([id, a]) => { const p = eOut(P(t, a, a + .5)); $(id).style.opacity = p * (1 - out); $(id).style.transform = `translateY(${(1 - p) * 20}px)`; });
+  [['ld1', 54.0], ['ld2', 54.8]].forEach(([id, a]) => { const p = eIO(P(t, a, a + .55)); $(id).style.width = 210 * p + 'px'; $(id).style.opacity = 1 - out; });
+}
+function sceneM(t) {
+  if (!show('sM', t, 57.0, DURATION + 1)) return;
+  drawMark($('mMark'), P(t, 57.1, 58.4));
+  decode($('mT'), 'QRS', P(t, 57.7, 58.6), t, { color: '#fff', dark: true, span: .6 });
+  const s = eOut(P(t, 58.6, 59.2)); $('mSub').style.opacity = s; $('mSub').style.transform = `translateY(${(1 - s) * 16}px)`;
+  const u = eOut(P(t, 59.4, 60.0)); $('mUrl').style.opacity = u; $('mUrl').style.transform = `translateY(${(1 - u) * 16}px)`;
+  const end = P(t, DURATION - .6, DURATION);
+  $('sM').style.opacity = 1 - end;
+}
+
+function seek(t) {
+  background(t);
+  sceneA(t); sceneB(t); sceneC(t); sceneD(t); sceneE(t); sceneF(t); sceneG(t); sceneH(t); sceneI(t); sceneJ(t); sceneK(t); sceneL(t); sceneM(t);
+  if (!(t >= 26.5 && t < 31.6)) cursor(t, null);
+}
+window.seek = seek;
+window.DURATION = DURATION;
+window.ready = (async () => {
+  await document.fonts.ready;
+  await Promise.all([...document.images].map((im) => (im.complete ? im.decode().catch(() => {}) : new Promise((r) => { im.onload = im.onerror = () => im.decode().then(r, r); }))));
+  seek(0);
+  return true;
+})();
+// Watching in a browser: play in real time (?t= to start later); the renderer passes ?render
+if (!/[?&]render/.test(location.search)) {
+  const start = +(new URLSearchParams(location.search).get('t') || 0);
+  window.ready.then(() => { const t0 = performance.now(); const tick = (now) => { seek((start + (now - t0) / 1000) % DURATION); requestAnimationFrame(tick); }; requestAnimationFrame(tick); });
+}
+</script>
+</body>
+</html>

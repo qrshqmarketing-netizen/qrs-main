@@ -4,7 +4,7 @@ export const LA_90057_PROJECT = {
   keyword: 'shingle roof replacement in Westlake',
   title: 'Shingle Roof Replacement in Westlake, Los Angeles 90057',
   description:
-    "Shingle roof replacement in Westlake, Los Angeles 90057: a Craftsman-style home with many gables re-roofed in new gray shingles, with its chimney and vents flashed.",
+    "Shingle roof replacement in Westlake, Los Angeles 90057: a many-gabled Craftsman home re-roofed in new gray shingles, with its chimney and vents flashed.",
   image: '/images/projects/shingle-roof-replacement-los-angeles-90057/shingle-los-angeles-90057-01.webp', // also the first photo in `photos`
   imageAlt: "Aerial view of a Craftsman-style home in Westlake with a new gray shingle roof of many gables, a white chimney and palm trees beside it",
   // Map pin on /projects/: the center of the ZIP code, not the property's address, so the client's address stays private

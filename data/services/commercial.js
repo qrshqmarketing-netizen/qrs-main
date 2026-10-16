@@ -53,30 +53,17 @@ export const COMMERCIAL_CONTENT = {
         intro: 'QRS provides office building roofing across Los Angeles and Orange County, from leak repairs to full replacement, with the work planned so your tenants can keep working. Every project starts with a roof survey that traces leaks to the source, from rooftop HVAC curbs to parapets and drains, with photo-documented findings for owners and property management clients.',
         highlights: ['Work planned around your tenants', 'Curbs and flashings at rooftop HVAC', 'Photo-documented findings for owners'],
       },
-      overview: {
-        paragraphs: [
-          'Office building roofing is detail work. Most office roofs are low-slope and crowded with HVAC units, exhaust fans, conduit and roof hatches, and many are ringed by parapet walls capped with coping. Each of those details is a place water can get in, and the first sign is often a stained ceiling tile in a top-floor suite. We follow the leak to its source, whether that’s a failed curb flashing, a split seam or a drain backing up, then repair or replace the [flat and low-slope roofing](/residential-roofing/flat-roofing/) with the right system for your building.',
-          'For commercial clients, the roof is also a planning question. Is it worth repairing, or is replacement coming? What needs attention this year, and what can wait? Our roof survey answers with photos and plain-English findings you can share with ownership or keep with your building records. When larger work is due, we build the scope and work plan around your tenants, covering roof access, noise, staging and deliveries.',
-        ],
-      },
-      process: {
-        subheading: 'How an office roof project works',
-        steps: [
-          { title: 'Roof survey', text: 'A roofer walks the roof, checks the areas your tenants have reported and photo-documents what we find.', bullets: ['Curbs and flashings at HVAC units', 'Drains, scuppers and low spots', 'Parapet walls and coping'] },
-          { title: 'Written scope and tenant plan', text: 'The scope and price come in writing, along with a work plan built around your tenants and the way the building runs.', bullets: ['Roof access and material hoisting', 'Noisy work and quiet hours', 'Staging areas and tenant updates'] },
-          { title: 'Installation', text: 'Crews work through the agreed scope area by area, keeping entrances, walkways and loading areas clear.' },
-          { title: 'Closeout photos and records', text: 'We walk the finished roof with your property manager or building engineer and share photos of the completed work for your files.' },
-          { title: 'Ongoing roof care', text: 'Scheduled checks keep drains clear and catch worn flashings early, with photos you can compare from one visit to the next.' },
-        ],
-      },
-      why: {
-        heading: 'Why Choose QRS for Office Building Roofing?',
-        intro: 'Property management clients juggle tenants, ownership and budgets. A [roof survey](#roof-check) gives you facts and photos to work from.',
-        points: [
-          { title: 'Leaks traced, not guessed at', text: 'We follow water back to where it enters instead of patching the spot above the stain, and we show you the photos.' },
-          { title: 'Findings ownership can follow', text: 'Plain-English findings and clear photos make it easier to explain a repair, or a replacement budget, up the chain.' },
-          { title: 'Plans that respect tenants', text: 'Access, noise and staging are worked out before the project starts, so you can tell tenants what to expect.' },
-          { title: '10-Year workmanship warranty', text: 'Our installs are backed by a 10-year workmanship warranty (call for details), and we review it with you at closeout.' },
+      // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
+      story: {
+        label: 'Office building roofing',
+        lead: 'On an office roof, the first sign is usually a __stained__ ceiling tile.',
+        text: 'Most office roofs are low-slope and crowded with HVAC units, exhaust fans, conduit and roof hatches, often ringed by parapet walls capped with coping. Each of those details is a place water can get in, and the stain shows up in a top-floor suite.',
+        heading: 'How we roof an office building',
+        principles: [
+          { title: 'Follow the leak from the suite to the source.', text: 'A roofer checks the areas your tenants have reported and works back to where water enters, whether that’s a failed curb flashing, a split seam or a drain backing up, and photographs it.', bullets: ['Curbs and flashings at HVAC units', 'Drains, scuppers and low spots', 'Parapet walls and coping'] },
+          { title: 'Findings ownership can follow.', text: 'Is it worth repairing, or is replacement coming? What needs attention this year, and what can wait? Photos and plain-English findings answer that in a form you can take to ownership or keep with your building records.' },
+          { title: 'A work plan built around tenants.', text: 'When larger work is due, the written scope and price come with a plan for roof access and material hoisting, noisy work and quiet hours, staging and tenant updates, and crews work area by area with entrances, walkways and loading areas kept clear.' },
+          { title: 'Closeout, then ongoing care.', text: 'We walk the finished roof with your property manager or building engineer, share closeout photos and go over our 10-year workmanship warranty (call for details). Scheduled checks then keep drains clear and catch worn flashings early, with photos you can compare visit to visit.' },
         ],
       },
       faqs: [
@@ -103,30 +90,17 @@ export const COMMERCIAL_CONTENT = {
         intro: 'QRS provides retail store roofing across Los Angeles and Orange County, repairing and replacing the low-slope roof over your sales floor and the mansard or façade sections out front. We trace sales-floor leaks to the source and plan the work around your store hours, entrances and deliveries, so the store can stay open.',
         highlights: ['Scheduled around store hours', 'Low-slope and mansard sections', 'Sales-floor leaks traced to the source'],
       },
-      overview: {
-        paragraphs: [
-          'Good retail store roofing does two jobs: it keeps water off the sales floor, and it keeps the building looking like a place people want to shop. Most stores sit under a low-slope roof with rooftop units, skylights and sign mounts that all depend on sound flashing. Some also have a decorative mansard or front façade finished in tile or shingles, aging in full view of your customers. We handle both, from [flat roofing](/residential-roofing/flat-roofing/) over the sales floor to the steep-slope sections out front.',
-          'Timing matters as much as the roofing itself. Before work starts, we talk through store hours, delivery windows, customer entrances and parking, then write the scope and schedule around them. We plan material staging away from customer paths and clean up as we go. If your store is one of many in a larger center, our [mall and shopping center roofing](/commercial-roofing/malls/) page explains how we phase work across tenants.',
-        ],
-      },
-      process: {
-        subheading: 'How a retail roofing project works',
-        steps: [
-          { title: 'Roof and sales-floor survey', text: 'We walk the roof and the store, match interior stains to what’s above them and photo-document the roof and façade.', bullets: ['Rooftop units, skylights and sign mounts', 'Parapets, coping and scuppers', 'Mansard or façade roofing'] },
-          { title: 'Scope and store-hours plan', text: 'The written scope and price come with a plan for your store, agreed before anything starts.', bullets: ['Store hours and busy periods', 'Delivery windows and entrances', 'Customer parking and staging'] },
-          { title: 'Installation with customers in mind', text: 'Crews keep entrances clear, stage materials out of customer paths and work in sections so the store stays protected as the job moves.' },
-          { title: 'Closeout photos', text: 'You get photos of the finished roof and façade, ready for your records, your landlord or your regional office.' },
-          { title: 'Seasonal roof care', text: 'Checks before the rainy season keep drains and scuppers clear, so a missed clog is less likely to end up on the sales floor.' },
-        ],
-      },
-      why: {
-        heading: 'Why Choose QRS for Retail Store Roofing?',
-        intro: 'A store can’t close every time the roof needs attention, so we plan around your business and show you the work. [Request an estimate](#roof-check) to get a roofer on your roof.',
-        points: [
-          { title: 'Planned around your hours', text: 'Deliveries, entrances and busy times are part of the plan from the start, not an afterthought.' },
-          { title: 'Main roof and façade, one scope', text: 'Low-slope roofing over the store and tile or shingle sections out front are covered in a single written scope.' },
-          { title: 'Photos you can forward', text: 'Plain-English findings and photos are easy to share with building owners, landlords or a regional manager.' },
-          { title: 'A tidy storefront', text: 'Customers see a clean, organized work area, not a pile of debris by the front door.' },
+      // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
+      story: {
+        label: 'Retail store roofing',
+        lead: 'A store roof has two jobs: keep the sales floor dry and the storefront looking __right__.',
+        text: 'Most stores sit under a low-slope roof with rooftop units, skylights and sign mounts that all depend on sound flashing. Some also have a decorative mansard or front façade in tile or shingles, aging in full view of your customers.',
+        heading: 'How we roof a retail store',
+        principles: [
+          { title: 'Match the stain on the floor to the roof above.', text: 'We walk the roof and the store, match interior stains to what’s above them and photograph the roof and façade.', bullets: ['Rooftop units, skylights and sign mounts', 'Parapets, coping and scuppers', 'Mansard or façade roofing'] },
+          { title: 'Main roof and façade, one scope.', text: 'The [flat roofing](/residential-roofing/flat-roofing/) over the sales floor and the tile or shingle sections out front go into a single written scope and price.' },
+          { title: 'Planned around your store hours.', text: 'Store hours and busy periods, delivery windows, entrances and customer parking are agreed before anything starts. Materials are staged away from customer paths, the work moves in sections and we clean up as we go, so customers see a tidy storefront.' },
+          { title: 'Photos you can forward.', text: 'Closeout photos are ready for your records, your landlord or your regional office, and checks before the rainy season keep drains and scuppers clear. If your store is one of many in a center, see [mall and shopping center roofing](/commercial-roofing/malls/).' },
         ],
       },
       faqs: [
@@ -153,30 +127,17 @@ export const COMMERCIAL_CONTENT = {
         intro: 'QRS provides church roofing across Los Angeles and Orange County, repairing and replacing the tile, shingle and low-slope roofs over sanctuaries, fellowship halls and classrooms. We plan the work around services, weddings and events, and every project starts with a roof survey and findings your board can review.',
         highlights: ['Tile, shingle and low-slope sections', 'Scheduled around services and events', 'Findings your board can review'],
       },
-      overview: {
-        paragraphs: [
-          'Many churches in Los Angeles and Orange County pair a steep sanctuary roof, often clay tile or shingles, with low-slope roofs over fellowship or parish halls, offices and classrooms. Each section ages in its own way. Tiles can crack or shift in an earthquake while the underlayment beneath them slowly dries out, and the low-slope areas depend on clear drains and sound flashing. We care for all of it, from [tile roofing](/residential-roofing/tile-roofing/) on the sanctuary to [flat roofing](/residential-roofing/flat-roofing/) over the hall.',
-          'Decisions about a church roof rarely rest with one person. A board, a building committee or a group of trustees usually weighs in, so our roof survey comes with photos and plain-English findings anyone can follow, plus a clear next step for each section. Once the work is approved, we plan it around worship services, weddings, memorials and weekday programs, and we keep walkways and parking areas clean for your members and visitors.',
-        ],
-      },
-      process: {
-        subheading: 'How a church roofing project works',
-        steps: [
-          { title: 'Survey of every roof section', text: 'A roofer surveys the sanctuary, halls and classrooms and photo-documents the condition of each section.', bullets: ['Cracked, slipped or missing tiles', 'Valleys, flashings and underlayment', 'Drains on low-slope roofs'] },
-          { title: 'A scope your board can review', text: 'Your board gets a written scope and price organized by roof section, so priorities are clear and the work can be phased if needed.', bullets: ['Priorities by roof section', 'Services and events to work around', 'Options to phase the work'] },
-          { title: 'Work planned around your calendar', text: 'We schedule around the services and events on your calendar and keep entrances and walkways clear while we work.' },
-          { title: 'Closeout walkthrough', text: 'We review the finished roof with your facilities lead or committee, share photos of the work and go over your 10-year workmanship warranty (call for details).' },
-          { title: 'Seasonal care for every section', text: 'Regular checks catch slipped tiles and clogged drains early, and the photo record helps future boards plan ahead.' },
-        ],
-      },
-      why: {
-        heading: 'Why Choose QRS for Church Roofing?',
-        intro: 'A church roof is a shared responsibility and a careful budget decision. A [roof survey](#roof-check) gives your board clear facts to decide with.',
-        points: [
-          { title: 'Every roof type in one scope', text: 'Tile, shingle and low-slope sections go into one written scope, so nothing falls between contractors.' },
-          { title: 'Respect for the original look', text: 'We reuse sound tiles wherever we can and match replacements as closely as available materials allow.' },
-          { title: 'Findings anyone can follow', text: 'Photos and plain-English explanations help your board or congregation understand what the roof needs and why.' },
-          { title: 'Careful, clean job sites', text: 'Walkways and parking areas stay tidy and clear, so members and visitors can come and go during the project.' },
+      // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
+      story: {
+        label: 'Church roofing',
+        lead: 'A church is usually several roofs, and each one ages its own __way__.',
+        text: 'Many churches pair a steep sanctuary roof, often clay tile or shingles, with low-slope roofs over fellowship halls, offices and classrooms. Tiles can crack or shift in an earthquake while the underlayment slowly dries out, and the low-slope areas depend on clear drains and sound flashing.',
+        heading: 'How we care for a church roof',
+        principles: [
+          { title: 'Every section surveyed.', text: 'A roofer surveys the sanctuary, halls and classrooms and photographs each section, from [tile roofing](/residential-roofing/tile-roofing/) on the sanctuary to [flat roofing](/residential-roofing/flat-roofing/) over the hall.', bullets: ['Cracked, slipped or missing tiles', 'Valleys, flashings and underlayment', 'Drains on low-slope roofs'] },
+          { title: 'Findings your board can follow.', text: 'Decisions rarely rest with one person, so the written scope and price are organized by roof section, with photos, plain-English findings and a clear next step for each, so the work can be prioritized or phased.' },
+          { title: 'The original look, kept.', text: 'Sound tiles are reused wherever we can, and replacements matched as closely as available materials allow. Tile, shingle and low-slope sections share one scope, so nothing falls between contractors.' },
+          { title: 'Work around services and events.', text: 'We schedule around worship services, weddings, memorials and weekday programs and keep walkways and parking clean for members and visitors. Closeout includes photos and our 10-year workmanship warranty (call for details), and seasonal checks catch slipped tiles and clogged drains early.' },
         ],
       },
       faqs: [
@@ -203,32 +164,17 @@ export const COMMERCIAL_CONTENT = {
         intro: 'QRS provides industrial roofing for manufacturing and industrial facilities across Los Angeles and Orange County, from surveys and repairs to full replacement, phased around production and the people and equipment below. We flash every stack and vent properly and plan safe roof access with your facility team before crews go up.',
         highlights: ['Every stack and vent flashed properly', 'Work phased around production', 'Access and safety planned first'],
       },
-      overview: {
-        paragraphs: [
-          'Industrial buildings put more on their roofs than most. Exhaust stacks, ductwork, vents, conduit and equipment supports add up quickly, and each penetration is a potential leak point. Maintenance crews walk the roof to reach equipment, wearing paths into the surface, and some processes vent residue that wears on roofing around stacks. We start with a close look at all of it, then repair or replace the roof with [low-slope roofing systems](/residential-roofing/flat-roofing/) suited to how your facility runs.',
-          'Most facilities can’t pause production for a roof project, so the plan has to fit your operation. Before work starts, we walk through shift schedules, loading areas, what sits beneath each roof section and where crews can safely get on and off the roof. The written scope lays out the work in phases, and closeout photos document each area for your maintenance records. If your site includes storage or distribution buildings, our [warehouse roofing](/commercial-roofing/warehouses/) page covers those too.',
-        ],
-      },
-      process: {
-        subheading: 'How an industrial roofing project works',
-        image: '/images/recent-work-commercial-flat-roof-drone-view.webp',
-        imageAlt: 'Aerial view of an industrial flat roof with rooftop equipment',
-        steps: [
-          { title: 'Survey of roof and penetrations', text: 'We survey the roof and photograph every stack, curb, vent and equipment support, along with wear paths, standing water and flashing condition.', bullets: ['Stacks, vents and ductwork', 'Equipment supports and curbs', 'Walk paths and ponding areas'] },
-          { title: 'Scope phased around production', text: 'The scope lays out price, work areas and sequencing around your shifts, loading and the equipment underneath.', bullets: ['Shift and production schedules', 'Restricted or hazardous areas', 'Safe roof access points'] },
-          { title: 'Controlled installation', text: 'Crews stay within agreed work areas and access points, and debris is contained and hauled off as the work moves.' },
-          { title: 'Closeout documentation', text: 'Photos of each completed area and every finished penetration go into a closeout record for your facility files.' },
-          { title: 'Maintenance planning', text: 'We help you plan routine checks around the parts of the roof that take the most wear, like stacks, walk paths and drains.' },
-        ],
-      },
-      why: {
-        heading: 'Why Choose QRS for Industrial Roofing?',
-        intro: 'On an industrial roof, small details multiply fast. [Request an estimate](#roof-check) and we’ll start by giving each one a close look.',
-        points: [
-          { title: 'Detail at every penetration', text: 'Stacks, curbs and supports get flashing built to suit the roof system, not just a smear of sealant.' },
-          { title: 'Safety planned before work starts', text: 'Roof access, edges, skylights and work zones are planned with your facility team before anyone goes up.' },
-          { title: 'Records for your maintenance team', text: 'Photo documentation by roof area makes it easier to track repairs, wear and future work.' },
-          { title: '10-Year workmanship warranty', text: 'Your new roof comes with our 10-year workmanship warranty (call for details), explained in plain English at closeout.' },
+      // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
+      story: {
+        label: 'Industrial roofing',
+        lead: 'Industrial buildings put more on their roofs than most, and every __penetration__ counts.',
+        text: 'Exhaust stacks, ductwork, vents, conduit and equipment supports add up quickly. Maintenance crews wear paths into the surface walking to equipment, and some processes vent residue that wears on the roofing around stacks.',
+        heading: 'How we roof an industrial facility',
+        principles: [
+          { title: 'Every stack, curb and support photographed.', text: 'The survey covers each penetration along with the wear paths, standing water and flashing condition, so nothing on a crowded roof is overlooked.', bullets: ['Stacks, vents and ductwork', 'Equipment supports and curbs', 'Walk paths and ponding areas'] },
+          { title: 'Flashing built for the roof, not a smear of sealant.', text: 'Stacks, curbs and supports get flashing built to suit the [low-slope roofing system](/residential-roofing/flat-roofing/), whether the job is a repair or a full replacement.' },
+          { title: 'Safety and production, planned first.', text: 'Before anyone goes up, we walk through shift schedules, loading areas, restricted or hazardous areas, what sits beneath each section and where crews can safely get on and off the roof. The scope phases the work around your operation, and crews stay within the agreed areas.' },
+          { title: 'Records for your maintenance team.', text: 'Closeout photos of each area and every finished penetration go into your facility files, with our 10-year workmanship warranty (call for details), and we help plan routine checks around the parts that wear most. Storage or distribution buildings are covered on [warehouse roofing](/commercial-roofing/warehouses/).' },
         ],
       },
       faqs: [
@@ -255,30 +201,17 @@ export const COMMERCIAL_CONTENT = {
         intro: 'QRS provides small business roofing across Los Angeles and Orange County, repairing and replacing roofs on auto and repair shops, workshops, studios and storefront businesses. We keep it simple: a roofer shows you photos of what’s wrong, you get a written price before any work starts and the job is planned around your work days.',
         highlights: ['Small roofs, same attention to detail', 'Straight answers for the owner', 'Written price before any work'],
       },
-      overview: {
-        paragraphs: [
-          'Small commercial buildings collect roof problems quietly. A patch from one owner, a vent added by the next tenant, an exhaust fan or skylight cut in long ago: over time, a small roof can end up with more repairs than roof. Auto and repair shops, workshops, studios and storefront businesses also need the space below to stay dry, because tools, equipment, vehicles and stock don’t mix with water. We sort out what’s worth repairing and what isn’t, then handle the [flat roof repair](/residential-roofing/flat-roofing/repair/) or replacement cleanly.',
-          'Most small business owners don’t have a facilities department. You’re the one who sees the leak, calls the roofer and approves the price. So we keep it simple: a roofer looks at the roof, shows you photos of what’s wrong and gives you a written scope and price before any work starts. Where we can, we schedule around your working hours. For larger stores built around customers and a sales floor, see our [retail store roofing](/commercial-roofing/retail/) page.',
-        ],
-      },
-      process: {
-        subheading: 'How a small commercial roof project works',
-        steps: [
-          { title: 'Roof survey with the owner', text: 'A roofer checks the roof, the old patches and every vent, fan and skylight, then walks you through the photos.', bullets: ['Old patches and worn seams', 'Exhaust fans, vents and skylights', 'Drains, scuppers and gutters'] },
-          { title: 'A straight answer and a written price', text: 'You get a clear recommendation and a written scope and price, with repair and replacement options explained when both make sense.' },
-          { title: 'Work planned around your shop', text: 'We agree on work days, parking and access ahead of time, so your bays, doors and customers aren’t caught off guard.' },
-          { title: 'Clean finish and photos', text: 'We clean up, walk the finished roof with you and share photos of the work for your records.' },
-          { title: 'Check-ins when you want them', text: 'Scheduled roof care keeps an eye on drains, patches and flashing, so small issues get fixed while they’re still small.' },
-        ],
-      },
-      why: {
-        heading: 'Why Choose QRS for Shop and Small Business Roofing?',
-        intro: 'When it’s your building and your budget, you want a roofer who tells it straight. [Request an estimate](#roof-check) and see how we work.',
-        points: [
-          { title: 'Small roofs get full attention', text: 'A small roof gets the same roofer-led survey, photo documentation and written scope as a large one.' },
-          { title: 'Repairs when repairs make sense', text: 'If a repair will do the job, we say so. If the roof is past patching, we show you why.' },
-          { title: 'Direct, plain-English answers', text: 'You get clear answers about your roof, your price and your schedule, without the runaround.' },
-          { title: '10-Year workmanship warranty', text: 'New roofs we install carry our 10-year workmanship warranty (call for details), and we explain it in plain English at the final walkthrough.' },
+      // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
+      story: {
+        label: 'Small business roofing',
+        lead: 'Without a facilities department, you’re the one who sees the leak and makes the __call__.',
+        text: 'A patch from one owner, a vent from the next tenant, an exhaust fan or skylight cut in long ago: over time a small roof can end up with more repairs than roof. Shops, workshops, studios and storefronts need the space below dry, because tools, vehicles and stock don’t mix with water.',
+        heading: 'How we roof a small business',
+        principles: [
+          { title: 'A survey with you, not around you.', text: 'A roofer checks the roof, the old patches and every vent, fan and skylight, then walks you through the photos.', bullets: ['Old patches and worn seams', 'Exhaust fans, vents and skylights', 'Drains and scuppers'] },
+          { title: 'A straight answer and a written price.', text: 'If a [flat roof repair](/residential-roofing/flat-roofing/repair/) will do the job, we say so; if the roof is past patching, we show you why. You get the scope and price in writing, with both options explained when both make sense.' },
+          { title: 'Planned around your work days.', text: 'Work days, parking and access are agreed ahead of time, so your bays, doors and customers aren’t caught off guard.' },
+          { title: 'Full attention for a small roof.', text: 'A small roof gets the same photos and written scope as a large one. We clean up, walk the finished roof with you and go over our 10-year workmanship warranty (call for details). For stores built around a sales floor, see [retail store roofing](/commercial-roofing/retail/).' },
         ],
       },
       faqs: [
@@ -305,30 +238,17 @@ export const COMMERCIAL_CONTENT = {
         intro: 'QRS provides warehouse roofing across Los Angeles and Orange County, surveying, repairing and replacing large low-slope roofs section by section, with the inventory below in mind. We start with a survey, fix the urgent areas first and phase any replacement around your docks and racking so you can keep shipping.',
         highlights: ['Large roofs surveyed section by section', 'Drainage across long, flat spans', 'Work phased around docks and racking'],
       },
-      overview: {
-        paragraphs: [
-          'Warehouse roofs are big, simple and unforgiving. Across a wide, nearly flat span, water has to travel a long way to reach a drain or scupper, so a low spot, a missing cricket or a clogged drain can leave water sitting on the roof after every storm. Skylights, roof hatches and parapet walls add more details to watch. Many Southern California warehouses are concrete tilt-up buildings with roofs like this, and we repair and replace them with [low-slope roofing](/residential-roofing/flat-roofing/) planned around how water drains.',
-          'Size changes how the work is planned. Our roof survey works across the roof in sections, with photos of drains, seams, skylights and flashing, so you can see where problems cluster and budget for them. Repairs can target the worst areas first. For a replacement, we phase the work by section and plan it around loading docks, truck traffic and what’s stored below each part of the roof. [Request an estimate](#roof-check) to start with a survey of your building.',
-        ],
-      },
-      process: {
-        subheading: 'How a warehouse roofing project works',
-        steps: [
-          { title: 'Section-by-section survey', text: 'A roofer works across the roof in sections, photographing drainage, seams, skylights, parapets and any areas where water stands.', bullets: ['Drains, scuppers and crickets', 'Ponding and low spots', 'Skylight curbs and roof hatches'] },
-          { title: 'Scope, phases and dock plan', text: 'We write the scope and price in phases, timing each work area around docks, truck access and the inventory below.', bullets: ['Dock and truck access', 'Inventory below each work area', 'Staging and hoisting locations'] },
-          { title: 'One section at a time', text: 'Work moves across the roof section by section, so only part of the building is under construction at once.' },
-          { title: 'Closeout photos by section', text: 'Photos document each finished section, drains and flashing included, for your property records.' },
-          { title: 'Drain and roof care', text: 'Scheduled checks clear drains and scuppers before the rainy season and build a photo history of the roof’s condition.' },
-        ],
-      },
-      why: {
-        heading: 'Why Choose QRS for Warehouse Roofing?',
-        intro: 'On a roof this size, guessing gets expensive. We document what we find, rank it and put the plan in writing.',
-        points: [
-          { title: 'Drainage comes first', text: 'Standing water speeds up wear, so we look at how water moves across the whole roof, not just where it leaked.' },
-          { title: 'Priorities you can budget for', text: 'Photos and findings by section help you fix the urgent areas now and plan for the rest.' },
-          { title: 'Planned around your docks', text: 'Truck traffic, loading hours and where inventory sits are part of the work plan from the start.' },
-          { title: 'Records for owners and tenants', text: 'Closeout photos give owners, asset managers and tenants a clear record of what was done and where.' },
+      // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
+      story: {
+        label: 'Warehouse roofing',
+        lead: 'Warehouse roofs are big, simple and __unforgiving__.',
+        text: 'Across a wide, nearly flat span, water travels a long way to reach a drain or scupper, so a low spot, a missing cricket or a clogged drain leaves water standing after every storm. Many Southern California warehouses are concrete tilt-up buildings with roofs like this.',
+        heading: 'How we roof a warehouse',
+        principles: [
+          { title: 'Surveyed in sections.', text: 'A roofer works across the roof section by section, photographing drainage, seams, skylights, parapets and anywhere water stands, so you can see where problems cluster.', bullets: ['Drains, scuppers and crickets', 'Ponding and low spots', 'Skylight curbs and roof hatches'] },
+          { title: 'Drainage first.', text: 'Standing water speeds up wear, so the repair or [low-slope roofing](/residential-roofing/flat-roofing/) is planned around how water moves across the whole roof, not just where it leaked.' },
+          { title: 'Urgent areas now, the rest in phases.', text: 'Findings by section let you fix the worst areas first and budget for the rest. A replacement is phased by section around your docks, truck traffic and the inventory below each part of the roof, so you keep shipping.', bullets: ['Dock and truck access', 'Inventory below each work area', 'Staging and hoisting locations'] },
+          { title: 'Records by section.', text: 'Closeout photos document each finished section, drains and flashing included, for owners, asset managers and tenants, and checks before the rainy season keep drains and scuppers clear.' },
         ],
       },
       faqs: [
@@ -355,30 +275,17 @@ export const COMMERCIAL_CONTENT = {
         intro: 'QRS provides shopping center roofing across Los Angeles and Orange County, surveying, repairing and replacing the many roofs over a center’s tenant spaces and common areas in phases. We coordinate the work with center management and plan it around store hours, deliveries, entrances and parking, so tenants and shoppers can carry on.',
         highlights: ['Phased across tenant spaces', 'Common areas and entrances planned', 'Photo records by roof section'],
       },
-      overview: {
-        paragraphs: [
-          'Malls and shopping centers grow and change, and so do their roofs. Sections built at different times sit at different heights, each tenant space tends to add its own rooftop units, and every remodel can leave behind new penetrations, abandoned curbs or quick patches. Skylights over common areas, parapets with signage and long runs of drains complete the picture. Water can travel across connected sections before it shows up in a store, so we follow each leak back across the roof to where it actually starts.',
-          'Work on an open center takes coordination. We plan the scope with center management, phase it across roof sections and tenant spaces, and schedule around store hours, deliveries, entrances and parking. Closeout photos by section give you a record of what was done above each space. We work with centers [across Los Angeles and Orange County](/service-areas/), and it all starts with a roof survey: [request an estimate](#roof-check) and we’ll take it from there.',
-        ],
-      },
-      process: {
-        subheading: 'How a shopping center roofing project works',
-        steps: [
-          { title: 'Center-wide roof survey', text: 'We survey each roof section and tenant space, photographing rooftop units, penetrations, skylights, drains and parapets.', bullets: ['Rooftop units and tenant penetrations', 'Skylights over common areas', 'Drains, scuppers and parapet flashing'] },
-          { title: 'Phasing and tenant plan', text: 'Phases are set out by section in the written scope and price, with work hours, access routes and staging agreed with center management.', bullets: ['Phase boundaries by roof section', 'Access routes and staging areas', 'Store hours and delivery windows'] },
-          { title: 'Installation, phase by phase', text: 'Crews work one phase at a time, with entrances, walkways and parking planned around the work.' },
-          { title: 'Closeout photos for each phase', text: 'Photos document every finished phase, so you can update tenants and ownership as the project moves along.' },
-          { title: 'A long-term roof plan', text: 'Scheduled care and fresh photos help you plan repairs and future phases across the whole center.' },
-        ],
-      },
-      why: {
-        heading: 'Why Choose QRS for Mall & Shopping Center Roofing?',
-        intro: 'Center managers answer to tenants, shoppers and ownership all at once. We keep the roof work organized, documented and clearly communicated.',
-        points: [
-          { title: 'Leaks followed across sections', text: 'We track water across connected roof areas to find where it gets in, even when that’s above a different tenant.' },
-          { title: 'Phasing that protects business', text: 'Work areas, access and staging are planned with the goal of keeping every store open while the roof is done.' },
-          { title: 'Clear information for tenants', text: 'You get the details tenants ask about, like which areas are affected and when, so updates come from one source.' },
-          { title: 'Records for every space', text: 'Section-by-section photos are useful for ownership reports and when a space changes hands.' },
+      // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
+      story: {
+        label: 'Shopping center roofing',
+        lead: 'A shopping center’s roofs grow and change with the __center__.',
+        text: 'Sections built at different times sit at different heights, each tenant adds rooftop units, and every remodel can leave new penetrations, abandoned curbs or quick patches. Water can travel across connected sections before it shows up in a store.',
+        heading: 'How we roof a shopping center',
+        principles: [
+          { title: 'Leaks followed across sections.', text: 'We survey every roof section and tenant space and track water across connected areas to where it actually starts, even when that’s above a different tenant.', bullets: ['Rooftop units and tenant penetrations', 'Skylights over common areas', 'Drains, scuppers and parapet flashing'] },
+          { title: 'Phases agreed with center management.', text: 'The written scope and price set out phases by roof section, with work hours, access routes and staging agreed with center management around store hours, deliveries, entrances and parking.' },
+          { title: 'Every store open while the roof is done.', text: 'Crews work one phase at a time, and tenants get the details they ask about, like which areas are affected and when, from one source.' },
+          { title: 'Records for every space.', text: 'Closeout photos for each phase help with ownership reports and when a space changes hands, and scheduled care keeps a long-term plan for the whole center. It starts with a roof survey anywhere [across Los Angeles and Orange County](/service-areas/).' },
         ],
       },
       faqs: [

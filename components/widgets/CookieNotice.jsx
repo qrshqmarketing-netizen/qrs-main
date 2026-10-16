@@ -5,6 +5,7 @@ import { PRIVACY_POLICY_URL } from '@/data/site';
 import { COOKIE_SETTINGS_EVENT, currentConsent, saveConsent, storedConsent } from '@/lib/consent';
 import { COOKIE_OK_EVENT, COOKIE_OK_KEY } from '@/lib/events';
 import { local } from '@/lib/storage';
+import { afterSplash } from '@/lib/splash';
 import './CookieNotice.css';
 
 // The cookie bar (owner, October 15 2026): the full width of the bottom of the screen, on a first visit until the visitor chooses.
@@ -27,8 +28,10 @@ export default function CookieNotice() {
   useEffect(() => {
     setChoice(currentConsent());
     if (storedConsent()) return undefined;
-    const t = setTimeout(() => setOpen(true), 1200);
-    return () => clearTimeout(t);
+    // On a first visit to the home page it waits for the opening splash to finish (lib/splash.js)
+    let t;
+    const stop = afterSplash(() => { t = setTimeout(() => setOpen(true), 1200); });
+    return () => { stop(); clearTimeout(t); };
   }, []);
 
   // The footer link: open again, at the settings

@@ -151,3 +151,44 @@ body:has(main :is(.hero,.st-hero,.promo-home,.pd-hero)) .site-header:not([data-s
 @supports ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){
   body:has(main :is(.hero,.st-hero,.promo-home,.pd-hero)) .site-header:not([data-solid]) .hd-bar:before{background:linear-gradient(180deg,rgba(3,14,26,.42),rgba(3,14,26,.18))}
 }
+
+/* Liquid glass (owner, October 16 2026, adapted from the scrolled nav on zaro.ai): replaces the heavy frost above. The solid bar is the paper
+   color at 80% over a light blur, with a soft white highlight inside its top edge and a hairline shadow (zaro: bg-white/80, backdrop-blur-xs,
+   box-shadow 0 1px 4px #fff inset, 0 1px 4px rgba(0,0,0,.04)); over a photo hero it is dark glass, black at 20% with a faint light edge
+   (zaro's look over dark sections). Dark theme: navy glass with a much fainter highlight. Still drawn on .hd-bar:before. */
+@supports ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){
+  .hd-bar:before{
+    background:color-mix(in srgb,var(--paper) 80%,transparent);
+    -webkit-backdrop-filter:blur(6px) saturate(1.5);backdrop-filter:blur(6px) saturate(1.5);
+    box-shadow:inset 0 1px 4px 0 rgba(255,255,255,.95),0 1px 4px 0 rgba(0,0,0,.04);
+    transition:background .35s ease,box-shadow .35s ease;
+  }
+  :root[data-theme="dark"] .hd-bar:before{box-shadow:inset 0 1px 4px 0 rgba(255,255,255,.07),0 1px 6px 0 rgba(0,0,0,.25)}
+  body:has(main :is(.hero,.st-hero,.promo-home,.pd-hero)) .site-header:not([data-solid]) .hd-bar:before{
+    background:rgba(0,0,0,.2);
+    -webkit-backdrop-filter:blur(4px) saturate(1.3);backdrop-filter:blur(4px) saturate(1.3);
+    box-shadow:inset 0 1px 4px 0 rgba(255,255,255,.14),0 1px 4px 0 rgba(0,0,0,.08);
+  }
+}
+
+/* Liquid glass menu panel (owner, October 16 2026, adapted from zaro.ai's menu: bg-cloud-50/95, backdrop-blur-md, hairline border,
+   rounded free corners, a soft drop shadow 0 10px 28px -14px). Ours is a little more see-through (paper at 84%, 16px blur) so the glass
+   reads over the dimmed page, with a faint white edge inside it; the page behind is dimmed less and softly blurred (zaro's overlay:
+   70% + backdrop-blur-sm). The "more" rows and row hovers turn translucent so the glass shows through them too. Dark theme: navy glass.
+   Browsers without backdrop-filter keep the solid panel above. */
+@supports ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){
+  .hd-panel{
+    background:color-mix(in srgb,var(--paper) 84%,transparent);
+    -webkit-backdrop-filter:blur(16px) saturate(1.6);backdrop-filter:blur(16px) saturate(1.6);
+    border-radius:0 0 var(--radius) var(--radius);
+    box-shadow:inset 0 -1px 4px 0 rgba(255,255,255,.7),0 14px 32px -16px rgba(3,14,26,.4);
+  }
+  .hd-more{background:color-mix(in srgb,var(--wash) 55%,transparent)}
+  .hd-panel li{border-bottom-color:color-mix(in srgb,var(--line) 80%,transparent)}
+  .hd-panel li:last-child{border-bottom:0}
+  @media (hover:hover){.hd-row:hover{background:color-mix(in srgb,var(--navy) 6%,transparent)}}
+  .hd-backdrop{background:rgba(3,14,26,.38);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+  :root[data-theme="dark"] .hd-panel{box-shadow:inset 0 -1px 4px 0 rgba(255,255,255,.06),0 14px 32px -16px rgba(0,0,0,.6)}
+  @media (hover:hover){:root[data-theme="dark"] .hd-row:hover{background:color-mix(in srgb,#fff 7%,transparent)}}
+  @media (min-width:621px){.hd-panel{border-radius:0 0 0 var(--radius);border-bottom:1px solid var(--line)}}
+}

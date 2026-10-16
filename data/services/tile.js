@@ -171,28 +171,17 @@ export const TILE_CONTENT = {
         intro: 'Slate tile roofing gives a home the natural color and texture of stone, and QRS plans slate roofs across Los Angeles and Orange County from the structure up. Because slate is heavy, we review the framing and roof details first and put the full scope in writing before work begins. It starts with a roof evaluation.',
         highlights: ['Natural slate appearance', 'Roof structure and details reviewed', 'Written scope before work begins'],
       },
-      overview: {
-        paragraphs: [
-          'Slate has a distinctive look and a long service life when the roof is designed and installed for the material. Its weight and the way it is fastened make planning especially important. We begin with a roof evaluation, discuss the home’s structure and existing roof, and explain the work involved before recommending a direction.',
-          'A complete slate roof scope considers the deck, underlayment, flashing, drainage and the slate profile. If slate is not the right fit for the structure or budget, we can also talk through [concrete tile roofing](/residential-roofing/tile-roofing/concrete/) and other [tile roof replacement](/residential-roofing/tile-roofing/replacement/) options.'
-        ],
-      },
-      process: {
-        subheading: 'Planning a slate tile roof',
-        steps: [
-          { title: 'Review the existing roof', text: 'We document roof conditions, geometry and visible details, then talk through the look and goals for the project.' },
-          { title: 'Assess the structure', text: 'Slate is a substantial roofing material. The roof framing and applicable project requirements need review before a final system is selected.' },
-          { title: 'Prepare a written scope', text: 'The proposal explains the planned roof assembly, slate selection, underlayment, flashing and cleanup.' },
-          { title: 'Install and review', text: 'Work follows the approved scope, with attention to the slate layout and transitions. We share project photos and review the completed work with you.' },
-        ],
-      },
-      why: {
-        heading: 'Planning Slate Tile Roofing with QRS',
-        intro: 'A slate roof needs sound planning from the structure up, not just a material choice.',
-        points: [
-          { title: 'Start with the home', text: 'We consider the roof’s framing, slope, drainage and details before proposing a system.' },
-          { title: 'Clear scope and pricing', text: 'You see the planned materials and work in writing before installation begins.' },
-          { title: 'One local team', text: 'Our local crews handle roofing projects across Los Angeles and Orange County, with project size matched to the property and scope.' },
+      // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
+      story: {
+        label: 'Slate tile roofing',
+        lead: 'A slate roof starts with the __structure__, not the stone.',
+        text: 'Slate gives a home the natural color and texture of stone and a long service life when the roof is designed and installed for it. It’s heavy and fastened its own way, so planning matters more than with most roofs.',
+        heading: 'How we plan a slate roof',
+        principles: [
+          { title: 'Look at the home first.', text: 'We document the roof’s condition, shape and visible details, and talk through the look and the goals for the project.' },
+          { title: 'Check the framing before choosing the material.', text: 'Slate is a substantial roofing material, so the roof framing, slope, drainage and the project’s requirements are reviewed before a final system is selected.' },
+          { title: 'Every layer in the written scope.', text: 'The proposal explains the roof assembly, the slate selection, underlayment, flashing, drainage and clean-up, with the price, before installation begins.' },
+          { title: 'Laid out with care, or a lighter option.', text: 'Work follows the approved scope, with attention to the slate layout and every transition, and we review the finished roof and photos with you. If slate isn’t the right fit for the structure or budget, [concrete tile roofing](/residential-roofing/tile-roofing/concrete/) and other [tile roof replacement](/residential-roofing/tile-roofing/replacement/) options are worth a look.' },
         ],
       },
       faqs: [
@@ -216,28 +205,17 @@ export const TILE_CONTENT = {
         intro: 'Concrete tile roofing comes in a range of profiles and colors, and QRS installs it on homes across Los Angeles and Orange County as a complete roof system. We help you choose the profile and color, then plan the deck, underlayment, flashing and drainage alongside the tile, with a written scope before work begins.',
         highlights: ['Multiple profiles and color choices', 'Underlayment and flashing included in planning', 'Written scope before work begins'],
       },
-      overview: {
-        paragraphs: [
-          'Concrete tile can suit many home styles, from Spanish-inspired architecture to newer Mediterranean designs. A successful installation starts with a roof evaluation and a clear plan for the deck, underlayment, flashing, tile profile and water flow.',
-          'If you are replacing an older tile roof, we compare the existing condition with the options for a complete replacement. If the tiles can be reused and the underlayment is the main concern, [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/) may be worth considering. We can also discuss [slate tile roofing](/residential-roofing/tile-roofing/slate/) if you are exploring a natural-stone appearance.'
-        ],
-      },
-      process: {
-        subheading: 'How a concrete tile roof project works',
-        steps: [
-          { title: 'Evaluate the existing roof', text: 'We photograph the roof, check visible conditions and discuss your goals for the new system.' },
-          { title: 'Choose a profile and color', text: 'We review available concrete tile options and how they fit the home’s architecture and project scope.' },
-          { title: 'Plan the roof assembly', text: 'Your written scope covers removal as needed, underlayment, flashing, drainage and tile installation.' },
-          { title: 'Install and walk through', text: 'Our crew completes the approved work and reviews the finished project and photos with you.' },
-        ],
-      },
-      why: {
-        heading: 'Concrete Tile Roofing Planned for Your Home',
-        intro: 'The visible tile is only one part of a roof that needs to manage water and weather.',
-        points: [
-          { title: 'Tile and roof details together', text: 'We include the layers below the tile and the transitions that direct water into the project plan.' },
-          { title: 'Options explained clearly', text: 'We talk through profiles, colors and repair versus replacement based on what the roof needs.' },
-          { title: 'Local crews for projects of different sizes', text: 'Our small local roofing company takes on both focused tile work and larger roof projects across Los Angeles and Orange County.' },
+      // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
+      story: {
+        label: 'Concrete tile roofing',
+        lead: 'The tile you see is only one part of the __roof__.',
+        text: 'Concrete tile suits many home styles, from Spanish-inspired architecture to newer Mediterranean designs. What keeps it dry is planned underneath: the deck, the underlayment, the flashing and the way water runs off.',
+        heading: 'How we plan a concrete tile roof',
+        principles: [
+          { title: 'Start with the roof you have.', text: 'We photograph the roof, check what can be seen and talk through your goals. If the tiles can be reused and the underlayment is the real concern, a [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/) may be worth considering instead.' },
+          { title: 'A profile and color that fit the house.', text: 'We go through the concrete tile options and how each fits your home’s architecture and the project. If you’re drawn to a natural-stone look, we can also talk through [slate tile roofing](/residential-roofing/tile-roofing/slate/).' },
+          { title: 'The layers below, planned with the tile.', text: 'Your written scope covers removal as needed, the underlayment, the flashing and drainage details that direct water off the roof, and the tile installation, so nothing under the tile is left to chance.' },
+          { title: 'Installed, then walked through.', text: 'Our crew completes the approved work and reviews the finished roof and the photos with you. As a small local company, we take on focused tile work and larger roof projects alike.' },
         ],
       },
       faqs: [

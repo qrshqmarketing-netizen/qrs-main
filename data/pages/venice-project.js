@@ -5,7 +5,7 @@ export const VENICE_PROJECT = {
   keyword: 'shingle roof replacement in Venice',
   title: 'Shingle Roof Replacement in Venice 90291',
   description:
-    'Shingle roof replacement in Venice 90291: a canal-side home re-roofed from tear-off to finish with new charcoal shingles, flashed vents and a rebuilt flat roof section.',
+    'Shingle roof replacement in Venice 90291: a canal-side home re-roofed from tear-off to finish in charcoal shingles, with new flashing and a rebuilt flat roof.',
   image: '/images/projects/shingle-roof-replacement-venice-90291/shingle-venice-90291-23.webp', // the finished roof (the slider below starts at the tear-off and ends at the finish)
   imageAlt: 'The finished charcoal shingle roof beside the stone chimney on a canal-side home in Venice',
   // Map pin on /projects/: the center of the ZIP code, not the home's address, so the client's address stays private

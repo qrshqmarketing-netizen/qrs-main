@@ -92,7 +92,7 @@ export const REGION_PAGES = {
   'san-bernardino-county': {
     keyword: 'san bernardino county roofing',
     metaTitle: 'San Bernardino County Roofing Services',
-    metaDescription: 'San Bernardino County roofing for homes, HOAs and businesses in Chino, Ontario, Rancho Cucamonga and nearby: tile, shingle and flat roofs. Book a free roof evaluation.',
+    metaDescription: 'San Bernardino County roofing for homes, HOAs and businesses in Chino, Ontario and Rancho Cucamonga: tile, shingle and flat roofs. Book a free roof evaluation.',
     hero: {
       heading: 'San Bernardino County Roofing Services',
       intro: 'San Bernardino County roofing from Quality Roofing Specialists covers homes, HOAs and businesses in the southwest corner of the county, from Chino Hills and Ontario to Rancho Cucamonga, Fontana and Colton, with tile, shingle and flat roof repair and replacement. Every project starts with a free roof evaluation and a written scope and price.',

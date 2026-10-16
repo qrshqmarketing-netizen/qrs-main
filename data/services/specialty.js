@@ -115,61 +115,17 @@ export const HOA_MULTI_FAMILY = {
       'QRS provides HOA & multi-family roofing for boards and property management clients across Los Angeles and Orange County, from roof inspections and repairs to replacements phased building by building. Our *ReserveReady* program gives your board photo reports, phased proposals and long-range budget planning, with one point of contact throughout. It starts with a roofer-led roof survey of each building.',
     highlights: ['Photo reports your board can review', 'Work phased building by building', 'One point of contact, start to finish'],
   },
-  overview: {
-    paragraphs: [
-      'Whether it’s a townhome community in Irvine or an apartment building in Long Beach, a multi-family property is really a collection of roofs. Buildings put up at the same time can age differently depending on sun, shade and drainage, and carports, clubhouses and other common-area roofs often use a different system altogether. Before a board or property management client can make a sound decision, they need a clear picture of every one of them. We inspect each roof, photo-document what we find and organize it into a **report your board can review**, building by building.',
-      'From there, we help you separate what’s urgent from what can be planned. Some roofs need repairs now, while others can be monitored or scheduled into a later phase so replacements fit your budget. Because we work on tile, shingle and flat roofs, the whole property can stay with one contractor. For office, retail or mixed-use buildings, see our [commercial roofing](/commercial-roofing/) services. To get started, [request an estimate](#roof-check) and we’ll set up a time to walk the property with you.',
-    ],
-  },
-  process: {
-    subheading: 'How we work with boards and property management clients',
-    steps: [
-      {
-        title: 'Property walk and roof inspections',
-        text: 'We inspect each building’s roof, including carports and common-area roofs, and photo-document conditions so decisions don’t rest on memory or guesswork.',
-        bullets: ['Condition of each building’s roof', 'Carports and common-area roofs', 'Gutters, drains and downspouts', 'Access, parking and staging needs'],
-      },
-      {
-        title: 'Report and written proposal',
-        text: 'You receive a photo-documented report and a written proposal with scope and price for each building or phase.',
-        bullets: ['Repair, maintain or replace, by building', 'Photos of each problem area', 'Options your board can compare'],
-      },
-      {
-        title: 'Phasing and scheduling',
-        text: 'We plan the work building by building, with start dates, parking changes and access routes set ahead of time for each phase.',
-        bullets: ['Phases set by priority and budget', 'Schedule details for resident notices', 'Staging kept out of residents’ way'],
-      },
-      {
-        title: 'Clean, to-spec installation',
-        text: 'Qualified crews install the agreed roof system on each building to spec, keeping walkways open and work areas tidy.',
-      },
-      {
-        title: 'Walkthrough and closeout',
-        text: 'We review the completed work with your manager or board contact, hand over photos of each building and go over the 10-year workmanship warranty that backs our installs (call for details).',
-      },
-    ],
-  },
-  why: {
-    heading: 'Why Choose QRS for HOA & Multi-Family Roofing?',
-    intro:
-      'Boards, managers and owners need answers they can take into a meeting, and residents need to know what’s happening overhead. As a licensed California contractor since 2020, we bring that accountability to both.',
-    points: [
-      {
-        title: 'Reports made for board review',
-        text: 'Photos, plain-English findings and a written proposal give every board member the same clear picture, so the decision doesn’t rest on one person’s description.',
-      },
-      {
-        title: 'One clear point of contact',
-        text: 'Your manager or board has one contact for schedule, scope and resident questions, from the first property walk through closeout.',
-      },
-      {
-        title: 'Phased around residents',
-        text: 'Working building by building keeps noise, crews and parking changes to one area at a time instead of the whole property at once.',
-      },
-      {
-        title: 'Consistent across buildings',
-        text: 'When roofs are replaced in phases, we keep materials and details matched so the property looks uniform when the last building is done.',
-      },
+  // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
+  story: {
+    label: 'HOA & multi-family roofing',
+    lead: 'A multi-family property is really a collection of __roofs__.',
+    text: 'Buildings put up at the same time age differently with sun, shade and drainage, and carports, clubhouses and common-area roofs often use a different system altogether. Before a board decides anything, it needs a clear picture of every one of them.',
+    heading: 'How we work with boards and property managers',
+    principles: [
+      { title: 'Every roof, inspected and photographed.', text: 'We walk the property and inspect each building’s roof, including carports and common areas, so decisions don’t rest on memory or one person’s description.', bullets: ['Condition of each building’s roof', 'Carports and common-area roofs', 'Drains and downspouts', 'Access, parking and staging needs'] },
+      { title: 'A report your board can take into a meeting.', text: 'Photos, plain-English findings and a written proposal with scope and price for each building or phase give every board member the same picture. The *ReserveReady* program adds phased proposals and long-range budget planning.', bullets: ['Repair, maintain or replace, by building', 'Photos of each problem area', 'Options your board can compare'] },
+      { title: 'Phased around residents.', text: 'Work goes building by building, with start dates, parking changes and access routes set ahead of each phase for resident notices, so noise, crews and staging stay in one area at a time.' },
+      { title: 'One contact, matching roofs.', text: 'Your manager or board has one contact for schedule, scope and resident questions from the first walk to closeout, and materials and details stay matched across phases so the property looks uniform when the last building is done. Closeout includes photos of each building and our 10-year workmanship warranty (call for details). For office, retail or mixed-use buildings, see [commercial roofing](/commercial-roofing/).' },
     ],
   },
   faqs: [
@@ -215,61 +171,17 @@ export const ATTIC_VENTILATION = {
       'Attic ventilation from QRS means checking how air moves through your attic, fixing vents that are blocked, missing or mismatched, and adding the right ones when your roof is replaced, across Los Angeles and Orange County. A roofer inspects the vents, eaves and ridge, photographs what they find and gives you a written scope and price before any work. Start with a free roof evaluation.',
     highlights: ['Intake and exhaust vents checked together', 'Photos of every vent and finding', 'Fixed on its own or built into a new roof'],
   },
-  overview: {
-    paragraphs: [
-      'In Los Angeles and Orange County the sun beats on a roof for much of the year, and that heat goes straight into the attic. An attic that can’t vent gets hotter and more humid. Roofing materials age early, shingles can curl, blister and crack, moisture settles into the decking and insulation, and your air conditioner works harder to cool the rooms below. Everyday life adds to it, since showers, cooking and laundry all put moisture into the air. A working ventilation system is built to carry all of that out.',
-      'It works by keeping air moving. Cooler air comes in low, through vents at the eaves and soffits, and hot air leaves high, through vents at or near the ridge, so the flow continues as the roof heats up. The two sides have to match: exhaust vents with no intake, or intake blocked by insulation or paint, leave an attic stuffy no matter how many vents are on the roof. When we replace a roof, ventilation is planned with the new roof, as part of a [shingle roof replacement](/residential-roofing/shingle-roofing/replacement/). If you only suspect a problem, a [free roof evaluation](#roof-check) is the place to start.',
-    ],
-  },
-  process: {
-    subheading: 'How we check and fix your attic ventilation',
-    steps: [
-      {
-        title: 'Roof and attic check',
-        text: 'A roofer looks at your vents from the roof and, where it can be reached, from the attic: how many there are, what kinds, whether they’re open, and where air is meant to come in and go out.',
-        bullets: ['Ridge, box and other exhaust vents', 'Eave and soffit intake vents', 'Stained or damp decking and insulation', 'Curling or blistered shingles'],
-      },
-      {
-        title: 'Photos and a plain-English report',
-        text: 'We photograph each vent and any sign of trouble, then explain what is likely causing it. Sometimes it’s one blocked vent, and sometimes the system is missing a whole side.',
-        bullets: ['What is blocked, missing or mismatched', 'Where the air should enter and leave'],
-      },
-      {
-        title: 'Written scope and price',
-        text: 'Before any work starts you get a written scope and price: which vents to clear, repair, replace or add, and where they go.',
-      },
-      {
-        title: 'Repair or installation',
-        text: 'We free blocked intake, repair or replace failed vents and add vents where the system falls short, then flash every vent that goes through the roof so it doesn’t become a leak.',
-        bullets: ['Intake kept open at the eaves', 'Exhaust added or replaced near the ridge', 'Every vent flashed into the roof'],
-      },
-      {
-        title: 'Walkthrough and warranty',
-        text: 'We go through the photos of the finished work with you. Vents installed as part of a roof replacement are covered by our 10-year workmanship warranty (call for details), and repairs carry the manufacturer’s warranty on the materials used, which depends on the product.',
-      },
-    ],
-  },
-  why: {
-    heading: 'Why Choose QRS for Attic Ventilation?',
-    intro:
-      'Ventilation is part of how the whole roof ages, so we treat it as part of the roof. As a licensed California contractor since 2020, we look at your vents the way we look at everything else up there: closely, and with photos.',
-    points: [
-      {
-        title: 'A roofer checks the whole system',
-        text: 'We look at intake and exhaust together, because a new vent doesn’t help if the air has no way in.',
-      },
-      {
-        title: 'Photos, not guesswork',
-        text: 'You see each vent and each sign of trouble in photos, so you can tell what’s wrong and what it will take to fix.',
-      },
-      {
-        title: 'Fixed alone or with a new roof',
-        text: 'We can repair or add vents on their own. When a roof is near the end of its life, we’ll tell you if it makes more sense to do it with the replacement.',
-      },
-      {
-        title: 'Flashed so it doesn’t leak',
-        text: 'Every vent that goes through the roof is flashed into it, since a poorly sealed vent is a common place for a leak to start.',
-      },
+  // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
+  story: {
+    label: 'Attic ventilation',
+    lead: 'An attic that can’t breathe ages the roof from the __inside__.',
+    text: 'The sun drives heat into the attic for much of the year, and showers, cooking and laundry add moisture. When the air can’t move, shingles curl and blister early, moisture settles into the decking and insulation, and the air conditioner works harder in the rooms below.',
+    heading: 'How we fix attic ventilation',
+    principles: [
+      { title: 'Air in low, out high.', text: 'Cooler air comes in through vents at the eaves and soffits and hot air leaves at or near the ridge, so the flow keeps going as the roof heats up. The two sides have to match: exhaust with no intake, or intake blocked by insulation or paint, leaves an attic stuffy however many vents are on the roof.' },
+      { title: 'Check the roof and the attic.', text: 'A roofer looks at the vents from the roof and, where it can be reached, from the attic, photographs each one and explains the likely cause. Sometimes it’s one blocked vent; sometimes the system is missing a whole side.', bullets: ['Ridge, box and other exhaust vents', 'Eave and soffit intake vents', 'Stained or damp decking and insulation', 'Curling or blistered shingles'] },
+      { title: 'Clear, repair, add, then flash.', text: 'The written scope and price say which vents to clear, repair, replace or add, and where. We free blocked intake, replace failed vents and add vents where the system falls short, then flash every vent that goes through the roof so it doesn’t become a leak.' },
+      { title: 'On its own, or with a new roof.', text: 'Vents can be fixed on their own. When a roof is near the end of its life, we’ll tell you it makes more sense to plan the ventilation with a [shingle roof replacement](/residential-roofing/shingle-roofing/replacement/); vents installed with a replacement are covered by our 10-year workmanship warranty (call for details), and repairs carry the manufacturer’s warranty on the materials used.' },
     ],
   },
   faqs: [

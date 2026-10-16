@@ -1,0 +1,46 @@
+/* The opening splash (components/widgets/Splash.jsx, rules in lib/splash.js). Hidden unless <html> has `splash-on`. A navy night panel (the brand
+   film's dark act) with the roof mark wiping in, the name opening up in spaced gold capitals, a gold line filling and the service area; then
+   `splash-out` lifts the panel away with a gold edge (`splash-fast`, after a scroll, key or tap, just fades it) and the hero's copy rises in
+   behind it. Transform, opacity, clip-path and mask only. */
+.splash{display:none}
+html.splash-on .splash{display:grid;place-items:center;position:fixed;inset:0;z-index:10050;color:#fff;pointer-events:none;
+  background:radial-gradient(120% 90% at 70% 8%,#0b3460 0%,#071a2e 58%,#050f1c 100%)}
+html.splash-on .splash:after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold) 20%,var(--gold) 80%,transparent);opacity:0}
+.splash-in{display:grid;justify-items:center;gap:20px;padding:0 24px;text-align:center}
+.splash-mark{width:clamp(118px,13vw,176px);aspect-ratio:372/195}
+html.splash-on .splash-mark{background:url('/images/logo/qrs-mark.webp') center/contain no-repeat;
+  -webkit-mask-image:linear-gradient(65deg,#000 42%,transparent 58%);mask-image:linear-gradient(65deg,#000 42%,transparent 58%);
+  -webkit-mask-size:300% 100%;mask-size:300% 100%;-webkit-mask-position:100% 0;mask-position:100% 0;
+  animation:splashWipe .95s cubic-bezier(.65,0,.35,1) .08s forwards}
+.splash-name:after{content:"Quality Roofing Specialists";display:block;font:600 clamp(12px,1.05vw,15px)/1.2 var(--font-text),sans-serif;
+  letter-spacing:.42em;margin-right:-.42em;text-transform:uppercase;color:var(--gold)}
+html.splash-on .splash-name{clip-path:inset(0 50% 0 50%);animation:splashOpen .9s cubic-bezier(.17,.84,.44,1) .5s forwards}
+.splash-bar{display:block;width:clamp(150px,14vw,200px);height:1px;background:rgba(255,255,255,.16);overflow:hidden}
+.splash-bar i{display:block;height:100%;background:var(--gold);transform:scaleX(0);transform-origin:left}
+html.splash-on .splash-bar i{animation:splashFill 1.3s cubic-bezier(.45,.05,.25,1) .2s forwards}
+.splash-place:after{content:"Los Angeles \00B7  Orange County";font:400 clamp(12px,.95vw,14px)/1 var(--font-text),sans-serif;letter-spacing:.14em;color:rgba(255,255,255,.62)}
+html.splash-on .splash-place{opacity:0;animation:splashUp .7s cubic-bezier(.17,.84,.44,1) .8s forwards}
+@keyframes splashWipe{to{-webkit-mask-position:0 0;mask-position:0 0}}
+@keyframes splashOpen{to{clip-path:inset(0 0 0 0)}}
+@keyframes splashFill{to{transform:scaleX(1)}}
+@keyframes splashUp{from{opacity:0;translate:0 22px}to{opacity:1;translate:0 0}}
+
+/* Leaving: the copy lifts and fades, then the whole panel rises off the top with a gold edge */
+html.splash-out .splash{transform:translateY(-101%);transition:transform .9s cubic-bezier(.76,0,.24,1) .05s}
+html.splash-out .splash:after{opacity:1;transition:opacity .2s ease}
+html.splash-out .splash-in{opacity:0;translate:0 -28px;transition:opacity .35s ease,translate .5s cubic-bezier(.76,0,.24,1)}
+html.splash-fast .splash{transform:none;opacity:0;transition:opacity .35s ease}
+
+/* The hero waits behind the panel, then its copy rises in as the panel clears (the headline from behind its own line, as on page changes) */
+html.splash-on .promo-home .promo-copy > *,html.splash-on .st-hero-inner > *{opacity:0}
+html.splash-out .promo-home .promo-copy > *,html.splash-out .st-hero-inner > *{animation:splashUp .8s cubic-bezier(.17,.84,.44,1) .42s both}
+html.splash-out :is(.promo-home .promo-title,.st-hero-title){animation:headRise .95s cubic-bezier(.17,.84,.44,1) .3s both}
+html.splash-out .promo-home .promo-copy > :nth-child(3),html.splash-out .st-hero-inner > :nth-child(3){animation-delay:.52s}
+html.splash-out .promo-home .promo-copy > :nth-child(4),html.splash-out .st-hero-inner > :nth-child(4){animation-delay:.62s}
+html.splash-out .promo-home .promo-copy > :nth-child(n+5){animation-delay:.72s}
+/* The hand-drawn underline in the headline waits for the headline */
+html:is(.splash-on,.splash-out) .hand-draw path{animation-delay:1.25s}
+html:is(.splash-on,.splash-out) .hand-draw .hl-second{animation-delay:1.75s}
+html.splash-on:not(.splash-out) .hand-draw path{animation-play-state:paused}
+
+@media print{.splash{display:none!important}}

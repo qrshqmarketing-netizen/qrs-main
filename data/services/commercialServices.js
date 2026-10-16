@@ -16,30 +16,17 @@ export const COMMERCIAL_SERVICES = [
       intro: 'Commercial roof repair starts by tracing a leak back to where the water actually gets in, then fixes what failed, whether that’s a drain, a parapet, a seam or the flashing at rooftop equipment. QRS repairs commercial roofs across Los Angeles and Orange County while your building stays open, with before-and-after photos of every repair.',
       highlights: ['Leaks traced to where water enters', 'Drains, parapets and penetrations', 'Photo records for owners and tenants'],
     },
-    overview: {
-      paragraphs: [
-        'On a low-slope roof, water seldom drips straight down from the spot where it enters. It can slip under a lap, travel along the deck and show up over a different office, aisle or bay, which is why a patch above the stain so often fails. We check the likely entry points first: seams and laps, flashing at rooftop units and pipe penetrations, drain bowls, scuppers and the base of parapet walls. Once we find the cause, we make a targeted [flat roof repair](/residential-roofing/flat-roofing/repair/) that ties into the existing modified bitumen or other low-slope system.',
-        'Repairs on an occupied building have to fit around the people inside. Before we go up, we confirm roof access, where the water shows inside and whether anything below needs protecting, and the building stays open while we work. Every repair is photographed before and after, so owners, property managers and tenants all see what failed and how it was fixed. If the survey shows wear across the whole roof, we’ll tell you plainly, and those photos become the starting point for planning a [commercial roof replacement](/commercial-roofing/replacement/).',
-      ],
-    },
-    process: {
-      subheading: 'How a commercial roof repair works',
-      steps: [
-        { title: 'Leak report and history', text: 'We start with what you know: where water shows up inside, when it happens and what has been patched before.', bullets: ['Interior stains and drip locations', 'Leaks tied to heavy rain or wind', 'Past repairs and patches'] },
-        { title: 'Tracing on the roof', text: 'A roofer works back from the leak area, checking every detail that could feed it and photographing what we find.', bullets: ['Seams, laps and blisters', 'Curbs and flashings at rooftop equipment', 'Drains, scuppers and parapet walls'] },
-        { title: 'Written repair scope', text: 'You get a written scope and price for the repair, plus a note on anything else we saw that’s worth watching.' },
-        { title: 'Repair, scheduled around occupants', text: 'We agree on timing, access and noise with you or your building contact, then make the repair while the building stays open.' },
-        { title: 'Before-and-after photos', text: 'Photos of the problem and the finished repair come to you, ready to share with owners and tenants or to keep in your maintenance files.' },
-      ],
-    },
-    why: {
-      heading: 'Why Choose QRS for Commercial Roof Repair?',
-      intro: 'A repair is only as good as the diagnosis behind it. [Request an estimate](#roof-check) and a roofer will come out to find the real cause, anywhere in Los Angeles or Orange County.',
-      points: [
-        { title: 'Diagnosis before patching', text: 'We don’t smear on sealant and hope. The repair goes where the water actually gets in, and the photos show it.' },
-        { title: 'Repairs that suit your roof', text: 'We repair with materials compatible with the existing system, so the patch ties in cleanly instead of becoming the next weak spot.' },
-        { title: 'One record for everyone', text: 'Before-and-after photos and a written scope give owners, managers and tenants the same clear picture.' },
-        { title: 'Straight talk on repair vs. replace', text: 'When patching no longer makes financial sense, you’ll hear it from us, with photos of the roof’s overall condition to back it up.' },
+    // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
+    story: {
+      label: 'Commercial roof repair',
+      lead: 'On a low-slope roof, water rarely drips where it gets __in__.',
+      text: 'It slips under a lap, travels along the deck and shows up over a different office, aisle or bay, which is why a patch above the stain so often fails. A repair is only as good as the diagnosis behind it.',
+      heading: 'How we repair a commercial roof',
+      principles: [
+        { title: 'Start with what you know.', text: 'Where water shows up inside, when it happens and what has been patched before tell the roofer where to start looking.', bullets: ['Interior stains and drip locations', 'Leaks tied to heavy rain or wind', 'Past repairs and patches'] },
+        { title: 'Trace it on the roof.', text: 'A roofer works back from the leak area, checking every detail that could feed it, from seams and laps to the flashing at rooftop units, drain bowls, scuppers and the base of parapet walls, and photographs what they find.' },
+        { title: 'Fixed to match the roof, with the building open.', text: 'You get a written scope and price, plus a note on anything else worth watching. The repair ties into the existing modified bitumen or other low-slope system, and timing, access and noise are agreed with your building contact so the building stays open while we work.' },
+        { title: 'One record for owners, managers and tenants.', text: 'Photos of the problem and the finished repair give everyone the same picture. If the roof is worn across the whole surface, we’ll say so plainly, and those photos become the starting point for planning a [commercial roof replacement](/commercial-roofing/replacement/).' },
       ],
     },
     faqs: [
@@ -67,30 +54,17 @@ export const COMMERCIAL_SERVICES = [
       intro: 'A commercial roof replacement tears off the worn roof in phases, section by section, and installs a new low-slope system chosen for your building, so your doors stay open. QRS replaces commercial roofs across Los Angeles and Orange County, starting with a roofer-led survey that shows whether replacement is due now or can wait.',
       highlights: ['Survey before any recommendation', 'System chosen for drainage and use', 'Phased so your building stays open'],
     },
-    overview: {
-      paragraphs: [
-        'Repairs are the right call until the same roof keeps needing them. Signs that [commercial roof repair](/commercial-roofing/repair/) has run its course include leaks in new places every rainy season, seams opening across the field of the roof, surfacing worn thin by years of Southern California sun, and soft spots underfoot where water has reached the insulation or deck. Before we recommend anything, a roofer walks the whole roof and photographs it area by area. The survey shows whether replacement is due now, belongs in next year’s budget, or can wait while targeted repairs keep the roof working.',
-        'The new roof should fit how your building works. We install [modified bitumen and other low-slope systems](/residential-roofing/flat-roofing/), and the survey tells us which one suits your roof. Commercial buildings stay open during the work: we tear off and replace the roof in phases, section by section, planned around your hours, deliveries and the people below. Tarps protect landscaping and nail sweeps keep walkways and parking clear, and when the last section is finished, you get closeout photos of the completed roof for your records.',
-      ],
-    },
-    process: {
-      subheading: 'How a commercial roof replacement works',
-      steps: [
-        { title: 'Whole-roof survey', text: 'A roofer surveys the entire roof, photographs each area and notes how water drains, where equipment sits and how the roof has held up.', bullets: ['Seams, surfacing and past patches', 'Soft or wet areas underfoot', 'Drains, curbs and parapet details'] },
-        { title: 'System choice and written scope', text: 'We recommend the low-slope system that suits your building and put the scope, price and phasing plan in writing before work starts.', bullets: ['Roof system and flashing details', 'Sections and the order of work', 'Work hours, access and staging'] },
-        { title: 'Phased tear-off and install', text: 'Crews work one section at a time, removing the old roofing, checking the deck and installing the new system before starting the next area.', bullets: ['Old roofing removed down to the deck', 'Deck condition photographed while exposed', 'New flashings at curbs, drains and edges'] },
-        { title: 'A building that stays open', text: 'Staging, hoisting and debris removal are planned away from entrances and customer paths, and old roofing is hauled off as each section is finished.' },
-        { title: 'Closeout photos and walkthrough', text: 'We walk the finished roof with your team, hand over closeout photos and go over your 10-year workmanship warranty in plain English (call for details).' },
-      ],
-    },
-    why: {
-      heading: 'Why Choose QRS for Commercial Roof Replacement?',
-      intro: 'A new roof is one of the larger decisions a building owner makes, so it should rest on photos and facts. [Request an estimate](#roof-check) and a roofer will survey the roof before recommending anything.',
-      points: [
-        { title: 'A survey, not a sales pitch', text: 'A roofer tells you whether replacement is really due, with photos of the areas behind the recommendation.' },
-        { title: 'A system matched to the building', text: 'Drainage, equipment and foot traffic shape what we recommend, so the new roof suits how the building is used.' },
-        { title: 'Phasing that keeps you open', text: 'The work plan follows your hours and the people inside, so business carries on while the roof is replaced.' },
-        { title: '10-Year workmanship warranty', text: 'Every replacement is backed by our 10-year workmanship warranty (call for details), which we review with you at the final walkthrough.' },
+    // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
+    story: {
+      label: 'Commercial roof replacement',
+      lead: 'A new roof should rest on photos and facts, not a __pitch__.',
+      text: 'Leaks in new places every rainy season, seams opening across the field, surfacing worn thin by the sun and soft spots underfoot are signs that [commercial roof repair](/commercial-roofing/repair/) has run its course. A roofer-led survey shows whether replacement is due now, belongs in next year’s budget or can wait.',
+      heading: 'How we replace a commercial roof',
+      principles: [
+        { title: 'Survey the whole roof first.', text: 'A roofer walks the entire roof, photographs it area by area and notes how water drains, where equipment sits and how the roof has held up.', bullets: ['Seams, surfacing and past patches', 'Soft or wet areas underfoot', 'Drains, curbs and parapet details'] },
+        { title: 'A system matched to the building.', text: 'Drainage, rooftop equipment and foot traffic shape what we recommend, from [modified bitumen and other low-slope systems](/residential-roofing/flat-roofing/) to [TPO roofing](/commercial-roofing/tpo-roofing/). The scope, price and phasing plan are in writing before work starts.' },
+        { title: 'Section by section, so your doors stay open.', text: 'Crews take one section at a time down to the deck, photograph the deck while it’s exposed and install the new system with new flashings at curbs, drains and edges before moving on. Staging, hoisting and debris removal are planned around your hours, deliveries, entrances and customer paths.' },
+        { title: 'A clean site and closeout photos.', text: 'Tarps protect landscaping and nail sweeps keep walkways and parking clear. When the last section is done, we walk the roof with your team, hand over closeout photos and go over our 10-year workmanship warranty (call for details).' },
       ],
     },
     faqs: [
@@ -120,64 +94,19 @@ export const COMMERCIAL_SERVICES = [
         'TPO roofing from QRS puts a white, reflective single-ply membrane on flat and low-slope commercial roofs across Los Angeles and Orange County. A roofer surveys the roof first, photographs what is there and recommends TPO only if it suits the building, with a written scope and price before any work. The work is planned in phases so your building stays open.',
       highlights: ['White membrane that reflects sunlight', 'Seams welded with hot air', 'Planned in phases so the building stays open'],
     },
-    overview: {
-      paragraphs: [
-        'TPO stands for thermoplastic polyolefin. It is a single-ply roofing membrane, sold in wide rolls and usually white, that is laid over the roof and joined at the seams with hot air, so the seams fuse into one continuous surface. It is one of the most common choices for flat and low-slope commercial roofs.',
-        'In Southern California the appeal is mostly sun and heat. A white membrane reflects much of the sun’s energy instead of absorbing it, which can keep the roof surface cooler. California’s Title 24 energy code includes cool roof requirements for many low-slope commercial roofs, and a reflective membrane is one way to meet them. The exact requirement depends on the building and the product, so we check it as part of your scope.',
-        'TPO is not the right answer for every roof. A roofer checks the deck, the insulation, the drainage and what is on the roof now before recommending a system. For the full picture of replacing a commercial roof, see [commercial roof replacement](/commercial-roofing/replacement/).',
-      ],
-    },
-    process: {
-      subheading: 'How a TPO roof project works',
-      image: '/images/recent-work-commercial-flat-roof-drone-view.webp', // a commercial flat roof (not the residential photo the page would otherwise pick)
+    // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
+    story: {
+      label: 'TPO roofing',
+      lead: 'A TPO roof is only as good as its __seams__ and its details.',
+      text: 'TPO (thermoplastic polyolefin) is a white single-ply membrane laid in wide rolls and joined with hot air, so the seams fuse into one continuous surface. In Southern California the appeal is the sun: a white membrane reflects much of its energy instead of absorbing it, which can keep the roof surface cooler.',
+      heading: 'How we install a TPO roof',
+      image: '/images/recent-work-commercial-flat-roof-drone-view.webp',
       imageAlt: 'Aerial view of a large white commercial flat roof with its rooftop units, above a parking lot',
-      steps: [
-        {
-          title: 'Roofer-led roof survey',
-          text: 'A roofer inspects and photographs the roof, section by section, and notes what a new membrane will have to be tied into.',
-          bullets: ['Slope, drains and scuppers', 'Rooftop units, curbs and penetrations', 'Parapets and wall flashing', 'The condition of the deck and insulation where it can be seen'],
-        },
-        {
-          title: 'Written scope and price',
-          text: 'Before any work starts you get a written scope and price: the membrane and how it is attached, any insulation or cover board, the flashings, the phasing and the schedule.',
-        },
-        {
-          title: 'Roof prep in phases',
-          text: 'We remove the old roofing section by section where the scope calls for it, repair the deck as needed and prepare the surface, so each section is dried in the same day it is opened.',
-          bullets: ['Work phased around your operations', 'Deck repairs per your written scope', 'Photos before the membrane goes on'],
-        },
-        {
-          title: 'Membrane installation',
-          text: 'The TPO membrane is rolled out and attached the way the scope specifies, and each seam is welded with hot air. Walls, curbs, penetrations and drains are flashed and detailed, since that is where most flat roof leaks begin.',
-          bullets: ['Seams welded with hot air', 'Flashing at walls, curbs and penetrations', 'Drains and scuppers detailed'],
-        },
-        {
-          title: 'Closeout and warranty',
-          text: 'We walk the finished roof with you and hand over closeout photos for your records. Our installs are backed by a 10-year workmanship warranty (call for details), and the membrane carries the manufacturer’s warranty, which depends on the product.',
-        },
-      ],
-    },
-    why: {
-      heading: 'Why Choose QRS for TPO Roofing?',
-      intro:
-        'A TPO roof is only as good as its seams and its details. As a licensed California contractor since 2020, we plan and photograph both, and we plan the work around how your building runs.',
-      points: [
-        {
-          title: 'A roofer surveys first',
-          text: 'We recommend TPO when it suits your roof, and tell you plainly when another system would serve the building better.',
-        },
-        {
-          title: 'Photos for owners and tenants',
-          text: 'You get photos of the roof before, during and after the work, which owners, managers and tenants can all review.',
-        },
-        {
-          title: 'Phased so you stay open',
-          text: 'Work moves across the roof in sections, with each section dried in as it is opened, so your doors stay open.',
-        },
-        {
-          title: 'Details done right',
-          text: 'Walls, curbs, penetrations and drains get as much attention as the field of the roof, because that is where leaks start.',
-        },
+      principles: [
+        { title: 'Recommended only when it fits.', text: 'A roofer surveys and photographs the roof section by section and checks the deck, insulation, drainage and what sits on the roof now. TPO is recommended when it suits the building, and we tell you plainly when another system would serve it better.', bullets: ['Slope, drains and scuppers', 'Rooftop units, curbs and penetrations', 'Parapets and wall flashing', 'Deck and insulation where they can be seen'] },
+        { title: 'Title 24, checked in your scope.', text: 'California’s Title 24 energy code includes cool roof requirements for many low-slope commercial roofs, and a reflective membrane is one way to meet them. The exact requirement depends on the building and the product, so the written scope covers it, along with the membrane, how it’s attached, any insulation or cover board, the flashings, phasing, schedule and price.' },
+        { title: 'Opened and dried in the same day.', text: 'Where the scope calls for it, the old roofing comes off section by section, the deck is repaired as needed and the surface prepared, so each section is dried in the day it’s opened and your building stays open. We photograph it before the membrane goes on.' },
+        { title: 'Welded seams, detailed edges.', text: 'The membrane is attached as specified and every seam is welded with hot air. Walls, curbs, penetrations and drains are flashed and detailed, because that’s where most flat roof leaks begin. Closeout photos and our 10-year workmanship warranty (call for details) finish the job; the membrane carries the manufacturer’s warranty, which depends on the product.' },
       ],
     },
     faqs: [
@@ -223,30 +152,17 @@ export const COMMERCIAL_SERVICES = [
       intro: 'Commercial roof maintenance means scheduled roofer visits that clear debris from drains and gutters, reseal flashings where needed and catch early wear before it becomes interior damage. QRS maintains commercial roofs across Los Angeles and Orange County, starting with a baseline roof survey, and every visit ends with a photo report for owners, managers or boards.',
       highlights: ['Scheduled visits with photo reports', 'Drains and flashings checked early', 'Reports owners and boards can follow'],
     },
-    overview: {
-      paragraphs: [
-        'A low-slope roof wears gradually, then seems to fail all at once. Leaves and grit build up at drains and scuppers, sealant around penetrations dries out under the Southern California sun, and near the coast, from Santa Monica to Huntington Beach, salt air works on metal flashing and fasteners. A small split at a parapet can let water in for months before anyone sees a stain. Scheduled inspections put a roofer on the roof before those details become interior damage, checking drains, seams, flashings and equipment curbs and photographing what has changed since the last visit.',
-        'For buildings that need regular attention, a [roof maintenance plan](/roof-maintenance-plans/) keeps it on the calendar. We set up the plan after an initial roof survey, around your roof’s type, age and condition, and visits happen on the schedule your plan sets. Each visit covers things like clearing debris from drains and gutters, checking and resealing flashings and penetrations, and spotting wear early, and ends with a photo report you can pass to ownership, a board or tenants. Anything beyond the plan gets a written price before we do the work.',
-      ],
-    },
-    process: {
-      subheading: 'How commercial roof maintenance works',
-      steps: [
-        { title: 'Baseline roof survey', text: 'A roofer inspects the whole roof and photo-documents its condition, creating the starting point every later visit is compared against.', bullets: ['Drains, scuppers and gutters', 'Flashings, seams and penetrations', 'Parapets, coping and roof hatches'] },
-        { title: 'A plan built around your roof', text: 'If ongoing maintenance makes sense, we set up a plan around the roof’s type, age and condition and agree on the visit schedule with you.' },
-        { title: 'Scheduled visits', text: 'Each visit is coordinated with your building contact for roof access, then we clear debris, check and reseal flashings and look for early wear.', bullets: ['Debris cleared from drains and gutters', 'Flashings and penetrations resealed as needed', 'Seams and surfacing checked for wear'] },
-        { title: 'A photo report every time', text: 'You get photos and plain-English notes on what we did and what we saw, written so owners, managers and boards can follow along.' },
-        { title: 'Repairs priced before work', text: 'If a visit turns up something beyond the plan, like a failed flashing or storm damage, you get a written price before any repair starts.' },
-      ],
-    },
-    why: {
-      heading: 'Why Choose QRS for Commercial Roof Maintenance?',
-      intro: 'Maintenance is only as useful as the attention behind it. [Request an estimate](#roof-check) to schedule your first roof survey.',
-      points: [
-        { title: 'Inspections led by roofers', text: 'The person checking your drains and flashings is a roofer who can spot early wear and explain what it means for your building.' },
-        { title: 'Problems caught while they’re small', text: 'A clogged drain or a loose flashing is simpler to deal with before water reaches the insulation or the ceiling below.' },
-        { title: 'A photo history you can plan with', text: 'Reports from each visit build a record of how the roof is aging, so when a [commercial roof replacement](/commercial-roofing/replacement/) gets close, you can budget for it ahead of time.' },
-        { title: 'No surprise charges', text: 'Work outside your plan is always priced in writing first, and nothing happens until you approve it.' },
+    // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
+    story: {
+      label: 'Commercial roof maintenance',
+      lead: 'A low-slope roof wears gradually, then seems to fail all at __once__.',
+      text: 'Leaves and grit build up at drains and scuppers, sealant around penetrations dries out in the sun, and near the coast, from Santa Monica to Huntington Beach, salt air works on metal flashing and fasteners. A small split at a parapet can let water in for months before anyone sees a stain.',
+      heading: 'How we maintain a commercial roof',
+      principles: [
+        { title: 'A baseline to compare against.', text: 'A roofer inspects the whole roof and photo-documents its condition, the starting point every later visit is compared with.', bullets: ['Drains, scuppers and gutters', 'Flashings, seams and penetrations', 'Parapets, coping and roof hatches'] },
+        { title: 'A plan that fits the roof.', text: 'If ongoing care makes sense, a [roof maintenance plan](/roof-maintenance-plans/) is set up around the roof’s type, age and condition, with the visit schedule agreed with you.' },
+        { title: 'Visits that catch it small.', text: 'Each visit is coordinated with your building contact for roof access. We clear debris from drains and gutters, check and reseal flashings and penetrations as needed and look for early wear, because a clogged drain or a loose flashing is simpler to deal with before water reaches the insulation.' },
+        { title: 'A photo report, every visit.', text: 'Photos and plain-English notes go to owners, managers and boards, building a record of how the roof is aging, so a [commercial roof replacement](/commercial-roofing/replacement/) can be budgeted ahead of time. Anything beyond the plan is priced in writing first, and nothing happens until you approve it.' },
       ],
     },
     faqs: [

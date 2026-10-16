@@ -11,7 +11,8 @@ import './Studio.css';
 // "How we work" on the home page (owner, October 15 2026; the story approach of the owner's reference maben.com.au, adapted to QRS): four
 // principles with short two-beat headings, each with one paragraph and a photo. It replaces the home page's "Why QRS", process steps and
 // credentials strip, which said the same things three times. Every fact is one the site already states (data/site.js, the About page,
-// the credentials page). Photos: home and commercial properties we roofed, no people (owner, October 15 2026).
+// the credentials page). Photos: the owner's own four, one per principle (October 16 2026), each with a focal point (`position`) for the portrait
+// frame on desktop and the landscape one on phones.
 // From 901px with motion the section is pinned while it scrolls: the four headings stay listed at the left, the current one bright with a
 // gold bar filling under it, its paragraph below the list and its photo at the right, all changing as the page scrolls (transform and
 // opacity only, no layout shift). Phones, reduced motion and no JavaScript show the four as a plain stacked list. Styles: "How we work"
@@ -23,26 +24,30 @@ const PRINCIPLES = [
   {
     title: 'A roofer looks first. The price is in writing.',
     text: 'A trained in-house roofer inspects your roof, with drone footage of the areas of concern. Before any work starts, you get a written scope and price: no pressure and no mystery pricing.',
-    image: '/images/shingle-roof-inspection-overhead.webp',
-    alt: 'Drone view looking straight down on a gray shingle roof during a roof evaluation',
+    image: '/images/how-we-work-roofer-tablet-report.webp',
+    alt: 'Roofer holding a tablet with a roof inspection report and estimate in front of a home',
+    position: 'center center',
   },
   {
     title: 'Clear answers. Plain English.',
     text: 'We photo-document what we find and explain it in plain English, then give you a clear next step: repair, monitor, maintain or replace. You decide with the facts in front of you.',
-    image: '/images/recent-work-commercial-flat-roof-drone-view.webp',
-    alt: 'Drone view looking down on a white flat roof on a commercial building',
+    image: '/images/how-we-work-plain-english-homeowners.webp',
+    alt: 'Roofer going over a roofing plan with two homeowners at their backyard table',
+    position: '38% center',
   },
   {
     title: 'Family-owned. Local crews.',
     text: `QRS is family-owned, woman-owned and locally owned, with ${offices} across Southern California and one phone number that reaches them all. Our 12 crews work on shingle, tile and flat roofs, and we speak English, Spanish and Tagalog.`,
-    image: '/images/tile-roof-replacement-drone-view.webp',
-    alt: 'Spanish-style home with a red clay tile roof',
+    image: '/images/how-we-work-local-crews-commercial-roof.webp',
+    alt: 'Crew installing a white membrane on a large commercial flat roof',
+    position: 'center',
   },
   {
     title: 'Clean sites. Work that’s backed.',
     text: `We pull the permits, tarp the landscaping and sweep for nails every day. Installs are backed by a 10-year workmanship warranty (call for details), from a licensed, bonded and insured California contractor (CSLB #${BUSINESS.license}) certified with the manufacturers we install.`,
-    image: '/images/shingle-roof-completed-drone-view.webp',
-    alt: 'Drone view of a finished gray shingle roof on a two-story home',
+    image: '/images/how-we-work-clean-site-multi-family-shingle.webp',
+    alt: 'Roofing crew in harnesses installing new shingles on a row of townhomes, with ladders, a lift and the work trucks parked behind cones',
+    position: 'center center',
     link: { label: 'See our credentials', href: CREDENTIALS_PAGE.path },
   },
 ];
@@ -110,7 +115,7 @@ export default function StudioHowWeWork() {
                     )}
                   </div>
                   <div className="st-how-img">
-                    <Image src={p.image} alt={p.alt} fill sizes="(min-width: 901px) 44vw, 100vw" quality={60} />
+                    <Image src={p.image} alt={p.alt} fill sizes="(min-width: 901px) 44vw, 100vw" quality={60} style={{ objectPosition: p.position }} />
                   </div>
                 </li>
               ))}
@@ -129,7 +134,7 @@ export default function StudioHowWeWork() {
             <div className="st-how-media" aria-hidden="true">
               {PRINCIPLES.map((p, i) => (
                 <div key={p.image} className={'st-how-frame' + (i === active ? ' on' : '')}>
-                  <Image src={p.image} alt="" fill sizes="44vw" quality={60} />
+                  <Image src={p.image} alt="" fill sizes="44vw" quality={60} style={{ objectPosition: p.position }} />
                 </div>
               ))}
             </div>
