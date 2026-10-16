@@ -29,9 +29,12 @@ export const BLOG_POSTS = [
     topics: ['replacement', 'shingle', 'tile', 'underlayment'],
     metaTitle: 'Shingle vs. Tile Roof: Which Is Right for Your Home?',
     metaDescription:
-      'Shingle vs. tile roof for a Los Angeles home: cost per square foot, weight, how each one ages, fire rating, upkeep and which homes each roof suits best.',
+      'Shingle vs. tile roof for a Los Angeles home: how cost, weight, aging, fire rating and upkeep compare, and which homes each roof suits best.',
     datePublished: '2026-10-13',
-    dateModified: '2026-10-13',
+    dateModified: '2026-10-16',
+    // No prices in this article (owner, October 16 2026): cost is described in general terms. `revision` copies this text over the live
+    // copy in Supabase once (lib/postsStore.js applyFileRevisions); raise it after the next change made here.
+    revision: 2,
     excerpt:
       'Asphalt shingles and tile are the two roofs you see most across Los Angeles. Here is how they compare on cost, weight, aging, fire rating and upkeep, and how to tell which one your home is built for.',
     image: '/images/blog/asphalt-shingle-vs-tile-roof.webp',
@@ -48,7 +51,7 @@ export const BLOG_POSTS = [
             table: {
               head: ['Compare', 'Asphalt shingle', 'Tile (clay or concrete)'],
               rows: [
-                ['Price per square foot (our Instant Quote range)', '$6.50 to $8.00', '$12 to $16 for a new tile roof'],
+                ['Up-front cost', 'The lower of the two', 'Higher: costlier material, more weight and more labor'],
                 ['Weight per square (100 sq ft)', 'About 200 to 350 lbs', 'About 600 to 1,100 lbs'],
                 ['How it ages', 'The shingles wear out: the sun breaks down the asphalt and the granules wash off', 'The tiles can last for decades; the underlayment under them wears out first'],
                 ['Fire rating', 'Most are Class A', 'Class A'],
@@ -62,8 +65,9 @@ export const BLOG_POSTS = [
       {
         heading: 'Cost: Tile Costs More Up Front',
         blocks: [
-          'At the ranges our Instant Quote uses, a shingle roof runs $6.50 to $8.00 per square foot of roof and a new tile roof $12 to $16. On a 2,000 square foot roof, with about 10% added for waste, that is about $14,300 to $17,600 for shingles against about $26,400 to $35,200 for new tile, before adjustments for pitch and height.',
-          'A tile roof whose tiles are still sound often doesn’t need new tile at all. A [tile lift and relay](/residential-roofing/tile-roofing/lift-and-relay/) replaces the underlayment and puts your own tiles back, for $8 to $11 per square foot at our ranges. See our full guide to [roof replacement cost](/blog/roof-replacement-cost-los-angeles/).',
+          'A new tile roof costs noticeably more up front than an asphalt shingle roof on the same home. The tiles themselves cost more, they are heavier to carry up and set, and the work takes longer.',
+          'Every roof is priced on its own. Its size, pitch and height, the layers coming off, the condition of the deck and the details around chimneys, skylights and vents all change the number. That is why a roofer looks at your roof first and you get a written scope and price before any work starts.',
+          'A tile roof whose tiles are still sound often doesn’t need new tile at all. A [tile lift and relay](/residential-roofing/tile-roofing/lift-and-relay/) replaces the underlayment and puts your own tiles back, and it usually costs less than a new tile roof. See our full guide to [roof replacement cost](/blog/roof-replacement-cost-los-angeles/).',
         ],
       },
       {
@@ -114,7 +118,7 @@ export const BLOG_POSTS = [
     faqs: [
       {
         q: 'Is a tile roof more expensive than shingles?',
-        a: 'Yes. At our Instant Quote ranges a new tile roof is $12 to $16 per square foot of roof, against $6.50 to $8.00 for asphalt shingles. If your tiles are still sound, a lift and relay is $8 to $11.',
+        a: 'Yes. A new tile roof usually costs noticeably more up front than asphalt shingles on the same home. If your tiles are still sound, a tile lift and relay usually costs less than new tile. The written price you get after a free roof evaluation is the number to plan around.',
       },
       {
         q: 'Can I put a tile roof on a house that had shingles?',
