@@ -1,6 +1,7 @@
 // The brand film on the home page, "QRS in a minute" (components/studio/StudioFilm.jsx; made in scripts/brand-film/). One place for its
 // facts, so the section, the home page's VideoObject structured data (lib/structuredData.js) and the AI files (lib/pageIndex.js) agree.
-// Re-render or re-encode it and update `uploadDate` (and `duration` if the length changes).
+// Re-render or re-encode it and update `uploadDate` (a full date-time with the Pacific offset, -07:00 in summer, -08:00 in winter) and
+// `duration` if the length changes.
 export const BRAND_FILM = {
   name: 'QRS in a minute',
   heading: 'From the first look to the last __nail__.',
@@ -12,7 +13,7 @@ export const BRAND_FILM = {
   ],
   contentUrl: '/videos/qrs-film-h264.mp4',
   poster: '/images/qrs-film-poster.webp',
-  uploadDate: '2026-10-16',
+  uploadDate: '2026-10-16T10:30:00-07:00', // date, time and time zone (Google flags a plain date)
   duration: 'PT1M2S',
   length: '1:02',
 };
