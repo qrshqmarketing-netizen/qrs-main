@@ -70,6 +70,10 @@ const PROCESS_PHOTOS = {
     ['/images/contractors-hero-roofer-tablet.webp', 'Roofer documenting a roof inspection on a tablet'],
     ['/images/shingle-roof-inspection-overhead.webp', 'Aerial view of a shingle roof during inspection'],
   ],
+  metal: [
+    ['/images/metal-roof-standing-seam-panel-detail.webp', 'Close-up of bronze standing seam metal roof panels with raised seams running down to the eave'],
+    ['/images/metal-roof-standing-seam-modern-home.webp', 'Modern two-story home with a dark gray standing seam metal roof over wood and stucco walls'],
+  ],
   general: [
     ['/images/home-services-residential-shingle-drone-view.webp', 'Aerial view of a residential roof'],
     ['/images/qrs-truck-4k.webp', 'QRS roofing truck at a project site'],
@@ -83,6 +87,7 @@ function processPhoto(page) {
   else if (description.includes('industrial')) category = 'industrial';
   else if (description.includes('commercial')) category = 'commercial';
   else if (description.includes('gutter')) category = 'gutter';
+  else if (description.includes('metal')) category = 'metal';
   else if (description.includes('tile')) category = 'tile';
   else if (description.includes('flat')) category = 'flat';
   else if (description.includes('inspect')) category = 'inspection';

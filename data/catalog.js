@@ -62,6 +62,9 @@ export const GROUPS = {
     href: '/residential-roofing/metal-roofing/',
     parent: RESIDENTIAL,
     scenes: ['scene-metal'],
+    image: '/images/metal-roof-standing-seam-modern-home.webp',
+    imageAlt: 'Modern two-story home with a dark gray standing seam metal roof over wood and stucco walls',
+    cardImage: '/images/metal-roof-standing-seam-modern-home.webp',
     blurb: 'Standing seam metal roofs with clean lines and concealed fasteners, plus repairs for leaks and loose fasteners.',
   },
   commercial: {

@@ -74,6 +74,8 @@ export const METAL_CONTENT = {
       metaTitle: 'Standing Seam Metal Roofing in Los Angeles',
       metaDescription:
         'Standing seam metal roofing in Los Angeles & Orange County: concealed clips, a flat, sound deck and clean flashings. Schedule a free roof evaluation.',
+      image: '/images/metal-roof-standing-seam-modern-home.webp',
+      imageAlt: 'Modern two-story home with a dark gray standing seam metal roof over wood and stucco walls',
       hero: {
         intro:
           'Standing seam metal roofing from QRS is our *LockSeam* Metal System, built around the parts you can’t see as well as the panels: the deck and underlayment beneath them, the clips under the seams and the flashings at every wall and vent. We plan and install each with care.',
@@ -85,7 +87,8 @@ export const METAL_CONTENT = {
         lead: 'Metal shows the quality of the __installation__.',
         text: 'Standing seam panels run from ridge to eave, held by concealed clips under seams that stand above the flat of the panel, so no screws pierce the face of the metal. A wavy deck or a clip fastened too tight shows up as ripples in the finished roof, so we don’t take shortcuts.',
         heading: 'How we install a standing seam roof',
-        image: false,
+        image: '/images/metal-roof-standing-seam-panel-detail.webp',
+        imageAlt: 'Close-up of bronze standing seam metal roof panels with raised seams running down to the eave',
         principles: [
           { title: 'A straight answer on fit.', text: 'A roofer checks your slope, flashings and exposure and talks through profile, metal and color with you, and tells you plainly if another roof would suit your home better. The written scope lists the panels, underlayment, trims and flashings with the price.', bullets: ['Slope and roof condition', 'Walls, valleys, vents and skylights', 'Sun, wind and salt-air exposure'] },
           { title: 'A flat deck under every panel.', text: 'On a replacement, the old roof comes off and the deck is checked closely, since metal shows every dip and hump beneath it. Underlayment suited to the heat under metal goes down, and we photograph it before the panels cover it.' },
@@ -126,6 +129,8 @@ export const METAL_CONTENT = {
       card: 'Leaks at fasteners, seams, sealant and flashings traced to the source and repaired, with photos of the problem and the fix.',
       metaTitle: 'Metal Roof Repair in Los Angeles & Orange County',
       metaDescription: 'Metal roof repair in Los Angeles & Orange County: leaks traced to loose fasteners, worn sealant and failed flashing, fixed with photos. Free roof evaluation.',
+      image: '/images/metal-roof-standing-seam-panel-detail.webp',
+      imageAlt: 'Close-up of bronze standing seam metal roof panels with raised seams running down to the eave',
       hero: {
         intro:
           'Metal roof repair from QRS finds where water is really getting in and fixes it at the source, across Los Angeles and Orange County. On a metal roof the cause is often a loose fastener, tired sealant or failed flashing rather than the panels themselves. We show you photos of the problem and the finished repair, with a written scope and price before any work. Start with a free roof evaluation.',
@@ -137,7 +142,8 @@ export const METAL_CONTENT = {
         lead: 'When a metal roof leaks, the panels are rarely the __problem__.',
         text: 'Metal sheds water well, so leaks come from the details: screws that back out, washers cracked by the sun, sealant that shrinks, seams that open and flashing that pulls loose at walls, vents and skylights. Water runs along the panels and under their laps before it drips, so the stain inside is rarely under the opening.',
         heading: 'How we repair a metal roof',
-        image: false, // no metal roof photos yet: no photo rather than a shingle one
+        image: '/images/metal-roof-standing-seam-modern-home.webp',
+        imageAlt: 'Modern two-story home with a dark gray standing seam metal roof over wood and stucco walls',
         principles: [
           { title: 'Start upslope. Check every line.', text: 'A roofer works up from the stain across the places metal roofs leak, and photographs the cause before anything is fixed.', bullets: ['Lines of fasteners and their washers', 'Seams, laps and trims', 'Sealant at vents, pipes and walls', 'Signs of corrosion'] },
           { title: 'Fix the detail. Keep the roof.', text: 'Failed fasteners are replaced or tightened, penetrations and walls are re-flashed and sealed, and damaged trims or panels are repaired or replaced. Where corrosion has started, we deal with it while the metal is still sound.' },
