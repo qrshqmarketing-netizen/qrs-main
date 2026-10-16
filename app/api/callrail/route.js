@@ -35,6 +35,9 @@ export async function POST(request) {
       return Response.json({ ok: false, error: 'could not confirm the call' }, { status: 503 }); // CallRail will retry
     }
     if (!call) return Response.json({ ok: false, error: 'unknown call' }, { status: 401 });
+  } else {
+    // Signed: still prefer CallRail's own record, so the saved id is the same one the daily sync uses (no duplicates)
+    call = (await confirmCallWithApi(call).catch(() => null)) || call;
   }
   if (call.direction && call.direction !== 'inbound') return Response.json({ ok: true, skipped: 'not an inbound call' });
 
