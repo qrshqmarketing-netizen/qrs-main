@@ -7,6 +7,7 @@
     "dev": "next dev",
     "prebuild": "npm run lastmod",
     "build": "next build",
+    "postbuild": "npm run assistant:sync -- --deploy",
     "start": "next start",
     "lastmod": "node --no-warnings --import ./scripts/alias.mjs scripts/lastmod.mjs",
     "functions:sync": "node --no-warnings --import ./scripts/alias.mjs scripts/sync-functions-data.mjs",

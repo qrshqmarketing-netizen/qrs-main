@@ -2,6 +2,8 @@
 // search it. Run it after changing page copy or publishing articles:
 //   npm run assistant:sync            (needs SUPABASE_URL and SUPABASE_SECRET_KEY in the environment or .env.local)
 //   npm run assistant:sync -- --dry   (only counts what it would send)
+//   npm run assistant:sync -- --deploy (what every production deploy runs after the build, from `postbuild` in package.json: only on Vercel
+//                                      production with the Supabase keys there, and a failure only prints a warning, so it never breaks a deploy)
 // It also saves the assistant's instructions (data/assistant.js) as `system_prompt` in `assistant_config` the first time only, so later edits made
 // in the database aren't overwritten; pass --prompt to replace it with the site's current text.
 import { readFileSync } from 'node:fs';
@@ -15,6 +17,16 @@ try {
     if (m && !process.env[m[1]]) process.env[m[1]] = m[2].replace(/^["']|["']$/g, '');
   }
 } catch {}
+
+// Deploy mode: runs by itself after each production build on Vercel (where the keys are), skips quietly everywhere else, never fails the build
+if (process.argv.includes('--deploy')) {
+  const skip = (why) => { console.log(`[assistant] sync skipped: ${why}`); process.exit(0); };
+  if (process.env.VERCEL_ENV !== 'production') skip('not a production deploy');
+  if (!process.env.SUPABASE_URL || !(process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY)) skip('no Supabase keys');
+  const warn = (e) => { console.warn(`[assistant] sync failed, the deploy carries on: ${e?.cause?.message || e?.message || e}`); process.exit(0); };
+  process.on('uncaughtException', warn);
+  process.on('unhandledRejection', warn);
+}
 
 // Same scrub as the website's lib/chatRetrieval.js: no links or bold marks in what the model reads, and the paused $199 Roof Check price stays out
 const plain = (text) =>
