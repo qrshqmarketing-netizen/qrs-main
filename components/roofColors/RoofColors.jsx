@@ -18,7 +18,7 @@ const SRC = '/images/roof-colors-single-story-home.webp';
 // The roof in that photo: a mask picture made from the photo itself (scripts/roof-colors/make-mask.mjs), white where the roof is, so the new
 // color stops exactly at the trim, gutters and gable walls. A new photo needs a new mask (and the script's outline and corrections redone).
 const ROOF = '/images/roof-colors-single-story-home-mask.webp';
-const DEMO = ['mojave', 'sierra-gray', 'sand-castle', 'night-sky'];
+const DEMO = ['copper-trail', 'sierra-grey', 'golden-meadow', 'midnight'];
 const ORIGINAL = { id: 'original', name: 'Original' };
 
 export default function RoofColors() {
@@ -98,6 +98,13 @@ export default function RoofColors() {
           <p className="st-label">{ROOF_COLORS_COPY.label}</p>
           <h2><Mark text={ROOF_COLORS_COPY.heading} /></h2>
           <p className="rc-sub">{ROOF_COLORS_COPY.sub}</p>
+          <p className="rc-sri">
+            <span className="rc-sri-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2" /><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" /></svg>
+              SRI 20+
+            </span>
+            <span>{ROOF_COLORS_COPY.sri}</span>
+          </p>
         </div>
 
         <div className="rc-pick">
@@ -111,7 +118,9 @@ export default function RoofColors() {
                 className={'rc-swatch' + (currentId === c.id ? ' on' : '') + (c.id === 'original' ? ' rc-original' : '')}
                 onClick={() => choose(c.id)}
               >
-                <i style={c.swatch ? { backgroundImage: `url(${c.swatch})` } : c.hex ? { background: c.hex } : undefined} />
+                <i className={c.swatch ? 'pic' : c.hex ? 'tex' : undefined} style={c.swatch ? { backgroundImage: `url(${c.swatch})` } : c.hex ? { '--c': c.hex } : undefined}>
+                  <svg className="rc-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 12.5l4 4 8-9" /></svg>
+                </i>
                 <span>{c.name}</span>
               </button>
             ))}
