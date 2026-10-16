@@ -1,5 +1,7 @@
-// Repaints the roof in a photo, in the browser. The roof is a polygon (percent of the photo's width and height); every pixel inside keeps its brightness
-// relative to the roof's average, scaled onto the new color, so the shingle texture, ridges and shadows stay. A soft edge blends the new color in.
+// Repaints the roof in a photo, in the browser. The roof is a mask picture (white where the roof is, made from the photo by
+// scripts/roof-colors/make-mask.mjs, so it follows every edge, gable and gutter), or a polygon (percent of the photo's width and height) for a
+// simple photo. Every roof pixel keeps its brightness relative to the roof's average, scaled onto the new color, so the texture, ridges and
+// shadows stay; the mask's soft edge blends the new color in.
 
 const MAX_W = 1280; // the photo is drawn at most this wide, so a repaint takes a few milliseconds
 
@@ -13,8 +15,8 @@ const loadImage = (src) =>
   });
 
 // Draws the photo and the roof mask once; returns what `paint` needs
-export async function prepareRoof(src, polygon) {
-  const img = await loadImage(src);
+export async function prepareRoof(src, roof) {
+  const [img, maskImg] = await Promise.all([loadImage(src), typeof roof === 'string' ? loadImage(roof) : null]);
   const scale = Math.min(1, MAX_W / img.naturalWidth);
   const w = Math.round(img.naturalWidth * scale);
   const h = Math.round(img.naturalHeight * scale);
@@ -27,12 +29,17 @@ export async function prepareRoof(src, polygon) {
   mask.width = w;
   mask.height = h;
   const mc = mask.getContext('2d', { willReadFrequently: true });
-  mc.filter = 'blur(1.5px)'; // a soft edge
-  mc.fillStyle = '#fff';
-  mc.beginPath();
-  polygon.forEach(([x, y], i) => (i ? mc.lineTo((x / 100) * w, (y / 100) * h) : mc.moveTo((x / 100) * w, (y / 100) * h)));
-  mc.closePath();
-  mc.fill();
+  if (maskImg) {
+    mc.filter = 'blur(0.6px)'; // the mask's own edge is already soft
+    mc.drawImage(maskImg, 0, 0, w, h);
+  } else {
+    mc.filter = 'blur(1.5px)'; // a soft edge
+    mc.fillStyle = '#fff';
+    mc.beginPath();
+    roof.forEach(([x, y], i) => (i ? mc.lineTo((x / 100) * w, (y / 100) * h) : mc.moveTo((x / 100) * w, (y / 100) * h)));
+    mc.closePath();
+    mc.fill();
+  }
   const pixels = pc.getImageData(0, 0, w, h);
   const alpha = mc.getImageData(0, 0, w, h).data;
   let sum = 0;

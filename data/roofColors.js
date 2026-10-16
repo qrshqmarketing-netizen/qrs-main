@@ -21,6 +21,6 @@ export const ROOF_COLORS = [
 export const ROOF_COLORS_COPY = {
   label: 'Shingle colors',
   heading: 'See a roof in a __new color__',
-  sub: 'Tap a color to see it on a real roof we finished. Every roof replacement starts with a free roof evaluation, and we can bring physical samples so you see the color in your own light.',
+  sub: 'Tap a color to see it on a home’s roof. Every roof replacement starts with a free roof evaluation, and we can bring physical samples so you see the color in your own light.',
   note: 'Colors on screen are approximate. Check a physical sample before you decide.',
 };

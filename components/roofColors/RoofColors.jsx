@@ -11,12 +11,13 @@ import { paintRoof, prepareRoof } from './recolor';
 import '@/components/studio/Studio.css'; // .st-section and .st-label (the section moved from the home page to the shingle roofing page)
 import './RoofColors.css';
 
-// The home page's shingle color section: a finished roof seen from above and the color swatches. Tapping a swatch repaints only the roof (recolor.js keeps the
+// The shingle color section: a single-story home seen from the street and the color swatches. Tapping a swatch repaints only the roof (recolor.js keeps the
 // shingle texture and shading); "Original" shows the photo as it is. Until the visitor taps, the photo moves through a few colors on its own while it is on
 // screen (not for reduced motion). Nothing is sent anywhere.
-const SRC = '/images/shingle-roof-inspection-overhead.webp';
-// The roof's outline in that photo, in percent of its width and height
-const ROOF = [[16.4, 13.9], [36.5, 11.5], [48.4, 13.5], [49, 2.8], [76.8, 1.5], [76.8, 37.8], [58.9, 38.2], [58.9, 89.6], [37.2, 92.7], [16.7, 89.9]];
+const SRC = '/images/roof-colors-single-story-home.webp';
+// The roof in that photo: a mask picture made from the photo itself (scripts/roof-colors/make-mask.mjs), white where the roof is, so the new
+// color stops exactly at the trim, gutters and gable walls. A new photo needs a new mask (and the script's outline and corrections redone).
+const ROOF = '/images/roof-colors-single-story-home-mask.webp';
 const DEMO = ['mojave', 'sierra-gray', 'sand-castle', 'night-sky'];
 const ORIGINAL = { id: 'original', name: 'Original' };
 
@@ -123,7 +124,7 @@ export default function RoofColors() {
           <p className="rc-note">{ROOF_COLORS_COPY.note}</p>
         </div>
 
-        <div className="rc-photo" ref={box} role="img" aria-label={`A finished shingle roof seen from above${current.id === 'original' ? '' : `, shown in ${current.name}`}`}>
+        <div className="rc-photo" ref={box} role="img" aria-label={`A single-story home with a gray roof${current.id === 'original' ? '' : `, shown in ${current.name}`}`}>
           <Image src={SRC} alt="" fill sizes="(min-width: 901px) 50vw, 100vw" quality={70} />
           {shown && (
             // eslint-disable-next-line @next/next/no-img-element
