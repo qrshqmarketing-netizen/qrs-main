@@ -11,8 +11,6 @@ import StudioHero from '@/components/studio/StudioHero';
 import PromoCard from '@/components/widgets/PromoCard';
 import { SEASON_PROMO as promo } from '@/data/promo';
 import StudioIntro from '@/components/studio/StudioIntro';
-import StudioFilm from '@/components/studio/StudioFilm';
-import { BRAND_FILM } from '@/data/brandFilm';
 import StudioHowWeWork from '@/components/studio/StudioHowWeWork';
 import StudioProjects from '@/components/studio/StudioProjects';
 import StudioServices from '@/components/studio/StudioServices';
@@ -81,7 +79,7 @@ export default async function HomePage() {
   const faqs = await getHomeFaqs(); // from the dashboard (lib/contentStore.js), else data/faqs.js
   return (
     <>
-      <JsonLd data={pageJsonLd({ path: '/', title: HOME_TITLE, description: HOME_DESCRIPTION, faqs, video: BRAND_FILM })} />
+      <JsonLd data={pageJsonLd({ path: '/', title: HOME_TITLE, description: HOME_DESCRIPTION, faqs })} />
       <main id="top" className="studio">
         {/* While SEASON_PROMO.active the hero is this full-screen card (the keyword line above the headline is the H1) over the drone video, with the
             home page's own words (HOME_HERO above) and none of the El Niño effects (rain, lightning, red dot, promo tracking); otherwise the newest
@@ -108,8 +106,6 @@ export default async function HomePage() {
         )}
         <ProofBar strip />
         <StudioIntro />
-        {/* The brand film, "QRS in a minute" (owner, October 16 2026; recreated from zaro.ai's launch film, scripts/brand-film/) */}
-        <StudioFilm />
         <StudioServices categories={SERVICE_CATEGORIES} items={HOME_PRODUCTS} />
         {/* The home page's story (owner, October 15 2026, after maben.com.au): the belief statement (StudioIntro), the services, then "How we work"
             (four principles, pinned while it scrolls; it replaces "Why QRS", the process steps and the credentials strip), the reviews and the projects.

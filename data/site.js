@@ -50,6 +50,8 @@ export const OFFICES = [
   {
     name: 'Valley Office',
     citySlug: 'woodland-hills', gbpUrl: 'https://maps.google.com/?cid=2545734132360308765',
+    // Its own number, as on its Google listing (owner, October 19 2026: used on the legal pages); the site's main number stays PHONE
+    phone: '(818) 918-3184', tel: 'tel:+18189183184',
     address: { street: '22900 Ventura Blvd, Suite 124', city: 'Woodland Hills', region: 'CA', postalCode: '91364', country: 'US' },
     geo: { latitude: 34.165009, longitude: -118.626272 },
     image: '/images/woodland-hills-office.webp',

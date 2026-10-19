@@ -1,11 +1,17 @@
-// Privacy Policy (/privacy-policy/) and Terms & Conditions (/terms-and-conditions/): the same addresses as the old site.
+// Privacy Policy (/privacy-policy/), Terms & Conditions (/terms-and-conditions/) and the Accessibility Statement: the same email as the old site;
+// the phone number and mailing address are the Woodland Hills office's.
 // DRAFTS written from how this website works. Have them reviewed by your attorney before launch, and update them
 // when the site changes (for example when analytics, advertising pixels or new forms are added).
 // sections: [{ heading, paragraphs?: [...] (before the list), items?: [...] (a bulleted list), after?: [...] }].
 // Text can link with [words](/path/).
 
-const UPDATED = 'September 25, 2026';
-const CONTACT = 'email [info@qualityroofingspecialists.com](mailto:info@qualityroofingspecialists.com), call [(310) 340-1643](tel:+13103401643) or write to Quality Roofing Specialists, Inc., 1444 N Poinsettia Pl, Unit 308, Los Angeles, CA 90046';
+import { BUSINESS, OFFICES } from '@/data/site';
+
+const UPDATED = 'October 19, 2026';
+// The phone number and mailing address on the legal pages are the Woodland Hills (Valley) office's (owner, October 19 2026), from OFFICES in data/site.js
+const LEGAL = OFFICES.find((o) => o.citySlug === 'woodland-hills');
+const { street, city, region, postalCode } = LEGAL.address;
+const CONTACT = `email [info@qualityroofingspecialists.com](mailto:info@qualityroofingspecialists.com), call [${LEGAL.phone}](${LEGAL.tel}) or write to ${BUSINESS.legalName}, ${street}, ${city}, ${region} ${postalCode}`;
 
 export const PRIVACY_POLICY = {
   keyword: 'privacy policy',
