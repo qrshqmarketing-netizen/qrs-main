@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import { statusLabel } from '@/lib/adminLeads';
+import { statusLabel } from '@/lib/leadStatuses';
 import AdminIcon from './AdminIcons';
 
 // One lead as an AdFlux-style card: the name, tag pills (where it came from, what they need), a line with the status and when it arrived, a short
 // excerpt of their message (or the job details), and an outlined "View lead" button across the bottom.
-const when = (iso) => {
+export const when = (iso) => {
   const d = new Date(iso);
   if (Number.isNaN(d.getTime())) return '';
   const days = Math.floor((Date.now() - d.getTime()) / 864e5);

@@ -1,11 +1,13 @@
 import { notFound, redirect } from 'next/navigation';
+import Link from 'next/link';
 import AdminIcon from '@/components/admin/AdminIcons';
+import LeadDelete from '@/components/admin/LeadDelete';
 import LeadEditor from '@/components/admin/LeadEditor';
 import PageHead from '@/components/admin/PageHead';
 import { isAdmin } from '@/lib/adminAuth';
 import { getLead, LEAD_STATUSES } from '@/lib/adminLeads';
 
-// /admin/leads/<id>/: one lead. Call and email buttons, the status and notes the team keeps (LeadEditor), then everything the lead sent: the job
+// /admin/leads/<id>/: one lead. Call, email, Edit and Delete buttons, the status and notes the team keeps (LeadEditor), then everything the lead sent: the job
 // details, their message, the Instant Quote estimate, the chat transcript and where they came from (page, campaign tags).
 const DETAILS = [
   ['source', 'Came in through'],
@@ -48,6 +50,10 @@ export default async function LeadPage({ params }) {
                 <AdminIcon name="mail" /> Email
               </a>
             )}
+            <Link className="adm-btn" href={`/admin/leads/${lead.id}/edit/`}>
+              <AdminIcon name="edit" /> Edit
+            </Link>
+            <LeadDelete id={lead.id} name={name} />
           </>
         }
       />

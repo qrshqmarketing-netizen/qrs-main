@@ -291,3 +291,78 @@ body .adm :is(h1,h2,h3,h4){font-family:var(--font-text),system-ui,sans-serif;tex
 .adm-check input{width:16px;height:16px;min-height:0;margin:0;flex:none;accent-color:var(--a-primary)}
 /* The site's dark theme gives every field a white border (app/dark-theme.css); the dashboard keeps its own hairline */
 :root[data-theme="dark"] .adm :is(input,select,textarea){border-color:var(--a-line);background:var(--a-card);color:var(--a-text)}
+
+/* ---------- Leads: views (Cards, List, Kanban), filters, the lead form (LeadsWorkspace, LeadForm) ---------- */
+.adm-page-wide{max-width:none}
+.adm .adm-segments button{display:inline-flex;align-items:center;gap:8px;min-height:36px;padding:0 12px;border:0;border-radius:7px;background:none;color:var(--a-soft);font:500 14px/1 var(--font-text),sans-serif;white-space:nowrap;cursor:pointer}
+.adm .adm-segments button:hover{color:var(--a-text)}
+.adm .adm-segments button.on{background:var(--a-tint);color:var(--a-text)}
+.adm-views .adm-ico{width:17px;height:17px}
+
+.adm-filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;align-items:end;margin:0 0 14px;padding:14px;border:1px solid var(--a-line);border-radius:12px;background:var(--a-card)}
+.adm-filter-search{grid-column:1/-1;max-width:none}
+.adm-filter{display:flex;flex-direction:column;gap:4px;min-width:0;font-size:12.5px;color:var(--a-soft)}
+.adm-filter :is(select,input){width:100%;height:40px;padding:0 10px;border:1px solid var(--a-line);border-radius:8px;background:var(--a-card);color:var(--a-text);font:400 14px/1 var(--font-text),sans-serif}
+.adm-filter-clear{justify-self:start;align-self:center;font-size:14px}
+@media (min-width:900px){.adm-filters{grid-template-columns:repeat(5,minmax(0,1fr)) auto}}
+@media (min-width:1500px){
+  .adm-filters{grid-template-columns:minmax(260px,1.6fr) repeat(5,minmax(0,1fr)) auto}
+  .adm-filter-search{grid-column:auto}
+}
+
+/* List */
+.adm-table-wrap{border:1px solid var(--a-line);border-radius:12px;background:var(--a-card);box-shadow:var(--a-shadow);overflow:hidden}
+.adm-leads{width:100%;border-collapse:collapse;font-size:14.5px}
+.adm-leads th{padding:12px 14px;border-bottom:1px solid var(--a-line);background:var(--a-panel);color:var(--a-soft);font-size:12.5px;font-weight:500;text-align:left;white-space:nowrap}
+.adm-leads td{padding:12px 14px;border-bottom:1px solid var(--a-line);vertical-align:middle}
+.adm-leads tr:last-child td{border-bottom:0}
+.adm-leads tbody tr:hover{background:var(--a-tint)}
+.adm .adm-lead-name{display:block;color:var(--a-text);font-weight:600;text-decoration:none}
+.adm .adm-lead-name:hover{text-decoration:underline}
+.adm-leads small{display:block;color:var(--a-soft);font-size:12.5px}
+.adm-leads td[data-label="Contact"] a{display:block;color:var(--a-text);text-decoration:none;overflow-wrap:anywhere}
+.adm-row-actions{white-space:nowrap;text-align:right}
+.adm-row-actions .adm-icon-btn{display:inline-grid;width:36px;height:36px}
+.adm .adm-danger{color:var(--danger,#a32d2d)}
+.adm .adm-danger:hover{background:rgba(163,45,45,.08);color:var(--danger,#a32d2d)}
+.adm-status-pick{display:inline-flex;align-items:center;gap:6px}
+.adm-status-pick:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--dot,#7d8aa0);flex:none}
+.adm-status-select{height:34px;padding:0 28px 0 10px;border:1px solid var(--a-line);border-radius:8px;background:var(--a-card);color:var(--a-text);font:500 13.5px/1 var(--font-text),sans-serif;cursor:pointer}
+@media (max-width:899px){
+  .adm-leads thead{display:none}
+  .adm-leads,.adm-leads tbody,.adm-leads tr,.adm-leads td{display:block;width:100%}
+  .adm-leads tr{padding:12px 14px;border-bottom:1px solid var(--a-line)}
+  .adm-leads td{display:flex;gap:12px;padding:4px 0;border:0}
+  .adm-leads td[data-label]:before{content:attr(data-label);flex:0 0 84px;color:var(--a-soft);font-size:12.5px}
+  .adm-leads td[data-label="Name"]{display:block}
+  .adm-leads td[data-label="Name"]:before{display:none}
+  .adm-leads td[data-label="Contact"]{flex-wrap:wrap}
+  .adm-row-actions{justify-content:flex-end}
+}
+
+/* Kanban: a column per status, side by side (scrolls sideways when narrow) */
+.adm-board{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(210px,1fr);gap:12px;overflow-x:auto;padding:2px 2px 12px;scroll-snap-type:x proximity}
+.adm-col{display:flex;flex-direction:column;min-width:0;border:1px solid var(--a-line);border-radius:12px;background:var(--a-panel);scroll-snap-align:start;transition:border-color .15s,background .15s}
+.adm-col.is-over{border-color:color-mix(in srgb,var(--a-primary) 55%,var(--a-line));background:var(--a-tint)}
+body .adm .adm-col-head{display:flex;align-items:center;justify-content:space-between;margin:0;padding:12px 14px;border-bottom:1px solid var(--a-line);font-size:14.5px;font-weight:600}
+.adm-col-list{display:flex;flex-direction:column;gap:10px;min-height:120px;margin:0;padding:12px;list-style:none}
+.adm-kcard{padding:12px 12px 10px;border:1px solid var(--a-line);border-radius:10px;background:var(--a-card);box-shadow:var(--a-shadow);cursor:grab}
+.adm-kcard:active{cursor:grabbing}
+.adm-kcard.is-dragging{opacity:.45}
+.adm-kcard-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.adm .adm-kcard-top a{color:var(--a-text);font-weight:600;font-size:15px;line-height:1.3;text-decoration:none;overflow-wrap:anywhere}
+.adm .adm-kcard-top a:hover{text-decoration:underline}
+.adm-grip{width:16px;height:16px;flex:none;color:var(--a-soft)}
+.adm-kcard .adm-pills{margin-top:8px}
+.adm-kcard .adm-pill{font-size:12px;padding:2px 8px}
+.adm-kcard-text{margin:8px 0 0;color:var(--a-soft);font-size:13.5px;line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.adm-kcard-foot{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:10px}
+.adm-kcard-foot .adm-status-select{height:30px;font-size:12.5px}
+.adm-col-empty{display:grid;place-items:center;min-height:90px;border:1px dashed var(--a-line);border-radius:10px;color:var(--a-soft);font-size:13.5px}
+
+/* The lead form */
+.adm-lead-form{max-width:900px}
+.adm-form-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:0 16px}
+@media (min-width:700px){.adm-form-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.adm-field input[type=tel],.adm-field input[type=date]{width:100%;min-height:44px;padding:10px 12px;border:1px solid var(--a-line);border-radius:8px;background:var(--a-card);color:var(--a-text);font:inherit}
+.adm-form-actions{display:flex;flex-wrap:wrap;gap:10px}
