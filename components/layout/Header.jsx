@@ -6,7 +6,7 @@ import BrandLogo from '@/components/ui/BrandLogo';
 import SiteLink from '@/components/ui/SiteLink';
 import { MoonIcon, PhoneIcon, SunIcon } from '@/components/ui/icons';
 import { HEADER_CTA, HEADER_LINKS, HEADER_MORE } from '@/data/navigation';
-import { START_PATH } from '@/data/start';
+import { isFocusPath, isLandingPath } from '@/lib/landing';
 import { PHONE, TEL } from '@/data/site';
 import './Header.css';
 
@@ -24,7 +24,8 @@ export default function Header() {
   const [theme, setTheme] = useState('light');
   const [past, setPast] = useState(false); // scrolled below the photo hero
   const pathname = usePathname();
-  const requestPage = pathname === START_PATH;
+  const requestPage = isFocusPath(pathname); // /start/ and the ad landing pages: logo, theme switch and phone only (lib/landing.js)
+  const landing = isLandingPath(pathname);
   const button = useRef(null);
 
   useEffect(() => {
@@ -91,7 +92,7 @@ export default function Header() {
   };
 
   return (
-    <header className={'site-header' + (open ? ' is-open' : '') + (requestPage ? ' is-start' : '')} data-solid={past || open ? 'true' : undefined}>
+    <header className={'site-header' + (open ? ' is-open' : '') + (requestPage ? ' is-start' : '') + (landing ? ' is-lp' : '')} data-solid={past || open ? 'true' : undefined}>
       <div className="hd-backdrop" onClick={close} aria-hidden="true"></div>
       <div className="hd-bar">
         <div className="hd-brand">

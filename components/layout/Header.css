@@ -50,6 +50,9 @@ body:has(main :is(.hero,.st-hero,.promo-home,.pd-hero)) .site-header:not([data-s
 /* /start/: the phone shows as a round icon cell */
 .is-start .hd-phone{display:inline-flex;padding:0;width:56px}
 .is-start .hd-phone span{display:none}
+/* Ad landing pages: the phone number shows in full (a call is a conversion too) */
+.is-lp .hd-phone{width:auto;padding:0 16px;gap:8px}
+.is-lp .hd-phone span{display:inline;font-size:13px;letter-spacing:.04em}
 
 /* The panel: drops down from the bar, cut open from the top */
 .hd-panel{position:absolute;top:var(--hd-h);right:0;left:0;z-index:1;max-height:calc(100dvh - var(--hd-h));overflow-y:auto;overscroll-behavior:contain;

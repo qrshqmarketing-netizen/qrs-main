@@ -9,6 +9,7 @@ import Script from 'next/script';
 import { Big_Shoulders, Libre_Franklin } from 'next/font/google';
 import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
+import HideOnLanding from '@/components/layout/HideOnLanding';
 import SiteChrome from '@/components/layout/SiteChrome';
 import CampaignWelcome from '@/components/widgets/CampaignWelcome';
 import CallRailSwap from '@/components/widgets/CallRailSwap';
@@ -95,7 +96,10 @@ export default async function RootLayout({ children }) {
         <SiteChrome>
           <Footer />
           <MobileActionBar />
-          <RoofAssistant />
+          {/* No chat bubble on the ad landing pages (lib/landing.js) */}
+          <HideOnLanding>
+            <RoofAssistant />
+          </HideOnLanding>
           {INSTANT_QUOTE_ENABLED && <InstantQuoteLoader />}
           <CookieNotice />
           <SeasonPromo />

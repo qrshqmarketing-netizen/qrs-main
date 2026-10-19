@@ -60,7 +60,8 @@ export async function handleLead(request, ctx) {
   const diagnostic = Boolean(secret) && request.headers.get('x-leads-diagnostic') === secret;
   if (diagnostic && body?.configCheck === true) return json({ ok: true, settings: leadChannelSettings(env, db) }, 200, cors);
 
-  const source = body?.source === 'instant-quote' ? 'instant-quote' : 'estimate-form';
+  // 'landing-page': the ad landing pages' hero form (components/landing/LandingPage.jsx), its own source in the CRM, the sheet and the email
+  const source = ['instant-quote', 'landing-page'].includes(body?.source) ? body.source : 'estimate-form';
   const name = clip(body?.name, 120);
   const phone = clip(body?.phone, 40);
   const email = clip(body?.email, 200);

@@ -8,6 +8,7 @@ import { escapeHtml, formatDay } from './util.js';
 export const SOURCE_LABELS = {
   'estimate-form': 'Estimate form',
   'instant-quote': 'Instant Quote',
+  'landing-page': 'Ad landing page',
   'roof-assistant-chat': 'Roof Assistant chat',
   mcp: 'AI agent (MCP)',
 };

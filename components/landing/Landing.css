@@ -1,0 +1,150 @@
+/* ---------- Paid-ad landing pages (LandingPage.jsx; /lp/residential/, /lp/commercial/, /el-nino-roof-check/) ----------
+   Phones first: the headline, then the form right away, then the points and proof. From 901px: copy at the left, the form card at the right,
+   both over the photo under a dark shade. Below the hero the page is light and calm, every section ends in a way back to the form. */
+.lp{--lp-gut:20px;background:var(--paper)}
+.lp-wrap{max-width:1180px;margin:0 auto;padding-inline:var(--lp-gut)}
+@media (min-width:621px){.lp{--lp-gut:40px}}
+
+/* Hero */
+.lp-hero{position:relative;isolation:isolate;overflow:hidden;color:#fff;background:#0b1a2b}
+.lp-hero-photo{object-fit:cover;object-position:50% 40%;z-index:-2}
+.lp-hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(4,14,26,.72) 0%,rgba(4,14,26,.5) 45%,rgba(4,14,26,.8) 100%)}
+@media (min-width:901px){.lp-hero:before{background:linear-gradient(90deg,rgba(4,14,26,.86) 0%,rgba(4,14,26,.62) 48%,rgba(4,14,26,.35) 100%)}}
+.lp-storm .lp-hero-photo{object-position:50% 25%}
+.lp-hero-inner{display:grid;gap:22px;max-width:1240px;margin:0 auto;padding:84px var(--lp-gut) 40px}
+.lp-hero-copy{display:contents}
+body .lp .lp-hero :is(h1,.lp-eyebrow,.lp-sub){text-align:left;margin-left:0;margin-right:0}
+.lp-eyebrow{order:1;margin:0;color:var(--gold-2);font:600 12.5px/1.4 var(--font-text),sans-serif;letter-spacing:.14em;text-transform:uppercase}
+body .lp .lp-hero h1{order:2;margin:0;max-width:18ch;color:#fff;font:600 clamp(32px,8.6vw,46px)/1.08 var(--font-text),sans-serif;letter-spacing:-.025em;text-transform:none;text-wrap:balance;text-shadow:0 2px 18px rgba(0,0,0,.35)}
+.lp-sub{order:3;margin:0;max-width:56ch;color:rgba(255,255,255,.9);font-size:16.5px;line-height:1.55}
+.lp-hero-form{order:4;scroll-margin-top:84px}
+.lp-points{order:5;display:grid;gap:8px;margin:0;padding:0;list-style:none;font:500 15px/1.4 var(--font-text),sans-serif}
+.lp-points li:before,.lp-strip li:before{content:"✓";margin-right:9px;color:var(--gold-2);font-family:var(--font-glyph);font-weight:700}
+.lp-proof{order:6;display:flex;flex-wrap:wrap;gap:6px 16px;margin:0;color:rgba(255,255,255,.78);font-size:14px}
+.lp-proof span+span:before{content:"·";margin-right:16px;color:rgba(255,255,255,.4)}
+.lp-call{order:7;display:inline-flex;align-items:center;gap:8px;justify-self:start;color:#fff;font:600 16px/1.3 var(--font-text),sans-serif;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:5px}
+.lp-call svg{width:18px;height:18px;color:var(--gold-2)}
+.lp-hero .qlf{box-shadow:0 30px 70px -24px rgba(0,0,0,.65)}
+@media (min-width:901px){
+  .lp-hero-inner{grid-template-columns:minmax(0,1.1fr) minmax(360px,440px);align-items:center;gap:56px;min-height:min(820px,100svh);padding:120px clamp(40px,4vw,72px) 72px}
+  .lp-hero-copy{display:grid;gap:18px;align-content:center}
+  body .lp .lp-hero-copy > *,body .lp .lp-hero .lp-hero-copy > h1{order:0} /* the phones' order (form after the headline) doesn't apply inside the copy column */
+  .lp-hero-form{order:0;scroll-margin-top:100px}
+  body .lp .lp-hero h1{font-size:clamp(42px,4vw,60px);max-width:16ch}
+  .lp-sub{font-size:18.5px}
+  .lp-points{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 24px;margin-top:6px}
+}
+
+/* Proof strip */
+.lp-strip{border-bottom:1px solid var(--line);background:var(--wash)}
+.lp-strip ul{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 32px;max-width:1180px;margin:0 auto;padding:18px var(--lp-gut);list-style:none;color:var(--ink);font:600 14.5px/1.4 var(--font-text),sans-serif}
+.lp-strip li:before{color:var(--gold-ink)}
+
+/* Manufacturer certification badges (from the Credentials page), right under the proof strip */
+.lp-badges{padding:28px 0;border-bottom:1px solid var(--line)}
+.lp-badges ul{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:24px 40px;margin:0;padding:0;list-style:none}
+.lp-badges li{display:flex;align-items:center;justify-content:center;width:120px;height:64px}
+.lp-badges img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+:root[data-theme="dark"] .lp-badges li{padding:8px 12px;width:140px;height:72px;border-radius:var(--radius-sm);background:#f3f6f9}
+@media (min-width:760px){.lp-badges li{width:150px;height:72px}}
+
+/* Shared section headings */
+body .lp :is(.lp-services,.lp-steps,.lp-work,.lp-final) h2{margin:0 0 28px;color:var(--navy);font:600 clamp(28px,6vw,40px)/1.15 var(--font-text),sans-serif;letter-spacing:-.02em;text-transform:none;text-align:center}
+
+/* What we do: service cards, no links */
+.lp-services{padding:72px 0 64px}
+.lp-services ul{display:grid;gap:14px;margin:0 0 32px;padding:0;list-style:none}
+.lp-services li{position:relative;padding:22px 22px 22px 26px;border:1px solid var(--line);border-radius:var(--radius);background:var(--paper)}
+.lp-services li:before{content:"";position:absolute;left:0;top:22px;bottom:22px;width:3px;border-radius:0 3px 3px 0;background:var(--gold)}
+body .lp .lp-services h3{margin:0 0 6px;color:var(--navy);font:600 18px/1.3 var(--font-text),sans-serif;text-transform:none;letter-spacing:-.01em}
+.lp-services p{margin:0;color:var(--muted);font-size:15px;line-height:1.55}
+@media (min-width:700px){.lp-services ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}}
+@media (min-width:1000px){.lp-services ul{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}}
+
+/* Steps */
+.lp-steps{padding:72px 0}
+.lp-steps ol{display:grid;gap:16px;margin:0 0 32px;padding:0;list-style:none}
+.lp-steps li{padding:24px;border:1px solid var(--line);border-radius:var(--radius);background:var(--paper)}
+.lp-step-num{display:block;margin-bottom:12px;color:var(--gold-ink);font:600 14px/1 var(--font-text),sans-serif;letter-spacing:.08em}
+body .lp .lp-steps h3{margin:0 0 8px;color:var(--navy);font:600 20px/1.3 var(--font-text),sans-serif;text-transform:none;letter-spacing:-.01em}
+.lp-steps p{margin:0;color:var(--muted);font-size:15.5px;line-height:1.6}
+.lp-jump{display:flex;width:fit-content;margin:0 auto}
+@media (min-width:760px){.lp-steps ol{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}}
+
+/* Recent work */
+.lp-work{padding:72px 0;background:var(--wash)}
+.lp-work ul{display:grid;gap:16px;margin:0;padding:0;list-style:none}
+.lp-work-photo{position:relative;aspect-ratio:4/3;overflow:hidden;border-radius:var(--radius);background:var(--line)}
+.lp-work-photo img{object-fit:cover}
+.lp-work p{margin:10px 0 0;color:var(--ink);font:500 15px/1.4 var(--font-text),sans-serif}
+@media (min-width:760px){.lp-work ul{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}}
+
+/* Closing call */
+.lp-final{padding:80px 0 96px;text-align:center}
+.lp-final p{max-width:52ch;margin:-12px auto 28px;color:var(--muted);font-size:17px;line-height:1.6}
+.lp-final-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.lp-final-actions .btn svg{width:17px;height:17px}
+
+/* Dark theme: the hero stays dark; the light sections follow the theme tokens */
+:root[data-theme="dark"] .lp-strip{background:var(--wash)}
+
+/* The site's studio look left-aligns every heading (StudioSite.css); the landing page's section headings stay centered */
+body.studio-site main.lp :is(.lp-services,.lp-steps,.lp-work,.lp-final) h2:not(.x):not(.y){text-align:center;margin-left:auto;margin-right:auto}
+/* The "Client stories" review block (ReviewMarquee) is centered on the landing pages: label, heading and the Google line */
+body.studio-site main.lp .rmq-head{text-align:center}
+body.studio-site main.lp .rmq-head h2:not(.x):not(.y){text-align:center;margin-left:auto;margin-right:auto}
+body.studio-site main.lp .rmq-label,body.studio-site main.lp .rmq-sub{justify-content:center}
+
+/* ---------- Motion (owner, October 19 2026) ----------
+   On load: the hero copy rises in one piece after another; the H1 only moves (never transparent, so it still counts as painted at once), the
+   form card slides up and then a gold ring pulses around it twice. The photo zooms slowly (Ken Burns) and dims as the hero scrolls away
+   (--lp-p from LandingMotion.jsx). Below the hero the site's own reveals fade the sections in (RevealSections, line reveals on the headings);
+   here: the steps' gold line draws itself (data-lp-in → is-in), the work photos drift with the scroll (StudioMotion PARALLAX) and zoom on
+   hover, badges and step cards lift on hover, and a slow warm glow moves behind the closing call. All off for reduced motion and in print. */
+@keyframes lpRise{from{opacity:0;transform:translate3d(0,18px,0)}to{opacity:1;transform:none}}
+@keyframes lpRiseSolid{from{transform:translate3d(0,22px,0)}to{transform:none}}
+@keyframes lpCard{from{opacity:0;transform:translate3d(0,28px,0) scale(.98)}to{opacity:1;transform:none}}
+@keyframes lpRing{0%{box-shadow:0 0 0 0 rgba(212,181,114,.55)}100%{box-shadow:0 0 0 18px rgba(212,181,114,0)}}
+@keyframes lpZoom{from{transform:scale(1.04)}to{transform:scale(1.14) translate3d(-1.2%,-1%,0)}}
+@keyframes lpGlow{0%,100%{transform:translate3d(-12%,0,0) scale(1)}50%{transform:translate3d(12%,-6%,0) scale(1.15)}}
+@media (prefers-reduced-motion:no-preference){
+  .lp-hero-photo{animation:lpZoom 26s cubic-bezier(.3,.1,.4,1) both;will-change:transform}
+  .lp-hero :is(.lp-eyebrow,.lp-sub,.lp-proof,.lp-call){animation:lpRise .7s cubic-bezier(.17,.84,.44,1) both}
+  body .lp .lp-hero h1{animation:lpRiseSolid .8s cubic-bezier(.17,.84,.44,1) both}
+  .lp-hero .lp-eyebrow{animation-delay:.05s}
+  .lp-hero .lp-sub{animation-delay:.22s}
+  .lp-points li{animation:lpRise .6s cubic-bezier(.17,.84,.44,1) both}
+  .lp-points li:nth-child(1){animation-delay:.32s}.lp-points li:nth-child(2){animation-delay:.4s}.lp-points li:nth-child(3){animation-delay:.48s}.lp-points li:nth-child(4){animation-delay:.56s}
+  .lp-hero .lp-proof{animation-delay:.64s}
+  .lp-hero .lp-call{animation-delay:.72s}
+  .lp-hero-form .qlf{animation:lpCard .8s cubic-bezier(.17,.84,.44,1) .18s both,lpRing 1.6s ease-out 1.6s 2}
+
+  /* The hero photo dims a little as the hero scrolls away */
+  html.lp-motion .lp-hero-photo{opacity:calc(1 - var(--lp-p,0) * .5)}
+
+  /* Steps: a gold line draws across the three numbers once they come into view (desktop) */
+  .lp-steps ol{position:relative}
+  .lp-steps li{transition:transform .35s cubic-bezier(.17,.84,.44,1),box-shadow .35s ease,border-color .35s ease}
+  .lp-step-num{position:relative}
+
+  /* Badges and work photos */
+  .lp-badges li{transition:transform .35s cubic-bezier(.17,.84,.44,1)}
+  .lp-work-photo img{transition:scale .7s cubic-bezier(.17,.84,.44,1)}
+
+  /* The closing call: a slow warm glow drifting behind it */
+  .lp-final{position:relative;isolation:isolate;overflow:hidden}
+  .lp-final:before{content:"";position:absolute;inset:-30% 10%;z-index:-1;pointer-events:none;background:radial-gradient(50% 50% at 50% 50%,color-mix(in srgb,var(--gold) 22%,transparent),transparent 70%);animation:lpGlow 16s ease-in-out infinite}
+}
+@media (prefers-reduced-motion:no-preference) and (min-width:760px){
+  html.lp-motion .lp-steps ol:before{content:"";position:absolute;left:24px;right:24px;top:31px;z-index:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold-2));transform:scaleX(0);transform-origin:0 50%;transition:transform 1.4s cubic-bezier(.65,0,.35,1) .2s}
+  html.lp-motion .lp-steps ol.is-in:before{transform:scaleX(1)}
+  .lp-steps li{position:relative;z-index:1}
+}
+@media (hover:hover) and (prefers-reduced-motion:no-preference){
+  .lp-steps li:hover{transform:translateY(-4px);border-color:color-mix(in srgb,var(--gold) 55%,var(--line));box-shadow:0 18px 40px -24px rgba(6,45,87,.35)}
+  .lp-badges li:hover{transform:translateY(-3px) scale(1.06)}
+  .lp-services li{transition:transform .35s cubic-bezier(.17,.84,.44,1),box-shadow .35s ease}
+  .lp-services li:hover{transform:translateY(-4px);box-shadow:0 18px 40px -24px rgba(6,45,87,.35)}
+  .lp-work li:hover .lp-work-photo img{scale:1.06}
+}
+@media print{.lp-hero-photo,.lp-final:before{animation:none}.lp-final:before{display:none}}

@@ -10,8 +10,9 @@ import './QuickLeadForm.css';
 // A short request form (name, phone, email, ZIP) for a landing page hero. It sends the same fields as the request steps (/start/) to the lead endpoint
 // (lib/endpoints.js: /api/lead/ or the Supabase function), so the lead goes to the team's email, the Google Sheet and Supabase, with the page's utm tags;
 // then the thank-you page opens (it reports the conversion). service: one of SERVICE_OPTIONS (data/estimateOptions.js); note: what the email's message says.
-export default function QuickLeadForm({ title = 'Book your free roof evaluation', text, service = 'Roof inspection / roof check', note, page, leadSource = 'quick_form', button = 'Book My Free Evaluation' }) {
-  const [f, setF] = useState({ name: '', phone: '', email: '', zip: '', website: '' });
+// `fine`: the line under the button; `askCompany`: an optional "Company or property" field (commercial pages), added to the message.
+export default function QuickLeadForm({ title = 'Book your free roof evaluation', text, service = 'Roof inspection / roof check', note, page, leadSource = 'quick_form', button = 'Book My Free Evaluation', fine = 'Free and no obligation. A roofer calls you to schedule.', askCompany = false, source = 'estimate-form' }) {
+  const [f, setF] = useState({ name: '', phone: '', email: '', zip: '', company: '', website: '' });
   const [state, setState] = useState({ status: 'idle', error: '' });
   const set = (k) => (e) => setF((v) => ({ ...v, [k]: e.target.value }));
 
@@ -25,13 +26,13 @@ export default function QuickLeadForm({ title = 'Book your free roof evaluation'
     setState({ status: 'sending', error: '' });
     try {
       const res = await postLead({
-        source: 'estimate-form',
+        source,
         name: f.name.trim(),
         phone: f.phone.trim(),
         email: f.email.trim(),
         zip: f.zip.trim(),
         service,
-        message: note || '',
+        message: [note, askCompany && f.company.trim() && `Company / property: ${f.company.trim().slice(0, 120)}`].filter(Boolean).join('\n'),
         website: f.website,
         page: page || window.location.pathname,
         utm: currentAttribution(),
@@ -66,6 +67,12 @@ export default function QuickLeadForm({ title = 'Book your free roof evaluation'
           <input name="zip" inputMode="numeric" autoComplete="postal-code" maxLength={5} value={f.zip} onChange={(e) => setF((v) => ({ ...v, zip: e.target.value.replace(/\D/g, '') }))} />
         </label>
       </div>
+      {askCompany && (
+        <label>
+          <span>Company or property <small>(optional)</small></span>
+          <input name="organization" autoComplete="organization" value={f.company} onChange={set('company')} maxLength={120} />
+        </label>
+      )}
       <label className="qlf-hp" aria-hidden="true">
         <span>Leave this field empty</span>
         <input name="qlf-leave-empty" tabIndex={-1} autoComplete="off" data-1p-ignore data-lpignore="true" value={f.website} onChange={set('website')} />
@@ -74,7 +81,7 @@ export default function QuickLeadForm({ title = 'Book your free roof evaluation'
       <button className="btn btn-gold" type="submit" disabled={state.status === 'sending'}>
         {state.status === 'sending' ? 'Sending…' : <>{button} <ArrowRight /></>}
       </button>
-      <p className="qlf-fine">Free and no obligation. A roofer calls you to schedule.</p>
+      {fine && <p className="qlf-fine">{fine}</p>}
     </form>
   );
 }

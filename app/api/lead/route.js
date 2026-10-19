@@ -66,7 +66,8 @@ export async function POST(request) {
   // (and whether the blog articles table exists, and how many articles it holds)
   if (diagnostic && body?.configCheck === true) return Response.json({ ok: true, settings: { ...leadChannelSettings(), dashboardPassword: cleanPassword(process.env.ADMIN_PASSWORD).length >= 12, dashboardPasswordLength: cleanPassword(process.env.ADMIN_PASSWORD).length, dashboardPasswordHadQuotesOrName: cleanPassword(process.env.ADMIN_PASSWORD) !== String(process.env.ADMIN_PASSWORD || '').trim(), articles: await postsTableStatus(), callrail: await callrailStatus() } });
 
-  const source = body?.source === 'instant-quote' ? 'instant-quote' : 'estimate-form';
+  // 'landing-page': the ad landing pages' hero form (components/landing/LandingPage.jsx), its own source in the CRM, the sheet and the email
+  const source = ['instant-quote', 'landing-page'].includes(body?.source) ? body.source : 'estimate-form';
   const name = clip(body?.name, 120);
   const phone = clip(body?.phone, 40);
   const email = clip(body?.email, 200);

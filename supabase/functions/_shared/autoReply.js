@@ -4,7 +4,7 @@ import { AUTO_REPLY as A, SITE } from './generated.js';
 import { leadRecipients } from './leads.js';
 import { escapeHtml, formatDay } from './util.js';
 
-const SOURCES = ['estimate-form', 'instant-quote']; // chat and AI-agent leads don't get this email
+const SOURCES = ['estimate-form', 'instant-quote', 'landing-page']; // chat and AI-agent leads don't get this email
 
 function firstName(name) {
   const word = String(name || '').trim().split(/\s+/)[0] || '';
