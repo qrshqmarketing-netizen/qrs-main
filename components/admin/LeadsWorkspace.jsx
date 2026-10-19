@@ -21,7 +21,7 @@ const VIEWS = [
   { id: 'kanban', label: 'Kanban', icon: 'kanban' },
 ];
 
-export default function LeadsWorkspace({ leads: initial, view, filters, facets, counts }) {
+export default function LeadsWorkspace({ leads: initial, total = 0, page = 1, pageSize = 24, view, filters, facets, counts }) {
   const router = useRouter();
   const pathname = usePathname();
   const params = useSearchParams();
@@ -33,16 +33,21 @@ export default function LeadsWorkspace({ leads: initial, view, filters, facets, 
   useEffect(() => setLeads(initial), [initial]);
   useEffect(() => setQ(filters.q), [filters.q]);
 
-  // Change one or more filters in the address (an empty value removes it)
+  // Change one or more filters in the address (an empty value removes it); any change other than the page itself goes back to page 1
   const go = (changes) => {
     const next = new URLSearchParams(params.toString());
+    if (!('page' in changes)) next.delete('page');
     for (const [k, v] of Object.entries(changes)) {
       if (v) next.set(k, v);
       else next.delete(k);
     }
     const s = next.toString();
-    router.replace(s ? `${pathname}?${s}` : pathname, { scroll: false });
+    router.replace(s ? `${pathname}?${s}` : pathname, { scroll: 'page' in changes });
   };
+  const pages = Math.max(1, Math.ceil(total / pageSize));
+  const first = total ? (page - 1) * pageSize + 1 : 0;
+  const last = Math.min(total, (page - 1) * pageSize + leads.length);
+  const pager = view !== 'kanban' && pages > 1 && <Pager page={page} pages={pages} onGo={(p) => go({ page: p > 1 ? String(p) : '' })} />;
   const anyFilter = Boolean(filters.q || filters.source || filters.service || filters.from || filters.to || filters.status);
 
   const setStatus = async (lead, status) => {
@@ -155,8 +160,11 @@ export default function LeadsWorkspace({ leads: initial, view, filters, facets, 
         </div>
       )}
       <p className="adm-note">
-        {leads.length} lead{leads.length === 1 ? '' : 's'}
-        {anyFilter ? ' match the filters' : ''}.
+        {view === 'kanban'
+          ? `${total} lead${total === 1 ? '' : 's'}${anyFilter ? ' match the filters' : ''}${total > leads.length ? `; the board shows the ${sortWord(filters.sort)} ${leads.length}. Use the filters to narrow it down` : ''}.`
+          : total > 0
+            ? `Showing ${first}–${last} of ${total} lead${total === 1 ? '' : 's'}${anyFilter ? ' matching the filters' : ''}.`
+            : `No leads${anyFilter ? ' match the filters' : ''}.`}
       </p>
 
       {view === 'cards' && (
@@ -167,6 +175,7 @@ export default function LeadsWorkspace({ leads: initial, view, filters, facets, 
           {leads.length === 0 && <Empty />}
         </div>
       )}
+      {view === 'cards' && pager}
 
       {view === 'list' && (
         <div className="adm-table-wrap">
@@ -220,6 +229,7 @@ export default function LeadsWorkspace({ leads: initial, view, filters, facets, 
           {leads.length === 0 && <Empty />}
         </div>
       )}
+      {view === 'list' && pager}
 
       {view === 'kanban' && (
         <div className="adm-board" aria-label="Leads by status">
@@ -293,6 +303,33 @@ export default function LeadsWorkspace({ leads: initial, view, filters, facets, 
         </div>
       )}
     </>
+  );
+}
+
+const sortWord = (sort) => (sort === 'asc' ? 'oldest' : 'newest');
+
+// Page buttons: Previous, the first and last pages, the pages around the current one (gaps shown as …), Next
+function Pager({ page, pages, onGo }) {
+  const list = [...new Set([1, page - 1, page, page + 1, pages].filter((p) => p >= 1 && p <= pages))].sort((a, b) => a - b);
+  return (
+    <nav className="adm-pager" aria-label="Pages">
+      <button type="button" className="adm-btn" onClick={() => onGo(page - 1)} disabled={page <= 1}>
+        Previous
+      </button>
+      <span className="adm-pager-pages">
+        {list.map((p, i) => (
+          <span key={p}>
+            {i > 0 && p - list[i - 1] > 1 && <span className="adm-pager-gap" aria-hidden="true">…</span>}
+            <button type="button" className={'adm-pager-num' + (p === page ? ' on' : '')} aria-current={p === page ? 'page' : undefined} aria-label={`Page ${p}`} onClick={() => onGo(p)}>
+              {p}
+            </button>
+          </span>
+        ))}
+      </span>
+      <button type="button" className="adm-btn" onClick={() => onGo(page + 1)} disabled={page >= pages}>
+        Next
+      </button>
+    </nav>
   );
 }
 

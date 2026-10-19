@@ -8,8 +8,10 @@ import { leadCounts, listLeads } from '@/lib/adminLeads';
 import { dbConfigured } from '@/lib/supabase';
 
 // /admin/leads/: the CRM. Three views of the leads (Cards, List, Kanban: LeadsWorkspace), filters in the address (status, q, source, service,
-// from, to, sort), and "New lead" to add one by hand. The top bar's search lands here too. Up to 300 leads at a time, newest first by default.
+// from, to, sort), and "New lead" to add one by hand. The top bar's search lands here too. Cards and List come in pages (?page=, PAGE_SIZE per
+// view); Kanban shows up to 300 leads on one board. Newest first by default.
 const VIEWS = ['cards', 'list', 'kanban'];
+const PAGE_SIZE = { cards: 24, list: 50, kanban: 300 };
 const one = (v) => (Array.isArray(v) ? v[0] : v) || '';
 
 export default async function LeadsPage({ searchParams }) {
@@ -25,13 +27,18 @@ export default async function LeadsPage({ searchParams }) {
     to: one(sp.to),
     sort: one(sp.sort) === 'asc' ? 'asc' : 'desc',
   };
+  const size = PAGE_SIZE[view];
+  const page = view === 'kanban' ? 1 : Math.max(1, Math.floor(Number(one(sp.page))) || 1);
   let leads = [];
+  let total = 0;
   let counts = null;
   let problem = '';
   if (!dbConfigured()) problem = 'Supabase is not connected to the site yet (SUPABASE_URL and SUPABASE_SECRET_KEY in Vercel).';
   else {
     try {
-      [leads, counts] = await Promise.all([listLeads(filters), leadCounts()]);
+      let list;
+      [list, counts] = await Promise.all([listLeads({ ...filters, limit: size, page }), leadCounts()]);
+      ({ leads, total } = list);
     } catch (err) {
       problem = /42P01|PGRST205|does not exist/.test(err.message)
         ? 'The leads table does not exist yet. In Supabase, open the SQL Editor and run scripts/supabase-leads.sql, then reload this page.'
@@ -54,7 +61,7 @@ export default async function LeadsPage({ searchParams }) {
       {problem ? (
         <div className="adm-msg bad">{problem}</div>
       ) : (
-        <LeadsWorkspace leads={leads} view={view} filters={filters} facets={{ sources: counts?.sources || [], services: counts?.services || [] }} counts={counts} />
+        <LeadsWorkspace leads={leads} total={total} page={page} pageSize={size} view={view} filters={filters} facets={{ sources: counts?.sources || [], services: counts?.services || [] }} counts={counts} />
       )}
     </div>
   );

@@ -18,7 +18,7 @@ export default async function AdminPage() {
 
   const connected = dbConfigured();
   const [counts, recent, posts, team] = connected
-    ? await Promise.all([settle(leadCounts()), settle(listLeads({ limit: 6 })), settle(adminListPosts()), settle(teamList())])
+    ? await Promise.all([settle(leadCounts()), settle(listLeads({ limit: 6 }).then((r) => r.leads)), settle(adminListPosts()), settle(teamList())])
     : [{}, {}, {}, {}];
   const problem = !connected
     ? 'Supabase is not connected to the site yet (SUPABASE_URL and SUPABASE_SECRET_KEY in Vercel), so there are no leads or articles to show.'
