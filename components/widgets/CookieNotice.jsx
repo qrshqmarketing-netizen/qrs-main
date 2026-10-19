@@ -23,6 +23,7 @@ export default function CookieNotice() {
   const [settings, setSettings] = useState(false);
   const [choice, setChoice] = useState({ analytics: true, clarity: true });
   const panel = useRef(null);
+  const bar = useRef(null);
 
   // First visit: show the bar after a moment, until a choice is saved
   useEffect(() => {
@@ -49,6 +50,19 @@ export default function CookieNotice() {
     document.body.classList.toggle('cookie-open', open);
   }, [open]);
 
+  // While the bar is up, its height is --cookie-h on <html>, so the chat bubble (RoofAssistant.css) rises above it instead of covering its buttons
+  useEffect(() => {
+    const root = document.documentElement;
+    const el = bar.current;
+    if (!open || !el || !('ResizeObserver' in window)) return undefined;
+    const watch = new ResizeObserver(() => root.style.setProperty('--cookie-h', `${el.offsetHeight}px`));
+    watch.observe(el);
+    return () => {
+      watch.disconnect();
+      root.style.removeProperty('--cookie-h');
+    };
+  }, [open]);
+
   useEffect(() => {
     if (open && settings) panel.current?.querySelector('input:not([disabled])')?.focus({ preventScroll: true });
   }, [open, settings]);
@@ -64,7 +78,7 @@ export default function CookieNotice() {
   };
 
   return (
-    <div className={'cookie' + (settings ? ' is-settings' : '')} role="region" aria-label="Cookie settings">
+    <div className={'cookie' + (settings ? ' is-settings' : '')} role="region" aria-label="Cookie settings" ref={bar}>
       <div className="cookie-inner">
         {settings && (
           <fieldset className="cookie-kinds" ref={panel}>

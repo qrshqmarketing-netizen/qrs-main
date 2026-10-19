@@ -40,25 +40,6 @@ export function PhoneIcon({ strokeWidth = 2, ...props }) {
   );
 }
 
-// Header tools (Header.jsx): the AI assistant (a speech bubble with three dots) and the Instant Quote (a calculator)
-export function ChatIcon(props) {
-  return (
-    <svg {...lineIcon} strokeWidth="2" {...props}>
-      <path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.3 9.3 0 0 1-3.6-.7L3 21l1.6-4.4A8 8 0 0 1 3 11.5 8.6 8.6 0 0 1 12 3a8.6 8.6 0 0 1 9 8.5Z" />
-      <path d="M8 11.6h.01M12 11.6h.01M16 11.6h.01" strokeWidth="2.6" />
-    </svg>
-  );
-}
-
-export function QuoteIcon(props) {
-  return (
-    <svg {...lineIcon} strokeWidth="2" {...props}>
-      <rect x="5" y="2.5" width="14" height="19" rx="2.5" />
-      <path d="M8.5 6.5h7v3h-7z" />
-      <path d="M9 13.5h.01M12 13.5h.01M15 13.5h.01M9 17h.01M12 17h.01M15 17h.01" strokeWidth="2.6" />
-    </svg>
-  );
-}
 
 export function MoonIcon(props) {
   return (

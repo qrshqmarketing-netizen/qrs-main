@@ -175,7 +175,7 @@ body.studio-site .promo-home .promo-title{
   /* Two columns: the caption and points at the left, the buttons at the right; the keyword line spans both, centered, sharing the top row with the note */
   .promo.promo-landing.promo-home{
     grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto 1.6fr auto 1fr auto auto;column-gap:48px;
-    min-height:max(720px,100svh);padding:96px clamp(40px,4vw,72px) clamp(56px,8svh,96px); /* the header is 68px here */
+    min-height:max(720px,100svh);padding:96px clamp(40px,4vw,72px) clamp(104px,13svh,150px); /* the header is 68px here; the bottom row clears the chat bubble */
   }
   .promo-home .promo-note{grid-column:1;grid-row:1}
   body.studio-site .promo-home h1.promo-eyebrow{grid-column:1/-1;grid-row:1;justify-self:center;white-space:nowrap}
@@ -187,6 +187,8 @@ body.studio-site .promo-home .promo-title{
   .promo-home .promo-points{grid-column:1;grid-row:6;flex-direction:row;flex-wrap:wrap;gap:4px 22px;margin-top:12px}
   .promo-home .promo-actions{grid-column:2;grid-row:5/span 2;align-self:end;justify-self:end;justify-content:flex-end;margin-top:0;gap:20px}
 }
+
+body.promo-open .qa-teaser{visibility:hidden}
 
 /* The home hero without the El Niño storm effects (owner, October 14 2026; PromoCard with className "promo-calm"): no lightning flash over the
    photo, no glow on the heading, no red ping beside the keyword line (the rain is off through rain={false}) */

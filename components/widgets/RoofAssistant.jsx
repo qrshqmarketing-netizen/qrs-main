@@ -7,7 +7,6 @@ import { ArrowRight, CloseIcon, RefreshIcon } from '@/components/ui/icons';
 import { ANSWERS, CHAT_ENDPOINT, CHAT_MAX_CHARS, SITE_CHAT_ENDPOINT, CHIP_PROMPTS, CONTACT_ANSWERS, CONTACT_RE, FALLBACK_ANSWER, GREETING, STARTERS } from '@/data/assistant';
 import { PHONE, TEL } from '@/data/site';
 import { currentAttribution } from '@/lib/attribution';
-import { ASSISTANT_EVENT, ASSISTANT_STATE_EVENT } from '@/lib/events';
 import { session } from '@/lib/storage';
 import './RoofAssistant.css';
 
@@ -24,11 +23,11 @@ function localReply(text, saved) {
 
 let nextId = 0;
 
-// QRS Roof Assistant: the chat panel (answers and settings in data/assistant.js). Since October 2026 there is no floating bubble or teaser: the
-// header's chat button opens and closes it (ASSISTANT_EVENT, lib/events.js), and it reports open/closed back (ASSISTANT_STATE_EVENT). Phones get a
-// bottom sheet, wider screens a panel under the header at the right.
+// QRS Roof Assistant: floating chat bubble + panel (answers and settings in data/assistant.js)
 export default function RoofAssistant() {
   const [open, setOpen] = useState(false);
+  const [seen, setSeen] = useState(false); // stops the pulse + red dot after the first visit
+  const [teaser, setTeaser] = useState(false);
   const [messages, setMessages] = useState([]); // { id, role: 'bot' | 'me', html }
   const [chips, setChips] = useState([]);
   const [typing, setTyping] = useState(false);
@@ -42,28 +41,27 @@ export default function RoofAssistant() {
   const logRef = useRef(null);
   const inputRef = useRef(null);
   const formRef = useRef(null);
-  const openerRef = useRef(null); // the header button that opened the chat (focus goes back to it)
+  const bubbleRef = useRef(null);
   const router = useRouter();
 
   useEffect(() => {
     openRef.current = open;
   }, [open]);
 
-  // Tell the header whether the chat is open (its button shows it)
+  // First visit this session: show the "Hi!" teaser after a few seconds (after the cookie notice, if it's up)
   useEffect(() => {
-    window.dispatchEvent(new CustomEvent(ASSISTANT_STATE_EVENT, { detail: { open } }));
-  }, [open]);
-
-  // The header's chat button: open the chat, or close it if it is open
-  useEffect(() => {
-    const onToggle = (e) => {
-      openerRef.current = e.detail?.opener || null;
-      if (openRef.current) closeChat();
-      else openChat();
+    if (session.get('qaSeen')) {
+      setSeen(true);
+      return;
+    }
+    let t;
+    const show = () => {
+      if (document.body.classList.contains('cookie-open')) t = setTimeout(show, 2000);
+      else if (!openRef.current) setTeaser(true);
     };
-    window.addEventListener(ASSISTANT_EVENT, onToggle);
-    return () => window.removeEventListener(ASSISTANT_EVENT, onToggle);
-  });
+    t = setTimeout(show, 4000);
+    return () => clearTimeout(t);
+  }, []);
 
   // Keep the newest message in view
   useEffect(() => {
@@ -119,6 +117,7 @@ export default function RoofAssistant() {
 
   function openChat() {
     setOpen(true);
+    setSeen(true);
     session.set('qaSeen', '1');
     if (!started.current) {
       started.current = true;
@@ -129,7 +128,7 @@ export default function RoofAssistant() {
 
   function closeChat() {
     setOpen(false);
-    openerRef.current?.focus({ preventScroll: true });
+    bubbleRef.current.focus({ preventScroll: true });
   }
 
   // Clears the conversation (on screen, in memory and what's sent to the AI backend) and starts fresh
@@ -145,6 +144,14 @@ export default function RoofAssistant() {
     showGreeting();
     inputRef.current.focus({ preventScroll: true });
   }
+
+  const onTeaserClick = (e) => {
+    if (e.target.id === 'qaTeaserX') {
+      setTeaser(false);
+      setSeen(true);
+      session.set('qaSeen', '1');
+    } else openChat();
+  };
 
   // Links in answers: data-qa-close links close the chat on phones so the page is visible.
   // Page links change pages without a reload; section links (#…) fall back to the home page's section.
@@ -186,7 +193,11 @@ export default function RoofAssistant() {
   };
 
   return (
-    <div className={'qa' + (open ? ' open' : '')} id="qa">
+    <div className={'qa' + (open ? ' open' : '') + (seen ? ' seen' : '')} id="qa">
+      <div className="qa-teaser" id="qaTeaser" hidden={!teaser} onClick={onTeaserClick}>
+        Hi! Questions about your roof? I can help.
+        <button type="button" id="qaTeaserX" aria-label="Dismiss">&times;</button>
+      </div>
 
       <section className="qa-panel" id="qaPanel" role="dialog" aria-modal="false" aria-labelledby="qaTitle" onKeyDown={(e) => e.key === 'Escape' && closeChat()}>
         <header className="qa-head">
@@ -241,6 +252,25 @@ export default function RoofAssistant() {
         </div>
       </section>
 
+      <button
+        className="qa-bubble"
+        type="button"
+        id="qaBubble"
+        ref={bubbleRef}
+        aria-label={open ? 'Close chat' : 'Chat with the QRS assistant'}
+        aria-expanded={open}
+        aria-controls="qaPanel"
+        onClick={() => (open ? closeChat() : openChat())}
+      >
+        <svg className="qa-ic-open" viewBox="0 0 40 40" aria-hidden="true">
+          <path d="M20 5C11.2 5 4 11.1 4 18.7c0 4.1 2.1 7.8 5.5 10.3L8 35l7.1-3.6c1.6.4 3.2.6 4.9.6 8.8 0 16-6.1 16-13.3S28.8 5 20 5Z" fill="#fff" />
+          <circle cx="13.5" cy="18.7" r="2.2" fill="#d4b572" />
+          <circle cx="20" cy="18.7" r="2.2" fill="#d4b572" />
+          <circle cx="26.5" cy="18.7" r="2.2" fill="#d4b572" />
+        </svg>
+        <CloseIcon className="qa-ic-close" strokeWidth={2.8} />
+        <span className="qa-dot" aria-hidden="true"></span>
+      </button>
     </div>
   );
 }

@@ -387,7 +387,7 @@ body.studio-site .hero.hero.hero:not(:has(.hero-has-aside)) .hero-notes li{font:
 }
 @media (min-width:901px){
   body.studio-site .hero.hero.hero:not(:has(.hero-has-aside)){min-height:max(720px,100svh)}
-  body.studio-site .hero.hero.hero:not(:has(.hero-has-aside)) > .hero-inner{padding:96px clamp(40px,4vw,72px) clamp(56px,8svh,96px)} /* the header is 68px here */
+  body.studio-site .hero.hero.hero:not(:has(.hero-has-aside)) > .hero-inner{padding:96px clamp(40px,4vw,72px) clamp(104px,13svh,150px)} /* the header is 68px here; the bottom row clears the chat bubble */
   body.studio-site .hero.hero.hero:not(:has(.hero-has-aside)) .hero-copy{grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto 1.6fr auto 1fr auto auto;column-gap:48px}
   body.studio-site .hero.hero.hero:not(:has(.hero-has-aside)) .hero-copy > :is(.crumbs,.eyebrow){grid-column:1/-1}
   body.studio-site .hero.hero.hero:not(:has(.hero-has-aside)) .crumbs ol,body.studio-site .hero.hero.hero:not(:has(.hero-has-aside)) .hero-copy > .eyebrow{font-size:13px}

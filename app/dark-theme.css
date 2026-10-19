@@ -22,6 +22,8 @@
 :root[data-theme="dark"] :is(.process-num, .cp-badge, .loc-form button, .qa-send),
 :root[data-theme="dark"] .faq-item[open] summary::after{color:#0b1f33}
 
+:root[data-theme="dark"] .qa-teaser{outline:1px solid #fff;outline-offset:-1px}
+
 /* The footer's gradient started from --navy */
 :root[data-theme="dark"] footer{background:linear-gradient(180deg,#0b2b4d 0%,#03111f 100%)}
 
