@@ -53,10 +53,10 @@ footer .container{position:relative;max-width:1540px}
   .ft-brand{grid-column:1}
   .ft-social{margin-left:-11px}
 }
-/* The brand word, large, across the bottom: QRS® (FooterWord.jsx), tight letters that fill the footer's width at every screen size (the size is a share
+/* The brand word, large, across the bottom: QUALITY (FooterWord.jsx; it was QRS® at --fit 40.7cqw), tight letters that fill the footer's width at every screen size (the size is a share
    of the container width, --fit, measured for this word in this font), each letter in its own mask sliding up into view. Inversion effect: the
    letters are white with mix-blend-mode difference, so they show the footer photo and shade inverted (light where the footer is dark). */
-.ft-name{--fit:40.7cqw;container-type:inline-size;display:flex;align-items:flex-start;margin-top:36px;user-select:none;line-height:1;mix-blend-mode:difference}
+.ft-name{--fit:20.35cqw;container-type:inline-size;display:flex;align-items:flex-start;margin-top:36px;user-select:none;line-height:1;mix-blend-mode:difference}
 .ft-l{display:block;overflow:clip;padding:0 0 .1em;margin-bottom:-.1em}
 .ft-l > span{display:block;font:700 var(--fit)/.8 var(--font-text),sans-serif;letter-spacing:.04em;color:#fff;text-transform:uppercase}
 .ft-reg > span{font-size:calc(var(--fit) * .2);line-height:1;letter-spacing:0;margin:.35em 0 0 .25em}

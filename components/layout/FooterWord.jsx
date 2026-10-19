@@ -2,12 +2,12 @@
 
 import { useEffect, useRef, useState } from 'react';
 
-// The big faint brand word across the bottom of the footer: QRS (owner, October 15 2026: back from the particles, "large/elastic QRS"), sized from its
-// letter count so it always spans the footer's width edge to edge. Tight letters, a registered mark, and an inversion effect (CSS: mix-blend-mode
+// The big faint brand word across the bottom of the footer: QUALITY (owner, October 19 2026; it was "QRS®"), sized so it always spans the footer's width
+// edge to edge. `mark` adds a small registered mark (off now). An inversion effect (CSS: mix-blend-mode
 // difference over the footer photo, owner, October 16 2026). When it scrolls into view each letter slides up out of its own mask, one after the other (about 0.09 s
 // apart). Decorative (aria-hidden): the real text is in the page title, the logo and the copyright line. Without JavaScript, in print and for reduced motion the
 // letters are simply there.
-export default function FooterWord({ word = 'QRS', mark = true }) {
+export default function FooterWord({ word = 'QUALITY', mark = false }) {
   const ref = useRef(null);
   const [state, setState] = useState('static'); // 'static' (visible) -> 'ready' (hidden, waiting) -> 'in' (revealed)
 
