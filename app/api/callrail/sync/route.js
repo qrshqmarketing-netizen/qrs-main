@@ -1,4 +1,4 @@
-import { callrailConfigured, syncRecentCalls } from '@/lib/callrail';
+import { CALLS_AS_LEADS, callrailConfigured, syncRecentCalls } from '@/lib/callrail';
 import { deliverLead } from '@/lib/leads';
 import { dbConfigured, dbRequest } from '@/lib/supabase';
 
@@ -18,6 +18,7 @@ export async function GET(request) {
   const fromCron = cronSecret ? request.headers.get('authorization') === `Bearer ${cronSecret}` : /vercel-cron/i.test(request.headers.get('user-agent') || '');
   const manual = Boolean(sheetSecret) && request.headers.get('x-leads-diagnostic') === sheetSecret;
   if (!fromCron && !manual) return Response.json({ ok: false, error: 'not allowed' }, { status: 401 });
+  if (!CALLS_AS_LEADS) return Response.json({ ok: true, skipped: 'calls are not saved as leads (CALLS_AS_LEADS in lib/callrail.js)' });
   if (!callrailConfigured() || !dbConfigured()) return Response.json({ ok: false, error: 'CallRail or Supabase not configured' }, { status: 503 });
   if (!manual && Date.now() - lastRun < 5 * 60 * 1000) return Response.json({ ok: true, skipped: 'ran a moment ago' });
   lastRun = Date.now();

@@ -1,4 +1,4 @@
-import { callrailConfigured, callToLead, confirmCallWithApi, verifyCallrailSignature } from '@/lib/callrail';
+import { CALLS_AS_LEADS, callrailConfigured, callToLead, confirmCallWithApi, verifyCallrailSignature } from '@/lib/callrail';
 import { deliverLead } from '@/lib/leads';
 import { dbConfigured, dbRequest } from '@/lib/supabase';
 
@@ -11,6 +11,8 @@ import { dbConfigured, dbRequest } from '@/lib/supabase';
 export const dynamic = 'force-dynamic';
 
 export async function POST(request) {
+  // Calls are not saved as leads (CALLS_AS_LEADS in lib/callrail.js): answer 200 so CallRail doesn't keep retrying, and save nothing
+  if (!CALLS_AS_LEADS) return Response.json({ ok: true, saved: false, reason: 'calls are not saved as leads' });
   if (!callrailConfigured()) return Response.json({ ok: false, error: 'not configured' }, { status: 503 });
   const raw = await request.text();
   let valid = false;
