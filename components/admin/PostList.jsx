@@ -4,11 +4,12 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { adminApi } from './api';
+import PageHead from './PageHead';
 
 const SPOTS = [1, 2, 3];
 const day = (iso) => (iso ? new Date(`${iso}T12:00:00Z`).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }) : '');
 
-// The dashboard home: the home page's featured spots, the list of articles, and the one-time import. `problem` explains why the list is empty
+// The Articles page (/admin/articles/): the home page's featured spots, the list of articles, and the one-time import. `problem` explains why the list is empty
 // when Supabase isn't ready.
 export default function PostList({ posts, problem }) {
   const router = useRouter();
@@ -30,11 +31,6 @@ export default function PostList({ posts, problem }) {
     }
   };
 
-  const logout = async () => {
-    await adminApi('/api/admin/logout', {});
-    router.refresh();
-  };
-
   const published = posts.filter((p) => p.status === 'published' && !p.noindex);
   const holder = (spot) => posts.find((p) => p.homeSlot === spot);
   const chooseSpot = (spot, slug) => {
@@ -49,15 +45,17 @@ export default function PostList({ posts, problem }) {
 
   return (
     <div className="adm-wrap">
-      <div className="adm-bar">
-        <h1>Blog articles</h1>
-        <nav>
-          <Link className="adm-btn adm-btn-primary" href="/admin/new">New article</Link>
-          <Link className="adm-btn" href="/admin/content">Home page FAQ</Link>
-          <a className="adm-btn" href="/" target="_blank" rel="noopener">View the site</a>
-          <button className="adm-btn" type="button" onClick={logout}>Log out</button>
-        </nav>
-      </div>
+      <PageHead
+        crumbs={[{ label: 'Dashboard', href: '/admin/' }, { label: 'Articles' }]}
+        title="Articles"
+        text="Write, publish and feature the blog articles. A saved change is on the site within seconds."
+        actions={
+          <>
+            <Link className="adm-btn adm-btn-line" href="/admin/content/">Home page FAQ</Link>
+            <Link className="adm-btn adm-btn-primary" href="/admin/new/">New article</Link>
+          </>
+        }
+      />
 
       {message && (
         <div className={`adm-msg ${message.kind}`} role="status">

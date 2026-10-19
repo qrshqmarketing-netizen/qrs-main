@@ -29,7 +29,7 @@ export default function ContentEditor({ initial, saved, problem }) {
       <div className="adm-bar">
         <h1>Home page FAQ</h1>
         <nav>
-          <Link className="adm-btn" href="/admin">Back to the articles</Link>
+          <Link className="adm-btn" href="/admin/articles/">Back to the articles</Link>
           <a className="adm-btn" href="/#faq" target="_blank" rel="noopener">View on the site</a>
         </nav>
       </div>

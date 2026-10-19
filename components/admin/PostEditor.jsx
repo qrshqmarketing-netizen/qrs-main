@@ -133,7 +133,7 @@ export default function PostEditor({ initial, isNew }) {
     setBusy(false);
     if (res.ok) {
       setDirty(false);
-      router.push('/admin');
+      router.push('/admin/articles/');
       router.refresh();
     } else setMessage({ kind: 'bad', text: res.error || 'Could not delete.' });
   };
@@ -145,7 +145,7 @@ export default function PostEditor({ initial, isNew }) {
       <div className="adm-bar">
         <h1>{isNew ? 'New article' : 'Edit article'}</h1>
         <nav>
-          <Link className="adm-btn" href="/admin">All articles</Link>
+          <Link className="adm-btn" href="/admin/articles/">All articles</Link>
           {!isNew && (published ? (
             <a className="adm-btn" href={`/blog/${form.slug}/`} target="_blank" rel="noopener">View on the site</a>
           ) : (
