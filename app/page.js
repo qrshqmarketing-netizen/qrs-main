@@ -19,7 +19,7 @@ import StudioProjects from '@/components/studio/StudioProjects';
 import StudioServices from '@/components/studio/StudioServices';
 import JsonLd from '@/components/ui/JsonLd';
 import { SERVICE_CATEGORIES } from '@/data/serviceCategories';
-import { GOOGLE_REVIEWS, HERO_ANNOTATIONS, HOME_DESCRIPTION, HOME_H1, HOME_TITLE } from '@/data/site';
+import { BUSINESS, GOOGLE_REVIEWS, HERO_ANNOTATIONS, HOME_DESCRIPTION, HOME_H1, HOME_TITLE } from '@/data/site';
 import { LATEST_PROJECTS } from '@/data/projectPages';
 import { ROOF_FINANCING } from '@/data/services/programs';
 import { latestArticles } from '@/lib/articles';
@@ -74,6 +74,8 @@ const HOME_HERO = {
   text: 'Roofer-led inspections, a written scope and price before any work, and careful roofers on every tile, shingle and flat roof across Los Angeles and Orange County.',
   cta: 'Book a Free Roof Evaluation',
   points: HERO_ANNOTATIONS.home.slice(0, 3),
+  // The small line in the top-left corner (layout after exemplarfromsweden.com, owner, October 19 2026: a year at the top left)
+  note: `Licensed since ${BUSINESS.licenseSince.slice(0, 4)}`,
 };
 
 export default async function HomePage() {
@@ -99,6 +101,7 @@ export default async function HomePage() {
             text={HOME_HERO.text}
             cta={{ label: HOME_HERO.cta, href: '#estimate' }}
             points={HOME_HERO.points}
+            note={HOME_HERO.note}
             rain={false}
             video={HERO_VIDEO}
             photo={HERO_POSTER}

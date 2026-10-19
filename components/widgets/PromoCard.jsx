@@ -24,10 +24,11 @@ const PHOTO = '/images/season-promo-storm-over-los-angeles.webp';
 // taken the offer, so the popup never comes back. `exit` is the "before you go" wording (smaller heading, "No thanks" under the button).
 // `video` ([{ src, type }]): a muted looping background video over the photo (the home hero), loaded after the page; the photo stays as the fallback.
 // `photo`: a different background photo (the home hero uses the drone video's first frame, so the poster and the video match).
+// `note`: a short line in the top-left corner (the home hero: "Licensed since 2020"); it comes last in the markup so the splash's staggered rise keeps its order.
 // Only simple values go in from a server component: strings, and `points` (a list of short lines under the button).
 export default function PromoCard({
   variant = 'modal', as: Tag = 'div', track, eyebrow, eyebrowTag: Eyebrow = 'div', heading, headingTag: Heading = 'p', headingId, text, cta, exit = false, rain = true,
-  points, aside, video, photo = PHOTO, className, onClaim, onClose, onSkip, closeRef,
+  points, note, aside, video, photo = PHOTO, className, onClaim, onClose, onSkip, closeRef,
 }) {
   const root = useRef(null);
   // track={false}: the card is used for something that isn't the El Niño offer (the home hero): no promo events, and its button doesn't count as taking the offer
@@ -101,6 +102,7 @@ export default function PromoCard({
             ))}
           </ul>
         )}
+        {note && <p className="promo-note">{note}</p>}
       </div>
       {aside && <div className="promo-aside">{aside}</div>}
     </Tag>

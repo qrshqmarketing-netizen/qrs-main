@@ -394,7 +394,7 @@ a.chip:hover{border-color:var(--navy)}
    rises into view (--ex 0 → 1). Without the script, or for reduced motion, the defaults leave everything as it was. */
 .hero-scene :is(.hero-background,.pd-hero-img,.promo-photo){opacity:calc(1 - var(--hero-p,0) * .55)}
 .hero-scene :is(.hero-inner,.pd-hero-inner),
-.promo-home.hero-scene :is(.promo-eyebrow,.promo-title,.promo-text,.promo-actions,.promo-points){translate:0 calc(var(--hero-p,0) * 14vh);opacity:calc(1 - var(--hero-p,0) * 1.15)}
+.promo-home.hero-scene :is(.promo-eyebrow,.promo-title,.promo-text,.promo-actions,.promo-points,.promo-note){translate:0 calc(var(--hero-p,0) * 14vh);opacity:calc(1 - var(--hero-p,0) * 1.15)}
 .expand-scene{clip-path:inset(0 calc((1 - var(--ex,1)) * 4vw) round calc((1 - var(--ex,1)) * 28px))}
 @media print{.hero-scene *,.expand-scene{translate:none!important;opacity:1!important;clip-path:none!important}}
 
