@@ -10,11 +10,25 @@
 .lp-hero-photo{object-fit:cover;object-position:50% 40%;z-index:-2}
 .lp-hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(4,14,26,.72) 0%,rgba(4,14,26,.5) 45%,rgba(4,14,26,.8) 100%)}
 @media (min-width:901px){.lp-hero:before{background:linear-gradient(90deg,rgba(4,14,26,.86) 0%,rgba(4,14,26,.62) 48%,rgba(4,14,26,.35) 100%)}}
-.lp-storm .lp-hero-photo{object-position:50% 25%}
+.lp-storm .lp-hero-photo{object-position:50% 100%;transform-origin:50% 100%} /* El Niño: the storm photo anchored at the bottom center (owner, October 19 2026) */
 /* The rain canvas (PromoRain) sits over the photo and its shade, under the copy and the form; it fades in once it starts */
 .lp-hero .promo-rain{position:absolute;inset:0;z-index:-1;width:100%;height:100%;pointer-events:none;opacity:0;transition:opacity 1.8s ease}
 .lp-hero .promo-rain.is-on{opacity:1}
 @media print{.lp-hero .promo-rain{display:none}}
+/* El Niño lightning (as on the El Niño card, SeasonPromo.css): every 6 s the clouds flash (a light burst high in the sky, over the shade and the
+   rain, under the copy and form) and the headline glows with it; the first strike comes just after the page opens */
+@keyframes lpFlash{0%,88%,100%{opacity:0}90%{opacity:.9}91.5%{opacity:.15}93%{opacity:1}97%{opacity:0}}
+@keyframes lpStrike{
+  0%,88%,96%,100%{text-shadow:0 2px 18px rgba(0,0,0,.35)}
+  90%{text-shadow:0 0 16px rgba(255,255,255,.85),0 0 40px rgba(190,220,255,.65)}
+  91.5%{text-shadow:0 2px 18px rgba(0,0,0,.35)}
+  93%{text-shadow:0 0 20px rgba(255,255,255,1),0 0 58px rgba(190,220,255,.8)}
+}
+@media (prefers-reduced-motion:no-preference){
+  .lp-storm:after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:0;background:radial-gradient(120% 70% at 70% 0%,rgba(225,236,255,.5),transparent 70%);animation:lpFlash 6s ease-out -4.8s infinite}
+  body .lp .lp-hero.lp-storm h1{animation:lpRiseSolid .8s cubic-bezier(.17,.84,.44,1) both,lpStrike 6s ease-out -4.8s infinite}
+}
+@media print{.lp-storm:after{display:none}}
 .lp-hero-inner{display:grid;gap:22px;max-width:1240px;margin:0 auto;padding:84px var(--lp-gut) 40px}
 .lp-hero-copy{display:contents}
 body .lp .lp-hero :is(h1,.lp-eyebrow,.lp-sub){text-align:left;margin-left:0;margin-right:0}
@@ -110,9 +124,11 @@ body.studio-site main.lp .rmq-label,body.studio-site main.lp .rmq-sub{justify-co
 @keyframes lpCard{from{opacity:0;transform:translate3d(0,28px,0) scale(.98)}to{opacity:1;transform:none}}
 @keyframes lpRing{0%{box-shadow:0 0 0 0 rgba(212,181,114,.55)}100%{box-shadow:0 0 0 18px rgba(212,181,114,0)}}
 @keyframes lpZoom{from{transform:scale(1.04)}to{transform:scale(1.14) translate3d(-1.2%,-1%,0)}}
+@keyframes lpZoomBottom{from{transform:scale(1.04)}to{transform:scale(1.14) translate3d(-1.2%,0,0)}} /* grows up from the bottom edge, so no gap opens there */
 @keyframes lpGlow{0%,100%{transform:translate3d(-12%,0,0) scale(1)}50%{transform:translate3d(12%,-6%,0) scale(1.15)}}
 @media (prefers-reduced-motion:no-preference){
   .lp-hero-photo{animation:lpZoom 26s cubic-bezier(.3,.1,.4,1) both;will-change:transform}
+  .lp-storm .lp-hero-photo{animation-name:lpZoomBottom}
   .lp-hero :is(.lp-eyebrow,.lp-sub,.lp-proof,.lp-call){animation:lpRise .7s cubic-bezier(.17,.84,.44,1) both}
   body .lp .lp-hero h1{animation:lpRiseSolid .8s cubic-bezier(.17,.84,.44,1) both}
   .lp-hero .lp-eyebrow{animation-delay:.05s}
