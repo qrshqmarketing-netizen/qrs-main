@@ -12,7 +12,6 @@ import PromoCard from '@/components/widgets/PromoCard';
 import { SEASON_PROMO as promo } from '@/data/promo';
 import StudioIntro from '@/components/studio/StudioIntro';
 import StudioFilm from '@/components/studio/StudioFilm';
-import Splash from '@/components/widgets/Splash';
 import { BRAND_FILM } from '@/data/brandFilm';
 import StudioHowWeWork from '@/components/studio/StudioHowWeWork';
 import StudioProjects from '@/components/studio/StudioProjects';
@@ -83,8 +82,6 @@ export default async function HomePage() {
   return (
     <>
       <JsonLd data={pageJsonLd({ path: '/', title: HOME_TITLE, description: HOME_DESCRIPTION, faqs, video: BRAND_FILM })} />
-      {/* The opening splash on a first visit (shown only when the <head> script allows it: lib/splash.js) */}
-      <Splash />
       <main id="top" className="studio">
         {/* While SEASON_PROMO.active the hero is this full-screen card (the keyword line above the headline is the H1) over the drone video, with the
             home page's own words (HOME_HERO above) and none of the El Niño effects (rain, lightning, red dot, promo tracking); otherwise the newest
