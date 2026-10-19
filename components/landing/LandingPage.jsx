@@ -35,7 +35,7 @@ export default function LandingPage({ page, variant }) {
   // Commercial: real QRS job photos only (owner, October 19 2026)
   const work = page.name === 'commercial'
     ? [
-        { src: '/images/recent-work-commercial-flat-roof-drone-view.webp', alt: 'Drone view of a finished white flat roof on a warehouse, with the loading area and vans below', label: 'Warehouse white flat roof' },
+        { src: '/images/cta-white-flat-roof-tile-coping-drone-view.webp', alt: 'Drone view of a finished white flat roof edged with clay tile on a multi-unit building', label: 'White flat roof with tile edge' },
         { src: '/images/commercial-retail-flat-roof-tear-off-drone-view.webp', alt: 'Drone view of a retail building’s flat roof during the tear-off', label: 'Retail flat roof tear-off' },
         { src: '/images/cta-flat-roof-install-drone-view.webp', alt: 'Drone view of a white flat roof being installed on a multi-unit building, with the crew at work', label: 'Multi-unit flat roof install' },
       ]

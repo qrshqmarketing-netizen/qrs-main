@@ -66,8 +66,10 @@ export const LANDING_PAGES = {
     name: 'commercial',
     metaTitle: 'Commercial Roofing in Los Angeles & Orange County',
     metaDescription: 'Commercial roofing in Los Angeles and Orange County: a roofer-led roof survey, a written scope and price, permits pulled and work planned around your building.',
-    image: '/images/home-services-commercial-flat-roof-drone-view.webp',
-    imageAlt: 'Drone view of a commercial flat roof in Los Angeles',
+    // The finished warehouse roof seen from above (owner, October 19 2026: a complete roof with no debris). The photo is drawn a third taller than
+    // the hero and anchored at the top (.lp-commercial .lp-hero-photo in Landing.css), so the loading area along its bottom edge stays out of frame
+    image: '/images/recent-work-commercial-flat-roof-drone-view.webp',
+    imageAlt: 'Drone view from above of a finished white flat roof on a warehouse',
     eyebrow: 'For property managers, owners & HOA boards',
     heading: 'Commercial roofing that keeps your building running.',
     sub: 'A roofer surveys your roof, documents it with photos and gives you a written scope and price, with the work planned around your tenants and operations.',

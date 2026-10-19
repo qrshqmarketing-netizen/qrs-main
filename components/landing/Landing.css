@@ -10,6 +10,7 @@
 .lp-hero-photo{object-fit:cover;object-position:50% 40%;z-index:-2}
 .lp-hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(4,14,26,.72) 0%,rgba(4,14,26,.5) 45%,rgba(4,14,26,.8) 100%)}
 @media (min-width:901px){.lp-hero:before{background:linear-gradient(90deg,rgba(4,14,26,.86) 0%,rgba(4,14,26,.62) 48%,rgba(4,14,26,.35) 100%)}}
+.lp-commercial .lp-hero-photo{top:0!important;bottom:auto!important;height:134%!important;object-position:50% 0%;transform-origin:50% 0%} /* commercial: the warehouse photo cropped above its loading area */
 .lp-storm .lp-hero-photo{object-position:50% 100%;transform-origin:50% 100%} /* El Niño: the storm photo anchored at the bottom center (owner, October 19 2026) */
 /* The rain canvas (PromoRain) sits over the photo and its shade, under the copy and the form; it fades in once it starts */
 .lp-hero .promo-rain{position:absolute;inset:0;z-index:-1;width:100%;height:100%;pointer-events:none;opacity:0;transition:opacity 1.8s ease}
