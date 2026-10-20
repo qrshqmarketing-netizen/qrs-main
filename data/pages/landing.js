@@ -112,7 +112,7 @@ export const LANDING_PAGES = {
     storm: true,
     eyebrow: 'Get your roof ready before the rain',
     heading: 'Is your roof ready for a super El Niño?',
-    sub: 'Forecasters expect a very strong El Niño this winter. Book your free drone roof evaluation now and find the weak spots before the storms do.',
+    sub: 'Forecasters expect a very strong El Niño this winter. Book your roof readiness inspection today and find the weak spots before the storms do.',
     service: 'Roof inspection / roof check',
     variants: [
       { match: /leak|repair|fix|damage|storm/, heading: 'Fix the weak spots before El Niño does.', sub: 'A roofer finds where water could get in, shows you photos and gives you a written scope and price for any repair, before the first big storm.', service: 'Roof repair', tag: 'repair' },
@@ -128,7 +128,7 @@ export const LANDING_PAGES = {
     ],
     faqs: { from: 'home', questions: ['Is the roof evaluation free', 'How soon can someone', 'Will I know the price', 'Do you work with insurance', 'What kind of warranty'] },
     reviewsHeading: 'What homeowners say after the job',
-    closing: { heading: 'Don’t wait for the first big storm.', text: 'Book your free drone roof evaluation and know where your roof stands.' },
+    closing: { heading: 'Don’t wait for the first big storm.', text: 'Book your roof readiness inspection today and know where your roof stands.' },
   },
 };
 

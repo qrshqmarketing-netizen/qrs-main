@@ -8,8 +8,15 @@
 /* Hero */
 .lp-hero{position:relative;isolation:isolate;overflow:hidden;color:#fff;background:#0b1a2b}
 .lp-hero-photo{object-fit:cover;object-position:50% 40%;z-index:-2}
-.lp-hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(4,14,26,.72) 0%,rgba(4,14,26,.5) 45%,rgba(4,14,26,.8) 100%)}
-@media (min-width:901px){.lp-hero:before{background:linear-gradient(90deg,rgba(4,14,26,.86) 0%,rgba(4,14,26,.62) 48%,rgba(4,14,26,.35) 100%)}}
+.lp-hero:before{content:"";position:absolute;inset:0;z-index:-1;background:var(--hero-cinema),linear-gradient(180deg,rgba(4,14,26,.25) 0%,rgba(4,14,26,.15) 45%,rgba(4,14,26,.3) 100%)}
+/* Desktop: the cinematic overlay (app/globals.css) over a shade that keeps the copy column at the left darker */
+@media (min-width:901px){.lp-hero:before{background:var(--hero-cinema),linear-gradient(90deg,rgba(4,14,26,.62) 0%,rgba(4,14,26,.34) 48%,rgba(4,14,26,.08) 100%)}}
+/* The moving film grain, as on the other heroes (heroGrain keyframes in SeasonPromo.css and StudioSite.css) */
+.lp-grain{position:absolute;inset:-50%;z-index:-1;pointer-events:none;opacity:.2;mix-blend-mode:overlay;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E")}
+@media (prefers-reduced-motion:no-preference){.lp-grain{animation:lpGrain .9s steps(6) infinite}}
+@keyframes lpGrain{0%{transform:translate(0,0)}17%{transform:translate(-6%,4%)}33%{transform:translate(5%,-7%)}50%{transform:translate(-3%,8%)}67%{transform:translate(8%,2%)}83%{transform:translate(-8%,-4%)}100%{transform:translate(0,0)}}
+@media print{.lp-grain{display:none}}
 .lp-commercial .lp-hero-photo{top:0!important;bottom:auto!important;height:134%!important;object-position:50% 0%;transform-origin:50% 0%} /* commercial: the warehouse photo cropped above its loading area */
 .lp-storm .lp-hero-photo{object-position:50% 100%;transform-origin:50% 100%} /* El Niño: the storm photo anchored at the bottom center (owner, October 19 2026) */
 /* The rain canvas (PromoRain) sits over the photo and its shade, under the copy and the form; it fades in once it starts */

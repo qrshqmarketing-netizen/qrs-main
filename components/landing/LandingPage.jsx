@@ -50,6 +50,7 @@ export default function LandingPage({ page, variant }) {
       <section className={'lp-hero' + (page.storm ? ' lp-storm' : '')} aria-labelledby="lp-title">
         <Image className="lp-hero-photo" src={page.image} alt="" fill sizes="100vw" preload fetchPriority="high" />
         {/* El Niño: the pop-up's rain over the storm photo (PromoRain: fetched after load, skipped for reduced motion, Data Saver and low-end devices) */}
+        <span className="lp-grain" aria-hidden="true"></span>
         {page.storm && <PromoRain rich />}
         <div className="lp-hero-inner">
           <div className="lp-hero-copy">
