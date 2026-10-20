@@ -376,3 +376,32 @@ body .adm .adm-col-head{display:flex;align-items:center;justify-content:space-be
 .adm-pager-num.on{border-color:var(--a-line);background:var(--a-card);color:var(--a-text);box-shadow:var(--a-shadow)}
 .adm-pager-gap{color:var(--a-soft);padding:0 2px}
 @media (max-width:620px){.adm-pager-pages{order:3;width:100%;justify-content:center}}
+
+/* ---------- Users page (UsersManager.jsx) ---------- */
+.adm-user-cell{display:flex;align-items:center;gap:12px;min-width:0}
+.adm-user-cell > span:last-child{display:flex;flex-direction:column;min-width:0}
+.adm-user-cell b{font-weight:600;color:var(--a-text)}
+.adm-user-cell em{font-style:normal;font-weight:400;color:var(--a-soft)}
+.adm-user-cell small{color:var(--a-soft);font-size:13px;overflow-wrap:anywhere}
+.adm-users .adm-avatar{width:36px;height:36px;font-size:13px}
+.adm-role{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:99px;border:1px solid var(--a-line);font-size:13px;font-weight:500;white-space:nowrap}
+.adm-role:before{content:"";width:7px;height:7px;border-radius:50%;background:#9aa3af}
+.adm-role.r-admin{background:var(--a-tint);color:var(--a-pill);border-color:color-mix(in srgb,var(--a-primary) 18%,var(--a-line))}
+.adm-role.r-admin:before{background:#1f8a52}
+.adm-users-foot{margin-top:12px}
+.adm-toolbar > .adm-btn-primary{margin-left:auto}
+
+/* The add / edit dialog */
+.adm-dialog{width:min(520px,calc(100vw - 32px));max-height:calc(100dvh - 32px);margin:auto;padding:0;border:0;border-radius:16px;background:transparent;color:inherit;overflow:visible}
+.adm-dialog::backdrop{background:rgba(5,20,38,.45);backdrop-filter:blur(3px)}
+.adm-dialog-card{max-height:calc(100dvh - 32px);overflow:auto;padding:22px 22px 20px;border:1px solid var(--a-line);border-radius:16px;background:var(--a-card);color:var(--a-text);box-shadow:0 30px 80px -20px rgba(5,20,38,.45);font:400 15px/1.55 var(--font-text),system-ui,sans-serif}
+.adm-dialog-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 16px}
+body .adm-dialog-head h2{margin:0;font-family:var(--font-text),system-ui,sans-serif;font-size:20px;font-weight:600;letter-spacing:-.01em;text-transform:none;text-align:left;color:var(--a-text)}
+.adm-x{transform:rotate(45deg)}
+.adm-choice-wide{flex:1 1 200px;border-radius:10px;min-height:52px;padding:8px 14px}
+.adm-choice-wide span{display:flex;flex-direction:column;align-items:flex-start;gap:0}
+.adm-choice-wide span:before{display:none}
+.adm-choice-wide small{color:var(--a-soft);font-size:12.5px;font-weight:400}
+.adm-dialog .adm-choices{margin-bottom:14px}
+.adm-dialog .adm-choices:disabled{opacity:.6}
+@media (min-width:621px){.adm-dialog-card{padding:28px 28px 24px}}

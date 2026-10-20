@@ -37,7 +37,7 @@ export default async function AdminPage() {
     { label: 'New leads', value: c?.counts.new, note: 'Waiting for a first call', href: '/admin/leads/?status=new', icon: 'leads' },
     { label: 'Leads this week', value: c?.lastWeek, note: c ? `${c.total} in all` : '', href: '/admin/leads/', icon: 'target' },
     { label: 'Published articles', value: published, note: drafts ? `${drafts} draft${drafts === 1 ? '' : 's'}` : 'No drafts', href: '/admin/articles/', icon: 'articles' },
-    { label: 'Waiting for approval', value: pending, note: 'New team accounts', href: '/admin/team/', icon: 'team' },
+    { label: 'Waiting for approval', value: pending, note: 'New team accounts', href: '/admin/users/', icon: 'team' },
   ];
 
   return (

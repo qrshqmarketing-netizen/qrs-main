@@ -16,7 +16,7 @@ const NAV = [
   { href: '/admin/leads/', label: 'Leads', icon: 'leads' },
   { href: '/admin/articles/', label: 'Articles', icon: 'articles', also: ['/admin/posts/', '/admin/new/', '/admin/preview/'] },
   { href: '/admin/content/', label: 'Site text', icon: 'content' },
-  { href: '/admin/team/', label: 'Team', icon: 'team', badge: 'pending' },
+  { href: '/admin/users/', label: 'Users', icon: 'team', badge: 'pending', also: ['/admin/team/'] },
 ];
 
 const initials = (name, email) => (name || email || 'QRS').split(/[\s@.]+/).filter(Boolean).slice(0, 2).map((w) => w[0].toUpperCase()).join('');

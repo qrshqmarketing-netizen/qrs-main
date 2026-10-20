@@ -1,5 +1,5 @@
 -- Dashboard logins with Supabase Auth (lib/adminAuth.js). Since October 19 2026 people normally ask for an account themselves at /admin/register/
--- and an admin approves them on the dashboard's Team page (/admin/team/); nothing here is needed for that. This script is for marking the
+-- and an admin approves them on the dashboard's Users page (/admin/users/, where admins can also add, edit and delete accounts); nothing here is needed for that. This script is for marking the
 -- FIRST admin by hand (or anyone made in Authentication → Users → Add user → Create new user, with "Auto Confirm User" ticked). The team
 -- password (ADMIN_PASSWORD) also logs in and can approve accounts, so the owner can approve the first requests without this script.
 --

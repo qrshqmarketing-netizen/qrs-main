@@ -6,7 +6,7 @@ import AuthCard from './AuthCard';
 import { adminApi } from './api';
 
 // Asking for a dashboard account (app/api/admin/register): name, email and a password of `min` characters or more. The account then waits for
-// an admin to approve it on the Team page; the answer is the same whether or not the email already had an account.
+// an admin to approve it on the Users page; the answer is the same whether or not the email already had an account.
 export default function RegisterForm({ ready, min = 10 }) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');

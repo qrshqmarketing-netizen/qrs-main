@@ -1,5 +1,5 @@
 // POST { name, email, password }: asks for a dashboard account (lib/adminAuth.js). The account is made 'pending' and can't log in until an admin
-// approves it on the Team page (/admin/team/). The answer is the same whether or not the email already has an account, so this can't be used to
+// approves it on the Users page (/admin/users/). The answer is the same whether or not the email already has an account, so this can't be used to
 // find out who works here. Five tries per ten minutes per visitor.
 import { accountsReady, clientIp, MIN_ACCOUNT_PASSWORD, registerAccount, sameOrigin } from '@/lib/adminAuth';
 import { rateLimited } from '@/lib/leads';
