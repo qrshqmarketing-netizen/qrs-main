@@ -54,11 +54,16 @@ export const metadata = {
     google: SITE_VERIFICATION.google || undefined,
     other: SITE_VERIFICATION.bing ? { 'msvalidate.01': SITE_VERIFICATION.bing } : undefined,
   },
-  // Browser-tab and home-screen icons, made from the logo's roof mark (source: assets/originals/qrs-mark.webp)
+  // Browser-tab and home-screen icons: the roof mark of the logo (owner, October 20 2026; source assets/originals/qrs-logo-square-2026-10-20.jpg,
+  // the gold roofs cut out on transparent, without the words, which can't be read at tab size). WebP first; the .ico and PNGs stay for browsers
+  // without WebP icons, and iOS takes the PNG on white. The full logo as WebP is /images/logo/qrs-logo-square.webp.
   icons: {
     icon: [
+      { url: '/favicon.webp', type: 'image/webp', sizes: '48x48' },
+      { url: '/icon-192.webp', type: 'image/webp', sizes: '192x192' },
+      { url: '/icon-512.webp', type: 'image/webp', sizes: '512x512' },
+      { url: '/favicon-32.png', type: 'image/png', sizes: '32x32' },
       { url: '/favicon.ico', sizes: '16x16 32x32 48x48' },
-      { url: '/icon-192.png', type: 'image/png', sizes: '192x192' },
     ],
     apple: '/apple-touch-icon.png',
   },
