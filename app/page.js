@@ -1,5 +1,4 @@
 import Faq from '@/components/sections/Faq';
-import LatestArticles from '@/components/sections/LatestArticles';
 import FinalCta from '@/components/sections/FinalCta';
 import PartnerLogos from '@/components/sections/PartnerLogos';
 import ProofBar from '@/components/sections/ProofBar';
@@ -10,12 +9,13 @@ import ServiceArea from '@/components/sections/ServiceArea';
 import StudioHero from '@/components/studio/StudioHero';
 import PromoCard from '@/components/widgets/PromoCard';
 import { SEASON_PROMO as promo } from '@/data/promo';
-import StudioIntro from '@/components/studio/StudioIntro';
 import StudioHowWeWork from '@/components/studio/StudioHowWeWork';
-import StudioProjects from '@/components/studio/StudioProjects';
-import StudioServices from '@/components/studio/StudioServices';
+import HomeArticles from '@/components/home/HomeArticles';
+import HomeServices from '@/components/home/HomeServices';
+import HomeWork from '@/components/home/HomeWork';
+import '@/components/home/HomeClean.css';
 import JsonLd from '@/components/ui/JsonLd';
-import { SERVICE_CATEGORIES } from '@/data/serviceCategories';
+import { HOME_SERVICE_TABS } from '@/data/homeServices';
 import { BUSINESS, GOOGLE_REVIEWS, HERO_ANNOTATIONS, HOME_DESCRIPTION, HOME_H1, HOME_TITLE } from '@/data/site';
 import { LATEST_PROJECTS } from '@/data/projectPages';
 import { ROOF_FINANCING } from '@/data/services/programs';
@@ -32,29 +32,24 @@ export const metadata = {
   twitter: { ...twitterBase, title: HOME_TITLE, description: HOME_DESCRIPTION },
 };
 
-// The home page's "Roofing Services" section: just the two top-level categories from the nav.
 // The hero photo slider: the newest projects' cover photos, newest first (LATEST_PROJECTS in data/projectPages.js)
 const HERO_SLIDES = LATEST_PROJECTS.map((project) => ({ src: project.image, alt: project.imageAlt, title: project.label, place: project.place.replace(/,?\s*CA\b/, ''), href: project.path }));
 // The home hero's facts under the button: the offer's first and last points, plus the warranty (no license number here: owner's choice)
 
-const HOME_PRODUCTS = [
-  { title: '*TotalShield* Shingle Systems', text: 'Complete shingle replacements and new installations, built from the deck up.', href: '/residential-roofing/shingle-roofing/replacement/', scene: 'scene-shingle', image: '/images/shingle-roof-completed-drone-view.webp' },
-  { title: '*FlatGuard* Flat Roofing', text: 'Flat roof systems planned around drainage, seams and lasting protection.', href: '/residential-roofing/flat-roofing/replacement/', scene: 'scene-flat', image: '/images/flat-roof-torch-down-drone-view-services.webp' },
-  { title: '*LeakRescue* Roof Repairs', text: 'Leaks traced to the source and repaired with clear photos and a written scope.', href: '/roof-repair/', scene: 'scene-repair', image: '/images/shingle-roof-repair-ridge-finish.webp' },
-  { title: '*RoofScan 360* Inspections', text: 'A roofer-led inspection with photos, plain-English findings and a clear next step.', href: '/roof-inspection/', scene: 'scene-inspect', image: '/images/roofscan-360-roofer-chimney-flashing.webp' },
-  { title: '*SecondLife* Tile Reset', text: 'Keep sound roof tiles while replacing the worn underlayment below.', href: '/residential-roofing/tile-roofing/lift-and-relay/', scene: 'scene-tile', image: '/images/tile-lift-off-and-reset-drone-view.webp' },
-  { title: '*RoofCare Plan*', text: 'Scheduled roof care with seasonal visits and a photo report each time.', href: '/roof-maintenance-plans/', scene: 'scene-inspect', image: '/images/shingle-roof-inspection-overhead.webp' },
-  { title: '*ReserveReady* HOA Roofing', text: 'Roof inspections, clear scopes and planning support for community boards.', href: '/residential-roofing/hoa-multi-family/', scene: 'scene-hoa', image: '/images/shingle-roof-care-multi-family.webp' },
-];
-
-// Home page: sections in order, top to bottom, with what a customer wants first near the top: the hero and proof strip, what we do
-// (residential and commercial), what other customers say, the roofing systems, the current El Niño offer, the service area check,
-// why QRS, financing partners, articles, careers (for job seekers, so low), the FAQ, then the request card and closing call to action.
-// Reorder or remove a line to change the page.
-// Home page, studio style (components/studio/*, scoped by the `studio` class): a full-height photo hero, a quiet intro, the services as photo cards and a
-// hover list, large featured projects, three steps, then the sections shared with other pages (reviews, the El Niño offer, the service area map,
-// partners, articles, careers, FAQ, request card and closing call to action). The page's H1 is the hero's small
-// keyword line. Reorder or remove a line to change the page.
+// Home page (owner, October 21 2026, after digitalocean.com: few sections, each a centered heading and one line, clean cards, lots of air;
+// components/home/*, styles HomeClean.css, scoped by `home-clean`): the hero and proof strip, who we are with three finished projects, the services
+// as tabs, how we work, reviews, the service area map, financing partners, articles as a row, the FAQ, the request form and the closing call to
+// action. The page's H1 is the hero's keyword line. Reorder or remove a line to change the page. The earlier sections (StudioIntro,
+// StudioServices, StudioProjects, LatestArticles) are still in the code.
+const HOME_WORK = {
+  heading: 'At QRS, a roofer should look at your roof before anyone tries to __sell__ you one.',
+  text: 'That’s how every job starts: a free roof evaluation, photos of what we find and a written scope and price before any work begins. Every [roof replacement](/roof-replacement/), [roof repair](/roof-repair/), [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/) and [flat](/residential-roofing/flat-roofing/) or [shingle roof](/residential-roofing/shingle-roofing/) across [Southern California](/service-areas/) gets the same care.',
+  all: { label: 'View all projects', href: '/projects/' },
+};
+const HOME_SERVICES = {
+  heading: 'Roofing for every __home__ and building',
+  text: 'Repairs, replacements and care for tile, shingle, flat and metal roofs, on homes, HOA communities and commercial buildings.',
+};
 // The home hero's background video (October 14 2026): an edit of the owner's drone footage (five QRS jobs: a tear-off, roofers laying shingles,
 // two finished roofs and an orbit over a new roof), 21 seconds, looping without a jump, cleaned up and upscaled from the 640px source to 1280x720.
 // WebM first, H.264 MP4 for Safari and older browsers; its first frame (HERO_POSTER) is the first paint and the fallback (PromoCard `video` and
@@ -80,7 +75,7 @@ export default async function HomePage() {
   return (
     <>
       <JsonLd data={pageJsonLd({ path: '/', title: HOME_TITLE, description: HOME_DESCRIPTION, faqs })} />
-      <main id="top" className="studio">
+      <main id="top" className="studio home-clean">
         {/* While SEASON_PROMO.active the hero is this full-screen card (the keyword line above the headline is the H1) over the drone video, with the
             home page's own words (HOME_HERO above) and none of the El Niño effects (rain, lightning, red dot, promo tracking); otherwise the newest
             projects' photo slider is the hero again. The button jumps to the estimate form at the bottom of this page (RoofCheck, #estimate). */}
@@ -105,18 +100,14 @@ export default async function HomePage() {
           <StudioHero slides={HERO_SLIDES} />
         )}
         <ProofBar strip />
-        <StudioIntro />
-        <StudioServices categories={SERVICE_CATEGORIES} items={HOME_PRODUCTS} />
-        {/* The home page's story (owner, October 15 2026, after maben.com.au): the belief statement (StudioIntro), the services, then "How we work"
-            (four principles, pinned while it scrolls; it replaces "Why QRS", the process steps and the credentials strip), the reviews and the projects.
-            The shingle colors moved to the shingle roofing page; "Giving back" (on the About page) and the careers band were taken off. */}
+        <HomeWork {...HOME_WORK} projects={LATEST_PROJECTS.slice(0, 3)} />
+        <HomeServices tabs={HOME_SERVICE_TABS} {...HOME_SERVICES} />
         <StudioHowWeWork />
         <ReviewMarquee heading="What people say after the job" text={`${GOOGLE_REVIEWS.count} reviews from the people we roof for, on Google.`} />
-        <StudioProjects projects={LATEST_PROJECTS.slice(0, 3)} more={LATEST_PROJECTS.slice(3)} />
         {!promo.active && <PromoSection />}
         <ServiceArea allAreasLink />
         <PartnerLogos {...ROOF_FINANCING.partners} />
-        <LatestArticles posts={await latestArticles(3)} />
+        <HomeArticles posts={await latestArticles(6)} />
         <Faq cta={false} faqs={faqs} />
         <RoofCheck />
         <FinalCta />
