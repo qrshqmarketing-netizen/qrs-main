@@ -1,0 +1,99 @@
+/* ---------- The "How we work" 3D stage (HowStage.jsx, howEngine.js; owner, October 20 2026) ----------
+   Always a dark stage (both themes): a navy radial backdrop with a faint blueprint grid and a warm low glow, the WebGL canvas over it, and glass
+   cards and labels on top. Labels with data-anchor are moved by the engine (translate3d from the stage's top-left); the tag inside points down at
+   its spot with a short gold stem. Only the active station's group shows (fades). Mobile first. */
+.hw-stage{position:relative;isolation:isolate;overflow:hidden;border-radius:var(--radius);color:#fff;background:#06172b;aspect-ratio:4/3;contain:layout paint;
+  --hw-glass:rgba(8,24,44,.58);--hw-line:rgba(255,255,255,.14);--hw-gold:#e0c68a}
+.hw-backdrop{position:absolute;inset:0;z-index:-2;pointer-events:none;
+  background:
+    radial-gradient(120% 70% at 50% 100%,rgba(212,181,114,.16),transparent 60%),
+    radial-gradient(90% 80% at 30% 0%,rgba(40,90,150,.35),transparent 70%),
+    linear-gradient(180deg,#0a2442 0%,#06172b 60%,#041120 100%)}
+.hw-backdrop:after{content:"";position:absolute;inset:0;opacity:.5;
+  background:
+    repeating-linear-gradient(0deg,rgba(160,190,230,.08) 0 1px,transparent 1px 32px),
+    repeating-linear-gradient(90deg,rgba(160,190,230,.08) 0 1px,transparent 1px 32px);
+  -webkit-mask-image:radial-gradient(ellipse 80% 70% at 50% 55%,#000 30%,transparent 80%);mask-image:radial-gradient(ellipse 80% 70% at 50% 55%,#000 30%,transparent 80%)}
+.hw-canvas{position:absolute;inset:0;z-index:-1;width:100%;height:100%;display:block;opacity:0;animation:hwIn 1.1s ease .1s forwards}
+@keyframes hwIn{to{opacity:1}}
+
+/* One group of cards and labels per station; only the active one shows */
+.hw-group{position:absolute;inset:0;pointer-events:none;opacity:0;visibility:hidden;transition:opacity .6s ease,visibility 0s linear .6s}
+.hw-group.on{opacity:1;visibility:visible;transition:opacity .7s ease .25s}
+
+/* Labels that follow 3D points */
+.hw-anchor{position:absolute;left:0;top:0;will-change:transform;transition:opacity .3s ease}
+.hw-anchor[data-off]{opacity:0}
+.hw-tag{position:absolute;left:0;bottom:12px;transform:translateX(-50%);display:inline-flex;align-items:baseline;gap:7px;padding:7px 11px;border:1px solid var(--hw-line);border-radius:999px;
+  background:var(--hw-glass);-webkit-backdrop-filter:blur(12px) saturate(1.4);backdrop-filter:blur(12px) saturate(1.4);box-shadow:0 10px 30px -12px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,255,255,.1);
+  font:500 12px/1.2 var(--font-text),sans-serif;letter-spacing:.01em;white-space:nowrap}
+.hw-tag:after{content:"";position:absolute;left:50%;top:100%;width:1px;height:12px;background:linear-gradient(var(--hw-gold),transparent)}
+.hw-tag:before{content:"";position:absolute;left:50%;top:calc(100% + 10px);width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:var(--hw-gold);box-shadow:0 0 10px var(--hw-gold)}
+/* A tag can sit beside its point instead of centered over it (the three offices are close together on the map) */
+.hw-tag-left{transform:translateX(calc(-100% + 14px))}
+.hw-tag-left:after,.hw-tag-left:before{left:auto;right:14px}
+.hw-tag-left:before{margin:0 -2.5px 0 0}
+.hw-tag-right{transform:translateX(-14px)}
+.hw-tag-right:after,.hw-tag-right:before{left:14px}
+.hw-tag b{font-weight:600}
+.hw-tag small{color:rgba(255,255,255,.62);font-size:11px}
+.hw-tag-rec{gap:8px}
+.hw-rec{display:inline-block;width:7px;height:7px;align-self:center;border-radius:50%;background:#ff5b4f;box-shadow:0 0 0 0 rgba(255,91,79,.6)}
+/* Before the scene draws (and without WebGL) the moving labels have no spot: they wait (idle) or sit at fixed places (fallback) */
+.hw-idle .hw-anchor{opacity:0}
+.hw-fallback .hw-anchor{transform:none}
+.hw-fallback [data-anchor="s0-drone"]{left:62%;top:22%}.hw-fallback [data-anchor="s0-roof"]{left:36%;top:42%}
+.hw-fallback [data-anchor="s1-flashing"]{left:26%;top:30%}.hw-fallback [data-anchor="s1-boot"]{left:58%;top:46%}.hw-fallback [data-anchor="s1-skylight"]{left:76%;top:28%}
+.hw-fallback [data-anchor="s2-office-0"]{left:46%;top:34%}.hw-fallback [data-anchor="s2-office-1"]{left:24%;top:24%}.hw-fallback [data-anchor="s2-office-2"]{left:58%;top:48%}
+.hw-fallback [data-anchor="s3-top"]{left:30%;top:30%}.hw-fallback [data-anchor="s3-under"]{left:30%;top:40%}.hw-fallback [data-anchor="s3-deck"]{left:30%;top:50%}
+
+/* Glass cards */
+.hw-card{position:absolute;left:12px;right:12px;bottom:12px;padding:14px 16px;border:1px solid var(--hw-line);border-radius:14px;background:var(--hw-glass);
+  -webkit-backdrop-filter:blur(16px) saturate(1.5);backdrop-filter:blur(16px) saturate(1.5);box-shadow:0 24px 60px -24px rgba(0,0,0,.75),inset 0 1px 0 rgba(255,255,255,.12)}
+.hw-kicker{margin:0 0 10px;color:var(--hw-gold);font:600 10.5px/1.3 var(--font-text),sans-serif;letter-spacing:.16em;text-transform:uppercase}
+.hw-rows{display:grid;gap:7px;margin:0;padding:0;list-style:none}
+.hw-rows li{display:flex;align-items:center;gap:9px;font:500 13px/1.35 var(--font-text),sans-serif;color:rgba(255,255,255,.92)}
+.hw-check{flex:none;width:18px;height:18px;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.hw-check circle{stroke:rgba(224,198,138,.45);stroke-width:1.4}
+.hw-check path{stroke:var(--hw-gold);stroke-width:2;stroke-dasharray:14;stroke-dashoffset:0}
+.hw-chip{display:inline-flex;align-items:center;margin:12px 0 0;padding:5px 11px;border:1px solid var(--hw-line);border-radius:999px;font:500 12px/1.2 var(--font-text),sans-serif;color:rgba(255,255,255,.9);background:rgba(255,255,255,.05)}
+.hw-chip-gold{border-color:rgba(224,198,138,.45);color:var(--hw-gold);background:rgba(212,181,114,.1)}
+.hw-chips{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 0;padding:0;list-style:none}
+.hw-chips .hw-chip{margin:0}
+.hw-fine{margin:12px 0 0;color:rgba(255,255,255,.66);font:400 12px/1.4 var(--font-text),sans-serif}
+.hw-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin:0;padding:0;list-style:none}
+.hw-steps li{padding:8px 4px;border:1px solid var(--hw-line);border-radius:10px;text-align:center;font:600 12px/1.2 var(--font-text),sans-serif;color:rgba(255,255,255,.8);background:rgba(255,255,255,.04)}
+.hw-steps li:first-child{border-color:rgba(224,198,138,.7);background:rgba(212,181,114,.2);color:#fff}
+.hw-stats{display:flex;gap:22px}
+.hw-stats p{margin:0;display:flex;align-items:baseline;gap:7px;font:500 13px/1 var(--font-text),sans-serif;color:rgba(255,255,255,.8)}
+.hw-stats b{font:300 34px/1 var(--font-text),sans-serif;letter-spacing:-.03em;color:var(--hw-gold)}
+.hw-big{margin:0 0 12px;font:500 16px/1.3 var(--font-text),sans-serif;letter-spacing:-.01em}
+.hw-big small{display:block;margin-top:2px;color:rgba(255,255,255,.62);font-size:12px;font-weight:400}
+
+@media (min-width:621px){
+  .hw-card{left:18px;right:auto;bottom:18px;width:min(320px,calc(100% - 36px));padding:16px 18px}
+  .hw-card-next{width:min(380px,calc(100% - 36px))}
+  .hw-tag{font-size:12.5px}
+}
+@media (min-width:901px){
+  .hw-card{left:22px;bottom:22px;padding:18px 20px}
+  .hw-card-backed{left:auto;right:22px}
+  .hw-big{font-size:18px}
+  .hw-stats b{font-size:42px}
+}
+
+/* Motion: rows tick in turn, the next-step chips light up one after another, the REC dot pulses (only while the group shows) */
+@media (prefers-reduced-motion:no-preference){
+  .hw-group.on .hw-rows li{animation:hwRow .55s cubic-bezier(.17,.84,.44,1) var(--d,0s) both}
+  .hw-group.on .hw-check path{animation:hwTick .5s ease calc(var(--d,0s) + .2s) both}
+  .hw-group.on .hw-card{animation:hwCard .8s cubic-bezier(.17,.84,.44,1) .2s both}
+  .hw-group.on .hw-steps li{animation:hwStep 8s ease-in-out calc(var(--i) * 2s) infinite}
+  .hw-group.on .hw-steps li:first-child{border-color:var(--hw-line);background:rgba(255,255,255,.04);color:rgba(255,255,255,.8)}
+  .hw-rec{animation:hwPing 1.6s ease-out infinite}
+}
+@keyframes hwRow{from{opacity:.25;transform:translateX(-6px)}to{opacity:1;transform:none}}
+@keyframes hwTick{from{stroke-dashoffset:14}to{stroke-dashoffset:0}}
+@keyframes hwCard{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes hwStep{0%,22%{border-color:rgba(224,198,138,.7);background:rgba(212,181,114,.22);color:#fff}26%,100%{border-color:rgba(255,255,255,.14);background:rgba(255,255,255,.04);color:rgba(255,255,255,.8)}}
+@keyframes hwPing{0%{box-shadow:0 0 0 0 rgba(255,91,79,.6)}100%{box-shadow:0 0 0 8px rgba(255,91,79,0)}}
+@media print{.hw-canvas{display:none}.hw-group.on{opacity:1;visibility:visible}}

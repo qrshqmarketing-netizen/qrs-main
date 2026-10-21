@@ -228,3 +228,10 @@ main.studio .section,main.studio .faq,main.studio .latest-articles{background-im
 .st-intro .st-intro-reveal p{font-size:clamp(19px,1.75vw,25px);line-height:1.55;letter-spacing:-.01em;color:var(--ink)}
 .st-intro .st-intro-reveal a{color:inherit;text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--gold) 70%,transparent);text-decoration-thickness:.07em;text-underline-offset:.18em}
 .wr-w{will-change:opacity}
+
+/* "How we work" 3D stage (HowStage.jsx): in the stacked list it takes the photo frame's place (.st-how-img: 4:3, rounded, under the text);
+   in the pinned desktop column it fills the frame */
+.st-how-img.hw-stage{aspect-ratio:5/6;background:#06172b} /* phones: taller, so the scene has room above its card */
+@media (min-width:621px){.st-how-img.hw-stage{aspect-ratio:4/3}}
+.st-how-media > .hw-stage{position:absolute;inset:0;aspect-ratio:auto;border-radius:inherit}
+@media (min-width:901px){.st-how.is-live .st-how-media{background:#06172b}}

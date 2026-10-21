@@ -1,5 +1,5 @@
 /* ---------- Footer: the studio look ----------
-   A neighborhood photo under a deep navy shade. The phone number is the big line, with the three offices beside it; the logo and link columns sit
+   Plain deep navy (the neighborhood photo was taken out on October 21 2026). The phone number is the big line, with the three offices beside it; the logo and link columns sit
    under a hairline and the small print comes last. Always dark, in both themes. Mobile first. */
 footer{position:relative;isolation:isolate;overflow:hidden;background:#0b2440;color:#fff;padding:72px 0 96px} /* bottom room so the chat bubble never covers the copyright */
 .ft-photo{object-fit:cover;object-position:center 40%;z-index:-2}
