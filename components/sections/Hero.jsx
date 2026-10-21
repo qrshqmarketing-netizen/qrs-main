@@ -9,6 +9,7 @@ import { HERO_ANNOTATIONS, PHONE, TEL } from '@/data/site';
 import Breadcrumbs from './Breadcrumbs';
 import HeroParallax from './HeroParallax';
 import ProofBar from './ProofBar';
+import FlowLines from '@/components/home/FlowLines';
 import './Hero.css';
 
 const DEFAULT_ACTIONS = [
@@ -45,7 +46,7 @@ function HeadlineText({ title, phrase }) {
   );
 }
 
-export default function Hero({
+export default function Hero({ decor = true,
   crumbs,
   eyebrow = 'Roof Repair & Replacement in Southern California',
   title = (
@@ -137,6 +138,12 @@ export default function Hero({
         </div>
       </section>
       {stats && <ProofBar strip />}
+      {/* Hairline curves behind the first section under every hero (decorations after getaethr.ai, October 21 2026); decor={false} leaves them out */}
+      {decor && (
+        <div className="hd-flow-anchor" aria-hidden="true">
+          <FlowLines />
+        </div>
+      )}
     </>
   );
 }

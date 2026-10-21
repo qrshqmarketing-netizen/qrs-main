@@ -13,9 +13,10 @@ import StudioHowWeWork from '@/components/studio/StudioHowWeWork';
 import HomeArticles from '@/components/home/HomeArticles';
 import HomeServices from '@/components/home/HomeServices';
 import HomeWork from '@/components/home/HomeWork';
+import WordBand from '@/components/home/WordBand';
 import '@/components/home/HomeClean.css';
 import JsonLd from '@/components/ui/JsonLd';
-import { HOME_SERVICE_TABS } from '@/data/homeServices';
+import { BAND_WORDS, HOME_SERVICE_TABS } from '@/data/homeServices';
 import { BUSINESS, GOOGLE_REVIEWS, HERO_ANNOTATIONS, HOME_DESCRIPTION, HOME_H1, HOME_TITLE } from '@/data/site';
 import { LATEST_PROJECTS } from '@/data/projectPages';
 import { ROOF_FINANCING } from '@/data/services/programs';
@@ -100,16 +101,19 @@ export default async function HomePage() {
           <StudioHero slides={HERO_SLIDES} />
         )}
         <ProofBar strip />
-        <HomeWork {...HOME_WORK} projects={LATEST_PROJECTS.slice(0, 3)} />
+        <HomeWork {...HOME_WORK} projects={LATEST_PROJECTS.slice(0, 3)} decor />
+        {/* Decorations after getaethr.ai (October 21 2026): "+" bands with the services as a slow word strip, and a plain band before the reviews */}
+        <WordBand words={BAND_WORDS} seed={3} />
         <HomeServices tabs={HOME_SERVICE_TABS} {...HOME_SERVICES} />
         <StudioHowWeWork />
+        <WordBand seed={9} />
         <ReviewMarquee heading="What people say after the job" text={`${GOOGLE_REVIEWS.count} reviews from the people we roof for, on Google.`} />
         {!promo.active && <PromoSection />}
         <ServiceArea allAreasLink />
         <PartnerLogos {...ROOF_FINANCING.partners} />
         <HomeArticles posts={await latestArticles(6)} />
         <Faq cta={false} faqs={faqs} />
-        <RoofCheck />
+        <RoofCheck band={false} />
         <FinalCta />
       </main>
     </>

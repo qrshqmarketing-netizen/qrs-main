@@ -2,15 +2,20 @@ import Link from 'next/link';
 import { OFFERS } from '@/data/offers';
 import { START_PATH } from '@/data/start';
 import EstimateForm from './EstimateForm';
+import WordBand from '@/components/home/WordBand';
+import { BAND_WORDS } from '@/data/homeServices';
 import './RoofCheck.css';
 import Mark from '@/components/ui/Mark';
 
 // Offer card (data/offers.js) + the estimate form (EstimateForm.jsx). Every page has one, so "Get Pro Advice" always has a target on the page
 // (SiteLink scrolls to #roof-check); a small link still opens the step-by-step form at /start/.
-// tone="white" drops the pale blue background when the section above is also pale blue.
-export default function RoofCheck({ tone, offer = 'home' }) {
+// tone="white" drops the pale blue background when the section above is also pale blue. band={false} leaves out the "+" band with the
+// service words above it (decorations after getaethr.ai, October 21 2026; the home page has its own bands).
+export default function RoofCheck({ tone, offer = 'home', band = true }) {
   const o = OFFERS[offer];
   return (
+    <>
+    {band && <WordBand words={BAND_WORDS} seed={5} className="hd-band-form" />}
     <section className={'section check' + (tone === 'white' ? ' check-white' : '')} id="roof-check">
       <div className="container check-grid">
         <aside className="check-card">
@@ -41,5 +46,6 @@ export default function RoofCheck({ tone, offer = 'home' }) {
         </div>
       </div>
     </section>
+    </>
   );
 }

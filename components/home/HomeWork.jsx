@@ -2,6 +2,7 @@ import Image from 'next/image';
 import SiteLink from '@/components/ui/SiteLink';
 import { ArrowRight } from '@/components/ui/icons';
 import { plainText } from '@/lib/richText';
+import FlowLines from './FlowLines';
 import HomeHead from './HomeHead';
 
 // "Who we are" and the newest work in one section (after the case-study cards under digitalocean.com's hero): the belief statement and one
@@ -10,9 +11,11 @@ import HomeHead from './HomeHead';
 const workOf = (title) => title.slice(0, title.lastIndexOf(' in ')) || title;
 const placeOf = (place) => place.replace(/,?\s*CA\b/, '');
 
-export default function HomeWork({ heading, text, projects, all }) {
+// decor: the hairline curves behind the heading (home page only)
+export default function HomeWork({ heading, text, projects, all, decor = false }) {
   return (
     <section className="hc-section hc-work" aria-labelledby="hc-work-title">
+      {decor && <FlowLines />}
       <div className="hc-wrap">
         <HomeHead id="hc-work-title" heading={heading} text={text} />
         <ul className="hc-cards">

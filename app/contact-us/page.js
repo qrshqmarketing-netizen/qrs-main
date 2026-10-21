@@ -14,6 +14,8 @@ import { hoursList } from '@/lib/hours';
 import { heroOutcome } from '@/data/heroOutcomes';
 import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
+import '@/components/home/HomeClean.css';
+import '@/components/home/CleanPages.css';
 
 export const metadata = pageMetadata({ title: page.metaTitle, description: page.metaDescription, path: CONTACT_LINK.href });
 
@@ -39,7 +41,7 @@ const schema = pageJsonLd({ path: CONTACT_LINK.href, title: page.metaTitle, desc
 // Contact page (content in data/pages/contact.js; offices and hours in data/site.js)
 export default function ContactPage() {
   return (
-    <main id="top">
+    <main id="top" className="clean-page">
       <JsonLd data={schema} />
       <Hero
         crumbs={CRUMBS}

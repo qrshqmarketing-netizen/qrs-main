@@ -176,3 +176,9 @@ body.studio-site main.lp .rmq-label,body.studio-site main.lp .rmq-sub{justify-co
   .lp-work li:hover .lp-work-photo img{scale:1.06}
 }
 @media print{.lp-hero-photo,.lp-final:before{animation:none}.lp-final:before{display:none}}
+
+/* Shorter ad landing hero (owner, October 21 2026: "not as tall"); the form still sets the height when it needs more */
+@media (min-width:901px){.lp-hero-inner{min-height:min(700px,86svh);padding-top:104px;padding-bottom:56px}}
+/* The header now sits above the hero (Header.css), so its top padding no longer has to clear it */
+.lp-hero-inner{padding-top:32px}
+@media (min-width:901px){.lp-hero-inner{padding-top:48px}}

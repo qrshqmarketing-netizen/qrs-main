@@ -176,3 +176,14 @@ body:has(main :is(.hero,.st-hero,.promo-home,.pd-hero)) .site-header:not([data-s
   @media (hover:hover){:root[data-theme="dark"] .hd-row:hover{background:color-mix(in srgb,#fff 7%,transparent)}}
   @media (min-width:621px){.hd-panel{border-radius:0 0 0 var(--radius);border-bottom:1px solid var(--line)}}
 }
+
+/* Solid bar above the hero on every page (owner, October 21 2026; replaces the see-through bar over photo heroes and the liquid glass above):
+   the bar is always the theme's solid color, paper in the light theme and deep navy in the dark one (--paper), with a hairline under it, and
+   every hero starts below it instead of under it (`margin-top` = the bar's height; the heroes' own top padding no longer clears the bar). */
+:root{--hd-h:60px}
+@media (min-width:901px){:root{--hd-h:68px}}
+.site-header .hd-bar{background:var(--paper)}
+.site-header .hd-bar:before{background:var(--paper);-webkit-backdrop-filter:none;backdrop-filter:none;box-shadow:none}
+.site-header{--hd-ink:var(--navy);--hd-line:var(--line)}
+:root[data-theme="dark"] .site-header{--hd-ink:#e8eef5}
+main > :is(.hero,.st-hero,.promo-home,.pd-hero,.lp-hero):first-of-type{margin-top:var(--hd-h)}

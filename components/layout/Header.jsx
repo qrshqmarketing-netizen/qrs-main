@@ -14,15 +14,13 @@ import './Header.css';
 // HEADER_LINKS in data/navigation.js, no dropdowns), the phone number, the gold "Get Pro Advice" cell, the theme switch
 // and a two-line menu button.
 // The menu button drops a small panel from the bar with the rest of the site (HEADER_MORE; below 1240px the main links are at the top of it).
-// Over a photo hero the bar is see-through with white type; once the hero has scrolled away (or the menu is open) it turns solid (data-solid).
+// The bar is always solid and sits above the hero, never over it (owner, October 21 2026): paper in the light theme, deep navy in the dark one.
 // /start/ shows only the logo, the theme switch and the phone. Escape, the backdrop or a link closes the panel.
-const HEROES = '.hero, .st-hero, .promo-home, .pd-hero';
 const isCurrent = (pathname, href) => href !== '/' && pathname.startsWith(href);
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [theme, setTheme] = useState('light');
-  const [past, setPast] = useState(false); // scrolled below the photo hero
   const pathname = usePathname();
   const requestPage = isFocusPath(pathname); // /start/ and the ad landing pages: logo, theme switch and phone only (lib/landing.js)
   const landing = isLandingPath(pathname);
@@ -40,21 +38,6 @@ export default function Header() {
   useEffect(() => {
     setTheme(document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light');
   }, []);
-
-  // Over a photo hero the bar is see-through (CSS, from the page itself); once the hero has scrolled up under it, it turns solid
-  useEffect(() => {
-    const update = () => {
-      const hero = document.querySelector(HEROES);
-      setPast(Boolean(hero) && hero.getBoundingClientRect().bottom < 72);
-    };
-    update();
-    window.addEventListener('scroll', update, { passive: true });
-    window.addEventListener('resize', update);
-    return () => {
-      window.removeEventListener('scroll', update);
-      window.removeEventListener('resize', update);
-    };
-  }, [pathname]);
 
   // Escape closes the panel and puts the focus back on the menu button
   useEffect(() => {
@@ -92,7 +75,7 @@ export default function Header() {
   };
 
   return (
-    <header className={'site-header' + (open ? ' is-open' : '') + (requestPage ? ' is-start' : '') + (landing ? ' is-lp' : '')} data-solid={past || open ? 'true' : undefined}>
+    <header className={'site-header' + (open ? ' is-open' : '') + (requestPage ? ' is-start' : '') + (landing ? ' is-lp' : '')} data-solid="true">
       <div className="hd-backdrop" onClick={close} aria-hidden="true"></div>
       <div className="hd-bar">
         <div className="hd-brand">

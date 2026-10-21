@@ -211,3 +211,16 @@ body.promo-open .qa-teaser{visibility:hidden}
 }
 @media (prefers-reduced-motion:reduce){.promo.promo-calm.promo-home:after{animation:none}}
 @media print{.promo.promo-calm.promo-home:after{display:none}}
+
+/* Shorter home hero (owner, October 21 2026: "not as tall", then "a little taller than the sub pages" and a smaller headline): about 85% of the
+   screen, capped, a step taller than the sub-page heroes (StudioSite.css); the headline no longer runs edge to edge. */
+.promo.promo-landing.promo-home{min-height:clamp(580px,84svh,720px)}
+body.studio-site .promo-home .promo-title{font-size:clamp(36px,10vw,62px)}
+@media (min-width:901px){
+  .promo.promo-landing.promo-home{min-height:clamp(660px,86svh,820px);padding-bottom:clamp(72px,9svh,110px)}
+  body.studio-site .promo-home .promo-title{font-size:clamp(48px,5vw,84px)}
+}
+/* The header now sits above the hero (Header.css), so the hero's top padding no longer has to clear it */
+.promo.promo-landing.promo-home{padding-top:28px}
+@media (min-width:621px){.promo.promo-landing.promo-home{padding-top:32px}}
+@media (min-width:901px){.promo.promo-landing.promo-home{padding-top:40px}}

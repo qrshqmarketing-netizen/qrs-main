@@ -1,0 +1,62 @@
+/* Decorations (owner, October 21 2026, after getaethr.ai; on every page since the same day, imported by app/layout.js): hairline curves with
+   "+" marks behind the first section (the home page's "Who we are", and under every Hero), "+" cluster bands with a strip of service words
+   (home page, and above every request form, RoofCheck), corner brackets over a dot grid around the services tabs and the roof illustrations,
+   and small "+" registration marks at the top corners of the home and clean-format sections. All drawn in theme colors (--ink, --muted, --line, --gold, --gold-ink), so dark mode follows; motion is transform/opacity
+   only and stops for reduced motion. Components: FlowLines.jsx, PlusField.jsx, WordBand.jsx. */
+
+/* Curves behind "Who we are" */
+main.home-clean .hc-work{position:relative;isolation:isolate}
+main.clean-page{isolation:isolate}
+.hd-flow-anchor{position:relative;height:0;pointer-events:none}
+.hd-flow-anchor .hd-flow{height:640px}
+.hd-flow{position:absolute;left:0;top:0;width:100%;height:min(640px,100%);z-index:-1;pointer-events:none;color:var(--ink);
+  -webkit-mask-image:linear-gradient(#000 35%,transparent 92%);mask-image:linear-gradient(#000 35%,transparent 92%)}
+.hd-flow-lines path{fill:none;stroke:currentColor;stroke-width:1;opacity:.13}
+.hd-flow-lines{animation:hdDrift 28s ease-in-out infinite alternate;transform-origin:50% 50%}
+.hd-flow-marks path{fill:none;stroke:var(--gold-ink);stroke-width:1.2;opacity:.7;animation:hdBlink 5.5s ease-in-out infinite;animation-delay:calc(var(--i) * -.7s)}
+@keyframes hdDrift{from{transform:translate3d(0,0,0)}to{transform:translate3d(-1.6%,1.2%,0)}}
+@keyframes hdBlink{0%,100%{opacity:.75}50%{opacity:.25}}
+:root[data-theme="dark"] .hd-flow-lines path{opacity:.16}
+:root[data-theme="dark"] .hd-flow-marks path{stroke:var(--gold)}
+
+/* "+" bands and the word strip */
+.hd-band{margin-top:clamp(72px,10vw,136px);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
+.hd-plus{display:block;width:100%;height:44px}
+.hd-band.hd-band-form{margin-top:0}
+.hd-band > .hd-plus:only-child{height:72px}
+.hd-words{display:flex;width:max-content;padding:10px 0}
+.hd-words ul{display:flex;flex:none;list-style:none;margin:0;padding:0;animation:hdSlide 60s linear infinite}
+.hd-words li{display:flex;align-items:center;gap:clamp(22px,3vw,40px);padding-right:clamp(22px,3vw,40px);white-space:nowrap;font:400 clamp(22px,2.4vw,34px)/1.2 var(--font-text),sans-serif;letter-spacing:-.02em;color:var(--ink);opacity:.82}
+.hd-cross{width:22px;height:22px;flex:none;opacity:.8;background:
+  linear-gradient(var(--muted),var(--muted)) left center/8px 1px no-repeat,
+  linear-gradient(var(--muted),var(--muted)) right center/8px 1px no-repeat,
+  linear-gradient(var(--muted),var(--muted)) center top/1px 8px no-repeat,
+  linear-gradient(var(--muted),var(--muted)) center bottom/1px 8px no-repeat}
+.hd-band:hover .hd-words ul{animation-play-state:paused}
+@keyframes hdSlide{to{transform:translateX(-100%)}}
+
+/* Corner brackets over a dot grid around the services tabs */
+@media (min-width:901px){
+  main :is(.hc-services .hc-tabs,.sv-diagram-art){position:relative;padding:clamp(28px,3vw,44px)}
+  main :is(.hc-services .hc-tabs,.sv-diagram-art):before,main :is(.hc-services .hc-tabs,.sv-diagram-art):after{content:"";position:absolute;inset:0;pointer-events:none}
+  main :is(.hc-services .hc-tabs,.sv-diagram-art):before{z-index:-1;opacity:.5;background:radial-gradient(circle,var(--line) 1.1px,transparent 1.6px) 0 0/22px 22px;
+    -webkit-mask-image:radial-gradient(ellipse at center,#000 45%,transparent 100%);mask-image:radial-gradient(ellipse at center,#000 45%,transparent 100%)}
+  main :is(.hc-services .hc-tabs,.sv-diagram-art):after{--c:var(--muted);--l:24px;opacity:.7;background:
+    linear-gradient(var(--c),var(--c)) left top/var(--l) 1px no-repeat,linear-gradient(var(--c),var(--c)) left top/1px var(--l) no-repeat,
+    linear-gradient(var(--c),var(--c)) right top/var(--l) 1px no-repeat,linear-gradient(var(--c),var(--c)) right top/1px var(--l) no-repeat,
+    linear-gradient(var(--c),var(--c)) left bottom/var(--l) 1px no-repeat,linear-gradient(var(--c),var(--c)) left bottom/1px var(--l) no-repeat,
+    linear-gradient(var(--c),var(--c)) right bottom/var(--l) 1px no-repeat,linear-gradient(var(--c),var(--c)) right bottom/1px var(--l) no-repeat}
+  main :is(.hc-services,.sv-diagram){isolation:isolate}
+}
+
+/* "+" registration marks at the top corners of each section's column (home sections and the plain sections of clean-format pages) */
+@media (min-width:901px){
+  main.home-clean > .hc-section,main.clean-page > .hc-section,main.clean-page > .process-block,main.clean-page > .why-choose,main.clean-page > .value-grid,main.clean-page > .city-cards,main.clean-page > .index-note{position:relative}
+  main.home-clean > .hc-section:before,main.home-clean > .hc-section:after,main.clean-page > .hc-section:before,main.clean-page > .hc-section:after,main.clean-page > .process-block:before,main.clean-page > .process-block:after,main.clean-page > .why-choose:before,main.clean-page > .why-choose:after,main.clean-page > .value-grid:before,main.clean-page > .value-grid:after,main.clean-page > .city-cards:before,main.clean-page > .city-cards:after,main.clean-page > .index-note:before,main.clean-page > .index-note:after{content:"";position:absolute;top:clamp(36px,5vw,68px);width:13px;height:13px;pointer-events:none;opacity:.55;
+    background:linear-gradient(var(--muted),var(--muted)) center/13px 1px no-repeat,linear-gradient(var(--muted),var(--muted)) center/1px 13px no-repeat}
+  main.home-clean > .hc-section:before,main.clean-page > .hc-section:before,main.clean-page > .process-block:before,main.clean-page > .why-choose:before,main.clean-page > .value-grid:before,main.clean-page > .city-cards:before,main.clean-page > .index-note:before{left:calc((100% - min(var(--hc-w),100% - 40px)) / 2 - 6px)}
+  main.home-clean > .hc-section:after,main.clean-page > .hc-section:after,main.clean-page > .process-block:after,main.clean-page > .why-choose:after,main.clean-page > .value-grid:after,main.clean-page > .city-cards:after,main.clean-page > .index-note:after{right:calc((100% - min(var(--hc-w),100% - 40px)) / 2 - 6px)}
+}
+
+@media (prefers-reduced-motion:reduce){.hd-flow-lines,.hd-flow-marks path,.hd-words ul{animation:none}}
+@media print{.hd-flow,.hd-band{display:none}}

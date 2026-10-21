@@ -10,6 +10,8 @@ import { ABOUT_PAGE as page } from '@/data/pages/about';
 import { heroOutcome } from '@/data/heroOutcomes';
 import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
+import '@/components/home/HomeClean.css';
+import '@/components/home/CleanPages.css';
 
 export const metadata = pageMetadata({ title: page.metaTitle, description: page.metaDescription, path: ABOUT_LINK.href });
 
@@ -21,7 +23,7 @@ const schema = pageJsonLd({ path: ABOUT_LINK.href, title: page.metaTitle, descri
 // About page (content in data/pages/about.js and data/site.js), in the studio style: components/about/AboutSections.jsx
 export default function AboutPage() {
   return (
-    <main id="top">
+    <main id="top" className="clean-page">
       <JsonLd data={schema} />
       <Hero crumbs={CRUMBS} eyebrow={page.hero.eyebrow} title={page.hero.heading} outcome={heroOutcome('/about-us/')} intro={page.hero.intro} image={HERO_IMAGE} imageAlt="Aerial view of a home with a new shingle roof in a Southern California neighborhood" imagePosition="center 45%" stats />
       <AboutIntro page={page} />

@@ -5,6 +5,9 @@ import { SERVICE_CATEGORIES } from './serviceCategories';
 
 const category = (title) => SERVICE_CATEGORIES.find((c) => c.title === title);
 
+// The service names in the "+" word bands (WordBand: the home page and above every request form)
+export const BAND_WORDS = ['Roof Inspection', 'Roof Repair', 'Roof Replacement', 'Tile Lift & Relay', 'Shingle Roofs', 'Flat Roofs', 'Metal Roofs', 'HOA & Multi-Family', 'Commercial Roofing'];
+
 export const HOME_SERVICE_TABS = [
   {
     label: 'Roof Repair',
