@@ -1,16 +1,18 @@
 import AlsoServing from '@/components/sections/AlsoServing';
 import ReviewMarquee from '@/components/sections/ReviewMarquee';
-import CardCarousel from '@/components/sections/CardCarousel';
 import CityCards from '@/components/sections/CityCards';
 import Faq from '@/components/sections/Faq';
-import LatestArticles from '@/components/sections/LatestArticles';
+import HomeArticles from '@/components/home/HomeArticles';
+import HomeServices from '@/components/home/HomeServices';
+import '@/components/home/HomeClean.css';
+import '@/components/home/CleanPages.css';
+import { HOME_SERVICE_TABS, servicesLine } from '@/data/homeServices';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
 import LocalIntro from '@/components/sections/LocalIntro';
 import RoofCheck from '@/components/sections/RoofCheck';
-import ServiceCategories from '@/components/sections/ServiceCategories';
 import JsonLd from '@/components/ui/JsonLd';
-import { HOME, LOCATIONS_LINK, RESIDENTIAL_TYPES, typeCard } from '@/data/catalog';
+import { HOME, LOCATIONS_LINK, RESIDENTIAL } from '@/data/catalog';
 import { LOCATION_PAGES } from '@/data/locationPages';
 import { ALL_PLACES, citiesIn, cityPath, findCity, REGIONS, regionPath } from '@/data/locations';
 import { SERVICES } from '@/data/services';
@@ -54,17 +56,16 @@ export default async function RegionPage({ region, page }) {
     image: photo.src,
   });
   return (
-    <main id="top">
+    <main id="top" className="clean-page">
       <JsonLd data={schema} />
       <Hero crumbs={crumbs} eyebrow="Service Areas" title={page.hero.heading} outcome={heroOutcome(path)} intro={page.hero.intro} image={photo.src} imageAlt={photo.alt} imagePosition={photo.position} stats />
       <LocalIntro city={region.name} heading={page.intro.heading} paragraphs={page.intro.paragraphs} offices={offices} considerations={page.considerations} />
-      <ServiceCategories place={region.name} />
-      <CardCarousel title={`Roof types we work on in __${region.name}__`} items={RESIDENTIAL_TYPES.map(typeCard)} idPrefix="roofTypes" tone="wash" />
+      <HomeServices tabs={HOME_SERVICE_TABS} heading={`Roofing services in __${region.name}__`} text={servicesLine(region.name)} all={{ label: 'All residential roofing', href: RESIDENTIAL.href }} />
       {/* Google reviews, a few sections below the hero (owner, October 14 2026) */}
       <ReviewMarquee />
       <CityCards regions={[region.slug]} blurbs={blurbs} heading={`Cities We Serve in ${region.name}`} />
       <AlsoServing region={region.slug} heading={cities.length ? `More of ${region.name} We __Serve__` : `Cities We __Serve__ in ${region.name}`} sub={cities.length ? undefined : `Every city below is inside the area we serve and has a pin on our service area map. If you are in or near one, we cover you.`} />
-      <LatestArticles posts={await articlesFor(path)} heading="Related Roofing Articles" />
+      <HomeArticles posts={await articlesFor(path)} heading="Related articles" />
       <Faq heading={`${region.name} Roofing FAQs`} sub={`Straight answers for property owners across ${region.name}.`} faqs={page.faqs} cta={false} />
       <RoofCheck tone="white" />
       <FinalCta

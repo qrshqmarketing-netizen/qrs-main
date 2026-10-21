@@ -96,3 +96,6 @@ export const HOME_SERVICE_TABS = [
     ],
   },
 ];
+
+// The line under the tabs' heading on a city or county page (LocationPage, RegionPage)
+export const servicesLine = (place) => `Repairs, replacements and care for tile, shingle, flat and metal roofs in ${place}, on homes, HOA communities and commercial buildings.`;

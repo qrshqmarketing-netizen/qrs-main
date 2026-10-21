@@ -1,6 +1,9 @@
 import Faq from '@/components/sections/Faq';
 import ReviewMarquee from '@/components/sections/ReviewMarquee';
-import LatestArticles from '@/components/sections/LatestArticles';
+import HomeArticles from '@/components/home/HomeArticles';
+import HomeWork from '@/components/home/HomeWork';
+import '@/components/home/HomeClean.css';
+import '@/components/home/CleanPages.css';
 import FeatureBand from '@/components/sections/FeatureBand';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
@@ -14,7 +17,6 @@ import RoofCheck from '@/components/sections/RoofCheck';
 import WhyChoose from '@/components/sections/WhyChoose';
 import JsonLd from '@/components/ui/JsonLd';
 import { projectsShownOn } from '@/data/projectPages';
-import StudioProjects from '@/components/studio/StudioProjects';
 import { pageJsonLd } from '@/lib/structuredData';
 import { closingCta, faqSub } from './shared';
 import { heroOutcome } from '@/data/heroOutcomes';
@@ -118,7 +120,7 @@ export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], 
     image: page.image,
   });
   return (
-    <main id="top">
+    <main id="top" className="clean-page">
       <JsonLd data={schema} />
       <Hero
         crumbs={crumbs}
@@ -141,7 +143,7 @@ export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], 
       {/* The blog's roof illustration where it explains this service (data/roofDiagrams.js) */}
       <RoofDiagram diagram={diagramFor(crumbs.at(-1).href)} />
       {page.sections?.map((section, i) => (
-        <FeatureBand key={section.heading} {...section} tone={i % 2 ? 'navy' : 'light'} />
+        <FeatureBand key={section.heading} {...section} tone="light" />
       ))}
       {!page.story && (
         <ProcessSteps
@@ -155,12 +157,12 @@ export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], 
       )}
       {/* The story in order (owner, October 15 2026, after maben.com.au): what we do, how we do it, then the work itself on real roofs, what people
           say, why QRS, and the questions. The projects used to sit at the bottom, under the FAQ. */}
-      <StudioProjects projects={work.projects} heading={work.exact ? 'This work, on real roofs' : 'Recent roofing projects'} />
+      {work.projects.length > 0 && <HomeWork heading={work.exact ? 'This work, on real __roofs__' : 'Recent roofing __projects__'} projects={work.projects.slice(0, 3)} all={{ label: 'View all projects', href: '/projects/' }} />}
       {/* Google reviews, a few sections below the hero (owner, October 14 2026) */}
       {page.showReviews !== false && <ReviewMarquee />}
       {!page.story && <WhyChoose heading={page.why.heading} intro={page.why.intro} points={page.why.points} />}
       {page.partners && <PartnerLogos {...page.partners} />}
-      <LatestArticles posts={await articlesFor(crumbs.at(-1).href)} heading="Related Roofing Articles" />
+      <HomeArticles posts={await articlesFor(crumbs.at(-1).href)} heading="Related articles" />
       {page.faqs?.length > 0 && <Faq heading="Frequently Asked __Questions__" sub={faqSub(page.keyword)} faqs={page.faqs} cta={false} />}
       <RoofCheck tone="white" offer={offer} />
       <FinalCta {...finalCta} />

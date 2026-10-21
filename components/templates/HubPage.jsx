@@ -1,7 +1,10 @@
 import CardGrid from '@/components/sections/CardGrid';
 import ReviewMarquee from '@/components/sections/ReviewMarquee';
 import Faq from '@/components/sections/Faq';
-import LatestArticles from '@/components/sections/LatestArticles';
+import HomeArticles from '@/components/home/HomeArticles';
+import HomeWork from '@/components/home/HomeWork';
+import '@/components/home/HomeClean.css';
+import '@/components/home/CleanPages.css';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
 import Overview from '@/components/sections/Overview';
@@ -9,7 +12,6 @@ import Process from '@/components/sections/Process';
 import RoofCheck from '@/components/sections/RoofCheck';
 import SplitFeature from '@/components/sections/SplitFeature';
 import ValueGrid from '@/components/sections/ValueGrid';
-import StudioProjects from '@/components/studio/StudioProjects';
 import RoofDiagram from '@/components/sections/RoofDiagram';
 import { diagramFor } from '@/data/roofDiagrams';
 import JsonLd from '@/components/ui/JsonLd';
@@ -37,8 +39,9 @@ export default async function HubPage({ hub, crumbs, eyebrow, image, imageAlt, c
     faqs: hub.faqs,
     image,
   });
+  const hubWork = projectsShownOn(crumbs.at(-1).href).projects;
   return (
-    <main id="top">
+    <main id="top" className="clean-page">
       <JsonLd data={schema} />
       <Hero
         crumbs={crumbs}
@@ -58,13 +61,13 @@ export default async function HubPage({ hub, crumbs, eyebrow, image, imageAlt, c
       {/* The blog's roof illustration where it explains this hub (data/roofDiagrams.js) */}
       <RoofDiagram diagram={diagramFor(crumbs.at(-1).href)} />
       {/* The work itself, right after the services (owner, October 15 2026, after maben.com.au): projects on this hub's pages, newest first */}
-      <StudioProjects projects={projectsShownOn(crumbs.at(-1).href).projects} heading="Recent roofing projects" />
+      {hubWork.length > 0 && <HomeWork heading="Recent roofing __projects__" projects={hubWork.slice(0, 3)} all={{ label: 'View all projects', href: '/projects/' }} />}
       <ReviewMarquee />
       <ValueGrid heading={hub.highlights.heading} items={hub.highlights.points} columns={3} />
       {extra}
       {process && <Process />}
       {feature && <SplitFeature {...feature} tone="wash" />}
-      <LatestArticles posts={await articlesFor(crumbs.at(-1).href)} heading="Related Roofing Articles" />
+      <HomeArticles posts={await articlesFor(crumbs.at(-1).href)} heading="Related articles" />
       {hub.faqs?.length > 0 && <Faq heading="Frequently Asked __Questions__" sub={faqSub(hub.keyword)} faqs={hub.faqs} cta={false} />}
       <RoofCheck tone="white" offer={offer} />
       <FinalCta {...closingCta(hub.keyword, offer)} />

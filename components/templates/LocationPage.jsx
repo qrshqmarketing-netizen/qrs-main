@@ -1,15 +1,17 @@
 import Faq from '@/components/sections/Faq';
 import ReviewMarquee from '@/components/sections/ReviewMarquee';
-import LatestArticles from '@/components/sections/LatestArticles';
-import CardCarousel from '@/components/sections/CardCarousel';
+import HomeArticles from '@/components/home/HomeArticles';
+import HomeServices from '@/components/home/HomeServices';
+import '@/components/home/HomeClean.css';
+import '@/components/home/CleanPages.css';
+import { HOME_SERVICE_TABS, servicesLine } from '@/data/homeServices';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
 import LocalIntro from '@/components/sections/LocalIntro';
 import StudioProjects from '@/components/studio/StudioProjects';
 import RoofCheck from '@/components/sections/RoofCheck';
-import ServiceCategories from '@/components/sections/ServiceCategories';
 import JsonLd from '@/components/ui/JsonLd';
-import { HOME, LOCATIONS_LINK, RESIDENTIAL_TYPES, typeCard } from '@/data/catalog';
+import { HOME, LOCATIONS_LINK, RESIDENTIAL } from '@/data/catalog';
 import { cityPath, findRegion, OTHER_PLACES, regionPath } from '@/data/locations';
 import { projectsNear } from '@/data/projects';
 import { SERVICES } from '@/data/services';
@@ -56,7 +58,7 @@ export default async function LocationPage({ location, page, index = 0 }) {
   });
   const nearby = projectsNear(slug);
   return (
-    <main id="top">
+    <main id="top" className="clean-page">
       <JsonLd data={schema} />
       <Hero
         crumbs={crumbs}
@@ -70,8 +72,7 @@ export default async function LocationPage({ location, page, index = 0 }) {
         label={`QRS roofing in ${city}`}
       />
       <LocalIntro city={city} heading={page.intro.heading} paragraphs={page.intro.paragraphs} offices={office ? [office] : []} neighborhoods={page.neighborhoods} considerations={page.considerations} />
-      <ServiceCategories place={city} />
-      <CardCarousel title={`Roof types we work on in __${city}__`} items={RESIDENTIAL_TYPES.map(typeCard)} idPrefix="roofTypes" tone="wash" />
+      <HomeServices tabs={HOME_SERVICE_TABS} heading={`Roofing services in __${city}__`} text={servicesLine(city)} all={{ label: 'All residential roofing', href: RESIDENTIAL.href }} />
       {/* Only real projects in or near this city (by the project's ZIP code pin), as a list with the hover photo (owner, October 15 2026); with none nearby, no section */}
       {/* Google reviews, a few sections below the hero (owner, October 14 2026) */}
       <ReviewMarquee office={slug} places={[city, ...page.neighborhoods]} />
@@ -83,7 +84,7 @@ export default async function LocationPage({ location, page, index = 0 }) {
         allLink={false}
         layout="list"
       />
-      <LatestArticles posts={await articlesFor(cityPath(slug))} heading="Related Roofing Articles" />
+      <HomeArticles posts={await articlesFor(cityPath(slug))} heading="Related articles" />
       <Faq heading={`${city} Roofing FAQs`} sub={`Straight answers for ${city} ${page.offer === 'commercial' ? 'clients' : 'homeowners'}.`} faqs={page.faqs} cta={false} />
       <RoofCheck offer={page.offer || 'home'} />
       <FinalCta heading={page.final.heading} text={page.final.text} />
