@@ -224,3 +224,8 @@ body.studio-site .promo-home .promo-title{font-size:clamp(36px,10vw,62px)}
 .promo.promo-landing.promo-home{padding-top:28px}
 @media (min-width:621px){.promo.promo-landing.promo-home{padding-top:32px}}
 @media (min-width:901px){.promo.promo-landing.promo-home{padding-top:40px}}
+
+/* The ZIP search under the home headline (owner, October 21 2026, after publicstorage.com's hero search; PromoCard `search`): phones in the open
+   row under the headline, full width; from 901px in the row under the one-line headline, left-aligned like it */
+.promo-home .promo-search{grid-row:5;align-self:start;justify-self:stretch;margin-top:24px;max-width:520px}
+@media (min-width:901px){.promo-home .promo-search{grid-column:1/-1;grid-row:4;margin-top:clamp(24px,3svh,36px);width:min(520px,100%)}}

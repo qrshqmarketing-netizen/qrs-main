@@ -13,8 +13,8 @@ body.studio-site main.clean-page > section.band-navy{background:transparent;colo
 main.clean-page :is(.band .eyebrow,.local-intro .eyebrow,.sv-label,.st-label){display:none}
 
 /* Centered headings and their one line */
-body.studio-site main.clean-page > section:not(.hero):not(.final):not(.check) :is(h2,.section-head p,.faq-sub,.process-block-sub,.sv-head .sv-text,.sa-also-sub):not(.x):not(.y){text-align:center;margin-left:auto;margin-right:auto}
-body.studio-site main.clean-page > section:not(.hero):not(.final):not(.check) h2:not(.x):not(.y){font:500 clamp(30px,3.6vw,46px)/1.12 var(--font-text),sans-serif;letter-spacing:-.03em;color:var(--ink);text-transform:none;max-width:24ch;text-wrap:balance;margin-bottom:16px}
+body.studio-site main.clean-page > section:not(.hero):not(.final):not(.check):not(.al):not(.cb) :is(h2,.section-head p,.faq-sub,.process-block-sub,.sv-head .sv-text,.sa-also-sub):not(.x):not(.y){text-align:center;margin-left:auto;margin-right:auto}
+body.studio-site main.clean-page > section:not(.hero):not(.final):not(.check):not(.al):not(.cb) h2:not(.x):not(.y){font:500 clamp(30px,3.6vw,46px)/1.12 var(--font-text),sans-serif;letter-spacing:-.03em;color:var(--ink);text-transform:none;max-width:24ch;text-wrap:balance;margin-bottom:16px}
 body.studio-site main.clean-page :is(.section-head p,.faq-sub,.process-block-sub,.sv-head .sv-text,.sa-also-sub):not(.x){font:400 clamp(16px,1.3vw,18px)/1.6 var(--font-text),sans-serif;color:var(--muted);max-width:640px;text-wrap:pretty}
 main.clean-page .section-head,main.clean-page .sv-head,main.clean-page .st-head{margin-bottom:clamp(36px,5vw,56px)}
 
@@ -49,6 +49,8 @@ main.clean-page .band-points :is(p,span){color:var(--muted)}
 }
 
 /* City and county intro: the text in the column, the office, neighborhoods and conditions as cards under it */
+/* The intro copy was pinned (sticky) beside the cards; stacked here it would slide over them, so it scrolls normally */
+main.clean-page .local-copy{position:static}
 main.clean-page .local-aside{margin-top:40px;display:grid;gap:16px;grid-template-columns:minmax(0,1fr)}
 @media (min-width:901px){main.clean-page .local-aside{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));align-items:start}}
 

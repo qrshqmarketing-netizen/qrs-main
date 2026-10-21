@@ -16,7 +16,6 @@ import CampaignWelcome from '@/components/widgets/CampaignWelcome';
 import CallRailSwap from '@/components/widgets/CallRailSwap';
 import PageTrail from '@/components/widgets/PageTrail';
 import ScrollToTop from '@/components/ui/ScrollToTop';
-import PageTransition from '@/components/ui/PageTransition';
 import WebMcpTools from '@/components/widgets/WebMcpTools';
 import ScrollDraw from '@/components/ui/ScrollDraw';
 import ScrollScenes from '@/components/ui/ScrollScenes';
@@ -113,7 +112,6 @@ export default async function RootLayout({ children }) {
           {callrailSwap && <CallRailSwap />}
           <PageTrail />
           <ScrollToTop />
-          <PageTransition />
           <WebMcpTools />
           <ScrollDraw />
           <ScrollScenes />

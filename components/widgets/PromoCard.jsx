@@ -19,6 +19,7 @@ const PHOTO = '/images/season-promo-storm-over-los-angeles.webp';
 //   variant="inline"  the section on the home page, above the request card (PromoSection.jsx)
 //   variant="landing" a full-width hero: the home page's hero (the eyebrow is the page's H1 there: `eyebrowTag="h1"`) and the El Niño landing page's top,
 //                     where `aside` (the quick request form) sits beside the copy in two columns and the heading is the H1. Without `cta` only the call link shows.
+//                     `search` (the home hero: the ZIP search, components/home/ZipSearch.jsx) sits right under the headline.
 // `track` names the piece for Google Analytics (promo_view when it is shown, promo_click and promo_call when its buttons are used) and
 // is the utm_medium of the button's address (promoLandingHref in data/promo.js). Clicking the main button also means the visitor has
 // taken the offer, so the popup never comes back. `exit` is the "before you go" wording (smaller heading, "No thanks" under the button).
@@ -28,7 +29,7 @@ const PHOTO = '/images/season-promo-storm-over-los-angeles.webp';
 // Only simple values go in from a server component: strings, and `points` (a list of short lines under the button).
 export default function PromoCard({
   variant = 'modal', as: Tag = 'div', track, eyebrow, eyebrowTag: Eyebrow = 'div', heading, headingTag: Heading = 'p', headingId, text, cta, exit = false, rain = true,
-  points, note, aside, video, photo = PHOTO, className, onClaim, onClose, onSkip, closeRef,
+  points, note, aside, search, video, photo = PHOTO, className, onClaim, onClose, onSkip, closeRef,
 }) {
   const root = useRef(null);
   // track={false}: the card is used for something that isn't the El Niño offer (the home hero): no promo events, and its button doesn't count as taking the offer
@@ -77,6 +78,7 @@ export default function PromoCard({
         <Heading className={'promo-title' + (exit ? ' promo-title-exit' : '')} id={headingId}>
           <Mark text={heading} animate />
         </Heading>
+        {search && <div className="promo-search">{search}</div>}
         <p className="promo-text">{text}</p>
         <div className="promo-actions">
           {cta && (

@@ -98,6 +98,7 @@ export const ROOF_INSPECTION = {
       'It’s worth booking one when you’re **buying or selling a home**, after a storm, strong Santa Ana winds or a noticeable earthquake, when an older roof leaves you unsure of its condition, or before choosing between a [roof repair](/roof-repair/) and a [roof replacement](/roof-replacement/). The visit ends with one recommendation: repair, monitor, maintain or replace. Sometimes the honest answer is that your roof is fine for now, and we’ll say so. There’s no deposit, you pay after the visit, and you’re under no obligation to hire us for any work.',
     ],
   },
+  sectionsHeading: 'What we check on each __roof__ type', // the heading over the three roof-type cards (BandCards)
   sections: [
     {
       id: 'shingle-roofs',

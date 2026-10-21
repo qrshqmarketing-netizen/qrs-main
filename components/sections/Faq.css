@@ -28,3 +28,12 @@
   .faq-item p{padding:0 24px 22px;font-size:18px}
   .faq-cta{margin-top:40px}
 }
+
+/* "Show N more questions" (Faq `limit`): a quiet pill under the first questions; the rest open below it */
+.faq-more{margin-top:12px}
+.faq-more > summary{list-style:none;display:flex;justify-content:center;cursor:pointer}
+.faq-more > summary::-webkit-details-marker{display:none}
+.faq-more > summary{width:max-content;margin:12px auto 0;align-items:center;min-height:44px;padding:0 22px;border:1px solid var(--ink);border-radius:999px;color:var(--ink);font:500 15px/1 var(--font-text),sans-serif}
+.faq-more > summary:focus-visible{outline:2px solid var(--gold-ink);outline-offset:3px}
+@media (hover:hover){.faq-more > summary:hover{background:var(--ink);color:var(--paper)}}
+.faq-more[open] > summary{display:none}

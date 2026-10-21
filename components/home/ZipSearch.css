@@ -1,0 +1,20 @@
+/* ZIP search pill (components/home/ZipSearch.jsx), after publicstorage.com's hero search: a white pill, the ZIP field and a round gold button
+   inside it. Same look on the photo hero (tone dark) and on the page (tone light, with a hairline border). */
+.zs{width:100%;max-width:520px;margin:0}
+.zs-field{display:flex;align-items:center;gap:6px;height:60px;padding:6px 6px 6px 24px;border-radius:999px;background:#fff;box-shadow:0 10px 40px rgba(0,0,0,.18)}
+.zs-light .zs-field{border:1px solid var(--line);box-shadow:0 6px 24px rgba(10,27,44,.06)}
+/* The site's form-field rules (and the dark theme's dark fields) would box the input inside the pill: reset them here */
+.zs .zs-field input:not(.x){flex:1;min-width:0;width:auto;height:100%;min-height:0;margin:0;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;color:#0a1b2c;font:400 17px/1 var(--font-text),sans-serif;letter-spacing:.01em;outline:none}
+.zs .zs-field input::placeholder{color:#5c6b7a;opacity:1}
+.zs-field:focus-within{outline:2px solid var(--gold);outline-offset:3px}
+.zs-field button{flex:none;display:grid;place-items:center;width:48px;height:48px;border:0;border-radius:50%;background:var(--gold);color:#0a1b2c;cursor:pointer;transition:background-color .2s,transform .2s}
+.zs-field button svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round}
+.zs-field button:disabled{cursor:progress}
+@media (hover:hover){.zs-field button:hover{background:var(--gold-2,#e6c98a);transform:scale(1.04)}}
+.zs-spin{width:20px;height:20px;border:2.4px solid currentColor;border-right-color:transparent;border-radius:50%;animation:zsSpin .7s linear infinite}
+@keyframes zsSpin{to{transform:rotate(1turn)}}
+.zs-error{margin:10px 0 0 24px;font:500 14px/1.4 var(--font-text),sans-serif;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.zs-light .zs-error{color:#b42318;text-shadow:none}
+/* Dark theme on the page: the pill stays white (it reads as a field), its border a little stronger */
+:root[data-theme="dark"] .zs-light .zs-field{border-color:transparent}
+@media (min-width:901px){.zs-field{height:64px}.zs-field button{width:52px;height:52px}}

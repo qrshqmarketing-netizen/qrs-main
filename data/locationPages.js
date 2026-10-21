@@ -740,3 +740,11 @@ export const LOCATION_PAGES = {
     final: { heading: 'Let’s Take a Look at Your Hacienda Heights Roof', text: 'Start with a free roof evaluation and a written scope for your Hacienda Heights home.' },
   },
 };
+
+// A city page's hero photo: its own `image`, else one of these in turn (by its place in LOCATIONS) until the city has its own. Shared by the
+// city page (LocationPage.jsx) and the home page's "Roofers near you" cards, so both show the same photo.
+const CITY_PHOTOS = [
+  { src: '/images/home-hero-drone-view.webp', position: 'center 40%' },
+  { src: '/images/roof-drone-palms.webp', position: 'center 45%' },
+];
+export const cityPhoto = (page, index = 0) => (page?.image ? { src: page.image, position: page.imagePosition } : CITY_PHOTOS[index % CITY_PHOTOS.length]);
