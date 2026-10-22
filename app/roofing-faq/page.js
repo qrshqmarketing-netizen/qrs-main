@@ -1,7 +1,5 @@
-import AreaLinks from '@/components/home/AreaLinks';
 import '@/components/home/HomeClean.css';
 import '@/components/home/CleanPages.css';
-import { AREA_LINKS } from '@/data/nearYou';
 import Hero from '@/components/sections/Hero';
 import RoofCheck from '@/components/sections/RoofCheck';
 import JsonLd from '@/components/ui/JsonLd';
@@ -103,7 +101,6 @@ export default async function RoofingFaqPage() {
         </div>
       </section>
       <RoofCheck tone="white" />
-      <AreaLinks {...AREA_LINKS} />
     </main>
   );
 }

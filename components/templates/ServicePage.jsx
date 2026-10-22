@@ -1,8 +1,7 @@
 import Faq from '@/components/sections/Faq';
-import AreaLinks from '@/components/home/AreaLinks';
 import CheckBand from '@/components/home/CheckBand';
 import ReviewTrio from '@/components/home/ReviewTrio';
-import { AREA_LINKS, checksFor } from '@/data/nearYou';
+import { checksFor } from '@/data/nearYou';
 import HomeArticles from '@/components/home/HomeArticles';
 import HomeWork from '@/components/home/HomeWork';
 import '@/components/home/HomeClean.css';
@@ -165,7 +164,6 @@ export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], 
       <HomeArticles posts={await articlesFor(crumbs.at(-1).href)} heading="Related articles" />
       {page.faqs?.length > 0 && <Faq heading="Frequently Asked __Questions__" sub={faqSub(page.keyword)} faqs={page.faqs} cta={false} limit={4} />}
       <RoofCheck tone="white" offer={offer} />
-      <AreaLinks {...AREA_LINKS} />
     </main>
   );
 }

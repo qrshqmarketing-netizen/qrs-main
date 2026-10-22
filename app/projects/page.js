@@ -12,8 +12,6 @@ import RoofCheck from '@/components/sections/RoofCheck';
 import HomeWork from '@/components/home/HomeWork';
 import '@/components/home/HomeClean.css';
 import '@/components/home/CleanPages.css';
-import AreaLinks from '@/components/home/AreaLinks';
-import { AREA_LINKS } from '@/data/nearYou';
 
 export const metadata = pageMetadata({ title: page.metaTitle, description: page.metaDescription, path: PROJECTS_LINK.href });
 
@@ -47,7 +45,6 @@ export default function ProjectsPage() {
       {/* Every project as a card under the map (the clean format, October 21 2026) */}
       <HomeWork heading="Every project, __newest__ first" projects={PROJECT_PAGES} />
       <RoofCheck tone="white" />
-      <AreaLinks {...AREA_LINKS} />
     </main>
   );
 }

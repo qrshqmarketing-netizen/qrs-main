@@ -1,10 +1,8 @@
 import Hero from '@/components/sections/Hero';
 import IndexNote from '@/components/sections/IndexNote';
-import AreaLinks from '@/components/home/AreaLinks';
 import ReviewTrio from '@/components/home/ReviewTrio';
 import '@/components/home/HomeClean.css';
 import '@/components/home/CleanPages.css';
-import { AREA_LINKS } from '@/data/nearYou';
 import ReviewDestinations from '@/components/sections/ReviewDestinations';
 import JsonLd from '@/components/ui/JsonLd';
 import { HOME, REVIEWS_LINK } from '@/data/catalog';
@@ -31,7 +29,6 @@ export default function ReviewsPage() {
       <ReviewTrio path="/reviews/" heading="What people say after the __job__" />
       <IndexNote note={page.note} />
       <RoofCheck tone="white" />
-      <AreaLinks {...AREA_LINKS} />
     </main>
   );
 }

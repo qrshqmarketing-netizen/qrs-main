@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import Breadcrumbs from '@/components/sections/Breadcrumbs';
-import AreaLinks from '@/components/home/AreaLinks';
 import ReviewTrio from '@/components/home/ReviewTrio';
-import { AREA_LINKS } from '@/data/nearYou';
 import RelatedLinks from '@/components/sections/RelatedLinks';
 import ProjectChapters from '@/components/project/ProjectChapters';
 import ProjectCounter from '@/components/project/ProjectCounter';
@@ -149,7 +147,6 @@ export default function ProjectDetail({ page }) {
 
       <RelatedLinks heading="Related services" links={relatedLinks(page.related)} />
       <RoofCheck tone="white" />
-      <AreaLinks {...AREA_LINKS} />
     </main>
   );
 }

@@ -1,8 +1,7 @@
 import CardGrid from '@/components/sections/CardGrid';
-import AreaLinks from '@/components/home/AreaLinks';
 import CheckBand from '@/components/home/CheckBand';
 import ReviewTrio from '@/components/home/ReviewTrio';
-import { AREA_LINKS, checksFor } from '@/data/nearYou';
+import { checksFor } from '@/data/nearYou';
 import Faq from '@/components/sections/Faq';
 import HomeArticles from '@/components/home/HomeArticles';
 import HomeWork from '@/components/home/HomeWork';
@@ -71,7 +70,6 @@ export default async function HubPage({ hub, crumbs, eyebrow, image, imageAlt, c
       <HomeArticles posts={await articlesFor(crumbs.at(-1).href)} heading="Related articles" />
       {hub.faqs?.length > 0 && <Faq heading="Frequently Asked __Questions__" sub={faqSub(hub.keyword)} faqs={hub.faqs} cta={false} limit={4} />}
       <RoofCheck tone="white" offer={offer} />
-      <AreaLinks {...AREA_LINKS} />
     </main>
   );
 }

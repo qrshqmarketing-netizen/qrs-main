@@ -1,11 +1,9 @@
 import CarePlanPricing from '@/components/sections/CarePlanPricing';
-import AreaLinks from '@/components/home/AreaLinks';
 import BandCards from '@/components/home/BandCards';
 import HomeArticles from '@/components/home/HomeArticles';
 import ReviewTrio from '@/components/home/ReviewTrio';
 import '@/components/home/HomeClean.css';
 import '@/components/home/CleanPages.css';
-import { AREA_LINKS } from '@/data/nearYou';
 import Faq from '@/components/sections/Faq';
 import Hero from '@/components/sections/Hero';
 import PlanScope from '@/components/sections/PlanScope';
@@ -47,7 +45,6 @@ export default async function RoofMaintenancePlansPage() {
       <HomeArticles posts={await articlesFor(PROGRAMS.plans.href)} heading="Related articles" />
       <Faq heading="Roof Care Plan FAQs" sub="Straight answers about how the plan works." faqs={page.faqs} cta={false} limit={4} />
       <RoofCheck />
-      <AreaLinks {...AREA_LINKS} />
     </main>
   );
 }

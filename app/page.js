@@ -13,7 +13,6 @@ import HomeArticles from '@/components/home/HomeArticles';
 import HomeServices from '@/components/home/HomeServices';
 import HomeWork from '@/components/home/HomeWork';
 import WordBand from '@/components/home/WordBand';
-import AreaLinks from '@/components/home/AreaLinks';
 import AreaSketch from '@/components/home/AreaSketch';
 import CheckBand from '@/components/home/CheckBand';
 import NearYou from '@/components/home/NearYou';
@@ -23,7 +22,7 @@ import '@/components/home/HomeClean.css';
 import JsonLd from '@/components/ui/JsonLd';
 import { BAND_WORDS, HOME_SERVICE_TABS } from '@/data/homeServices';
 import { BUSINESS, GOOGLE_REVIEWS, HERO_ANNOTATIONS, HOME_DESCRIPTION, HOME_H1, HOME_TITLE } from '@/data/site';
-import { AREA_LINKS, NEAR_ALL, NEAR_PLACES, OFFICE_CITIES, QUICK_TILES, checksFor, nearLine } from '@/data/nearYou';
+import { NEAR_ALL, NEAR_PLACES, OFFICE_CITIES, QUICK_TILES, checksFor, nearLine } from '@/data/nearYou';
 import { LATEST_PROJECTS } from '@/data/projectPages';
 import { ROOF_FINANCING } from '@/data/services/programs';
 import { latestArticles } from '@/lib/articles';
@@ -139,7 +138,6 @@ export default async function HomePage() {
         <Faq cta={false} faqs={faqs} />
         <RoofCheck band={false} />
         <FinalCta />
-        <AreaLinks {...AREA_LINKS} />
       </main>
     </>
   );

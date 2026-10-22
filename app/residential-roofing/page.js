@@ -1,5 +1,4 @@
 import CardCarousel from '@/components/sections/CardCarousel';
-import AreaLinks from '@/components/home/AreaLinks';
 import CheckBand from '@/components/home/CheckBand';
 import HomeArticles from '@/components/home/HomeArticles';
 import HomeWork from '@/components/home/HomeWork';
@@ -12,7 +11,7 @@ import Overview from '@/components/sections/Overview';
 import RoofCheck from '@/components/sections/RoofCheck';
 import ServiceFinder from '@/components/sections/ServiceFinder';
 import { projectsShownOn } from '@/data/projectPages';
-import { AREA_LINKS, checksFor } from '@/data/nearYou';
+import { checksFor } from '@/data/nearYou';
 import JsonLd from '@/components/ui/JsonLd';
 import { HOME, RESIDENTIAL, RESIDENTIAL_TYPES, typeCard } from '@/data/catalog';
 import { RESIDENTIAL_PAGE as page } from '@/data/pages/residential';
@@ -66,7 +65,6 @@ export default async function ResidentialRoofingPage() {
       <HomeArticles posts={await articlesFor(RESIDENTIAL.href)} heading="Related articles" />
       <Faq heading="Frequently Asked __Questions__" sub="Straight answers about residential roofing." faqs={page.faqs} cta={false} limit={4} />
       <RoofCheck tone="white" />
-      <AreaLinks {...AREA_LINKS} />
     </main>
   );
 }

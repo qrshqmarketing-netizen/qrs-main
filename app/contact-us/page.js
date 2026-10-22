@@ -1,7 +1,5 @@
 import Faq from '@/components/sections/Faq';
-import AreaLinks from '@/components/home/AreaLinks';
 import ReviewTrio from '@/components/home/ReviewTrio';
-import { AREA_LINKS } from '@/data/nearYou';
 import Hero from '@/components/sections/Hero';
 import Offices from '@/components/sections/Offices';
 import RoofCheck from '@/components/sections/RoofCheck';
@@ -65,7 +63,6 @@ export default function ContactPage() {
       <RoofCheck />
       <ServiceArea heading="Check Your Service Area" sub="Enter your ZIP code to confirm we cover your address, or pick your city from the list." />
       <Faq heading="Contact FAQs" sub="Straight answers about reaching our team." faqs={FAQS} cta={false} limit={4} />
-      <AreaLinks {...AREA_LINKS} />
     </main>
   );
 }

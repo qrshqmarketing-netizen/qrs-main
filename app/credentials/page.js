@@ -1,10 +1,8 @@
 import Credentials from '@/components/sections/Credentials';
 import Faq from '@/components/sections/Faq';
-import AreaLinks from '@/components/home/AreaLinks';
 import ReviewTrio from '@/components/home/ReviewTrio';
 import '@/components/home/HomeClean.css';
 import '@/components/home/CleanPages.css';
-import { AREA_LINKS } from '@/data/nearYou';
 import Hero from '@/components/sections/Hero';
 import RoofCheck from '@/components/sections/RoofCheck';
 import JsonLd from '@/components/ui/JsonLd';
@@ -49,7 +47,6 @@ export default function CredentialsPage() {
       <ReviewTrio path={CREDENTIALS_LINK.href} />
       <Faq heading="Credentials FAQs" sub="Straight answers about our license, insurance and certifications." faqs={page.faqs} cta={false} limit={4} />
       <RoofCheck tone="white" />
-      <AreaLinks {...AREA_LINKS} />
     </main>
   );
 }

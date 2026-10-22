@@ -1,7 +1,5 @@
 import Faq from '@/components/sections/Faq';
-import AreaLinks from '@/components/home/AreaLinks';
 import ReviewTrio from '@/components/home/ReviewTrio';
-import { AREA_LINKS } from '@/data/nearYou';
 import Hero from '@/components/sections/Hero';
 import { AboutCards, AboutIntro, AboutMission, AboutNumbers, AboutOffices, AboutProcess, AboutRecognition, AboutStory, AboutTeam } from '@/components/about/AboutSections';
 import RoofCheck from '@/components/sections/RoofCheck';
@@ -42,7 +40,6 @@ export default function AboutPage() {
       <AboutCards careers={page.careers} partners={page.partners} />
       <Faq heading="About QRS: FAQs" sub="Straight answers about who we are and how we work." faqs={page.faqs} cta={false} limit={4} />
       <RoofCheck />
-      <AreaLinks {...AREA_LINKS} />
     </main>
   );
 }

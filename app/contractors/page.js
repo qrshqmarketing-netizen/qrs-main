@@ -1,8 +1,7 @@
-import AreaLinks from '@/components/home/AreaLinks';
 import CheckBand from '@/components/home/CheckBand';
 import '@/components/home/HomeClean.css';
 import '@/components/home/CleanPages.css';
-import { AREA_LINKS, checksFor } from '@/data/nearYou';
+import { checksFor } from '@/data/nearYou';
 import Faq from '@/components/sections/Faq';
 import FeatureBand from '@/components/sections/FeatureBand';
 import Hero from '@/components/sections/Hero';
@@ -64,7 +63,6 @@ export default function ContractorsPage() {
       <RelatedLinks heading="Related pages" links={RELATED} />
       <Faq heading="Contractor FAQs" sub="Straight answers for contractors and property management clients." faqs={page.faqs} cta={false} limit={4} />
       <RoofCheck tone="white" offer="commercial" />
-      <AreaLinks {...AREA_LINKS} />
     </main>
   );
 }

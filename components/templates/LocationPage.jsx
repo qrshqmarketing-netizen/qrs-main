@@ -1,5 +1,4 @@
 import Faq from '@/components/sections/Faq';
-import AreaLinks from '@/components/home/AreaLinks';
 import AreaSketch from '@/components/home/AreaSketch';
 import NearYou from '@/components/home/NearYou';
 import QuickTiles from '@/components/home/QuickTiles';
@@ -8,7 +7,7 @@ import HomeArticles from '@/components/home/HomeArticles';
 import '@/components/home/HomeClean.css';
 import '@/components/home/CleanPages.css';
 import { servicesLine } from '@/data/homeServices';
-import { AREA_LINKS, NEAR_ALL, NEAR_PLACES, QUICK_TILES, nearLine, nearestCities } from '@/data/nearYou';
+import { NEAR_ALL, NEAR_PLACES, QUICK_TILES, nearLine, nearestCities } from '@/data/nearYou';
 import Hero from '@/components/sections/Hero';
 import LocalIntro from '@/components/sections/LocalIntro';
 import StudioProjects from '@/components/studio/StudioProjects';
@@ -87,7 +86,6 @@ export default async function LocationPage({ location, page, index = 0 }) {
       <HomeArticles posts={await articlesFor(cityPath(slug))} heading="Related articles" />
       <Faq heading={`${city} Roofing FAQs`} sub={`Straight answers for ${city} ${page.offer === 'commercial' ? 'clients' : 'homeowners'}.`} faqs={page.faqs} cta={false} limit={4} />
       <RoofCheck offer={page.offer || 'home'} />
-      <AreaLinks {...AREA_LINKS} />
     </main>
   );
 }

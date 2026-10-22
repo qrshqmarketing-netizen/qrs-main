@@ -1,7 +1,5 @@
 import Image from 'next/image';
 import Breadcrumbs from '@/components/sections/Breadcrumbs';
-import AreaLinks from '@/components/home/AreaLinks';
-import { AREA_LINKS } from '@/data/nearYou';
 import RelatedLinks from '@/components/sections/RelatedLinks';
 import RoofCheck from '@/components/sections/RoofCheck';
 import { postDate } from '@/components/sections/PostCards';
@@ -199,8 +197,6 @@ export default function BlogPost({ post }) {
       </article>
       <RelatedLinks heading="Related services" links={relatedLinks(post.related)} />
       <RoofCheck />
-      {/* The request form is the one ask; then the area and service links (owner, October 22 2026: as on the other pages) */}
-      <AreaLinks {...AREA_LINKS} />
     </main>
   );
 }
