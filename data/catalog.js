@@ -52,7 +52,7 @@ export const GROUPS = {
     parent: RESIDENTIAL,
     scenes: ['scene-flat', 'scene-commercial', 'scene-inspect'],
     image: '/images/flat-roof-replacement-completed-white-membrane.webp',
-    imageAlt: 'Aerial view of a completed white flat roof membrane with tile coping',
+    imageAlt: 'Flat roofing in Los Angeles: a completed white flat roof membrane with tile coping, seen from above',
     cardImage: '/images/flat-roof-torch-down-drone-view-services.webp',
     blurb: 'Modified bitumen and low-slope systems planned around drainage and the way water moves across your roof.',
   },

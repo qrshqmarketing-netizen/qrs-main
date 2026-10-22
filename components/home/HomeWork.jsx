@@ -12,7 +12,8 @@ const workOf = (title) => title.slice(0, title.lastIndexOf(' in ')) || title;
 const placeOf = (place) => place.replace(/,?\s*CA\b/, '');
 
 // decor: the hairline curves behind the heading (home page only)
-export default function HomeWork({ heading, headingTag, text, projects, all, decor = false }) {
+// more: the words of each card's "View the project" line
+export default function HomeWork({ heading, headingTag, text, projects, all, more = 'View the project', decor = false }) {
   return (
     <section className="hc-section hc-work" aria-labelledby="hc-work-title">
       {decor && <FlowLines />}
@@ -33,7 +34,7 @@ export default function HomeWork({ heading, headingTag, text, projects, all, dec
                 </h3>
                 <p>{plainText(p.description)}</p>
                 <span className="hc-more" aria-hidden="true">
-                  View the project <ArrowRight />
+                  {more} <ArrowRight />
                 </span>
               </div>
             </li>

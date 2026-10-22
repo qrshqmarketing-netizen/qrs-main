@@ -10,8 +10,9 @@ export const LOCATION_PAGES = {
     imagePosition: 'center 40%',
     // About Los Angeles only (owner, October 22 2026): West Hollywood has its own page (the one the Google listing named West Hollywood should
     // point to), so this page names it only to link there, and the two pages don't compete for "West Hollywood roofing"
-    metaTitle: 'Los Angeles Roofing & Roof Repair',
-    metaDescription: 'Los Angeles roofing across the city: tile, shingle and flat roof repair and replacement with written scopes. Book a free roof evaluation.',
+    metaTitle: 'Los Angeles Roofing & Roof Repair | 269 Google Reviews', // the review count for the "best roofer" searches; the H1 stays plain (h1)
+    h1: 'Los Angeles Roofing & Roof Repair',
+    metaDescription: 'Los Angeles roofing contractor with 269 Google reviews: tile, shingle and flat roof repair and replacement, with a written scope and price before any work.',
     blurb: 'Roofer-led inspections, written scopes and clean installs for homes across the city, from the Hollywood Hills to the Valley.',
     hero: {
       // The keyword line; the result line under it is in data/heroOutcomes.js
@@ -33,6 +34,7 @@ export const LOCATION_PAGES = {
       { title: 'Mixed roofs on one house', text: 'Many LA homes pair a tile or shingle main roof with flat sections over additions, garages or patios, and each needs its own details.' },
     ],
     faqs: [
+      { q: 'How do I choose the best roofing contractor in Los Angeles?', a: 'Check the CSLB license, ask for a roofer-led inspection with photos, get a written scope and price before any work starts, read the workmanship warranty and look at reviews from homeowners near you. Our [license and credentials](/credentials/) and our [Google reviews](/reviews/) are a click away.' },
       { q: 'Do you serve my Los Angeles neighborhood?', a: 'We work across the city, from the Hollywood Hills and Silver Lake to Sherman Oaks and Encino, with offices in West Hollywood and Woodland Hills. Check your ZIP code on the map on this page, or give us a call.' },
       { q: 'Do you work in West Hollywood?', a: 'Yes. West Hollywood has its own [West Hollywood roofing](/service-areas/la-county/west-hollywood/) page, with the work we do there on homes, condos and [multi-family buildings](/residential-roofing/hoa-multi-family/). Our West Hollywood office and its address are on that page too.' },
       { q: 'What roof types do you work on in Los Angeles?', a: 'All of the common ones: [tile](/residential-roofing/tile-roofing/), [shingle](/residential-roofing/shingle-roofing/) and [flat](/residential-roofing/flat-roofing/) roofs. Plenty of homes here have more than one type, and one roof evaluation covers them all.' },

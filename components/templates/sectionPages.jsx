@@ -30,7 +30,9 @@ export const hubMetadata = (section) =>
   pageMetadata({ title: section.hub.metaTitle, description: section.hub.metaDescription, path: section.href });
 
 export function SectionHub({ section, extra }) {
-  const cards = [...serviceCards(section), ...(isCommercial(section) ? [] : SHARED_CARDS.map(cardFor))];
+  // `hub.cardOverrides` (by service slug) changes a card's title or line on this hub only
+  const own = serviceCards(section).map((c, i) => ({ ...c, ...section.hub.cardOverrides?.[section.services[i].slug] }));
+  const cards = [...own, ...(isCommercial(section) ? [] : SHARED_CARDS.map(cardFor))];
   const feature = isCommercial(section)
     ? {
         eyebrow: 'Contractors',

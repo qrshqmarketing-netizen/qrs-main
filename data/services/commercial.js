@@ -3,8 +3,8 @@
 export const COMMERCIAL_CONTENT = {
   hub: {
     keyword: 'commercial roofing',
-    metaTitle: 'Commercial Roofing in Los Angeles',
-    metaDescription: 'Commercial roofing in LA & Orange County for offices, retail, churches, warehouses and more. Roofer-led surveys and written scopes. Request an estimate.',
+    metaTitle: 'Commercial Roofing Contractor in Los Angeles & Orange County', // for the "best commercial roofing contractor" searches (October 22 2026)
+    metaDescription: 'Commercial roofing contractor in Los Angeles & Orange County: a roofer-led roof survey, written scope and price, permits pulled. Licensed, bonded and insured.',
     hero: {
       heading: 'Commercial Roofing in Los Angeles & Orange County',
       intro: 'QRS is a commercial roofing contractor in Los Angeles and Orange County, with repairs, replacement and scheduled maintenance for office buildings, retail stores, churches, warehouses, shopping centers and more. Every project starts with a roofer-led survey and a written scope, and the work is planned around how your building runs.',
@@ -30,6 +30,7 @@ export const COMMERCIAL_CONTENT = {
       ],
     },
     faqs: [
+      { q: 'How do I choose the best commercial roofing contractor?', a: 'Look for a CSLB license, bonding and insurance, a roofer-led survey of your roof, a written scope and price before any work, and work on buildings like yours. Our guide to [choosing a commercial roofing contractor](/blog/how-to-choose-a-commercial-roofing-contractor/) lists the questions to ask, and our [license and credentials](/credentials/) are on one page.' },
       { q: 'What types of commercial buildings do you roof?', a: 'We roof office buildings, retail stores, churches, industrial facilities, shops and small businesses, warehouses, and malls and shopping centers. Apartment buildings and condo communities are covered by our [HOA & multi-family roofing](/residential-roofing/hoa-multi-family/) service.' },
       { q: 'Can our building stay open while you work on the roof?', a: 'Usually, yes. Most commercial roofing happens while the building is in use, so we plan access, noise, staging and deliveries with you before work begins. If any step needs an area cleared, you’ll know ahead of time.' },
       { q: 'Do you repair commercial roofs, or only replace them?', a: 'Both. Many commercial leaks trace back to one failed flashing, a clogged drain or a worn seam, and a targeted repair is the right fix. When a roof is near the end of its life, the survey photos show it, so you can plan and budget for replacement.' },

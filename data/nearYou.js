@@ -74,7 +74,7 @@ const COMMERCIAL_CHECKS = ['Roofer-led roof survey', 'Written scope and price be
 export const checksFor = (path = '/') =>
   path.startsWith('/commercial-roofing/') || path.startsWith('/contractors/')
     ? { heading: 'What you can __count__ on, on every job', items: COMMERCIAL_CHECKS, image: { src: '/images/recent-work-commercial-flat-roof-drone-view.webp', position: 'center 40%' } }
-    : { heading: 'What you can __count__ on, on every job', items: HOME_CHECKS, image: { src: '/images/home-hero-shingle-neighborhood-drone-view.webp', position: 'center 55%' } };
+    : { heading: 'What you can __count__ on, on every job', items: path.includes('/flat-roofing/') ? HOME_CHECKS.map((c) => (c === 'Licensed, bonded & insured' ? 'Licensed, bonded & insured flat roof contractor' : c)) : HOME_CHECKS, image: { src: '/images/home-hero-shingle-neighborhood-drone-view.webp', position: 'center 55%' } };
 
 // The four tiles (QuickTiles.jsx): the home page under the hero, and city and county pages in place of the services tabs
 export const QUICK_TILES = [

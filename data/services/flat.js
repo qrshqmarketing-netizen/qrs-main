@@ -4,8 +4,15 @@
 export const FLAT_CONTENT = {
   hub: {
     keyword: 'flat roofing',
-    metaTitle: 'Residential Flat Roofing in Los Angeles & Orange County',
-    metaDescription: 'Residential flat roofing in Los Angeles & Orange County: modified bitumen roofs for homes, ADUs, garages and patio covers, planned around drainage.',
+    metaTitle: 'Flat Roofing Los Angeles & Orange County | Flat Roof Specialists', // owner, October 22 2026 (the H1 stays "Flat Roofing in Los Angeles & Orange County")
+    metaDescription: 'Flat roofing in Los Angeles & Orange County from licensed flat roof specialists: installs, replacements and repairs for homes, ADUs, garages and patio covers.',
+    // The hero's check points on this page (Hero `annotations`), in place of the home set
+    heroNotes: ['Licensed flat roof contractor serving LA & Orange County · CSLB #1061942', 'Free roof evaluation', 'Written price before any work', '10-year workmanship warranty (call for details)'],
+    // A card on this hub reads differently from the same page's card elsewhere (menus and the service-first hubs keep `title` and `card`)
+    cardOverrides: {
+      replacement: { title: 'Flat Roof Replacement in Los Angeles, CA · *FlatGuard*', text: 'Flat roof replacement in Los Angeles, CA: a full tear-off down to the deck and a new modified bitumen or low-slope system, planned around how your roof drains.' },
+    },
+    projectMore: 'View this Los Angeles flat roof project',
     hero: {
       heading: 'Flat Roofing Services · *FlatGuard*',
       intro: 'Flat roofing from QRS covers new installs, replacements and repairs for modified bitumen and other low-slope roofs on homes, ADUs, garages and patio covers across Los Angeles and Orange County. Every drain, seam and flashing is detailed so water leaves the roof, and our *FlatGuard* Roof System covers low-slope replacements and new installs. Start with a free roof evaluation.',
@@ -14,8 +21,9 @@ export const FLAT_CONTENT = {
     overview: {
       heading: 'Flat Roofs Need Their Own Kind of Detail',
       paragraphs: [
-        'Flat roofing from QRS covers new installs, replacements and repairs for low-slope roofs on homes, ADUs, garages and patio covers. Low-slope roofs are everywhere in Southern California: on mid-century and modern homes, over garages, patio covers and room additions, on new backyard ADUs, and tucked behind the parapet walls of Spanish-style houses. Every one of them still has to drain. That takes a gentle, deliberate slope that carries rainwater to a drain, a scupper (an opening through the parapet) or a gutter instead of letting it sit. When that slope is missing or a drain is blocked, water ponds, the sun bakes the membrane, and seams and flashings start to give way.',
+        'QRS is a flat roof specialist in Los Angeles, California, and Orange County: our flat roofing covers new installs, replacements and repairs for low-slope roofs on homes, ADUs, garages and patio covers. Low-slope roofs are everywhere in Southern California: on mid-century and modern homes, over garages, patio covers and room additions, on new backyard ADUs, and tucked behind the parapet walls of Spanish-style houses. Every one of them still has to drain. That takes a gentle, deliberate slope that carries rainwater to a drain, a scupper (an opening through the parapet) or a gutter instead of letting it sit. When that slope is missing or a drain is blocked, water ponds, the sun bakes the membrane, and seams and flashings start to give way.',
         'We install **modified bitumen and other low-slope systems**, chosen for your roof’s condition, how it drains and what sits on it, from HVAC equipment to skylights. Our advice comes from a roofer on your roof, not a salesperson at your kitchen table. The [free roof evaluation](#roof-check) photo-documents the membrane, seams, drains and flashings, explains the findings in plain English and ends with a clear next step: repair, monitor, maintain or replace. You see a written scope and price before any work begins, and finished installs carry our 10-year workmanship warranty (call for details).',
+        'As Orange County flat roofers, we serve [Irvine](/service-areas/orange-county/irvine/), Costa Mesa, [Newport Beach](/service-areas/orange-county/newport-beach/), [Anaheim](/service-areas/orange-county/anaheim/), [Santa Ana](/service-areas/orange-county/santa-ana/), [Huntington Beach](/service-areas/orange-county/huntington-beach/) and the rest of [Orange County](/service-areas/orange-county/) with the same free roof evaluation, written price and 10-year workmanship warranty (call for details) as our Los Angeles homeowners.',
       ],
     },
     cards: {
@@ -31,10 +39,10 @@ export const FLAT_CONTENT = {
       ],
     },
     faqs: [
-      { q: 'Is a flat roof actually flat?', a: 'No. A well-built flat roof has a slight slope, often too gentle to notice, that moves water off the roof. If water still sits in the same spots long after the rain stops, the slope or the drainage needs attention.' },
+      { q: 'Is a flat roof actually flat?', a: 'No. Unlike steep-slope roofs, which shed water quickly, a flat roof is really a low-slope roof that needs a gentle pitch toward its drains. On a well-built one that slope is often too gentle to notice, but it moves water off the roof. If water still sits in the same spots long after the rain stops, the slope or the drainage needs attention.' },
       { q: 'What is modified bitumen?', a: 'It’s a tough, asphalt-based roofing membrane with built-in reinforcement, typically installed in layers with overlapping, sealed laps. It handles routine foot traffic and strong sun well, one reason it’s so common on low-slope homes in Southern California. The right system for your roof still depends on its condition and drainage.' },
       { q: 'Do you work on the flat sections of Spanish-style homes?', a: 'Yes. Many Spanish and Mediterranean homes pair [tile roofing](/residential-roofing/tile-roofing/) with flat sections hidden behind parapet walls, drained by scuppers through the wall. We look at the flat areas, the parapet caps and the wall flashings, not just the tile you can see from the street.' },
-      { q: 'Do you work on flat roofs for commercial buildings?', a: 'Yes. Offices, shops, warehouses and many other commercial buildings rely on low-slope roofs, and we plan that work around each building’s condition and drainage too. Visit our [commercial roofing](/commercial-roofing/) section for details.' },
+      { q: 'Do you work on flat roofs for commercial buildings?', a: 'Yes. As a flat roof contractor in Los Angeles and Orange County, we also work on the low-slope roofs of offices, shops, warehouses and many other commercial buildings, planned around each building’s condition and drainage. Visit our [commercial roofing](/commercial-roofing/) section for details.' },
       { q: 'Do you work on flat roofs in my part of LA or Orange County?', a: 'We work across Los Angeles County and Orange County, in cities such as Glendale, Torrance, Anaheim, Santa Ana and Huntington Beach as well as Los Angeles itself. Our [service area](/service-areas/) page shows whether your city is on the list.' },
       { q: 'How long does a flat roof last?', a: 'There’s no single answer. The roofing system, how well the roof drains, how much sun it takes and how often it’s maintained all play a part, and water that sits on a flat roof after rain shortens its life. Rather than guessing from the roof’s age, a [free roof evaluation](#roof-check) looks at its actual condition.' },
     ],
