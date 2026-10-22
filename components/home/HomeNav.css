@@ -45,7 +45,7 @@ body.studio-site main:is(.home-clean,.clean-page) .qt h3:not(.x){margin:0 0 6px;
 .hc-near-office{fill:var(--gold)}
 .hc-near-ring{fill:none;stroke:var(--gold);stroke-width:2;opacity:.45}
 .hc-near .hc-head{margin-bottom:24px}
-.hc-near-search{margin:0 auto}
+.zs.hc-near-search{margin-left:auto;margin-right:auto} /* centered under the heading (owner, October 22 2026; .zs sets margin:0) */
 .hc-near-answer{margin:16px auto 0;max-width:640px;text-align:center;font:400 15.5px/1.5 var(--font-text),sans-serif;color:var(--ink)}
 .hc-near-answer:empty{display:none}
 .hc-near-answer a{color:inherit;font-weight:600}

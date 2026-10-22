@@ -446,3 +446,25 @@ body.studio-site .hero.hero:has(.hero-has-aside) > .hero-inner.hero-has-aside{pa
 
 /* Every heading in medium weight (owner, October 22 2026), whatever the component set; the serif product names inside keep their own style */
 body.studio-site :is(h1,h2,h3,h4,h5,h6){font-weight:500!important}
+
+/* Centered, stacked heroes (owner, October 22 2026; overrides the corner layout above): the trail, the H1 with its outcome line, the buttons and
+   the check points in one centered column, sitting in the middle of the photo; long headlines are held to about 20 characters a line so they
+   break evenly onto two lines, and the headline is about 12% smaller. The blog index's two-column hero is left alone. */
+body.studio-site .hero.hero.hero:not(:has(.hero-has-aside)) .hero-copy{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:100%}
+body.studio-site .hero.hero.hero:not(:has(.hero-has-aside)) > .hero-inner{display:flex;align-items:center;justify-content:center}
+body.studio-site .hero.hero.hero:not(:has(.hero-has-aside)) .hero-copy > *{grid-column:auto;grid-row:auto;align-self:center;justify-self:center}
+body.studio-site .hero.hero.hero:not(:has(.hero-has-aside)) .crumbs ol{justify-content:center}
+body.studio-site main .hero.hero.hero:not(:has(.hero-has-aside)) .hero-title:not(.x):not(.y){text-align:center;margin:14px auto 0;max-width:20ch;text-wrap:balance;font-size:clamp(28px,7.4vw,38px)}
+body.studio-site .hero.hero.hero:not(:has(.hero-has-aside)) .hero-title .hero-outcome{display:block;margin:.7em auto 0;max-width:46ch;text-wrap:balance}
+body.studio-site .hero.hero.hero:not(:has(.hero-has-aside)) .hero-actions{justify-content:center;align-items:center;margin:26px auto 0}
+body.studio-site .hero.hero.hero:not(:has(.hero-has-aside)) .hero-notes{align-items:center;justify-content:center;margin:18px auto 0}
+@media (min-width:621px){
+  body.studio-site main .hero.hero.hero:not(:has(.hero-has-aside)) .hero-title:not(.x):not(.y){font-size:clamp(36px,5.6vw,48px)}
+  body.studio-site .hero.hero.hero:not(:has(.hero-has-aside)) .hero-actions{align-self:center}
+}
+@media (min-width:901px){
+  body.studio-site main .hero.hero.hero:not(:has(.hero-has-aside)) .hero-title:not(.x):not(.y){font-size:clamp(40px,3.9vw,62px);max-width:22ch}
+  body.studio-site .hero.hero.hero:not(:has(.hero-has-aside)) .hero-notes{flex-direction:row;flex-wrap:wrap;gap:4px 22px}
+  body.studio-site .hero.hero.hero:not(:has(.hero-has-aside)) .hero-actions{gap:16px}
+}
+body.studio-site main .hero.hero.hero:not(:has(.hero-has-aside)) .hero-title .hero-outcome:not(.x){text-align:center}

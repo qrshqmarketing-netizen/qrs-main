@@ -229,3 +229,25 @@ body.studio-site .promo-home .promo-title{font-size:clamp(36px,10vw,62px)}
    row under the headline, full width; from 901px in the row under the one-line headline, left-aligned like it */
 .promo-home .promo-search{grid-row:5;align-self:start;justify-self:stretch;margin-top:24px;max-width:520px}
 @media (min-width:901px){.promo-home .promo-search{grid-column:1/-1;grid-row:4;margin-top:clamp(24px,3svh,36px);width:min(520px,100%)}}
+
+/* The home hero centered and stacked like the sub-page heroes (owner, October 22 2026; overrides the corner grid above): "Licensed since",
+   the keyword H1, the headline (held to two even lines, about 12% smaller), the ZIP search, the line, the buttons and the check points in
+   one centered column in the middle of the video */
+.promo.promo-landing.promo-home{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:0}
+.promo-home .promo-copy{display:contents}
+.promo-home .promo-note{order:-2;align-self:center}
+body.studio-site .promo-home h1.promo-eyebrow{order:-1;align-self:center;margin-top:8px}
+body.studio-site main .promo.promo.promo.promo-home :is(h1,.promo-title,.promo-eyebrow):not(.x):not(.y):not(.z){text-align:center;margin-left:auto;margin-right:auto}
+body.studio-site main .promo.promo.promo.promo-home .promo-title:not(.x):not(.y):not(.z){margin-top:18px;max-width:14ch;white-space:normal;text-wrap:balance;font-size:clamp(32px,8.8vw,54px)}
+.promo-home .promo-search{align-self:center;justify-self:auto;margin:26px auto 0;width:min(520px,100%)}
+.promo-landing.promo-home .promo-text{align-self:center;margin:22px auto 0;max-width:560px;text-align:center}
+.promo-home .promo-actions{align-self:center;justify-content:center;align-items:center;margin:24px auto 0}
+.promo-home .promo-call{align-self:center}
+.promo-home .promo-points{align-self:center;align-items:center;justify-content:center;margin:16px auto 0}
+@media (min-width:621px){.promo-home .promo-actions{justify-content:center}}
+@media (min-width:901px){
+  body.studio-site main .promo.promo.promo.promo-home .promo-title:not(.x):not(.y):not(.z){font-size:clamp(44px,4.4vw,74px);max-width:16ch}
+  .promo-home .promo-points{flex-direction:row;flex-wrap:wrap;gap:4px 22px}
+}
+/* The home headline in medium weight like every heading (owner, October 22 2026; it is a <p>, so the h1-h6 rule in StudioSite.css missed it) */
+body.studio-site main .promo.promo.promo.promo-home .promo-title:not(.x):not(.y):not(.z){font-weight:500;letter-spacing:-.035em}
