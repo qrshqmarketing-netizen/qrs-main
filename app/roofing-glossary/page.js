@@ -1,4 +1,7 @@
-import FinalCta from '@/components/sections/FinalCta';
+import AreaLinks from '@/components/home/AreaLinks';
+import '@/components/home/HomeClean.css';
+import '@/components/home/CleanPages.css';
+import { AREA_LINKS } from '@/data/nearYou';
 import Hero from '@/components/sections/Hero';
 import RoofCheck from '@/components/sections/RoofCheck';
 import JsonLd from '@/components/ui/JsonLd';
@@ -32,7 +35,7 @@ const schema = pageJsonLd({
 
 export default function RoofingGlossaryPage() {
   return (
-    <main id="top">
+    <main id="top" className="clean-page">
       <JsonLd data={schema} />
       <Hero
         crumbs={CRUMBS}
@@ -78,7 +81,7 @@ export default function RoofingGlossaryPage() {
         </div>
       </section>
       <RoofCheck tone="white" />
-      <FinalCta heading="Questions About Your __Roof__?" text="Start with a free roof evaluation. A roofer looks at your roof, explains what they find in plain English and gives you a written scope and price before any work." />
+      <AreaLinks {...AREA_LINKS} />
     </main>
   );
 }

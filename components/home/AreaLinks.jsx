@@ -1,5 +1,6 @@
 import Rich from '@/components/ui/Rich';
 import SiteLink from '@/components/ui/SiteLink';
+import './HomeClean.css';
 import './HomeNav.css';
 
 // The closing block of the home page, just above the footer (after publicstorage.com's paragraph and "locations in Los Angeles / California"

@@ -1,9 +1,12 @@
 import CarePlanPricing from '@/components/sections/CarePlanPricing';
-import ReviewMarquee from '@/components/sections/ReviewMarquee';
+import AreaLinks from '@/components/home/AreaLinks';
+import BandCards from '@/components/home/BandCards';
+import HomeArticles from '@/components/home/HomeArticles';
+import ReviewTrio from '@/components/home/ReviewTrio';
+import '@/components/home/HomeClean.css';
+import '@/components/home/CleanPages.css';
+import { AREA_LINKS } from '@/data/nearYou';
 import Faq from '@/components/sections/Faq';
-import LatestArticles from '@/components/sections/LatestArticles';
-import FeatureBand from '@/components/sections/FeatureBand';
-import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
 import PlanScope from '@/components/sections/PlanScope';
 import ProcessSteps from '@/components/sections/ProcessSteps';
@@ -29,22 +32,22 @@ const schema = pageJsonLd({ path: LINK.href, title: page.metaTitle, description:
 
 export default async function RoofMaintenancePlansPage() {
   return (
-    <main id="top">
+    <main id="top" className="clean-page">
       <JsonLd data={schema} />
       <Hero crumbs={CRUMBS} eyebrow="Maintenance Plans" title={searchHeading(page.hero.heading)} outcome={heroOutcome(PROGRAMS.plans.href)} intro={page.hero.intro} image={page.image} imageAlt={page.imageAlt} stats />
       <ValueGrid heading={page.whatGoesWrong.heading} items={page.whatGoesWrong.items} tone="wash" pattern />
       <CarePlanPricing />
       <PlanScope />
-      {/* Google reviews, a few sections below the hero (owner, October 14 2026) */}
-      <ReviewMarquee />
+      {/* In the clean format with the publicstorage.com patterns like the other sub pages (owner, October 22 2026): three reviews, the tune-up and
+          member benefits as two cards in one row, the related articles row, four FAQs, the request form and the area links */}
+      <ReviewTrio path={LINK.href} />
       <ValueGrid id="roof-types" heading={page.byRoof.heading} intro={page.byRoof.intro} items={page.byRoof.items} columns={3} tone="wash" />
       <ProcessSteps heading={page.schedule.heading} steps={page.schedule.steps} scene="scene-inspect" image={page.schedule.image} imageAlt={page.schedule.imageAlt} tone="white" />
-      <FeatureBand {...page.tuneUp} tone="light" />
-      <FeatureBand eyebrow={page.memberBenefits.eyebrow} heading={page.memberBenefits.heading} paragraphs={page.memberBenefits.paragraphs} points={page.memberBenefits.points} cta={{ label: 'Get Started', href: '#roof-check' }} />
-      <LatestArticles posts={await articlesFor(PROGRAMS.plans.href)} heading="Related Roofing Articles" />
-      <Faq heading="Roof Care Plan FAQs" sub="Straight answers about how the plan works." faqs={page.faqs} />
+      <BandCards heading="Tune-ups and member __benefits__" sections={[page.tuneUp, page.memberBenefits]} />
+      <HomeArticles posts={await articlesFor(PROGRAMS.plans.href)} heading="Related articles" />
+      <Faq heading="Roof Care Plan FAQs" sub="Straight answers about how the plan works." faqs={page.faqs} cta={false} limit={4} />
       <RoofCheck />
-      <FinalCta heading={page.final.heading} text={page.final.text} />
+      <AreaLinks {...AREA_LINKS} />
     </main>
   );
 }

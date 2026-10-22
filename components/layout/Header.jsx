@@ -7,7 +7,9 @@ import SiteLink from '@/components/ui/SiteLink';
 import { MoonIcon, PhoneIcon, SunIcon } from '@/components/ui/icons';
 import { HEADER_CTA, HEADER_LINKS, HEADER_MORE } from '@/data/navigation';
 import { isFocusPath, isLandingPath } from '@/lib/landing';
-import { PHONE, TEL } from '@/data/site';
+import { PHONE, PROOF_POINTS, TEL } from '@/data/site';
+import ProofMarquee from '@/components/sections/ProofMarquee';
+import '@/components/sections/ProofBar.css';
 import './Header.css';
 
 // The header, modelled on thekithmore.com (the owner's reference): one slim bar split by hairlines: the logo, the main links (each one a hub page,
@@ -77,6 +79,13 @@ export default function Header() {
   return (
     <header className={'site-header' + (open ? ' is-open' : '') + (requestPage ? ' is-start' : '') + (landing ? ' is-lp' : '')} data-solid="true">
       <div className="hd-backdrop" onClick={close} aria-hidden="true"></div>
+      {/* The proof points as a slim marquee above the menu bar on every page (owner, October 22 2026; it used to sit under each hero). Not on
+          /start/ or the ad landing pages. Its height is --hd-top (Header.css), part of the header height the heroes start under. */}
+      {!requestPage && !landing && (
+        <div className="hd-marquee">
+          <ProofMarquee points={PROOF_POINTS} label="Why homeowners and clients choose QRS" />
+        </div>
+      )}
       <div className="hd-bar">
         <div className="hd-brand">
           <BrandLogo variant="adaptive" preload />

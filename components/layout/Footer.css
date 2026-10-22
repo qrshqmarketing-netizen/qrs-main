@@ -67,3 +67,6 @@ footer .container{position:relative;max-width:1540px}
 @media (min-width:901px){.ft-name{margin-top:48px}}
 /* /start/ shows only the small print (HideOnStart): no gap above it */
 footer .container > .ft-copy:first-child{margin-top:0;border-top:0;padding-top:0}
+/* The footer in the closing call to action's muted navy, a step darker (owner, October 22 2026), without the near-black shade */
+footer{background:#122d49}
+.ft-shade{background:linear-gradient(180deg,rgba(10,26,44,.18),rgba(10,26,44,.32))}

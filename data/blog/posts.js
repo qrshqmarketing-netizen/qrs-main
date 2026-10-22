@@ -150,7 +150,10 @@ export const BLOG_POSTS = [
     metaDescription:
       'Tile lift and relay or a new tile roof? How each works, what each costs per square foot and the signs that point to one or the other.',
     datePublished: '2026-10-13',
-    dateModified: '2026-10-13',
+    dateModified: '2026-10-22',
+    // No prices in this article (owner, October 22 2026): cost is described in general terms. `revision` copies this text over the live
+    // copy in Supabase once (lib/postsStore.js applyFileRevisions); raise it after the next change made here.
+    revision: 1,
     excerpt:
       'When a tile roof leaks, the tiles are often fine and the underlayment beneath them is not. Here is how a lift and relay compares with a new tile roof, and how to tell which one your roof needs.',
     image: '/images/blog/tile-lift-and-relay-vs-new-tile-roof.webp',
@@ -169,7 +172,7 @@ export const BLOG_POSTS = [
               rows: [
                 ['What happens to the tiles', 'Your tiles come off by hand and go back in their pattern; only cracked or broken ones are replaced', 'New tile throughout'],
                 ['Underlayment, battens and flashings', 'Renewed', 'Renewed'],
-                ['Price per square foot (our Instant Quote range)', '$8 to $11', '$12 to $16'],
+                ['Cost', 'Lower: you pay for labor and underlayment, not new tile', 'Higher: new tile plus the labor to lay it'],
                 ['Look afterward', 'The same roof, with its original tile', 'A new look, in the profile and color you choose'],
                 ['Best for', 'Sound tiles over failed underlayment', 'Worn, brittle or mismatched tile, or a new look'],
               ],
@@ -231,7 +234,7 @@ export const BLOG_POSTS = [
     faqs: [
       {
         q: 'Is a lift and relay cheaper than a new tile roof?',
-        a: 'Usually, because the tiles are reused. At our Instant Quote ranges a lift and relay is $8 to $11 per square foot of roof, against $12 to $16 for a new tile roof. Your written scope shows the price before any work.',
+        a: 'Usually, because the tiles are reused: you pay for labor and underlayment rather than new tile. Your written scope shows the price before any work.',
       },
       {
         q: 'Will my roof look the same after a lift and relay?',
@@ -376,7 +379,10 @@ export const BLOG_POSTS = [
     metaDescription:
       'Metal roof vs. shingles for a Los Angeles home: cost, weight, fire, heat, noise, repairs and looks, and when standing seam metal is worth it.',
     datePublished: '2026-10-13',
-    dateModified: '2026-10-13',
+    dateModified: '2026-10-22',
+    // No prices in this article (owner, October 22 2026): cost is described in general terms. `revision` copies this text over the live
+    // copy in Supabase once (lib/postsStore.js applyFileRevisions); raise it after the next change made here.
+    revision: 1,
     excerpt:
       'Standing seam metal is showing up on more Los Angeles homes. Here is how it compares with asphalt shingles on cost, weight, fire, heat, noise and repairs, and when it is worth it.',
     image: '/images/blog/metal-roof-vs-shingles.webp',
@@ -393,7 +399,7 @@ export const BLOG_POSTS = [
             table: {
               head: ['Compare', 'Asphalt shingles', 'Standing seam metal'],
               rows: [
-                ['Cost', 'Lower ($6.50 to $8.00 per square foot at our Instant Quote range)', 'Higher up front'],
+                ['Cost', 'Lower', 'Higher up front'],
                 ['Weight', 'About 200 to 350 lbs per square', 'Lighter than shingles'],
                 ['Fire', 'Most are Class A', 'The panels are noncombustible'],
                 ['Heat', 'Cool-rated shingles are available', 'Reflective finishes suited to Southern California heat'],
@@ -458,7 +464,7 @@ export const BLOG_POSTS = [
       },
       {
         q: 'Does a metal roof cost more than shingles?',
-        a: 'Yes, up front. Shingles run $6.50 to $8.00 per square foot of roof at our Instant Quote range; a standing seam roof is priced from a roof evaluation and a written scope.',
+        a: 'Yes, up front. Shingles are the lower-cost roof to install; a standing seam roof is priced from a roof evaluation and a written scope.',
       },
       {
         q: 'Is a metal roof noisy in the rain?',
@@ -573,56 +579,39 @@ export const BLOG_POSTS = [
   },
   {
     slug: 'roof-replacement-cost-los-angeles',
-    title: 'Roof Replacement Cost in Los Angeles: Price per Square Foot by Roof Type',
+    title: 'Roof Replacement Cost in Los Angeles: What Sets the Price',
     keyword: 'roof replacement cost',
     topics: ['replacement', 'shingle', 'tile', 'flat', 'restoration'],
-    metaTitle: 'Roof Replacement Cost in Los Angeles by Roof Type',
+    metaTitle: 'Roof Replacement Cost in Los Angeles: What Sets the Price',
     metaDescription:
-      'Roof replacement cost in Los Angeles by roof type: shingle, tile, lift and relay and flat roofs per square foot, what moves the price and how to compare bids.',
+      'Roof replacement cost in Los Angeles: how roof type, size, pitch and the deck shape the price, why your roof isn’t your square footage, and how to compare bids.',
     datePublished: '2026-10-13',
-    dateModified: '2026-10-13',
+    dateModified: '2026-10-22',
+    // No prices in this article (owner, October 22 2026): cost is described in general terms, as in the shingle vs. tile article; the exact
+    // figure comes from the free roof evaluation. `revision` copies this text over the live copy in Supabase once (lib/postsStore.js
+    // applyFileRevisions); raise it after the next change made here.
+    revision: 1,
     excerpt:
-      'What a new roof costs in Los Angeles per square foot for shingle, tile and flat roofs, a worked example, why your roof is not your home’s square footage, and how to compare bids line by line.',
+      'What shapes the cost of a new roof in Los Angeles: how each roof type compares, how roofers measure a roof, what moves the price and how to compare bids line by line.',
     cardImage: '/images/shingle-roof-replacement-tear-off-drone-view.webp',
     intro: [
       'Roof replacement cost in Los Angeles depends mostly on three things: the size of the roof, the roof type and how hard the roof is to work on. Roofers price by the square foot of roof surface, or by the square, which is 100 square feet.',
-      'This guide gives the price ranges our Instant Quote uses for each roof type, works through an example, explains why your roof’s size is not your home’s square footage, and shows what to check when you compare bids.',
+      'This guide explains how those pieces come together, why your roof’s size is not your home’s square footage, what moves the price up or down and what to check when you compare bids. For the figure on your own roof, a roofer gives you a written scope and price.',
     ],
     sections: [
       {
-        heading: 'Roof Replacement Cost per Square Foot in Los Angeles',
+        heading: 'How Roof Type Shapes the Cost',
         blocks: [
-          'These are the ranges our Instant Quote uses, per square foot of roof surface, for a full [roof replacement](/roof-replacement/) with tear-off. Where your roof lands depends on its size, pitch, height, access and details.',
+          'Every roof type is priced by the square foot of roof surface for a full [roof replacement](/roof-replacement/) with tear-off, but the material and the labor differ a lot from one roof to the next.',
           {
-            table: {
-              head: ['Roof type', 'Per square foot of roof', 'Per square (100 sq ft)'],
-              rows: [
-                ['Asphalt shingle', '$6.50 to $8.00', '$650 to $800'],
-                ['Tile (new tile roof)', '$12 to $16', '$1,200 to $1,600'],
-                ['Tile lift and relay (your tiles reused)', '$8 to $11', '$800 to $1,100'],
-                ['Flat roof', '$7.50 to $10', '$750 to $1,000'],
-              ],
-            },
+            list: [
+              '**Asphalt shingle** is usually the least costly roof to replace: the material is light and goes on quickly.',
+              '**A new tile roof** costs the most: the tiles cost more, they are heavy, and laying them takes longer.',
+              '**A tile lift and relay** reuses your tiles and replaces the underlayment beneath them, so you pay for labor and underlayment rather than new tile. When the tiles are still sound, it costs less than a new tile roof.',
+              '**A flat roof** usually falls between shingles and a new tile roof, depending on the system and how much drainage work the roof needs.',
+            ],
           },
-          { note: '**Minimum job:** $3,500. Small jobs still need setup, permits and cleanup.' },
-        ],
-      },
-      {
-        heading: 'Example: What a 2,000 Square Foot Roof Costs',
-        blocks: [
-          'Take a roof that measures 2,000 square feet. Roofers order about 10% extra material for cuts, starter rows, hips and ridges, so the job is priced on about 2,200 square feet.',
-          {
-            table: {
-              head: ['Roof type', '2,200 sq ft at the range above'],
-              rows: [
-                ['Asphalt shingle', 'about $14,300 to $17,600'],
-                ['Tile (new tile roof)', 'about $26,400 to $35,200'],
-                ['Tile lift and relay', 'about $17,600 to $24,200'],
-                ['Flat roof', 'about $16,500 to $22,000'],
-              ],
-            },
-          },
-          'A steep roof or a two- or three-story home adds to these numbers, because the work takes longer and needs more safety equipment. The Instant Quote asks for both and adjusts the range.',
+          { note: '**Small jobs** still need setup, permits and cleanup, so a small roof costs more per square foot than a large one.' },
         ],
       },
       {
@@ -636,6 +625,7 @@ export const BLOG_POSTS = [
               '**Slope adds area.** A 4/12 roof has about 5% more surface than the ground it covers, a 6/12 roof about 12% more and an 8/12 roof about 20% more.',
             ],
           },
+          'Roofers also order about 10% extra material for cuts, starter rows, hips and ridges, so a 2,000 square foot roof is priced on about 2,200 square feet. A steep roof or a two- or three-story home takes longer and needs more safety equipment, which adds to the cost.',
           'That is why we measure the roof itself, from satellite imagery for a quick range and on the roof before a final price.',
         ],
       },
@@ -683,23 +673,21 @@ export const BLOG_POSTS = [
       },
       {
         heading: 'Paying for a New Roof',
-        blocks: [
-          'Most homeowners spread the cost of a new roof over time. See [roof financing](/roof-financing/) for monthly payment options; the Instant Quote shows an example monthly payment next to each price range.',
-        ],
+        blocks: ['Most homeowners spread the cost of a new roof over time. See [roof financing](/roof-financing/) for monthly payment options.'],
       },
     ],
     faqs: [
       {
         q: 'How much does a new roof cost in Los Angeles?',
-        a: 'Per square foot of roof, our Instant Quote ranges are $6.50 to $8.00 for asphalt shingles, $12 to $16 for a new tile roof, $8 to $11 for a tile lift and relay and $7.50 to $10 for a flat roof, with a $3,500 minimum. A 2,000 square foot shingle roof works out to about $14,300 to $17,600 before adjustments for pitch and height.',
+        a: 'It depends on the size of the roof, the roof type, the pitch and height of the home and what is found under the old roof. Asphalt shingles are usually the least costly to replace and a new tile roof the most. The free roof evaluation gives you the exact figure: a written scope and price before any work starts.',
       },
       {
-        q: 'How much is a roof per square?',
-        a: 'A square is 100 square feet of roof. At our ranges that is about $650 to $800 a square for shingles, $1,200 to $1,600 for a new tile roof, $800 to $1,100 for a tile lift and relay and $750 to $1,000 for a flat roof.',
+        q: 'What is a roofing square?',
+        a: 'A square is 100 square feet of roof surface, the unit roofers use to price and order material. A 2,000 square foot roof is 20 squares, plus about 10% extra material for cuts, hips and ridges.',
       },
       {
         q: 'Is a tile lift and relay cheaper than a new tile roof?',
-        a: 'Usually, yes. A [lift and relay](/residential-roofing/tile-roofing/lift-and-relay/) reuses your tiles and replaces the underlayment beneath them, so you pay for labor and underlayment rather than new tile: $8 to $11 per square foot at our ranges, against $12 to $16 for a new tile roof.',
+        a: 'Usually, yes. A [lift and relay](/residential-roofing/tile-roofing/lift-and-relay/) reuses your tiles and replaces the underlayment beneath them, so you pay for labor and underlayment rather than new tile.',
       },
       {
         q: 'Why is my roof size different from my home’s square footage?',

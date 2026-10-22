@@ -41,3 +41,7 @@
   background-size:56px 32px;
   -webkit-mask-image:radial-gradient(70% 80% at 50% 50%,transparent 22%,#000 78%);mask-image:radial-gradient(70% 80% at 50% 50%,transparent 22%,#000 78%)}
 @media print{.final-burst{display:none}}
+/* Muted navy (owner, October 22 2026: "more like the primary blue, a shade lighter, not this true blue"): the brand navy lifted a step and
+   toned down, a soft top-to-bottom shade, no bright blue glow. The footer uses the same navy a step darker (Footer.css). */
+.final{background:linear-gradient(180deg,#1a3c5f 0%,#163655 55%,#132f4c 100%)}
+.final:before{background:radial-gradient(60% 55% at 50% 50%,rgba(12,32,54,.35),rgba(12,32,54,0) 72%)}

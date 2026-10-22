@@ -15,23 +15,42 @@ export const projectsRelatedTo = (href) => PROJECT_PAGES.filter((p) => p.related
 // The project pages that list `href` (a service or city page) as related, newest first, as full project objects (for the stacked project cards)
 export const projectPagesFor = (href, limit = 4) => PROJECT_PAGES.filter((p) => p.related?.includes(href)).slice(0, limit);
 
-// The projects a service or hub page shows (owner, October 15 2026, after maben.com.au: the work itself, in the middle of every page).
-// Newest first within each step, up to `limit`: (1) projects that list this page in `related` (`exact`), (2) for a hub, projects related to
-// a page under it, (3) projects related to a sibling page in the same section (a shingle repair page shows shingle projects; never across
-// /residential-roofing/ and /commercial-roofing/), (4) for /roof-repair/, /roof-replacement/ and similar, projects of the same kind of work.
-const KINDS = ['repair', 'replacement', 'installation', 'inspection'];
+// The projects a service or hub page shows, matched to the page's topic (owner, October 22 2026: "the projects on those pages should match
+// the topic of the page"). A project's roof types come from its own address (tile, flat, shingle; a tile and flat job is both, tile first),
+// the page's from its section in the address (/tile-roofing/, /flat-roofing/ ...). Each project scores: listed in this page's `related` (100), its main roof is the page's
+// roof (40) or one of its roofs is (20), related to a page under this hub or in the same section (10), the same kind of work, repair,
+// replacement or installation (5). On a page about one roof type only projects with that roof are shown (none on the metal pages until a
+// metal job is published); commercial pages show only commercial projects (none yet). Pages with no roof type (inspection, maintenance
+// plans, financing, the repair and replacement hubs) show the best matches, then the newest. Highest score first, newest first within a
+// score, up to `limit`. Returns { projects, exact, roof, heading } (heading: for the section, with one underlined word).
+const KINDS = ['repair', 'replacement', 'installation'];
+const ROOF_TYPES = ['tile', 'flat', 'shingle', 'metal'];
+export const projectRoofs = (p) => [/tile/.test(p.path) && 'tile', /flat/.test(p.path) && 'flat', /shingle|full-roof/.test(p.path) && 'shingle'].filter(Boolean);
+
 export function projectsShownOn(href, limit = 4) {
+  const roof = ROOF_TYPES.find((r) => href.includes(`/${r}-roofing/`)); // the roof a page is about, from its section (/tile-roofing/ ...)
   const parent = href.replace(/[^/]+\/$/, '');
   const kind = KINDS.find((k) => href.includes(k));
-  const steps = [
-    (r) => r === href,
-    (r) => r.startsWith(href),
-    (r) => parent.split('/').length > 3 && r.startsWith(parent), // a section like /residential-roofing/shingle-roofing/, not the site root or a whole category
-    (r) => href.startsWith('/roof-') && kind && r.includes(kind),
-  ];
-  const picked = [];
-  for (const test of steps) {
-    for (const p of PROJECT_PAGES) if (picked.length < limit && !picked.includes(p) && p.related?.some(test)) picked.push(p);
-  }
-  return { projects: picked, exact: picked.length > 0 && picked[0].related.includes(href) };
+  const commercial = href.startsWith('/commercial-roofing/');
+  const scored = PROJECT_PAGES.map((p, order) => {
+    const related = p.related || [];
+    const roofs = projectRoofs(p);
+    let score = related.includes(href) ? 100 : 0;
+    if (roof && roofs[0] === roof) score += 40;
+    else if (roof && roofs.includes(roof)) score += 20;
+    if (related.some((r) => r !== href && (r.startsWith(href) || (parent.split('/').length > 3 && r.startsWith(parent))))) score += 10;
+    if (kind && (p.path.includes(kind) || related.some((r) => r.includes(kind)))) score += 5;
+    const fits = commercial ? related.some((r) => r.startsWith('/commercial-roofing/')) : !roof || score >= 20;
+    return { p, score, order, fits };
+  });
+  const ranked = scored.filter((x) => x.fits).sort((a, b) => b.score - a.score || a.order - b.order).map((x) => x.p);
+  // A page about no one roof shows a mix (the best tile, flat and shingle job first), so it doesn't read as shingle-only
+  // (projects listed in this page's `related` always come first, in their own order)
+  const own = ranked.filter((p) => p.related?.includes(href));
+  const rest = ranked.filter((p) => !own.includes(p));
+  const mixed = roof ? ranked : [...own, ...new Set([...rest.filter((p, i) => rest.findIndex((q) => projectRoofs(q)[0] === projectRoofs(p)[0]) === i), ...rest])];
+  const projects = mixed.slice(0, limit);
+  const exact = projects.length > 0 && projects[0].related?.includes(href);
+  const heading = exact ? 'This work, on real __roofs__' : roof ? `Recent ${roof} roof __projects__` : 'Recent roofing __projects__';
+  return { projects, exact, roof, heading };
 }

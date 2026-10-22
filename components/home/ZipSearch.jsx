@@ -33,7 +33,7 @@ export default function ZipSearch({ target = 'near-you', tone = 'light', label =
         <input
           id={id}
           inputMode="numeric"
-          autoComplete="postal-code"
+          autoComplete="off" // not "postal-code": that makes LastPass put its icon inside the field before React loads (a hydration mismatch)
           maxLength={5}
           placeholder={label}
           value={zip}

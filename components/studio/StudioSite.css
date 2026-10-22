@@ -443,3 +443,6 @@ body.studio-site .hero.hero.hero:not(:has(.hero-has-aside)) > .hero-inner{paddin
 /* The blog index's two-column hero: no longer needs the tall top padding or height now that the header sits above it */
 body.studio-site .hero.hero:has(.hero-has-aside){min-height:0}
 body.studio-site .hero.hero:has(.hero-has-aside) > .hero-inner.hero-has-aside{padding-top:clamp(40px,6vw,72px);padding-bottom:clamp(40px,6vw,72px)}
+
+/* Every heading in medium weight (owner, October 22 2026), whatever the component set; the serif product names inside keep their own style */
+body.studio-site :is(h1,h2,h3,h4,h5,h6){font-weight:500!important}

@@ -8,7 +8,6 @@ import { heroUnderline } from '@/data/heroOutcomes';
 import { HERO_ANNOTATIONS, PHONE, TEL } from '@/data/site';
 import Breadcrumbs from './Breadcrumbs';
 import HeroParallax from './HeroParallax';
-import ProofBar from './ProofBar';
 import FlowLines from '@/components/home/FlowLines';
 import './Hero.css';
 
@@ -131,7 +130,7 @@ export default function Hero({ decor = true,
           {aside}
         </div>
       </section>
-      {stats && <ProofBar strip />}
+      {/* `stats` no longer adds the proof strip here: it is the marquee above the menu bar on every page (Header.jsx, October 22 2026) */}
       {/* Hairline curves behind the first section under every hero (decorations after getaethr.ai, October 21 2026); decor={false} leaves them out */}
       {decor && (
         <div className="hd-flow-anchor" aria-hidden="true">

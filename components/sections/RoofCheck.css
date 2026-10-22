@@ -45,4 +45,13 @@
 .check-steps a{color:var(--gold-ink);font-weight:600;text-decoration:underline;text-underline-offset:3px}
 .form-card textarea{min-height:96px}
 .field label small{font-weight:400;color:var(--muted)}
-#estimate,#roof-check{scroll-margin-top:84px}
+#estimate,#roof-check{scroll-margin-top:calc(var(--hd-h,100px) + 16px)} /* clears the header and the proof strip above it */
+
+/* The offer card beside the form ("Free roof evaluation", owner, October 22 2026): no navy background, the copy sits right on the section in
+   the theme's ink and gold-ink, so dark mode follows */
+body.studio-site .check .check-card{background:transparent;color:var(--ink);box-shadow:none;border:0;padding-left:0;padding-right:0}
+body.studio-site .check .check-card :is(h2,strong){color:var(--ink)}
+body.studio-site .check .check-card p{color:var(--muted)}
+body.studio-site .check .check-card .check-points div{color:var(--ink)}
+body.studio-site .check .check-card :is(.eyebrow,.price,.check-points b){color:var(--gold-ink)}
+@media (min-width:901px){.check-card{top:calc(var(--hd-h,100px) + 16px)}}

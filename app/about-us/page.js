@@ -1,6 +1,7 @@
 import Faq from '@/components/sections/Faq';
-import ReviewMarquee from '@/components/sections/ReviewMarquee';
-import FinalCta from '@/components/sections/FinalCta';
+import AreaLinks from '@/components/home/AreaLinks';
+import ReviewTrio from '@/components/home/ReviewTrio';
+import { AREA_LINKS } from '@/data/nearYou';
 import Hero from '@/components/sections/Hero';
 import { AboutCards, AboutIntro, AboutMission, AboutNumbers, AboutOffices, AboutProcess, AboutRecognition, AboutStory, AboutTeam } from '@/components/about/AboutSections';
 import RoofCheck from '@/components/sections/RoofCheck';
@@ -33,18 +34,15 @@ export default function AboutPage() {
           (AboutServices) was taken off: the intro now says it, with the same links. */}
       <AboutProcess process={page.process} />
       <AboutTeam team={page.team} />
-      {/* Google reviews, a few sections below the hero (owner, October 14 2026) */}
-      <ReviewMarquee />
+      {/* Three reviews side by side, as on the other sub pages (owner, October 22 2026) */}
+      <ReviewTrio path="/about-us/" />
       <AboutOffices />
       <AboutMission mission={page.mission} />
       <AboutRecognition giving={page.story.paragraphs[1]} />
       <AboutCards careers={page.careers} partners={page.partners} />
-      <Faq heading="About QRS: FAQs" sub="Straight answers about who we are and how we work." faqs={page.faqs} cta={false} />
+      <Faq heading="About QRS: FAQs" sub="Straight answers about who we are and how we work." faqs={page.faqs} cta={false} limit={4} />
       <RoofCheck />
-      <FinalCta
-        heading="Work With a Roofer-Led Team"
-        text="QRS is family-owned and local. Tell us about your roof and a roofer, not a salesperson, gives you a clear next step with a written scope and price."
-      />
+      <AreaLinks {...AREA_LINKS} />
     </main>
   );
 }

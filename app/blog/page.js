@@ -13,6 +13,8 @@ import { pageJsonLd } from '@/lib/structuredData';
 import RoofCheck from '@/components/sections/RoofCheck';
 import '@/components/home/HomeClean.css';
 import '@/components/home/CleanPages.css';
+import AreaLinks from '@/components/home/AreaLinks';
+import { AREA_LINKS } from '@/data/nearYou';
 
 // Kept out of search results until there's a published post
 export async function generateMetadata() {
@@ -62,6 +64,7 @@ export default async function BlogPage() {
       <BlogBrowser posts={cards} heading={published.length ? 'Browse the roofing blog' : 'Coming Soon'} />
       <IndexNote note={page.note} />
       <RoofCheck tone="white" />
+      <AreaLinks {...AREA_LINKS} />
     </main>
   );
 }

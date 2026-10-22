@@ -156,7 +156,7 @@ export default function ProjectMap({ projects, heading, sub }) {
               </div>
               <form className="loc-form" noValidate onSubmit={onSearch}>
                 <label htmlFor="projZip" className="sr-only">ZIP code</label>
-                <input id="projZip" inputMode="numeric" maxLength={5} autoComplete="postal-code" placeholder="Enter Zip Code" value={zip} onChange={(e) => setZip(e.target.value)} />
+                <input id="projZip" inputMode="numeric" maxLength={5} autoComplete="off" data-lpignore="true" data-1p-ignore data-form-type="other" placeholder="Enter Zip Code" value={zip} onChange={(e) => setZip(e.target.value)} />
                 <button type="submit" aria-label="Search ZIP code">
                   <ArrowRight />
                 </button>

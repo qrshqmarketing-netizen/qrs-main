@@ -12,12 +12,12 @@ const workOf = (title) => title.slice(0, title.lastIndexOf(' in ')) || title;
 const placeOf = (place) => place.replace(/,?\s*CA\b/, '');
 
 // decor: the hairline curves behind the heading (home page only)
-export default function HomeWork({ heading, text, projects, all, decor = false }) {
+export default function HomeWork({ heading, headingTag, text, projects, all, decor = false }) {
   return (
     <section className="hc-section hc-work" aria-labelledby="hc-work-title">
       {decor && <FlowLines />}
       <div className="hc-wrap">
-        <HomeHead id="hc-work-title" heading={heading} text={text} />
+        <HomeHead id="hc-work-title" heading={heading} text={text} tag={headingTag} />
         <ul className="hc-cards">
           {projects.map((p) => (
             <li className="hc-card" key={p.path}>

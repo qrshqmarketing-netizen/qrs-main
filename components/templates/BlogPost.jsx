@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Breadcrumbs from '@/components/sections/Breadcrumbs';
-import FinalCta from '@/components/sections/FinalCta';
+import AreaLinks from '@/components/home/AreaLinks';
+import { AREA_LINKS } from '@/data/nearYou';
 import RelatedLinks from '@/components/sections/RelatedLinks';
 import RoofCheck from '@/components/sections/RoofCheck';
 import { postDate } from '@/components/sections/PostCards';
@@ -198,10 +199,8 @@ export default function BlogPost({ post }) {
       </article>
       <RelatedLinks heading="Related services" links={relatedLinks(post.related)} />
       <RoofCheck />
-      <FinalCta
-        heading="Have a Question About Your Roof?"
-        text="An article only goes so far. A roofer, not a salesperson, can look at your roof and give you a clear next step with a written scope and price."
-      />
+      {/* The request form is the one ask; then the area and service links (owner, October 22 2026: as on the other pages) */}
+      <AreaLinks {...AREA_LINKS} />
     </main>
   );
 }

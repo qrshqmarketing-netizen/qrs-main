@@ -1,6 +1,7 @@
 import Faq from '@/components/sections/Faq';
-import ReviewMarquee from '@/components/sections/ReviewMarquee';
-import FinalCta from '@/components/sections/FinalCta';
+import AreaLinks from '@/components/home/AreaLinks';
+import ReviewTrio from '@/components/home/ReviewTrio';
+import { AREA_LINKS } from '@/data/nearYou';
 import Hero from '@/components/sections/Hero';
 import Offices from '@/components/sections/Offices';
 import RoofCheck from '@/components/sections/RoofCheck';
@@ -59,15 +60,12 @@ export default function ContactPage() {
       />
       <Offices sub="To contact Quality Roofing Specialists, visit or call any of our offices. One phone number reaches our whole team." note={`Hours: ${HOURS_LINE}`} photos={false} />
       <ValueGrid heading={page.ways.heading} items={page.ways.items} />
-      {/* Google reviews, a few sections below the hero (owner, October 14 2026) */}
-      <ReviewMarquee />
+      {/* Three reviews side by side, as on the other sub pages (owner, October 22 2026) */}
+      <ReviewTrio path="/contact-us/" />
       <RoofCheck />
       <ServiceArea heading="Check Your Service Area" sub="Enter your ZIP code to confirm we cover your address, or pick your city from the list." />
-      <Faq heading="Contact FAQs" sub="Straight answers about reaching our team." faqs={FAQS} cta={false} />
-      <FinalCta
-        heading="Talk to a Roofer, Not a Call Center"
-        text="Call the office or send the form, and a roofer gets back to you with a clear next step, a written scope and a price."
-      />
+      <Faq heading="Contact FAQs" sub="Straight answers about reaching our team." faqs={FAQS} cta={false} limit={4} />
+      <AreaLinks {...AREA_LINKS} />
     </main>
   );
 }

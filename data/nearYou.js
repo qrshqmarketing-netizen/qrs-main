@@ -72,7 +72,7 @@ export const AREA_LINKS = {
 const HOME_CHECKS = ['Free roof evaluation', 'Written scope and price before any work', '10-year workmanship warranty, call for details', 'Licensed, bonded & insured', 'Permits pulled', 'Clean site and a nail sweep every day'];
 const COMMERCIAL_CHECKS = ['Roofer-led roof survey', 'Written scope and price before any work', 'Permits pulled', 'Licensed, bonded & insured', 'Clean site and a nail sweep every day', 'One phone number for every office'];
 export const checksFor = (path = '/') =>
-  path.startsWith('/commercial-roofing/')
+  path.startsWith('/commercial-roofing/') || path.startsWith('/contractors/')
     ? { heading: 'What you can __count__ on, on every job', items: COMMERCIAL_CHECKS, image: { src: '/images/recent-work-commercial-flat-roof-drone-view.webp', position: 'center 40%' } }
     : { heading: 'What you can __count__ on, on every job', items: HOME_CHECKS, image: { src: '/images/home-hero-shingle-neighborhood-drone-view.webp', position: 'center 55%' } };
 

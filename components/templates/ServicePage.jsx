@@ -156,7 +156,7 @@ export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], 
       )}
       {/* The story in order (owner, October 15 2026, after maben.com.au): what we do, how we do it, then the work itself on real roofs, what people
           say, why QRS, and the questions. The projects used to sit at the bottom, under the FAQ. */}
-      {work.projects.length > 0 && <HomeWork heading={work.exact ? 'This work, on real __roofs__' : 'Recent roofing __projects__'} projects={work.projects.slice(0, 3)} all={{ label: 'View all projects', href: '/projects/' }} />}
+      {work.projects.length > 0 && <HomeWork heading={work.heading} projects={work.projects.slice(0, 3)} all={{ label: 'View all projects', href: '/projects/' }} />}
       {/* After publicstorage.com (owner, October 21 2026: less on each page): three reviews side by side instead of the review wall, and the
           checklist photo band instead of "Why choose QRS" on the pages without a story */}
       {page.showReviews !== false && <ReviewTrio path={crumbs.at(-1).href} />}

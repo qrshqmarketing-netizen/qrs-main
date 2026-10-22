@@ -39,7 +39,7 @@ export default async function HubPage({ hub, crumbs, eyebrow, image, imageAlt, c
     faqs: hub.faqs,
     image,
   });
-  const hubWork = projectsShownOn(crumbs.at(-1).href).projects;
+  const hubWork = projectsShownOn(crumbs.at(-1).href);
   return (
     <main id="top" className="clean-page">
       <JsonLd data={schema} />
@@ -61,7 +61,7 @@ export default async function HubPage({ hub, crumbs, eyebrow, image, imageAlt, c
       {/* The blog's roof illustration where it explains this hub (data/roofDiagrams.js) */}
       <RoofDiagram diagram={diagramFor(crumbs.at(-1).href)} />
       {/* The work itself, right after the services (owner, October 15 2026, after maben.com.au): projects on this hub's pages, newest first */}
-      {hubWork.length > 0 && <HomeWork heading="Recent roofing __projects__" projects={hubWork.slice(0, 3)} all={{ label: 'View all projects', href: '/projects/' }} />}
+      {hubWork.projects.length > 0 && <HomeWork heading={hubWork.heading} projects={hubWork.projects.slice(0, 3)} all={{ label: 'View all projects', href: '/projects/' }} />}
       {/* After publicstorage.com (owner, October 21 2026: less on each page): three reviews side by side, and the checklist photo band in place
           of the highlights grid and "Roofing, the QRS Way" */}
       <ReviewTrio path={crumbs.at(-1).href} />

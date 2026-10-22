@@ -91,3 +91,14 @@ body.studio-site main.clean-page.projects-hub .projects-hub-copy h1:not(.x):not(
 main.clean-page.projects-hub .projects-hub-intro{padding-bottom:0}
 main.clean-page.projects-hub > .proj-area{padding-top:clamp(28px,4vw,48px)}
 main.clean-page .post-cards p.pc-status,main.clean-page .offices p.office-note{text-align:center;justify-content:center}
+
+/* Pages converted on October 22 2026 (owner: every page in the clean format) */
+/* Credentials: the license block stays text beside the facts card, so its heading sits left with its text; the other heads and their lead lines are centered */
+body.studio-site main.clean-page > section.cr-section:not(.a):not(.b):not(.c):not(.d):not(.e) .cr-license h2:not(.x):not(.y):not(.z){text-align:left;margin-left:0} /* beats the centered sub-page heading rule above */
+main.clean-page .cr-section:not(:has(.cr-license)) .cr-lead{text-align:center;margin-left:auto;margin-right:auto;max-width:640px}
+main.clean-page .cr-section{background:transparent}
+main.clean-page :is(.cr-section,.gl) > .container{width:min(var(--hc-w),calc(100% - 40px))}
+/* Roofing FAQ and glossary: the topic chips centered under the lead line, in the clean column */
+main.clean-page .gl-jump{justify-content:center}
+/* A project page's reviews leave room before the "Next project" card */
+.project-detail .rt{padding-bottom:clamp(48px,6vw,96px)}

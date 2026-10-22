@@ -186,4 +186,20 @@ body:has(main :is(.hero,.st-hero,.promo-home,.pd-hero)) .site-header:not([data-s
 .site-header .hd-bar:before{background:var(--paper);-webkit-backdrop-filter:none;backdrop-filter:none;box-shadow:none}
 .site-header{--hd-ink:var(--navy);--hd-line:var(--line)}
 :root[data-theme="dark"] .site-header{--hd-ink:#e8eef5}
-main > :is(.hero,.st-hero,.promo-home,.pd-hero,.lp-hero):first-of-type{margin-top:var(--hd-h)}
+main > :is(.hero,.st-hero,.promo-home,.pd-hero,.lp-hero,.hh):first-of-type{margin-top:var(--hd-h)}
+
+/* The proof marquee above the menu bar (owner, October 22 2026; Header.jsx .hd-marquee): a slim navy strip, smaller type than the old strip under
+   the hero. --hd-top is its height; on :root --hd-h is the whole header (strip + bar), so heroes and scroll offsets clear both, while inside
+   the header --hd-h stays the bar's own height. /start/ and the ad landing pages have no strip. */
+:root{--hd-top:30px;--hd-bar:60px;--hd-h:calc(var(--hd-top) + var(--hd-bar))}
+@media (min-width:901px){:root{--hd-top:32px;--hd-bar:68px;--hd-h:calc(var(--hd-top) + var(--hd-bar))}}
+:root:has(.site-header:is(.is-start,.is-lp)){--hd-top:0px}
+.site-header{--hd-h:var(--hd-bar)}
+.hd-marquee{position:relative;z-index:3;height:var(--hd-top);overflow:hidden;background:#03192e;border-bottom:1px solid rgba(212,181,114,.35)}
+.hd-marquee .pm-item{padding:0;height:var(--hd-top);align-items:center;gap:8px}
+.hd-marquee .pm-item:after{width:4px;height:4px;margin:0 18px}
+body .hd-marquee .pm h4{font:700 12px/1 var(--font-display);letter-spacing:.06em;color:#fff;text-transform:uppercase}
+body .hd-marquee .pm span{font:500 12px/1 var(--font-head);color:rgba(255,255,255,.78)}
+.hd-panel{top:calc(var(--hd-top) + var(--hd-bar))}
+@media (min-width:621px){.hd-panel{max-height:calc(100dvh - var(--hd-top) - var(--hd-bar) - 24px)}}
+@media print{.hd-marquee{display:none}}

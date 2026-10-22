@@ -1,4 +1,6 @@
 import Faq from '@/components/sections/Faq';
+import '@/components/home/HomeClean.css';
+import '@/components/home/CleanPages.css';
 import FeatureBand from '@/components/sections/FeatureBand';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
@@ -24,7 +26,7 @@ const EMAIL_LINK = `mailto:${page.email}?subject=${encodeURIComponent('Careers a
 // Careers page (content in data/pages/careers.js)
 export default function CareersPage() {
   return (
-    <main id="top">
+    <main id="top" className="clean-page">
       <JsonLd data={schema} />
       <Hero
         crumbs={CRUMBS}
@@ -42,10 +44,10 @@ export default function CareersPage() {
           { label: `Call ${PHONE}`, href: TEL, style: 'line' },
         ]}
       />
-      <ValueGrid heading={page.values.heading} items={page.values.items} tone="wash" pattern />
+      <ValueGrid heading={page.values.heading} intro={page.values.intro} items={page.values.items} tone="wash" pattern />
       <FeatureBand {...page.coreValues} tone="light" />
       <ValueGrid id="roles" heading={page.roles.heading} intro={page.roles.intro} items={page.roles.items} />
-      <Faq heading="Careers FAQs" sub="Straight answers about working at QRS." faqs={page.faqs} cta={false} />
+      <Faq heading="Careers FAQs" sub="Straight answers about working at QRS." faqs={page.faqs} cta={false} limit={4} />
       <ProcessSteps
         heading={page.apply.heading}
         subheading={page.apply.subheading}

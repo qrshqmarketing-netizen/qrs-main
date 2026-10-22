@@ -1,6 +1,10 @@
 import Credentials from '@/components/sections/Credentials';
 import Faq from '@/components/sections/Faq';
-import FinalCta from '@/components/sections/FinalCta';
+import AreaLinks from '@/components/home/AreaLinks';
+import ReviewTrio from '@/components/home/ReviewTrio';
+import '@/components/home/HomeClean.css';
+import '@/components/home/CleanPages.css';
+import { AREA_LINKS } from '@/data/nearYou';
 import Hero from '@/components/sections/Hero';
 import RoofCheck from '@/components/sections/RoofCheck';
 import JsonLd from '@/components/ui/JsonLd';
@@ -28,7 +32,7 @@ const schema = pageJsonLd({
 
 export default function CredentialsPage() {
   return (
-    <main id="top">
+    <main id="top" className="clean-page">
       <JsonLd data={schema} />
       <Hero
         crumbs={CRUMBS}
@@ -41,9 +45,11 @@ export default function CredentialsPage() {
         stats
       />
       <Credentials page={page} />
-      <Faq heading="Credentials FAQs" sub="Straight answers about our license, insurance and certifications." faqs={page.faqs} cta={false} />
+      {/* Clean format like the other sub pages (owner, October 22 2026): three reviews, four FAQs, the request form and the area links */}
+      <ReviewTrio path={CREDENTIALS_LINK.href} />
+      <Faq heading="Credentials FAQs" sub="Straight answers about our license, insurance and certifications." faqs={page.faqs} cta={false} limit={4} />
       <RoofCheck tone="white" />
-      <FinalCta heading="Work With a Licensed Roofer" text="Start with a free roof evaluation. A roofer looks at your roof and gives you a written scope and price before any work begins." />
+      <AreaLinks {...AREA_LINKS} />
     </main>
   );
 }

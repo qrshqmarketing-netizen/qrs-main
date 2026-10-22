@@ -1,14 +1,14 @@
 import Faq from '@/components/sections/Faq';
 import FinalCta from '@/components/sections/FinalCta';
 import PartnerLogos from '@/components/sections/PartnerLogos';
-import ProofBar from '@/components/sections/ProofBar';
 import PromoSection from '@/components/sections/PromoSection';
 import ReviewMarquee from '@/components/sections/ReviewMarquee';
 import RoofCheck from '@/components/sections/RoofCheck';
 import StudioHero from '@/components/studio/StudioHero';
 import PromoCard from '@/components/widgets/PromoCard';
+import HolidayHero from '@/components/home/HolidayHero';
 import { SEASON_PROMO as promo } from '@/data/promo';
-import StudioHowWeWork from '@/components/studio/StudioHowWeWork';
+import HomeHowWeWork from '@/components/home/HomeHowWeWork';
 import HomeArticles from '@/components/home/HomeArticles';
 import HomeServices from '@/components/home/HomeServices';
 import HomeWork from '@/components/home/HomeWork';
@@ -57,15 +57,23 @@ const HOME_SERVICES = {
   heading: 'Roofing for every __home__ and building',
   text: 'Repairs, replacements and care for tile, shingle, flat and metal roofs, on homes, HOA communities and commercial buildings.',
 };
-// The home hero's background video (owner, October 21 2026): the drone reel from the old site (QRS jobs: an apartment building, a home, a finished
-// shingle roof, a crew re-roofing, a flat roof tear-off), 17 seconds at 1600x900, no sound, from the owner's `from-old-site.mp4`. WebM first,
-// H.264 MP4 for Safari and older browsers; its first frame (HERO_POSTER) is the first paint and the fallback (PromoCard `video` and `photo`,
-// HeroVideo.jsx). The earlier drone edit (home-hero-drone.*) and the storm video (home-hero-el-nino.*) are still in public/videos.
+// The home hero's background video (owner, October 22 2026: back to the drone edit of October 14: five shots from five jobs, 21 seconds,
+// looping without a jump). WebM first, H.264 MP4 for Safari and older browsers; its first frame (HERO_POSTER) is the first paint and the
+// fallback (PromoCard `video` and `photo`, HeroVideo.jsx). The old-site reel (home-hero-old-site.*, October 21) and the storm video
+// (home-hero-el-nino.*) are still in public/videos.
 const HERO_VIDEO = [
-  { src: '/videos/home-hero-old-site.webm', type: 'video/webm' },
-  { src: '/videos/home-hero-old-site-h264.mp4', type: 'video/mp4' },
+  { src: '/videos/home-hero-drone.webm', type: 'video/webm' },
+  { src: '/videos/home-hero-drone-h264.mp4', type: 'video/mp4' },
 ];
-const HERO_POSTER = '/images/home-hero-old-site-poster.webp';
+// The Halloween special (owner, October 22 2026): while HOME_HOLIDAY is true, the home hero is the night photo with the offer graphic centered,
+// linking down to the estimate form, in place of the video hero below. Off for now (owner, October 22 2026: back to the video hero); the
+// intro section's H1 version (HomeWork headingTag="h1") went back with it.
+const HOME_HOLIDAY = false;
+const HOLIDAY_HERO = {
+  photo: { src: '/images/home-hero-halloween-drone-night.webp', alt: 'A drone flying past the full moon over a home with a shingle roof at night, lit jack-o’-lanterns by the door', position: 'center 40%' },
+  graphic: { src: '/images/home-hero-halloween-special.webp', width: 2000, height: 1494, alt: 'Halloween special: free drone roof inspection and 0% financing (OAC). Call for details, (310) 340-1643. Request yours with the form below.' },
+};
+const HERO_POSTER = '/images/home-hero-drone-poster.webp';
 // The words over the drone video (owner, October 14 2026: no El Niño wording or effects in the home hero). The keyword line above the headline is
 // the page's H1 (HOME_H1); the button jumps to the estimate form at the bottom of the page.
 const HOME_HERO = {
@@ -93,7 +101,9 @@ export default async function HomePage() {
         {/* While SEASON_PROMO.active the hero is this full-screen card (the keyword line above the headline is the H1) over the drone video, with the
             home page's own words (HOME_HERO above) and none of the El Niño effects (rain, lightning, red dot, promo tracking); otherwise the newest
             projects' photo slider is the hero again. The button jumps to the estimate form at the bottom of this page (RoofCheck, #estimate). */}
-        {promo.active ? (
+        {HOME_HOLIDAY ? (
+          <HolidayHero {...HOLIDAY_HERO} />
+        ) : promo.active ? (
           <PromoCard
             as="section"
             variant="landing"
@@ -114,14 +124,13 @@ export default async function HomePage() {
         ) : (
           <StudioHero slides={HERO_SLIDES} />
         )}
-        <ProofBar strip />
         <QuickTiles {...QUICK} />
         <HomeWork {...HOME_WORK} projects={LATEST_PROJECTS.slice(0, 3)} decor />
         {/* Decorations after getaethr.ai (October 21 2026): "+" bands with the services as a slow word strip, and a plain band before the reviews */}
         <WordBand words={BAND_WORDS} seed={3} />
         <HomeServices tabs={HOME_SERVICE_TABS} {...HOME_SERVICES} />
         <NearYou {...NEAR_YOU} places={NEAR_PLACES} sketch={<AreaSketch />} />
-        <StudioHowWeWork />
+        <HomeHowWeWork />
         <CheckBand {...checksFor('/')} />
         <ReviewMarquee heading="What people say after the job" text={`${GOOGLE_REVIEWS.count} reviews from the people we roof for, on Google.`} />
         {!promo.active && <PromoSection />}
