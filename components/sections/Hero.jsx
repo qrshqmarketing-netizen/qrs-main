@@ -54,7 +54,6 @@ export default function Hero({ decor = true,
       Roofing built with <span>precision.</span>
     </>
   ),
-  intro,
   image,
   slides,
   mobileImage,
@@ -78,8 +77,6 @@ export default function Hero({ decor = true,
   const path = crumbs?.at(-1)?.href || '';
   const skip = /^\/(careers|blog)\//.test(path); // job and article pages: the roofing facts don't belong there
   const notes = annotations === false || skip || !actions?.length ? [] : annotations || HERO_ANNOTATIONS[/^\/(commercial-roofing|contractors)\//.test(path) ? 'commercial' : 'home'];
-  // The intro's closing "Start with / Book a free roof evaluation." is left out when the facts row already says it (the keyword stays in the first sentence)
-  const lead = notes.some((n) => /free roof evaluation/i.test(n)) ? intro?.replace(/\s*(Start with|Book) a free roof evaluation\.\s*$/, '') : intro;
   const Eyebrow = h1 === 'eyebrow' ? 'h1' : 'div';
   const Title = h1 === 'eyebrow' ? 'p' : 'h1';
   return (
@@ -102,11 +99,8 @@ export default function Hero({ decor = true,
                 </>
               )}
             </Title>
-            {lead && (
-              <p className="hero-sub">
-                <Rich text={lead} />
-              </p>
-            )}
+            {/* The intro line under the headline is no longer shown (owner, October 21 2026: no excerpt in sub-page heroes). `intro` stays in the
+                data for the AI files and the chat search; each page's keyword is in its H1 and in the opening of its first section instead. */}
             {actions?.length > 0 && (
               <div className="hero-actions">
                 {actions.map((a) =>

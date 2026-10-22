@@ -52,7 +52,7 @@ export default function LocationsPage() {
         imageAlt="Row of homes with pitched roofs along a residential street"
         imagePosition="40% center"
       />
-      <Offices sub="Our Los Angeles and Valley offices serve homes and businesses across Los Angeles County, Orange County and the Inland Empire. One number reaches both." />
+      <Offices sub="Our roofing service areas cover homes and businesses across Los Angeles County, Orange County and the Inland Empire, served from our offices. One phone number reaches every office." />
       <ServiceArea heading="Find Your Nearest QRS Service Area" sub="Enter your ZIP code to confirm we cover your address, or pick your city from the list." />
       <CityCards blurbs={BLURBS} linkRegions />
       {/* Google reviews, a few sections below the hero (owner, October 14 2026) */}

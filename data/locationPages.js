@@ -593,7 +593,7 @@ export const LOCATION_PAGES = {
     intro: {
       heading: 'Two Roofs Finished in San Pedro',
       paragraphs: [
-        'In San Pedro 90732, a homeowner first called us about a repair. After looking at the intersecting slopes and the patio cover, we recommended a [full roof replacement](/projects/full-roof-replacement-san-pedro-90732/): new architectural shingles on the main roof and garage wing, and a torch-down roof with a white reflective cap sheet over the back patio. In 90731, we put a new charcoal shingle roof on a [two-story multi-family building](/projects/shingle-roof-replacements-90731/), covering every hip, ridge and gable.',
+        'For San Pedro roofing, Quality Roofing Specialists repairs and replaces shingle and flat roofs on homes and multi-family buildings. In San Pedro 90732, a homeowner first called us about a repair. After looking at the intersecting slopes and the patio cover, we recommended a [full roof replacement](/projects/full-roof-replacement-san-pedro-90732/): new architectural shingles on the main roof and garage wing, and a torch-down roof with a white reflective cap sheet over the back patio. In 90731, we put a new charcoal shingle roof on a [two-story multi-family building](/projects/shingle-roof-replacements-90731/), covering every hip, ridge and gable.',
         'Every job starts with a roofer-led [free roof evaluation](#roof-check): photos of what we find, a plain-English explanation and a written scope and price. When a repair will do, that’s what we recommend; when the whole roof is worn, we show you why.',
       ],
     },
@@ -625,7 +625,7 @@ export const LOCATION_PAGES = {
     intro: {
       heading: 'Roofs Built for the Valley Sun',
       paragraphs: [
-        'On a [two-story apartment building in Panorama City 91402](/projects/shingle-roof-replacement-panorama-city-91402/), our crew installed a new light gray shingle roof around three pairs of AC condensers on equipment platforms and dozens of plumbing stacks and vents, giving every one its own flashing, with new box vents for the attic.',
+        'For Panorama City roofing, Quality Roofing Specialists repairs and replaces roofs on homes and apartment buildings from our Valley office in Woodland Hills. On a [two-story apartment building in Panorama City 91402](/projects/shingle-roof-replacement-panorama-city-91402/), our crew installed a new light gray shingle roof around three pairs of AC condensers on equipment platforms and dozens of plumbing stacks and vents, giving every one its own flashing, with new box vents for the attic.',
         'Our Valley office in Woodland Hills covers Panorama City. Every job starts with a roofer-led [free roof evaluation](#roof-check), and apartment owners get the same written scope through our [HOA and multi-family roofing](/residential-roofing/hoa-multi-family/) work.',
       ],
     },
@@ -657,7 +657,7 @@ export const LOCATION_PAGES = {
     intro: {
       heading: 'Big Single-Story Homes, Lots of Roof Lines',
       paragraphs: [
-        'On a [large single-story home in Granada Hills 91344](/projects/shingle-roof-replacement-granada-hills-91344/) that wraps around a garden, our roofers laid new gray shingles over hips, ridges and valleys running around the courtyard and the garage, and built the brick chimney, skylights and vents into the new roof with their own flashing.',
+        'For Granada Hills roofing, Quality Roofing Specialists repairs and replaces roofs on Valley homes from our office in Woodland Hills. On a [large single-story home in Granada Hills 91344](/projects/shingle-roof-replacement-granada-hills-91344/) that wraps around a garden, our roofers laid new gray shingles over hips, ridges and valleys running around the courtyard and the garage, and built the brick chimney, skylights and vents into the new roof with their own flashing.',
         'Our Valley office in Woodland Hills covers Granada Hills. Every job starts with a roofer-led [free roof evaluation](#roof-check): photos of what we find, a plain-English explanation and a written scope and price before any work begins.',
       ],
     },
@@ -689,7 +689,7 @@ export const LOCATION_PAGES = {
     intro: {
       heading: 'A New Roof Under the Solar Panels',
       paragraphs: [
-        'On a [home in Pico Rivera 90660](/projects/shingle-roof-replacement-solar-pico-rivera-90660/), the roof needed replacing under a solar array. The array’s position was measured and marked before anything came off, the old plank deck with gaps between the boards was covered with new OSB sheathing, and the new shingle roof went on with every mounting point flashed before the panels went back in place.',
+        'For Pico Rivera roofing, Quality Roofing Specialists repairs and replaces roofs on homes across the city. On a [home in Pico Rivera 90660](/projects/shingle-roof-replacement-solar-pico-rivera-90660/), the roof needed replacing under a solar array. The array’s position was measured and marked before anything came off, the old plank deck with gaps between the boards was covered with new OSB sheathing, and the new shingle roof went on with every mounting point flashed before the panels went back in place.',
         'Every job starts with a roofer-led [free roof evaluation](#roof-check): photos of what we find, a plain-English explanation and a written scope and price before any work begins, from our offices across Los Angeles County.',
       ],
     },
@@ -721,7 +721,7 @@ export const LOCATION_PAGES = {
     intro: {
       heading: 'Wide Roofs, Clean Lines',
       paragraphs: [
-        'On a [large single-story home in Hacienda Heights 91745](/projects/shingle-roof-replacement-hacienda-heights-91745/) with many hips and valleys, our roofers laid new light gray shingles in even courses across every slope, capped the ridges and hips in straight runs and flashed every box vent and pipe vent into the new roof.',
+        'For Hacienda Heights roofing, Quality Roofing Specialists repairs and replaces roofs on homes in the hills and along the valley floor. On a [large single-story home in Hacienda Heights 91745](/projects/shingle-roof-replacement-hacienda-heights-91745/) with many hips and valleys, our roofers laid new light gray shingles in even courses across every slope, capped the ridges and hips in straight runs and flashed every box vent and pipe vent into the new roof.',
         'Every job starts with a roofer-led [free roof evaluation](#roof-check): photos of what we find, a plain-English explanation and a written scope and price before any work begins.',
       ],
     },

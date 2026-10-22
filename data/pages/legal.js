@@ -179,7 +179,7 @@ export const ACCESSIBILITY = {
   metaDescription: 'Quality Roofing Specialists is committed to a website that works for everyone. Read our accessibility statement and how to reach us about accessibility.',
   title: 'Accessibility Statement',
   updated: UPDATED,
-  intro: 'Quality Roofing Specialists, Inc. (“QRS,” “we,” “us”) wants everyone, including people with disabilities, to be able to use qualityroofingspecialists.com.',
+  intro: 'This accessibility statement covers qualityroofingspecialists.com. Quality Roofing Specialists, Inc. (“QRS,” “we,” “us”) wants everyone, including people with disabilities, to be able to use qualityroofingspecialists.com.',
   sections: [
     {
       heading: 'Our approach',

@@ -44,6 +44,10 @@ export default function RoofingGlossaryPage() {
       />
       <section className="gl section">
         <div className="container">
+          {/* The page's opening line, moved out of the hero (October 21 2026: no excerpt in heroes); it carries the keyword in the first 100 words */}
+          <p className="gl-lead">
+            <Rich text={page.hero.intro} />
+          </p>
           <nav className="gl-jump" aria-label="Glossary sections">
             {page.groups.map((g) => (
               <a href={`#${headingId(g.title)}`} key={g.title}>

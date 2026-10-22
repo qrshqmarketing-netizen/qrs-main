@@ -27,3 +27,7 @@
 .gl-faq[open] summary:after{rotate:45deg}
 .gl-answer{max-width:72ch;padding:0 0 22px;font-size:16.5px;line-height:1.7;color:var(--ink)}
 .gl-group-more{display:inline-flex;margin:16px 0 0}
+
+/* The opening line above the topic links (the old hero intro) */
+.gl-lead{max-width:760px;margin:0 auto 28px;text-align:center;font-size:clamp(16.5px,1.3vw,18px);line-height:1.7;color:var(--muted)}
+.gl-lead a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:3px}

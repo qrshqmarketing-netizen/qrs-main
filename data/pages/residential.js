@@ -15,7 +15,7 @@ export const RESIDENTIAL_PAGE = {
   overview: {
     heading: 'One Team for Every Roof on Your Home',
     paragraphs: [
-      'Many Southern California homes have more than one kind of roof: a tile main roof with a flat section behind the parapet, a shingle house with a low-slope patio cover, a garage or ADU with a system of its own. Our crews work on all of them, so one roofer-led assessment covers the whole house and one written scope explains what each part needs.',
+      'Quality Roofing Specialists provides residential roofing for homes across Los Angeles and Orange County: repair, replacement and ongoing care for shingle, tile and flat roofs. Many Southern California homes have more than one kind of roof: a tile main roof with a flat section behind the parapet, a shingle house with a low-slope patio cover, a garage or ADU with a system of its own. Our crews work on all of them, so one roofer-led assessment covers the whole house and one written scope explains what each part needs.',
       'Start with your roof type below, or jump straight to the service you’re after. Not sure where to begin? A [free roof evaluation](#roof-check) gives you photos of your roof’s condition and a clear next step: repair, monitor, maintain or replace.',
     ],
   },

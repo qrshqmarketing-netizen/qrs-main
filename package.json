@@ -13,7 +13,8 @@
     "functions:sync": "node --no-warnings --import ./scripts/alias.mjs scripts/sync-functions-data.mjs",
     "assistant:sync": "node --no-warnings --import ./scripts/alias.mjs scripts/sync-assistant.mjs",
     "callrail:setup": "node --no-warnings --import ./scripts/alias.mjs scripts/callrail-setup.mjs",
-    "functions:test": "node --no-warnings --import ./scripts/alias.mjs scripts/test-functions.mjs"
+    "functions:test": "node --no-warnings --import ./scripts/alias.mjs scripts/test-functions.mjs",
+    "seo:keywords": "node --no-warnings --import ./scripts/alias.mjs scripts/keyword-audit.mjs"
   },
   "dependencies": {
     "gsap": "^3.15.0",

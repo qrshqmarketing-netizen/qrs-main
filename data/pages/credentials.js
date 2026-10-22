@@ -21,7 +21,7 @@ export const CREDENTIALS_PAGE = {
   },
   license: {
     heading: 'Licensed, bonded and __insured__',
-    text: 'A California roofing contractor has to hold a license from the Contractors State License Board. Ours is current, and you can check it yourself on the board’s website.',
+    text: 'Our roofing contractor credentials start with the license. A California roofing contractor has to hold a license from the Contractors State License Board. Ours is current, and you can check it yourself on the board’s website.',
     facts: [
       { label: 'CSLB license', value: `#${BUSINESS.license}` },
       { label: 'Licensed since', value: formatDate(BUSINESS.licenseSince) },

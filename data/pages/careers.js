@@ -20,7 +20,7 @@ export const CAREERS_PAGE = {
   values: {
     heading: 'What It’s Like to Work at QRS',
     items: [
-      { title: 'Detail-first standards', text: 'Clean lines, proper details and tidy job sites. We’d rather do it right than do it twice.' },
+      { title: 'Detail-first standards', text: 'Quality Roofing Specialists hires for roofing jobs across Los Angeles and Orange County: roofers and installers, crew leads, estimators, project managers and office team members. Clean lines, proper details and tidy job sites. We’d rather do it right than do it twice.' },
       { title: 'Roofers lead the work', text: 'Roofers inspect, scope and explain the work, so roofing skill sits at the center of every job.' },
       { title: 'Clear communication', text: 'Written scopes, photos and plain English, with homeowners and within the crew.' },
       { title: 'Local projects', text: 'Work across Los Angeles and Orange County, from tile lift & relay to full roof replacements.' },

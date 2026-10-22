@@ -59,7 +59,7 @@ export default async function BlogPage() {
         breath={false}
         {...(featured && { aside: <HeroLatestPost post={featured} /> })}
       />
-      <BlogBrowser posts={cards} heading={published.length ? 'Browse Articles' : 'Coming Soon'} />
+      <BlogBrowser posts={cards} heading={published.length ? 'Browse the roofing blog' : 'Coming Soon'} />
       <IndexNote note={page.note} />
       <RoofCheck tone="white" />
     </main>

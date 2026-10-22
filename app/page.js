@@ -70,7 +70,7 @@ const HERO_POSTER = '/images/home-hero-old-site-poster.webp';
 // the page's H1 (HOME_H1); the button jumps to the estimate form at the bottom of the page.
 const HOME_HERO = {
   heading: 'Roofs built right, from the __deck__ up.',
-  text: 'Roofer-led inspections, a written scope and price before any work, and careful roofers on every tile, shingle and flat roof across Los Angeles and Orange County.',
+  text: 'A family-owned roofing contractor: roofer-led inspections, a written scope and price before any work, and careful roofers on every tile, shingle and flat roof across Los Angeles and Orange County.', // carries the keyword ("roofing contractor") in the first 100 words
   cta: 'Book a Free Roof Evaluation',
   points: HERO_ANNOTATIONS.home.slice(0, 3),
   // The small line in the top-left corner (layout after exemplarfromsweden.com, owner, October 19 2026: a year at the top left)

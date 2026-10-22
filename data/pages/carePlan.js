@@ -22,7 +22,7 @@ export const CARE_PLAN = {
     items: [
       {
         title: 'The sun, not the storm',
-        text: 'Los Angeles gets twelve inches of rain a year — and three hundred days of sun. Your roof heats and cools every day of the year. Sealant dries and cracks; shingles go brittle and shed granules. Nothing about that waits for rain — by the time water finds the gap, the damage is already years old.',
+        text: 'Roof maintenance plans from QRS schedule one or two roofer visits a year, timed to the rains, so small wear is caught before it turns into a surprise leak. Los Angeles gets twelve inches of rain a year — and three hundred days of sun. Your roof heats and cools every day of the year. Sealant dries and cracks; shingles go brittle and shed granules. Nothing about that waits for rain — by the time water finds the gap, the damage is already years old.',
       },
       {
         title: 'Tile lasts. The felt underneath doesn’t.',

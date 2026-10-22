@@ -41,7 +41,7 @@ export default function ProjectsPage() {
           </div>
         </div>
       </section>
-      <ProjectMap projects={PROJECT_PAGES} />
+      <ProjectMap projects={PROJECT_PAGES} heading="Find roofing projects near you" />
       {/* Every project as a card under the map (the clean format, October 21 2026) */}
       <HomeWork heading="Every project, __newest__ first" projects={PROJECT_PAGES} />
       <RoofCheck tone="white" />

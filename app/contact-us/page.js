@@ -57,7 +57,7 @@ export default function ContactPage() {
           { label: 'Request an Estimate', href: '#roof-check', style: 'line' },
         ]}
       />
-      <Offices sub="Visit or call any of our offices. One phone number reaches our whole team." note={`Hours: ${HOURS_LINE}`} photos={false} />
+      <Offices sub="To contact Quality Roofing Specialists, visit or call any of our offices. One phone number reaches our whole team." note={`Hours: ${HOURS_LINE}`} photos={false} />
       <ValueGrid heading={page.ways.heading} items={page.ways.items} />
       {/* Google reviews, a few sections below the hero (owner, October 14 2026) */}
       <ReviewMarquee />
