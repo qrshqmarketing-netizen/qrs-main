@@ -16,8 +16,8 @@ const officeIn = (citySlug) => OFFICES.find((o) => o.citySlug === citySlug);
 export const GBP_PROFILES = {
   'gbp-west-hollywood': {
     place: 'West Hollywood',
-    office: officeIn('los-angeles'),
-    line: 'Roofing for West Hollywood homes, from our Los Angeles office in the Fairfax area.',
+    office: officeIn('west-hollywood'),
+    line: 'Roofing for West Hollywood homes, from our West Hollywood office.',
     cta: 'Get Pro Advice',
   },
   'gbp-woodland-hills': {

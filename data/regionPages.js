@@ -15,7 +15,7 @@ export const REGION_PAGES = {
       heading: 'One County, Many Roofing Climates',
       paragraphs: [
         'Quality Roofing Specialists provides Los Angeles County roofing from its Los Angeles, Valley and Vernon offices. Los Angeles County covers a lot of ground, and roofs age differently across it. Near the coast in [Santa Monica](/service-areas/la-county/santa-monica/) and Long Beach, salt air and the marine layer work on flashings and fasteners. In the Valley and foothill cities like Burbank, Glendale and Pasadena, long hot summers bake underlayment and shingles, and dry Santa Ana winds test every loose tile and edge. Older neighborhoods mix clay tile, shingle and flat roofs, often on the same house, while an exclusively industrial city like [Vernon](/service-areas/la-county/vernon/) is almost entirely warehouses and plants with large, low-slope roofs.',
-        'Our [Los Angeles](/service-areas/la-county/los-angeles/) office in the Fairfax area, our Valley office in [Woodland Hills](/service-areas/la-county/woodland-hills/) and our [Vernon](/service-areas/la-county/vernon/) office keep roofers close to every city we serve here. Whether your roof needs a [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/) or a full replacement, the process stays the same: photos of what we find, a written scope and price before work starts, and a final walkthrough when the job is done.',
+        'Our [West Hollywood](/service-areas/la-county/west-hollywood/) office, our Valley office in [Woodland Hills](/service-areas/la-county/woodland-hills/) and our [Vernon](/service-areas/la-county/vernon/) office keep roofers close to every city we serve here. Whether your roof needs a [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/) or a full replacement, the process stays the same: photos of what we find, a written scope and price before work starts, and a final walkthrough when the job is done.',
       ],
     },
     considerations: [
@@ -25,7 +25,7 @@ export const REGION_PAGES = {
     ],
     faqs: [
       { q: 'Which Los Angeles County cities do you serve?', a: 'Our city pages cover Los Angeles, Santa Monica, Pasadena, Glendale, Burbank, Woodland Hills, Torrance, Long Beach and Vernon, and we work in many nearby communities as well. Enter your ZIP code on the map to check your address.' },
-      { q: 'Where are your Los Angeles County offices?', a: 'We have three: our Los Angeles office at 1444 N Poinsettia Pl, Unit 308, our Valley office at 22900 Ventura Blvd, Suite 124, in Woodland Hills, and our Vernon office at 2850 E 46th St, Unit B. All answer at (310) 340-1643.' },
+      { q: 'Where are your Los Angeles County offices?', a: 'We have three: our West Hollywood office at 1444 N Poinsettia Pl, Unit 308, our Valley office at 22900 Ventura Blvd, Suite 124, in Woodland Hills, and our Vernon office at 2850 E 46th St, Unit B. All answer at (310) 340-1643.' },
       { q: 'Do you work on commercial buildings in LA County?', a: 'Yes. We roof offices, retail, warehouses, churches and other buildings across the county, and we plan the work so the building stays open. See our [commercial roofing](/commercial-roofing/) services.' },
       { q: 'What should I do if a storm damages my roof?', a: 'Stay safe, move belongings away from any leak and take photos if you can. Then call us or see our [emergency roof repair](/roof-repair/emergency/) page for what happens next.' },
     ],

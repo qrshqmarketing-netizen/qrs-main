@@ -11,7 +11,7 @@
 
 // citySlug: the city page that location belongs to (data/locations.js); a page can ask for its own location's reviews
 export const GOOGLE_PLACES = [
-  { slug: 'west-hollywood', name: 'West Hollywood', citySlug: 'los-angeles', placeId: 'ChIJuebO04MknGwRaxUUEfK_JmI' },
+  { slug: 'west-hollywood', name: 'West Hollywood', citySlug: 'west-hollywood', placeId: 'ChIJuebO04MknGwRaxUUEfK_JmI' },
   { slug: 'woodland-hills', name: 'Woodland Hills', citySlug: 'woodland-hills', placeId: 'ChIJRQG9EFydugcRHWjsm7RDVCM' },
   { slug: 'vernon', name: 'Vernon', citySlug: 'vernon', placeId: 'ChIJY-O0LoNSpCER8tDoaQ8hV20' },
 ];

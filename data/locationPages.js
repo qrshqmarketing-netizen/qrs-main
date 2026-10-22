@@ -8,38 +8,39 @@ export const LOCATION_PAGES = {
     keyword: 'los angeles roofing',
     image: '/images/los-angeles-drone-view.webp',
     imagePosition: 'center 40%',
-    // Written for West Hollywood too (owner, October 15 2026): our Los Angeles office (1444 N Poinsettia Pl) is next to it, and West Hollywood has no page of its own
-    metaTitle: 'Los Angeles Roofing & Roof Repair Near West Hollywood',
-    metaDescription: 'Los Angeles roofing from our office near West Hollywood: tile, shingle and flat roof repair and replacement with written scopes. Book a free roof evaluation.',
-    blurb: 'Roofer-led inspections, written scopes and clean installs for homes across the city and West Hollywood, from the Hollywood Hills to the Valley.',
+    // About Los Angeles only (owner, October 22 2026): West Hollywood has its own page (the one the Google listing named West Hollywood should
+    // point to), so this page names it only to link there, and the two pages don't compete for "West Hollywood roofing"
+    metaTitle: 'Los Angeles Roofing & Roof Repair',
+    metaDescription: 'Los Angeles roofing across the city: tile, shingle and flat roof repair and replacement with written scopes. Book a free roof evaluation.',
+    blurb: 'Roofer-led inspections, written scopes and clean installs for homes across the city, from the Hollywood Hills to the Valley.',
     hero: {
       // The keyword line; the result line under it is in data/heroOutcomes.js
       heading: 'Los Angeles roofing',
-      sub: 'For Los Angeles roofing, Quality Roofing Specialists repairs and replaces tile, shingle and flat roofs on homes, condos and apartment buildings from West Hollywood and the Hollywood Hills to the Valley, with our Los Angeles office near West Hollywood and a second office in Woodland Hills. Every job starts with a free roof evaluation.',
+      sub: 'For Los Angeles roofing, Quality Roofing Specialists repairs and replaces tile, shingle and flat roofs on homes, condos and apartment buildings from Los Feliz and the Hollywood Hills to the Valley, with offices in West Hollywood and Woodland Hills. Every job starts with a free roof evaluation.',
     },
     intro: {
       heading: 'Roofing for Every Kind of Los Angeles Home',
       paragraphs: [
-        'Los Angeles roofing covers more ground than most cities: Spanish Revival homes with clay tile in Los Feliz, mid-century houses with low-slope roofs in the hills, Craftsman bungalows with shingles in Highland Park and Eagle Rock. Our Los Angeles office is at 1444 N Poinsettia Pl, in the Fairfax area next to West Hollywood, with a second office in Woodland Hills for the Valley, and our crews bring the same detail-first process to every roof across the city.',
-        '**West Hollywood roofing** is part of the same everyday work, minutes from our office: flat and low-slope roofs on condos and [multi-family buildings](/residential-roofing/hoa-multi-family/), and tile and shingle roofs on the homes around them. Lots are tight and neighbors are close, so access, staging and protection for the buildings next door are planned in the written scope before work starts.',
+        'Los Angeles roofing covers more ground than most cities: Spanish Revival homes with clay tile in Los Feliz, mid-century houses with low-slope roofs in the hills, Craftsman bungalows with shingles in Highland Park and Eagle Rock. Our offices in [West Hollywood](/service-areas/la-county/west-hollywood/) and Woodland Hills cover the city and the Valley, and our crews bring the same detail-first process to every roof across the city.',
+        'Next door, [West Hollywood roofing](/service-areas/la-county/west-hollywood/) has its own page: condos, multi-family buildings and tight lots that need their own planning.',
         'It starts with a roofer-led [free roof evaluation](#roof-check), not a sales pitch. We photo-document what we find, explain it in plain English and give you a written scope and price before any work begins. Whether your roof needs a [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/), a [flat roof repair](/residential-roofing/flat-roofing/repair/) or a full replacement, you’ll know exactly what you’re paying for.',
       ],
     },
-    neighborhoods: ['West Hollywood', 'Hollywood Hills', 'Los Feliz', 'Silver Lake', 'Hancock Park', 'Mid-Wilshire', 'Fairfax', 'Eagle Rock', 'Highland Park', 'Sherman Oaks', 'Encino'],
+    neighborhoods: ['Hollywood Hills', 'Los Feliz', 'Silver Lake', 'Hancock Park', 'Mid-Wilshire', 'Fairfax', 'Eagle Rock', 'Highland Park', 'Sherman Oaks', 'Encino'],
     considerations: [
       { title: 'Sun and heat on every slope', text: 'Strong sun dries out underlayment and ages shingles and sealants, especially on south- and west-facing slopes.' },
       { title: 'Hillside homes and tight streets', text: 'Steep lots and narrow roads in the hills mean planning access, deliveries and safety before the first day of work.' },
       { title: 'Mixed roofs on one house', text: 'Many LA homes pair a tile or shingle main roof with flat sections over additions, garages or patios, and each needs its own details.' },
     ],
     faqs: [
-      { q: 'Do you serve my Los Angeles neighborhood?', a: 'We work across the city, from the Hollywood Hills and Silver Lake to Sherman Oaks and Encino, with offices in the Fairfax area and in Woodland Hills. Check your ZIP code on the map on this page, or give us a call.' },
-      { q: 'Do you work in West Hollywood?', a: 'Yes. Our Los Angeles office at 1444 N Poinsettia Pl, Unit 308 is next to West Hollywood, which now has its own [West Hollywood roofing](/service-areas/la-county/west-hollywood/) page, and we repair and replace roofs there on single-family homes, condos and [multi-family buildings](/residential-roofing/hoa-multi-family/). Book a free roof evaluation or call (310) 340-1643.' },
+      { q: 'Do you serve my Los Angeles neighborhood?', a: 'We work across the city, from the Hollywood Hills and Silver Lake to Sherman Oaks and Encino, with offices in West Hollywood and Woodland Hills. Check your ZIP code on the map on this page, or give us a call.' },
+      { q: 'Do you work in West Hollywood?', a: 'Yes. West Hollywood has its own [West Hollywood roofing](/service-areas/la-county/west-hollywood/) page, with the work we do there on homes, condos and [multi-family buildings](/residential-roofing/hoa-multi-family/). Our West Hollywood office and its address are on that page too.' },
       { q: 'What roof types do you work on in Los Angeles?', a: 'All of the common ones: [tile](/residential-roofing/tile-roofing/), [shingle](/residential-roofing/shingle-roofing/) and [flat](/residential-roofing/flat-roofing/) roofs. Plenty of homes here have more than one type, and one roof evaluation covers them all.' },
       { q: 'Can you work on hillside homes?', a: 'Yes. Steep lots and narrow streets take extra planning for access, material deliveries and safety, and we build that into the written scope before work starts.' },
       { q: 'How do I get started?', a: 'Book a free roof evaluation. A roofer inspects your roof, photo-documents its condition and gives you a clear next step: repair, monitor, maintain or replace.' },
     ],
     nearby: ['woodland-hills', 'glendale', 'burbank', 'santa-monica'],
-    final: { heading: 'Let’s Take a Look at Your Los Angeles Roof', text: 'No pressure, no mystery scope and no surprises. Start with a free roof evaluation for your Los Angeles or West Hollywood home.' },
+    final: { heading: 'Let’s Take a Look at Your Los Angeles Roof', text: 'No pressure, no mystery scope and no surprises. Start with a free roof evaluation for your Los Angeles home.' },
   },
 
   'santa-monica': {
@@ -481,23 +482,23 @@ export const LOCATION_PAGES = {
   },
 
   // ----- Pages for places with something real behind them (owner, October 15 2026: option A, after "about 50 of the 65 cities share county
-  // pages"): West Hollywood (our Google listing and its reviews, next to the Los Angeles office) and seven places where we finished a project.
+  // pages"): West Hollywood (our West Hollywood office and its Google listing and reviews) and seven places where we finished a project.
   // Each is built around that work; the local details (neighborhood names, building types) still need the owner's check.
 
   'west-hollywood': {
     keyword: 'west hollywood roofing',
     metaTitle: 'West Hollywood Roofing & Roof Repair',
-    metaDescription: 'West Hollywood roofing from our office next door: flat, tile and shingle roof repair and replacement for homes, condos and apartment buildings.',
-    blurb: 'Roof repair and replacement for West Hollywood homes, condos and apartment buildings, from our Los Angeles office next door.',
+    metaDescription: 'West Hollywood roofing from our West Hollywood office: flat, tile and shingle roof repair and replacement for homes, condos and apartment buildings.',
+    blurb: 'Roof repair and replacement for West Hollywood homes, condos and apartment buildings, from our West Hollywood office.',
     hero: {
       heading: 'West Hollywood roofing',
-      sub: 'For West Hollywood roofing, Quality Roofing Specialists repairs and replaces flat, tile and shingle roofs on homes, condos and multi-family buildings, from our Los Angeles office on N Poinsettia Pl, a few minutes away. Every job starts with a free roof evaluation.',
+      sub: 'For West Hollywood roofing, Quality Roofing Specialists repairs and replaces flat, tile and shingle roofs on homes, condos and multi-family buildings, from our West Hollywood office at 1444 N Poinsettia Pl. Every job starts with a free roof evaluation.',
     },
     intro: {
       heading: 'Roofing for a Compact, Busy City',
       paragraphs: [
         'West Hollywood roofing is a mix of building types packed into a small city: bungalows and cottages, condos and multi-family buildings, many with flat or low-slope roofs. Tight lots, shared walls and neighbors close on every side make planning important, so we work out access, staging and protection for the buildings next door before work starts.',
-        'Our Los Angeles office at 1444 N Poinsettia Pl is next to West Hollywood, and the Google listing for it is where many of our reviews come from. Every job begins with a roofer-led [free roof evaluation](#roof-check), with photos of drains, flashings and seams, and owners of larger buildings get the same process through our [HOA and multi-family roofing](/residential-roofing/hoa-multi-family/) work.',
+        'Our West Hollywood office is at 1444 N Poinsettia Pl, Unit 308, and its Google listing is where many of our reviews come from. Every job begins with a roofer-led [free roof evaluation](#roof-check), with photos of drains, flashings and seams, and owners of larger buildings get the same process through our [HOA and multi-family roofing](/residential-roofing/hoa-multi-family/) work.',
       ],
     },
     neighborhoods: ['West Hollywood West', 'Norma Triangle', 'West Hollywood East', 'Sunset Strip', 'Melrose District'],
@@ -507,7 +508,7 @@ export const LOCATION_PAGES = {
       { title: 'Rooftop equipment', text: 'Roofs that carry AC units, vents or a deck wear faster around the equipment, and those spots need regular checks.' },
     ],
     faqs: [
-      { q: 'Is your office close to West Hollywood?', a: 'Yes. Our Los Angeles office is at 1444 N Poinsettia Pl, Unit 308, next to West Hollywood, and it answers at (310) 340-1643.' },
+      { q: 'Where is your West Hollywood office?', a: 'At 1444 N Poinsettia Pl, Unit 308, Los Angeles, CA 90046. It answers at (310) 340-1643.' },
       { q: 'Do you roof condos and apartment buildings?', a: 'Yes. We handle [HOA and multi-family roofing](/residential-roofing/hoa-multi-family/) as well as single-family homes, and for larger buildings we give the property manager or board a clear written scope.' },
       { q: 'Can you repair a flat roof that holds water?', a: 'In many cases, yes. We look at slope, drains and flashings to find why water is standing, then give you a written scope for a [flat roof repair](/residential-roofing/flat-roofing/repair/) or replacement.' },
       { q: 'How do I get started?', a: 'Book a free roof evaluation. A roofer inspects your roof with drone footage and photos, explains what they find and gives you a clear next step: repair, monitor, maintain or replace.' },
@@ -530,7 +531,7 @@ export const LOCATION_PAGES = {
       heading: 'Roofs Close to the Beach',
       paragraphs: [
         'Venice roofing has its own mix: older homes with many-sided roofs, flat upper roofs carrying HVAC units and skylights, and terraces and decks tied into the roof. On a [canal-side home in Venice](/projects/shingle-roof-replacement-venice-90291/), our roofers took the whole roof off down to the deck and built it back around a river-stone chimney, the skylights and every plumbing vent, covering each section with underlayment as it came off.',
-        'Every job starts with a roofer-led [free roof evaluation](#roof-check): photos of what we find, a plain-English explanation and a written scope and price before any work begins. Our Los Angeles office covers Venice, with crews for [shingle](/residential-roofing/shingle-roofing/), [flat](/residential-roofing/flat-roofing/) and [tile](/residential-roofing/tile-roofing/) roofs.',
+        'Every job starts with a roofer-led [free roof evaluation](#roof-check): photos of what we find, a plain-English explanation and a written scope and price before any work begins. Our West Hollywood office covers Venice, with crews for [shingle](/residential-roofing/shingle-roofing/), [flat](/residential-roofing/flat-roofing/) and [tile](/residential-roofing/tile-roofing/) roofs.',
       ],
     },
     neighborhoods: ['Venice Canals', 'Oakwood', 'Abbot Kinney', 'Marina Peninsula'],
@@ -562,7 +563,7 @@ export const LOCATION_PAGES = {
       heading: 'Roofs for Homes That Aren’t Ordinary',
       paragraphs: [
         'Hollywood Hills roofing means steep lots, narrow streets and homes with unusual shapes. On a [round home with 12 sides](/projects/flat-roof-replacement-hollywood-hills-west-90046/) in Hollywood Hills West, we installed a new torch-down flat roof, cutting each section to its own angle, finishing it with a white reflective cap sheet and sealing around every post of the rooftop deck.',
-        'Our Los Angeles office on N Poinsettia Pl sits at the foot of the hills. Every job starts with a roofer-led [free roof evaluation](#roof-check), and access, deliveries and safety on a hillside lot are planned in the written scope before work begins.',
+        'Our [West Hollywood](/service-areas/la-county/west-hollywood/) office sits at the foot of the hills. Every job starts with a roofer-led [free roof evaluation](#roof-check), and access, deliveries and safety on a hillside lot are planned in the written scope before work begins.',
       ],
     },
     neighborhoods: ['Hollywood Hills West', 'Laurel Canyon', 'Nichols Canyon', 'Beachwood Canyon', 'Outpost Estates'],

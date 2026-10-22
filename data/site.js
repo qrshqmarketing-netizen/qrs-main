@@ -46,7 +46,8 @@ export const COMPANY = {
 // Offices, shown on the Service Areas page and on the city page each one sits in (citySlug, from data/locations.js).
 // The first is the main office (BUSINESS.address). All answer the same phone number. `gbpUrl`: the office's Google Business Profile (schema sameAs). `image`: an optional photo for its card.
 export const OFFICES = [
-  { name: 'Los Angeles Office', citySlug: 'los-angeles', gbpUrl: 'https://maps.google.com/?cid=7072551311221462379', address: BUSINESS.address, geo: BUSINESS.geo, mapUrl: BUSINESS.mapUrl },
+  // The office on N Poinsettia Pl, whose Google listing is named West Hollywood (owner, October 22 2026): its page is the West Hollywood page
+  { name: 'West Hollywood Office', citySlug: 'west-hollywood', gbpUrl: 'https://maps.google.com/?cid=7072551311221462379', address: BUSINESS.address, geo: BUSINESS.geo, mapUrl: BUSINESS.mapUrl },
   {
     name: 'Valley Office',
     citySlug: 'woodland-hills', gbpUrl: 'https://maps.google.com/?cid=2545734132360308765',
