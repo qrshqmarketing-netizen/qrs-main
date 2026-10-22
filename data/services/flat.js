@@ -89,8 +89,8 @@ export const FLAT_CONTENT = {
       h1: 'Flat Roof Repair in Los Angeles & Orange County',
       navLabel: 'Roof Repairs',
       card: 'Leaks, blisters, open seams and failed flashings traced to the source, repaired carefully and documented with photos.',
-      metaTitle: 'Flat Roof Repair in Los Angeles',
-      metaDescription: 'Flat roof repair in Los Angeles & Orange County: we trace leaks to the source and fix seams, blisters and flashings, with photos. Book a free roof evaluation.',
+      metaTitle: 'Flat Roof Repair & Flat Roof Leak Repair in Los Angeles', // "flat roof leak repair" added (owner, October 22 2026)
+      metaDescription: 'Flat roof repair and flat roof leak repair in Los Angeles & Orange County: we trace leaks to the source and fix seams, blisters and flashings, with photos.',
       image: '/images/flat-roof-replacement-tear-off-drone-view.webp',
       imageAlt: 'Aerial view of a flat roof with roofing work in progress',
       hero: {
