@@ -4,7 +4,6 @@ import 'leaflet/dist/leaflet.css';
 import './globals.css';
 import './dark-theme.css'; // dark theme colors, toggled from the header and saved in local storage
 import '@/components/studio/StudioSite.css'; // the studio look for every page (STUDIO_THEME in data/promo.js)
-import '@/components/home/HomeDecor.css'; // decorations on every page: curves under the hero, "+" bands, brackets, registration marks
 
 import Script from 'next/script';
 import { Big_Shoulders, Libre_Franklin } from 'next/font/google';

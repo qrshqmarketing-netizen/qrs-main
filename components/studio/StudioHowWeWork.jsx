@@ -22,7 +22,7 @@ import './Studio.css';
 
 const offices = OFFICES.length === 1 ? 'one office' : `${OFFICES.length} offices`;
 
-export const PRINCIPLES = [
+const PRINCIPLES = [
   {
     title: 'A roofer looks first. The price is in writing.',
     text: 'A trained in-house roofer inspects your roof, with drone footage of the areas of concern. Before any work starts, you get a written scope and price: no pressure and no mystery pricing.',

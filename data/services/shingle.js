@@ -7,8 +7,8 @@ export const SHINGLE_CONTENT = {
     // Search Console wording (owner, October 23 2026): "shingle roofing services/company/contractor", "shingle roofing los angeles", "shingle roofer(s)",
     // "shingle roofing installers", "comp shingle roof installation los angeles county", "asphalt/architectural shingles los angeles", "composition roof
     // orange county". The H1 is unchanged.
-    metaTitle: 'Shingle Roofing Los Angeles | Shingle Roofing Contractor',
-    metaDescription: 'Shingle roofing in Los Angeles & Orange County from a licensed shingle roofing company: asphalt and architectural shingle replacement, repair and installs.',
+    metaTitle: 'Shingle Roofing in Los Angeles & Orange County',
+    metaDescription: 'Shingle roofing for Los Angeles & Orange County homes: replacement, repairs, new installs, inspections, tune-ups and roof care. Book a free roof evaluation.',
     hero: {
       heading: 'Shingle Roofing Services · *TotalShield*',
       intro: 'Shingle roofing services from QRS, a licensed shingle roofing contractor, cover replacement, new installs, repairs, inspections, tune-ups and ongoing roof care for homes across Los Angeles and Orange County. We give the underlayment, flashings and attic ventilation the same care as the shingles, and our complete replacement and new-install package is the *TotalShield* Shingle System. Each one starts with a free roof evaluation.',

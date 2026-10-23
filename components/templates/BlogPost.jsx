@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Breadcrumbs from '@/components/sections/Breadcrumbs';
+import FinalCta from '@/components/sections/FinalCta';
 import RelatedLinks from '@/components/sections/RelatedLinks';
 import RoofCheck from '@/components/sections/RoofCheck';
 import { postDate } from '@/components/sections/PostCards';
@@ -197,6 +198,10 @@ export default function BlogPost({ post }) {
       </article>
       <RelatedLinks heading="Related services" links={relatedLinks(post.related)} />
       <RoofCheck />
+      <FinalCta
+        heading="Have a Question About Your Roof?"
+        text="An article only goes so far. A roofer, not a salesperson, can look at your roof and give you a clear next step with a written scope and price."
+      />
     </main>
   );
 }

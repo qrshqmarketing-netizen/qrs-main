@@ -1,15 +1,14 @@
-import CheckBand from '@/components/home/CheckBand';
-import '@/components/home/HomeClean.css';
-import '@/components/home/CleanPages.css';
-import { checksFor } from '@/data/nearYou';
+import DifferenceBand from '@/components/sections/DifferenceBand';
 import Faq from '@/components/sections/Faq';
 import FeatureBand from '@/components/sections/FeatureBand';
+import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
 import Overview from '@/components/sections/Overview';
 import ProcessSteps from '@/components/sections/ProcessSteps';
 import RelatedLinks from '@/components/sections/RelatedLinks';
 import RoofCheck from '@/components/sections/RoofCheck';
 import ValueGrid from '@/components/sections/ValueGrid';
+import WhyChoose from '@/components/sections/WhyChoose';
 import JsonLd from '@/components/ui/JsonLd';
 import { CONTRACTORS_LINK, HOME } from '@/data/catalog';
 import { relatedLinks } from '@/data/content';
@@ -37,7 +36,7 @@ const RELATED = relatedLinks(['/commercial-roofing/', '/residential-roofing/hoa-
 // Contractor partnerships (B2B) page (content in data/pages/contractors.js)
 export default function ContractorsPage() {
   return (
-    <main id="top" className="clean-page">
+    <main id="top">
       <JsonLd data={schema} />
       <Hero
         crumbs={CRUMBS}
@@ -57,12 +56,12 @@ export default function ContractorsPage() {
       <ValueGrid heading={page.audiences.heading} items={page.audiences.points} tone="wash" />
       <FeatureBand id="white-label" {...page.whiteLabel} />
       <ProcessSteps heading={page.process.heading} subheading={page.process.subheading} steps={page.process.steps} image="/images/contractors-process-roofer-tablet.webp" imageAlt="Roofer on a rooftop smiling while reviewing a scope on a tablet" tone="white" />
-      {/* In the clean format with the publicstorage.com patterns like the other sub pages (owner, October 22 2026): the checklist band (the
-          commercial list) in place of the QRS Difference band and "Why choose QRS", four FAQs, the request form and the area links */}
-      <CheckBand {...checksFor('/contractors/')} />
+      <DifferenceBand />
+      <WhyChoose heading={page.why.heading} intro={page.why.intro} points={page.why.points} cta={{ label: 'Start a Conversation', href: '#roof-check' }} />
       <RelatedLinks heading="Related pages" links={RELATED} />
-      <Faq heading="Contractor FAQs" sub="Straight answers for contractors and property management clients." faqs={page.faqs} cta={false} limit={4} />
+      <Faq heading="Contractor FAQs" sub="Straight answers for contractors and property management clients." faqs={page.faqs} cta={false} />
       <RoofCheck tone="white" offer="commercial" />
+      <FinalCta heading="Let’s Build Something Together" text="Tell us about your project and we’ll start with a roofer-led look at the roof." cta={{ label: 'Start a Conversation', href: '#roof-check' }} />
     </main>
   );
 }

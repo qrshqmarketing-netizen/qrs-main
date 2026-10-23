@@ -1,5 +1,6 @@
 import Faq from '@/components/sections/Faq';
-import ReviewTrio from '@/components/home/ReviewTrio';
+import ReviewMarquee from '@/components/sections/ReviewMarquee';
+import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
 import Offices from '@/components/sections/Offices';
 import RoofCheck from '@/components/sections/RoofCheck';
@@ -13,8 +14,6 @@ import { hoursList } from '@/lib/hours';
 import { heroOutcome } from '@/data/heroOutcomes';
 import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
-import '@/components/home/HomeClean.css';
-import '@/components/home/CleanPages.css';
 
 export const metadata = pageMetadata({ title: page.metaTitle, description: page.metaDescription, path: CONTACT_LINK.href });
 
@@ -40,7 +39,7 @@ const schema = pageJsonLd({ path: CONTACT_LINK.href, title: page.metaTitle, desc
 // Contact page (content in data/pages/contact.js; offices and hours in data/site.js)
 export default function ContactPage() {
   return (
-    <main id="top" className="clean-page">
+    <main id="top">
       <JsonLd data={schema} />
       <Hero
         crumbs={CRUMBS}
@@ -56,13 +55,17 @@ export default function ContactPage() {
           { label: 'Request an Estimate', href: '#roof-check', style: 'line' },
         ]}
       />
-      <Offices sub="To contact Quality Roofing Specialists, visit or call any of our offices. One phone number reaches our whole team." note={`Hours: ${HOURS_LINE}`} photos={false} />
+      <Offices sub="Visit or call any of our offices. One phone number reaches our whole team." note={`Hours: ${HOURS_LINE}`} photos={false} />
       <ValueGrid heading={page.ways.heading} items={page.ways.items} />
-      {/* Three reviews side by side, as on the other sub pages (owner, October 22 2026) */}
-      <ReviewTrio path="/contact-us/" />
+      {/* Google reviews, a few sections below the hero (owner, October 14 2026) */}
+      <ReviewMarquee />
       <RoofCheck />
       <ServiceArea heading="Check Your Service Area" sub="Enter your ZIP code to confirm we cover your address, or pick your city from the list." />
-      <Faq heading="Contact FAQs" sub="Straight answers about reaching our team." faqs={FAQS} cta={false} limit={4} />
+      <Faq heading="Contact FAQs" sub="Straight answers about reaching our team." faqs={FAQS} cta={false} />
+      <FinalCta
+        heading="Talk to a Roofer, Not a Call Center"
+        text="Call the office or send the form, and a roofer gets back to you with a clear next step, a written scope and a price."
+      />
     </main>
   );
 }

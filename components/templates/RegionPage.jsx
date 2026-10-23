@@ -1,19 +1,17 @@
 import AlsoServing from '@/components/sections/AlsoServing';
-import AreaSketch from '@/components/home/AreaSketch';
-import NearYou from '@/components/home/NearYou';
-import QuickTiles from '@/components/home/QuickTiles';
-import ReviewTrio from '@/components/home/ReviewTrio';
+import ReviewMarquee from '@/components/sections/ReviewMarquee';
+import CardCarousel from '@/components/sections/CardCarousel';
+import CityCards from '@/components/sections/CityCards';
 import Faq from '@/components/sections/Faq';
-import HomeArticles from '@/components/home/HomeArticles';
-import '@/components/home/HomeClean.css';
-import '@/components/home/CleanPages.css';
-import { servicesLine } from '@/data/homeServices';
-import { NEAR_ALL, NEAR_PLACES, QUICK_TILES, nearLine, regionStart } from '@/data/nearYou';
+import LatestArticles from '@/components/sections/LatestArticles';
+import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
 import LocalIntro from '@/components/sections/LocalIntro';
 import RoofCheck from '@/components/sections/RoofCheck';
+import ServiceCategories from '@/components/sections/ServiceCategories';
 import JsonLd from '@/components/ui/JsonLd';
-import { HOME, LOCATIONS_LINK } from '@/data/catalog';
+import { HOME, LOCATIONS_LINK, RESIDENTIAL_TYPES, typeCard } from '@/data/catalog';
+import { LOCATION_PAGES } from '@/data/locationPages';
 import { ALL_PLACES, citiesIn, cityPath, findCity, REGIONS, regionPath } from '@/data/locations';
 import { SERVICES } from '@/data/services';
 import { OFFICES } from '@/data/site';
@@ -35,6 +33,7 @@ export default async function RegionPage({ region, page }) {
   const offices = OFFICES.filter((o) => findCity(o.citySlug)?.region === region.slug);
   const photo = page.image ? { src: page.image, alt: page.imageAlt || '' } : PHOTOS[REGIONS.indexOf(region) % PHOTOS.length];
   const crumbs = [HOME, LOCATIONS_LINK, { label: region.name, href: path }];
+  const blurbs = Object.fromEntries(cities.map((l) => [l.slug, LOCATION_PAGES[l.slug]?.blurb]));
   const schema = pageJsonLd({
     path,
     title: page.metaTitle,
@@ -55,20 +54,23 @@ export default async function RegionPage({ region, page }) {
     image: photo.src,
   });
   return (
-    <main id="top" className="clean-page">
+    <main id="top">
       <JsonLd data={schema} />
       <Hero crumbs={crumbs} eyebrow="Service Areas" title={page.hero.heading} outcome={heroOutcome(path)} intro={page.hero.intro} image={photo.src} imageAlt={photo.alt} imagePosition={photo.position} stats />
       <LocalIntro city={region.name} heading={page.intro.heading} paragraphs={page.intro.paragraphs} offices={offices} considerations={page.considerations} />
-      {/* After publicstorage.com (owner, October 21 2026: less on each page): the four tiles in place of the services tabs, three reviews side by
-          side, the county's city pages as "Roofers near you" cards with the ZIP search in place of the long city card grid (every city page is
-          also in the link columns above the footer) */}
-      <QuickTiles heading={`Roofing services in __${region.name}__`} text={servicesLine(region.name)} tiles={QUICK_TILES} />
-      <ReviewTrio path={path} />
-      <NearYou heading={`Roofers __near__ you in ${region.name}`} text={nearLine(region.name)} places={NEAR_PLACES} start={regionStart(region.slug)} sketch={<AreaSketch />} all={NEAR_ALL} />
+      <ServiceCategories place={region.name} />
+      <CardCarousel title={`Roof types we work on in __${region.name}__`} items={RESIDENTIAL_TYPES.map(typeCard)} idPrefix="roofTypes" tone="wash" />
+      {/* Google reviews, a few sections below the hero (owner, October 14 2026) */}
+      <ReviewMarquee />
+      <CityCards regions={[region.slug]} blurbs={blurbs} heading={`Cities We Serve in ${region.name}`} />
       <AlsoServing region={region.slug} heading={cities.length ? `More of ${region.name} We __Serve__` : `Cities We __Serve__ in ${region.name}`} sub={cities.length ? undefined : `Every city below is inside the area we serve and has a pin on our service area map. If you are in or near one, we cover you.`} />
-      <HomeArticles posts={await articlesFor(path)} heading="Related articles" />
-      <Faq heading={`${region.name} Roofing FAQs`} sub={`Straight answers for property owners across ${region.name}.`} faqs={page.faqs} cta={false} limit={4} />
+      <LatestArticles posts={await articlesFor(path)} heading="Related Roofing Articles" />
+      <Faq heading={`${region.name} Roofing FAQs`} sub={`Straight answers for property owners across ${region.name}.`} faqs={page.faqs} cta={false} />
       <RoofCheck tone="white" />
+      <FinalCta
+        heading={`Roofing Across ${region.name}`}
+        text={`Wherever you are in ${region.name}, a local roofer, not a salesperson, looks at your roof and gives you a clear next step with a written scope and price.`}
+      />
     </main>
   );
 }

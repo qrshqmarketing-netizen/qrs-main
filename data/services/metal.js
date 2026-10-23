@@ -129,8 +129,8 @@ export const METAL_CONTENT = {
       card: 'Leaks at fasteners, seams, sealant and flashings traced to the source and repaired, with photos of the problem and the fix.',
       // Search Console wording (owner, October 23 2026): "metal roof repair" (779 impressions at 41), "sheet metal roof repair", "aluminum roof
       // repair", "r-panel metal roof repair", "galvanized roof repair", "flat metal roof repair", "metal roof leak repairs"
-      metaTitle: 'Metal Roof Repair & Metal Roof Leak Repair in Los Angeles',
-      metaDescription: 'Metal roof repair in Los Angeles & Orange County: sheet metal, aluminum and R-panel roof leaks traced to fasteners, sealant and flashing, fixed with photos.',
+      metaTitle: 'Metal Roof Repair in Los Angeles & Orange County',
+      metaDescription: 'Metal roof repair in Los Angeles & Orange County: leaks traced to loose fasteners, worn sealant and failed flashing, fixed with photos. Free roof evaluation.',
       image: '/images/metal-roof-standing-seam-panel-detail.webp',
       imageAlt: 'Close-up of bronze standing seam metal roof panels with raised seams running down to the eave',
       hero: {

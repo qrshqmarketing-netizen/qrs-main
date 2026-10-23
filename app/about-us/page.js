@@ -1,5 +1,6 @@
 import Faq from '@/components/sections/Faq';
-import ReviewTrio from '@/components/home/ReviewTrio';
+import ReviewMarquee from '@/components/sections/ReviewMarquee';
+import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
 import { AboutCards, AboutIntro, AboutMission, AboutNumbers, AboutOffices, AboutProcess, AboutRecognition, AboutStory, AboutTeam } from '@/components/about/AboutSections';
 import RoofCheck from '@/components/sections/RoofCheck';
@@ -9,8 +10,6 @@ import { ABOUT_PAGE as page } from '@/data/pages/about';
 import { heroOutcome } from '@/data/heroOutcomes';
 import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
-import '@/components/home/HomeClean.css';
-import '@/components/home/CleanPages.css';
 
 export const metadata = pageMetadata({ title: page.metaTitle, description: page.metaDescription, path: ABOUT_LINK.href });
 
@@ -22,7 +21,7 @@ const schema = pageJsonLd({ path: ABOUT_LINK.href, title: page.metaTitle, descri
 // About page (content in data/pages/about.js and data/site.js), in the studio style: components/about/AboutSections.jsx
 export default function AboutPage() {
   return (
-    <main id="top" className="clean-page">
+    <main id="top">
       <JsonLd data={schema} />
       <Hero crumbs={CRUMBS} eyebrow={page.hero.eyebrow} title={page.hero.heading} outcome={heroOutcome('/about-us/')} intro={page.hero.intro} image={HERO_IMAGE} imageAlt="Aerial view of a home with a new shingle roof in a Southern California neighborhood" imagePosition="center 45%" stats />
       <AboutIntro page={page} />
@@ -32,14 +31,18 @@ export default function AboutPage() {
           (AboutServices) was taken off: the intro now says it, with the same links. */}
       <AboutProcess process={page.process} />
       <AboutTeam team={page.team} />
-      {/* Three reviews side by side, as on the other sub pages (owner, October 22 2026) */}
-      <ReviewTrio path="/about-us/" />
+      {/* Google reviews, a few sections below the hero (owner, October 14 2026) */}
+      <ReviewMarquee />
       <AboutOffices />
       <AboutMission mission={page.mission} />
       <AboutRecognition giving={page.story.paragraphs[1]} />
       <AboutCards careers={page.careers} partners={page.partners} />
-      <Faq heading="About QRS: FAQs" sub="Straight answers about who we are and how we work." faqs={page.faqs} cta={false} limit={4} />
+      <Faq heading="About QRS: FAQs" sub="Straight answers about who we are and how we work." faqs={page.faqs} cta={false} />
       <RoofCheck />
+      <FinalCta
+        heading="Work With a Roofer-Led Team"
+        text="QRS is family-owned and local. Tell us about your roof and a roofer, not a salesperson, gives you a clear next step with a written scope and price."
+      />
     </main>
   );
 }

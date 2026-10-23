@@ -1,5 +1,4 @@
-import '@/components/home/HomeClean.css';
-import '@/components/home/CleanPages.css';
+import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
 import RoofCheck from '@/components/sections/RoofCheck';
 import JsonLd from '@/components/ui/JsonLd';
@@ -53,7 +52,7 @@ export default async function RoofingFaqPage() {
     faqs: groups.flatMap((g) => g.faqs),
   });
   return (
-    <main id="top" className="clean-page">
+    <main id="top">
       <JsonLd data={schema} />
       <Hero
         crumbs={CRUMBS}
@@ -65,10 +64,6 @@ export default async function RoofingFaqPage() {
       />
       <section className="gl section">
         <div className="container">
-          {/* The page's opening line, moved out of the hero (October 21 2026: no excerpt in heroes); it carries the keyword in the first 100 words */}
-          <p className="gl-lead">
-            <Rich text={FAQ_PAGE.intro} />
-          </p>
           <nav className="gl-jump" aria-label="FAQ topics">
             {groups.map((g) => (
               <a href={`#${headingId(g.title)}`} key={g.title}>
@@ -101,6 +96,7 @@ export default async function RoofingFaqPage() {
         </div>
       </section>
       <RoofCheck tone="white" />
+      <FinalCta heading="Still Have a __Question__?" text="Ask a roofer. Start with a free roof evaluation and get a written scope and price before any work." />
     </main>
   );
 }

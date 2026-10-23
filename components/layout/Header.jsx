@@ -7,22 +7,22 @@ import SiteLink from '@/components/ui/SiteLink';
 import { MoonIcon, PhoneIcon, SunIcon } from '@/components/ui/icons';
 import { HEADER_CTA, HEADER_LINKS, HEADER_MORE } from '@/data/navigation';
 import { isFocusPath, isLandingPath } from '@/lib/landing';
-import { PHONE, PROOF_POINTS, TEL } from '@/data/site';
-import ProofMarquee from '@/components/sections/ProofMarquee';
-import '@/components/sections/ProofBar.css';
+import { PHONE, TEL } from '@/data/site';
 import './Header.css';
 
 // The header, modelled on thekithmore.com (the owner's reference): one slim bar split by hairlines: the logo, the main links (each one a hub page,
 // HEADER_LINKS in data/navigation.js, no dropdowns), the phone number, the gold "Get Pro Advice" cell, the theme switch
 // and a two-line menu button.
 // The menu button drops a small panel from the bar with the rest of the site (HEADER_MORE; below 1240px the main links are at the top of it).
-// The bar is always solid and sits above the hero, never over it (owner, October 21 2026): paper in the light theme, deep navy in the dark one.
+// Over a photo hero the bar is see-through with white type; once the hero has scrolled away (or the menu is open) it turns solid (data-solid).
 // /start/ shows only the logo, the theme switch and the phone. Escape, the backdrop or a link closes the panel.
+const HEROES = '.hero, .st-hero, .promo-home, .pd-hero';
 const isCurrent = (pathname, href) => href !== '/' && pathname.startsWith(href);
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [theme, setTheme] = useState('light');
+  const [past, setPast] = useState(false); // scrolled below the photo hero
   const pathname = usePathname();
   const requestPage = isFocusPath(pathname); // /start/ and the ad landing pages: logo, theme switch and phone only (lib/landing.js)
   const landing = isLandingPath(pathname);
@@ -40,6 +40,21 @@ export default function Header() {
   useEffect(() => {
     setTheme(document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light');
   }, []);
+
+  // Over a photo hero the bar is see-through (CSS, from the page itself); once the hero has scrolled up under it, it turns solid
+  useEffect(() => {
+    const update = () => {
+      const hero = document.querySelector(HEROES);
+      setPast(Boolean(hero) && hero.getBoundingClientRect().bottom < 72);
+    };
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    return () => {
+      window.removeEventListener('scroll', update);
+      window.removeEventListener('resize', update);
+    };
+  }, [pathname]);
 
   // Escape closes the panel and puts the focus back on the menu button
   useEffect(() => {
@@ -77,15 +92,8 @@ export default function Header() {
   };
 
   return (
-    <header className={'site-header' + (open ? ' is-open' : '') + (requestPage ? ' is-start' : '') + (landing ? ' is-lp' : '')} data-solid="true">
+    <header className={'site-header' + (open ? ' is-open' : '') + (requestPage ? ' is-start' : '') + (landing ? ' is-lp' : '')} data-solid={past || open ? 'true' : undefined}>
       <div className="hd-backdrop" onClick={close} aria-hidden="true"></div>
-      {/* The proof points as a slim marquee above the menu bar on every page (owner, October 22 2026; it used to sit under each hero). Not on
-          /start/ or the ad landing pages. Its height is --hd-top (Header.css), part of the header height the heroes start under. */}
-      {!requestPage && !landing && (
-        <div className="hd-marquee">
-          <ProofMarquee points={PROOF_POINTS} label="Why homeowners and clients choose QRS" />
-        </div>
-      )}
       <div className="hd-bar">
         <div className="hd-brand">
           <BrandLogo variant="adaptive" preload />

@@ -9,9 +9,9 @@ export const EMERGENCY_ROOF_REPAIR = {
   card: 'Storm damage or a sudden leak? A roofer assesses and photographs the damage, adds temporary protection when it’s needed and follows with a permanent repair.',
   // Search Console wording (owner, October 23 2026; the old /residential-roofing-services/roof-storm-damage/ redirects here): "storm damage roof
   // repair", "roof storm damage repair", "wind damage roof contractor", "storm damage roof inspection", "hail damage roof repair"
-  metaTitle: 'Storm Damage & Emergency Roof Repair in Los Angeles',
+  metaTitle: 'Emergency Roof Repair & Storm Damage in Los Angeles',
   metaDescription:
-    'Emergency roof repair and storm damage roof repair in Los Angeles & Orange County: wind and hail damage, tarps when needed and photos for your insurance.',
+    'Emergency roof repair in Los Angeles & Orange County for active leaks, storm and wind damage: after-hours calls, tarps when needed and photos for insurance.',
   image: '/images/emergency-roof-repair-hero.webp',
   imageAlt: 'Storm damage roof repair in Los Angeles: a roofer reviewing storm damage with homeowners beside a blue roof tarp',
   hero: {
@@ -96,8 +96,8 @@ export const ROOF_INSPECTION = {
   card: 'Our free, roofer-led roof evaluation for shingle, tile and flat roofs: every finding photographed and explained, with one clear next step.',
   // Search Console wording (owner, October 23 2026): "roof inspection los angeles", "roof inspection service/company", "professional roof inspection",
   // "roof inspection and repair", "roofing consultation". The H1 is unchanged.
-  metaTitle: 'Roof Inspection Los Angeles | Professional Roof Inspections',
-  metaDescription: 'Roof inspection company in Los Angeles & Orange County: a free, professional roof inspection service with photos, plain-English advice and one next step.',
+  metaTitle: 'Roof Inspection in Los Angeles & Orange County',
+  metaDescription: 'Roof inspection in Los Angeles & Orange County: a free, photo-documented roof evaluation with a clear next step, not a sales pitch. Book yours today.',
   image: '/images/shingle-roof-inspection-overhead.webp',
   imageAlt: 'Aerial overhead view of a finished dark grey shingle roof',
   hero: {

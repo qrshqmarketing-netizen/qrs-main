@@ -9,9 +9,6 @@ import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
 import './projects.css';
 import RoofCheck from '@/components/sections/RoofCheck';
-import HomeWork from '@/components/home/HomeWork';
-import '@/components/home/HomeClean.css';
-import '@/components/home/CleanPages.css';
 
 export const metadata = pageMetadata({ title: page.metaTitle, description: page.metaDescription, path: PROJECTS_LINK.href });
 
@@ -27,7 +24,7 @@ const schema = pageJsonLd({
 
 export default function ProjectsPage() {
   return (
-    <main id="top" className="projects-hub clean-page">
+    <main id="top" className="projects-hub">
       <JsonLd data={schema} />
       <section className="projects-hub-intro">
         <div className="container">
@@ -42,8 +39,6 @@ export default function ProjectsPage() {
         </div>
       </section>
       <ProjectMap projects={PROJECT_PAGES} heading="Find roofing projects near you" />
-      {/* Every project as a card under the map (the clean format, October 21 2026) */}
-      <HomeWork heading="Every project, __newest__ first" projects={PROJECT_PAGES} />
       <RoofCheck tone="white" />
     </main>
   );

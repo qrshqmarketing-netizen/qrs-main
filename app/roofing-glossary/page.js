@@ -1,5 +1,4 @@
-import '@/components/home/HomeClean.css';
-import '@/components/home/CleanPages.css';
+import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
 import RoofCheck from '@/components/sections/RoofCheck';
 import JsonLd from '@/components/ui/JsonLd';
@@ -33,7 +32,7 @@ const schema = pageJsonLd({
 
 export default function RoofingGlossaryPage() {
   return (
-    <main id="top" className="clean-page">
+    <main id="top">
       <JsonLd data={schema} />
       <Hero
         crumbs={CRUMBS}
@@ -45,10 +44,6 @@ export default function RoofingGlossaryPage() {
       />
       <section className="gl section">
         <div className="container">
-          {/* The page's opening line, moved out of the hero (October 21 2026: no excerpt in heroes); it carries the keyword in the first 100 words */}
-          <p className="gl-lead">
-            <Rich text={page.hero.intro} />
-          </p>
           <nav className="gl-jump" aria-label="Glossary sections">
             {page.groups.map((g) => (
               <a href={`#${headingId(g.title)}`} key={g.title}>
@@ -79,6 +74,7 @@ export default function RoofingGlossaryPage() {
         </div>
       </section>
       <RoofCheck tone="white" />
+      <FinalCta heading="Questions About Your __Roof__?" text="Start with a free roof evaluation. A roofer looks at your roof, explains what they find in plain English and gives you a written scope and price before any work." />
     </main>
   );
 }

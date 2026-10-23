@@ -118,6 +118,7 @@ export function ServiceHub({ page, actions }) {
       imageAlt={page.imageAlt}
       scene={page.scenes[0]}
       cards={page.cards.map(cardFor).filter(Boolean)}
+      process
       offer="home"
       actions={actions}
     />

@@ -11,8 +11,6 @@ import { heroOutcome } from '@/data/heroOutcomes';
 import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
 import RoofCheck from '@/components/sections/RoofCheck';
-import '@/components/home/HomeClean.css';
-import '@/components/home/CleanPages.css';
 
 // Kept out of search results until there's a published post
 export async function generateMetadata() {
@@ -48,7 +46,7 @@ export default async function BlogPage() {
     featured: post.slug === featured?.slug,
   }));
   return (
-    <main id="top" className="clean-page">
+    <main id="top">
       <JsonLd data={schema} />
       <Hero
         crumbs={CRUMBS}
@@ -59,7 +57,7 @@ export default async function BlogPage() {
         breath={false}
         {...(featured && { aside: <HeroLatestPost post={featured} /> })}
       />
-      <BlogBrowser posts={cards} heading={published.length ? 'Browse the roofing blog' : 'Coming Soon'} />
+      <BlogBrowser posts={cards} heading={published.length ? 'Browse Articles' : 'Coming Soon'} />
       <IndexNote note={page.note} />
       <RoofCheck tone="white" />
     </main>

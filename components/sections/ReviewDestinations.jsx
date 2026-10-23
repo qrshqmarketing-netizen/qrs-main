@@ -9,7 +9,7 @@ export default function ReviewDestinations() {
         <div className="section-head center">
           <span className="eyebrow">Choose your location</span>
           <h2 id="review-destinations-title">Where Was Your Project?</h2>
-          <p>Leave customer reviews for Quality Roofing Specialists on Google or Yelp: select the office that helped with your roofing project, then choose the platform.</p>
+          <p>Select the office that helped with your roofing project, then choose Google or Yelp.</p>
         </div>
         <div className="review-destinations-grid">
           {REVIEW_DESTINATIONS.map(({ location, links }) => (

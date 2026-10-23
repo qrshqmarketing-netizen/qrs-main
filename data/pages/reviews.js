@@ -22,9 +22,9 @@ export const REVIEW_DESTINATIONS = [
 
 export const REVIEWS_PAGE = {
   keyword: 'customer reviews',
-  metaTitle: 'Customer Reviews of Quality Roofing Specialists',
+  metaTitle: 'Customer Reviews | Leave QRS a Review',
   metaDescription:
-    'Customer reviews of Quality Roofing Specialists: read what homeowners say about our roofers on Google, or leave a review for your location on Google or Yelp.',
+    'Leave customer reviews for Quality Roofing Specialists. Choose your QRS location and write a review on Google or Yelp.',
   hero: {
     heading: 'Customer Reviews',
     image: '/images/reviews-hero-bg.webp',

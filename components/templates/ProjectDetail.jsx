@@ -1,11 +1,12 @@
 import Image from 'next/image';
 import Breadcrumbs from '@/components/sections/Breadcrumbs';
-import ReviewTrio from '@/components/home/ReviewTrio';
+import FinalCta from '@/components/sections/FinalCta';
 import RelatedLinks from '@/components/sections/RelatedLinks';
 import ProjectChapters from '@/components/project/ProjectChapters';
 import ProjectCounter from '@/components/project/ProjectCounter';
 import ProjectGallery from '@/components/project/ProjectGallery';
 import ProjectReveal from '@/components/project/ProjectReveal';
+import ReviewMarquee from '@/components/sections/ReviewMarquee';
 import JsonLd from '@/components/ui/JsonLd';
 import Rich from '@/components/ui/Rich';
 import SiteLink from '@/components/ui/SiteLink';
@@ -122,8 +123,7 @@ export default function ProjectDetail({ page }) {
 
       <ProjectGallery photos={page.photos} name={page.title} />
 
-      {/* Three reviews, the project's neighborhood and city first, then its roof type (owner, October 22 2026: as on the other sub pages) */}
-      <ReviewTrio path={page.path} places={placesOf(page.place)} />
+      <ReviewMarquee places={placesOf(page.place)} />
 
       {next && next.path !== page.path && (
         <section className="pd-next" aria-label="Next project">
@@ -147,6 +147,7 @@ export default function ProjectDetail({ page }) {
 
       <RelatedLinks heading="Related services" links={relatedLinks(page.related)} />
       <RoofCheck tone="white" />
+      <FinalCta />
     </main>
   );
 }

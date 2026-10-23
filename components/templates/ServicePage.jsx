@@ -1,12 +1,8 @@
 import Faq from '@/components/sections/Faq';
-import CheckBand from '@/components/home/CheckBand';
-import ReviewTrio from '@/components/home/ReviewTrio';
-import { checksFor } from '@/data/nearYou';
-import HomeArticles from '@/components/home/HomeArticles';
-import HomeWork from '@/components/home/HomeWork';
-import '@/components/home/HomeClean.css';
-import '@/components/home/CleanPages.css';
-import BandCards from '@/components/home/BandCards';
+import ReviewMarquee from '@/components/sections/ReviewMarquee';
+import LatestArticles from '@/components/sections/LatestArticles';
+import FeatureBand from '@/components/sections/FeatureBand';
+import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
 import Overview from '@/components/sections/Overview';
 import PartnerLogos from '@/components/sections/PartnerLogos';
@@ -15,10 +11,12 @@ import ServiceStory from '@/components/sections/ServiceStory';
 import RoofDiagram from '@/components/sections/RoofDiagram';
 import { diagramFor } from '@/data/roofDiagrams';
 import RoofCheck from '@/components/sections/RoofCheck';
+import WhyChoose from '@/components/sections/WhyChoose';
 import JsonLd from '@/components/ui/JsonLd';
 import { projectsShownOn } from '@/data/projectPages';
+import StudioProjects from '@/components/studio/StudioProjects';
 import { pageJsonLd } from '@/lib/structuredData';
-import { faqSub } from './shared';
+import { closingCta, faqSub } from './shared';
 import { heroOutcome } from '@/data/heroOutcomes';
 import { articlesFor } from '@/lib/articles';
 import { searchHeading } from '@/lib/headings';
@@ -102,11 +100,11 @@ function processPhoto(page) {
 
 // A service page (e.g. /residential-roofing/tile-roofing/lift-and-relay/). Content shape: see data/services/*.js.
 // crumbs: breadcrumb trail; eyebrow: section label above the H1; scenes: [heroArt, processArt] placeholder
-// art until photos exist. actions: hero buttons (Hero). The closing call to action (page.final) is no longer shown on sub pages (October 21 2026:
-// the request form just above it is the one ask). page.sections (optional): one per roof type on /roof-inspection/ ([{ eyebrow, heading,
-// paragraphs, points }]), shown as cards in one row under `page.sectionsHeading` (BandCards). hub: the service-first
+// art until photos exist. actions: hero buttons (Hero); finalCta: the closing call to action (FinalCta
+// props; defaults to page.final, else one worded around page.keyword). page.sections (optional): bands after the
+// overview, e.g. one per roof type on /roof-inspection/ ([{ eyebrow, heading, paragraphs, points }]). hub: the service-first
 // hub this page belongs to ({ label, href }); the overview links back to it, so the hub is the page for the general search.
-export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], offer, actions, hub }) {
+export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], offer, actions, hub, finalCta = page.final || closingCta(page.keyword, offer) }) {
   const [heroScene = 'scene-shingle', processScene = heroScene] = scenes;
   const [processImage, processImageAlt] = page.process?.image ? [page.process.image, page.process.imageAlt] : processPhoto(page);
   const work = projectsShownOn(crumbs.at(-1).href);
@@ -120,7 +118,7 @@ export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], 
     image: page.image,
   });
   return (
-    <main id="top" className="clean-page">
+    <main id="top">
       <JsonLd data={schema} />
       <Hero
         crumbs={crumbs}
@@ -143,9 +141,11 @@ export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], 
       )}
       {/* The blog's roof illustration where it explains this service (data/roofDiagrams.js) */}
       <RoofDiagram diagram={diagramFor(crumbs.at(-1).href)} />
-      {/* `about`: a short section of the page's own after the steps (the commercial replacement page's "Commercial roofing company in Los Angeles") */}
+      {/* `about`: a short section of the page's own after the story (the commercial replacement page's "Commercial roofing company in Los Angeles") */}
       {page.about && <Overview heading={page.about.heading} paragraphs={page.about.paragraphs} />}
-      {page.sections?.length > 0 && <BandCards heading={page.sectionsHeading} sections={page.sections} />}
+      {page.sections?.map((section, i) => (
+        <FeatureBand key={section.heading} {...section} tone={i % 2 ? 'navy' : 'light'} />
+      ))}
       {!page.story && (
         <ProcessSteps
           heading={page.process.heading}
@@ -158,15 +158,15 @@ export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], 
       )}
       {/* The story in order (owner, October 15 2026, after maben.com.au): what we do, how we do it, then the work itself on real roofs, what people
           say, why QRS, and the questions. The projects used to sit at the bottom, under the FAQ. */}
-      {work.projects.length > 0 && <HomeWork heading={work.heading} projects={work.projects.slice(0, 3)} all={{ label: 'View all projects', href: '/projects/' }} />}
-      {/* After publicstorage.com (owner, October 21 2026: less on each page): three reviews side by side instead of the review wall, and the
-          checklist photo band instead of "Why choose QRS" on the pages without a story */}
-      {page.showReviews !== false && <ReviewTrio path={crumbs.at(-1).href} {...(page.reviewsHeading && { heading: page.reviewsHeading })} />}
-      {!page.story && <CheckBand {...checksFor(crumbs.at(-1).href)} />}
+      <StudioProjects projects={work.projects} heading={work.exact ? 'This work, on real roofs' : 'Recent roofing projects'} />
+      {/* Google reviews, a few sections below the hero (owner, October 14 2026) */}
+      {page.showReviews !== false && <ReviewMarquee {...(page.reviewsHeading && { heading: page.reviewsHeading })} />}
+      {!page.story && <WhyChoose heading={page.why.heading} intro={page.why.intro} points={page.why.points} />}
       {page.partners && <PartnerLogos {...page.partners} />}
-      <HomeArticles posts={await articlesFor(crumbs.at(-1).href)} heading="Related articles" />
-      {page.faqs?.length > 0 && <Faq heading="Frequently Asked __Questions__" sub={faqSub(page.keyword)} faqs={page.faqs} cta={false} limit={4} />}
+      <LatestArticles posts={await articlesFor(crumbs.at(-1).href)} heading="Related Roofing Articles" />
+      {page.faqs?.length > 0 && <Faq heading="Frequently Asked __Questions__" sub={faqSub(page.keyword)} faqs={page.faqs} cta={false} />}
       <RoofCheck tone="white" offer={offer} />
+      <FinalCta {...finalCta} />
     </main>
   );
 }

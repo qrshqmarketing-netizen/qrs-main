@@ -3,7 +3,7 @@
 .finder-list{display:grid;gap:14px}
 .finder-row{
   display:grid;grid-template-columns:minmax(0,1fr);gap:16px;padding:22px 20px;border-radius:var(--radius);background:var(--paper);
-  border:1px solid var(--line);border-left:4px solid var(--gold);scroll-margin-top:calc(var(--hd-h,100px) + 16px);
+  border:1px solid var(--line);border-left:4px solid var(--gold);scroll-margin-top:100px;
 }
 .finder-row:target{box-shadow:0 0 0 3px rgba(212,181,114,.45)}
 .finder-copy h3{color:var(--navy);font-size:22px;font-weight:800;line-height:1.25;letter-spacing:.01em;margin:0 0 6px}

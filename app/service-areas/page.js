@@ -1,11 +1,9 @@
 import AlsoServing from '@/components/sections/AlsoServing';
-import CheckBand from '@/components/home/CheckBand';
-import ReviewTrio from '@/components/home/ReviewTrio';
-import '@/components/home/HomeClean.css';
-import '@/components/home/CleanPages.css';
-import { checksFor } from '@/data/nearYou';
+import ReviewMarquee from '@/components/sections/ReviewMarquee';
 import CityCards from '@/components/sections/CityCards';
+import DifferenceBand from '@/components/sections/DifferenceBand';
 import Faq from '@/components/sections/Faq';
+import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
 import Offices from '@/components/sections/Offices';
 import RoofCheck from '@/components/sections/RoofCheck';
@@ -41,7 +39,7 @@ const BLURBS = Object.fromEntries(Object.entries(LOCATION_PAGES).map(([slug, p])
 // Service Areas page: offices, the map, every region and city page (content in data/pages/locations.js)
 export default function LocationsPage() {
   return (
-    <main id="top" className="clean-page">
+    <main id="top">
       <JsonLd data={schema} />
       <Hero
         crumbs={CRUMBS}
@@ -54,17 +52,19 @@ export default function LocationsPage() {
         imageAlt="Row of homes with pitched roofs along a residential street"
         imagePosition="40% center"
       />
-      <Offices sub="Our roofing service areas cover homes and businesses across Los Angeles County, Orange County and the Inland Empire, served from our offices. One phone number reaches every office." />
+      <Offices sub="Our Los Angeles and Valley offices serve homes and businesses across Los Angeles County, Orange County and the Inland Empire. One number reaches both." />
       <ServiceArea heading="Find Your Nearest QRS Service Area" sub="Enter your ZIP code to confirm we cover your address, or pick your city from the list." />
       <CityCards blurbs={BLURBS} linkRegions />
-      {/* In the clean format with the publicstorage.com patterns like the other sub pages (owner, October 22 2026): three reviews, the checklist
-          band, four FAQs and the request form (no second closing call to action; the city cards above already link every city page, so no
-          area link columns here) */}
-      <ReviewTrio path="/service-areas/" />
+      {/* Google reviews, a few sections below the hero (owner, October 14 2026) */}
+      <ReviewMarquee />
       <AlsoServing />
-      <CheckBand {...checksFor('/service-areas/')} />
-      <Faq heading="Service Area FAQs" sub="Straight answers about where we work." faqs={page.faqs} cta={false} limit={4} />
+      <DifferenceBand />
+      <Faq heading="Service Area FAQs" sub="Straight answers about where we work." faqs={page.faqs} cta={false} />
       <RoofCheck tone="white" />
+      <FinalCta
+        heading="Local Roofers Across Southern California"
+        text="Wherever you are in our service area, a local roofer looks at your roof and gives you a clear next step with a written scope and price."
+      />
     </main>
   );
 }

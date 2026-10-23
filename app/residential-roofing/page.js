@@ -1,17 +1,16 @@
 import CardCarousel from '@/components/sections/CardCarousel';
-import CheckBand from '@/components/home/CheckBand';
-import HomeArticles from '@/components/home/HomeArticles';
-import HomeWork from '@/components/home/HomeWork';
-import ReviewTrio from '@/components/home/ReviewTrio';
-import '@/components/home/HomeClean.css';
-import '@/components/home/CleanPages.css';
+import ReviewMarquee from '@/components/sections/ReviewMarquee';
+import DifferenceBand from '@/components/sections/DifferenceBand';
 import Faq from '@/components/sections/Faq';
+import LatestArticles from '@/components/sections/LatestArticles';
+import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
 import Overview from '@/components/sections/Overview';
 import RoofCheck from '@/components/sections/RoofCheck';
 import ServiceFinder from '@/components/sections/ServiceFinder';
+import StudioProjects from '@/components/studio/StudioProjects';
 import { projectsShownOn } from '@/data/projectPages';
-import { checksFor } from '@/data/nearYou';
+import { closingCta } from '@/components/templates/shared';
 import JsonLd from '@/components/ui/JsonLd';
 import { HOME, RESIDENTIAL, RESIDENTIAL_TYPES, typeCard } from '@/data/catalog';
 import { RESIDENTIAL_PAGE as page } from '@/data/pages/residential';
@@ -36,13 +35,10 @@ const schema = pageJsonLd({
   image: HERO_IMAGE,
 });
 
-// Residential hub: every roof type, then every service by roof type (content in data/pages/residential.js). In the clean format with the
-// publicstorage.com patterns like the other sub pages (owner, October 22 2026): projects matched to the page, three reviews, the checklist
-// band, the related articles row, four FAQs, the request form and the area links (no second closing call to action).
+// Residential hub: every roof type, then every service by roof type (content in data/pages/residential.js)
 export default async function ResidentialRoofingPage() {
-  const work = projectsShownOn(RESIDENTIAL.href);
   return (
-    <main id="top" className="clean-page">
+    <main id="top">
       <JsonLd data={schema} />
       <Hero
         crumbs={CRUMBS}
@@ -59,12 +55,14 @@ export default async function ResidentialRoofingPage() {
       <CardCarousel title={page.cards.heading} items={RESIDENTIAL_TYPES.map(typeCard)} idPrefix="roofTypes" tone="wash" />
       <ServiceFinder heading={page.finder.heading} intro={page.finder.intro} rows={page.finder.rows} />
       {/* The work itself, after the service finder (owner, October 15 2026, after maben.com.au) */}
-      {work.projects.length > 0 && <HomeWork heading={work.heading} projects={work.projects.slice(0, 3)} all={{ label: 'View all projects', href: '/projects/' }} />}
-      <ReviewTrio path={RESIDENTIAL.href} />
-      <CheckBand {...checksFor(RESIDENTIAL.href)} />
-      <HomeArticles posts={await articlesFor(RESIDENTIAL.href)} heading="Related articles" />
-      <Faq heading="Frequently Asked __Questions__" sub="Straight answers about residential roofing." faqs={page.faqs} cta={false} limit={4} />
+      <StudioProjects projects={projectsShownOn(RESIDENTIAL.href).projects} heading="Recent roofing projects" />
+      {/* Google reviews, a few sections below the hero (owner, October 14 2026) */}
+      <ReviewMarquee />
+      <DifferenceBand />
+      <LatestArticles posts={await articlesFor(RESIDENTIAL.href)} heading="Related Roofing Articles" />
+      <Faq heading="Frequently Asked __Questions__" sub="Straight answers about residential roofing." faqs={page.faqs} cta={false} />
       <RoofCheck tone="white" />
+      <FinalCta {...closingCta(page.keyword)} />
     </main>
   );
 }

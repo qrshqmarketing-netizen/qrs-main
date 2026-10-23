@@ -2341,13 +2341,13 @@ export const BLOG_POSTS = [
     slug: 'roof-insurance-claims-california',
     // Search Console wording (owner, October 23 2026): "roof insurance claim help", "roof insurance claim process", "roof damage insurance claim",
     // "roofing insurance claim", "roof claim". `revision` copies this text over the live copy in Supabase once (lib/postsStore.js applyFileRevisions).
-    revision: 1,
+    revision: 2, // 2: meta title and description back to the October 16 wording (owner, October 23 2026)
     title: 'Roof Insurance Claims in California: Help, the Process and What to Document',
     keyword: 'roof insurance claims',
     topics: ['insurance', 'storm', 'emergency', 'repair', 'replacement'],
-    metaTitle: 'Roof Insurance Claims in California: Help and the Process',
+    metaTitle: 'Roof Insurance Claims in California: What to Document',
     metaDescription:
-      'Roof insurance claims in California: the roof insurance claim process, what to document after roof damage and the claim help a roofer can give you.',
+      'Roof insurance claims in California go more smoothly with photos, fast protection from further damage and a written repair scope. See what to expect.',
     datePublished: '2026-10-05',
     dateModified: '2026-10-23',
     excerpt:

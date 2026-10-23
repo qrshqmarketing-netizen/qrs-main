@@ -1,21 +1,20 @@
 import CardGrid from '@/components/sections/CardGrid';
-import CheckBand from '@/components/home/CheckBand';
-import ReviewTrio from '@/components/home/ReviewTrio';
-import { checksFor } from '@/data/nearYou';
+import ReviewMarquee from '@/components/sections/ReviewMarquee';
 import Faq from '@/components/sections/Faq';
-import HomeArticles from '@/components/home/HomeArticles';
-import HomeWork from '@/components/home/HomeWork';
-import '@/components/home/HomeClean.css';
-import '@/components/home/CleanPages.css';
+import LatestArticles from '@/components/sections/LatestArticles';
+import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
 import Overview from '@/components/sections/Overview';
+import Process from '@/components/sections/Process';
 import RoofCheck from '@/components/sections/RoofCheck';
 import SplitFeature from '@/components/sections/SplitFeature';
+import ValueGrid from '@/components/sections/ValueGrid';
+import StudioProjects from '@/components/studio/StudioProjects';
 import RoofDiagram from '@/components/sections/RoofDiagram';
 import { diagramFor } from '@/data/roofDiagrams';
 import JsonLd from '@/components/ui/JsonLd';
 import { pageJsonLd } from '@/lib/structuredData';
-import { faqSub } from './shared';
+import { closingCta, faqSub } from './shared';
 import { heroOutcome } from '@/data/heroOutcomes';
 import { articlesFor } from '@/lib/articles';
 import { projectsShownOn } from '@/data/projectPages';
@@ -25,9 +24,9 @@ import { searchHeading } from '@/lib/headings';
 // why-choose points and the Roof Check form. Content shape: `hub` in data/services/*.js.
 // cards: [{ title, text, href, scene, image? }]; extraGrid: optional { heading, intro, cards } shown before them
 // (commercial services); feature: optional SplitFeature props (e.g. contractors teaser); actions: hero buttons (Hero);
-// (`process`, the general "QRS Way" steps, and the hub's `highlights` grid are no longer shown since October 21 2026: the checklist band says it.)
-// `extra`: a section of the hub's own, after the reviews (the shingle roofing page's shingle colors)
-export default async function HubPage({ hub, crumbs, eyebrow, image, imageAlt, cards, extraGrid, feature, offer, actions, extra }) {
+// process: show the general "QRS Way" steps (the service-first hubs /roof-repair/ and /roof-replacement/).
+// `extra`: a section of the hub's own, after its highlights (the shingle roofing page's shingle colors)
+export default async function HubPage({ hub, crumbs, eyebrow, image, imageAlt, cards, extraGrid, feature, offer, actions, process = false, extra }) {
   const schema = pageJsonLd({
     path: crumbs.at(-1).href,
     title: hub.metaTitle,
@@ -38,9 +37,8 @@ export default async function HubPage({ hub, crumbs, eyebrow, image, imageAlt, c
     faqs: hub.faqs,
     image,
   });
-  const hubWork = projectsShownOn(crumbs.at(-1).href);
   return (
-    <main id="top" className="clean-page">
+    <main id="top">
       <JsonLd data={schema} />
       <Hero
         crumbs={crumbs}
@@ -61,16 +59,16 @@ export default async function HubPage({ hub, crumbs, eyebrow, image, imageAlt, c
       {/* The blog's roof illustration where it explains this hub (data/roofDiagrams.js) */}
       <RoofDiagram diagram={diagramFor(crumbs.at(-1).href)} />
       {/* The work itself, right after the services (owner, October 15 2026, after maben.com.au): projects on this hub's pages, newest first */}
-      {hubWork.projects.length > 0 && <HomeWork heading={hubWork.heading} projects={hubWork.projects.slice(0, 3)} more={hub.projectMore} all={{ label: 'View all projects', href: '/projects/' }} />}
-      {/* After publicstorage.com (owner, October 21 2026: less on each page): three reviews side by side, and the checklist photo band in place
-          of the highlights grid and "Roofing, the QRS Way" */}
-      <ReviewTrio path={crumbs.at(-1).href} />
+      <StudioProjects projects={projectsShownOn(crumbs.at(-1).href).projects} heading="Recent roofing projects" />
+      <ReviewMarquee />
+      <ValueGrid heading={hub.highlights.heading} items={hub.highlights.points} columns={3} />
       {extra}
-      <CheckBand {...checksFor(crumbs.at(-1).href)} />
+      {process && <Process />}
       {feature && <SplitFeature {...feature} tone="wash" />}
-      <HomeArticles posts={await articlesFor(crumbs.at(-1).href)} heading="Related articles" />
-      {hub.faqs?.length > 0 && <Faq heading="Frequently Asked __Questions__" sub={faqSub(hub.keyword)} faqs={hub.faqs} cta={false} limit={4} />}
+      <LatestArticles posts={await articlesFor(crumbs.at(-1).href)} heading="Related Roofing Articles" />
+      {hub.faqs?.length > 0 && <Faq heading="Frequently Asked __Questions__" sub={faqSub(hub.keyword)} faqs={hub.faqs} cta={false} />}
       <RoofCheck tone="white" offer={offer} />
+      <FinalCta {...closingCta(hub.keyword, offer)} />
     </main>
   );
 }

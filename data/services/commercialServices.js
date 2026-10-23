@@ -48,8 +48,8 @@ export const COMMERCIAL_SERVICES = [
     navLabel: 'Roof Replacement',
     card: 'When repairs stop adding up: a roofer-led survey, the right low-slope system for your building and phased work that keeps you open.',
     // Broader title for the general "commercial roofing Los Angeles" searches (owner, October 22 2026; the keyword stays in it, the H1 is unchanged)
-    metaTitle: 'Commercial Roofing Los Angeles | Commercial Roof Replacement',
-    metaDescription: 'Commercial roofing company in Los Angeles & Orange County: a roofer-led survey, a written price and commercial roof replacement done section by section.',
+    metaTitle: 'Commercial Roof Replacement in Los Angeles',
+    metaDescription: 'Commercial roof replacement in LA & Orange County: a roofer-led survey, the right low-slope system and phased work that keeps you open. Request an estimate.',
     image: '/images/flat-roof-replacement-tear-off-drone-view.webp',
     imageAlt: 'Commercial roof replacement in Los Angeles: flat roof aerial view, with the old roofing stripped back',
     heroNotes: [`Los Angeles commercial roofing contractor · CSLB #${BUSINESS.license}`, 'Serving LA, Orange County & Southern California', 'Roofer-led roof survey', 'Written scope and price before any work'],

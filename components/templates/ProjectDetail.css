@@ -4,9 +4,13 @@
 .pd-hero{position:relative;isolation:isolate;overflow:hidden;min-height:max(560px,86svh);display:flex;color:#fff;background:#0a1b2c}
 .pd-hero-img{object-fit:cover;object-position:center 45%;z-index:-2}
 .pd-hero-shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(3,22,40,.88) 0%,rgba(3,22,40,.45) 40%,rgba(3,22,40,.2) 70%,rgba(3,22,40,.5) 100%)}
-/* The cover's overlay, like the home and sub-page heroes: the cinematic overlay (--hero-cinema, app/globals.css; October 20 2026, no dot screen), and a moving
+/* The cover's overlay, like the home and sub-page heroes (owner, October 14 2026): a fine dot screen and a soft vignette over the shade, and a moving
    film grain on top (.pd-hero:after, blended with the photo inside the cover's isolated group). Grain still for reduced motion, hidden in print. */
-.pd-hero-shade{background:var(--hero-cinema)} /* the cinematic overlay (app/globals.css); no dot screen since October 20 2026 */
+.pd-hero-shade{
+  background:
+    radial-gradient(ellipse 90% 80% at 50% 50%,transparent 50%,rgba(4,14,26,.55) 100%),
+    linear-gradient(0deg,rgba(3,22,40,.88) 0%,rgba(3,22,40,.45) 40%,rgba(3,22,40,.2) 70%,rgba(3,22,40,.5) 100%);
+}
 .pd-hero:after{
   content:"";position:absolute;inset:-50%;z-index:-1;pointer-events:none;opacity:.2;mix-blend-mode:overlay;animation:pdGrain .9s steps(6) infinite;
   background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
@@ -112,10 +116,3 @@
 .pd-next-text span{display:inline-flex;align-items:center;gap:8px;font:600 14px/1 var(--font-text),sans-serif;color:var(--gold-ink)}
 .pd-next-text svg{width:15px;height:15px}
 @media (min-width:901px){.pd-next{padding-bottom:120px}.pd-next-card{grid-template-columns:1.2fr 1fr}.pd-next-text{padding:40px}}
-
-/* Shorter project cover (owner, October 21 2026: "not as tall") */
-.pd-hero{min-height:clamp(440px,68svh,560px)}
-@media (min-width:901px){.pd-hero{min-height:clamp(520px,72svh,680px)}}
-/* The header now sits above the cover (Header.css), so its top padding no longer has to clear it */
-.pd-hero-inner{padding-top:32px}
-@media (min-width:901px){.pd-hero-inner{padding-top:72px}}

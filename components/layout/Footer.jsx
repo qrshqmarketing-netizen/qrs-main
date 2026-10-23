@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import BrandLogo from '@/components/ui/BrandLogo';
 import { FacebookIcon, InstagramIcon, LinkedInIcon, YouTubeIcon } from '@/components/ui/icons';
 import CookieSettingsLink from '@/components/ui/CookieSettingsLink';
@@ -17,12 +18,13 @@ const links = (list) =>
     </SiteLink>
   ));
 
-// The studio-style footer: plain deep navy (no photo since October 21 2026), the phone number large with the three offices beside it, the logo and link
+// The studio-style footer: a neighborhood photo under a deep navy shade, the phone number large with the three offices beside it, the logo and link
 // columns under a hairline, and the small print last. The request page (/start/) keeps only the small print (HideOnStart).
 export default function Footer() {
   return (
     <footer>
-      {/* No photo behind the footer (owner, October 21 2026): plain deep navy */}
+      <Image className="ft-photo" src="/images/home-hero-shingle-neighborhood-drone-view.webp" alt="" fill sizes="100vw" quality={55} loading="lazy" />
+      <div className="ft-shade" aria-hidden="true"></div>
       <div className="container">
         <HideOnStart>
           <div className="ft-top">

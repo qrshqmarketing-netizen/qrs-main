@@ -97,12 +97,11 @@ export const GA_ID = 'G-CJSKXDJCBF';
 // Search Console ("roofing contractor in Los Angeles") and after how Royal Roofing, the competitor that ranks #1 for "roofing company orange county",
 // words theirs: both counties in the title, description and H1. The H1 (HOME_H1) uses the same phrase; the brand name is in the description.
 export const GOOGLE_REVIEWS = { count: 269, asOf: '2026-10-15' };
-// Titles and descriptions that answer the "best roofer" searches with confirmed facts, not a "best" claim (owner, October 22 2026, from
-// Search Console: 2,904 "best roofer in Los Angeles" impressions, 1 click; "best roofing contractor in los angeles" at position 1.6, 0 clicks)
-// Owner, October 23 2026: "Best Roofers" to match the "best roofer" searches, backed by the review count (title only; the rest of the home page is unchanged)
-export const HOME_TITLE = `Best Roofers in Los Angeles | ${GOOGLE_REVIEWS.count} Google Reviews`;
+// Home title and description: the October 16 wording again (owner, October 23 2026: "restore the meta data")
+export const HOME_TITLE = 'Roofing Contractor in Los Angeles & Orange County, CA';
 export const HOME_H1 = 'Roofing Contractor in Los Angeles & Orange County';
-export const HOME_DESCRIPTION = `Choosing a roofing contractor in Los Angeles & Orange County? Free drone roof evaluation, a written price before any work and ${GOOGLE_REVIEWS.count} Google reviews.`;
+export const HOME_DESCRIPTION =
+  'Quality Roofing Specialists: roofing contractor in Los Angeles & Orange County. Repair, replacement, free roof evaluation, 10-year warranty: call for details.';
 
 // The number of Google reviews across our listings (owner, October 15 2026: 269). Update it by hand from Google now and then; it shows on the
 // proof strip under every hero and in the home page's review section. No star rating is shown (not given by the owner).

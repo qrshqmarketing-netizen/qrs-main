@@ -4,8 +4,8 @@
 export const FLAT_CONTENT = {
   hub: {
     keyword: 'flat roofing',
-    metaTitle: 'Flat Roofing Los Angeles & Orange County | Flat Roof Specialists', // owner, October 22 2026 (the H1 stays "Flat Roofing in Los Angeles & Orange County")
-    metaDescription: 'Flat roofing in Los Angeles & Orange County from licensed flat roof specialists: installs, replacements and repairs for homes, ADUs, garages and patio covers.',
+    metaTitle: 'Residential Flat Roofing in Los Angeles & Orange County', // owner, October 22 2026 (the H1 stays "Flat Roofing in Los Angeles & Orange County")
+    metaDescription: 'Residential flat roofing in Los Angeles & Orange County: modified bitumen roofs for homes, ADUs, garages and patio covers, planned around drainage.',
     // The hero's check points on this page (Hero `annotations`), in place of the home set
     heroNotes: ['Licensed flat roof contractor serving LA & Orange County · CSLB #1061942', 'Free roof evaluation', 'Written price before any work', '10-year workmanship warranty (call for details)'],
     // A card on this hub reads differently from the same page's card elsewhere (menus and the service-first hubs keep `title` and `card`)
@@ -97,11 +97,11 @@ export const FLAT_CONTENT = {
       h1: 'Flat Roof Repair in Los Angeles & Orange County',
       navLabel: 'Roof Repairs',
       card: 'Leaks, blisters, open seams and failed flashings traced to the source, repaired carefully and documented with photos.',
-      metaTitle: 'Flat Roof Repair & Flat Roof Leak Repair in Los Angeles', // "flat roof leak repair" added (owner, October 22 2026)
+      metaTitle: 'Flat Roof Repair in Los Angeles', // "flat roof leak repair" added (owner, October 22 2026)
       // Search Console wording (owner, October 23 2026): "flat roof repair los angeles", "flat roof repair service(s)", "flat roof repairs", "flat roofing
       // experts los angeles", "roof repair specialist los angeles", "flat roof repair contractor". Polyurethane (foam) roofs, Woodland Beach and Delano
       // are not used (not a confirmed system / outside the area).
-      metaDescription: 'Flat roof repair services in Los Angeles & Orange County: flat roof leak repair traced to the source, and seams, blisters and flashings fixed, with photos.',
+      metaDescription: 'Flat roof repair in Los Angeles & Orange County: we trace leaks to the source and fix seams, blisters and flashings, with photos. Book a free roof evaluation.',
       image: '/images/flat-roof-replacement-tear-off-drone-view.webp',
       imageAlt: 'Aerial view of a flat roof with roofing work in progress',
       hero: {

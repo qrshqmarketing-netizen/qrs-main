@@ -88,8 +88,8 @@ export const TILE_CONTENT = {
       card: 'Cracked or slipped tiles, loose ridges, failed flashings and clogged valleys, traced to their source and fixed with photos of the work.',
       // Search Console wording (owner, October 23 2026): "tile roof repair(s)", "roof tile repair", "tile roof specialist(s)", "broken roof tile repair
       // orange county", "highland park tile roof repair", "cracked tile roof repair", "tile roof leak repair". "Same day" is not promised.
-      metaTitle: 'Tile Roof Repair in Los Angeles | Tile Roof Specialists',
-      metaDescription: 'Tile roof repair in Los Angeles & Orange County from tile roof specialists: broken and cracked tiles replaced and leaks traced to the source, with photos.',
+      metaTitle: 'Tile Roof Repair in Los Angeles & Orange County',
+      metaDescription: 'Tile roof repair in Los Angeles & Orange County: leaks traced, cracked tiles matched and flashings fixed, with photos. Book a free roof evaluation.',
       image: '/images/tile-lift-off-and-reset-drone-view-2.webp',
       imageAlt: 'Tile roof repair and relay in progress, with tiles staged on the roof',
       hero: {

@@ -17,7 +17,7 @@
 .pc-more svg{width:14px;height:14px}
 /* Filters, count and page buttons (BlogBrowser.jsx) */
 .pc-card[hidden]{display:none}
-.pc-filters{display:grid;gap:16px;margin:0 0 18px;scroll-margin-top:calc(var(--hd-h,100px) + 24px)}
+.pc-filters{display:grid;gap:16px;margin:0 0 18px;scroll-margin-top:110px}
 .pc-group{display:grid;gap:8px}
 .pc-group-label{color:var(--gold-ink);font:700 12px/1.3 var(--font-head);letter-spacing:.08em;text-transform:uppercase}
 .pc-chips{display:flex;flex-wrap:wrap;gap:8px}

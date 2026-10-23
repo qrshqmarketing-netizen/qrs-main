@@ -3,8 +3,8 @@
 export const COMMERCIAL_CONTENT = {
   hub: {
     keyword: 'commercial roofing',
-    metaTitle: 'Commercial Roofing Contractor in Los Angeles & Orange County', // for the "best commercial roofing contractor" searches (October 22 2026)
-    metaDescription: 'Commercial roofing contractor in Los Angeles & Orange County: a roofer-led roof survey, written scope and price, permits pulled. Licensed, bonded and insured.',
+    metaTitle: 'Commercial Roofing in Los Angeles', // for the "best commercial roofing contractor" searches (October 22 2026)
+    metaDescription: 'Commercial roofing in LA & Orange County for offices, retail, churches, warehouses and more. Roofer-led surveys and written scopes. Request an estimate.',
     hero: {
       heading: 'Commercial Roofing in Los Angeles & Orange County',
       intro: 'QRS is a commercial roofing contractor in Los Angeles and Orange County, with repairs, replacement and scheduled maintenance for office buildings, retail stores, churches, warehouses, shopping centers and more. Every project starts with a roofer-led survey and a written scope, and the work is planned around how your building runs.',
@@ -160,8 +160,8 @@ export const COMMERCIAL_CONTENT = {
       // Search Console wording (owner, October 23 2026): "industrial roofing contractor", "industrial roof repairs", "california industrial roofers",
       // "industrial reroofing", "industrial roof inspection/maintenance", with Los Angeles and Orange County. Santa Clarita and the Bay Area are
       // not in the service area, so they are not named.
-      metaTitle: 'Industrial Roofing Contractor in Los Angeles & Orange County',
-      metaDescription: 'Industrial roofing contractor in Los Angeles & Orange County: industrial roof repairs, reroofing, inspections and maintenance, phased around production.',
+      metaTitle: 'Industrial Roofing in Los Angeles',
+      metaDescription: 'Industrial roofing in LA & Orange County: surveys, repairs and replacement planned around production, rooftop equipment and safe access. Request an estimate.',
       image: '/images/vernon-industrial.webp',
       imageAlt: 'Industrial property in Vernon, California',
       hero: {
@@ -237,8 +237,8 @@ export const COMMERCIAL_CONTENT = {
       // Search Console wording (owner, October 23 2026): "warehouse roofing repair", "warehouse roof replacement (los angeles)", "warehouse roofing
       // contractor(s)/company", "orange county warehouse roofing/roof repair". "Reconditioning" (coatings) is not a service, and Carmel-by-the-Sea is
       // outside the service area, so neither is used.
-      metaTitle: 'Warehouse Roofing Contractor in Los Angeles & Orange County',
-      metaDescription: 'Warehouse roofing in Los Angeles & Orange County: warehouse roof repair and replacement in phases around inventory and loading docks. Request a survey.',
+      metaTitle: 'Warehouse Roofing in Los Angeles & Orange County',
+      metaDescription: 'Warehouse roofing in Los Angeles & Orange County: large low-slope roofs repaired or replaced in phases around inventory and loading docks. Request a survey.',
       image: '/images/recent-work-commercial-flat-roof-drone-view.webp',
       imageAlt: 'Aerial view of a large white flat roof with rooftop units above a parking lot',
       hero: {

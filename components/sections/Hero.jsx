@@ -8,7 +8,7 @@ import { heroUnderline } from '@/data/heroOutcomes';
 import { HERO_ANNOTATIONS, PHONE, TEL } from '@/data/site';
 import Breadcrumbs from './Breadcrumbs';
 import HeroParallax from './HeroParallax';
-import FlowLines from '@/components/home/FlowLines';
+import ProofBar from './ProofBar';
 import './Hero.css';
 
 const DEFAULT_ACTIONS = [
@@ -45,7 +45,7 @@ function HeadlineText({ title, phrase }) {
   );
 }
 
-export default function Hero({ decor = true,
+export default function Hero({
   crumbs,
   eyebrow = 'Roof Repair & Replacement in Southern California',
   title = (
@@ -53,6 +53,7 @@ export default function Hero({ decor = true,
       Roofing built with <span>precision.</span>
     </>
   ),
+  intro,
   image,
   slides,
   mobileImage,
@@ -76,6 +77,8 @@ export default function Hero({ decor = true,
   const path = crumbs?.at(-1)?.href || '';
   const skip = /^\/(careers|blog)\//.test(path); // job and article pages: the roofing facts don't belong there
   const notes = annotations === false || skip || !actions?.length ? [] : annotations || HERO_ANNOTATIONS[/^\/(commercial-roofing|contractors)\//.test(path) ? 'commercial' : 'home'];
+  // The intro's closing "Start with / Book a free roof evaluation." is left out when the facts row already says it (the keyword stays in the first sentence)
+  const lead = notes.some((n) => /free roof evaluation/i.test(n)) ? intro?.replace(/\s*(Start with|Book) a free roof evaluation\.\s*$/, '') : intro;
   const Eyebrow = h1 === 'eyebrow' ? 'h1' : 'div';
   const Title = h1 === 'eyebrow' ? 'p' : 'h1';
   return (
@@ -98,8 +101,11 @@ export default function Hero({ decor = true,
                 </>
               )}
             </Title>
-            {/* The intro line under the headline is no longer shown (owner, October 21 2026: no excerpt in sub-page heroes). `intro` stays in the
-                data for the AI files and the chat search; each page's keyword is in its H1 and in the opening of its first section instead. */}
+            {lead && (
+              <p className="hero-sub">
+                <Rich text={lead} />
+              </p>
+            )}
             {actions?.length > 0 && (
               <div className="hero-actions">
                 {actions.map((a) =>
@@ -130,13 +136,7 @@ export default function Hero({ decor = true,
           {aside}
         </div>
       </section>
-      {/* `stats` no longer adds the proof strip here: it is the marquee above the menu bar on every page (Header.jsx, October 22 2026) */}
-      {/* Hairline curves behind the first section under every hero (decorations after getaethr.ai, October 21 2026); decor={false} leaves them out */}
-      {decor && (
-        <div className="hd-flow-anchor" aria-hidden="true">
-          <FlowLines />
-        </div>
-      )}
+      {stats && <ProofBar strip />}
     </>
   );
 }

@@ -10,9 +10,9 @@ export const LOCATION_PAGES = {
     imagePosition: 'center 40%',
     // About Los Angeles only (owner, October 22 2026): West Hollywood has its own page (the one the Google listing named West Hollywood should
     // point to), so this page names it only to link there, and the two pages don't compete for "West Hollywood roofing"
-    metaTitle: 'Los Angeles Roofing & Roof Repair | 269 Google Reviews', // the review count for the "best roofer" searches; the H1 stays plain (h1)
+    metaTitle: 'Los Angeles Roofing & Roof Repair',
     h1: 'Los Angeles Roofing & Roof Repair',
-    metaDescription: 'Los Angeles roofing contractor with 269 Google reviews: tile, shingle and flat roof repair and replacement, with a written scope and price before any work.',
+    metaDescription: 'Los Angeles roofing across the city: tile, shingle and flat roof repair and replacement with written scopes. Book a free roof evaluation.',
     blurb: 'Roofer-led inspections, written scopes and clean installs for homes across the city, from the Hollywood Hills to the Valley.',
     hero: {
       // The keyword line; the result line under it is in data/heroOutcomes.js
@@ -422,9 +422,9 @@ export const LOCATION_PAGES = {
     // Search Console wording (owner, October 23 2026; always "Newport Beach", never "Newport" alone): roofers, roof repairs, "roof inspections newport
     // beach", "roof leak repair newport beach", "newport beach roofing contractor", "newport coast roofing". Soffit and fascia repair is not a
     // confirmed service, so it is not mentioned. `h1` keeps the H1 plain.
-    metaTitle: 'Newport Beach Roofing & Roof Repair | Newport Beach Roofers',
+    metaTitle: 'Newport Beach Roofing & Roof Repair',
     h1: 'Newport Beach Roofing & Roof Repair',
-    metaDescription: 'Newport Beach roofing contractor for roof repair, roof leak repair, inspections and replacement, from Balboa Island to Newport Coast. Free roof evaluation.',
+    metaDescription: 'Newport Beach roofing for coastal homes: tile, shingle and flat roof repair and replacement. Book a roofer-led free roof evaluation.',
     blurb: 'Roofer-led inspections and detail-first installs for homes from Corona del Mar to Newport Coast.',
     hero: {
       heading: 'Newport Beach roofing',

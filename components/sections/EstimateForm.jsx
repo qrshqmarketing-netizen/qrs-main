@@ -1,14 +1,12 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { FOUND_US_OPTIONS, ROOF_TYPES, SERVICE_OPTIONS } from '@/data/estimateOptions';
 import { PHONE, TEL } from '@/data/site';
 import { currentAttribution } from '@/lib/attribution';
 import { postLead } from '@/lib/endpoints';
 import { rememberLead, trackLead } from '@/lib/tracking';
-import { ZIP_EVENT } from '@/lib/events';
-import { storedZip } from '@/lib/zipLookup';
 
 // The estimate form in the request section at the bottom of every page (RoofCheck.jsx, id="roof-check"), back in October 2026 after the
 // step-by-step form at /start/ brought in fewer leads. Every "Get Pro Advice" link on a page with this section scrolls to it (SiteLink).
@@ -46,15 +44,6 @@ function Form({ pathname }) {
   });
   const [state, setState] = useState({ status: 'idle', error: '' });
   const set = (k) => (e) => setF((v) => ({ ...v, [k]: e.target.value }));
-
-  // A ZIP the visitor searched for on this visit (the home page's ZIP search, components/home/ZipSearch.jsx) fills an empty ZIP field
-  useEffect(() => {
-    const fill = (r) => r?.zip && setF((v) => (v.zip ? v : { ...v, zip: r.zip }));
-    fill(storedZip());
-    const on = (e) => fill(e.detail);
-    window.addEventListener(ZIP_EVENT, on);
-    return () => window.removeEventListener(ZIP_EVENT, on);
-  }, []);
 
   async function submit(e) {
     e.preventDefault();
