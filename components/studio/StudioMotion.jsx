@@ -14,7 +14,7 @@ import { IMAGE_PARALLAX, LINE_REVEALS, SMOOTH_SCROLL } from '@/data/promo';
 
 const LINE_TARGETS = 'main h2, main .st-lead';
 const LINE_SKIP = '.hero, .st-hero, .faq-item, .st-card, .sa-wrap, .post-toc, [data-no-reveal], .mega, .qa-log, .rm-body, nav';
-const PARALLAX = '.st-proj img, .st-cat img, .cg-media img, .split-media img, .process-block-media img, .post-image img';
+const PARALLAX = '.st-proj img, .st-cat img, .cg-media img, .split-media img, .process-block-media img, .post-image img, .lp-work-photo img';
 const EASE = 'cubic-bezier(0.17, 0.84, 0.44, 1)';
 
 // Wrap every word of an element in a clipped mask with an inner span, keeping the original inline markup (links, underlines, brand names)

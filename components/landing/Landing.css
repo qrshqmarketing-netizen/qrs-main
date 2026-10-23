@@ -179,9 +179,10 @@ body.studio-site main.lp .rmq-label,body.studio-site main.lp .rmq-sub{justify-co
 
 /* Shorter ad landing hero (owner, October 21 2026: "not as tall"); the form still sets the height when it needs more */
 @media (min-width:901px){.lp-hero-inner{min-height:min(700px,86svh);padding-top:104px;padding-bottom:56px}}
-/* The header now sits above the hero (Header.css), so its top padding no longer has to clear it */
-.lp-hero-inner{padding-top:32px}
-@media (min-width:901px){.lp-hero-inner{padding-top:48px}}
+/* The header floats over the hero again since the October 16 design rollback (October 23 2026), so the top padding clears it: 60px header + 32px
+   on phones, 68px + 48px from 901px */
+.lp-hero-inner{padding-top:92px}
+@media (min-width:901px){.lp-hero-inner{padding-top:116px}}
 
 /* The landing hero's film shade (the site-wide --hero-cinema token went with the October 20 theme; kept here for the ad landing pages) */
 .lp-hero{--hero-cinema:radial-gradient(ellipse 88% 78% at 50% 46%,transparent 42%,rgba(2,8,16,.5) 80%,rgba(2,8,16,.78) 100%),linear-gradient(180deg,rgba(4,18,32,.76) 0%,rgba(6,24,40,.54) 24%,rgba(28,20,10,.38) 50%,rgba(10,10,12,.52) 72%,rgba(2,8,16,.9) 100%)}
