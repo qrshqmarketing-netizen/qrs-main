@@ -127,27 +127,29 @@ export const METAL_CONTENT = {
       h1: 'Metal Roof Repair in Los Angeles & Orange County',
       navLabel: 'Roof Repairs',
       card: 'Leaks at fasteners, seams, sealant and flashings traced to the source and repaired, with photos of the problem and the fix.',
-      metaTitle: 'Metal Roof Repair in Los Angeles & Orange County',
-      metaDescription: 'Metal roof repair in Los Angeles & Orange County: leaks traced to loose fasteners, worn sealant and failed flashing, fixed with photos. Free roof evaluation.',
+      // Search Console wording (owner, October 23 2026): "metal roof repair" (779 impressions at 41), "sheet metal roof repair", "aluminum roof
+      // repair", "r-panel metal roof repair", "galvanized roof repair", "flat metal roof repair", "metal roof leak repairs"
+      metaTitle: 'Metal Roof Repair & Metal Roof Leak Repair in Los Angeles',
+      metaDescription: 'Metal roof repair in Los Angeles & Orange County: sheet metal, aluminum and R-panel roof leaks traced to fasteners, sealant and flashing, fixed with photos.',
       image: '/images/metal-roof-standing-seam-panel-detail.webp',
       imageAlt: 'Close-up of bronze standing seam metal roof panels with raised seams running down to the eave',
       hero: {
         intro:
-          'Metal roof repair from QRS finds where water is really getting in and fixes it at the source, across Los Angeles and Orange County. On a metal roof the cause is often a loose fastener, tired sealant or failed flashing rather than the panels themselves. We show you photos of the problem and the finished repair, with a written scope and price before any work. Start with a free roof evaluation.',
+          'Metal roof repair from QRS finds where water is really getting in and fixes it at the source, on sheet metal, aluminum, galvanized, R-panel and standing seam roofs across Los Angeles and Orange County. On a metal roof the cause is often a loose fastener, tired sealant or failed flashing rather than the panels themselves. We show you photos of the problem and the finished repair, with a written scope and price before any work. Start with a free roof evaluation.',
         highlights: ['Leaks traced to the real entry point', 'Fasteners, seams, sealant and flashing checked', 'Photos of the problem and the fix'],
       },
       // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
       story: {
         label: 'Metal roof repair',
         lead: 'When a metal roof leaks, the panels are rarely the __problem__.',
-        text: 'Metal sheds water well, so leaks come from the details: screws that back out, washers cracked by the sun, sealant that shrinks, seams that open and flashing that pulls loose at walls, vents and skylights. Water runs along the panels and under their laps before it drips, so the stain inside is rarely under the opening.',
+        text: 'Metal sheds water well, so leaks come from the details: screws that back out, washers cracked by the sun, sealant that shrinks, seams that open and flashing that pulls loose at walls, vents and skylights. Water runs along the panels and under their laps before it drips, so the stain inside is rarely under the opening. Metal roof leak repairs follow the same path on every kind of metal roof: sheet metal and R-panel roofs with exposed fasteners, aluminum and galvanized steel, flat metal roofs over porches and additions, and standing seam.',
         heading: 'How we repair a metal roof',
         image: '/images/metal-roof-standing-seam-modern-home.webp',
         imageAlt: 'Modern two-story home with a dark gray standing seam metal roof over wood and stucco walls',
         principles: [
           { title: 'Start upslope. Check every line.', text: 'A roofer works up from the stain across the places metal roofs leak, and photographs the cause before anything is fixed.', bullets: ['Lines of fasteners and their washers', 'Seams, laps and trims', 'Sealant at vents, pipes and walls', 'Signs of corrosion'] },
           { title: 'Fix the detail. Keep the roof.', text: 'Failed fasteners are replaced or tightened, penetrations and walls are re-flashed and sealed, and damaged trims or panels are repaired or replaced. Where corrosion has started, we deal with it while the metal is still sound.' },
-          { title: 'Matched to your metal.', text: 'Fasteners, sealants and flashing are chosen for your roof’s metal and finish, so the repair doesn’t start corrosion where different metals meet.' },
+          { title: 'Matched to your metal.', text: 'Aluminum, galvanized and painted steel each need their own parts: fasteners, sealants and flashing are chosen for your roof’s metal and finish, so the repair doesn’t start corrosion where different metals meet.' },
           { title: 'In writing before. In photos after.', text: 'The written scope lists the fasteners, sealant, flashing or panels involved and the price, before any work. Afterward we walk you through photos of the finished repair; repair materials carry the manufacturer’s warranty, which depends on the product. If the panels are failing across the roof, [standing seam metal roofing](/residential-roofing/metal-roofing/standing-seam/) may be the better call.' },
         ],
       },
@@ -159,6 +161,10 @@ export const METAL_CONTENT = {
         {
           q: 'Can a metal roof be repaired instead of replaced?',
           a: 'Often, yes. When the panels are sound and the problem is in the fasteners, sealant or flashing, a targeted repair fixes it. If the panels are failing across the roof, replacement makes more sense, and we’ll show you the photos.',
+        },
+        {
+          q: 'Do you repair aluminum, galvanized and R-panel metal roofs?',
+          a: 'Yes. Aluminum roof repair, galvanized roof repair and R-panel metal roof repair follow the same steps: trace the leak to the fastener, seam, sealant or flashing that let it in, then fix it with parts matched to the metal, so different metals don’t meet and corrode. Flat metal roofs over porches, patios and additions are checked the same way, with extra attention to where water sits.',
         },
         {
           q: 'Can I seal the leak myself?',

@@ -157,23 +157,26 @@ export const COMMERCIAL_CONTENT = {
       title: 'Industrial Roofing',
       navLabel: 'Industrial',
       card: 'Roofing for manufacturing and industrial facilities, with rooftop equipment, penetrations and safe access planned before crews go up.',
-      metaTitle: 'Industrial Roofing in Los Angeles',
-      metaDescription: 'Industrial roofing in LA & Orange County: surveys, repairs and replacement planned around production, rooftop equipment and safe access. Request an estimate.',
+      // Search Console wording (owner, October 23 2026): "industrial roofing contractor", "industrial roof repairs", "california industrial roofers",
+      // "industrial reroofing", "industrial roof inspection/maintenance", with Los Angeles and Orange County. Santa Clarita and the Bay Area are
+      // not in the service area, so they are not named.
+      metaTitle: 'Industrial Roofing Contractor in Los Angeles & Orange County',
+      metaDescription: 'Industrial roofing contractor in Los Angeles & Orange County: industrial roof repairs, reroofing, inspections and maintenance, phased around production.',
       image: '/images/vernon-industrial.webp',
       imageAlt: 'Industrial property in Vernon, California',
       hero: {
-        intro: 'QRS provides industrial roofing for manufacturing and industrial facilities across Los Angeles and Orange County, from surveys and repairs to full replacement, phased around production and the people and equipment below. We flash every stack and vent properly and plan safe roof access with your facility team before crews go up.',
+        intro: 'QRS provides industrial roofing for manufacturing and industrial facilities across Los Angeles and Orange County, from industrial roof inspections and repairs to maintenance and full reroofing, phased around production and the people and equipment below. We flash every stack and vent properly and plan safe roof access with your facility team before crews go up.',
         highlights: ['Every stack and vent flashed properly', 'Work phased around production', 'Access and safety planned first'],
       },
       // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
       story: {
         label: 'Industrial roofing',
         lead: 'Industrial buildings put more on their roofs than most, and every __penetration__ counts.',
-        text: 'Exhaust stacks, ductwork, vents, conduit and equipment supports add up quickly. Maintenance crews wear paths into the surface walking to equipment, and some processes vent residue that wears on the roofing around stacks.',
+        text: 'As industrial roofers serving Los Angeles, Orange County and the Inland Empire, we handle industrial roof repairs, inspections, maintenance and reroofing for Southern California facilities. Exhaust stacks, ductwork, vents, conduit and equipment supports add up quickly. Maintenance crews wear paths into the surface walking to equipment, and some processes vent residue that wears on the roofing around stacks.',
         heading: 'How we roof an industrial facility',
         principles: [
-          { title: 'Every stack, curb and support photographed.', text: 'The survey covers each penetration along with the wear paths, standing water and flashing condition, so nothing on a crowded roof is overlooked.', bullets: ['Stacks, vents and ductwork', 'Equipment supports and curbs', 'Walk paths and ponding areas'] },
-          { title: 'Flashing built for the roof, not a smear of sealant.', text: 'Stacks, curbs and supports get flashing built to suit the [low-slope roofing system](/residential-roofing/flat-roofing/), whether the job is a repair or a full replacement.' },
+          { title: 'Every stack, curb and support photographed.', text: 'The industrial roof inspection covers each penetration along with the wear paths, standing water and flashing condition, so nothing on a crowded roof is overlooked.', bullets: ['Stacks, vents and ductwork', 'Equipment supports and curbs', 'Walk paths and ponding areas'] },
+          { title: 'Flashing built for the roof, not a smear of sealant.', text: 'Stacks, curbs and supports get flashing built to suit the [low-slope roofing system](/residential-roofing/flat-roofing/), whether the job is an industrial roof repair or a full industrial reroof.' },
           { title: 'Safety and production, planned first.', text: 'Before anyone goes up, we walk through shift schedules, loading areas, restricted or hazardous areas, what sits beneath each section and where crews can safely get on and off the roof. The scope phases the work around your operation, and crews stay within the agreed areas.' },
           { title: 'Records for your maintenance team.', text: 'Closeout photos of each area and every finished penetration go into your facility files, with our 10-year workmanship warranty (call for details), and we help plan routine checks around the parts that wear most. Storage or distribution buildings are covered on [warehouse roofing](/commercial-roofing/warehouses/).' },
         ],
@@ -181,9 +184,9 @@ export const COMMERCIAL_CONTENT = {
       faqs: [
         { q: 'Can you replace our roof without shutting down production?', a: 'For most facilities, yes. We divide the roof into work areas and schedule each one around your shifts and the equipment below. If an area needs to be cleared or covered, you’ll hear about it well before the work reaches it.' },
         { q: 'Why does our roof keep leaking around stacks and vents?', a: 'Penetrations heat up, cool down and sometimes vibrate, and residue from some processes breaks down roofing around them. Flashing that was sealed over rather than properly built tends to fail first. We rebuild those details to suit the conditions on your roof.' },
+        { q: 'Are you an industrial roofing contractor in Los Angeles and Orange County?', a: 'Yes. We work with industrial properties across Los Angeles County, including Los Angeles, Vernon and Torrance, and Orange County, including Anaheim and Santa Ana, plus the Inland Empire. Industrial roof repairs, reroofing and maintenance are planned with your facility team. Our [service area](/service-areas/) page lists every city we serve.' },
         { q: 'What do you need from us before a roof survey?', a: 'Safe roof access, a contact who knows the building, and any history of leaks or past repairs. If some areas are restricted or call for extra safety gear, let us know so we can plan the visit around it.' },
         { q: 'Do you also roof the office or showroom part of our building?', a: 'Yes. Many industrial properties include front offices or a showroom, sometimes under a different kind of roof. We can include every section in one survey and one written scope.' },
-        { q: 'Do you serve industrial areas in both counties?', a: 'Yes. We work with industrial properties across LA County and Orange County, including Los Angeles, Torrance, Anaheim and Santa Ana. Our [service area](/service-areas/) page lists every city we serve.' },
       ],
       related: ['/commercial-roofing/warehouses/', '/commercial-roofing/shops/', '/residential-roofing/flat-roofing/'],
     },
@@ -231,8 +234,11 @@ export const COMMERCIAL_CONTENT = {
       title: 'Warehouse Roofing',
       navLabel: 'Warehouses',
       card: 'Large low-slope warehouse roofs surveyed, repaired and replaced in sections, with drainage, skylights and the inventory below in mind.',
-      metaTitle: 'Warehouse Roofing in Los Angeles & Orange County',
-      metaDescription: 'Warehouse roofing in Los Angeles & Orange County: large low-slope roofs repaired or replaced in phases around inventory and loading docks. Request a survey.',
+      // Search Console wording (owner, October 23 2026): "warehouse roofing repair", "warehouse roof replacement (los angeles)", "warehouse roofing
+      // contractor(s)/company", "orange county warehouse roofing/roof repair". "Reconditioning" (coatings) is not a service, and Carmel-by-the-Sea is
+      // outside the service area, so neither is used.
+      metaTitle: 'Warehouse Roofing Contractor in Los Angeles & Orange County',
+      metaDescription: 'Warehouse roofing in Los Angeles & Orange County: warehouse roof repair and replacement in phases around inventory and loading docks. Request a survey.',
       image: '/images/recent-work-commercial-flat-roof-drone-view.webp',
       imageAlt: 'Aerial view of a large white flat roof with rooftop units above a parking lot',
       hero: {
@@ -243,11 +249,11 @@ export const COMMERCIAL_CONTENT = {
       story: {
         label: 'Warehouse roofing',
         lead: 'Warehouse roofs are big, simple and __unforgiving__.',
-        text: 'Across a wide, nearly flat span, water travels a long way to reach a drain or scupper, so a low spot, a missing cricket or a clogged drain leaves water standing after every storm. Many Southern California warehouses are concrete tilt-up buildings with roofs like this.',
+        text: 'Across a wide, nearly flat span, water travels a long way to reach a drain or scupper, so a low spot, a missing cricket or a clogged drain leaves water standing after every storm. Many Southern California warehouses are concrete tilt-up buildings with roofs like this. As warehouse roofing contractors in Los Angeles and Orange County, we handle warehouse roof repairs, from one drain or skylight to a whole section, and full warehouse roof replacement.',
         heading: 'How we roof a warehouse',
         principles: [
           { title: 'Surveyed in sections.', text: 'A roofer works across the roof section by section, photographing drainage, seams, skylights, parapets and anywhere water stands, so you can see where problems cluster.', bullets: ['Drains, scuppers and crickets', 'Ponding and low spots', 'Skylight curbs and roof hatches'] },
-          { title: 'Drainage first.', text: 'Standing water speeds up wear, so the repair or [low-slope roofing](/residential-roofing/flat-roofing/) is planned around how water moves across the whole roof, not just where it leaked.' },
+          { title: 'Drainage first.', text: 'Standing water speeds up wear, so a warehouse roof repair or new [low-slope roofing](/residential-roofing/flat-roofing/) is planned around how water moves across the whole roof, not just where it leaked.' },
           { title: 'Urgent areas now, the rest in phases.', text: 'Findings by section let you fix the worst areas first and budget for the rest. A replacement is phased by section around your docks, truck traffic and the inventory below each part of the roof, so you keep shipping.', bullets: ['Dock and truck access', 'Inventory below each work area', 'Staging and hoisting locations'] },
           { title: 'Records by section.', text: 'Closeout photos document each finished section, drains and flashing included, for owners, asset managers and tenants, and checks before the rainy season keep drains and scuppers clear.' },
         ],
@@ -255,6 +261,7 @@ export const COMMERCIAL_CONTENT = {
       faqs: [
         { q: 'Why does water keep pooling on our warehouse roof?', a: 'Ponding usually comes from low spots, clogged drains or areas where water has no clear path off the roof. Over time it wears the surface faster and adds weight. Fixes range from clearing drains to adding crickets, or rebuilding the slope in that area during a replacement.' },
         { q: 'Can you replace a warehouse roof while we keep shipping?', a: 'That’s what phasing is for. We plan work areas around your docks and truck routes and keep material staging out of the way. If a section above sensitive inventory needs a cleared or covered area, we plan it with you ahead of time.' },
+        { q: 'Do you do warehouse roof repair and replacement in Los Angeles and Orange County?', a: 'Yes. Warehouse roofing repair is often enough when the problems sit in a few areas, such as drains, skylights or one ponding section. When wear runs across the roof, a warehouse roof replacement is phased by section so you keep shipping. We work on warehouses across Los Angeles County, Orange County and the Inland Empire; see our [commercial roof replacement](/commercial-roofing/replacement/) page for how a phased replacement runs.' },
         { q: 'Do you work on warehouse skylights?', a: 'Skylights are one of the most common leak points on a warehouse roof. We check the curbs and flashing around each one during the survey and include any roofing repairs in your scope. If a skylight itself is cracked or clouded, we note it in the photos so you can plan for it.' },
         { q: 'Our warehouse is leased. Can you coordinate with the tenant?', a: 'Yes. We can work out access and timing with your tenant’s operations contact while keeping you informed on the scope and findings. Everyone works from the same photos and written plan.' },
         { q: 'Do you also roof manufacturing and industrial buildings?', a: 'Yes. Facilities with production equipment and lots of rooftop penetrations need their own kind of planning, covered on our [industrial roofing](/commercial-roofing/industrial/) page. You can also check our [service area](/service-areas/) to confirm we cover your city.' },

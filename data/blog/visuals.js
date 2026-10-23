@@ -89,8 +89,8 @@ export const POST_VISUALS = {
   },
   'roof-insurance-claims-california': {
     'What Homeowners Insurance Usually Covers': { list: 'facts' },
-    'What to Do After Roof Damage': { steps: 'timeline' },
-    'What to Expect From the Process': { list: 'facts-numbered' },
+    'Filing a Roof Damage Insurance Claim: What to Do First': { steps: 'timeline' },
+    'The Roof Insurance Claim Process: What to Expect': { list: 'facts-numbered' },
     'Common Mistakes With Roof Insurance Claims': { list: 'flags' },
   },
   'wooden-roof-pros-and-cons': {

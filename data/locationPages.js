@@ -419,8 +419,12 @@ export const LOCATION_PAGES = {
     keyword: 'newport beach roofing',
     image: '/images/newport-beach-drone-view.webp',
     imagePosition: 'center 55%',
-    metaTitle: 'Newport Beach Roofing & Roof Repair',
-    metaDescription: 'Newport Beach roofing for coastal homes: tile, shingle and flat roof repair and replacement. Book a roofer-led free roof evaluation.',
+    // Search Console wording (owner, October 23 2026; always "Newport Beach", never "Newport" alone): roofers, roof repairs, "roof inspections newport
+    // beach", "roof leak repair newport beach", "newport beach roofing contractor", "newport coast roofing". Soffit and fascia repair is not a
+    // confirmed service, so it is not mentioned. `h1` keeps the H1 plain.
+    metaTitle: 'Newport Beach Roofing & Roof Repair | Newport Beach Roofers',
+    h1: 'Newport Beach Roofing & Roof Repair',
+    metaDescription: 'Newport Beach roofing contractor for roof repair, roof leak repair, inspections and replacement, from Balboa Island to Newport Coast. Free roof evaluation.',
     blurb: 'Roofer-led inspections and detail-first installs for homes from Corona del Mar to Newport Coast.',
     hero: {
       heading: 'Newport Beach roofing',
@@ -429,8 +433,8 @@ export const LOCATION_PAGES = {
     intro: {
       heading: 'Roofing for Newport Beach, From the Islands to the Bluffs',
       paragraphs: [
-        'Newport Beach roofing has to handle constant coastal exposure. Homes on Balboa Island, Lido Isle and the Balboa Peninsula sit right in the salt air, while Corona del Mar, Newport Heights and Newport Coast see ocean wind and marine layer from the bluffs above. Roof styles range from tile and shingle to flat roofs on homes of every age and style.',
-        'We start with a roofer-led [free roof evaluation](#roof-check), photograph the areas coastal conditions affect most and explain what we find in plain English. That could lead to a [flat roof repair](/residential-roofing/flat-roofing/repair/) or a tile or shingle replacement, always with a written scope and price first.',
+        'Newport Beach roofing has to handle constant coastal exposure. As roofers in Newport Beach and Newport Coast, we handle roof repairs, roof leak repair, roof inspections and full roof replacement for homes of every style. Homes on Balboa Island, Lido Isle and the Balboa Peninsula sit right in the salt air, while Corona del Mar, Newport Heights and Newport Coast see ocean wind and marine layer from the bluffs above. Roof styles range from tile and shingle to flat roofs on homes of every age and style.',
+        'We start with a roofer-led [free roof evaluation](#roof-check), photograph the areas coastal conditions affect most and explain what we find in plain English. That could lead to a [flat roof repair](/residential-roofing/flat-roofing/repair/) or a tile or shingle roof replacement, always with a written scope and price first.',
       ],
     },
     neighborhoods: ['Corona del Mar', 'Balboa Island', 'Balboa Peninsula', 'Lido Isle', 'Newport Heights', 'Eastbluff', 'Dover Shores', 'Newport Coast'],
@@ -441,6 +445,7 @@ export const LOCATION_PAGES = {
     ],
     faqs: [
       { q: 'Which Newport Beach neighborhoods do you serve?', a: 'All of Newport Beach, including Corona del Mar, Balboa Island, the Balboa Peninsula, Lido Isle, Newport Heights, Eastbluff, Dover Shores and Newport Coast.' },
+      { q: 'Do you do roof repair and replacement in Newport Beach and Newport Coast?', a: 'Yes. Our Newport Beach roof repairs range from a single roof leak repair to cracked tiles and worn flashings, and we replace tile, shingle and flat roofs when repairs no longer make sense. In Newport Coast we also handle [commercial roof repair](/commercial-roofing/repair/) for offices and shops. Every job starts with a roof inspection and a written scope and price.' },
       { q: 'Do you work on homes on Balboa Island and the peninsula?', a: 'Yes. Tight lots and close neighbors there take careful planning for staging and cleanup, and we build that into the written scope.' },
       { q: 'Do you offer ongoing roof care for coastal homes?', a: 'Yes. Scheduled [roof care](/roof-maintenance-plans/#roof-types) helps catch salt-air wear early, with photo records from each visit.' },
     ],

@@ -4,18 +4,21 @@
 export const SHINGLE_CONTENT = {
   hub: {
     keyword: 'shingle roofing',
-    metaTitle: 'Shingle Roofing in Los Angeles & Orange County',
-    metaDescription: 'Shingle roofing for Los Angeles & Orange County homes: replacement, repairs, new installs, inspections, tune-ups and roof care. Book a free roof evaluation.',
+    // Search Console wording (owner, October 23 2026): "shingle roofing services/company/contractor", "shingle roofing los angeles", "shingle roofer(s)",
+    // "shingle roofing installers", "comp shingle roof installation los angeles county", "asphalt/architectural shingles los angeles", "composition roof
+    // orange county". The H1 is unchanged.
+    metaTitle: 'Shingle Roofing Los Angeles | Shingle Roofing Contractor',
+    metaDescription: 'Shingle roofing in Los Angeles & Orange County from a licensed shingle roofing company: asphalt and architectural shingle replacement, repair and installs.',
     hero: {
       heading: 'Shingle Roofing Services · *TotalShield*',
-      intro: 'Shingle roofing from QRS covers replacement, new installs, repairs, inspections, tune-ups and ongoing roof care for homes across Los Angeles and Orange County. We give the underlayment, flashings and attic ventilation the same care as the shingles, and our complete replacement and new-install package is the *TotalShield* Shingle System. Each one starts with a free roof evaluation.',
+      intro: 'Shingle roofing services from QRS, a licensed shingle roofing contractor, cover replacement, new installs, repairs, inspections, tune-ups and ongoing roof care for homes across Los Angeles and Orange County. We give the underlayment, flashings and attic ventilation the same care as the shingles, and our complete replacement and new-install package is the *TotalShield* Shingle System. Each one starts with a free roof evaluation.',
       highlights: ['Premium shingle systems, installed to spec', 'Proper ventilation and tidy detailing', '10-Year workmanship warranty on installs (call for details)'],
     },
     overview: {
       heading: 'Shingle Roofs Built for Southern California',
       paragraphs: [
-        'Shingle roofing from QRS covers replacement, new installs, repairs, inspections, tune-ups and ongoing roof care for homes across Los Angeles and Orange County. You’ll find asphalt shingles, often called composition shingles, on homes all over Los Angeles and Orange County. Our climate is hard on them. Strong sun bakes the asphalt and loosens the granules that protect it, dry Santa Ana winds pry at tabs that have lost their seal, and winter storms find any tired flashing. A shingle roof holds up when it’s built as a complete system: drip edge and starter strips at the eaves, underlayment across the deck, careful flashing at every wall and chimney, and balanced attic ventilation so heat doesn’t cook the shingles from below.',
-        'As a licensed California contractor since 2020, QRS installs premium shingle systems to the manufacturer’s requirements, with proper ventilation, clean lines and tidy detailing at every edge and penetration. Whether your roof needs a [shingle roof replacement](/residential-roofing/shingle-roofing/replacement/), a targeted repair or a simple tune-up, it starts the same way: a roofer-led [free roof evaluation](#roof-check). You see photos of what we found, hear what it means in plain English and get a clear next step. There’s no deposit to book it, and you pay after the visit.',
+        'Shingle roofing from QRS, a licensed shingle roofing company in Los Angeles, CA, covers replacement, new installs, repairs, inspections, tune-ups and ongoing roof care for homes across Los Angeles and Orange County. Our shingle roofers work on asphalt shingles, often called comp or composition shingles, which you’ll find on homes all over Los Angeles County and Orange County. Our climate is hard on them. Strong sun bakes the asphalt and loosens the granules that protect it, dry Santa Ana winds pry at tabs that have lost their seal, and winter storms find any tired flashing. A shingle roof holds up when it’s built as a complete system: drip edge and starter strips at the eaves, underlayment across the deck, careful flashing at every wall and chimney, and balanced attic ventilation so heat doesn’t cook the shingles from below.',
+        'As shingle roofing installers and a licensed California contractor since 2020, QRS installs premium architectural shingle systems to the manufacturer’s requirements, with proper ventilation, clean lines and tidy detailing at every edge and penetration. Whether your roof needs a [shingle roof replacement](/residential-roofing/shingle-roofing/replacement/), a targeted [shingle roof repair](/residential-roofing/shingle-roofing/repair/) or a simple tune-up, it starts the same way: a roofer-led [free roof evaluation](#roof-check). You see photos of what we found, hear what it means in plain English and get a clear next step. There’s no deposit to book it, and you pay after the visit.',
       ],
     },
     cards: {
@@ -32,10 +35,10 @@ export const SHINGLE_CONTENT = {
     },
     faqs: [
       { q: 'What’s the difference between architectural and 3-tab shingles?', a: 'A 3-tab shingle is a single flat layer cut into three tabs, which gives the roof a uniform look. Architectural shingles are laminated from more than one layer, so they’re thicker, show more depth and generally handle wind better. They’re the usual choice for new shingle roofs today.' },
+      { q: 'Do you install shingle roofs across Los Angeles County and Orange County?', a: 'Yes. Our shingle roofers handle comp shingle roof installation, replacement and repair across Los Angeles County, from Santa Monica, Pasadena and Long Beach to the valleys, and composition roofs in Orange County, from Anaheim to Irvine and Newport Beach. Visit our [service area](/service-areas/) page to find your city.' },
       { q: 'Should I choose shingles or tile for my home?', a: 'It comes down to your home’s framing, style and budget. Tile has its own distinct look and is much heavier, while shingles are lighter and usually cost less to install. You can compare the two on our [tile roofing](/residential-roofing/tile-roofing/) page, and we’re glad to talk through the tradeoffs for your home.' },
       { q: 'Can shingles go on a flat or very low-slope roof?', a: 'No. Shingles rely on the roof’s pitch to shed water, so flat and very low-slope areas need a different system. Plenty of homes here pair a shingled main roof with a low-slope section over a porch or addition, and our [flat roofing](/residential-roofing/flat-roofing/) page covers those.' },
       { q: 'How long will a shingle roof last in Southern California?', a: 'There’s no single answer. Shingle quality, installation, attic ventilation and sun exposure all play a part, and a sunny slope in the inland valleys usually ages faster than a shaded one near the coast. Rather than guessing from the roof’s age, a free roof evaluation looks at its actual condition.' },
-      { q: 'Which cities do you serve?', a: 'We work across Los Angeles County and Orange County, from Santa Monica, Pasadena and Long Beach to Anaheim, Irvine and Newport Beach. Visit our [service area](/service-areas/) page to find your city.' },
     ],
   },
 

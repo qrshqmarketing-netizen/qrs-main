@@ -86,19 +86,21 @@ export const TILE_CONTENT = {
       title: 'Tile Roof Repair',
       navLabel: 'Roof Repairs',
       card: 'Cracked or slipped tiles, loose ridges, failed flashings and clogged valleys, traced to their source and fixed with photos of the work.',
-      metaTitle: 'Tile Roof Repair in Los Angeles & Orange County',
-      metaDescription: 'Tile roof repair in Los Angeles & Orange County: leaks traced, cracked tiles matched and flashings fixed, with photos. Book a free roof evaluation.',
+      // Search Console wording (owner, October 23 2026): "tile roof repair(s)", "roof tile repair", "tile roof specialist(s)", "broken roof tile repair
+      // orange county", "highland park tile roof repair", "cracked tile roof repair", "tile roof leak repair". "Same day" is not promised.
+      metaTitle: 'Tile Roof Repair in Los Angeles | Tile Roof Specialists',
+      metaDescription: 'Tile roof repair in Los Angeles & Orange County from tile roof specialists: broken and cracked tiles replaced and leaks traced to the source, with photos.',
       image: '/images/tile-lift-off-and-reset-drone-view-2.webp',
       imageAlt: 'Tile roof repair and relay in progress, with tiles staged on the roof',
       hero: {
-        intro: 'Tile roof repair finds where water really gets in, often well away from the stain on your ceiling, and fixes the tiles, flashings or underlayment responsible. QRS repairs tile roofs across Los Angeles and Orange County with the closest available tile match and photos of the problem and the fix.',
+        intro: 'Tile roof repair finds where water really gets in, often well away from the stain on your ceiling, and fixes the tiles, flashings or underlayment responsible. QRS handles tile roof repairs and roof tile repair across Los Angeles and Orange County with the closest available tile match and photos of the problem and the fix.',
         highlights: ['Leaks traced to where water gets in', 'Closest available tile match', 'Photos of the problem and the fix'],
       },
       // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
       story: {
         label: 'Tile roof repair',
         lead: 'A tile roof keeps water out in __two__ layers, and a leak can start in either.',
-        text: 'The tiles turn away most of the rain and the underlayment beneath catches what slips past, so water can run a long way before it finds a way in. Finding the real entry point, instead of patching the spot that drips, is what makes a tile repair last.',
+        text: 'The tiles turn away most of the rain and the underlayment beneath catches what slips past, so water can run a long way before it finds a way in. Finding the real entry point, instead of patching the spot that drips, is what makes a tile repair last. As tile roof specialists, we handle everything from a single broken roof tile to a full tile roof leak repair, across Los Angeles, from Highland Park to the Westside, and Orange County.',
         heading: 'How we repair a tile roof',
         principles: [
           { title: 'Trace the water. Then touch the tiles.', text: 'A roofer inspects the roof above and around the problem, photographs what they find and follows the water back to where it gets in. You approve a written scope and price, including which tiles will be replaced, before work starts.', bullets: ['Broken or shifted tiles', 'Flashings at walls, chimneys and vents', 'Valleys, ridges and eave closures'] },
@@ -108,8 +110,9 @@ export const TILE_CONTENT = {
         ],
       },
       faqs: [
-        { q: 'Is one cracked tile worth fixing right away?', a: 'Usually, yes. A cracked tile lets sun and water reach the underlayment beneath it, which ages that spot faster and can eventually cause a leak. Replacing a single tile is a small job, and doing it early protects the layer that actually keeps your home dry.' },
+        { q: 'Is one cracked tile worth fixing right away?', a: 'Usually, yes. A cracked tile roof repair is a small job, and a cracked tile lets sun and water reach the underlayment beneath it, which ages that spot faster and can eventually cause a leak. Replacing it early protects the layer that actually keeps your home dry.' },
         { q: 'Can you match tiles that aren’t made anymore?', a: 'Often, though not always perfectly. Many older clay and concrete profiles and colors have been discontinued, and weathered tiles rarely look identical to new ones. We look for the closest available match and tell you up front how close it will be.' },
+        { q: 'Do you repair broken roof tiles in Orange County and Los Angeles?', a: 'Yes. We handle broken roof tile repair in both counties, on clay and concrete tile. We replace the broken pieces with the closest available match, check the underlayment beneath them and photograph the finished repair. See our [tile roofing](/residential-roofing/tile-roofing/) page for the full range of tile work.' },
         { q: 'Why does my tile roof only leak in heavy rain?', a: 'Heavy, wind-driven rain pushes more water under the tiles, testing worn underlayment, clogged valleys and tired flashings in ways a light shower doesn’t. That’s why a leak can stay hidden for a long time and then show up in one storm. A [tile roof inspection](/roof-inspection/#tile-roofs) can pinpoint the weak spot before the next one, and our [tile roof underlayment guide](/blog/tile-roof-underlayment/) explains why tiles can look fine while the roof leaks.' },
         { q: 'What if the leak is where my tile roof meets a flat section?', a: 'That transition is a common leak point on Spanish-style homes, especially along parapet walls. We check both sides of it, and if the flat side is the source, a [flat roof repair](/residential-roofing/flat-roofing/repair/) becomes part of the fix.' },
         { q: 'Can you fix tiles cracked by other work on the roof?', a: 'Yes. Tiles often break when painters, HVAC technicians or other trades walk a roof without knowing where to step. We replace the broken tiles, check the underlayment beneath them for damage and photograph the finished repair.' },

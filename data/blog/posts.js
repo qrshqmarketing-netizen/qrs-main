@@ -2339,22 +2339,25 @@ export const BLOG_POSTS = [
   },
   {
     slug: 'roof-insurance-claims-california',
-    title: 'Roof Insurance Claims in California: What to Document and What to Expect',
+    // Search Console wording (owner, October 23 2026): "roof insurance claim help", "roof insurance claim process", "roof damage insurance claim",
+    // "roofing insurance claim", "roof claim". `revision` copies this text over the live copy in Supabase once (lib/postsStore.js applyFileRevisions).
+    revision: 1,
+    title: 'Roof Insurance Claims in California: Help, the Process and What to Document',
     keyword: 'roof insurance claims',
     topics: ['insurance', 'storm', 'emergency', 'repair', 'replacement'],
-    metaTitle: 'Roof Insurance Claims in California: What to Document',
+    metaTitle: 'Roof Insurance Claims in California: Help and the Process',
     metaDescription:
-      'Roof insurance claims in California go more smoothly with photos, fast protection from further damage and a written repair scope. See what to expect.',
+      'Roof insurance claims in California: the roof insurance claim process, what to document after roof damage and the claim help a roofer can give you.',
     datePublished: '2026-10-05',
-    dateModified: '2026-10-05',
+    dateModified: '2026-10-23',
     excerpt:
-      'Roof insurance claims go more smoothly when you document the damage, protect the roof from more harm and get a written repair scope. Here is what to do, what insurers usually cover and what a roofer can help with.',
+      'Roof insurance claims go more smoothly when you document the damage, protect the roof from more harm and get a written repair scope. Here is the roof insurance claim process, what insurers usually cover and the help a roofer can give.',
     image: '/images/blog/roof-insurance-claims-california-photo-documentation.webp',
     imageAlt: 'A roofer in a navy cap on a ladder photographing storm-damaged shingles and exposed roof decking with a tablet, to document the damage',
     intro: [
       'Roof insurance claims go more smoothly when you document the damage well, act quickly to prevent more, and get a clear written scope of the repair.',
       'Whether a claim is approved depends on your policy and on what caused the damage, and your insurer makes that decision. What you control is how well the damage is documented and how quickly the roof is protected.',
-      'This guide explains what homeowners insurance usually covers, the steps to take after roof damage, what a roofer can and cannot do and what to expect from the process in California.',
+      'This guide explains what homeowners insurance usually covers, the first steps of a roof damage insurance claim, the roof insurance claim help a roofer can and cannot give, and what to expect from the roof insurance claim process in California.',
     ],
     sections: [
       {
@@ -2372,9 +2375,9 @@ export const BLOG_POSTS = [
         ],
       },
       {
-        heading: 'What to Do After Roof Damage',
+        heading: 'Filing a Roof Damage Insurance Claim: What to Do First',
         blocks: [
-          'These steps protect both your home and your claim:',
+          'Whether it’s a small roof claim or a large one, these steps protect both your home and your claim:',
           {
             steps: [
               'Stay safe. Do not climb onto a damaged roof, and keep away from fallen power lines and from water near light fixtures.',
@@ -2388,15 +2391,15 @@ export const BLOG_POSTS = [
         ],
       },
       {
-        heading: 'What a Roofer Can and Cannot Do',
+        heading: 'Roof Insurance Claim Help: What a Roofer Can and Cannot Do',
         blocks: [
           'A roofer can inspect the roof, photograph the damage, explain the cause in plain English and give you a written scope and price. Those are the documents an adjuster needs to see.',
-          'At Quality Roofing Specialists we work with insurance adjusters, and we can give you photos and a written scope to share with yours. Our team is small, so we do what we can to help.',
+          'That is the kind of roofing insurance claim help a contractor can honestly give. At Quality Roofing Specialists we work with insurance adjusters, and we can give you photos and a written scope to share with yours. Our team is small, so we do what we can to help.',
           'A roofing contractor cannot file or negotiate the claim for you. That is between you and your insurer, or a licensed public adjuster if you choose to hire one. Be careful with anyone who promises that insurance will pay for your roof.',
         ],
       },
       {
-        heading: 'What to Expect From the Process',
+        heading: 'The Roof Insurance Claim Process: What to Expect',
         blocks: [
           'After you report the loss, your insurer will usually send an adjuster to inspect the damage and prepare an estimate.',
           {
@@ -2441,6 +2444,14 @@ export const BLOG_POSTS = [
       {
         q: 'Will filing a claim raise my insurance rates?',
         a: 'It can, depending on your insurer and your claim history. Ask your agent before you file if you are unsure whether to.',
+      },
+      {
+        q: 'Where can I get help with a roof insurance claim?',
+        a: 'Your insurer and your agent explain your policy, and the [California Department of Insurance](https://www.insurance.ca.gov/) can help if you have a problem with a claim. A licensed public adjuster can handle the claim for you, for a fee. A roofer helps with the evidence: photos of the damage, the cause in plain English and a written scope and price for your adjuster.',
+      },
+      {
+        q: 'What are the steps of the roof insurance claim process?',
+        a: 'Stay safe and photograph the damage, protect the roof from further harm, report the loss to your insurer promptly, get a roofer’s inspection and written scope, then meet the adjuster and compare their estimate with your roofer’s. Your policy decides how the payment is calculated.',
       },
       {
         q: 'Can Quality Roofing Specialists handle my claim for me?',

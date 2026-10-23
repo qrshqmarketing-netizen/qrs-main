@@ -98,18 +98,21 @@ export const FLAT_CONTENT = {
       navLabel: 'Roof Repairs',
       card: 'Leaks, blisters, open seams and failed flashings traced to the source, repaired carefully and documented with photos.',
       metaTitle: 'Flat Roof Repair & Flat Roof Leak Repair in Los Angeles', // "flat roof leak repair" added (owner, October 22 2026)
-      metaDescription: 'Flat roof repair and flat roof leak repair in Los Angeles & Orange County: we trace leaks to the source and fix seams, blisters and flashings, with photos.',
+      // Search Console wording (owner, October 23 2026): "flat roof repair los angeles", "flat roof repair service(s)", "flat roof repairs", "flat roofing
+      // experts los angeles", "roof repair specialist los angeles", "flat roof repair contractor". Polyurethane (foam) roofs, Woodland Beach and Delano
+      // are not used (not a confirmed system / outside the area).
+      metaDescription: 'Flat roof repair services in Los Angeles & Orange County: flat roof leak repair traced to the source, and seams, blisters and flashings fixed, with photos.',
       image: '/images/flat-roof-replacement-tear-off-drone-view.webp',
       imageAlt: 'Aerial view of a flat roof with roofing work in progress',
       hero: {
-        intro: 'QRS handles flat roof repair across Los Angeles and Orange County, tracing each leak back to where water gets in and fixing the open seam, blister, split or failed flashing behind it. A ceiling stain can sit far from the actual leak, so we check the whole area and show you photos of the problem and the fix.',
+        intro: 'QRS handles flat roof repair services across Los Angeles County and Orange County, tracing each leak back to where water gets in and fixing the open seam, blister, split or failed flashing behind it. A ceiling stain can sit far from the actual leak, so we check the whole area and show you photos of the problem and the fix.',
         highlights: ['Leaks traced to where water enters', 'Seams, blisters and flashings repaired', 'Photos of the damage and the fix'],
       },
       // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
       story: {
         label: 'Flat roof repair',
         lead: 'Water on a flat roof moves slowly and finds every __weakness__.',
-        text: 'It can travel under the membrane before it drips, so the stain on your ceiling may sit far from the opening. That’s why we check the whole area around a leak, not just the spot above the stain.',
+        text: 'It can travel under the membrane before it drips, so the stain on your ceiling may sit far from the opening. That’s why we check the whole area around a leak, not just the spot above the stain. As flat roofing experts in Los Angeles, we handle flat roof repairs on homes, garages, patio covers and additions across Los Angeles County and Orange County, from one open seam to a full flat roof leak repair.',
         heading: 'How we repair a flat roof',
         principles: [
           { title: 'Check the whole area. Find the opening.', text: 'A roofer works around and upslope of the leak until the cause is found, and photographs it before anything is fixed.', bullets: ['Seams, laps and blisters', 'Parapet caps and wall flashings', 'Drains, scuppers and equipment curbs', 'Vents and skylights'] },
@@ -121,6 +124,7 @@ export const FLAT_CONTENT = {
       faqs: [
         { q: 'Why does my flat roof leak in big storms but not light rain?', a: 'Light rain may drain away before it finds a weak spot, but a heavy storm deepens the water on the roof and pushes it into open laps, cracked flashings and overflowing scuppers. Water that’s still ponding after the storm is a clue that drainage is part of the problem. A [flat roof inspection](/roof-inspection/#flat-roofs) shows you where the water is getting in.' },
         { q: 'Can you fix blisters on a flat roof?', a: 'Yes. Small blisters that are still intact are often left alone and watched, while cracked or growing blisters are cut out and patched. We’ll show you which ones need attention and explain why.' },
+        { q: 'Are you a flat roof repair contractor in Los Angeles?', a: 'Yes. QRS is a licensed roofing contractor, and our flat roof repair service covers Los Angeles, the rest of Los Angeles County and Orange County. A roofer, not a salesperson, finds the leak, photographs it and gives you a written scope and price before any flat roof repairs start.' },
         { q: 'The leak is near a wall. Is it the roof or the wall?', a: 'It can be either. On roofs with parapets, water often gets in through cracked parapet caps, gaps in the stucco or failed wall flashings rather than the roof surface itself. We check the parapet from cap to base and tell you exactly where the water is entering.' },
         { q: 'Do you repair flat roofs on garages, patio covers and additions?', a: 'Yes. These smaller low-slope roofs leak for the same reasons as the main roof, usually at the seams, the drainage or the joint where they meet the house. They get the same photo-documented approach as any other repair.' },
         { q: 'What if you find more than one problem?', a: 'We photograph each one and list it in your written scope, so you can decide what to fix now. If the roof is sound overall but has a handful of small issues, a [flat roof tune-up](/roof-maintenance-plans/#tune-up) may cover them in one visit.' },
