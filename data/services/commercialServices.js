@@ -1,4 +1,5 @@
 // Commercial service pages: /commercial-roofing/repair/, /commercial-roofing/replacement/ and /commercial-roofing/maintenance/.
+import { BUSINESS, GOOGLE_REVIEWS } from '../site';
 
 export const COMMERCIAL_SERVICES = [
   {
@@ -46,10 +47,20 @@ export const COMMERCIAL_SERVICES = [
     h1: 'Commercial Roof Replacement in Los Angeles & Orange County',
     navLabel: 'Roof Replacement',
     card: 'When repairs stop adding up: a roofer-led survey, the right low-slope system for your building and phased work that keeps you open.',
-    metaTitle: 'Commercial Roof Replacement in Los Angeles',
-    metaDescription: 'Commercial roof replacement in LA & Orange County: a roofer-led survey, the right low-slope system and phased work that keeps you open. Request an estimate.',
+    // Broader title for the general "commercial roofing Los Angeles" searches (owner, October 22 2026; the keyword stays in it, the H1 is unchanged)
+    metaTitle: 'Commercial Roofing Los Angeles | Commercial Roof Replacement',
+    metaDescription: 'Commercial roofing company in Los Angeles & Orange County: a roofer-led survey, a written price and commercial roof replacement done section by section.',
     image: '/images/flat-roof-replacement-tear-off-drone-view.webp',
-    imageAlt: 'Aerial view of a flat roof replacement in progress, with the old roofing stripped back',
+    imageAlt: 'Commercial roof replacement in Los Angeles: flat roof aerial view, with the old roofing stripped back',
+    heroNotes: [`Los Angeles commercial roofing contractor · CSLB #${BUSINESS.license}`, 'Serving LA, Orange County & Southern California', 'Roofer-led roof survey', 'Written scope and price before any work'],
+    // A short section after "How we replace a commercial roof" (ServicePage `about`)
+    about: {
+      heading: 'Commercial roofing company in Los __Angeles__',
+      paragraphs: [
+        `QRS is a Los Angeles commercial roofing company with ${GOOGLE_REVIEWS.count} Google reviews from the people we roof for. Our commercial roofing contractors handle replacement, installation and [commercial roofing repair](/commercial-roofing/repair/) in Los Angeles, CA, from small retail buildings to [warehouses](/commercial-roofing/warehouses/) and other large flat roofs, with [roof maintenance](/commercial-roofing/maintenance/) once the work is done. If you’re comparing commercial roofers in Los Angeles, start with a roofer-led roof survey and a written price, then read [how to choose a commercial roofing contractor in Los Angeles](/blog/how-to-choose-a-commercial-roofing-contractor/).`,
+      ],
+    },
+    reviewsHeading: 'What people in Los Angeles say after the __job__',
     hero: {
       intro: 'A commercial roof replacement tears off the worn roof in phases, section by section, and installs a new low-slope system chosen for your building, so your doors stay open. QRS replaces commercial roofs across Los Angeles and Orange County, starting with a roofer-led survey that shows whether replacement is due now or can wait.',
       highlights: ['Survey before any recommendation', 'System chosen for drainage and use', 'Phased so your building stays open'],
@@ -58,16 +69,18 @@ export const COMMERCIAL_SERVICES = [
     story: {
       label: 'Commercial roof replacement',
       lead: 'A new roof should rest on photos and facts, not a __pitch__.',
-      text: 'Leaks in new places every rainy season, seams opening across the field, surfacing worn thin by the sun and soft spots underfoot are signs that [commercial roof repair](/commercial-roofing/repair/) has run its course. A roofer-led survey shows whether replacement is due now, belongs in next year’s budget or can wait.',
+      text: 'Leaks in new places every rainy season, seams opening across the field, surfacing worn thin by the sun and soft spots underfoot are signs that [commercial roof repair](/commercial-roofing/repair/) in Los Angeles has run its course. As commercial roofers serving Los Angeles and Orange County, we start with a roofer-led survey that shows whether replacement is due now, belongs in next year’s budget or can wait.',
       heading: 'How we replace a commercial roof',
       principles: [
         { title: 'Survey the whole roof first.', text: 'A roofer walks the entire roof, photographs it area by area and notes how water drains, where equipment sits and how the roof has held up.', bullets: ['Seams, surfacing and past patches', 'Soft or wet areas underfoot', 'Drains, curbs and parapet details'] },
-        { title: 'A system matched to the building.', text: 'Drainage, rooftop equipment and foot traffic shape what we recommend, from [modified bitumen and other low-slope systems](/residential-roofing/flat-roofing/) to [TPO roofing](/commercial-roofing/tpo-roofing/). The scope, price and phasing plan are in writing before work starts.' },
-        { title: 'Section by section, so your doors stay open.', text: 'Crews take one section at a time down to the deck, photograph the deck while it’s exposed and install the new system with new flashings at curbs, drains and edges before moving on. Staging, hoisting and debris removal are planned around your hours, deliveries, entrances and customer paths.' },
+        { title: 'A system matched to the building.', text: 'Drainage, rooftop equipment and foot traffic shape what we recommend, from [modified bitumen and other low-slope systems](/residential-roofing/flat-roofing/) to [TPO roofing](/commercial-roofing/tpo-roofing/), for commercial roof installation in Los Angeles, CA. The scope, price and phasing plan are in writing before work starts.' },
+        { title: 'Section by section, so your doors stay open.', text: 'Whether your commercial roof is replaced in Los Angeles or elsewhere in Southern California, our crews, from a local Los Angeles roofing company, take one section at a time down to the deck, photograph the deck while it’s exposed and install the new system with new flashings at curbs, drains and edges before moving on. Staging, hoisting and debris removal are planned around your hours, deliveries, entrances and customer paths.' },
         { title: 'A clean site and closeout photos.', text: 'Tarps protect landscaping and nail sweeps keep walkways and parking clear. When the last section is done, we walk the roof with your team, hand over closeout photos and go over our 10-year workmanship warranty (call for details).' },
       ],
     },
     faqs: [
+      { q: 'Do you do commercial roof repair in Los Angeles?', a: 'Yes. [Commercial roof repair](/commercial-roofing/repair/) in Los Angeles and Orange County makes sense when the problems are local: a leak at a curb or drain, an open seam, storm damage to one area, on a roof that is otherwise sound. When leaks keep moving, large areas are worn or soft, or repair bills keep adding up, replacement is usually the better use of the budget. The roof survey photos show which one your building needs.' },
+      { q: 'How do I choose a commercial roofing contractor in Los Angeles?', a: 'Check the contractor’s California license, ask who will survey the roof (a roofer or a salesperson), expect a written scope and price that names the roof system, and ask how the work will be phased around your tenants and customers. Our article on [how to choose a commercial roofing contractor in Los Angeles](/blog/how-to-choose-a-commercial-roofing-contractor/) walks through each question, and our [credentials](/credentials/) page shows our license.' },
       { q: 'Do you pull the permits?', a: 'Yes. When the project needs a building permit, we pull it for you.' },
       { q: 'How do we know it’s time to replace and not repair again?', a: 'Look at the pattern rather than the latest leak. If repair bills keep adding up, leaks appear in new places each season, or large areas of the roof are worn, soft or holding water, replacement is usually the sounder investment. Our survey photos show which situation you’re in.' },
       { q: 'Which roof system will you recommend?', a: 'That depends on your building. We install modified bitumen and other low-slope systems, and we weigh drainage, rooftop equipment, foot traffic and the structure underneath before recommending one. Your written scope names the system and explains why it fits.' },

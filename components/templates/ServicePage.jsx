@@ -131,6 +131,7 @@ export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], 
         image={page.image}
         imageAlt={page.imageAlt}
         stats
+        {...(page.heroNotes && { annotations: page.heroNotes })}
         {...(actions && { actions })}
       />
       {/* Pages rewritten the home page's way have a `story` (ServiceStory: statement + "How we …" principles), which replaces the overview, the
@@ -142,6 +143,8 @@ export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], 
       )}
       {/* The blog's roof illustration where it explains this service (data/roofDiagrams.js) */}
       <RoofDiagram diagram={diagramFor(crumbs.at(-1).href)} />
+      {/* `about`: a short section of the page's own after the steps (the commercial replacement page's "Commercial roofing company in Los Angeles") */}
+      {page.about && <Overview heading={page.about.heading} paragraphs={page.about.paragraphs} />}
       {page.sections?.length > 0 && <BandCards heading={page.sectionsHeading} sections={page.sections} />}
       {!page.story && (
         <ProcessSteps
@@ -158,7 +161,7 @@ export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], 
       {work.projects.length > 0 && <HomeWork heading={work.heading} projects={work.projects.slice(0, 3)} all={{ label: 'View all projects', href: '/projects/' }} />}
       {/* After publicstorage.com (owner, October 21 2026: less on each page): three reviews side by side instead of the review wall, and the
           checklist photo band instead of "Why choose QRS" on the pages without a story */}
-      {page.showReviews !== false && <ReviewTrio path={crumbs.at(-1).href} />}
+      {page.showReviews !== false && <ReviewTrio path={crumbs.at(-1).href} {...(page.reviewsHeading && { heading: page.reviewsHeading })} />}
       {!page.story && <CheckBand {...checksFor(crumbs.at(-1).href)} />}
       {page.partners && <PartnerLogos {...page.partners} />}
       <HomeArticles posts={await articlesFor(crumbs.at(-1).href)} heading="Related articles" />
