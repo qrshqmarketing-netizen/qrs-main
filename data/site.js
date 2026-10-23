@@ -99,7 +99,8 @@ export const GA_ID = 'G-CJSKXDJCBF';
 export const GOOGLE_REVIEWS = { count: 269, asOf: '2026-10-15' };
 // Titles and descriptions that answer the "best roofer" searches with confirmed facts, not a "best" claim (owner, October 22 2026, from
 // Search Console: 2,904 "best roofer in Los Angeles" impressions, 1 click; "best roofing contractor in los angeles" at position 1.6, 0 clicks)
-export const HOME_TITLE = `Roofing Contractor in Los Angeles | ${GOOGLE_REVIEWS.count} Google Reviews`;
+// Owner, October 23 2026: "Best Roofers" to match the "best roofer" searches, backed by the review count (title only; the rest of the home page is unchanged)
+export const HOME_TITLE = `Best Roofers in Los Angeles | ${GOOGLE_REVIEWS.count} Google Reviews`;
 export const HOME_H1 = 'Roofing Contractor in Los Angeles & Orange County';
 export const HOME_DESCRIPTION = `Choosing a roofing contractor in Los Angeles & Orange County? Free drone roof evaluation, a written price before any work and ${GOOGLE_REVIEWS.count} Google reviews.`;
 
