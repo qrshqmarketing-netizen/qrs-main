@@ -23,6 +23,207 @@ const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
   {
+    slug: 'shingle-granules-in-gutter',
+    title: 'Granules in Your Gutter? What’s Normal and When to Call a Roofer',
+    keyword: 'granules in your gutter',
+    topics: ['shingle', 'maintenance', 'inspection', 'repair', 'replacement'],
+    metaTitle: 'Granules in Your Gutter? What’s Normal and When to Call a Roofer',
+    metaDescription:
+      'Finding granules in your gutter? Learn what’s normal on a new roof, what signals wear, and how a roofer checks. Free drone evaluation in LA & OC.',
+    datePublished: '2026-10-26',
+    dateModified: '2026-10-26',
+    excerpt:
+      'A little grit in your gutter is usually normal, especially on a new roof. What matters is how old your roof is, whether the loss is even across the roof, and whether your shingles are showing bare spots.',
+    image: '/images/blog/shingle-granules-in-gutter.webp',
+    imageAlt: 'A roofer in gloves pointing at shingle granules collected in a rain gutter at the edge of an asphalt shingle roof',
+    intro: [
+      'A few granules in your gutter are usually normal, especially on a new roof. What matters is how old your roof is, whether the loss is even across the roof, and whether your shingles are showing bare spots.',
+      'Those gritty, sand-like grains are granules from your asphalt shingles. Seeing them collect in a gutter or at the bottom of a downspout is one of the most common roofing worries homeowners have, and the answer is often calmer than the worry.',
+      'This guide explains what’s normal, what isn’t, and how to tell the difference from the ground. If you’d rather have a roofer look for you, QRS offers a [free drone roof evaluation](/roof-inspection/) across Los Angeles and Orange County.',
+    ],
+    sections: [
+      {
+        heading: 'What Those Granules Actually Are',
+        blocks: [
+          'Granules are the small, mineral-coated grains pressed into the top of an asphalt shingle. They look like decoration, but they do the heavy lifting.',
+          {
+            list: [
+              '**UV protection.** Granules shield the asphalt and the fiberglass mat underneath from the sun’s ultraviolet rays, which would otherwise break both down quickly.',
+              '**Color.** They give the shingle its look, so heavy loss can show up as a changing roof color.',
+              '**Fire resistance.** Some granules add a measure of fire protection to the surface.',
+            ],
+          },
+          'In Southern California, where a [shingle roof](/residential-roofing/shingle-roofing/) gets strong sun most of the year, that UV shield is the part that matters most.',
+        ],
+      },
+      {
+        heading: 'On a New Roof, Granules in the Gutter Are Normal',
+        blocks: [
+          'If your roof is new or only a few years old, granules in the gutter are almost always excess granules from manufacturing, not a sign that something is wrong.',
+          'Shingle makers apply extra granules during production so the asphalt is fully covered. Some of that excess isn’t firmly embedded. Manufacturers call these “hitchhiker” or “rider” granules, and they wash off with the first rains. IKO’s technical bulletin says this loss is normal and doesn’t reduce the shingle’s weatherproofing life. It becomes a concern only when bare spots of asphalt show on the surface.',
+          'GAF’s technical bulletin says the same thing. Loss from excess granules is usually heaviest right after installation and tapers off over time. GAF often recommends waiting several months to see if it corrects itself, since in its experience it usually does.',
+          'One more thing to rule out: granules in the gutter after a roof replacement can also come from the old roof that was just removed. Cleaning the gutters out and checking again after the next rain tells you whether the new roof is still shedding.',
+          'GAF advises contacting the manufacturer’s warranty department if, several months after installation, the loss is still significant, the roof is visibly changing color, or the shingles show other damage.',
+        ],
+      },
+      {
+        heading: 'On an Older Roof, the Pattern Tells the Story',
+        blocks: [
+          'On a roof that’s been up for years, some granule loss is simply aging. Over time the bond between the granules and the asphalt weakens, and rain carries the loose ones away. InterNACHI, the home inspectors’ association, describes loss that is even across the whole roof as usually normal weathering rather than a defect.',
+          'So the question isn’t “are there granules in the gutter?” It’s “how old is the roof, and what do the shingles look like?” How long shingles last depends on the shingle line, sun exposure, attic ventilation and installation quality, so the paperwork from your installation is the best guide to what’s normal for your roof.',
+          'A few patterns to watch for:',
+          {
+            list: [
+              '**Even loss across the roof.** Usually aging. Plan ahead, but it isn’t an emergency.',
+              '**Loss on one slope.** InterNACHI notes that south- and west-facing slopes take the most sun, so they often wear first. That’s common in Southern California.',
+              '**Loss along foot paths.** Scuffing from people walking the roof, or from other trades, can wear granules off in a trail.',
+              '**Blistering with bare asphalt.** Blisters that have popped and exposed the asphalt speed up wear.',
+            ],
+          },
+          'The rate of loss also depends on shingle quality and climate. A premium shingle in a mild climate and a budget shingle on a hot, sunny roof won’t age on the same schedule.',
+        ],
+      },
+      {
+        heading: 'Five Signs It’s More Than Normal Shedding',
+        blocks: [
+          'Granules in the gutter alone don’t mean much. These signs, taken together with your roof’s age, suggest it’s time to have someone look.',
+          {
+            steps: [
+              '**Bare spots or exposed asphalt.** Once the dark asphalt shows through, that area has lost its sun protection. Both IKO and the Colorado Roofing Association name this as the line between normal shedding and a real concern.',
+              '**Loss that keeps going.** A new roof should settle down over the first few months. If granules keep piling up well past that, or after every rain, have it checked.',
+              '**Patchy loss.** One slope, one section, or a stripe that follows the shingle layout points to a cause worth finding, not just age.',
+              '**A visible color change.** If the roof looks lighter, blotchy, or faded compared with when it was installed, granules are probably thinning.',
+              '**Other damage.** Curling, cracking, blistering, or any leak inside the home makes granule loss more urgent.',
+            ],
+          },
+          'None of these is a diagnosis on its own. They’re reasons to get a roofer’s eyes on it before the next rainy season.',
+        ],
+      },
+      {
+        heading: 'How to Check From the Ground',
+        blocks: [
+          'You can learn a lot without setting foot on the roof. Please don’t climb up yourself. Wet or sun-baked shingles are slippery, and walking on them can scuff off granules and make things worse.',
+          {
+            steps: [
+              '**Look at the gutters and downspout outlets.** Note roughly how much grit is there and whether it’s mixed with dirt and leaves.',
+              '**Clean them out and check again after the next rain.** If it fills back up fast, the roof is still shedding.',
+              '**Stand back and look at the whole roof.** Is the color even? Are there lighter patches or one slope that looks different from the others?',
+              '**Use binoculars on the south- and west-facing slopes.** Those take the most sun and usually show wear first.',
+              '**Take photos.** A dated photo of the gutter and of each slope gives you something to compare against later, and something to show a roofer.',
+            ],
+          },
+          'If you spot bare asphalt, patchy slopes, or color change, that’s the point to book an [inspection](/roof-inspection/).',
+        ],
+      },
+      {
+        heading: 'What Causes Granules to Wear Off Faster Than They Should',
+        blocks: [
+          'When loss is heavier than the roof’s age explains, one of these is usually behind it:',
+          {
+            list: [
+              '**Sun and heat.** UV is the main long-term enemy of asphalt shingles, and hot, south- and west-facing slopes age faster than shaded ones.',
+              '**Poor attic ventilation.** A hot, stuffy attic bakes shingles from below and shortens their life.',
+              '**Foot traffic and cleaning.** Walking on the roof, pressure washing, and trades like gutter or solar crews can scuff granules loose.',
+              '**Installation or batch problems.** Mixing shingles from different production batches can make parts of a roof weather at different rates, and InterNACHI describes patterns that follow the shingle layout.',
+              '**Manufacturing defects.** Rare, but poor-quality asphalt or flaws in the process can weaken the bond early. This is the case manufacturer warranties are written for.',
+              '**Hail and storms.** A major factor in many parts of the country, and less common in Los Angeles and Orange County, so it’s usually not the first suspect here.',
+            ],
+          },
+          'The cause matters because it decides the fix: a ventilation problem needs ventilation, a damaged section needs a repair, and an aged roof needs a plan.',
+        ],
+      },
+      {
+        heading: 'What a Roofer Looks At',
+        blocks: [
+          'At QRS, a roofer looks at your roof before anyone tries to sell you one. For granule concerns, that means a look at the whole picture, not just the gutter:',
+          {
+            list: [
+              '**Roof age and shingle type,** so we know what “normal” should look like.',
+              '**Several slopes compared side by side,** including the sun-facing ones.',
+              '**Bare asphalt, blistering, cracking, and curling,** up close, with drone footage of the areas of concern.',
+              '**Flashings, vents, and penetrations,** where leaks usually start.',
+              '**Ventilation and previous repairs,** which affect how fast shingles age.',
+            ],
+          },
+          'You get photos of what we find, a plain-English explanation, and a clear next step: repair, monitor, maintain, or replace. If you move forward, you get a written scope and price before any work begins.',
+          'The [drone roof evaluation](/roof-inspection/) is free. There’s also an optional $199 Roof Check, a tune-up where we seal the vents, pipes, and flashings as much as possible. There’s no deposit, you pay after the visit, and the $199 is credited toward a repair or replacement if you go ahead.',
+        ],
+      },
+      {
+        heading: 'Repair, Monitor, or Replace?',
+        blocks: [
+          'The right answer depends on how much granule loss there is, where it is, and how much life the roof has left.',
+          {
+            list: [
+              '**Monitor** when the roof is new or fairly young, the loss is light and even, and there are no bare spots. Clean the gutters, take dated photos, and check again in a few months.',
+              '**Repair** when the problem is limited to one area, such as a worn section, damaged shingles, or a leaking flashing. Matching and sealing replacement shingles works best when the rest of the roof still has life in it. See [roof repair](/roof-repair/).',
+              '**Plan a replacement** when bare asphalt is widespread, the shingles are brittle or cracking, and the roof is near the end of its expected life. See [roof replacement](/roof-replacement/).',
+            ],
+          },
+          { note: 'A note on coatings and sealants: they can slow further wear and add some temporary protection, but they don’t put lost granules back. They’re a stopgap, not a cure.' },
+          'If replacement is the answer, you don’t have to rush it into an emergency. A free evaluation gives you a written price and a timeline you can plan around, and our [roof replacement cost guide](/blog/roof-replacement-cost-los-angeles/) explains what sets the price. [Financing](/roof-financing/) is available for qualifying home roof replacements through Momnt Financing or Service Financing, subject to credit approval. It doesn’t cover repairs or commercial projects.',
+        ],
+      },
+      {
+        heading: 'What About the Warranty?',
+        blocks: [
+          'There are two kinds of coverage, and they protect against different things.',
+          {
+            list: [
+              '**The manufacturer’s warranty covers defects in the shingles.** GAF’s technical bulletin says its warranty covers manufacturing defects, and it doesn’t cover the changed look of light to moderate granule loss. Severe loss caused by a manufacturing defect may be covered under the terms of the limited warranty.',
+              '**Workmanship coverage protects against installation problems.** QRS installs are backed by a 10-year workmanship warranty (call for details).',
+            ],
+          },
+          'Every manufacturer’s terms are different, so read your own paperwork. If you think your granule loss is excessive on a roof that isn’t old, photos and your install date are the first things the manufacturer or your roofer will ask for.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Is it normal to find granules in my gutter after a new roof?',
+        a: 'Yes. Shingles are made with extra granules, and the loose ones wash off after installation. It should taper off over the first few months. If it doesn’t, or you see bare spots, have the roof checked.',
+      },
+      {
+        q: 'How long does a new roof shed granules?',
+        a: 'There’s no fixed date. Manufacturers say the loss is usually heaviest right after installation and gradually lessens, and GAF suggests waiting several months before judging whether it has settled.',
+      },
+      {
+        q: 'Can I clean the granules out myself?',
+        a: 'Yes. Scoop them out of the gutter, check that the downspout isn’t clogged, and bag them with your trash. Use a stable ladder, or hire someone if you’re not comfortable on one. Don’t walk on the roof.',
+      },
+      {
+        q: 'Do granules in the gutter mean I need a new roof?',
+        a: 'Not by themselves. A new roof is on the table when granule loss comes with bare asphalt, patchy slopes, cracking or curling, and a roof that’s near the end of its life. A roofer can tell you which situation you’re in.',
+      },
+      {
+        q: 'Will shingles that lost granules leak?',
+        a: 'Not immediately. But once the asphalt is exposed to the sun, it dries out, cracks, and curls faster, and that’s when leaks become more likely. Leaks also tend to start at flashings, vents, and penetrations, so those are worth checking at the same time.',
+      },
+      {
+        q: 'Does insurance cover granule loss?',
+        a: 'InterNACHI notes that long-term, even granule loss is generally treated as normal aging rather than functional damage, unless shingles appear to be failing prematurely. Storm damage is evaluated separately and case by case. Our photos and written scope give you clear documentation to share with your insurance company.',
+      },
+    ],
+    closing: {
+      heading: 'Not Sure What Your Roof Is Telling You?',
+      blocks: [
+        'A roofer should look before anyone tries to sell you a roof. Book a [free drone roof evaluation](#roof-check) and you’ll get photos of what we find, a plain-English explanation, and a clear next step. If a repair or replacement makes sense, you’ll have a written scope and price before any work starts. No pressure, no mystery pricing.',
+        'Call [(310) 340-1643](tel:+13103401643) (Monday to Friday, 8 am to 6 pm) or [request your free evaluation](#roof-check).',
+        'Quality Roofing Specialists is a licensed, bonded, and insured California contractor, CSLB #1061942, serving Los Angeles and Orange County.',
+        { h3: 'Sources' },
+        {
+          list: [
+            '[IKO, “Excess Roofing Granules on Shingles” (technical bulletin)](https://iko.com/na/document/tbr02-excess-roofing-granules-on-shingles-product-bulletin)',
+            '[GAF, “Granule Loss on New Shingles,” Technical Advisory TAB-R-112](https://www.inspectapedia.com/roof/Granule-Loss-on-New-Shingles-GAF.pdf)',
+            '[InterNACHI, “Mastering Roof Inspections: Asphalt Composition Shingles, Part 34”](https://www.nachi.org/asphalt-comp-shingles-part34-88.htm)',
+            '[Colorado Roofing Association, “Is It Normal for a New Roof to Lose Granules?”](https://www.coloradoroofing.org/news/granule-loss-on-new-asphalt-roof)',
+          ],
+        },
+      ],
+    },
+    related: ['/residential-roofing/shingle-roofing/', '/roof-inspection/', '/roof-repair/', '/roof-replacement/'],
+  },
+  {
     slug: 'asphalt-shingle-vs-tile-roof',
     title: 'Asphalt Shingle vs. Tile Roof: Cost, Weight and Upkeep in Los Angeles',
     keyword: 'shingle vs. tile roof',
