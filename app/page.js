@@ -54,13 +54,15 @@ const HOME_PRODUCTS = [
 // hover list, large featured projects, three steps, then the sections shared with other pages (reviews, the El Niño offer, the service area map,
 // partners, articles, careers, FAQ, request card and closing call to action). The page's H1 is the hero's small
 // keyword line. Reorder or remove a line to change the page.
-// The home hero's background video (owner, October 23 2026): the owner's final 30-second clip, no sound, encoded from 1080p to 1600x900
-// (VP9 WebM first, H.264 MP4 for Safari and older browsers). Its first frame is the poster and first paint (PromoCard `video` and `photo`).
+// The home hero's background video (owner, October 26 2026: the one before the truck reel): an edit of the owner's drone footage (five QRS jobs:
+// a tear-off, roofers laying shingles, two finished roofs and an orbit over a new roof), 21 seconds, looping without a jump, upscaled to 1280x720.
+// WebM first, H.264 MP4 for Safari and older browsers; its first frame (HERO_POSTER) is the first paint and the fallback (PromoCard `video` and
+// `photo`, HeroVideo.jsx). The truck reel (home-hero-brand.*) and the final clip (home-hero-background-final.*) stay in public/videos.
 const HERO_VIDEO = [
-  { src: '/videos/home-hero-background-final.webm', type: 'video/webm' },
-  { src: '/videos/home-hero-background-final-h264.mp4', type: 'video/mp4' },
+  { src: '/videos/home-hero-drone.webm', type: 'video/webm' },
+  { src: '/videos/home-hero-drone-h264.mp4', type: 'video/mp4' },
 ];
-const HERO_POSTER = '/images/home-hero-background-final-poster.jpg';
+const HERO_POSTER = '/images/home-hero-drone-poster.webp';
 // The words over the truck video (owner, October 14 2026: no El Niño wording or effects in the home hero). The keyword line above the headline is
 // the page's H1 (HOME_H1); the button jumps to the estimate form at the bottom of the page.
 const HOME_HERO = {

@@ -93,6 +93,10 @@ export const CLARITY_ID = 'ynxdd3rck6';
 // (lib/tracking.js). Only loads on the live site (see LOAD_TRACKING in lib/seo.js), same as Clarity above.
 export const GA_ID = 'G-CJSKXDJCBF';
 
+// Google Ads tag (owner, October 26 2026): configured on the same gtag.js as GA_ID (app/layout.js), under the same Analytics consent and only on
+// the live site. Google's consent mode keeps ad_storage denied, so Ads measures without ad cookies (cookieless pings and modelled conversions).
+export const GOOGLE_ADS_ID = 'AW-778824076';
+
 // Home page title and description (search results + link previews). Worded after the searches that bring people to the home page in
 // Search Console ("roofing contractor in Los Angeles") and after how Royal Roofing, the competitor that ranks #1 for "roofing company orange county",
 // words theirs: both counties in the title, description and H1. The H1 (HOME_H1) uses the same phrase; the brand name is in the description.

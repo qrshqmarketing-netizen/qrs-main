@@ -28,7 +28,7 @@ import StudioMotion from '@/components/studio/StudioMotion';
 import HelpfulTitles from '@/components/ui/HelpfulTitles';
 import { INSTANT_QUOTE_ENABLED } from '@/data/instantQuote';
 import { PAGE_ENTRANCES, SCROLL_REVEALS, STUDIO_THEME } from '@/data/promo';
-import { BUSINESS, CLARITY_ID, GA_ID, HOME_DESCRIPTION, SITE_URL, SITE_VERIFICATION } from '@/data/site';
+import { BUSINESS, CLARITY_ID, GA_ID, GOOGLE_ADS_ID, HOME_DESCRIPTION, SITE_URL, SITE_VERIFICATION } from '@/data/site';
 import { ALLOW_INDEXING, LOAD_TRACKING, openGraphBase, twitterBase } from '@/lib/seo';
 import ThemeScript from '@/components/ui/ThemeScript';
 import { callrailSwapScript } from '@/lib/callrail';
@@ -115,7 +115,7 @@ export default async function RootLayout({ children }) {
           <ScrollDraw />
           <ScrollScenes />
           {LOAD_TRACKING && (
-            /* Google Analytics, Clarity and CallRail's number swapping (with Analytics), each only if the visitor's cookie choice allows it (lib/consent.js; the key, the old "Got it" key and
+            /* Google Analytics and the Google Ads tag (one gtag.js), Clarity and CallRail's number swapping (with Analytics), each only if the visitor's cookie choice allows it (lib/consent.js; the key, the old "Got it" key and
                the Global Privacy Control default must match it). Google's consent mode starts from that choice; the scripts load after the page
                has loaded, like the lazyOnload they replace. Not id="clarity": an element's id becomes window.clarity, which stops Clarity from starting. */
             <Script id="qrs-tracking" strategy="afterInteractive">
@@ -129,6 +129,7 @@ export default async function RootLayout({ children }) {
   gtag('consent','default',{analytics_storage:ok('analytics')?'granted':'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});
   gtag('js',new Date());
   gtag('config','${GA_ID}');
+  gtag('config','${GOOGLE_ADS_ID}');
   var done={};
   window.__qrsLoadTracking=function(){
     try{c=JSON.parse(localStorage.getItem('qrs-consent'))||c;}catch(e){}
