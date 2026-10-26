@@ -49,7 +49,6 @@ export default async function ResidentialRoofingPage() {
         image={HERO_IMAGE}
         imageAlt="Aerial view of a Southern California neighborhood of shingle-roofed homes"
         imagePosition="center 45%"
-        stats
       />
       <Overview heading={page.overview.heading} paragraphs={page.overview.paragraphs} />
       <CardCarousel title={page.cards.heading} items={RESIDENTIAL_TYPES.map(typeCard)} idPrefix="roofTypes" tone="wash" />

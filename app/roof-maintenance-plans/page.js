@@ -31,7 +31,7 @@ export default async function RoofMaintenancePlansPage() {
   return (
     <main id="top">
       <JsonLd data={schema} />
-      <Hero crumbs={CRUMBS} eyebrow="Maintenance Plans" title={searchHeading(page.hero.heading)} outcome={heroOutcome(PROGRAMS.plans.href)} intro={page.hero.intro} image={page.image} imageAlt={page.imageAlt} stats />
+      <Hero crumbs={CRUMBS} eyebrow="Maintenance Plans" title={searchHeading(page.hero.heading)} outcome={heroOutcome(PROGRAMS.plans.href)} intro={page.hero.intro} image={page.image} imageAlt={page.imageAlt} />
       <ValueGrid heading={page.whatGoesWrong.heading} items={page.whatGoesWrong.items} tone="wash" pattern />
       <CarePlanPricing />
       <PlanScope />

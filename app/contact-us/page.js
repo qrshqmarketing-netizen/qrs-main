@@ -46,7 +46,6 @@ export default function ContactPage() {
         eyebrow="Contact"
         title={page.hero.heading}
         outcome={heroOutcome('/contact-us/')}
-        stats
         intro={page.hero.intro}
         image={page.hero.image}
         imageAlt={page.hero.imageAlt}

@@ -2,7 +2,6 @@ import Faq from '@/components/sections/Faq';
 import LatestArticles from '@/components/sections/LatestArticles';
 import FinalCta from '@/components/sections/FinalCta';
 import PartnerLogos from '@/components/sections/PartnerLogos';
-import ProofBar from '@/components/sections/ProofBar';
 import PromoSection from '@/components/sections/PromoSection';
 import ReviewMarquee from '@/components/sections/ReviewMarquee';
 import RoofCheck from '@/components/sections/RoofCheck';
@@ -55,16 +54,14 @@ const HOME_PRODUCTS = [
 // hover list, large featured projects, three steps, then the sections shared with other pages (reviews, the El Niño offer, the service area map,
 // partners, articles, careers, FAQ, request card and closing call to action). The page's H1 is the hero's small
 // keyword line. Reorder or remove a line to change the page.
-// The home hero's background video (October 14 2026): an edit of the owner's drone footage (five QRS jobs: a tear-off, roofers laying shingles,
-// two finished roofs and an orbit over a new roof), 21 seconds, looping without a jump, cleaned up and upscaled from the 640px source to 1280x720.
-// WebM first, H.264 MP4 for Safari and older browsers; its first frame (HERO_POSTER) is the first paint and the fallback (PromoCard `video` and
-// `photo`, HeroVideo.jsx). The earlier storm video is still in public/videos/home-hero-el-nino.* if it is wanted back.
+// The home hero's background video (owner, October 23 2026): the owner's final 30-second clip, no sound, encoded from 1080p to 1600x900
+// (VP9 WebM first, H.264 MP4 for Safari and older browsers). Its first frame is the poster and first paint (PromoCard `video` and `photo`).
 const HERO_VIDEO = [
-  { src: '/videos/home-hero-drone.webm', type: 'video/webm' },
-  { src: '/videos/home-hero-drone-h264.mp4', type: 'video/mp4' },
+  { src: '/videos/home-hero-background-final.webm', type: 'video/webm' },
+  { src: '/videos/home-hero-background-final-h264.mp4', type: 'video/mp4' },
 ];
-const HERO_POSTER = '/images/home-hero-drone-poster.webp';
-// The words over the drone video (owner, October 14 2026: no El Niño wording or effects in the home hero). The keyword line above the headline is
+const HERO_POSTER = '/images/home-hero-background-final-poster.jpg';
+// The words over the truck video (owner, October 14 2026: no El Niño wording or effects in the home hero). The keyword line above the headline is
 // the page's H1 (HOME_H1); the button jumps to the estimate form at the bottom of the page.
 const HOME_HERO = {
   heading: 'Roofs built right, from the __deck__ up.',
@@ -79,7 +76,7 @@ export default async function HomePage() {
     <>
       <JsonLd data={pageJsonLd({ path: '/', title: HOME_TITLE, description: HOME_DESCRIPTION, faqs })} />
       <main id="top" className="studio">
-        {/* While SEASON_PROMO.active the hero is this full-screen card (the keyword line above the headline is the H1) over the drone video, with the
+        {/* While SEASON_PROMO.active the hero is this full-screen card (the keyword line above the headline is the H1) over the truck video, with the
             home page's own words (HOME_HERO above) and none of the El Niño effects (rain, lightning, red dot, promo tracking); otherwise the newest
             projects' photo slider is the hero again. The button jumps to the estimate form at the bottom of this page (RoofCheck, #estimate). */}
         {promo.active ? (
@@ -101,7 +98,6 @@ export default async function HomePage() {
         ) : (
           <StudioHero slides={HERO_SLIDES} />
         )}
-        <ProofBar strip />
         <StudioIntro />
         <StudioServices categories={SERVICE_CATEGORIES} items={HOME_PRODUCTS} />
         {/* The home page's story (owner, October 15 2026, after maben.com.au): the belief statement (StudioIntro), the services, then "How we work"

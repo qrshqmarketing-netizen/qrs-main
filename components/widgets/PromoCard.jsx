@@ -23,7 +23,7 @@ const PHOTO = '/images/season-promo-storm-over-los-angeles.webp';
 // is the utm_medium of the button's address (promoLandingHref in data/promo.js). Clicking the main button also means the visitor has
 // taken the offer, so the popup never comes back. `exit` is the "before you go" wording (smaller heading, "No thanks" under the button).
 // `video` ([{ src, type }]): a muted looping background video over the photo (the home hero), loaded after the page; the photo stays as the fallback.
-// `photo`: a different background photo (the home hero uses the drone video's first frame, so the poster and the video match).
+// `photo`: a background photo (the home hero uses the video's first frame, so the poster and the video match).
 // Only simple values go in from a server component: strings, and `points` (a list of short lines under the button).
 export default function PromoCard({
   variant = 'modal', as: Tag = 'div', track, eyebrow, eyebrowTag: Eyebrow = 'div', heading, headingTag: Heading = 'p', headingId, text, cta, exit = false, rain = true,

@@ -48,7 +48,6 @@ export default async function HubPage({ hub, crumbs, eyebrow, image, imageAlt, c
         intro={hub.hero.intro}
         image={image}
         imageAlt={imageAlt}
-        stats
         {...(hub.heroNotes && { annotations: hub.heroNotes })}
         {...(actions && { actions })}
       />

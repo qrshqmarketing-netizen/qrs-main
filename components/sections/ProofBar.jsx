@@ -2,7 +2,7 @@ import { PROOF_POINTS } from '@/data/site';
 import ProofMarquee from './ProofMarquee';
 import './ProofBar.css';
 
-// The four proof points. `strip`: the slim navy band directly under every hero (Hero.jsx `stats`), a horizontal marquee (ProofMarquee.jsx); `onDark`: sitting directly on a photo
+// The four proof points. `strip`: the slim navy marquee above the shared header (ProofMarquee.jsx); `onDark`: sitting directly on a photo
 // instead of its own white bar; neither: a white band.
 export default function ProofBar({ onDark = false, strip = false }) {
   if (strip) {

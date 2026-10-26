@@ -23,7 +23,7 @@ export default function AboutPage() {
   return (
     <main id="top">
       <JsonLd data={schema} />
-      <Hero crumbs={CRUMBS} eyebrow={page.hero.eyebrow} title={page.hero.heading} outcome={heroOutcome('/about-us/')} intro={page.hero.intro} image={HERO_IMAGE} imageAlt="Aerial view of a home with a new shingle roof in a Southern California neighborhood" imagePosition="center 45%" stats />
+      <Hero crumbs={CRUMBS} eyebrow={page.hero.eyebrow} title={page.hero.heading} outcome={heroOutcome('/about-us/')} intro={page.hero.intro} image={HERO_IMAGE} imageAlt="Aerial view of a home with a new shingle roof in a Southern California neighborhood" imagePosition="center 45%" />
       <AboutIntro page={page} />
       <AboutNumbers />
       <AboutStory story={{ ...page.story, paragraphs: page.story.paragraphs.slice(0, 1) }} />

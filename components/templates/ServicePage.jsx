@@ -128,7 +128,6 @@ export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], 
         intro={page.hero.intro}
         image={page.image}
         imageAlt={page.imageAlt}
-        stats
         {...(page.heroNotes && { annotations: page.heroNotes })}
         {...(actions && { actions })}
       />

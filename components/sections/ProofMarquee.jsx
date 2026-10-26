@@ -6,7 +6,7 @@ const SPEED = 38; // pixels a second
 const COPIES = 4; // the points repeated end to end: one copy is the loop, the rest keep the strip full on a wide screen
 const RESUME_MS = 2500; // how long after the visitor last touched it the strip waits before it drifts again
 
-// The proof strip under the hero (ProofBar `strip`): the points inline (heading and line side by side) in a horizontal marquee. It drifts on its
+// The proof strip above the header (ProofBar `strip`): the points inline (heading and line side by side) in a horizontal marquee. It drifts on its
 // own and can also be scrolled by hand (swipe, trackpad, arrow keys) in either direction; it pauses while the pointer is over it, while it has
 // keyboard focus and for a moment after the visitor scrolls it, and it only moves while it is on screen and the tab is visible. Visitors who
 // ask for reduced motion get a strip that doesn't move by itself, but still scrolls. Without JavaScript it is simply a scrollable row.

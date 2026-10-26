@@ -15,7 +15,7 @@ export const SEASON_PROMO = {
   },
   cta: { label: 'Claim My Free Evaluation' }, // jumps to the estimate form on the current page (the El Niño landing page on a page without one)
   rain: true, // faint rain falling inside the popup (components/widgets/PromoRain.jsx); false switches it off
-  // The home page shows it too now that its hero is the drone video (add '/' to keep it off the home page only)
+  // The home page shows it too now that its hero is a background video (add '/' to keep it off the home page only)
   exclude: ['/start/', '/thank-you/', '/el-nino-roof-check/', '/lp/residential/', '/lp/commercial/', '/commercial-roofing/', '/residential-roofing/hoa-multi-family/', '/service-areas/la-county/vernon/', '/contractors/', '/careers/'],
 };
 

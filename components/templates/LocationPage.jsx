@@ -63,7 +63,6 @@ export default async function LocationPage({ location, page, index = 0 }) {
         eyebrow={`${city} Roofing · Roof Repair & Replacement`}
         title={page.h1 || page.metaTitle}
         outcome={heroOutcome(cityPath(slug))}
-        stats
         intro={page.hero.sub}
         image={photo.src}
         imagePosition={photo.position}

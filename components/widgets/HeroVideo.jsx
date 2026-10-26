@@ -2,8 +2,8 @@
 
 import { useEffect, useRef } from 'react';
 
-// A muted, looping background video over a hero's photo (the home page's El Niño hero: public/videos/home-hero-el-nino.webm, slowed 30% when it
-// was encoded, with an H.264 .mp4 for browsers without WebM). The photo underneath stays the page's first paint and the fallback: the video's
+// A muted, looping background video over a hero's photo (the home page's final clip: VP9 WebM, with an H.264 .mp4 for browsers without WebM). The
+// photo underneath stays the page's first paint and the fallback: the video's
 // files are only fetched after the page has loaded, and it fades in once it is actually playing. Nothing loads for visitors who ask for
 // reduced motion or have Data Saver on, or when autoplay is blocked; they keep the photo. `sources`: [{ src, type }], best first.
 export default function HeroVideo({ sources, className = '' }) {

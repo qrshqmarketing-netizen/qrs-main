@@ -8,7 +8,6 @@ import { heroUnderline } from '@/data/heroOutcomes';
 import { HERO_ANNOTATIONS, PHONE, TEL } from '@/data/site';
 import Breadcrumbs from './Breadcrumbs';
 import HeroParallax from './HeroParallax';
-import ProofBar from './ProofBar';
 import './Hero.css';
 
 const DEFAULT_ACTIONS = [
@@ -26,8 +25,8 @@ const DEFAULT_ACTIONS = [
 // (QuoteTrigger) follows the actions, unless one of them already opens the drawer. `slides` ([{ src, alt }], the first is
 // also `image`) turns the photo into a slider that rotates every 7 seconds (HeroSlides.jsx). Pass `mobileImage` (e.g. a portrait
 // crop of the same scene) to show a different photo below 621px instead of a cropped `image`. Below 621px a hero
-// with a photo stacks: the photo on its own band, then the copy below it (Hero.css .hero-stack). `stats` adds the proof-point strip directly
-// under the hero (ProofBar `strip`). The Google reviews marquee is placed by each page, a few sections further down. `aside` puts something (a picture) beside the copy
+// with a photo stacks: the photo on its own band, then the copy below it (Hero.css .hero-stack). The proof-point marquee sits above the shared
+// header on pages that show it. The Google reviews marquee is placed by each page, a few sections further down. `aside` puts something (a picture) beside the copy
 // from 901px, below it on phones (the blog index shows its latest article this way). Under the buttons, a row of check marks names the decisive facts
 // (`annotations`, default HERO_ANNOTATIONS in data/site.js: the commercial set on commercial and partner pages; false hides it). `underline` (default: the page's entry in HERO_UNDERLINES,
 // data/heroOutcomes.js) is the word in the headline that gets the hand-drawn animated underline.
@@ -64,7 +63,6 @@ export default function Hero({
   outcome,
   align = 'center',
   underline,
-  stats = false,
   aside,
   actions: allActions = DEFAULT_ACTIONS,
   annotations,
@@ -136,7 +134,6 @@ export default function Hero({
           {aside}
         </div>
       </section>
-      {stats && <ProofBar strip />}
     </>
   );
 }

@@ -1,9 +1,8 @@
-/* ---------- Header: one slim bar (Header.jsx, modelled on thekithmore.com) ----------
+/* ---------- Header: proof marquee above a solid menu bar (Header.jsx) ----------
    The logo, the main links (small spaced capitals, each a hub page, from 1240px), then cells split by hairlines: the phone number (from 1440px),
    the gold "Get Pro Advice" cell (from 621px; phones have it in the action bar), the theme switch and a two-line menu button. The menu button drops
-   a small paper panel under its corner (full width on phones) with the rest of the site in hairline rows; the page behind darkens.
-   Over a photo hero the bar is see-through with white type; it turns solid paper when the hero has scrolled away or the menu is open. Colors
-   follow the theme tokens, so the solid bar is dark in the dark theme. */
+   a small paper panel under its corner (full width on phones) with the rest of the site in hairline rows; the page behind darkens. The header stack
+   stays in document flow, before the hero. Colors follow the theme tokens, so the solid bar is dark in the dark theme. */
 .site-header{--hd-h:60px;--hd-ink:var(--navy);--hd-line:var(--line);position:fixed;top:0;left:0;right:0;z-index:100;color:var(--hd-ink)}
 .hd-bar{position:relative;z-index:2;display:flex;align-items:stretch;height:var(--hd-h);background:var(--paper);border-bottom:1px solid var(--hd-line);
   transition:background .35s ease,border-color .35s ease,color .35s ease}
@@ -130,6 +129,7 @@ body:has(main :is(.hero,.st-hero,.promo-home,.pd-hero)) .site-header:not([data-s
 @supports ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){
   .hd-bar:before{background:color-mix(in srgb,var(--paper) 72%,transparent);-webkit-backdrop-filter:blur(18px) saturate(1.6);backdrop-filter:blur(18px) saturate(1.6)}
 }
+
 body:has(main :is(.hero,.st-hero,.promo-home,.pd-hero)) .site-header:not([data-solid]) .hd-bar{background:transparent}
 body:has(main :is(.hero,.st-hero,.promo-home,.pd-hero)) .site-header:not([data-solid]) .hd-bar:before{background:linear-gradient(180deg,rgba(3,14,26,.5),rgba(3,14,26,.12))}
 @supports ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){
@@ -176,3 +176,17 @@ body:has(main :is(.hero,.st-hero,.promo-home,.pd-hero)) .site-header:not([data-s
   @media (hover:hover){:root[data-theme="dark"] .hd-row:hover{background:color-mix(in srgb,#fff 7%,transparent)}}
   @media (min-width:621px){.hd-panel{border-radius:0 0 0 var(--radius);border-bottom:1px solid var(--line)}}
 }
+
+/* The marquee and menu now sit in normal page flow, before the hero. Keep their surfaces fully opaque. */
+.site-header{position:relative;top:auto;left:auto;right:auto;width:100%;background:var(--paper)}
+.site-header.has-marquee{--hd-marquee-h:37px}
+.site-header .hd-bar{background:var(--paper)!important}
+.site-header .hd-bar:before{display:none!important}
+body:has(main :is(.hero,.st-hero,.promo-home,.pd-hero)) .site-header:not([data-solid]){--hd-ink:var(--navy);--hd-line:var(--line)}
+body:has(main :is(.hero,.st-hero,.promo-home,.pd-hero)) .site-header:not([data-solid]) .hd-bar{background:var(--paper)!important}
+body:has(main :is(.hero,.st-hero,.promo-home,.pd-hero)) .site-header:not([data-solid]) .hd-bar:before{display:none!important}
+html:not([data-theme="dark"]) body:has(main :is(.hero,.st-hero,.promo-home,.pd-hero)) .site-header:not([data-solid]) .hd-brand .brand-logo.on-light{display:block}
+html:not([data-theme="dark"]) body:has(main :is(.hero,.st-hero,.promo-home,.pd-hero)) .site-header:not([data-solid]) .hd-brand .brand-logo.on-dark{display:none}
+.site-header .hd-panel{max-height:calc(100dvh - var(--hd-h) - var(--hd-marquee-h,0px));background:var(--paper);-webkit-backdrop-filter:none;backdrop-filter:none;border-radius:0;box-shadow:none}
+.site-header .hd-more{background:var(--wash)}
+@media (min-width:621px){.site-header.has-marquee{--hd-marquee-h:43px}.site-header .hd-panel{max-height:calc(100dvh - var(--hd-h) - var(--hd-marquee-h,0px) - 24px)}}

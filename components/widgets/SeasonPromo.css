@@ -131,11 +131,10 @@ body.studio-site .promo h1.promo-eyebrow{font:600 12px/1.4 var(--font-head);lett
 body.studio-site .promo h1.promo-title{font-family:var(--font-display);font-weight:800;letter-spacing:.01em;text-transform:uppercase;line-height:.96}
 .promo-split .promo-eyebrow{align-self:flex-start;text-align:left}
 /* The home page's hero: a little taller than the landing page's (most of the screen, with the proof strip peeking in below) */
-/* Full screen, like the hero on fluid.glass (the owner's reference): the photo or video fills the whole first screen at every size; the copy sits at the
-   top center (owner, October 13 2026), so the storm and the city show below it; the proof strip starts right at the fold */
-/* Phones: the hero is as tall as its content (owner, October 14 2026: no empty band under the points); from 901px it fills the first screen */
+/* The home hero keeps its top-centered copy and visible background, with a shorter desktop height so the page content starts sooner. */
+/* Phones: the hero is as tall as its content (owner, October 14 2026: no empty band under the points). */
 .promo.promo-landing.promo-home{min-height:0;justify-content:flex-start;padding-top:clamp(96px,14svh,132px);padding-bottom:44px}
-@media (min-width:901px){.promo.promo-landing.promo-home{min-height:max(720px,100svh);padding-top:clamp(120px,16svh,170px);padding-bottom:clamp(56px,9svh,120px)}}
+@media (min-width:901px){.promo.promo-landing.promo-home{min-height:max(720px,100svh);padding-top:clamp(96px,11svh,132px);padding-bottom:clamp(56px,8svh,96px)}}
 /* Home hero photo: centered at the bottom (the city), and the slow zoom grows up from the bottom edge so it never opens a gap there */
 .promo-home .promo-photo{object-position:50% 100%;transform-origin:50% 100%}
 /* The home hero's background video (HeroVideo.jsx): over the photo, centered at the bottom, fading in once it plays */
@@ -151,19 +150,19 @@ body.studio-site .promo-home .promo-title{font:500 clamp(34px,8.4vw,62px)/1.04 v
    left and the buttons (with the three check points under them) at the bottom right. Phones stack it: the headline at the top, then the excerpt,
    the excerpt centered right under it, then the buttons one above the other and the points, all centered. (.promo-copy is display:contents, so these are the hero's own children.) */
 .promo-home :is(.promo-text,.promo-actions,.promo-points){align-self:stretch}
-.promo-landing.promo-home .promo-text{margin:4px auto 0;text-align:center;max-width:560px;font-size:19px;line-height:1.5}
+.promo-landing.promo-home .promo-text{margin:4px auto 0;text-align:center;max-width:560px;font-size:17px;line-height:1.5}
 .promo-home .promo-actions{margin-top:24px;align-items:center}
 .promo-landing.promo-home .promo-actions .btn{width:100%;max-width:none}
 .promo-home .promo-points{align-items:center;margin-top:20px}
-@media (min-width:621px){.promo-landing.promo-home .promo-text{font-size:22px}}
+@media (min-width:621px){.promo-landing.promo-home .promo-text{font-size:19px}}
 @media (min-width:901px){
   .promo.promo-landing.promo-home{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto auto 1fr auto auto;column-gap:48px;padding-left:clamp(40px,4vw,72px);padding-right:clamp(40px,4vw,72px)}
   .promo-home .promo-eyebrow{grid-column:1/-1;grid-row:1;justify-self:center}
   body.studio-site .promo-home .promo-title{grid-column:1/-1;grid-row:2;justify-self:center;font-size:clamp(34px,3.9vw,80px);white-space:nowrap;max-width:none}
-  .promo-landing.promo-home .promo-text{grid-column:1;grid-row:4/span 2;align-self:end;justify-self:start;margin:0;text-align:left;max-width:640px;font-size:clamp(22px,1.75vw,30px)}
+  .promo-landing.promo-home .promo-text{grid-column:1;grid-row:4/span 2;align-self:end;justify-self:start;margin:0;text-align:left;max-width:640px;font-size:clamp(18px,1.5vw,24px)}
   .promo-home :is(.promo-actions,.promo-points){align-self:end}
   .promo-home .promo-actions{grid-column:2;grid-row:4;align-self:end;justify-self:end;flex-direction:row;justify-content:flex-end;align-items:center;gap:20px;margin-top:0;padding-top:0}
-  .promo.promo-landing.promo-home{padding-bottom:clamp(96px,13svh,150px)} /* the bottom row clears the chat bubble */
+  .promo.promo-landing.promo-home{padding-bottom:clamp(72px,9svh,112px)} /* the bottom row clears the chat bubble */
   .promo-landing.promo-home .promo-actions .btn{width:auto;min-width:0}
   .promo-home .promo-points{grid-column:2;grid-row:5;justify-self:end;flex-direction:column;align-items:flex-end;gap:6px;margin:18px 0 0}
 }

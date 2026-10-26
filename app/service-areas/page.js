@@ -46,7 +46,6 @@ export default function LocationsPage() {
         eyebrow="Los Angeles, Orange County & the Inland Empire"
         title={page.hero.heading}
         outcome={heroOutcome('/service-areas/')}
-        stats
         intro={page.hero.intro}
         image={HERO_IMAGE}
         imageAlt="Row of homes with pitched roofs along a residential street"

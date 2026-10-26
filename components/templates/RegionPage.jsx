@@ -56,7 +56,7 @@ export default async function RegionPage({ region, page }) {
   return (
     <main id="top">
       <JsonLd data={schema} />
-      <Hero crumbs={crumbs} eyebrow="Service Areas" title={page.hero.heading} outcome={heroOutcome(path)} intro={page.hero.intro} image={photo.src} imageAlt={photo.alt} imagePosition={photo.position} stats />
+      <Hero crumbs={crumbs} eyebrow="Service Areas" title={page.hero.heading} outcome={heroOutcome(path)} intro={page.hero.intro} image={photo.src} imageAlt={photo.alt} imagePosition={photo.position} />
       <LocalIntro city={region.name} heading={page.intro.heading} paragraphs={page.intro.paragraphs} offices={offices} considerations={page.considerations} />
       <ServiceCategories place={region.name} />
       <CardCarousel title={`Roof types we work on in __${region.name}__`} items={RESIDENTIAL_TYPES.map(typeCard)} idPrefix="roofTypes" tone="wash" />
