@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Faq from '@/components/sections/Faq';
 import ReviewMarquee from '@/components/sections/ReviewMarquee';
 import JsonLd from '@/components/ui/JsonLd';
+import Rich from '@/components/ui/Rich';
 import { PhoneIcon } from '@/components/ui/icons';
 import PromoRain from '@/components/widgets/PromoRain';
 import QuickLeadForm from '@/components/widgets/QuickLeadForm';
@@ -118,7 +119,9 @@ export default function LandingPage({ page, variant }) {
             <ul>
               {page.services.map((s) => (
                 <li key={s.title}>
-                  <h3>{s.title}</h3>
+                  <h3>
+                    <Rich text={s.title} />
+                  </h3>
                   <p>{s.text}</p>
                 </li>
               ))}

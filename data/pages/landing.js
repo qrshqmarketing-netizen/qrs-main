@@ -49,7 +49,7 @@ export const LANDING_PAGES = {
       { title: 'Tile lift & relay', text: 'Keep your sound roof tiles while the worn underlayment below is replaced.' },
       { title: 'Flat roofing', text: 'Flat roof systems planned around drainage, seams and lasting protection.' },
       { title: 'Roof inspections', text: 'A roofer-led inspection with photos, plain-English findings and a clear next step.' },
-      { title: 'Roof maintenance plans', text: 'Scheduled roof care with seasonal visits and a photo report each time.' },
+      { title: '*RoofRevive* roof tune-ups', text: 'One focused visit to fix a short list of small issues before they turn into leaks, plus maintenance plans with seasonal visits.' },
     ],
     steps: [
       { title: 'A roofer looks first', text: 'A trained in-house roofer inspects your roof, with drone footage of the areas of concern, and shows you photos of what we find.' },

@@ -112,7 +112,7 @@ export const CARE_PLAN = {
   tuneUp: {
     id: 'tune-up',
     eyebrow: 'One-time visit',
-    heading: 'Need a One-Time Roof Tune-Up?',
+    heading: 'Need a One-Time RoofRevive® Roof Tune-Up?', // a plain ® here: FeatureBand headings go through Mark, which doesn't style product names
     paragraphs: [
       'A roof tune-up is one focused visit for a roof that’s basically sound but showing its age in small ways. You get a written list of fixes and one price before we start, and photos of every fix when we’re done. It often makes sense to start with a tune-up, then move into a plan.',
       'If the list is longer than a tune-up should handle, or the problem is an active leak, a [roof repair](/roof-repair/) is the better fit, and we’ll tell you so.',

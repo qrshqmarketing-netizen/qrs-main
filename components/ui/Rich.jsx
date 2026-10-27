@@ -10,6 +10,7 @@ const PRODUCT_BRANDS = new Set([
   'SecondLife',
   'RoofCare Plan',
   'ReserveReady',
+  'RoofRevive', // roof tune-ups (owner, October 27 2026)
 ]);
 const PRODUCT_BRAND_PATTERN = new RegExp(`(${[...PRODUCT_BRANDS].sort((a, b) => b.length - a.length).join('|')})`, 'g');
 
