@@ -23,6 +23,128 @@ const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
   {
+    slug: 'how-to-pay-for-a-new-roof',
+    title: 'How to Pay for a New Roof When Money Is Tight',
+    keyword: 'pay for a new roof',
+    topics: ['replacement', 'repair', 'insurance', 'maintenance'],
+    metaTitle: 'How to Pay for a New Roof When Money Is Tight',
+    metaDescription:
+      'Can’t afford to pay for a new roof right now? Repair first, financing, insurance, home repair programs and planning ahead, for Los Angeles homeowners.',
+    datePublished: '2026-10-26',
+    dateModified: '2026-10-26',
+    excerpt:
+      'A roof that needs work rarely arrives at a convenient time. Here are the realistic ways Los Angeles homeowners pay for a new roof, starting with finding out whether you need one yet.',
+    // A stand-in picture for the blog cards until the article has its own (remove it then)
+    cardImage: '/images/how-we-work-plain-english-homeowners.webp',
+    intro: [
+      'If you need to pay for a new roof and the money isn’t there right now, you have more options than it might seem, and the first one costs nothing: finding out whether you need a new roof yet.',
+      'A roof that needs work rarely shows up at a convenient time. The good news is that many roof problems can be fixed with a targeted repair, and when a replacement is due, there are ways to spread the cost.',
+      'This guide walks through the options in the order we’d suggest them to a homeowner in Los Angeles or Orange County, from a free look at the roof to financing, insurance and home repair programs.',
+    ],
+    sections: [
+      {
+        heading: 'Start by Finding Out What the Roof Really Needs',
+        blocks: [
+          'Before you look for money, make sure you know the size of the problem. A leak, a few missing shingles or a stain on the ceiling doesn’t automatically mean a new roof.',
+          'A [free roof evaluation](/roof-inspection/) from QRS includes drone footage of the areas of concern and photos of what we find, explained in plain English, with one clear next step: repair, monitor, maintain or replace. Sometimes the honest answer is that the roof is fine for now, and we’ll say so.',
+          'If work is needed, you get a written scope and price before anything starts. That written price is also what a lender or an insurer will want to see.',
+        ],
+      },
+      {
+        heading: 'Repair Now, Replace Later',
+        blocks: [
+          'When the wear is in one place, a targeted repair can fix the leak and buy time to plan and save for a replacement.',
+          {
+            list: [
+              '**Leaks at a detail.** Most leaks start at a flashing, a vent boot, a valley or a cracked tile, and a [roof repair](/roof-repair/) fixes the cause without touching the rest of the roof.',
+              '**Tile roofs with worn underlayment.** A [tile lift and relay](/residential-roofing/tile-roofing/lift-and-relay/) reuses your tiles over new underlayment, which usually costs less than a new tile roof.',
+              '**A tune-up.** A handful of small issues can often be handled in one visit, such as resealing vents, pipes and flashings.',
+            ],
+          },
+          'Repairs make sense while the rest of the roof still has life in it. When the wear is spread across the whole roof, more patching only delays the bill, and we’ll show you that in the photos.',
+        ],
+      },
+      {
+        heading: 'Financing a Roof Replacement',
+        blocks: [
+          'If a replacement is due, [roof financing](/roof-financing/) lets you spread the cost into monthly payments instead of paying all at once.',
+          {
+            list: [
+              '**Who it’s through.** QRS works with Momnt Financing and Service Financing. Approval and terms depend on your credit and the lender.',
+              '**What it covers.** Home roof replacements. It doesn’t cover repairs or commercial projects.',
+              '**When to apply.** After you have the written scope and price, so you know exactly what you’re financing.',
+            ],
+          },
+          'Compare the monthly payment with what repeated repairs and water damage would cost you over the same years. Read the terms before you sign, and ask the lender anything that isn’t clear.',
+        ],
+      },
+      {
+        heading: 'Check Whether Insurance Applies',
+        blocks: [
+          'Homeowners insurance usually pays for roof damage from a sudden, covered event, such as wind or a fallen tree limb, under the terms of your policy. It usually doesn’t pay for a roof that is simply old or worn.',
+          'If a storm or another event caused the damage, photograph it, protect the roof from more water and report it to your insurer promptly. Our photos and written scope give you documentation to share with your adjuster. Our guide to [roof insurance claims in California](/blog/roof-insurance-claims-california/) walks through the process.',
+        ],
+      },
+      {
+        heading: 'Look Into Home Repair Assistance Programs',
+        blocks: [
+          'Some cities, counties and nonprofit groups run home repair programs, often for seniors, veterans, people with disabilities or lower-income homeowners. They come and go, and the rules differ from place to place.',
+          {
+            steps: [
+              '**Ask your city or county housing department** whether it has a home repair or rehabilitation program, and who qualifies.',
+              '**Ask before any work starts.** Programs usually have to approve the contractor and the scope first.',
+              '**Keep your documents ready:** proof of ownership and income, and the roofer’s written scope and price.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Other Ways Homeowners Pay',
+        blocks: [
+          'Some homeowners use savings, a home equity loan or line of credit, or a personal loan from their own bank. Each has its own costs and risks, so compare the interest and terms, and talk to your bank or a financial adviser about what fits your situation.',
+          { note: 'Be careful with anyone who knocks on your door after a storm and promises that insurance will pay for a new roof, or who asks for a large payment up front. Hire a licensed contractor, and get the scope and price in writing.' },
+        ],
+      },
+      {
+        heading: 'Plan Ahead So the Next Roof Isn’t a Surprise',
+        blocks: [
+          'The cheapest roof work is the work you catch early. Clear gutters and drains before the rainy season, have small problems fixed while they’re small, and keep dated photos of the roof.',
+          'A [roof maintenance plan](/roof-maintenance-plans/) schedules those visits for you, with a photo report each time, so you can see a replacement coming years ahead and set money aside for it.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Can I get a new roof with no money down?',
+        a: 'It depends on the financing and your credit. The lenders we work with set their own terms, so ask them about any down payment once you have the written price. Before that, a free evaluation tells you whether a repair can solve the problem for less.',
+      },
+      {
+        q: 'Are there government grants for a new roof?',
+        a: 'Some cities, counties and nonprofits offer home repair help, usually for seniors, veterans or lower-income homeowners, and the programs change over time. Your city or county housing department is the place to ask.',
+      },
+      {
+        q: 'Is it cheaper to repair or replace my roof?',
+        a: 'A repair is cheaper up front and is the right call when the problem is in one place. When the wear is across the whole roof, repeated repairs can end up costing more than a replacement. The photos from a roof evaluation show which one you’re facing.',
+      },
+      {
+        q: 'Does financing cover roof repairs?',
+        a: 'Not through QRS. Financing through Momnt Financing or Service Financing is for home roof replacements, subject to credit approval. Repairs and commercial projects aren’t covered.',
+      },
+      {
+        q: 'Will insurance pay for an old roof?',
+        a: 'Usually not. Insurance generally covers damage from a sudden, covered event, not wear and age. Your insurer decides, based on your policy and what caused the damage.',
+      },
+    ],
+    closing: {
+      heading: 'Find Out Where You Stand First',
+      blocks: [
+        'You can’t plan how to pay for a roof until you know what it needs. Book a [free roof evaluation](#roof-check): you’ll get photos, a plain-English explanation and a clear next step, and if work makes sense, a written scope and price before anything starts. No pressure, no mystery pricing.',
+        'Call [(310) 340-1643](tel:+13103401643) (Monday to Friday, 8 am to 6 pm) or [request your free evaluation](#roof-check).',
+      ],
+    },
+    related: ['/roof-financing/', '/roof-repair/', '/roof-inspection/', '/roof-maintenance-plans/'],
+  },
+  {
     slug: 'shingle-granules-in-gutter',
     title: 'Granules in Your Gutter? What’s Normal and When to Call a Roofer',
     keyword: 'granules in your gutter',
@@ -791,7 +913,7 @@ export const BLOG_POSTS = [
     // No prices in this article (owner, October 22 2026): cost is described in general terms, as in the shingle vs. tile article; the exact
     // figure comes from the free roof evaluation. `revision` copies this text over the live copy in Supabase once (lib/postsStore.js
     // applyFileRevisions); raise it after the next change made here.
-    revision: 1,
+    revision: 2, // Search Console FAQ additions (owner, October 26 2026); `revision` copies this text over the live copy once
     excerpt:
       'What shapes the cost of a new roof in Los Angeles: how each roof type compares, how roofers measure a roof, what moves the price and how to compare bids line by line.',
     cardImage: '/images/shingle-roof-replacement-tear-off-drone-view.webp',
@@ -879,6 +1001,14 @@ export const BLOG_POSTS = [
     ],
     faqs: [
       {
+        q: 'How much does it cost to replace the roof on a 2,000-square-foot house?',
+        a: 'It depends on the roof, not the floor plan. A 2,000-square-foot house can have more or less roof area than that, depending on the pitch, overhangs and how many stories it has, and the roof type matters most of all. For a quick range, try the Instant Quote on our site; for an exact figure, a [free roof evaluation](/roof-inspection/) measures the roof and ends with a written price.',
+      },
+      {
+        q: 'What is included in a roof replacement?',
+        a: 'Usually the tear-off down to the deck, deck repairs where needed, new underlayment, flashings, vents and drip edge, the new roofing, permits, daily cleanup and a final walk-through. A good written scope lists each of these, so you can compare bids line by line.',
+      },
+      {
         q: 'How much does a new roof cost in Los Angeles?',
         a: 'It depends on the size of the roof, the roof type, the pitch and height of the home and what is found under the old roof. Asphalt shingles are usually the least costly to replace and a new tile roof the most. The free roof evaluation gives you the exact figure: a written scope and price before any work starts.',
       },
@@ -909,6 +1039,8 @@ export const BLOG_POSTS = [
   },
   {
     slug: 'torch-down-roofing-app-vs-sbs',
+    // Search Console FAQ additions (owner, October 26 2026); `revision` copies this text over the live copy once
+    revision: 1,
     title: 'Torch-Down Roofing: APP vs. SBS Modified Bitumen for Flat Roofs',
     keyword: 'torch-down roofing',
     topics: ['flat', 'replacement', 'repair', 'commercial'],
@@ -995,6 +1127,10 @@ export const BLOG_POSTS = [
       },
     ],
     faqs: [
+      {
+        q: 'What does SBS stand for in roofing?',
+        a: 'Styrene-butadiene-styrene, a rubber-like polymer mixed into the asphalt so the membrane stays flexible, even when it’s cold. APP stands for atactic polypropylene, a plastic polymer that makes the membrane stiffer and more heat-resistant.',
+      },
       {
         q: 'What is the difference between APP and SBS torch-down?',
         a: 'Both are modified bitumen. APP is blended with a plastic-like polymer, is stiffer and is almost always torched; it holds up well to heat and sun. SBS is blended with a rubber-like polymer, stays flexible in cold and can be torched, set in hot asphalt, glued or self-adhered.',
@@ -1368,6 +1504,8 @@ export const BLOG_POSTS = [
   },
   {
     slug: 'commercial-roof-leak-repair',
+    // Search Console FAQ additions (owner, October 26 2026); `revision` copies this text over the live copy once
+    revision: 1,
     title: 'Commercial Roof Leak Repair: How to Find the Source on a Flat Roof',
     keyword: 'commercial roof leak repair',
     topics: ['commercial', 'leak', 'repair', 'flat', 'emergency'],
@@ -1461,6 +1599,10 @@ export const BLOG_POSTS = [
       },
     ],
     faqs: [
+      {
+        q: 'Why is my new commercial roof leaking?',
+        a: 'Most often at a detail rather than the open field of the roof: a flashing at a curb, drain or wall, a penetration added after the roof was finished, or damage from another trade working up there. Call the installer first, since new work is usually covered by their workmanship warranty. If you need a second opinion, we trace the leak, photograph the cause and put the fix in writing.',
+      },
       {
         q: 'How do you find a leak on a flat commercial roof?',
         a: 'By working upslope from where the water shows up inside, and checking each drain, seam, flashing, penetration and edge along the way. The cause is photographed before it is fixed.',
@@ -2131,6 +2273,8 @@ export const BLOG_POSTS = [
   },
   {
     slug: 'roof-restoration-vs-replacement',
+    // Search Console FAQ additions (owner, October 26 2026); `revision` copies this text over the live copy once
+    revision: 1,
     title: 'Roof Restoration vs. Replacement: Which Does Your Roof Need?',
     keyword: 'roof restoration',
     topics: ['replacement', 'restoration', 'repair', 'tile', 'flat', 'maintenance'],
@@ -2237,6 +2381,10 @@ export const BLOG_POSTS = [
       },
     ],
     faqs: [
+      {
+        q: 'What is the difference between roof repair and roof restoration?',
+        a: 'A repair fixes one problem in one place, such as a leaking flashing or a cracked tile. Restoration works across the whole roof to renew it without a tear-off: repairing damaged pieces, resealing flashings and, on tile roofs, resetting the tiles over new underlayment. Replacement starts over from the deck.',
+      },
       {
         q: 'Is roof restoration cheaper than replacement?',
         a: 'It often costs less up front, but only when the roof is sound enough to restore. If the roof is worn out, restoration can cost you twice, once for the restoration and again for the replacement that follows.',
@@ -2413,6 +2561,8 @@ export const BLOG_POSTS = [
   },
   {
     slug: 'temporary-roof-repair-options',
+    // Search Console FAQ additions (owner, October 26 2026); `revision` copies this text over the live copy once
+    revision: 1,
     title: 'Temporary Roof Repair: What Works Until a Roofer Arrives',
     keyword: 'temporary roof repair',
     topics: ['emergency', 'repair', 'leak', 'storm'],
@@ -2507,6 +2657,14 @@ export const BLOG_POSTS = [
     ],
     faqs: [
       {
+        q: 'How do I temporarily fix a leaking flat roof?',
+        a: 'Only if the roof is dry, low and safe to reach. Clear the drain or scupper so water can leave, then cover the leaking area with a tarp weighted at the edges, or seal a small, clean, dry split with roofing cement. On a flat roof the leak is often away from the drip inside, so a tarp over a wide area works better than a dab of sealant. Then have a roofer find the source; see [flat roof repair](/residential-roofing/flat-roofing/repair/).',
+      },
+      {
+        q: 'How do I temporarily patch a hole in my roof?',
+        a: 'From inside, catch the water and protect your belongings first. On the roof, and only if it’s safe, a tarp that runs over the ridge and is weighted or battened at the edges is the most reliable short-term cover; roofing cement only suits small holes and cracks on a dry surface. A hole means the deck may be damaged, so call a roofer: our [emergency roof repair](/roof-repair/emergency/) page explains what we do.',
+      },
+      {
         q: 'How long does a temporary roof repair last?',
         a: 'Usually days to a few weeks. A tarp or sealant is meant to hold until the permanent repair is made, and weather, wind and sun can wear it out sooner.',
       },
@@ -2542,7 +2700,7 @@ export const BLOG_POSTS = [
     slug: 'roof-insurance-claims-california',
     // Search Console wording (owner, October 23 2026): "roof insurance claim help", "roof insurance claim process", "roof damage insurance claim",
     // "roofing insurance claim", "roof claim". `revision` copies this text over the live copy in Supabase once (lib/postsStore.js applyFileRevisions).
-    revision: 3, // 3: the Search Console meta again (owner, October 23 2026, after the rollback had restored the October 16 meta)
+    revision: 4, // Search Console FAQ additions (owner, October 26 2026); `revision` copies this text over the live copy once
     title: 'Roof Insurance Claims in California: Help, the Process and What to Document',
     keyword: 'roof insurance claims',
     topics: ['insurance', 'storm', 'emergency', 'repair', 'replacement'],
@@ -2631,6 +2789,14 @@ export const BLOG_POSTS = [
     ],
     faqs: [
       {
+        q: 'Does homeowners insurance cover a leaking roof?',
+        a: 'It depends on why it leaks. A leak caused by a sudden, covered event, such as wind or a fallen branch, is often covered under the terms of your policy. A leak from age, wear or skipped maintenance usually isn’t. Your insurer decides, so check your policy, and get the roof photographed and the cause written down before anything is repaired.',
+      },
+      {
+        q: 'Do I need an insurance-approved roofer?',
+        a: 'Ask your insurer whether your policy has any rules about contractors. Whoever you hire should hold an active California contractor license, carry insurance and give you photos and a written scope and price you can share with your adjuster.',
+      },
+      {
         q: 'Does homeowners insurance cover a roof replacement?',
         a: 'It can, if the damage came from a covered event such as wind, and your policy’s terms allow it. Roofs that are simply old or worn are generally not covered. Your insurer decides, so ask them and read your policy.',
       },
@@ -2672,6 +2838,8 @@ export const BLOG_POSTS = [
   },
   {
     slug: 'wooden-roof-pros-and-cons',
+    // Search Console FAQ additions (owner, October 26 2026); `revision` copies this text over the live copy once
+    revision: 1,
     title: 'Wooden Roof Pros and Cons: Is a Wood Roof Right for Your Home?',
     keyword: 'wooden roof',
     topics: ['wood', 'shingle', 'tile', 'replacement'],
@@ -2776,6 +2944,14 @@ export const BLOG_POSTS = [
       },
     ],
     faqs: [
+      {
+        q: 'What are the disadvantages of a wooden roof?',
+        a: 'Fire risk is the big one in Southern California, along with more upkeep than tile or shingles (cleaning, treating and replacing split or cupped pieces), sensitivity to moss and rot where it stays damp, a higher cost to install, and local fire rules that may require a fire-treated product or a different roof altogether.',
+      },
+      {
+        q: 'What wood is used for roofing?',
+        a: 'Mostly western red cedar, which resists rot and insects naturally, and sometimes redwood. They come as shakes (split, thicker and more rustic) or shingles (sawn, thinner and smoother). In fire-prone areas, look for fire-treated products that meet the local fire rating.',
+      },
       {
         q: 'Are wooden roofs allowed in Los Angeles and Orange County?',
         a: 'It depends on where your home is. Rules vary by city and by fire hazard zone, and many areas restrict wood roofs or require a Class A fire rating. Your city’s building department can tell you what applies to your address before you spend any money.',

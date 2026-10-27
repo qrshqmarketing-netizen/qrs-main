@@ -29,6 +29,7 @@ export const ROOF_REPAIR_HUB = {
     ],
   },
   faqs: [
+    { q: 'Can you fix a leaking roof without replacing it?', a: 'Often, yes. Most leaks start at one detail, such as a flashing, a vent boot, a valley, a cracked tile or an open seam, and a targeted repair fixes it while the rest of the roof still has life. Replacement only makes sense when the wear is spread across the roof. The [free roof evaluation](/roof-inspection/) shows which one you’re looking at, with photos.' },
     { q: 'How much does a roof repair cost?', a: 'It depends on what failed and how much needs fixing. A cracked pipe boot or a few slipped tiles is a small job, while a failed valley, flashing or damaged decking takes more work. We trace the leak to its source first, then give you a written scope and price before any repair begins, so you know the cost up front.' },
     { q: 'Is there a warranty on roof repairs?', a: 'The materials in a repair carry the manufacturer’s warranty, and what it covers depends on the product and its warranty tier. Our 10-year workmanship warranty applies to new roof installs (call for details).' },
     { q: 'Do you work with insurance adjusters?', a: 'Yes, as our schedule allows. Our team is small, so we can’t always be there when the adjuster visits, but we’ll help you where we can, and our photos and written scope give you clear documentation to share with your insurance company.' },

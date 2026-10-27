@@ -180,6 +180,7 @@ export const ROOF_INSPECTION = {
     ],
   },
   faqs: [
+    { q: 'What do roof inspectors look for?', a: 'The roofing itself (worn, cracked, slipped or missing shingles and tiles, bare asphalt, blisters and open seams on flat roofs), the flashings at walls, chimneys, skylights and vents, the valleys and edges, signs of water getting in, and how the roof drains and is ventilated. We photograph each finding, explain it in plain English and give you one clear next step: repair, monitor, maintain or replace.' },
     { q: 'Is the roof inspection really free?', a: 'Yes. For homes, our roofer-led roof evaluation is free, with no obligation and nothing to pay up front. We use drone footage to see the roof’s condition, explain what we find in plain English and give you a clear next step. The optional $199 Roof Check is a separate tune-up visit, and the $199 is credited toward a repair or replacement if you move forward.' },
     { q: 'What do I get after the roof evaluation?', a: 'Photos of what we found, a plain-English explanation of what they show and one clear recommendation: repair, monitor, maintain or replace. If work is needed, you get a written scope and price before anything starts, with no pressure to decide on the spot.' },
     { q: 'Do you do roof inspection and repair?', a: 'Yes. The roofer who inspects your roof can explain how a problem would be fixed, and if you want us to do the work, you get a written scope and price first. Small issues often go to [roof repair](/roof-repair/); you’re never obliged to hire us after the evaluation.' },
@@ -279,6 +280,7 @@ export const ROOF_FINANCING = {
     ],
   },
   faqs: [
+    { q: 'How can I pay for a new roof if I don’t have the money right now?', a: 'Start with what the roof actually needs: a [free roof evaluation](/roof-inspection/) shows whether a repair can buy time or a replacement is due. For a home roof replacement, financing through Momnt Financing or Service Financing spreads the cost into monthly payments, subject to credit approval. If a covered event such as a storm caused the damage, your homeowners insurance may pay part of it ([how roof insurance claims work](/blog/roof-insurance-claims-california/)). Some cities and counties also run home repair programs for seniors and lower-income homeowners, so ask your local housing department. Our guide on [paying for a new roof](/blog/how-to-pay-for-a-new-roof/) covers each option.' },
     {
       q: 'What kind of roof work can be financed?',
       a: 'Financing through Momnt Financing or Service Financing is available for home roof replacements. It doesn’t cover repairs or commercial projects. Once you have your written scope and price, ask us whether financing fits your project.',

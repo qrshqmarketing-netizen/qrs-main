@@ -9,7 +9,8 @@ import { afterSplash } from '@/lib/splash';
 import './CookieNotice.css';
 
 // The cookie bar (owner, October 15 2026): the full width of the bottom of the screen, on a first visit until the visitor chooses.
-// "Accept all", "Necessary only", or "Settings", which opens switches for each kind of cookie (lib/consent.js applies and saves them).
+// A first visit opens it with the choices showing (owner, October 26 2026): a switch for each kind of cookie, then "Save my choices",
+// "Necessary only" or "Accept all" (lib/consent.js applies and saves them).
 // The footer's "Cookie settings" link opens it again at the settings. While it is up, body has `cookie-open` (the El Niño pop-up waits for it).
 
 const KINDS = [
@@ -23,6 +24,7 @@ export default function CookieNotice() {
   const [settings, setSettings] = useState(false);
   const [choice, setChoice] = useState({ analytics: true, clarity: true });
   const panel = useRef(null);
+  const fromLink = useRef(false); // opened from the footer link: move the focus to the first switch (not on a first visit)
   const bar = useRef(null);
 
   // First visit: show the bar after a moment, until a choice is saved
@@ -31,7 +33,12 @@ export default function CookieNotice() {
     if (storedConsent()) return undefined;
     // On a first visit to the home page it waits for the opening splash to finish (lib/splash.js)
     let t;
-    const stop = afterSplash(() => { t = setTimeout(() => setOpen(true), 1200); });
+    const stop = afterSplash(() => {
+      t = setTimeout(() => {
+        setSettings(true);
+        setOpen(true);
+      }, 1200);
+    });
     return () => { stop(); clearTimeout(t); };
   }, []);
 
@@ -39,6 +46,7 @@ export default function CookieNotice() {
   useEffect(() => {
     const show = () => {
       setChoice(currentConsent());
+      fromLink.current = true;
       setSettings(true);
       setOpen(true);
     };
@@ -64,7 +72,7 @@ export default function CookieNotice() {
   }, [open]);
 
   useEffect(() => {
-    if (open && settings) panel.current?.querySelector('input:not([disabled])')?.focus({ preventScroll: true });
+    if (open && settings && fromLink.current) panel.current?.querySelector('input:not([disabled])')?.focus({ preventScroll: true });
   }, [open, settings]);
 
   if (!open) return null;
@@ -75,6 +83,7 @@ export default function CookieNotice() {
     window.dispatchEvent(new Event(COOKIE_OK_EVENT));
     setOpen(false);
     setSettings(false);
+    fromLink.current = false;
   };
 
   return (

@@ -129,6 +129,7 @@ export const HOA_MULTI_FAMILY = {
     ],
   },
   faqs: [
+    { q: 'Do you offer a warranty on roofs for rental and multi-family properties?', a: 'Yes. Our installs are backed by a 10-year workmanship warranty (call for details), and the roofing materials carry the manufacturer’s own warranty, which depends on the product. The written scope for each building lists the roof system and the warranties that come with it, so owners, boards and property managers can keep it with the building’s records.' },
     {
       q: 'What will our board receive before approving roof work?',
       a: 'A photo-documented report on each roof and a written proposal with scope and price. Findings are in plain English, so board members who have never been on a roof can still weigh the options side by side.',
@@ -185,6 +186,7 @@ export const ATTIC_VENTILATION = {
     ],
   },
   faqs: [
+    { q: 'Who installs roof and attic vents?', a: 'A roofing contractor. Roof vents are cut through the roof deck and flashed into the roofing, so a poorly installed one is a leak waiting to happen. We install and replace ridge and roof vents, open or add intake at the eaves and soffits so the system stays balanced, and flash every vent into the roof. You get photos and a written scope and price first.' },
     {
       q: 'How can I tell if my attic isn’t ventilated well?',
       a: 'Common signs are upstairs rooms that stay hot, an air conditioner that runs nearly all day, a musty smell, damp insulation, stained decking and shingles that curl or blister. Some of these have other causes, so a roofer’s inspection, with photos, is the way to find out which one you have.',
