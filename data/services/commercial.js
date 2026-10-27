@@ -3,17 +3,17 @@
 export const COMMERCIAL_CONTENT = {
   hub: {
     keyword: 'commercial roofing',
-    metaTitle: 'Commercial Roofing Contractor for Every Building', // for the "best commercial roofing contractor" searches (October 22 2026)
-    metaDescription: 'Commercial roofing for offices, retail, churches, warehouses and more: roofer-led surveys, written scopes and work planned around you. Request an estimate.',
+    metaTitle: 'Commercial Roofing in Los Angeles', // for the "best commercial roofing contractor" searches (October 22 2026)
+    metaDescription: 'Commercial roofing in LA & Orange County for offices, retail, churches, warehouses and more. Roofer-led surveys and written scopes. Request an estimate.',
     hero: {
       heading: 'Commercial Roofing in Los Angeles & Orange County',
-      intro: 'QRS is a commercial roofing contractor with repairs, replacement and scheduled maintenance for office buildings, retail stores, churches, warehouses, shopping centers and more. Every project starts with a roofer-led survey and a written scope, and the work is planned around how your building runs.',
+      intro: 'QRS is a commercial roofing contractor in Los Angeles and Orange County, with repairs, replacement and scheduled maintenance for office buildings, retail stores, churches, warehouses, shopping centers and more. Every project starts with a roofer-led survey and a written scope, and the work is planned around how your building runs.',
       highlights: ['Roofer-led roof surveys', 'Work planned around your operations', 'Closeout photos for your records'],
     },
     overview: {
       heading: 'Detail-First Roofing for Commercial Buildings',
       paragraphs: [
-        'QRS is a commercial roofing contractor with repairs, replacement and scheduled maintenance for office buildings, retail stores, churches, warehouses, shopping centers and more. Most commercial buildings sit under low-slope roofs, and those roofs wear differently than a home’s. Water needs a clear path to drains and scuppers. Rooftop HVAC units and other equipment add penetrations that need sound flashing, while parapet walls and coping take the brunt of the sun and the Santa Ana winds. We repair and replace [modified bitumen and other low-slope systems](/residential-roofing/flat-roofing/), along with the tile and shingle sections found on many churches and some retail buildings.',
+        'QRS is a commercial roofing contractor in Los Angeles and Orange County, with repairs, replacement and scheduled maintenance for office buildings, retail stores, churches, warehouses, shopping centers and more. Most commercial buildings in Southern California sit under low-slope roofs, and those roofs wear differently than a home’s. Water needs a clear path to drains and scuppers. Rooftop HVAC units and other equipment add penetrations that need sound flashing, while parapet walls and coping take the brunt of the sun and the Santa Ana winds. We repair and replace [modified bitumen and other low-slope systems](/residential-roofing/flat-roofing/), along with the tile and shingle sections found on many churches and some retail buildings.',
         'If you own or manage a commercial building, you need more than a price. You need to know what’s wrong, what it will take to fix and how the work will affect tenants, customers or staff. Our roof surveys are photo-documented and explained in plain English, every scope is written before work starts, and schedules are planned around your hours. When the job is done, you get closeout photos for your files. [Request an estimate](#roof-check) to get started.',
       ],
     },
@@ -46,12 +46,12 @@ export const COMMERCIAL_CONTENT = {
       title: 'Office Building Roofing',
       navLabel: 'Office Buildings',
       card: 'Roof surveys, repairs and replacement for office buildings, planned around your tenants and documented for owners and property management clients.',
-      metaTitle: 'Office Building Roofing That Keeps Tenants Working',
-      metaDescription: 'Office building roofing: leak repairs, rooftop HVAC flashing and replacement planned around your tenants. Request a roof survey.',
+      metaTitle: 'Office Building Roofing in Los Angeles',
+      metaDescription: 'Office building roofing in Los Angeles & Orange County: leak repairs, rooftop HVAC flashing and replacement planned around tenants. Request a roof survey.',
       image: '/images/office-building-hero.webp',
       imageAlt: 'Modern office building exterior beneath a clear Southern California sky',
       hero: {
-        intro: 'QRS provides office building roofing, from leak repairs to full replacement, with the work planned so your tenants can keep working. Every project starts with a roof survey that traces leaks to the source, from rooftop HVAC curbs to parapets and drains, with photo-documented findings for owners and property management clients.',
+        intro: 'QRS provides office building roofing across Los Angeles and Orange County, from leak repairs to full replacement, with the work planned so your tenants can keep working. Every project starts with a roof survey that traces leaks to the source, from rooftop HVAC curbs to parapets and drains, with photo-documented findings for owners and property management clients.',
         highlights: ['Work planned around your tenants', 'Curbs and flashings at rooftop HVAC', 'Photo-documented findings for owners'],
       },
       // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
@@ -83,12 +83,12 @@ export const COMMERCIAL_CONTENT = {
       title: 'Retail Store Roofing',
       navLabel: 'Retail',
       card: 'Roofing for retail stores, from the low-slope roof over the sales floor to mansard and façade sections, scheduled around store hours.',
-      metaTitle: 'Retail Store Roofing That Keeps Your Doors Open',
-      metaDescription: 'Retail store roofing: leak repairs, replacement and mansard or façade roofs, planned around your store hours. Request an estimate.',
+      metaTitle: 'Retail Store Roofing in Los Angeles',
+      metaDescription: 'Retail store roofing in LA & Orange County: leak repairs, replacement and mansard or façade roofs, planned around your store hours. Request an estimate.',
       image: '/images/commercial-retail-flat-roof-tear-off-drone-view.webp',
       imageAlt: 'Aerial view of a retail strip center during a flat roof replacement: roof stripped to the plywood deck, rooftop HVAC units, tarps along the edges and roofers at work',
       hero: {
-        intro: 'QRS provides retail store roofing, repairing and replacing the low-slope roof over your sales floor and the mansard or façade sections out front. We trace sales-floor leaks to the source and plan the work around your store hours, entrances and deliveries, so the store can stay open.',
+        intro: 'QRS provides retail store roofing across Los Angeles and Orange County, repairing and replacing the low-slope roof over your sales floor and the mansard or façade sections out front. We trace sales-floor leaks to the source and plan the work around your store hours, entrances and deliveries, so the store can stay open.',
         highlights: ['Scheduled around store hours', 'Low-slope and mansard sections', 'Sales-floor leaks traced to the source'],
       },
       // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
@@ -120,12 +120,12 @@ export const COMMERCIAL_CONTENT = {
       title: 'Church Roofing',
       navLabel: 'Churches',
       card: 'Roofing for churches and ministry buildings, from tile and shingle sanctuary roofs to low-slope halls, planned around services and events.',
-      metaTitle: 'Church Roofing for Sanctuaries, Halls & Classrooms',
-      metaDescription: 'Church roofing: tile, shingle and low-slope roofs repaired or replaced around your services and events. Request a roof survey.',
+      metaTitle: 'Church Roofing in Los Angeles & Orange County',
+      metaDescription: 'Church roofing in Los Angeles & Orange County: tile, shingle and low-slope roofs repaired or replaced around your services and events. Request a roof survey.',
       image: '/images/tile-roof-replacement-drone-view.webp',
       imageAlt: 'Aerial view of a completed clay tile roof on a commercial building',
       hero: {
-        intro: 'QRS provides church roofing, repairing and replacing the tile, shingle and low-slope roofs over sanctuaries, fellowship halls and classrooms. We plan the work around services, weddings and events, and every project starts with a roof survey and findings your board can review.',
+        intro: 'QRS provides church roofing across Los Angeles and Orange County, repairing and replacing the tile, shingle and low-slope roofs over sanctuaries, fellowship halls and classrooms. We plan the work around services, weddings and events, and every project starts with a roof survey and findings your board can review.',
         highlights: ['Tile, shingle and low-slope sections', 'Scheduled around services and events', 'Findings your board can review'],
       },
       // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
@@ -160,19 +160,19 @@ export const COMMERCIAL_CONTENT = {
       // Search Console wording (owner, October 23 2026): "industrial roofing contractor", "industrial roof repairs", "california industrial roofers",
       // "industrial reroofing", "industrial roof inspection/maintenance", with Los Angeles and Orange County. Santa Clarita and the Bay Area are
       // not in the service area, so they are not named.
-      metaTitle: 'Industrial Roofing, Planned Around Production',
-      metaDescription: 'Industrial roofing: surveys, repairs and replacement planned around production, rooftop equipment and safe access. Request an estimate.',
+      metaTitle: 'Industrial Roofing in Los Angeles',
+      metaDescription: 'Industrial roofing in LA & Orange County: surveys, repairs and replacement planned around production, rooftop equipment and safe access. Request an estimate.',
       image: '/images/vernon-industrial.webp',
       imageAlt: 'Industrial property in Vernon, California',
       hero: {
-        intro: 'QRS provides industrial roofing for manufacturing and industrial facilities, from industrial roof inspections and repairs to maintenance and full reroofing, phased around production and the people and equipment below. We flash every stack and vent properly and plan safe roof access with your facility team before crews go up.',
+        intro: 'QRS provides industrial roofing for manufacturing and industrial facilities across Los Angeles and Orange County, from industrial roof inspections and repairs to maintenance and full reroofing, phased around production and the people and equipment below. We flash every stack and vent properly and plan safe roof access with your facility team before crews go up.',
         highlights: ['Every stack and vent flashed properly', 'Work phased around production', 'Access and safety planned first'],
       },
       // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
       story: {
         label: 'Industrial roofing',
         lead: 'Industrial buildings put more on their roofs than most, and every __penetration__ counts.',
-        text: 'As industrial roofers, we handle industrial roof repairs, inspections, maintenance and reroofing for working facilities. Exhaust stacks, ductwork, vents, conduit and equipment supports add up quickly. Maintenance crews wear paths into the surface walking to equipment, and some processes vent residue that wears on the roofing around stacks.',
+        text: 'As industrial roofers serving Los Angeles, Orange County and the Inland Empire, we handle industrial roof repairs, inspections, maintenance and reroofing for Southern California facilities. Exhaust stacks, ductwork, vents, conduit and equipment supports add up quickly. Maintenance crews wear paths into the surface walking to equipment, and some processes vent residue that wears on the roofing around stacks.',
         heading: 'How we roof an industrial facility',
         principles: [
           { title: 'Every stack, curb and support photographed.', text: 'The industrial roof inspection covers each penetration along with the wear paths, standing water and flashing condition, so nothing on a crowded roof is overlooked.', bullets: ['Stacks, vents and ductwork', 'Equipment supports and curbs', 'Walk paths and ponding areas'] },
@@ -197,12 +197,12 @@ export const COMMERCIAL_CONTENT = {
       title: 'Shop & Small Business Roofing',
       navLabel: 'Shops',
       card: 'Roof repairs and replacement for small commercial buildings: workshops, auto and repair shops, studios and storefront businesses.',
-      metaTitle: 'Shop & Small Business Roofing by Quality Roofers',
-      metaDescription: 'Shop and small business roofing for auto shops, workshops, studios and storefronts, with a written price first. Request an estimate.',
+      metaTitle: 'Shop & Small Business Roofing in Los Angeles',
+      metaDescription: 'Shop and small business roofing in LA & Orange County: auto shops, workshops, studios and storefronts, with a written price first. Request an estimate.',
       image: '/images/cta-white-flat-roof-tile-coping-drone-view.webp',
       imageAlt: 'Aerial view of a white flat roof with a clay tile edge and rooftop equipment',
       hero: {
-        intro: 'QRS provides small business roofing, repairing and replacing roofs on auto and repair shops, workshops, studios and storefront businesses. We keep it simple: a roofer shows you photos of what’s wrong, you get a written price before any work starts and the job is planned around your work days.',
+        intro: 'QRS provides small business roofing across Los Angeles and Orange County, repairing and replacing roofs on auto and repair shops, workshops, studios and storefront businesses. We keep it simple: a roofer shows you photos of what’s wrong, you get a written price before any work starts and the job is planned around your work days.',
         highlights: ['Small roofs, same attention to detail', 'Straight answers for the owner', 'Written price before any work'],
       },
       // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
@@ -237,12 +237,12 @@ export const COMMERCIAL_CONTENT = {
       // Search Console wording (owner, October 23 2026): "warehouse roofing repair", "warehouse roof replacement (los angeles)", "warehouse roofing
       // contractor(s)/company", "orange county warehouse roofing/roof repair". "Reconditioning" (coatings) is not a service, and Carmel-by-the-Sea is
       // outside the service area, so neither is used.
-      metaTitle: 'Warehouse Roofing That Works Around Your Inventory',
-      metaDescription: 'Warehouse roofing: large low-slope roofs repaired or replaced in phases around inventory and loading docks. Request a roof survey.',
+      metaTitle: 'Warehouse Roofing in Los Angeles & Orange County',
+      metaDescription: 'Warehouse roofing in Los Angeles & Orange County: large low-slope roofs repaired or replaced in phases around inventory and loading docks. Request a survey.',
       image: '/images/recent-work-commercial-flat-roof-drone-view.webp',
       imageAlt: 'Aerial view of a large white flat roof with rooftop units above a parking lot',
       hero: {
-        intro: 'QRS provides warehouse roofing, surveying, repairing and replacing large low-slope roofs section by section, with the inventory below in mind. We start with a survey, fix the urgent areas first and phase any replacement around your docks and racking so you can keep shipping.',
+        intro: 'QRS provides warehouse roofing across Los Angeles and Orange County, surveying, repairing and replacing large low-slope roofs section by section, with the inventory below in mind. We start with a survey, fix the urgent areas first and phase any replacement around your docks and racking so you can keep shipping.',
         highlights: ['Large roofs surveyed section by section', 'Drainage across long, flat spans', 'Work phased around docks and racking'],
       },
       // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
@@ -275,12 +275,12 @@ export const COMMERCIAL_CONTENT = {
       title: 'Mall & Shopping Center Roofing',
       navLabel: 'Malls',
       card: 'Roofing for malls and shopping centers, phased across tenant spaces and common areas and planned to keep the center open for business.',
-      metaTitle: 'Mall & Shopping Center Roofing, Phased by Tenant',
-      metaDescription: 'Mall and shopping center roofing: leak tracing, repairs and phased replacement across tenant spaces and common areas. Request an estimate.',
+      metaTitle: 'Mall & Shopping Center Roofing in Los Angeles',
+      metaDescription: 'Mall and shopping center roofing in LA & Orange County: leak tracing, repairs and phased replacement across tenant spaces and common areas. Request an estimate.',
       image: '/images/flat-roof-replacement-completed-white-membrane.webp',
       imageAlt: 'Aerial view of a white flat roof membrane with roofers working across a large roof',
       hero: {
-        intro: 'QRS provides shopping center roofing, surveying, repairing and replacing the many roofs over a center’s tenant spaces and common areas in phases. We coordinate the work with center management and plan it around store hours, deliveries, entrances and parking, so tenants and shoppers can carry on.',
+        intro: 'QRS provides shopping center roofing across Los Angeles and Orange County, surveying, repairing and replacing the many roofs over a center’s tenant spaces and common areas in phases. We coordinate the work with center management and plan it around store hours, deliveries, entrances and parking, so tenants and shoppers can carry on.',
         highlights: ['Phased across tenant spaces', 'Common areas and entrances planned', 'Photo records by roof section'],
       },
       // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once

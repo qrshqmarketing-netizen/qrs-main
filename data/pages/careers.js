@@ -9,18 +9,18 @@ const apply = (role) => `mailto:${EMAIL}?subject=${encodeURIComponent(`Careers: 
 export const CAREERS_PAGE = {
   email: EMAIL,
   keyword: 'roofing jobs',
-  metaTitle: 'Roofing Jobs & Careers With Quality Roofers',
+  metaTitle: 'Roofing Jobs in Los Angeles',
   metaDescription:
-    'Roofing jobs and careers at Quality Roofing Specialists. Join a detail-first team of roofers and send us your info today.',
+    'Roofing jobs and careers at Quality Roofing Specialists across Los Angeles & Orange County. Join a detail-first crew and send us your info today.',
   hero: {
     heading: 'Roofing Jobs & Careers at QRS',
     intro:
-      'Quality Roofing Specialists hires for roofing jobs: roofers and installers, crew leads, estimators, project managers and office team members. To apply, email us your info and the role you’re interested in. We’re building a team of dedicated professionals who share our core values and our mission of crafting top-quality roofs.',
+      'Quality Roofing Specialists hires for roofing jobs across Los Angeles and Orange County: roofers and installers, crew leads, estimators, project managers and office team members. To apply, email us your info and the role you’re interested in. We’re building a team of dedicated professionals who share our core values and our mission of crafting top-quality roofs.',
   },
   values: {
     heading: 'What It’s Like to Work at QRS',
     // The keyword ("roofing jobs") in the first 100 words, now that the hero has no excerpt
-    intro: 'Quality Roofing Specialists hires for roofing jobs: roofers and installers, crew leads, estimators, project managers and office team members.',
+    intro: 'Quality Roofing Specialists hires for roofing jobs across Los Angeles and Orange County: roofers and installers, crew leads, estimators, project managers and office team members.',
     items: [
       { title: 'Detail-first standards', text: 'Clean lines, proper details and tidy job sites. We’d rather do it right than do it twice.' },
       { title: 'Roofers lead the work', text: 'Roofers inspect, scope and explain the work, so roofing skill sits at the center of every job.' },

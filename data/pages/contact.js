@@ -6,9 +6,9 @@ import { hoursText } from '@/lib/hours';
 
 export const CONTACT_PAGE = {
   keyword: 'contact quality roofing specialists',
-  metaTitle: 'Contact Quality Roofing Specialists',
+  metaTitle: 'Contact',
   metaDescription:
-    'Contact Quality Roofing Specialists: call (310) 340-1643, visit one of our three offices, or request a free roof evaluation online.',
+    'Contact Quality Roofing Specialists: call (310) 340-1643, visit our LA, Valley or Vernon office, or request a free roof evaluation online.',
   hero: {
     heading: 'Contact Quality Roofing Specialists',
     image: '/images/reviews-hero-bg.webp',

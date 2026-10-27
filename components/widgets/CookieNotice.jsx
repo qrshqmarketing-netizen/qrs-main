@@ -9,8 +9,8 @@ import { afterSplash } from '@/lib/splash';
 import './CookieNotice.css';
 
 // The cookie bar (owner, October 15 2026): the full width of the bottom of the screen, on a first visit until the visitor chooses.
-// A first visit opens it with the choices showing (owner, October 26 2026): a switch for each kind of cookie, then "Save my choices",
-// "Necessary only" or "Accept all" (lib/consent.js applies and saves them).
+// "Accept all", "Necessary only", or "Settings", which opens switches for each kind of cookie (lib/consent.js applies and saves them).
+// The October 26 version that opened with the switches showing (about 612px tall on a phone) was taken back on October 27 after calls dropped.
 // The footer's "Cookie settings" link opens it again at the settings. While it is up, body has `cookie-open` (the El Niño pop-up waits for it).
 
 const KINDS = [
@@ -33,12 +33,7 @@ export default function CookieNotice() {
     if (storedConsent()) return undefined;
     // On a first visit to the home page it waits for the opening splash to finish (lib/splash.js)
     let t;
-    const stop = afterSplash(() => {
-      t = setTimeout(() => {
-        setSettings(true);
-        setOpen(true);
-      }, 1200);
-    });
+    const stop = afterSplash(() => { t = setTimeout(() => setOpen(true), 1200); });
     return () => { stop(); clearTimeout(t); };
   }, []);
 

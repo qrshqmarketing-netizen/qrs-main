@@ -11,6 +11,7 @@ import './SeasonPromo.css';
 const FIRST_MS = 15000, EXIT_ARM_MS = 8000; // the card opens 15 seconds after the page loads
 const FLICK_PX = 350, FLICK_MS = 300; // phones: an upward scroll this far this fast, once they're a screen down, reads as leaving
 const PHOTO = '/images/season-promo-storm-over-los-angeles.webp'; // the card's background (SeasonPromo.css)
+const FORM_ID = 'estimate'; // the estimate form card at the bottom of each page (RoofCheck.jsx)
 
 // Fetch the background photo a few seconds before the card can open, so it doesn't appear on an empty navy card
 const preloadPhoto = () => {
@@ -134,13 +135,21 @@ export default function SeasonPromo() {
   const isExit = view === 'exit';
   const landing = promoLandingHref(isExit ? 'modal-exit' : 'modal-timed');
 
-  // The button opens the El Niño landing page (owner, October 27 2026; data/promo.js), tagged with which popup it was (modal-timed or
-  // modal-exit), so the lead email, sheet and dashboard show where the visitor came from
-  const cta = { label: promo.cta.label, href: landing };
+  // The button jumps to the estimate form on the page the visitor is on (#estimate, RoofCheck); a page without the form
+  // (legal pages, careers) opens the El Niño landing page instead (data/promo.js), tagged with which popup it was
+  const cta = { label: promo.cta.label, href: `#${FORM_ID}` };
   const claim = (e) => {
+    const form = document.getElementById(FORM_ID);
     e.preventDefault();
     close();
-    router.push(landing);
+    if (!form) return router.push(landing);
+    // Smooth scrolling (Lenis) is paused while the popup is open, so scroll once it has closed; scroll-margin-top clears the header
+    requestAnimationFrame(() => {
+      const lenis = window.__qrsLenis;
+      if (lenis) lenis.scrollTo(form, { offset: -(parseFloat(getComputedStyle(form).scrollMarginTop) || 0), force: true });
+      else form.scrollIntoView({ behavior: 'smooth' });
+      history.replaceState(history.state, '', `#${FORM_ID}`);
+    });
   };
 
   return (

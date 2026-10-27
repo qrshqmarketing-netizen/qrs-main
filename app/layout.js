@@ -43,7 +43,7 @@ const bigShoulders = Big_Shoulders({ subsets: ['latin'], variable: '--font-conde
 // Defaults for every page. A page's own `metadata` export overrides these.
 export const metadata = {
   metadataBase: new URL(SITE_URL),
-  title: { default: BUSINESS.name, template: `%s | QRS` }, // sub pages end in " | QRS" (owner, October 27 2026; lib/pages.js)
+  title: { default: BUSINESS.name, template: `%s | ${BUSINESS.name}` },
   description: HOME_DESCRIPTION,
   // Staging and preview copies are kept out of search results (see ALLOW_INDEXING in lib/seo.js)
   robots: ALLOW_INDEXING

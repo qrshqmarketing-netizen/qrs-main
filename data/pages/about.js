@@ -6,13 +6,13 @@ import { formatDate } from '@/lib/dates';
 
 export const ABOUT_PAGE = {
   keyword: 'quality roofing specialists',
-  metaTitle: 'About Quality Roofing Specialists',
+  metaTitle: 'About Us',
   metaDescription:
-    'Quality Roofing Specialists crafts top-quality roofs with passion and precision. A family-owned roofing contractor, licensed in California since 2020.',
+    'Quality Roofing Specialists crafts top-quality roofs with passion and precision. Licensed California contractor since 2020, serving LA & Orange County.',
   hero: {
     eyebrow: 'About Our Company',
     heading: 'Meet Quality Roofing Specialists',
-    intro: `Quality Roofing Specialists, Inc. (QRS) is a family-owned roofing contractor serving homes and businesses, licensed in California since 2020 (CSLB #${BUSINESS.license}). Co-founded by Tony and Adva Goldberg, QRS repairs and replaces tile, shingle and flat roofs, and every project starts with a roofer-led look at the roof.`,
+    intro: `Quality Roofing Specialists, Inc. (QRS) is a family-owned roofing contractor serving homes and businesses across Los Angeles and Orange County, licensed in California since 2020 (CSLB #${BUSINESS.license}). Co-founded by Tony and Adva Goldberg, QRS repairs and replaces tile, shingle and flat roofs, and every project starts with a roofer-led look at the roof.`,
   },
   // "Who we are" (owner, October 15 2026, after the story approach of maben.com.au): what we do and where, then who owns us. How a job runs is
   // said once, in `process` below.

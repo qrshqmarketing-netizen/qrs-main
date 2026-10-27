@@ -269,11 +269,11 @@ export const BLOG_POSTS = [
   },
   {
     slug: 'shingle-granules-in-gutter',
-    revision: 1, // meta title shortened for " | QRS" (owner, October 27 2026); `revision` copies it to the live copy once
+    revision: 2, // meta title back to its October 26 wording (owner, October 27 2026: revert after the drop in calls); copies it to the live copy once
     title: 'Granules in Your Gutter? What’s Normal and When to Call a Roofer',
     keyword: 'granules in your gutter',
     topics: ['shingle', 'maintenance', 'inspection', 'repair', 'replacement'],
-    metaTitle: 'Granules in Your Gutter? Normal Wear or a Problem?',
+    metaTitle: 'Granules in Your Gutter? What’s Normal and When to Call a Roofer',
     metaDescription:
       'Finding granules in your gutter? Learn what’s normal on a new roof, what signals wear, and how a roofer checks. Free drone evaluation in LA & OC.',
     datePublished: '2026-10-26',
@@ -1029,7 +1029,7 @@ export const BLOG_POSTS = [
     title: 'Roof Replacement Cost in Los Angeles: What Sets the Price',
     keyword: 'roof replacement cost',
     topics: ['replacement', 'shingle', 'tile', 'flat', 'restoration'],
-    metaTitle: 'Roof Replacement Cost in Los Angeles, Explained',
+    metaTitle: 'Roof Replacement Cost in Los Angeles: What Sets the Price',
     metaDescription:
       'Roof replacement cost in Los Angeles: how roof type, size, pitch and the deck shape the price, why your roof isn’t your square footage, and how to compare bids.',
     datePublished: '2026-10-13',
@@ -1037,7 +1037,7 @@ export const BLOG_POSTS = [
     // No prices in this article (owner, October 22 2026): cost is described in general terms, as in the shingle vs. tile article; the exact
     // figure comes from the free roof evaluation. `revision` copies this text over the live copy in Supabase once (lib/postsStore.js
     // applyFileRevisions); raise it after the next change made here.
-    revision: 3, // meta title shortened for " | QRS" (owner, October 27 2026); `revision` copies it to the live copy once
+    revision: 4, // meta title back to its October 26 wording (owner, October 27 2026: revert after the drop in calls); copies it to the live copy once
     excerpt:
       'What shapes the cost of a new roof in Los Angeles: how each roof type compares, how roofers measure a roof, what moves the price and how to compare bids line by line.',
     cardImage: '/images/shingle-roof-replacement-tear-off-drone-view.webp',
@@ -2824,11 +2824,11 @@ export const BLOG_POSTS = [
     slug: 'roof-insurance-claims-california',
     // Search Console wording (owner, October 23 2026): "roof insurance claim help", "roof insurance claim process", "roof damage insurance claim",
     // "roofing insurance claim", "roof claim". `revision` copies this text over the live copy in Supabase once (lib/postsStore.js applyFileRevisions).
-    revision: 5, // meta title shortened for " | QRS" (owner, October 27 2026); `revision` copies it to the live copy once
+    revision: 6, // meta title back to its October 26 wording (owner, October 27 2026: revert after the drop in calls); copies it to the live copy once
     title: 'Roof Insurance Claims in California: Help, the Process and What to Document',
     keyword: 'roof insurance claims',
     topics: ['insurance', 'storm', 'emergency', 'repair', 'replacement'],
-    metaTitle: 'Roof Insurance Claims in California: Help & Process',
+    metaTitle: 'Roof Insurance Claims in California: Help and the Process',
     metaDescription:
       'Roof insurance claims in California: the roof insurance claim process, what to document after roof damage and the claim help a roofer can give you.',
     datePublished: '2026-10-05',

@@ -3,7 +3,7 @@
 export const FAQ_PAGE = {
   path: '/roofing-faq/',
   keyword: 'roofing FAQ',
-  metaTitle: 'Roofing FAQ: Straight Answers From Our Roofers',
+  metaTitle: 'Roofing FAQ: Answers From Los Angeles Roofers',
   metaDescription:
     'Roofing FAQ from Quality Roofing Specialists: straight answers on roof repair, replacement, inspections, tile, shingle, flat and metal roofs, and financing.',
   heading: 'Roofing FAQ',

@@ -2,7 +2,6 @@
 export const SAN_PEDRO_FULL_ROOF_PROJECT = {
   path: '/projects/full-roof-replacement-san-pedro-90732/',
   keyword: 'full roof replacement in San Pedro',
-  metaTitle: 'Full Roof Replacement in San Pedro 90732', // short enough for " | QRS" (owner, October 27 2026)
   title: 'Single-Story Home: Full Roof Replacement in San Pedro 90732',
   description:
     'Full roof replacement in San Pedro 90732: warm tan architectural shingles, a white reflective flat roof over the patio, new vents and flashed brick chimneys.',

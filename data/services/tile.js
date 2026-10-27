@@ -4,11 +4,11 @@
 export const TILE_CONTENT = {
   hub: {
     keyword: 'tile roofing',
-    metaTitle: 'Tile Roofing for Clay, Concrete & Slate Roofs',
-    metaDescription: 'Tile roofing: clay, concrete and slate tile repair, lift & relay, replacement and roof care, from roofers who know tile. Book a free roof evaluation.',
+    metaTitle: 'Tile Roofing in Los Angeles & Orange County',
+    metaDescription: 'Tile roofing in Los Angeles & Orange County: clay, concrete and slate tile repair, lift & relay, replacement and roof care. Start with a free roof evaluation.',
     hero: {
       heading: 'Tile Roofing Services',
-      intro: 'Tile roofing from QRS covers repairs, tune-ups, inspections, roof care, lift & relay and replacement for clay, concrete and slate tile roofs. Because the tiles often outlast the layers beneath them, we focus on the underlayment, flashings and valleys you can’t see. Every job starts with a free roof evaluation.',
+      intro: 'Tile roofing from QRS covers repairs, tune-ups, inspections, roof care, lift & relay and replacement for clay, concrete and slate tile roofs across Los Angeles and Orange County. Because the tiles often outlast the layers beneath them, we focus on the underlayment, flashings and valleys you can’t see. Every job starts with a free roof evaluation.',
       highlights: ['Clay, concrete and slate options', 'Focused on what’s under the tile', 'Free drone roof evaluation to start'],
     },
     overview: {
@@ -47,12 +47,12 @@ export const TILE_CONTENT = {
       title: 'Tile Roof Replacement',
       navLabel: 'Roof Replacement',
       card: 'When the old tiles are past saving, we tear off to the deck and build a complete new tile system, from underlayment and flashings to ridge.',
-      metaTitle: 'Tile Roof Replacement That Keeps the Tile Look',
-      metaDescription: 'Tile roof replacement: full tear-off, new underlayment, flashings and clay or concrete tile, with a written price first. Book a free roof evaluation.',
+      metaTitle: 'Tile Roof Replacement in Los Angeles',
+      metaDescription: 'Tile roof replacement in Los Angeles & Orange County: full tear-off, new underlayment, flashings and clay or concrete tile. Book your free roof evaluation.',
       image: '/images/tile-roof-replacement.webp',
       imageAlt: 'Finished clay barrel tile roof on a home, viewed from above',
       hero: {
-        intro: 'A tile roof replacement takes your roof down to the deck and builds a complete new system: underlayment, flashings, clay or concrete tile and ridge details. QRS replaces tile roofs when the tiles themselves are past saving, backed by our 10-year workmanship warranty (call for details). It starts with a free roof evaluation.',
+        intro: 'A tile roof replacement takes your roof down to the deck and builds a complete new system: underlayment, flashings, clay or concrete tile and ridge details. QRS replaces tile roofs across Los Angeles and Orange County when the tiles themselves are past saving, backed by our 10-year workmanship warranty (call for details). It starts with a free roof evaluation.',
         highlights: ['Full tear-off down to the deck', 'Clay or concrete tile to suit your home', '10-Year workmanship warranty (call for details)'],
       },
       // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
@@ -89,12 +89,12 @@ export const TILE_CONTENT = {
       card: 'Cracked or slipped tiles, loose ridges, failed flashings and clogged valleys, traced to their source and fixed with photos of the work.',
       // Search Console wording (owner, October 23 2026): "tile roof repair(s)", "roof tile repair", "tile roof specialist(s)", "broken roof tile repair
       // orange county", "highland park tile roof repair", "cracked tile roof repair", "tile roof leak repair". "Same day" is not promised.
-      metaTitle: 'Tile Roof Repair With the Closest Tile Match',
-      metaDescription: 'Tile roof repair: leaks traced, cracked tiles matched and flashings fixed, with photos of the problem and the fix. Book a free roof evaluation.',
+      metaTitle: 'Tile Roof Repair in Los Angeles & Orange County',
+      metaDescription: 'Tile roof repair in Los Angeles & Orange County: leaks traced, cracked tiles matched and flashings fixed, with photos. Book a free roof evaluation.',
       image: '/images/tile-lift-off-and-reset-drone-view-2.webp',
       imageAlt: 'Tile roof repair and relay in progress, with tiles staged on the roof',
       hero: {
-        intro: 'Tile roof repair finds where water really gets in, often well away from the stain on your ceiling, and fixes the tiles, flashings or underlayment responsible. QRS handles tile roof repairs and roof tile repair with the closest available tile match and photos of the problem and the fix.',
+        intro: 'Tile roof repair finds where water really gets in, often well away from the stain on your ceiling, and fixes the tiles, flashings or underlayment responsible. QRS handles tile roof repairs and roof tile repair across Los Angeles and Orange County with the closest available tile match and photos of the problem and the fix.',
         highlights: ['Leaks traced to where water gets in', 'Closest available tile match', 'Photos of the problem and the fix'],
       },
       // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
@@ -127,12 +127,12 @@ export const TILE_CONTENT = {
       title: 'Tile Lift & Relay · *SecondLife*',
       navLabel: 'Lift & Relay',
       card: 'Keep the tile roof you love. We lift the tiles, replace the worn underlayment underneath and reset your roof in its original pattern.',
-      metaTitle: 'Tile Lift & Relay: Keep Your Tiles, Renew Beneath',
-      metaDescription: 'Tile lift & relay: new underlayment under your existing tiles, reset cleanly so your roof keeps its look. Start with a free roof evaluation.',
+      metaTitle: 'Tile Lift & Relay in Los Angeles',
+      metaDescription: 'Tile lift & relay in LA & Orange County: new underlayment under your existing tiles, reset cleanly to keep your look. Start with a free roof evaluation.',
       image: '/images/tile-lift-off-and-reset-drone-view.webp',
       imageAlt: 'Aerial view of tiles lifted off a roof during a tile lift and relay, exposing the underlayment',
       hero: {
-        intro: 'A tile lift & relay removes your existing tiles, replaces the worn underlayment beneath them and resets the same tiles in their original pattern, so your roof keeps its look. QRS does it as our *SecondLife* Tile Reset, renewing worn battens and flashings and replacing only cracked or broken tiles.',
+        intro: 'A tile lift & relay removes your existing tiles, replaces the worn underlayment beneath them and resets the same tiles in their original pattern, so your roof keeps its look. QRS does it across Los Angeles and Orange County as our *SecondLife* Tile Reset, renewing worn battens and flashings and replacing only cracked or broken tiles.',
         highlights: ['Your tiles reused, broken ones matched', 'New underlayment and flashings', 'Written scope and price first'],
       },
       // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
@@ -167,12 +167,12 @@ export const TILE_CONTENT = {
       title: 'Slate Tile Roofing',
       navLabel: 'Slate Tile Roofing',
       card: 'A distinctive natural-stone roof option, planned around your home’s structure, roof details and the slate profile you want.',
-      metaTitle: 'Slate Tile Roofing, Planned From the Frame Up',
-      metaDescription: 'Slate tile roofing: a natural-stone roof planned around structure, underlayment and flashing by quality roofers. Request a roof evaluation.',
+      metaTitle: 'Slate Tile Roofing in Los Angeles & Orange County',
+      metaDescription: 'Slate tile roofing in Los Angeles & Orange County: a natural-stone roof planned around structure, underlayment and flashing. Request a roof evaluation.',
       image: '/images/tile-roof-replacement.webp',
       imageAlt: 'Tile roof on a Southern California home',
       hero: {
-        intro: 'Slate tile roofing gives a home the natural color and texture of stone, and QRS plans slate roofs from the structure up. Because slate is heavy, we review the framing and roof details first and put the full scope in writing before work begins. It starts with a roof evaluation.',
+        intro: 'Slate tile roofing gives a home the natural color and texture of stone, and QRS plans slate roofs across Los Angeles and Orange County from the structure up. Because slate is heavy, we review the framing and roof details first and put the full scope in writing before work begins. It starts with a roof evaluation.',
         highlights: ['Natural slate appearance', 'Roof structure and details reviewed', 'Written scope before work begins'],
       },
       // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
@@ -201,12 +201,12 @@ export const TILE_CONTENT = {
       title: 'Concrete Tile Roofing',
       navLabel: 'Concrete Tile Roofing',
       card: 'Explore concrete tile profiles and colors, with a roof system planned around the deck, underlayment and flashing.',
-      metaTitle: 'Concrete Tile Roofing, Built as a Complete Roof',
-      metaDescription: 'Concrete tile roofing: compare profiles, colors and roof-system details with roofers who install it as a complete system. Request a roof evaluation.',
+      metaTitle: 'Concrete Tile Roofing in Los Angeles & Orange County',
+      metaDescription: 'Concrete tile roofing in Los Angeles & Orange County: compare profiles, colors and roof-system details with a local roofing crew. Request a roof evaluation.',
       image: '/images/tile-roof-replacement.webp',
       imageAlt: 'Concrete tile roof on a Southern California home',
       hero: {
-        intro: 'Concrete tile roofing comes in a range of profiles and colors, and QRS installs it on homes as a complete roof system. We help you choose the profile and color, then plan the deck, underlayment, flashing and drainage alongside the tile, with a written scope before work begins.',
+        intro: 'Concrete tile roofing comes in a range of profiles and colors, and QRS installs it on homes across Los Angeles and Orange County as a complete roof system. We help you choose the profile and color, then plan the deck, underlayment, flashing and drainage alongside the tile, with a written scope before work begins.',
         highlights: ['Multiple profiles and color choices', 'Underlayment and flashing included in planning', 'Written scope before work begins'],
       },
       // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once

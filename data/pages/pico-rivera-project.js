@@ -11,7 +11,6 @@ const photo = (n, alt) => ({ src: mediaUrl(`${DIR}${String(n).padStart(2, '0')}.
 export const PICO_RIVERA_PROJECT = {
   path: '/projects/shingle-roof-replacement-solar-pico-rivera-90660/',
   keyword: 'roof replacement under solar panels',
-  metaTitle: 'Roof Replacement Under Solar Panels, Pico Rivera', // short enough for " | QRS" (owner, October 27 2026)
   title: 'Roof Replacement Under Solar Panels in Pico Rivera 90660',
   description:
     'Roof replacement under solar panels in Pico Rivera 90660: the array measured and stored, the deck made solid, flashed mounts and new shingles.',
