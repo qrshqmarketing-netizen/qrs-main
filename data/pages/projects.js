@@ -23,11 +23,11 @@ export const PROJECT_PAGES = [PICO_RIVERA_PROJECT, HACIENDA_HEIGHTS_PROJECT, GRA
 
 export const PROJECTS_PAGE = {
   keyword: 'roofing projects',
-  metaTitle: 'Roofing Projects in Los Angeles & Orange County',
+  metaTitle: 'Roofing Projects by Quality Roofers',
   metaDescription:
-    'Roofing projects by QRS: tile, shingle and flat roofs for homes, HOAs and businesses across Southern California. Book a free roof evaluation.',
+    'Roofing projects by QRS: tile, shingle and flat roofs for homes, HOAs and businesses, with photos from each job. Book a free roof evaluation.',
   hero: {
-    heading: 'Roofing Projects in Los Angeles & Orange County',
+    heading: 'Roofing Projects by Quality Roofers',
     intro:
       'Browse roofing projects from homes, communities and commercial properties across Southern California, featuring tile, shingle and flat roof work.',
     // Second paragraph under the intro, smaller type. Describes only what the project pages show.

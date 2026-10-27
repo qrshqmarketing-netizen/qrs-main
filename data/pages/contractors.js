@@ -2,17 +2,17 @@
 
 export const CONTRACTORS_PAGE = {
   keyword: 'roofing crews for contractors',
-  metaTitle: 'Roofing Crews for Contractors in Los Angeles',
-  metaDescription: 'Roofing crews for contractors in LA & Orange County: QRS partners with contractors, builders and property management clients, including white-label roofing.',
+  metaTitle: 'Roofing Crews for Contractors and Builders',
+  metaDescription: 'Roofing crews for contractors: QRS partners with contractors, builders and property management clients, including white-label roofing.',
   hero: {
-    heading: 'Roofing Crews for Contractors in Los Angeles',
-    intro: 'QRS provides roofing crews for contractors, builders and remodelers across Los Angeles and Orange County. You get roofer-led assessments, written scopes you can build on and photo documentation for your records and your clients.',
+    heading: 'Roofing Crews for Contractors',
+    intro: 'QRS provides roofing crews for contractors, builders and remodelers. You get roofer-led assessments, written scopes you can build on and photo documentation for your records and your clients.',
     highlights: ['Roofer-led assessments and scopes', 'Photo documentation you can share', 'White-label service under your brand'],
   },
   overview: {
     heading: 'Roofing Handled, So You Can Run the Job',
     paragraphs: [
-      'QRS provides roofing crews for contractors, builders and remodelers across Los Angeles and Orange County. When the roof is one part of a bigger project, you need a roofer who shows up prepared, communicates clearly and leaves the site clean. We’re a licensed California contractor since 2020, working on projects across Los Angeles and Orange County, from home remodels, additions and ADUs to multi-family properties and [commercial buildings](/commercial-roofing/). Every roof we scope is assessed by a roofer, so the price you work from is grounded in real conditions.',
+      'QRS provides roofing crews for contractors, builders and remodelers. When the roof is one part of a bigger project, you need a roofer who shows up prepared, communicates clearly and leaves the site clean. We’re a licensed California contractor since 2020, working on projects across Los Angeles and Orange County, from home remodels, additions and ADUs to multi-family properties and [commercial buildings](/commercial-roofing/). Every roof we scope is assessed by a roofer, so the price you work from is grounded in real conditions.',
       'Scopes are written, with the price, before any work starts, so you know exactly what’s included before you commit. We photo-document conditions before, during and after the work, which gives you a clean record for the project file and something clear to show your client. Add tidy job sites and clear updates, and the roof becomes one trade you don’t have to chase.',
     ],
   },

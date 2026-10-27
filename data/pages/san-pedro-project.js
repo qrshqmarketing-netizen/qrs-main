@@ -2,6 +2,7 @@
 export const SAN_PEDRO_PROJECT = {
   path: '/projects/shingle-roof-replacements-90731/',
   keyword: 'shingle roof replacement in San Pedro 90731',
+  metaTitle: 'Shingle Roof Replacement in San Pedro 90731', // short enough for " | QRS" (owner, October 27 2026)
   title: 'Multi-Family Shingle Roof Replacement in San Pedro 90731',
   description:
     'Shingle roof replacement in San Pedro 90731 on a two-story multi-family building, with new charcoal shingles across every hip, ridge and gable.',

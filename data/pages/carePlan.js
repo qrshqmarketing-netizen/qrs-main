@@ -6,19 +6,19 @@ import { PHONE } from '../site';
 
 export const CARE_PLAN = {
   keyword: 'roof maintenance plans',
-  metaTitle: 'Roof Maintenance Plans & Pricing in Los Angeles',
+  metaTitle: 'Roof Maintenance Plans Timed to the Rains',
   metaDescription:
-    'Roof maintenance plans and one-time tune-ups for Los Angeles & Orange County homes: three priced tiers, seasonal visits and a photo report every time.',
+    'Roof maintenance plans and one-time tune-ups for homes: three priced tiers, seasonal visits and a photo report every time.',
   image: '/images/shingle-roof-inspection-overhead.webp',
   imageAlt: 'Aerial overhead view of a finished shingle roof inspected for ongoing care',
   hero: {
     heading: 'Roof Maintenance Plans · *RoofCare Plan*',
     intro:
-      'Roof maintenance plans from QRS schedule one or two roofer visits a year, timed to the rains, so small wear on Los Angeles and Orange County homes is caught before it turns into a surprise leak. Visits include a full inspection, a written photo report, debris clearing and sealant top-offs, with three *RoofCare Plan* tiers priced by roof size.',
+      'Roof maintenance plans from QRS schedule one or two roofer visits a year, timed to the rains, so small wear on your home is caught before it turns into a surprise leak. Visits include a full inspection, a written photo report, debris clearing and sealant top-offs, with three *RoofCare Plan* tiers priced by roof size.',
     highlights: ['Scheduled visits, before and after the rains', 'A written photo report every time', 'Pay after each visit — nothing up front'],
   },
   whatGoesWrong: {
-    heading: 'What Actually Goes Wrong on a Los Angeles Roof',
+    heading: 'What Actually Goes Wrong on a Roof',
     items: [
       {
         title: 'The sun, not the storm',

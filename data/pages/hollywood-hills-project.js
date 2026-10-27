@@ -2,6 +2,7 @@
 export const HOLLYWOOD_HILLS_PROJECT = {
   path: '/projects/flat-roof-replacement-hollywood-hills-west-90046/',
   keyword: 'flat roof replacement in Hollywood Hills West',
+  metaTitle: 'Round Flat Roof Replacement in Hollywood Hills West', // short enough for " | QRS" (owner, October 27 2026)
   title: 'Round Flat Roof Replacement in Hollywood Hills West 90046',
   description:
     'Flat roof replacement in Hollywood Hills West 90046: a torch-down roof with a white reflective cap sheet, custom-cut for a round, 12-sided home.',

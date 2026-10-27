@@ -7,7 +7,7 @@ export const GLOSSARY_PAGE = {
   keyword: 'roofing terms',
   metaTitle: 'Roofing Terms Glossary: Plain-English Definitions',
   metaDescription:
-    'Roofing terms explained in plain English: flashing, underlayment, pitch, squares, valleys, torch-down, TPO, lift and relay and more, from Los Angeles roofers.',
+    'Roofing terms explained in plain English: flashing, underlayment, pitch, squares, valleys, torch-down, TPO, lift and relay and more, from our roofers.',
   hero: {
     heading: 'Roofing Terms Glossary',
     intro:

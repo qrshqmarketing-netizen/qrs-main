@@ -2,6 +2,7 @@
 export const LA_90057_PROJECT = {
   path: '/projects/shingle-roof-replacement-los-angeles-90057/',
   keyword: 'shingle roof replacement in Westlake',
+  metaTitle: 'Shingle Roof Replacement in Westlake 90057', // short enough for " | QRS" (owner, October 27 2026)
   title: 'Shingle Roof Replacement in Westlake, Los Angeles 90057',
   description:
     "Shingle roof replacement in Westlake, Los Angeles 90057: a many-gabled Craftsman home re-roofed in new gray shingles, with its chimney and vents flashed.",

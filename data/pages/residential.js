@@ -3,19 +3,19 @@
 
 export const RESIDENTIAL_PAGE = {
   keyword: 'residential roofing',
-  metaTitle: 'Residential Roofing in Los Angeles',
+  metaTitle: 'Residential Roofing for Every Roof on Your Home',
   metaDescription:
-    'Residential roofing in Los Angeles & Orange County: shingle, tile and flat roofs, plus HOA and multi-family roofing. Start with a free roof evaluation.',
+    'Residential roofing for shingle, tile and flat roofs, plus HOA and multi-family homes. A roofer looks first: book a free roof evaluation.',
   hero: {
-    heading: 'Residential Roofing in Los Angeles & Orange County',
+    heading: 'Residential Roofing',
     intro:
-      'Quality Roofing Specialists provides residential roofing for homes across Los Angeles and Orange County: repair, replacement and ongoing care for shingle, tile and flat roofs. From a leak on a tile roof to a full tear-off on a shingle home, every job starts with a free roof evaluation, not a sales pitch.',
+      'Quality Roofing Specialists provides residential roofing for homes: repair, replacement and ongoing care for shingle, tile and flat roofs. From a leak on a tile roof to a full tear-off on a shingle home, every job starts with a free roof evaluation, not a sales pitch.',
     highlights: ['Shingle, tile and flat roofs', 'Written scope and price before work', '10-Year workmanship warranty (call for details)'],
   },
   overview: {
     heading: 'One Team for Every Roof on Your Home',
     paragraphs: [
-      'Quality Roofing Specialists provides residential roofing for homes across Los Angeles and Orange County: repair, replacement and ongoing care for shingle, tile and flat roofs. Many Southern California homes have more than one kind of roof: a tile main roof with a flat section behind the parapet, a shingle house with a low-slope patio cover, a garage or ADU with a system of its own. Our crews work on all of them, so one roofer-led assessment covers the whole house and one written scope explains what each part needs.',
+      'Quality Roofing Specialists provides residential roofing for homes: repair, replacement and ongoing care for shingle, tile and flat roofs. Many Southern California homes have more than one kind of roof: a tile main roof with a flat section behind the parapet, a shingle house with a low-slope patio cover, a garage or ADU with a system of its own. Our crews work on all of them, so one roofer-led assessment covers the whole house and one written scope explains what each part needs.',
       'Start with your roof type below, or jump straight to the service you’re after. Not sure where to begin? A [free roof evaluation](#roof-check) gives you photos of your roof’s condition and a clear next step: repair, monitor, maintain or replace.',
     ],
   },

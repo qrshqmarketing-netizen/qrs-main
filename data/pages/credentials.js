@@ -11,7 +11,7 @@ export const CREDENTIALS_PUBLIC = true;
 export const CREDENTIALS_PAGE = {
   path: '/credentials/',
   keyword: 'roofing contractor credentials',
-  metaTitle: 'Roofing Contractor Credentials: License & Certifications',
+  metaTitle: 'Roofing Contractor Credentials & Certifications',
   metaDescription: `Our roofing contractor credentials: CSLB license #${BUSINESS.license}, licensed, bonded and insured, and our manufacturer certifications.`,
   hero: {
     heading: 'Roofing contractor credentials',

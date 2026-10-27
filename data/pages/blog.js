@@ -4,11 +4,11 @@ export const BLOG_PAGE = {
   keyword: 'roofing blog',
   metaTitle: 'Roofing Blog & Tips',
   metaDescription:
-    'The QRS roofing blog: practical roofing tips for Southern California homeowners, from tile roof underlayment to getting ready for the rainy season.',
+    'The QRS roofing blog: practical roofing tips for homeowners, from tile roof underlayment to getting ready for the rainy season.',
   hero: {
     heading: 'Roofing Blog & Tips',
     intro:
-      'The Quality Roofing Specialists roofing blog shares practical guidance for homeowners across Southern California: how roofs age, what warning signs mean and how to plan repairs before the rain. Explore our [residential roofing](/residential-roofing/) services or request a [free roof evaluation](#roof-check).',
+      'The Quality Roofing Specialists roofing blog shares practical guidance for homeowners: how roofs age, what warning signs mean and how to plan repairs before the rain. Explore our [residential roofing](/residential-roofing/) services or request a [free roof evaluation](#roof-check).',
   },
   // Text block under the articles (components/sections/IndexNote.jsx)
   note: {

@@ -105,14 +105,14 @@ export const HOA_MULTI_FAMILY = {
   title: 'HOA & Multi-Family Roofing · *ReserveReady*',
   navLabel: 'HOA & Multi-Family',
   card: 'Roofing for HOA communities and multi-family properties, with photo-documented reports, work phased building by building and one point of contact.',
-  metaTitle: 'HOA & Multi-Family Roofing in Los Angeles & Orange County',
+  metaTitle: 'HOA & Multi-Family Roofing Your Board Can Approve',
   metaDescription:
-    'HOA & multi-family roofing in Los Angeles & Orange County: photo-documented reports, phased work and one point of contact. Request an estimate.',
+    'HOA & multi-family roofing: photo-documented reports, work phased building by building and one point of contact. Request an estimate.',
   image: '/images/shingle-roof-care-multi-family.webp',
   imageAlt: 'Aerial view of a multi-family property with a shingle roof',
   hero: {
     intro:
-      'QRS provides HOA & multi-family roofing for boards and property management clients across Los Angeles and Orange County, from roof inspections and repairs to replacements phased building by building. Our *ReserveReady* program gives your board photo reports, phased proposals and long-range budget planning, with one point of contact throughout. It starts with a roofer-led roof survey of each building.',
+      'QRS provides HOA & multi-family roofing for boards and property management clients, from roof inspections and repairs to replacements phased building by building. Our *ReserveReady* program gives your board photo reports, phased proposals and long-range budget planning, with one point of contact throughout. It starts with a roofer-led roof survey of each building.',
     highlights: ['Photo reports your board can review', 'Work phased building by building', 'One point of contact, start to finish'],
   },
   // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
@@ -163,13 +163,13 @@ export const ATTIC_VENTILATION = {
   h1: 'Attic Ventilation in Los Angeles & Orange County',
   navLabel: 'Attic Ventilation',
   card: 'Blocked, missing or mismatched vents found and fixed, so hot, humid air can leave your attic and cooler air can come in.',
-  metaTitle: 'Attic Ventilation Repair in Los Angeles & Orange County',
-  metaDescription: 'Attic ventilation repair and installation in Los Angeles & Orange County: vents inspected, airflow balanced, every finding photographed. Free roof evaluation.',
+  metaTitle: 'Attic Ventilation That Helps Your Roof Breathe',
+  metaDescription: 'Attic ventilation repair and installation: vents inspected, airflow balanced and every finding photographed. Book a free roof evaluation.',
   image: '/images/projects/shingle-roof-replacement-panorama-city-91402/shingle-panorama-city-91402-09.webp',
   imageAlt: 'New box vents and pipe jacks flashed into a light gray shingle roof',
   hero: {
     intro:
-      'Attic ventilation from QRS means checking how air moves through your attic, fixing vents that are blocked, missing or mismatched, and adding the right ones when your roof is replaced, across Los Angeles and Orange County. A roofer inspects the vents, eaves and ridge, photographs what they find and gives you a written scope and price before any work. Start with a free roof evaluation.',
+      'Attic ventilation from QRS means checking how air moves through your attic, fixing vents that are blocked, missing or mismatched, and adding the right ones when your roof is replaced. A roofer inspects the vents, eaves and ridge, photographs what they find and gives you a written scope and price before any work. Start with a free roof evaluation.',
     highlights: ['Intake and exhaust vents checked together', 'Photos of every vent and finding', 'Fixed on its own or built into a new roof'],
   },
   // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once

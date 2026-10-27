@@ -4,19 +4,19 @@
 export const METAL_CONTENT = {
   hub: {
     keyword: 'metal roofing',
-    metaTitle: 'Metal Roofing in Los Angeles & Orange County',
+    metaTitle: 'Metal Roofing With Clean Lines, Built for the Sun',
     metaDescription:
-      'Metal roofing for Los Angeles & Orange County homes: standing seam panels, concealed fasteners, leak repairs and a written scope first. Free roof evaluation.',
+      'Metal roofing for your home: standing seam panels, concealed fasteners, leak repairs and a written scope first. Book a free roof evaluation.',
     hero: {
       heading: 'Metal Roofing Services · *LockSeam*',
       intro:
-        'Metal roofing gives Southern California homes clean lines and a noncombustible surface that stands up to intense sun and heat. Our standing seam package is the *LockSeam* Metal System. We install standing seam roofs and repair metal roofs that leak, starting with a roofer-led inspection and a written scope.',
+        'Metal roofing gives homes clean lines and a noncombustible surface that stands up to intense sun and heat. Our standing seam package is the *LockSeam* Metal System. We install standing seam roofs and repair metal roofs that leak, starting with a roofer-led inspection and a written scope.',
       highlights: ['Standing seam with concealed fasteners', 'Noncombustible, long-lasting panels', 'Leaks traced and repaired, with photos'],
     },
     overview: {
       heading: 'Is a Metal Roof Right for Your Home?',
       paragraphs: [
-        'Metal roofing gives Southern California homes clean lines and a noncombustible surface that stands up to intense sun and heat. For homes, the metal roof we install is **standing seam**, named for the raised seams that join its long vertical panels. The look is clean and linear, which suits modern and mid-century homes, and it works just as well on a new ADU, a porch roof or a patio cover. Metal can also be a smart change when an older roof is due for replacement, as long as the deck, slope and drainage are right for it. Here in Los Angeles and Orange County, any metal roof should be planned around hard sun, dry Santa Ana winds, winter storms and, near the beach, salt air.',
+        'Metal roofing gives homes clean lines and a noncombustible surface that stands up to intense sun and heat. For homes, the metal roof we install is **standing seam**, named for the raised seams that join its long vertical panels. The look is clean and linear, which suits modern and mid-century homes, and it works just as well on a new ADU, a porch roof or a patio cover. Metal can also be a smart change when an older roof is due for replacement, as long as the deck, slope and drainage are right for it. Here in Los Angeles and Orange County, any metal roof should be planned around hard sun, dry Santa Ana winds, winter storms and, near the beach, salt air.',
         'Metal isn’t the right answer for every roof, and we’ll tell you if it isn’t right for yours. Our [free roof evaluation](#roof-check) starts there: a roofer checks your slope, the condition of the existing roof and how water leaves it, and tells you in plain English whether metal makes sense. If it does, we’ll walk you through [standing seam metal roofing](/residential-roofing/metal-roofing/standing-seam/), from panel color to trims and flashings. Already have a metal roof that leaks? See [metal roof repair](/residential-roofing/metal-roofing/repair/). If you decide to go ahead, nothing starts until you’ve seen the written scope and price.',
       ],
     },
@@ -71,9 +71,9 @@ export const METAL_CONTENT = {
       title: 'Standing Seam Metal Roofing · *LockSeam*',
       navLabel: 'Standing Seam',
       card: 'Clean vertical panels joined by raised seams, held by hidden clips that let the metal move with the heat. Suited to modern homes, ADUs and patio covers.',
-      metaTitle: 'Standing Seam Metal Roofing in Los Angeles',
+      metaTitle: 'Standing Seam Metal Roofing by Quality Roofers',
       metaDescription:
-        'Standing seam metal roofing in Los Angeles & Orange County: concealed clips, a flat, sound deck and clean flashings. Schedule a free roof evaluation.',
+        'Standing seam metal roofing: concealed clips, a flat, sound deck and clean flashings, with a written scope first. Schedule a free roof evaluation.',
       image: '/images/metal-roof-standing-seam-modern-home.webp',
       imageAlt: 'Modern two-story home with a dark gray standing seam metal roof over wood and stucco walls',
       hero: {
@@ -129,13 +129,13 @@ export const METAL_CONTENT = {
       card: 'Leaks at fasteners, seams, sealant and flashings traced to the source and repaired, with photos of the problem and the fix.',
       // Search Console wording (owner, October 23 2026): "metal roof repair" (779 impressions at 41), "sheet metal roof repair", "aluminum roof
       // repair", "r-panel metal roof repair", "galvanized roof repair", "flat metal roof repair", "metal roof leak repairs"
-      metaTitle: 'Metal Roof Repair in Los Angeles & Orange County',
-      metaDescription: 'Metal roof repair in Los Angeles & Orange County: leaks traced to loose fasteners, worn sealant and failed flashing, fixed with photos. Free roof evaluation.',
+      metaTitle: 'Metal Roof Repair That Finds the Real Leak',
+      metaDescription: 'Metal roof repair: leaks traced to loose fasteners, worn sealant and failed flashing, fixed with photos. Book a free roof evaluation.',
       image: '/images/metal-roof-standing-seam-panel-detail.webp',
       imageAlt: 'Close-up of bronze standing seam metal roof panels with raised seams running down to the eave',
       hero: {
         intro:
-          'Metal roof repair from QRS finds where water is really getting in and fixes it at the source, on sheet metal, aluminum, galvanized, R-panel and standing seam roofs across Los Angeles and Orange County. On a metal roof the cause is often a loose fastener, tired sealant or failed flashing rather than the panels themselves. We show you photos of the problem and the finished repair, with a written scope and price before any work. Start with a free roof evaluation.',
+          'Metal roof repair from QRS finds where water is really getting in and fixes it at the source, on sheet metal, aluminum, galvanized, R-panel and standing seam roofs. On a metal roof the cause is often a loose fastener, tired sealant or failed flashing rather than the panels themselves. We show you photos of the problem and the finished repair, with a written scope and price before any work. Start with a free roof evaluation.',
         highlights: ['Leaks traced to the real entry point', 'Fasteners, seams, sealant and flashing checked', 'Photos of the problem and the fix'],
       },
       // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once

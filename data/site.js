@@ -112,10 +112,10 @@ export const GOOGLE_REVIEWS = { count: 269, asOf: '2026-10-15' };
 // Home title and description: the October 16 wording again (owner, October 23 2026: "restore the meta data")
 // Owner, October 27 2026: the services in the home title, with the company name (the home keyword "roofing contractor" stays in the H1,
 // description and opening line; the keyword check flags the title, which is the owner's choice)
-export const HOME_TITLE = 'Roof Repair, Replacement & Inspection | Quality Roofing Specialists';
+export const HOME_TITLE = 'QRS | Roofs built right, from the deck up.'; // owner, October 27 2026: the home hero's headline as the title
 export const HOME_H1 = 'Roofing Contractor in Los Angeles & Orange County';
 export const HOME_DESCRIPTION =
-  'Quality Roofing Specialists: roofing contractor in Los Angeles & Orange County. Repair, replacement, free roof evaluation, 10-year warranty: call for details.';
+  'Roofs built right, from the deck up. QRS is a family-owned roofing contractor in Los Angeles & Orange County: a free roof evaluation, then a written price.'; // matches the title's line and keeps the home keyword ("roofing contractor")
 
 // The number of Google reviews across our listings (owner, October 15 2026: 269). Update it by hand from Google now and then; it shows on the
 // proof strip under every hero and in the home page's review section. No star rating is shown (not given by the owner).

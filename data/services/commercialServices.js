@@ -9,12 +9,12 @@ export const COMMERCIAL_SERVICES = [
     h1: 'Commercial Roof Repair in Los Angeles & Orange County',
     navLabel: 'Roof Repair',
     card: 'Leaks traced to where the water gets in, then repaired at drains, parapets, seams and rooftop equipment, with before-and-after photos.',
-    metaTitle: 'Commercial Roof Repair in Los Angeles',
-    metaDescription: 'Commercial roof repair in LA & Orange County: leaks traced at drains, parapets and rooftop units, fixed and photo-documented. Request an estimate.',
+    metaTitle: 'Commercial Roof Repair While Your Building Stays Open',
+    metaDescription: 'Commercial roof repair: leaks traced at drains, parapets and rooftop units, fixed and photo-documented while you stay open. Request an estimate.',
     image: '/images/cta-flat-roof-install-drone-view.webp',
     imageAlt: 'Roofers working on a white low-slope roof with rooftop units, seen from above',
     hero: {
-      intro: 'Commercial roof repair starts by tracing a leak back to where the water actually gets in, then fixes what failed, whether that’s a drain, a parapet, a seam or the flashing at rooftop equipment. QRS repairs commercial roofs across Los Angeles and Orange County while your building stays open, with before-and-after photos of every repair.',
+      intro: 'Commercial roof repair starts by tracing a leak back to where the water actually gets in, then fixes what failed, whether that’s a drain, a parapet, a seam or the flashing at rooftop equipment. QRS repairs commercial roofs while your building stays open, with before-and-after photos of every repair.',
       highlights: ['Leaks traced to where water enters', 'Drains, parapets and penetrations', 'Photo records for owners and tenants'],
     },
     // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
@@ -48,11 +48,11 @@ export const COMMERCIAL_SERVICES = [
     navLabel: 'Roof Replacement',
     card: 'When repairs stop adding up: a roofer-led survey, the right low-slope system for your building and phased work that keeps you open.',
     // Broader title for the general "commercial roofing Los Angeles" searches (owner, October 22 2026; the keyword stays in it, the H1 is unchanged)
-    metaTitle: 'Commercial Roof Replacement in Los Angeles',
-    metaDescription: 'Commercial roof replacement in LA & Orange County: a roofer-led survey, the right low-slope system and phased work that keeps you open. Request an estimate.',
+    metaTitle: 'Commercial Roof Replacement by Quality Roofers',
+    metaDescription: 'Commercial roof replacement: a roofer-led survey, the right low-slope system and phased work that keeps you open. Request an estimate.',
     image: '/images/flat-roof-replacement-tear-off-drone-view.webp',
     imageAlt: 'Commercial roof replacement in Los Angeles: flat roof aerial view, with the old roofing stripped back',
-    heroNotes: [`Los Angeles commercial roofing contractor · CSLB #${BUSINESS.license}`, 'Serving LA, Orange County & Southern California', 'Roofer-led roof survey', 'Written scope and price before any work'],
+    heroNotes: [`Licensed commercial roofing contractor · CSLB #${BUSINESS.license}`, 'Roofer-led roof survey', 'Written scope and price before any work', 'Permits pulled'],
     // A short section after "How we replace a commercial roof" (ServicePage `about`)
     about: {
       heading: 'Commercial roofing company in Los __Angeles__',
@@ -62,7 +62,7 @@ export const COMMERCIAL_SERVICES = [
     },
     reviewsHeading: 'What people in Los Angeles say after the __job__',
     hero: {
-      intro: 'A commercial roof replacement tears off the worn roof in phases, section by section, and installs a new low-slope system chosen for your building, so your doors stay open. QRS replaces commercial roofs across Los Angeles and Orange County, starting with a roofer-led survey that shows whether replacement is due now or can wait.',
+      intro: 'A commercial roof replacement tears off the worn roof in phases, section by section, and installs a new low-slope system chosen for your building, so your doors stay open. QRS replaces commercial roofs, starting with a roofer-led survey that shows whether replacement is due now or can wait.',
       highlights: ['Survey before any recommendation', 'System chosen for drainage and use', 'Phased so your building stays open'],
     },
     // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
@@ -98,13 +98,13 @@ export const COMMERCIAL_SERVICES = [
     h1: 'TPO Roofing in Los Angeles & Orange County',
     navLabel: 'TPO Roofing',
     card: 'A white, heat-welded single-ply membrane for flat and low-slope commercial roofs, installed over a roof surface prepared for it.',
-    metaTitle: 'TPO Roofing in Los Angeles & Orange County',
-    metaDescription: 'TPO roofing in Los Angeles & Orange County: a reflective single-ply membrane for commercial flat roofs, seams welded, work phased so you stay open. Roof survey.',
+    metaTitle: 'TPO Roofing: A Bright White Commercial Roof',
+    metaDescription: 'TPO roofing: a reflective single-ply membrane for commercial flat roofs, seams welded and work phased so you stay open. Request a roof survey.',
     image: '/images/home-services-commercial-flat-roof-drone-view.webp',
     imageAlt: 'Aerial view of a white low-slope commercial roof',
     hero: {
       intro:
-        'TPO roofing from QRS puts a white, reflective single-ply membrane on flat and low-slope commercial roofs across Los Angeles and Orange County. A roofer surveys the roof first, photographs what is there and recommends TPO only if it suits the building, with a written scope and price before any work. The work is planned in phases so your building stays open.',
+        'TPO roofing from QRS puts a white, reflective single-ply membrane on flat and low-slope commercial roofs. A roofer surveys the roof first, photographs what is there and recommends TPO only if it suits the building, with a written scope and price before any work. The work is planned in phases so your building stays open.',
       highlights: ['White membrane that reflects sunlight', 'Seams welded with hot air', 'Planned in phases so the building stays open'],
     },
     // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
@@ -157,12 +157,12 @@ export const COMMERCIAL_SERVICES = [
     title: 'Commercial Roof Maintenance & Inspections',
     navLabel: 'Inspection & Maintenance',
     card: 'Scheduled inspections and upkeep for commercial roofs, with photo reports for owners, managers and boards, and drain and flashing issues caught early.',
-    metaTitle: 'Commercial Roof Maintenance in Los Angeles',
-    metaDescription: 'Commercial roof maintenance in LA & Orange County: scheduled inspections, photo reports and drains and flashings kept in check. Ask about a maintenance plan.',
+    metaTitle: 'Commercial Roof Maintenance With Photo Reports',
+    metaDescription: 'Commercial roof maintenance: scheduled inspections, photo reports, and drains and flashings kept in check. Ask about a maintenance plan.',
     image: '/images/flat-roof-torch-down-drone-view-services.webp',
     imageAlt: 'Aerial view of a flat roof surface used for commercial roof maintenance',
     hero: {
-      intro: 'Commercial roof maintenance means scheduled roofer visits that clear debris from drains and gutters, reseal flashings where needed and catch early wear before it becomes interior damage. QRS maintains commercial roofs across Los Angeles and Orange County, starting with a baseline roof survey, and every visit ends with a photo report for owners, managers or boards.',
+      intro: 'Commercial roof maintenance means scheduled roofer visits that clear debris from drains and gutters, reseal flashings where needed and catch early wear before it becomes interior damage. QRS maintains commercial roofs, starting with a baseline roof survey, and every visit ends with a photo report for owners, managers or boards.',
       highlights: ['Scheduled visits with photo reports', 'Drains and flashings checked early', 'Reports owners and boards can follow'],
     },
     // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
