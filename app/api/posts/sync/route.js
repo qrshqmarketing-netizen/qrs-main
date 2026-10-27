@@ -15,7 +15,8 @@ export async function POST(request) {
     // An article added to the file that the server's own start-up sync missed is added here too (never overwrites one in the table)
     const added = await addNewFilePosts();
     const result = await applyFileRevisions();
-    if (added || result.updated.length) revalidateTag(POSTS_TAG, { expire: 0 });
+    // Always refresh the cached article list: a list cached before a new article was added would otherwise 404 its page for up to an hour
+    revalidateTag(POSTS_TAG, { expire: 0 });
     return Response.json({ ok: true, added, ...result });
   } catch (e) {
     return Response.json({ ok: false, error: e.message }, { status: 502 });
