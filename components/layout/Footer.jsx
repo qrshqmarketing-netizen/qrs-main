@@ -31,7 +31,7 @@ export default function Footer() {
             <div className="ft-call">
               <p className="ft-label">Talk to a roofer</p>
               <a className="ft-phone" href={TEL}>{PHONE}</a>
-              <p className="ft-hours">{hoursText(BUSINESS.hours)}. One number reaches all three offices.</p>
+              <p className="ft-hours">{hoursText(BUSINESS.hours)}. This number reaches all three offices.</p>
             </div>
             <div className="ft-offices">
               {OFFICES.map((office) => (
@@ -40,6 +40,12 @@ export default function Footer() {
                   {office.address.street}
                   <br />
                   {office.address.city}, {office.address.region} {office.address.postalCode}
+                  {office.phone && (
+                    <>
+                      <br />
+                      <a href={office.tel}>{office.phone}</a>
+                    </>
+                  )}
                 </address>
               ))}
             </div>

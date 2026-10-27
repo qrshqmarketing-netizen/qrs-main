@@ -30,7 +30,7 @@ export function OfficeCard({ office, cityLink = true, photo = true }) {
         <br />
         {city}, {region} {postalCode}
       </address>
-      <a className="office-phone" href={TEL}>{PHONE}</a>
+      <a className="office-phone" href={office.tel || TEL}>{office.phone || PHONE}</a>
       {cityLink && (
         <div className="office-links">
           <SiteLink href={cityPath(office.citySlug)}>

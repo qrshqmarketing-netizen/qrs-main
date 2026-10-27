@@ -120,6 +120,12 @@ export function AboutOffices() {
                 {o.address.street}
                 <br />
                 {o.address.city}, {o.address.region} {o.address.postalCode}
+                {o.phone && (
+                  <>
+                    <br />
+                    <a href={o.tel}>{o.phone}</a>
+                  </>
+                )}
               </address>
               <SiteLink href={cityPath(o.citySlug)}>
                 Roofing in {o.address.city === 'Los Angeles' ? 'Los Angeles' : o.address.city} <ArrowRight />
