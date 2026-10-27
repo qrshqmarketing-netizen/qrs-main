@@ -5,6 +5,7 @@ import CardCarousel from '@/components/sections/CardCarousel';
 import FinalCta from '@/components/sections/FinalCta';
 import Hero from '@/components/sections/Hero';
 import LocalIntro from '@/components/sections/LocalIntro';
+import OfficeMap from '@/components/sections/OfficeMap';
 import StudioProjects from '@/components/studio/StudioProjects';
 import RoofCheck from '@/components/sections/RoofCheck';
 import ServiceCategories from '@/components/sections/ServiceCategories';
@@ -68,7 +69,10 @@ export default async function LocationPage({ location, page, index = 0 }) {
         imagePosition={photo.position}
         label={`QRS roofing in ${city}`}
       />
-      <LocalIntro city={city} heading={page.intro.heading} paragraphs={page.intro.paragraphs} offices={office ? [office] : []} neighborhoods={page.neighborhoods} considerations={page.considerations} />
+      <LocalIntro city={city} heading={page.intro.heading} paragraphs={page.intro.paragraphs} offices={office && !office.mapEmbed ? [office] : []} neighborhoods={page.neighborhoods} considerations={page.considerations} />
+      {/* An office's Google Maps listing, when it has one (OFFICES[].mapEmbed in data/site.js): it replaces the office card in the intro above, so the
+          address shows once (owner, October 27 2026) */}
+      {office?.mapEmbed && <OfficeMap office={office} city={city} />}
       <ServiceCategories place={city} />
       <CardCarousel title={`Roof types we work on in __${city}__`} items={RESIDENTIAL_TYPES.map(typeCard)} idPrefix="roofTypes" tone="wash" />
       {/* Only real projects in or near this city (by the project's ZIP code pin), as a list with the hover photo (owner, October 15 2026); with none nearby, no section */}

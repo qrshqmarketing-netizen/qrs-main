@@ -47,12 +47,18 @@ export const COMPANY = {
 // The first is the main office (BUSINESS.address). All answer the same phone number. `gbpUrl`: the office's Google Business Profile (schema sameAs). `image`: an optional photo for its card.
 export const OFFICES = [
   // The office on N Poinsettia Pl, whose Google listing is named West Hollywood (owner, October 22 2026): its page is the West Hollywood page
-  { name: 'West Hollywood Office', citySlug: 'west-hollywood', gbpUrl: 'https://maps.google.com/?cid=7072551311221462379', address: BUSINESS.address, geo: BUSINESS.geo, mapUrl: BUSINESS.mapUrl },
+  {
+    name: 'West Hollywood Office', citySlug: 'west-hollywood', gbpUrl: 'https://maps.google.com/?cid=7072551311221462379', address: BUSINESS.address, geo: BUSINESS.geo, mapUrl: BUSINESS.mapUrl,
+    // The Google Maps embed of this office's listing (owner, October 27 2026), shown on the West Hollywood page under the office details
+    mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d332650.37763537234!2d-118.58677239794676!3d34.08299454132669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6c9c2483d3cee6b9%3A0x6226bff21114156b!2sQuality%20Roofing%20Specialists!5e1!3m2!1sen!2sus!4v1793117748817!5m2!1sen!2sus',
+  },
   {
     name: 'Valley Office',
     citySlug: 'woodland-hills', gbpUrl: 'https://maps.google.com/?cid=2545734132360308765',
     // Its own number, as on its Google listing (owner, October 19 2026: used on the legal pages); the site's main number stays PHONE
     phone: '(818) 918-3184', tel: 'tel:+18189183184',
+    // The Google Maps embed of this office's listing (owner, October 27 2026), shown on its city page under the office details (OfficeMap.jsx)
+    mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5192.6398992640725!2d-118.62884552427865!3d34.164730273114685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ba9d5c10bd0145%3A0x235443b49bec681d!2sQuality%20Roofing%20Specialists!5e1!3m2!1sen!2sus!4v1793117704324!5m2!1sen!2sus',
     address: { street: '22900 Ventura Blvd, Suite 124', city: 'Woodland Hills', region: 'CA', postalCode: '91364', country: 'US' },
     geo: { latitude: 34.165009, longitude: -118.626272 },
     image: '/images/woodland-hills-office.webp',
@@ -62,6 +68,8 @@ export const OFFICES = [
   {
     name: 'Vernon Office',
     citySlug: 'vernon', gbpUrl: 'https://maps.google.com/?cid=7878802423193063666',
+    // The Google Maps embed of this office's listing (owner, October 27 2026), shown on the Vernon page under the office details
+    mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d332650.37763537234!2d-118.58677239794676!3d34.08299454132669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21a452832eb4e363%3A0x6d57210f69e8d0f2!2sQuality%20Roofing%20Specialists!5e1!3m2!1sen!2sus!4v1793117831003!5m2!1sen!2sus',
     address: { street: '2850 E 46th St, Unit B', city: 'Vernon', region: 'CA', postalCode: '90058', country: 'US' },
     geo: { latitude: 34.001813, longitude: -118.218411 },
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=2850+E+46th+St+Unit+B+Vernon+CA+90058',
