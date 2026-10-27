@@ -3,7 +3,7 @@
 // the camera flies from station to station as the section scrolls, on phones each principle gets its own small stage with just its station.
 //   0  A roofer looks first. The price is in writing.   a home with a drone circling it, its spotlight and scan beam sweeping the roof
 //   1  Clear answers. Plain English.                   a roof close-up with three pulsing markers (chimney flashing, vent boot, skylight)
-//                                                       and floating photo frames
+//                                                       (the floating photo frames were removed, owner, October 27 2026)
 //   2  Family-owned. Local crews.                       the service area (data/serviceAreaOutline.js) as a glowing 3D map, beacons at the
 //                                                       three offices (OFFICES), arcs between them and twelve crew lights moving around
 //   3  Clean sites. Work that's backed.                a roof assembling layer by layer (deck, underlayment, shingles) and a gold shield
@@ -128,35 +128,6 @@ const glow = () =>
     grad.addColorStop(1, 'rgba(255,255,255,0)');
     g.fillStyle = grad;
     g.fillRect(0, 0, w, h);
-  });
-
-// A "photo" of a roof detail for the floating frames: shingles with a gold circle drawn on the problem
-const photo = (seed, label) =>
-  canvasTexture(320, 240, (g, w, h) => {
-    const r = rand(seed);
-    g.fillStyle = '#2d3138';
-    g.fillRect(0, 0, w, h);
-    for (let y = 0; y < 6; y++)
-      for (let x = -1; x < 8; x++) {
-        const v = 60 + Math.floor(r() * 30);
-        g.fillStyle = `rgb(${v},${v + 3},${v + 8})`;
-        g.fillRect(x * 44 + (y % 2) * 22 + 1, y * 40 + 1, 42, 37);
-      }
-    const grad = g.createLinearGradient(0, 0, w, h);
-    grad.addColorStop(0, 'rgba(255,214,160,.18)');
-    grad.addColorStop(1, 'rgba(0,0,0,.25)');
-    g.fillStyle = grad;
-    g.fillRect(0, 0, w, h);
-    g.strokeStyle = '#e0c68a';
-    g.lineWidth = 5;
-    g.beginPath();
-    g.arc(w * (0.35 + r() * 0.3), h * (0.4 + r() * 0.2), 34, 0, Math.PI * 2);
-    g.stroke();
-    g.fillStyle = 'rgba(4,20,36,.75)';
-    g.fillRect(0, h - 40, w, 40);
-    g.fillStyle = '#fff';
-    g.font = '600 20px system-ui, sans-serif';
-    g.fillText(label, 14, h - 13);
   });
 
 // ---------- Small builders ----------
@@ -386,20 +357,6 @@ function stationExplain(ctx) {
   const pinBoot = markerAt(1.4, 0.9, 1.2);
   const pinSky = markerAt(2.9, 0.4, -1.3);
 
-  // Floating photo frames, like the photos we send
-  const frames = [];
-  [['Photo 1 · Flashing', -4.4, 4.5, -3.4, 0.3], ['Photo 2 · Vent boot', -0.4, 5.3, -4.0, 0.05], ['Photo 3 · Skylight', 3.1, 4.4, -3.8, -0.25]].forEach(([label, x, y, z, ry], i) => {
-    const f = new THREE.Group();
-    const border = mesh(new THREE.BoxGeometry(2.3, 1.78, 0.04), std(0xffffff, { roughness: 0.6 }), { receive: false });
-    const pic = new THREE.Mesh(new THREE.PlaneGeometry(2.1, 1.58), new THREE.MeshBasicMaterial({ map: photo(31 + i * 7, label), toneMapped: false }));
-    pic.position.z = 0.025;
-    f.add(border, pic);
-    f.position.set(x, y, z);
-    f.rotation.set(-0.12, ry, 0);
-    g.add(f);
-    frames.push({ f, y, i });
-  });
-
   const tmp = new THREE.Vector3();
   const anchors = { 's1-flashing': new THREE.Vector3(), 's1-boot': new THREE.Vector3(), 's1-skylight': new THREE.Vector3() };
   const update = (t) => {
@@ -408,10 +365,6 @@ function stationExplain(ctx) {
       ring.scale.setScalar(1 + k * 3.2);
       ring.material.opacity = (1 - k) * 0.85;
       halo.material.opacity = 0.55 + Math.sin(t * 3 + i) * 0.25;
-    });
-    frames.forEach(({ f, y, i }) => {
-      f.position.y = y + Math.sin(t * 0.9 + i * 1.7) * 0.18;
-      f.rotation.z = Math.sin(t * 0.6 + i) * 0.03;
     });
     roof.updateMatrixWorld();
     anchors['s1-flashing'].copy(pinFlash.localToWorld(tmp.set(0, 1.5, 0))).sub(ctx.origin(1));
