@@ -24,7 +24,7 @@ import { openGraphBase, twitterBase } from '@/lib/seo';
 import { pageJsonLd } from '@/lib/structuredData';
 
 export const metadata = {
-  title: HOME_TITLE,
+  title: { absolute: HOME_TITLE }, // the title already ends with the company name, so the layout's " | Quality Roofing Specialists" isn't added
   description: HOME_DESCRIPTION,
   alternates: { canonical: '/' },
   openGraph: { ...openGraphBase, url: '/', title: HOME_TITLE, description: HOME_DESCRIPTION },

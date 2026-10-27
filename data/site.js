@@ -102,7 +102,9 @@ export const GOOGLE_ADS_ID = 'AW-778824076';
 // words theirs: both counties in the title, description and H1. The H1 (HOME_H1) uses the same phrase; the brand name is in the description.
 export const GOOGLE_REVIEWS = { count: 269, asOf: '2026-10-15' };
 // Home title and description: the October 16 wording again (owner, October 23 2026: "restore the meta data")
-export const HOME_TITLE = 'Roofing Contractor in Los Angeles & Orange County, CA';
+// Owner, October 27 2026: the services in the home title, with the company name (the home keyword "roofing contractor" stays in the H1,
+// description and opening line; the keyword check flags the title, which is the owner's choice)
+export const HOME_TITLE = 'Roof Repair, Replacement & Inspection | Quality Roofing Specialists';
 export const HOME_H1 = 'Roofing Contractor in Los Angeles & Orange County';
 export const HOME_DESCRIPTION =
   'Quality Roofing Specialists: roofing contractor in Los Angeles & Orange County. Repair, replacement, free roof evaluation, 10-year warranty: call for details.';
