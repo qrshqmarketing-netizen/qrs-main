@@ -2,13 +2,14 @@ import QuoteTrigger from '@/components/ui/QuoteTrigger';
 import SiteLink from '@/components/ui/SiteLink';
 import { PhoneIcon } from '@/components/ui/icons';
 import { PHONE, TEL } from '@/data/site';
-import CtaParallax from './CtaParallax';
+import CtaBackground from './CtaBackground';
 import './FinalCta.css';
 import Mark from '@/components/ui/Mark';
 
 const TRUST = ['CSLB licensed, bonded & insured', '10-year workmanship warranty (call for details)', 'Google customer reviews'];
 
-// Closing call to action above the footer: white copy over a darkened job-site photo, the main button plus a
+// Closing call to action above the footer: white copy on solid primary navy with a slow WebGL design of gold contour lines (CtaBackground,
+// owner, October 28 2026; the job-site photo, CtaParallax, is no longer used), the main button plus a
 // call button, and a short trust row. It opens from an inset card to the full width as it scrolls into view (data-expand, components/ui/ScrollScenes.jsx). Pages can change the words and the main button (cta.style: 'gold', or
 // 'plum' for a "call now" button — the separate call button is then left out). trust={false} hides the trust row.
 export default function FinalCta({
@@ -20,7 +21,7 @@ export default function FinalCta({
   const isCall = cta.href.startsWith('tel:');
   return (
     <section className="final" data-expand="">
-      <CtaParallax />
+      <CtaBackground />
       <div className="container final-inner">
         <h2><Mark text={heading} /></h2>
         <p>{text}</p>

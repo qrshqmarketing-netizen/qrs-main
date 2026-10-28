@@ -1,9 +1,7 @@
 /* ---------- Footer: the studio look ----------
-   A neighborhood photo under a deep navy shade. The phone number is the big line, with the three offices beside it; the logo and link columns sit
+   Solid primary navy (--surface-navy, the logo blue; the neighborhood photo was removed on October 28 2026). The phone number is the big line, with the three offices beside it; the logo and link columns sit
    under a hairline and the small print comes last. Always dark, in both themes. Mobile first. */
-footer{position:relative;isolation:isolate;overflow:hidden;background:#0b2440;color:#fff;padding:72px 0 96px} /* bottom room so the chat bubble never covers the copyright */
-.ft-photo{object-fit:cover;object-position:center 40%;z-index:-2}
-.ft-shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(5,22,40,.86) 0%,rgba(5,22,40,.72) 45%,rgba(5,22,40,.84) 100%)} /* a little lighter (owner, October 16 2026) */
+footer{position:relative;isolation:isolate;overflow:hidden;background:var(--surface-navy);color:#fff;padding:72px 0 96px;border-top:1px solid rgba(255,255,255,.08)} /* bottom room so the chat bubble never covers the copyright */
 footer .container{position:relative;max-width:1540px}
 .ft-label{margin:0 0 16px;display:flex;align-items:center;gap:12px;font:600 12px/1.2 var(--font-text),sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.62)}
 .ft-label:before{content:"";width:28px;height:1px;background:currentColor}
@@ -55,7 +53,7 @@ footer .container{position:relative;max-width:1540px}
 }
 /* The brand word, large, across the bottom: QUALITY (FooterWord.jsx; it was QRS® at --fit 40.7cqw), tight letters that fill the footer's width at every screen size (the size is a share
    of the container width, --fit, measured for this word in this font), each letter in its own mask sliding up into view. Inversion effect: the
-   letters are white with mix-blend-mode difference, so they show the footer photo and shade inverted (light where the footer is dark). */
+   letters are white with mix-blend-mode difference, so they show the navy inverted, a warm cream. */
 .ft-name{--fit:20.35cqw;container-type:inline-size;display:flex;align-items:flex-start;margin-top:36px;user-select:none;line-height:1;mix-blend-mode:difference}
 .ft-l{display:block;overflow:clip;padding:0 0 .1em;margin-bottom:-.1em}
 .ft-l > span{display:block;font:700 var(--fit)/.8 var(--font-text),sans-serif;letter-spacing:.04em;color:#fff;text-transform:uppercase}

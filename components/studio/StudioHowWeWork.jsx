@@ -15,10 +15,11 @@ import './Studio.css';
 // (HowStage.jsx, howEngine.js): a home with a drone scanning the roof and a written-scope card; a roof close-up with marked problems, photo
 // frames and the next-step choice; the service area as a 3D map with the three offices and twelve crews; a roof assembling layer by layer
 // with the warranty shield. Decorative (the text below carries the content), fetched only when the section is near, still for reduced motion.
-// From 901px with motion the section is pinned while it scrolls: the four headings stay listed at the left, the current one bright with a
-// gold bar filling under it, its paragraph below the list and the stage at the right, whose camera flies to the current principle's scene
-// (transform and opacity only, no layout shift). Phones, reduced motion and no JavaScript show the four as a plain stacked list, each with its
-// own small stage. Styles: "How we work" in Studio.css, the stage in HowStage.css.
+// Compact auto slider (owner, October 28 2026; it replaces the 400svh pinned scroll): the four headings are tabs, the current one bright
+// with a gold bar that fills over AUTO_MS; when it is full the next principle comes in, and the stage's camera flies to its scene. Clicking a
+// heading jumps there. It pauses while the pointer is over the section or a tab has keyboard focus, and while the section is off screen;
+// with reduced motion it doesn't advance on its own. Every paragraph is in the HTML (the hidden ones stacked in the same cell, so the height
+// never changes). Styles: "How we work" in Studio.css, the stage in HowStage.css.
 
 const offices = OFFICES.length === 1 ? 'one office' : `${OFFICES.length} offices`;
 
@@ -42,87 +43,87 @@ const PRINCIPLES = [
   },
 ];
 
-const LIVE = '(min-width: 901px) and (prefers-reduced-motion: no-preference)';
+const AUTO_MS = 7000;
 
 export default function StudioHowWeWork() {
   const root = useRef(null);
-  const [live, setLive] = useState(false);
   const [active, setActive] = useState(0);
+  const [paused, setPaused] = useState(true); // starts paused until it is on screen
+  const [hold, setHold] = useState(false); // pointer over the section or keyboard focus in it
+  const [still, setStill] = useState(false); // reduced motion: no automatic change
 
-  // Pinned scrolling on wide screens with motion
   useEffect(() => {
-    const media = window.matchMedia(LIVE);
-    const sync = () => setLive(media.matches);
+    const media = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const sync = () => setStill(media.matches);
     sync();
     media.addEventListener('change', sync);
-    return () => media.removeEventListener('change', sync);
+    const el = root.current;
+    const seen = 'IntersectionObserver' in window ? new IntersectionObserver(([e]) => setPaused(!e.isIntersecting), { threshold: 0.35 }) : null;
+    if (seen) seen.observe(el);
+    else setPaused(false);
+    return () => {
+      media.removeEventListener('change', sync);
+      if (seen) seen.disconnect();
+    };
   }, []);
 
-  // While live: the scroll position through the tall track picks the principle, and fills its bar (--p, 0 to 1)
-  useEffect(() => {
-    if (!live) return undefined;
-    const el = root.current;
-    const bars = el.querySelectorAll('.st-how-bar i');
-    let raf = 0, current = -1;
-    const update = () => {
-      raf = 0;
-      const r = el.getBoundingClientRect();
-      const span = r.height - window.innerHeight;
-      const p = Math.min(1, Math.max(0, -r.top / (span || 1))) * PRINCIPLES.length;
-      const i = Math.min(PRINCIPLES.length - 1, Math.floor(p));
-      bars.forEach((bar, k) => bar.style.setProperty('--p', k < i ? 1 : k > i ? 0 : Math.min(1, p - i)));
-      if (i !== current) setActive((current = i));
-    };
-    const onScroll = () => raf || (raf = requestAnimationFrame(update));
-    update();
-    window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', onScroll);
-    return () => {
-      cancelAnimationFrame(raf);
-      window.removeEventListener('scroll', onScroll);
-      window.removeEventListener('resize', onScroll);
-    };
-  }, [live]);
+  const next = () => setActive((i) => (i + 1) % PRINCIPLES.length);
+  const running = !still && !paused && !hold;
 
   return (
-    <section className={'st-section st-how' + (live ? ' is-live' : '')} aria-labelledby="how-we-work" ref={root} data-no-reveal="">
-      <div className="st-how-pin">
-        <div className="container st-how-grid">
-          <div className="st-how-copy">
-            <h2 id="how-we-work" className="st-how-label">How we work</h2>
-            <ol className="st-how-list">
-              {PRINCIPLES.map((p, i) => (
-                <li key={p.title} className={live && i === active ? 'on' : undefined}>
-                  <span className="st-how-n" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
-                  <h3>{p.title}</h3>
-                  <span className="st-how-bar" aria-hidden="true"><i /></span>
-                  <div className="st-how-body">
-                    <p>{p.text}</p>
-                    {p.link && (
-                      <SiteLink className="st-link" href={p.link.href}>
-                        {p.link.label} <ArrowRight />
-                      </SiteLink>
-                    )}
-                  </div>
-                  <HowStage className="st-how-img" stations={[i]} active={i} />
-                </li>
-              ))}
-            </ol>
-            <div className="st-how-actions">
-              <SiteLink className="btn btn-gold" href="#roof-check">
-                Get Pro Advice <span className="arrow">→</span>
-              </SiteLink>
-              <a className="btn btn-dark" href={TEL}>
-                Call {PHONE}
-              </a>
-            </div>
+    <section
+      className={'st-section st-how' + (running ? ' is-running' : '') + (still ? ' is-still' : '')}
+      aria-labelledby="how-we-work"
+      ref={root}
+      data-no-reveal=""
+      onPointerEnter={() => setHold(true)}
+      onPointerLeave={() => setHold(false)}
+      onFocus={() => setHold(true)}
+      onBlur={(e) => !e.currentTarget.contains(e.relatedTarget) && setHold(false)}
+    >
+      <div className="container st-how-grid">
+        <div className="st-how-copy">
+          <h2 id="how-we-work" className="st-how-label">How we work</h2>
+          <ol className="st-how-list">
+            {PRINCIPLES.map((p, i) => (
+              <li key={p.title} className={i === active ? 'on' : undefined}>
+                <h3>
+                  <button type="button" className="st-how-tab" aria-expanded={i === active} aria-controls={`how-body-${i}`} onClick={() => setActive(i)}>
+                    <span className="st-how-n" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+                    <span className="st-how-t">{p.title}</span>
+                  </button>
+                </h3>
+                <span className="st-how-bar" aria-hidden="true">
+                  {/* the fill is a CSS animation; when it ends, the next principle comes in */}
+                  <i key={i === active ? `on-${active}` : 'off'} onAnimationEnd={i === active ? next : undefined} />
+                </span>
+              </li>
+            ))}
+          </ol>
+          <div className="st-how-panels">
+            {PRINCIPLES.map((p, i) => (
+              <div key={p.title} id={`how-body-${i}`} className={'st-how-body' + (i === active ? ' on' : '')} aria-hidden={i !== active}>
+                <p>{p.text}</p>
+                {p.link && (
+                  <SiteLink className="st-link" href={p.link.href} tabIndex={i === active ? undefined : -1}>
+                    {p.link.label} <ArrowRight />
+                  </SiteLink>
+                )}
+              </div>
+            ))}
           </div>
-          {/* Wide screens: one 3D stage for all four principles in its own column; its camera flies to the current one (decorative) */}
-          {live && (
-            <div className="st-how-media" aria-hidden="true">
-              <HowStage stations={[0, 1, 2, 3]} active={active} />
-            </div>
-          )}
+          <div className="st-how-actions">
+            <SiteLink className="btn btn-gold" href="#roof-check">
+              Get Pro Advice <span className="arrow">→</span>
+            </SiteLink>
+            <a className="btn btn-dark" href={TEL}>
+              Call {PHONE}
+            </a>
+          </div>
+        </div>
+        {/* One 3D stage for all four principles; its camera flies to the current one (decorative) */}
+        <div className="st-how-media" aria-hidden="true">
+          <HowStage stations={[0, 1, 2, 3]} active={active} />
         </div>
       </div>
     </section>

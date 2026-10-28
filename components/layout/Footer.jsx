@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import BrandLogo from '@/components/ui/BrandLogo';
 import { FacebookIcon, InstagramIcon, LinkedInIcon, YouTubeIcon } from '@/components/ui/icons';
 import CookieSettingsLink from '@/components/ui/CookieSettingsLink';
@@ -18,20 +17,18 @@ const links = (list) =>
     </SiteLink>
   ));
 
-// The studio-style footer: a neighborhood photo under a deep navy shade, the phone number large with the three offices beside it, the logo and link
+// The studio-style footer: solid primary navy (owner, October 28 2026: the neighborhood photo is gone), the phone number large with the three offices beside it, the logo and link
 // columns under a hairline, and the small print last. The request page (/start/) keeps only the small print (HideOnStart).
 export default function Footer() {
   return (
     <footer>
-      <Image className="ft-photo" src="/images/home-hero-shingle-neighborhood-drone-view.webp" alt="" fill sizes="100vw" quality={55} loading="lazy" />
-      <div className="ft-shade" aria-hidden="true"></div>
       <div className="container">
         <HideOnStart>
           <div className="ft-top">
             <div className="ft-call">
               <p className="ft-label">Talk to a roofer</p>
               <a className="ft-phone" href={TEL}>{PHONE}</a>
-              <p className="ft-hours">{hoursText(BUSINESS.hours)}. This number reaches all three offices.</p>
+              <p className="ft-hours">{hoursText(BUSINESS.hours)}.</p>
             </div>
             <div className="ft-offices">
               {OFFICES.map((office) => (
