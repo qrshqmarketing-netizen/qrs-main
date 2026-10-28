@@ -14,6 +14,7 @@ import { PAGE_INDEX } from '@/lib/pageIndex';
 import { pageMetadata } from '@/lib/pages';
 import { plainText } from '@/lib/richText';
 import { pageJsonLd } from '@/lib/structuredData';
+import PreferredSource from '@/components/ui/PreferredSource';
 import '../roofing-glossary/glossary.css';
 
 // The roofing FAQ: every group is the FAQ of the page it comes from (the home page's from the dashboard, the rest from lib/pageIndex.js), so an answer
@@ -93,6 +94,7 @@ export default async function RoofingFaqPage() {
               )}
             </section>
           ))}
+          <PreferredSource className="pref-end" />
         </div>
       </section>
       <RoofCheck tone="white" />

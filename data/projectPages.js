@@ -20,7 +20,7 @@ export const projectPagesFor = (href, limit = 4) => PROJECT_PAGES.filter((p) => 
 // the page's from its section in the address (/tile-roofing/, /flat-roofing/ ...). Each project scores: listed in this page's `related` (100), its main roof is the page's
 // roof (40) or one of its roofs is (20), related to a page under this hub or in the same section (10), the same kind of work, repair,
 // replacement or installation (5). On a page about one roof type only projects with that roof are shown (none on the metal pages until a
-// metal job is published); commercial pages show only commercial projects (none yet). Pages with no roof type (inspection, maintenance
+// metal job is published); commercial pages show only commercial projects, and residential pages never show a commercial one. Pages with no roof type (inspection, maintenance
 // plans, financing, the repair and replacement hubs) show the best matches, then the newest. Highest score first, newest first within a
 // score, up to `limit`. Returns { projects, exact, roof, heading } (heading: for the section, with one underlined word).
 const KINDS = ['repair', 'replacement', 'installation'];
@@ -40,7 +40,9 @@ export function projectsShownOn(href, limit = 4) {
     else if (roof && roofs.includes(roof)) score += 20;
     if (related.some((r) => r !== href && (r.startsWith(href) || (parent.split('/').length > 3 && r.startsWith(parent))))) score += 10;
     if (kind && (p.path.includes(kind) || related.some((r) => r.includes(kind)))) score += 5;
-    const fits = commercial ? related.some((r) => r.startsWith('/commercial-roofing/')) : !roof || score >= 20;
+    const commercialJob = related.some((r) => r.startsWith('/commercial-roofing/'));
+    // a commercial job is never shown on the residential roof pages (/residential-roofing/...), only on commercial and general pages
+    const fits = commercial ? commercialJob : (!roof || score >= 20) && !(commercialJob && href.startsWith('/residential-roofing/'));
     return { p, score, order, fits };
   });
   const ranked = scored.filter((x) => x.fits).sort((a, b) => b.score - a.score || a.order - b.order).map((x) => x.p);

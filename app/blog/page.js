@@ -2,6 +2,7 @@ import Hero from '@/components/sections/Hero';
 import HeroLatestPost from '@/components/sections/HeroLatestPost';
 import IndexNote from '@/components/sections/IndexNote';
 import BlogBrowser from '@/components/sections/BlogBrowser';
+import PreferredSource from '@/components/ui/PreferredSource';
 import { postDate } from '@/components/sections/PostCards';
 import JsonLd from '@/components/ui/JsonLd';
 import { BLOG_LINK, blogPath, HOME } from '@/data/catalog';
@@ -58,6 +59,9 @@ export default async function BlogPage() {
         {...(featured && { aside: <HeroLatestPost post={featured} /> })}
       />
       <BlogBrowser posts={cards} heading={published.length ? 'Browse Articles' : 'Coming Soon'} />
+      <div className="container">
+        <PreferredSource />
+      </div>
       <IndexNote note={page.note} />
       <RoofCheck tone="white" />
     </main>

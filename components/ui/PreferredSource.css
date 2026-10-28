@@ -1,0 +1,6 @@
+.pref-source{margin:0 0 28px;text-align:center}
+.pref-source a{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:8px 18px;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--ink);font:600 14px/1.3 var(--font-text),sans-serif;text-decoration:none;transition:border-color .2s,color .2s}
+.pref-star{color:var(--gold-ink);font-family:var(--font-glyph);font-size:15px;line-height:1}
+@media (hover:hover){.pref-source a:hover{border-color:var(--gold);color:var(--navy)}}
+.pref-source a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.pref-source.pref-end{margin:40px 0 0}

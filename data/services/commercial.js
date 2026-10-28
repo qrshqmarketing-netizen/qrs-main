@@ -35,7 +35,7 @@ export const COMMERCIAL_CONTENT = {
       { q: 'Can our building stay open while you work on the roof?', a: 'Usually, yes. Most commercial roofing happens while the building is in use, so we plan access, noise, staging and deliveries with you before work begins. If any step needs an area cleared, you’ll know ahead of time.' },
       { q: 'Do you repair commercial roofs, or only replace them?', a: 'Both. Many commercial leaks trace back to one failed flashing, a clogged drain or a worn seam, and a targeted repair is the right fix. When a roof is near the end of its life, the survey photos show it, so you can plan and budget for replacement.' },
       { q: 'Do you offer ongoing maintenance for commercial roofs?', a: 'Yes. Scheduled roof care covers seasonal checks, clearing drains and debris, and a photo record you can keep with your building files. It helps you catch wear early and deal with it before the rainy season.' },
-      { q: 'Do you work with contractors and property management clients?', a: 'Yes. We partner with contractors, builders and property management clients across [Los Angeles and Orange County](/service-areas/). Our [contractor partnerships](/contractors/) page explains how those projects run.' },
+      { q: 'Do you work with contractors and property management clients?', a: 'Yes. We partner with contractors, builders and property management clients across [Los Angeles and Orange County](/service-areas/). Our [property management roofing](/commercial-roofing/property-managers/) page shows how we work with managers, and our [contractor partnerships](/contractors/) page explains how contractor projects run.' },
     ],
   },
 
@@ -304,6 +304,47 @@ export const COMMERCIAL_CONTENT = {
         { q: 'Can you help us plan roof budgets for the whole center?', a: 'Yes. A center-wide survey with photos by section shows which areas need attention now and which can be planned for later. That gives ownership a clearer picture for budgeting repairs and future replacement phases.' },
       ],
       related: ['/commercial-roofing/retail/', '/commercial-roofing/office-buildings/', '/residential-roofing/hoa-multi-family/'],
+    },
+
+    // For property managers (owner, October 28 2026, from the slow-season plan: commercial, HOA and apartment searches are the biggest group
+    // the site ranks for without clicks). An audience page, not a building type: it gathers what a manager needs from a roofer across the
+    // buildings they look after and points to the service pages for the work itself. Only facts the site already states.
+    {
+      slug: 'property-managers',
+      keyword: 'property management roofing',
+      title: 'Property Management Roofing',
+      navLabel: 'Property Managers',
+      card: 'One roofer for the buildings you manage: photo reports, written scopes for owner approval and work planned around tenants.',
+      metaTitle: 'Property Management Roofing in Los Angeles & Orange County',
+      metaDescription: 'Property management roofing in LA & Orange County: roofer-led surveys, photo reports and written scopes owners can approve. Request a roof survey.',
+      image: '/images/projects/commercial-flat-roof-replacement-westminster-92683/commercial-flat-roof-westminster-92683-14.webp',
+      imageAlt: 'Rows of new white cap sheet with sealed laps along the parapet edge of a commercial flat roof in Westminster',
+      hero: {
+        intro: 'Property management roofing from QRS covers the buildings you look after across Los Angeles, Orange County and the Inland Empire: apartment and condo buildings, retail, offices and warehouses. A roofer surveys each roof, you get photos and a written scope you can send to the owner or board, and the work is planned around your tenants.',
+        highlights: ['Photo reports for owners and boards', 'Written scope and price before any work', 'Work planned around tenants'],
+      },
+      // Told the home page's way (ServiceStory): one statement, one paragraph, then the principles, each fact said once
+      story: {
+        label: 'Property management roofing',
+        lead: 'You answer for the roof. You shouldn’t have to __guess__ about it.',
+        text: 'A tenant calls about a stain, an owner asks what the roof will need next year, a board wants options before it votes. Each of those needs the same thing: someone who has been on the roof, photos of what they found and a scope in writing. That is how we work on every building you manage, from one [repair](/commercial-roofing/repair/) to a phased [replacement](/commercial-roofing/replacement/).',
+        heading: 'How we work with property managers',
+        principles: [
+          { title: 'Surveyed by a roofer. Shown in photos.', text: 'A roofer walks each roof and photographs what matters, with a plain-English next step for each area: repair, monitor, maintain or replace.', bullets: ['Drains, scuppers and gutters', 'Flashings, seams and penetrations', 'Rooftop units, skylights and parapets'] },
+          { title: 'A scope owners can approve.', text: 'Every job has a written scope and price before any work, ready to forward to the owner, the asset manager or the board. Nothing starts until it is approved.' },
+          { title: 'Planned around tenants.', text: 'Access, staging, noise and deliveries are worked out with you or the site contact before work begins, and buildings usually stay open while we work. Every job gets tarps, magnetic nail sweeps and daily cleanup.', bullets: ['Tenant notices and access times', 'Staging away from entrances and parking', 'Areas to clear, known ahead of time'] },
+          { title: 'A record for every building.', text: 'Closeout photos go to your files, and a [maintenance plan](/commercial-roofing/maintenance/) adds scheduled visits with a photo report each time, so the roofs you manage can be budgeted for ahead of time instead of after a leak.' },
+        ],
+      },
+      faqs: [
+        { q: 'What kinds of properties do you roof for property managers?', a: 'Apartment and condo buildings, HOA communities, retail centers, offices, warehouses and industrial buildings across Los Angeles County, Orange County and the Inland Empire. Communities with a board and reserve study are covered on our [HOA & multi-family roofing](/residential-roofing/hoa-multi-family/) page.' },
+        { q: 'Can you send the photos and scope straight to the owner or board?', a: 'Yes. You decide who gets them: you, the owner, an asset manager or a board contact. Everyone works from the same photos and written scope, and nothing starts until it is approved.' },
+        { q: 'How do you handle tenants during roof work?', a: 'We plan access, staging, noise and timing with you or the site contact before work begins. If an area needs to be cleared, you know ahead of time, so tenants can be told.' },
+        { q: 'What happens when a tenant reports a leak?', a: 'Call us. If water is coming in, we can tarp the area to stop more damage, then a roofer finds the source and you get photos and a written scope for the repair. See [emergency roof repair](/roof-repair/emergency/) for what to do in the meantime.' },
+        { q: 'Do you help with insurance claims after storm damage?', a: 'We work with insurance adjusters where we can, and the photos and written scope we provide can be shared with the carrier. Our guide to [roof insurance claims](/blog/roof-insurance-claims-california/) explains the process.' },
+        { q: 'Have you worked on commercial buildings like ours?', a: 'Yes. On a [commercial building in Westminster](/projects/commercial-flat-roof-replacement-westminster-92683/), our roofers tore the old roof off down to the deck and put on a new base sheet and white cap sheet, flashed at every curb and wall, while the loading yard kept working.' },
+      ],
+      related: ['/commercial-roofing/maintenance/', '/residential-roofing/hoa-multi-family/', '/commercial-roofing/repair/', '/commercial-roofing/replacement/'],
     },
   ],
 };

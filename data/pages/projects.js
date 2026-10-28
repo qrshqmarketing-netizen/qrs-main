@@ -7,6 +7,7 @@ import { GARDEN_GROVE_PROJECT } from './garden-grove-project';
 import { GRANADA_HILLS_PROJECT } from './granada-hills-project';
 import { HACIENDA_HEIGHTS_PROJECT } from './hacienda-heights-project';
 import { PICO_RIVERA_PROJECT } from './pico-rivera-project';
+import { WESTMINSTER_COMMERCIAL_PROJECT } from './westminster-commercial-project';
 import { LA_90057_PROJECT } from './la-90057-project';
 import { LA_90061_PROJECT } from './la-90061-project';
 import { VENICE_PROJECT } from './venice-project';
@@ -19,7 +20,7 @@ import { SAN_PEDRO_PROJECT } from './san-pedro-project';
 // ZIP code's center, not the street address), then list it here.
 // Garden Grove is switched off until all of its photos are in: set SHOW_GARDEN_GROVE to true to bring its page, its map pin and its place in the lists back
 export const SHOW_GARDEN_GROVE = false;
-export const PROJECT_PAGES = [PICO_RIVERA_PROJECT, HACIENDA_HEIGHTS_PROJECT, GRANADA_HILLS_PROJECT, ...(SHOW_GARDEN_GROVE ? [GARDEN_GROVE_PROJECT] : []), LA_90057_PROJECT, LA_90061_PROJECT, WHITE_FLAT_PROJECT, VENICE_PROJECT, PANORAMA_CITY_PROJECT, MID_WILSHIRE_PROJECT, HOLLYWOOD_HILLS_PROJECT, SAN_PEDRO_PROJECT, SAN_PEDRO_FULL_ROOF_PROJECT];
+export const PROJECT_PAGES = [WESTMINSTER_COMMERCIAL_PROJECT, PICO_RIVERA_PROJECT, HACIENDA_HEIGHTS_PROJECT, GRANADA_HILLS_PROJECT, ...(SHOW_GARDEN_GROVE ? [GARDEN_GROVE_PROJECT] : []), LA_90057_PROJECT, LA_90061_PROJECT, WHITE_FLAT_PROJECT, VENICE_PROJECT, PANORAMA_CITY_PROJECT, MID_WILSHIRE_PROJECT, HOLLYWOOD_HILLS_PROJECT, SAN_PEDRO_PROJECT, SAN_PEDRO_FULL_ROOF_PROJECT];
 
 export const PROJECTS_PAGE = {
   keyword: 'roofing projects',

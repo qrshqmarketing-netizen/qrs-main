@@ -150,3 +150,7 @@ export const SOCIAL = {
   linkedin: '',
   youtube: '',
 };
+
+// Google's "preferred sources" page for this site (owner, October 28 2026): a reader who picks QRS there sees our articles more often in
+// Google's Top stories. Linked from the articles, the blog index and the Roofing FAQ and glossary pages (components/ui/PreferredSource.jsx).
+export const PREFERRED_SOURCE_URL = 'https://www.google.com/preferences/source?q=qualityroofingspecialists.com';
