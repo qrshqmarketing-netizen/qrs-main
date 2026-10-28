@@ -22,6 +22,582 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // Pillar guides (owner, October 28 2026): four long guides that tie the existing articles on one subject together and link to them. They are
+  // informational, so they don't compete with the service pages they link to. No prices, no lifespans in years, nothing the site doesn't already say.
+  {
+    slug: 'tile-roof-guide-southern-california',
+    title: 'Tile Roof Guide for Southern California Homeowners',
+    keyword: 'tile roof guide',
+    topics: ['tile', 'underlayment', 'repair', 'replacement'],
+    metaTitle: 'Tile Roof Guide for Southern California Homeowners',
+    metaDescription:
+      'Tile roof guide for Southern California: why the underlayment wears out before the tiles, broken and slipped tiles, tile weight, matching and your options.',
+    datePublished: '2026-10-28',
+    dateModified: '2026-10-28',
+    excerpt:
+      'Most of what goes wrong with a tile roof comes back to one idea: the tiles usually outlast the underlayment beneath them. This guide ties together everything a Southern California tile roof owner needs to know.',
+    image: '/images/blog/tile-roof-guide-southern-california.webp',
+    imageAlt: 'The Tile Roof Owner’s Guide, Southern California Edition: a Spanish-style home with a red clay tile roof among palm trees',
+    intro: [
+      'This tile roof guide is for Southern California homeowners who have clay or concrete tile overhead, or are thinking about it. Most of what goes wrong with a tile roof comes back to one idea: **the tiles usually outlast the underlayment beneath them.**',
+      'That is why a tile roof can leak while every tile still looks fine, and why the fix is often less than a new roof. The sections below cover how a tile roof works, the problems we see most, your options and where to read more on each topic.',
+    ],
+    sections: [
+      {
+        heading: 'How a Tile Roof Keeps Water Out',
+        blocks: [
+          'A tile roof is a system of layers. The tiles shed most of the rain and shade the layers below from the sun, but they are not watertight on their own. Water that gets past them, through the gaps between tiles or under a broken one, is stopped by the underlayment.',
+          {
+            table: {
+              head: ['Layer', 'What it does'],
+              rows: [
+                ['Tiles', 'Shed most of the water and shield the layers below from sun and heat'],
+                ['Battens', 'Wood or other strips that hold many tiles in place, depending on how the roof was built'],
+                ['Underlayment', 'The waterproof layer that stops the water the tiles let through'],
+                ['Flashings', 'Metal at walls, chimneys, valleys and vents, where most leaks start'],
+                ['Roof deck', 'The sheathing that carries all of it'],
+              ],
+            },
+          },
+        ],
+      },
+      {
+        heading: 'The Tiles Usually Outlast the Underlayment',
+        blocks: [
+          'Clay and concrete tiles can protect a home for decades. The underlayment beneath them works hard the whole time, in heat that builds up under the tiles, and it wears out first. When it does, water the tiles let through reaches the deck, even though the roof looks fine from the street.',
+          {
+            list: [
+              'A leak or a ceiling stain after rain, with no broken tile in sight',
+              'Dark, brittle or torn underlayment showing where a tile has slipped or broken',
+              'Leaks at valleys, walls and chimneys, where water collects',
+              'Repeated repairs in the same area',
+            ],
+          },
+          'There is no single age at which underlayment fails; it depends on the product, how it was installed and how the roof is built. Our guide to [tile roof underlayment](/blog/tile-roof-underlayment/) explains the signs and the options in detail.',
+        ],
+      },
+      {
+        heading: 'Broken and Slipped Tiles',
+        blocks: [
+          'A tile cracks when it is stepped on in the wrong place, hit by a falling branch or knocked during other work on the roof, such as a satellite dish, solar or HVAC service. Tiles also slip when the fastener or batten holding them gives way.',
+          'One broken tile is rarely an emergency on its own, but it leaves the underlayment below in direct sun and rain, and that speeds up its wear. A slipped tile can also let more water through than the underlayment was meant to handle.',
+          'The repair is to replace the broken tiles with the closest match, reset the slipped ones and check the underlayment and flashing around them. See [tile roof repair](/residential-roofing/tile-roofing/repair/) for how we do it.',
+        ],
+      },
+      {
+        heading: 'Why Walking on Tile Cracks It',
+        blocks: [
+          'A tile is strong when the load is spread the way it was designed to be, and brittle when it is not. Step on the middle of a barrel tile, or on the unsupported edge of a flat one, and it can crack under one person’s weight, even if the crack doesn’t show until the next rain.',
+          'Roofers who work on tile know where to step and where not to. When anyone else needs to be on your roof, for solar, a satellite dish or air conditioning, it is worth asking how they will walk it and having the tiles checked afterward.',
+          { note: '**Stay off a tile roof yourself.** Tiles crack underfoot, and a tile roof is slippery, especially when wet. Look from the ground or ask a roofer.' },
+        ],
+      },
+      {
+        heading: 'Tile Weight and Your Roof Framing',
+        blocks: [
+          'Tile is heavy compared with other roofing. As a general range, clay tile weighs about 600 to 950 pounds per square (100 square feet) and concrete tile about 820 to 1,100, depending on the profile.',
+          'A home built for tile was framed for that weight. Putting tile on a home that had shingles, or switching from clay to a heavier concrete tile, means the framing has to be checked first and may need reinforcing. Our guides to [clay vs. concrete tile](/blog/clay-vs-concrete-tile-roof/) and [shingle vs. tile](/blog/asphalt-shingle-vs-tile-roof/) compare the materials.',
+        ],
+      },
+      {
+        heading: 'Matching Tiles on Older Spanish-Style Homes',
+        blocks: [
+          'Many older Spanish Revival homes in Los Angeles and Orange County have clay tile in profiles or colors that are no longer made, and clay that has aged in the sun for years doesn’t look like a new tile even when the profile matches.',
+          {
+            list: [
+              '**Salvaged tiles** of the same profile can replace broken ones.',
+              '**Your own tiles can be moved** from a less visible slope to the front, with the closest new match going where it shows least.',
+              '**A lift and relay keeps your tiles** on the roof, so the look of the home doesn’t change at all.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Repair, Lift and Relay, or a New Tile Roof?',
+        blocks: [
+          {
+            table: {
+              head: ['Option', 'When it fits', 'What happens'],
+              rows: [
+                ['Repair', 'A few broken or slipped tiles, or one flashing', 'Tiles replaced with the closest match or reset, flashing fixed'],
+                ['Lift and relay (*SecondLife* Tile Reset)', 'The tiles are sound but the underlayment is worn', 'Tiles come off, new underlayment goes on, worn battens and flashings are renewed and the same tiles go back; only cracked or broken ones are replaced'],
+                ['New tile roof', 'Many tiles are brittle or broken, or you are changing tile', 'A complete new tile roof, from the deck up'],
+              ],
+            },
+          },
+          'Our comparison of a [tile lift and relay vs. a new tile roof](/blog/tile-lift-and-relay-vs-new-tile-roof/) walks through the choice, and the [lift and relay](/residential-roofing/tile-roofing/lift-and-relay/) and [tile roof replacement](/residential-roofing/tile-roofing/replacement/) pages explain how each job runs.',
+        ],
+      },
+      {
+        heading: 'Caring for a Tile Roof in Southern California',
+        blocks: [
+          {
+            checklist: [
+              'Keep valleys and gutters clear of leaves, so water can run off the roof',
+              'Look over the roof from the ground after strong winds and storms',
+              'Have the tiles checked after anyone else has worked on the roof',
+              'Get a roof check before the rainy season if the underlayment’s age is unknown',
+              'Fix broken and slipped tiles soon, before the underlayment below them wears through',
+            ],
+          },
+          'Our [roof maintenance checklist](/blog/roof-maintenance-checklist/) covers the rest of the year, and a [roof maintenance plan](/roof-maintenance-plans/) puts the visits on a schedule.',
+        ],
+      },
+      {
+        heading: 'More on Tile Roofs',
+        blocks: [
+          {
+            list: [
+              '[Tile roof underlayment](/blog/tile-roof-underlayment/): what it is, how it fails and how it is replaced',
+              '[Clay vs. concrete tile](/blog/clay-vs-concrete-tile-roof/): how they differ and which to choose',
+              '[Tile lift and relay vs. a new tile roof](/blog/tile-lift-and-relay-vs-new-tile-roof/): which one your roof needs',
+              '[Asphalt shingle vs. tile](/blog/asphalt-shingle-vs-tile-roof/): weight, look and upkeep compared',
+              '[Tile and flat roofing in Mid-Wilshire](/projects/tile-flat-roofing-in-mid-wilshire-90019/): a project on a multi-family building',
+            ],
+          },
+        ],
+      },
+    ],
+    faqs: [
+      { q: 'How long does a tile roof last?', a: 'The tiles themselves can protect a home for decades. The underlayment beneath them wears out sooner, and how soon depends on the product, the installation and the roof. That is why a tile roof often needs new underlayment long before it needs new tiles.' },
+      { q: 'Can a tile roof leak if no tiles are broken?', a: 'Yes. Tiles are not watertight on their own, so once the underlayment beneath them wears out, water the tiles let through can reach the deck. A roof inspection checks the underlayment, not just the tiles.' },
+      { q: 'Can I walk on my tile roof?', a: 'It is better not to. Tiles crack when stepped on in the wrong place, and a tile roof is slippery, especially when wet. Roofers who work on tile know where to step.' },
+      { q: 'Can you replace the underlayment without new tiles?', a: 'Yes. A [tile lift and relay](/residential-roofing/tile-roofing/lift-and-relay/) takes the tiles off, puts new underlayment down and resets the same tiles, replacing only the cracked or broken ones.' },
+      { q: 'Can you match the tiles on an older home?', a: 'We look for the closest match, use salvaged tiles where they exist and can move your own tiles to the slopes people see, with the new ones where they show least.' },
+    ],
+    closing: {
+      heading: 'Get Your Tile Roof Checked',
+      blocks: [
+        '[Book a free roof evaluation](/contact-us/). A roofer checks your tiles, the underlayment and the flashings, shows you photos and gives you a written scope and price before any work.',
+      ],
+    },
+    related: [TILE, '/residential-roofing/tile-roofing/lift-and-relay/', '/residential-roofing/tile-roofing/repair/'],
+  },
+  {
+    slug: 'flat-roofs-los-angeles-guide',
+    title: 'Flat Roofs in Los Angeles: Systems, Drainage and Lifespan',
+    keyword: 'flat roofs in los angeles',
+    topics: ['flat', 'repair', 'replacement', 'maintenance'],
+    metaTitle: 'Flat Roofs in Los Angeles: Systems, Drainage, Lifespan',
+    metaDescription:
+      'Flat roofs in Los Angeles: why they are so common, torch-down, cap sheet and TPO, ponding water, parapets, scuppers and drains, and what shortens their life.',
+    datePublished: '2026-10-28',
+    dateModified: '2026-10-28',
+    excerpt:
+      'Flat roofs are everywhere in Los Angeles, and none of them is truly flat. Here is how they are built, why drainage matters most and what shortens a flat roof’s life.',
+    image: '/images/blog/flat-roofs-los-angeles-guide.webp',
+    imageAlt: 'Los Angeles Flat Roof Guide: a white flat roof on a modern building with the downtown Los Angeles skyline behind it',
+    intro: [
+      'Flat roofs in Los Angeles are everywhere: on mid-century and modern homes, apartment buildings, garages, additions and ADUs, and behind the parapet walls of Spanish-style houses. None of them is truly flat. A good one has a gentle slope that carries rainwater to a drain, a scupper or a gutter.',
+      'This guide explains the systems used on flat roofs here, why drainage matters more than anything else, what shortens a flat roof’s life and when repair or replacement makes sense.',
+    ],
+    sections: [
+      {
+        heading: 'Why Flat Roofs Are So Common in Los Angeles',
+        blocks: [
+          'Low-slope roofs suit the way much of Los Angeles was built. Mid-century and modern homes used them for clean lines and wide overhangs. Apartment buildings use them to cover a large footprint simply and to carry the air conditioning units. Spanish Revival homes hide them behind parapet walls, often next to tile. And garages, room additions, patio covers and new backyard ADUs are often low-slope too.',
+          'The dry climate helps: there is no snow load to shed. But when the winter rains come, every one of those roofs has to move water off quickly, and that is where most flat roof problems start.',
+        ],
+      },
+      {
+        heading: 'Flat Roof Systems, Compared',
+        blocks: [
+          {
+            table: {
+              head: ['System', 'What it is', 'Where you see it'],
+              rows: [
+                ['Torch-down (modified bitumen)', 'A base sheet and a cap sheet bonded with a torch, the laps sealed as they go', 'Very common on Los Angeles homes and buildings'],
+                ['Cap sheet', 'The top, granulated layer of a modified bitumen roof; white and light ones reflect much of the sun', 'The surface you see on most torch-down roofs'],
+                ['Self-adhered sheets', 'Modified bitumen that sticks without a flame', 'Against wood siding and tight details where a flame is the wrong tool'],
+                ['TPO', 'A single-ply sheet with seams welded by hot air', 'Mostly commercial buildings; QRS installs it on commercial roofs'],
+                ['Coatings', 'A liquid layer brushed or sprayed over an existing roof', 'Offered by some roofers; QRS does not apply roof coatings'],
+              ],
+            },
+          },
+          'Our guides to [torch-down roofing](/blog/torch-down-roofing-app-vs-sbs/), [TPO roofing](/blog/tpo-roofing-pros-and-cons/) and [cool roofs](/blog/cool-roof-southern-california/) go deeper on each.',
+        ],
+      },
+      {
+        heading: 'Drainage Comes First',
+        blocks: [
+          'Water should move steadily toward the drains and scuppers, then down through downspouts or gutters. When the slope is missing, the deck has sagged or an outlet is blocked, water sits. Standing water, called ponding, wears the surface faster, adds weight and finds any weak lap or flashing.',
+          {
+            list: [
+              'Puddles that are still there long after the rain stops',
+              'Dirt rings or stains where water has dried on the roof',
+              'Drains and scuppers clogged with leaves and grit',
+              'Water marks on ceilings below low spots',
+            ],
+          },
+          'On a replacement, the roof can be planned around the water: crickets, small raised sections that steer water around curbs toward the outlets, and extra outlets where the existing ones can’t keep up.',
+        ],
+      },
+      {
+        heading: 'Parapets, Scuppers and Drains',
+        blocks: [
+          'Most flat roof leaks start where the roof meets something, not out in the open field. Parapet walls take the brunt of the sun and wind, and the roof has to be carried up them and finished under the coping. Scuppers, the openings through a parapet, and roof drains are the only way out for the water, so a clogged one turns into a pond. Air conditioning curbs, vents and skylights all interrupt the roof and each needs its own flashing, not just a bead of sealant.',
+          'On a [commercial building in Westminster](/projects/commercial-flat-roof-replacement-westminster-92683/), for example, the new cap sheet was carried up the parapet walls and every curb, vent and turbine vent was flashed before the job was done.',
+        ],
+      },
+      {
+        heading: 'What Shortens a Flat Roof’s Life',
+        blocks: [
+          'How long a flat roof lasts depends on the system, how well it was installed, how it drains and how it is looked after. These are the things that shorten it:',
+          {
+            list: [
+              '**Ponding water** that sits on the same spots after every rain',
+              '**Sun and heat**, which dry out dark roof surfaces',
+              '**Foot traffic** from air conditioning service and other trades',
+              '**Laps that open** where one sheet meets the next',
+              '**Cracked flashing** at parapets, curbs and vents',
+              '**New layers over old ones**, which can trap moisture underneath',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Repair or Replace a Flat Roof?',
+        blocks: [
+          'A blister, a split, an open lap or a failed flashing at one curb can usually be repaired. When wear is spread across the roof, when there are several old layers, or when the deck or insulation underneath is wet, repairs buy less time each round and a replacement is the better use of money.',
+          'Every flat roof replacement we do is a full tear-off down to the deck, so anything holding moisture goes with it and damaged decking is found and fixed instead of buried. See [flat roof repair](/residential-roofing/flat-roofing/repair/) and our *FlatGuard* [flat roof replacement](/residential-roofing/flat-roofing/replacement/).',
+        ],
+      },
+      {
+        heading: 'Flat Roofs We Have Replaced',
+        blocks: [
+          {
+            list: [
+              '[A round flat roof in Hollywood Hills West](/projects/flat-roof-replacement-hollywood-hills-west-90046/)',
+              '[A white flat roof on a mid-century home in Los Angeles 90049](/projects/white-flat-roof-los-angeles-90049/)',
+              '[Tile and flat roofing on a multi-family building in Mid-Wilshire](/projects/tile-flat-roofing-in-mid-wilshire-90019/)',
+              '[A commercial flat roof in Westminster](/projects/commercial-flat-roof-replacement-westminster-92683/)',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Keeping a Flat Roof Healthy',
+        blocks: [
+          {
+            checklist: [
+              'Clear the drains and scuppers before the rainy season and after storms',
+              'Watch where water sits after rain, and note it',
+              'Have the roof checked after air conditioning or other rooftop work',
+              'Keep foot traffic to the paths that need it',
+              'Fix small splits and open laps before water gets under them',
+            ],
+          },
+          'Our [roof maintenance checklist](/blog/roof-maintenance-checklist/) and [temporary roof repair](/blog/temporary-roof-repair-options/) guides help between visits.',
+        ],
+      },
+    ],
+    faqs: [
+      { q: 'Are flat roofs really flat?', a: 'No. A flat roof has a gentle slope that carries water to a drain, a scupper or a gutter. When that slope is missing or an outlet is blocked, water ponds and wears the roof faster.' },
+      { q: 'Is torch-down or TPO better for a home?', a: 'Most flat roofs on Los Angeles homes are modified bitumen, usually torch-down with a cap sheet, and TPO is more common on commercial buildings. The right system depends on the roof, how it drains and what is around it; a roof evaluation sorts that out.' },
+      { q: 'Do you apply roof coatings?', a: 'No. QRS does not apply roof coatings. We repair flat roofs and replace them with a full tear-off, often with a white reflective cap sheet.' },
+      { q: 'Why does water pond on my flat roof?', a: 'Usually because of a low spot in the deck, a missing slope or a blocked drain or scupper. Clearing the outlets helps; fixing the slope is usually done during a replacement.' },
+      { q: 'Can a new flat roof go over the old one?', a: 'We tear off down to the deck on every flat roof replacement, so moisture trapped in old layers goes with them and the deck can be checked and repaired.' },
+    ],
+    closing: {
+      heading: 'Have Your Flat Roof Checked',
+      blocks: [
+        '[Book a free roof evaluation](/contact-us/). A roofer checks the drainage, laps and flashings, shows you photos and gives you a written scope and price before any work.',
+      ],
+    },
+    related: ['/residential-roofing/flat-roofing/', '/residential-roofing/flat-roofing/repair/', '/residential-roofing/flat-roofing/replacement/'],
+  },
+  {
+    slug: 'asphalt-shingle-roof-guide',
+    title: 'Asphalt Shingle Roofs: The Complete SoCal Guide',
+    keyword: 'asphalt shingle roofs',
+    topics: ['shingle', 'replacement', 'repair', 'ventilation', 'maintenance'],
+    metaTitle: 'Asphalt Shingle Roofs: The Complete SoCal Guide',
+    metaDescription:
+      'Asphalt shingle roofs in Southern California: 3-tab vs. architectural, how sun, heat and salt air age them, attic ventilation and a roof built from the deck up.',
+    datePublished: '2026-10-28',
+    dateModified: '2026-10-28',
+    excerpt:
+      'Shingles cover more Southern California homes than any other roof. Here is how they age in our sun, why the attic matters as much as the shingles and what a roof built from the deck up includes.',
+    image: '/images/blog/asphalt-shingle-roof-guide.webp',
+    imageAlt: 'SoCal Asphalt Shingle Guide: a roofer nailing asphalt shingles on a sunny Southern California roof',
+    intro: [
+      'Asphalt shingle roofs cover more Southern California homes than any other kind. They are lighter than tile, come in many colors, are commonly fire-rated and suit Craftsman, ranch and traditional homes alike.',
+      'This guide covers the types of shingles, what wears them out here, why the attic matters as much as the shingles, and what a roof built from the deck up includes.',
+    ],
+    sections: [
+      {
+        heading: 'Types of Asphalt Shingles',
+        blocks: [
+          {
+            table: {
+              head: ['Type', 'What it is', 'Look'],
+              rows: [
+                ['3-tab', 'A single flat layer cut into three tabs', 'Flat and uniform'],
+                ['Architectural', 'Two or more layers laminated together', 'Thicker, with depth and shadow lines'],
+              ],
+            },
+          },
+          'Architectural shingles are what most new shingle roofs here use. Our comparison of [architectural vs. 3-tab shingles](/blog/architectural-vs-3-tab-shingles/) explains the difference in detail.',
+        ],
+      },
+      {
+        heading: 'How Sun and Heat Age Shingles',
+        blocks: [
+          'The granules on a shingle are its sunscreen. They shield the asphalt underneath from the sun, which is relentless here for much of the year. As a roof ages, granules wash off, the exposed asphalt dries out, and the shingles start to curl, crack and lose their grip on each other. Slopes that face the afternoon sun usually show it first.',
+          'A handful of granules in the gutter after a new roof is normal. A steady stream of them years later is a sign of wear. Our guide to [granules in your gutter](/blog/shingle-granules-in-gutter/) explains what they mean.',
+        ],
+      },
+      {
+        heading: 'Attic Ventilation and Heat',
+        blocks: [
+          'A shingle roof bakes from both sides: the sun on top, and a hot attic underneath. Balanced ventilation, with intake low at the eaves and exhaust near the ridge, lets the attic breathe and carries that heat out. Trapped heat shortens shingle life and makes the rooms below harder to cool.',
+          {
+            list: [
+              'An attic that feels like an oven on a warm afternoon',
+              'Blocked eave vents, often covered by insulation or paint',
+              'Shingles that curl or blister ahead of their age',
+            ],
+          },
+          'See [attic ventilation](/residential-roofing/attic-ventilation/) for how a roofer checks and balances it.',
+        ],
+      },
+      {
+        heading: 'Coastal Wear',
+        blocks: [
+          'Near the coast, from Venice and San Pedro to Huntington Beach and Newport Beach, salt air works on metal flashing and fasteners, and wind off the ocean can lift shingle edges. Flashings, nails and how well each shingle is sealed matter even more there.',
+          'Our roofers replaced shingle roofs close to the water in [Venice](/projects/shingle-roof-replacement-venice-90291/) and [San Pedro](/projects/full-roof-replacement-san-pedro-90732/).',
+        ],
+      },
+      {
+        heading: 'What a Roof Built From the Deck Up Includes',
+        blocks: [
+          'A shingle roof is only as good as what is under it. A replacement done from the deck up includes every layer, in order:',
+          {
+            steps: [
+              'The old shingles, nails and underlayment come off, and the deck is checked for soft or damaged spots and photographed while it is open.',
+              'Damaged sheathing is replaced, so the new roof sits on a solid base.',
+              'Drip edge goes on at the eaves and rakes, and underlayment covers the deck.',
+              'Starter strips go on at the eaves and rakes, then the shingles, nailed in the manufacturer’s nailing zone.',
+              'Step flashing goes in at walls and chimneys, with new pipe boots and vents.',
+              'Ridge caps finish the top, and the attic gets balanced intake and exhaust ventilation.',
+            ],
+          },
+          'That complete package is our *TotalShield* Shingle System, described on the [shingle roof replacement](/residential-roofing/shingle-roofing/replacement/) page. On a [home in Pico Rivera](/projects/shingle-roof-replacement-solar-pico-rivera-90660/), it meant covering a gapped plank deck with new sheathing before a single shingle went down.',
+        ],
+      },
+      {
+        heading: 'Common Shingle Roof Problems',
+        blocks: [
+          {
+            list: [
+              '**Lifted, creased or missing shingles** after strong winds',
+              '**Cracked pipe boots** around plumbing vents',
+              '**Failed step flashing** where the roof meets a wall or chimney',
+              '**Nail pops** that push up through the shingle above',
+              '**Granule loss** that leaves bare, dark patches',
+            ],
+          },
+          'Most of these are repairs, not reasons for a new roof. Our guide to finding a [roof leak](/blog/roof-leak-source/) and our [shingle roof repair](/residential-roofing/shingle-roofing/repair/) page explain how they are fixed.',
+        ],
+      },
+      {
+        heading: 'Repair, Tune-Up or Replace?',
+        blocks: [
+          {
+            table: {
+              head: ['Option', 'When it fits'],
+              rows: [
+                ['Repair', 'A leak, a few damaged shingles or one failed flashing'],
+                ['*RoofRevive* tune-up', 'A roof in fair shape that needs sealing and upkeep at vents, pipes and flashings'],
+                ['Replacement', 'Wear across the whole roof: granule loss everywhere, brittle or curling shingles, repeated leaks'],
+              ],
+            },
+          },
+          'A one-time [roof tune-up](/roof-maintenance-plans/#tune-up) can keep a sound roof going, and a [roof maintenance plan](/roof-maintenance-plans/) puts the checks on a schedule.',
+        ],
+      },
+      {
+        heading: 'Shingles Compared With Other Roofs',
+        blocks: [
+          'Shingles weigh far less than tile, so they suit many homes never framed to carry tile, and they usually cost less. Tile has a different look and can last for decades, with the underlayment beneath it renewed along the way. Metal is another option. Our comparisons of [shingle vs. tile](/blog/asphalt-shingle-vs-tile-roof/) and [metal vs. shingles](/blog/metal-roof-vs-shingles/) weigh them side by side.',
+        ],
+      },
+      {
+        heading: 'More on Shingle Roofs',
+        blocks: [
+          {
+            list: [
+              '[Architectural vs. 3-tab shingles](/blog/architectural-vs-3-tab-shingles/)',
+              '[Granules in your gutter](/blog/shingle-granules-in-gutter/)',
+              '[Metal roof vs. shingles](/blog/metal-roof-vs-shingles/)',
+              '[Asphalt shingle vs. tile](/blog/asphalt-shingle-vs-tile-roof/)',
+              '[Fire-resistant roofs](/blog/wildfire-resistant-roof-los-angeles/)',
+            ],
+          },
+        ],
+      },
+    ],
+    faqs: [
+      { q: 'How long do asphalt shingles last in Southern California?', a: 'It depends on the shingle, how well the attic is ventilated, how much sun the roof gets and how it was installed. Granule loss, curling and brittle shingles across the roof are the signs it is wearing out; a roof evaluation tells you where yours stands.' },
+      { q: 'Are architectural shingles worth it?', a: 'For most new shingle roofs here, yes: they are thicker than 3-tab shingles and have more depth. Our [comparison](/blog/architectural-vs-3-tab-shingles/) explains the differences.' },
+      { q: 'Can new shingles go over the old ones?', a: 'On our shingle roof replacements, the old shingles, nails and underlayment come off and the deck is checked, so the new roof starts from a solid base.' },
+      { q: 'Are asphalt shingles fire-rated?', a: 'Asphalt shingles are commonly fire-rated, which matters near hillsides and brush. Our guide to [fire-resistant roofs](/blog/wildfire-resistant-roof-los-angeles/) covers more.' },
+      { q: 'Does attic ventilation really affect my shingles?', a: 'Yes. Heat trapped in the attic bakes the shingles from below and shortens their life. Balanced intake at the eaves and exhaust near the ridge carries it out.' },
+    ],
+    closing: {
+      heading: 'Have Your Shingle Roof Checked',
+      blocks: [
+        '[Book a free roof evaluation](/contact-us/). A roofer checks the shingles, flashings and attic ventilation, shows you photos and gives you a written scope and price before any work.',
+      ],
+    },
+    related: ['/residential-roofing/shingle-roofing/', '/residential-roofing/shingle-roofing/replacement/', '/residential-roofing/shingle-roofing/repair/'],
+  },
+  {
+    slug: 'roof-replacement-guide',
+    title: 'The Roof Replacement Guide: From First Inspection to Final Walkthrough',
+    keyword: 'roof replacement guide',
+    topics: ['replacement', 'inspection', 'shingle', 'tile', 'flat'],
+    metaTitle: 'Roof Replacement Guide: From Inspection to Walkthrough',
+    metaDescription:
+      'A roof replacement guide for homeowners: repair or replace, comparing bids line by line, permits, tear-off day, bad decking, timelines, cleanup and warranties.',
+    datePublished: '2026-10-28',
+    dateModified: '2026-10-28',
+    excerpt:
+      'What happens from the first inspection to the final walkthrough: deciding whether you need a new roof, comparing bids, permits, tear-off day, bad decking, timelines, cleanup and warranties.',
+    image: '/images/blog/roof-replacement-guide.webp',
+    imageAlt: 'The Roof Replacement Guide, inspection to final walkthrough: a roofer inspecting worn shingles beside a house with a new shingle roof',
+    intro: [
+      'This roof replacement guide walks you through the whole job, from the first inspection to the final walkthrough, so you know what to ask and what to expect at each step.',
+      'It is general information for homeowners. For how QRS replaces roofs, see our [roof replacement](/roof-replacement/) page.',
+    ],
+    sections: [
+      {
+        heading: 'Step 1: Decide Whether You Need a New Roof',
+        blocks: [
+          'Not every old roof needs replacing. A leak at one flashing, a few damaged shingles or broken tiles are repairs. A new roof makes sense when the wear is spread across the whole roof and repairs buy less time each round.',
+          {
+            table: {
+              head: ['Usually a repair', 'Usually a replacement'],
+              rows: [
+                ['One leak with a clear source', 'Leaks in several places, or the same one returning'],
+                ['A few damaged shingles or tiles', 'Granule loss, curling or brittle shingles across the roof'],
+                ['One failed flashing or pipe boot', 'A soft or damaged deck in several areas'],
+                ['Sound tiles over worn underlayment (a lift and relay)', 'Brittle tiles, or a change of roof type'],
+              ],
+            },
+          },
+          'Our guide to [roof restoration vs. replacement](/blog/roof-restoration-vs-replacement/) goes deeper, and on a tile roof a [lift and relay](/residential-roofing/tile-roofing/lift-and-relay/) can renew the underlayment without new tiles.',
+        ],
+      },
+      {
+        heading: 'Step 2: Get the Roof Inspected',
+        blocks: [
+          'A good inspection is done by a roofer on the roof, not from a ladder or a photo of the house. You should come away with photos of what was found, a plain-English explanation and a clear recommendation: repair, monitor, maintain or replace.',
+          {
+            checklist: [
+              'Who will look at the roof, and will they go up on it?',
+              'Will I get photos of what you find?',
+              'Will you tell me if a repair is enough?',
+              'Will the price be in writing before any work?',
+            ],
+          },
+          'At QRS this is a free roof evaluation with drone photos, explained on our [roof inspection](/roof-inspection/) page.',
+        ],
+      },
+      {
+        heading: 'Step 3: Compare Bids Line by Line',
+        blocks: [
+          'Two bids with different totals often describe different jobs. Lay them side by side and compare what each one includes, line by line.',
+          {
+            table: {
+              head: ['Line item', 'What to look for'],
+              rows: [
+                ['Tear-off', 'Down to the deck, or new layers over the old roof'],
+                ['Decking', 'How damaged decking is found, shown to you and priced'],
+                ['Underlayment', 'Which product, named in the bid'],
+                ['Flashings', 'Which ones are replaced rather than reused'],
+                ['Ventilation', 'Whether vents and attic ventilation are included'],
+                ['Permit', 'Who pulls it'],
+                ['Cleanup', 'Site protection, daily cleanup and nail sweeps'],
+                ['Warranty', 'The workmanship warranty, and the manufacturer’s'],
+              ],
+            },
+          },
+          'Our [roof replacement cost](/blog/roof-replacement-cost-los-angeles/) article explains what moves the price and how to read a bid.',
+        ],
+      },
+      {
+        heading: 'Step 4: Permits and Paperwork',
+        blocks: [
+          'A roof replacement usually needs a building permit from your city or county, and the work may be inspected. Ask who pulls it; at QRS, we pull the permits.',
+          'This is also the time to settle how you will pay. Our guide on [how to pay for a new roof](/blog/how-to-pay-for-a-new-roof/) covers savings, financing and insurance, and if storm damage is involved, our guide to [roof insurance claims](/blog/roof-insurance-claims-california/) explains the process.',
+        ],
+      },
+      {
+        heading: 'Step 5: Tear-Off Day',
+        blocks: [
+          'Tear-off is the loudest, messiest day of the job. The landscaping and the sides of the house are covered, the old roofing comes off down to the deck and the debris goes straight into a bin or truck.',
+          {
+            checklist: [
+              'Move cars out of the driveway and away from the walls',
+              'Take pictures and fragile items off the walls inside, since hammering carries',
+              'Cover things stored in the attic',
+              'Keep pets and children inside or away from the work',
+              'Let your neighbors know',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Step 6: When the Deck Is Bad',
+        blocks: [
+          'The deck, the sheathing under the roof, is hidden until the old roof comes off. Soft spots, rot and delaminated sheets show up then, and on older homes, wide planks with gaps between them. New roofing laid over a bad deck doesn’t hold its nails well and can sag.',
+          'Damaged decking should be photographed while it is open, explained and replaced. On a [home in Pico Rivera](/projects/shingle-roof-replacement-solar-pico-rivera-90660/) we covered a gapped plank deck with new sheathing, and on a [building in Westminster](/projects/commercial-flat-roof-replacement-westminster-92683/) new plywood went in where the deck needed it. Ask every bidder how decking is handled and priced.',
+        ],
+      },
+      {
+        heading: 'How Long a Roof Replacement Takes',
+        blocks: [
+          'A typical home roof replacement takes 3 to 5 days. A bigger roof, a tile roof, deck repairs, rain and city inspections can add time. Ask for a schedule up front, and how the roof will be protected if rain is coming.',
+        ],
+      },
+      {
+        heading: 'Step 7: Cleanup and the Final Walkthrough',
+        blocks: [
+          'Cleanup should happen every day, not just at the end, with magnetic sweeps for nails around the house and yard. When the roof is done, walk it with the roofer, or walk the yard and look at the photos of each stage.',
+          {
+            checklist: [
+              'Photos of the deck, underlayment and flashings before they were covered',
+              'No nails or debris in the driveway, yard or gutters',
+              'Vents, pipe boots and flashings finished',
+              'Your warranty paperwork and permit sign-off',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Warranties: Workmanship and Manufacturer',
+        blocks: [
+          'A new roof usually carries two warranties. The roofer’s workmanship warranty covers how the roof was installed; the manufacturer’s warranty covers the materials, and what it covers depends on the product and its warranty tier. Keep both with your home records.',
+          'QRS backs its installs with a 10-year workmanship warranty (call for details).',
+        ],
+      },
+    ],
+    faqs: [
+      { q: 'How long does a roof replacement take?', a: 'A typical home roof replacement takes 3 to 5 days. Size, roof type, deck repairs, weather and inspections can change that.' },
+      { q: 'Who pulls the permit for a roof replacement?', a: 'Usually the roofer. Ask before you sign; at QRS we pull the permits.' },
+      { q: 'What happens if the decking is damaged?', a: 'It is found when the old roof comes off. It should be photographed, explained and replaced before the new roof goes on. Ask each bidder how they handle and price it.' },
+      { q: 'Can a new roof go over the old one?', a: 'Some roofs can take a second layer, but a tear-off down to the deck lets the deck be checked and repaired and gives the new roof a clean base. Our replacements are tear-offs.' },
+      { q: 'What warranty comes with a new roof?', a: 'Usually a workmanship warranty from the roofer and a manufacturer’s warranty on the materials. QRS installs carry a 10-year workmanship warranty (call for details), and manufacturers’ warranties vary by product.' },
+    ],
+    closing: {
+      heading: 'Start With a Roof Evaluation',
+      blocks: [
+        '[Book a free roof evaluation](/contact-us/). A roofer tells you whether a repair is enough or a new roof makes sense, and gives you a written scope and price before any work. See how we run a [roof replacement](/roof-replacement/).',
+      ],
+    },
+    related: ['/roof-replacement/', '/residential-roofing/shingle-roofing/replacement/', '/residential-roofing/tile-roofing/replacement/'],
+  },
   {
     slug: 'most-in-demand-commercial-roofing',
     title: 'What Is the Most In-Demand Type of Commercial Roofing?',
@@ -149,6 +725,7 @@ export const BLOG_POSTS = [
     slug: 'how-to-pay-for-a-new-roof',
     title: 'How to Pay for a New Roof When Money Is Tight',
     keyword: 'pay for a new roof',
+    revision: 1,
     topics: ['replacement', 'repair', 'insurance', 'maintenance'],
     metaTitle: 'How to Pay for a New Roof When Money Is Tight',
     metaDescription:
@@ -263,13 +840,14 @@ export const BLOG_POSTS = [
       blocks: [
         'You can’t plan how to pay for a roof until you know what it needs. Book a [free roof evaluation](#roof-check): you’ll get photos, a plain-English explanation and a clear next step, and if work makes sense, a written scope and price before anything starts. No pressure, no mystery pricing.',
         'Call [(310) 340-1643](tel:+13103401643) (Monday to Friday, 8 am to 6 pm) or [request your free evaluation](#roof-check).',
+        'Part of our [roof replacement guide](/blog/roof-replacement-guide/), from the first inspection to the final walkthrough.',
       ],
     },
     related: ['/roof-financing/', '/roof-repair/', '/roof-inspection/', '/roof-maintenance-plans/'],
   },
   {
     slug: 'shingle-granules-in-gutter',
-    revision: 2, // meta title back to its October 26 wording (owner, October 27 2026: revert after the drop in calls); copies it to the live copy once
+    revision: 3, // meta title back to its October 26 wording (owner, October 27 2026: revert after the drop in calls); copies it to the live copy once
     title: 'Granules in Your Gutter? What’s Normal and When to Call a Roofer',
     keyword: 'granules in your gutter',
     topics: ['shingle', 'maintenance', 'inspection', 'repair', 'replacement'],
@@ -465,6 +1043,7 @@ export const BLOG_POSTS = [
             '[Colorado Roofing Association, “Is It Normal for a New Roof to Lose Granules?”](https://www.coloradoroofing.org/news/granule-loss-on-new-asphalt-roof)',
           ],
         },
+        'Part of our [asphalt shingle roof guide](/blog/asphalt-shingle-roof-guide/) for Southern California homes.',
       ],
     },
     related: ['/residential-roofing/shingle-roofing/', '/roof-inspection/', '/roof-repair/', '/roof-replacement/'],
@@ -481,7 +1060,7 @@ export const BLOG_POSTS = [
     dateModified: '2026-10-16',
     // No prices in this article (owner, October 16 2026): cost is described in general terms. `revision` copies this text over the live
     // copy in Supabase once (lib/postsStore.js applyFileRevisions); raise it after the next change made here.
-    revision: 2,
+    revision: 3,
     excerpt:
       'Asphalt shingles and tile are the two roofs you see most across Los Angeles. Here is how they compare on cost, weight, aging, fire rating and upkeep, and how to tell which one your home is built for.',
     image: '/images/blog/asphalt-shingle-vs-tile-roof.webp',
@@ -584,6 +1163,8 @@ export const BLOG_POSTS = [
       heading: 'Not Sure Which Your Roof Needs?',
       blocks: [
         '[Book a free roof evaluation](/contact-us/). A roofer looks at your roof, explains your options in plain English and gives you a written scope and price before any work.',
+        'Part of our [tile roof guide](/blog/tile-roof-guide-southern-california/), which ties together everything a Southern California tile roof owner needs to know.',
+        'Part of our [asphalt shingle roof guide](/blog/asphalt-shingle-roof-guide/) for Southern California homes.',
       ],
     },
     related: ['/residential-roofing/shingle-roofing/replacement/', '/residential-roofing/tile-roofing/replacement/', '/residential-roofing/tile-roofing/lift-and-relay/'],
@@ -600,7 +1181,7 @@ export const BLOG_POSTS = [
     dateModified: '2026-10-22',
     // No prices in this article (owner, October 22 2026): cost is described in general terms. `revision` copies this text over the live
     // copy in Supabase once (lib/postsStore.js applyFileRevisions); raise it after the next change made here.
-    revision: 1,
+    revision: 2,
     excerpt:
       'When a tile roof leaks, the tiles are often fine and the underlayment beneath them is not. Here is how a lift and relay compares with a new tile roof, and how to tell which one your roof needs.',
     image: '/images/blog/tile-lift-and-relay-vs-new-tile-roof.webp',
@@ -700,6 +1281,7 @@ export const BLOG_POSTS = [
       heading: 'Find Out What Your Tile Roof Needs',
       blocks: [
         '[Book a free roof evaluation](/contact-us/). A roofer checks the underlayment, flashings and tiles, shows you the photos and gives you a written scope and price before any work.',
+        'Part of our [tile roof guide](/blog/tile-roof-guide-southern-california/), which ties together everything a Southern California tile roof owner needs to know.',
       ],
     },
     related: ['/residential-roofing/tile-roofing/lift-and-relay/', '/residential-roofing/tile-roofing/replacement/', '/residential-roofing/tile-roofing/repair/'],
@@ -708,6 +1290,7 @@ export const BLOG_POSTS = [
     slug: 'clay-vs-concrete-tile-roof',
     title: 'Clay vs. Concrete Tile Roofs: How They Differ and Which to Choose',
     keyword: 'clay vs. concrete tile',
+    revision: 1,
     topics: ['tile', 'replacement', 'underlayment', 'repair'],
     metaTitle: 'Clay vs. Concrete Tile Roofs: Key Differences',
     metaDescription:
@@ -813,6 +1396,7 @@ export const BLOG_POSTS = [
       heading: 'Get Your Tile Roof Checked',
       blocks: [
         '[Book a free roof evaluation](/contact-us/). A roofer identifies your tile, checks it and the underlayment, and gives you a written scope and price before any work.',
+        'Part of our [tile roof guide](/blog/tile-roof-guide-southern-california/), which ties together everything a Southern California tile roof owner needs to know.',
       ],
     },
     related: ['/residential-roofing/tile-roofing/', '/residential-roofing/tile-roofing/concrete/', '/residential-roofing/tile-roofing/lift-and-relay/'],
@@ -829,7 +1413,7 @@ export const BLOG_POSTS = [
     dateModified: '2026-10-22',
     // No prices in this article (owner, October 22 2026): cost is described in general terms. `revision` copies this text over the live
     // copy in Supabase once (lib/postsStore.js applyFileRevisions); raise it after the next change made here.
-    revision: 1,
+    revision: 2,
     excerpt:
       'Standing seam metal is showing up on more Los Angeles homes. Here is how it compares with asphalt shingles on cost, weight, fire, heat, noise and repairs, and when it is worth it.',
     image: '/images/blog/metal-roof-vs-shingles.webp',
@@ -926,6 +1510,7 @@ export const BLOG_POSTS = [
       heading: 'Talk Through Your Options',
       blocks: [
         '[Book a free roof evaluation](/contact-us/). A roofer looks at your roof, slope and exposure and gives you a written scope and price for the roof you choose.',
+        'Part of our [asphalt shingle roof guide](/blog/asphalt-shingle-roof-guide/) for Southern California homes.',
       ],
     },
     related: ['/residential-roofing/metal-roofing/', '/residential-roofing/metal-roofing/standing-seam/', '/residential-roofing/shingle-roofing/replacement/'],
@@ -934,6 +1519,7 @@ export const BLOG_POSTS = [
     slug: 'architectural-vs-3-tab-shingles',
     title: 'Architectural vs. 3-Tab Shingles: The Difference and Which to Choose',
     keyword: 'architectural vs. 3-tab shingles',
+    revision: 1,
     topics: ['shingle', 'replacement', 'repair', 'storm'],
     metaTitle: 'Architectural vs. 3-Tab Shingles: Which to Choose',
     metaDescription:
@@ -1020,6 +1606,7 @@ export const BLOG_POSTS = [
       heading: 'Planning a New Shingle Roof?',
       blocks: [
         '[Book a free roof evaluation](/contact-us/). A roofer checks your roof, helps you choose the shingle style and color and gives you a written scope and price before any work.',
+        'Part of our [asphalt shingle roof guide](/blog/asphalt-shingle-roof-guide/) for Southern California homes.',
       ],
     },
     related: ['/residential-roofing/shingle-roofing/replacement/', '/residential-roofing/shingle-roofing/repair/', '/residential-roofing/shingle-roofing/'],
@@ -1037,7 +1624,7 @@ export const BLOG_POSTS = [
     // No prices in this article (owner, October 22 2026): cost is described in general terms, as in the shingle vs. tile article; the exact
     // figure comes from the free roof evaluation. `revision` copies this text over the live copy in Supabase once (lib/postsStore.js
     // applyFileRevisions); raise it after the next change made here.
-    revision: 4, // meta title back to its October 26 wording (owner, October 27 2026: revert after the drop in calls); copies it to the live copy once
+    revision: 5, // meta title back to its October 26 wording (owner, October 27 2026: revert after the drop in calls); copies it to the live copy once
     excerpt:
       'What shapes the cost of a new roof in Los Angeles: how each roof type compares, how roofers measure a roof, what moves the price and how to compare bids line by line.',
     cardImage: '/images/shingle-roof-replacement-tear-off-drone-view.webp',
@@ -1157,6 +1744,7 @@ export const BLOG_POSTS = [
       heading: 'Get a Price for Your Roof',
       blocks: [
         'For a quick range, the Instant Quote measures your roof from satellite imagery in about a minute. For a firm price, [book a free roof evaluation](/contact-us/): a roofer looks at your roof and gives you a written scope and price before any work.',
+        'Part of our [roof replacement guide](/blog/roof-replacement-guide/), from the first inspection to the final walkthrough.',
       ],
     },
     related: ['/roof-replacement/', '/residential-roofing/tile-roofing/lift-and-relay/', '/roof-financing/'],
@@ -1164,7 +1752,7 @@ export const BLOG_POSTS = [
   {
     slug: 'torch-down-roofing-app-vs-sbs',
     // Search Console FAQ additions (owner, October 26 2026); `revision` copies this text over the live copy once
-    revision: 1,
+    revision: 2,
     title: 'Torch-Down Roofing: APP vs. SBS Modified Bitumen for Flat Roofs',
     keyword: 'torch-down roofing',
     topics: ['flat', 'replacement', 'repair', 'commercial'],
@@ -1276,6 +1864,7 @@ export const BLOG_POSTS = [
       heading: 'Get Your Flat Roof Checked',
       blocks: [
         'QRS installs and repairs torch-down flat roofs on homes and commercial buildings across Los Angeles and Orange County. [Book a free roof evaluation](/contact-us/) for a home, and you get a written scope and price before any work.',
+        'Part of our guide to [flat roofs in Los Angeles](/blog/flat-roofs-los-angeles-guide/): systems, drainage and what shortens a flat roof’s life.',
       ],
     },
     related: ['/residential-roofing/flat-roofing/replacement/', '/residential-roofing/flat-roofing/repair/', '/commercial-roofing/tpo-roofing/'],
@@ -1284,6 +1873,7 @@ export const BLOG_POSTS = [
     slug: 'cool-roof-southern-california',
     title: 'Cool Roofs in Southern California: What They Are and When You Need One',
     keyword: 'cool roof',
+    revision: 1,
     topics: ['flat', 'replacement', 'ventilation', 'commercial'],
     metaTitle: 'Cool Roofs in Southern California: Homeowner Guide',
     metaDescription:
@@ -1373,6 +1963,7 @@ export const BLOG_POSTS = [
       heading: 'Talk to a Roofer About Your Roof',
       blocks: [
         'Thinking about a new roof? [Book a free roof evaluation](/contact-us/). A roofer looks at your roof and gives you a written scope and price, with the materials named, before any work.',
+        'Part of our guide to [flat roofs in Los Angeles](/blog/flat-roofs-los-angeles-guide/): systems, drainage and what shortens a flat roof’s life.',
       ],
     },
     related: ['/residential-roofing/flat-roofing/', '/commercial-roofing/tpo-roofing/', '/residential-roofing/attic-ventilation/'],
@@ -2398,7 +2989,7 @@ export const BLOG_POSTS = [
   {
     slug: 'roof-restoration-vs-replacement',
     // Search Console FAQ additions (owner, October 26 2026); `revision` copies this text over the live copy once
-    revision: 1,
+    revision: 2,
     title: 'Roof Restoration vs. Replacement: Which Does Your Roof Need?',
     keyword: 'roof restoration',
     topics: ['replacement', 'restoration', 'repair', 'tile', 'flat', 'maintenance'],
@@ -2537,6 +3128,7 @@ export const BLOG_POSTS = [
         'Quality Roofing Specialists provides [roof repair](/roof-repair/), [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/), [roof maintenance plans](/roof-maintenance-plans/) and [roof replacement](/roof-replacement/) for homes across Los Angeles and Orange County.',
         'To find out whether your roof can be restored or needs replacing, schedule a [free roof evaluation](#roof-check) and get photos and a clear next step.',
         '**[Contact Quality Roofing Specialists](/contact-us/) to talk through your roof.**',
+        'Part of our [roof replacement guide](/blog/roof-replacement-guide/), from the first inspection to the final walkthrough.',
       ],
     },
     related: ['/roof-repair/', '/roof-replacement/', '/roof-maintenance-plans/', '/residential-roofing/tile-roofing/lift-and-relay/', '/roof-inspection/'],
@@ -3112,6 +3704,7 @@ export const BLOG_POSTS = [
     slug: 'tile-roof-underlayment',
     title: 'Tile Roof Underlayment: When Should It Be Replaced?',
     keyword: 'tile roof underlayment',
+    revision: 1,
     topics: ['tile', 'underlayment', 'repair', 'replacement', 'leak'],
     metaTitle: 'Tile Roof Underlayment: When to Replace It',
     metaDescription:
@@ -3364,6 +3957,7 @@ export const BLOG_POSTS = [
         `Quality Roofing Specialists provides roofing services for residential properties in the Los Angeles area, including [roof inspections](/roof-inspection/), [tile roof repairs](${TILE}repair/), and [roof replacement](${TILE}replacement/).`,
         'If you are unsure about the condition of the waterproofing beneath your tiles, schedule a [free roof evaluation](#roof-check) to determine whether maintenance, targeted repairs, or underlayment replacement is appropriate.',
         '**[Contact Quality Roofing Specialists](/contact-us/) to discuss your tile roof and plan the next steps for protecting your home.**',
+        'Part of our [tile roof guide](/blog/tile-roof-guide-southern-california/), which ties together everything a Southern California tile roof owner needs to know.',
       ],
     },
     related: [`${TILE}lift-and-relay/`, `${TILE}repair/`, `${TILE}replacement/`, '/roof-inspection/'],
