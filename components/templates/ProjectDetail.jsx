@@ -1,3 +1,4 @@
+import ProofBar from '@/components/sections/ProofBar';
 import Image from 'next/image';
 import Breadcrumbs from '@/components/sections/Breadcrumbs';
 import FinalCta from '@/components/sections/FinalCta';
@@ -94,6 +95,7 @@ export default function ProjectDetail({ page }) {
           </div>
         </div>
       </section>
+      <ProofBar strip />
 
       <section className="pd-intro">
         <div className="container pd-intro-grid">

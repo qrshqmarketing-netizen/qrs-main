@@ -1,3 +1,4 @@
+import ProofBar from './ProofBar';
 import HandUnderline from '@/components/ui/HandUnderline';
 import Rich from '@/components/ui/Rich';
 import QuoteTrigger from '@/components/ui/QuoteTrigger';
@@ -134,6 +135,8 @@ export default function Hero({
           {aside}
         </div>
       </section>
+      {/* The proof points as a marquee right under every hero (owner, October 28 2026: moved here from above the header) */}
+      <ProofBar strip />
     </>
   );
 }

@@ -8,6 +8,7 @@ import RoofCheck from '@/components/sections/RoofCheck';
 import ServiceArea from '@/components/sections/ServiceArea';
 import StudioHero from '@/components/studio/StudioHero';
 import PromoCard from '@/components/widgets/PromoCard';
+import ProofBar from '@/components/sections/ProofBar';
 import { SEASON_PROMO as promo } from '@/data/promo';
 import StudioIntro from '@/components/studio/StudioIntro';
 import StudioHowWeWork from '@/components/studio/StudioHowWeWork';
@@ -101,6 +102,7 @@ export default async function HomePage() {
         ) : (
           <StudioHero slides={HERO_SLIDES} />
         )}
+        <ProofBar strip />
         <StudioIntro />
         <StudioServices categories={SERVICE_CATEGORIES} items={HOME_PRODUCTS} />
         {/* The home page's story (owner, October 15 2026, after maben.com.au): the belief statement (StudioIntro), the services, then "How we work"
