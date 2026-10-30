@@ -88,9 +88,8 @@ export const POST_VISUALS = {
     'Mistakes That Make a Leak Worse': { list: 'flags' },
   },
   'roof-insurance-claims-california': {
-    'What Homeowners Insurance Usually Covers': { list: 'facts' },
-    'Filing a Roof Damage Insurance Claim: What to Do First': { steps: 'timeline' },
-    'The Roof Insurance Claim Process: What to Expect': { list: 'facts-numbered' },
+    'How to File a Roof Insurance Claim in California, Step by Step': { steps: 'timeline' },
+    'The Adjuster Visit: What to Expect': { list: 'facts' },
     'Common Mistakes With Roof Insurance Claims': { list: 'flags' },
   },
   'wooden-roof-pros-and-cons': {

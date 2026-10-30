@@ -4247,77 +4247,155 @@ export const BLOG_POSTS = [
   },
   {
     slug: 'roof-insurance-claims-california',
-    // Search Console wording (owner, October 23 2026): "roof insurance claim help", "roof insurance claim process", "roof damage insurance claim",
-    // "roofing insurance claim", "roof claim". `revision` copies this text over the live copy in Supabase once (lib/postsStore.js applyFileRevisions).
-    revision: 6, // meta title back to its October 26 wording (owner, October 27 2026: revert after the drop in calls); copies it to the live copy once
-    title: 'Roof Insurance Claims in California: Help, the Process and What to Document',
-    keyword: 'roof insurance claims',
-    topics: ['insurance', 'storm', 'emergency', 'repair', 'replacement'],
-    metaTitle: 'Roof Insurance Claims in California: Help and the Process',
+    // Rewritten from the owner's team's draft "How to File a Roof Insurance Claim in California" (October 30 2026), at the same address so the
+    // article keeps its rankings and links. `revision` copies this text over the live copy in Supabase once (lib/postsStore.js applyFileRevisions).
+    // Left out of the draft: its byline (every article is by Tony G.), its publishing notes and the signing place of AB 1795 (the Department of
+    // Insurance's release doesn't give it); "we work with adjusters regularly" follows the owner's own wording (we help where we can).
+    revision: 7,
+    revisionImage: true, // the new thumbnail goes to the live copy with this revision
+    title: 'How to File a Roof Insurance Claim in California: Step-by-Step (and When to Bring in a Roofer)',
+    keyword: 'roof insurance claim',
+    topics: ['insurance', 'storm', 'emergency', 'repair', 'replacement', 'tile'],
+    metaTitle: 'How to File a Roof Insurance Claim in California',
     metaDescription:
-      'Roof insurance claims in California: the roof insurance claim process, what to document after roof damage and the claim help a roofer can give you.',
+      'How to file a roof insurance claim in California: what to document, insurer deadlines, the adjuster visit, what’s covered and new rules for fire-area homes.',
     datePublished: '2026-10-05',
-    dateModified: '2026-10-23',
+    dateModified: '2026-10-30',
     excerpt:
-      'Roof insurance claims go more smoothly when you document the damage, protect the roof from more harm and get a written repair scope. Here is the roof insurance claim process, what insurers usually cover and the help a roofer can give.',
-    image: '/images/blog/roof-insurance-claims-california-photo-documentation.webp',
-    imageAlt: 'A roofer in a navy cap on a ladder photographing storm-damaged shingles and exposed roof decking with a tablet, to document the damage',
+      'To file a roof insurance claim in California, make the roof safe, photograph the damage, report the loss promptly, get a roofer’s written inspection report and meet the adjuster with it. Here is each step, the deadlines insurers must meet and when to bring in a roofer.',
+    image: '/images/blog/how-to-file-roof-insurance-claim-california.webp',
+    imageAlt: 'A hand filling in a California homeowners insurance claim form on a clipboard resting on a clay tile roof, beside the title How to File a Roof Claim in CA',
     intro: [
-      'Roof insurance claims go more smoothly when you document the damage well, act quickly to prevent more, and get a clear written scope of the repair.',
-      'Whether a claim is approved depends on your policy and on what caused the damage, and your insurer makes that decision. What you control is how well the damage is documented and how quickly the roof is protected.',
-      'This guide explains what homeowners insurance usually covers, the first steps of a roof damage insurance claim, the roof insurance claim help a roofer can and cannot give, and what to expect from the roof insurance claim process in California.',
+      'To file a roof insurance claim in California, make the roof safe, photograph the damage, report the loss to your insurer promptly, get a roofer’s written inspection report, and meet the adjuster with that report in hand. Your insurer decides whether the claim is paid. What you control is how well the damage is documented and how quickly the roof is protected.',
+      'This guide covers what homeowners insurance usually pays for, each step of a roof claim, the deadlines California insurers must meet, what happens at the adjuster visit, and how we can help as your roofer. Altadena and other fire-area homeowners will find a section of their own near the end.',
+      '*This is general information, not legal or insurance advice. Policies differ, so read yours or ask your agent.*',
     ],
     sections: [
       {
-        heading: 'What Homeowners Insurance Usually Covers',
+        heading: 'Does Insurance Cover Roof Replacement in California?',
         blocks: [
-          'Policies differ, so read yours or ask your agent. In general:',
+          'Insurance can cover a roof replacement when the damage came from a sudden, covered event and your policy’s terms allow it. It generally won’t pay to replace a roof that is simply old or worn out.',
           {
-            list: [
-              '**Usually covered:** sudden, accidental damage, such as wind, a fallen tree limb or fire.',
-              '**Usually not covered:** wear and tear, age and damage from poor maintenance.',
-              '**Earthquake damage:** In California, a standard homeowners policy generally does not cover earthquake damage. That takes separate earthquake coverage.',
-            ],
+            table: {
+              head: ['Usually covered', 'Usually not covered'],
+              rows: [
+                ['Wind damage, such as lifted or torn-off shingles and tiles', 'Normal wear and tear and age'],
+                ['A fallen tree or limb', 'Damage from skipped maintenance'],
+                ['Fire, smoke and heat damage', 'Slow leaks that went unrepaired'],
+                ['Hail and other sudden storm damage', 'Earthquake damage, unless you carry separate earthquake coverage'],
+              ],
+            },
           },
-          'A roof’s age can also affect how a claim is paid, because policies treat older roofs differently. Check your policy’s terms for deductibles and for how roof damage is valued.',
+          'The line between sudden damage and wear is where most roof claims are won or lost. A tile roof whose [underlayment](/blog/tile-roof-underlayment/) has been failing for years, for example, may leak after the first big storm, but the insurer may decide the cause was age rather than the storm. That’s why a written report on the cause of the damage matters so much, and why an old tile roof often needs a [tile lift and relay](/residential-roofing/tile-roofing/lift-and-relay/) whatever the claim decides.',
+          'A roof’s age can also change how a claim is paid. Some policies pay replacement cost, while others pay actual cash value, which subtracts depreciation for an older roof. Check your declarations page for your deductible and how roof damage is valued.',
         ],
       },
       {
-        heading: 'Filing a Roof Damage Insurance Claim: What to Do First',
+        heading: 'How to File a Roof Insurance Claim in California, Step by Step',
         blocks: [
-          'Whether it’s a small roof claim or a large one, these steps protect both your home and your claim:',
+          'These steps work for storm, wind, tree and fire damage, and for small claims and large ones.',
           {
             steps: [
-              'Stay safe. Do not climb onto a damaged roof, and keep away from fallen power lines and from water near light fixtures.',
-              'Photograph everything. Take wide and close-up photos, with the date, from the ground and inside the house, before anything is moved or cleaned up.',
-              'Prevent further damage. Cover the damage or have a roofer put temporary protection in place, and keep every receipt. See our guide to [temporary roof repair options](/blog/temporary-roof-repair-options/).',
-              'Contact your insurer promptly. Policies have deadlines for reporting a loss, so do not wait.',
-              'Get a roofer’s inspection and a written scope. A roofer can find the cause, photograph it and put the repair, with a price, in writing.',
-              'Keep damaged materials until the adjuster has seen them, if it is safe to do so.',
+              'Stay safe. Don’t climb onto a damaged roof. Keep away from fallen power lines and from water near light fixtures.',
+              'Photograph everything before anything is moved. Take wide and close-up photos and video from the ground, inside the house and in the attic if you can reach it safely. Capture ceiling stains, wet insulation, debris in the yard and any broken tiles or shingles.',
+              'Prevent further damage. Have a roofer tarp or temporarily seal the roof, and keep every receipt. Most policies expect you to take reasonable steps to stop the damage from getting worse. See our guide to [temporary roof repair options](/blog/temporary-roof-repair-options/), or call us for [emergency roof repair](/roof-repair/emergency/).',
+              'Report the loss promptly. Call your insurer or agent, or file online. Write down your claim number, the date you reported it, and the name and contact details of your assigned adjuster.',
+              'Get a roofer’s inspection and written scope. A licensed roofer can identify the cause, document it with photos and put the repair and its price in writing.',
+              'Keep damaged materials. If it’s safe, hold on to broken tiles, torn shingles and wet underlayment until the adjuster has seen them.',
+              'Meet the adjuster. Walk them through your photos and share your roofer’s report. Ask whether your roofer can be on site for the visit.',
+              'Review the estimate. Compare the insurer’s estimate with your roofer’s scope line by line. If something is missing, ask in writing and send supporting documentation.',
+              'Keep a claim file. Save every email, letter, photo, receipt and note of each phone call, with the date and the name of the person you spoke to.',
             ],
           },
+          { pov: 'Photograph first, protect second, report third, and do all three the same day if you can. We see more trouble from damage that was cleaned up or left uncovered for a week than from anything an adjuster says. A tarp and a camera roll protect both your home and your claim.' },
         ],
       },
       {
-        heading: 'Roof Insurance Claim Help: What a Roofer Can and Cannot Do',
+        heading: 'California Claim Timelines: What Your Insurer Must Do and When',
         blocks: [
-          'A roofer can inspect the roof, photograph the damage, explain the cause in plain English and give you a written scope and price. Those are the documents an adjuster needs to see.',
-          'That is the kind of roofing insurance claim help a contractor can honestly give. At Quality Roofing Specialists we work with insurance adjusters, and we can give you photos and a written scope to share with yours. Our team is small, so we do what we can to help.',
-          'A roofing contractor cannot file or negotiate the claim for you. That is between you and your insurer, or a licensed public adjuster if you choose to hire one. Be careful with anyone who promises that insurance will pay for your roof.',
+          'California’s Fair Claims Settlement Practices Regulations set deadlines insurers must meet. The main ones for a roof claim:',
+          {
+            table: {
+              head: ['Deadline', 'What the insurer must do'],
+              rows: [
+                ['15 days after you report the claim', 'Acknowledge it, send any forms you need, and begin investigating'],
+                ['15 days after you write or call', 'Respond to your questions and communications'],
+                ['40 days after receiving proof of claim', 'Accept or deny the claim, in whole or in part, and explain any denial in writing'],
+                ['30 days after accepting the claim', 'Pay the undisputed amount'],
+                ['60 days before a deadline that affects your rights', 'Notify you in writing of time limits to collect more benefits or file suit'],
+              ],
+            },
+          },
+          'The 40-day clock starts when the insurer receives your proof of claim, not when the damage happened. That’s one more reason to send documentation early and keep a record of what you sent and when.',
+          'If your insurer misses these deadlines or you have a problem with your claim, you can contact the [California Department of Insurance](https://www.insurance.ca.gov/) for help or file a complaint. Your policy also sets its own deadline for reporting a loss, so report damage promptly rather than waiting.',
+          'Sources: [United Policyholders, Insurance Claim Rules in California](https://uphelp.org/claim-guidance-publications/insurance-claim-rules-in-california-2020/); [California Department of Insurance](https://www.insurance.ca.gov/).',
         ],
       },
       {
-        heading: 'The Roof Insurance Claim Process: What to Expect',
+        heading: 'The Adjuster Visit: What to Expect',
         blocks: [
-          'After you report the loss, your insurer will usually send an adjuster to inspect the damage and prepare an estimate.',
+          'After you report the loss, your insurer usually sends an adjuster to inspect the damage and write an estimate. Depending on the roof’s pitch and condition, the adjuster may inspect from the roof itself, from a ladder or by drone.',
           {
             list: [
-              '**The adjuster’s visit:** Show them the photos and the damage, and share your roofer’s written scope.',
-              '**The estimate:** The insurer’s estimate may differ from your roofer’s. You can ask questions and provide your own documentation.',
-              '**The payment:** Your policy determines how the payment is calculated, including your deductible.',
-              '**The timeline:** California rules set deadlines for insurers to respond to claims. The [California Department of Insurance](https://www.insurance.ca.gov/) can explain them and how to get help if you have a problem.',
+              '**Have your file ready:** your photos, the date of the storm or event, receipts for emergency repairs and your roofer’s written report.',
+              '**Show the inside, too:** point out ceiling stains, wet insulation and attic damage, which an adjuster focused on the roof can miss.',
+              '**Ask if your roofer can attend:** a roofer on site can point out damage the adjuster might not see from a ladder, such as cracked tiles under the top row or torn underlayment.',
+              '**Ask questions in writing afterward:** if the estimate leaves out items, ask why and send your roofer’s documentation.',
             ],
           },
+          'The insurer’s estimate may differ from your roofer’s. That’s normal, and it’s often a matter of scope, such as whether damaged tiles can be matched or whether the underlayment beneath them must be replaced too. Your policy decides how the payment is calculated, including your deductible and any depreciation.',
+        ],
+      },
+      {
+        heading: 'When to Bring In a Roofer, and How an Inspection Report Helps',
+        blocks: [
+          'Bring in a roofer as soon as the roof is safe to inspect, ideally before the adjuster visits. A licensed roofer’s written report gives the adjuster evidence they can act on. A good inspection report includes:',
+          {
+            list: [
+              'Dated photos of the damage, close-up and wide',
+              'The likely cause, explained in plain English, such as wind uplift, impact from a branch or heat damage',
+              'Measurements of the affected area',
+              'A written scope of the repair or replacement, with a price',
+              'Notes on anything hidden, such as damaged underlayment, decking or flashing',
+            ],
+          },
+          'That report helps answer the question most roof claims turn on: was this sudden damage, or wear and tear? It is what our [roof inspection](/roof-inspection/) gives you: photos of what we find, the cause in plain English and a written scope and price.',
+          { h3: 'What a Roofer Can and Cannot Do' },
+          'A roofer can inspect the roof, document the damage, explain the cause and give you a written scope and price to share with your adjuster. At Quality Roofing Specialists we work with insurance adjusters, and we can give you that documentation; our team is small, so we help where we can.',
+          'A roofing contractor cannot file or negotiate your claim for you. That is between you and your insurer, or a licensed public adjuster if you choose to hire one. Be wary of anyone who knocks on your door after a storm and promises insurance will pay for a new roof.',
+          { pov: 'Call a roofer before the adjuster comes, not after the estimate arrives. When the cause is written down with dated photos before the visit, the conversation is about the damage, not about whether it was there. We would rather tell you honestly that a roof is simply worn out than help build a claim it can’t support.' },
+        ],
+      },
+      {
+        heading: 'Altadena and Fire-Area Homeowners: What’s Different',
+        blocks: [
+          'If your home survived the Eaton fire or another wildfire, your roof may still be damaged in ways you can’t see from the ground. Smoke, ash and radiant heat can affect roofing even when there are no flames on the house.',
+          'What to have a roofer check on a fire-area roof:',
+          {
+            list: [
+              'Cracked or heat-stressed clay and concrete tiles',
+              'Warped or discolored metal flashing, vents and gutters',
+              'Melted or brittle underlayment, especially near ridges and vents',
+              'Ember entry points at vents, eaves and gaps under tiles',
+              'Ash and debris packed into valleys, gutters and under tile rows',
+            ],
+          },
+          'Don’t power-wash ash off the roof yourself. Ash from burned structures can contain hazardous materials, and cleaning it away before it’s documented can remove evidence of damage. Photograph it first, and let your insurer know before cleanup. We work in Altadena’s neighbor [Pasadena](/service-areas/la-county/pasadena/) and across [Los Angeles County](/service-areas/la-county/).',
+          { h3: 'New California Rules on Smoke Damage Claims' },
+          'In September 2026, Governor Newsom signed [AB 1795, the Smoke Damage Recovery Act](https://www.insurance.ca.gov/0400-news/0100-press-releases/2026/release031-2026.cfm). According to the California Department of Insurance, the law:',
+          {
+            list: [
+              'Presumes smoke damage within a wildfire impact zone was caused by the wildfire',
+              'Requires insurers to pay for necessary testing and sampling',
+              'Prevents insurers from ending Additional Living Expense benefits until qualifying homes are restored and safe to occupy',
+              'Sets timelines for inspections and claim handling',
+              'Preserves your right to choose your own restoration contractors',
+              'Requires training for adjusters who handle smoke damage claims',
+            ],
+          },
+          'The law [takes effect January 1, 2027](https://beinsure.com/news/california-sets-wildfire-smoke-damage-rules-for-home-insurers/), and several technical standards will be developed over the following years. Ask your insurer or the Department of Insurance how it applies to your open claim.',
+          'Other special rules can also apply after a declared state of emergency, including extra time to collect your full replacement cost benefits. [United Policyholders](https://uphelp.org/claim-guidance-publications/insurance-claim-rules-in-california-2020/) publishes free guidance for wildfire survivors.',
+          { pov: 'On a roof that came through a fire, look before you wash. Heat damage to tile, flashing and underlayment is easy to miss from the ground and easy to wash away with the ash. Document it first; the cleanup can wait a day.' },
         ],
       },
       {
@@ -4332,54 +4410,62 @@ export const BLOG_POSTS = [
               '**Hiring anyone who goes door to door after a storm and promises the claim will be approved.**',
             ],
           },
-          'For help recognizing damage in the first place, see our guide to [roof storm damage signs](/blog/roof-storm-damage-signs/).',
+          'For help recognizing damage in the first place, see our guide to [roof storm damage signs](/blog/roof-storm-damage-signs/), and if water is already coming in, [how to find the source of a roof leak](/blog/roof-leak-source/).',
         ],
       },
     ],
     faqs: [
       {
+        q: 'How do I file a claim for roof damage?',
+        a: 'Make the roof safe, photograph the damage, and report the loss to your insurer by phone, online or through your agent. Get a roofer’s written inspection report, then meet the adjuster and compare their estimate with your roofer’s scope. Keep a record of every document and conversation.',
+      },
+      {
+        q: 'How do I file an insurance claim for storm roof damage in California?',
+        a: 'The steps are the same as any roof claim, but act quickly. Note the date of the storm, photograph damage before cleanup, and have a roofer tarp the roof to prevent more water damage. California insurers must acknowledge your claim within 15 days and accept or deny it within 40 days of receiving proof of claim.',
+      },
+      {
+        q: 'Does insurance cover roof replacement in California?',
+        a: 'It can, if a covered event such as wind, a fallen tree or fire damaged the roof and your policy’s terms allow replacement. Insurance generally won’t pay to replace a roof that is simply old or worn out. Your insurer decides, based on your policy and the cause of the damage.',
+      },
+      {
         q: 'Does homeowners insurance cover a leaking roof?',
-        a: 'It depends on why it leaks. A leak caused by a sudden, covered event, such as wind or a fallen branch, is often covered under the terms of your policy. A leak from age, wear or skipped maintenance usually isn’t. Your insurer decides, so check your policy, and get the roof photographed and the cause written down before anything is repaired.',
-      },
-      {
-        q: 'Do I need an insurance-approved roofer?',
-        a: 'Ask your insurer whether your policy has any rules about contractors. Whoever you hire should hold an active California contractor license, carry insurance and give you photos and a written scope and price you can share with your adjuster.',
-      },
-      {
-        q: 'Does homeowners insurance cover a roof replacement?',
-        a: 'It can, if the damage came from a covered event such as wind, and your policy’s terms allow it. Roofs that are simply old or worn are generally not covered. Your insurer decides, so ask them and read your policy.',
-      },
-      {
-        q: 'Does insurance cover earthquake damage to a roof in California?',
-        a: 'A standard homeowners policy generally does not. Earthquake damage usually requires separate earthquake coverage, so check what you have.',
+        a: 'It depends on why it leaks. A leak caused by a sudden, covered event is often covered. A leak from age, wear or skipped maintenance usually isn’t. Get the cause documented in writing before anything is repaired.',
       },
       {
         q: 'How long do I have to file a roof insurance claim?',
-        a: 'Policies set deadlines for reporting a loss, and they differ. Report the damage promptly and check your policy or ask your agent.',
+        a: 'Your policy sets the deadline for reporting a loss, and policies differ. Report damage as soon as you can. Waiting can also let damage spread, which makes it harder to show what the original event caused.',
       },
       {
-        q: 'Will filing a claim raise my insurance rates?',
-        a: 'It can, depending on your insurer and your claim history. Ask your agent before you file if you are unsure whether to.',
+        q: 'Do I need an insurance-approved roofer?',
+        a: 'Ask your insurer whether your policy has any rules about contractors. Whoever you hire should hold an active California contractor license, carry insurance, and give you photos and a written scope you can share with your adjuster. You can check any contractor’s license on the [Contractors State License Board](https://www.cslb.ca.gov/) website; ours is on our [credentials](/credentials/) page.',
+      },
+      {
+        q: 'Can a roofer handle my insurance claim for me?',
+        a: 'No. A roofing contractor can inspect, document and give you a written scope and price, but cannot file or negotiate the claim for you. For full claim representation, you can hire a licensed public adjuster, who charges a fee.',
       },
       {
         q: 'Where can I get help with a roof insurance claim?',
         a: 'Your insurer and your agent explain your policy, and the [California Department of Insurance](https://www.insurance.ca.gov/) can help if you have a problem with a claim. A licensed public adjuster can handle the claim for you, for a fee. A roofer helps with the evidence: photos of the damage, the cause in plain English and a written scope and price for your adjuster.',
       },
       {
-        q: 'What are the steps of the roof insurance claim process?',
-        a: 'Stay safe and photograph the damage, protect the roof from further harm, report the loss to your insurer promptly, get a roofer’s inspection and written scope, then meet the adjuster and compare their estimate with your roofer’s. Your policy decides how the payment is calculated.',
+        q: 'Will filing a roof claim raise my insurance rates?',
+        a: 'It can, depending on your insurer and your claim history. Ask your agent before filing if you’re unsure.',
       },
       {
-        q: 'Can Quality Roofing Specialists handle my claim for me?',
-        a: 'No contractor can file or negotiate a claim for you. We can inspect the roof, take photos and give you a written scope and price to share with your adjuster. Start with a [free roof evaluation](#roof-check).',
+        q: 'Does insurance cover earthquake damage to a roof in California?',
+        a: 'A standard homeowners policy generally does not. Earthquake damage usually requires separate earthquake coverage.',
+      },
+      {
+        q: 'What if my insurer denies my roof claim?',
+        a: 'Ask for the denial and its reasons in writing. You can send more documentation, ask for a re-inspection, request a copy of your claim file, or contact the [California Department of Insurance](https://www.insurance.ca.gov/) for help.',
       },
     ],
     closing: {
       heading: 'Document First, Then Repair',
       blocks: [
-        'A good record of the damage and a clear written scope make roof insurance claims easier for everyone involved.',
-        'Quality Roofing Specialists provides [emergency roof repair](/roof-repair/emergency/), [roof repair](/roof-repair/) and [roof inspections](/roof-inspection/) for homes across Los Angeles and Orange County, with photos of what we find.',
-        'If your roof has been damaged, schedule a [free roof evaluation](#roof-check) and a roofer will photograph the damage and explain your next step.',
+        'A thorough record of the damage and a clear written scope make roof insurance claims easier for everyone involved.',
+        'Quality Roofing Specialists provides [emergency roof repair](/roof-repair/emergency/), [roof repair](/roof-repair/), [roof replacement](/roof-replacement/) and [roof inspections](/roof-inspection/) for homes across Los Angeles and Orange County, including Pasadena and its neighbors. If your roof has been damaged, schedule a [free roof evaluation](#roof-check): a roofer will photograph the damage, explain the likely cause and give you a written scope to share with your adjuster.',
+        '*This article is general information, not legal or insurance advice. Your policy and your insurer determine what is covered.*',
         '**[Contact Quality Roofing Specialists](/contact-us/) to get your roof inspected.**',
       ],
     },

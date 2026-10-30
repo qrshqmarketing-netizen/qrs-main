@@ -59,7 +59,7 @@ export const EMERGENCY_ROOF_REPAIR = {
     },
     {
       q: 'Do you work with my insurance company or adjuster?',
-      a: 'Yes, as our schedule allows. Our team is small, so we can’t always be there when the adjuster visits, but we’ll help you where we can. Our photos and written scope can be shared with your insurance company, and they show what we found on your roof and exactly what the permanent repair includes, in plain English.',
+      a: 'Yes, as our schedule allows. Our team is small, so we can’t always be there when the adjuster visits, but we’ll help you where we can. Our photos and written scope can be shared with your insurance company, and they show what we found on your roof and exactly what the permanent repair includes, in plain English. Our guide on [how to file a roof insurance claim in California](/blog/roof-insurance-claims-california/) walks through each step.',
     },
     {
       q: 'What if a leak starts without a storm?',
