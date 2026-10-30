@@ -113,10 +113,13 @@ export const GOOGLE_ADS_ID = 'AW-778824076';
 // words theirs: both counties in the title, description and H1. The H1 (HOME_H1) uses the same phrase; the brand name is in the description.
 export const GOOGLE_REVIEWS = { count: 269, asOf: '2026-10-15' };
 // Home title and description: the October 16 wording again (owner, October 23 2026: "restore the meta data")
-export const HOME_TITLE = 'Roofing Contractor in Los Angeles & Orange County, CA';
+// "Roofer" searches (owner, October 30 2026, from Search Console, last 28 days: "roofer los angeles" 179 impressions at 12, "roofers los angeles"
+// 164 at 17, "roofers in los angeles" 145 at 18, "roofer in los angeles" 140 at 11, plus licensed / best / quality roofers): the title leads with
+// "Roofers in Los Angeles" and keeps "Roofing Contractor" (the home keyword) and both counties. 59 characters, no brand suffix.
+export const HOME_TITLE = 'Roofers in Los Angeles & Orange County | Roofing Contractor';
 export const HOME_H1 = 'Roofing Contractor in Los Angeles & Orange County';
-export const HOME_DESCRIPTION =
-  'Quality Roofing Specialists: roofing contractor in Los Angeles & Orange County. Repair, replacement, free roof evaluation, 10-year warranty: call for details.';
+// "Licensed roofers" for those searches; the review count answers the "best roofers" ones without claiming "best". 149 characters.
+export const HOME_DESCRIPTION = `Licensed roofers in Los Angeles & Orange County: QRS is a family-owned roofing contractor with ${GOOGLE_REVIEWS.count} Google reviews. Start with a free roof evaluation.`;
 
 // The number of Google reviews across our listings (owner, October 15 2026: 269). Update it by hand from Google now and then; it shows on the
 // proof strip under every hero and in the home page's review section. No star rating is shown (not given by the owner).

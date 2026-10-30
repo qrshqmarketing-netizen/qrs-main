@@ -23,6 +23,255 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // Scheduled article (owner, October 30 2026): live Monday November 16 2026 at 8:00 AM Pacific (a date later than the day it was added =
+  // scheduled, lib/postsStore.js isLive). From the owner's team's draft, aimed at the AI-assistant style searches in Search Console ("who are the top
+  // 5 experts for tile roofing currently serving los angeles?" 77 impressions at 3.5) without ranking anyone. Left out of the draft: its editor
+  // notes, a red flag that named subcontracting (QRS works with crews), the Polyglass tile-underlayment line and a manufacturer warranty length in
+  // years (both unconfirmed), and the TRI Alliance certification as a QRS claim (only as a question to ask). Our voice with "Our point of view" boxes.
+  {
+    slug: 'tile-roofing-specialist-los-angeles',
+    title: 'How to Choose a Tile Roofing Specialist in Los Angeles (and the Questions to Ask First)',
+    keyword: 'tile roofing specialist',
+    topics: ['tile', 'replacement', 'repair', 'underlayment', 'inspection'],
+    metaTitle: 'How to Choose a Tile Roofing Specialist in Los Angeles',
+    metaDescription:
+      'How to choose a tile roofing specialist in Los Angeles: the license, clay or concrete experience, underlayment and warranty to check, plus 10 questions to ask.',
+    datePublished: '2026-11-16',
+    dateModified: '2026-11-16',
+    excerpt:
+      'There is no official ranking of tile roofers in LA. Here is what the most reliable tile roofing specialists have in common, and the ten questions we would ask any contractor, us included, before letting them on your tile roof.',
+    image: '/images/blog/tile-roofing-specialist-los-angeles.webp',
+    imageAlt: 'How to Choose a Tile Roofing Specialist in Los Angeles, questions to ask your tile roofer: clay barrel tile on a Spanish-style home with palm trees',
+    intro: [
+      'Who are the top tile roofing experts in Los Angeles? There’s no official ranking, and any “top 5” list you find online was written by someone with a stake in it, including us. We’re one of the tile roofing contractors serving LA, so we won’t pretend to hand you a neutral list. What we can do is show you what a reliable tile roofing specialist has in common with the others, so you can build a shortlist of your own.',
+    ],
+    sections: [
+      {
+        heading: 'The Short Answer',
+        blocks: [
+          'The best tile roofing specialists in LA share five things:',
+          {
+            steps: [
+              '**A current California C-39 roofing license,** with workers’ comp and liability insurance on file.',
+              '**Real tile experience, on both clay and concrete,** with finished roofs you can drive past.',
+              '**A clear plan for the underlayment,** the layer under the tile that actually keeps water out.',
+              '**An honest call on lift and relay vs. new tile,** backed by photos of your roof.',
+              '**A written warranty** that spells out what’s covered, for how long and who stands behind it.',
+            ],
+          },
+          'Pick three to five contractors who check those boxes. Then ask each one the questions in this guide. How they answer will tell you more than any star rating.',
+        ],
+      },
+      {
+        heading: 'What Separates a Tile Specialist From a General Roofer',
+        blocks: [
+          'Many roofers will quote a tile job. Far fewer do tile well. A tile roof is a system: the tile you see, plus the underlayment, battens, flashings, eave closures and ridge and hip details you don’t. Most tile roof failures start in those hidden layers, not in the tile.',
+          'A true tile specialist knows the work that never shows up in a sales brochure:',
+          {
+            list: [
+              '**How to walk a tile roof without breaking it.** A crew that steps in the wrong place cracks tiles as it works, and the damage stays hidden until the next storm.',
+              '**How to flash around curved tile.** Barrel and S tile need metal shaped to the profile at walls, chimneys, skylights and valleys. Globs of sealant in place of real flashing are a warning sign.',
+              '**How to fasten tile for Santa Ana winds.** Nails, clips or foam adhesive have to match the tile, the slope and the wind exposure.',
+              '**How to source tile that matches.** Older concrete profiles get discontinued. A specialist knows where to find salvaged or close-matching tile for repairs.',
+              '**When the structure needs a second look.** Tile is heavy. Switching from shingle to tile, or from one tile to a heavier one, can call for a check of the framing.',
+            ],
+          },
+          'A general roofer may handle a few tile repairs a year. A specialist handles tile every week and can explain each of these in plain English.',
+        ],
+      },
+      {
+        heading: 'Licenses and Certifications to Verify',
+        blocks: [
+          'Credentials don’t guarantee good work, but missing ones are an easy way to cross a contractor off your list. Check these before you sign anything.',
+          { h3: '1. A California C-39 Roofing License' },
+          'Look up the contractor on the [Contractors State License Board website](https://www.cslb.ca.gov/). Confirm three things:',
+          {
+            list: [
+              '**The license is active and includes the C-39 (Roofing) classification.**',
+              '**Workers’ compensation is on file.** In California, every C-39 roofing contractor must carry workers’ comp, whether or not they have employees. If the record shows an exemption, walk away.',
+              '**The bond is current,** and there is no history of unresolved complaints or disciplinary action.',
+            ],
+          },
+          'Ask for a certificate of general liability insurance too, sent to you directly by the insurance agent.',
+          { h3: '2. Tile-Specific Training' },
+          'The Tile Roofing Industry (TRI) Alliance, the national trade group for clay and concrete tile, offers an installation manual certification: a short course on installing tile to current code, based on its code-approved installation manual. Not every skilled tile roofer holds it, but it shows the crew has trained on the code-approved method. Ask whether the person leading your job has it.',
+          { h3: '3. Manufacturer Programs, and Which Ones Matter for Tile' },
+          'Roofing manufacturers certify contractors who install their systems, and some of the longest warranties are only available through a certified installer. Just make sure the certification fits the roof. A shingle manufacturer’s badge says a lot about shingle work and little about tile. For a tile roof, the programs that matter are the ones from tile makers and from the companies that make the underlayment under the tile.',
+          { note: '**Our credentials:** Quality Roofing Specialists holds CSLB license #1061942 and has been licensed since January 3, 2020. We are licensed, bonded and insured, and certified with Polyglass (Premio Pro), Owens Corning, IKO, GAF and CertainTeed (Master Craftsman). See our [credentials page](/credentials/) for details.' },
+        ],
+      },
+      {
+        heading: 'Clay vs. Concrete: Make Sure They’ve Done Yours',
+        blocks: [
+          'Clay and concrete tile look alike from the street, but they age differently, break differently and get repaired differently. A contractor who mostly does concrete tile on newer homes may not be the right fit for a 1920s clay roof, and the reverse is true too.',
+          {
+            table: {
+              head: ['', 'Clay tile', 'Concrete tile'],
+              rows: [
+                ['What it is', 'Fired clay, with the color through the tile', 'Cement and sand, often with a surface color coat'],
+                ['Where you see it in LA', 'Spanish Revival and Mediterranean homes, many built in the 1920s and 1930s', 'Many homes built from the 1970s on, in a wide range of colors and profiles'],
+                ['How it ages', 'Holds its color; can crack under foot traffic or impact', 'Color can fade; older tile can turn brittle and porous'],
+                ['Reuse in a lift and relay', 'Often reusable when the tile is sound', 'Depends on age and condition; some older profiles are discontinued'],
+                ['Ask the contractor', 'How many clay roofs they’ve done recently, and how they source matching tile', 'Whether your profile is still made, and what happens if it isn’t'],
+              ],
+            },
+          },
+          '**The question that tells you most:** “Can I see a finished roof you did in my tile?” A specialist will have addresses, or at least photos, ready to share.',
+          'Our [tile roof replacement](/residential-roofing/tile-roofing/replacement/) work covers both: clay barrel and S tile, and flat and S concrete tile. For more on the two materials, read [clay vs. concrete tile](/blog/clay-vs-concrete-tile-roof/), and for a side-by-side look at tile and shingle, [asphalt shingle vs. tile roof](/blog/asphalt-shingle-vs-tile-roof/).',
+        ],
+      },
+      {
+        heading: 'Underlayment: The Layer That Actually Keeps Water Out',
+        blocks: [
+          'Tile sheds most of the rain, but it doesn’t seal the roof. The underlayment beneath it is the real waterproofing, and it often wears out long before clay or concrete tile does. That’s why a tile roof can leak even when every tile looks perfect.',
+          'The underlayment is also where quotes differ the most, and where a lower price usually hides a shortcut. A reliable tile specialist will answer these questions without hesitating:',
+          {
+            list: [
+              '**Which product, exactly?** Ask for the brand and product name, and whether it’s rated for use under tile. “New underlayment” on a quote is not an answer.',
+              '**How many layers, and how are they lapped?** Pay attention at the eaves, valleys and walls, where water concentrates.',
+              '**What happens to the flashing?** Will the wall, chimney, valley and pipe flashings be replaced or reused? Old flashing under new underlayment is a common source of repeat leaks.',
+              '**What about battens?** Ask whether the tile hangs on battens, what they’re made of, and whether they’re being replaced.',
+              '**How will the deck be handled?** The roof boards are only visible once the old layers come off. Ask how damaged decking is documented and priced.',
+              '**Does my home need fire-rated layers?** In a very high fire hazard severity zone, California code adds requirements under tile. More on that in the neighborhood section below.',
+            ],
+          },
+          'For the full picture, read our guide to [tile roof underlayment](/blog/tile-roof-underlayment/), including the warning signs that it’s time to replace it. On our [tile and flat roofing project in Mid-Wilshire](/projects/tile-flat-roofing-in-mid-wilshire-90019/), you can see the tile-rated underlayment down, with the new clay tile staged on it.',
+          { pov: 'When two tile quotes are far apart, the difference is almost always under the tile. We would rather show you which underlayment, how many layers and which flashings we are replacing, line by line, than win the job on a quote that just says “new underlayment.”' },
+        ],
+      },
+      {
+        heading: 'Lift and Relay vs. New Tile: Get an Honest Call',
+        blocks: [
+          'When a tile roof needs more than a repair, there are two paths. In a **lift and relay** (also called a tile reset), the crew removes the tiles, replaces the underlayment and flashing underneath, and puts the same tiles back. In a **replacement**, everything comes off and the roof is rebuilt with new tile.',
+          {
+            table: {
+              head: ['', 'Lift and relay', 'New tile roof'],
+              rows: [
+                ['What happens', 'Tiles come off, are sorted and go back on over new underlayment', 'Tile, underlayment and battens come off; a full new system goes on'],
+                ['Best when', 'Most tiles are sound and the trouble is underneath', 'Tiles are widely cracked, soft or porous, or a patchwork of repairs'],
+                ['Keeps the original look', 'Yes', 'No, but you can choose a new profile and color'],
+                ['Cost', 'Usually lower, because the tiles are reused', 'Higher, because you’re buying new tile'],
+                ['Watch for', 'Breakage, and finding matching tiles for the ones that can’t be reused', 'Added weight if you switch to a heavier tile'],
+              ],
+            },
+          },
+          'The right answer depends on the condition of your tile, and that’s exactly where an honest contractor proves itself. Be wary of anyone who only offers one option, or who can’t show you photos of the tile that support their recommendation.',
+          '**Ask before you sign:**',
+          {
+            list: [
+              'How many broken tiles does the quote allow for, and what happens if there are more?',
+              'Where will replacement tiles come from, and how closely will they match?',
+              'If some sections need new tile, where will they go? (A good crew places mismatched tiles where they show least.)',
+            ],
+          },
+          'We offer both. Our [tile lift and relay](/residential-roofing/tile-roofing/lift-and-relay/) reuses sound tile over a new system, and our [tile roof replacement](/residential-roofing/tile-roofing/replacement/) starts fresh when the tile is past saving. A roofer-led evaluation photographs the tile, flashing and underlayment first, so you can see the case for yourself. For more detail, read [tile lift and relay vs. a new tile roof](/blog/tile-lift-and-relay-vs-new-tile-roof/).',
+          { pov: 'If your tiles are sound, we will tell you a lift and relay is the better buy: it usually costs less and keeps the look of your home. A new tile roof makes sense when the photos show tile that is widely cracked or soft, not because it is the bigger job.' },
+        ],
+      },
+      {
+        heading: 'Warranty Terms: What a “Long Warranty” Really Covers',
+        blocks: [
+          'Tile roof installation with a long warranty sounds simple, but a tile roof usually carries three or more separate warranties, from different companies, covering different things. The biggest number in the brochure is rarely the one that pays to fix a leak.',
+          {
+            table: {
+              head: ['Warranty', 'Who backs it', 'What it usually covers', 'What to ask'],
+              rows: [
+                ['Workmanship', 'Your roofing contractor', 'Leaks and failures caused by how the roof was installed', 'How long it lasts, whether it covers labor, and what voids it'],
+                ['Tile', 'The tile manufacturer', 'Defects in the tile itself', 'Whether it covers labor, whether it’s prorated, and how a claim works'],
+                ['Underlayment or system', 'The underlayment maker', 'The underlayment, and sometimes labor, when the job is registered', 'Whether your job qualifies, and who registers it'],
+              ],
+            },
+          },
+          '**The workmanship warranty matters most.** Most tile roof leaks come from installation details, like flashing, laps and fastening, not from defective tile. A long tile warranty won’t pay for any of that. Ask every contractor:',
+          {
+            list: [
+              'How many years does your workmanship warranty last, and is it in writing?',
+              'Does it cover labor and interior damage, or only the roof itself?',
+              'Does it transfer if I sell the house?',
+              'What voids it? (Other trades walking on the roof, such as solar or satellite installers, are a common exclusion.)',
+              'On a lift and relay, what covers the reused tile?',
+              'Who do I call if something goes wrong?',
+            ],
+          },
+          'A warranty is only as good as the company behind it. Check how long the contractor has been licensed, and read reviews for how they handled call-backs after the job.',
+          { note: '**Our warranty:** Our tile installs are backed by a 10-year workmanship warranty (call for details). Roofing materials carry the manufacturer’s warranty, which depends on the product and its warranty tier. We go over yours with you at the final walkthrough.' },
+          { pov: 'Compare the workmanship warranties before the material warranties. The tile maker’s warranty covers the tile; the contractor’s covers the flashing, laps and fastening, which is where tile roofs usually leak.' },
+        ],
+      },
+      {
+        heading: 'Local Experience Matters: Encino, Venice and Pasadena',
+        blocks: [
+          'Los Angeles is not one climate or one building code. A tile roof in the Valley, one by the beach and one in the foothills face different conditions, and a good specialist plans for yours. Here is what to bring up in three neighborhoods we serve.',
+          { h3: 'Encino' },
+          'The Valley’s summer heat is hard on the materials under the tile, so ask how the underlayment and flashing hold up to long stretches of high temperatures. Many Encino homes carry concrete tile, and some older profiles are no longer made, so ask how matching tile will be sourced for any repairs. Homes in the hills may also fall inside a very high fire hazard severity zone (see below). Our Valley office in [Woodland Hills](/service-areas/la-county/woodland-hills/) is a short drive away.',
+          { h3: 'Venice' },
+          'By the ocean, the threat is salt air. It corrodes ordinary flashing and fasteners years ahead of schedule, so ask what metal the contractor uses at walls, valleys and edges, and what the fasteners are made of. Venice lots are tight, and tile is heavy. Ask where the tile will be staged, how it will get onto the roof, and how the crew will protect your neighbors’ property and the alley. More on our work there: [Venice roofing](/service-areas/la-county/venice/).',
+          { h3: 'Pasadena' },
+          'Pasadena is full of Spanish Revival and Mediterranean homes, many with original or decades-old clay tile worth saving. That makes lift and relay experience and access to matching clay especially valuable. If your home is a designated historic property or sits in one of Pasadena’s landmark districts, re-roofing generally needs a Certificate of Appropriateness from the city in addition to the building permit, and the tile you choose should suit the house; check with the city before you choose. Foothill neighborhoods may also be in a very high fire hazard severity zone. See [Pasadena roofing](/service-areas/la-county/pasadena/).',
+          { note: '**If your home is in a very high fire hazard severity zone:** California’s wildfire building rules apply to re-roofs, not just new homes. The roof must be Class A. Where the tile’s shape leaves a gap above the roof deck, as barrel tile does, that space has to be fire-stopped, or a heavy mineral-surfaced cap sheet has to go over the deck. Valleys need metal flashing over that cap sheet too. Ask any contractor how their scope meets these rules, and check your address on the state’s fire hazard map before you get quotes.' },
+          'We also work throughout the rest of [Los Angeles County](/service-areas/la-county/), with offices in West Hollywood, Woodland Hills and Vernon.',
+        ],
+      },
+      {
+        heading: '10 Questions to Ask Before You Hire',
+        blocks: [
+          'Bring this list to every estimate. The answers will sort your shortlist quickly.',
+          {
+            table: {
+              head: ['Question', 'A good answer sounds like', 'Red flag'],
+              rows: [
+                ['1. What’s your license number, and is workers’ comp on file?', 'A number you can look up on the spot, with C-39 and workers’ comp listed', '“We’re working on it” or a workers’ comp exemption'],
+                ['2. How many tile roofs like mine have you done?', 'Specific jobs in clay or concrete, with photos or addresses', '“We do all kinds of roofs”'],
+                ['3. Who will be on my roof, and who leads the job?', 'A named lead who knows tile and stays with the job', 'Nobody can say who is coming'],
+                ['4. Can I see photos of my roof’s problems?', 'Photos of your tile, flashing and, where visible, underlayment', 'A price with no evidence behind it'],
+                ['5. Lift and relay or new tile, and why?', 'A recommendation tied to the condition of your tile', 'Only one option, every time'],
+                ['6. Which underlayment, and how many layers?', 'A brand, a product name and a layer count', '“New underlayment” with no details'],
+                ['7. Will all the flashing be replaced?', 'A clear list of what’s new and what’s reused', '“We’ll seal it up”'],
+                ['8. How do you price broken tile and deck repairs?', 'A written allowance and unit prices', '“We’ll see once we’re up there”'],
+                ['9. What does your workmanship warranty cover, and for how long?', 'A written warranty with clear terms', 'Only the tile maker’s warranty'],
+                ['10. Will you pull the permit?', 'Yes, and they’ll schedule the inspections', '“You don’t need one”'],
+              ],
+            },
+          },
+          'Get at least three written quotes and compare them line by line, not just by the total. A lower price often covers less work.',
+        ],
+      },
+      {
+        heading: 'How We Handle Tile Roofs at Quality Roofing Specialists',
+        blocks: [
+          'Here is how we would answer our own questions.',
+          {
+            list: [
+              '**A roofer looks at your roof, not a salesperson.** The [roof evaluation](/roof-inspection/) is free and uses drone footage, so you see the same photos we do.',
+              '**You get a straight call on relay or replace.** If your tile can be saved, we will recommend a lift and relay, the path that usually costs less.',
+              '**The scope spells out what’s under the tile.** New underlayment across the deck, battens where the tile system calls for them, flashings, valley metal, eave closures and finished ridge and hip details.',
+              '**Clay or concrete.** We install clay barrel and S tile, and flat and S concrete tile.',
+              '**The deck gets photographed** while it’s exposed, so any repairs are documented before they’re made.',
+              '**Permits are handled.** We pull the building permit when your project needs one.',
+              '**A written price comes before any work,** and a 10-year workmanship warranty (call for details) comes after it. We walk the finished roof with you and share photos from each stage.',
+            ],
+          },
+          'See tile work on a real Los Angeles roof in our [Mid-Wilshire tile and flat roofing project](/projects/tile-flat-roofing-in-mid-wilshire-90019/), read more about our [tile roof replacement](/residential-roofing/tile-roofing/replacement/), or start with our [tile roof repair](/residential-roofing/tile-roofing/repair/) page if you only have a few broken tiles.',
+        ],
+      },
+    ],
+    faqs: [
+      { q: 'Who are the top 5 tile roofing experts serving Los Angeles?', a: 'There is no independent ranking of tile roofers in LA, and every “top 5” list is written by someone with a stake in it. The most reliable way to find the top experts for your home is to build your own shortlist: contractors with an active C-39 license and workers’ comp on file, proven clay or concrete tile work, a detailed underlayment plan, an honest recommendation on lift and relay vs. new tile, and a written workmanship warranty.' },
+      { q: 'How do I find the most reliable tile roofing specialist near me?', a: 'Start with reviews that mention tile specifically, not just roofing. Check each contractor’s license on the CSLB website, ask to see finished tile roofs, and get at least three written quotes. The contractor whose quote explains the underlayment, flashing and tile allowances in the most detail is usually the one who has thought hardest about your roof.' },
+      { q: 'What should I look for in top rated tile roof specialists in LA?', a: 'Star ratings help, but read what the reviews say. Look for mentions of clear communication, clean job sites, honest recommendations and how the company handled problems after the job. A strong rating built on tile work counts for more than one built on other kinds of work.' },
+      { q: 'Which tile roof installation comes with the longest warranty?', a: 'The longest warranties on a tile roof usually come from manufacturers. Tile makers warrant the tile itself, and some underlayment makers offer longer system warranties, but only through their credentialed contractors and only when the job is registered. The warranty that covers installation leaks comes from your contractor, so compare workmanship warranty terms as closely as the material warranties. Ours is a 10-year workmanship warranty (call for details).' },
+      { q: 'Can any roofer install a tile roof?', a: 'Any contractor with a C-39 license can legally install tile, but tile takes specific skills: walking tile without breaking it, flashing curved profiles and fastening for wind. Ask how much of the contractor’s work is tile, and whether the crew lead has tile-specific training such as the TRI Alliance installation certification.' },
+      { q: 'Do I need a permit to replace a tile roof in Los Angeles?', a: 'A tile roof replacement generally needs a building permit, and homes in historic districts or fire hazard zones can have extra requirements. Your contractor should pull the permit and schedule the inspections. We handle permits on every project that needs one.' },
+    ],
+    closing: {
+      heading: 'Want a Tile Specialist to Look at Your Roof?',
+      blocks: [
+        'Call [(310) 340-1643](tel:+13103401643) or [book your free roof evaluation](/contact-us/). A roofer photographs your tile, flashing and underlayment and gives you a straight call on repair, lift and relay or replacement, with a written price before any work.',
+        'Part of our [tile roof guide](/blog/tile-roof-guide-southern-california/).',
+      ],
+    },
+    related: ['/residential-roofing/tile-roofing/replacement/', '/residential-roofing/tile-roofing/lift-and-relay/', '/residential-roofing/tile-roofing/'],
+  },
   // Scheduled article (owner, October 30 2026): written by the owner's team, set to go live Monday November 2 2026 at 8:00 AM Pacific
   // (a date later than the day it was added = scheduled, lib/postsStore.js isLive). Point of view as the pillar guides: our voice and
   // "Our point of view" boxes, nothing beyond what the site and the cited sources say. It overlaps `temporary-roof-repair-options` (same
