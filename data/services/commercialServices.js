@@ -9,8 +9,11 @@ export const COMMERCIAL_SERVICES = [
     h1: 'Commercial Roof Repair in Los Angeles & Orange County',
     navLabel: 'Roof Repair',
     card: 'Leaks traced to where the water gets in, then repaired at drains, parapets, seams and rooftop equipment, with before-and-after photos.',
-    metaTitle: 'Commercial Roof Repair in Los Angeles',
-    metaDescription: 'Commercial roof repair in LA & Orange County: leaks traced at drains, parapets and rooftop units, fixed and photo-documented. Request an estimate.',
+    // Meta for the searches the owner picked (October 30 2026: commercial roof repair (services, experts), commercial roof repair los angeles,
+    // commercial roofing repair(s) orange county, commercial roof leak repair los angeles, commercial roofing replacement orange county).
+    // 58 / 160 characters; the survey is never called free.
+    metaTitle: 'Commercial Roof Repair Los Angeles & Orange County Experts',
+    metaDescription: 'Commercial roof repair services in Los Angeles & Orange County: commercial roof leak repair, roofing repairs and replacement by local experts. Request a survey.',
     image: '/images/cta-flat-roof-install-drone-view.webp',
     imageAlt: 'Roofers working on a white low-slope roof with rooftop units, seen from above',
     hero: {
