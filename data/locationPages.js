@@ -49,8 +49,11 @@ export const LOCATION_PAGES = {
     keyword: 'santa monica roofing',
     image: '/images/santa-monica-drone-view.webp',
     imagePosition: 'center 35%',
-    metaTitle: 'Santa Monica Roofing & Roof Repair',
-    metaDescription: 'Santa Monica roofing built for coastal conditions: tile, shingle and flat roof repair and replacement from a detail-first team. Book a free roof evaluation.',
+    // Meta for picked searches (owner, October 30 2026): santa monica roofing contractor, roof repair(s) santa monica, roof replacement and
+    // installation santa monica, roofing santa monica ca, roofing company santa monica, santa monica roofer. The H1 stays plain (`h1`).
+    metaTitle: 'Santa Monica Roofing Contractor | Roof Repair & Replacement',
+    h1: 'Santa Monica Roofing & Roof Repair',
+    metaDescription: 'Santa Monica roofing company and roofer for roof repairs, roof replacement and roof installation in Santa Monica, CA. Family-owned. Book a free roof evaluation.',
     blurb: 'Clear inspections, written scopes and clean workmanship for homes from Ocean Park to North of Montana.',
     hero: {
       heading: 'Santa Monica roofing',
@@ -249,8 +252,11 @@ export const LOCATION_PAGES = {
 
   'long-beach': {
     keyword: 'long beach roofing',
-    metaTitle: 'Long Beach Roofing & Roof Repair',
-    metaDescription: 'Long Beach roofing for coastal and historic homes: tile, shingle and flat roof repair and replacement from a detail-first team. Book a free roof evaluation.',
+    // Meta for picked searches (owner, October 30 2026): long beach roofing contractor(s), roof repair (in) long beach, roof inspection long beach,
+    // roof repair specialist long beach, long beach roofers. The H1 stays plain (`h1`).
+    metaTitle: 'Long Beach Roofing Contractors | Roof Repair & Inspection',
+    h1: 'Long Beach Roofing & Roof Repair',
+    metaDescription: 'Long Beach roofing contractor for roof repair, roof inspection and replacement: licensed Long Beach roofers and roof repair specialists. Book a free evaluation.',
     blurb: 'Clear inspections and clean workmanship for Long Beach homes near the water and farther inland.',
     hero: {
       heading: 'Long Beach roofing',
