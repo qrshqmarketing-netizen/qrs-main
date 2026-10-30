@@ -236,3 +236,15 @@ body:has(main :is(.hero,.pd-hero,.hg-hero,.promo-home,.sv-hero)) .site-header:no
 /* The main links sit in the bar from 1280px (tighter up to 1440px); from 1240 to 1280 they stay in the menu panel, as on tablets */
 @media (min-width:1240px) and (max-width:1279.98px){.site-header .hd-links{display:none}.site-header .hd-primary{display:revert}.site-header .hd-brand{border-right-color:transparent}}
 @media (min-width:1280px) and (max-width:1439.98px){.site-header .hd-link{padding:0 11px}.site-header .hd-link:after{left:11px;right:11px}}
+
+/* Home page logo wipe (owner, October 30 2026): on the home page the logo is hidden at the top at every width and, once the page scrolls
+   (data-scrolled) or the menu opens, it wipes in from left to right (clip-path on the logo link). From 1240px the logo cell still widens and
+   pushes the links right as before; the wipe replaces its fade. Hidden logos are also out of the tab order (visibility). Still for reduced motion. */
+body:has(main.hg) .site-header:not(.is-lp):not(.is-start) .hd-brand .brand{
+  clip-path:inset(0 0 0 0);visibility:visible;transition:clip-path .75s cubic-bezier(.65,0,.35,1) .12s,visibility 0s 0s}
+body:has(main.hg) .site-header:not(.is-lp):not(.is-start):not([data-scrolled]):not(.is-open) .hd-brand .brand{
+  clip-path:inset(0 100% 0 0);visibility:hidden;transition:clip-path .3s ease,visibility 0s .3s}
+@media (min-width:1240px){
+  body:has(main.hg) .site-header:not(.is-lp):not(.is-start) .hd-brand{opacity:1!important}
+}
+@media (prefers-reduced-motion:reduce){body:has(main.hg) .site-header .hd-brand .brand{transition:none!important}}

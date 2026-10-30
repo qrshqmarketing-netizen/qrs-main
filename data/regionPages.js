@@ -2,6 +2,8 @@
 // keyword: the page's main search phrase; it appears in metaTitle, metaDescription, hero.heading (the H1) and the intro.
 // Text fields can link with [words](/path/) and bold with **words**. Add an entry here when you add a region in data/locations.js.
 
+import { GOOGLE_REVIEWS } from './site.js';
+
 export const REGION_PAGES = {
   'la-county': {
     keyword: 'los angeles county roofing',
@@ -37,8 +39,11 @@ export const REGION_PAGES = {
     keyword: 'orange county roofing',
     image: '/images/orange-county-drone-view.webp',
     imageAlt: 'Aerial view of Orange County suburban neighborhoods with hills in the background',
-    metaTitle: 'Orange County Roofing Services',
-    metaDescription: 'Orange County roofing for homes, HOAs and businesses from Anaheim to Newport Beach: tile, shingle and flat roofs. Book a free roof evaluation today.',
+    // Meta for picked searches (owner, October 30 2026: commercial roofing specialists orange county california, orange county commercial
+    // roofing, commercial roofer orange county, best roofing company in orange county ca). The review count answers "best" without claiming it;
+    // "free" is only the home evaluation (the commercial survey is never called free). 58 / 152 characters. The H1 (hero.heading) is unchanged.
+    metaTitle: 'Orange County Roofing & Commercial Roofing Specialists, CA',
+    metaDescription: `Orange County roofing company, ${GOOGLE_REVIEWS.count} Google reviews: commercial roofer for offices, retail and warehouses, plus homes and HOAs. Free home roof evaluation.`,
     hero: {
       heading: 'Orange County Roofing Services',
       intro: 'Orange County roofing from Quality Roofing Specialists covers homes, HOAs and businesses from Anaheim to Newport Beach, with tile, shingle and flat roof repair and replacement. Homes start with a free roof evaluation; commercial and larger HOA properties start with a roof survey.',
