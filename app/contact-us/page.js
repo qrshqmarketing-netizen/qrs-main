@@ -1,7 +1,7 @@
 import Faq from '@/components/sections/Faq';
 import ReviewMarquee from '@/components/sections/ReviewMarquee';
 import FinalCta from '@/components/sections/FinalCta';
-import Hero from '@/components/sections/Hero';
+import { AbrHero } from '@/components/about/AboutRemote';
 import Offices from '@/components/sections/Offices';
 import RoofCheck from '@/components/sections/RoofCheck';
 import ServiceArea from '@/components/sections/ServiceArea';
@@ -39,28 +39,29 @@ const schema = pageJsonLd({ path: CONTACT_LINK.href, title: page.metaTitle, desc
 // Contact page (content in data/pages/contact.js; offices and hours in data/site.js)
 export default function ContactPage() {
   return (
-    <main id="top">
+    <main id="top" className="abr">
       <JsonLd data={schema} />
-      <Hero
+      <AbrHero
         crumbs={CRUMBS}
-        eyebrow="Contact"
+        path="/contact-us/"
         title={page.hero.heading}
         outcome={heroOutcome('/contact-us/')}
         intro={page.hero.intro}
-        image={page.hero.image}
-        imageAlt={page.hero.imageAlt}
+        media={{ image: page.hero.image, alt: page.hero.imageAlt }}
         actions={[
-          { label: `Call ${PHONE}`, href: TEL, style: 'plum' },
+          { label: `Call ${PHONE}`, href: TEL, style: 'dark' },
           { label: 'Request an Estimate', href: '#roof-check', style: 'line' },
         ]}
       />
-      <Offices sub="Visit or call any of our offices. One phone number reaches our whole team." note={`Hours: ${HOURS_LINE}`} photos={false} />
-      <ValueGrid heading={page.ways.heading} items={page.ways.items} />
-      {/* Google reviews, a few sections below the hero (owner, October 14 2026) */}
-      <ReviewMarquee />
-      <RoofCheck />
-      <ServiceArea heading="Check Your Service Area" sub="Enter your ZIP code to confirm we cover your address, or pick your city from the list." />
-      <Faq heading="Contact FAQs" sub="Straight answers about reaching our team." faqs={FAQS} cta={false} />
+      <div className="abr-keep">
+        <Offices sub="Visit or call any of our offices. Each office has its own number, or call our main line." note={`Hours: ${HOURS_LINE}`} photos={false} />
+        <ValueGrid heading={page.ways.heading} items={page.ways.items} />
+        {/* Google reviews, a few sections below the hero (owner, October 14 2026) */}
+        <ReviewMarquee />
+        <RoofCheck />
+        <ServiceArea heading="Check Your Service Area" sub="Enter your ZIP code to confirm we cover your address, or pick your city from the list." />
+        <Faq heading="Contact FAQs" sub="Straight answers about reaching our team." faqs={FAQS} cta={false} />
+      </div>
       <FinalCta
         heading="Talk to a Roofer, Not a Call Center"
         text="Call the office or send the form, and a roofer gets back to you with a clear next step, a written scope and a price."

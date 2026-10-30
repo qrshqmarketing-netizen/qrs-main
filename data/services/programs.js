@@ -16,7 +16,7 @@ export const EMERGENCY_ROOF_REPAIR = {
   imageAlt: 'Storm damage roof repair in Los Angeles: a roofer reviewing storm damage with homeowners beside a blue roof tarp',
   hero: {
     intro:
-      'For emergency roof repair and storm damage roof repair in Los Angeles and Orange County, stay off the roof, move belongings away from the leak and call QRS, even after hours or on a weekend. A roofer assesses and photographs the storm damage or sudden leak, puts temporary protection such as a tarp in place when it’s needed, then makes the permanent repair, priced in writing first.',
+      'Emergency roof repair and storm damage roof repair in Los Angeles and Orange County. Stay off the roof, move belongings away from the leak and call QRS, even after hours or on a weekend. A roofer assesses and photographs the damage and puts a tarp in place when it’s needed. Then the permanent repair, priced in writing first.',
     highlights: ['Damage assessed and photo-documented', 'Temporary protection, like a tarp, if needed', 'Permanent repair with a written scope'],
   },
   // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
@@ -223,7 +223,7 @@ export const ROOF_FINANCING = {
   },
   hero: {
     intro:
-      'Roof financing with QRS lets you spread the cost of a home roof replacement in Los Angeles and Orange County into monthly payments through Momnt Financing or Service Financing, subject to credit approval. You get a written scope and price before you apply, so you know exactly what you’re financing. Start with a free roof evaluation.',
+      'Roof financing for a home roof replacement in Los Angeles and Orange County. Spread the cost into monthly payments through Momnt Financing or Service Financing, subject to credit approval. You get a written scope and price before you apply, so you know exactly what you’re financing. Start with a free roof evaluation.',
     highlights: ['For home roof replacements', 'Through Momnt Financing or Service Financing', 'Written scope and price come first', 'Example payments in our Instant Quote'],
   },
   overview: {

@@ -1,7 +1,7 @@
 import Faq from '@/components/sections/Faq';
 import FeatureBand from '@/components/sections/FeatureBand';
 import FinalCta from '@/components/sections/FinalCta';
-import Hero from '@/components/sections/Hero';
+import { AbrHero } from '@/components/about/AboutRemote';
 import ProcessSteps from '@/components/sections/ProcessSteps';
 import ValueGrid from '@/components/sections/ValueGrid';
 import JsonLd from '@/components/ui/JsonLd';
@@ -24,36 +24,35 @@ const EMAIL_LINK = `mailto:${page.email}?subject=${encodeURIComponent('Careers a
 // Careers page (content in data/pages/careers.js)
 export default function CareersPage() {
   return (
-    <main id="top">
+    <main id="top" className="abr">
       <JsonLd data={schema} />
-      <Hero
+      <AbrHero
         crumbs={CRUMBS}
-        eyebrow="Careers"
+        path="/careers/"
         title={page.hero.heading}
         outcome={heroOutcome('/careers/')}
         intro={page.hero.intro}
-        image={HERO_IMAGE}
-        mobileImage="/images/careers-hero-crew-shingle-roof-mobile.webp"
-        imageAlt="Two QRS roofers installing shingles together on a roof"
-        imagePosition="center 30%"
+        media={{ image: HERO_IMAGE, alt: 'Two QRS roofers installing shingles together on a roof', position: 'center 30%' }}
         actions={[
-          { label: 'Email Us Your Info', href: EMAIL_LINK, style: 'gold' },
+          { label: 'Email Us Your Info', href: EMAIL_LINK, style: 'dark' },
           { label: `Call ${PHONE}`, href: TEL, style: 'line' },
         ]}
       />
-      <ValueGrid heading={page.values.heading} items={page.values.items} tone="wash" pattern />
-      <FeatureBand {...page.coreValues} tone="light" />
-      <ValueGrid id="roles" heading={page.roles.heading} intro={page.roles.intro} items={page.roles.items} />
-      <Faq heading="Careers FAQs" sub="Straight answers about working at QRS." faqs={page.faqs} cta={false} />
-      <ProcessSteps
-        heading={page.apply.heading}
-        subheading={page.apply.subheading}
-        steps={page.apply.steps}
-        image="/images/careers-process-roofer-crew.webp"
-        imageAlt="Smiling QRS roofer in gear with a crewmate working on the roof behind him"
-        showOnMobile
-        tone="white"
-      />
+      <div className="abr-keep">
+        <ValueGrid heading={page.values.heading} items={page.values.items} tone="wash" pattern />
+        <FeatureBand {...page.coreValues} tone="light" />
+        <ValueGrid id="roles" heading={page.roles.heading} intro={page.roles.intro} items={page.roles.items} />
+        <Faq heading="Careers FAQs" sub="Straight answers about working at QRS." faqs={page.faqs} cta={false} />
+        <ProcessSteps
+          heading={page.apply.heading}
+          subheading={page.apply.subheading}
+          steps={page.apply.steps}
+          image="/images/careers-process-roofer-crew.webp"
+          imageAlt="Smiling QRS roofer in gear with a crewmate working on the roof behind him"
+          showOnMobile
+          tone="white"
+        />
+      </div>
       <FinalCta trust={false} heading="Ready to Join the Crew?" text={`Email us your info or call ${PHONE} during business hours.`} cta={{ label: 'Email Us Your Info', href: EMAIL_LINK }} />
     </main>
   );

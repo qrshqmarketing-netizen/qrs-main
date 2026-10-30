@@ -14,7 +14,7 @@ export const CARE_PLAN = {
   hero: {
     heading: 'Roof Maintenance Plans · *RoofCare Plan*',
     intro:
-      'Roof maintenance plans from QRS schedule one or two roofer visits a year, timed to the rains, so small wear on Los Angeles and Orange County homes is caught before it turns into a surprise leak. Visits include a full inspection, a written photo report, debris clearing and sealant top-offs, with three *RoofCare Plan* tiers priced by roof size.',
+      'Roof maintenance plans, timed to the rains. One or two roofer visits a year catch small wear on Los Angeles and Orange County homes before it turns into a surprise leak. Each visit includes a full inspection, a written photo report, debris clearing and sealant top-offs. Three *RoofCare Plan* tiers, priced by roof size.',
     highlights: ['Scheduled visits, before and after the rains', 'A written photo report every time', 'Pay after each visit — nothing up front'],
   },
   whatGoesWrong: {

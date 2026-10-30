@@ -11,7 +11,7 @@ import Breadcrumbs from './Breadcrumbs';
 import HeroParallax from './HeroParallax';
 import './Hero.css';
 
-const DEFAULT_ACTIONS = [
+export const DEFAULT_ACTIONS = [
   { label: 'Get Pro Advice', href: '#roof-check', style: 'gold' },
   { label: `Call ${PHONE}`, href: TEL, style: 'line' },
 ];
@@ -32,7 +32,7 @@ const DEFAULT_ACTIONS = [
 // (`annotations`, default HERO_ANNOTATIONS in data/site.js: the commercial set on commercial and partner pages; false hides it). `underline` (default: the page's entry in HERO_UNDERLINES,
 // data/heroOutcomes.js) is the word in the headline that gets the hand-drawn animated underline.
 // The headline, with one word or phrase underlined by hand (it draws itself). `phrase` must appear in the text; otherwise the headline is shown as it is.
-function HeadlineText({ title, phrase }) {
+export function HeadlineText({ title, phrase }) {
   const at = typeof title === 'string' && phrase ? title.indexOf(phrase) : -1;
   if (at < 0) return <Rich text={title} registeredMark />;
   const after = title.slice(at + phrase.length);

@@ -2,7 +2,7 @@ import DifferenceBand from '@/components/sections/DifferenceBand';
 import Faq from '@/components/sections/Faq';
 import FeatureBand from '@/components/sections/FeatureBand';
 import FinalCta from '@/components/sections/FinalCta';
-import Hero from '@/components/sections/Hero';
+import { AbrHero } from '@/components/about/AboutRemote';
 import Overview from '@/components/sections/Overview';
 import ProcessSteps from '@/components/sections/ProcessSteps';
 import RelatedLinks from '@/components/sections/RelatedLinks';
@@ -36,30 +36,31 @@ const RELATED = relatedLinks(['/commercial-roofing/', '/residential-roofing/hoa-
 // Contractor partnerships (B2B) page (content in data/pages/contractors.js)
 export default function ContractorsPage() {
   return (
-    <main id="top">
+    <main id="top" className="abr">
       <JsonLd data={schema} />
-      <Hero
+      <AbrHero
         crumbs={CRUMBS}
-        eyebrow="Contractor Partnerships"
+        path="/contractors/"
         title={page.hero.heading}
         outcome={heroOutcome('/contractors/')}
         intro={page.hero.intro}
-        image="/images/contractors-hero-roofer-tablet.webp"
-        imageAlt="Roofer on a rooftop reviewing a scope on a tablet"
+        media={{ image: '/images/contractors-hero-roofer-tablet.webp', alt: 'Roofer on a rooftop reviewing a scope on a tablet' }}
         actions={[
-          { label: 'Start a Conversation', href: '#roof-check', style: 'gold' },
+          { label: 'Start a Conversation', href: '#roof-check', style: 'dark' },
           { label: `Call ${PHONE}`, href: TEL, style: 'line' },
         ]}
       />
-      <Overview heading={page.overview.heading} paragraphs={page.overview.paragraphs} />
-      <ValueGrid heading={page.audiences.heading} items={page.audiences.points} tone="wash" />
-      <FeatureBand id="white-label" {...page.whiteLabel} />
-      <ProcessSteps heading={page.process.heading} subheading={page.process.subheading} steps={page.process.steps} image="/images/contractors-process-roofer-tablet.webp" imageAlt="Roofer on a rooftop smiling while reviewing a scope on a tablet" tone="white" />
-      <DifferenceBand />
-      <WhyChoose heading={page.why.heading} intro={page.why.intro} points={page.why.points} cta={{ label: 'Start a Conversation', href: '#roof-check' }} />
-      <RelatedLinks heading="Related pages" links={RELATED} />
-      <Faq heading="Contractor FAQs" sub="Straight answers for contractors and property management clients." faqs={page.faqs} cta={false} />
-      <RoofCheck tone="white" offer="commercial" />
+      <div className="abr-keep">
+        <Overview heading={page.overview.heading} paragraphs={page.overview.paragraphs} />
+        <ValueGrid heading={page.audiences.heading} items={page.audiences.points} tone="wash" />
+        <FeatureBand id="white-label" {...page.whiteLabel} />
+        <ProcessSteps heading={page.process.heading} subheading={page.process.subheading} steps={page.process.steps} image="/images/contractors-process-roofer-tablet.webp" imageAlt="Roofer on a rooftop smiling while reviewing a scope on a tablet" tone="white" />
+        <DifferenceBand />
+        <WhyChoose heading={page.why.heading} intro={page.why.intro} points={page.why.points} cta={{ label: 'Start a Conversation', href: '#roof-check' }} />
+        <RelatedLinks heading="Related pages" links={RELATED} />
+        <Faq heading="Contractor FAQs" sub="Straight answers for contractors and property management clients." faqs={page.faqs} cta={false} />
+        <RoofCheck tone="white" offer="commercial" />
+      </div>
       <FinalCta heading="Let’s Build Something Together" text="Tell us about your project and we’ll start with a roofer-led look at the roof." cta={{ label: 'Start a Conversation', href: '#roof-check' }} />
     </main>
   );

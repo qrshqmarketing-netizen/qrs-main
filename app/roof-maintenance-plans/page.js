@@ -1,10 +1,10 @@
 import CarePlanPricing from '@/components/sections/CarePlanPricing';
-import ReviewMarquee from '@/components/sections/ReviewMarquee';
 import Faq from '@/components/sections/Faq';
 import LatestArticles from '@/components/sections/LatestArticles';
 import FeatureBand from '@/components/sections/FeatureBand';
 import FinalCta from '@/components/sections/FinalCta';
-import Hero from '@/components/sections/Hero';
+import ProofBar from '@/components/sections/ProofBar';
+import { SvcHero, SvcReviews, SvcTrust } from '@/components/svc/SvcSections';
 import PlanScope from '@/components/sections/PlanScope';
 import ProcessSteps from '@/components/sections/ProcessSteps';
 import RoofCheck from '@/components/sections/RoofCheck';
@@ -29,18 +29,22 @@ const schema = pageJsonLd({ path: LINK.href, title: page.metaTitle, description:
 
 export default async function RoofMaintenancePlansPage() {
   return (
-    <main id="top">
+    // Layout (owner, October 29 2026): the service pages' gradient hero with the WebGL roof frame, credibility and review cards (components/svc/);
+    // the plan's own sections (pricing, scope, schedule, tune-up, member benefits) stay as they were
+    <main id="top" className="svc">
       <JsonLd data={schema} />
-      <Hero crumbs={CRUMBS} eyebrow="Maintenance Plans" title={searchHeading(page.hero.heading)} outcome={heroOutcome(PROGRAMS.plans.href)} intro={page.hero.intro} image={page.image} imageAlt={page.imageAlt} />
+      <SvcHero crumbs={CRUMBS} title={searchHeading(page.hero.heading)} outcome={heroOutcome(PROGRAMS.plans.href)} intro={page.hero.intro} />
+      <ProofBar strip />
       <ValueGrid heading={page.whatGoesWrong.heading} items={page.whatGoesWrong.items} tone="wash" pattern />
       <CarePlanPricing />
       <PlanScope />
       {/* Google reviews, a few sections below the hero (owner, October 14 2026) */}
-      <ReviewMarquee />
+      <SvcReviews path={PROGRAMS.plans.href} />
       <ValueGrid id="roof-types" heading={page.byRoof.heading} intro={page.byRoof.intro} items={page.byRoof.items} columns={3} tone="wash" />
       <ProcessSteps heading={page.schedule.heading} steps={page.schedule.steps} scene="scene-inspect" image={page.schedule.image} imageAlt={page.schedule.imageAlt} tone="white" />
       <FeatureBand {...page.tuneUp} tone="light" />
       <FeatureBand eyebrow={page.memberBenefits.eyebrow} heading={page.memberBenefits.heading} paragraphs={page.memberBenefits.paragraphs} points={page.memberBenefits.points} cta={{ label: 'Get Started', href: '#roof-check' }} />
+      <SvcTrust path={PROGRAMS.plans.href} />
       <LatestArticles posts={await articlesFor(PROGRAMS.plans.href)} heading="Related Roofing Articles" />
       <Faq heading="Roof Care Plan FAQs" sub="Straight answers about how the plan works." faqs={page.faqs} />
       <RoofCheck />

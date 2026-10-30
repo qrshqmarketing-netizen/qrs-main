@@ -1,7 +1,7 @@
 import Credentials from '@/components/sections/Credentials';
 import Faq from '@/components/sections/Faq';
 import FinalCta from '@/components/sections/FinalCta';
-import Hero from '@/components/sections/Hero';
+import { AbrHero } from '@/components/about/AboutRemote';
 import RoofCheck from '@/components/sections/RoofCheck';
 import JsonLd from '@/components/ui/JsonLd';
 import { CREDENTIALS_LINK, HOME } from '@/data/catalog';
@@ -28,20 +28,14 @@ const schema = pageJsonLd({
 
 export default function CredentialsPage() {
   return (
-    <main id="top">
+    <main id="top" className="abr">
       <JsonLd data={schema} />
-      <Hero
-        crumbs={CRUMBS}
-        eyebrow="Credentials"
-        title={page.hero.heading}
-        outcome={heroOutcome(CREDENTIALS_LINK.href)}
-        intro={page.hero.intro}
-        image={page.hero.image}
-        imageAlt={page.hero.imageAlt}
-      />
-      <Credentials page={page} />
-      <Faq heading="Credentials FAQs" sub="Straight answers about our license, insurance and certifications." faqs={page.faqs} cta={false} />
-      <RoofCheck tone="white" />
+      <AbrHero crumbs={CRUMBS} path={CREDENTIALS_LINK.href} title={page.hero.heading} outcome={heroOutcome(CREDENTIALS_LINK.href)} intro={page.hero.intro} media={{ image: page.hero.image, alt: page.hero.imageAlt }} />
+      <div className="abr-keep">
+        <Credentials page={page} />
+        <Faq heading="Credentials FAQs" sub="Straight answers about our license, insurance and certifications." faqs={page.faqs} cta={false} />
+        <RoofCheck tone="white" />
+      </div>
       <FinalCta heading="Work With a Licensed Roofer" text="Start with a free roof evaluation. A roofer looks at your roof and gives you a written scope and price before any work begins." />
     </main>
   );

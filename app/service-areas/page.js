@@ -1,17 +1,13 @@
-import AlsoServing from '@/components/sections/AlsoServing';
-import ReviewMarquee from '@/components/sections/ReviewMarquee';
-import CityCards from '@/components/sections/CityCards';
-import DifferenceBand from '@/components/sections/DifferenceBand';
-import Faq from '@/components/sections/Faq';
+import LocExplorer from '@/components/loc/LocExplorer';
+import { cityCards, countyCards, LocHubHero, placeCards } from '@/components/loc/LocHub';
+import { LocFaq, LocReviews } from '@/components/loc/LocSections';
 import FinalCta from '@/components/sections/FinalCta';
-import Hero from '@/components/sections/Hero';
 import Offices from '@/components/sections/Offices';
 import RoofCheck from '@/components/sections/RoofCheck';
 import ServiceArea from '@/components/sections/ServiceArea';
 import JsonLd from '@/components/ui/JsonLd';
 import { HOME, LOCATIONS_LINK } from '@/data/catalog';
-import { LOCATION_PAGES } from '@/data/locationPages';
-import { ALL_PLACES, cityPath, LOCATIONS } from '@/data/locations';
+import { cityPath, LOCATIONS, REGIONS } from '@/data/locations';
 import { LOCATIONS_PAGE as page } from '@/data/pages/locations';
 import { heroOutcome } from '@/data/heroOutcomes';
 import { pageMetadata } from '@/lib/pages';
@@ -33,33 +29,34 @@ const schema = pageJsonLd({
   image: HERO_IMAGE,
 });
 
-// Each city card shows the one-line intro from that city's page
-const BLURBS = Object.fromEntries(Object.entries(LOCATION_PAGES).map(([slug, p]) => [slug, p.blurb]));
-
-// Service Areas page: offices, the map, every region and city page (content in data/pages/locations.js)
+// Service Areas page, the main location hub after remote.com/us-state-explorer (owner, October 29 2026): the short gradient band, the explorer
+// (search, a county filter, the four county cards, every city page and the places with no page of their own), then the offices, the ZIP map,
+// reviews and FAQs (content in data/pages/locations.js)
 export default function LocationsPage() {
   return (
-    <main id="top">
+    <main id="top" className="loc">
       <JsonLd data={schema} />
-      <Hero
-        crumbs={CRUMBS}
-        eyebrow="Los Angeles, Orange County & the Inland Empire"
-        title={page.hero.heading}
-        outcome={heroOutcome('/service-areas/')}
-        intro={page.hero.intro}
-        image={HERO_IMAGE}
-        imageAlt="Row of homes with pitched roofs along a residential street"
-        imagePosition="40% center"
+      <LocHubHero crumbs={CRUMBS} path={LOCATIONS_LINK.href} title={page.hero.heading} outcome={heroOutcome('/service-areas/')} intro={page.hero.intro} />
+      <LocExplorer
+        label="Service area overview"
+        heading="Local roofing guides, county by county"
+        text="Roofing in Los Angeles County, Orange County and the Inland Empire: each county and city guide covers the neighborhoods we work in, the roofs we see there, the nearest QRS office and our projects nearby."
+        counties={countyCards()}
+        cities={cityCards()}
+        places={placeCards(null, { link: true })}
+        placesHeading="More places we serve"
+        placesText="These places have no page of their own yet. They are inside our service area, and each links to its county guide."
+        filters={[{ value: 'all', label: 'All counties' }, ...REGIONS.map((r) => ({ value: r.slug, label: r.name }))]}
       />
-      <Offices sub="Our Los Angeles and Valley offices serve homes and businesses across Los Angeles County, Orange County and the Inland Empire. One number reaches both." />
-      <ServiceArea heading="Find Your Nearest QRS Service Area" sub="Enter your ZIP code to confirm we cover your address, or pick your city from the list." />
-      <CityCards blurbs={BLURBS} linkRegions />
-      {/* Google reviews, a few sections below the hero (owner, October 14 2026) */}
-      <ReviewMarquee />
-      <AlsoServing />
-      <DifferenceBand />
-      <Faq heading="Service Area FAQs" sub="Straight answers about where we work." faqs={page.faqs} cta={false} />
-      <RoofCheck tone="white" />
+      <div className="lc-keep">
+        <Offices sub="Our offices serve homes and businesses across Los Angeles County, Orange County and the Inland Empire. Each office has its own number, or call our main line." />
+        <ServiceArea heading="Check Your ZIP Code" sub="Enter your ZIP code to confirm we cover your address, or pick your city from the list." />
+      </div>
+      <LocReviews path={LOCATIONS_LINK.href} place="your area" />
+      <LocFaq heading="Service Area FAQs" sub="Straight answers about where we work." faqs={page.faqs} />
+      <div className="lc-keep">
+        <RoofCheck tone="white" />
+      </div>
       <FinalCta
         heading="Local Roofers Across Southern California"
         text="Wherever you are in our service area, a local roofer looks at your roof and gives you a clear next step with a written scope and price."

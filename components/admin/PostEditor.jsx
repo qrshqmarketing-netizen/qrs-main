@@ -14,6 +14,8 @@ A paragraph. It can have [a link](/roof-repair/) and **bold** words.
 
 > A highlighted note.
 
+POV: Our point of view, our bottom-line recommendation in a box.
+
 - A bullet
 - Another bullet
 

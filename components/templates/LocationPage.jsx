@@ -1,16 +1,11 @@
-import Faq from '@/components/sections/Faq';
-import ReviewMarquee from '@/components/sections/ReviewMarquee';
+import { LocColumns, LocCta, LocFaq, LocHero, LocReviews, LocRoofTypes, LocStory } from '@/components/loc/LocSections';
 import LatestArticles from '@/components/sections/LatestArticles';
-import CardCarousel from '@/components/sections/CardCarousel';
 import FinalCta from '@/components/sections/FinalCta';
-import Hero from '@/components/sections/Hero';
-import LocalIntro from '@/components/sections/LocalIntro';
 import OfficeMap from '@/components/sections/OfficeMap';
 import StudioProjects from '@/components/studio/StudioProjects';
 import RoofCheck from '@/components/sections/RoofCheck';
-import ServiceCategories from '@/components/sections/ServiceCategories';
 import JsonLd from '@/components/ui/JsonLd';
-import { HOME, LOCATIONS_LINK, RESIDENTIAL_TYPES, typeCard } from '@/data/catalog';
+import { HOME, LOCATIONS_LINK } from '@/data/catalog';
 import { cityPath, findRegion, OTHER_PLACES, regionPath } from '@/data/locations';
 import { projectsNear } from '@/data/projects';
 import { SERVICES } from '@/data/services';
@@ -26,8 +21,8 @@ const PHOTOS = [
   { src: '/images/roof-drone-palms.webp', position: 'center 45%' },
 ];
 
-// A city page (e.g. /service-areas/la-county/pasadena/): the home page's sections with local copy from data/locationPages.js
-// and a gallery of projects in the area (data/projects.js)
+// A city page (e.g. /service-areas/la-county/pasadena/), in the location-page design (components/loc/, after remote.com/global-hr/small-business;
+// owner, October 29 2026), with local copy from data/locationPages.js and the projects in the area (data/projects.js)
 export default async function LocationPage({ location, page, index = 0 }) {
   const { city, slug, county } = location;
   const region = findRegion(location.region);
@@ -57,38 +52,51 @@ export default async function LocationPage({ location, page, index = 0 }) {
   });
   const nearby = projectsNear(slug);
   return (
-    <main id="top">
+    <main id="top" className="loc">
       <JsonLd data={schema} />
-      <Hero
+      <LocHero
         crumbs={crumbs}
-        eyebrow={`${city} Roofing · Roof Repair & Replacement`}
+        path={cityPath(slug)}
         title={page.h1 || page.metaTitle}
         outcome={heroOutcome(cityPath(slug))}
-        intro={page.hero.sub}
-        image={photo.src}
-        imagePosition={photo.position}
-        label={`QRS roofing in ${city}`}
+        sub={page.hero.sub}
+        place={city}
+        commercial={page.offer === 'commercial'}
       />
-      <LocalIntro city={city} heading={page.intro.heading} paragraphs={page.intro.paragraphs} offices={office && !office.mapEmbed ? [office] : []} neighborhoods={page.neighborhoods} considerations={page.considerations} />
-      {/* An office's Google Maps listing, when it has one (OFFICES[].mapEmbed in data/site.js): it replaces the office card in the intro above, so the
-          address shows once (owner, October 27 2026) */}
-      {office?.mapEmbed && <OfficeMap office={office} city={city} />}
-      <ServiceCategories place={city} />
-      <CardCarousel title={`Roof types we work on in __${city}__`} items={RESIDENTIAL_TYPES.map(typeCard)} idPrefix="roofTypes" tone="wash" />
-      {/* Only real projects in or near this city (by the project's ZIP code pin), as a list with the hover photo (owner, October 15 2026); with none nearby, no section */}
-      {/* Google reviews, a few sections below the hero (owner, October 14 2026) */}
-      <ReviewMarquee office={slug} places={[city, ...page.neighborhoods]} />
-      <StudioProjects
-        id="projects"
-        label={nearby.local ? `Projects in ${city}` : `Projects near ${city}`}
-        heading={nearby.local ? `Roofing Projects in ${city}` : `Recent Roofing Projects Near ${city}`}
-        projects={nearby.projects}
-        allLink={false}
-        layout="list"
+      <LocColumns place={city} />
+      <LocStory
+        place={city}
+        heading={page.intro.heading}
+        paragraphs={page.intro.paragraphs}
+        considerations={page.considerations}
+        neighborhoods={page.neighborhoods}
+        photo={photo.src}
+        photoAlt={page.imageAlt || `A roof in ${city} from above`}
       />
-      <LatestArticles posts={await articlesFor(cityPath(slug))} heading="Related Roofing Articles" />
-      <Faq heading={`${city} Roofing FAQs`} sub={`Straight answers for ${city} ${page.offer === 'commercial' ? 'clients' : 'homeowners'}.`} faqs={page.faqs} cta={false} />
-      <RoofCheck offer={page.offer || 'home'} />
+      <div className="lc-keep">
+        {/* An office's Google Maps listing, when it has one (OFFICES[].mapEmbed in data/site.js; owner, October 27 2026) */}
+        {office?.mapEmbed && <OfficeMap office={office} city={city} />}
+      </div>
+      <LocRoofTypes place={city} />
+      <LocReviews path={cityPath(slug)} place={city} places={[city, ...page.neighborhoods]} />
+      <div className="lc-keep">
+        {/* Only real projects in or near this city (by the project's ZIP code pin), as a list with the hover photo; with none nearby, no section */}
+        <StudioProjects
+          id="projects"
+          label={nearby.local ? `Projects in ${city}` : `Projects near ${city}`}
+          heading={nearby.local ? `Roofing Projects in ${city}` : `Recent Roofing Projects Near ${city}`}
+          projects={nearby.projects}
+          allLink={false}
+          layout="list"
+        />
+        <LatestArticles posts={await articlesFor(cityPath(slug))} heading="Related Roofing Articles" />
+      </div>
+      <LocCta place={city} commercial={page.offer === 'commercial'} />
+      <LocFaq heading={`${city} Roofing FAQs`} sub={`Straight answers for ${city} ${page.offer === 'commercial' ? 'clients' : 'homeowners'}.`} faqs={page.faqs} />
+      {/* The request form, in the same column as the sections above */}
+      <div className="lc-keep">
+        <RoofCheck tone="white" offer={page.offer || 'home'} />
+      </div>
       <FinalCta heading={page.final.heading} text={page.final.text} />
     </main>
   );

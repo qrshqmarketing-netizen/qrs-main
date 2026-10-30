@@ -34,6 +34,17 @@ function Block({ block }) {
     );
   }
   if (block.h3) return <h3>{block.h3}</h3>;
+  // QRS's own recommendation (owner, October 29 2026: the articles are written from our point of view)
+  if (block.pov) {
+    return (
+      <aside className="post-pov" aria-label="Our point of view">
+        <p className="post-pov-label">Our point of view</p>
+        <p>
+          <Rich text={block.pov} />
+        </p>
+      </aside>
+    );
+  }
   if (block.note) {
     return (
       <p className="post-note">

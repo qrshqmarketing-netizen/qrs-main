@@ -110,7 +110,16 @@ export default function PostList({ posts, problem }) {
                     <Link className="t" href={`/admin/posts/${p.slug}`}>{p.title}</Link>
                     <span className="s">/blog/{p.slug}/{p.noindex ? ' · hidden from search' : ''}{p.hasImage ? '' : ' · no image yet'}</span>
                   </td>
-                  <td><span className={`adm-chip ${p.status === 'published' ? 'pub' : 'draft'}`}>{p.status === 'published' ? 'Published' : 'Draft'}</span></td>
+                  <td>
+                    {p.scheduledFor ? (
+                      <span className="adm-chip sched" title={`Goes live ${new Date(p.scheduledFor).toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short', timeZone: 'America/Los_Angeles' })} Pacific`}>
+                        Scheduled
+                      </span>
+                    ) : (
+                      <span className={`adm-chip ${p.status === 'published' ? 'pub' : 'draft'}`}>{p.status === 'published' ? 'Published' : 'Draft'}</span>
+                    )}
+                    {p.scheduledFor && <span className="s">{new Date(p.scheduledFor).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZone: 'America/Los_Angeles' })}</span>}
+                  </td>
                   <td>{day(p.datePublished)}{p.dateModified && p.dateModified !== p.datePublished ? <span className="s">Updated {day(p.dateModified)}</span> : null}</td>
                   <td>{p.homeSlot ? `Spot ${p.homeSlot}` : ''}</td>
                   <td>

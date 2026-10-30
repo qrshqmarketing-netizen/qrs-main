@@ -60,3 +60,9 @@
   .post p,.post li{font-size:18px}
   .post-toc{padding:24px 28px}
 }
+
+/* "Our point of view" (owner, October 29 2026): QRS's bottom-line recommendation in an article, a hairline box with a small gold label */
+.post-pov{margin:28px 0;padding:20px 22px;border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:var(--radius);background:var(--paper)}
+main .post-pov p.post-pov-label{margin:0 0 8px;font-size:12px;line-height:1.4;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-ink)}
+:root[data-theme="dark"] main .post-pov p.post-pov-label{color:var(--gold)}
+main .post-pov p:last-child{margin:0;font-size:17px;line-height:1.6;color:var(--ink)}

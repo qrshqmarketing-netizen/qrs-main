@@ -38,7 +38,7 @@ export function AboutIntro({ page }) {
   );
 }
 
-const NUMBERS = [
+export const NUMBERS = [
   { value: '10', unit: 'year', label: 'Workmanship warranty on our installs, call for details' },
   { value: '12', unit: '', label: 'Crews for shingle, tile and flat roofs' },
   { value: String(OFFICES.length), unit: '', label: 'Offices across Los Angeles' },

@@ -15,6 +15,7 @@
 //   contents), faqs, closing (the last section, not in the table of contents) and related (service pages to suggest).
 //   A section is { heading, blocks }, and each block is one of:
 //     'a paragraph'               { h3: 'Subheading' }          { note: 'Callout paragraph' }
+//     { pov: 'Our point of view: QRS\'s own bottom-line recommendation, in a box' }
 //     { list: ['…', '…'] }        { steps: ['…', '…'] }         { checklist: ['…', '…'] }
 //     { table: { head: ['…', '…'], rows: [['…', '…'], …] } }
 //   Text accepts [link text](/path/) and **bold**; outside links open in a new tab.
@@ -22,10 +23,270 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // Scheduled article (owner, October 30 2026): written by the owner's team, set to go live Monday November 2 2026 at 8:00 AM Pacific
+  // (a date later than the day it was added = scheduled, lib/postsStore.js isLive). Point of view as the pillar guides: our voice and
+  // "Our point of view" boxes, nothing beyond what the site and the cited sources say. It overlaps `temporary-roof-repair-options` (same
+  // subject, keyword "temporary roof repair"), so this one targets "stop a roof leak" and the two link to each other.
+  {
+    slug: 'stop-a-roof-leak',
+    title: 'Roof Repair: 5 Safe Ways to Stop a Roof Leak Until a Roofer Arrives',
+    keyword: 'stop a roof leak',
+    topics: ['leak', 'emergency', 'repair', 'storm'],
+    metaTitle: '5 Safe Ways to Stop a Roof Leak Until a Roofer Arrives',
+    metaDescription:
+      'How to stop a roof leak safely until a roofer arrives: contain it inside, tarp, roof cement, flashing tape or sealant, and when to stay off the roof.',
+    datePublished: '2026-11-02',
+    dateModified: '2026-11-02',
+    excerpt:
+      'Water coming through the ceiling? Here are five safe ways to stop a roof leak until a roofer arrives, from least to most risk, and the times you should stay off the roof entirely.',
+    image: '/images/blog/stop-a-roof-leak.webp',
+    imageAlt: '5 Safe Ways! Stop a Roof Leak!: a roofer in a safety harness spreading a blue tarp held down with sandbags over a damaged shingle roof under storm clouds',
+    intro: [
+      'If water is coming through your ceiling right now, this is how we tell homeowners to stop a roof leak safely until a roofer arrives. A temporary roof repair buys you days or weeks of dry ceilings, not a fixed roof. The goal is simple: keep water out of the house and limit the damage until a licensed roofer can find the source and repair it properly.',
+      'The first storm of the rainy season is when many homeowners discover worn flashing, cracked pipe boots or a missing shingle. Below are the five safe ways to stop the water, ordered from least to most risk to you.',
+    ],
+    sections: [
+      {
+        heading: 'Quick Answer: How to Fix a Leaking Roof Temporarily',
+        blocks: [
+          {
+            steps: [
+              '**Contain the leak from inside.** Catch the water, drain a bulging ceiling and protect the attic. No ladder needed, and it works in any weather.',
+              '**Tarp the damaged area.** The best stopgap for large, storm-related or hard-to-find leaks.',
+              '**Patch with roof cement.** For small holes, cracks and lifted shingle edges.',
+              '**Seal with flashing tape.** For split seams, cracked flashing and small punctures.',
+              '**Caulk gaps with roof sealant.** For pinhole leaks around vents, pipe boots and chimneys.',
+            ],
+          },
+          'Options 2 through 5 put you on a roof. If it is raining, windy, dark, steep or a tile or slate roof, stop at option 1 and call a roofer. The section on when not to go on the roof explains why.',
+        ],
+      },
+      {
+        heading: 'How Temporary Roofing Works',
+        blocks: [
+          'Temporary roofing works in one of two ways: it **covers** the damaged area with a new waterproof layer, or it **seals** one specific gap. A tarp covers. Roof cement, flashing tape and sealant seal. None of them repairs what is underneath, such as wet decking, soaked insulation or torn underlayment.',
+          'A roof sheds water by overlapping layers, each one lapping over the one below so water runs downhill. A good temporary fix follows the same rule: it starts above the damage and laps down over it, so water flows over the patch instead of under it.',
+          'One more thing to know before you climb anything: the stain on your ceiling is often not directly under the hole. Water can run along the roof deck or a rafter before it drips. That is why we trace a leak from the attic before patching outside. Our guide to [finding the source of a roof leak](/blog/roof-leak-source/) explains how.',
+          {
+            table: {
+              head: ['Fix', 'Best for', 'Surface', 'Temperature window', 'Who should do it'],
+              rows: [
+                ['1. Contain from inside', 'Any active leak', 'Any', 'Any', 'Anyone'],
+                ['2. Tarp', 'Storm damage, missing shingles, unknown leak source', 'Wet is fine; calm wind needed', 'Any', 'A roofer, ideally'],
+                ['3. Roof cement', 'Small holes, cracks, lifted shingle edges', 'Wet only with a wet/dry formula', '20–120°F for one wet-patch product ([Henry 208](https://www.siglers.com/mwdownloads/download/link/id/7235))', 'Confident DIYer, low-slope roof'],
+                ['4. Flashing tape', 'Split seams, cracked flashing, punctures', 'Clean and dry', '40–150°F ambient ([EternaBond RoofSeal](https://media.knowde.com/image/upload/v1681134890/production/Collateral/429537/Eternabond-EternabondRoofSealTDS_EN.pdf))', 'Confident DIYer, low-slope roof'],
+                ['5. Roof sealant', 'Gaps at vents, pipe boots, chimney flashing, nail heads', 'Dry', 'Above 40°F ([Loctite PL](https://www.buildsite.com/pdf/pl/Loctite-PL-S30-Polyurethane-Roof-Flashing-Sealant-Product-Data-2973866.pdf))', 'Confident DIYer, low-slope roof'],
+              ],
+            },
+          },
+          'Treat every one of these as a stopgap. FEMA’s own Operation Blue Roof sheeting is designed to last 30 days, and the agency recommends arranging permanent repairs within that window ([FEMA](https://www.fema.gov/print/pdf/node/671068)).',
+        ],
+      },
+      {
+        heading: 'When Not to Go on the Roof',
+        blocks: [
+          'No patch is worth a fall. More than 500,000 people are treated for ladder-related falls each year in the U.S., and more than 300 die, according to the [CDC’s National Institute for Occupational Safety and Health](https://stacks.cdc.gov/view/cdc/44485/cdc_44485_DS1.pdf).',
+          'Stay on the ground, and skip straight to Way 1, if any of these are true:',
+          {
+            list: [
+              '**It is raining, or the roof is still wet.** Wet shingles, moss, leaves and dust are slick. Tape and most sealants will not bond to a wet surface anyway.',
+              '**It is windy, dark or there is lightning nearby.** A tarp in a gust acts like a sail, and wind can push a ladder off the gutter line.',
+              '**The roof is steeper than 4 in 12.** That means it rises more than 4 inches for every 12 inches across. OSHA classifies these as steep roofs and requires professional crews to use guardrails, safety nets or a personal fall arrest system on them ([OSHA](https://www.osha.gov/laws-regs/standardinterpretations/2003-09-26)). If you cannot walk upright on it comfortably, it is steep.',
+              '**The roof is clay tile, concrete tile, slate or wood shake.** Tile and slate crack underfoot, which creates new leaks. Even FEMA’s Operation Blue Roof program excludes clay and slate tile roofs ([FEMA](https://www.fema.gov/print/pdf/node/671068)).',
+              '**The house is two stories or more,** or your ladder will not reach at least 3 feet above the roof edge.',
+              '**You are alone.** Someone should hold the ladder and be able to call for help.',
+              '**You see sagging, soft spots, fallen branches or a downed power line.** A sagging roof deck may not hold your weight. Stay well away from any downed line and call your utility.',
+            ],
+          },
+          { pov: 'If there is any doubt, stay inside. A bucket and a towel do more good than a patch put on in the rain, and a roofer can look at the roof once it is safe to be up there.' },
+          { h3: 'If You Do Climb: Four Ladder Rules From OSHA' },
+          'These rules are written for workers, but they are the best benchmark for homeowners too ([OSHA 1926.1053](https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.1053)).',
+          {
+            steps: [
+              'Set the base about 1 foot out from the wall for every 4 feet of height to the roof edge.',
+              'Extend the side rails at least 3 feet above the roof edge so you have something to hold when stepping on and off.',
+              'Place the feet on stable, level ground.',
+              'Face the ladder, keep at least one hand on it and do not carry anything that could throw off your balance. Raise tools and materials with a rope and bucket instead.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Way 1: Contain the Leak From Inside',
+        blocks: [
+          'This is the first thing every homeowner should do, and during a storm it is the only thing you should do. It needs no ladder and limits the damage while you wait.',
+          '**You need:** buckets or a plastic tote, towels, plastic sheeting or a drop cloth, a screwdriver, a flashlight, and fans or a dehumidifier.',
+          {
+            steps: [
+              '**Cut power near the water.** If water is near a light fixture, ceiling fan, recessed light or outlet, switch off that circuit at the breaker panel. If the panel is in a wet area or you would be standing in water, do not touch it. Call your utility or an electrician.',
+              '**Catch the drip.** Set a bucket under it with a towel in the bottom to stop splashing. Lay plastic sheeting under and around it.',
+              '**Drain a bulging ceiling.** A bulge means water is pooling on top of the drywall. Put a bucket under the lowest point, stand to the side, and poke a small hole with a screwdriver. A small, controlled hole is far easier to repair than a ceiling that gives way.',
+              '**Move belongings.** Electronics first, then rugs, furniture and anything with paper or fabric.',
+              '**Check the attic, if you can reach it safely.** Step only on joists, never on the drywall between them. Set a scrap of plywood across two joists and a tub on top of it under the drip. Pull soaked insulation away so it stops holding water against the ceiling.',
+              '**Mark the entry point.** In the attic, follow the wet trail uphill to where water first appears on the roof deck. Circle it with a marker and take a photo. This saves your roofer time finding the source.',
+              '**Start drying right away.** Run fans and a dehumidifier. According to the [EPA](https://www.epa.gov/mold/mold-course-chapter-4), mold will not grow in most cases if wet items are dried within 24 to 48 hours.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Way 2: Tarp the Damaged Area',
+        blocks: [
+          'A properly anchored tarp is the most effective stopgap for storm damage, and the riskiest one to do yourself. GAF, the roofing manufacturer, recommends leaving it to professionals, using at least two people if you do it, and never tarping while it is still raining ([GAF](https://www.gaf.com/en-us/blog/your-home/what-to-know-about-tarping-a-roof-2f4a3a18-076a-4a41-b911-4c47c604b195)).',
+          '**Best for:** missing shingles, branch punctures, damage across a large area, and leaks you cannot trace to one spot.',
+          '**You need:** a heavy-duty reinforced tarp, wood furring strips (1x3 or 2x4), 8d galvanized nails or exterior screws, a hammer or drill, a utility knife, and a helper.',
+          {
+            steps: [
+              '**Clear the area.** Remove branches, loose shingles and old nails that could puncture the tarp.',
+              '**Size it generously.** Plan for the tarp to extend about 4 feet beyond the damage on every side ([City of Sunrise, FL tarping guide](https://sunrisefl.gov/home/showpublisheddocument/4667/636739879149830000)). It must also reach over the ridge onto the far slope. A tarp that stops partway up the roof lets water run in under its top edge.',
+              '**Anchor the bottom edge first.** Roll about 2 feet of tarp around a furring strip three or four times. Roll it so the tarp comes off the top of the board, not the bottom, so water flows over the roll. Nail it below the damage with galvanized nails about 2 feet apart.',
+              '**Pull it taut over the ridge.** Wrap the top edge around a second strip on the opposite slope and nail it down. A loose tarp flaps, lifts and tears.',
+              '**Secure the sides.** Run side strips up and down the slope, not across it, so they do not dam water ([GAF](https://www.gaf.com/en-us/blog/your-home/what-to-know-about-tarping-a-roof-2f4a3a18-076a-4a41-b911-4c47c604b195)). Keep every strip at least 2 feet from the damaged area.',
+              '**Never nail the tarp alone.** Nails through bare plastic rip out in the first strong gust. Always nail through a wrapped board.',
+            ],
+          },
+          '**Tile and metal roofs need a different method.** Nailing into metal roofing causes permanent damage, and tile is slippery and breaks underfoot. The Sunrise guide uses cords through the tarp’s grommets, staked to the ground, instead. This is a job for a roofer.',
+          '**Plan for a short life.** FEMA designs its Blue Roof sheeting to last 30 days. GAF advises keeping any tarp up no longer than three months and having it checked after the first month. Every nail you drive is a hole the roofer will need to seal, so point them out.',
+          { pov: 'Tarping is the stopgap we would most like you to leave to a roofer. A loose tarp can let in more water than the leak it covers, and on tile or metal roofs it needs a different method altogether.' },
+        ],
+      },
+      {
+        heading: 'Way 3: Patch With Roof Cement',
+        blocks: [
+          'Roof cement is a thick, black, asphalt-based paste that you trowel into small holes and cracks. It is the only one of the sealing options that can go on in the rain, but only if you buy the right formula.',
+          '**Check the label before you buy.** Standard plastic roof cement needs a clean, dry surface. Wet-surface formulas are tested to ASTM D3409, the standard for adhesion to damp, wet or underwater surfaces. Henry’s 208 Wet Patch, for example, is rated for application from 20°F to 120°F, even in standing water ([Henry 208 data sheet](https://www.siglers.com/mwdownloads/download/link/id/7235)).',
+          '**Best for:** small holes, cracks and splits, lifted shingle edges, and gaps where shingles meet flashing.',
+          '**You need:** wet/dry roof cement (a cartridge for small jobs, a can for larger ones), a putty knife or trowel, roof repair fabric, a wire brush, gloves and mineral spirits for cleanup.',
+          {
+            steps: [
+              '**Clean the spot.** Brush away loose granules, dirt and old cement. Wire-brush any rust off metal.',
+              '**Apply 1/8 to 1/4 inch thick.** Work the cement into the hole, then spread it 2 to 4 inches past the edges and feather them thin.',
+              '**Reinforce anything bigger than a nail hole.** Henry’s instructions call for embedding repair fabric when a hole is wider than 1/4 inch or longer than 2 inches.',
+              '**Add a second coat** over the fabric.',
+              '**For a lifted shingle,** spread a little cement under the loose edge and press it flat.',
+            ],
+          },
+          { h3: 'Limits to Know' },
+          {
+            list: [
+              'It is not recommended over gravel, rubber or PVC sheet roofing, or wood shingles, according to the same data sheet. Check the label for your roof type.',
+              'The solvent fumes are strong. The manufacturer says to close rooftop air intakes until they clear.',
+              'Use it sparingly. Your roofer will have to scrape off excess cement before making a permanent repair.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Way 4: Seal With Flashing Tape',
+        blocks: [
+          'Flashing tape is a peel-and-stick waterproof tape, usually butyl or rubberized asphalt with a foil or UV-stable backing. It is the cleanest, fastest patch on this list, but it only works on a clean, dry surface.',
+          '**Best for:** split seams on metal or low-slope roofs, cracked metal flashing, small punctures, and leaking joints in gutters or roof edging.',
+          '**You need:** roof-rated flashing tape at least 2 inches wider than the crack, acetone or a residue-free cleaner, rags, scissors and a small hand roller.',
+          {
+            steps: [
+              '**Wait for a dry day.** EternaBond’s RoofSeal data sheet, for example, requires a clean, dry surface and an air temperature of 40°F to 150°F, with a primer below 40°F ([EternaBond RoofSeal data sheet](https://media.knowde.com/image/upload/v1681134890/production/Collateral/429537/Eternabond-EternabondRoofSealTDS_EN.pdf)).',
+              '**Clean thoroughly.** Remove dust, grime and oil with acetone or lacquer thinner and let it dry. Dust and oil are what keep tape from bonding.',
+              '**Cut the tape long.** It should cover the damage and run well onto sound material on every side. Round the corners so they are less likely to peel.',
+              '**Peel and press as you go.** Pull the release liner back gradually rather than all at once, so the adhesive stays clean.',
+              '**Roll it hard.** Use a hand roller or firm hand pressure across the whole piece, especially the edges. The pressure is what activates the bond.',
+              '**Lap like shingles.** When you use more than one piece, start at the lowest point and work uphill so each upper piece overlaps the one below it.',
+            ],
+          },
+          { note: '**Do not use silicone anywhere near tape.** The same data sheet warns that RoofSeal is not compatible with silicone sealants or lubricants. If someone has already smeared silicone on the spot, the tape will not stick there.' },
+        ],
+      },
+      {
+        heading: 'Way 5: Caulk Small Gaps With Roof Sealant',
+        blocks: [
+          'Roof sealant comes in a caulk tube and fills narrow gaps around the things that poke through your roof. Leaks around vents, pipes and chimneys often start at a gap like this.',
+          '**Best for:** gaps around plumbing vent pipes, vent flanges and chimney flashing, exposed nail heads, and small separations where flashing meets shingles. If the rubber collar on a pipe boot has cracked, sealant can bridge it for a while, but the boot itself needs replacing.',
+          '**Choose polyurethane, not silicone.** A polyurethane roof and flashing sealant bonds to asphalt shingles, metal, brick, wood and stucco. Loctite’s PL Roof & Flashing sealant, for example, lists those surfaces ([Loctite PL data sheet](https://www.buildsite.com/pdf/pl/Loctite-PL-S30-Polyurethane-Roof-Flashing-Sealant-Product-Data-2973866.pdf)). Both Loctite and EternaBond warn that their products will not bond with silicone, so a silicone patch today can block a proper repair later.',
+          '**You need:** roof-rated polyurethane sealant, a caulk gun, a utility knife, a wire brush or scraper, rags and mineral spirits for cleanup.',
+          {
+            steps: [
+              '**Pick a dry window.** Loctite says application to moist surfaces will hurt adhesion and calls for temperatures between 40°F and 100°F.',
+              '**Clean the joint.** Scrape out old caulk, loose granules, dirt and oil. Do not caulk over fresh roof cement; the data sheet says surfaces must be free of asphalt and mastic.',
+              '**Cut the nozzle at 45 degrees** and push a steady bead into the gap, not just over it.',
+              '**Tool it smooth within 5 minutes** with a dry putty knife so it bonds to both sides.',
+              '**Mind the depth.** Gaps deeper than 1/2 inch need a foam backer rod first. Very wide or deep gaps are a job for a roofer.',
+              '**Give it time.** The bead skins within 24 hours, works after about 3 days and fully cures in about a week, so apply it ahead of the next storm, not during it.',
+            ],
+          },
+          'If you must seal in damp conditions, use a wet/dry roof cement from Way 3 or a sealant whose label specifically says it is rated for wet surfaces.',
+          { pov: 'Skip the silicone. It is the patch we most often have to scrape off before a real repair, because tape and roof sealant will not stick where it has been.' },
+        ],
+      },
+      {
+        heading: 'Document Everything for Insurance',
+        blocks: [
+          'Temporary repairs are usually part of your claim, not a reason to lose it. Homeowners policies generally require you to take reasonable steps to prevent further damage. North Carolina’s Department of Insurance, for example, says to keep every receipt, photograph the damage before and after emergency repairs, and avoid extensive repairs before the adjuster arrives ([NC Department of Insurance](https://www.ncdoi.gov/consumers/homeowners-insurance/loss-prevention-and-aftermath)). Check your own policy for its exact wording, and see our guide to [roof insurance claims in California](/blog/roof-insurance-claims-california/).',
+          {
+            checklist: [
+              'Photos and video of the ceiling, attic and roof damage **before** you fix anything',
+              'Photos of each temporary fix once it is done',
+              'Receipts for every tarp, tube, roll of tape and bucket',
+              'A short log: date and time the leak started, the weather, and what you did',
+              'Damaged belongings set aside, not thrown out, until the adjuster sees them',
+            ],
+          },
+          { h3: 'What to Tell Your Roofer' },
+          'The details you collected will save time on the first visit. Share:',
+          {
+            list: [
+              'Where the water appears inside, and the attic photo of where it enters the roof deck',
+              'When it leaks: every rain, only in wind-driven rain, or only in heavy storms',
+              'Every temporary fix you made and the exact product used, especially if anyone used silicone',
+              'Where you drove nails or screws for a tarp',
+              'The roof’s age and any recent rooftop work, such as solar panels, a satellite dish or HVAC equipment',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Sources',
+        blocks: [
+          {
+            list: [
+              '[FEMA: Frequently Asked Questions about Operation Blue Roof](https://www.fema.gov/print/pdf/node/671068)',
+              '[CDC/NIOSH: Ladder Safety app fact sheet, Publication 2017-129](https://stacks.cdc.gov/view/cdc/44485/cdc_44485_DS1.pdf)',
+              '[OSHA: 29 CFR 1926.1053, Ladders](https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.1053)',
+              '[OSHA: Letter of interpretation on low-slope and steep roofs, Sept. 26, 2003](https://www.osha.gov/laws-regs/standardinterpretations/2003-09-26)',
+              '[EPA: Mold Course, Chapter 4](https://www.epa.gov/mold/mold-course-chapter-4)',
+              '[City of Sunrise, FL: Temporary roof tarping guide](https://sunrisefl.gov/home/showpublisheddocument/4667/636739879149830000)',
+              '[GAF: What to Know About Tarping a Roof, Feb. 21, 2025](https://www.gaf.com/en-us/blog/your-home/what-to-know-about-tarping-a-roof-2f4a3a18-076a-4a41-b911-4c47c604b195)',
+              '[Henry 208 Wet Patch technical data sheet](https://www.siglers.com/mwdownloads/download/link/id/7235)',
+              '[EternaBond RoofSeal technical data sheet](https://media.knowde.com/image/upload/v1681134890/production/Collateral/429537/Eternabond-EternabondRoofSealTDS_EN.pdf)',
+              '[Loctite PL Roof & Flashing Polyurethane Sealant technical data sheet, rev. Oct. 30, 2024](https://www.buildsite.com/pdf/pl/Loctite-PL-S30-Polyurethane-Roof-Flashing-Sealant-Product-Data-2973866.pdf)',
+              '[North Carolina Department of Insurance: Loss Prevention and Aftermath](https://www.ncdoi.gov/consumers/homeowners-insurance/loss-prevention-and-aftermath)',
+            ],
+          },
+        ],
+      },
+    ],
+    faqs: [
+      { q: 'How do I fix a leaking roof temporarily?', a: 'Start inside: catch the water, drain any ceiling bulge and cut power near the leak. Once the roof is dry and calm, match the fix to the damage: a tarp for large or storm damage, roof cement for small holes, flashing tape for seams and cracked flashing, and polyurethane sealant for gaps around vents and pipes.' },
+      { q: 'How do I temporarily fix my roof while it is still raining?', a: 'Stay off the roof and work from inside and the attic. Wet roofs are slippery, and tape and most sealants will not bond to a wet surface. Wet/dry roof cement is the only patch rated for wet application, and it is only worth using if you can reach the spot safely from a ladder on a low-slope roof.' },
+      { q: 'How do I temporarily patch a roof?', a: 'Clean the area, then use the product made for that damage. Roof cement goes 1/8 to 1/4 inch thick and 2 to 4 inches past the hole, with repair fabric for anything larger than a nail hole. Flashing tape needs a clean, dry surface and firm rolling. Sealant goes into the gap, not just over it.' },
+      { q: 'How does temporary roofing work?', a: 'It either covers the damage with a new waterproof layer, like a tarp, or seals one specific gap, like cement, tape or sealant. Both work by lapping over the damage from above so water flows across the patch, not under it. None of them repairs wet decking, insulation or underlayment underneath.' },
+      { q: 'How long does a temporary roof repair last?', a: 'Plan on weeks, not seasons. FEMA designs its Operation Blue Roof sheeting to last 30 days, and GAF advises keeping a tarp up no longer than three months. Check every patch after each storm.' },
+      { q: 'Can I use silicone caulk on a roof leak?', a: 'It is better not to. Loctite and EternaBond both warn that their roof sealant and tape will not bond with silicone, so a silicone patch can make a proper repair harder later. Use a roof-rated polyurethane sealant or wet/dry roof cement instead.' },
+      { q: 'Will homeowners insurance pay for a temporary roof repair?', a: 'Often, if the damage itself is covered. Policies generally require you to protect your home from further damage and keep a record of what you spend. Photograph everything before and after, save every receipt, and confirm the details with your insurer.' },
+    ],
+    closing: {
+      heading: 'Have the Leak Fixed for Good',
+      blocks: [
+        'A temporary fix buys you time; it does not tell you why the roof failed. A roofer traces where the water actually gets in, checks the decking underneath and makes a repair built to last. If water is coming in now, see [emergency roof repair](/roof-repair/emergency/); otherwise [book a free roof evaluation](/contact-us/) and you get photos of what we find and a written scope and price before any work. For more stopgaps, see [temporary roof repair options](/blog/temporary-roof-repair-options/).',
+      ],
+    },
+    related: ['/roof-repair/emergency/', '/roof-repair/', '/roof-inspection/'],
+  },
   // Pillar guides (owner, October 28 2026): four long guides that tie the existing articles on one subject together and link to them. They are
   // informational, so they don't compete with the service pages they link to. No prices, no lifespans in years, nothing the site doesn't already say.
+  // Point of view (owner, October 29 2026): written in QRS's own voice ("we" are the roofers: what we check, what we find, what we recommend), with
+  // "Our point of view" boxes ({ pov }) giving our bottom-line recommendation. Still no invented stories or new facts. `revision` copies it to Supabase.
   {
     slug: 'tile-roof-guide-southern-california',
+    revision: 1, // rewritten from our point of view (owner, October 29 2026); POST /api/posts/sync/ after the deploy copies it to the live copy
     title: 'Tile Roof Guide for Southern California Homeowners',
     keyword: 'tile roof guide',
     topics: ['tile', 'underlayment', 'repair', 'replacement'],
@@ -33,20 +294,20 @@ export const BLOG_POSTS = [
     metaDescription:
       'Tile roof guide for Southern California: why the underlayment wears out before the tiles, broken and slipped tiles, tile weight, matching and your options.',
     datePublished: '2026-10-28',
-    dateModified: '2026-10-28',
+    dateModified: '2026-10-29',
     excerpt:
       'Most of what goes wrong with a tile roof comes back to one idea: the tiles usually outlast the underlayment beneath them. This guide ties together everything a Southern California tile roof owner needs to know.',
     image: '/images/blog/tile-roof-guide-southern-california.webp',
     imageAlt: 'The Tile Roof Owner’s Guide, Southern California Edition: a Spanish-style home with a red clay tile roof among palm trees',
     intro: [
-      'This tile roof guide is for Southern California homeowners who have clay or concrete tile overhead, or are thinking about it. Most of what goes wrong with a tile roof comes back to one idea: **the tiles usually outlast the underlayment beneath them.**',
-      'That is why a tile roof can leak while every tile still looks fine, and why the fix is often less than a new roof. The sections below cover how a tile roof works, the problems we see most, your options and where to read more on each topic.',
+      'This tile roof guide is for Southern California homeowners who have clay or concrete tile overhead, or are thinking about it. It is written from what we see on the tile roofs we work on, and most of it comes back to one idea: **the tiles usually outlast the underlayment beneath them.**',
+      'That is why a tile roof can leak while every tile still looks fine, and why the fix is often less than a new roof. Below we explain how a tile roof works, the problems we find, the options we weigh on a tile roof and where to read more on each topic.',
     ],
     sections: [
       {
         heading: 'How a Tile Roof Keeps Water Out',
         blocks: [
-          'A tile roof is a system of layers. The tiles shed most of the rain and shade the layers below from the sun, but they are not watertight on their own. Water that gets past them, through the gaps between tiles or under a broken one, is stopped by the underlayment.',
+          'We explain a tile roof to homeowners as a system of layers. The tiles shed most of the rain and shade the layers below from the sun, but they are not watertight on their own. Water that gets past them, through the gaps between tiles or under a broken one, is stopped by the underlayment.',
           {
             table: {
               head: ['Layer', 'What it does'],
@@ -64,7 +325,7 @@ export const BLOG_POSTS = [
       {
         heading: 'The Tiles Usually Outlast the Underlayment',
         blocks: [
-          'Clay and concrete tiles can protect a home for decades. The underlayment beneath them works hard the whole time, in heat that builds up under the tiles, and it wears out first. When it does, water the tiles let through reaches the deck, even though the roof looks fine from the street.',
+          'Clay and concrete tiles can protect a home for decades. The underlayment beneath them works hard the whole time, in heat that builds up under the tiles, and it wears out first. That is why, when we are called out for a leak on a tile roof, the tiles are often fine: what has worn out is the layer under them, and water the tiles let through is reaching the deck even though the roof looks fine from the street. These are the signs we look for:',
           {
             list: [
               'A leak or a ceiling stain after rain, with no broken tile in sight',
@@ -73,22 +334,23 @@ export const BLOG_POSTS = [
               'Repeated repairs in the same area',
             ],
           },
-          'There is no single age at which underlayment fails; it depends on the product, how it was installed and how the roof is built. Our guide to [tile roof underlayment](/blog/tile-roof-underlayment/) explains the signs and the options in detail.',
+          'We can’t put a single age on underlayment; it depends on the product, how it was installed and how the roof is built. Our guide to [tile roof underlayment](/blog/tile-roof-underlayment/) explains the signs and the options in detail.',
+          { pov: 'If your tiles are sound, don’t let anyone sell you a new tile roof before checking whether new underlayment under your own tiles, a lift and relay, would do the job.' },
         ],
       },
       {
         heading: 'Broken and Slipped Tiles',
         blocks: [
           'A tile cracks when it is stepped on in the wrong place, hit by a falling branch or knocked during other work on the roof, such as a satellite dish, solar or HVAC service. Tiles also slip when the fastener or batten holding them gives way.',
-          'One broken tile is rarely an emergency on its own, but it leaves the underlayment below in direct sun and rain, and that speeds up its wear. A slipped tile can also let more water through than the underlayment was meant to handle.',
-          'The repair is to replace the broken tiles with the closest match, reset the slipped ones and check the underlayment and flashing around them. See [tile roof repair](/residential-roofing/tile-roofing/repair/) for how we do it.',
+          'One broken tile is rarely an emergency on its own, but we don’t like leaving one for long: it leaves the underlayment below in direct sun and rain, and that speeds up its wear. A slipped tile can also let more water through than the underlayment was meant to handle.',
+          'Our repair is to replace the broken tiles with the closest match, reset the slipped ones and check the underlayment and flashing around them. See [tile roof repair](/residential-roofing/tile-roofing/repair/) for how we do it.',
         ],
       },
       {
         heading: 'Why Walking on Tile Cracks It',
         blocks: [
           'A tile is strong when the load is spread the way it was designed to be, and brittle when it is not. Step on the middle of a barrel tile, or on the unsupported edge of a flat one, and it can crack under one person’s weight, even if the crack doesn’t show until the next rain.',
-          'Roofers who work on tile know where to step and where not to. When anyone else needs to be on your roof, for solar, a satellite dish or air conditioning, it is worth asking how they will walk it and having the tiles checked afterward.',
+          'Our roofers know where to step on tile and where not to. When anyone else needs to be on your roof, for solar, a satellite dish or air conditioning, we suggest asking how they will walk it and having the tiles checked afterward.',
           { note: '**Stay off a tile roof yourself.** Tiles crack underfoot, and a tile roof is slippery, especially when wet. Look from the ground or ask a roofer.' },
         ],
       },
@@ -96,13 +358,13 @@ export const BLOG_POSTS = [
         heading: 'Tile Weight and Your Roof Framing',
         blocks: [
           'Tile is heavy compared with other roofing. As a general range, clay tile weighs about 600 to 950 pounds per square (100 square feet) and concrete tile about 820 to 1,100, depending on the profile.',
-          'A home built for tile was framed for that weight. Putting tile on a home that had shingles, or switching from clay to a heavier concrete tile, means the framing has to be checked first and may need reinforcing. Our guides to [clay vs. concrete tile](/blog/clay-vs-concrete-tile-roof/) and [shingle vs. tile](/blog/asphalt-shingle-vs-tile-roof/) compare the materials.',
+          'A home built for tile was framed for that weight. If you are thinking of putting tile on a home that had shingles, or switching from clay to a heavier concrete tile, we check the framing first, because it may need reinforcing. Our guides to [clay vs. concrete tile](/blog/clay-vs-concrete-tile-roof/) and [shingle vs. tile](/blog/asphalt-shingle-vs-tile-roof/) compare the materials.',
         ],
       },
       {
         heading: 'Matching Tiles on Older Spanish-Style Homes',
         blocks: [
-          'Many older Spanish Revival homes in Los Angeles and Orange County have clay tile in profiles or colors that are no longer made, and clay that has aged in the sun for years doesn’t look like a new tile even when the profile matches.',
+          'Many older Spanish Revival homes in Los Angeles and Orange County have clay tile in profiles or colors that are no longer made, and clay that has aged in the sun for years doesn’t look like a new tile even when the profile matches. These are the ways we keep the look:',
           {
             list: [
               '**Salvaged tiles** of the same profile can replace broken ones.',
@@ -110,11 +372,13 @@ export const BLOG_POSTS = [
               '**A lift and relay keeps your tiles** on the roof, so the look of the home doesn’t change at all.',
             ],
           },
+          { pov: 'On a Spanish-style home, we would rather move your own tiles to the slopes people see than put a new tile that doesn’t match out front.' },
         ],
       },
       {
         heading: 'Repair, Lift and Relay, or a New Tile Roof?',
         blocks: [
+          'These are the three options we weigh on a tile roof, from the smallest job to the largest:',
           {
             table: {
               head: ['Option', 'When it fits', 'What happens'],
@@ -131,6 +395,7 @@ export const BLOG_POSTS = [
       {
         heading: 'Caring for a Tile Roof in Southern California',
         blocks: [
+          'What we ask tile roof owners to keep up between visits:',
           {
             checklist: [
               'Keep valleys and gutters clear of leaves, so water can run off the roof',
@@ -160,8 +425,8 @@ export const BLOG_POSTS = [
     ],
     faqs: [
       { q: 'How long does a tile roof last?', a: 'The tiles themselves can protect a home for decades. The underlayment beneath them wears out sooner, and how soon depends on the product, the installation and the roof. That is why a tile roof often needs new underlayment long before it needs new tiles.' },
-      { q: 'Can a tile roof leak if no tiles are broken?', a: 'Yes. Tiles are not watertight on their own, so once the underlayment beneath them wears out, water the tiles let through can reach the deck. A roof inspection checks the underlayment, not just the tiles.' },
-      { q: 'Can I walk on my tile roof?', a: 'It is better not to. Tiles crack when stepped on in the wrong place, and a tile roof is slippery, especially when wet. Roofers who work on tile know where to step.' },
+      { q: 'Can a tile roof leak if no tiles are broken?', a: 'Yes, and it is one of the leaks we see most on tile. Tiles are not watertight on their own, so once the underlayment beneath them wears out, water the tiles let through can reach the deck. When we inspect a tile roof, we check the underlayment, not just the tiles.' },
+      { q: 'Can I walk on my tile roof?', a: 'We would ask you not to. Tiles crack when stepped on in the wrong place, and a tile roof is slippery, especially when wet. Roofers who work on tile know where to step.' },
       { q: 'Can you replace the underlayment without new tiles?', a: 'Yes. A [tile lift and relay](/residential-roofing/tile-roofing/lift-and-relay/) takes the tiles off, puts new underlayment down and resets the same tiles, replacing only the cracked or broken ones.' },
       { q: 'Can you match the tiles on an older home?', a: 'We look for the closest match, use salvaged tiles where they exist and can move your own tiles to the slopes people see, with the new ones where they show least.' },
     ],
@@ -175,6 +440,7 @@ export const BLOG_POSTS = [
   },
   {
     slug: 'flat-roofs-los-angeles-guide',
+    revision: 1, // rewritten from our point of view (owner, October 29 2026); POST /api/posts/sync/ after the deploy copies it to the live copy
     title: 'Flat Roofs in Los Angeles: Systems, Drainage and Lifespan',
     keyword: 'flat roofs in los angeles',
     topics: ['flat', 'repair', 'replacement', 'maintenance'],
@@ -182,14 +448,14 @@ export const BLOG_POSTS = [
     metaDescription:
       'Flat roofs in Los Angeles: why they are so common, torch-down, cap sheet and TPO, ponding water, parapets, scuppers and drains, and what shortens their life.',
     datePublished: '2026-10-28',
-    dateModified: '2026-10-28',
+    dateModified: '2026-10-29',
     excerpt:
       'Flat roofs are everywhere in Los Angeles, and none of them is truly flat. Here is how they are built, why drainage matters most and what shortens a flat roof’s life.',
     image: '/images/blog/flat-roofs-los-angeles-guide.webp',
     imageAlt: 'Los Angeles Flat Roof Guide: a white flat roof on a modern building with the downtown Los Angeles skyline behind it',
     intro: [
-      'Flat roofs in Los Angeles are everywhere: on mid-century and modern homes, apartment buildings, garages, additions and ADUs, and behind the parapet walls of Spanish-style houses. None of them is truly flat. A good one has a gentle slope that carries rainwater to a drain, a scupper or a gutter.',
-      'This guide explains the systems used on flat roofs here, why drainage matters more than anything else, what shortens a flat roof’s life and when repair or replacement makes sense.',
+      'Flat roofs in Los Angeles are everywhere: on mid-century and modern homes, apartment buildings, garages, additions and ADUs, and behind the parapet walls of Spanish-style houses. None of them is truly flat, and the first thing we look at on one is how it moves water: a good one has a gentle slope that carries rainwater to a drain, a scupper or a gutter.',
+      'In this guide we explain the systems we see on flat roofs here, why we put drainage ahead of everything else, what shortens a flat roof’s life and how we decide between repair and replacement.',
     ],
     sections: [
       {
@@ -215,12 +481,13 @@ export const BLOG_POSTS = [
             },
           },
           'Our guides to [torch-down roofing](/blog/torch-down-roofing-app-vs-sbs/), [TPO roofing](/blog/tpo-roofing-pros-and-cons/) and [cool roofs](/blog/cool-roof-southern-california/) go deeper on each.',
+          { pov: 'We don’t coat roofs. When a flat roof is worn, we would rather fix what is actually wrong, the laps, the flashings or the drainage, or tear it off and start again from the deck, than cover it with another layer.' },
         ],
       },
       {
         heading: 'Drainage Comes First',
         blocks: [
-          'Water should move steadily toward the drains and scuppers, then down through downspouts or gutters. When the slope is missing, the deck has sagged or an outlet is blocked, water sits. Standing water, called ponding, wears the surface faster, adds weight and finds any weak lap or flashing.',
+          'When we look at a flat roof, we follow the water first. It should move steadily toward the drains and scuppers, then down through downspouts or gutters. When the slope is missing, the deck has sagged or an outlet is blocked, water sits. Standing water, called ponding, wears the surface faster, adds weight and finds any weak lap or flashing.',
           {
             list: [
               'Puddles that are still there long after the rain stops',
@@ -229,20 +496,21 @@ export const BLOG_POSTS = [
               'Water marks on ceilings below low spots',
             ],
           },
-          'On a replacement, the roof can be planned around the water: crickets, small raised sections that steer water around curbs toward the outlets, and extra outlets where the existing ones can’t keep up.',
+          'On a replacement, we can plan the roof around the water: crickets, small raised sections that steer water around curbs toward the outlets, and extra outlets where the existing ones can’t keep up.',
+          { pov: 'Fix the water path before you fix the surface. A new cap sheet over a roof that still ponds will wear out first at the same low spots.' },
         ],
       },
       {
         heading: 'Parapets, Scuppers and Drains',
         blocks: [
-          'Most flat roof leaks start where the roof meets something, not out in the open field. Parapet walls take the brunt of the sun and wind, and the roof has to be carried up them and finished under the coping. Scuppers, the openings through a parapet, and roof drains are the only way out for the water, so a clogged one turns into a pond. Air conditioning curbs, vents and skylights all interrupt the roof and each needs its own flashing, not just a bead of sealant.',
-          'On a [commercial building in Westminster](/projects/commercial-flat-roof-replacement-westminster-92683/), for example, the new cap sheet was carried up the parapet walls and every curb, vent and turbine vent was flashed before the job was done.',
+          'Most of the flat roof leaks we trace start where the roof meets something, not out in the open field. Parapet walls take the brunt of the sun and wind, and the roof has to be carried up them and finished under the coping. Scuppers, the openings through a parapet, and roof drains are the only way out for the water, so a clogged one turns into a pond. Air conditioning curbs, vents and skylights all interrupt the roof and each needs its own flashing, not just a bead of sealant.',
+          'On a [commercial building in Westminster](/projects/commercial-flat-roof-replacement-westminster-92683/), for example, we carried the new cap sheet up the parapet walls and flashed every curb, vent and turbine vent before calling the job done.',
         ],
       },
       {
         heading: 'What Shortens a Flat Roof’s Life',
         blocks: [
-          'How long a flat roof lasts depends on the system, how well it was installed, how it drains and how it is looked after. These are the things that shorten it:',
+          'How long a flat roof lasts depends on the system, how well it was installed, how it drains and how it is looked after. These are the things we see shorten it:',
           {
             list: [
               '**Ponding water** that sits on the same spots after every rain',
@@ -258,8 +526,9 @@ export const BLOG_POSTS = [
       {
         heading: 'Repair or Replace a Flat Roof?',
         blocks: [
-          'A blister, a split, an open lap or a failed flashing at one curb can usually be repaired. When wear is spread across the roof, when there are several old layers, or when the deck or insulation underneath is wet, repairs buy less time each round and a replacement is the better use of money.',
+          'A blister, a split, an open lap or a failed flashing at one curb can usually be repaired. When wear is spread across the roof, when there are several old layers, or when the deck or insulation underneath is wet, repairs buy less time each round, and we will tell you a replacement is the better use of money.',
           'Every flat roof replacement we do is a full tear-off down to the deck, so anything holding moisture goes with it and damaged decking is found and fixed instead of buried. See [flat roof repair](/residential-roofing/flat-roofing/repair/) and our *FlatGuard* [flat roof replacement](/residential-roofing/flat-roofing/replacement/).',
+          { pov: 'Don’t let a new flat roof go over the old one. Layers hide wet insulation and damaged decking, and we would rather find them while the roof is open.' },
         ],
       },
       {
@@ -278,6 +547,7 @@ export const BLOG_POSTS = [
       {
         heading: 'Keeping a Flat Roof Healthy',
         blocks: [
+          'What we ask flat roof owners to keep an eye on:',
           {
             checklist: [
               'Clear the drains and scuppers before the rainy season and after storms',
@@ -308,6 +578,7 @@ export const BLOG_POSTS = [
   },
   {
     slug: 'asphalt-shingle-roof-guide',
+    revision: 1, // rewritten from our point of view (owner, October 29 2026); POST /api/posts/sync/ after the deploy copies it to the live copy
     title: 'Asphalt Shingle Roofs: The Complete SoCal Guide',
     keyword: 'asphalt shingle roofs',
     topics: ['shingle', 'replacement', 'repair', 'ventilation', 'maintenance'],
@@ -315,14 +586,14 @@ export const BLOG_POSTS = [
     metaDescription:
       'Asphalt shingle roofs in Southern California: 3-tab vs. architectural, how sun, heat and salt air age them, attic ventilation and a roof built from the deck up.',
     datePublished: '2026-10-28',
-    dateModified: '2026-10-28',
+    dateModified: '2026-10-29',
     excerpt:
       'Shingles cover more Southern California homes than any other roof. Here is how they age in our sun, why the attic matters as much as the shingles and what a roof built from the deck up includes.',
     image: '/images/blog/asphalt-shingle-roof-guide.webp',
     imageAlt: 'SoCal Asphalt Shingle Guide: a roofer nailing asphalt shingles on a sunny Southern California roof',
     intro: [
       'Asphalt shingle roofs cover more Southern California homes than any other kind. They are lighter than tile, come in many colors, are commonly fire-rated and suit Craftsman, ranch and traditional homes alike.',
-      'This guide covers the types of shingles, what wears them out here, why the attic matters as much as the shingles, and what a roof built from the deck up includes.',
+      'In this guide we cover the types of shingles, what we see wearing them out here, why we check the attic as closely as the shingles, and what we mean by a roof built from the deck up.',
     ],
     sections: [
       {
@@ -337,20 +608,20 @@ export const BLOG_POSTS = [
               ],
             },
           },
-          'Architectural shingles are what most new shingle roofs here use. Our comparison of [architectural vs. 3-tab shingles](/blog/architectural-vs-3-tab-shingles/) explains the difference in detail.',
+          'Architectural shingles are what most new shingle roofs here use, and for most homes they are what we recommend. Our comparison of [architectural vs. 3-tab shingles](/blog/architectural-vs-3-tab-shingles/) explains the difference in detail.',
         ],
       },
       {
         heading: 'How Sun and Heat Age Shingles',
         blocks: [
-          'The granules on a shingle are its sunscreen. They shield the asphalt underneath from the sun, which is relentless here for much of the year. As a roof ages, granules wash off, the exposed asphalt dries out, and the shingles start to curl, crack and lose their grip on each other. Slopes that face the afternoon sun usually show it first.',
-          'A handful of granules in the gutter after a new roof is normal. A steady stream of them years later is a sign of wear. Our guide to [granules in your gutter](/blog/shingle-granules-in-gutter/) explains what they mean.',
+          'The granules on a shingle are its sunscreen. They shield the asphalt underneath from the sun, which is relentless here for much of the year. As a roof ages, granules wash off, the exposed asphalt dries out, and the shingles start to curl, crack and lose their grip on each other. Slopes that face the afternoon sun usually show it first, so that is where we look first.',
+          'A handful of granules in the gutter after a new roof is normal. A steady stream of them years later is a sign of wear, and worth a roof check. Our guide to [granules in your gutter](/blog/shingle-granules-in-gutter/) explains what they mean.',
         ],
       },
       {
         heading: 'Attic Ventilation and Heat',
         blocks: [
-          'A shingle roof bakes from both sides: the sun on top, and a hot attic underneath. Balanced ventilation, with intake low at the eaves and exhaust near the ridge, lets the attic breathe and carries that heat out. Trapped heat shortens shingle life and makes the rooms below harder to cool.',
+          'A shingle roof bakes from both sides: the sun on top, and a hot attic underneath. That is why we check the attic as closely as the shingles. Balanced ventilation, with intake low at the eaves and exhaust near the ridge, lets the attic breathe and carries that heat out. Trapped heat shortens shingle life and makes the rooms below harder to cool.',
           {
             list: [
               'An attic that feels like an oven on a warm afternoon',
@@ -358,20 +629,21 @@ export const BLOG_POSTS = [
               'Shingles that curl or blister ahead of their age',
             ],
           },
-          'See [attic ventilation](/residential-roofing/attic-ventilation/) for how a roofer checks and balances it.',
+          'See [attic ventilation](/residential-roofing/attic-ventilation/) for how we check and balance it.',
+          { pov: 'New shingles over a hot, poorly vented attic are money half spent. When we replace a shingle roof, the attic ventilation is part of the job, not an extra.' },
         ],
       },
       {
         heading: 'Coastal Wear',
         blocks: [
-          'Near the coast, from Venice and San Pedro to Huntington Beach and Newport Beach, salt air works on metal flashing and fasteners, and wind off the ocean can lift shingle edges. Flashings, nails and how well each shingle is sealed matter even more there.',
+          'Near the coast, from Venice and San Pedro to Huntington Beach and Newport Beach, salt air works on metal flashing and fasteners, and wind off the ocean can lift shingle edges. On coastal roofs we pay even closer attention to the flashings, the nails and how well each shingle is sealed.',
           'Our roofers replaced shingle roofs close to the water in [Venice](/projects/shingle-roof-replacement-venice-90291/) and [San Pedro](/projects/full-roof-replacement-san-pedro-90732/).',
         ],
       },
       {
         heading: 'What a Roof Built From the Deck Up Includes',
         blocks: [
-          'A shingle roof is only as good as what is under it. A replacement done from the deck up includes every layer, in order:',
+          'A shingle roof is only as good as what is under it. When we replace one from the deck up, every layer goes on in this order:',
           {
             steps: [
               'The old shingles, nails and underlayment come off, and the deck is checked for soft or damaged spots and photographed while it is open.',
@@ -388,6 +660,7 @@ export const BLOG_POSTS = [
       {
         heading: 'Common Shingle Roof Problems',
         blocks: [
+          'The shingle roof problems we see most often:',
           {
             list: [
               '**Lifted, creased or missing shingles** after strong winds',
@@ -397,12 +670,14 @@ export const BLOG_POSTS = [
               '**Granule loss** that leaves bare, dark patches',
             ],
           },
-          'Most of these are repairs, not reasons for a new roof. Our guide to finding a [roof leak](/blog/roof-leak-source/) and our [shingle roof repair](/residential-roofing/shingle-roofing/repair/) page explain how they are fixed.',
+          'Most of these are repairs, not reasons for a new roof. Our guide to finding a [roof leak](/blog/roof-leak-source/) and our [shingle roof repair](/residential-roofing/shingle-roofing/repair/) page explain how we fix them.',
+          { pov: 'One leak is not a reason to replace a shingle roof. If the rest of the roof is sound, we would rather repair it and tell you where the rest of the roof stands.' },
         ],
       },
       {
         heading: 'Repair, Tune-Up or Replace?',
         blocks: [
+          'How we decide between the three:',
           {
             table: {
               head: ['Option', 'When it fits'],
@@ -439,7 +714,7 @@ export const BLOG_POSTS = [
     ],
     faqs: [
       { q: 'How long do asphalt shingles last in Southern California?', a: 'It depends on the shingle, how well the attic is ventilated, how much sun the roof gets and how it was installed. Granule loss, curling and brittle shingles across the roof are the signs it is wearing out; a roof evaluation tells you where yours stands.' },
-      { q: 'Are architectural shingles worth it?', a: 'For most new shingle roofs here, yes: they are thicker than 3-tab shingles and have more depth. Our [comparison](/blog/architectural-vs-3-tab-shingles/) explains the differences.' },
+      { q: 'Are architectural shingles worth it?', a: 'For most new shingle roofs here, we think so: they are thicker than 3-tab shingles and have more depth. Our [comparison](/blog/architectural-vs-3-tab-shingles/) explains the differences.' },
       { q: 'Can new shingles go over the old ones?', a: 'On our shingle roof replacements, the old shingles, nails and underlayment come off and the deck is checked, so the new roof starts from a solid base.' },
       { q: 'Are asphalt shingles fire-rated?', a: 'Asphalt shingles are commonly fire-rated, which matters near hillsides and brush. Our guide to [fire-resistant roofs](/blog/wildfire-resistant-roof-los-angeles/) covers more.' },
       { q: 'Does attic ventilation really affect my shingles?', a: 'Yes. Heat trapped in the attic bakes the shingles from below and shortens their life. Balanced intake at the eaves and exhaust near the ridge carries it out.' },
@@ -454,6 +729,7 @@ export const BLOG_POSTS = [
   },
   {
     slug: 'roof-replacement-guide',
+    revision: 1, // rewritten from our point of view (owner, October 29 2026); POST /api/posts/sync/ after the deploy copies it to the live copy
     title: 'The Roof Replacement Guide: From First Inspection to Final Walkthrough',
     keyword: 'roof replacement guide',
     topics: ['replacement', 'inspection', 'shingle', 'tile', 'flat'],
@@ -461,20 +737,20 @@ export const BLOG_POSTS = [
     metaDescription:
       'A roof replacement guide for homeowners: repair or replace, comparing bids line by line, permits, tear-off day, bad decking, timelines, cleanup and warranties.',
     datePublished: '2026-10-28',
-    dateModified: '2026-10-28',
+    dateModified: '2026-10-29',
     excerpt:
       'What happens from the first inspection to the final walkthrough: deciding whether you need a new roof, comparing bids, permits, tear-off day, bad decking, timelines, cleanup and warranties.',
     image: '/images/blog/roof-replacement-guide.webp',
     imageAlt: 'The Roof Replacement Guide, inspection to final walkthrough: a roofer inspecting worn shingles beside a house with a new shingle roof',
     intro: [
-      'This roof replacement guide walks you through the whole job, from the first inspection to the final walkthrough, so you know what to ask and what to expect at each step.',
-      'It is general information for homeowners. For how QRS replaces roofs, see our [roof replacement](/roof-replacement/) page.',
+      'This roof replacement guide walks you through the whole job, from the first inspection to the final walkthrough, the way we explain it to homeowners, so you know what to ask and what to expect at each step.',
+      'It is our advice for any homeowner, whoever you hire. For how QRS replaces roofs, see our [roof replacement](/roof-replacement/) page.',
     ],
     sections: [
       {
         heading: 'Step 1: Decide Whether You Need a New Roof',
         blocks: [
-          'Not every old roof needs replacing. A leak at one flashing, a few damaged shingles or broken tiles are repairs. A new roof makes sense when the wear is spread across the whole roof and repairs buy less time each round.',
+          'Not every old roof needs replacing, and we will tell you when yours doesn’t. A leak at one flashing, a few damaged shingles or broken tiles are repairs. A new roof makes sense when the wear is spread across the whole roof and repairs buy less time each round.',
           {
             table: {
               head: ['Usually a repair', 'Usually a replacement'],
@@ -487,12 +763,13 @@ export const BLOG_POSTS = [
             },
           },
           'Our guide to [roof restoration vs. replacement](/blog/roof-restoration-vs-replacement/) goes deeper, and on a tile roof a [lift and relay](/residential-roofing/tile-roofing/lift-and-relay/) can renew the underlayment without new tiles.',
+          { pov: 'Ask any roofer who recommends a new roof to show you why: photos of wear across the whole roof, not one bad spot. Our rule is simple: a roofer looks at your roof before anyone tries to sell you one.' },
         ],
       },
       {
         heading: 'Step 2: Get the Roof Inspected',
         blocks: [
-          'A good inspection is done by a roofer on the roof, not from a ladder or a photo of the house. You should come away with photos of what was found, a plain-English explanation and a clear recommendation: repair, monitor, maintain or replace.',
+          'In our view, a good inspection is done by a roofer on the roof, not from a ladder or a photo of the house. You should come away with photos of what was found, a plain-English explanation and a clear recommendation: repair, monitor, maintain or replace.',
           {
             checklist: [
               'Who will look at the roof, and will they go up on it?',
@@ -507,7 +784,7 @@ export const BLOG_POSTS = [
       {
         heading: 'Step 3: Compare Bids Line by Line',
         blocks: [
-          'Two bids with different totals often describe different jobs. Lay them side by side and compare what each one includes, line by line.',
+          'Two bids with different totals often describe different jobs. Lay them side by side and compare what each one includes, line by line. These are the lines we would check:',
           {
             table: {
               head: ['Line item', 'What to look for'],
@@ -524,6 +801,7 @@ export const BLOG_POSTS = [
             },
           },
           'Our [roof replacement cost](/blog/roof-replacement-cost-los-angeles/) article explains what moves the price and how to read a bid.',
+          { pov: 'The lowest bid is often a different job: no tear-off, old flashings reused, decking left out. Compare the lines before you compare the totals.' },
         ],
       },
       {
@@ -536,7 +814,7 @@ export const BLOG_POSTS = [
       {
         heading: 'Step 5: Tear-Off Day',
         blocks: [
-          'Tear-off is the loudest, messiest day of the job. The landscaping and the sides of the house are covered, the old roofing comes off down to the deck and the debris goes straight into a bin or truck.',
+          'Tear-off is the loudest, messiest day of the job. We cover the landscaping and the sides of the house, take the old roofing off down to the deck and send the debris straight into a bin or truck. What we ask homeowners to do before we start:',
           {
             checklist: [
               'Move cars out of the driveway and away from the walls',
@@ -552,7 +830,7 @@ export const BLOG_POSTS = [
         heading: 'Step 6: When the Deck Is Bad',
         blocks: [
           'The deck, the sheathing under the roof, is hidden until the old roof comes off. Soft spots, rot and delaminated sheets show up then, and on older homes, wide planks with gaps between them. New roofing laid over a bad deck doesn’t hold its nails well and can sag.',
-          'Damaged decking should be photographed while it is open, explained and replaced. On a [home in Pico Rivera](/projects/shingle-roof-replacement-solar-pico-rivera-90660/) we covered a gapped plank deck with new sheathing, and on a [building in Westminster](/projects/commercial-flat-roof-replacement-westminster-92683/) new plywood went in where the deck needed it. Ask every bidder how decking is handled and priced.',
+          'When we find damaged decking, we photograph it while it is open, explain it and replace it. On a [home in Pico Rivera](/projects/shingle-roof-replacement-solar-pico-rivera-90660/) we covered a gapped plank deck with new sheathing, and on a [building in Westminster](/projects/commercial-flat-roof-replacement-westminster-92683/) new plywood went in where the deck needed it. Ask every bidder how decking is handled and priced.',
         ],
       },
       {
@@ -564,7 +842,7 @@ export const BLOG_POSTS = [
       {
         heading: 'Step 7: Cleanup and the Final Walkthrough',
         blocks: [
-          'Cleanup should happen every day, not just at the end, with magnetic sweeps for nails around the house and yard. When the roof is done, walk it with the roofer, or walk the yard and look at the photos of each stage.',
+          'We clean up every day, not just at the end, with magnetic sweeps for nails around the house and yard. When the roof is done, we walk it with you, or walk the yard and go through the photos of each stage. What to check before you sign off:',
           {
             checklist: [
               'Photos of the deck, underlayment and flashings before they were covered',
@@ -580,6 +858,7 @@ export const BLOG_POSTS = [
         blocks: [
           'A new roof usually carries two warranties. The roofer’s workmanship warranty covers how the roof was installed; the manufacturer’s warranty covers the materials, and what it covers depends on the product and its warranty tier. Keep both with your home records.',
           'QRS backs its installs with a 10-year workmanship warranty (call for details).',
+          { pov: 'Read the workmanship warranty as closely as the price. It tells you what the roofer will stand behind after the work is done.' },
         ],
       },
     ],
