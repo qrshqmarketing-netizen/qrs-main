@@ -159,10 +159,6 @@
     "date": "2026-10-02",
     "hash": "cee3d57cbe010c9f"
   },
-  "/service-areas/la-county/glendale/": {
-    "date": "2026-10-01",
-    "hash": "39356647d182c2a8"
-  },
   "/service-areas/la-county/burbank/": {
     "date": "2026-10-02",
     "hash": "8c96bbd2bbf7434e"
@@ -170,10 +166,6 @@
   "/service-areas/la-county/woodland-hills/": {
     "date": "2026-10-01",
     "hash": "8190ae989e09418b"
-  },
-  "/service-areas/la-county/torrance/": {
-    "date": "2026-10-01",
-    "hash": "5a281145199afdb8"
   },
   "/service-areas/la-county/long-beach/": {
     "date": "2026-10-01",
@@ -187,21 +179,9 @@
     "date": "2026-10-02",
     "hash": "8915a5d17d1bc530"
   },
-  "/service-areas/orange-county/anaheim/": {
-    "date": "2026-10-01",
-    "hash": "ff0498577b21df9b"
-  },
-  "/service-areas/orange-county/santa-ana/": {
-    "date": "2026-10-01",
-    "hash": "f00715cc18f43712"
-  },
   "/service-areas/orange-county/huntington-beach/": {
     "date": "2026-10-02",
     "hash": "ee5133956764df94"
-  },
-  "/service-areas/orange-county/irvine/": {
-    "date": "2026-10-01",
-    "hash": "66660083bbc721f6"
   },
   "/service-areas/orange-county/newport-beach/": {
     "date": "2026-10-01",

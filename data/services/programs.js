@@ -47,7 +47,7 @@ export const EMERGENCY_ROOF_REPAIR = {
     },
     {
       q: 'Do you do storm damage roof repair in Los Angeles?',
-      a: 'Yes. Roof storm damage repair is a large part of this work: wind that lifts shingles and cracks tiles, branches that puncture the roof, and the occasional hail. We handle storm damage roof repair across Los Angeles, including [Glendale](/service-areas/la-county/glendale/), [Pasadena](/service-areas/la-county/pasadena/) and Whittier, and in Orange County, including [Anaheim](/service-areas/orange-county/anaheim/) and Orange. Our [service area](/service-areas/) page lets you check your ZIP code.',
+      a: 'Yes. Roof storm damage repair is a large part of this work: wind that lifts shingles and cracks tiles, branches that puncture the roof, and the occasional hail. We handle storm damage roof repair across Los Angeles, including Glendale, [Pasadena](/service-areas/la-county/pasadena/) and Whittier, and in Orange County, including Anaheim and Orange. Our [service area](/service-areas/) page lets you check your ZIP code.',
     },
     {
       q: 'Is wind damage to a roof an emergency?',

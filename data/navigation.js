@@ -132,7 +132,7 @@ export const LOCATIONS_MENU = {
   regions: REGIONS.map((r) => {
     const featuredCities = {
       'la-county': ['los-angeles', 'santa-monica', 'pasadena', 'long-beach'],
-      'orange-county': ['anaheim', 'irvine', 'huntington-beach', 'newport-beach'],
+      'orange-county': ['huntington-beach', 'newport-beach'],
     }[r.slug] || [];
 
     return {

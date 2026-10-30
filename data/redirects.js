@@ -1,5 +1,5 @@
 // Permanent redirects from the old WordPress site's addresses to their new pages (used by next.config.mjs).
-// Old addresses that match a new page exactly (/contact-us/, /service-areas/la-county/glendale/, …)
+// Old addresses that match a new page exactly (/contact-us/, /service-areas/la-county/pasadena/, …)
 // need no redirect and aren't listed. Plain data with no imports, so next.config.mjs can load it directly.
 // Cities without their own page go to the nearest city page when they border it, otherwise to their region page.
 
@@ -119,20 +119,11 @@ export const REDIRECTS = [
     ['sierra-madre', 'pasadena'],
     ['arcadia', 'pasadena'],
     ['roof-inspection-services-in-san-marino', 'pasadena'],
-    ['roofing-services-in-la-canada-flintridge', 'glendale'],
     ['calabasas', 'woodland-hills'],
     ['agoura-hills', 'woodland-hills'],
     ['westlake-village', 'woodland-hills'],
     ['signal-hill', 'long-beach'],
     ['lakewood-new-roof-installation', 'long-beach'],
-    ['lomita-gutter-replacement-services', 'torrance'],
-    ['redondo-beach-gutter-replacement-services', 'torrance'],
-    ['manhattan-beach-roof-inspections', 'torrance'],
-    ['palos-verdes-estates-roofing', 'torrance'],
-    ['rancho-palos-verdes-residential-roofing-services', 'torrance'],
-    ['roof-repairs-in-rolling-hills', 'torrance'],
-    ['roof-installations-in-rolling-hills-estates', 'torrance'],
-    ['gardena', 'torrance'],
   ].map(([old, slug]) => [`${LA}${old}/`, city(LA, slug)]),
   ...[
     'alhambra', 'artesia', 'azusa', 'baldwin-park', 'bell-gardens', 'bell', 'bellflower', 'bradbury', 'cerritos', 'commerce',
@@ -153,12 +144,15 @@ export const REDIRECTS = [
     ['fountain-valley', 'huntington-beach'],
     ['westminster', 'huntington-beach'],
     ['midway-city', 'huntington-beach'],
-    ['fullerton', 'anaheim'],
-    ['placentia', 'anaheim'],
-    ['orange-roofing', 'santa-ana'],
-    ['lake-forest', 'irvine'],
   ].map(([old, slug]) => [`${OC}${old}/`, city(OC, slug)]),
-  [`${OC}lawndale/`, city(LA, 'torrance')],
+  [`${OC}lawndale/`, LA],
   [`${OC}los-alamitos/`, city(LA, 'long-beach')],
   ...['brea', 'capistrano-beach', 'cypress', 'foothill-ranch', 'la-habra', 'la-palma', 'ladera-ranch'].map((old) => [`${OC}${old}/`, OC]),
+
+  // City pages folded into their county page (owner, October 30 2026: city searches are rare and these pages had nothing of their own behind
+  // them; the places stay on the map and their county page). The older addresses that used to point at them go straight to the county too.
+  ...['glendale', 'torrance'].map((slug) => [city(LA, slug), LA]),
+  ...['anaheim', 'santa-ana', 'irvine'].map((slug) => [city(OC, slug), OC]),
+  ...['roofing-services-in-la-canada-flintridge', 'lomita-gutter-replacement-services', 'redondo-beach-gutter-replacement-services', 'manhattan-beach-roof-inspections', 'palos-verdes-estates-roofing', 'rancho-palos-verdes-residential-roofing-services', 'roof-repairs-in-rolling-hills', 'roof-installations-in-rolling-hills-estates', 'gardena'].map((old) => [`${LA}${old}/`, LA]),
+  ...['fullerton', 'placentia', 'orange-roofing', 'lake-forest'].map((old) => [`${OC}${old}/`, OC]),
 ];

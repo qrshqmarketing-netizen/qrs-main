@@ -10,7 +10,7 @@ export const GARDEN_GROVE_PROJECT = {
   // Map pin on /projects/: the center of the ZIP code, not the home's address, so the client's address stays private
   // Short name for the "Recent projects" links on the service pages this project is listed under (`related`)
   label: 'Shingle roof replacement, Garden Grove',
-  related: ['/residential-roofing/shingle-roofing/replacement/', '/service-areas/orange-county/', '/service-areas/orange-county/anaheim/', '/service-areas/orange-county/santa-ana/'], // service and city pages: shown as "Related services" here, and this project is linked back from them
+  related: ['/residential-roofing/shingle-roofing/replacement/', '/service-areas/orange-county/'], // service and city pages: shown as "Related services" here, and this project is linked back from them
   // An H2 above the paragraph at each position below (they describe the paragraphs, nothing is added to the story)
   headings: {
     1: 'Old shingles off, the roof deck covered as the work moves',
@@ -36,6 +36,6 @@ export const GARDEN_GROVE_PROJECT = {
     'The job started with the tear-off. Our roofers worked across the roof in sections, pulling the old shingles down to the deck and clearing the debris as they went. Blue tarps covered the opened areas while the work moved on, so the exposed roof was protected from one section to the next.',
     'This roof carries a brick chimney, a turbine vent and the mounts for a TV antenna and satellite dishes, and every one of them is a spot where a shingle roof can let water in. Stripping the roof to the deck is what lets each one be dealt with properly, as part of our *TotalShield* Shingle System, instead of being roofed over.',
     'The finished roofs on the property show the result: new brown shingles laid in even rows from eave to ridge, a straight ridge cap, and crisp edges all the way around, on a property with a large backyard and patio where the roofs are always in view. The new roof looks as tidy up close as it does from the drone.',
-    'Own a home in Garden Grove, Anaheim, Santa Ana or elsewhere in north Orange County? Our roofers handle [shingle roof replacement](/residential-roofing/shingle-roofing/replacement/) across [Orange County](/service-areas/orange-county/), including [Anaheim](/service-areas/orange-county/anaheim/) and [Santa Ana](/service-areas/orange-county/santa-ana/). Homeowners can request a [free roof evaluation](/contact-us/) anywhere in our service area.',
+    'Own a home in Garden Grove, Anaheim, Santa Ana or elsewhere in north Orange County? Our roofers handle [shingle roof replacement](/residential-roofing/shingle-roofing/replacement/) across [Orange County](/service-areas/orange-county/), including Anaheim and Santa Ana. Homeowners can request a [free roof evaluation](/contact-us/) anywhere in our service area.',
   ],
 };

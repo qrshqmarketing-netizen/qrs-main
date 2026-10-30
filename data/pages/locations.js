@@ -19,7 +19,7 @@ export const LOCATIONS_PAGE = {
     },
     {
       q: 'Do you work in both Los Angeles and Orange County?',
-      a: 'Yes. Our team works across Los Angeles County and Orange County, and also in the Inland Empire, in [Riverside County](/service-areas/riverside-county/) and [San Bernardino County](/service-areas/san-bernardino-county/), from Riverside and Corona to Temecula and Ontario. In Los Angeles and Orange Counties that runs from [Santa Monica](/service-areas/la-county/santa-monica/) and [Pasadena](/service-areas/la-county/pasadena/) to [Irvine](/service-areas/orange-county/irvine/) and [Newport Beach](/service-areas/orange-county/newport-beach/).',
+      a: 'Yes. Our team works across Los Angeles County and Orange County, and also in the Inland Empire, in [Riverside County](/service-areas/riverside-county/) and [San Bernardino County](/service-areas/san-bernardino-county/), from Riverside and Corona to Temecula and Ontario. In Los Angeles and Orange Counties that runs from [Santa Monica](/service-areas/la-county/santa-monica/) and [Pasadena](/service-areas/la-county/pasadena/) to Irvine and [Newport Beach](/service-areas/orange-county/newport-beach/).',
     },
     {
       q: 'What if my city isn’t listed?',

@@ -14,15 +14,10 @@ export const LOCATIONS = [
   { city: 'Los Angeles', slug: 'los-angeles', county: 'Los Angeles County', region: 'la-county', lat: 34.0522, lng: -118.2437 },
   { city: 'Santa Monica', slug: 'santa-monica', county: 'Los Angeles County', region: 'la-county', lat: 34.0195, lng: -118.4912 },
   { city: 'Pasadena', slug: 'pasadena', county: 'Los Angeles County', region: 'la-county', lat: 34.1478, lng: -118.1445 },
-  { city: 'Glendale', slug: 'glendale', county: 'Los Angeles County', region: 'la-county', lat: 34.1425, lng: -118.2551 },
   { city: 'Burbank', slug: 'burbank', county: 'Los Angeles County', region: 'la-county', lat: 34.1808, lng: -118.309 },
   { city: 'Woodland Hills', slug: 'woodland-hills', county: 'Los Angeles County', region: 'la-county', lat: 34.1684, lng: -118.6058 },
-  { city: 'Torrance', slug: 'torrance', county: 'Los Angeles County', region: 'la-county', lat: 33.8358, lng: -118.3406 },
   { city: 'Long Beach', slug: 'long-beach', county: 'Los Angeles County', region: 'la-county', lat: 33.7701, lng: -118.1937 },
-  { city: 'Anaheim', slug: 'anaheim', county: 'Orange County', region: 'orange-county', lat: 33.8366, lng: -117.9143 },
-  { city: 'Santa Ana', slug: 'santa-ana', county: 'Orange County', region: 'orange-county', lat: 33.7455, lng: -117.8677 },
   { city: 'Huntington Beach', slug: 'huntington-beach', county: 'Orange County', region: 'orange-county', lat: 33.6595, lng: -117.9988 },
-  { city: 'Irvine', slug: 'irvine', county: 'Orange County', region: 'orange-county', lat: 33.6846, lng: -117.8265 },
   { city: 'Newport Beach', slug: 'newport-beach', county: 'Orange County', region: 'orange-county', lat: 33.6189, lng: -117.9298 },
   { city: 'Vernon', slug: 'vernon', county: 'Los Angeles County', region: 'la-county', lat: 34.0018, lng: -118.2184 },
   // Pages for places with something real behind them (owner, October 15 2026): our Google listing (West Hollywood) or a finished project
@@ -41,6 +36,12 @@ export const LOCATIONS = [
 // files, and link to their county page. A place gets its own page only when there is something real behind it (a project, reviews, a photo): move its row into
 // LOCATIONS and add its copy to data/locationPages.js (drafts for these places are in data/locationCopy/). Every place was checked to sit inside the outline.
 export const OTHER_PLACES = [
+  // City pages folded into their county page (owner, October 30 2026: city searches are rare and these pages had nothing of their own behind them)
+  { city: 'Glendale', slug: 'glendale', county: 'Los Angeles County', region: 'la-county', lat: 34.1425, lng: -118.2551 },
+  { city: 'Torrance', slug: 'torrance', county: 'Los Angeles County', region: 'la-county', lat: 33.8358, lng: -118.3406 },
+  { city: 'Anaheim', slug: 'anaheim', county: 'Orange County', region: 'orange-county', lat: 33.8366, lng: -117.9143 },
+  { city: 'Santa Ana', slug: 'santa-ana', county: 'Orange County', region: 'orange-county', lat: 33.7455, lng: -117.8677 },
+  { city: 'Irvine', slug: 'irvine', county: 'Orange County', region: 'orange-county', lat: 33.6846, lng: -117.8265 },
   { city: 'Beverly Hills', slug: 'beverly-hills', county: 'Los Angeles County', region: 'la-county', lat: 34.0736, lng: -118.4004 },
   { city: 'Culver City', slug: 'culver-city', county: 'Los Angeles County', region: 'la-county', lat: 34.0211, lng: -118.3965 },
   { city: 'Sherman Oaks', slug: 'sherman-oaks', county: 'Los Angeles County', region: 'la-county', lat: 34.1511, lng: -118.4492 },
