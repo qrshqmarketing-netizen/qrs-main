@@ -5,8 +5,10 @@
 export const REGION_PAGES = {
   'la-county': {
     keyword: 'los angeles county roofing',
-    metaTitle: 'Los Angeles County Roofing',
-    metaDescription: 'Los Angeles County roofing from our Los Angeles, Valley and Vernon offices: tile, shingle and flat roof repair and replacement. Book a free roof evaluation.',
+    // Meta for the searches the owner picked (October 30 2026: roofing specialists, roof repair specialist Los Angeles, roof replacement services
+    // Los Angeles County, local roofing experts Los Angeles); the keyword stays first, the free evaluation is the call to action. 60 / 160 characters.
+    metaTitle: 'Los Angeles County Roofing Specialists: Repair & Replacement',
+    metaDescription: 'Los Angeles County roofing from local roofing experts: roof repair specialists and roof replacement services from 3 nearby offices. Book a free roof evaluation.',
     hero: {
       heading: 'Los Angeles County Roofing Services',
       intro: 'Quality Roofing Specialists provides Los Angeles County roofing from its Los Angeles, Valley and Vernon offices, repairing and replacing tile, shingle and flat roofs on homes and businesses. Homes start with a free roof evaluation; commercial buildings start with a roof survey.',

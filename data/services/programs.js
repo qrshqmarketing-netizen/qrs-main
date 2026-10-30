@@ -96,8 +96,10 @@ export const ROOF_INSPECTION = {
   card: 'Our free, roofer-led roof evaluation for shingle, tile and flat roofs: every finding photographed and explained, with one clear next step.',
   // Search Console wording (owner, October 23 2026): "roof inspection los angeles", "roof inspection service/company", "professional roof inspection",
   // "roof inspection and repair", "roofing consultation". The H1 is unchanged.
-  metaTitle: 'Roof Inspection Los Angeles | Professional Roof Inspections', // Search Console meta again (owner, October 23 2026, after the rollback)
-  metaDescription: 'Roof inspection company in Los Angeles & Orange County: a free, professional roof inspection service with photos, plain-English advice and one next step.',
+  // Meta for the searches the owner picked (October 30 2026: roof inspection los angeles, roof inspection service, roof repair specialist, tile roof
+  // inspection, roof inspection company near me). 58 / 157 characters.
+  metaTitle: 'Roof Inspection Los Angeles | Free Roof Inspection Service',
+  metaDescription: 'Roof inspection company near you in Los Angeles & Orange County: a free roof inspection service for shingle, tile and flat roofs by a roof repair specialist.',
   image: '/images/shingle-roof-inspection-overhead.webp',
   imageAlt: 'Aerial overhead view of a finished dark grey shingle roof',
   hero: {
