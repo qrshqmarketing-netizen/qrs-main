@@ -2,7 +2,7 @@ import { revalidateTag } from 'next/cache';
 import { POSTS_TAG } from '@/lib/postsStore';
 
 // Publishes scheduled articles on time (owner, October 30 2026). An article dated in the future goes live at 8:00 AM Pacific on its date
-// (isLive in lib/postsStore.js); this route, run by the daily Vercel Cron Job in vercel.json at that hour, refreshes the cached article list so
+// (isLive in lib/postsStore.js; or the hour in PUBLISH_HOURS); this route, run by the daily Vercel Cron Jobs in vercel.json at those hours, refreshes the cached article list so
 // the blog, the sitemap, the AI files and the article's own page show it right away instead of with the next hourly refresh. It changes no
 // data. Who may run it: Vercel's cron (with CRON_SECRET set in Vercel, its `Authorization: Bearer` header is required), or a request with the
 // setup check's x-leads-diagnostic header (the LEADS_SHEET_SECRET). Anything else is turned away. Running it again is harmless.

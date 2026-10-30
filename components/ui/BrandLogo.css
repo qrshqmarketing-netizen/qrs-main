@@ -1,6 +1,11 @@
-/* ---------- Brand logo (header + footer) ---------- */
-.brand{display:flex;align-items:center;flex:0 0 auto;min-width:0}
-.brand-logo{display:block;width:auto;height:44px}
-@media (min-width:621px){
-  .brand-logo{height:52px}
-}
+/* ---------- Brand logo (header + footer): the gold roof mark with QUALITY beside it, "Roofing Specialists" in tiny letters under the word
+   when `tagline` is on (owner, October 29 2026) ---------- */
+.brand{display:inline-flex;align-items:center;gap:.42em;flex:0 0 auto;min-width:0;font-size:22px;line-height:1;text-decoration:none}
+.brand-mark{display:block;width:auto;height:1.5em}
+.brand-text{display:flex;flex-direction:column;align-items:flex-start}
+.brand-word{font:800 1em/1 var(--font-heading),var(--font-text),ui-sans-serif,system-ui,sans-serif;letter-spacing:.06em;color:var(--navy);white-space:nowrap}
+.brand-sub{margin-top:.28em;font:600 .33em/1 var(--font-heading),var(--font-text),ui-sans-serif,system-ui,sans-serif;letter-spacing:.21em;text-transform:uppercase;color:var(--gold-ink);white-space:nowrap}
+/* On dark (the footer, and the header in the dark theme): white word, bright gold tagline */
+.brand-on-dark .brand-word,:root[data-theme="dark"] .brand-adaptive .brand-word{color:#fff}
+.brand-on-dark .brand-sub,:root[data-theme="dark"] .brand-adaptive .brand-sub{color:var(--gold)}
+@media (min-width:621px){.brand{font-size:24px}}

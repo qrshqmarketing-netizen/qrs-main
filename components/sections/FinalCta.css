@@ -1,9 +1,6 @@
-/* ---------- Final CTA — white copy on solid primary navy with the WebGL contour lines (CtaBackground) ---------- */
-.final{position:relative;overflow:hidden;isolation:isolate;text-align:center;color:#fff;background:var(--surface-navy);padding:104px 0}
-/* The WebGL layer: hidden until it has drawn, then fades in over the same solid color */
-.final-gl{position:absolute;inset:0;z-index:-1;width:100%;height:100%;display:block;opacity:0;transition:opacity 1s ease}
-.final-gl.is-live{opacity:1}
-@media print{.final-gl{display:none}}
+/* ---------- Final CTA — white copy on navy that warms into gold at its bottom edge, where the footer's gradient (gold at its top, blue at
+   the bottom) takes over (October 29 2026) ---------- */
+.final{position:relative;overflow:hidden;isolation:isolate;text-align:center;color:#fff;background:linear-gradient(180deg,var(--surface-navy) 0%,#04213f 62%,#2c4766 82%,#8a7448 94%,#d4b572 100%);padding:104px 0}
 .cta-parallax{position:absolute;inset:-18% 0;z-index:-2;overflow:hidden;transform:translate3d(0,var(--cta-parallax-y,0px),0);will-change:transform}
 .cta-scene{object-fit:cover;object-position:center 40%}
 .final-inner{position:relative}

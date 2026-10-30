@@ -13,7 +13,7 @@ body:has(main :is(.hero,.st-hero,.promo-home,.pd-hero)) .site-header:not([data-s
 
 /* Logo: the white-word version over photos and in the dark theme */
 .hd-brand{display:flex;align-items:center;padding:0 18px 0 16px}
-.hd-brand .brand-logo{height:30px;width:auto}
+.hd-brand .brand{font-size:19px} /* the mark with QUALITY beside it (BrandLogo.jsx) */
 .brand-logo.on-dark{display:none}
 .brand-logo.on-light{display:block}
 :root[data-theme="dark"] .hd-brand .brand-logo.on-light,
@@ -85,7 +85,7 @@ body:has(main :is(.hero,.st-hero,.promo-home,.pd-hero)) .site-header:not([data-s
 @media (min-width:1240px){
   .site-header{--hd-h:68px}
   .hd-brand{padding:0 26px 0 24px;margin-right:6px;border-right:1px solid var(--hd-line)}
-  .hd-brand .brand-logo{height:34px}
+  .hd-brand .brand{font-size:22px}
   .hd-links{display:flex;align-items:stretch;padding-left:8px}
   .hd-primary{display:none}
   .hd-panel{width:300px}
@@ -178,7 +178,8 @@ body:has(main :is(.hero,.st-hero,.promo-home,.pd-hero)) .site-header:not([data-s
 }
 
 /* The marquee and menu now sit in normal page flow, before the hero. Keep their surfaces fully opaque. */
-.site-header{position:relative;top:auto;left:auto;right:auto;width:100%;background:var(--paper)}
+/* Sticky (owner, October 29 2026): the bar stays at the top of the screen while the page scrolls under it */
+.site-header{position:sticky;top:0;left:auto;right:auto;width:100%;z-index:100;background:var(--paper)}
 .site-header.has-marquee{--hd-marquee-h:37px}
 .site-header .hd-bar{background:var(--paper)!important}
 .site-header .hd-bar:before{display:none!important}
@@ -190,3 +191,48 @@ html:not([data-theme="dark"]) body:has(main :is(.hero,.st-hero,.promo-home,.pd-h
 .site-header .hd-panel{max-height:calc(100dvh - var(--hd-h) - var(--hd-marquee-h,0px));background:var(--paper);-webkit-backdrop-filter:none;backdrop-filter:none;border-radius:0;box-shadow:none}
 .site-header .hd-more{background:var(--wash)}
 @media (min-width:621px){.site-header.has-marquee{--hd-marquee-h:43px}.site-header .hd-panel{max-height:calc(100dvh - var(--hd-h) - var(--hd-marquee-h,0px) - 24px)}}
+
+/* Frosted glass on scroll (owner, October 29 2026): once the page has scrolled (data-scrolled, Header.jsx), the sticky bar turns see-through
+   with the page blurred behind it, in the theme's paper color (white glass in the light theme, navy glass in the dark one). Drawn on
+   .hd-bar:before, never on the bar itself, so the menu panel keeps its own positioning. Browsers without backdrop-filter get a near-solid bar. */
+.site-header[data-scrolled]{background:transparent}
+.site-header[data-scrolled] .hd-bar{background:transparent!important}
+.site-header[data-scrolled] .hd-bar:before{display:block!important;background:color-mix(in srgb,var(--paper) 94%,transparent)!important;box-shadow:0 1px 0 color-mix(in srgb,var(--ink) 8%,transparent),0 8px 24px -18px rgba(3,14,26,.45);transition:background .3s ease}
+@supports ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){
+  .site-header[data-scrolled] .hd-bar:before{background:color-mix(in srgb,var(--paper) 66%,transparent)!important;-webkit-backdrop-filter:blur(18px) saturate(1.7);backdrop-filter:blur(18px) saturate(1.7)}
+}
+
+/* Over a hero (owner, October 29 2026): on a page that opens with a hero, the header floats over it with no background and white type until
+   the page scrolls (data-scrolled) or the menu opens; then the frosted glass above takes over. From 1240px, where the main links sit in the
+   bar, the logo is hidden at the top and the links start at the left edge; on scroll the logo slides in and pushes the links right. Phones
+   keep the logo (white over the hero). Pages without a hero, /start/ and the ad landing pages keep the solid sticky bar. */
+body:has(main :is(.hero,.pd-hero,.hg-hero,.promo-home,.sv-hero)) .site-header:not(.is-lp):not(.is-start){position:fixed;top:0;left:0;right:0}
+body:has(main :is(.hero,.pd-hero,.hg-hero,.promo-home,.sv-hero)) .site-header:not(.is-lp):not(.is-start):not([data-scrolled]):not(.is-open){
+  --hd-ink:#fff;--hd-line:rgba(255,255,255,.22);background:transparent}
+body:has(main :is(.hero,.pd-hero,.hg-hero,.promo-home,.sv-hero)) .site-header:not(.is-lp):not(.is-start):not([data-scrolled]):not(.is-open) .hd-bar{background:transparent!important;border-bottom-color:transparent}
+body:has(main :is(.hero,.pd-hero,.hg-hero,.promo-home,.sv-hero)) .site-header:not(.is-lp):not(.is-start):not([data-scrolled]):not(.is-open) :is(.brand-word,.brand-sub){color:#fff}
+body:has(main :is(.hero,.pd-hero,.hg-hero,.promo-home,.sv-hero)) .site-header:not(.is-lp):not(.is-start):not([data-scrolled]):not(.is-open) .hd-link:before{
+  background-image:linear-gradient(115deg,var(--gold) 0%,var(--gold-2) 38%,#fffaf0 50%,var(--gold-2) 62%,var(--gold) 100%)}
+@media (min-width:1240px){
+  .hd-brand{max-width:340px;overflow:hidden;transition:max-width .5s cubic-bezier(.2,.8,.2,1),padding .5s cubic-bezier(.2,.8,.2,1),margin .5s ease,opacity .35s ease,border-color .35s ease}
+  .hd-links{transition:padding .5s cubic-bezier(.2,.8,.2,1),margin .5s cubic-bezier(.2,.8,.2,1)}
+  /* the home page only (owner, October 29 2026: sub pages keep the logo at the top) */
+  body:has(main.hg) .site-header:not(.is-lp):not(.is-start):not([data-scrolled]):not(.is-open) .hd-brand{
+    max-width:0;padding-left:0;padding-right:0;margin-right:0;opacity:0;border-right-color:transparent;visibility:hidden;
+    transition:max-width .5s cubic-bezier(.2,.8,.2,1),padding .5s cubic-bezier(.2,.8,.2,1),margin .5s ease,opacity .25s ease,border-color .35s ease,visibility 0s .5s}
+  body:has(main.hg) .site-header:not(.is-lp):not(.is-start):not([data-scrolled]):not(.is-open) .hd-links{padding-left:0;margin-left:-13px}
+}
+@media (prefers-reduced-motion:reduce){.hd-brand,.hd-links{transition:none!important}}
+
+/* Side margins as in the owner's reference homepage (October 29 2026): the bar's contents sit inside the same gutters as the page (4.44% of the
+   width, 16px at least) and stay within 1680px on very wide screens */
+.site-header .hd-bar{padding-left:max(16px,4.44vw,calc((100% - 1680px) / 2));padding-right:max(16px,4.44vw,calc((100% - 1680px) / 2))}
+.site-header .hd-brand{padding-left:0}
+
+/* The logo cell never shrinks (it would be clipped by its overflow:hidden when the bar is crowded) */
+.site-header .hd-brand{flex-shrink:0}
+/* With the reference margins the bar is tighter: the phone number cell shows from 1600px (it is in the hero, the footer and the menu panel) */
+@media (min-width:1440px) and (max-width:1599.98px){.site-header:not(.is-start):not(.is-lp) .hd-phone{display:none}}
+/* The main links sit in the bar from 1280px (tighter up to 1440px); from 1240 to 1280 they stay in the menu panel, as on tablets */
+@media (min-width:1240px) and (max-width:1279.98px){.site-header .hd-links{display:none}.site-header .hd-primary{display:revert}.site-header .hd-brand{border-right-color:transparent}}
+@media (min-width:1280px) and (max-width:1439.98px){.site-header .hd-link{padding:0 11px}.site-header .hd-link:after{left:11px;right:11px}}

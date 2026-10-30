@@ -272,6 +272,311 @@ export const BLOG_POSTS = [
     },
     related: ['/residential-roofing/tile-roofing/replacement/', '/residential-roofing/tile-roofing/lift-and-relay/', '/residential-roofing/tile-roofing/'],
   },
+  // Scheduled article (owner, October 30 2026): live Monday November 9 2026 at 9:00 AM Pacific (PUBLISH_HOURS in lib/postsStore.js). From the
+  // owner's team's draft, as a separate post (owner's choice; the older `roof-leak-source`, keyword "roof leak", stays live and is linked from
+  // here). The draft's photo placeholders, its "From the field" placeholder, its editor notes and a story taken from a client review were left
+  // out; the real job details are the Mid-Wilshire and Hollywood Hills West project pages', linked. Our voice with "Our point of view" boxes.
+  {
+    slug: 'how-to-find-a-roof-leak',
+    title: 'How to Find a Roof Leak: A Step-by-Step Guide for Los Angeles Homeowners',
+    keyword: 'how to find a roof leak',
+    topics: ['leak', 'repair', 'inspection', 'tile', 'flat', 'shingle'],
+    metaTitle: 'How to Find a Roof Leak: Step-by-Step Guide for LA Homes',
+    metaDescription:
+      'How to find a roof leak: trace it from the ceiling stain through the attic, run a hose test and check the usual culprits on LA tile, shingle and flat roofs.',
+    datePublished: '2026-11-09',
+    dateModified: '2026-11-09',
+    excerpt:
+      'The leak is rarely right above the stain. Here is how we trace a roof leak from the ceiling through the attic to the spot where water gets in, step by step, and the places it starts most often on Los Angeles roofs.',
+    image: '/images/blog/how-to-find-a-roof-leak.webp',
+    imageAlt: 'How to Find a Roof Leak, a step-by-step guide for Los Angeles homeowners: a man with a flashlight checking the roof boards in an attic',
+    intro: [
+      'How to find a roof leak: start at the ceiling stain, follow the water trail uphill through the attic to where it first touches wood, then confirm the entry point from outside with a garden hose. The one thing almost every homeowner gets wrong is that the leak is rarely directly above the stain. Water slips under a shingle or tile, runs down the roof deck or along a rafter, and drips wherever it finds a low spot, often several feet from where it got in.',
+      'In Los Angeles, most leaks announce themselves in the first real storm of the season. After six or seven dry months, valleys are packed with leaves, rubber vent boots have baked and cracked in the sun, and sealant around flashing has shrunk away from the wall. Nothing shows until the rain comes, and then everything shows at once.',
+      'Here is the short version of how to find a leak in your roof, the way our roofers do it on Los Angeles service calls:',
+    ],
+    sections: [
+      {
+        heading: 'The Short Version',
+        blocks: [
+          {
+            steps: [
+              'Mark and photograph the ceiling stain.',
+              'Go into the attic and trace the water trail upslope.',
+              'Rule out plumbing, AC condensate lines and windows.',
+              'Inspect the roof above the trail: flashing, vents, valleys and skylights.',
+              'Confirm the source with a hose test, working from the bottom up.',
+            ],
+          },
+          'Below we walk through each step, plus the spots we find leaking most often on LA homes.',
+        ],
+      },
+      {
+        heading: 'How to Tell if Your Roof Is Leaking',
+        blocks: [
+          'A roof leak usually shows up inside the house weeks before anyone sees a drip. Check for these signs after every storm, and especially after the first rain of the season.',
+          { h3: 'Inside the House' },
+          {
+            list: [
+              '**Brown or yellow rings on the ceiling.** Each ring is often a separate storm, so a stain with several rings has been leaking for a while.',
+              '**Bubbling paint or a soft, sagging spot** in the drywall, often along a seam.',
+              '**Water at a light fixture or smoke detector.** Water follows wiring and the holes cut for it, so fixtures are a common place for a leak to surface.',
+              '**A musty smell** in an upstairs closet or a room under the roof.',
+              '**Damp or flattened insulation** in the attic, or dark stains on the underside of the roof boards.',
+            ],
+          },
+          { h3: 'Outside the House (Look From the Ground)' },
+          {
+            list: [
+              '**Cracked, slipped or missing tiles,** or shingles lifted after a Santa Ana wind event.',
+              '**Shingle granules** collecting in the gutters or at the bottom of downspouts. Our guide to [granules in your gutter](/blog/shingle-granules-in-gutter/) explains what they mean.',
+              '**Leaves and debris packed into valleys,** where two roof slopes meet.',
+              '**Water still standing on a flat roof** two days after the rain stops.',
+              '**Streaks or staining on stucco** below a parapet wall or a scupper.',
+            ],
+          },
+          { note: '**The quick test:** a stain that grows only when it rains points to the roof, a window or the stucco. A stain that grows on dry days points to plumbing or an air conditioner. More on that in Step 3.' },
+        ],
+      },
+      {
+        heading: 'Before You Start: Safety and What You Need',
+        blocks: [
+          'Everything in this guide can be done from inside the house, the attic and the ground. Walking the roof is our job, not yours. Wet roofs are slick, clay and concrete tile crack underfoot, and a fall costs far more than any leak.',
+          { h3: 'What You Need' },
+          {
+            checklist: [
+              'A bright LED flashlight or headlamp',
+              'Your phone, for dated photos',
+              'A tape measure and painter’s tape',
+              'A bucket, towels and a plastic sheet',
+              'A garden hose with a nozzle that has a gentle shower setting',
+              'Binoculars, for looking at the roof from the street',
+              'A helper, for the hose test',
+            ],
+          },
+          { h3: 'Attic Safety' },
+          {
+            list: [
+              '**Step only on the joists or a walk board.** Drywall between the joists will not hold you, and you will come through the ceiling.',
+              '**Go up in the morning.** An LA attic can get dangerously hot by mid-afternoon, even in fall.',
+              '**Wear a dust mask, gloves and long sleeves.** Insulation fibers irritate skin and lungs.',
+              '**Watch your head.** Roofing nails poke through the roof boards all over the attic.',
+              '**Keep away from wet wiring.** If water is near a light fixture or outlet, switch off that circuit at the breaker first.',
+            ],
+          },
+          { pov: 'Find the leak from the inside and the ground, and leave the roof to us. Tracing it yourself is the most useful thing you can do; walking a wet roof or a tile roof is the riskiest.' },
+        ],
+      },
+      {
+        heading: 'Step 1: Start at the Ceiling Stain',
+        blocks: [
+          'The stain is your starting point, not your answer. Your job here is to record where it is and when it appears, so you can find the same spot in the attic and read the pattern.',
+          {
+            steps: [
+              '**Photograph the stain** with the date showing. Take one wide shot that shows the room and one close-up.',
+              '**Outline it with painter’s tape or a light pencil line.** After the next rain, you will know whether it grew and in which direction.',
+              '**Measure from two walls.** For example, 6 feet from the north wall and 4 feet from the hallway wall. You will use these numbers in the attic.',
+              '**Note what is above it outside.** A bathroom vent, chimney, skylight, valley or the line where a flat roof meets a sloped one are all prime suspects.',
+              '**Write down when it leaks.** The timing is one of the best clues you have.',
+            ],
+          },
+          {
+            table: {
+              head: ['When it leaks', 'What it usually points to'],
+              rows: [
+                ['Only in wind-driven rain, or storms from one direction', 'Flashing, a parapet wall or vents on the side facing the wind'],
+                ['Only in long, heavy storms', 'Worn underlayment under tile, overloaded valleys, or flat-roof drains that can’t keep up'],
+                ['Hours or a day after the rain stops', 'Water trapped under tile or in a flat roof, slowly working its way to a seam'],
+                ['On dry days too', 'Not the roof: plumbing or an air conditioner condensate line'],
+                ['Every rain, even a light one', 'An open hole: a cracked pipe boot, a missing shingle or a broken tile'],
+              ],
+            },
+          },
+          'If the ceiling is bulging with trapped water, skip ahead to [what to do in an emergency](#found-it-temporary-and-emergency-steps) first.',
+        ],
+      },
+      {
+        heading: 'Step 2: Trace the Water in the Attic',
+        blocks: [
+          'The attic is where you find out how far the water traveled. Go up during the rain or within a few hours after it, while the trail is still wet and easy to follow.',
+          {
+            steps: [
+              '**Find the spot above the stain.** Use your two wall measurements. Count joists from a wall if that helps.',
+              '**Check the insulation first.** Wet insulation is darker, matted down and cold to the touch. Pull it back gently and look at the top of the drywall underneath.',
+              '**Look up and follow the trail uphill.** Shine your light along the rafters and the underside of the roof boards. Water leaves dark streaks, stains and sometimes white mineral lines. Follow them toward the peak of the roof.',
+              '**Find the highest wet point.** That is the closest you can get to where water enters the roof from the inside. On most leaks we trace, it is several feet upslope of the ceiling stain, and sometimes on the far side of a wall.',
+              '**Check the nails.** Nail tips with rust, or tiny drops of water on them, show where moisture is getting through.',
+              '**Look for daylight.** On a shingle roof, a pinpoint of light through the roof boards is a hole. Turn off your flashlight for a moment to see it.',
+              '**Measure to something that goes through the roof.** A plumbing vent pipe, chimney or skylight shows on both sides. Note the distance from it to the wet spot, for example 3 feet below and 2 feet left of the vent pipe. That is how you, or your roofer, will find the spot from outside.',
+            ],
+          },
+          '**No attic?** Many Los Angeles homes have flat roofs, vaulted ceilings or only a shallow crawl space. If you can’t get above the ceiling, skip to Step 3 and Step 4. A roofer can use a moisture meter, a drone or a controlled water test to find the source without opening the ceiling.',
+        ],
+      },
+      {
+        heading: 'Step 3: Rule Out Leaks That Aren’t the Roof',
+        blocks: [
+          'Not every ceiling stain is a roof leak. Before you go looking on the roof, rule out these common look-alikes.',
+          {
+            list: [
+              '**Air conditioner condensate.** Many LA homes have the furnace and AC coil in the attic. When the drain line clogs, the pan overflows and water drips through the ceiling, usually on hot, dry days. Look for a full drain pan or a wet unit.',
+              '**Rooftop AC units.** On flat roofs, a package unit drains condensate onto the roof. A clogged drain or a cracked unit housing can leak right through the curb it sits on.',
+              '**Plumbing.** A stain under an upstairs bathroom, or one that grows on dry days, points to a supply line, drain or toilet seal. Run the shower above it for ten minutes and check again.',
+              '**Bathroom fans venting into the attic.** Moist air from a fan that dumps into the attic instead of outside condenses on cold roof boards and drips back down. It looks like a leak but shows up after showers, not storms. Our [attic ventilation](/residential-roofing/attic-ventilation/) page explains how an attic should breathe.',
+              '**Windows and stucco.** Wind-driven rain can get in around a window frame or through cracked stucco and show up at the top of the wall. It looks like a roof leak, but the roof is dry.',
+            ],
+          },
+          'If you have ruled these out and the stain only grows in rain, the water is coming through the roof. On to the outside.',
+        ],
+      },
+      {
+        heading: 'Step 4: Inspect the Roof From Outside',
+        blocks: [
+          'Now look at the roof directly above your attic trail, and a few feet upslope of it. Stay on the ground with binoculars, or on a ladder at the edge of a single-story roof. Do not climb onto the roof.',
+          'Use the measurement you took in the attic. If the wet spot was 3 feet below and 2 feet left of the vent pipe, find the pipe and look there first. Then scan everything above it, up to the ridge.',
+          { h3: 'On a Shingle Roof, Look For' },
+          {
+            list: [
+              'Shingles that are lifted, creased, cracked or missing',
+              'Bare patches where the granules have worn off',
+              'Nail heads sticking up or showing',
+              'A cracked rubber collar around a pipe',
+            ],
+          },
+          { h3: 'On a Tile Roof, Look For' },
+          {
+            list: [
+              'Cracked, slipped or missing tiles',
+              'Tiles that sit unevenly or have been walked on (satellite installers and solar crews are common culprits)',
+              'Gaps in the mortar at the ridge and hips',
+              'Debris piled up behind tiles or in valleys',
+            ],
+          },
+          { h3: 'On a Flat Roof, Look For' },
+          {
+            list: [
+              'Ponding water, or a dried ring of dirt where water sat',
+              'Blisters, splits and open seams in the surface',
+              'Cracks in the stucco on parapet walls, and loose or cracked coping on top of them',
+              'Drains and scuppers clogged with leaves',
+            ],
+          },
+          'Write down anything that looks wrong, even if you are not sure. Then take photos. A zoomed-in phone shot from the ground is often good enough for a roofer to spot the problem. Our guides to [tile roofs](/blog/tile-roof-guide-southern-california/), [flat roofs in Los Angeles](/blog/flat-roofs-los-angeles-guide/) and [asphalt shingle roofs](/blog/asphalt-shingle-roof-guide/) go deeper on each.',
+        ],
+      },
+      {
+        heading: 'Step 5: Run a Hose Test',
+        blocks: [
+          'A hose test recreates the rain one small section at a time, so you can see exactly which spot lets water in. It is the most reliable way to confirm a leak, and it is how roofers prove the source before they repair it.',
+          'Run it on a dry day, after the attic and the stain have had a day or two to dry out. New water is much easier to spot on dry wood.',
+          {
+            steps: [
+              '**Put your helper inside.** They wait in the attic at the wet spot, or under the ceiling stain, with a flashlight and a phone.',
+              '**Use a gentle shower, not a jet.** Rain falls on a roof. A strong spray forces water up under laps where rain never goes and gives you a false answer.',
+              '**Start low.** Wet the area just below the suspected spot first. If you start at the top, water runs down over everything and you can’t tell which part leaked.',
+              '**Give each section 10 to 15 minutes.** Tile and flat roofs can take longer, sometimes 30 minutes or more, before water works its way through.',
+              '**Move up one section at a time.** Then move to the next feature. Around a chimney or skylight, wet the downhill side, then each side, then the uphill side, one at a time.',
+              '**Stop when the helper sees water.** Note exactly which section you were wetting. That is your leak.',
+            ],
+          },
+          '**Keep it safe.** Only spray what you can reach from the ground, or from a ladder at the edge of a single-story roof. Never stand on a roof you are wetting. For second stories, tile roofs and flat roofs, let a roofer run the test with the right equipment.',
+          '**Nothing showed up?** Some leaks only open under wind-driven rain, which pushes water sideways. A roofer can recreate that by angling the spray up under the flashing and tile laps.',
+          { pov: 'Start low and go slow. A hose test that starts at the ridge wets the whole roof at once and tells you nothing; one section at a time, bottom to top, is how we prove the source before we repair anything.' },
+        ],
+      },
+      {
+        heading: 'The Most Common Culprits on Los Angeles Roofs',
+        blocks: [
+          'Leaks start at the details far more often than in the open field of a roof. Anywhere the roof is cut, joined or meets a wall is a weak point. These are the spots we check first.',
+          {
+            table: {
+              head: ['Spot', 'What usually fails', 'Where it shows up inside'],
+              rows: [
+                ['Flashing at chimneys, walls and parapets', 'Sealant shrinks and cracks; metal pulls away from the stucco', 'Near an exterior wall or chimney, or at the top of an inside wall'],
+                ['Pipe boots and vents', 'The rubber collar cracks in the sun; vent flashing rusts', 'A small, round stain below the pipe, often near a bathroom or kitchen'],
+                ['Valleys', 'Debris dams the water; the valley lining wears out', 'A stain in a line, often at an inside corner of the house'],
+                ['Skylights', 'Flashing around the curb fails; the seal or lens cracks', 'At the corners of the skylight or down the shaft walls'],
+                ['Underlayment under tile', 'Old felt dries out and tears under tiles that still look fine', 'Spread-out stains, often after long storms'],
+                ['Flat roof seams, drains and scuppers', 'Seams open, blisters split, drains clog', 'Anywhere under the flat area, often near the drain'],
+                ['Rooftop equipment, deck posts and solar mounts', 'Unsealed curbs, posts and mounting bolts', 'Directly below the equipment'],
+              ],
+            },
+          },
+          { h3: 'Flashing' },
+          'Flashing is the metal that seals the joint where the roof meets a chimney, a wall or a parapet. In LA, the joint is usually against stucco, and the sealant that covers it shrinks and cracks after a few summers. Water runs down the wall, gets behind the flashing and lands in the attic. Stepped parapet walls like the ones on our [tile and flat roofing project in Mid-Wilshire](/projects/tile-flat-roofing-in-mid-wilshire-90019/) are a good example: every joint where the roof meets the wall needs flashing that stays sealed.',
+          { h3: 'Vents and Pipe Boots' },
+          'Every plumbing pipe and exhaust vent goes through a hole in the roof. On shingle and flat roofs, a rubber collar seals the pipe. LA sun bakes that rubber until it cracks, often first on the side that gets the most sun. It is one of the most common leaks we see, and one of the simplest to fix.',
+          'On that same Mid-Wilshire building, water had already come inside before the client called us. They booked our $199 Roof Check, the visit where our roofers seal the vents, pipes and flashings, which put a roofer on the roof before we planned the replacement. The new roof included flashing shaped around every vent and plumbing stack.',
+          { h3: 'Valleys' },
+          'A valley is the channel where two roof slopes meet. It carries more water than any other part of the roof. After a dry LA summer, valleys fill with leaves and pine needles, which dam the water and push it sideways under the shingles or tiles.',
+          { h3: 'Skylights' },
+          'A skylight is a big hole in the roof, sealed by flashing around its curb. Leaks usually start at the uphill side, where debris collects, or at the corners. If the drip comes down the inside of the skylight shaft only on cold mornings, it may be condensation rather than a leak.',
+          { h3: 'LA-Specific Trouble Spots' },
+          {
+            list: [
+              '**Tile roofs with old underlayment.** The tile sheds most of the water, but the underlayment beneath it is the real waterproofing. Once it tears, the roof leaks even though every tile looks fine. Our guide to [tile roof underlayment](/blog/tile-roof-underlayment/) explains why, and a [tile lift and relay](/residential-roofing/tile-roofing/lift-and-relay/) renews it under your own tiles.',
+              '**Rooftop decks and HVAC units on flat roofs.** On our [round flat roof in Hollywood Hills West](/projects/flat-roof-replacement-hollywood-hills-west-90046/), the rooftop deck posts, the HVAC unit and every penetration were sealed, because each one is a path for water.',
+              '**Solar panel mounts.** Each mount is bolted through the roof. If the installer did not flash it properly, it can leak years later, hidden under the panel.',
+              '**Damage after Santa Ana winds.** Strong winds lift shingles and loosen tiles. The damage stays hidden until the first rain.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Found It? Temporary and Emergency Steps',
+        blocks: [
+          'Once you know where the water is coming in, your goal is to limit the damage until the roof can be properly repaired. Most of that happens inside.',
+          { h3: 'Inside the House' },
+          {
+            steps: [
+              '**Cut power to anything wet.** Switch off the breaker for any light fixture, fan or outlet near the water.',
+              '**Move furniture and electronics,** and lay down a plastic sheet with towels on top.',
+              '**Catch the drip.** Put a bucket under it, with a rag inside to stop the splashing.',
+              '**Drain a bulging ceiling.** If the drywall is sagging with water, put a bucket under the lowest point and poke a small hole there with a screwdriver. A controlled drain is far better than the whole section coming down.',
+              '**Dry out the attic.** Pull wet insulation away from the drywall so it can dry, and run a fan if you can.',
+              '**Photograph everything** with the date showing, for your roofer and for any insurance claim. Our guide to [roof insurance claims in California](/blog/roof-insurance-claims-california/) explains what to keep.',
+            ],
+          },
+          { h3: 'On the Roof' },
+          'A tarp or a temporary seal is the right stopgap, but it should be done on a dry roof by someone with fall protection. A tarp has to be anchored past the ridge so wind can’t lift it and rain can’t run under it. A blob of roof cement smeared over the wrong spot can trap water and hide the real source. See our guides to [stopping a roof leak safely](/blog/stop-a-roof-leak/) and [temporary roof repair options](/blog/temporary-roof-repair-options/), or call our [emergency roof repair](/roof-repair/emergency/) line if water is coming in now.',
+          '**Call early in the season.** When the first big storm hits Los Angeles, every roofer’s phone rings at once. If you have a stain now, get it looked at before the rain, not during it.',
+        ],
+      },
+      {
+        heading: 'When to Call a Roofer',
+        blocks: [
+          'Call a roofer when the steps above don’t give you a clear answer, or when the fix means getting on the roof. In particular:',
+          {
+            list: [
+              'You traced the water in the attic but can’t see a cause from the ground.',
+              'You have no attic access, or the roof is tile, flat or two stories.',
+              'There is more than one stain, or the stain is near electrical wiring.',
+              'The roof boards feel soft, or you see mold on the underside of the roof.',
+              'The leak came back after a patch.',
+            ],
+          },
+          'At Quality Roofing Specialists, our [roof repair](/roof-repair/) service starts with a free drone [roof evaluation](/roof-inspection/). A roofer, not a salesperson, traces the water to its real source and shows you photos of what we found. You get a written scope and price before any work begins. If you also want a tune-up, our optional $199 Roof Check seals the vents, pipes and flashings, the places most leaks begin. For a leak on a particular roof, see [shingle roof repair](/residential-roofing/shingle-roofing/repair/), [tile roof repair](/residential-roofing/tile-roofing/repair/) or [flat roof repair](/residential-roofing/flat-roofing/repair/).',
+          'Not every leak means you need a new roof. When the problem is local, a targeted repair is the sensible fix. When the wear is spread across the roof, we will say so and show you the photos. Our guide to [roof restoration vs. replacement](/blog/roof-restoration-vs-replacement/) explains how to tell the difference, and our earlier guide to [roof leak signs and causes](/blog/roof-leak-source/) covers what a leak can do if it is left.',
+          { pov: 'A leak in one spot usually needs a repair in one spot. We would rather fix the flashing or the pipe boot that failed and show you the photos than talk about a new roof the leak doesn’t call for.' },
+        ],
+      },
+    ],
+    faqs: [
+      { q: 'How can I tell if it’s a roof leak or a plumbing leak?', a: 'Watch when it happens. A roof leak only grows during or soon after rain. A plumbing or AC leak grows on dry days, often after someone showers or the air conditioning runs. Running the shower above the stain for ten minutes is a quick test.' },
+      { q: 'Why does my roof only leak when it’s windy?', a: 'Wind pushes rain sideways and even uphill, into gaps that straight-down rain never reaches. That pattern points to flashing, vents or a parapet wall on the side facing the wind.' },
+      { q: 'Why did the leak show up a day after the rain stopped?', a: 'Water can sit under tile, in a flat roof or in wet insulation and keep moving slowly toward a low spot. A delayed drip often means the water traveled a long way from where it entered.' },
+      { q: 'How do I find a leak in my roof if I don’t have an attic?', a: 'Start with the timing clues and look at the roof above the stain from the ground. On flat roofs and vaulted ceilings, a roofer can use a moisture meter, drone photos and a controlled water test to find the source without opening the ceiling.' },
+      { q: 'Is it safe to do a hose test myself?', a: 'Only from the ground, or from a ladder at the edge of a single-story roof. Never stand on a roof you are wetting. For tile, flat or two-story roofs, have a roofer run the test.' },
+      { q: 'How much does it cost to find a roof leak?', a: 'Our drone roof evaluation is free, and it includes photos and a plain-English explanation of what we found. If a repair is needed, you get a written scope and price before any work begins.' },
+    ],
+    closing: {
+      heading: 'Have a Stain You Can’t Explain?',
+      blocks: [
+        'Call [(310) 340-1643](tel:+13103401643) or [request a free roof evaluation](/contact-us/). A roofer traces the water to its real source and shows you the photos. We serve homes across [Los Angeles](/service-areas/la-county/) and [Orange County](/service-areas/orange-county/).',
+      ],
+    },
+    related: ['/roof-repair/', '/roof-inspection/', '/roof-repair/emergency/'],
+  },
   // Scheduled article (owner, October 30 2026): written by the owner's team, set to go live Monday November 2 2026 at 8:00 AM Pacific
   // (a date later than the day it was added = scheduled, lib/postsStore.js isLive). Point of view as the pillar guides: our voice and
   // "Our point of view" boxes, nothing beyond what the site and the cited sources say. It overlaps `temporary-roof-repair-options` (same

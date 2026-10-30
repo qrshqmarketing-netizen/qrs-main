@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react';
 
 // The WebGL roof shape behind a service page hero (svcRoofEngine.js). Fetched after the page has loaded and only while the hero is near the
 // screen; draws only while on screen and the tab is visible; one still frame for reduced motion; nothing with Data Saver or without WebGL (the
-// hero's gradient carries on alone). The colors are the theme's gold and the brand blue. Decorative (aria-hidden). `kind="commercial"` draws
+// hero's gradient carries on alone). With a mouse it leans slightly toward the pointer. The colors are the theme's gold and the brand blue. Decorative (aria-hidden). `kind="commercial"` draws
 // the commercial building (the commercial pages) instead of the house, `kind="dollar"` a dollar sign (the financing page).
 export default function SvcRoofGL({ kind = 'home' }) {
   const ref = useRef(null);
@@ -19,6 +19,8 @@ export default function SvcRoofGL({ kind = 'home' }) {
     let watch;
     let resizer;
     let onScroll;
+    let onMove;
+    let onLeave;
 
     const start = async () => {
       try {
@@ -37,6 +39,16 @@ export default function SvcRoofGL({ kind = 'home' }) {
           stage?.setScroll(Math.max(-1, Math.min(1, -r.top / Math.max(1, r.height))));
         };
         window.addEventListener('scroll', onScroll, { passive: true });
+        // a slight lean toward the mouse, only with a mouse or trackpad and with motion allowed
+        if (!reducedMotion && hero && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+          onMove = (e) => {
+            const r = hero.getBoundingClientRect();
+            stage?.setPointer(((e.clientX - r.left) / r.width) * 2 - 1, ((e.clientY - r.top) / r.height) * 2 - 1);
+          };
+          onLeave = () => stage?.setPointer(0, 0);
+          hero.addEventListener('pointermove', onMove, { passive: true });
+          hero.addEventListener('pointerleave', onLeave);
+        }
       } catch {
         // no WebGL: the gradient stays on its own
       }
@@ -50,6 +62,8 @@ export default function SvcRoofGL({ kind = 'home' }) {
       cancelled = true;
       window.removeEventListener('load', later);
       if (onScroll) window.removeEventListener('scroll', onScroll);
+      if (onMove) hero?.removeEventListener('pointermove', onMove);
+      if (onLeave) hero?.removeEventListener('pointerleave', onLeave);
       resizer?.disconnect();
       watch?.disconnect();
       stage?.destroy();

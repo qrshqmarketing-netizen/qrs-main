@@ -3,29 +3,18 @@ import Link from 'next/link';
 import { BUSINESS } from '@/data/site';
 import './BrandLogo.css';
 
-// Logo files in public/images/logo/ (the full-size original is assets/originals/qrs-logo.png)
-const LOGOS = {
-  regular: '/images/logo/qrs-logo.webp', // light backgrounds (footer)
-  dark: '/images/logo/qrs-logo-dark.webp', // dark backgrounds (footer): "ROOFING" in white
-  'dark-sm': '/images/logo/qrs-logo-dark-sm.webp', // the same logo at 312 px wide, 12 KB, for the header (shown 30-40 px tall)
-};
-const SIZES = { 'dark-sm': { width: 312, height: 90 } }; // every other file is 520 x 150
-
-// The QRS logo, used in the header (dark version) and the footer (regular version). Always links to /.
-// Served as-is (unoptimized) so the lossless file keeps its crisp edges.
-export default function BrandLogo({ variant = 'regular', preload = false }) {
-  // 'adaptive' (the header): both files are in the page and Header.css shows the one that suits the header's background
-  if (variant === 'adaptive') {
-    return (
-      <Link className="brand" href="/" aria-label={`${BUSINESS.shortName} homepage`} title={`Go to the ${BUSINESS.shortName} homepage.`}>
-        <Image className="brand-logo on-dark" src={LOGOS['dark-sm']} alt={BUSINESS.name} width={SIZES['dark-sm'].width} height={SIZES['dark-sm'].height} preload={preload} unoptimized />
-        <Image className="brand-logo on-light" src={LOGOS.regular} alt="" aria-hidden="true" width={520} height={150} unoptimized />
-      </Link>
-    );
-  }
+// The QRS logo in the header and footer (owner, October 29 2026): the gold roof mark (public/images/logo/qrs-mark-gold.webp, trimmed from the
+// owner's file) with the word QUALITY set as text to its right, in the site's font. `variant` sets the word's color: 'adaptive' (the header:
+// navy on the light bar, white in the dark theme) or 'dark' (the footer: white). Always links to /. The earlier full logos (qrs-logo*.webp in
+// public/images/logo/) are still used by emails and structured data. `tagline` adds "Roofing Specialists" in tiny letters under the word (the header).
+export default function BrandLogo({ variant = 'adaptive', preload = false, tagline = false }) {
   return (
-    <Link className="brand" href="/" aria-label={`${BUSINESS.shortName} homepage`} title={`Go to the ${BUSINESS.shortName} homepage.`}>
-      <Image className="brand-logo" src={LOGOS[variant]} alt={BUSINESS.name} width={SIZES[variant]?.width || 520} height={SIZES[variant]?.height || 150} preload={preload} unoptimized />
+    <Link className={`brand brand-${variant === 'dark' ? 'on-dark' : 'adaptive'}`} href="/" aria-label={`${BUSINESS.shortName} homepage`} title={`Go to the ${BUSINESS.shortName} homepage.`}>
+      <Image className="brand-mark" src="/images/logo/qrs-mark-gold.webp" alt="" width={175} height={92} preload={preload} unoptimized />
+      <span className="brand-text" aria-hidden="true">
+        <span className="brand-word">QUALITY</span>
+        {tagline && <span className="brand-sub">Roofing Specialists</span>}
+      </span>
     </Link>
   );
 }

@@ -9,9 +9,11 @@ export const EMERGENCY_ROOF_REPAIR = {
   card: 'Storm damage or a sudden leak? A roofer assesses and photographs the damage, adds temporary protection when it’s needed and follows with a permanent repair.',
   // Search Console wording (owner, October 23 2026; the old /residential-roofing-services/roof-storm-damage/ redirects here): "storm damage roof
   // repair", "roof storm damage repair", "wind damage roof contractor", "storm damage roof inspection", "hail damage roof repair"
-  metaTitle: 'Storm Damage & Emergency Roof Repair in Los Angeles', // Search Console meta again (owner, October 23 2026, after the rollback)
+  // Meta for the searches the owner picked (October 30 2026: roof repair specialist (Los Angeles), emergency roof repair (Los Angeles), LA wind
+  // damage roof contractor, roofing services after LA storm), keeping "storm damage" (this page's strongest search). 55 / 159 characters.
+  metaTitle: 'Emergency Roof Repair Los Angeles | Storm & Wind Damage',
   metaDescription:
-    'Emergency roof repair and storm damage roof repair in Los Angeles & Orange County: wind and hail damage, tarps when needed and photos for your insurance.',
+    'Emergency roof repair in Los Angeles by roof repair specialists: storm and wind damage repair after an LA storm, tarps when needed. Call now, even after hours.',
   image: '/images/emergency-roof-repair-hero.webp',
   imageAlt: 'Storm damage roof repair in Los Angeles: a roofer reviewing storm damage with homeowners beside a blue roof tarp',
   hero: {
@@ -103,7 +105,7 @@ export const ROOF_INSPECTION = {
   image: '/images/shingle-roof-inspection-overhead.webp',
   imageAlt: 'Aerial overhead view of a finished dark grey shingle roof',
   hero: {
-    intro: 'A roof inspection from QRS is a free, professional roof inspection service for homes across Los Angeles and Orange County: a roofer-led roof evaluation checking the roofing, flashings, edges and gutters on shingle, tile and flat roofs. Our *RoofScan 360* evaluation uses drone footage to show what matters, explains every finding in plain English and ends with one clear next step.',
+    intro: 'A roof inspection from a roofer, not a salesperson. Our free, professional roof inspection service checks the roofing, flashings, edges and gutters on shingle, tile and flat roofs across Los Angeles and Orange County. Our *RoofScan 360* evaluation uses drone footage, explains every finding in plain English and ends with one clear next step.',
     highlights: ['A roofer on the roof, not a salesperson', 'Every finding photographed and explained', 'Free, with no obligation'],
   },
   overview: {

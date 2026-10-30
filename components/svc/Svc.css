@@ -158,7 +158,3 @@ main.svc :is(.sv-keep,.sv-faq-wrap) .container{width:auto;max-width:calc(1680px 
 .sv-tile-body > span:not(.sv-arrow){flex:1;font-size:15px;line-height:1.55;color:var(--muted)}
 @media (min-width:621px){.sv-grid{grid-template-columns:repeat(2,1fr)}}
 @media (min-width:1100px){.sv-grid{grid-template-columns:repeat(3,1fr)}}
-
-/* Released with the live header (October 30 2026): that header sits in the page flow above the hero, not over it, so the hero doesn't need room for it */
-.sv-hero{padding-top:clamp(36px,6vw,80px)}
-@media (min-width:1240px){.sv-hero{padding-top:clamp(48px,6vw,96px)}}

@@ -24,8 +24,7 @@
 
 :root[data-theme="dark"] .qa-teaser{outline:1px solid #fff;outline-offset:-1px}
 
-/* The footer's gradient started from --navy */
-:root[data-theme="dark"] footer{background:linear-gradient(180deg,#0b2b4d 0%,#03111f 100%)}
+/* The footer keeps its own navy-to-gold gradient and black card in both themes (Footer.css) */
 
 /* Form fields */
 :root[data-theme="dark"] :is(input, select, textarea){background:#0a1828;color:var(--ink);border-color:#fff}

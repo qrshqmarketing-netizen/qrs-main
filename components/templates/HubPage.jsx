@@ -1,18 +1,15 @@
-import CardGrid from '@/components/sections/CardGrid';
-import ReviewMarquee from '@/components/sections/ReviewMarquee';
 import Faq from '@/components/sections/Faq';
 import LatestArticles from '@/components/sections/LatestArticles';
 import FinalCta from '@/components/sections/FinalCta';
-import Hero from '@/components/sections/Hero';
-import Overview from '@/components/sections/Overview';
 import Process from '@/components/sections/Process';
+import ProofBar from '@/components/sections/ProofBar';
 import RoofCheck from '@/components/sections/RoofCheck';
 import SplitFeature from '@/components/sections/SplitFeature';
-import ValueGrid from '@/components/sections/ValueGrid';
 import StudioProjects from '@/components/studio/StudioProjects';
 import RoofDiagram from '@/components/sections/RoofDiagram';
 import { diagramFor } from '@/data/roofDiagrams';
 import JsonLd from '@/components/ui/JsonLd';
+import { SvcCardGrid, SvcHero, SvcIncludes, SvcIntro, SvcOffer, SvcReviews, SvcTrust } from '@/components/svc/SvcSections';
 import { pageJsonLd } from '@/lib/structuredData';
 import { closingCta, faqSub } from './shared';
 import { heroOutcome } from '@/data/heroOutcomes';
@@ -37,35 +34,41 @@ export default async function HubPage({ hub, crumbs, eyebrow, image, imageAlt, c
     faqs: hub.faqs,
     image,
   });
+  const path = crumbs.at(-1).href;
+  // Layout (owner, October 29 2026): the service pages' design after remote.com (components/svc/): the gradient hero with the WebGL roof
+  // frame, the proof strip, the overview, the hub's services as photo cards, the roof diagram, credibility with numbers, the highlights,
+  // the hub's own extra section, the written-price offer, projects, review cards, articles, FAQ, the request form and the closing call to action.
   return (
-    <main id="top">
+    <main id="top" className="svc">
       <JsonLd data={schema} />
-      <Hero
+      <SvcHero
         crumbs={crumbs}
-        eyebrow={eyebrow}
         title={searchHeading(hub.hero.heading)}
-        outcome={heroOutcome(crumbs.at(-1).href)}
+        outcome={heroOutcome(path)}
         intro={hub.hero.intro}
-        image={image}
-        imageAlt={imageAlt}
         {...(hub.heroNotes && { annotations: hub.heroNotes })}
         {...(actions && { actions })}
       />
-      <Overview heading={hub.overview.heading} paragraphs={hub.overview.paragraphs} />
-      {extraGrid && <CardGrid id="services" heading={extraGrid.heading} intro={extraGrid.intro} cards={extraGrid.cards} tone="wash" />}
-      <CardGrid id={extraGrid ? 'buildings' : 'services'} heading={hub.cards.heading} intro={hub.cards.intro} cards={cards} tone={extraGrid ? undefined : 'wash'} />
-      {/* Google reviews, a few sections below the hero (owner, October 14 2026) */}
+      <ProofBar strip />
+      <SvcIntro heading={hub.overview.heading} paragraphs={hub.overview.paragraphs} />
+      {extraGrid && <SvcCardGrid id="services" heading={extraGrid.heading} intro={extraGrid.intro} cards={extraGrid.cards} />}
+      <SvcCardGrid id={extraGrid ? 'buildings' : 'services'} heading={hub.cards.heading} intro={hub.cards.intro} cards={cards} tone={extraGrid ? 'cream' : 'white'} />
       {/* The blog's roof illustration where it explains this hub (data/roofDiagrams.js) */}
-      <RoofDiagram diagram={diagramFor(crumbs.at(-1).href)} />
-      {/* The work itself, right after the services (owner, October 15 2026, after maben.com.au): projects on this hub's pages, newest first */}
-      <StudioProjects projects={projectsShownOn(crumbs.at(-1).href).projects} heading="Recent roofing projects" />
-      <ReviewMarquee />
-      <ValueGrid heading={hub.highlights.heading} items={hub.highlights.points} columns={3} />
+      <RoofDiagram diagram={diagramFor(path)} />
+      <SvcTrust path={path} />
+      <SvcIncludes heading={hub.highlights.heading} points={hub.highlights.points} />
       {extra}
       {process && <Process />}
+      <SvcOffer offer={offer} />
+      <StudioProjects projects={projectsShownOn(path).projects} heading="Recent roofing projects" />
+      <SvcReviews path={path} />
       {feature && <SplitFeature {...feature} tone="wash" />}
-      <LatestArticles posts={await articlesFor(crumbs.at(-1).href)} heading="Related Roofing Articles" />
-      {hub.faqs?.length > 0 && <Faq heading="Frequently Asked __Questions__" sub={faqSub(hub.keyword)} faqs={hub.faqs} cta={false} />}
+      <LatestArticles posts={await articlesFor(path)} heading="Related Roofing Articles" />
+      {hub.faqs?.length > 0 && (
+        <div className="sv-faq-wrap">
+          <Faq heading="Frequently Asked __Questions__" sub={faqSub(hub.keyword)} faqs={hub.faqs} cta={false} />
+        </div>
+      )}
       <RoofCheck tone="white" offer={offer} />
       <FinalCta {...closingCta(hub.keyword, offer)} />
     </main>

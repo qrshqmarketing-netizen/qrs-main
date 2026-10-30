@@ -1,33 +1,40 @@
-/* ---------- Footer: the studio look ----------
-   Solid primary navy (--surface-navy, the logo blue; the neighborhood photo was removed on October 28 2026). The phone number is the big line, with the three offices beside it; the logo and link columns sit
-   under a hairline and the small print comes last. Always dark, in both themes. Mobile first. */
-footer{position:relative;isolation:isolate;overflow:hidden;background:var(--surface-navy);color:#fff;padding:72px 0 96px;border-top:1px solid rgba(255,255,255,.08)} /* bottom room so the chat bubble never covers the copyright */
-footer .container{position:relative;max-width:1540px}
-.ft-label{margin:0 0 16px;display:flex;align-items:center;gap:12px;font:600 12px/1.2 var(--font-text),sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.62)}
-.ft-label:before{content:"";width:28px;height:1px;background:currentColor}
+/* ---------- Footer (owner, October 29 2026, after the owner's reference homepage) ----------
+   The page's closing gradient fills the footer: read from the bottom up, it starts in the brand blue and rises through the navies to gold at
+   the top, where the call to action above ends in the same gold. On it, with a gutter all around, a compact near-black card holds everything: the brand column, the link
+   columns and the offices, then the small print. The same in both themes. Mobile first. */
+footer,:root[data-theme="dark"] footer{
+  position:relative;color:#fff;
+  padding:0 max(16px,4.44vw) 96px; /* the gold band under the card, also room so the chat bubble never covers the small print */
+  background:linear-gradient(0deg,#1d5fae 0%,#0a3969 24%,#2c4766 48%,#8a7448 74%,#d4b572 100%);
+}
+.ft-card{max-width:1680px;margin:0 auto;background:#070b12;border-radius:var(--radius);padding:44px clamp(20px,4vw,56px) 26px}
 
-.ft-top{display:grid;gap:40px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.18)}
-.ft-phone{display:inline-block;white-space:nowrap;font:300 clamp(34px,9.4vw,76px)/1 var(--font-text),sans-serif;letter-spacing:-.04em;color:#fff;transition:color .2s ease}
-.ft-phone:hover{color:var(--gold-2)}
-.ft-hours{margin:16px 0 0;max-width:36ch;font-size:15px;line-height:1.6;color:rgba(255,255,255,.72)}
-.ft-offices{display:grid;gap:22px}
-.ft-offices address{font-style:normal;font-size:15px;line-height:1.6;color:rgba(255,255,255,.72)}
-.ft-offices b{display:block;margin-bottom:4px;font:500 17px/1.3 var(--font-text),sans-serif;letter-spacing:-.01em;color:#fff}
-
-.ft-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px 20px;padding:48px 0 8px}
+.ft-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px 20px}
 .ft-col{display:flex;flex-direction:column;align-items:flex-start;min-width:0}
-.ft-col h3{margin:0 0 14px;font:600 12px/1.2 var(--font-text),sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.ft-col h3{margin:0 0 12px;font:600 12px/1.2 var(--font-text),sans-serif;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5)}
 /* 40px tall rows on phones so every link is an easy tap target */
-.ft-col a{display:flex;align-items:center;min-height:40px;font:400 16px/1.35 var(--font-text),sans-serif;color:rgba(255,255,255,.88);transition:color .2s ease}
+.ft-col a{display:flex;align-items:center;min-height:40px;font:400 15px/1.35 var(--font-text),sans-serif;color:rgba(255,255,255,.86);transition:color .2s ease}
 .ft-col a:hover{color:var(--gold-2)}
-.ft-brand{grid-column:1/-1}
-.ft-brand .brand-logo{height:52px}
-.ft-social{display:flex;gap:6px;margin:14px 0 0 -11px}
-.ft-social a{width:44px;height:44px;color:rgba(255,255,255,.6);display:grid;place-items:center}
-.ft-social a:hover{color:var(--gold)}
-.ft-social svg{width:22px;height:22px}
 
-.ft-copy{margin:40px 0 0;padding-top:22px;border-top:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.62);font-size:13px;line-height:1.6;display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center}
+.ft-brand{grid-column:1/-1}
+.ft-brand .brand{font-size:26px}
+.ft-line{margin:14px 0 0;max-width:30ch;font-size:15px;line-height:1.55;color:rgba(255,255,255,.66)}
+.ft-brand a.ft-phone{min-height:0;margin-top:16px;font:500 26px/1.1 var(--font-text),sans-serif;letter-spacing:-.02em;color:#fff}
+.ft-hours{margin:6px 0 0;font-size:14px;line-height:1.5;color:rgba(255,255,255,.62)}
+.ft-asks{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.ft-brand .ft-asks a.btn{min-height:44px;padding:0 18px;font-size:15px}
+.ft-social{display:flex;gap:4px;margin:12px 0 0 -11px}
+.ft-brand .ft-social a{width:44px;height:44px;min-height:0;color:rgba(255,255,255,.6);display:grid;place-items:center}
+.ft-social a:hover{color:var(--gold)}
+.ft-social svg{width:21px;height:21px}
+
+.ft-offices{grid-column:1/-1;display:grid;gap:16px}
+.ft-offices h3{margin-bottom:0}
+.ft-offices address{font-style:normal;font-size:14px;line-height:1.55;color:rgba(255,255,255,.66)}
+.ft-offices b{display:block;margin-bottom:2px;font:500 15px/1.3 var(--font-text),sans-serif;color:#fff}
+.ft-offices address a{display:inline;min-height:0;font-size:14px;color:rgba(255,255,255,.86)}
+
+.ft-copy{margin:36px 0 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.55);font-size:13px;line-height:1.6;display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center}
 .ft-copy a{color:inherit;transition:color .2s ease}
 .ft-copy .ft-license{color:#fff} /* the license number stands out in white (owner, October 14 2026) */
 .ft-copy a:hover{color:var(--gold-2)}
@@ -35,33 +42,16 @@ footer .container{position:relative;max-width:1540px}
 @media (hover:hover){.ft-cookie:hover{color:var(--gold-2)}}
 
 @media (min-width:621px){
-  footer{padding:96px 0 64px} /* the floating review pop-up and chat bubble sit in the bottom corners: room so they don't cover the company name */
-  .ft-offices{grid-template-columns:repeat(3,1fr);gap:28px}
-  .ft-grid{grid-template-columns:repeat(4,1fr);gap:40px 28px}
-  .ft-col a{min-height:0;margin-bottom:12px}
-  .ft-copy{gap:8px 22px}
-  .ft-copy span+span{padding-left:22px;border-left:1px solid rgba(255,255,255,.22)}
-}
-@media (min-width:901px){
-  footer{padding-top:120px}
-  .ft-phone{font-size:clamp(48px,5.4vw,92px)}
-  .ft-top{grid-template-columns:1.25fr 1fr;align-items:end;gap:72px;padding-bottom:64px}
+  .ft-card{padding-top:52px}
+  .ft-grid{grid-template-columns:repeat(3,1fr);gap:36px 28px}
   .ft-offices{grid-template-columns:repeat(3,1fr)}
-  .ft-grid{grid-template-columns:1.3fr repeat(4,1fr);padding-top:60px}
-  .ft-brand{grid-column:1}
-  .ft-social{margin-left:-11px}
+  .ft-offices h3{grid-column:1/-1}
+  .ft-col a{min-height:0;margin-bottom:10px}
+  .ft-copy span+span{padding-left:18px;border-left:1px solid rgba(255,255,255,.18)}
 }
-/* The brand word, large, across the bottom: QUALITY (FooterWord.jsx; it was QRS® at --fit 40.7cqw), tight letters that fill the footer's width at every screen size (the size is a share
-   of the container width, --fit, measured for this word in this font), each letter in its own mask sliding up into view. Inversion effect: the
-   letters are white with mix-blend-mode difference, so they show the navy inverted, a warm cream. */
-.ft-name{--fit:20.35cqw;container-type:inline-size;display:flex;align-items:flex-start;margin-top:36px;user-select:none;line-height:1;mix-blend-mode:difference}
-.ft-l{display:block;overflow:clip;padding:0 0 .1em;margin-bottom:-.1em}
-.ft-l > span{display:block;font:700 var(--fit)/.8 var(--font-text),sans-serif;letter-spacing:.04em;color:#fff;text-transform:uppercase}
-.ft-reg > span{font-size:calc(var(--fit) * .2);line-height:1;letter-spacing:0;margin:.35em 0 0 .25em}
-.ft-name.is-ready .ft-l > span{transform:translate3d(0,105%,0)}
-.ft-name.is-in .ft-l > span{transform:none;transition:transform 1.1s cubic-bezier(.17,.84,.44,1);transition-delay:calc(var(--i,0) * 90ms)}
-@media print,(prefers-reduced-motion:reduce){.ft-name.is-ready .ft-l > span{transform:none}}
-@media print{.ft-name{mix-blend-mode:normal}.ft-l > span{color:rgba(0,0,0,.15)}}
-@media (min-width:901px){.ft-name{margin-top:48px}}
-/* /start/ shows only the small print (HideOnStart): no gap above it */
-footer .container > .ft-copy:first-child{margin-top:0;border-top:0;padding-top:0}
+@media (min-width:1080px){
+  .ft-grid{grid-template-columns:1.4fr repeat(3,1fr) 1.15fr;gap:32px}
+  .ft-brand,.ft-offices{grid-column:auto}
+  .ft-offices{grid-template-columns:1fr;gap:14px;align-content:start}
+  .ft-offices h3{margin-bottom:-2px}
+}

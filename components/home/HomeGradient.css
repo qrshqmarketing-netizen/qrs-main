@@ -1,0 +1,416 @@
+/* ---------- Home page, gradient story (owner, October 29 2026; adapted from the owner's reference homepage) ----------
+   One continuous vertical gradient runs down the page: each section starts on the color the one above ended on. The reference's
+   plum → electric violet → aqua spectrum is mapped onto the QRS palette: deep navy → brand blue → pale sky, with a warm cream (from the gold)
+   where the reference used lilac, gold where it used lime, and plum as a small accent. Sections follow the main navigation: Residential,
+   Commercial, Roof Repair, Replacement, Service Areas, Projects. Everything is scoped to main.hg; the classes start with hg-. Mobile first. */
+main.hg{
+  --hg-deep:#031a33;
+  --hg-navy:#062d57;
+  --hg-blue:#1d5fae;
+  --hg-bright:#3d86d6;
+  --hg-sky:#cfe7fa;
+  --hg-sky-2:#e8f4fd;
+  --hg-peri:#c8d5f1;
+  --hg-cream:#f3e5c4;
+  --hg-gold:var(--gold);
+  --hg-spectrum:linear-gradient(110deg,#062d57 0%,#1d5fae 55%,#6fb2ea 100%);
+  --hg-text-grad:linear-gradient(100deg,#062d57 0%,#1d5fae 55%,#a07b30 100%);
+  --hg-card:var(--paper);
+  --hg-wordmark:var(--gold); /* the hero's QUALITY in the brand gold, in both themes (owner, October 29 2026) */
+  --hg-r:12px;
+  overflow-x:clip;
+}
+:root[data-theme="dark"] main.hg{
+  --hg-sky:#0e2847;--hg-sky-2:#0a1f38;--hg-peri:#142d55;--hg-cream:#262536;
+  --hg-text-grad:linear-gradient(100deg,#e8eef5 0%,#8fc1f0 55%,#e0c68a 100%);
+}
+
+/* Type: the studio look's light headings, set bolder and tighter here, as in the reference */
+body.studio-site main.hg :is(h2,h3):not(.final *){font-family:var(--font-text),ui-sans-serif,system-ui,sans-serif;font-weight:700;letter-spacing:-.035em;line-height:1.06;color:var(--navy)}
+.hg-grad{background:var(--hg-text-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hg-section{padding:clamp(64px,9vw,120px) 0}
+.hg-head{max-width:780px;margin:0 auto clamp(36px,5vw,60px);text-align:center!important}
+body.studio-site main.hg .hg-head h2{font-size:clamp(32px,5vw,56px);text-align:center!important;margin:0}
+.hg-head p{margin:16px auto 0;font-size:clamp(16px,1.6vw,19px);color:var(--muted);max-width:640px}
+.hg-row-head{display:flex;justify-content:space-between;align-items:end;gap:18px 24px;margin-bottom:36px;flex-wrap:wrap}
+body.studio-site main.hg .hg-row-head h2{font-size:clamp(30px,4.4vw,50px);max-width:720px;margin:0;text-align:left!important}
+.hg-arrow{display:inline-flex;align-items:center;gap:6px;font-weight:600;color:var(--gold-ink)}
+.hg-arrow span{font-family:var(--font-glyph);transition:transform .2s}
+@media (hover:hover){.hg-arrow:hover span{transform:translateX(4px)}}
+.hg-pill{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--ink);padding:6px 14px 6px 6px;border-radius:999px;background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.75);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.hg-pill b{background:var(--hg-gold);color:#0b1f33;font-size:11px;letter-spacing:.06em;padding:3px 9px;border-radius:999px}
+
+/* Continuous page gradient: each band starts where the last ended */
+.hg-bg-sky{background:linear-gradient(180deg,var(--hg-sky) 0%,var(--hg-sky-2) 100%)}
+.hg-bg-white{background:var(--paper)}
+.hg-bg-white-sky{background:linear-gradient(180deg,var(--paper) 0%,var(--hg-sky-2) 100%)}
+.hg-bg-sky-up{background:linear-gradient(180deg,var(--hg-sky-2) 0%,var(--hg-sky) 100%)}
+.hg-bg-sky-peri{background:linear-gradient(180deg,var(--hg-sky) 0%,var(--hg-peri) 100%)}
+.hg-bg-peri-cream{background:linear-gradient(180deg,var(--hg-peri) 0%,var(--hg-cream) 100%)}
+
+/* ---------- Hero: deep navy → brand blue → sky, the wordmark, the copy and the framed drone footage ---------- */
+.hg-hero{position:relative;overflow:hidden;isolation:isolate;--hg-top:clamp(28px,4vw,56px);--hg-wm:calc(var(--hg-cw) / 5.62);--hg-pb:clamp(56px,7vw,96px);padding:var(--hg-top) 0 var(--hg-pb);
+  background:linear-gradient(180deg,var(--hg-deep) 0%,var(--hg-navy) 22%,var(--hg-blue) 58%,var(--hg-blue) 100%)}
+/* The fade to sky starts partway down the framed footage, so all the copy above it always sits on blue (phones included) and the
+   next section starts on the color the hero ends on */
+.hg-stage:before{content:"";position:absolute;z-index:-1;left:50%;width:100vw;transform:translateX(-50%);top:38%;bottom:calc(-1 * var(--hg-pb) - 1px);background:linear-gradient(180deg,rgba(29,95,174,0) 0%,var(--hg-sky) 70%)}
+.hg-hero:before{content:"";position:absolute;z-index:-1;left:50%;top:-200px;width:min(1100px,130vw);height:520px;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(107,37,69,.45),rgba(107,37,69,0))}
+.hg-hero:after{content:"";position:absolute;z-index:-1;left:50%;bottom:4%;width:min(1200px,140vw);height:620px;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(232,244,253,.9),rgba(232,244,253,0))}
+.hg-wordmark{ /* The roof mark and QUALITY, sized to fill the width inside the side margins (together 5.62 font-sizes wide in Xmind, the word alone 4.16; re-measure if the word, mark, gap or font changes) */
+font:800 var(--hg-wm)/.8 var(--font-text),sans-serif;letter-spacing:-.05em;text-align:center;color:var(--hg-wordmark);white-space:nowrap;user-select:none;margin:0}
+.hg-hero-copy{text-align:center;max-width:900px;margin:clamp(28px,5vw,72px) auto 0}
+body.studio-site main.hg .hg-kicker{margin:18px auto 0;font:600 13px/1.4 var(--font-text),sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#fff;text-align:center!important}
+.hg-title{margin:14px auto 0;max-width:820px;font:700 clamp(34px,5.4vw,72px)/1 var(--font-text),sans-serif;letter-spacing:-.045em;color:#fff;text-wrap:balance}
+.hg-title u{text-decoration:none;position:relative;white-space:nowrap}
+.hg-lead{margin:20px auto 0;max-width:600px;font-size:17px;line-height:1.6;color:rgba(255,255,255,.88)}
+.hg-ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+.hg-ctas .btn{min-height:52px}
+.hg-note{margin-top:14px;font-size:14px;color:rgba(255,255,255,.75)}
+.hg-stage{position:relative;max-width:calc(var(--hg-cw) - 2 * var(--hg-inset));margin:clamp(44px,6vw,72px) auto 0}
+.hg-frame{position:relative;border-radius:var(--hg-r);overflow:hidden;background:rgba(255,255,255,.75);border:1px solid rgba(255,255,255,.85);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+.hg-frame-bar{display:flex;align-items:center;gap:7px;padding:12px 14px;border-bottom:1px solid rgba(6,45,87,.08)}
+.hg-dot{width:10px;height:10px;border-radius:50%;background:#d6e2ee}
+.hg-url{margin-left:8px;flex:0 1 320px;height:26px;border-radius:999px;background:#eef4f9;font-size:12px;color:#5a6b82;display:flex;align-items:center;padding:0 12px;gap:6px;white-space:nowrap;overflow:hidden}
+.hg-media{position:relative;aspect-ratio:16/9;background:#0b2440}
+.hg-media img,.hg-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hg-media video{opacity:0;transition:opacity .8s ease}
+.hg-media video.on{opacity:1}
+.hg-float{position:absolute;display:flex;align-items:center;gap:10px;background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:var(--hg-r);padding:12px 14px;font-size:13px;line-height:1.35;animation:hgBob 6s ease-in-out infinite;box-shadow:0 14px 30px -18px rgba(6,45,87,.45)}
+.hg-float strong{display:block;font-size:14.5px;letter-spacing:-.01em;color:var(--navy)}
+.hg-float small{color:var(--muted)}
+.hg-ico{width:34px;height:34px;flex:none;border-radius:10px;display:grid;place-items:center;color:#fff}
+.hg-ico svg{width:18px;height:18px}
+.hg-f1{left:-6px;bottom:-26px;animation-delay:-1s}
+.hg-f2{right:-6px;top:-22px;animation-delay:-3s}
+.hg-f3{display:none}
+@keyframes hgBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@media (min-width:621px){
+  .hg-f1{left:3%;bottom:-28px}.hg-f2{right:-18px;top:14%}
+  .hg-f3{display:flex;right:6%;bottom:-24px;animation-delay:-2s}
+}
+
+/* ---------- Four principles as cards ---------- */
+.hg-cores{display:grid;gap:16px}
+.hg-core{background:var(--hg-card);border:1px solid var(--line);border-radius:var(--hg-r);overflow:hidden;transition:transform .3s}
+@media (hover:hover){.hg-core:hover{transform:translateY(-6px)}}
+.hg-core-art{height:170px;position:relative;overflow:hidden}
+.hg-core-body{padding:22px 22px 26px}
+body.studio-site main.hg .hg-core h3{font-size:21px;margin:0}
+.hg-core p{color:var(--muted);margin-top:8px;font-size:15px;line-height:1.55}
+.hg-art-1{background:linear-gradient(180deg,#dbe7f6,var(--hg-sky-2))}
+.hg-art-2{background:linear-gradient(180deg,#e7ecf7,#f6edd8)}
+.hg-art-3{background:linear-gradient(180deg,var(--hg-sky-2),#dde9fb)}
+.hg-art-4{background:linear-gradient(180deg,var(--hg-navy) 0%,var(--hg-blue) 70%,#6fb2ea 100%)}
+:root[data-theme="dark"] main.hg :is(.hg-art-1,.hg-art-2,.hg-art-3){background:linear-gradient(180deg,#13305a,#0d2340)}
+.hg-pin{position:absolute;width:52px;height:52px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--plum)}
+.hg-pin:after{content:"";position:absolute;inset:15px;border-radius:50%;background:#fff}
+.hg-pin.p1{left:calc(50% - 26px);top:40px}
+.hg-pin.p2{left:22%;top:78px;width:34px;height:34px;background:var(--hg-blue)}
+.hg-pin.p2:after{inset:10px}
+.hg-pin.p3{right:20%;top:70px;width:34px;height:34px;background:var(--hg-navy)}
+.hg-pin.p3:after{inset:10px}
+.hg-ring{position:absolute;left:50%;top:122px;width:200px;height:40px;margin-left:-100px;border-radius:50%;border:2px solid rgba(29,95,174,.35)}
+.hg-roofs{position:absolute;left:18px;right:18px;bottom:0;display:flex;align-items:flex-end;gap:10px}
+.hg-roofs i{flex:1;background:var(--hg-navy);clip-path:polygon(0 38%,50% 0,100% 38%,100% 100%,0 100%)}
+.hg-roofs i:nth-child(1){height:70px;background:var(--hg-blue)}
+.hg-roofs i:nth-child(2){height:110px}
+.hg-roofs i:nth-child(3){height:84px;background:var(--hg-gold)}
+.hg-roofs i:nth-child(4){height:58px;background:var(--plum)}
+.hg-chat{position:absolute;left:20px;right:20px;padding:10px 12px;border-radius:10px;background:#fff;color:#10243a;font-size:12.5px;line-height:1.4}
+.hg-chat.q{top:22px;right:66px;background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.3)}
+.hg-chat.a{top:76px;left:56px}
+.hg-chat.a b{color:var(--hg-blue)}
+@media (min-width:621px){.hg-cores{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1080px){.hg-cores{grid-template-columns:repeat(4,1fr)}}
+
+/* ---------- Statement ---------- */
+.hg-statement{position:relative;text-align:center;background:linear-gradient(180deg,var(--hg-sky-2) 0%,var(--paper) 100%);padding:clamp(80px,12vw,150px) 0;overflow:hidden}
+body.studio-site main.hg .hg-statement h2{font-size:clamp(34px,6vw,78px);max-width:1040px;margin:0 auto;letter-spacing:-.05em;text-align:center!important}
+.hg-orbit{position:absolute;width:62px;height:62px;border-radius:var(--hg-r);border:1px solid var(--line);display:none;place-items:center;background:var(--paper);color:var(--navy);animation:hgBob 7s ease-in-out infinite}
+.hg-orbit svg{width:28px;height:28px}
+.hg-o1{left:8%;top:20%}.hg-o2{right:10%;top:15%;animation-delay:-2s}.hg-o3{left:14%;bottom:15%;animation-delay:-4s}.hg-o4{right:15%;bottom:19%;animation-delay:-1s}
+@media (min-width:761px){.hg-orbit{display:grid}}
+
+/* ---------- Residential: tabs over a panel ---------- */
+.hg-tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:30px}
+.hg-tab{min-height:44px;padding:0 18px;border-radius:10px;font:600 15px/1 var(--font-text),sans-serif;background:var(--paper);color:var(--ink);border:1px solid var(--line);display:inline-flex;align-items:center;gap:8px;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.hg-tab i{width:8px;height:8px;border-radius:50%;background:var(--hg-c,var(--hg-blue))}
+.hg-tab[aria-selected="true"]{background:var(--surface-navy);color:#fff;border-color:var(--surface-navy)}
+.hg-panel{display:grid;gap:clamp(22px,4vw,52px);align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:var(--hg-r);padding:clamp(20px,4vw,48px)}
+.hg-panel[hidden]{display:none}
+body.studio-site main.hg .hg-panel h3{font-size:clamp(26px,3.2vw,38px);margin:0}
+.hg-panel-copy > p{color:var(--muted);margin-top:12px;font-size:17px;line-height:1.6}
+.hg-check{list-style:none;margin:20px 0 24px;padding:0;display:grid;gap:12px}
+.hg-check li{display:flex;gap:12px;align-items:flex-start;font-weight:500;color:var(--ink)}
+.hg-check li:before{content:"✓";flex:none;width:22px;height:22px;margin-top:1px;border-radius:7px;display:grid;place-items:center;background:linear-gradient(135deg,var(--hg-navy),var(--hg-blue));color:#fff;font:800 12px/1 var(--font-glyph)}
+.hg-panel-media{position:relative;aspect-ratio:4/3;border-radius:var(--hg-r);overflow:hidden;background:var(--wash)}
+.hg-panel-media img{object-fit:cover}
+.hg-panel-in{animation:hgUp .45s ease both}
+@keyframes hgUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@media (min-width:901px){.hg-panel{grid-template-columns:1fr 1.1fr}}
+
+/* ---------- Commercial: a dark gradient card with badges and numbers ---------- */
+.hg-sys{position:relative;overflow:hidden;isolation:isolate;color:#fff;border-radius:var(--hg-r);padding:clamp(52px,8vw,100px) clamp(20px,5vw,64px);background:linear-gradient(180deg,var(--hg-blue) 0%,var(--hg-navy) 55%,var(--hg-deep) 100%)}
+.hg-sys:before{content:"";position:absolute;z-index:-1;left:50%;bottom:-260px;width:1100px;height:520px;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(111,178,234,.45),rgba(111,178,234,0))}
+.hg-sys:after{content:"";position:absolute;z-index:-1;left:50%;top:-240px;width:900px;height:480px;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(107,37,69,.55),rgba(107,37,69,0))}
+body.studio-site main.hg .hg-sys h2{color:#fff}
+.hg-sys .hg-head p{color:rgba(255,255,255,.82)}
+.hg-badges{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:26px;padding:0;list-style:none}
+.hg-badges li{padding:10px 16px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);font-size:14px;font-weight:600;display:flex;align-items:center;gap:8px}
+.hg-badges li:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--hg-gold)}
+.hg-stats{display:grid;gap:14px;margin-top:clamp(40px,6vw,60px)}
+.hg-stat{padding:26px 22px;border-radius:var(--hg-r);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)}
+.hg-stat b{display:block;font:800 clamp(42px,5vw,62px)/1 var(--font-text),sans-serif;letter-spacing:-.04em;background:linear-gradient(110deg,#fff 10%,#9fcaf2 60%,var(--gold-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hg-stat span{display:block;margin-top:12px;color:rgba(255,255,255,.8);font-size:15px;line-height:1.45}
+.hg-sys-ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:clamp(32px,4vw,44px)}
+.hg-sys-ctas .btn-line{background:transparent;color:#fff;border-color:rgba(255,255,255,.45)}
+.hg-sys-note{text-align:center;margin-top:18px;font-size:15px;color:rgba(255,255,255,.78)}
+.hg-sys-note a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+@media (min-width:621px){.hg-stats{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1080px){.hg-stats{grid-template-columns:repeat(4,1fr)}}
+
+/* ---------- Roof repair: four tiles, the last one the emergency card ---------- */
+.hg-tiles{display:grid;gap:16px}
+.hg-tile{border-radius:var(--hg-r);padding:24px;min-height:250px;display:flex;flex-direction:column;justify-content:space-between;gap:24px;border:1px solid var(--line);background:var(--paper);transition:transform .3s}
+@media (hover:hover){.hg-tile:hover{transform:translateY(-6px)}}
+.hg-tile .hg-ico{width:54px;height:54px;border-radius:var(--hg-r)}
+.hg-tile .hg-ico svg{width:26px;height:26px}
+.hg-tile p{font-size:16px;line-height:1.55;color:var(--ink);margin:0}
+.hg-tile-em{background:linear-gradient(180deg,var(--plum) 0%,#8a3a5d 55%,#c58a9f 100%);border-color:transparent;color:#fff}
+body.studio-site main.hg .hg-tile-em h3{color:#fff;font-size:24px;margin:0}
+.hg-tile-em p{color:rgba(255,255,255,.9)}
+.hg-tile-em .hg-arrow{color:#fff}
+.hg-tile-em .hg-phone{display:inline-block;margin-top:6px;font-weight:700;color:#fff;font-size:18px}
+@media (min-width:621px){.hg-tiles{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1080px){.hg-tiles{grid-template-columns:repeat(4,1fr)}}
+
+/* ---------- Replacement: three segment cards ---------- */
+.hg-segs{display:grid;gap:16px}
+.hg-seg{border-radius:var(--hg-r);overflow:hidden;background:var(--paper);border:1px solid var(--line);display:flex;flex-direction:column}
+.hg-seg-art{height:200px;position:relative;overflow:hidden}
+.hg-seg-art .glass{position:absolute;border-radius:28px;background:rgba(255,255,255,.35);border:1px solid rgba(255,255,255,.7)}
+.hg-seg-art svg{position:absolute;left:50%;top:50%;width:120px;height:120px;transform:translate(-50%,-50%);color:#fff;opacity:.92}
+.hg-sa1{background:linear-gradient(180deg,var(--hg-sky) 0%,var(--hg-sky-2) 100%)}
+.hg-sa1 svg{color:var(--hg-navy)}
+.hg-sa2{background:linear-gradient(180deg,var(--hg-blue) 0%,#8cc0ee 100%)}
+.hg-sa3{background:linear-gradient(180deg,var(--hg-navy) 0%,var(--hg-blue) 100%)}
+.hg-seg-body{padding:24px 26px 28px;display:flex;flex-direction:column;flex:1}
+body.studio-site main.hg .hg-seg h3{font-size:25px;margin:0}
+.hg-seg p{color:var(--muted);margin:10px 0 18px;flex:1;line-height:1.55}
+@media (min-width:901px){.hg-segs{grid-template-columns:repeat(3,1fr)}}
+
+/* ---------- Service areas: one card per county ---------- */
+.hg-plans{display:grid;gap:18px;align-items:stretch}
+.hg-plan{background:var(--paper);border:1px solid var(--line);border-radius:var(--hg-r);padding:28px;display:flex;flex-direction:column;position:relative}
+.hg-plan.feat{border:2px solid transparent;background:linear-gradient(var(--paper),var(--paper)) padding-box,var(--hg-spectrum) border-box}
+.hg-tag{position:absolute;top:-13px;left:28px;font-size:12px;font-weight:700;padding:5px 12px;border-radius:999px;background:linear-gradient(90deg,var(--hg-navy),var(--hg-blue));color:#fff}
+.hg-k2{font-weight:700;font-size:12.5px;color:var(--gold-ink);text-transform:uppercase;letter-spacing:.08em}
+body.studio-site main.hg .hg-plan h3{font-size:25px;margin:6px 0 0}
+.hg-big{margin:16px 0 4px;font:800 clamp(40px,4.4vw,52px)/1 var(--font-text),sans-serif;letter-spacing:-.04em;color:var(--navy)}
+.hg-big span{font-size:16px;font-weight:600;color:var(--muted);letter-spacing:0;margin-left:6px}
+.hg-sub{font-size:14px;color:var(--muted)}
+.hg-plan ul{list-style:none;margin:20px 0 26px;padding:0;display:grid;gap:10px;flex:1}
+.hg-plan li{display:flex;gap:10px;font-size:15px;line-height:1.45;color:var(--ink)}
+.hg-plan li:before{content:"✓";flex:none;width:20px;height:20px;border-radius:50%;display:grid;place-items:center;font:800 11px/1 var(--font-glyph);background:var(--hg-sky);color:var(--hg-navy);margin-top:1px}
+:root[data-theme="dark"] main.hg .hg-plan li:before{color:#e8eef5}
+.hg-plan li a{color:inherit;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+.hg-plan .btn{width:100%;justify-content:center}
+.hg-fine{text-align:center;margin-top:24px;font-size:14px;color:var(--muted)}
+@media (min-width:761px){.hg-plans{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1180px){.hg-plans.hg-four{grid-template-columns:repeat(4,1fr)}.hg-plans.hg-three{grid-template-columns:repeat(3,1fr)}}
+
+/* ---------- Projects and guides: cards with a picture ---------- */
+.hg-posts{display:grid;gap:18px}
+.hg-postcard{border-radius:var(--hg-r);overflow:hidden;background:var(--paper);border:1px solid var(--line);display:flex;flex-direction:column;transition:transform .3s;color:inherit}
+@media (hover:hover){.hg-postcard:hover{transform:translateY(-6px)}}
+.hg-postart{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--wash)}
+.hg-postart img{object-fit:cover}
+.hg-postbody{padding:22px 24px 26px;display:flex;flex-direction:column;gap:8px;flex:1}
+.hg-postbody small{font-weight:600;color:var(--gold-ink);font-size:13px}
+body.studio-site main.hg .hg-postcard h3{font-size:21px;line-height:1.2;margin:0}
+.hg-postbody p{color:var(--muted);font-size:15px;line-height:1.5;flex:1;margin:0}
+@media (min-width:901px){.hg-posts{grid-template-columns:1.3fr 1fr 1fr}.hg-posts > :first-child .hg-postart{aspect-ratio:16/11}}
+
+/* ---------- Reviews: a slider with a number card beside each quote ---------- */
+.hg-q-viewport{overflow:hidden;border-radius:var(--hg-r)}
+.hg-q-track{display:flex;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.hg-q-slide{min-width:100%;display:grid;gap:16px}
+.hg-q-main{background:var(--paper);border:1px solid var(--line);border-radius:var(--hg-r);padding:clamp(24px,4vw,48px);display:flex;flex-direction:column;justify-content:space-between;gap:24px}
+.hg-stars{color:#f5b100;letter-spacing:3px;font:18px/1 var(--font-glyph)}
+.hg-q-main blockquote{margin:0;font:600 clamp(17px,1.7vw,22px)/1.4 var(--font-text),sans-serif;letter-spacing:-.02em;color:var(--navy)}
+.hg-who{display:flex;align-items:center;gap:14px}
+.hg-avatar{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:700;background:var(--hg-spectrum)}
+.hg-who b{color:var(--ink)}
+.hg-who small{display:block;color:var(--muted)}
+.hg-q-stat{border-radius:var(--hg-r);padding:clamp(26px,4vw,42px);color:#fff;display:flex;flex-direction:column;justify-content:flex-end;min-height:240px}
+.hg-q-stat b{font:800 clamp(52px,6.4vw,86px)/.95 var(--font-text),sans-serif;letter-spacing:-.05em}
+.hg-q-stat span{margin-top:12px;font-size:17px;opacity:.92;max-width:300px}
+.hg-qs1{background:linear-gradient(0deg,#6fb2ea 0%,#1d5fae 30%,#0a3969 70%,#031a33 100%)}
+.hg-qs2{background:linear-gradient(180deg,var(--plum) 0%,#3a1630 100%)}
+.hg-qs3{background:linear-gradient(180deg,var(--hg-navy) 0%,var(--hg-blue) 100%)}
+.hg-qs4{background:linear-gradient(180deg,#f3e5c4 0%,var(--gold) 100%);color:#10243a}
+.hg-q-ctrl{display:none;gap:10px}
+.hg-q-btn{width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:var(--paper);color:var(--ink);display:grid;place-items:center;font:20px/1 var(--font-glyph);cursor:pointer;transition:background .2s,color .2s}
+@media (hover:hover){.hg-q-btn:hover{background:var(--surface-navy);color:#fff}}
+.hg-q-dots{display:flex;gap:6px;justify-content:center;align-items:center;margin-top:20px}
+.hg-q-dots button:not(.hg-q-btn){width:44px;height:44px;border:0;background:none;display:grid;place-items:center;cursor:pointer;padding:0}
+.hg-q-dots button:not(.hg-q-btn) i{display:block;width:8px;height:8px;border-radius:999px;background:#c8d3e0;transition:width .3s,background .3s}
+.hg-q-dots button:not(.hg-q-btn)[aria-current="true"] i{width:28px;background:var(--hg-navy)}
+:root[data-theme="dark"] main.hg .hg-q-dots button[aria-current="true"] i{background:var(--gold)}
+@media (min-width:621px){.hg-q-ctrl{display:flex;margin:0 10px}}
+@media (min-width:901px){.hg-q-slide{grid-template-columns:1.5fr 1fr}}
+
+/* ---------- FAQ ---------- */
+.hg-faq{max-width:860px;margin:0 auto}
+.hg-faq details{border-bottom:1px solid color-mix(in srgb,var(--ink) 16%,transparent);padding:20px 0}
+.hg-faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;font:600 clamp(17px,1.8vw,20px)/1.3 var(--font-text),sans-serif;letter-spacing:-.01em;color:var(--navy);min-height:44px}
+.hg-faq summary::-webkit-details-marker{display:none}
+.hg-faq summary:after{content:"+";flex:none;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.65);transition:transform .25s;font:500 20px/1 var(--font-glyph);color:var(--navy)}
+.hg-faq details[open] summary:after{transform:rotate(45deg);background:var(--surface-navy);color:#fff}
+.hg-faq-a{margin-top:10px;color:var(--ink);max-width:740px;line-height:1.6}
+.hg-faq-a a{text-decoration:underline;text-underline-offset:3px}
+
+/* The page's closing gradient: from the FAQ's cream, the request form section fades into the dark brand blue, which the call to action
+   below starts on and the footer finishes in gold */
+main.hg .hg-form-wrap{background:linear-gradient(180deg,var(--hg-cream) 0%,#a9bfdc 38%,#1d5fae 72%,var(--surface-navy) 100%)}
+main.hg .hg-form-wrap > section{background:transparent}
+
+@media (prefers-reduced-motion:reduce){
+  .hg-float,.hg-orbit,.hg-panel-in{animation:none}
+  .hg-q-track{transition:none}
+}
+@media print{.hg-float,.hg-orbit{display:none}}
+
+:root[data-theme="dark"] main.hg .hg-hero:after{opacity:.15}
+
+
+/* Navy behind the bottom of the page, so the closing gradient (request form fading into the call to action) never shows a white gap */
+main.hg{background:linear-gradient(180deg,var(--paper) 0,var(--paper) calc(100% - 1100px),var(--surface-navy) calc(100% - 1100px))}
+
+/* The hero starts under the header, which floats over it until the page scrolls (Header.css, "Over a hero") */
+main.hg .hg-hero{padding-top:calc(var(--hg-top) + 60px)}
+@media (min-width:1240px){main.hg .hg-hero{padding-top:calc(var(--hg-top) + 68px)}}
+
+/* Margins as in the owner's reference homepage (October 29 2026): side gutters of 4.44% of the width (16px at least), content up to 1680px,
+   and from 1200px the sections inset by one column of a 12-column grid. The hero's QUALITY and the framed footage use the same widths. */
+main.hg{--hg-gut:max(16px,4.44vw);--hg-cw:min(calc(100vw - 2 * var(--hg-gut)),1680px);--hg-inset:0px}
+@media (min-width:1200px){main.hg{--hg-inset:calc(var(--hg-cw) / 12)}}
+main.hg .container{width:auto;max-width:calc(1680px + 2 * var(--hg-gut));margin:0 auto;padding-left:var(--hg-gut);padding-right:var(--hg-gut);box-sizing:border-box}
+main.hg :is(.hg-section,.hg-statement,.hg-form-wrap > section,.final) > .container{padding-left:calc(var(--hg-gut) + var(--hg-inset));padding-right:calc(var(--hg-gut) + var(--hg-inset))}
+
+/* ---------- Principle cards in motion (owner, October 29 2026; CoresMotion.jsx sets hg-seen once, hg-live while on screen) ---------- */
+/* Card 1, "A roofer looks first": the drone scanning a roof */
+.hg-art-1 .hg-scan{position:absolute;left:0;right:0;bottom:0;width:100%;height:100%}
+.hg-scan-wall{fill:#fff;stroke:rgba(6,45,87,.12)}
+.hg-scan-door{fill:rgba(6,45,87,.14)}
+.hg-scan-roof{fill:var(--hg-navy)}
+.hg-scan-chimney,.hg-scan-pipe{fill:#4c6b8e}
+.hg-scan-line{fill:var(--hg-gold);opacity:0}
+.hg-spot-ring{fill:none;stroke:var(--hg-gold);stroke-width:2}
+.hg-spot-dot{fill:var(--hg-gold)}
+.hg-drone-arm{stroke:#10243a;stroke-width:2.5;stroke-linecap:round}
+.hg-drone-body{fill:#10243a}
+.hg-drone-cam{fill:var(--hg-gold)}
+.hg-rotor{fill:rgba(16,36,58,.45)}
+.hg-rec{position:absolute;left:14px;top:12px;z-index:1;display:inline-flex;align-items:center;gap:6px;padding:4px 9px;border-radius:999px;background:rgba(255,255,255,.85);color:#10243a;font-size:11px;font-weight:600;letter-spacing:.02em}
+.hg-rec i{width:7px;height:7px;border-radius:50%;background:#d93a3a}
+:root[data-theme="dark"] main.hg .hg-scan-wall{fill:#1d3a60;stroke:none}
+:root[data-theme="dark"] main.hg .hg-scan-roof{fill:#2f5f98}
+:root[data-theme="dark"] main.hg :is(.hg-drone-arm){stroke:#e8eef6}
+:root[data-theme="dark"] main.hg :is(.hg-drone-body){fill:#e8eef6}
+:root[data-theme="dark"] main.hg .hg-rotor{fill:rgba(232,238,246,.45)}
+:root[data-theme="dark"] main.hg .hg-rec{background:rgba(6,20,38,.8);color:#fff}
+
+/* Card 4: typing dots between the question and the answer (only seen during the entrance) */
+.hg-typing{position:absolute;left:56px;top:76px;display:none;gap:4px;padding:12px 14px;border-radius:10px;background:#fff}
+.hg-typing i{width:6px;height:6px;border-radius:50%;background:#7b8ea5}
+
+@media (prefers-reduced-motion:no-preference){
+  /* the SVG parts animate around their own centers */
+  .hg-scan :is(.hg-spot-ring,.hg-rotor,.hg-drone){transform-box:fill-box;transform-origin:center}
+
+  /* Card 1: the drone hovers, its rotors spin, the beam breathes, a scan line sweeps down the roof and the three spots light up in turn */
+  .hg-cores.hg-seen:not(.hg-static) .hg-drone{animation:hgFlyIn 1s cubic-bezier(.17,.84,.44,1) both,hgHover 3.2s ease-in-out 1s infinite}
+  .hg-cores.hg-static .hg-drone{animation:hgHover 3.2s ease-in-out infinite}
+  .hg-cores.hg-seen:not(.hg-static) .hg-scan-beam{animation:hgFade .5s ease .9s both,hgBeam 3s ease-in-out 1.4s infinite}
+  .hg-cores.hg-seen .hg-rotor{animation:hgSpin .18s linear infinite}
+  .hg-cores.hg-static .hg-scan-beam{animation:hgBeam 3s ease-in-out infinite}
+  .hg-cores.hg-seen .hg-scan-line{animation:hgSweep 3s cubic-bezier(.45,0,.55,1) infinite}
+  .hg-cores.hg-seen .hg-spot-ring{animation:hgPing 3s ease-out infinite}
+  .hg-cores.hg-seen .sp2 .hg-spot-ring{animation-delay:1s}
+  .hg-cores.hg-seen .sp3 .hg-spot-ring{animation-delay:2s}
+  .hg-cores.hg-seen .hg-rec i{animation:hgBlink 1.2s steps(2,start) infinite}
+
+  /* Card 2: the pins drop in one after another, then the ring ripples and the pins bob */
+  .hg-cores.hg-seen:not(.hg-static) .hg-pin{animation:hgDrop .7s cubic-bezier(.3,1.5,.6,1) both,hgPinBob 3.6s ease-in-out .9s infinite}
+  .hg-cores.hg-static .hg-pin{animation:hgPinBob 3.6s ease-in-out infinite}
+  .hg-cores.hg-seen .hg-pin.p2{animation-delay:.18s,1.1s}
+  .hg-cores.hg-seen .hg-pin.p3{animation-delay:.36s,1.3s}
+  .hg-cores.hg-seen .hg-ring{animation:hgRipple 2.8s ease-out infinite}
+
+  /* Card 3: the roofs rise in turn, then lift gently one after another */
+  .hg-roofs i{transform-origin:bottom}
+  .hg-cores.hg-seen:not(.hg-static) .hg-roofs i{animation:hgRise .7s cubic-bezier(.17,.84,.44,1) both,hgLift 4.8s ease-in-out .9s infinite}
+  .hg-cores.hg-static .hg-roofs i{animation:hgLift 4.8s ease-in-out infinite}
+  .hg-cores.hg-seen .hg-roofs i:nth-child(2){animation-delay:.12s,2.1s}
+  .hg-cores.hg-seen .hg-roofs i:nth-child(3){animation-delay:.24s,3.3s}
+  .hg-cores.hg-seen .hg-roofs i:nth-child(4){animation-delay:.36s,4.5s}
+
+  /* Card 4: the question, a moment of typing, then the written answer */
+  .hg-cores.hg-seen:not(.hg-static) .hg-chat.q{animation:hgUp .45s ease .1s both}
+  .hg-cores.hg-seen:not(.hg-static) .hg-typing{display:flex;animation:hgTyping 1.3s ease .5s both}
+  .hg-cores.hg-seen:not(.hg-static) .hg-typing i{animation:hgDot .9s ease-in-out infinite}
+  .hg-cores.hg-seen .hg-typing i:nth-child(2){animation-delay:.15s}
+  .hg-cores.hg-seen .hg-typing i:nth-child(3){animation-delay:.3s}
+  .hg-cores.hg-seen:not(.hg-static) .hg-chat.a{animation:hgUp .5s cubic-bezier(.17,.84,.44,1) 1.75s both,hgBob 5s ease-in-out 2.4s infinite}
+  .hg-cores.hg-static .hg-chat.a{animation:hgBob 5s ease-in-out infinite}
+
+  /* Everything pauses while the cards are off screen (after the animation shorthands above, which reset the play state) */
+  .hg-cores.hg-seen:not(.hg-live) :is(.hg-drone,.hg-rotor,.hg-scan-line,.hg-scan-beam,.hg-spot-ring,.hg-rec i,.hg-pin,.hg-ring,.hg-roofs i,.hg-chat,.hg-typing,.hg-typing i){animation-play-state:paused}
+}
+@keyframes hgFlyIn{from{transform:translate(-150px,-24px) rotate(-8deg);opacity:0}to{transform:none;opacity:1}}
+@keyframes hgFade{from{opacity:0}to{opacity:1}}
+@keyframes hgHover{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes hgSpin{0%,100%{transform:scaleX(1)}50%{transform:scaleX(.25)}}
+@keyframes hgBeam{0%,100%{opacity:.55}50%{opacity:1}}
+@keyframes hgSweep{0%{transform:translateY(0);opacity:0}10%{opacity:.9}85%{opacity:.9}100%{transform:translateY(56px);opacity:0}}
+@keyframes hgPing{0%{transform:scale(.6);opacity:0}12%{opacity:1}60%{transform:scale(1.6);opacity:0}100%{opacity:0}}
+@keyframes hgBlink{to{visibility:hidden}}
+@keyframes hgDrop{from{transform:translateY(-60px) rotate(-45deg);opacity:0}to{transform:rotate(-45deg);opacity:1}}
+@keyframes hgPinBob{0%,100%{transform:translateY(0) rotate(-45deg)}50%{transform:translateY(-5px) rotate(-45deg)}}
+@keyframes hgRipple{0%{transform:scale(.55);opacity:0}25%{opacity:1}100%{transform:scale(1.25);opacity:0}}
+@keyframes hgRise{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes hgLift{0%,20%,100%{transform:translateY(0)}10%{transform:translateY(-8px)}}
+@keyframes hgTyping{0%{opacity:0;transform:translateY(8px)}15%,85%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes hgDot{0%,100%{transform:translateY(0);opacity:.5}50%{transform:translateY(-3px);opacity:1}}
+
+/* The roof mark (SVG, components/ui/QrsMarkSvg.jsx) at the left of QUALITY in the hero (owner, October 29 2026): as tall as the capitals, sitting
+   on the baseline, and the mark, gap and word together fill the width inside the margins (the divisor is measured: see --hg-wm on .hg-hero) */
+.hg-wordmark{display:flex;align-items:baseline;justify-content:center;gap:.12em}
+.hg-wm-mark{flex:none;height:.7em;width:auto;align-self:baseline;transform:translateY(.01em);color:var(--hg-wordmark)}
+@supports (height:1cap){.hg-wm-mark{height:1cap}}
+
+/* ---------- Hero logo: randomized entrance (WordmarkScript.jsx sets the random values and html.hg-wm-in before the first paint) ---------- */
+.hg-wm-word{display:inline-flex}
+.hg-wm-word > span{display:inline-block}
+.hg-wm-mark [data-wm]{transform-box:fill-box;transform-origin:center}
+@media (prefers-reduced-motion:no-preference){
+  html.hg-wm-in .hg-wordmark [data-wm]{animation:hgWmIn var(--wt,1s) cubic-bezier(.2,.9,.25,1) var(--wd,0s) both}
+}
+@keyframes hgWmIn{
+  from{opacity:0;transform:translate(var(--wx,0),var(--wy,0)) rotate(var(--wr,0)) scale(var(--ws,.6));filter:blur(10px)}
+  60%{filter:blur(0)}
+  to{opacity:1;transform:none;filter:none}
+}
+
+/* ---------- Home motion (HomeMotion.jsx) ---------- */
+/* The hero logo's scroll drift is smoothed a little (the hero's stage and its bottom gradient stay put: owner, October 29 2026) */
+@media (prefers-reduced-motion:no-preference){
+  main.hg .hg-wordmark [data-wm]{transition:translate .12s linear,rotate .12s linear}
+}
+/* Cards lean toward the pointer */
+main.hg .hg-tilt{transform:perspective(1000px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translateY(var(--ty,0px));transition:transform .5s cubic-bezier(.17,.84,.44,1);will-change:transform}
+main.hg .hg-tilt:hover{--ty:-6px;transition:transform .12s linear}
+/* Magnetic buttons glide back when the pointer leaves */
+main.hg .hg-magnet{transition:translate .45s cubic-bezier(.17,.84,.44,1),background-color .2s,color .2s,border-color .2s}
+main.hg .hg-magnet:hover{transition:translate .1s linear,background-color .2s,color .2s,border-color .2s}

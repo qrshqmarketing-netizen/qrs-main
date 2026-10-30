@@ -17,7 +17,7 @@ export const COMMERCIAL_SERVICES = [
     image: '/images/cta-flat-roof-install-drone-view.webp',
     imageAlt: 'Roofers working on a white low-slope roof with rooftop units, seen from above',
     hero: {
-      intro: 'Commercial roof repair starts by tracing a leak back to where the water actually gets in, then fixes what failed, whether that’s a drain, a parapet, a seam or the flashing at rooftop equipment. QRS repairs commercial roofs across Los Angeles and Orange County while your building stays open, with before-and-after photos of every repair.',
+      intro: 'Commercial roof repair starts where the water gets in. A drain, a parapet, a seam or the flashing at rooftop equipment: we trace the leak and fix what failed. Your building stays open, and every repair gets before-and-after photos, across Los Angeles and Orange County.',
       highlights: ['Leaks traced to where water enters', 'Drains, parapets and penetrations', 'Photo records for owners and tenants'],
     },
     // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
@@ -65,7 +65,7 @@ export const COMMERCIAL_SERVICES = [
     },
     reviewsHeading: 'What people in Los Angeles say after the __job__',
     hero: {
-      intro: 'A commercial roof replacement tears off the worn roof in phases, section by section, and installs a new low-slope system chosen for your building, so your doors stay open. QRS replaces commercial roofs across Los Angeles and Orange County, starting with a roofer-led survey that shows whether replacement is due now or can wait.',
+      intro: 'Commercial roof replacement in phases, so your doors stay open. Section by section, the worn roof comes off and a new low-slope system chosen for your building goes on. It starts with a roofer-led survey that shows whether replacement is due now or can wait, across Los Angeles and Orange County.',
       highlights: ['Survey before any recommendation', 'System chosen for drainage and use', 'Phased so your building stays open'],
     },
     // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
@@ -107,7 +107,7 @@ export const COMMERCIAL_SERVICES = [
     imageAlt: 'Aerial view of a white low-slope commercial roof',
     hero: {
       intro:
-        'TPO roofing from QRS puts a white, reflective single-ply membrane on flat and low-slope commercial roofs across Los Angeles and Orange County. A roofer surveys the roof first, photographs what is there and recommends TPO only if it suits the building, with a written scope and price before any work. The work is planned in phases so your building stays open.',
+        'TPO roofing: a white, reflective single-ply membrane for flat and low-slope commercial roofs. A roofer surveys and photographs the roof first and recommends TPO only if it suits the building. A written scope and price before any work. Planned in phases, so your building stays open, across Los Angeles and Orange County.',
       highlights: ['White membrane that reflects sunlight', 'Seams welded with hot air', 'Planned in phases so the building stays open'],
     },
     // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
@@ -165,7 +165,7 @@ export const COMMERCIAL_SERVICES = [
     image: '/images/flat-roof-torch-down-drone-view-services.webp',
     imageAlt: 'Aerial view of a flat roof surface used for commercial roof maintenance',
     hero: {
-      intro: 'Commercial roof maintenance means scheduled roofer visits that clear debris from drains and gutters, reseal flashings where needed and catch early wear before it becomes interior damage. QRS maintains commercial roofs across Los Angeles and Orange County, starting with a baseline roof survey, and every visit ends with a photo report for owners, managers or boards.',
+      intro: 'Commercial roof maintenance catches early wear before it becomes interior damage. Scheduled roofer visits clear drains and gutters and reseal flashings where needed. It starts with a baseline roof survey, and every visit ends with a photo report for owners, managers or boards, across Los Angeles and Orange County.',
       highlights: ['Scheduled visits with photo reports', 'Drains and flashings checked early', 'Reports owners and boards can follow'],
     },
     // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once

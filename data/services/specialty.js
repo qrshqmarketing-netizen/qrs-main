@@ -112,7 +112,7 @@ export const HOA_MULTI_FAMILY = {
   imageAlt: 'Aerial view of a multi-family property with a shingle roof',
   hero: {
     intro:
-      'QRS provides HOA & multi-family roofing for boards and property management clients across Los Angeles and Orange County, from roof inspections and repairs to replacements phased building by building. Our *ReserveReady* program gives your board photo reports, phased proposals and long-range budget planning, with one point of contact throughout. It starts with a roofer-led roof survey of each building.',
+      'HOA & multi-family roofing for boards and property management clients. Roof inspections, repairs and replacements, phased building by building. Our *ReserveReady* program gives your board photo reports, phased proposals and long-range budget planning, with one point of contact throughout. Across Los Angeles and Orange County, starting with a roofer-led roof survey of each building.',
     highlights: ['Photo reports your board can review', 'Work phased building by building', 'One point of contact, start to finish'],
   },
   // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
@@ -169,7 +169,7 @@ export const ATTIC_VENTILATION = {
   imageAlt: 'New box vents and pipe jacks flashed into a light gray shingle roof',
   hero: {
     intro:
-      'Attic ventilation from QRS means checking how air moves through your attic, fixing vents that are blocked, missing or mismatched, and adding the right ones when your roof is replaced, across Los Angeles and Orange County. A roofer inspects the vents, eaves and ridge, photographs what they find and gives you a written scope and price before any work. Start with a free roof evaluation.',
+      'Attic ventilation that lets your roof breathe. We check how air moves through your attic, fix vents that are blocked, missing or mismatched, and add the right ones when your roof is replaced. A roofer photographs the vents, eaves and ridge, with a written scope and price before any work, across Los Angeles and Orange County. Start with a free roof evaluation.',
     highlights: ['Intake and exhaust vents checked together', 'Photos of every vent and finding', 'Fixed on its own or built into a new roof'],
   },
   // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once

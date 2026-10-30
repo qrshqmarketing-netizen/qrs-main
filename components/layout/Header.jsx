@@ -39,6 +39,15 @@ export default function Header() {
     setTheme(document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light');
   }, []);
 
+  // Frosted glass once the page has scrolled (owner, October 29 2026): data-scrolled on the header, styled at the end of Header.css
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 4);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   // Escape closes the panel and puts the focus back on the menu button
   useEffect(() => {
     if (!open) return undefined;
@@ -77,12 +86,13 @@ export default function Header() {
   return (
     <>
       <header
+        data-scrolled={scrolled ? '' : undefined}
         className={'site-header' + (open ? ' is-open' : '') + (requestPage ? ' is-start' : '') + (landing ? ' is-lp' : '')}
       >
       <div className="hd-backdrop" onClick={close} aria-hidden="true"></div>
       <div className="hd-bar">
         <div className="hd-brand">
-          <BrandLogo variant="adaptive" preload />
+          <BrandLogo variant="adaptive" preload tagline />
         </div>
         {!requestPage && (
           <nav className="hd-links" aria-label="Main">

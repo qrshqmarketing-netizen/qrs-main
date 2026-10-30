@@ -15,7 +15,7 @@ export const FLAT_CONTENT = {
     projectMore: 'View this Los Angeles flat roof project',
     hero: {
       heading: 'Flat Roofing Services · *FlatGuard*',
-      intro: 'Flat roofing from QRS covers new installs, replacements and repairs for modified bitumen and other low-slope roofs on homes, ADUs, garages and patio covers across Los Angeles and Orange County. Every drain, seam and flashing is detailed so water leaves the roof, and our *FlatGuard* Roof System covers low-slope replacements and new installs. Start with a free roof evaluation.',
+      intro: 'Flat roofing built so water leaves the roof. New installs, replacements and repairs for modified bitumen and other low-slope roofs on homes, ADUs, garages and patio covers across Los Angeles and Orange County. Every drain, seam and flashing is detailed. Our *FlatGuard* Roof System covers low-slope replacements and new installs. Start with a free roof evaluation.',
       highlights: ['Modified bitumen and low-slope systems', 'Drains, scuppers and parapets detailed', 'Written scope and price before work starts'],
     },
     overview: {
@@ -61,7 +61,7 @@ export const FLAT_CONTENT = {
       image: '/images/flat-roof-replacement-completed-white-membrane.webp',
       imageAlt: 'Aerial view of a completed white flat roof membrane with tile coping',
       hero: {
-        intro: 'A flat roof replacement removes the old roofing down to the deck, addresses any damaged decking and installs a new modified bitumen or other low-slope system planned around how your roof drains. QRS replaces worn-out flat roofs across Los Angeles and Orange County with our *FlatGuard* low-slope system, starting with a free roof evaluation.',
+        intro: 'Flat roof replacement, planned around how your roof drains. We tear off down to the deck, fix any damaged decking and install a new modified bitumen or other low-slope system. That’s our *FlatGuard* low-slope system, across Los Angeles and Orange County. It starts with a free roof evaluation.',
         highlights: ['Full tear-off down to the deck', 'Drainage planned into the new roof', '10-Year workmanship warranty (call for details)'],
       },
       // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
@@ -106,7 +106,7 @@ export const FLAT_CONTENT = {
       image: '/images/flat-roof-replacement-tear-off-drone-view.webp',
       imageAlt: 'Aerial view of a flat roof with roofing work in progress',
       hero: {
-        intro: 'QRS handles flat roof repair services across Los Angeles County and Orange County, tracing each leak back to where water gets in and fixing the open seam, blister, split or failed flashing behind it. A ceiling stain can sit far from the actual leak, so we check the whole area and show you photos of the problem and the fix.',
+        intro: 'Flat roof repair services that trace each leak to the source. An open seam, a blister, a split or failed flashing: we find it and fix it. A ceiling stain can sit far from the actual leak, so we check the whole area. Photos of the problem and the fix, across Los Angeles County and Orange County.',
         highlights: ['Leaks traced to where water enters', 'Seams, blisters and flashings repaired', 'Photos of the damage and the fix'],
       },
       // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
@@ -144,7 +144,7 @@ export const FLAT_CONTENT = {
       image: '/images/flat-roof-torch-down-drone-view-services.webp',
       imageAlt: 'Aerial view of a completed flat roof system',
       hero: {
-        intro: 'A new flat roof installation puts a modified bitumen or other low-slope roof on an ADU, addition, garage or patio cover, with the slope, drains and tie-ins planned before the first layer goes down. QRS builds new flat roofs across Los Angeles and Orange County as part of the *FlatGuard* Roof System. Request an estimate to get started.',
+        intro: 'Flat roof installation for an ADU, addition, garage or patio cover. A new modified bitumen or other low-slope roof, with the slope, drains and tie-ins planned before the first layer goes down. Part of our *FlatGuard* Roof System, across Los Angeles and Orange County. Request an estimate to get started.',
         highlights: ['ADUs, additions, garages and patio covers', 'Slope and drain locations planned early', 'Clean tie-ins to your existing roof'],
       },
       // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once

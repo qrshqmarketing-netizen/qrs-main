@@ -105,10 +105,10 @@ function processPhoto(page) {
 // props; defaults to page.final, else one worded around page.keyword). page.sections (optional): bands after the
 // overview, e.g. one per roof type on /roof-inspection/ ([{ eyebrow, heading, paragraphs, points }]). hub: the service-first
 // hub this page belongs to ({ label, href }); the overview links back to it, so the hub is the page for the general search.
-// The service pages already in the new design (components/svc/, ServicePageSvc.jsx; owner, October 30 2026: released for these pages only,
-// the others keep this layout until they are released too). SVC_DESIGN_EVERYWHERE switches every service page to it.
+// The new design (components/svc/, ServicePageSvc.jsx): released for SVC_DESIGN_PAGES first (October 30 2026), then for every service page
+// (SVC_DESIGN_EVERYWHERE, the same day). Set it to false to send the others back to this classic layout.
 const SVC_DESIGN_PAGES = new Set(['/roof-repair/emergency/', '/roof-financing/']);
-const SVC_DESIGN_EVERYWHERE = false;
+const SVC_DESIGN_EVERYWHERE = true;
 
 export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], offer, actions, hub, finalCta = page.final || closingCta(page.keyword, offer) }) {
   if (SVC_DESIGN_EVERYWHERE || SVC_DESIGN_PAGES.has(crumbs.at(-1).href)) return ServicePageSvc({ page, crumbs, eyebrow, offer, actions, hub, finalCta });

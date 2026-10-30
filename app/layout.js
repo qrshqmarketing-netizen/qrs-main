@@ -6,7 +6,8 @@ import './dark-theme.css'; // dark theme colors, toggled from the header and sav
 import '@/components/studio/StudioSite.css'; // the studio look for every page (STUDIO_THEME in data/promo.js)
 
 import Script from 'next/script';
-import { Big_Shoulders, Libre_Franklin } from 'next/font/google';
+import { Big_Shoulders, Open_Sans } from 'next/font/google';
+import localFont from 'next/font/local';
 import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
 import HideOnLanding from '@/components/layout/HideOnLanding';
@@ -35,10 +36,14 @@ import { callrailSwapScript } from '@/lib/callrail';
 
 // Google Fonts, downloaded at build time and served from this site. Both are variable fonts, so no `weight` list: one file covers every
 // weight (the site uses 300-900), and the stylesheet carries only a few font rules instead of dozens.
-// Body, menus, buttons and labels: Libre Franklin, a sturdy American-gothic text face that sits well under the condensed headings.
-const bodyFont = Libre_Franklin({ subsets: ['latin'], variable: '--font-text' });
+// Paragraphs, menus, buttons and labels: Open Sans (owner, October 29 2026; it replaces Libre Franklin), a variable Google font.
+// Arrows, checks and stars stay in var(--font-glyph): in Open Sans they would pull in two extra font files (see AGENTS.md, Page speed).
+const bodyFont = Open_Sans({ subsets: ['latin'], variable: '--font-text' });
 // Uppercase condensed display face for every heading (h1–h6 and the hero headline): Big Shoulders, a tall, sturdy, signage-style face
 const bigShoulders = Big_Shoulders({ subsets: ['latin'], variable: '--font-condensed' });
+// Headings and the logo's words (owner, October 29 2026): Xmind, the owner's font (SIL Open Font License, app/fonts/Xmind-OFL.txt). The upright
+// variable font (every weight in one file), converted from the owner's TTF to WOFF2 (67 KB); served from this site and preloaded like the others.
+const headingFont = localFont({ src: './fonts/Xmind-Variable.woff2', variable: '--font-heading', weight: '100 900', display: 'swap' });
 
 // Defaults for every page. A page's own `metadata` export overrides these.
 export const metadata = {
@@ -81,7 +86,7 @@ export default async function RootLayout({ children }) {
   // CallRail's number-swap script (lib/callrail.js), production only; null without a key or company
   const callrailSwap = LOAD_TRACKING ? await callrailSwapScript() : null;
   return (
-    <html lang="en" className={bodyFont.variable + ' ' + bigShoulders.variable} data-scroll-behavior="smooth" suppressHydrationWarning>
+    <html lang="en" className={bodyFont.variable + ' ' + bigShoulders.variable + ' ' + headingFont.variable} data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
         {/* WebMCP origin trial (components/widgets/WebMcpTools.jsx): set NEXT_PUBLIC_WEBMCP_OT_TOKEN to Google's token for this domain */}
         {process.env.NEXT_PUBLIC_WEBMCP_OT_TOKEN && <meta httpEquiv="origin-trial" content={process.env.NEXT_PUBLIC_WEBMCP_OT_TOKEN} />}

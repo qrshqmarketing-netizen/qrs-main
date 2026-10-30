@@ -1,4 +1,4 @@
-import Hero from '@/components/sections/Hero';
+import { AbrHero } from '@/components/about/AboutRemote';
 import IndexNote from '@/components/sections/IndexNote';
 import ReviewDestinations from '@/components/sections/ReviewDestinations';
 import JsonLd from '@/components/ui/JsonLd';
@@ -17,12 +17,14 @@ const schema = pageJsonLd({ path: REVIEWS_LINK.href, title: page.metaTitle, desc
 // A simple hub for leaving a review by location and platform.
 export default function ReviewsPage() {
   return (
-    <main id="top">
+    <main id="top" className="abr">
       <JsonLd data={schema} />
-      <Hero crumbs={CRUMBS} eyebrow="Reviews" title={page.hero.heading} outcome={heroOutcome('/reviews/')} intro={page.hero.intro} image={page.hero.image} imageAlt={page.hero.imageAlt} actions={[]} />
-      <ReviewDestinations />
-      <IndexNote note={page.note} />
-      <RoofCheck tone="white" />
+      <AbrHero crumbs={CRUMBS} path="/reviews/" title={page.hero.heading} outcome={heroOutcome('/reviews/')} intro={page.hero.intro} media={{ image: page.hero.image, alt: page.hero.imageAlt }} actions={[]} />
+      <div className="abr-keep">
+        <ReviewDestinations />
+        <IndexNote note={page.note} />
+        <RoofCheck tone="white" />
+      </div>
     </main>
   );
 }

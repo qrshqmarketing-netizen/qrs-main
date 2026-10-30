@@ -11,7 +11,7 @@ export const SHINGLE_CONTENT = {
     metaDescription: 'Shingle roofing for Los Angeles & Orange County homes: replacement, repairs, new installs, inspections, tune-ups and roof care. Book a free roof evaluation.',
     hero: {
       heading: 'Shingle Roofing Services · *TotalShield*',
-      intro: 'Shingle roofing services from QRS, a licensed shingle roofing contractor, cover replacement, new installs, repairs, inspections, tune-ups and ongoing roof care for homes across Los Angeles and Orange County. We give the underlayment, flashings and attic ventilation the same care as the shingles, and our complete replacement and new-install package is the *TotalShield* Shingle System. Each one starts with a free roof evaluation.',
+      intro: 'Shingle roofing from a licensed shingle roofing contractor. Replacement, new installs, repairs, inspections, tune-ups and ongoing roof care for homes across Los Angeles and Orange County. The underlayment, flashings and attic ventilation get the same care as the shingles. Our complete package is the *TotalShield* Shingle System. Each job starts with a free roof evaluation.',
       highlights: ['Premium shingle systems, installed to spec', 'Proper ventilation and tidy detailing', '10-Year workmanship warranty on installs (call for details)'],
     },
     overview: {
@@ -54,7 +54,7 @@ export const SHINGLE_CONTENT = {
       image: '/images/shingle-roof-replacement-tear-off-drone-view.webp',
       imageAlt: 'Aerial view of a shingle roof tear-off in progress, with crew removing old shingles down to the deck',
       hero: {
-        intro: 'A shingle roof replacement removes your old roof down to the deck and installs a complete new system: underlayment, flashings, balanced attic ventilation and new shingles, built to the manufacturer’s requirements. QRS replaces shingle roofs across Los Angeles and Orange County with our *TotalShield* Shingle System, starting with a free roof evaluation.',
+        intro: 'Shingle roof replacement, done from the deck up. We take your old roof down to the deck and build a complete new system: underlayment, flashings, balanced attic ventilation and new shingles. That’s our *TotalShield* Shingle System, across Los Angeles and Orange County. It starts with a free roof evaluation.',
         highlights: ['Full tear-off down to the deck', 'Balanced attic intake and exhaust', 'Your choice of shingle style and color'],
       },
       // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
@@ -96,7 +96,7 @@ export const SHINGLE_CONTENT = {
       image: '/images/shingle-roof-repair-ridge-finish.webp',
       imageAlt: 'A roofer working near the ridge of a finished shingle roof',
       hero: {
-        intro: 'Shingle roof repair traces a leak or damage to its real source and fixes it properly, whether that’s a cracked pipe boot, a wind-lifted tab, a nail pop or failed flashing. QRS repairs shingle roofs across Los Angeles and Orange County, with photos of the problem and the fix and no push toward a new roof.',
+        intro: 'Shingle roof repair that fixes the real source. A cracked pipe boot, a wind-lifted tab, a nail pop or failed flashing: we trace the leak and fix what failed. You get photos of the problem and the fix, across Los Angeles and Orange County. No push toward a new roof.',
         highlights: ['Leaks traced to where water gets in', 'Wind-damaged shingles replaced and sealed', 'Before-and-after repair photos'],
       },
       // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then four principles, each fact said once
@@ -133,7 +133,7 @@ export const SHINGLE_CONTENT = {
       image: '/images/shingle-roof-repair-ridge-finish.webp',
       imageAlt: 'Aerial view of a nearly finished light grey shingle roof, with a roofer working near the ridge',
       hero: {
-        intro: 'A shingle roof installation is a complete new roof, planned from the deck up, for a new home, addition, ADU or garage, or for a switch from wood shakes or tile. QRS installs new shingle roofs across Los Angeles and Orange County with our *TotalShield* Shingle System, settling ventilation, flashing and edge details before the first bundle goes on.',
+        intro: 'Shingle roof installation, planned from the deck up. A new home, an addition, an ADU or garage, or a switch from wood shakes or tile. We settle the ventilation, flashing and edge details before the first bundle goes on. That’s our *TotalShield* Shingle System, across Los Angeles and Orange County.',
         highlights: ['New homes, additions, ADUs and garages', 'Clean tie-ins to your existing roof', 'Switches from shake and other roof types'],
       },
       // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once

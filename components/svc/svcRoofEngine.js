@@ -1,7 +1,7 @@
 // The 3D shape behind the service page heroes (owner, October 29 2026; adapted from the translucent gradient prism in the hero of the owner's
 // reference remote.com/global-hr/global-payroll, made our own): a gable-roof frame, the outline of a house with a roof, extruded and hollow,
 // its faces shading from the brand gold to the brand blue, see-through with a soft bright edge. It turns very slowly and tilts a little with
-// the page's scroll. Three.js (npm `three`), fetched only when the hero is on screen (SvcRoofGL.jsx). Decorative.
+// the page's scroll and leans slightly toward the mouse over the hero. Three.js (npm `three`), fetched only when the hero is on screen (SvcRoofGL.jsx). Decorative.
 // `kind: 'commercial'` (owner, October 29 2026: /commercial-roofing/ and every page under it) draws a commercial building instead: a wide
 // storefront with a flat roof behind a stepped parapet, a sign band and a large storefront window cut through, and an air conditioning unit
 // on the roof, in the same translucent gold-to-blue. `kind: 'dollar'` (the financing page) draws a dollar sign: an S of two thick arcs with the
@@ -178,11 +178,15 @@ export function createSvcRoof(canvas, { reducedMotion = false, gold = '#d4b572',
   let clock = 0;
   let visible = true;
   let scrollTilt = 0;
+  // the mouse over the hero: a target (-1..1 each way) and the eased value that follows it, so the shape leans a little toward the pointer
+  const pointer = { tx: 0, ty: 0, x: 0, y: 0 };
 
   const draw = () => {
     // the dollar sign faces the visitor more, so the S reads; the house and the building turn to show their depth
-    mesh.rotation.y = (kind === 'dollar' ? -0.3 : -0.62) + Math.sin(clock * 0.12) * 0.22 + scrollTilt * 0.35;
-    mesh.rotation.x = (kind === 'dollar' ? 0.12 : 0.28) + Math.sin(clock * 0.09) * 0.05 + scrollTilt * 0.12;
+    mesh.rotation.y = (kind === 'dollar' ? -0.3 : -0.62) + Math.sin(clock * 0.12) * 0.22 + scrollTilt * 0.35 + pointer.x * 0.16;
+    mesh.rotation.x = (kind === 'dollar' ? 0.12 : 0.28) + Math.sin(clock * 0.09) * 0.05 + scrollTilt * 0.12 + pointer.y * 0.09;
+    mesh.position.x = 0.45 + pointer.x * 0.12;
+    mesh.position.y = -pointer.y * 0.08;
     renderer.render(scene, camera);
   };
 
@@ -192,6 +196,9 @@ export function createSvcRoof(canvas, { reducedMotion = false, gold = '#d4b572',
     last = now;
     if (dt < 1 / 45) return; // about 40 frames a second is plenty for a slow turn
     clock += dt;
+    const ease = 1 - Math.exp(-dt * 3); // about a third of a second to catch up
+    pointer.x += (pointer.tx - pointer.x) * ease;
+    pointer.y += (pointer.ty - pointer.y) * ease;
     draw();
   };
 
@@ -227,6 +234,10 @@ export function createSvcRoof(canvas, { reducedMotion = false, gold = '#d4b572',
       visible = v;
       if (v) play();
       else pause();
+    },
+    setPointer(x, y) {
+      pointer.tx = Math.max(-1, Math.min(1, x));
+      pointer.ty = Math.max(-1, Math.min(1, y));
     },
     setScroll(p) {
       scrollTilt = p;

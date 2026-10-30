@@ -10,7 +10,7 @@ export const METAL_CONTENT = {
     hero: {
       heading: 'Metal Roofing Services · *LockSeam*',
       intro:
-        'Metal roofing gives Southern California homes clean lines and a noncombustible surface that stands up to intense sun and heat. Our standing seam package is the *LockSeam* Metal System. We install standing seam roofs and repair metal roofs that leak, starting with a roofer-led inspection and a written scope.',
+        'Metal roofing: clean lines and a noncombustible surface. It stands up to Southern California’s intense sun and heat. We install standing seam roofs as our *LockSeam* Metal System and repair metal roofs that leak. Every job starts with a roofer-led inspection and a written scope.',
       highlights: ['Standing seam with concealed fasteners', 'Noncombustible, long-lasting panels', 'Leaks traced and repaired, with photos'],
     },
     overview: {
@@ -78,7 +78,7 @@ export const METAL_CONTENT = {
       imageAlt: 'Modern two-story home with a dark gray standing seam metal roof over wood and stucco walls',
       hero: {
         intro:
-          'Standing seam metal roofing from QRS is our *LockSeam* Metal System, built around the parts you can’t see as well as the panels: the deck and underlayment beneath them, the clips under the seams and the flashings at every wall and vent. We plan and install each with care.',
+          'Standing seam metal roofing, built around the parts you can’t see. The deck and underlayment beneath the panels, the clips under the seams and the flashings at every wall and vent. That’s our *LockSeam* Metal System, planned and installed with care.',
         highlights: ['Concealed clips, no screws through panels', 'Flat, sound deck to limit oil-canning', 'Matching trims, flashings and closures'],
       },
       // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
@@ -135,7 +135,7 @@ export const METAL_CONTENT = {
       imageAlt: 'Close-up of bronze standing seam metal roof panels with raised seams running down to the eave',
       hero: {
         intro:
-          'Metal roof repair from QRS finds where water is really getting in and fixes it at the source, on sheet metal, aluminum, galvanized, R-panel and standing seam roofs across Los Angeles and Orange County. On a metal roof the cause is often a loose fastener, tired sealant or failed flashing rather than the panels themselves. We show you photos of the problem and the finished repair, with a written scope and price before any work. Start with a free roof evaluation.',
+          'Metal roof repair at the source. On a metal roof, the cause is often a loose fastener, tired sealant or failed flashing, not the panels. We repair sheet metal, aluminum, galvanized, R-panel and standing seam roofs across Los Angeles and Orange County. Photos of the problem and the repair, with a written scope and price before any work. Start with a free roof evaluation.',
         highlights: ['Leaks traced to the real entry point', 'Fasteners, seams, sealant and flashing checked', 'Photos of the problem and the fix'],
       },
       // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once

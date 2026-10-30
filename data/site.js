@@ -112,7 +112,9 @@ export const GOOGLE_ADS_ID = 'AW-778824076';
 // Search Console ("roofing contractor in Los Angeles") and after how Royal Roofing, the competitor that ranks #1 for "roofing company orange county",
 // words theirs: both counties in the title, description and H1. The H1 (HOME_H1) uses the same phrase; the brand name is in the description.
 export const GOOGLE_REVIEWS = { count: 269, asOf: '2026-10-15' };
-// Home title and description: the October 16 wording again (owner, October 23 2026: "restore the meta data")
+// Home title and description in the voice of the gradient home page (owner, October 29 2026, after the owner's reference homepage: "Brand |
+// place + service" and a short "who we are, what one team does, start with the free offer" description). The keyword "roofing contractor" and
+// both counties stay in both (October 27 2026: titles without places were rolled back after calls dropped).
 // "Roofer" searches (owner, October 30 2026, from Search Console, last 28 days: "roofer los angeles" 179 impressions at 12, "roofers los angeles"
 // 164 at 17, "roofers in los angeles" 145 at 18, "roofer in los angeles" 140 at 11, plus licensed / best / quality roofers): the title leads with
 // "Roofers in Los Angeles" and keeps "Roofing Contractor" (the home keyword) and both counties. 59 characters, no brand suffix.

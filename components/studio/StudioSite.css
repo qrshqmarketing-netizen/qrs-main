@@ -421,3 +421,9 @@ body.studio-site .hero .hero-roof-texture:before{
 }
 @media (prefers-reduced-motion:reduce){body.studio-site .hero .hero-roof-texture:before{animation:none}}
 @media print{body.studio-site .hero .hero-roof-texture:before{display:none}}
+
+/* Heading font (owner, October 29 2026): every heading h1-h6 and the heading-like lines (the home hero's QUALITY and headline, the big numbers)
+   are set in Xmind (--font-heading, app/layout.js). !important because many components set their headings with a `font:` shorthand naming
+   --font-text. Product names inside a heading keep their serif italic (.product-brand sets its own font on the span). */
+body.studio-site :is(h1,h2,h3,h4,h5,h6),
+body.studio-site :is(.hg-wordmark,.hg-title,.hg-big,.hg-stat b,.hg-q-stat b,.hero-title,.promo-title,.pd-hero h1){font-family:var(--font-heading),var(--font-text),ui-sans-serif,system-ui,sans-serif!important}
