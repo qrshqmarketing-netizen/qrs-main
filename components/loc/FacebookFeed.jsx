@@ -1,3 +1,4 @@
+import { cleanPageId, cleanToken } from '@/lib/facebook';
 import './FacebookFeed.css';
 
 // "Latest from our Facebook" (owner, November 2 2026): the 3 newest posts of an office's Facebook Page, on that office's city page
@@ -7,7 +8,9 @@ import './FacebookFeed.css';
 const GRAPH = process.env.FACEBOOK_GRAPH_BASE || 'https://graph.facebook.com/v26.0'; // the override is only for testing against a stand-in
 const EXCERPT = 150;
 
-async function latestPosts(pageId, token) {
+async function latestPosts(rawId, rawToken) {
+  const pageId = cleanPageId(rawId);
+  const token = cleanToken(rawToken);
   if (!pageId || !token) return [];
   const url = `${GRAPH}/${encodeURIComponent(pageId)}/posts?fields=message,full_picture,permalink_url,created_time&limit=3&access_token=${encodeURIComponent(token)}`;
   try {
@@ -28,8 +31,9 @@ const excerpt = (text = '') => {
 };
 const date = (iso) => new Date(iso).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'America/Los_Angeles' });
 
-export default async function FacebookFeed({ pageId, token, place }) {
-  const posts = await latestPosts(pageId, token);
+export default async function FacebookFeed({ pageId: rawId, token, place }) {
+  const pageId = cleanPageId(rawId);
+  const posts = await latestPosts(rawId, token);
   if (!posts.length) return null;
   return (
     <section className="lc-section fb-feed" aria-labelledby="fb-feed-title">
