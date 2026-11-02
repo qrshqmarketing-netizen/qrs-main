@@ -77,7 +77,8 @@ const PROCESS_PHOTOS = {
   ],
   general: [
     ['/images/home-services-residential-shingle-drone-view.webp', 'Aerial view of a residential roof'],
-    ['/images/qrs-truck-4k.webp', 'QRS roofing truck at a project site'],
+    // no truck photo on sub pages (owner, November 2 2026)
+    ['/images/roofscan-360-roofer-chimney-flashing.webp', 'A roofer with a tablet pointing out the chimney flashing during a roof inspection'],
   ],
 };
 
