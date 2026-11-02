@@ -54,8 +54,9 @@ export default async function HomePage() {
         <ProofBar strip />
         {/* Google, BBB and Yelp logos linking to our profiles (owner, November 2 2026) */}
         <TrustLogos />
-        <HomeCores />
+        {/* The statement moved up under the logos (owner, November 2 2026) */}
         <HomeStatement />
+        <HomeCores />
         <HomeResidential />
         <HomeCommercial />
         <HomeRepair />
