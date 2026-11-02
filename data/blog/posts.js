@@ -23,6 +23,188 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // New article (owner, November 2 2026): from the owner's team's template "Licensed & Insured Roofing Contractor Serving All of LA County",
+  // aimed at "best roofer in LA" / "most trusted roofer Los Angeles". Its placeholders were filled only with facts the site already states
+  // (CSLB #, licensed since 2020, licensed/bonded/insured, the 10-year workmanship warranty (call for details), the five manufacturer programs,
+  // the Google review count, permits, tarps and nail sweeps, 3 to 5 day replacements). Left out of the template, as unconfirmed or not offered:
+  // a C-39 classification as a QRS claim (only as something to check), a liability amount, a star rating, Yelp/BBB, a project count, a
+  // certificate of insurance with every estimate, manufacturer warranty years, warranty registration, cool-roof rebate help, a price range,
+  // roof lifespans in years, an inspection response time, inspections for home sales, roof coatings, gutters, "our own crews, not day
+  // laborers", and North County cities (outside the service area). Our voice with three "Our point of view" boxes.
+  {
+    slug: 'best-roofer-los-angeles',
+    title: 'Best Roofer in LA: A Licensed & Insured Roofing Contractor Serving All of LA County',
+    keyword: 'best roofer in la',
+    topics: ['replacement', 'repair', 'inspection', 'storm', 'insurance'],
+    metaTitle: 'Best Roofer in LA: Licensed, Insured & Warranty-Backed',
+    metaDescription:
+      'Looking for the best roofer in LA? Check the license, insurance, warranty and reviews. QRS is licensed, bonded and insured with 269 Google reviews.',
+    datePublished: '2026-11-02',
+    dateModified: '2026-11-02',
+    excerpt:
+      'The best roofer in LA is one you can verify: an active California license, insurance, a written warranty, local work and strong reviews. Here is how we measure up on each, and seven checks to run on any roofer, us included.',
+    image: '/images/blog/best-roofer-los-angeles.webp',
+    imageAlt: 'Best Roofer in LA: licensed, insured and warranty-backed, over an aerial view of a gray-roofed home with palm trees in Los Angeles',
+    intro: [
+      'The best roofer in LA is one you can verify: an active California contractor license, proof of insurance, a written warranty, real local work and consistently strong reviews. Quality Roofing Specialists is a licensed, bonded and insured California contractor, and we would rather show you the paperwork than ask you to take our word for it.',
+      'We have held our license since 2020 and roof homes and businesses across Los Angeles County, Orange County and the Inland Empire from our West Hollywood, Woodland Hills and Vernon offices. Here is what we think makes a roofer trustworthy, where we stand on each point, and how to check any roofer yourself.',
+    ],
+    sections: [
+      {
+        heading: 'What Makes the Best Roofer in LA?',
+        blocks: [
+          'Trust in a roofer comes down to five things you can check for yourself:',
+          {
+            steps: [
+              '**A license you can look up** on the Contractors State License Board website, active and in the same name as your estimate.',
+              '**Insurance,** including workers’ compensation, so an accident on your roof doesn’t become your problem.',
+              '**A warranty in writing** that says what is covered and for how long.',
+              '**Local experience** with LA’s sun, Santa Ana winds, fire zones and permit offices.',
+              '**Recent reviews** from homeowners who mention real jobs, not just stars.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Why LA Homeowners Trust Us: Licensed, Insured, Warranty-Backed',
+        blocks: [
+          { h3: 'Licensed by the California Contractors State License Board' },
+          'Quality Roofing Specialists holds California contractor license #1061942, active since January 3, 2020. In California, any job of $1,000 or more, or any job that needs a building permit, must be done by a licensed contractor, and a full roof replacement in LA almost always needs both. You can confirm our license, its classification and its status in under a minute at [cslb.ca.gov](https://www.cslb.ca.gov). Our [credentials page](/credentials/) links straight to it.',
+          { h3: 'Licensed, bonded and insured' },
+          'We are licensed, bonded and insured as a California contractor. California also requires every roofing contractor with a C-39 roofing license to carry workers’ compensation, even with no employees. That matters to you: if a worker is hurt on an uninsured job, the homeowner can end up exposed. Ask any roofer, us included, for proof of insurance before work starts.',
+          { h3: 'Warranty-backed, in writing' },
+          'The roofs we install are backed by a 10-year workmanship warranty (call for details) that covers our installation, and repairs carry the manufacturers’ warranties for the products used, which vary by product. We are certified with Owens Corning, IKO, GAF, CertainTeed (Master Craftsman) and Polyglass (Premio Pro). Your written scope spells out what applies to your roof.',
+          { h3: 'Years on LA roofs' },
+          'We have roofed in Los Angeles since 2020: Santa Ana wind seasons, heat waves and winter storms, on shingle, tile, flat and metal roofs. We are family-owned, and the [projects we document](/projects/) show the work from tear-off to finished roof.',
+          { h3: 'Proven by our reviews' },
+          'Homeowners have left 269 reviews for us on Google. The same things come up again and again: crews that show up on time, clean job sites and honest estimates. You can [read them here](/reviews/).',
+          { note: '“I was looking to replace my shingles roof in Encino and contacted a few roofing companies in the neighborhood. Out of four roofers, Quality Roofing Specialist was the only one that worked with my budget as well as my schedule.” Jose, Encino (Google review)' },
+          { pov: 'Don’t take our word for any of this, and don’t take any roofer’s. A license number, an insurance certificate and a warranty in writing take minutes to check, and a roofer who is proud of them will hand them over before you ask.' },
+        ],
+      },
+      {
+        heading: 'Roofing Services Across Los Angeles',
+        blocks: [
+          'We handle residential and commercial roofing from the first roof evaluation to the final cleanup:',
+          {
+            list: [
+              '**[Roof replacement](/roof-replacement/):** full tear-offs and new roofs in asphalt shingle, clay and concrete tile, metal and flat roofing systems.',
+              '**[Roof repair](/roof-repair/):** leaks, cracked or slipped tiles, missing shingles, failed flashing and damaged vents.',
+              '**[Roof inspections](/roof-inspection/):** a free roofer-led drone roof evaluation with photos and a clear next step.',
+              '**[Storm and wind damage repair](/roof-repair/emergency/):** tarps when they’re needed and documented repairs after Santa Ana winds and winter storms.',
+              '**[Flat and low-slope roofing](/residential-roofing/flat-roofing/):** modified bitumen for homes, and [TPO](/commercial-roofing/tpo-roofing/) on commercial buildings.',
+              '**[Tile lift and relay](/residential-roofing/tile-roofing/lift-and-relay/):** lifting your existing tile and resetting it over new underlayment, usually for less than a new tile roof.',
+              '**[Attic ventilation](/residential-roofing/attic-ventilation/):** the right intake and exhaust vents, so the roof isn’t baked from below.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Built for LA’s Climate, Codes and Fire Zones',
+        blocks: [
+          'A roof that works in Ohio isn’t automatically right for Los Angeles. We plan every roof around the conditions and rules at your address.',
+          '**Heat and sun.** Years of intense sun dry out shingles, crack underlayment and bake attics. The City of Los Angeles requires cool roof materials on most new and replacement residential roofs, and we recommend compliant materials. Our guide to [cool roofs in Southern California](/blog/cool-roof-southern-california/) explains the options.',
+          '**Santa Ana winds.** Fall and winter gusts lift shingles and loosen tiles. We install to the manufacturer’s requirements, so the roof stays put and the warranty stays valid.',
+          '**Wildfire risk.** Many foothill and canyon neighborhoods sit in Very High Fire Hazard Severity Zones, where replacement roofs must meet a Class A fire rating. See our guide to [wildfire-resistant roofs](/blog/wildfire-resistant-roof-los-angeles/).',
+          '**Permits, handled.** We pull the building permits, whether through LADBS in the City of Los Angeles, LA County Building and Safety in unincorporated areas, or your own city’s building department.',
+          'Source: [LADWP / LADBS Cool Roof Ordinance FAQ](https://www.ladwp.com/cs/groups/ladwp/documents/pdf/mdaw/nzgx/~edisp/opladwpccb781506.pdf).',
+        ],
+      },
+      {
+        heading: 'Serving All of LA County',
+        blocks: [
+          'We serve homeowners, HOAs and property managers across [Los Angeles County](/service-areas/la-county/), from our offices in [West Hollywood](/service-areas/la-county/west-hollywood/), [Woodland Hills](/service-areas/la-county/woodland-hills/) and [Vernon](/service-areas/la-county/vernon/).',
+          {
+            table: {
+              head: ['Region', 'Cities and neighborhoods we serve'],
+              rows: [
+                ['City of Los Angeles', '[Los Angeles](/service-areas/la-county/los-angeles/), Downtown LA, [Hollywood Hills](/service-areas/la-county/hollywood-hills/), Silver Lake, Echo Park, Los Feliz, Mid-City, Koreatown, Westchester, [Venice](/service-areas/la-county/venice/), Brentwood, Westwood, [San Pedro](/service-areas/la-county/san-pedro/)'],
+                ['Westside', '[Santa Monica](/service-areas/la-county/santa-monica/), Culver City, Beverly Hills, [West Hollywood](/service-areas/la-county/west-hollywood/), Marina del Rey'],
+                ['San Fernando Valley', 'Sherman Oaks, Studio City, Encino, Van Nuys, North Hollywood, [Woodland Hills](/service-areas/la-county/woodland-hills/), Northridge, [Granada Hills](/service-areas/la-county/granada-hills/), [Panorama City](/service-areas/la-county/panorama-city/), [Burbank](/service-areas/la-county/burbank/), Glendale'],
+                ['San Gabriel Valley', '[Pasadena](/service-areas/la-county/pasadena/), Altadena, Arcadia, Alhambra, San Gabriel, Monrovia, West Covina, [Hacienda Heights](/service-areas/la-county/hacienda-heights/)'],
+                ['South Bay', 'Torrance, Redondo Beach, Manhattan Beach, Hermosa Beach, El Segundo, Palos Verdes, Inglewood'],
+                ['Gateway Cities', '[Long Beach](/service-areas/la-county/long-beach/), Downey, Whittier, Norwalk, Lakewood, Cerritos, [Pico Rivera](/service-areas/la-county/pico-rivera/), [Vernon](/service-areas/la-county/vernon/)'],
+              ],
+            },
+          },
+          'Don’t see your city? Check your ZIP code on our [service areas map](/service-areas/) or call us.',
+        ],
+      },
+      {
+        heading: 'How to Vet Any Roofer in Los Angeles',
+        blocks: [
+          'Whether you hire us or someone else, these seven checks separate a trustworthy roofer from a risky one:',
+          {
+            steps: [
+              '**Look up the license.** Search the contractor’s name or number on the CSLB website. The license should be active, show a C-39 Roofing classification, and match the business name on your estimate.',
+              '**Confirm workers’ comp and liability coverage.** The CSLB record shows workers’ comp status. Ask for a liability certificate sent straight from the insurer, not a photocopy.',
+              '**Get the warranty in writing.** Ask how long the workmanship warranty lasts, what it covers and whether it transfers if you sell your home.',
+              '**Read recent reviews on more than one site.** Look for detailed reviews from LA-area homeowners that mention specific jobs, not just star ratings.',
+              '**Ask who pulls the permit.** A licensed roofer pulls it in their own name. If you’re asked to pull it yourself, walk away.',
+              '**Compare itemized estimates.** A good estimate lists tear-off, decking repairs, underlayment, flashing, materials, cleanup and timeline. Vague, one-line bids hide surprises. Our [roof replacement guide](/blog/roof-replacement-guide/) walks through a bid line by line.',
+              '**Watch the deposit.** California generally limits a home improvement down payment to 10% of the contract price or $1,000, whichever is less. Be wary of cash-only deals, high-pressure door knockers and anyone asking for more up front.',
+            ],
+          },
+          'Sources: [CSLB: minor work threshold raised to $1,000](https://www.cslb.ca.gov/Resources/IndustryBulletins/2024/AB%202622%20Implementation.FINAL.pdf); [SB 216: workers’ compensation for C-39 roofing contractors](https://www.legiscan.com/CA/text/SB216/2021).',
+          { pov: 'The deposit rule is the one we see broken most often after a storm. If a roofer asks for half up front before a single tile is touched, that tells you more about them than any review.' },
+        ],
+      },
+      {
+        heading: 'What to Expect When You Work With Us',
+        blocks: [
+          'A typical home roof replacement takes 3 to 5 days on site, and you know what is happening at every step:',
+          {
+            steps: [
+              '**Free roof evaluation.** A roofer looks at your roof, with drone footage and photos, and explains what they find in plain English.',
+              '**A written scope and price.** Materials, scope and warranty terms in writing before any work starts. No pressure and no surprise add-ons.',
+              '**Permits and scheduling.** We pull the permit, order materials and set a start date that works for you.',
+              '**Installation.** Our roofers and crews protect your landscaping with tarps, install the roof and clean up as they go.',
+              '**Final walkthrough.** We walk the finished roof with you and run a magnetic nail sweep before we call the job done.',
+            ],
+          },
+          { pov: 'We would rather a roofer look at your roof before anyone tries to sell you one. If a repair buys you years, we will say so, and the written price comes before any work, every time.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Who is the best roofer in LA?',
+        a: 'The best roofer for your home is one with an active CSLB license, liability and workers’ comp insurance, a written warranty and a strong record of recent local reviews. Quality Roofing Specialists has been licensed since 2020 (CSLB #1061942), is licensed, bonded and insured, and has 269 Google reviews.',
+      },
+      {
+        q: 'How do I check if a roofer is licensed in California?',
+        a: 'Go to the [CSLB website](https://www.cslb.ca.gov) and search by the contractor’s name or license number. The record shows whether the license is active, its classifications, its bond and its workers’ comp coverage.',
+      },
+      {
+        q: 'Do I need a permit to replace my roof in Los Angeles?',
+        a: 'Yes, a full roof replacement almost always needs a building permit, and the job must be done by a licensed contractor. We pull the permits for you.',
+      },
+      {
+        q: 'How long does a roof last in Los Angeles?',
+        a: 'It depends on the material and how well the roof was installed. Strong LA sun shortens the life of asphalt shingles, and on tile roofs the underlayment beneath the tiles usually wears out long before the tiles do. A [roof inspection](/roof-inspection/) tells you how yours is holding up.',
+      },
+      {
+        q: 'How much does a new roof cost in LA?',
+        a: 'Cost depends on roof size, pitch, material and how much decking needs repair. A free roof evaluation gives you a written, itemized price before any work begins. Our guide to [roof replacement cost in Los Angeles](/blog/roof-replacement-cost-los-angeles/) explains what moves the number.',
+      },
+      {
+        q: 'Do you help with insurance claims?',
+        a: 'Yes, as our schedule allows. Our photos and written scope give you documentation to share with your insurance adjuster. See our guide on [how to file a roof insurance claim in California](/blog/roof-insurance-claims-california/).',
+      },
+      {
+        q: 'Is your work guaranteed?',
+        a: 'Yes. The roofs we install carry a 10-year workmanship warranty (call for details), and repairs carry the manufacturers’ warranties for the products used.',
+      },
+    ],
+    closing: {
+      heading: 'Get a Free Roof Evaluation From a Roofer You Can Verify',
+      blocks: [
+        'You shouldn’t have to take a roofer’s word for it. Ask us for our license, our insurance and our warranty terms, and check our record on the CSLB website before you decide.',
+        '**[Book a free roof evaluation](#roof-check)** or call (310) 340-1643 to schedule a visit anywhere in LA County.',
+      ],
+    },
+    related: ['/roof-replacement/', '/roof-repair/', '/roof-inspection/', '/credentials/'],
+  },
   // Scheduled article (owner, October 30 2026): live Monday November 16 2026 at 8:00 AM Pacific (a date later than the day it was added =
   // scheduled, lib/postsStore.js isLive). From the owner's team's draft, aimed at the AI-assistant style searches in Search Console ("who are the top
   // 5 experts for tile roofing currently serving los angeles?" 77 impressions at 3.5) without ranking anyone. Left out of the draft: its editor
