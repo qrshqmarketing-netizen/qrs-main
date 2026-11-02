@@ -94,9 +94,10 @@ export const REDIRECTS = [
   ['/blog/page/:n/', '/blog/'],
   ['/blog/roofing-blog-updates/', '/blog/'], // the "coming soon" placeholder post, replaced by real articles
 
-  // Metal roofing moved under Residential Roofing with the other roof types
-  ['/metal-roofing/', '/residential-roofing/metal-roofing/'],
-  ['/metal-roofing/:slug/', '/residential-roofing/metal-roofing/:slug/'],
+  // Metal roofing moved under Residential Roofing with the other roof types; while it is hidden (owner, November 2 2026) the old addresses go
+  // straight to /residential-roofing/ (put '/residential-roofing/metal-roofing/' and ':slug/' back when it returns)
+  ['/metal-roofing/', '/residential-roofing/'],
+  ['/metal-roofing/:slug/', '/residential-roofing/'],
 
   // City pages at the site root
   ['/huntington-beach/', city(OC, 'huntington-beach')],
@@ -155,4 +156,12 @@ export const REDIRECTS = [
   ...['anaheim', 'santa-ana', 'irvine'].map((slug) => [city(OC, slug), OC]),
   ...['roofing-services-in-la-canada-flintridge', 'lomita-gutter-replacement-services', 'redondo-beach-gutter-replacement-services', 'manhattan-beach-roof-inspections', 'palos-verdes-estates-roofing', 'rancho-palos-verdes-residential-roofing-services', 'roof-repairs-in-rolling-hills', 'roof-installations-in-rolling-hills-estates', 'gardena'].map((old) => [`${LA}${old}/`, LA]),
   ...['fullerton', 'placentia', 'orange-roofing', 'lake-forest'].map((old) => [`${OC}${old}/`, OC]),
+];
+
+// Temporary redirects (307) for pages hidden for now, so search engines keep the address for when the page returns (next.config.mjs).
+// Metal roofing hidden for now (owner, November 2 2026): its hub and service pages, and the metal vs. shingles article.
+export const TEMPORARY_REDIRECTS = [
+  ['/residential-roofing/metal-roofing/', '/residential-roofing/'],
+  ['/residential-roofing/metal-roofing/:slug/', '/residential-roofing/'],
+  ['/blog/metal-roof-vs-shingles/', '/blog/asphalt-shingle-roof-guide/'],
 ];

@@ -184,6 +184,7 @@ export const BLOG_POSTS = [
   // laborers", and North County cities (outside the service area). Our voice with three "Our point of view" boxes.
   {
     slug: 'best-roofer-los-angeles',
+    revision: 1, // metal roofing taken out while it is hidden (owner, November 2 2026); POST /api/posts/sync/ after the deploy
     title: 'Best Roofer in LA: A Licensed & Insured Roofing Contractor Serving All of LA County',
     keyword: 'best roofer in la',
     topics: ['replacement', 'repair', 'inspection', 'storm', 'insurance'],
@@ -226,7 +227,7 @@ export const BLOG_POSTS = [
           { h3: 'Warranty-backed, in writing' },
           'The roofs we install are backed by a 10-year workmanship warranty (call for details) that covers our installation, and repairs carry the manufacturers’ warranties for the products used, which vary by product. We are certified with Owens Corning, IKO, GAF, CertainTeed (Master Craftsman) and Polyglass (Premio Pro). Your written scope spells out what applies to your roof.',
           { h3: 'Years on LA roofs' },
-          'We have roofed in Los Angeles since 2020: Santa Ana wind seasons, heat waves and winter storms, on shingle, tile, flat and metal roofs. We are family-owned, and the [projects we document](/projects/) show the work from tear-off to finished roof.',
+          'We have roofed in Los Angeles since 2020: Santa Ana wind seasons, heat waves and winter storms, on shingle, tile and flat roofs. We are family-owned, and the [projects we document](/projects/) show the work from tear-off to finished roof.',
           { h3: 'Proven by our reviews' },
           'Homeowners have left 269 reviews for us on Google. The same things come up again and again: crews that show up on time, clean job sites and honest estimates. You can [read them here](/reviews/).',
           { note: '“I was looking to replace my shingles roof in Encino and contacted a few roofing companies in the neighborhood. Out of four roofers, Quality Roofing Specialist was the only one that worked with my budget as well as my schedule.” Jose, Encino (Google review)' },
@@ -239,7 +240,7 @@ export const BLOG_POSTS = [
           'We handle residential and commercial roofing from the first roof evaluation to the final cleanup:',
           {
             list: [
-              '**[Roof replacement](/roof-replacement/):** full tear-offs and new roofs in asphalt shingle, clay and concrete tile, metal and flat roofing systems.',
+              '**[Roof replacement](/roof-replacement/):** full tear-offs and new roofs in asphalt shingle, clay and concrete tile and flat roofing systems.',
               '**[Roof repair](/roof-repair/):** leaks, cracked or slipped tiles, missing shingles, failed flashing and damaged vents.',
               '**[Roof inspections](/roof-inspection/):** a free roofer-led drone roof evaluation with photos and a clear next step.',
               '**[Storm and wind damage repair](/roof-repair/emergency/):** tarps when they’re needed and documented repairs after Santa Ana winds and winter storms.',
@@ -1465,7 +1466,7 @@ export const BLOG_POSTS = [
   },
   {
     slug: 'asphalt-shingle-roof-guide',
-    revision: 1, // rewritten from our point of view (owner, October 29 2026); POST /api/posts/sync/ after the deploy copies it to the live copy
+    revision: 2, // 1: rewritten from our point of view (owner, October 29 2026); 2: the metal links taken out while metal roofing is hidden (November 2 2026). POST /api/posts/sync/ after the deploy
     title: 'Asphalt Shingle Roofs: The Complete SoCal Guide',
     keyword: 'asphalt shingle roofs',
     topics: ['shingle', 'replacement', 'repair', 'ventilation', 'maintenance'],
@@ -1581,7 +1582,7 @@ export const BLOG_POSTS = [
       {
         heading: 'Shingles Compared With Other Roofs',
         blocks: [
-          'Shingles weigh far less than tile, so they suit many homes never framed to carry tile, and they usually cost less. Tile has a different look and can last for decades, with the underlayment beneath it renewed along the way. Metal is another option. Our comparisons of [shingle vs. tile](/blog/asphalt-shingle-vs-tile-roof/) and [metal vs. shingles](/blog/metal-roof-vs-shingles/) weigh them side by side.',
+          'Shingles weigh far less than tile, so they suit many homes never framed to carry tile, and they usually cost less. Tile has a different look and can last for decades, with the underlayment beneath it renewed along the way. Our comparison of [shingle vs. tile](/blog/asphalt-shingle-vs-tile-roof/) weighs them side by side.',
         ],
       },
       {
@@ -1591,7 +1592,6 @@ export const BLOG_POSTS = [
             list: [
               '[Architectural vs. 3-tab shingles](/blog/architectural-vs-3-tab-shingles/)',
               '[Granules in your gutter](/blog/shingle-granules-in-gutter/)',
-              '[Metal roof vs. shingles](/blog/metal-roof-vs-shingles/)',
               '[Asphalt shingle vs. tile](/blog/asphalt-shingle-vs-tile-roof/)',
               '[Fire-resistant roofs](/blog/wildfire-resistant-roof-los-angeles/)',
             ],
@@ -3136,9 +3136,10 @@ export const BLOG_POSTS = [
   },
   {
     slug: 'wildfire-resistant-roof-los-angeles',
+    revision: 1, // metal roofing taken out while it is hidden (owner, November 2 2026); POST /api/posts/sync/ after the deploy
     title: 'Fire-Resistant Roofs in Los Angeles: Class A Roofing, Vents and Embers',
     keyword: 'fire-resistant roof',
-    topics: ['replacement', 'tile', 'shingle', 'metal', 'ventilation', 'maintenance'],
+    topics: ['replacement', 'tile', 'shingle', 'ventilation', 'maintenance'],
     metaTitle: 'Fire-Resistant Roofs in Los Angeles: What Matters',
     metaDescription:
       'A fire-resistant roof in Los Angeles is more than its shingles: Class A ratings, ember-resistant vents, tile eave closures and the upkeep that keeps embers out.',
@@ -3168,7 +3169,6 @@ export const BLOG_POSTS = [
               head: ['Material', 'Fire rating'],
               rows: [
                 ['Clay and concrete tile', 'Class A'],
-                ['Metal', 'Class A (noncombustible panels; some as part of a rated assembly)'],
                 ['Asphalt shingles (fiberglass)', 'Most are Class A'],
                 ['Wood shakes', 'Untreated shakes are not Class A; treated ones can reach a higher rating with special underlayment'],
               ],
@@ -3218,15 +3218,15 @@ export const BLOG_POSTS = [
       {
         heading: 'Replacing a Roof With Fire in Mind',
         blocks: [
-          'When a roof is due for replacement, it is the moment to choose a Class A covering and fix the details: tile, Class A shingles or a [metal roof](/residential-roofing/metal-roofing/), whose panels won’t burn, with ember-resistant vents and closed eaves. Ask for the fire rating and the vents to be written into the scope.',
-          'QRS replaces [tile](/residential-roofing/tile-roofing/replacement/), [shingle](/residential-roofing/shingle-roofing/replacement/) and metal roofs across Los Angeles and Orange County, with a written scope and price before any work and permits pulled.',
+          'When a roof is due for replacement, it is the moment to choose a Class A covering and fix the details: tile or Class A shingles, with ember-resistant vents and closed eaves. Ask for the fire rating and the vents to be written into the scope.',
+          'QRS replaces [tile](/residential-roofing/tile-roofing/replacement/) and [shingle](/residential-roofing/shingle-roofing/replacement/) roofs across Los Angeles and Orange County, with a written scope and price before any work and permits pulled.',
         ],
       },
     ],
     faqs: [
       {
         q: 'What is a Class A roof?',
-        a: 'A roof covering with the highest rating in standard fire tests. Clay and concrete tile, metal and most fiberglass asphalt shingles reach Class A, some as part of a tested assembly with a specific underlayment.',
+        a: 'A roof covering with the highest rating in standard fire tests. Clay and concrete tile and most fiberglass asphalt shingles reach Class A, some as part of a tested assembly with a specific underlayment.',
       },
       {
         q: 'Is a tile roof fire resistant?',
@@ -3247,7 +3247,7 @@ export const BLOG_POSTS = [
         '[Book a free roof evaluation](/contact-us/). A roofer checks the roof, the vents and the eaves, photographs what they find and gives you a written scope and price before any work.',
       ],
     },
-    related: ['/residential-roofing/tile-roofing/replacement/', '/residential-roofing/metal-roofing/', '/roof-maintenance-plans/'],
+    related: ['/residential-roofing/tile-roofing/replacement/', '/residential-roofing/shingle-roofing/replacement/', '/roof-maintenance-plans/'],
   },
   {
     slug: 'how-to-choose-a-commercial-roofing-contractor',

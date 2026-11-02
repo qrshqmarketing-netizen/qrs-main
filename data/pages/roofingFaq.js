@@ -5,7 +5,7 @@ export const FAQ_PAGE = {
   keyword: 'roofing FAQ',
   metaTitle: 'Roofing FAQ: Answers From Los Angeles Roofers',
   metaDescription:
-    'Roofing FAQ from Quality Roofing Specialists: straight answers on roof repair, replacement, inspections, tile, shingle, flat and metal roofs, and financing.',
+    'Roofing FAQ from Quality Roofing Specialists: straight answers on roof repair, replacement, inspections, tile, shingle and flat roofs, and financing.',
   heading: 'Roofing FAQ',
   intro:
     'This roofing FAQ gathers the questions homeowners and property managers ask our roofers most, in one place: repairs, replacements, inspections, each roof type, maintenance, financing and our license. Every answer links to the page that covers it in full.',
@@ -23,7 +23,6 @@ export const FAQ_GROUPS = [
   ['Tile lift and relay', '/residential-roofing/tile-roofing/lift-and-relay/'],
   ['Shingle roofs', '/residential-roofing/shingle-roofing/'],
   ['Flat roofs', '/residential-roofing/flat-roofing/'],
-  ['Metal roofs', '/residential-roofing/metal-roofing/'],
   ['Attic ventilation', '/residential-roofing/attic-ventilation/'],
   ['Commercial roofing', '/commercial-roofing/'],
   ['Maintenance plans', '/roof-maintenance-plans/'],

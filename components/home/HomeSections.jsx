@@ -10,7 +10,6 @@ import { LOCATIONS, REGIONS, cityPath, placesIn, regionPath } from '@/data/locat
 import { BUSINESS, GOOGLE_REVIEWS, OFFICES, PHONE, TEL } from '@/data/site';
 import HomeTabs from './HomeTabs';
 import HomeQuotes from './HomeQuotes';
-import WordmarkScript from './WordmarkScript';
 import CoresMotion from './CoresMotion';
 import './HomeGradient.css';
 
@@ -44,17 +43,15 @@ const officeList = `${offices.slice(0, -1).join(', ')} and ${offices[offices.len
 export function HomeHero({ h1, heading, text, cta, video, poster }) {
   return (
     <section className="hg-hero" aria-label="Quality Roofing Specialists">
-      <p className="hg-wordmark" aria-hidden="true">
-        <QrsMarkSvg className="hg-wm-mark" parts />
-        <span className="hg-wm-word">
-          {'QUALITY'.split('').map((ch, i) => (
-            <span data-wm={i + 3} key={i}>
-              {ch}
-            </span>
-          ))}
+      {/* The header's logo, large (owner, November 2 2026): the gold roof mark, QUALITY in white and "Roofing Specialists" in gold under it,
+          wiping in from left to right on load like the header logo (.hg-logo in HomeGradient.css). Decorative: the H1 is below. */}
+      <p className="hg-wordmark hg-logo" aria-hidden="true">
+        <QrsMarkSvg className="hg-logo-mark" />
+        <span className="hg-logo-text">
+          <span className="hg-logo-word">QUALITY</span>
+          <span className="hg-logo-sub">Roofing Specialists</span>
         </span>
       </p>
-      <WordmarkScript />
       <div className="container">
         <div className="hg-hero-copy">
           <span className="hg-pill"><b>FREE</b> Drone roof evaluation, with a written price before any work</span>
@@ -165,7 +162,7 @@ export function HomeCores() {
           <div className="hg-core-art hg-art-3" aria-hidden="true"><span className="hg-roofs"><i /><i /><i /><i /></span></div>
           <div className="hg-core-body">
             <h3>Every kind of roof</h3>
-            <p>Shingle, tile, flat and metal roofs on homes, plus HOA, multi-family and commercial buildings.</p>
+            <p>Shingle, tile and flat roofs on homes, plus HOA, multi-family and commercial buildings.</p>
           </div>
         </article>
         <article className="hg-core">
@@ -227,14 +224,7 @@ const RESIDENTIAL = [
     href: '/residential-roofing/flat-roofing/', link: 'Flat roofing',
     image: '/images/flat-roof-torch-down-drone-view-services.webp', imageAlt: 'A torch-down flat roof seen from a drone',
   },
-  {
-    tab: 'Metal', color: '#5a6b82',
-    title: 'Standing seam metal roofs.',
-    text: 'Standing seam metal roofs installed and repaired, with panels, fasteners and flashings matched to the roof.',
-    points: ['Standing seam installation', 'Metal roof and metal roof leak repair', 'Noncombustible metal panels'],
-    href: '/residential-roofing/metal-roofing/', link: 'Metal roofing',
-    image: '/images/metal-roof-standing-seam-modern-home.webp', imageAlt: 'A modern home with a dark standing seam metal roof',
-  },
+  // Metal tab hidden for now (owner, November 2 2026)
   {
     tab: 'HOA & multi-family', color: '#6b2545',
     title: 'HOA and multi-family roofs.',

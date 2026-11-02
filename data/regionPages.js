@@ -92,7 +92,7 @@ export const REGION_PAGES = {
     ],
     faqs: [
       { q: 'Which Riverside County cities do you serve?', a: 'We serve Riverside, Corona, Norco, Eastvale, Jurupa Valley, Moreno Valley, Perris, Menifee, Lake Elsinore, Murrieta and Temecula, all listed on this page and marked on our [service areas](/service-areas/) map. Check your ZIP code there, or call us if you’re nearby.' },
-      { q: 'What roof types do you work on in Riverside County?', a: 'The common ones: [tile](/residential-roofing/tile-roofing/), [shingle](/residential-roofing/shingle-roofing/), [flat](/residential-roofing/flat-roofing/) and [metal](/residential-roofing/metal-roofing/) roofs, plus [HOA and multi-family](/residential-roofing/hoa-multi-family/) and [commercial](/commercial-roofing/) buildings.' },
+      { q: 'What roof types do you work on in Riverside County?', a: 'The common ones: [tile](/residential-roofing/tile-roofing/), [shingle](/residential-roofing/shingle-roofing/) and [flat](/residential-roofing/flat-roofing/) roofs, plus [HOA and multi-family](/residential-roofing/hoa-multi-family/) and [commercial](/commercial-roofing/) buildings.' },
       { q: 'Does the summer heat shorten a roof’s life?', a: 'Sun and heat are hard on every roofing material. A free roof evaluation shows how your roof is holding up, with photos, so you know whether to repair, monitor, maintain or replace.' },
       { q: 'How does a project start?', a: 'With a free roof evaluation. You get photos of your roof’s condition, a plain-English explanation and a written scope and price for anything it needs.' },
     ],
@@ -121,7 +121,7 @@ export const REGION_PAGES = {
     faqs: [
       { q: 'Which San Bernardino County cities do you serve?', a: 'We serve Chino, Chino Hills, Ontario, Montclair, Upland, Rancho Cucamonga, Fontana, Rialto, Colton and Grand Terrace, in the southwest corner of the county. If you’re elsewhere in the county, call us and we’ll tell you if we can help.' },
       { q: 'Do you serve all of San Bernardino County?', a: 'We serve the southwest corner of the county shown on our [service areas](/service-areas/) map. For an address outside it, call us and tell us where the property is.' },
-      { q: 'What roof types do you work on?', a: 'The common ones: [tile](/residential-roofing/tile-roofing/), [shingle](/residential-roofing/shingle-roofing/), [flat](/residential-roofing/flat-roofing/) and [metal](/residential-roofing/metal-roofing/) roofs, plus [HOA and multi-family](/residential-roofing/hoa-multi-family/) and [commercial](/commercial-roofing/) buildings.' },
+      { q: 'What roof types do you work on?', a: 'The common ones: [tile](/residential-roofing/tile-roofing/), [shingle](/residential-roofing/shingle-roofing/) and [flat](/residential-roofing/flat-roofing/) roofs, plus [HOA and multi-family](/residential-roofing/hoa-multi-family/) and [commercial](/commercial-roofing/) buildings.' },
       { q: 'How does a project start?', a: 'With a free roof evaluation. You get photos of your roof’s condition, a plain-English explanation and a written scope and price for anything it needs.' },
     ],
   },

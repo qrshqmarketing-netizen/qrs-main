@@ -14,7 +14,7 @@ export const SERVICE_OPTIONS = [
   'Not sure yet',
 ];
 
-export const ROOF_TYPES = ['Not sure', 'Tile', 'Shingle', 'Flat', 'Metal'];
+export const ROOF_TYPES = ['Not sure', 'Tile', 'Shingle', 'Flat']; // 'Metal' hidden for now (owner, November 2 2026)
 
 // "Preferred time" for the visit (optional, on /start/): windows inside our weekday hours (BUSINESS.hours in data/site.js, Monday-Friday 8 am-6 pm).
 // Shown in the lead email and its own spreadsheet column, next to the preferred date.

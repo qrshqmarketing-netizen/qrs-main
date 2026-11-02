@@ -1,4 +1,4 @@
-import { REDIRECTS } from './data/redirects.js';
+import { REDIRECTS, TEMPORARY_REDIRECTS } from './data/redirects.js';
 
 // Bump this (any new value, e.g. today's date) to clear every visitor's cached copy of the site once (see headers())
 const CACHE_RESET = '2026-10-02';
@@ -74,6 +74,8 @@ const nextConfig = {
         permanent: true,
       },
       ...REDIRECTS.map(([source, destination]) => ({ source, destination, permanent: true })),
+      // Pages hidden for now (metal roofing): temporary, so they can come back at the same address
+      ...TEMPORARY_REDIRECTS.map(([source, destination]) => ({ source, destination, permanent: false })),
     ];
   },
 };

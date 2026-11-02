@@ -205,7 +205,7 @@ export function LocRoofTypes({ place }) {
     <section className="lc-section" aria-labelledby="lc-types">
       <div className="lc-wrap">
         <h2 id="lc-types" className="lc-center">Every kind of roof in {place}.</h2>
-        <p className="lc-center lc-lead">Shingle, tile, flat and metal, each with the details that keep it dry.</p>
+        <p className="lc-center lc-lead">Shingle, tile and flat, each with the details that keep it dry.</p>
         <ul className="lc-features">
           {types.map((t) => (
             <li key={t.href}>

@@ -6,7 +6,7 @@ import { SERVICE_CATEGORIES } from './serviceCategories';
 const category = (title) => SERVICE_CATEGORIES.find((c) => c.title === title);
 
 // The service names in the "+" word bands (WordBand: the home page and above every request form)
-export const BAND_WORDS = ['Roof Inspection', 'Roof Repair', 'Roof Replacement', 'Tile Lift & Relay', 'Shingle Roofs', 'Flat Roofs', 'Metal Roofs', 'HOA & Multi-Family', 'Commercial Roofing'];
+export const BAND_WORDS = ['Roof Inspection', 'Roof Repair', 'Roof Replacement', 'Tile Lift & Relay', 'Shingle Roofs', 'Flat Roofs', 'HOA & Multi-Family', 'Commercial Roofing'];
 
 export const HOME_SERVICE_TABS = [
   {
@@ -19,7 +19,6 @@ export const HOME_SERVICE_TABS = [
       { label: 'Shingle roof repair', href: '/residential-roofing/shingle-roofing/repair/' },
       { label: 'Tile roof repair', href: '/residential-roofing/tile-roofing/repair/' },
       { label: 'Flat roof repair', href: '/residential-roofing/flat-roofing/repair/' },
-      { label: 'Metal roof repair', href: '/residential-roofing/metal-roofing/repair/' },
       { label: 'Emergency roof repair', href: '/roof-repair/emergency/' },
     ],
   },
@@ -33,7 +32,6 @@ export const HOME_SERVICE_TABS = [
       { label: 'Shingle roof replacement', href: '/residential-roofing/shingle-roofing/replacement/' },
       { label: 'Tile roof replacement', href: '/residential-roofing/tile-roofing/replacement/' },
       { label: 'Flat roof replacement', href: '/residential-roofing/flat-roofing/replacement/' },
-      { label: 'Standing seam metal roofs', href: '/residential-roofing/metal-roofing/standing-seam/' },
     ],
   },
   {
@@ -101,4 +99,4 @@ export const HOME_SERVICE_TABS = [
 ];
 
 // The line under the tabs' heading on a city or county page (LocationPage, RegionPage)
-export const servicesLine = (place) => `Repairs, replacements and care for tile, shingle, flat and metal roofs in ${place}, on homes, HOA communities and commercial buildings.`;
+export const servicesLine = (place) => `Repairs, replacements and care for tile, shingle and flat roofs in ${place}, on homes, HOA communities and commercial buildings.`;

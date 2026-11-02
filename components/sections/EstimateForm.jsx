@@ -27,7 +27,7 @@ const ROOF_BY_PATH = [
   [/tile|lift-and-relay|slate|concrete/, 'Tile'],
   [/shingle/, 'Shingle'],
   [/flat-roofing|tpo/, 'Flat'],
-  [/metal|standing-seam/, 'Metal'],
+  // [/metal|standing-seam/, 'Metal'], (metal hidden for now, owner, November 2 2026)
 ];
 const fromPath = (table, path, fallback) => table.find(([re]) => re.test(path))?.[1] || fallback;
 

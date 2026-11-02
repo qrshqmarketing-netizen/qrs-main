@@ -38,7 +38,6 @@ export const RESIDENTIAL_PAGE = {
           { label: 'Shingle', href: '/residential-roofing/shingle-roofing/replacement/' },
           { label: 'Tile', href: '/residential-roofing/tile-roofing/replacement/' },
           { label: 'Flat', href: '/residential-roofing/flat-roofing/replacement/' },
-          { label: 'Metal', href: '/residential-roofing/metal-roofing/standing-seam/' },
         ],
       },
       {
@@ -49,7 +48,6 @@ export const RESIDENTIAL_PAGE = {
           { label: 'Shingle', href: '/residential-roofing/shingle-roofing/repair/' },
           { label: 'Tile', href: '/residential-roofing/tile-roofing/repair/' },
           { label: 'Flat', href: '/residential-roofing/flat-roofing/repair/' },
-          { label: 'Metal', href: '/residential-roofing/metal-roofing/repair/' },
         ],
       },
       {

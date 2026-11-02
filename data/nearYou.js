@@ -57,7 +57,6 @@ export const AREA_LINKS = {
         { label: 'Tile Roofing', href: '/residential-roofing/tile-roofing/' },
         { label: 'Shingle Roofing', href: '/residential-roofing/shingle-roofing/' },
         { label: 'Flat Roofing', href: '/residential-roofing/flat-roofing/' },
-        { label: 'Metal Roofing', href: '/residential-roofing/metal-roofing/' },
         { label: 'Commercial Roofing', href: '/commercial-roofing/' },
         { label: 'HOA & Multi-Family', href: '/residential-roofing/hoa-multi-family/' },
         { label: 'Roof Maintenance Plans', href: '/roof-maintenance-plans/' },

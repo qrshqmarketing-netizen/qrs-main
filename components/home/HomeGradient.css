@@ -414,3 +414,18 @@ main.hg .hg-tilt:hover{--ty:-6px;transition:transform .12s linear}
 /* Magnetic buttons glide back when the pointer leaves */
 main.hg .hg-magnet{transition:translate .45s cubic-bezier(.17,.84,.44,1),background-color .2s,color .2s,border-color .2s}
 main.hg .hg-magnet:hover{transition:translate .1s linear,background-color .2s,color .2s,border-color .2s}
+
+/* ---------- Hero logo (owner, November 2 2026; replaces the flying letters): the header's logo, large: the gold roof mark, QUALITY in white
+   and "Roofing Specialists" in gold under it, in the header logo's proportions (BrandLogo.css), filling the width inside the margins
+   (--hg-logo-fit: the logo is that many font-sizes wide; re-measure if the words or font change). It wipes in from left to right on load,
+   like the header logo, with the tagline following a beat later. Still for reduced motion. ---------- */
+.hg-wordmark.hg-logo{--hg-logo-fit:8.2;font-size:calc(var(--hg-cw) / var(--hg-logo-fit));line-height:1;letter-spacing:0;display:flex;align-items:center;justify-content:center;gap:.42em;margin:0}
+.hg-logo-mark{flex:none;display:block;height:1.5em;width:auto;color:var(--gold)}
+.hg-logo-text{display:flex;flex-direction:column;align-items:flex-start}
+.hg-logo-word{font:800 1em/1 var(--font-heading),var(--font-text),ui-sans-serif,system-ui,sans-serif;letter-spacing:.06em;color:#fff}
+.hg-logo-sub{margin-top:.28em;font:600 .33em/1 var(--font-heading),var(--font-text),ui-sans-serif,system-ui,sans-serif;letter-spacing:.21em;text-transform:uppercase;color:var(--gold);white-space:nowrap}
+@media (prefers-reduced-motion:no-preference){
+  .hg-logo{animation:hgLogoWipe 1.15s cubic-bezier(.65,0,.35,1) .15s both}
+  .hg-logo-sub{animation:hgLogoWipe .9s cubic-bezier(.65,0,.35,1) .75s both}
+}
+@keyframes hgLogoWipe{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}

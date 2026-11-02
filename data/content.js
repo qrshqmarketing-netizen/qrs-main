@@ -58,7 +58,9 @@ export const TILE = { ...GROUPS.tile, ...TILE_CONTENT };
 export const FLAT = { ...GROUPS.flat, ...FLAT_CONTENT };
 export const METAL = { ...GROUPS.metal, ...METAL_CONTENT };
 export const COMMERCIAL = { ...GROUPS.commercial, ...COMMERCIAL_CONTENT, serviceTypes: COMMERCIAL_SERVICES };
-export const SECTIONS = [SHINGLE, TILE, FLAT, METAL, COMMERCIAL];
+// Metal roofing is hidden for now (owner, November 2 2026): METAL stays defined for when it returns, but it is out of SECTIONS, so its pages
+// leave the sitemap, menus, AI files and page index; its addresses redirect to /residential-roofing/ (TEMPORARY_REDIRECTS, data/redirects.js).
+export const SECTIONS = [SHINGLE, TILE, FLAT, COMMERCIAL];
 
 // Stand-alone pages: { ...structure, page }
 export const GUTTERS = { ...SINGLES.gutters, page: RAIN_GUTTERS };
