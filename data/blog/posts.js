@@ -23,6 +23,157 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // New article (owner, November 2 2026): from the owner's team's template "What Does a Professional Roof Inspection Include?", aimed at the
+  // roof inspection searches as an informational guide that sends readers to /roof-inspection/ (the service page keeps its own keyword). The
+  // twelve points are written as what a thorough inspection covers; what we do is limited to what the inspection page already says (free,
+  // roofer-led, drone footage and photos of every finding, plain English, one next step: repair, monitor, maintain or replace, a written scope
+  // and price before any work). Left out of the template, as unconfirmed or not offered: report turnaround, inspection length, appointment lead
+  // time, condition ratings, remaining roof life, an attic check and roof walking as QRS claims, roof certifications for home sales (QRS
+  // doesn't issue them; the FAQ says so), a C-39 classification for QRS, inspection-age rules in years, and warranty-voiding claims. Our voice
+  // with three "Our point of view" boxes.
+  {
+    slug: 'what-does-a-roof-inspection-include',
+    title: 'What Does a Professional Roof Inspection Include? A 12-Point Roof Inspection Checklist',
+    keyword: 'roof inspection checklist',
+    topics: ['inspection', 'maintenance', 'storm', 'leak', 'insurance'],
+    metaTitle: 'Roof Inspection Checklist: What an Inspection Includes',
+    metaDescription:
+      'Our roof inspection checklist: the 12 things a professional roof inspection should cover, what you should get afterward, and when to book one in Los Angeles.',
+    datePublished: '2026-11-02',
+    dateModified: '2026-11-02',
+    excerpt:
+      'A professional roof inspection checks the roofing, flashing, drainage and structure and ends with photos and a clear next step. Here is the 12-point roof inspection checklist we would hold any inspection to, ours included.',
+    image: '/images/blog/what-does-a-roof-inspection-include.webp',
+    imageAlt: 'What does a professional roof inspection include? A roof inspection checklist on a clipboard and a gloved hand with a magnifying glass over a cracked clay roof tile',
+    intro: [
+      'A professional roof inspection is a close check of your roof’s surface, flashing, drainage and structure, finished with photos that show what is wrong and what to fix first. This roof inspection checklist covers the 12 things a thorough inspection should look at, what you should get afterward and how to tell a real inspection from a sales pitch.',
+      'A quick look from the driveway can miss the problems that cause leaks. At Quality Roofing Specialists, our [roof inspection](/roof-inspection/) for homes is a free, roofer-led roof evaluation: every finding photographed and explained in plain English, ending with one clear next step.',
+    ],
+    sections: [
+      {
+        heading: 'The Roof Inspection Checklist: 12 Things a Professional Should Check',
+        blocks: [
+          'Whether your roof is asphalt shingle, clay or concrete tile, or flat, a thorough inspection covers these points:',
+          {
+            steps: [
+              '**Roofing material.** Cracked, curling or missing shingles, heavy granule loss, slipped or broken tiles, and blisters or splits on flat roofs.',
+              '**Storm and wind damage.** Lifted or creased shingles, displaced tiles and impact marks, each photographed and dated in case you file an insurance claim.',
+              '**Flashing.** The metal around chimneys, walls, skylights and roof edges, where many leaks begin: rust, gaps, loose nails and failed sealant.',
+              '**Valleys.** Where two slopes meet and water runs fastest. Debris, worn material or a bad seam here can send water straight into the house.',
+              '**Pipe boots and roof penetrations.** Rubber boots around plumbing vents crack in the LA sun; exhaust vents, solar mounts and HVAC curbs need a look too.',
+              '**Ridge and hip caps.** Loose, cracked or missing caps along the peaks, and crumbling mortar on tile roofs.',
+              '**Underlayment.** The waterproof layer beneath the roofing, checked wherever it can be seen, such as at the edges and under lifted tiles. Worn underlayment is a common hidden cause of leaks on older [tile roofs](/blog/tile-roof-underlayment/).',
+              '**Roof deck and structure.** Sagging lines, soft spots and uneven areas that point to rotted decking or framing problems.',
+              '**Gutters, downspouts and drainage.** Clogs, sagging gutters and loose downspouts, and on [flat roofs](/residential-roofing/flat-roofing/), ponding water and blocked drains or scuppers.',
+              '**Fascia, soffits and eaves.** Wood rot, peeling paint, pest or bird entry points, and missing eave closures on tile roofs.',
+              '**Inside the house.** Ceiling stains, damp insulation or daylight in the attic, and signs of past leaks. The inside often shows what the outside hides.',
+              '**Ventilation.** Whether intake and exhaust vents are clear and balanced. Poor [attic ventilation](/residential-roofing/attic-ventilation/) traps heat and ages the roof from underneath.',
+            ],
+          },
+          { pov: 'The roof covering is rarely where the story is. We spend most of an inspection on the flashings, valleys, penetrations and edges, because that is where water usually gets in, on shingle, tile and flat roofs alike.' },
+        ],
+      },
+      {
+        heading: 'What You Should Get After a Roof Inspection',
+        blocks: [
+          'An inspection is only as useful as what you take away from it. A good one leaves you with:',
+          {
+            list: [
+              '**Photos of each problem area,** so you can see what the roofer saw on your roof.',
+              '**Plain-language explanations** of what each issue means and what happens if it is left alone.',
+              '**A clear next step,** separating what is urgent from what can wait.',
+              '**A written scope and price** for any work, if you want one, with no obligation to hire anyone.',
+            ],
+          },
+          'Ours ends the same way every time: drone footage and photos from our *RoofScan 360* evaluation, every finding explained in plain English, and one next step: repair, monitor, maintain or replace. If work is needed, you get a written scope and price before any of it starts. Homeowners share those photos with insurance adjusters after a storm and use them to compare quotes from other roofers.',
+          { pov: 'An inspection that ends with “you need a new roof” and nothing to look at is a sales visit. Ask to see the photos, and ask what happens if you wait a year. A roofer who knows your roof can answer both.' },
+        ],
+      },
+      {
+        heading: 'When to Get a Roof Inspection in Los Angeles',
+        blocks: [
+          'Once a year, before the rains, is a good habit for most roofs; our [roof maintenance plans](/roof-maintenance-plans/) schedule one or two visits a year for that reason. Book one sooner in any of these situations:',
+          {
+            list: [
+              '**Before the rainy season.** LA gets most of its rain between November and March. A fall inspection catches small problems before the first big storm turns them into leaks.',
+              '**After Santa Ana winds or a storm.** Wind lifts shingles and shifts tiles in ways you can’t see from the ground. See [roof storm damage signs](/blog/roof-storm-damage-signs/), and if water is coming in, call for [emergency roof repair](/roof-repair/emergency/).',
+              '**Before buying or selling a home.** A roofer’s inspection gives buyers and sellers a clear picture of the roof’s condition.',
+              '**Before installing solar panels.** Panels stay up for a long time, so the roof under them should be sound before they go on.',
+              '**At insurance renewal.** Some insurers now ask about roof age and condition, and current photos make that conversation easier.',
+              '**When you notice warning signs.** Ceiling stains, granules collecting in gutters, broken tiles in the yard or a sudden jump in cooling costs all deserve a closer look. Our guide to [finding the source of a roof leak](/blog/roof-leak-source/) explains what each sign can mean.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'How Our Roof Inspection Works',
+        blocks: [
+          {
+            steps: [
+              '**You book a visit.** Tell us about leaks, past repairs and anything you have noticed, so the roofer knows where to look closely.',
+              '**A roofer evaluates the roof.** Our *RoofScan 360* evaluation uses drone footage to show what matters, so you see your roof the way we do.',
+              '**Every finding is photographed and explained,** in plain English, with normal wear sorted from real problems.',
+              '**You get one clear next step:** repair, monitor, maintain or replace. If work is needed, the written scope and price come before any of it, with no pressure to book.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Roofer Inspection vs. Home Inspection vs. Door-to-Door Check',
+        blocks: [
+          'Not every “roof inspection” is the same. A general home inspection is valuable when buying a house, but it covers the whole property, so the roof gets a lighter look than a roofing contractor would give it.',
+          {
+            table: {
+              head: ['', 'Roofing contractor inspection', 'General home inspection', 'Unsolicited door-to-door inspection'],
+              rows: [
+                ['Who does it', 'A licensed roofing contractor', 'A home inspector covering the entire house', 'Often a salesperson, sometimes from out of the area after a storm'],
+                ['Roof coverage', 'Every roof component, up close', 'A visual overview, often from the ground, a ladder or a drone', 'Varies, usually focused on finding damage for a claim'],
+                ['What you get', 'Photos, plain-English findings and a clear next step', 'A roof section within a whole-home report', 'Often just a contract or claim paperwork'],
+                ['Repair pricing', 'A written scope and price if work is needed', 'Not included; may refer you to a roofer', 'Usually tied to signing with them'],
+                ['Best for', 'Leaks, storm damage, insurance claims, planning a replacement', 'A full picture of a home you are buying', 'Check their CSLB license before anyone goes on your roof'],
+              ],
+            },
+          },
+          'If a home inspector flags the roof, a roofing contractor’s inspection is the natural next step. It tells you whether the issue is a small repair or a bigger expense to plan for. For how to vet the roofer, see [what makes the best roofer in LA](/blog/best-roofer-los-angeles/). Own a commercial building? Use our [commercial roof inspection checklist](/blog/commercial-roof-inspection-checklist/).',
+          { pov: 'Be wary of the free inspection that shows up at your door the day after a storm. Ours is free too, but you call us, you get the photos, and the decision stays yours.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'How much does a roof inspection cost in Los Angeles?',
+        a: 'Our roof evaluation for homes is free, with no obligation. Commercial buildings start with a roofer-led [commercial roof survey](/commercial-roofing/maintenance/).',
+      },
+      {
+        q: 'What does a roof inspection include?',
+        a: 'A thorough inspection checks the roofing material, storm damage, flashing, valleys, pipe boots and penetrations, ridge and hip caps, underlayment where it can be seen, the deck, gutters and drainage, fascia and eaves, signs of leaks inside, and ventilation, then explains what it found with photos and a clear next step.',
+      },
+      {
+        q: 'Will you walk on my tile roof?',
+        a: 'Tile cracks easily underfoot, which is one reason our *RoofScan 360* evaluation uses drone footage: it shows the whole roof up close. Please don’t walk on a tile roof to check it yourself.',
+      },
+      {
+        q: 'Can I use your photos for an insurance claim?',
+        a: 'Yes. Our photos and written scope give you documentation to share with your adjuster, and we help where we can as our schedule allows. See [how to file a roof insurance claim in California](/blog/roof-insurance-claims-california/).',
+      },
+      {
+        q: 'What’s the difference between a roof inspection and a roof certification?',
+        a: 'An inspection tells you the roof’s current condition. A roof certification is a roofer’s written statement that the roof should stay watertight for a set period, often used in California home sales. We don’t issue roof certifications; our evaluation shows you the roof’s condition and your next step.',
+      },
+      {
+        q: 'How often should I get my roof inspected?',
+        a: 'Once a year before the rainy season suits most LA roofs, plus after any major storm or Santa Ana wind event. Older roofs and tile roofs with original underlayment benefit most from a regular look.',
+      },
+    ],
+    closing: {
+      heading: 'Schedule a Free Roof Evaluation',
+      blocks: [
+        'Know what is happening on your roof before the next storm, sale or insurance renewal. A roofer checks it, photographs every finding and tells you your next step in plain English.',
+        '**[Book a free roof evaluation](#roof-check)** or call (310) 340-1643. We inspect roofs across Los Angeles County, Orange County and the Inland Empire.',
+      ],
+    },
+    related: ['/roof-inspection/', '/roof-maintenance-plans/', '/roof-repair/'],
+  },
   // New article (owner, November 2 2026): from the owner's team's template "Licensed & Insured Roofing Contractor Serving All of LA County",
   // aimed at "best roofer in LA" / "most trusted roofer Los Angeles". Its placeholders were filled only with facts the site already states
   // (CSLB #, licensed since 2020, licensed/bonded/insured, the 10-year workmanship warranty (call for details), the five manufacturer programs,
