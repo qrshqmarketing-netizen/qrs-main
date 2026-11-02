@@ -95,7 +95,7 @@ export const singleCrumbs = (single) => [HOME, ...(single.parent ? [single.paren
 
 // Cards for a list of a section's pages (placeholder art rotates until real photos are added)
 const cardsFor = (section, list) =>
-  list.map((s, i) => ({ title: s.title, text: s.card, href: serviceHref(section, s), scene: section.scenes[i % section.scenes.length], image: s.image }));
+  list.map((s, i) => ({ title: s.title, text: s.card, href: serviceHref(section, s), scene: section.scenes[i % section.scenes.length], image: s.cardImage || s.image })); // `cardImage`: a card photo different from the page's hero
 export const serviceCards = (section) => cardsFor(section, section.services);
 export const serviceTypeCards = (section) => cardsFor(section, section.serviceTypes || []);
 
