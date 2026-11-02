@@ -1,4 +1,5 @@
 import { LocColumns, LocCta, LocFaq, LocHero, LocReviews, LocRoofTypes, LocStory } from '@/components/loc/LocSections';
+import FacebookFeed from '@/components/loc/FacebookFeed';
 import LatestArticles from '@/components/sections/LatestArticles';
 import FinalCta from '@/components/sections/FinalCta';
 import OfficeMap from '@/components/sections/OfficeMap';
@@ -14,6 +15,13 @@ import { pageJsonLd } from '@/lib/structuredData';
 import { heroOutcome } from '@/data/heroOutcomes';
 import { articlesFor } from '@/lib/articles';
 
+
+// Office Facebook Pages (owner, November 2 2026): the city page whose office has a Page shows its 3 newest posts (FacebookFeed). The ID and
+// token come from Vercel's environment variables, read here on the server only.
+const FACEBOOK_FEEDS = {
+  'woodland-hills': { id: 'FACEBOOK_PAGE_ID', token: 'FACEBOOK_PAGE_TOKEN' },
+  vernon: { id: 'FACEBOOK_VERNON_PAGE_ID', token: 'FACEBOOK_VERNON_PAGE_TOKEN' },
+};
 
 // Hero photos rotate across city pages until each city has its own
 const PHOTOS = [
@@ -91,6 +99,7 @@ export default async function LocationPage({ location, page, index = 0 }) {
         />
         <LatestArticles posts={await articlesFor(cityPath(slug))} heading="Related Roofing Articles" />
       </div>
+      {FACEBOOK_FEEDS[slug] && <FacebookFeed pageId={process.env[FACEBOOK_FEEDS[slug].id]} token={process.env[FACEBOOK_FEEDS[slug].token]} place={city} />}
       <LocCta place={city} commercial={page.offer === 'commercial'} />
       <LocFaq heading={`${city} Roofing FAQs`} sub={`Straight answers for ${city} ${page.offer === 'commercial' ? 'clients' : 'homeowners'}.`} faqs={page.faqs} />
       {/* The request form, in the same column as the sections above */}

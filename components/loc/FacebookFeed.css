@@ -1,0 +1,18 @@
+/* "Latest from our Facebook" on the Woodland Hills and Vernon city pages (FacebookFeed.jsx): three post cards in the location pages' look,
+   hairline cards on theme tokens, a sideways row on phones, three across from 901px */
+.fb-feed .fb-kicker{margin:0 0 10px;font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-ink)}
+:root[data-theme="dark"] .fb-feed .fb-kicker{color:var(--gold)}
+.fb-cards{list-style:none;margin:36px 0 32px;padding:0 0 6px;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(260px,82%);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin}
+.fb-cards li{scroll-snap-align:start;display:flex}
+.fb-card{display:flex;flex-direction:column;width:100%;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--paper);color:var(--ink);text-decoration:none;transition:border-color .2s,transform .2s}
+.fb-card img,.fb-noimg{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--wash)}
+.fb-noimg{display:grid;place-items:center;font:800 64px/1 var(--font-text),sans-serif;color:var(--line)}
+.fb-body{display:flex;flex-direction:column;gap:10px;padding:18px 20px 20px;flex:1}
+.fb-body time{font-size:13px;font-weight:600;letter-spacing:.04em;color:var(--muted)}
+.fb-text{font-size:15px;line-height:1.55;color:var(--ink)}
+.fb-more{margin-top:auto;font-size:14px;font-weight:700;color:var(--navy)}
+:root[data-theme="dark"] .fb-more{color:var(--gold)}
+.fb-card:focus-visible{outline:3px solid rgba(212,181,114,.85);outline-offset:3px}
+@media (hover:hover){.fb-card:hover{border-color:var(--gold);transform:translateY(-3px)}}
+@media (min-width:901px){.fb-cards{grid-auto-flow:row;grid-template-columns:repeat(3,1fr);overflow:visible}}
+@media (prefers-reduced-motion:reduce){.fb-card{transition:none}}
