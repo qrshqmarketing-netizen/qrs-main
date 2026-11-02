@@ -11,9 +11,9 @@ export const EMERGENCY_ROOF_REPAIR = {
   // repair", "roof storm damage repair", "wind damage roof contractor", "storm damage roof inspection", "hail damage roof repair"
   // Meta for the searches the owner picked (October 30 2026: roof repair specialist (Los Angeles), emergency roof repair (Los Angeles), LA wind
   // damage roof contractor, roofing services after LA storm), keeping "storm damage" (this page's strongest search). 55 / 159 characters.
-  metaTitle: 'Emergency Roof Repair Los Angeles | Storm & Wind Damage',
+  metaTitle: 'Storm Damage & Emergency Roof Repair in Los Angeles', // rolled back to the October 28 wording (owner, November 2 2026)
   metaDescription:
-    'Emergency roof repair in Los Angeles by roof repair specialists: storm and wind damage repair after an LA storm, tarps when needed. Call now, even after hours.',
+    'Emergency roof repair and storm damage roof repair in Los Angeles & Orange County: wind and hail damage, tarps when needed and photos for your insurance.',
   image: '/images/emergency-roof-repair-hero.webp',
   imageAlt: 'Storm damage roof repair in Los Angeles: a roofer reviewing storm damage with homeowners beside a blue roof tarp',
   hero: {
@@ -100,8 +100,8 @@ export const ROOF_INSPECTION = {
   // "roof inspection and repair", "roofing consultation". The H1 is unchanged.
   // Meta for the searches the owner picked (October 30 2026: roof inspection los angeles, roof inspection service, roof repair specialist, tile roof
   // inspection, roof inspection company near me). 58 / 157 characters.
-  metaTitle: 'Roof Inspection Los Angeles | Free Roof Inspection Service',
-  metaDescription: 'Roof inspection company near you in Los Angeles & Orange County: a free roof inspection service for shingle, tile and flat roofs by a roof repair specialist.',
+  metaTitle: 'Roof Inspection Los Angeles | Professional Roof Inspections', // rolled back to the October 28 wording (owner, November 2 2026)
+  metaDescription: 'Roof inspection company in Los Angeles & Orange County: a free, professional roof inspection service with photos, plain-English advice and one next step.',
   image: '/images/shingle-roof-inspection-overhead.webp',
   imageAlt: 'Aerial overhead view of a finished dark grey shingle roof',
   hero: {

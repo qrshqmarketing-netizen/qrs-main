@@ -16,7 +16,7 @@ export async function POST(request) {
     const added = await addNewFilePosts();
     const result = await applyFileRevisions();
     // Always refresh the cached article list: a list cached before a new article was added would otherwise 404 its page for up to an hour
-    revalidateTag(POSTS_TAG, { expire: 0 });
+    revalidateTag(POSTS_TAG, 'max'); // stale-while-revalidate: visitors keep getting the last good page while it refreshes (expire: 0 made failed refreshes a 500)
     return Response.json({ ok: true, added, ...result });
   } catch (e) {
     return Response.json({ ok: false, error: e.message }, { status: 502 });

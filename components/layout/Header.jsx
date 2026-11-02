@@ -5,14 +5,14 @@ import { usePathname } from 'next/navigation';
 import BrandLogo from '@/components/ui/BrandLogo';
 import SiteLink from '@/components/ui/SiteLink';
 import { MoonIcon, PhoneIcon, SunIcon } from '@/components/ui/icons';
-import { HEADER_CTA, HEADER_LINKS, HEADER_MORE } from '@/data/navigation';
+import { HEADER_CTA, HEADER_MENU, HEADER_MORE } from '@/data/navigation';
 import { isFocusPath, isLandingPath } from '@/lib/landing';
 import { PHONE, TEL } from '@/data/site';
 import './Header.css';
 
-// The header: one solid bar split by hairlines: the logo, main links (each one a hub page,
-// HEADER_LINKS in data/navigation.js, no dropdowns), the phone number, the gold "Get Pro Advice" cell, the theme switch
-// and a two-line menu button.
+// The header: one solid bar split by hairlines: the logo, the main menu (HEADER_MENU in data/navigation.js: Services, Service Areas,
+// Credentials and Roofing 101 open a dropdown on hover, focus or click, Services as a wide panel of every service page), the phone number,
+// the gold "Get Pro Advice" cell, the theme switch and a two-line menu button.
 // The menu button drops a small panel from the bar with the rest of the site (HEADER_MORE; below 1240px the main links are at the top of it).
 // It stays in the page flow, above the hero. The proof marquee sits under each hero instead (ProofBar strip; owner, October 28 2026).
 // /start/ shows only the logo, the theme switch and the phone. Escape, the backdrop or a link closes the panel.
@@ -25,15 +25,33 @@ export default function Header() {
   const requestPage = isFocusPath(pathname); // /start/ and the ad landing pages: logo, theme switch and phone only (lib/landing.js)
   const landing = isLandingPath(pathname);
   const button = useRef(null);
+  const [drop, setDrop] = useState(null); // the open dropdown's label in the bar
+  const bar = useRef(null);
+  const leave = useRef(null);
 
   useEffect(() => {
     document.body.classList.toggle('menu-open', open);
   }, [open]);
 
-  // A new page closes the panel
+  // A new page closes the panel and any dropdown
   useEffect(() => {
     setOpen(false);
+    setDrop(null);
   }, [pathname]);
+
+  // A dropdown closes on Escape (focus back on its button) and on a click outside the bar
+  useEffect(() => {
+    if (!drop) return undefined;
+    const onKey = (e) => {
+      if (e.key !== 'Escape') return;
+      bar.current?.querySelector(`[data-drop="${drop}"]`)?.focus();
+      setDrop(null);
+    };
+    const onDown = (e) => { if (!bar.current?.contains(e.target)) setDrop(null); };
+    document.addEventListener('keydown', onKey);
+    document.addEventListener('pointerdown', onDown);
+    return () => { document.removeEventListener('keydown', onKey); document.removeEventListener('pointerdown', onDown); };
+  }, [drop]);
 
   useEffect(() => {
     setTheme(document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light');
@@ -72,7 +90,10 @@ export default function Header() {
     setTheme(nextTheme);
   };
 
-  const close = () => setOpen(false);
+  const close = () => { setOpen(false); setDrop(null); };
+  const hoverOpen = (label) => { clearTimeout(leave.current); setDrop(label); };
+  const hoverClose = () => { clearTimeout(leave.current); leave.current = setTimeout(() => setDrop(null), 160); };
+  const inMenu = (item) => isCurrent(pathname, item.href) || item.groups?.some((g) => g.links.some((l) => isCurrent(pathname, l.href.split('#')[0])));
   const link = (l, className) => {
     const on = isCurrent(pathname, l.href);
     return (
@@ -95,10 +116,38 @@ export default function Header() {
           <BrandLogo variant="adaptive" preload tagline />
         </div>
         {!requestPage && (
-          <nav className="hd-links" aria-label="Main">
-            {HEADER_LINKS.map((l) => (
-              <span key={l.href}>{link(l, 'hd-link')}</span>
-            ))}
+          <nav className="hd-links" aria-label="Main" ref={bar}>
+            {HEADER_MENU.map((item) =>
+              item.groups ? (
+                <div className={'hd-dd' + (drop === item.label ? ' is-open' : '')} key={item.label} onMouseEnter={() => hoverOpen(item.label)} onMouseLeave={hoverClose}>
+                  <button
+                    type="button"
+                    className={'hd-link hd-dd-btn' + (inMenu(item) ? ' on' : '')}
+                    data-drop={item.label}
+                    aria-expanded={drop === item.label}
+                    aria-controls={`hdDrop-${item.label.replace(/\W+/g, '')}`}
+                    onClick={() => setDrop((d) => (d === item.label ? null : item.label))}
+                  >
+                    {item.label}
+                    <svg className="hd-chev" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                  </button>
+                  <div className={'hd-drop' + (item.mega ? ' hd-mega' : '')} id={`hdDrop-${item.label.replace(/\W+/g, '')}`} inert={drop !== item.label}>
+                    {item.groups.map((g) => (
+                      <div className="hd-drop-col" key={g.title}>
+                        <p className="hd-drop-title">{g.title}</p>
+                        <ul>
+                          {g.links.map((l) => (
+                            <li key={l.href + l.label}>{link(l, 'hd-drop-link')}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <span key={item.href}>{link(item, 'hd-link')}</span>
+              ),
+            )}
           </nav>
         )}
         <div className="hd-actions">
@@ -141,8 +190,26 @@ export default function Header() {
         <div className="hd-panel" id="hdPanel" inert={!open} data-lenis-prevent="">
           <nav aria-label="Menu">
             <ul className="hd-primary">
-              {HEADER_LINKS.map((l, i) => (
-                <li key={l.href} style={{ '--n': i }}>{link(l, 'hd-row hd-row-big')}</li>
+              {HEADER_MENU.map((item, i) => (
+                <li key={item.label} style={{ '--n': i }}>
+                  {item.groups ? (
+                    <details className="hd-acc">
+                      <summary className="hd-row hd-row-big">{item.label}</summary>
+                      {item.groups.map((g) => (
+                        <div className="hd-acc-group" key={g.title}>
+                          <p className="hd-drop-title">{g.title}</p>
+                          <ul>
+                            {g.links.map((l) => (
+                              <li key={l.href + l.label}>{link(l, 'hd-acc-link')}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </details>
+                  ) : (
+                    link(item, 'hd-row hd-row-big')
+                  )}
+                </li>
               ))}
             </ul>
             <ul className="hd-more">

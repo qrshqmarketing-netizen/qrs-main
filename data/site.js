@@ -118,10 +118,11 @@ export const GOOGLE_REVIEWS = { count: 269, asOf: '2026-10-15' };
 // "Roofer" searches (owner, October 30 2026, from Search Console, last 28 days: "roofer los angeles" 179 impressions at 12, "roofers los angeles"
 // 164 at 17, "roofers in los angeles" 145 at 18, "roofer in los angeles" 140 at 11, plus licensed / best / quality roofers): the title leads with
 // "Roofers in Los Angeles" and keeps "Roofing Contractor" (the home keyword) and both counties. 59 characters, no brand suffix.
-export const HOME_TITLE = 'Roofers in Los Angeles & Orange County | Roofing Contractor';
+export const HOME_TITLE = 'Roofing Contractor in Los Angeles & Orange County, CA'; // rolled back to the October 28 wording (owner, November 2 2026)
 export const HOME_H1 = 'Roofing Contractor in Los Angeles & Orange County';
 // "Licensed roofers" for those searches; the review count answers the "best roofers" ones without claiming "best". 149 characters.
-export const HOME_DESCRIPTION = `Licensed roofers in Los Angeles & Orange County: QRS is a family-owned roofing contractor with ${GOOGLE_REVIEWS.count} Google reviews. Start with a free roof evaluation.`;
+export const HOME_DESCRIPTION = // rolled back to the October 28 wording (owner, November 2 2026)
+  'Quality Roofing Specialists: roofing contractor in Los Angeles & Orange County. Repair, replacement, free roof evaluation, 10-year warranty: call for details.';
 
 // The number of Google reviews across our listings (owner, October 15 2026: 269). Update it by hand from Google now and then; it shows on the
 // proof strip under every hero and in the home page's review section. No star rating is shown (not given by the owner).
@@ -136,6 +137,26 @@ export const PROOF_POINTS = [
 
 // Hero annotations: the few decisive facts shown as small check marks right under a hero's buttons, next to the action they support (Hero.jsx). Only owner-
 // confirmed facts. Commercial pages get their own set: a commercial roof survey has no price on the site, so it is never called free.
+// BBB accreditation (owner, November 2 2026; checked on BBB's profile the same day: "Quality Roofing Specialists is BBB Accredited", accredited
+// since 10/15/2026, A+ rating, the Woodland Hills address). BBB's rules: the seal links to the business profile. Shown by components/ui/BbbBadge.jsx
+// on the Credentials page, in the footer and on the ad landing pages, and the profile is in the structured data's sameAs.
+export const BBB = {
+  url: 'https://www.bbb.org/us/ca/woodland-hills/profile/roofing-contractors/quality-roofing-specialists-1216-1000067017',
+  accreditedSince: '2026-10-15',
+  rating: 'A+',
+  badge: '/images/badges/bbb-accredited-business.webp',
+  width: 625,
+  height: 209,
+};
+
+// Review and trust profiles shown as logos under the home hero (owner, November 2 2026; components/sections/TrustLogos.jsx). Each logo links to the
+// profile when `href` is set; Yelp has no link until the owner gives the Yelp business page address.
+export const TRUST_LOGOS = [
+  { id: 'google', name: 'Google Reviews', label: `${GOOGLE_REVIEWS.count} Google reviews`, href: 'https://maps.google.com/?cid=7072551311221462379', logo: '/images/badges/google-reviews.webp', width: 813, height: 328 },
+  { id: 'bbb', name: 'BBB Accredited Business', label: `Accredited, ${BBB.rating} rating`, href: BBB.url, logo: BBB.badge, width: BBB.width, height: BBB.height },
+  { id: 'yelp', name: 'Yelp', label: 'Find us on Yelp', href: '', logo: '/images/badges/yelp-reviews.webp', width: 416, height: 297 },
+];
+
 export const HERO_ANNOTATIONS = {
   home: ['Free roof evaluation', 'Written price before any work', '10-year workmanship warranty (call for details)', `CSLB #${BUSINESS.license}`],
   commercial: ['Roofer-led roof survey', 'Written scope and price before any work', 'Permits pulled', `CSLB #${BUSINESS.license}`],

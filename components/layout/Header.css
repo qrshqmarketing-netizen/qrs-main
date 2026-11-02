@@ -248,3 +248,41 @@ body:has(main.hg) .site-header:not(.is-lp):not(.is-start):not([data-scrolled]):n
   body:has(main.hg) .site-header:not(.is-lp):not(.is-start) .hd-brand{opacity:1!important}
 }
 @media (prefers-reduced-motion:reduce){body:has(main.hg) .site-header .hd-brand .brand{transition:none!important}}
+
+/* ---------- Menu dropdowns (owner, November 2 2026, after the reference roofing site's menu; HEADER_MENU in data/navigation.js) ----------
+   In the bar: Services, Service Areas, Credentials and Roofing 101 are buttons that open a panel under the bar on hover, focus or click
+   (Header.jsx keeps one open at a time). Services is a wide panel across the bar with six columns; the others sit under their button.
+   In the menu panel (below 1280px) the same items are collapsible groups. Panels use the theme tokens, so dark mode follows. */
+.hd-dd{position:relative;display:flex;align-items:stretch}
+.hd-dd:has(.hd-mega){position:static}
+.hd-dd-btn{background:none;border:0;font:inherit;letter-spacing:inherit;text-transform:inherit;cursor:pointer;gap:6px}
+.hd-chev{width:12px;height:12px;flex:none;transition:transform .2s ease}
+.hd-dd.is-open .hd-chev{transform:rotate(180deg)}
+.hd-drop{position:absolute;top:100%;left:0;z-index:5;display:flex;gap:36px;min-width:250px;padding:20px 24px 22px;box-sizing:border-box;
+  background:var(--paper);color:var(--ink);border:1px solid var(--line);border-top:0;border-radius:0 0 var(--radius) var(--radius);
+  box-shadow:0 22px 44px -26px rgba(3,14,26,.5);opacity:0;visibility:hidden;translate:0 -6px;transition:opacity .18s ease,translate .25s ease,visibility 0s linear .25s}
+.hd-dd.is-open .hd-drop{opacity:1;visibility:visible;translate:0 0;transition:opacity .18s ease,translate .25s ease}
+.hd-mega{left:0;right:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:24px;padding:26px max(16px,4.44vw) 30px;border-radius:0 0 var(--radius) var(--radius)}
+.hd-drop-col ul,.hd-acc-group ul{list-style:none;margin:0;padding:0}
+.hd-drop-title{margin:0 0 10px;font:700 11px/1.2 var(--font-text),sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-ink)}
+.hd-drop-link,.hd-acc-link{display:flex;align-items:center;gap:8px;padding:6px 0;font:500 14px/1.35 var(--font-text),sans-serif;letter-spacing:0;text-transform:none;color:var(--navy);text-decoration:none}
+.hd-drop-link{white-space:nowrap}
+.hd-drop-link.on,.hd-acc-link.on{color:var(--gold-ink)}
+@media (hover:hover){.hd-drop-link:hover,.hd-acc-link:hover{color:var(--gold-ink)}}
+.hd-drop-link:focus-visible,.hd-acc-link:focus-visible{outline:2px solid var(--gold);outline-offset:2px;border-radius:4px}
+:root[data-theme="dark"] :is(.hd-drop-link,.hd-acc-link){color:var(--ink)}
+:root[data-theme="dark"] .hd-drop-title,:root[data-theme="dark"] :is(.hd-drop-link,.hd-acc-link).on{color:var(--gold)}
+/* Menu panel: collapsible groups */
+.hd-acc summary{list-style:none;cursor:pointer;justify-content:space-between}
+.hd-acc summary::-webkit-details-marker{display:none}
+.hd-acc summary:after{content:"+";font:300 26px/1 var(--font-text),sans-serif;color:var(--gold-ink)}
+.hd-acc[open] summary:after{content:"\2212"}
+.hd-acc-group{padding:2px 22px 14px}
+.hd-acc-group + .hd-acc-group{padding-top:4px}
+.hd-acc-link{padding:9px 0;font-size:15px}
+.hd-panel .hd-acc li{border-bottom:0;opacity:1;translate:none}
+@media (prefers-reduced-motion:reduce){.hd-drop,.hd-chev{transition:none!important}}
+/* No menu button from 1280px, where the whole site is in the bar's dropdowns (owner, November 2 2026): the button and its panel are hidden there */
+@media (min-width:1280px){.site-header .hd-menu,.site-header .hd-panel,.site-header .hd-backdrop{display:none}}
+/* The last dropdowns in the bar open toward the left so they never run off the screen */
+.hd-links > .hd-dd:last-child .hd-drop,.hd-links > .hd-dd:nth-last-child(2) .hd-drop:not(.hd-mega){left:auto;right:0}

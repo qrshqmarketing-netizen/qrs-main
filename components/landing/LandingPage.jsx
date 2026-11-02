@@ -1,3 +1,4 @@
+import BbbBadge from '@/components/ui/BbbBadge';
 import Image from 'next/image';
 import Faq from '@/components/sections/Faq';
 import ReviewMarquee from '@/components/sections/ReviewMarquee';
@@ -102,6 +103,9 @@ export default function LandingPage({ page, variant }) {
         <section className="lp-badges" aria-label="Manufacturer certifications">
           <div className="lp-wrap">
             <ul>
+              <li className="lp-bbb">
+                <BbbBadge width={180} />
+              </li>
               {badges.map((m) => (
                 <li key={m.id}>
                   <Image src={m.logo} alt={`${m.name}${m.program ? ` ${m.program}` : ''} logo`} width={m.width || 400} height={m.height || 200} sizes="180px" />

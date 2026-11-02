@@ -1,3 +1,4 @@
+import BbbBadge from '@/components/ui/BbbBadge';
 import BrandLogo from '@/components/ui/BrandLogo';
 import { FacebookIcon, InstagramIcon, LinkedInIcon, YouTubeIcon } from '@/components/ui/icons';
 import CookieSettingsLink from '@/components/ui/CookieSettingsLink';
@@ -42,6 +43,7 @@ export default function Footer() {
                 {SOCIAL.linkedin && <a href={SOCIAL.linkedin} aria-label="LinkedIn"><LinkedInIcon /></a>}
                 {SOCIAL.youtube && <a href={SOCIAL.youtube} aria-label="YouTube"><YouTubeIcon /></a>}
               </div>
+              <BbbBadge width={200} className="ft-bbb" />
             </div>
             {columns.map((col) => (
               <nav className="ft-col" aria-label={col.title} key={col.title}>

@@ -3,7 +3,7 @@
 // words it, and put the logo file the manufacturer provides in public/images/badges/ (then set `logo` below). Manufacturers usually let only certified contractors
 // show their logos. A card with no logo shows the name instead.
 // CREDENTIALS_PUBLIC: false keeps the page out of search results, the sitemap, the AI files and the footer while it is reviewed; it still opens at its address.
-import { BUSINESS } from '../site';
+import { BBB, BUSINESS } from '../site';
 import { formatDate } from '@/lib/dates';
 
 export const CREDENTIALS_PUBLIC = true;
@@ -26,6 +26,7 @@ export const CREDENTIALS_PAGE = {
       { label: 'CSLB license', value: `#${BUSINESS.license}` },
       { label: 'Licensed since', value: formatDate(BUSINESS.licenseSince) },
       { label: 'Status', value: 'Licensed, bonded and insured' },
+      { label: 'BBB', value: `Accredited Business since ${formatDate(BBB.accreditedSince)}, ${BBB.rating} rating` },
     ],
     verify: { label: 'Verify our license on the CSLB website', href: 'https://www.cslb.ca.gov/' },
   },
@@ -52,6 +53,7 @@ export const CREDENTIALS_PAGE = {
   faqs: [
     { q: 'Is Quality Roofing Specialists licensed?', a: `Yes. We are a licensed California contractor, CSLB license #${BUSINESS.license}, licensed since ${formatDate(BUSINESS.licenseSince)}. You can verify it on the Contractors State License Board website.` },
     { q: 'Are you bonded and insured?', a: 'Yes. We are licensed, bonded and insured as a California contractor.' },
+    { q: 'Are you BBB accredited?', a: `Yes. Quality Roofing Specialists is a BBB Accredited Business since ${formatDate(BBB.accreditedSince)}, with an ${BBB.rating} rating. You can [see our BBB business profile](${BBB.url}).` },
     { q: 'Which roofing manufacturers are you certified with?', a: 'Owens Corning, IKO, GAF, CertainTeed (Master Craftsman) and Polyglass (Premio Pro).' },
     { q: 'What warranty comes with a new roof?', a: 'Our installs are backed by a 10-year workmanship warranty (call for details), and the roofing materials carry the manufacturer’s warranty, which depends on the product and its warranty tier. We go over yours with you at the final walkthrough.' },
   ],

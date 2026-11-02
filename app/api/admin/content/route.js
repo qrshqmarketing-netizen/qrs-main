@@ -8,7 +8,7 @@ import { CONTENT_TAG, adminResetHomeFaqs, adminSaveHomeFaqs } from '@/lib/conten
 import { dbConfigured } from '@/lib/supabase';
 
 const fail = (status, error, extra = {}) => Response.json({ ok: false, error, ...extra }, { status });
-const refresh = () => revalidateTag(CONTENT_TAG, { expire: 0 });
+const refresh = () => revalidateTag(CONTENT_TAG, 'max'); // stale-while-revalidate (expire: 0 turned a failed refresh into a 500)
 
 export async function POST(request) {
   if (!(await sameOrigin())) return fail(403, 'Not allowed.');

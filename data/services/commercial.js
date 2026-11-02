@@ -5,8 +5,8 @@ export const COMMERCIAL_CONTENT = {
     keyword: 'commercial roofing',
     // Meta for the searches the owner picked (October 30 2026: commercial roofing contractor(s) Los Angeles, commercial roofers (in) Los Angeles (CA),
     // commercial roofers Orange County, commercial roofing repair Orange County). 57 / 159 characters; the survey is never called free.
-    metaTitle: 'Commercial Roofing Contractor Los Angeles & Orange County',
-    metaDescription: 'Commercial roofers in Los Angeles & Orange County: commercial roofing repair, replacement and maintenance for offices, retail and warehouses. Request a survey.',
+    metaTitle: 'Commercial Roofing in Los Angeles', // rolled back to the October 28 wording (owner, November 2 2026)
+    metaDescription: 'Commercial roofing in LA & Orange County for offices, retail, churches, warehouses and more. Roofer-led surveys and written scopes. Request an estimate.',
     hero: {
       heading: 'Commercial Roofing in Los Angeles & Orange County',
       intro: 'Commercial roofing, planned around how your building runs. QRS is a commercial roofing contractor in Los Angeles and Orange County: repairs, replacement and scheduled maintenance for office buildings, retail stores, churches, warehouses, shopping centers and more. Every project starts with a roofer-led survey and a written scope.',
@@ -164,8 +164,8 @@ export const COMMERCIAL_CONTENT = {
       // not in the service area, so they are not named.
       // Meta for the searches the owner picked (October 30 2026: industrial roof repairs, industrial roofing contractor, california industrial roofers,
       // industrial roofing services, industrial roofers california). 59 / 158 characters; the description says where in California we work.
-      metaTitle: 'California Industrial Roofers | Industrial Roofing Services',
-      metaDescription: 'Industrial roofing contractor for Los Angeles, Orange County and the Inland Empire: industrial roof repairs, reroofing and maintenance. Request a roof survey.',
+      metaTitle: 'Industrial Roofing in Los Angeles', // rolled back to the October 28 wording (owner, November 2 2026)
+      metaDescription: 'Industrial roofing in LA & Orange County: surveys, repairs and replacement planned around production, rooftop equipment and safe access. Request an estimate.',
       image: '/images/vernon-industrial.webp',
       imageAlt: 'Industrial property in Vernon, California',
       hero: {

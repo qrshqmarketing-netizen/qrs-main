@@ -14,6 +14,6 @@ export async function GET(request) {
   const fromCron = cronSecret ? request.headers.get('authorization') === `Bearer ${cronSecret}` : /vercel-cron/i.test(request.headers.get('user-agent') || '');
   const manual = Boolean(sheetSecret) && request.headers.get('x-leads-diagnostic') === sheetSecret;
   if (!fromCron && !manual) return Response.json({ ok: false, error: 'not allowed' }, { status: 401 });
-  revalidateTag(POSTS_TAG, { expire: 0 });
+  revalidateTag(POSTS_TAG, 'max'); // stale-while-revalidate: visitors keep getting the last good page while it refreshes (expire: 0 made failed refreshes a 500)
   return Response.json({ ok: true, refreshed: POSTS_TAG });
 }

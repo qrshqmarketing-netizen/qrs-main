@@ -163,28 +163,146 @@ export const ABOUT_MENU = {
 
 export const HEADER_CTA = { label: 'Get Pro Advice', href: '#roof-check' };
 
-// The header (October 2026, modelled on thekithmore.com): no dropdowns. HEADER_LINKS sit in the bar from 1240px (in the menu panel below that),
-// each one a hub page; the menu button opens HEADER_MORE, the rest of the site. The old menus above are no longer shown in the header.
-export const HEADER_LINKS = [
-  { label: 'Residential', href: '/residential-roofing/' },
-  { label: 'Commercial', href: '/commercial-roofing/' },
-  { label: 'Roof Repair', href: '/roof-repair/' },
-  { label: 'Replacement', href: '/roof-replacement/' },
-  { label: 'Service Areas', href: '/service-areas/' },
+// The header menu (owner, November 2 2026, after the reference roofing site's menu): eight items in the bar from 1280px, four of them with a
+// dropdown. Services is a wide panel with every service page in six groups; the others are short lists. Below 1280px the same items are
+// collapsible groups in the menu panel, followed by HEADER_MORE. Metal roofing and gutters stay out while hidden. Only link pages that exist.
+const R = '/residential-roofing/';
+const C = '/commercial-roofing/';
+export const HEADER_MENU = [
+  {
+    label: 'Services',
+    href: '/residential-roofing/',
+    mega: true,
+    groups: [
+      { title: 'Roof Repair', links: [
+        { label: 'All Roof Repair', href: '/roof-repair/' },
+        { label: 'Shingle Roof Repair', href: `${R}shingle-roofing/repair/` },
+        { label: 'Tile Roof Repair', href: `${R}tile-roofing/repair/` },
+        { label: 'Flat Roof Repair', href: `${R}flat-roofing/repair/` },
+        { label: 'Emergency Roof Repair', href: '/roof-repair/emergency/', urgent: true },
+      ] },
+      { title: 'Roof Replacement', links: [
+        { label: 'All Roof Replacement', href: '/roof-replacement/' },
+        { label: 'Shingle Roof Replacement', href: `${R}shingle-roofing/replacement/` },
+        { label: 'New Shingle Roof Installation', href: `${R}shingle-roofing/installation/` },
+        { label: 'Tile Roof Replacement', href: `${R}tile-roofing/replacement/` },
+        { label: 'Tile Lift & Relay', href: `${R}tile-roofing/lift-and-relay/` },
+        { label: 'Flat Roof Replacement', href: `${R}flat-roofing/replacement/` },
+        { label: 'New Flat Roof Installation', href: `${R}flat-roofing/installation/` },
+      ] },
+      { title: 'Roof Types', links: [
+        { label: 'Shingle Roofing', href: `${R}shingle-roofing/` },
+        { label: 'Tile Roofing', href: `${R}tile-roofing/` },
+        { label: 'Concrete Tile Roofing', href: `${R}tile-roofing/concrete/` },
+        { label: 'Slate Tile Roofing', href: `${R}tile-roofing/slate/` },
+        { label: 'Flat Roofing', href: `${R}flat-roofing/` },
+        { label: 'Attic Ventilation', href: `${R}attic-ventilation/` },
+      ] },
+      { title: 'Inspections & Care', links: [
+        { label: 'Roof Inspection', href: '/roof-inspection/' },
+        { label: 'Roof Maintenance Plans', href: '/roof-maintenance-plans/' },
+        { label: 'Roof Tune-Ups', href: '/roof-maintenance-plans/#tune-up' },
+        { label: 'Roof Financing', href: '/roof-financing/' },
+      ] },
+      { title: 'Commercial', links: [
+        { label: 'All Commercial Roofing', href: C },
+        { label: 'Commercial Roof Repair', href: `${C}repair/` },
+        { label: 'Commercial Roof Replacement', href: `${C}replacement/` },
+        { label: 'TPO Roofing', href: `${C}tpo-roofing/` },
+        { label: 'Commercial Roof Maintenance', href: `${C}maintenance/` },
+        { label: 'Offices', href: `${C}office-buildings/` },
+        { label: 'Retail Stores', href: `${C}retail/` },
+        { label: 'Churches', href: `${C}churches/` },
+        { label: 'Industrial', href: `${C}industrial/` },
+        { label: 'Warehouses', href: `${C}warehouses/` },
+        { label: 'Shopping Centers', href: `${C}malls/` },
+        { label: 'Shops & Small Business', href: `${C}shops/` },
+      ] },
+      { title: 'Property Types', links: [
+        { label: 'Residential Roofing', href: R },
+        { label: 'HOA & Multi-Family', href: `${R}hoa-multi-family/` },
+        { label: 'Property Managers', href: `${C}property-managers/` },
+        { label: 'For Contractors', href: '/contractors/' },
+      ] },
+    ],
+  },
+  {
+    label: 'Service Areas',
+    href: '/service-areas/',
+    groups: [
+      { title: 'Counties', links: [
+        { label: 'Los Angeles County', href: '/service-areas/la-county/' },
+        { label: 'Orange County', href: '/service-areas/orange-county/' },
+        { label: 'Riverside County', href: '/service-areas/riverside-county/' },
+        { label: 'San Bernardino County', href: '/service-areas/san-bernardino-county/' },
+      ] },
+      { title: 'Our offices', links: [
+        { label: 'West Hollywood', href: '/service-areas/la-county/west-hollywood/' },
+        { label: 'Woodland Hills', href: '/service-areas/la-county/woodland-hills/' },
+        { label: 'Vernon', href: '/service-areas/la-county/vernon/' },
+        { label: 'All Service Areas', href: '/service-areas/' },
+      ] },
+    ],
+  },
   { label: 'Projects', href: '/projects/' },
+  {
+    label: 'Credentials',
+    href: '/credentials/',
+    groups: [
+      { title: 'Credentials', links: [
+        { label: 'License, Bonding & Insurance', href: '/credentials/' },
+        { label: 'Manufacturer Certifications', href: '/credentials/#certifications' },
+        { label: 'Reviews', href: '/reviews/' },
+        { label: 'Our Team', href: '/about-us/#team' },
+      ] },
+    ],
+  },
+  {
+    label: 'Roofing 101',
+    href: '/blog/',
+    groups: [
+      { title: 'Learn', links: [
+        { label: 'Roofing Blog', href: '/blog/' },
+        { label: 'Roofing FAQ', href: '/roofing-faq/' },
+        { label: 'Roofing Glossary', href: '/roofing-glossary/' },
+        { label: 'Roof Inspection Checklist', href: '/blog/what-does-a-roof-inspection-include/' },
+        { label: 'Roof Insurance Claims', href: '/blog/roof-insurance-claims-california/' },
+      ] },
+      { title: 'Guides', links: [
+        { label: 'Tile Roof Guide', href: '/blog/tile-roof-guide-southern-california/' },
+        { label: 'Flat Roof Guide', href: '/blog/flat-roofs-los-angeles-guide/' },
+        { label: 'Asphalt Shingle Guide', href: '/blog/asphalt-shingle-roof-guide/' },
+        { label: 'Roof Replacement Guide', href: '/blog/roof-replacement-guide/' },
+      ] },
+    ],
+  },
+  { label: 'Financing', href: '/roof-financing/' },
+  {
+    label: 'About',
+    href: '/about-us/',
+    groups: [
+      { title: 'Company', links: [
+        { label: 'About QRS', href: '/about-us/' },
+        { label: 'Our Team', href: '/about-us/#team' },
+        { label: 'Reviews', href: '/reviews/' },
+        { label: 'Careers', href: '/careers/' },
+        { label: 'For Contractors', href: '/contractors/' },
+        { label: 'Contact', href: '/contact-us/' },
+      ] },
+    ],
+  },
 ];
+// The rest of the site, under the menu groups in the menu panel below 1280px (from 1280px there is no menu button: every page is in the bar's dropdowns)
 export const HEADER_MORE = [
   { label: 'Emergency Repair', href: '/roof-repair/emergency/', urgent: true },
-  { label: 'About QRS', href: '/about-us/' },
   { label: 'Reviews', href: '/reviews/' },
-  { label: 'Credentials', href: '/credentials/' },
   { label: 'Maintenance Plans', href: '/roof-maintenance-plans/' },
-  { label: 'Financing', href: '/roof-financing/' },
   { label: 'Roofing Blog', href: '/blog/' },
   { label: 'Careers', href: '/careers/' },
   { label: 'For Contractors', href: '/contractors/' },
-  { label: 'Contact', href: '/contact-us/' },
 ];
+// Kept for anything that still lists the old six bar links
+export const HEADER_LINKS = HEADER_MENU.map(({ label, href }) => ({ label, href }));
 
 // Footer: four short columns.
 export const FOOTER = {

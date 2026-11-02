@@ -6,8 +6,8 @@ export const TILE_CONTENT = {
     keyword: 'tile roofing',
     // Meta for the searches the owner picked (October 30 2026: tile roof specialist(s), tile roofing los angeles, tile roofers, tile roof contractor,
     // tile roof installers). 60 / 160 characters.
-    metaTitle: 'Tile Roofing Los Angeles | Tile Roof Specialist & Installers',
-    metaDescription: 'Tile roofing contractor in Los Angeles & Orange County: tile roofers and installers for clay, concrete and slate repair and replacement. Book a free evaluation.',
+    metaTitle: 'Tile Roofing in Los Angeles & Orange County', // rolled back to the October 28 wording (owner, November 2 2026)
+    metaDescription: 'Tile roofing in Los Angeles & Orange County: clay, concrete and slate tile repair, lift & relay, replacement and roof care. Start with a free roof evaluation.',
     hero: {
       heading: 'Tile Roofing Services',
       intro: 'Tile roofing that looks after what’s under the tile. Repairs, tune-ups, inspections, roof care, lift & relay and replacement for clay, concrete and slate tile roofs across Los Angeles and Orange County. The tiles often outlast the layers beneath them, so we focus on the underlayment, flashings and valleys you can’t see. Every job starts with a free roof evaluation.',

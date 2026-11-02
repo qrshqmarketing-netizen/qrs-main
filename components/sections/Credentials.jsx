@@ -1,3 +1,4 @@
+import BbbBadge from '@/components/ui/BbbBadge';
 import Image from 'next/image';
 import Mark from '@/components/ui/Mark';
 import { ArrowRight } from '@/components/ui/icons';
@@ -16,6 +17,7 @@ export default function Credentials({ page }) {
             <a className="cr-link" href={license.verify.href} target="_blank" rel="noopener">
               {license.verify.label} <ArrowRight />
             </a>
+            <BbbBadge width={240} className="cr-bbb" />
           </div>
           <dl className="cr-facts">
             {license.facts.map((f) => (
@@ -28,7 +30,7 @@ export default function Credentials({ page }) {
         </div>
       </section>
 
-      <section className="cr-section cr-wash">
+      <section className="cr-section cr-wash" id="certifications">
         <div className="container">
           <h2><Mark text={manufacturers.heading} /></h2>
           <p className="cr-lead">{manufacturers.intro}</p>

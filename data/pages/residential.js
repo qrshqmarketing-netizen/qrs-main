@@ -6,9 +6,9 @@ export const RESIDENTIAL_PAGE = {
   // Meta for the searches the owner picked (October 30 2026: roof repair specialist (Los Angeles, CA), tile roof inspection near me, roofers Los
   // Angeles County CA, certified roofing specialists, local roofing experts Los Angeles). 57 / 158 characters; "certified" = the manufacturer
   // certifications on /credentials/, "free" = the home roof evaluation.
-  metaTitle: 'Residential Roofing Los Angeles | Roof Repair Specialists',
+  metaTitle: 'Residential Roofing in Los Angeles', // rolled back to the October 28 wording (owner, November 2 2026)
   metaDescription:
-    'Residential roofing from certified local roofing experts in Los Angeles County, CA: roof repair specialists and a free tile roof inspection. Book yours today.',
+    'Residential roofing in Los Angeles & Orange County: shingle, tile and flat roofs, plus HOA and multi-family roofing. Start with a free roof evaluation.',
   hero: {
     heading: 'Residential Roofing in Los Angeles & Orange County',
     intro:
