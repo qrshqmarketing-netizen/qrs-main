@@ -1,3 +1,4 @@
+import TrustLogos from '@/components/sections/TrustLogos';
 import LocExplorer from '@/components/loc/LocExplorer';
 import { cityCards, countyCards, LocHubHero, placeCards } from '@/components/loc/LocHub';
 import { LocFaq, LocReviews } from '@/components/loc/LocSections';
@@ -37,6 +38,8 @@ export default function LocationsPage() {
     <main id="top" className="loc">
       <JsonLd data={schema} />
       <LocHubHero crumbs={CRUMBS} path={LOCATIONS_LINK.href} title={page.hero.heading} outcome={heroOutcome('/service-areas/')} intro={page.hero.intro} />
+      {/* Google, BBB and Yelp logos linking to our profiles (owner, November 2 2026) */}
+      <TrustLogos />
       <LocExplorer
         label="Service area overview"
         heading="Local roofing guides, county by county"

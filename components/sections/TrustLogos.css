@@ -12,3 +12,5 @@ a.tl-item:focus-visible{outline:3px solid rgba(212,181,114,.85);outline-offset:2
 /* On the gradient home page the row sits on the light part of the page's gradient */
 main.hg .trust-logos{background:transparent;border-bottom:0;padding:24px 0 8px}
 main.hg .trust-logos .tl-label{color:var(--hg-ink,var(--muted))}
+/* On the location pages the row sits between the inset hero card and the first section, on the page itself */
+main.loc .trust-logos{background:transparent;border-bottom:0;padding:28px 0 4px}

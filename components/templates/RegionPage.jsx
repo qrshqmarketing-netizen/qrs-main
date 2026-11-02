@@ -1,3 +1,4 @@
+import TrustLogos from '@/components/sections/TrustLogos';
 import LocExplorer from '@/components/loc/LocExplorer';
 import { cityCards, LocHubHero, placeCards } from '@/components/loc/LocHub';
 import { LocCta, LocFaq, LocReviews, LocStory } from '@/components/loc/LocSections';
@@ -54,6 +55,8 @@ export default async function RegionPage({ region, page }) {
     <main id="top" className="loc">
       <JsonLd data={schema} />
       <LocHubHero crumbs={crumbs} path={path} title={page.hero.heading} outcome={heroOutcome(path)} intro={page.hero.intro} />
+      {/* Google, BBB and Yelp logos linking to our profiles (owner, November 2 2026) */}
+      <TrustLogos />
       <LocExplorer
         label="County guide"
         heading={cityList.length ? `Roofers across ${region.name}, city by city` : `Every place we serve in ${region.name}`}

@@ -1,5 +1,6 @@
 import { LocColumns, LocCta, LocFaq, LocHero, LocReviews, LocRoofTypes, LocStory } from '@/components/loc/LocSections';
 import FacebookFeed from '@/components/loc/FacebookFeed';
+import TrustLogos from '@/components/sections/TrustLogos';
 import LatestArticles from '@/components/sections/LatestArticles';
 import FinalCta from '@/components/sections/FinalCta';
 import OfficeMap from '@/components/sections/OfficeMap';
@@ -71,6 +72,8 @@ export default async function LocationPage({ location, page, index = 0 }) {
         place={city}
         commercial={page.offer === 'commercial'}
       />
+      {/* Google, BBB and Yelp logos linking to our profiles (owner, November 2 2026) */}
+      <TrustLogos />
       <LocColumns place={city} />
       <LocStory
         place={city}
