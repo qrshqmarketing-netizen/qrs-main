@@ -16,3 +16,8 @@
 @media (hover:hover){.fb-card:hover{border-color:var(--gold);transform:translateY(-3px)}}
 @media (min-width:901px){.fb-cards{grid-auto-flow:row;grid-template-columns:repeat(3,1fr);overflow:visible}}
 @media (prefers-reduced-motion:reduce){.fb-card{transition:none}}
+/* The Facebook mark: a small "Facebook" badge on each card's picture, and the icon in the Follow button */
+.fb-card{position:relative}
+.fb-badge{position:absolute;top:12px;left:12px;z-index:1;display:inline-flex;align-items:center;gap:6px;padding:5px 10px 5px 5px;border-radius:999px;background:rgba(255,255,255,.94);color:#1c2b39;font-size:12px;font-weight:700;letter-spacing:.02em;box-shadow:0 2px 8px rgba(3,14,26,.18)}
+.fb-icon{width:20px;height:20px;flex:none;display:inline-block;vertical-align:middle}
+.fb-follow{display:inline-flex;align-items:center;gap:10px}
