@@ -5,6 +5,7 @@ import FinalCta from '@/components/sections/FinalCta';
 import Overview from '@/components/sections/Overview';
 import PartnerLogos from '@/components/sections/PartnerLogos';
 import ProofBar from '@/components/sections/ProofBar';
+import TrustLogos from '@/components/sections/TrustLogos';
 import RoofDiagram from '@/components/sections/RoofDiagram';
 import { diagramFor } from '@/data/roofDiagrams';
 import RoofCheck from '@/components/sections/RoofCheck';
@@ -150,6 +151,8 @@ export default async function ServicePageSvc({ page, crumbs, eyebrow, offer, act
         {...(actions && { actions })}
       />
       <ProofBar strip />
+      {/* Google, BBB and Yelp logos linking to our profiles (owner, November 2 2026) */}
+      <TrustLogos />
       {page.story ? (
         <SvcFeatures
           label={page.story.label}

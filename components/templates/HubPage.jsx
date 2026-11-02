@@ -3,6 +3,7 @@ import LatestArticles from '@/components/sections/LatestArticles';
 import FinalCta from '@/components/sections/FinalCta';
 import Process from '@/components/sections/Process';
 import ProofBar from '@/components/sections/ProofBar';
+import TrustLogos from '@/components/sections/TrustLogos';
 import RoofCheck from '@/components/sections/RoofCheck';
 import SplitFeature from '@/components/sections/SplitFeature';
 import StudioProjects from '@/components/studio/StudioProjects';
@@ -50,6 +51,8 @@ export default async function HubPage({ hub, crumbs, eyebrow, image, imageAlt, c
         {...(actions && { actions })}
       />
       <ProofBar strip />
+      {/* Google, BBB and Yelp logos linking to our profiles (owner, November 2 2026) */}
+      <TrustLogos />
       <SvcIntro heading={hub.overview.heading} paragraphs={hub.overview.paragraphs} />
       {extraGrid && <SvcCardGrid id="services" heading={extraGrid.heading} intro={extraGrid.intro} cards={extraGrid.cards} />}
       <SvcCardGrid id={extraGrid ? 'buildings' : 'services'} heading={hub.cards.heading} intro={hub.cards.intro} cards={cards} tone={extraGrid ? 'cream' : 'white'} />

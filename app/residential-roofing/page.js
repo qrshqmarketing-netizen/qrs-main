@@ -2,6 +2,7 @@ import Faq from '@/components/sections/Faq';
 import LatestArticles from '@/components/sections/LatestArticles';
 import FinalCta from '@/components/sections/FinalCta';
 import ProofBar from '@/components/sections/ProofBar';
+import TrustLogos from '@/components/sections/TrustLogos';
 import RoofCheck from '@/components/sections/RoofCheck';
 import ServiceFinder from '@/components/sections/ServiceFinder';
 import StudioProjects from '@/components/studio/StudioProjects';
@@ -42,6 +43,8 @@ export default async function ResidentialRoofingPage() {
       <JsonLd data={schema} />
       <SvcHero crumbs={CRUMBS} title={page.hero.heading} outcome={heroOutcome(RESIDENTIAL.href)} intro={page.hero.intro} />
       <ProofBar strip />
+      {/* Google, BBB and Yelp logos linking to our profiles (owner, November 2 2026) */}
+      <TrustLogos />
       <SvcIntro heading={page.overview.heading} paragraphs={page.overview.paragraphs} />
       <SvcCardGrid id="roof-types" heading={page.cards.heading} cards={RESIDENTIAL_TYPES.map(typeCard)} />
       <ServiceFinder heading={page.finder.heading} intro={page.finder.intro} rows={page.finder.rows} />

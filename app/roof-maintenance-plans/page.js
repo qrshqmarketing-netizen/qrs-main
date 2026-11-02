@@ -4,6 +4,7 @@ import LatestArticles from '@/components/sections/LatestArticles';
 import FeatureBand from '@/components/sections/FeatureBand';
 import FinalCta from '@/components/sections/FinalCta';
 import ProofBar from '@/components/sections/ProofBar';
+import TrustLogos from '@/components/sections/TrustLogos';
 import { SvcHero, SvcReviews, SvcTrust } from '@/components/svc/SvcSections';
 import PlanScope from '@/components/sections/PlanScope';
 import ProcessSteps from '@/components/sections/ProcessSteps';
@@ -35,6 +36,8 @@ export default async function RoofMaintenancePlansPage() {
       <JsonLd data={schema} />
       <SvcHero crumbs={CRUMBS} title={searchHeading(page.hero.heading)} outcome={heroOutcome(PROGRAMS.plans.href)} intro={page.hero.intro} />
       <ProofBar strip />
+      {/* Google, BBB and Yelp logos linking to our profiles (owner, November 2 2026) */}
+      <TrustLogos />
       <ValueGrid heading={page.whatGoesWrong.heading} items={page.whatGoesWrong.items} tone="wash" pattern />
       <CarePlanPricing />
       <PlanScope />
