@@ -20,6 +20,7 @@ import WebMcpTools from '@/components/widgets/WebMcpTools';
 import ScrollDraw from '@/components/ui/ScrollDraw';
 import ScrollScenes from '@/components/ui/ScrollScenes';
 import CookieNotice from '@/components/widgets/CookieNotice';
+import EstimatePopup from '@/components/widgets/EstimatePopup';
 import InstantQuoteLoader from '@/components/widgets/InstantQuoteLoader';
 import MobileActionBar from '@/components/widgets/MobileActionBar';
 import SeasonPromo from '@/components/widgets/SeasonPromo';
@@ -112,6 +113,8 @@ export default async function RootLayout({ children }) {
           {INSTANT_QUOTE_ENABLED && <InstantQuoteLoader />}
           <CookieNotice />
           <SeasonPromo />
+          {/* Every estimate button opens the /start/ steps in a popup (not on /start/ or the ad landing pages) */}
+          <EstimatePopup />
           <CampaignWelcome />
           {callrailSwap && <CallRailSwap />}
           <PageTrail />

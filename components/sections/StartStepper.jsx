@@ -23,7 +23,9 @@ const isoDay = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2,
 // The request steps on /start/ (rules and wording in data/start.js). Questions that don't apply are left out, answers the visitor's
 // previous page implies are filled in, and the offer card beside it switches to the commercial survey for HOA and commercial
 // properties. Sends to the lead endpoint (lib/endpoints.js: /api/lead/ or the Supabase function) like the old estimate form did, then opens /thank-you/.
-export default function StartStepper() {
+// `modal`: the same steps inside the estimate popup (components/widgets/EstimatePopup.jsx): no offer card beside it, an h2 title (the page has
+// its own h1), no #estimate id (the page's own form keeps it), and the answers start from the page it opens on plus the link's `need`/`property`.
+export default function StartStepper({ modal = false, need: linkNeed = '', property: linkProperty = '', titleId }) {
   const [answers, setAnswers] = useState({});
   const [contact, setContact] = useState({ name: '', phone: '', email: '', zip: '', company: '', foundUs: '', message: '', date: '', time: '', website: '' });
   // Earliest and latest day the date picker offers (tomorrow to six months out). Set in the browser: this page is built ahead of time, so "today" isn't known yet.
@@ -45,10 +47,10 @@ export default function StartStepper() {
   // the page they came from implies
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    const need = params.get('need');
-    const property = params.get('property');
+    const need = modal ? linkNeed : params.get('need');
+    const property = modal ? linkProperty : params.get('property');
     const known = {
-      ...prefillForPath(lastPage()),
+      ...prefillForPath(modal ? window.location.pathname : lastPage()),
       ...(NEEDS.some((n) => n.id === need) && { need }),
       ...(PROPERTIES.some((p) => p.id === property) && { property }),
     };
@@ -165,9 +167,10 @@ export default function StartStepper() {
     </fieldset>
   );
 
+  const Title = modal ? 'h2' : 'h1';
   return (
-    <div className="container check-grid start-grid">
-      <aside className="check-card">
+    <div className={modal ? 'st-modal-body' : 'container check-grid start-grid'}>
+      {!modal && <aside className="check-card">
         <div className="eyebrow">{offer.eyebrow}</div>
         {offer.price && <div className="price">{offer.price}</div>}
         <h2>{offer.heading}</h2>
@@ -182,11 +185,11 @@ export default function StartStepper() {
             </div>
           ))}
         </div>
-      </aside>
+      </aside>}
 
-      <div className="form-card st-card" id="estimate">
-        <div className="eyebrow">Start here</div>
-        <h1>Tell us what you need.</h1>
+      <div className="form-card st-card" id={modal ? undefined : 'estimate'}>
+        <div className="eyebrow">{modal ? offer.eyebrow : 'Start here'}</div>
+        <Title className="st-title" id={titleId}>Tell us what you need.</Title>
 
         <div className="st-progress" role="progressbar" aria-valuemin={1} aria-valuemax={steps.length} aria-valuenow={index + 1} aria-label={`Step ${index + 1} of ${steps.length}`}>
           <span style={{ width: `${((index + 1) / steps.length) * 100}%` }} />
