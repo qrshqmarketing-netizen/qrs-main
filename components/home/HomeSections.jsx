@@ -8,6 +8,9 @@ import { LATEST_PROJECTS } from '@/data/projectPages';
 import { GOOGLE_REVIEWS as REVIEW_LIST } from '@/data/reviews';
 import { LOCATIONS, REGIONS, cityPath, placesIn, regionPath } from '@/data/locations';
 import { BUSINESS, GOOGLE_REVIEWS, OFFICES, PHONE, TEL } from '@/data/site';
+import { listJoin } from '@/lib/lang';
+import { th } from '@/lib/langHome';
+import { ES_HOME_REVIEWS } from '@/data/i18n/esHome';
 import HomeTabs from './HomeTabs';
 import HomeQuotes from './HomeQuotes';
 import CoresMotion from './CoresMotion';
@@ -37,10 +40,13 @@ const IconPhone = () => <Svg><path d="M6.5 3.5h3l1.5 4-2 1.5a11 11 0 0 0 6 6l1.5
 const IconRoof = () => <Svg><path d="M2.5 13 12 5l9.5 8" /><path d="M5 11v8.5h14V11" /><path d="M2.5 13h19" /></Svg>;
 
 const offices = OFFICES.map((o) => o.name.replace(/ Office$/, ''));
-const officeList = `${offices.slice(0, -1).join(', ')} and ${offices[offices.length - 1]}`;
+// Every section takes `lang` ('en' or 'es' for the Spanish home page at /es/); th() looks the English text up in data/i18n/esHome.js and
+// returns it unchanged in English, so the English page is exactly as written here.
+const officeList = (lang = 'en') => listJoin(lang, offices.map((o) => th(lang, o)));
 
 // ---------- Hero ----------
-export function HomeHero({ h1, heading, text, cta, video, poster }) {
+export function HomeHero({ h1, heading, text, cta, video, poster, lang = 'en' }) {
+  const T = (x, v) => th(lang, x, v);
   return (
     <section className="hg-hero" aria-label="Quality Roofing Specialists">
       {/* The header's logo, large (owner, November 2 2026): the gold roof mark, QUALITY in white and "Roofing Specialists" in gold under it,
@@ -49,12 +55,12 @@ export function HomeHero({ h1, heading, text, cta, video, poster }) {
         <QrsMarkSvg className="hg-logo-mark" />
         <span className="hg-logo-text">
           <span className="hg-logo-word">QUALITY</span>
-          <span className="hg-logo-sub">Roofing Specialists</span>
+          <span className="hg-logo-sub">{T('Roofing Specialists')}</span>
         </span>
       </p>
       <div className="container">
         <div className="hg-hero-copy">
-          <span className="hg-pill"><b>FREE</b> Drone roof evaluation, with a written price before any work</span>
+          <span className="hg-pill"><b>{T('FREE')}</b> {T('Drone roof evaluation, with a written price before any work')}</span>
           <h1 className="hg-kicker">{h1}</h1>
           <p className="hg-title">
             <Mark text={heading} animate />
@@ -65,33 +71,33 @@ export function HomeHero({ h1, heading, text, cta, video, poster }) {
               {cta} <span className="arrow">→</span>
             </SiteLink>
             <a className="btn btn-outline" href={TEL}>
-              Call {PHONE}
+              {T('Call {phone}', { phone: PHONE })}
             </a>
           </div>
-          <p className="hg-note">No pressure, no mystery scope and no surprises.</p>
+          <p className="hg-note">{T('No pressure, no mystery scope and no surprises.')}</p>
         </div>
         <div className="hg-stage">
           <div className="hg-frame">
             <div className="hg-frame-bar" aria-hidden="true">
               <span className="hg-dot" /><span className="hg-dot" /><span className="hg-dot" />
-              <span className="hg-url">RoofScan 360 · drone view of a QRS job</span>
+              <span className="hg-url">{T('RoofScan 360 · drone view of a QRS job')}</span>
             </div>
             <div className="hg-media">
-              <Image src={poster} alt="Drone view of a roof replacement by Quality Roofing Specialists" fill sizes="(min-width: 1240px) 1180px, 100vw" quality={70} preload fetchPriority="high" />
+              <Image src={poster} alt={T('Drone view of a roof replacement by Quality Roofing Specialists')} fill sizes="(min-width: 1240px) 1180px, 100vw" quality={70} preload fetchPriority="high" />
               <HeroVideo sources={video} />
             </div>
           </div>
           <div className="hg-float hg-f1">
             <span className="hg-ico" style={{ background: 'var(--plum)' }}><IconStar /></span>
-            <span><strong>{GOOGLE_REVIEWS.count} Google reviews</strong><small>From homeowners and clients</small></span>
+            <span><strong>{T('{count} Google reviews', { count: GOOGLE_REVIEWS.count })}</strong><small>{T('From homeowners and clients')}</small></span>
           </div>
           <div className="hg-float hg-f2">
             <span className="hg-ico" style={{ background: 'var(--hg-blue)' }}><IconDoc /></span>
-            <span><strong>Written price first</strong><small>Before any work starts</small></span>
+            <span><strong>{T('Written price first')}</strong><small>{T('Before any work starts')}</small></span>
           </div>
           <div className="hg-float hg-f3">
             <span className="hg-ico" style={{ background: 'var(--hg-navy)' }}><IconShield /></span>
-            <span><strong>10-year workmanship warranty</strong><small>On installs, call for details</small></span>
+            <span><strong>{T('10-year workmanship warranty')}</strong><small>{T('On installs, call for details')}</small></span>
           </div>
         </div>
       </div>
@@ -103,10 +109,10 @@ export function HomeHero({ h1, heading, text, cta, video, poster }) {
 // The first card's picture says what it claims (owner, October 29 2026): a drone over a home, its beam scanning the roof, a scan line sweeping
 // down the slope and the usual problem spots (chimney flashing, a vent pipe, the lower slope) lighting up in turn, with a blinking REC tag.
 // Drawn in SVG on the card's sky; the motion is CSS (CoresMotion starts it when the cards are on screen).
-function RoofScanArt() {
+function RoofScanArt({ lang = 'en' }) {
   return (
     <>
-      <span className="hg-rec" title="Recording drone footage"><i />REC</span>
+      <span className="hg-rec" title={th(lang, 'Recording drone footage')}><i />REC</span>
       <svg className="hg-scan" viewBox="28 4 244 172" preserveAspectRatio="xMidYMax meet">
         <defs>
           <linearGradient id="hgBeam" x1="0" y1="0" x2="0" y2="1">
@@ -139,41 +145,42 @@ function RoofScanArt() {
   );
 }
 
-export function HomeCores() {
+export function HomeCores({ lang = 'en' }) {
+  const T = (x, v) => th(lang, x, v);
   return (
-    <section className="hg-section hg-bg-sky" style={{ paddingTop: 24 }} aria-label="How QRS works">
+    <section className="hg-section hg-bg-sky" style={{ paddingTop: 24 }} aria-label={T('How QRS works')}>
       <CoresMotion />
       <div className="container hg-cores">
         <article className="hg-core">
-          <div className="hg-core-art hg-art-1" aria-hidden="true"><RoofScanArt /></div>
+          <div className="hg-core-art hg-art-1" aria-hidden="true"><RoofScanArt lang={lang} /></div>
           <div className="hg-core-body">
-            <h3>A roofer looks first</h3>
-            <p>A trained in-house roofer inspects your roof, with drone footage of the areas of concern, before anyone talks price.</p>
+            <h3>{T('A roofer looks first')}</h3>
+            <p>{T('A trained in-house roofer inspects your roof, with drone footage of the areas of concern, before anyone talks price.')}</p>
           </div>
         </article>
         <article className="hg-core">
           <div className="hg-core-art hg-art-2" aria-hidden="true"><span className="hg-pin p1" /><span className="hg-pin p2" /><span className="hg-pin p3" /><span className="hg-ring" /></div>
           <div className="hg-core-body">
-            <h3>Local, family-owned</h3>
-            <p>Offices in {officeList}, and 12 crews from the coast to the Inland Empire. We speak English, Spanish and Tagalog.</p>
+            <h3>{T('Local, family-owned')}</h3>
+            <p>{T('Offices in {offices}, and 12 crews from the coast to the Inland Empire. We speak English, Spanish and Tagalog.', { offices: officeList(lang) })}</p>
           </div>
         </article>
         <article className="hg-core">
           <div className="hg-core-art hg-art-3" aria-hidden="true"><span className="hg-roofs"><i /><i /><i /><i /></span></div>
           <div className="hg-core-body">
-            <h3>Every kind of roof</h3>
-            <p>Shingle, tile and flat roofs on homes, plus HOA, multi-family and commercial buildings.</p>
+            <h3>{T('Every kind of roof')}</h3>
+            <p>{T('Shingle, tile and flat roofs on homes, plus HOA, multi-family and commercial buildings.')}</p>
           </div>
         </article>
         <article className="hg-core">
           <div className="hg-core-art hg-art-4" aria-hidden="true">
-            <span className="hg-chat q">What will it cost?</span>
+            <span className="hg-chat q">{T('What will it cost?')}</span>
             <span className="hg-typing"><i /><i /><i /></span>
-            <span className="hg-chat a"><b>Here’s your written scope and price,</b> before any work.</span>
+            <span className="hg-chat a"><b>{T('Here’s your written scope and price,')}</b> {T('before any work.')}</span>
           </div>
           <div className="hg-core-body">
-            <h3>Everything in writing</h3>
-            <p>Photos of what we found, a written scope and price before any work, and a 10-year workmanship warranty on installs (call for details).</p>
+            <h3>{T('Everything in writing')}</h3>
+            <p>{T('Photos of what we found, a written scope and price before any work, and a 10-year workmanship warranty on installs (call for details).')}</p>
           </div>
         </article>
       </div>
@@ -182,16 +189,17 @@ export function HomeCores() {
 }
 
 // ---------- Statement ----------
-export function HomeStatement() {
+export function HomeStatement({ lang = 'en' }) {
+  const T = (x) => th(lang, x);
   return (
-    <section className="hg-statement" aria-label="Statement">
+    <section className="hg-statement" aria-label={T('Statement')}>
       <span className="hg-orbit hg-o1" aria-hidden="true"><IconDrone /></span>
       <span className="hg-orbit hg-o2" aria-hidden="true"><IconRoof /></span>
       <span className="hg-orbit hg-o3" aria-hidden="true"><IconShield /></span>
       <span className="hg-orbit hg-o4" aria-hidden="true"><IconDoc /></span>
       <div className="container">
         <h2>
-          A roof is only as good as <span className="hg-grad">the parts you never see.</span>
+          {T('A roof is only as good as')} <span className="hg-grad">{T('the parts you never see.')}</span>
         </h2>
       </div>
     </section>
@@ -235,51 +243,55 @@ const RESIDENTIAL = [
   },
 ];
 
-export function HomeResidential() {
+const trTab = (lang, t) => ({ ...t, tab: th(lang, t.tab), title: th(lang, t.title), text: th(lang, t.text), points: t.points.map((p) => th(lang, p)), link: th(lang, t.link), imageAlt: th(lang, t.imageAlt) });
+
+export function HomeResidential({ lang = 'en' }) {
+  const T = (x) => th(lang, x);
   return (
     <section className="hg-section hg-bg-white" id="residential" aria-labelledby="hg-residential">
       <div className="container">
         <div className="hg-head">
-          <h2 id="hg-residential">Every kind of home roof.</h2>
-          <p>Pick your roof. Every job starts the same way: a roofer looks first, and you get the scope and price in writing.</p>
+          <h2 id="hg-residential">{T('Every kind of home roof.')}</h2>
+          <p>{T('Pick your roof. Every job starts the same way: a roofer looks first, and you get the scope and price in writing.')}</p>
         </div>
-        <HomeTabs items={RESIDENTIAL} />
+        <HomeTabs items={RESIDENTIAL.map((t) => trTab(lang, t))} label={T('Roof types')} />
       </div>
     </section>
   );
 }
 
 // ---------- Commercial ----------
-export function HomeCommercial() {
+export function HomeCommercial({ lang = 'en' }) {
+  const T = (x, v) => th(lang, x, v);
   return (
     <section className="hg-section hg-bg-white" id="commercial" style={{ paddingTop: 0 }} aria-labelledby="hg-commercial">
       <div className="container">
         <div className="hg-sys">
           <div className="hg-head">
-            <h2 id="hg-commercial">One roofer for the buildings you run.</h2>
-            <p>Offices, retail, warehouses, churches and shopping centers. A roofer surveys the roof, you get photos and a written scope, and the work is planned around your hours.</p>
+            <h2 id="hg-commercial">{T('One roofer for the buildings you run.')}</h2>
+            <p>{T('Offices, retail, warehouses, churches and shopping centers. A roofer surveys the roof, you get photos and a written scope, and the work is planned around your hours.')}</p>
             <ul className="hg-badges">
-              <li>Roofer-led roof surveys</li>
-              <li>Written scope and price</li>
-              <li>Work planned around your hours</li>
-              <li>TPO and modified bitumen</li>
-              <li>Closeout photos</li>
+              <li>{T('Roofer-led roof surveys')}</li>
+              <li>{T('Written scope and price')}</li>
+              <li>{T('Work planned around your hours')}</li>
+              <li>{T('TPO and modified bitumen')}</li>
+              <li>{T('Closeout photos')}</li>
             </ul>
           </div>
           <div className="hg-stats">
-            <div className="hg-stat"><b>{GOOGLE_REVIEWS.count}</b><span>Google reviews from the people we roof for</span></div>
-            <div className="hg-stat"><b>2020</b><span>Licensed California contractor since, CSLB #{BUSINESS.license}</span></div>
-            <div className="hg-stat"><b>12</b><span>Crews across Southern California</span></div>
-            <div className="hg-stat"><b>4</b><span>Counties: Los Angeles, Orange, Riverside and San Bernardino</span></div>
+            <div className="hg-stat"><b>{GOOGLE_REVIEWS.count}</b><span>{T('Google reviews from the people we roof for')}</span></div>
+            <div className="hg-stat"><b>2020</b><span>{T('Licensed California contractor since, CSLB #{license}', { license: BUSINESS.license })}</span></div>
+            <div className="hg-stat"><b>12</b><span>{T('Crews across Southern California')}</span></div>
+            <div className="hg-stat"><b>4</b><span>{T('Counties: Los Angeles, Orange, Riverside and San Bernardino')}</span></div>
           </div>
           <div className="hg-sys-ctas">
             <SiteLink className="btn btn-gold" href="/commercial-roofing/">
-              Commercial roofing <span className="arrow">→</span>
+              {T('Commercial roofing')} <span className="arrow">→</span>
             </SiteLink>
-            <SiteLink className="btn btn-line" href="/commercial-roofing/property-managers/">For property managers</SiteLink>
+            <SiteLink className="btn btn-line" href="/commercial-roofing/property-managers/">{T('For property managers')}</SiteLink>
           </div>
           <p className="hg-sys-note">
-            See a <SiteLink href="/projects/commercial-flat-roof-replacement-westminster-92683/">commercial flat roof replacement in Westminster</SiteLink>.
+            {T('See a')} <SiteLink href="/projects/commercial-flat-roof-replacement-westminster-92683/">{T('commercial flat roof replacement in Westminster')}</SiteLink>.
           </p>
         </div>
       </div>
@@ -288,43 +300,44 @@ export function HomeCommercial() {
 }
 
 // ---------- Roof repair ----------
-export function HomeRepair() {
+export function HomeRepair({ lang = 'en' }) {
+  const T = (x) => th(lang, x);
   return (
     <section className="hg-section hg-bg-white" id="roof-repair" style={{ paddingTop: 0 }} aria-labelledby="hg-repair">
       <div className="container">
         <div className="hg-row-head">
-          <h2 id="hg-repair">Fix the leak where it starts.</h2>
-          <SiteLink className="hg-arrow" href="/blog/roof-leak-source/">How we find a leak <span aria-hidden="true">→</span></SiteLink>
+          <h2 id="hg-repair">{T('Fix the leak where it starts.')}</h2>
+          <SiteLink className="hg-arrow" href="/blog/roof-leak-source/">{T('How we find a leak')} <span aria-hidden="true">→</span></SiteLink>
         </div>
         <div className="hg-tiles">
           <div className="hg-tile">
             <span className="hg-ico" style={{ background: 'var(--hg-blue)' }}><IconRoof /></span>
             <div>
-              <p><strong>Shingle roof repair:</strong> lifted shingles, failed flashing and cracked pipe boots, fixed with the closest match.</p>
-              <SiteLink className="hg-arrow" href="/residential-roofing/shingle-roofing/repair/">Shingle repair <span aria-hidden="true">→</span></SiteLink>
+              <p><strong>{T('Shingle roof repair:')}</strong> {T('lifted shingles, failed flashing and cracked pipe boots, fixed with the closest match.')}</p>
+              <SiteLink className="hg-arrow" href="/residential-roofing/shingle-roofing/repair/">{T('Shingle repair')} <span aria-hidden="true">→</span></SiteLink>
             </div>
           </div>
           <div className="hg-tile">
             <span className="hg-ico" style={{ background: '#c2703d' }}><IconTile /></span>
             <div>
-              <p><strong>Tile roof repair:</strong> broken and slipped tiles replaced, with the underlayment and flashing around them checked.</p>
-              <SiteLink className="hg-arrow" href="/residential-roofing/tile-roofing/repair/">Tile repair <span aria-hidden="true">→</span></SiteLink>
+              <p><strong>{T('Tile roof repair:')}</strong> {T('broken and slipped tiles replaced, with the underlayment and flashing around them checked.')}</p>
+              <SiteLink className="hg-arrow" href="/residential-roofing/tile-roofing/repair/">{T('Tile repair')} <span aria-hidden="true">→</span></SiteLink>
             </div>
           </div>
           <div className="hg-tile">
             <span className="hg-ico" style={{ background: 'var(--hg-navy)' }}><IconFlat /></span>
             <div>
-              <p><strong>Flat roof repair:</strong> splits, open laps and failed curb flashing, sealed at the source.</p>
-              <SiteLink className="hg-arrow" href="/residential-roofing/flat-roofing/repair/">Flat roof repair <span aria-hidden="true">→</span></SiteLink>
+              <p><strong>{T('Flat roof repair:')}</strong> {T('splits, open laps and failed curb flashing, sealed at the source.')}</p>
+              <SiteLink className="hg-arrow" href="/residential-roofing/flat-roofing/repair/">{T('Flat roof repair')} <span aria-hidden="true">→</span></SiteLink>
             </div>
           </div>
           <div className="hg-tile hg-tile-em">
             <span className="hg-ico" style={{ background: 'rgba(255,255,255,.18)' }}><IconDrop /></span>
             <div>
-              <h3>Water coming in now?</h3>
-              <p>Call us. We can tarp the area to stop more damage, then find the source.</p>
+              <h3>{T('Water coming in now?')}</h3>
+              <p>{T('Call us. We can tarp the area to stop more damage, then find the source.')}</p>
               <a className="hg-phone" href={TEL}>{PHONE}</a>
-              <div><SiteLink className="hg-arrow" href="/roof-repair/emergency/">Emergency roof repair <span aria-hidden="true">→</span></SiteLink></div>
+              <div><SiteLink className="hg-arrow" href="/roof-repair/emergency/">{T('Emergency roof repair')} <span aria-hidden="true">→</span></SiteLink></div>
             </div>
           </div>
         </div>
@@ -334,37 +347,38 @@ export function HomeRepair() {
 }
 
 // ---------- Replacement ----------
-export function HomeReplacement({ children }) {
+export function HomeReplacement({ children, lang = 'en' }) {
+  const T = (x) => th(lang, x);
   return (
     <section className="hg-section hg-bg-white-sky" id="replacement" style={{ paddingTop: 0 }} aria-labelledby="hg-replacement">
       <div className="container">
         <div className="hg-row-head">
-          <h2 id="hg-replacement">Replace it only when it’s worn out.</h2>
-          <SiteLink className="hg-arrow" href="/blog/roof-replacement-guide/">Read the roof replacement guide <span aria-hidden="true">→</span></SiteLink>
+          <h2 id="hg-replacement">{T('Replace it only when it’s worn out.')}</h2>
+          <SiteLink className="hg-arrow" href="/blog/roof-replacement-guide/">{T('Read the roof replacement guide')} <span aria-hidden="true">→</span></SiteLink>
         </div>
         <div className="hg-segs">
           <article className="hg-seg">
             <div className="hg-seg-art hg-sa1" aria-hidden="true"><span className="glass" style={{ left: 30, top: 30, width: 120, height: 80 }} /><IconTile /></div>
             <div className="hg-seg-body">
-              <h3>Sound tiles, worn underlayment</h3>
-              <p>A tile lift and relay keeps your tiles and replaces what’s under them, for less than a new tile roof.</p>
-              <SiteLink className="hg-arrow" href="/residential-roofing/tile-roofing/lift-and-relay/">Keep your tiles <span aria-hidden="true">→</span></SiteLink>
+              <h3>{T('Sound tiles, worn underlayment')}</h3>
+              <p>{T('A tile lift and relay keeps your tiles and replaces what’s under them, for less than a new tile roof.')}</p>
+              <SiteLink className="hg-arrow" href="/residential-roofing/tile-roofing/lift-and-relay/">{T('Keep your tiles')} <span aria-hidden="true">→</span></SiteLink>
             </div>
           </article>
           <article className="hg-seg">
             <div className="hg-seg-art hg-sa2" aria-hidden="true"><span className="glass" style={{ right: 26, top: 34, width: 110, height: 110 }} /><IconRoof /></div>
             <div className="hg-seg-body">
-              <h3>Worn out, roof-wide</h3>
-              <p>A full replacement from the deck up: typically 3 to 5 days on a home, with the permits pulled and the site swept every day.</p>
-              <SiteLink className="hg-arrow" href="/roof-replacement/">Plan a replacement <span aria-hidden="true">→</span></SiteLink>
+              <h3>{T('Worn out, roof-wide')}</h3>
+              <p>{T('A full replacement from the deck up: typically 3 to 5 days on a home, with the permits pulled and the site swept every day.')}</p>
+              <SiteLink className="hg-arrow" href="/roof-replacement/">{T('Plan a replacement')} <span aria-hidden="true">→</span></SiteLink>
             </div>
           </article>
           <article className="hg-seg">
             <div className="hg-seg-art hg-sa3" aria-hidden="true"><span className="glass" style={{ left: 40, bottom: 26, width: 150, height: 70 }} /><IconDoc /></div>
             <div className="hg-seg-body">
-              <h3>Paying for it</h3>
-              <p>Financing on home roof replacements, and a guide to every way to pay for a new roof.</p>
-              <SiteLink className="hg-arrow" href="/roof-financing/">See financing <span aria-hidden="true">→</span></SiteLink>
+              <h3>{T('Paying for it')}</h3>
+              <p>{T('Financing on home roof replacements, and a guide to every way to pay for a new roof.')}</p>
+              <SiteLink className="hg-arrow" href="/roof-financing/">{T('See financing')} <span aria-hidden="true">→</span></SiteLink>
             </div>
           </article>
         </div>
@@ -382,13 +396,14 @@ const COUNTY_NOTES = {
   'san-bernardino-county': 'The Inland Empire',
 };
 
-export function HomeAreas() {
+export function HomeAreas({ lang = 'en' }) {
+  const T = (x, v) => th(lang, x, v);
   return (
     <section className="hg-section hg-bg-sky-up" id="service-areas" aria-labelledby="hg-areas">
       <div className="container">
         <div className="hg-head">
-          <h2 id="hg-areas">Roofers near you, across four counties.</h2>
-          <p>Offices in {officeList}, and crews from the coast to the Inland Empire.</p>
+          <h2 id="hg-areas">{T('Roofers near you, across four counties.')}</h2>
+          <p>{T('Offices in {offices}, and crews from the coast to the Inland Empire.', { offices: officeList(lang) })}</p>
         </div>
         <div className="hg-plans hg-four">
           {REGIONS.map((r, n) => {
@@ -396,10 +411,10 @@ export function HomeAreas() {
             const others = placesIn(r.slug).slice(0, Math.max(0, 6 - cities.length));
             return (
               <div className={'hg-plan' + (n === 0 ? ' feat' : '')} key={r.slug}>
-                {n === 0 && <span className="hg-tag">Offices</span>}
-                <small className="hg-k2">{COUNTY_NOTES[r.slug]}</small>
-                <h3>{r.name}</h3>
-                <p className="hg-big">{cities.length + placesIn(r.slug).length}<span>places we serve</span></p>
+                {n === 0 && <span className="hg-tag">{T('Offices')}</span>}
+                <small className="hg-k2">{T(COUNTY_NOTES[r.slug])}</small>
+                <h3>{T(r.name)}</h3>
+                <p className="hg-big">{cities.length + placesIn(r.slug).length}<span>{T('places we serve')}</span></p>
                 <ul>
                   {cities.slice(0, 6).map((c) => (
                     <li key={c.slug}><SiteLink href={cityPath(c.slug)}>{c.city}</SiteLink></li>
@@ -409,14 +424,14 @@ export function HomeAreas() {
                   ))}
                 </ul>
                 <SiteLink className={'btn ' + (n === 0 ? 'btn-gold' : 'btn-line')} href={regionPath(r.slug)}>
-                  Roofing in {r.short}
+                  {T('Roofing in {area}', { area: T(r.short) })}
                 </SiteLink>
               </div>
             );
           })}
         </div>
         <p className="hg-fine">
-          Not sure we cover you? <SiteLink className="hg-arrow" href="/service-areas/">Check every service area <span aria-hidden="true">→</span></SiteLink>
+          {T('Not sure we cover you?')} <SiteLink className="hg-arrow" href="/service-areas/">{T('Check every service area')} <span aria-hidden="true">→</span></SiteLink>
         </p>
       </div>
     </section>
@@ -424,14 +439,15 @@ export function HomeAreas() {
 }
 
 // ---------- Projects ----------
-export function HomeProjects() {
+export function HomeProjects({ lang = 'en' }) {
+  const T = (x) => th(lang, x);
   const projects = LATEST_PROJECTS.slice(0, 3);
   return (
     <section className="hg-section hg-bg-sky" id="projects" aria-labelledby="hg-projects">
       <div className="container">
         <div className="hg-row-head">
-          <h2 id="hg-projects">Real roofs, finished.</h2>
-          <SiteLink className="hg-arrow" href="/projects/">See every project <span aria-hidden="true">→</span></SiteLink>
+          <h2 id="hg-projects">{T('Real roofs, finished.')}</h2>
+          <SiteLink className="hg-arrow" href="/projects/">{T('See every project')} <span aria-hidden="true">→</span></SiteLink>
         </div>
         <div className="hg-posts">
           {projects.map((p) => (
@@ -441,9 +457,9 @@ export function HomeProjects() {
               </div>
               <div className="hg-postbody">
                 <small>{p.place}</small>
-                <h3>{p.title}</h3>
-                <p>{p.description}</p>
-                <span className="hg-arrow">View the project <span aria-hidden="true">→</span></span>
+                <h3>{T(p.title)}</h3>
+                <p>{T(p.description)}</p>
+                <span className="hg-arrow">{T('View the project')} <span aria-hidden="true">→</span></span>
               </div>
             </SiteLink>
           ))}
@@ -461,69 +477,74 @@ const QUOTES = [
   { name: 'Cynthia Pina', stat: '12', statText: 'crews across Los Angeles, Orange County and the Inland Empire', statClass: 'hg-qs4' },
 ];
 
-export function HomeReviews() {
-  const slides = QUOTES.map((q) => ({ ...q, text: (REVIEW_LIST.find((r) => r.name === q.name)?.text || '').replace(/\s*\n\s*/g, ' ') })).filter((q) => q.text);
+export function HomeReviews({ lang = 'en' }) {
+  const T = (x, v) => th(lang, x, v);
+  // On the Spanish page the reviews are shown translated (ES_HOME_REVIEWS), labelled "traducida del inglés"
+  const original = (q) => (REVIEW_LIST.find((r) => r.name === q.name)?.text || '').replace(/\s*\n\s*/g, ' ');
+  const slides = QUOTES.map((q) => ({ ...q, stat: T(q.stat), statText: T(q.statText), text: (lang === 'es' && original(q) && ES_HOME_REVIEWS[q.name]) || original(q) })).filter((q) => q.text);
+  const labels = { review: T(lang === 'es' ? 'Google review · translated from English' : 'Google review'), stars: T('5 out of 5 stars'), prev: T('Previous review'), next: T('Next review'), of: T('Review {n} of {total}') };
   return (
     <section className="hg-section hg-bg-sky-up" id="reviews" style={{ paddingTop: 0 }} aria-labelledby="hg-reviews">
       <div className="container">
         <div className="hg-row-head">
-          <h2 id="hg-reviews">Homes across Los Angeles, roofed right.</h2>
-          <SiteLink className="hg-arrow" href="/reviews/">Read more reviews <span aria-hidden="true">→</span></SiteLink>
+          <h2 id="hg-reviews">{T('Homes across Los Angeles, roofed right.')}</h2>
+          <SiteLink className="hg-arrow" href="/reviews/">{T('Read more reviews')} <span aria-hidden="true">→</span></SiteLink>
         </div>
-        <HomeQuotes slides={slides} />
+        <HomeQuotes slides={slides} labels={labels} />
       </div>
     </section>
   );
 }
 
 // ---------- The evaluation and the two offers after it ----------
-export function HomeOffers() {
+export function HomeOffers({ lang = 'en' }) {
+  const T = (x) => th(lang, x);
   return (
     <section className="hg-section hg-bg-sky" id="offers" aria-labelledby="hg-offers">
       <div className="container">
         <div className="hg-head">
-          <h2 id="hg-offers">Know what your roof needs before you spend a dollar.</h2>
-          <p>Start with a free roof evaluation. A roofer tells you what’s worth fixing, and you decide what to hire us for.</p>
+          <h2 id="hg-offers">{T('Know what your roof needs before you spend a dollar.')}</h2>
+          <p>{T('Start with a free roof evaluation. A roofer tells you what’s worth fixing, and you decide what to hire us for.')}</p>
         </div>
         <div className="hg-plans hg-three">
           <div className="hg-plan feat">
-            <span className="hg-tag">Start here</span>
-            <small className="hg-k2">Roof evaluation</small>
-            <h3>Just look</h3>
-            <p className="hg-big">Free<span>no obligation</span></p>
+            <span className="hg-tag">{T('Start here')}</span>
+            <small className="hg-k2">{T('Roof evaluation')}</small>
+            <h3>{T('Just look')}</h3>
+            <p className="hg-big">{T('Free')}<span>{T('no obligation')}</span></p>
             <ul>
-              <li>A trained in-house roofer on your roof</li>
-              <li>Drone footage of the areas of concern</li>
-              <li>Photos and plain-English findings</li>
-              <li>A written scope and price before any work</li>
+              <li>{T('A trained in-house roofer on your roof')}</li>
+              <li>{T('Drone footage of the areas of concern')}</li>
+              <li>{T('Photos and plain-English findings')}</li>
+              <li>{T('A written scope and price before any work')}</li>
             </ul>
-            <SiteLink className="btn btn-gold" href="#roof-check">Book my free evaluation</SiteLink>
+            <SiteLink className="btn btn-gold" href="#roof-check">{T('Book my free evaluation')}</SiteLink>
           </div>
           <div className="hg-plan">
-            <small className="hg-k2">Roof Check</small>
-            <h3>Seal and tune up</h3>
-            <p className="hg-big">$199<span>one visit</span></p>
+            <small className="hg-k2">{T('Roof Check')}</small>
+            <h3>{T('Seal and tune up')}</h3>
+            <p className="hg-big">$199<span>{T('one visit')}</span></p>
             <ul>
-              <li>Only if you want it, after the evaluation</li>
-              <li>Vents, pipes and flashings sealed</li>
-              <li>Credited toward a replacement if you move forward</li>
-              <li>Pay after the visit, no deposit</li>
+              <li>{T('Only if you want it, after the evaluation')}</li>
+              <li>{T('Vents, pipes and flashings sealed')}</li>
+              <li>{T('Credited toward a replacement if you move forward')}</li>
+              <li>{T('Pay after the visit, no deposit')}</li>
             </ul>
-            <SiteLink className="btn btn-line" href="#roof-check">Ask about a Roof Check</SiteLink>
+            <SiteLink className="btn btn-line" href="#roof-check">{T('Ask about a Roof Check')}</SiteLink>
           </div>
           <div className="hg-plan">
             <small className="hg-k2"><Rich text="*RoofCare Plan*" /></small>
-            <h3>Keep it up</h3>
-            <p className="hg-big">Seasonal<span>visits</span></p>
+            <h3>{T('Keep it up')}</h3>
+            <p className="hg-big">{T('Seasonal')}<span>{T('visits')}</span></p>
             <ul>
-              <li>Scheduled seasonal visits</li>
-              <li>A photo report every time</li>
-              <li>Small problems caught before they leak</li>
+              <li>{T('Scheduled seasonal visits')}</li>
+              <li>{T('A photo report every time')}</li>
+              <li>{T('Small problems caught before they leak')}</li>
             </ul>
-            <SiteLink className="btn btn-line" href="/roof-maintenance-plans/">See maintenance plans</SiteLink>
+            <SiteLink className="btn btn-line" href="/roof-maintenance-plans/">{T('See maintenance plans')}</SiteLink>
           </div>
         </div>
-        <p className="hg-fine">Repairs and replacements are priced in writing after the evaluation. Financing is available on home roof replacements.</p>
+        <p className="hg-fine">{T('Repairs and replacements are priced in writing after the evaluation. Financing is available on home roof replacements.')}</p>
       </div>
     </section>
   );
@@ -536,13 +557,14 @@ const GUIDES = [
   { href: '/blog/tile-roof-guide-southern-california/', label: 'Tile roofs', title: 'Tile Roof Guide for Southern California Homeowners', text: 'Why the underlayment wears out before the tiles, and what to do about it.', image: '/images/blog/tile-roof-guide-southern-california.webp' },
 ];
 
-export function HomeGuides() {
+export function HomeGuides({ lang = 'en' }) {
+  const T = (x) => th(lang, x);
   return (
     <section className="hg-section hg-bg-sky-peri" aria-labelledby="hg-guides">
       <div className="container">
         <div className="hg-row-head">
-          <h2 id="hg-guides">Learn how Southern California roofs work.</h2>
-          <SiteLink className="hg-arrow" href="/blog/">See all guides <span aria-hidden="true">→</span></SiteLink>
+          <h2 id="hg-guides">{T('Learn how Southern California roofs work.')}</h2>
+          <SiteLink className="hg-arrow" href="/blog/">{T('See all guides')} <span aria-hidden="true">→</span></SiteLink>
         </div>
         <div className="hg-posts">
           {GUIDES.map((g) => (
@@ -551,10 +573,10 @@ export function HomeGuides() {
                 <Image src={g.image} alt="" fill sizes="(min-width: 901px) 40vw, 100vw" quality={60} loading="lazy" />
               </div>
               <div className="hg-postbody">
-                <small>{g.label}</small>
-                <h3>{g.title}</h3>
-                <p>{g.text}</p>
-                <span className="hg-arrow">Read more <span aria-hidden="true">→</span></span>
+                <small>{T(g.label)}{lang !== 'en' && <> · {T('Articles in English')}</>}</small>
+                <h3>{T(g.title)}</h3>
+                <p>{T(g.text)}</p>
+                <span className="hg-arrow">{T('Read more')} <span aria-hidden="true">→</span></span>
               </div>
             </SiteLink>
           ))}
@@ -565,13 +587,14 @@ export function HomeGuides() {
 }
 
 // ---------- FAQ ----------
-export function HomeFaq({ faqs }) {
+export function HomeFaq({ faqs, lang = 'en' }) {
+  const T = (x, v) => th(lang, x, v);
   return (
     <section className="hg-section hg-bg-peri-cream" id="faq" aria-labelledby="hg-faq">
       <div className="container">
         <div className="hg-head">
           <h2 id="hg-faq">
-            Questions, answered. <span className="hg-grad">Still curious? Call {PHONE}.</span>
+            {T('Questions, answered.')} <span className="hg-grad">{T('Still curious? Call {phone}.', { phone: PHONE })}</span>
           </h2>
         </div>
         <div className="hg-faq">

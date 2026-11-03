@@ -11,11 +11,12 @@ import { ROOF_FINANCING } from '@/data/services/programs';
 import { getHomeFaqs } from '@/lib/contentStore';
 import { openGraphBase, twitterBase } from '@/lib/seo';
 import { pageJsonLd } from '@/lib/structuredData';
+import { HOME_LANGUAGES } from '@/lib/lang';
 
 export const metadata = {
   title: HOME_TITLE,
   description: HOME_DESCRIPTION,
-  alternates: { canonical: '/' },
+  alternates: { canonical: '/', languages: HOME_LANGUAGES }, // the Spanish home page is /es/ (app/es/page.js)
   openGraph: { ...openGraphBase, url: '/', title: HOME_TITLE, description: HOME_DESCRIPTION },
   twitter: { ...twitterBase, title: HOME_TITLE, description: HOME_DESCRIPTION },
 };

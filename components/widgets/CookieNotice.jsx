@@ -1,5 +1,6 @@
 'use client';
 
+import useLang from '@/components/ui/useLang';
 import { useEffect, useRef, useState } from 'react';
 import { PRIVACY_POLICY_URL } from '@/data/site';
 import { COOKIE_SETTINGS_EVENT, currentConsent, saveConsent, storedConsent } from '@/lib/consent';
@@ -20,6 +21,7 @@ const KINDS = [
 ];
 
 export default function CookieNotice() {
+  const { tr } = useLang(); // Spanish on /es/ (data/i18n/es.js)
   const [open, setOpen] = useState(false);
   const [settings, setSettings] = useState(false);
   const [choice, setChoice] = useState({ analytics: true, clarity: true });
@@ -82,16 +84,16 @@ export default function CookieNotice() {
   };
 
   return (
-    <div className={'cookie' + (settings ? ' is-settings' : '')} role="region" aria-label="Cookie settings" ref={bar}>
+    <div className={'cookie' + (settings ? ' is-settings' : '')} role="region" aria-label={tr('Cookie settings')} ref={bar}>
       <div className="cookie-inner">
         {settings && (
           <fieldset className="cookie-kinds" ref={panel}>
-            <legend>Choose which cookies we can use</legend>
+            <legend>{tr('Choose which cookies we can use')}</legend>
             {KINDS.map((k) => (
               <label key={k.key} className="cookie-kind">
                 <span className="cookie-kind-copy">
-                  <b>{k.title}</b>
-                  <span>{k.text}</span>
+                  <b>{tr(k.title)}</b>
+                  <span>{tr(k.text)}</span>
                 </span>
                 <input
                   type="checkbox"
@@ -107,29 +109,29 @@ export default function CookieNotice() {
         )}
         <div className="cookie-bar">
           <p>
-            We use cookies to keep the site working and, with your OK, to understand how it’s used.
+            {tr('We use cookies to keep the site working and, with your OK, to understand how it’s used.')}
             {PRIVACY_POLICY_URL && (
               <>
                 {' '}
-                <a href={PRIVACY_POLICY_URL}>Privacy policy</a>
+                <a href={PRIVACY_POLICY_URL}>{tr('Privacy policy')}</a>
               </>
             )}
           </p>
           <div className="cookie-actions">
             {settings ? (
               <button className="cookie-btn cookie-line" type="button" onClick={() => save(choice)}>
-                Save my choices
+                {tr('Save my choices')}
               </button>
             ) : (
               <button className="cookie-btn cookie-text" type="button" aria-expanded="false" onClick={() => setSettings(true)}>
-                Settings
+                {tr('Settings')}
               </button>
             )}
             <button className="cookie-btn cookie-line" type="button" onClick={() => save({ analytics: false, clarity: false })}>
-              Necessary only
+              {tr('Necessary only')}
             </button>
             <button className="cookie-btn cookie-ok" type="button" onClick={() => save({ analytics: true, clarity: true })}>
-              Accept all
+              {tr('Accept all')}
             </button>
           </div>
         </div>

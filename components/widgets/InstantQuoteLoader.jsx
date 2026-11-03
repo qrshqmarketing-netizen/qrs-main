@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
 import { usePathname } from 'next/navigation';
 import { isLandingPath } from '@/lib/landing';
+import { langOf } from '@/lib/lang';
 
 // The Instant Quote (the side tab, the drawer and the roof-measuring and price code, about 20 KB compressed) isn't part of
 // every page's first load. It's fetched once the page has settled and the browser is idle (not on data-saver connections),
@@ -11,7 +12,9 @@ import { isLandingPath } from '@/lib/landing';
 const InstantQuote = dynamic(() => import('./InstantQuote'), { ssr: false });
 
 export default function InstantQuoteLoader() {
-  const landing = isLandingPath(usePathname()); // not on the ad landing pages (lib/landing.js)
+  const pathname = usePathname();
+  // not on the ad landing pages (lib/landing.js), nor on the Spanish home page (the quote tool is English)
+  const landing = isLandingPath(pathname) || langOf(pathname) === 'es';
   const [load, setLoad] = useState(false);
   const [opener, setOpener] = useState(null); // the button tapped before the drawer was ready
   const ready = useRef(false);

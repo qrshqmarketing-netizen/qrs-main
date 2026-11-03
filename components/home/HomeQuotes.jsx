@@ -4,7 +4,9 @@ import { useEffect, useRef, useState } from 'react';
 
 // Google reviews as a slider, each quote beside a number card (HomeGradient.css, "Reviews"). It moves on by itself every 8 seconds while on screen,
 // pauses on hover and keyboard focus, and stays put for reduced motion. Every quote is in the HTML; the arrows and dots move between them.
-export default function HomeQuotes({ slides }) {
+// `labels`: the words around the reviews (Spanish on /es/); `quoteLang`: the reviews' own language when it differs from the page's
+const LABELS = { review: 'Google review', stars: '5 out of 5 stars', prev: 'Previous review', next: 'Next review', of: 'Review {n} of {total}' };
+export default function HomeQuotes({ slides, labels = LABELS, quoteLang }) {
   const [i, setI] = useState(0);
   const [hold, setHold] = useState(false);
   const [seen, setSeen] = useState(false);
@@ -39,14 +41,14 @@ export default function HomeQuotes({ slides }) {
             <div className="hg-q-slide" key={s.name} aria-hidden={n !== i} inert={n !== i ? true : undefined}>
               <figure className="hg-q-main">
                 <div>
-                  <div className="hg-stars" aria-label="5 out of 5 stars">★★★★★</div>
-                  <blockquote>“{s.text}”</blockquote>
+                  <div className="hg-stars" aria-label={labels.stars}>★★★★★</div>
+                  <blockquote lang={quoteLang}>“{s.text}”</blockquote>
                 </div>
                 <figcaption className="hg-who">
                   <span className="hg-avatar" aria-hidden="true">{s.name.split(' ').map((w) => w[0]).slice(0, 2).join('')}</span>
                   <span>
                     <b>{s.name}</b>
-                    <small>Google review</small>
+                    <small>{labels.review}</small>
                   </span>
                 </figcaption>
               </figure>
@@ -60,15 +62,15 @@ export default function HomeQuotes({ slides }) {
       </div>
       <div className="hg-q-dots">
         <span className="hg-q-ctrl">
-          <button type="button" className="hg-q-btn" aria-label="Previous review" onClick={() => go(i - 1)}>←</button>
+          <button type="button" className="hg-q-btn" aria-label={labels.prev} onClick={() => go(i - 1)}>←</button>
         </span>
         {slides.map((s, n) => (
-          <button key={s.name} type="button" aria-label={`Review ${n + 1} of ${slides.length}`} aria-current={n === i} onClick={() => go(n)}>
+          <button key={s.name} type="button" aria-label={labels.of.replace('{n}', n + 1).replace('{total}', slides.length)} aria-current={n === i} onClick={() => go(n)}>
             <i />
           </button>
         ))}
         <span className="hg-q-ctrl">
-          <button type="button" className="hg-q-btn" aria-label="Next review" onClick={() => go(i + 1)}>→</button>
+          <button type="button" className="hg-q-btn" aria-label={labels.next} onClick={() => go(i + 1)}>→</button>
         </span>
       </div>
     </div>

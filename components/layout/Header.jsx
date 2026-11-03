@@ -8,6 +8,7 @@ import { MoonIcon, PhoneIcon, SunIcon } from '@/components/ui/icons';
 import { HEADER_CTA, HEADER_MENU, HEADER_MORE } from '@/data/navigation';
 import { isFocusPath, isLandingPath } from '@/lib/landing';
 import { PHONE, TEL } from '@/data/site';
+import { LANGS, isHomePath, langOf, t } from '@/lib/lang';
 import './Header.css';
 
 // The header: one solid bar split by hairlines: the logo, the main menu (HEADER_MENU in data/navigation.js: Services, Service Areas,
@@ -22,6 +23,10 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const [theme, setTheme] = useState('light');
   const pathname = usePathname();
+  // Spanish home page (/es/): the menus in Spanish (data/i18n/es.js); the language switcher shows on the two home pages only (owner, November 3 2026)
+  const lang = langOf(pathname || '/');
+  const T = (x, v) => t(lang, x, v);
+  const showLang = isHomePath(pathname || '');
   const requestPage = isFocusPath(pathname); // /start/ and the ad landing pages: logo, theme switch and phone only (lib/landing.js)
   const landing = isLandingPath(pathname);
   const button = useRef(null);
@@ -99,7 +104,7 @@ export default function Header() {
     return (
       <SiteLink className={className + (on ? ' on' : '')} href={l.href} prefetch={false} aria-current={on ? 'page' : undefined} onClick={close}>
         {l.urgent && <i className="hd-urgent" aria-hidden="true" />}
-        {l.label}
+        {T(l.label)}
       </SiteLink>
     );
   };
@@ -107,6 +112,7 @@ export default function Header() {
   return (
     <>
       <header
+        lang={lang === 'es' ? LANGS.es.code : undefined}
         data-scrolled={scrolled ? '' : undefined}
         className={'site-header' + (open ? ' is-open' : '') + (requestPage ? ' is-start' : '') + (landing ? ' is-lp' : '')}
       >
@@ -116,7 +122,7 @@ export default function Header() {
           <BrandLogo variant="adaptive" preload tagline />
         </div>
         {!requestPage && (
-          <nav className="hd-links" aria-label="Main" ref={bar}>
+          <nav className="hd-links" aria-label={T('Main')} ref={bar}>
             {HEADER_MENU.map((item) =>
               item.groups ? (
                 <div className={'hd-dd' + (drop === item.label ? ' is-open' : '')} key={item.label} onMouseEnter={() => hoverOpen(item.label)} onMouseLeave={hoverClose}>
@@ -128,13 +134,13 @@ export default function Header() {
                     aria-controls={`hdDrop-${item.label.replace(/\W+/g, '')}`}
                     onClick={() => setDrop((d) => (d === item.label ? null : item.label))}
                   >
-                    {item.label}
+                    {T(item.label)}
                     <svg className="hd-chev" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg>
                   </button>
                   <div className={'hd-drop' + (item.mega ? ' hd-mega' : '')} id={`hdDrop-${item.label.replace(/\W+/g, '')}`} inert={drop !== item.label}>
                     {item.groups.map((g) => (
                       <div className="hd-drop-col" key={g.title}>
-                        <p className="hd-drop-title">{g.title}</p>
+                        <p className="hd-drop-title">{T(g.title)}</p>
                         <ul>
                           {g.links.map((l) => (
                             <li key={l.href + l.label}>{link(l, 'hd-drop-link')}</li>
@@ -151,21 +157,34 @@ export default function Header() {
           </nav>
         )}
         <div className="hd-actions">
-          <a className="hd-cell hd-phone" href={TEL} aria-label={`Call ${PHONE}`}>
+          <a className="hd-cell hd-phone" href={TEL} aria-label={T('Call {phone}', { phone: PHONE })}>
             <PhoneIcon />
             <span>{PHONE}</span>
           </a>
           {!requestPage && (
             <SiteLink className="hd-cell hd-cta" href={HEADER_CTA.href} onClick={close}>
-              {HEADER_CTA.label}
+              {T(HEADER_CTA.label)}
+            </SiteLink>
+          )}
+          {showLang && (
+            <SiteLink
+              className="hd-cell hd-lang"
+              href={LANGS[lang === 'es' ? 'en' : 'es'].home}
+              hrefLang={LANGS[lang === 'es' ? 'en' : 'es'].code}
+              lang={LANGS[lang === 'es' ? 'en' : 'es'].code}
+              aria-label={lang === 'es' ? 'View in English' : 'Ver en español'}
+              title={lang === 'es' ? 'View in English' : 'Ver en español'}
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" strokeWidth="1.6" /><path d="M3.5 12h17M12 3.5c2.4 2.4 3.6 5.2 3.6 8.5s-1.2 6.1-3.6 8.5M12 3.5C9.6 5.9 8.4 8.7 8.4 12s1.2 6.1 3.6 8.5" fill="none" stroke="currentColor" strokeWidth="1.6" /></svg>
+              <span>{LANGS[lang === 'es' ? 'en' : 'es'].short}</span>
             </SiteLink>
           )}
           <button
             className="hd-cell hd-theme"
             type="button"
-            aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+            aria-label={T(`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`)}
             aria-pressed={theme === 'dark'}
-            title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+            title={T(`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`)}
             onClick={toggleTheme}
           >
             {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
@@ -175,7 +194,7 @@ export default function Header() {
               className="hd-cell hd-menu"
               type="button"
               ref={button}
-              aria-label={open ? 'Close menu' : 'Open menu'}
+              aria-label={T(open ? 'Close menu' : 'Open menu')}
               aria-expanded={open}
               aria-controls="hdPanel"
               onClick={() => setOpen((o) => !o)}
@@ -188,16 +207,16 @@ export default function Header() {
       </div>
       {!requestPage && (
         <div className="hd-panel" id="hdPanel" inert={!open} data-lenis-prevent="">
-          <nav aria-label="Menu">
+          <nav aria-label={T('Menu')}>
             <ul className="hd-primary">
               {HEADER_MENU.map((item, i) => (
                 <li key={item.label} style={{ '--n': i }}>
                   {item.groups ? (
                     <details className="hd-acc">
-                      <summary className="hd-row hd-row-big">{item.label}</summary>
+                      <summary className="hd-row hd-row-big">{T(item.label)}</summary>
                       {item.groups.map((g) => (
                         <div className="hd-acc-group" key={g.title}>
-                          <p className="hd-drop-title">{g.title}</p>
+                          <p className="hd-drop-title">{T(g.title)}</p>
                           <ul>
                             {g.links.map((l) => (
                               <li key={l.href + l.label}>{link(l, 'hd-acc-link')}</li>
@@ -221,7 +240,7 @@ export default function Header() {
           <div className="hd-panel-foot">
             <a href={TEL}>{PHONE}</a>
             <SiteLink className="btn btn-gold" href={HEADER_CTA.href} onClick={close}>
-              {HEADER_CTA.label} <span className="arrow">→</span>
+              {T(HEADER_CTA.label)} <span className="arrow">→</span>
             </SiteLink>
           </div>
         </div>

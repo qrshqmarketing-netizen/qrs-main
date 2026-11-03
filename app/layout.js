@@ -33,6 +33,7 @@ import { PAGE_ENTRANCES, SCROLL_REVEALS, STUDIO_THEME } from '@/data/promo';
 import { BUSINESS, CLARITY_ID, GA_ID, GOOGLE_ADS_ID, HOME_DESCRIPTION, SITE_URL, SITE_VERIFICATION } from '@/data/site';
 import { ALLOW_INDEXING, LOAD_TRACKING, openGraphBase, twitterBase } from '@/lib/seo';
 import ThemeScript from '@/components/ui/ThemeScript';
+import HtmlLang from '@/components/ui/HtmlLang';
 import { callrailSwapScript } from '@/lib/callrail';
 
 // Google Fonts, downloaded at build time and served from this site. Both are variable fonts, so no `weight` list: one file covers every
@@ -119,6 +120,7 @@ export default async function RootLayout({ children }) {
           {callrailSwap && <CallRailSwap />}
           <PageTrail />
           <ScrollToTop />
+          <HtmlLang />
           <WebMcpTools />
           <ScrollDraw />
           <ScrollScenes />

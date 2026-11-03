@@ -7,7 +7,7 @@ import SiteLink from '@/components/ui/SiteLink';
 
 // The Residential section's roof types as tabs over one panel (HomeGradient.css, "Residential"). Every panel is in the HTML; the ones not
 // chosen are `hidden`, so all the copy and links stay crawlable and work without JavaScript (the first one shows).
-export default function HomeTabs({ items }) {
+export default function HomeTabs({ items, label = 'Roof types' }) {
   const [active, setActive] = useState(0);
   const onKey = (e) => {
     const step = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
@@ -18,7 +18,7 @@ export default function HomeTabs({ items }) {
   };
   return (
     <>
-      <div className="hg-tabs" role="tablist" aria-label="Roof types" onKeyDown={onKey}>
+      <div className="hg-tabs" role="tablist" aria-label={label} onKeyDown={onKey}>
         {items.map((t, i) => (
           <button
             key={t.tab}

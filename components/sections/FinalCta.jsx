@@ -4,6 +4,7 @@ import { PhoneIcon } from '@/components/ui/icons';
 import { PHONE, TEL } from '@/data/site';
 import './FinalCta.css';
 import Mark from '@/components/ui/Mark';
+import { t } from '@/lib/lang';
 
 const TRUST = ['CSLB licensed, bonded & insured', '10-year workmanship warranty (call for details)', 'Google customer reviews'];
 
@@ -16,31 +17,33 @@ export default function FinalCta({
   text = 'At QRS, there’s no pressure, no mystery scope and no surprises — ever. Start with a roofer-led roof check today!',
   cta = { label: 'Get Pro Advice', href: '#roof-check' },
   trust = true,
+  lang = 'en', // 'es' on the Spanish home page: the default words in Spanish, and no Instant Quote button (the quote tool is English)
 }) {
+  const T = (x) => t(lang, x);
   const isCall = cta.href.startsWith('tel:');
   return (
     <section className="final">
       <div className="container final-inner">
-        <h2><Mark text={heading} /></h2>
-        <p>{text}</p>
+        <h2><Mark text={T(heading)} /></h2>
+        <p>{T(text)}</p>
         <div className="final-actions">
           <SiteLink className={`btn btn-${cta.style || 'gold'}`} href={cta.href}>
             {isCall && <PhoneIcon />}
-            {cta.label}
+            {T(cta.label)}
             {!isCall && <span className="arrow">→</span>}
           </SiteLink>
           {!isCall && (
             <a className="btn btn-light" href={TEL}>
               <PhoneIcon />
-              Call {PHONE}
+              {T('Call {phone}').replace('{phone}', PHONE)}
             </a>
           )}
-          {!isCall && <QuoteTrigger />}
+          {!isCall && lang === 'en' && <QuoteTrigger />}
         </div>
         {trust && (
           <ul className="final-trust">
-            {TRUST.map((t) => (
-              <li key={t}>{t}</li>
+            {TRUST.map((item) => (
+              <li key={item}>{T(item)}</li>
             ))}
           </ul>
         )}

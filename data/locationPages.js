@@ -328,6 +328,7 @@ export const LOCATION_PAGES = {
       { q: 'Can you work on a roof without shutting down the building?', a: 'In most cases, yes. Vernon’s plants and warehouses often run continuously, so we plan the work, staging and access around keeping the building open.' },
       { q: 'Do you handle food-processing and manufacturing facilities?', a: 'Yes. We work with the rooftop equipment, exhaust systems and drainage details common on manufacturing and food-processing buildings, and document everything with photos.' },
       { q: 'Do you work on homes near Vernon?', a: 'Yes. From our Vernon office we repair and replace roofs on homes and apartment buildings in Huntington Park, Maywood, Bell, Bell Gardens, South Gate, Commerce, Boyle Heights and Downtown Los Angeles, starting with a [free roof evaluation](#roof-check). Our team speaks English and Spanish.' },
+      { q: 'Do you pull the roofing permit in Vernon and Huntington Park?', a: 'Yes. Vernon and Huntington Park each have their own building department, and we pull the permit and handle the inspections. Our [roofing permit guide](/blog/roofing-permits-los-angeles/) shows what each one asks for.' },
       { q: 'Where is your Vernon office?', a: 'Our Vernon office is at 2850 E 46th St, Unit B, Vernon, CA 90058. Call (213) 263-5976 to book a roof survey or ask a question.' },
     ],
     nearby: ['los-angeles'],
@@ -362,6 +363,7 @@ export const LOCATION_PAGES = {
     ],
     faqs: [
       { q: 'Where is your West Hollywood office?', a: 'At 1444 N Poinsettia Pl, Unit 308, Los Angeles, CA 90046. It answers at (310) 340-1643.' },
+      { q: 'Do you pull the roofing permit in West Hollywood?', a: 'Yes. West Hollywood has its own Building & Safety division, separate from the City of Los Angeles, and we pull the permit and schedule the inspections. Our [roofing permit guide](/blog/roofing-permits-los-angeles/) explains how it differs from LADBS and Beverly Hills.' },
       { q: 'Do you work in Hancock Park and Mid-Wilshire?', a: 'Yes. Our West Hollywood office is close by, and [Mid-Wilshire roofing](/service-areas/la-county/mid-wilshire/) has its own page, with the clay tile and flat roof work we did on a building there.' },
       { q: 'Do you roof condos and apartment buildings?', a: 'Yes. We handle [HOA and multi-family roofing](/residential-roofing/hoa-multi-family/) as well as single-family homes, and for larger buildings we give the property manager or board a clear written scope.' },
       { q: 'Can you repair a flat roof that holds water?', a: 'In many cases, yes. We look at slope, drains and flashings to find why water is standing, then give you a written scope for a [flat roof repair](/residential-roofing/flat-roofing/repair/) or replacement.' },

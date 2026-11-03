@@ -23,6 +23,178 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // Local permit guide (owner, November 3 2026, from the map/content plan): the five building departments around our West Hollywood and Vernon
+  // offices. Every rule is taken from the department's own published page or form (LADBS express permit bulletin P/GI 2020-003, rev. 04-20-2022;
+  // Beverly Hills' Roofing page and roofing permit application; Huntington Park's Re-Roof Approval Application, January 2026; Vernon's "When Do I
+  // Need a Permit?" and Building Division pages; West Hollywood's Building & Safety document list). No fees, turnaround times or code editions:
+  // those change, and each section sends readers to the department. Picture: the owner's image (November 3 2026).
+  {
+    slug: 'roofing-permits-los-angeles',
+    title: 'Roofing Permits in Los Angeles: LADBS, West Hollywood, Beverly Hills, Vernon and Huntington Park',
+    keyword: 'roofing permit',
+    topics: ['replacement', 'commercial', 'tile'],
+    metaTitle: 'Roofing Permits in LA: LADBS, WeHo, Beverly Hills & More',
+    metaDescription:
+      'Which building department issues your roofing permit in Los Angeles, West Hollywood, Beverly Hills, Vernon or Huntington Park, and what each one asks for.',
+    datePublished: '2026-11-03',
+    dateModified: '2026-11-03',
+    excerpt:
+      'Five cities around our West Hollywood and Vernon offices, five building departments. Here is who issues your roofing permit, what each one asks for, and what to check before a roofer starts.',
+    image: '/images/blog/roofing-permits-los-angeles.webp',
+    imageAlt: 'Roofing permits in Los Angeles: a roofing permit on a desk beside roof plans, with the Los Angeles skyline behind',
+    intro: [
+      'A roofing permit in Los Angeles depends on which side of a city line your roof sits. The City of Los Angeles, West Hollywood, Beverly Hills, Vernon and Huntington Park each run their own building department, with their own forms and their own rules on fire ratings and cool roofs, even though some of them are only a few blocks apart.',
+      'We pull the permits on our jobs, so we deal with these departments all the time. This guide sums up what each one publishes about reroofing, with a link to the source, so you know what to expect and what to ask any roofer before work starts.',
+    ],
+    sections: [
+      {
+        heading: 'Key Takeaways',
+        blocks: [
+          {
+            list: [
+              '**A reroof needs a permit.** Every department in this guide treats replacing a roof as permitted work. The contractor normally pulls it.',
+              '**Your address decides the department.** A home in Hollywood or Mid-Wilshire goes to LADBS; one a few blocks west may be in West Hollywood or Beverly Hills.',
+              '**Fire rating and cool roofs vary.** Beverly Hills asks for Class A roofs; the City of LA asks for Class A in Very High Fire Hazard Severity Zones and a rated cool roof on most larger home reroofs.',
+              '**A tile reset is treated differently in LA.** LADBS lists lifting tiles, new underlayment and resetting the same tiles as an express permit with no cool roof requirement.',
+              '**Ask to see the permit.** Before the tear-off, the permit should be issued and the inspections planned.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Which Building Department Issues Your Roofing Permit',
+        blocks: [
+          'Los Angeles is a patchwork. Hollywood, Mid-Wilshire, Koreatown, Boyle Heights and most of what people call “LA” are inside the City of Los Angeles, so the roofing permit comes from the Los Angeles Department of Building and Safety (LADBS). West Hollywood, Beverly Hills, Vernon and Huntington Park are separate cities with their own departments, and unincorporated areas such as East Los Angeles are handled by LA County Building and Safety.',
+          {
+            table: {
+              head: ['Where the roof is', 'Who issues the roofing permit', 'Where to start'],
+              rows: [
+                ['City of Los Angeles (Hollywood, Mid-Wilshire, Koreatown, Boyle Heights, Downtown)', 'Los Angeles Department of Building and Safety (LADBS)', '[ladbs.org](https://www.ladbs.org), or 311 inside the city'],
+                ['West Hollywood', 'City of West Hollywood Building & Safety', '[weho.org](https://www.weho.org/city-government/download-documents/-folder-222)'],
+                ['Beverly Hills', 'City of Beverly Hills Community Development, Building & Safety', '[Roofing permit page](https://www.beverlyhills.org/752/Roofing)'],
+                ['Vernon', 'City of Vernon Building Division', '[When do I need a permit?](https://www.cityofvernonca.gov/government/building-division/when-do-i-need-a-permit)'],
+                ['Huntington Park', 'City of Huntington Park Community Development (Planning, then Building and Safety)', '[Re-roof approval application](https://hpca.gov/DocumentCenter/View/12149/Re-Roof-Application_Jan2026)'],
+              ],
+            },
+          },
+          'If you’re not sure which city you’re in, your property tax bill or the city named on the LA County assessor’s record settles it. A mailing address that says “Los Angeles” doesn’t always mean the City of Los Angeles.',
+        ],
+      },
+      {
+        heading: 'City of Los Angeles (LADBS)',
+        blocks: [
+          'LADBS publishes a list of work it issues as an express permit, with no plan check, in its [express permits bulletin](https://dbs.lacity.gov/sites/default/files/efs/forms/pc17/ib-p-gi-2020-003-express-permits.pdf) (P/GI 2020-003). Express permits are issued at its Metro, Van Nuys, West Los Angeles, San Pedro and South Los Angeles counters. For roofs, the list includes:',
+          {
+            list: [
+              '**A reroof over solid sheathing** with a Class A or B roof covering weighing less than 6 pounds per square foot, over existing or new sheathing.',
+              '**Class A roofing in a Very High Fire Hazard Severity Zone.** In those zones, Class B is not enough.',
+              '**A cool roof on larger home reroofs.** When more than half of a home’s roof is replaced, the bulletin calls for a cool roof product labeled and certified by the Cool Roof Rating Council (CRRC). Non-residential buildings may need a cool roof under California’s Title 24 energy code.',
+              '**A tile reset.** Removing the existing tiles, applying new underlayment and resetting the same tiles is on the express list, and the bulletin says cool roof compliance is not required for it.',
+            ],
+          },
+          'Work that falls outside those lines, such as a heavier roof covering or changes to the framing, isn’t on the express list and goes through plan review first. The City of Los Angeles also has its own [cool roof ordinance](https://www.adaptationclearinghouse.org/resources/city-of-los-angeles-ordinance-no-183149-cool-roof-for-reduction-of-heat-island-effect.html) for homes, which is why a compliant color matters when you pick shingles; our [cool roof guide](/blog/cool-roof-southern-california/) explains how the ratings work.',
+          { pov: 'For a Spanish-style home in [Mid-Wilshire](/service-areas/la-county/mid-wilshire/) or Hancock Park whose tiles are still sound, the tile reset line matters: a [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/) keeps the clay tile you have, and LADBS doesn’t ask for a cool roof on it. We check whether the tiles can go back on before we recommend anything else.' },
+        ],
+      },
+      {
+        heading: 'West Hollywood',
+        blocks: [
+          'West Hollywood runs its own Building & Safety division at City Hall, 8300 Santa Monica Boulevard. Its published [Building & Safety documents](https://www.weho.org/city-government/download-documents/-folder-222) include a “No Plan Check Required” list of the work it permits without plan review, along with the daily inspection schedule and the city’s construction hours calendar.',
+          'Two things come up on almost every West Hollywood job: the condo and apartment buildings mean coordinating access with residents or an HOA, and the construction hours limit when roofers can work. Our [West Hollywood office](/service-areas/la-county/west-hollywood/) is a few minutes away, which helps with both.',
+        ],
+      },
+      {
+        heading: 'Beverly Hills',
+        blocks: [
+          'Beverly Hills spells out its roofing permit on its [Roofing page](https://www.beverlyhills.org/752/Roofing) and its roofing permit application. A permit is required for any roof change, and the city asks for:',
+          {
+            list: [
+              '**A completed roofing permit application.**',
+              '**Photos of the existing roof and building.**',
+              '**The roofing material’s ICC-ES evaluation report number**, and the roof installed as that report describes.',
+              '**A Cool Roof Rating Label** for the new roofing.',
+              '**A Class A, non-wood roof.** The city requires Class A roofing.',
+            ],
+          },
+          'The application also says the existing roof deck is subject to pre-inspection, and any work that encroaches on City property, such as a dumpster or a lift on the street, needs a separate public right-of-way permit with proof of insurance before work starts.',
+          { pov: 'Beverly Hills wants the product’s paperwork before the work, not after. When we write a scope there, we name the exact roofing product, its evaluation report and its cool roof label, so nothing holds up the permit.' },
+        ],
+      },
+      {
+        heading: 'Vernon',
+        blocks: [
+          'Vernon’s Building Division lists reroofing among the work that needs a permit on its [When do I need a permit?](https://www.cityofvernonca.gov/government/building-division/when-do-i-need-a-permit) page, and it asks owners to contact the Building Department before any work. Applications go through the city’s online permit portal, and its [permit submission requirements](https://www.cityofvernonca.gov/government/building-division/requirements-for-permit-submission) call for the application, plans showing the location and extent of the work with the address labeled, and a plan check fee based on the value of the work. Some simpler projects can be issued over the counter.',
+          'Almost every roof in Vernon is a large, low-slope roof on a warehouse, plant or food-processing building, so California’s Title 24 cool roof rules for non-residential roofs usually come into the choice of membrane. Our [Vernon office](/service-areas/la-county/vernon/) is in the city, and we plan the work around keeping the building running.',
+        ],
+      },
+      {
+        heading: 'Huntington Park',
+        blocks: [
+          'Huntington Park handles a reroof as a Re-Roof Approval, processed first by the Planning Division in its Community Development Department at 6550 Miles Avenue. Its [re-roof approval application](https://hpca.gov/DocumentCenter/View/12149/Re-Roof-Application_Jan2026) (January 2026) asks for:',
+          {
+            list: [
+              '**The completed application**, with the property owner’s and the contractor’s details, including the state license number and city business license number.',
+              '**A site plan** showing the area of work.',
+              '**Material specifications**, including the color and type of material, and the product’s CRRC (cool roof) number.',
+              '**Photos of the existing roof.**',
+              '**What kind of reroof it is:** the same material, a new material, a tear-off and reroof, or new plywood and roof, and whether skylights are proposed.',
+            ],
+          },
+          'The form notes that the Building and Safety Division may ask for more, depending on the project. Huntington Park is one of the cities around our [Vernon office](/service-areas/la-county/vernon/), along with Maywood, Bell, Bell Gardens, South Gate and Commerce, each with its own city hall.',
+        ],
+      },
+      {
+        heading: 'What to Check Before Any Roofer Starts',
+        blocks: [
+          'Whichever city you’re in, the same checks protect you:',
+          {
+            list: [
+              '**Who pulls the permit?** It should be the licensed contractor, in their name. Check the license on the [CSLB website](https://www.cslb.ca.gov).',
+              '**Is it issued before the tear-off?** Ask to see the permit number before the old roof comes off.',
+              '**Does the scope name the product?** The roofing, its fire rating and, where the city asks, its cool roof rating should be in the written scope.',
+              '**Who meets the inspector?** The roofer should schedule the inspections and the final, so the permit gets closed out.',
+              '**Is the permit closed at the end?** An open permit can come up when you sell or refinance.',
+            ],
+          },
+          { pov: 'A roofer who offers to skip the permit to save time is handing you the risk. We pull the permits on our jobs, list them in the written scope, and close them out with the final inspection.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Do I need a permit to replace my roof in Los Angeles?',
+        a: 'Yes. Replacing a roof is permitted work in the City of Los Angeles and in West Hollywood, Beverly Hills, Vernon and Huntington Park. In the City of LA, many home reroofs qualify for an LADBS express permit with no plan check.',
+      },
+      {
+        q: 'Who pulls the roofing permit, me or the roofer?',
+        a: 'Normally the licensed contractor, in their name. We pull the permits on our jobs and schedule the inspections.',
+      },
+      {
+        q: 'Does a tile lift and relay need a cool roof in the City of Los Angeles?',
+        a: 'According to the LADBS express permits bulletin, removing the existing tiles, applying new underlayment and resetting the same tiles does not require cool roof compliance. A full replacement with new roofing on more than half of a home’s roof does.',
+      },
+      {
+        q: 'What does Beverly Hills require for a roofing permit?',
+        a: 'A completed application, photos of the existing roof and building, the roofing material’s ICC-ES report number and a Cool Roof Rating Label, with a Class A roof. Work that uses City property needs a separate right-of-way permit.',
+      },
+      {
+        q: 'How do I know which city my roof is in?',
+        a: 'Check your property tax bill or the LA County assessor’s record. A “Los Angeles” mailing address can still be in another city or in an unincorporated area served by LA County Building and Safety.',
+      },
+      {
+        q: 'How long does a roofing permit take?',
+        a: 'It depends on the department and the job. Simple reroofs are often issued over the counter, while work that needs plan review takes longer. Ask the department or your roofer for the current timing on your project.',
+      },
+    ],
+    closing: {
+      heading: 'Let Us Handle the Permit',
+      blocks: [
+        'Start with a [free roof evaluation](#roof-check). A roofer looks at your roof, and the written scope and price you get list the permit, the product and the inspections, whichever city you’re in.',
+        'Part of our [roof replacement guide](/blog/roof-replacement-guide/).',
+      ],
+    },
+    related: ['/roof-replacement/', '/residential-roofing/tile-roofing/lift-and-relay/', '/commercial-roofing/replacement/', '/service-areas/la-county/west-hollywood/', '/service-areas/la-county/vernon/'],
+  },
   // New article (owner, November 3 2026): from the owner's team's draft "How to Decide Whether a Full Tile Roof Reset Is Worth It or You Should
   // Just Replace Damaged Tiles", keyword "tile roof reset" (our *SecondLife* Tile Reset; the article tile-lift-and-relay-vs-new-tile-roof keeps
   // "tile lift and relay"). Changed to the site's rules: every price and cost ratio, every lifespan or "adds 20-30 years" figure, the 15-30% damage

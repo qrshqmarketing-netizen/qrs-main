@@ -1,5 +1,6 @@
 'use client';
 
+import useLang from '@/components/ui/useLang';
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
@@ -25,6 +26,7 @@ let nextId = 0;
 
 // QRS Roof Assistant: floating chat bubble + panel (answers and settings in data/assistant.js)
 export default function RoofAssistant() {
+  const { tr } = useLang(); // the teaser in Spanish on /es/
   const [open, setOpen] = useState(false);
   const [seen, setSeen] = useState(false); // stops the pulse + red dot after the first visit
   const [teaser, setTeaser] = useState(false);
@@ -195,7 +197,7 @@ export default function RoofAssistant() {
   return (
     <div className={'qa' + (open ? ' open' : '') + (seen ? ' seen' : '')} id="qa">
       <div className="qa-teaser" id="qaTeaser" hidden={!teaser} onClick={onTeaserClick}>
-        Hi! Questions about your roof? I can help.
+        {tr('Hi! Questions about your roof? I can help.')}
         <button type="button" id="qaTeaserX" aria-label="Dismiss">&times;</button>
       </div>
 

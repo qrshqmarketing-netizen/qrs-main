@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { PhoneIcon } from '@/components/ui/icons';
 import SiteLink from '@/components/ui/SiteLink';
+import useLang from '@/components/ui/useLang';
 import { PHONE, TEL } from '@/data/site';
 import { START_PATH } from '@/data/start';
 import './MobileActionBar.css';
@@ -15,6 +16,7 @@ const SHOW_AFTER_PX = 480; // once the hero's own buttons have scrolled away
 // after the hero has scrolled by, steps aside while the request form is on screen, and the other floating pieces (chat bubble, review pop-up,
 // cookie notice) lift above it through --bar-h. Not shown from 901px up, where the header carries both actions.
 export default function MobileActionBar() {
+  const { tr } = useLang(); // Spanish on /es/
   const pathname = usePathname();
   const [past, setPast] = useState(false);
   const [formOnScreen, setFormOnScreen] = useState(false);
@@ -51,11 +53,11 @@ export default function MobileActionBar() {
   if (hidden) return null;
   return (
     <div className={'mab' + (show ? ' show' : '')} aria-hidden={!show} inert={!show}>
-      <a className="btn btn-plum" href={TEL} aria-label={`Call ${PHONE}`}>
-        <PhoneIcon /> Call
+      <a className="btn btn-plum" href={TEL} aria-label={tr('Call {phone}', { phone: PHONE })}>
+        <PhoneIcon /> {tr('Call')}
       </a>
       <SiteLink className="btn btn-gold" href="#roof-check">
-        Get Pro Advice <span className="arrow">→</span>
+        {tr('Get Pro Advice')} <span className="arrow">→</span>
       </SiteLink>
     </div>
   );

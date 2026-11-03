@@ -6,6 +6,7 @@ import StartStepper from '@/components/sections/StartStepper';
 import { START_PATH } from '@/data/start';
 import { PHONE, TEL } from '@/data/site';
 import { isFocusPath } from '@/lib/landing';
+import { langOf } from '@/lib/lang';
 import { trackEvent } from '@/lib/tracking';
 import './EstimatePopup.css';
 
@@ -44,7 +45,8 @@ export default function EstimatePopup() {
 
   // Open on any estimate link click (capture phase, so it runs before the link's own scroll or page change)
   useEffect(() => {
-    if (isFocusPath(pathname)) return undefined;
+    // Not on the Spanish home page (/es/): the steps are English there, so its buttons go to the Spanish form at the bottom of the page
+    if (isFocusPath(pathname) || langOf(pathname) === 'es') return undefined;
     const onClick = (e) => {
       if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
       const a = e.target.closest?.('a[href]');

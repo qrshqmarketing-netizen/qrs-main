@@ -286,3 +286,15 @@ body:has(main.hg) .site-header:not(.is-lp):not(.is-start):not([data-scrolled]):n
 @media (min-width:1280px){.site-header .hd-menu,.site-header .hd-panel,.site-header .hd-backdrop{display:none}}
 /* The last dropdowns in the bar open toward the left so they never run off the screen */
 .hd-links > .hd-dd:last-child .hd-drop,.hd-links > .hd-dd:nth-last-child(2) .hd-drop:not(.hd-mega){left:auto;right:0}
+
+/* Language switcher (owner, November 3 2026): a cell beside the theme switch on the two home pages only (/ and /es/), showing the other
+   language's code (ES on the English page, EN on the Spanish one) with a globe; a link, so each language version is its own crawlable page.
+   From 1280px, where the menu links share the bar, it is the code alone and the links' padding is a little tighter so the bar still fits. */
+.hd-lang{gap:7px;padding:0 14px;min-width:0;font:700 12px/1 var(--font-text);letter-spacing:.1em;text-decoration:none;color:inherit}
+.hd-lang svg{width:17px;height:17px;flex:none}
+@media (hover:hover){.hd-lang:hover{background:color-mix(in srgb,currentColor 8%,transparent)}}
+@media (min-width:1280px){
+  .hd-lang{padding:0 13px}
+  .hd-lang svg{display:none}
+  .site-header:has(.hd-lang) .hd-link{font-size:11px} /* the switcher's room: measured with the logo in, English and Spanish */
+}
