@@ -33,7 +33,7 @@ async function handle({ method, params }, context) {
       return {
         protocolVersion: params?.protocolVersion || PROTOCOL_VERSION,
         capabilities: { tools: {} },
-        serverInfo: { name: 'quality-roofing-specialists', title: 'Quality Roofing Specialists', version: '1.0.0' },
+        serverInfo: { name: 'quality-roofing-specialists', title: 'Quality Roofing Specialists, Inc.', version: '1.0.0' },
         instructions:
           `Tools for ${SITE_URL}: check service-area coverage, search site content (services, pricing, FAQs), get business contact info, ` +
           `and request_estimate — the one tool that writes anything. It submits a real lead, so only call it with a real person's ` +
@@ -104,7 +104,7 @@ function landingPage() {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MCP Server — ${esc(BUSINESS.name)}</title>
+<title>MCP Server — ${esc(BUSINESS.legalName)}</title>
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">

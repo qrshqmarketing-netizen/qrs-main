@@ -23,6 +23,136 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // New article (owner, November 3 2026): from the owner's team's draft "How to Decide Whether a Full Tile Roof Reset Is Worth It or You Should
+  // Just Replace Damaged Tiles", keyword "tile roof reset" (our *SecondLife* Tile Reset; the article tile-lift-and-relay-vs-new-tile-roof keeps
+  // "tile lift and relay"). Changed to the site's rules: every price and cost ratio, every lifespan or "adds 20-30 years" figure, the 15-30% damage
+  // thresholds (unsourced) and the roof ages in the scenarios were left out or made general; "fixed price" became a written price, "in-house roofer"
+  // a roofer; lifting tiles to check the underlayment is described as what tells you, not as part of our free evaluation (which is drone footage and
+  // photos). Facts about the reset come from the lift & relay page (battens and flashings renewed, broken tiles replaced with the closest match,
+  // replacement tiles on less visible slopes). Our voice with three "Our point of view" boxes.
+  {
+    slug: 'tile-roof-reset-vs-repair',
+    title: 'Tile Roof Reset vs. Repair: When a Full Reset Is Worth It and When to Just Replace Damaged Tiles',
+    keyword: 'tile roof reset',
+    topics: ['tile', 'underlayment', 'repair', 'replacement', 'leak'],
+    metaTitle: 'Tile Roof Reset vs. Repair: Which Does Your Roof Need?',
+    metaDescription:
+      'Is a full tile roof reset worth it, or should you just replace the damaged tiles? How the underlayment, tiles, leaks and your plans decide it.',
+    datePublished: '2026-11-03',
+    dateModified: '2026-11-03',
+    excerpt:
+      'A full reset makes sense when the tiles are sound but the underlayment under them has failed. A few cracked tiles over good underlayment only need a targeted repair. Here is how to tell which one your roof needs.',
+    image: '/images/blog/tile-roof-reset-vs-repair.webp',
+    imageAlt: 'Tile roof reset vs. repair: a roofer replacing a single cracked clay tile beside a full tile reset with new underlayment',
+    intro: [
+      'A full tile roof reset is worth it when the tiles are sound but the underlayment beneath them has failed. If only a handful of tiles are cracked or slipped and the layers below are in good shape, replacing those tiles is the smarter, less expensive call.',
+      'Five things decide it: the condition of the underlayment, how much of the tile is broken or displaced, whether you have active leaks, the age and history of the roof, and your plans for the property. Here is how we weigh each one, the red flags that change the answer, and three common situations with a clear verdict.',
+    ],
+    sections: [
+      {
+        heading: 'Key Takeaways',
+        blocks: [
+          {
+            list: [
+              '**The underlayment decides it.** The tile is not what keeps water out; the underlayment beneath it is. Sound tile over failed underlayment points to a reset.',
+              '**How much tile is damaged sizes the job.** A few cracked tiles in one area over good underlayment is a repair. Damage spread across several slopes calls for a closer look at a reset or a new roof.',
+              '**You can’t judge it from the driveway.** Underlayment, battens and decking only show where tiles are lifted.',
+              '**Red flags override the rest.** Soft decking, leaks that keep coming back and tile too brittle to handle push the answer toward a new roof.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'What Decides Whether a Full Reset Makes Sense',
+        blocks: [
+          'Most homeowners start with the tiles they can see from the driveway. That’s the wrong place to start. The tile is the weather surface, but the underlayment beneath it is the waterproof layer, and in Southern California’s heat it usually wears out long before the tiles do. When the underlayment has failed and the tiles are still sound, a [tile lift and relay](/residential-roofing/tile-roofing/lift-and-relay/), our *SecondLife* Tile Reset, is usually the right scope: we lift the tiles, replace the underlayment, renew worn battens and flashings, and reset the same tiles in their original pattern.',
+          'Replacing broken tiles on a roof whose underlayment has failed is a stopgap at best. It may buy a little time, but the waterproofing problem stays, and the repair bills add up. How much tile is damaged matters too, but it sizes the answer rather than deciding it: a few broken tiles in one area over good underlayment is a [tile roof repair](/residential-roofing/tile-roofing/repair/); damage spread across several slopes calls for a full evaluation.',
+          'The roof’s history and your plans also change the picture. A roof that leaks without any visibly broken tiles is a strong candidate for a reset. An older roof with a few cracked tiles and underlayment that still works may only need those tiles replaced. And if you plan to sell in the next few years, think about what a buyer’s inspection and your insurer will make of each option.',
+          { pov: 'We look at the underlayment before we talk about tiles. If it still works, we would rather replace the broken tiles and tell you when to look again than sell you a reset you don’t need yet.' },
+        ],
+      },
+      {
+        heading: 'How the Costs Compare',
+        blocks: [
+          'A reset is usually less expensive than a new tile roof, because you keep the tiles, often the most expensive part of the roof. A targeted repair is less again, but only good value when the underlayment under it still works. Our [lift and relay vs. new tile roof](/blog/tile-lift-and-relay-vs-new-tile-roof/) comparison walks through the trade-offs.',
+          'When a reset would mean replacing a large share of the tiles anyway, the gap to a new roof narrows, and a [new tile roof](/residential-roofing/tile-roofing/replacement/) with new tile can make more sense. Your written scope and price show you the numbers for your roof before any work starts.',
+        ],
+      },
+      {
+        heading: 'Red Flags That Mean a Reset Won’t Be Enough',
+        blocks: [
+          'Some conditions rule out a reset before cost even comes into it:',
+          {
+            list: [
+              '**Soft, spongy or stained decking.** Rot, sagging or water staining across several sections means the deck needs rebuilding, not just new underlayment. Whether the old tiles go back on then depends on how many survive removal.',
+              '**Leaks that keep coming back.** If a roof has been patched two or three times and water still gets in, spot repairs are no longer a strategy. A reset with new underlayment and flashings is the least that solves it, and a new roof may be the better call depending on the tile.',
+              '**Tile too fragile to reuse.** A reset only works when the tiles coming off can go back on. Cracked, spalled, crumbling or brittle tile that breaks in your hand is not a candidate, especially when the profile is no longer made and replacements can’t be matched.',
+            ],
+          },
+          { pov: 'If the tile is too brittle to handle, we will tell you a reset isn’t the answer, even though it is the less expensive one. Putting failing tile back on new underlayment just moves the problem a few years down the road.' },
+        ],
+      },
+      {
+        heading: 'Three Common Situations, With a Verdict',
+        blocks: [
+          { h3: 'Leaks, but no visible tile damage' },
+          'This is the reset case. The tiles look fine from the driveway; the leaks come from failed underlayment and worn flashings. A full lift and relay with new underlayment, battens and flashings restores the waterproofing without the cost of new tile. Keep the sound tile and replace everything under it.',
+          { h3: 'A few cracked tiles on one slope' },
+          'Assume the underlayment still has life left. A handful of broken tiles can be replaced with the closest available match, and where a match isn’t exact, replacement tiles can go on less visible slopes so the originals stay where they show. Doing a full reset while the underlayment still works would be early. Replace the tiles now and plan to look at the underlayment again later.',
+          { h3: 'An HOA with deferred maintenance across several buildings' },
+          'Boards often inherit tile roofs looked after by several past contractors. One blanket decision for every building is rarely the best value. A building-by-building look, with drone footage, photos and written scopes, lets the board reset the roofs whose underlayment has failed and repair the rest, in phases. Our [*ReserveReady* HOA roofing](/residential-roofing/hoa-multi-family/) gives boards one point of contact for exactly that.',
+        ],
+      },
+      {
+        heading: 'How to Find Out What Your Roof Actually Needs',
+        blocks: [
+          'Binoculars from the driveway can count broken tiles. They can’t show the underlayment, the battens or whether the deck is sound. Underlayment wear often doesn’t show from above at all; it shows where tiles are lifted, and the places that tell the most are the valleys, walls, chimneys, vents and anywhere you have seen a leak inside.',
+          'Our [free roof evaluation](/roof-inspection/) is done by a roofer, not a salesperson: drone footage and photos of the tile, flashings, valleys and penetrations, plain-English findings and one clear next step. Before any work, you get a written scope and price. No pressure and no surprises mid-job.',
+          'When you collect opinions from roofers, ask each one:',
+          {
+            list: [
+              'Where did you check the underlayment, and what did you find?',
+              'Did you see any deck damage, and how widespread is it?',
+              'Is my tile profile still available if some break during removal?',
+              'What does your written scope include, and what does it leave out?',
+            ],
+          },
+          'A roofer who can’t answer those clearly before the job starts isn’t in a position to give you an honest answer. Our [tile roof underlayment guide](/blog/tile-roof-underlayment/) explains what they are looking for.',
+          { pov: 'This decision can’t be made from the ground. Get the roof looked at, the underlayment checked where it matters and a written scope in hand before you commit to either a repair or a reset.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What is a tile roof reset?',
+        a: 'A tile roof reset (also called a lift and relay) means lifting the existing tiles, replacing the worn underlayment, renewing battens and flashings, and putting the same tiles back in their original pattern, with broken ones replaced by the closest available match. Ours is the *SecondLife* Tile Reset.',
+      },
+      {
+        q: 'Where should a roofer check the underlayment and deck?',
+        a: 'In representative spots across the roof, especially at valleys, walls, chimneys and vents and anywhere there is evidence of a leak inside. A look from the ground or the surface can’t show the underlayment, battens or decking.',
+      },
+      {
+        q: 'Can you replace just a few cracked tiles?',
+        a: 'Yes, if the underlayment is still in good shape. A targeted [tile roof repair](/residential-roofing/tile-roofing/repair/) replaces the broken tiles with the closest available match. The roof evaluation tells you which applies.',
+      },
+      {
+        q: 'Is a tile roof reset less expensive than a new tile roof?',
+        a: 'Usually, because the tiles are reused. Your written scope shows the price before any work starts, and if a new roof makes more sense, we will explain why.',
+      },
+      {
+        q: 'We plan to sell in a few years. Should that change the decision?',
+        a: 'It can. Weigh what a buyer’s inspection and your insurer will make of each option alongside the underlayment’s condition and the cost of each scope. A documented repair or reset, with photos and a written scope, is easier to show a buyer than a roof nobody has looked at.',
+      },
+    ],
+    closing: {
+      heading: 'Get an Honest Answer About Your Tile Roof',
+      blocks: [
+        'Start with the underlayment, then the tile, then the red flags. **[Book a free roof evaluation](#roof-check)** or call (310) 340-1643, and get a documented answer about what your tile roof needs before you commit to anything.',
+        'Part of our [tile roof guide](/blog/tile-roof-guide-southern-california/).',
+      ],
+    },
+    related: ['/residential-roofing/tile-roofing/lift-and-relay/', '/residential-roofing/tile-roofing/repair/', '/residential-roofing/tile-roofing/replacement/', '/residential-roofing/tile-roofing/'],
+  },
   // New article (owner, November 3 2026): from the owner's team's draft "How to choose a commercial roofing company in Los Angeles: key questions
   // property managers should ask", keyword "commercial roofing company in los angeles" (the older article how-to-choose-a-commercial-roofing-contractor
   // keeps "commercial roofing contractor"; this one links to it). Changed from the draft to the site's rules: the commercial roof survey is never

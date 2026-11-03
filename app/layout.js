@@ -49,7 +49,7 @@ const headingFont = localFont({ src: './fonts/Xmind-Variable.woff2', variable: '
 // Defaults for every page. A page's own `metadata` export overrides these.
 export const metadata = {
   metadataBase: new URL(SITE_URL),
-  title: { default: BUSINESS.name, template: `%s | ${BUSINESS.name}` },
+  title: { default: BUSINESS.legalName, template: `%s | ${BUSINESS.legalName}` },
   description: HOME_DESCRIPTION,
   // Staging and preview copies are kept out of search results (see ALLOW_INDEXING in lib/seo.js)
   robots: ALLOW_INDEXING
