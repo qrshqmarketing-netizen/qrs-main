@@ -23,6 +23,173 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // New article (owner, November 3 2026): from the owner's team's draft "How to choose a commercial roofing company in Los Angeles: key questions
+  // property managers should ask", keyword "commercial roofing company in los angeles" (the older article how-to-choose-a-commercial-roofing-contractor
+  // keeps "commercial roofing contractor"; this one links to it). Changed from the draft to the site's rules: the commercial roof survey is never
+  // called free (the draft offered a free evaluation to commercial owners); no prices, lifespans in years, a typical workmanship-warranty length or
+  // permit turnaround times; "in-house roofer" became "a roofer"; TPO is described as one common choice (we also install torch-down modified
+  // bitumen, as on the Westminster project), not the default; FlatGuard (a residential flat roof system) is left out; QRS isn't said to hold an
+  // NDL or C-39 authorization (only as things to check); outside blog links were replaced by the CSLB, LADBS and California Energy Commission.
+  // Our voice with three "Our point of view" boxes.
+  {
+    slug: 'how-to-choose-a-commercial-roofing-company-los-angeles',
+    title: 'How to Choose a Commercial Roofing Company in Los Angeles: Key Questions Property Managers Should Ask',
+    keyword: 'commercial roofing company in los angeles',
+    topics: ['commercial', 'flat', 'replacement', 'repair', 'maintenance'],
+    metaTitle: 'How to Choose a Commercial Roofing Company in Los Angeles',
+    metaDescription:
+      'Hiring a commercial roofing company in Los Angeles? The license and insurance checks, what a real roof survey looks like, warranties and keeping tenants open.',
+    datePublished: '2026-11-03',
+    dateModified: '2026-11-03',
+    excerpt:
+      'Verify the license and insurance before you read a single proposal, then require a roofer-led survey and a written scope and price before any work. Here are the questions property managers should ask, and what the answers should look like.',
+    image: '/images/blog/how-to-choose-a-commercial-roofing-company-los-angeles.webp',
+    imageAlt: 'How to choose a commercial roofing company in Los Angeles: key questions property managers should ask, over roofers installing a white flat commercial roof',
+    intro: [
+      'To choose the right commercial roofing company in Los Angeles, verify the contractor’s CSLB license and insurance before you review a single proposal, then require a written scope and price before any work begins. That alone rules out most unqualified bidders. Everything below fills in the details, so you can apply it to your own building.',
+      'Los Angeles adds its own layer. Most commercial buildings here have flat or low-slope roofs, the sun is relentless, and California’s Title 24 energy code sets cool roof requirements for most commercial reroofs. The contractor market is crowded enough that a business card tells you almost nothing. Our standard, and the one we suggest you hold every bidder to: a roofer comes to your roof first, not a salesperson, documents it with drone footage and photos, and explains the findings in plain English before asking for a signature.',
+    ],
+    sections: [
+      {
+        heading: 'Key Takeaways',
+        blocks: [
+          {
+            list: [
+              '**License first, always.** Look up the license at [cslb.ca.gov](https://www.cslb.ca.gov) before accepting any bid.',
+              '**A written scope is non-negotiable.** “Labor and materials” is not a scope. Require itemized documentation before signing anything.',
+              '**Match the system to the building.** Reflective single-ply membranes like TPO and modified bitumen cap sheets are both common on LA flat roofs; the right one depends on drainage, traffic and the existing roof.',
+              '**Warranties come in different kinds.** Material-only, workmanship and manufacturer system warranties are not interchangeable. Know which one you are getting.',
+              '**Permits are the contractor’s job.** A bidder who suggests skipping them is moving their risk onto you.',
+              '**Plan around your operations from day one.** A good commercial roofer phases the work around your tenants and hours, not the other way around.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'What Licenses and Insurance to Verify Before Accepting a Bid',
+        blocks: [
+          'This is the filter that removes unqualified bidders before you spend time on proposals. It isn’t complicated, but skipping it is how owners end up with an unlicensed contractor and no recourse when something goes wrong.',
+          { h3: 'The CSLB license is your baseline' },
+          'Roofing work in California is done under a license from the Contractors State License Board, usually the C-39 Roofing classification. At [cslb.ca.gov](https://www.cslb.ca.gov) you can confirm the license is active, see its classifications, and check its bond, workers’ compensation and any disciplinary history. Hesitation about giving you a license number is a red flag on its own.',
+          { h3: 'Insurance for commercial projects' },
+          'Many commercial contracts and management companies require the owner or manager to be named as additional insured. California requires workers’ compensation for roofing contractors even when they say they have no employees. Ask for certificates sent directly from the insurer or agent, not documents the contractor prints, and check them with the insurer.',
+          { h3: 'Permits are part of the job' },
+          'Reroofing and structural repairs usually need a permit from the [Los Angeles Department of Building and Safety](https://www.ladbs.org) inside the city, or the local building department elsewhere. A qualified commercial roofer pulls the permit as part of the scope. If a contractor offers to skip it to save time or money, that risk lands on you as the owner.',
+          { note: '**How we check out:** Quality Roofing Specialists holds California contractor license #1061942, is licensed, bonded and insured, and is a BBB Accredited Business with an A+ rating. We pull the permits for our jobs. [Verify our license](/credentials/) before you call us.' },
+        ],
+      },
+      {
+        heading: 'What a Roofer-Led Survey Should Look Like',
+        blocks: [
+          'Most property managers receive three numbers on a page and call them competing bids. That isn’t a scope. A real commercial proposal starts with a real survey, and the difference is easy to see.',
+          'A thorough commercial roof survey gives you drone footage of the whole roof, close-up photos of seams, flashing, penetrations and drains, and a written summary in plain language. That record does two things: it gives you something to compare across bids, and it documents the roof’s condition before any work, in case questions come up later. A contractor who can’t provide it before you sign has already told you something important.',
+          'The written scope should name the existing roof, the proposed repair or new system, the layers to tear off, insulation, drainage corrections, flashing details and the warranty. Line items like “labor and materials” are not a scope. They are placeholders for disputes later.',
+          'Our [commercial roof surveys](/commercial-roofing/) work this way: a roofer goes on the roof, takes drone footage and photos, and you get a written scope and price before any agreement is signed. For HOA boards and managers with several buildings, our *ReserveReady* program adds one point of contact and inspection documentation. See our [property management roofing](/commercial-roofing/property-managers/) page for how we work with managers.',
+          { pov: 'We would rather a roofer look at your roof before anyone tries to sell you one. If a bidder won’t put a roofer on your roof before pricing it, we would not accept that bid, and neither should you.' },
+        ],
+      },
+      {
+        heading: 'Which Materials Hold Up on Flat and Low-Slope Roofs in Los Angeles',
+        blocks: [
+          'Los Angeles conditions favor reflective roofs. Strong UV, long hot seasons and little rain mean a dark, heat-absorbing surface works against the building from day one, and cool roof rules often require a reflective one anyway.',
+          {
+            list: [
+              '**[TPO](/commercial-roofing/tpo-roofing/).** A white, reflective single-ply membrane with heat-welded seams. Its reflective surface cuts cooling loads, and the seams are durable when the installer knows the system.',
+              '**Modified bitumen.** Torch-applied or self-adhered sheets with a white granulated cap sheet, tough under foot traffic and around rooftop equipment. Our [Westminster commercial project](/projects/commercial-flat-roof-replacement-westminster-92683/) is a torch-applied modified bitumen roof.',
+            ],
+          },
+          'Installation quality matters as much as the product. Ask every bidder whether they are certified by the manufacturer of the system they are proposing: manufacturer system warranties are usually available only through installers the manufacturer has authorized. We are certified with Owens Corning, IKO, GAF, CertainTeed (Master Craftsman) and Polyglass (Premio Pro).',
+          { pov: 'We recommend TPO only when it suits the building. Drainage, roof traffic and what is already up there decide the system, not a default we bring to every job.' },
+        ],
+      },
+      {
+        heading: 'What Moves the Cost of a Commercial Roof Replacement',
+        blocks: [
+          'Roof size and the system chosen set most of the price. Beyond those, several things can change the total a lot:',
+          {
+            list: [
+              'HVAC equipment that has to be lifted or relocated.',
+              'Several existing layers to tear off.',
+              'Drainage corrections: added drains, crickets or tapered insulation to stop ponding.',
+              'Crane access and staging on a tight site.',
+              'Asbestos-containing materials in older roofs.',
+              'The warranty level required.',
+            ],
+          },
+          'The only way to know which of these apply to your building is a detailed written scope from someone who has been on your roof. Our guide to [commercial roof replacement planning](/blog/commercial-roof-replacement-planning/) walks through the decisions.',
+        ],
+      },
+      {
+        heading: 'How Commercial Roof Warranties Work, and What Can Void Them',
+        blocks: [
+          'A number of years printed on a proposal doesn’t mean what most property managers think. There are three kinds of warranty, and they are not interchangeable:',
+          {
+            list: [
+              '**Material-only warranty.** Covers defective products, but usually not the labor to remove and replace them.',
+              '**Contractor’s workmanship warranty.** Covers installation errors. Its value depends on the contractor still being in business when you need it.',
+              '**Manufacturer system warranty** (often called NDL, “no dollar limit”). Covers the roof assembly when it is installed by an authorized installer, subject to the manufacturer’s exclusions.',
+            ],
+          },
+          'The exclusions are where owners get surprised. Ponding water is often treated as a drainage problem rather than a product defect. Unauthorized penetrations, HVAC work by other trades, missing inspection records and late notice of a leak can all affect coverage, and transfer rules may apply when the property sells. Ask for the actual warranty document before signing, and confirm the contractor is authorized to issue the warranty they are quoting. Our guide to [roof warranties](/blog/roof-warranty-explained/) explains the difference between manufacturer and workmanship coverage.',
+          'The roofs we install carry our 10-year workmanship warranty (call for details), and the manufacturers’ warranties apply to their materials.',
+        ],
+      },
+      {
+        heading: 'How to Keep Your Business Open While the Roof Is Replaced',
+        blocks: [
+          'This is the part most property managers overlook until it is too late. A poorly sequenced job disrupts tenants, triggers complaints and can leave the building exposed during tear-off.',
+          'A qualified commercial roofer sequences tear-off and installation around the building: phased sections, protected entrances and temporary waterproofing at the end of each day. On our commercial jobs your building stays open: we phase the work by roof section and agree noise, access, staging and delivery times with your building contact in advance, so you can give tenants dates for each phase.',
+          'Permits affect the schedule more than most contractors admit up front. A simple reroof can often be permitted quickly; work that needs plan check takes longer. Ask each bidder for a realistic permit-to-completion timeline for your building’s city and scope, in writing.',
+          { pov: 'Ask every bidder how they will keep your tenants open, and get the answer in writing. A roofer who has never had to phase a roof around a business will tell you by how vague that answer is.' },
+        ],
+      },
+      {
+        heading: 'Choose a Commercial Roofing Company in Los Angeles the Right Way',
+        blocks: [
+          {
+            steps: [
+              'Verify the CSLB license and insurance certificates before taking any bid seriously.',
+              'Require a roofer-led survey with drone footage and photos, and a written scope.',
+              'Understand the system being proposed, and ask about manufacturer certification and the warranty.',
+              'Get the actual warranty document before signing, not a promise of one afterward.',
+              'Plan the schedule around your tenants and operations from day one.',
+            ],
+          },
+          'Quality Roofing Specialists serves commercial property owners and managers across Los Angeles, Orange County and the Inland Empire. Every commercial job starts with a roofer-led roof survey: a roofer on your roof, drone footage and photos, and a written scope and price before anything is signed. See our [commercial roofing](/commercial-roofing/), [commercial roof repair](/commercial-roofing/repair/) and [commercial roof replacement](/commercial-roofing/replacement/) pages, or our earlier guide on [choosing a commercial roofing contractor](/blog/how-to-choose-a-commercial-roofing-contractor/).',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Do you survey commercial roofs, and where do you work?',
+        a: 'Yes. Every commercial job starts with a roofer-led roof survey: a roofer on the roof, drone footage and photos, and a written scope and price before anything is signed. We work across Los Angeles, Orange County and the Inland Empire.',
+      },
+      {
+        q: 'Can a commercial roof warranty be transferred when the property is sold?',
+        a: 'Sometimes, but transfer conditions vary by warranty. Ask for the actual warranty document before signing and read its transfer conditions, so you know what applies when the property changes hands.',
+      },
+      {
+        q: 'How do we confirm a contractor can offer a manufacturer system warranty?',
+        a: 'Ask for proof that the contractor is currently authorized by the manufacturer for the exact system they are proposing, and ask for the warranty document itself before signing. Without that authorization, the manufacturer’s system warranty usually isn’t available, whatever the proposal says.',
+      },
+      {
+        q: 'What should we do if a bidder won’t send a roofer to inspect the roof first?',
+        a: 'Treat it as a red flag and don’t accept a bid based only on a salesperson’s estimate. Require a roofer on the roof who documents the findings with drone footage and photos and gives you a plain-English written scope before asking for a signature.',
+      },
+      {
+        q: 'Will our building have to close during a roof replacement?',
+        a: 'It shouldn’t. On our commercial jobs the building stays open: we phase the replacement by roof section and agree noise, access, staging and delivery times with you in advance.',
+      },
+    ],
+    closing: {
+      heading: 'Start With an Honest Look at Your Roof',
+      blocks: [
+        'If your commercial roof is overdue for an honest look, **[request a roof survey](#roof-check)** or call (310) 340-1643.',
+        'Sources: [CSLB license lookup](https://www.cslb.ca.gov); [Los Angeles Department of Building and Safety](https://www.ladbs.org); [California Energy Commission: Title 24 Building Energy Efficiency Standards](https://www.energy.ca.gov/programs-and-topics/programs/building-energy-efficiency-standards).',
+      ],
+    },
+    related: ['/commercial-roofing/', '/commercial-roofing/replacement/', '/commercial-roofing/property-managers/', '/commercial-roofing/tpo-roofing/'],
+  },
   // New article (owner, November 3 2026): from the owner's team's draft "How to Choose a Roofer in Los Angeles, CA", aimed at "roofer los angeles ca"
   // (keyword written "roofer in los angeles, ca" so it reads naturally in the H1). Placeholders filled from the site: CSLB #1061942, (310) 340-1643,
   // the free roof evaluation (#roof-check, the estimate popup). Left out as unconfirmed or against the site's rules: every price (the Angi cost table,
