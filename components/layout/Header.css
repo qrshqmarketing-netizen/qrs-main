@@ -296,5 +296,16 @@ body:has(main.hg) .site-header:not(.is-lp):not(.is-start):not([data-scrolled]):n
 @media (min-width:1280px){
   .hd-lang{padding:0 13px}
   .hd-lang svg{display:none}
-  .site-header:has(.hd-lang) .hd-link{font-size:11px} /* the switcher's room: measured with the logo in, English and Spanish */
+}
+
+/* Top-level menu items all alike (owner, November 3 2026): the plain links in the bar (Projects, Financing) take the dropdown buttons' type
+   (the bar's own size, capitalized words, no letter-spacing) instead of the small spaced capitals they had. */
+.hd-links > span > .hd-link{font:inherit;letter-spacing:inherit;text-transform:inherit}
+/* The language switcher's room on the two home pages from 1280px: slightly tighter link, action and switcher padding instead of smaller type */
+@media (min-width:1280px) and (max-width:1439.98px){
+  .site-header:has(.hd-lang) .hd-link{padding:0 9px}
+  .site-header:has(.hd-lang) .hd-link:after{left:9px;right:9px}
+  .site-header:has(.hd-lang) .hd-cta{padding:0 12px}
+  .site-header:has(.hd-lang) .hd-lang{padding:0 10px}
+  .site-header:has(.hd-lang) .hd-theme{width:48px}
 }

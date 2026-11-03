@@ -85,7 +85,7 @@ export const ES = {
   'Contact': 'Contacto',
   'Emergency Repair': 'Reparación de emergencia',
   'Maintenance Plans': 'Planes de mantenimiento',
-  'Get Pro Advice': 'Pida asesoría',
+  'Get Pro Advice': 'Asesoría', // short, so the Spanish bar fits at 1280px
   'Main': 'Principal',
   'Menu': 'Menú',
   'Open menu': 'Abrir menú',
