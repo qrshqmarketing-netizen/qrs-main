@@ -41,7 +41,7 @@ export const ABOUT_PAGE = {
     ],
   },
   story: {
-    eyebrow: 'Our Story',
+    eyebrow: 'Our Office', // matches the office team photo beside it (owner, November 3 2026)
     heading: 'Family-Owned, Locally Built',
     paragraphs: [
       'Quality Roofing Specialists, Inc. was incorporated in July 2019 and licensed as a California contractor in January 2020, co-founded by **Tony Goldberg** and **Adva Goldberg**, who serve as CEO and President. Tony did his first roofing job at 16 and never looked back — after years working in the roofing departments of other companies, he went out on his own when his uncle, who ran his own roofing business, retired.',
@@ -52,8 +52,8 @@ export const ABOUT_PAGE = {
     heading: 'Our Team',
     intro: 'Real people behind every roof, from the office to the ridge line. Names and photos are on the way — here’s who does the work today.',
     items: [
-      { title: 'Tony Goldberg', text: 'Co-founder and CEO. Tony co-founded QRS with Adva; his own roofing story is above.', photo: '/images/team/tony-goldberg-profile.webp' },
-      { title: 'Adva Goldberg', text: 'Co-founder and President. Adva co-founded QRS with Tony, and QRS is a family-owned, woman-owned business.', photo: '/images/team/adva-goldberg-profile.webp' },
+      { title: 'Tony Goldberg', text: 'Co-founder and CEO. Tony co-founded QRS with Adva; his own roofing story is above.' },
+      { title: 'Adva Goldberg', text: 'Co-founder and President. Adva co-founded QRS with Tony, and QRS is a family-owned, woman-owned business.' },
       { title: 'Field Inspectors & Lead Roofers', text: 'Your free drone roof evaluation and every $199 Roof Check (the visit where we seal and maintain the roof) are done by a field inspector, lead roofer or estimator on our own team — never an outside crew.' },
       { title: 'Senior Production Manager', text: '30 years overseeing roofing projects, managing our crews and quality control on every job.' },
       { title: '12 Crews, Every Roof Type', text: 'Dedicated crews for shingle, tile and flat roofing, with vetted partner crews brought in only during overflow.' },

@@ -143,7 +143,7 @@ export function AbrStory({ story }) {
           ))}
         </div>
         <div className="abr-photo">
-          <Image src="/images/about-our-story-selfie-walk.webp" alt="A couple walking their dog on a path in the park" fill sizes="(min-width: 901px) 44vw, 100vw" quality={65} loading="lazy" style={{ objectPosition: "52% 30%" }} />
+          <Image src="/images/about-our-office-team.webp" alt="The Quality Roofing Specialists office team at their desks, one of them on the phone with a customer" fill sizes="(min-width: 901px) 44vw, 100vw" quality={65} loading="lazy" style={{ objectPosition: "55% 40%" }} />
         </div>
       </div>
     </section>
