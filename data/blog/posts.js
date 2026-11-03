@@ -23,6 +23,266 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // New article (owner, November 3 2026): from the owner's team's draft "How to Choose a Roofer in Los Angeles, CA", aimed at "roofer los angeles ca"
+  // (keyword written "roofer in los angeles, ca" so it reads naturally in the H1). Placeholders filled from the site: CSLB #1061942, (310) 340-1643,
+  // the free roof evaluation (#roof-check, the estimate popup). Left out as unconfirmed or against the site's rules: every price (the Angi cost table,
+  // per-square-foot figures, tear-off costs), workers' comp "for every crew member" as a QRS claim, lead times for the inspection and the written
+  // price, per-material install times (the site says 3 to 5 days for a home replacement), unit pricing for hidden damage and permit line items as QRS
+  // promises, attic checks, roof coatings (not offered) and lifespans. The four service rows follow the site's own product definitions (TotalShield
+  // shingle replacement, SecondLife tile lift and relay, FlatGuard flat roofs, ReserveReady HOA). Author: the default (Tony G.); the draft named
+  // Steve Martin, who isn't in data/authors.js. Our voice with three "Our point of view" boxes.
+  {
+    slug: 'how-to-choose-a-roofer-los-angeles-ca',
+    title: 'How to Choose a Roofer in Los Angeles, CA: Questions, Red Flags and What to Ask at the Estimate',
+    keyword: 'roofer in los angeles, ca',
+    topics: ['replacement', 'inspection', 'repair', 'tile', 'shingle', 'flat'],
+    metaTitle: 'Choosing a Roofer in Los Angeles, CA: Questions & Red Flags',
+    metaDescription:
+      'Hiring a roofer in Los Angeles, CA? What to verify, the questions to ask at the estimate, the red flags to avoid and how a roof job runs from start to finish.',
+    datePublished: '2026-11-03',
+    dateModified: '2026-11-03',
+    excerpt:
+      'The right roofer is licensed, insured, puts the full scope and price in writing before work starts and can show you what is wrong with your roof. Here is what to verify, what to ask at the estimate and the red flags that should end the conversation.',
+    image: '/images/blog/how-to-choose-a-roofer-los-angeles-ca.webp',
+    imageAlt: 'How to choose a roofer in Los Angeles, CA: what to ask before hiring a roofer, with a roofing estimate, tape measure and hard hat on a table',
+    intro: [
+      'The right roofer in Los Angeles, CA is licensed, insured, puts the full scope and price in writing before work starts, and can show you exactly what is wrong with your roof. Everything else on a bid is secondary.',
+      'That sounds simple. In practice, LA homeowners, HOA boards and property managers sort through bids, door-knockers and online ads that all promise the same thing, and bids for the “same” roof can be far apart. The difference usually lives in details most people never think to ask about.',
+      'We are roofers in Los Angeles, and this is the checklist we would want our own families to use: what to verify before anyone climbs a ladder, the questions to ask at the estimate, the red flags that should end the conversation, and what really moves the price and the timeline on shingle, tile and flat roofs.',
+    ],
+    sections: [
+      {
+        heading: 'Why Choosing a Roofer in Los Angeles Is Different',
+        blocks: [
+          'Los Angeles roofs wear out from sun, heat and long dry spells far more than from snow or hail. UV breaks down shingles and flat roof membranes, the underlayment beneath tile dries out, and the first heavy winter storm finds every weak spot at once. A good LA roofer plans for that cycle, not a generic one.',
+          'Local code matters too. The City of Los Angeles amended its Green Building Code to require [cool roofs on new and refurbished homes](https://www.adaptationclearinghouse.org/resources/city-of-los-angeles-ordinance-no-183149-cool-roof-for-reduction-of-heat-island-effect.html), with the Department of Building and Safety (LADBS) handling permits and inspections. A roofer who works here every day knows which products comply, when a permit is needed and how to document it, so a sale or refinance doesn’t stall later. Our guide to [cool roofs in Southern California](/blog/cool-roof-southern-california/) explains the options.',
+          'LA also has a wide mix of roof types, often on the same street:',
+          {
+            list: [
+              '**[Asphalt shingle](/residential-roofing/shingle-roofing/)** on many single-family homes in the Valley and South LA.',
+              '**[Clay and concrete tile](/residential-roofing/tile-roofing/)** on Spanish, Mediterranean and mission-style homes across the basin.',
+              '**[Flat and low-slope roofs](/residential-roofing/flat-roofing/)** on mid-century homes, apartment buildings, condos and [commercial properties](/commercial-roofing/).',
+            ],
+          },
+          'Each system calls for different skills. A crew that is excellent at shingles may not be the right choice for a 1920s clay tile roof or a 40-unit building with a modified bitumen roof.',
+        ],
+      },
+      {
+        heading: 'Step 1: Verify the Basics Before Anyone Gets on Your Roof',
+        blocks: [
+          'Five minutes of checking rules out most problem contractors. Do it before you schedule an inspection, not after you get a bid you like.',
+          {
+            steps: [
+              '**A current CSLB license with the right classification.** In California, [anyone doing home improvement work of $1,000 or more must be licensed](https://cslb.ca.gov/Resources/GuidesAndPublications/WSSK_ENG0125_ADA.pdf) by the Contractors State License Board. For roofing, look for the C-39 Roofing classification (or a general B license with roofing experience). Search the license number on [cslb.ca.gov](https://www.cslb.ca.gov) and confirm the business name matches the one on the bid.',
+              '**Bonded, with workers’ compensation on file.** The CSLB license page shows the bond and workers’ comp status. Roofing is one of the highest-injury trades, and if someone is hurt on your property and the roofer has no workers’ comp, you could be exposed.',
+              '**General liability insurance.** Ask for a certificate of insurance sent directly from the insurer or agent, naming you (or your HOA or management company) as certificate holder. It covers damage to your home, landscaping or a neighbor’s property during the job.',
+              '**A local track record.** Look for a physical address in the LA area, a long history of reviews and the Better Business Bureau (BBB) rating. Ask for nearby jobs on your roof type: a roofer who has done tile roofs in Silver Lake or flat roofs in Koreatown has already solved the problems yours will have.',
+              '**Permit experience.** Ask who pulls the permit. In the City of LA that is LADBS; in other cities and unincorporated areas, the local building department or LA County. Your roofer should pull it in their own name and schedule the inspections.',
+            ],
+          },
+          { note: '**How we check out:** Quality Roofing Specialists holds California contractor license #1061942 (active since 2020), is licensed, bonded and insured, and is a BBB Accredited Business with an A+ rating. We pull the permits and handle the inspections. You can [verify our license](/credentials/) on the CSLB website before you ever call us.' },
+          { pov: 'Check us the same way you check anyone else. A license number and an insurance certificate take minutes to verify, and a roofer who is proud of theirs will hand them over before you ask.' },
+        ],
+      },
+      {
+        heading: 'Step 2: What to Ask at the Estimate',
+        blocks: [
+          'The estimate visit is your best chance to see how a roofer thinks. A good one answers these questions without hesitation and puts the answers in writing.',
+          { h3: 'About the inspection' },
+          {
+            list: [
+              '**Who is actually inspecting my roof?** A salesperson with a clipboard and a roofer who has installed roofs for years see different things. Ask whether the inspector is a roofer.',
+              '**How will you inspect it?** Walking a fragile clay tile roof can crack tiles. A drone lets a roofer see every slope, valley and penetration without adding damage.',
+              '**Can I see what you found?** Ask for photos or drone footage of each problem area. If they can’t show it to you, be careful about paying to fix it.',
+              '**Does my roof need replacement, or can it be repaired?** An honest roofer tells you when a repair buys you real time. Our [roof inspection checklist](/blog/what-does-a-roof-inspection-include/) shows what a thorough inspection covers.',
+            ],
+          },
+          { h3: 'About the scope and price' },
+          {
+            list: [
+              '**Is the full scope written out, line by line?** It should name the tear-off, decking repair, underlayment, flashing, vents, drip edge and cleanup.',
+              '**What brand and product line are you installing?** “Architectural shingles” is not a scope. A named manufacturer and shingle line, in a cool-rated color where the code requires one, is.',
+              '**How do you handle decking you can’t see yet?** Damaged decking often shows up only after tear-off. Ask how it will be priced before you sign.',
+              '**Is the permit included?** Ask whether the permit is part of the price.',
+              '**What is the payment schedule?** In California, a home improvement down payment [cannot exceed 10% of the contract price or $1,000, whichever is less](https://www.cslb.ca.gov/consumers/hire_a_contractor/Home_Improvement_Contracts/Homeowner_Checklists.aspx). Later payments should follow completed work.',
+            ],
+          },
+          { h3: 'About the crew and the job' },
+          {
+            list: [
+              '**Who will be on my roof?** Ask whether the work is done by the company’s own roofers or outside crews, and who supervises them.',
+              '**How will you protect my home?** Ask about tarps over landscaping, magnetic nail sweeps and protection for pools, AC units and solar panels.',
+              '**What happens if it rains mid-job?** In LA’s winter storm season you want a clear dry-in and tarp plan.',
+              '**What warranty do I get, and who backs it?** Separate the manufacturer’s material warranty from the contractor’s workmanship warranty, and get both in writing. Our guide to [roof warranties](/blog/roof-warranty-explained/) explains the difference.',
+            ],
+          },
+          { note: '**Tip:** Get two or three written bids on the same scope. Comparing bids only helps when each one describes the same work. Our [roof replacement guide](/blog/roof-replacement-guide/) walks through a bid line by line.' },
+        ],
+      },
+      {
+        heading: 'Step 3: Red Flags That Should End the Conversation',
+        blocks: [
+          'Any one of these is a reason to slow down. Two or more is a reason to walk away.',
+          {
+            list: [
+              '**No license number, or one that doesn’t match.** The name on the bid, the truck and the CSLB record should all line up.',
+              '**A big deposit up front.** Asking for 30% or 50% before work starts on a home improvement contract is above California’s legal limit. So is “cash only for a discount.”',
+              '**A verbal quote or a one-line bid.** “New roof” and a total gives you nothing to hold them to. No written scope, no deal.',
+              '**Pressure to sign today.** “This price expires tonight” is a sales tactic. California gives homeowners a [three-business-day right to cancel](https://www.cslb.ca.gov/Resources/GuidesAndPublications/WhatSeniorsShouldKnow.pdf) most home improvement contracts, and five business days for buyers 65 and older.',
+              '**Door-knockers after a storm or fire.** Some “storm chasers” come from out of state, do quick work and are gone before the first leak. Hire someone with a permanent local address.',
+              '**“We don’t need a permit.”** Skipping permits can cause problems with insurance claims, home sales and cool roof compliance.',
+              '**No photos of the damage.** If the inspector found a problem, they should be able to show it to you.',
+              '**Roof-over offers on a failing roof.** Layering new shingles over old ones can hide rotted decking. It is sometimes allowed, but it should be a clear choice, not a shortcut.',
+              '**A price far below every other bid.** The gap usually comes from cheaper underlayment, skipped flashing, uninsured labor or change orders added later.',
+              '**Vague warranty promises.** “Lifetime warranty” often means the manufacturer’s material warranty only. Ask what the roofer personally guarantees, and for how long.',
+            ],
+          },
+          'To check a contractor or report a problem, use the CSLB website or LA County’s [Department of Consumer and Business Affairs](https://dcba.lacounty.gov/portfolio/hiring-a-contractor/).',
+          { pov: 'The deposit rule is the one we see broken most often after a storm. If a roofer wants half up front before a single shingle comes off, that tells you more about them than any review.' },
+        ],
+      },
+      {
+        heading: 'What Drives Roofing Costs in Los Angeles',
+        blocks: [
+          'Roof material and roof size set most of the price. Asphalt shingles usually cost the least, a new tile roof the most, and lifting and relaying sound tile over new underlayment usually less than new tile. Flat roofs vary with the system, the insulation and the drainage work. Your written estimate is the number that counts; our guide to [roof replacement cost in Los Angeles](/blog/roof-replacement-cost-los-angeles/) explains how a roof is measured and priced.',
+          { h3: 'Cost drivers to ask about on any LA roof' },
+          {
+            list: [
+              '**Tear-off and disposal.** Removing and hauling away the old roof is part of every replacement, and heavy tile takes more work than shingles.',
+              '**Hidden decking damage.** Rotted plywood or skip sheathing often shows up only after tear-off.',
+              '**Cool roof compliance.** Required products in the City of LA can narrow your color and product choices.',
+              '**Solar panels.** Taking panels off and putting them back needs coordination with your solar company.',
+              '**Access and complexity.** Steep hillside lots, tight driveways, several roof levels, skylights and chimneys all add labor.',
+              '**Tile reuse.** Many LA tile roofs fail at the underlayment, not the tile. [Lifting the tile, replacing the underlayment and relaying it](/residential-roofing/tile-roofing/lift-and-relay/) can cost far less than new tile, if the tile is sound.',
+            ],
+          },
+          { h3: 'Repair or replace?' },
+          'A full replacement is not always the right answer. Small leaks around flashing or vents can often be [repaired](/roof-repair/). A tile roof with good tile and tired underlayment may be a candidate for a lift and relay. A flat roof with a sound membrane can often be repaired at its seams and flashing. The right roofer lays out the options and tells you which one actually solves the problem.',
+          { pov: 'We would rather a roofer look at your roof before anyone tries to sell you one. If a repair buys you years, we will say so, and the written price comes before any work, every time.' },
+        ],
+      },
+      {
+        heading: 'How Long a Roofing Project Takes in Los Angeles',
+        blocks: [
+          'Only a few days of a re-roof are spent on the roof itself. The rest is the inspection, the paperwork, the permit and the materials. Here is the usual order:',
+          {
+            steps: [
+              '**Inspection and evaluation.** A roofer looks at the roof and shows you what they found.',
+              '**Written scope and price.** Line by line, before anything is signed.',
+              '**Review and signing.** On your timing, plus the three-business-day cancellation window (five for buyers 65 and older).',
+              '**Permit.** A like-for-like re-roof is usually simple; a change of material, structural work or plan check takes longer.',
+              '**Materials.** Common shingles and membranes arrive quickly; specialty or matching tile can take longer.',
+              '**Installation.** A typical home roof replacement takes 3 to 5 days on site. Larger roofs, tile and multi-family or commercial work can run longer and may be phased.',
+              '**Final inspection and walkthrough.** The building inspector signs off, and your roofer walks you through the finished work and the warranty paperwork.',
+            ],
+          },
+          'Weather, hidden damage, HOA approvals and permit backlogs can all add time. Ask every roofer for an estimated start date and completion date in writing: California home improvement contracts are expected to include both.',
+        ],
+      },
+      {
+        heading: 'Extra Questions for HOA Boards and Commercial Property Owners',
+        blocks: [
+          'Boards and property managers spend other people’s money and answer to owners, tenants and reserve studies. Hold roofers to a higher documentation standard.',
+          {
+            list: [
+              '**Can you give us a roof condition report we can share?** Look for photos and a map of problem areas by building or section.',
+              '**Can you help us plan reserves?** A good roofer can phase work over several years so replacements line up with your reserve study instead of draining it in one year.',
+              '**What is your experience with our roof system?** Ask for references on similar buildings and roofs (TPO, modified bitumen, or tile on multi-unit buildings).',
+              '**How will you protect residents and tenants?** Ask about staging areas, parking, work hours, debris handling and notices to residents.',
+              '**Are your certificates of insurance ready for our management company?** Many associations require specific limits and additional-insured wording.',
+              '**Do you offer a maintenance plan?** Scheduled inspections and drain cleaning on flat roofs catch small problems before they become interior water damage.',
+              '**How will bids be structured?** Ask for a base scope and alternates so the board can compare bids on equal terms.',
+            ],
+          },
+          'See how we work with boards on our [HOA and multi-family roofing](/residential-roofing/hoa-multi-family/) page, and with managers on our [property management roofing](/commercial-roofing/property-managers/) page.',
+        ],
+      },
+      {
+        heading: 'Why LA Property Owners Choose Quality Roofing Specialists',
+        blocks: [
+          'Quality Roofing Specialists is a local, family-owned roofing company serving Los Angeles homeowners, HOAs and commercial properties from our West Hollywood, Woodland Hills and Vernon offices. Our process follows the same checklist as this guide.',
+          {
+            list: [
+              '**Roofer-led drone roof evaluations.** A roofer, not a salesperson, looks at your roof, with *RoofScan 360* drone footage and photos we share with you. For homes, the evaluation is free.',
+              '**A written scope and price before any work.** Materials, scope and warranty terms in writing, with no pressure to sign.',
+              '**A 10-year workmanship warranty (call for details)** on the roofs we install, alongside the manufacturers’ warranties on the materials.',
+              '**Credentials you can check.** CSLB #1061942, licensed, bonded and insured, BBB A+, and certified with Owens Corning, IKO, GAF, CertainTeed (Master Craftsman) and Polyglass (Premio Pro).',
+              '**Clean job sites.** Tarps over your landscaping, permits pulled and a magnetic nail sweep before we call the job done.',
+            ],
+          },
+          { h3: 'Find the right service for your roof' },
+          {
+            table: {
+              head: ['Service', 'Best for', 'What it covers'],
+              rows: [
+                ['[*TotalShield* shingle replacement](/residential-roofing/shingle-roofing/replacement/)', 'Shingle homes that need a new roof', 'A complete shingle roof built from the deck up, with permits and our 10-year workmanship warranty (call for details)'],
+                ['[*SecondLife* tile lift and relay](/residential-roofing/tile-roofing/lift-and-relay/)', 'Tile roofs with sound tile and tired underlayment', 'Your existing tile lifted, new underlayment installed and the tile reset, with broken tiles replaced'],
+                ['[*FlatGuard* flat roofing](/residential-roofing/flat-roofing/replacement/)', 'Flat and low-slope roofs on homes and small buildings', 'Flat roof systems planned around drainage, seams and flashing'],
+                ['[*ReserveReady* HOA roofing](/residential-roofing/hoa-multi-family/)', 'HOA boards and property managers', 'Roof inspections, clear written scopes and planning support for community boards'],
+              ],
+            },
+          },
+          'Not sure which one fits? That is what the free roof evaluation is for.',
+        ],
+      },
+      {
+        heading: 'Next Steps: Book Your Free Roof Evaluation',
+        blocks: [
+          'The fastest way to know what your roof needs is a free roof evaluation from a licensed local roofer. [Request one online](#roof-check) or call **(310) 340-1643**.',
+          'Have your address, roof type (if you know it), roof age and any leak or damage history handy. HOA and commercial clients: tell us how many buildings and whether you have a recent reserve study.',
+          { h3: 'What to expect at the evaluation' },
+          {
+            steps: [
+              '**A quick conversation.** We ask what you have noticed: leaks, stains, missing tiles, an upcoming sale.',
+              '**A roofer-led look at the roof.** Drone footage and photos of the slopes, valleys, flashing, vents and penetrations.',
+              '**Findings, shown to you.** You see what we see, with a plain-English explanation of each issue.',
+              '**One clear next step.** Repair, maintain, lift and relay or replace, and why.',
+              '**A written scope and price** before any work, with no obligation and no pressure to sign.',
+            ],
+          },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'How do I check if a roofer in Los Angeles, CA is licensed?',
+        a: 'Search the contractor’s name or license number on the Contractors State License Board website, [cslb.ca.gov](https://www.cslb.ca.gov). Confirm the license is active, the classification covers roofing (C-39), and the bond and workers’ comp are current.',
+      },
+      {
+        q: 'How much deposit should a roofer ask for in California?',
+        a: 'For home improvement contracts, the down payment can’t exceed 10% of the contract price or $1,000, whichever is less. After that, payments should follow completed work.',
+      },
+      {
+        q: 'Do I need a permit to replace my roof in Los Angeles?',
+        a: 'In most cases, yes. A full re-roof generally needs a permit from LADBS in the City of LA, or from your city or LA County elsewhere. Your roofer should pull it. We pull the permits for the roofs we replace.',
+      },
+      {
+        q: 'What is a cool roof, and do I need one?',
+        a: 'A cool roof uses materials rated to reflect more sunlight and absorb less heat. The City of LA requires cool roofs on new and refurbished homes, with some exemptions. Your roofer should know which products qualify for your property.',
+      },
+      {
+        q: 'How long does a roof last in Los Angeles?',
+        a: 'It depends on the material, the installation and the maintenance. Strong LA sun shortens the life of asphalt shingles, and on tile roofs the underlayment usually wears out long before the tiles do. A [roof inspection](/roof-inspection/) tells you how yours is holding up.',
+      },
+      {
+        q: 'Are drone roof inspections accurate?',
+        a: 'Yes, when an experienced roofer reviews the footage. A drone gets close, sharp views of slopes and details that are hard or risky to reach, especially on tile and steep roofs, without anyone walking on fragile tile.',
+      },
+      {
+        q: 'Should I repair or replace my roof?',
+        a: 'If the damage is limited and the rest of the roof is sound, a repair often makes sense. If leaks are widespread or the underlayment has failed, replacement is usually the better value. A roofer should show you the evidence either way.',
+      },
+    ],
+    closing: {
+      heading: 'Hire a Roofer You Can Verify',
+      blocks: [
+        'Ask any roofer for their license, their insurance and their warranty terms, and check them before you sign. We are happy to be checked the same way.',
+        '**[Book a free roof evaluation](#roof-check)** or call (310) 340-1643. Related reading: [Best Roofer in LA](/blog/best-roofer-los-angeles/).',
+        'Sources: [CSLB: What Seniors Should Know](https://www.cslb.ca.gov/Resources/GuidesAndPublications/WhatSeniorsShouldKnow.pdf); [CSLB licensing threshold guide](https://cslb.ca.gov/Resources/GuidesAndPublications/WSSK_ENG0125_ADA.pdf); [CSLB Homeowner Checklists](https://www.cslb.ca.gov/consumers/hire_a_contractor/Home_Improvement_Contracts/Homeowner_Checklists.aspx); [LA County DCBA: Hiring a Contractor](https://dcba.lacounty.gov/portfolio/hiring-a-contractor/); [City of Los Angeles Ordinance No. 183149: Cool Roofs](https://www.adaptationclearinghouse.org/resources/city-of-los-angeles-ordinance-no-183149-cool-roof-for-reduction-of-heat-island-effect.html).',
+      ],
+    },
+    related: ['/roof-inspection/', '/roof-replacement/', '/credentials/', '/residential-roofing/hoa-multi-family/'],
+  },
   // New article (owner, November 2 2026): from the owner's team's draft "Roof Warranties Explained", the first page aimed at warranty searches
   // ("a roofing service that provides warranties on their work", "best roof warranty terms in West LA", "leaking roof solutions with long-term
   // warranties"). QRS facts only as the site states them: the 10-year workmanship warranty on installs (call for details), repairs carrying the

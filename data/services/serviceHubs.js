@@ -43,7 +43,7 @@ export const ROOF_REPAIR_HUB = {
 
 export const ROOF_REPLACEMENT_HUB = {
   keyword: 'roof replacement',
-  metaTitle: 'Roof Replacement in Los Angeles & Orange County',
+  metaTitle: 'Roof Replacement Los Angeles | Los Angeles Roof Replacement', // owner, November 3 2026 (target keywords)
   metaDescription: 'Roof replacement in Los Angeles & Orange County: full tear-off, a new shingle, tile or flat roof and a written scope first. Book a free roof evaluation.',
   hero: {
     heading: 'Roof Replacement in Los Angeles & Orange County',
