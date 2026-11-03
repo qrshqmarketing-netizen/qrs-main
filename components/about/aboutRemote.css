@@ -96,22 +96,30 @@ main.abr .abr-section :is(.abr-center,.abr-center h2){text-align:center!importan
 .abr-num-grid dd{margin:10px 0 0;color:var(--muted);font-size:15px;line-height:1.5}
 @media (min-width:901px){.abr-num-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}}
 
-/* Values: the accordion, the open item navy, its photo at the right from 901px */
-.abr-values{position:relative;display:grid;gap:8px}
-.abr-values details{border-bottom:1px solid var(--line)}
-.abr-values summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:16px;padding:18px 4px;font-size:clamp(19px,1.6vw,22px);font-weight:600;color:var(--muted);min-height:44px}
-.abr-values summary::-webkit-details-marker{display:none}
-.abr-values details[open] summary{color:var(--ink)}
+/* Values: tabs without photos (AbrValueTabs): chips on phones, a numbered list at the left and the chosen value at the right from 901px */
 .abr-vnum{font-size:13px;font-weight:700;color:var(--gold-ink);letter-spacing:.08em}
-.abr-values details > p{margin:0 0 18px;padding-left:44px}
-.abr-vphoto{position:relative;display:block;aspect-ratio:16/10;margin:0 0 20px;border-radius:var(--radius);overflow:hidden;background:var(--line)}
-.abr-vphoto img{object-fit:cover}
+.abr-vtabs{display:grid;gap:20px}
+.abr-vtab-list{display:flex;flex-wrap:wrap;gap:8px}
+.abr-vtab-list button{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:8px 16px;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--muted);font:600 15px/1.3 var(--font-text),sans-serif;text-align:left;cursor:pointer;transition:color .2s,background .2s,border-color .2s}
+.abr-vtab-list button.is-on{background:var(--navy);border-color:var(--navy);color:#fff}
+.abr-vtab-list button.is-on .abr-vnum{color:var(--gold)}
+.abr-vtab-list button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.abr-vtab-panel{padding:28px 24px;border:1px solid var(--line);border-radius:var(--radius);background:var(--paper)}
+.abr-vtab-panel h3{margin:10px 0 14px;font-size:clamp(28px,3vw,44px) !important;line-height:1.1;color:var(--ink)}
+.abr-vtab-panel p{margin:0;font-size:clamp(19px,1.7vw,26px);line-height:1.45;color:var(--muted)}
+.abr-vtab-panel:not([hidden]){animation:abrFade .4s ease both}
 @media (min-width:901px){
-  .abr-values{--abr-vg:clamp(48px,6vw,112px);grid-template-columns:minmax(0,1fr);width:50%;min-height:440px}
-  .abr-vphoto{position:absolute;left:calc(100% + var(--abr-vg));top:0;width:calc(100% - var(--abr-vg));height:100%;aspect-ratio:auto;margin:0}
-  .abr-values details[open] .abr-vphoto{animation:abrFade .5s ease both}
+  .abr-vtabs{grid-template-columns:minmax(260px,.9fr) minmax(0,1.4fr);gap:clamp(32px,4vw,72px);align-items:start}
+  .abr-vtab-list{flex-direction:column;flex-wrap:nowrap;gap:0;border-top:1px solid var(--line)}
+  .abr-vtab-list button{width:100%;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:18px 4px;font-size:clamp(17px,1.4vw,20px)}
+  .abr-vtab-list button.is-on{background:transparent;color:var(--ink);box-shadow:inset 3px 0 0 var(--gold);padding-left:16px}
+  .abr-vtab-list button.is-on .abr-vnum{color:var(--gold-ink)}
+  .abr-vtabs{align-items:stretch}
+  .abr-vtab-panel{padding:clamp(32px,3.5vw,56px);display:flex;flex-direction:column;justify-content:center}
+  .abr-vtab-panel[hidden]{display:none}
 }
-@keyframes abrFade{from{opacity:0;transform:scale(1.02)}to{opacity:1;transform:none}}
+@keyframes abrFade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.abr-vtab-panel:not([hidden]){animation:none}}
 
 /* Process: four numbered cards */
 .abr-process{background:var(--abr-wash)}
@@ -128,6 +136,8 @@ main.abr .abr-steps h3{margin:18px 0 0;font-size:20px;color:var(--ink);text-alig
 .abr-team li{padding:26px;border-radius:var(--radius);border:1px solid var(--line);background:var(--paper)}
 .abr-avatar{display:grid;place-items:center;width:64px;height:64px;border-radius:50%;background:linear-gradient(180deg,var(--abr-g1),var(--abr-g2) 50%,var(--abr-g3));color:var(--abr-ink);font-weight:700;font-size:20px;letter-spacing:.02em}
 .abr-avatar svg{width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.abr-avatar.photo{overflow:hidden;background:var(--line)}
+.abr-avatar.photo img{width:100%;height:100%;object-fit:cover;display:block}
 main.abr .abr-team h3{margin:18px 0 0;font-size:19px;color:var(--ink);text-align:left}
 .abr-team p{font-size:15px!important;margin-top:8px!important}
 @media (min-width:621px){.abr-team{grid-template-columns:repeat(2,minmax(0,1fr))}}

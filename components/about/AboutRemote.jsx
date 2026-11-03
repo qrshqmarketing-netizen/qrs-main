@@ -9,6 +9,7 @@ import { heroUnderline } from '@/data/heroOutcomes';
 import { cityPath } from '@/data/locations';
 import { BUSINESS, COMPANY, OFFICES, PHONE, TEL } from '@/data/site';
 import { NUMBERS } from './AboutSections';
+import AbrValueTabs from './AbrValueTabs';
 import './aboutRemote.css';
 
 // The About page after the owner's reference remote.com/about (October 29 2026), in QRS colors: an inset hero card with a three-stop vertical
@@ -142,24 +143,14 @@ export function AbrStory({ story }) {
           ))}
         </div>
         <div className="abr-photo">
-          <Image src="/images/home-hero-shingle-neighborhood-drone-view.webp" alt="Aerial view of shingle roofs on homes in a Southern California neighborhood" fill sizes="(min-width: 901px) 44vw, 100vw" quality={65} loading="lazy" />
+          <Image src="/images/about-our-story-selfie-walk.webp" alt="A couple walking their dog on a path in the park" fill sizes="(min-width: 901px) 44vw, 100vw" quality={65} loading="lazy" style={{ objectPosition: "52% 30%" }} />
         </div>
       </div>
     </section>
   );
 }
 
-// The values as an accordion: one open at a time (native <details name>), the open one showing its photo at the right from 901px
-const VALUE_PHOTOS = [
-  ['/images/how-we-work-roofer-tablet-report.webp', 'A roofer reviewing a roof report on a tablet'],
-  ['/images/how-we-work-plain-english-homeowners.webp', 'A roofer talking through a roof with homeowners'],
-  ['/images/how-we-work-clean-site-tile-roof.webp', 'A clean job site on a tile roof'],
-  ['/images/roofscan-360-roofer-chimney-flashing.webp', 'A roofer pointing out chimney flashing during an inspection'],
-  ['/images/how-we-work-local-crews-commercial-roof.webp', 'A crew on a commercial roof'],
-  ['/images/careers-process-roofer-crew.webp', 'A roofing crew working together'],
-  ['/images/how-we-work-clean-site-multi-family-shingle.webp', 'A finished shingle reroof on a row of townhomes'],
-];
-
+// The values as tabs, without photos (owner, November 3 2026): AbrValueTabs
 export function AbrValues({ mission }) {
   return (
     <section className="abr-section abr-values-sec" aria-labelledby="abr-values">
@@ -170,23 +161,7 @@ export function AbrValues({ mission }) {
           <p>{COMPANY.mission}</p>
           <p className="abr-muted">{COMPANY.vision}</p>
         </div>
-        <div className="abr-values">
-          {COMPANY.values.map((v, i) => {
-            const [src, alt] = VALUE_PHOTOS[i % VALUE_PHOTOS.length];
-            return (
-              <details key={v.title} name="abr-values" open={i === 0}>
-                <summary>
-                  <span className="abr-vnum">{String(i + 1).padStart(2, '0')}</span>
-                  {v.title}
-                </summary>
-                <p>{v.text}</p>
-                <span className="abr-vphoto">
-                  <Image src={src} alt={alt} fill sizes="(min-width: 901px) 44vw, 100vw" quality={60} loading="lazy" />
-                </span>
-              </details>
-            );
-          })}
-        </div>
+        <AbrValueTabs values={COMPANY.values} />
       </div>
     </section>
   );
@@ -230,8 +205,8 @@ export function AbrTeam({ team }) {
             const ini = initials(m.title);
             return (
               <li key={m.title}>
-                <span className={'abr-avatar' + (ini ? '' : ' role')} aria-hidden="true">
-                  {ini || (
+                <span className={'abr-avatar' + (m.photo ? ' photo' : ini ? '' : ' role')} aria-hidden="true">
+                  {m.photo ? <Image src={m.photo} alt="" width={160} height={160} sizes="80px" loading="lazy" /> : ini || (
                     <svg viewBox="0 0 24 24">
                       <path d="M2.5 13 12 5l9.5 8" />
                       <path d="M5 11v8.5h14V11" />
