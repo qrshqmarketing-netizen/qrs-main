@@ -91,6 +91,8 @@ export const HERO_OUTCOMES = {
   '/service-areas/la-county/granada-hills/': 'A dry, cool home through the Valley heat.',
   '/service-areas/la-county/pico-rivera/': 'A new roof that works with your solar.',
   '/service-areas/la-county/hacienda-heights/': 'A neat, dry roof over your whole home.',
+  '/service-areas/la-county/mid-wilshire/': 'A tile roof that keeps its Spanish character.',
+  '/service-areas/la-county/westlake/': 'A roof that follows every line of your home.',
   '/service-areas/orange-county/huntington-beach/': 'A roof that’s ready for the salt air.',
   '/service-areas/orange-county/newport-beach/': 'A roof as polished as your coastal home.',
 
@@ -169,6 +171,8 @@ export const HERO_UNDERLINES = {
   '/service-areas/la-county/granada-hills/': 'Granada Hills',
   '/service-areas/la-county/pico-rivera/': 'Pico Rivera',
   '/service-areas/la-county/hacienda-heights/': 'Hacienda Heights',
+  '/service-areas/la-county/mid-wilshire/': 'Mid-Wilshire',
+  '/service-areas/la-county/westlake/': 'Westlake',
   '/service-areas/orange-county/huntington-beach/': 'Huntington Beach',
   '/service-areas/orange-county/newport-beach/': 'Newport Beach',
   '/projects/': 'Projects',

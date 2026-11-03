@@ -10,7 +10,7 @@ export const MID_WILSHIRE_PROJECT = {
   // Map pin on /projects/: the center of the ZIP code, not the building's address, so the client's address stays private
   // Short name for the "Recent projects" links on the service pages this project is listed under (`related`)
   label: 'Tile and flat roofing, Mid-Wilshire',
-  related: ['/residential-roofing/tile-roofing/replacement/', '/residential-roofing/flat-roofing/replacement/', '/residential-roofing/hoa-multi-family/', '/service-areas/la-county/los-angeles/'], // service and city pages: shown as "Related services" here, and this project is linked back from them
+  related: ['/residential-roofing/tile-roofing/replacement/', '/residential-roofing/flat-roofing/replacement/', '/residential-roofing/hoa-multi-family/', '/service-areas/la-county/los-angeles/', '/service-areas/la-county/mid-wilshire/'], // service and city pages: shown as "Related services" here, and this project is linked back from them
   // An H2 above the paragraph at each position below (they describe the paragraphs, nothing is added to the story)
   headings: { 1: 'From a leak to a $199 Roof Check', 2: 'Clay tile on the slopes, a reflective roof on the terrace', 3: 'Tile and terrace roofs for multi-family buildings' },
   place: 'Mid-Wilshire, Los Angeles, CA 90019',

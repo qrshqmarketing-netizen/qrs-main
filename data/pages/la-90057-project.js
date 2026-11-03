@@ -10,7 +10,7 @@ export const LA_90057_PROJECT = {
   // Map pin on /projects/: the center of the ZIP code, not the property's address, so the client's address stays private
   // Short name for the "Recent projects" links on the service pages this project is listed under (`related`)
   label: 'Shingle roof replacement, Westlake 90057',
-  related: ["/residential-roofing/shingle-roofing/replacement/", "/service-areas/la-county/los-angeles/"], // service and city pages: shown as "Related services" here, and this project is linked back from them
+  related: ["/residential-roofing/shingle-roofing/replacement/", "/service-areas/la-county/los-angeles/", "/service-areas/la-county/westlake/"], // service and city pages: shown as "Related services" here, and this project is linked back from them
   // An H2 above the paragraph at each position below (they describe the paragraphs, nothing is added to the story)
   headings: { 1: "Every gable, hip and valley, finished clean", 2: "A chimney and vents that stay watertight", 3: "One consistent roof, edge to edge", 4: "Roofing for Craftsman homes across Los Angeles" },
   place: 'Westlake, Los Angeles, CA 90057',

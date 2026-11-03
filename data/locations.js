@@ -29,6 +29,9 @@ export const LOCATIONS = [
   { city: 'Granada Hills', slug: 'granada-hills', county: 'Los Angeles County', region: 'la-county', lat: 34.2647, lng: -118.5233 },
   { city: 'Pico Rivera', slug: 'pico-rivera', county: 'Los Angeles County', region: 'la-county', lat: 33.9831, lng: -118.0967 },
   { city: 'Hacienda Heights', slug: 'hacienda-heights', county: 'Los Angeles County', region: 'la-county', lat: 33.9931, lng: -117.9687 },
+  // Neighborhood pages from the map plan (owner, November 3 2026), each with a finished project
+  { city: 'Mid-Wilshire', slug: 'mid-wilshire', county: 'Los Angeles County', region: 'la-county', lat: 34.0618, lng: -118.3437 },
+  { city: 'Westlake', slug: 'westlake', county: 'Los Angeles County', region: 'la-county', lat: 34.0587, lng: -118.2766 },
 ];
 
 // Places inside the outlined service area (data/serviceAreaOutline.js) that have no page of their own. They have a pin and a label on the service area map
@@ -42,6 +45,13 @@ export const OTHER_PLACES = [
   { city: 'Anaheim', slug: 'anaheim', county: 'Orange County', region: 'orange-county', lat: 33.8366, lng: -117.9143 },
   { city: 'Santa Ana', slug: 'santa-ana', county: 'Orange County', region: 'orange-county', lat: 33.7455, lng: -117.8677 },
   { city: 'Irvine', slug: 'irvine', county: 'Orange County', region: 'orange-county', lat: 33.6846, lng: -117.8265 },
+  // Cities around the Vernon office (owner, November 3 2026): listed on the Vernon page as places it serves
+  { city: 'Huntington Park', slug: 'huntington-park', county: 'Los Angeles County', region: 'la-county', lat: 33.9817, lng: -118.2251 },
+  { city: 'Maywood', slug: 'maywood', county: 'Los Angeles County', region: 'la-county', lat: 33.9867, lng: -118.1854 },
+  { city: 'Bell', slug: 'bell', county: 'Los Angeles County', region: 'la-county', lat: 33.9775, lng: -118.187 },
+  { city: 'Bell Gardens', slug: 'bell-gardens', county: 'Los Angeles County', region: 'la-county', lat: 33.9653, lng: -118.1514 },
+  { city: 'South Gate', slug: 'south-gate', county: 'Los Angeles County', region: 'la-county', lat: 33.9547, lng: -118.212 },
+  { city: 'Commerce', slug: 'commerce', county: 'Los Angeles County', region: 'la-county', lat: 34.0006, lng: -118.1598 },
   { city: 'Beverly Hills', slug: 'beverly-hills', county: 'Los Angeles County', region: 'la-county', lat: 34.0736, lng: -118.4004 },
   { city: 'Culver City', slug: 'culver-city', county: 'Los Angeles County', region: 'la-county', lat: 34.0211, lng: -118.3965 },
   { city: 'Sherman Oaks', slug: 'sherman-oaks', county: 'Los Angeles County', region: 'la-county', lat: 34.1511, lng: -118.4492 },

@@ -37,6 +37,7 @@ export const LOCATION_PAGES = {
       { q: 'How do I choose the best roofing contractor in Los Angeles?', a: 'Check the CSLB license, ask for a roofer-led inspection with photos, get a written scope and price before any work starts, read the workmanship warranty and look at reviews from homeowners near you. Our [license and credentials](/credentials/) and our [Google reviews](/reviews/) are a click away.' },
       { q: 'Do you serve my Los Angeles neighborhood?', a: 'We work across the city, from the Hollywood Hills and Silver Lake to Sherman Oaks and Encino, with offices in West Hollywood and Woodland Hills. Check your ZIP code on the map on this page, or give us a call.' },
       { q: 'Do you work in West Hollywood?', a: 'Yes. West Hollywood has its own [West Hollywood roofing](/service-areas/la-county/west-hollywood/) page, with the work we do there on homes, condos and [multi-family buildings](/residential-roofing/hoa-multi-family/). Our West Hollywood office and its address are on that page too.' },
+      { q: 'Do you work in Mid-Wilshire and Westlake?', a: 'Yes. [Mid-Wilshire roofing](/service-areas/la-county/mid-wilshire/), with Hancock Park and Miracle Mile, and [Westlake roofing](/service-areas/la-county/westlake/), with Koreatown, each have their own page with a project we finished there.' },
       { q: 'What roof types do you work on in Los Angeles?', a: 'All of the common ones: [tile](/residential-roofing/tile-roofing/), [shingle](/residential-roofing/shingle-roofing/) and [flat](/residential-roofing/flat-roofing/) roofs. Plenty of homes here have more than one type, and one roof evaluation covers them all.' },
       { q: 'Can you work on hillside homes?', a: 'Yes. Steep lots and narrow streets take extra planning for access, material deliveries and safety, and we build that into the written scope before work starts.' },
       { q: 'How do I get started?', a: 'Book a free roof evaluation. A roofer inspects your roof, photo-documents its condition and gives you a clear next step: repair, monitor, maintain or replace.' },
@@ -175,7 +176,7 @@ export const LOCATION_PAGES = {
       { title: 'Fire season near the hills', text: 'Homes near the Santa Monica Mountains benefit from ember-resistant details like closed eaves, bird stops and well-sealed vents.' },
     ],
     faqs: [
-      { q: 'Where is your Woodland Hills office?', a: 'Our Valley office is at 22900 Ventura Blvd, Suite 124, Woodland Hills, CA 91364. Call (310) 340-1643 to book a free roof evaluation or ask a question.' },
+      { q: 'Where is your Woodland Hills office?', a: 'Our Valley office is at 22900 Ventura Blvd, Suite 124, Woodland Hills, CA 91364. Call (818) 918-3184 to book a free roof evaluation or ask a question.' },
       { q: 'Which parts of the Valley do you serve from Woodland Hills?', a: 'All of Woodland Hills, including Warner Center, Walnut Acres and the hills south of Ventura Boulevard, plus nearby Tarzana, Encino, Canoga Park, West Hills and Calabasas. Check your ZIP code on the map on this page.' },
       { q: 'How does Valley heat affect my roof?', a: 'Heat breaks down underlayment, sealants and shingles faster, and a hot attic makes it worse. A [shingle roof inspection](/roof-inspection/#shingle-roofs) shows how your roof is holding up, with photos.' },
       { q: 'Do you work on hillside homes near the Santa Monica Mountains?', a: 'Yes. Steep lots and narrow roads take extra planning for access, deliveries and safety, and we build that into the written scope before work starts.' },
@@ -312,9 +313,11 @@ export const LOCATION_PAGES = {
       paragraphs: [
         'Vernon calls itself “exclusively industrial,” and the roofs here show it: wide, low-slope roofs over warehouses, manufacturing plants and food-processing facilities, built to cover large open floor plans rather than a typical house roof. Our Vernon office keeps us close to these buildings and to the surrounding industrial areas near Downtown Los Angeles.',
         'It starts with a roofer-led [roof survey](#roof-check), not a sales pitch. We photo-document the roof, explain what we find in plain English and give you a written scope and price before any work begins — the same process whether the job is a [flat roof repair](/residential-roofing/flat-roofing/repair/), a full [commercial roof replacement](/commercial-roofing/replacement/) or ongoing [commercial roof maintenance](/commercial-roofing/maintenance/).',
+        // Homes near the office (owner, November 3 2026: the Vernon listing's residential side; facts the site already states)
+        'Our Vernon office also serves the homes and apartment buildings around it, in Huntington Park, Maywood, Bell, Bell Gardens, South Gate, Commerce, Boyle Heights and Downtown Los Angeles. For a house there, it starts with a [free roof evaluation](#roof-check) and a written price before any work, whether the roof needs a [roof repair](/roof-repair/), a [shingle roof replacement](/residential-roofing/shingle-roofing/replacement/) or a [flat roof repair](/residential-roofing/flat-roofing/repair/). Our office team and roofers speak English and Spanish.',
       ],
     },
-    neighborhoods: [],
+    neighborhoods: ['Huntington Park', 'Maywood', 'Bell', 'Bell Gardens', 'South Gate', 'Commerce', 'Boyle Heights', 'Downtown Los Angeles'],
     considerations: [
       { title: 'Large, low-slope roofs', text: 'Warehouses and plants rely on wide flat and low-slope roof systems, where drainage and seam detail matter more than they do on a typical house roof.' },
       { title: 'Heavy rooftop equipment', text: 'HVAC units, exhaust systems and other rooftop equipment need flashing and curbs that are sealed and maintained, especially around food-processing and manufacturing exhaust.' },
@@ -324,7 +327,8 @@ export const LOCATION_PAGES = {
       { q: 'Do you work on warehouse and plant roofs in Vernon?', a: 'Yes. Vernon is almost entirely industrial and commercial buildings, and that’s exactly the kind of large, low-slope roof we work on — [commercial roofing](/commercial-roofing/) repair, replacement and maintenance.' },
       { q: 'Can you work on a roof without shutting down the building?', a: 'In most cases, yes. Vernon’s plants and warehouses often run continuously, so we plan the work, staging and access around keeping the building open.' },
       { q: 'Do you handle food-processing and manufacturing facilities?', a: 'Yes. We work with the rooftop equipment, exhaust systems and drainage details common on manufacturing and food-processing buildings, and document everything with photos.' },
-      { q: 'Where is your Vernon office?', a: 'Our Vernon office is at 2850 E 46th St, Unit B, Vernon, CA 90058. Call (310) 340-1643 to book a roof survey or ask a question.' },
+      { q: 'Do you work on homes near Vernon?', a: 'Yes. From our Vernon office we repair and replace roofs on homes and apartment buildings in Huntington Park, Maywood, Bell, Bell Gardens, South Gate, Commerce, Boyle Heights and Downtown Los Angeles, starting with a [free roof evaluation](#roof-check). Our team speaks English and Spanish.' },
+      { q: 'Where is your Vernon office?', a: 'Our Vernon office is at 2850 E 46th St, Unit B, Vernon, CA 90058. Call (213) 263-5976 to book a roof survey or ask a question.' },
     ],
     nearby: ['los-angeles'],
     final: { heading: 'A Clear Scope for Your Vernon Building', text: 'Start with a roofer-led roof survey and get a written scope and price for your Vernon warehouse, plant or commercial building.' },
@@ -358,6 +362,7 @@ export const LOCATION_PAGES = {
     ],
     faqs: [
       { q: 'Where is your West Hollywood office?', a: 'At 1444 N Poinsettia Pl, Unit 308, Los Angeles, CA 90046. It answers at (310) 340-1643.' },
+      { q: 'Do you work in Hancock Park and Mid-Wilshire?', a: 'Yes. Our West Hollywood office is close by, and [Mid-Wilshire roofing](/service-areas/la-county/mid-wilshire/) has its own page, with the clay tile and flat roof work we did on a building there.' },
       { q: 'Do you roof condos and apartment buildings?', a: 'Yes. We handle [HOA and multi-family roofing](/residential-roofing/hoa-multi-family/) as well as single-family homes, and for larger buildings we give the property manager or board a clear written scope.' },
       { q: 'Can you repair a flat roof that holds water?', a: 'In many cases, yes. We look at slope, drains and flashings to find why water is standing, then give you a written scope for a [flat roof repair](/residential-roofing/flat-roofing/repair/) or replacement.' },
       { q: 'How do I get started?', a: 'Book a free roof evaluation. A roofer inspects your roof with drone footage and photos, explains what they find and gives you a clear next step: repair, monitor, maintain or replace.' },
@@ -487,7 +492,7 @@ export const LOCATION_PAGES = {
     ],
     faqs: [
       { q: 'Have you worked in Panorama City?', a: 'Yes. We replaced the shingle roof on a [two-story apartment building in 91402](/projects/shingle-roof-replacement-panorama-city-91402/), flashing every AC platform and vent and adding new box vents.' },
-      { q: 'Which office serves Panorama City?', a: 'Our Valley office in Woodland Hills, which answers at the same number as all our offices, (310) 340-1643.' },
+      { q: 'Which office serves Panorama City?', a: 'Our Valley office in Woodland Hills, at (818) 918-3184.' },
       { q: 'How do I get started?', a: 'Book a free roof evaluation. A roofer inspects your roof with drone footage and photos, explains what they find and gives you a clear next step: repair, monitor, maintain or replace.' },
     ],
     nearby: ['granada-hills', 'woodland-hills', 'burbank'],
@@ -519,7 +524,7 @@ export const LOCATION_PAGES = {
     ],
     faqs: [
       { q: 'Have you worked in Granada Hills?', a: 'Yes. We replaced the shingle roof on a [large single-story home in 91344](/projects/shingle-roof-replacement-granada-hills-91344/), with its chimney, skylights and vents built into the new roof.' },
-      { q: 'Which office serves Granada Hills?', a: 'Our Valley office in Woodland Hills, which answers at (310) 340-1643.' },
+      { q: 'Which office serves Granada Hills?', a: 'Our Valley office in Woodland Hills, at (818) 918-3184.' },
       { q: 'How do I get started?', a: 'Book a free roof evaluation. A roofer inspects your roof with drone footage and photos, explains what they find and gives you a clear next step: repair, monitor, maintain or replace.' },
     ],
     nearby: ['woodland-hills', 'panorama-city', 'burbank'],
@@ -588,6 +593,79 @@ export const LOCATION_PAGES = {
     ],
     nearby: ['pico-rivera', 'los-angeles'],
     final: { heading: 'Let’s Take a Look at Your Hacienda Heights Roof', text: 'Start with a free roof evaluation and a written scope for your Hacienda Heights home.' },
+  },
+
+  // ----- Neighborhood pages from the map plan (owner, November 3 2026), each built around a finished project and linked from the Los Angeles
+  // and West Hollywood pages. The neighborhood names and local building types still need the owner's check.
+
+  'mid-wilshire': {
+    keyword: 'mid-wilshire roofing',
+    image: '/images/projects/tile-flat-roofing-in-mid-wilshire-90019/mid-wilshire-tile-flat-roof-8.webp',
+    metaTitle: 'Mid-Wilshire Roofing: Hancock Park & Miracle Mile',
+    h1: 'Mid-Wilshire Roofing & Roof Repair',
+    metaDescription: 'Mid-Wilshire roofing for Spanish-style homes and buildings in Hancock Park and Miracle Mile: clay tile and flat roof repair and replacement. Free evaluation.',
+    blurb: 'Clay tile and flat roofs for Spanish-style homes and multi-family buildings in Mid-Wilshire, Hancock Park and Miracle Mile.',
+    hero: {
+      heading: 'Mid-Wilshire roofing',
+      sub: 'For Mid-Wilshire roofing, Quality Roofing Specialists repairs and replaces clay tile and flat roofs on Spanish-style homes and multi-family buildings in Mid-Wilshire, Hancock Park and Miracle Mile, including new clay tile and a reflective terrace roof on a building in 90019. Every job starts with a free roof evaluation.',
+    },
+    intro: {
+      heading: 'Clay Tile Slopes and Flat Terraces',
+      paragraphs: [
+        'For Mid-Wilshire roofing, Quality Roofing Specialists works on the Spanish-style homes and buildings this part of Los Angeles is known for, from Hancock Park and Windsor Square to Miracle Mile. On a [Spanish Revival multi-family building in Mid-Wilshire 90019](/projects/tile-flat-roofing-in-mid-wilshire-90019/), we replaced both roof areas in one scope: the pitched sections with tile-rated underlayment and new curved clay tile, and the upper terrace with a reflective flat roof.',
+        'Many older buildings here pair clay tile slopes with flat roofs and terraces behind parapet walls, so one roof often needs both. We handle [tile roof replacement](/residential-roofing/tile-roofing/replacement/), a [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/) when the tile can be reused, [tile roof repair](/residential-roofing/tile-roofing/repair/) and [flat roof replacement](/residential-roofing/flat-roofing/replacement/), for single homes and [multi-family buildings](/residential-roofing/hoa-multi-family/).',
+        'It starts with a roofer-led [free roof evaluation](#roof-check): photos of what we find, a plain-English explanation and a written scope and price before any work begins, from our nearby [West Hollywood office](/service-areas/la-county/west-hollywood/).',
+      ],
+    },
+    neighborhoods: ['Hancock Park', 'Miracle Mile', 'Windsor Square', 'Larchmont', 'Mid-City'],
+    considerations: [
+      { title: 'Clay tile on Spanish-style roofs', text: 'The clay tile usually outlasts the underlayment under it, so a leaking tile roof often needs new underlayment more than new tile.' },
+      { title: 'Flat terraces behind parapets', text: 'Flat roofs and terraces next to tile slopes need their own drainage, flashing and parapet details.' },
+      { title: 'Matching older tile', text: 'Older clay tile can be hard to match, so we look at reusing the tile you have before replacing it.' },
+    ],
+    faqs: [
+      { q: 'Have you worked in Mid-Wilshire?', a: 'Yes. On a [Spanish Revival multi-family building in 90019](/projects/tile-flat-roofing-in-mid-wilshire-90019/) we replaced the pitched roof with tile-rated underlayment and new curved clay tile, and the upper terrace with a reflective flat roof, in one scope.' },
+      { q: 'Do you work in Hancock Park and Miracle Mile?', a: 'Yes. We work across Hancock Park, Windsor Square, Larchmont, Miracle Mile and the rest of Mid-Wilshire, from our [West Hollywood office](/service-areas/la-county/west-hollywood/).' },
+      { q: 'Can you repair a clay tile roof without replacing the tile?', a: 'Often, yes. When the tile is still sound, a [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/) takes it up, replaces the underlayment and puts the same tile back. The roof evaluation tells you which one your roof needs.' },
+      { q: 'How do I get started?', a: 'Book a free roof evaluation. A roofer inspects your roof with drone footage and photos, explains what they find and gives you a clear next step: repair, monitor, maintain or replace.' },
+    ],
+    nearby: ['west-hollywood', 'los-angeles', 'hollywood-hills'],
+    final: { heading: 'Let’s Take a Look at Your Mid-Wilshire Roof', text: 'Start with a free roof evaluation and a written scope for your Mid-Wilshire, Hancock Park or Miracle Mile home or building.' },
+  },
+
+  westlake: {
+    keyword: 'westlake roofing',
+    image: '/images/projects/shingle-roof-replacement-los-angeles-90057/shingle-los-angeles-90057-01.webp',
+    metaTitle: 'Westlake Roofing & Roof Repair Near Koreatown',
+    h1: 'Westlake Roofing & Roof Repair',
+    metaDescription: 'Westlake roofing in Los Angeles and Koreatown: shingle, tile and flat roof repair and replacement for older homes and apartment buildings. Free roof evaluation.',
+    blurb: 'Roof repair and replacement for older homes and apartment buildings in Westlake and Koreatown, including a Craftsman re-roof in 90057.',
+    hero: {
+      heading: 'Westlake roofing',
+      sub: 'For Westlake roofing, Quality Roofing Specialists repairs and replaces roofs on older homes and apartment buildings in Westlake and Koreatown, including a new shingle roof on a many-gabled Craftsman home in 90057. Every job starts with a free roof evaluation.',
+    },
+    intro: {
+      heading: 'Older Homes and Apartment Roofs',
+      paragraphs: [
+        'For Westlake roofing, Quality Roofing Specialists works on the older homes and apartment buildings of Westlake, Koreatown, MacArthur Park and Echo Park. On a [Craftsman home in Westlake 90057](/projects/shingle-roof-replacement-los-angeles-90057/), our roofers replaced a roof of many gables, hips and valleys in new gray asphalt shingles, with the chimney and every vent flashed.',
+        'Around it, many apartment and commercial buildings have flat roofs behind parapet walls, where drainage and seams matter most. We handle [shingle roof replacement](/residential-roofing/shingle-roofing/replacement/), [flat roof repair](/residential-roofing/flat-roofing/repair/), [flat roof replacement](/residential-roofing/flat-roofing/replacement/) and [multi-family roofing](/residential-roofing/hoa-multi-family/).',
+        'It starts with a roofer-led [free roof evaluation](#roof-check): photos of what we find, a plain-English explanation and a written scope and price before any work begins. Our team speaks English and Spanish.',
+      ],
+    },
+    neighborhoods: ['Koreatown', 'MacArthur Park', 'Echo Park', 'Pico-Union'],
+    considerations: [
+      { title: 'Rooflines with many gables', text: 'Craftsman and older homes often have gables, hips and valleys that each need to be worked and finished on their own.' },
+      { title: 'Flat roofs on apartment buildings', text: 'Flat roofs behind parapets need clear drains, sealed seams and flashed equipment so water doesn’t sit.' },
+      { title: 'Chimneys and vents', text: 'The places where something comes up through the roof are where leaks most often start, so each one is flashed.' },
+    ],
+    faqs: [
+      { q: 'Have you worked in Westlake?', a: 'Yes. We replaced the roof on a [Craftsman home in Westlake 90057](/projects/shingle-roof-replacement-los-angeles-90057/): new gray shingles over every gable, hip and valley, with the chimney and vents flashed.' },
+      { q: 'Do you work in Koreatown?', a: 'Yes. We repair and replace roofs on homes and apartment buildings in Koreatown, including [flat roof repair](/residential-roofing/flat-roofing/repair/) and [multi-family roofing](/residential-roofing/hoa-multi-family/).' },
+      { q: 'Is this Westlake Village?', a: 'No. This page is about Westlake in Los Angeles, around MacArthur Park. Westlake Village is served from our [Woodland Hills office](/service-areas/la-county/woodland-hills/).' },
+      { q: 'How do I get started?', a: 'Book a free roof evaluation. A roofer inspects your roof with drone footage and photos, explains what they find and gives you a clear next step: repair, monitor, maintain or replace.' },
+    ],
+    nearby: ['mid-wilshire', 'los-angeles', 'vernon'],
+    final: { heading: 'Let’s Take a Look at Your Westlake Roof', text: 'Start with a free roof evaluation and a written scope for your Westlake or Koreatown home or building.' },
   },
 };
 
