@@ -1,7 +1,7 @@
 // About page (/about-us/), linked from the footer ("About QRS") and the header ("Why QRS").
 // The mission, vision and core values come from COMPANY in data/site.js.
 
-import { BUSINESS, COMPANY } from '@/data/site';
+import { BUSINESS, COMPANY, GOOGLE_REVIEWS } from '@/data/site';
 import { formatDate } from '@/lib/dates';
 
 export const ABOUT_PAGE = {
@@ -75,7 +75,7 @@ export const ABOUT_PAGE = {
     cta: { label: 'Explore careers', href: '/careers/' },
   },
   faqs: [
-    { q: 'How can I tell if a roofing company is trustworthy?', a: 'Check that its California contractor license is active on the CSLB website and that it’s bonded and insured, read its recent reviews, and expect a roofer, not a salesperson, to look at your roof. A trustworthy company gives you photos of what it found and a written scope and price before any work, and puts its warranty in writing. Ours: CSLB #1061942, licensed, bonded and insured, 269 Google reviews and a 10-year workmanship warranty on installs (call for details).' },
+    { q: 'How can I tell if a roofing company is trustworthy?', a: `Check that its California contractor license is active on the CSLB website and that it’s bonded and insured, read its recent reviews, and expect a roofer, not a salesperson, to look at your roof. A trustworthy company gives you photos of what it found and a written scope and price before any work, and puts its warranty in writing. Ours: CSLB #1061942, licensed, bonded and insured, ${GOOGLE_REVIEWS.count} Google reviews and a 10-year workmanship warranty on installs (call for details).` },
     { q: 'Is Quality Roofing Specialists licensed and insured?', a: `Yes. QRS is licensed, bonded and insured as a California contractor: CSLB license #${BUSINESS.license}, licensed since ${formatDate(BUSINESS.licenseSince)}.` },
     { q: 'Who owns Quality Roofing Specialists?', a: 'QRS is family-owned, woman-owned and locally owned. It was co-founded by **Tony Goldberg** and **Adva Goldberg**, who serve as CEO and President. Tony did his first roofing job at 16.' },
     { q: 'What areas do you serve?', a: 'Homes and businesses across [Los Angeles County](/service-areas/la-county/), [Orange County](/service-areas/orange-county/) and the Inland Empire ([Riverside County](/service-areas/riverside-county/) and [San Bernardino County](/service-areas/san-bernardino-county/)), from our offices in West Hollywood, Woodland Hills and Vernon.' },
