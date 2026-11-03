@@ -10,7 +10,7 @@ export const LOCATION_PAGES = {
     imagePosition: 'center 40%',
     // About Los Angeles only (owner, October 22 2026): West Hollywood has its own page (the one the Google listing named West Hollywood should
     // point to), so this page names it only to link there, and the two pages don't compete for "West Hollywood roofing"
-    metaTitle: 'Roofer Los Angeles CA | Roofing Companies Los Angeles', // owner, November 3 2026 (target keywords); the H1 stays below
+    metaTitle: 'Los Angeles Roofing & Roof Repair',
     h1: 'Los Angeles Roofing & Roof Repair',
     metaDescription: 'Los Angeles roofing across the city: tile, shingle and flat roof repair and replacement with written scopes. Book a free roof evaluation.',
     blurb: 'Roofer-led inspections, written scopes and clean installs for homes across the city, from the Hollywood Hills to the Valley.',
