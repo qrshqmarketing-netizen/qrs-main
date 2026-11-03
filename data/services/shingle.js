@@ -7,7 +7,7 @@ export const SHINGLE_CONTENT = {
     // Search Console wording (owner, October 23 2026): "shingle roofing services/company/contractor", "shingle roofing los angeles", "shingle roofer(s)",
     // "shingle roofing installers", "comp shingle roof installation los angeles county", "asphalt/architectural shingles los angeles", "composition roof
     // orange county". The H1 is unchanged.
-    metaTitle: 'Shingle Roofing in Los Angeles & Orange County',
+    metaTitle: 'Shingle Roofing Los Angeles | Asphalt Shingle Roofers', // owner, November 3 2026 (asphalt shingle roofers, shingle roofers)
     metaDescription: 'Shingle roofing for Los Angeles & Orange County homes: replacement, repairs, new installs, inspections, tune-ups and roof care. Book a free roof evaluation.',
     hero: {
       heading: 'Shingle Roofing Services · *TotalShield*',

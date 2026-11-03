@@ -3219,7 +3219,7 @@ export const BLOG_POSTS = [
     title: 'Roof Replacement Cost in Los Angeles: What Sets the Price',
     keyword: 'roof replacement cost',
     topics: ['replacement', 'shingle', 'tile', 'flat', 'restoration'],
-    metaTitle: 'Roof Replacement Cost in Los Angeles: What Sets the Price',
+    metaTitle: 'Roof Replacement Cost in Los Angeles: Cost to Redo a Roof',
     metaDescription:
       'Roof replacement cost in Los Angeles: how roof type, size, pitch and the deck shape the price, why your roof isn’t your square footage, and how to compare bids.',
     datePublished: '2026-10-13',
@@ -3227,7 +3227,7 @@ export const BLOG_POSTS = [
     // No prices in this article (owner, October 22 2026): cost is described in general terms, as in the shingle vs. tile article; the exact
     // figure comes from the free roof evaluation. `revision` copies this text over the live copy in Supabase once (lib/postsStore.js
     // applyFileRevisions); raise it after the next change made here.
-    revision: 5, // meta title back to its October 26 wording (owner, October 27 2026: revert after the drop in calls); copies it to the live copy once
+    revision: 6, // meta title for "cost to redo roof" (owner, November 3 2026); earlier: revision 5, meta title back to its October 26 wording (owner, October 27 2026: revert after the drop in calls); copies it to the live copy once
     excerpt:
       'What shapes the cost of a new roof in Los Angeles: how each roof type compares, how roofers measure a roof, what moves the price and how to compare bids line by line.',
     cardImage: '/images/shingle-roof-replacement-tear-off-drone-view.webp',

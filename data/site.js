@@ -118,7 +118,7 @@ export const GOOGLE_REVIEWS = { count: 269, asOf: '2026-10-15' };
 // "Roofer" searches (owner, October 30 2026, from Search Console, last 28 days: "roofer los angeles" 179 impressions at 12, "roofers los angeles"
 // 164 at 17, "roofers in los angeles" 145 at 18, "roofer in los angeles" 140 at 11, plus licensed / best / quality roofers): the title leads with
 // "Roofers in Los Angeles" and keeps "Roofing Contractor" (the home keyword) and both counties. 59 characters, no brand suffix.
-export const HOME_TITLE = 'Roofing Contractor in Los Angeles & Orange County, CA'; // rolled back to the October 28 wording (owner, November 2 2026)
+export const HOME_TITLE = 'Roofing Contractor Los Angeles CA | Roofers Near Me'; // owner, November 3 2026 (position tracking report: "near me" searches) // rolled back to the October 28 wording (owner, November 2 2026)
 export const HOME_H1 = 'Roofing Contractor in Los Angeles & Orange County';
 // "Licensed roofers" for those searches; the review count answers the "best roofers" ones without claiming "best". 149 characters.
 export const HOME_DESCRIPTION = // rolled back to the October 28 wording (owner, November 2 2026)
