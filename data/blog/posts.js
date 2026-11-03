@@ -23,6 +23,183 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // New article (owner, November 2 2026): from the owner's team's draft "Roof Warranties Explained", the first page aimed at warranty searches
+  // ("a roofing service that provides warranties on their work", "best roof warranty terms in West LA", "leaking roof solutions with long-term
+  // warranties"). QRS facts only as the site states them: the 10-year workmanship warranty on installs (call for details), repairs carrying the
+  // manufacturers' warranties (which vary by product), the five manufacturer certifications, the final walkthrough, licensed/bonded/insured,
+  // 12 crews, BBB A+. Left out until the owner confirms them (the draft's brackets): what the workmanship warranty covers, labor, transfers,
+  // when coverage starts, exclusions, a repair or lift-and-relay warranty length, registering manufacturer warranties for customers, which
+  // enhanced tiers QRS can offer, handling manufacturer claims and a claim response time. Manufacturer tier names are kept as general examples
+  // (not as tiers QRS offers), and the draft's year figures for manufacturer warranties are left general. Our voice with three POV boxes.
+  {
+    slug: 'roof-warranty-explained',
+    title: 'Roof Warranties Explained: Manufacturer vs. Workmanship (What LA Homeowners Should Ask)',
+    keyword: 'roof warranties',
+    topics: ['replacement', 'repair', 'tile', 'shingle', 'flat', 'insurance'],
+    metaTitle: 'Roof Warranties Explained: Manufacturer vs. Workmanship',
+    metaDescription:
+      'Roof warranties explained for LA homeowners: manufacturer vs. workmanship, what each one covers, what voids a roof warranty and how transfers work.',
+    datePublished: '2026-11-02',
+    dateModified: '2026-11-02',
+    excerpt:
+      'A new roof should come with two warranties: one from the manufacturer for the materials and one from your roofer for the installation. Here is what each covers, what voids a roof warranty and the questions to ask before you sign.',
+    image: '/images/blog/roof-warranty-explained.webp',
+    imageAlt: 'Roof warranties explained, manufacturer vs. workmanship: a roofer going over warranty paperwork with a homeowner beside a tile-roofed home',
+    intro: [
+      'A new roof should come with two separate roof warranties: a manufacturer warranty that covers defects in the roofing materials, and a workmanship warranty from your roofer that covers mistakes in how the roof was installed. Leaks on newer roofs usually trace back to installation details like flashing and penetrations rather than defective shingles or tile, so the workmanship warranty is often the one that matters most.',
+      'At Quality Roofing Specialists, the roofs we install are backed by a 10-year workmanship warranty (call for details), and we are certified with Owens Corning, IKO, GAF, CertainTeed (Master Craftsman) and Polyglass (Premio Pro). Below, we explain how each type of warranty works, what can void one and the questions to ask any Los Angeles roofer before you sign.',
+    ],
+    sections: [
+      {
+        heading: 'Manufacturer vs. Workmanship Warranty: What Each One Covers',
+        blocks: [
+          'Think of it this way: the manufacturer stands behind the product, and your roofer stands behind the installation. You need both, because neither covers what the other does.',
+          {
+            table: {
+              head: ['', 'Manufacturer warranty', 'Workmanship warranty'],
+              rows: [
+                ['Who backs it', 'The company that made the shingles, tile, underlayment or membrane', 'The roofing contractor who installed your roof'],
+                ['What it covers', 'Defects in the materials, such as shingles that crack, curl or lose granules early', 'Installation errors, such as poorly sealed flashing, missed nails or bad penetration details'],
+                ['Typical length', 'Often marketed in decades, up to "limited lifetime" for the material', 'Set by each contractor; ask for the number of years in writing'],
+                ['Labor to fix it', 'Often covered only for an initial period, then prorated or excluded', 'Depends on the contractor; ask whether labor is included'],
+                ['What it doesn’t cover', 'Leaks caused by how the roof was installed', 'Defective materials, storm damage and normal wear'],
+                ['Biggest risk', 'Being voided by improper installation or missing registration', 'Disappearing if the contractor goes out of business'],
+              ],
+            },
+          },
+          'The catch with a manufacturer warranty is that it almost never pays for installation mistakes. If your roof leaks because a flashing detail was done wrong, the shingle maker won’t cover it. That’s the workmanship warranty’s job.',
+          { pov: 'When a newer roof leaks, we look at the flashings, the penetrations and the edges first, not the shingles. That is why we tell homeowners to weigh the installer’s warranty, and the installer, as heavily as the brand on the bundle.' },
+        ],
+      },
+      {
+        heading: 'Standard vs. Enhanced Manufacturer Warranties',
+        blocks: [
+          'Not all manufacturer warranties are equal. The word “lifetime” on a shingle bundle doesn’t mean the manufacturer will pay to replace your roof decades from now.',
+          { h3: 'Standard material warranty' },
+          'This comes automatically with the product. Most architectural shingles carry a “limited lifetime” warranty, but full coverage typically lasts only through an initial period. After that, coverage is prorated and usually covers materials only, not the labor to install them.',
+          { h3: 'Enhanced system warranty' },
+          'Manufacturers offer stronger warranties when a certified contractor installs a complete system from one brand, including the shingles, underlayment, starter strips, ridge caps and ventilation, and registers it. GAF’s System Plus, Silver Pledge and Golden Pledge and Owens Corning’s System, Preferred and Platinum Protection are examples. The top tiers extend non-prorated material coverage, and some add workmanship coverage backed by the manufacturer itself. Each tier is available only through contractors who hold that manufacturer’s matching certification, so ask which tier a roofer can actually register for your roof. Terms change, so check the current details with the manufacturer.',
+          { h3: 'Prorated vs. non-prorated, in plain English' },
+          'Non-prorated means the manufacturer covers the full cost of replacement materials, and sometimes labor, if a defect appears. Prorated means that coverage shrinks every year the roof ages. A defect found late in a prorated period may get you only a fraction of the material cost, and you would pay for labor yourself.',
+          { h3: 'Tile and flat roofs work differently' },
+          'Tile manufacturers often warrant the tile itself for a long time, but the [underlayment](/blog/tile-roof-underlayment/) beneath it, which is what usually fails, carries its own, much shorter warranty. Flat roof membranes, such as modified bitumen systems, come with system warranties that depend on approved installation methods. On both roof types, your roofer’s workmanship warranty fills the gaps the material warranties leave. Our [tile roof guide](/blog/tile-roof-guide-southern-california/) explains why the underlayment is the layer to ask about.',
+        ],
+      },
+      {
+        heading: 'What Voids a Roof Warranty',
+        blocks: [
+          'Many warranty claims are denied for reasons homeowners never saw coming. These are the most common ways a roof warranty gets voided or reduced:',
+          {
+            list: [
+              '**Installation that doesn’t follow the manufacturer’s specs.** Wrong nailing pattern, missing starter strips or mixing in off-brand components can void material coverage before the roof is even finished.',
+              '**Never registering the warranty.** Enhanced warranties usually must be registered with the manufacturer, often within a set window after installation. Ask your roofer who registers it and when you will get the confirmation.',
+              '**Poor attic ventilation.** Trapped heat cooks shingles from below, and many manufacturers exclude damage caused by inadequate ventilation, a real concern in hot inland areas like the San Fernando Valley. See [attic ventilation](/residential-roofing/attic-ventilation/).',
+              '**Other trades cutting into your roof.** Solar panels, satellite dishes, HVAC units and skylights installed by someone else can void coverage around those penetrations if the work isn’t flashed correctly.',
+              '**DIY or unauthorized repairs.** Patching a leak yourself, or hiring a different roofer for repairs during the warranty period, can end your installer’s workmanship warranty.',
+              '**Neglect.** Debris left in valleys and gutters, an ignored leak or tree limbs rubbing the roof can all count against you. Pressure washing shingles can strip granules and cause damage warranties exclude.',
+              '**Unpaid balances.** Many workmanship warranties only take effect once the job is paid in full.',
+            ],
+          },
+          'Most of these are within your control. Keep your warranty paperwork, call your installer first when something goes wrong, and ask any other contractor working on your roof to coordinate with your roofer. A [roof maintenance plan](/roof-maintenance-plans/) keeps valleys and drains clear and puts a roofer’s eyes on the roof once or twice a year.',
+          { pov: 'Before you let anyone else touch your roof, a solar installer, an HVAC crew or a handyman with a tube of caulk, call the roofer who installed it. A ten-minute conversation is cheaper than a warranty you no longer have.' },
+        ],
+      },
+      {
+        heading: 'Can You Transfer a Roof Warranty When You Sell?',
+        blocks: [
+          'Often, yes, but only if you follow the rules. A transferable warranty is a real selling point in an LA home sale, because buyers and their inspectors want to know who stands behind the roof.',
+          '**Manufacturer warranties** usually allow one transfer to the next owner. Most require the manufacturer to be notified within a set window after the sale, and some charge a small fee. Some brands cut coverage sharply if the transfer happens after the initial non-prorated period, so the timing of your sale can matter.',
+          '**Workmanship warranties** vary widely from one roofer to the next. Some end the day the home changes hands; others transfer for the rest of the term. If you might sell within the next decade, get the transfer terms in writing before you hire anyone.',
+          'If you’re selling:',
+          {
+            steps: [
+              'Find your warranty documents and the manufacturer’s registration confirmation.',
+              'Check the transfer rules, deadlines and any fee for each warranty.',
+              'Submit the transfer paperwork promptly after closing.',
+              'Give the buyer copies of everything, plus your roofer’s contact information.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Our Warranty, in Plain Terms',
+        blocks: [
+          'You shouldn’t have to read fine print to know what you’re getting. Here is what comes with a roof from Quality Roofing Specialists:',
+          {
+            table: {
+              head: ['What', 'Our terms'],
+              rows: [
+                ['Workmanship warranty', '10 years on the roofs we install (call for details)'],
+                ['Manufacturer warranty', 'On the materials we install, from Owens Corning, IKO, GAF, CertainTeed and Polyglass; terms vary by product and system'],
+                ['Roof repairs', 'Carry the manufacturers’ warranties for the products used, which vary by product'],
+                ['In writing', 'The scope and the price, before any work starts'],
+                ['At the end of the job', 'A final walkthrough of the finished roof with you'],
+              ],
+            },
+          },
+          'Call (310) 340-1643 for the full warranty details for your roof. Behind it is a licensed, bonded and insured California contractor, CSLB #1061942, family-owned, with 12 crews and an A+ rating with the BBB. [See our credentials](/credentials/).',
+        ],
+      },
+      {
+        heading: '8 Warranty Questions to Ask Any LA Roofer',
+        blocks: [
+          'Whether you’re in West LA, the Valley or the South Bay, the best roof warranty is the one you understand before you sign. Ask every roofer you’re considering these questions, and get the answers in writing:',
+          {
+            steps: [
+              '**How long is your workmanship warranty, and what exactly does it cover?** Look for a specific number of years and a clear description of covered problems.',
+              '**Does it include labor, or only materials?** Labor is often the biggest part of a repair bill.',
+              '**Which manufacturer warranty will I get?** Ask for the exact name and tier, not just “lifetime.”',
+              '**Who registers the manufacturer warranty?** Ask when you will receive the registration confirmation.',
+              '**Can the warranty transfer if I sell my home?** Confirm the steps, deadlines and any fee.',
+              '**What would void it?** A trustworthy roofer will tell you the exclusions up front.',
+              '**How do I file a claim?** A leak in January can’t wait two weeks.',
+              '**On a tile roof, does the warranty cover the underlayment?** That’s the layer most likely to fail, so it’s the coverage that matters most.',
+            ],
+          },
+          'If a roofer can’t answer these clearly, or won’t put the answers on paper, keep looking. Our guide to [what makes the best roofer in LA](/blog/best-roofer-los-angeles/) covers the license and insurance checks too.',
+          { pov: 'Ask every one of these questions, including to us. If any roofer, us included, gets vague about what the warranty covers, that tells you how a claim would go.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Can you suggest a roofing company that provides warranties on their work?',
+        a: 'Look for a licensed roofer who gives you a written workmanship warranty with a clear term, plus the manufacturer warranty on the materials. Quality Roofing Specialists backs the roofs it installs with a 10-year workmanship warranty (call for details) and is certified with Owens Corning, IKO, GAF, CertainTeed and Polyglass.',
+      },
+      {
+        q: 'Who offers the best roof warranty terms in West LA?',
+        a: 'The best terms combine a long workmanship warranty, the manufacturer warranty on the materials, clear coverage and exclusions, and a roofer who will still be around to honor it. We serve West LA from our [West Hollywood office](/service-areas/la-county/west-hollywood/), and we walk the finished roof with you at the end of every job.',
+      },
+      {
+        q: 'Do you offer long-term warranties on leak repairs?',
+        a: 'Repairs carry the manufacturers’ warranties for the products used, which vary by product; call us for the details. If a roof keeps leaking in different places, a [roof replacement](/roof-replacement/) or a [tile lift and relay](/residential-roofing/tile-roofing/lift-and-relay/) is usually the long-term fix, and the roofs we install carry our 10-year workmanship warranty (call for details).',
+      },
+      {
+        q: 'What’s the difference between a manufacturer and a workmanship warranty?',
+        a: 'A manufacturer warranty covers defects in the roofing materials. A workmanship warranty covers mistakes in how the roof was installed. You need both, because neither covers what the other does.',
+      },
+      {
+        q: 'Does a roof warranty cover storm damage?',
+        a: 'Usually not. Wind, hail and fallen-tree damage are typically handled through homeowners insurance rather than a roof warranty. See our guide to [roof insurance claims in California](/blog/roof-insurance-claims-california/).',
+      },
+      {
+        q: 'Is a lifetime roof warranty really for a lifetime?',
+        a: 'Rarely in full. Most “lifetime” shingle warranties offer full coverage only for an initial period, then shift to prorated coverage that shrinks each year and usually excludes labor.',
+      },
+      {
+        q: 'How do I make a warranty claim with Quality Roofing Specialists?',
+        a: 'Call us at (310) 340-1643 with your address and the installation date, and we will set up a time to look at the roof.',
+      },
+    ],
+    closing: {
+      heading: 'Get a Roof That’s Backed in Writing',
+      blocks: [
+        'A new roof is a big investment, and the warranty is what protects it. With Quality Roofing Specialists you get a written scope and price before any work starts, a 10-year workmanship warranty on the roofs we install (call for details) and a final walkthrough when the job is done.',
+        '**[Book a free roof evaluation](#roof-check)** or call (310) 340-1643, anywhere in Los Angeles or Orange County. Thinking about a new roof? [Read about our roof replacement process](/roof-replacement/).',
+      ],
+    },
+    related: ['/roof-replacement/', '/residential-roofing/tile-roofing/', '/credentials/'],
+  },
   // New article (owner, November 2 2026): from the owner's team's template "What Does a Professional Roof Inspection Include?", aimed at the
   // roof inspection searches as an informational guide that sends readers to /roof-inspection/ (the service page keeps its own keyword). The
   // twelve points are written as what a thorough inspection covers; what we do is limited to what the inspection page already says (free,
