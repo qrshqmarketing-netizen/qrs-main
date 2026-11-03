@@ -156,5 +156,3 @@ main.abr .abr-band h2{color:var(--abr-ink);text-align:center!important;margin:0 
 main.abr .abr-keep .container{width:auto;max-width:calc(1680px + 2 * var(--abr-gut));padding-left:calc(var(--abr-gut) + var(--abr-inset));padding-right:calc(var(--abr-gut) + var(--abr-inset));box-sizing:border-box}
 
 @media print{.abr-film,.abr-collage{display:none}.abr-hero,.abr-band{background:none}}
-/* The values accordion without photos (owner, November 2 2026): it uses the full column instead of the left half */
-@media (min-width:901px){.abr-values{width:auto;max-width:880px;min-height:0}}
