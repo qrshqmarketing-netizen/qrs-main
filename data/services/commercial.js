@@ -5,8 +5,8 @@ export const COMMERCIAL_CONTENT = {
     keyword: 'commercial roofing',
     // Meta for the searches the owner picked (October 30 2026: commercial roofing contractor(s) Los Angeles, commercial roofers (in) Los Angeles (CA),
     // commercial roofers Orange County, commercial roofing repair Orange County). 57 / 159 characters; the survey is never called free.
-    metaTitle: 'Commercial Roofing in Los Angeles', // rolled back to the October 28 wording (owner, November 2 2026)
-    metaDescription: 'Commercial roofing in LA & Orange County for offices, retail, churches, warehouses and more. Roofer-led surveys and written scopes. Request an estimate.',
+    metaTitle: 'Commercial Roofing Company Los Angeles | Commercial Roofers', // owner, November 3 2026 (keyword list)
+    metaDescription: 'Commercial roofing company in LA & Orange County: commercial roofers for offices, retail, warehouses and more. Roofer-led surveys and written scopes.',
     hero: {
       heading: 'Commercial Roofing in Los Angeles & Orange County',
       intro: 'Commercial roofing, planned around how your building runs. QRS is a commercial roofing contractor in Los Angeles and Orange County: repairs, replacement and scheduled maintenance for office buildings, retail stores, churches, warehouses, shopping centers and more. Every project starts with a roofer-led survey and a written scope.',

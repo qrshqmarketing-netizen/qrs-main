@@ -122,7 +122,7 @@ export const HOME_TITLE = 'Roofing Contractor Los Angeles CA | Roofers Near Me';
 export const HOME_H1 = 'Roofing Contractor in Los Angeles & Orange County';
 // "Licensed roofers" for those searches; the review count answers the "best roofers" ones without claiming "best". 149 characters.
 export const HOME_DESCRIPTION = // rolled back to the October 28 wording (owner, November 2 2026)
-  'Quality Roofing Specialists: roofing contractor in Los Angeles & Orange County. Repair, replacement, free roof evaluation, 10-year warranty: call for details.';
+  'Roofing company near you in Los Angeles & Orange County: QRS is a family-owned roofing contractor. Roof repair, replacement and a free roof evaluation.'; // owner, November 3 2026 (keyword list)
 
 // The number of Google reviews across our listings (owner, October 15 2026: 269). Update it by hand from Google now and then; it shows on the
 // proof strip under every hero and in the home page's review section. No star rating is shown (not given by the owner).

@@ -98,7 +98,7 @@ export const FLAT_CONTENT = {
       h1: 'Flat Roof Repair in Los Angeles & Orange County',
       navLabel: 'Roof Repairs',
       card: 'Leaks, blisters, open seams and failed flashings traced to the source, repaired carefully and documented with photos.',
-      metaTitle: 'Flat Roof Repair in Los Angeles', // "flat roof leak repair" added (owner, October 22 2026)
+      metaTitle: 'Flat Roof Repair Near Me in Los Angeles | Flat Roof Leaks', // owner, November 3 2026 (keyword list)
       // Search Console wording (owner, October 23 2026): "flat roof repair los angeles", "flat roof repair service(s)", "flat roof repairs", "flat roofing
       // experts los angeles", "roof repair specialist los angeles", "flat roof repair contractor". Polyurethane (foam) roofs, Woodland Beach and Delano
       // are not used (not a confirmed system / outside the area).

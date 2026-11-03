@@ -5318,12 +5318,12 @@ export const BLOG_POSTS = [
     // article keeps its rankings and links. `revision` copies this text over the live copy in Supabase once (lib/postsStore.js applyFileRevisions).
     // Left out of the draft: its byline (every article is by Tony G.), its publishing notes and the signing place of AB 1795 (the Department of
     // Insurance's release doesn't give it); "we work with adjusters regularly" follows the owner's own wording (we help where we can).
-    revision: 7,
+    revision: 8, // November 3 2026: meta title (keyword list)
     revisionImage: true, // the new thumbnail goes to the live copy with this revision
     title: 'How to File a Roof Insurance Claim in California: Step-by-Step (and When to Bring in a Roofer)',
     keyword: 'roof insurance claim',
     topics: ['insurance', 'storm', 'emergency', 'repair', 'replacement', 'tile'],
-    metaTitle: 'How to File a Roof Insurance Claim in California',
+    metaTitle: 'Roof Insurance Claim in California: How a Roofer Helps',
     metaDescription:
       'How to file a roof insurance claim in California: what to document, insurer deadlines, the adjuster visit, what’s covered and new rules for fire-area homes.',
     datePublished: '2026-10-05',

@@ -12,7 +12,7 @@ export const COMMERCIAL_SERVICES = [
     // Meta for the searches the owner picked (October 30 2026: commercial roof repair (services, experts), commercial roof repair los angeles,
     // commercial roofing repair(s) orange county, commercial roof leak repair los angeles, commercial roofing replacement orange county).
     // 58 / 160 characters; the survey is never called free.
-    metaTitle: 'Commercial Roof Repair in Los Angeles', // rolled back to the October 28 wording (owner, November 2 2026)
+    metaTitle: 'Commercial Roof Repair Near Me in Los Angeles', // owner, November 3 2026 (keyword list)
     metaDescription: 'Commercial roof repair in LA & Orange County: leaks traced at drains, parapets and rooftop units, fixed and photo-documented. Request an estimate.',
     image: '/images/cta-flat-roof-install-drone-view.webp',
     imageAlt: 'Roofers working on a white low-slope roof with rooftop units, seen from above',
@@ -51,7 +51,7 @@ export const COMMERCIAL_SERVICES = [
     navLabel: 'Roof Replacement',
     card: 'When repairs stop adding up: a roofer-led survey, the right low-slope system for your building and phased work that keeps you open.',
     // Broader title for the general "commercial roofing Los Angeles" searches (owner, October 22 2026; the keyword stays in it, the H1 is unchanged)
-    metaTitle: 'Commercial Roof Replacement in Los Angeles',
+    metaTitle: 'Commercial Roof Replacement & Installation in Los Angeles', // owner, November 3 2026 (keyword list)
     metaDescription: 'Commercial roof replacement in LA & Orange County: a roofer-led survey, the right low-slope system and phased work that keeps you open. Request an estimate.',
     image: '/images/flat-roof-replacement-tear-off-drone-view.webp',
     imageAlt: 'Commercial roof replacement in Los Angeles: flat roof aerial view, with the old roofing stripped back',

@@ -3,7 +3,7 @@
 export const ROOF_REPAIR_HUB = {
   keyword: 'roof repair',
   metaTitle: 'Roof Repair Near Me in Los Angeles | Roof Leak Repair', // owner, November 3 2026 (roof repair near me, roof leak repair)
-  metaDescription: 'Roof repair in Los Angeles & Orange County for shingle, tile and flat roofs: leaks traced and fixed, with a written price first. Book a free roof evaluation.',
+  metaDescription: 'Roof repair near you in Los Angeles & Orange County: we fix roof leaks on shingle, tile and flat roofs, with a written price first. Book a free roof evaluation.', // owner, November 3 2026 (keyword list)
   hero: {
     heading: 'Roof Repair in Los Angeles & Orange County\u00a0· *LeakRescue*',
     intro: 'Roof repair at the source. We find where water is really getting into your shingle, tile or flat roof and fix it there, across Los Angeles and Orange County. Our *LeakRescue* repair service shows you photos of the problem and the finished repair, with a written scope and price before any work. Start with a free roof evaluation.',
