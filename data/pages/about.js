@@ -56,7 +56,8 @@ export const ABOUT_PAGE = {
       { title: 'Adva Goldberg', text: 'Co-founder and President. Adva co-founded QRS with Tony, and QRS is a family-owned, woman-owned business.' },
       { title: 'Field Inspectors & Lead Roofers', text: 'Your free drone roof evaluation and every $199 Roof Check (the visit where we seal and maintain the roof) are done by a field inspector, lead roofer or estimator on our own team — never an outside crew.' },
       { title: 'Senior Production Manager', text: '30 years overseeing roofing projects, managing our crews and quality control on every job.' },
-      { title: '12 Crews, Every Roof Type', text: 'Dedicated crews for shingle, tile and flat roofing, with vetted partner crews brought in only during overflow.' },
+      // Marketing Team in place of the crews card (owner, November 2 2026); the 12 crews stay in the About numbers
+      { title: 'Steve Martin', text: 'Webmaster on our Marketing Team.' },
       { title: 'Bilingual Office Team & Roofers', text: 'Our team communicates in English, Spanish and Tagalog.' },
     ],
   },

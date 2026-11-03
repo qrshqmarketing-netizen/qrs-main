@@ -142,7 +142,8 @@ export function AbrStory({ story }) {
           ))}
         </div>
         <div className="abr-photo">
-          <Image src="/images/home-hero-shingle-neighborhood-drone-view.webp" alt="Aerial view of shingle roofs on homes in a Southern California neighborhood" fill sizes="(min-width: 901px) 44vw, 100vw" quality={65} loading="lazy" />
+          {/* The owner's family photo (November 2 2026) */}
+          <Image src="/images/about-our-story-family-walk.webp" alt="A family walk in the park with the dog" fill sizes="(min-width: 901px) 44vw, 100vw" quality={70} loading="lazy" style={{ objectPosition: '60% 30%' }} />
         </div>
       </div>
     </section>
@@ -150,15 +151,6 @@ export function AbrStory({ story }) {
 }
 
 // The values as an accordion: one open at a time (native <details name>), the open one showing its photo at the right from 901px
-const VALUE_PHOTOS = [
-  ['/images/how-we-work-roofer-tablet-report.webp', 'A roofer reviewing a roof report on a tablet'],
-  ['/images/how-we-work-plain-english-homeowners.webp', 'A roofer talking through a roof with homeowners'],
-  ['/images/how-we-work-clean-site-tile-roof.webp', 'A clean job site on a tile roof'],
-  ['/images/roofscan-360-roofer-chimney-flashing.webp', 'A roofer pointing out chimney flashing during an inspection'],
-  ['/images/how-we-work-local-crews-commercial-roof.webp', 'A crew on a commercial roof'],
-  ['/images/careers-process-roofer-crew.webp', 'A roofing crew working together'],
-  ['/images/how-we-work-clean-site-multi-family-shingle.webp', 'A finished shingle reroof on a row of townhomes'],
-];
 
 export function AbrValues({ mission }) {
   return (
@@ -171,21 +163,16 @@ export function AbrValues({ mission }) {
           <p className="abr-muted">{COMPANY.vision}</p>
         </div>
         <div className="abr-values">
-          {COMPANY.values.map((v, i) => {
-            const [src, alt] = VALUE_PHOTOS[i % VALUE_PHOTOS.length];
-            return (
-              <details key={v.title} name="abr-values" open={i === 0}>
-                <summary>
-                  <span className="abr-vnum">{String(i + 1).padStart(2, '0')}</span>
-                  {v.title}
-                </summary>
-                <p>{v.text}</p>
-                <span className="abr-vphoto">
-                  <Image src={src} alt={alt} fill sizes="(min-width: 901px) 44vw, 100vw" quality={60} loading="lazy" />
-                </span>
-              </details>
-            );
-          })}
+          {/* The values as an accordion, without photos (owner, November 2 2026) */}
+          {COMPANY.values.map((v, i) => (
+            <details key={v.title} name="abr-values" open={i === 0}>
+              <summary>
+                <span className="abr-vnum">{String(i + 1).padStart(2, '0')}</span>
+                {v.title}
+              </summary>
+              <p>{v.text}</p>
+            </details>
+          ))}
         </div>
       </div>
     </section>
