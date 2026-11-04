@@ -23,6 +23,261 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // How to choose a commercial roof repair company (owner, November 4 2026, from the team's draft; keyword "commercial roof repair company").
+  // Changed to the site's rules: no lifespans, prices or repair durations; coatings described as something QRS doesn't apply; the commercial
+  // survey never called free; no C-39 or workers' comp claim for QRS; the warranty as the site states it (installs, call for details; repairs
+  // carry the manufacturer's warranty); FlatGuard (residential) left out; the "quarter of the roof wet" rule of thumb and the cool roof
+  // thresholds left out (stated generally, with the Energy Commission as the source). Author: the default (the draft named Steve Martin).
+  {
+    slug: 'commercial-roof-repair-company',
+    title: 'How to Choose a Commercial Roof Repair Company: Key Questions for Property Owners and Managers',
+    keyword: 'commercial roof repair company',
+    topics: ['commercial', 'repair', 'flat', 'leak', 'maintenance'],
+    metaTitle: 'How to Choose a Commercial Roof Repair Company',
+    metaDescription:
+      'Choosing a commercial roof repair company: how flat roofs fail, repair or replace, the questions to ask, the photos and paperwork to get, and red flags.',
+    datePublished: '2026-11-04',
+    dateModified: '2026-11-04',
+    excerpt:
+      'The right commercial roof repair company fixes the leak you called about, finds the problems you didn’t know about and keeps your building open. Here is how flat roofs fail, the questions we would ask any roofer, and the records you should get.',
+    image: '/images/blog/commercial-roof-repair-company.webp',
+    imageAlt: 'Commercial roof repair guide: how to choose a company and key questions for property owners, a property manager and a roofer on a flat roof above downtown Los Angeles',
+    intro: [
+      'The right commercial roof repair company fixes the leak you called about, finds the problems you didn’t know about, and does both without shutting down your business. The wrong one patches the symptom, leaves you with no record of what was done, and comes back for a bigger check next season. For property owners, facility managers and HOA boards, the difference shows up in tenant complaints, insurance claims and capital budgets.',
+      'We repair flat and low-slope roofs on offices, shops, warehouses and multi-family buildings across Los Angeles and Orange County. This guide is what we tell owners and managers: how these roofs fail, when a repair still makes sense, the questions to ask every contractor (including us), what an inspection and its paperwork should include, and how to keep the work from disrupting your tenants.',
+    ],
+    sections: [
+      {
+        heading: 'How Flat and Low-Slope Commercial Roofs Fail',
+        blocks: [
+          'Most commercial roofs fail at a few predictable points, not across the whole surface. Knowing them helps you judge whether a contractor’s diagnosis makes sense.',
+          {
+            table: {
+              head: ['Failure', 'What causes it', 'What you’ll notice'],
+              rows: [
+                ['Ponding water', 'A sagging deck, clogged drains, poor slope, compressed insulation', 'Puddles that last well after the rain; dirt or algae rings'],
+                ['Open seams', 'Heat cycling, poor welds or adhesive, membrane shrinkage', 'Leaks along straight lines; lifted membrane edges'],
+                ['Flashing failures', 'Movement at walls, curbs and parapets; aging sealants', 'Leaks near walls, HVAC units, skylights or roof hatches'],
+                ['Penetration leaks', 'Pipes, vents, conduit and equipment added after the roof went on', 'Leaks right below equipment or newly added lines'],
+                ['Blisters and surface cracking', 'Trapped moisture, sun, age', 'Bubbles in modified bitumen or built-up roofs; alligator cracking'],
+                ['Punctures', 'Foot traffic, dropped tools, HVAC service work', 'Small, sudden leaks, often after another trade was on the roof'],
+                ['Drainage failures', 'Debris in drains, scuppers and gutters', 'Overflow, water at the parapet, leaks during heavy rain'],
+                ['Wet insulation', 'Any long-running leak', 'Soft spots underfoot; leaks far from where the water gets in'],
+              ],
+            },
+          },
+          'In Southern California, strong sun and heat age the membrane, and long dry spells hide small problems until the first heavy storm of the season. That is why a fall check and clear drains before the rainy season matter here. Our guide to [commercial roof leak repair](/blog/commercial-roof-leak-repair/) goes deeper on finding the source.',
+        ],
+      },
+      {
+        heading: 'Repair, Restore or Replace?',
+        blocks: [
+          'A good contractor tells you which path fits your roof instead of quoting the biggest one.',
+          {
+            table: {
+              head: ['Path', 'Usually right when', 'What it involves'],
+              rows: [
+                ['Repair', 'The damage is limited to seams, flashings or a few penetrations, and the membrane is otherwise sound', 'Patching, resealing or re-welding seams, re-flashing curbs and walls, clearing drains'],
+                ['Restore', 'The membrane is aging but mostly dry', 'Cleaning, targeted repairs, then a coating or overlay. Some roofers offer this; QRS does not apply roof coatings'],
+                ['Replace', 'Wet insulation is widespread, the membrane is brittle, or leaks keep coming back after repairs', 'Tear-off or re-cover, new insulation where needed, a new membrane and flashings'],
+              ],
+            },
+          },
+          'Signs that replacement is the better investment:',
+          {
+            list: [
+              '**Wet insulation across much of the roof.** Moisture testing shows how far it spreads; a repair over wet insulation won’t hold.',
+              '**Repeat leaks in different places.** If you’re calling for repairs several times a year, the system is wearing out as a whole.',
+              '**Two roofs are already on the building.** Building codes generally limit re-covering, so another layer usually isn’t allowed.',
+              '**Energy and code upgrades are due.** A replacement is when insulation and a reflective cool roof surface can be added, which California’s energy code requires on many commercial reroofs.',
+            ],
+          },
+          { pov: 'We start with the smallest fix that solves the problem. If the membrane is sound and the leak is at a seam or a curb, we repair it and show you the photos. When a roof is worn out across the surface, we say so plainly, because another patch only moves the leak. That’s when a [commercial roof replacement](/commercial-roofing/replacement/) is worth planning.' },
+        ],
+      },
+      {
+        heading: 'Commercial Roofing Systems Your Contractor Should Explain',
+        blocks: [
+          'A qualified contractor explains which systems fit your building and why, instead of pushing the one they happen to install. These are the common choices for flat and low-slope roofs in Southern California; how long any of them lasts depends heavily on installation and maintenance.',
+          {
+            table: {
+              head: ['System', 'Strengths', 'Trade-offs'],
+              rows: [
+                ['TPO (single-ply)', 'White, reflective surface; heat-welded seams', 'Quality varies by manufacturer; seams need skilled welding'],
+                ['PVC (single-ply)', 'Heat-welded seams; resists grease and chemicals, which suits restaurants', 'Usually costs more than TPO'],
+                ['Modified bitumen', 'Multi-layer toughness; handles foot traffic; easy to patch', 'Needs a reflective cap sheet to meet cool roof rules'],
+                ['EPDM (rubber)', 'Flexible, with a long track record', 'Standard black EPDM absorbs heat; seams are taped or glued'],
+                ['Built-up roofing (BUR)', 'Several redundant layers', 'Heavy; installation is messy and has an odor'],
+                ['Silicone or acrylic coatings', 'Restore an aging roof without a tear-off; reflective', 'Only over a sound, mostly dry roof, and must be reapplied. QRS does not apply them'],
+              ],
+            },
+          },
+          'We install [TPO roofing](/commercial-roofing/tpo-roofing/) and modified bitumen on commercial buildings. Our guide to [TPO roofing pros and cons](/blog/tpo-roofing-pros-and-cons/) compares the two.',
+          { h3: 'California cool roof rules' },
+          'California’s energy code (Title 24, Part 6) has cool roof requirements for many nonresidential reroofs, depending on how much of the roof is replaced, the climate zone and the building. The products are rated by the Cool Roof Rating Council, and small leak repairs don’t trigger the rules. The [California Energy Commission](https://www.energy.ca.gov/programs-and-topics/programs/building-energy-efficiency-standards/energy-code-support-center-4-0) publishes the details; your contractor should know which path applies to your building and handle it with the permit.',
+        ],
+      },
+      {
+        heading: 'Key Questions to Ask Every Commercial Roofing Contractor',
+        blocks: [
+          'Ask every bidder the same questions so you can compare the answers side by side. A contractor who hesitates on any of these is telling you something.',
+          { h3: 'Licensing, bonding and insurance' },
+          {
+            steps: [
+              '**What is your CSLB license number and classification?** Look it up with the free license check at [cslb.ca.gov](https://www.cslb.ca.gov). It shows whether the license is active, its classification, the contractor’s bond, workers’ compensation on file and any public complaints.',
+              '**Can you send a certificate of insurance naming us as additional insured?** Get it from the insurer or broker, not the contractor, with general liability limits that fit your building.',
+              '**Do you carry workers’ compensation?** California requires roofing contractors to carry it. Without it, an injured worker on your roof can become your problem.',
+            ],
+          },
+          { h3: 'Experience and crews' },
+          {
+            steps: [
+              '**How many low-slope commercial roofs like ours have you repaired lately?** Residential shingle experience doesn’t transfer to welding TPO or torching modified bitumen.',
+              '**Who will do the work?** Ask whether it is the contractor’s own crews or outside crews, and get the license number of anyone else on the roof.',
+              '**Are you certified by the manufacturer of the system you’re proposing?** Many manufacturer warranties require a certified installer.',
+              '**Can you give us recent commercial references?** Call them, and ask whether the work stayed on schedule and on budget.',
+            ],
+          },
+          { h3: 'Scope, warranty and process' },
+          {
+            steps: [
+              '**Who will inspect our roof, and what will we receive afterward?** You want a roofer on the roof and a written report with photos, not a salesperson’s verbal number.',
+              '**What exactly does your warranty cover, and for how long?** Get the workmanship warranty in writing, separate from the manufacturer’s material warranty. Our guide to [roof warranties](/blog/roof-warranty-explained/) explains the difference.',
+              '**How do you handle hidden damage like wet insulation or a rotted deck?** The contract should say how it is priced, so a surprise doesn’t become a blank check.',
+              '**Will you pull the permit and handle Title 24 cool roof compliance?** For larger repairs and any reroof, the answer should be yes.',
+              '**How will you protect our tenants, customers and operations during the work?** The answer should be specific; see below.',
+            ],
+          },
+          { pov: 'We’d rather you check us than trust us. Our license is CSLB #1061942, we are licensed, bonded and insured, and we are a BBB Accredited Business with an A+ rating. [Verify our credentials](/credentials/) and ask us every question on this list.' },
+        ],
+      },
+      {
+        heading: 'What a Professional Commercial Roof Inspection Includes',
+        blocks: [
+          'A real inspection means time on the roof and a written report afterward. A quick look from the hatch followed by a verbal number is not an inspection. A thorough one covers:',
+          {
+            steps: [
+              '**The inside first.** Ceiling stains, tenant leak reports and the top floor show where water is turning up.',
+              '**An aerial overview.** Drone footage captures the whole roof, drainage, ponding and the equipment layout, especially on large or hard-to-reach roofs.',
+              '**Membrane and seams.** The field of the roof is walked and the seams checked for punctures, blisters, cracking and shrinkage.',
+              '**Flashings and edges.** Parapet walls, curbs, expansion joints, coping and roof edges, where most leaks start.',
+              '**Penetrations and equipment.** HVAC units, vents, pipes, conduit, skylights and hatches, checked for open seals and failed pitch pans.',
+              '**Drainage.** Drains, scuppers, gutters and downspouts, checked for blockages and slope.',
+              '**Moisture testing where needed.** Core cuts, a moisture meter or an infrared scan show whether the insulation is wet and how far. This is what separates a repair recommendation from a replacement one.',
+              '**Written findings.** Photos, prioritized repairs and a clear recommendation: repair or replace.',
+            ],
+          },
+          'Our [commercial roof inspection checklist](/blog/commercial-roof-inspection-checklist/) lists what to look at between visits.',
+        ],
+      },
+      {
+        heading: 'Documentation and Photos to Request',
+        blocks: [
+          'Good records protect you with insurers, lenders, tenants, buyers and boards, and they let you hold the contractor to what was promised. Ask for these before you sign and after the work is done.',
+          { h3: 'Before the work starts' },
+          {
+            checklist: [
+              'An inspection report with labeled photos of every problem and where it is on the roof',
+              'Drone images or video of the whole roof',
+              'Moisture survey results, if wet insulation is suspected',
+              'A written scope listing each repair, its location, quantities and materials',
+              'An itemized price, and how hidden damage like wet insulation or deck replacement will be priced',
+              'The schedule, work hours and crew size',
+              'A certificate of insurance and the CSLB license number',
+              'Product data sheets, including Cool Roof Rating Council ratings where required',
+            ],
+          },
+          { h3: 'After the work is done' },
+          {
+            checklist: [
+              'Before, during and after photos of each repair area',
+              'A final invoice that matches the approved scope, with any changes signed',
+              'The workmanship warranty in writing, with its term and what it covers',
+              'The manufacturer warranty registration, if one applies',
+              'The permit sign-off and Title 24 forms, if a permit was required',
+              'Lien releases from the contractor and its suppliers',
+            ],
+          },
+          'Keep it all in one place. When a leak shows up two years later, photos and a warranty document turn a dispute into a service call. If a storm caused the damage, the same records help with an [insurance claim](/blog/roof-insurance-claims-california/).',
+        ],
+      },
+      {
+        heading: 'How to Keep Repairs from Disrupting Your Business',
+        blocks: [
+          'Most commercial roof repairs can happen while the building stays open. The key is planning the logistics before the crew arrives, and a good contractor raises these points without being asked.',
+          {
+            list: [
+              '**Work around your hours.** Ask for noisy work early, late or on weekends, and for work near entrances during slow periods. Restaurants, medical offices and retail each have different quiet windows.',
+              '**Lower-odor methods near occupied spaces.** Heat-welded TPO and PVC and cold-applied adhesives produce far less odor than hot asphalt or torch-applied systems. Ask how fumes will be kept away from HVAC intakes.',
+              '**Staging and access.** Agree on where materials, dumpsters and lifts go so they don’t block parking, loading docks, fire lanes or storefronts.',
+              '**People below.** Ask for barricades, protection at entrances and a plan for debris.',
+              '**Phase the work.** On larger jobs, work in sections and seal each one before the end of the day.',
+              '**Watch the weather.** Never open more roof than the crew can seal the same day, and ask what temporary protection is on hand if rain moves in.',
+              '**Other trades.** HVAC units may need to be shut down or lifted; schedule those trades ahead.',
+              '**One point of contact on each side,** with daily updates and a clear path for tenant questions.',
+              '**Tell tenants early,** with the dates, hours, expected noise and parking changes.',
+            ],
+          },
+          { pov: 'We plan commercial work around your building, not the other way around: the hours, the staging and the tenant notices are settled before we start, with one point of contact. If you manage several buildings, our page for [property managers](/commercial-roofing/property-managers/) shows how we work with owners and boards.' },
+        ],
+      },
+      {
+        heading: 'Red Flags When Hiring',
+        blocks: [
+          'Walk away, or at least slow down, if a contractor:',
+          {
+            list: [
+              'Gives a price without getting on the roof',
+              'Can’t produce a CSLB license number, or the license is for a different classification or business name',
+              'Asks for a large deposit before any materials arrive',
+              'Recommends full replacement with no photos or moisture testing to back it up',
+              'Pressures you to sign the same day, especially after a storm',
+              'Offers only a verbal warranty, or one that covers materials but not their own work',
+              'Won’t put the scope, schedule and hidden-damage pricing in writing',
+              'Bids far below everyone else, which often means a smaller scope, skipped permits or no insurance',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'How Quality Roofing Specialists Handles Commercial Roof Repair',
+        blocks: [
+          'Here is how our [commercial roof repair](/commercial-roofing/repair/) lines up with the questions above.',
+          {
+            table: {
+              head: ['What to look for', 'How we handle it'],
+              rows: [
+                ['A real inspection before any price', 'A roofer-led roof survey on the roof itself, with drone footage of the areas of concern'],
+                ['Records you can keep', 'Photos of what we find and a written scope and price before any work begins, and closeout photos when it’s done'],
+                ['Honest repair-or-replace advice', 'Recommendations backed by photos, starting with the smallest fix that solves the problem'],
+                ['The right system', 'TPO and modified bitumen, matched to how the roof drains and what sits on it'],
+                ['Licensing and accountability', 'CSLB #1061942; licensed, bonded and insured; BBB A+; certified with Owens Corning, IKO, GAF, CertainTeed (Master Craftsman) and Polyglass (Premio Pro)'],
+                ['Protection after the job', 'A 10-year workmanship warranty (call for details) on installs; repairs carry the manufacturer’s warranty on the materials used'],
+                ['Minimal disruption', 'Work planned around your hours, with one point of contact'],
+              ],
+            },
+          },
+          'You can see the work on a [commercial flat roof replacement in Westminster](/projects/commercial-flat-roof-replacement-westminster-92683/). Whether you manage one retail building or a portfolio, the first step is the same: get a clear picture of the roof before you spend money on it.',
+        ],
+      },
+    ],
+    faqs: [
+      { q: 'How often should a commercial roof be inspected?', a: 'At least twice a year, in spring and fall, and after any major storm. In Southern California, a fall check with drain cleaning before the rainy season prevents most emergency calls. Our [commercial roof maintenance](/commercial-roofing/maintenance/) covers scheduled visits.' },
+      { q: 'Can a commercial roof be repaired instead of replaced?', a: 'Usually, if the damage is limited to seams, flashings or penetrations and the insulation underneath is mostly dry. Moisture testing tells you whether a repair will hold.' },
+      { q: 'How long does a commercial roof repair take?', a: 'It depends on the roof, the repair and the weather. A targeted repair is usually much shorter than a replacement, and your written scope includes the schedule before work starts.' },
+      { q: 'Do I need a permit for commercial roof repairs?', a: 'Small leak repairs typically don’t. Larger repairs, re-covers and replacements usually do, and they can bring in California’s cool roof rules. Your contractor should confirm it with the local building department; our [roofing permit guide](/blog/roofing-permits-los-angeles/) covers Los Angeles and nearby cities.' },
+      { q: 'What’s the difference between a workmanship warranty and a manufacturer warranty?', a: 'A manufacturer warranty covers defects in the roofing materials. A workmanship warranty covers the contractor’s installation. You want both in writing, since most leaks come from installation details, not material defects.' },
+      { q: 'Can repairs be done while my business is open?', a: 'In most cases, yes. Ask for lower-odor methods near occupied spaces, work scheduled around your hours and a clear staging plan.' },
+    ],
+    closing: {
+      heading: 'Start with a Roofer on Your Roof',
+      blocks: [
+        '[Request a roof survey](#roof-check): a roofer goes on your roof, takes drone footage and photos, and you get a written scope and price before any work. Call (310) 340-1643. Quality Roofing Specialists, CSLB #1061942.',
+        'See also [how to choose a commercial roofing company in Los Angeles](/blog/how-to-choose-a-commercial-roofing-company-los-angeles/) and [planning a commercial roof replacement](/blog/commercial-roof-replacement-planning/).',
+      ],
+    },
+    related: ['/commercial-roofing/repair/', '/commercial-roofing/property-managers/', '/commercial-roofing/maintenance/', '/commercial-roofing/tpo-roofing/'],
+  },
   // Choosing a shingle roofer (owner, November 3 2026, from the owner's brief: the "shingle roofers" searches). Keyword "shingle roofer", which
   // also matches "shingle roofers". Written to the site's rules: no prices and no lifespans in years (the brief asked for costs and lifespans;
   // cost is described by what moves it, timing by the site's own 3 to 5 days), only facts the site already states. The shingle hub
