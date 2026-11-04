@@ -23,6 +23,176 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // Choosing a shingle roofer (owner, November 3 2026, from the owner's brief: the "shingle roofers" searches). Keyword "shingle roofer", which
+  // also matches "shingle roofers". Written to the site's rules: no prices and no lifespans in years (the brief asked for costs and lifespans;
+  // cost is described by what moves it, timing by the site's own 3 to 5 days), only facts the site already states. The shingle hub
+  // (/residential-roofing/shingle-roofing/) keeps "shingle roofing"; this guide links to it rather than competing. Picture: the owner's image.
+  {
+    slug: 'how-to-choose-a-shingle-roofer-los-angeles',
+    title: 'How to Choose a Shingle Roofer in Los Angeles: Questions to Ask Before You Hire',
+    keyword: 'shingle roofer',
+    topics: ['shingle', 'replacement', 'repair'],
+    metaTitle: 'Shingle Roofers in Los Angeles: What to Ask Before Hiring',
+    metaDescription:
+      'How to choose a shingle roofer in Los Angeles and Orange County: the warning signs on your roof, the questions to ask, and what a written scope should include.',
+    datePublished: '2026-11-03',
+    dateModified: '2026-11-03',
+    excerpt:
+      'Before you hire a shingle roofer, know what your roof is telling you, what a good inspection and written scope look like, and the questions that separate a careful roofer from a fast sale.',
+    image: '/images/blog/how-to-choose-a-shingle-roofer-los-angeles.webp',
+    imageAlt: 'Choosing a shingle roofer in Los Angeles: a roofer showing a homeowner asphalt shingle samples in front of a house',
+    intro: [
+      'Choosing a shingle roofer in Los Angeles starts before anyone climbs a ladder. Shingle roofers range from crews who do nothing but asphalt shingles to general contractors who hand the roof to an outside crew along with everything else, and the difference shows in how they inspect, what they put in writing and how they leave your home.',
+      'We are shingle roofers ourselves, so this guide is written from the roof: the warning signs worth acting on, the shingle choices you’ll be offered, how a replacement should run from the first look to the final walkthrough, and the questions that tell you who you’re dealing with.',
+    ],
+    sections: [
+      {
+        heading: 'Key Takeaways',
+        blocks: [
+          {
+            list: [
+              '**Curling, granule loss and leaks are the signs to act on.** One alone may mean a repair; several together usually mean the roof is wearing out.',
+              '**A roofer should look before anyone prices.** Photos of what they found, then a written scope and price, before any work.',
+              '**The scope should cover every layer,** not just the shingles: the deck, the underlayment, the flashings and the ventilation.',
+              '**Check the license, the permit and the warranty in writing.** A licensed contractor pulls the permit and explains what the warranty covers.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Signs Your Shingle Roof Needs a Roofer',
+        blocks: [
+          'Most shingle roofs tell you they’re in trouble well before water reaches a ceiling. From the ground, with binoculars or your phone’s zoom, look for:',
+          {
+            list: [
+              '**Curling or cupping shingles.** Edges that lift or corners that turn up have lost their seal, and wind gets under them.',
+              '**Granule loss.** Bare, dark patches on the roof, or a lot of grit in the gutters and at the downspouts. Our article on [shingle granules in the gutter](/blog/shingle-granules-in-gutter/) explains what a little and a lot mean.',
+              '**Missing, cracked or lifted shingles,** often along the ridge, the rakes or after a windy night.',
+              '**Leaks and stains:** water spots on ceilings near exterior walls, damp wood in the attic, or a stain that grows after rain. Our guide on [how to find a roof leak](/blog/how-to-find-a-roof-leak/) walks through tracing one.',
+              '**Worn flashing and pipe boots** around chimneys, skylights and vents, where most leaks actually start.',
+            ],
+          },
+          { note: 'If water is coming in right now, don’t wait for estimates: see [emergency roof repair](/roof-repair/emergency/). A tarp can stop more damage while the source is found.' },
+        ],
+      },
+      {
+        heading: 'Asphalt Shingle Options You’ll Be Offered',
+        blocks: [
+          'Almost every shingle roofer in Southern California will quote one of two kinds of asphalt shingle:',
+          {
+            table: {
+              head: ['Shingle', 'What it is', 'Where it fits'],
+              rows: [
+                ['3-tab', 'A single flat layer cut into tabs, with a uniform look', 'Budget work, rentals and matching an existing 3-tab roof'],
+                ['Architectural (dimensional)', 'Two or more laminated layers, thicker, with a textured look', 'Most home replacements today, for their weight, wind resistance and look'],
+              ],
+            },
+          },
+          'In Los Angeles, sun and heat do more to age a shingle roof than rain does: UV dries the asphalt, the granules loosen, and an attic that runs hot cooks the roof from below. That is why ventilation belongs in the conversation, not just the shingle. The longer comparison is in [architectural vs. 3-tab shingles](/blog/architectural-vs-3-tab-shingles/), and our [asphalt shingle roof guide](/blog/asphalt-shingle-roof-guide/) covers how sun, heat and the coast wear a roof.',
+          'Color matters too. In the City of Los Angeles, most home re-roofs need a rated cool roof product, so ask your roofer which colors in their line meet the rule before you fall for one.',
+        ],
+      },
+      {
+        heading: 'How a Shingle Roof Replacement Should Run',
+        blocks: [
+          'Whoever you hire, the job should follow roughly these steps:',
+          {
+            steps: [
+              '**A roofer inspects the roof** and photographs what they find, before anyone talks about price.',
+              '**You get a written scope and price** that lists the layers being replaced, the shingle, the flashings and vents, and how damaged decking will be handled.',
+              '**The permit is pulled** by the contractor. Our [roofing permit guide](/blog/roofing-permits-los-angeles/) covers LADBS and the cities around Los Angeles.',
+              '**Tear-off day:** the old roof comes off down to the deck, with tarps protecting the yard, and the deck is checked while it’s open.',
+              '**Underlayment, flashings and ventilation go on,** then the shingles and the ridge.',
+              '**Cleanup and inspection:** the site is swept with magnets, and the inspector signs off the permit.',
+              '**A final walkthrough** where the roofer shows you the finished roof and goes over your warranty.',
+            ],
+          },
+          'On a typical home, a full shingle replacement takes about 3 to 5 days. Larger or steeper roofs, rotten decking and weather can add to that, and a good roofer tells you so up front.',
+          { pov: 'We replace shingle roofs from the deck up with our *TotalShield* Shingle System: the decking and underlayment, the flashings and vents, and the shingles and ridge, with the deck checked and photographed while it’s open. A new roof over old flashing or a soft deck is the shortcut we won’t take.' },
+        ],
+      },
+      {
+        heading: 'What Sets the Price',
+        blocks: [
+          'Two honest quotes for the same roof can differ, and the reasons are usually in the scope, not the shingle. What moves the price:',
+          {
+            list: [
+              '**The size and pitch** of the roof, and how many hips, valleys and dormers it has.',
+              '**How many layers come off,** and what the deck looks like underneath.',
+              '**The shingle line and accessories:** underlayment, starter strip, ridge cap and drip edge.',
+              '**Flashings and ventilation:** new step flashing, pipe boots and attic vents, or reused ones.',
+              '**Access:** a two-story home, a steep roof or a tight lot takes more labor.',
+            ],
+          },
+          'Compare quotes line by line: if one leaves out the underlayment, the flashings or how bad decking is priced, it isn’t cheaper, it just isn’t finished. Our guide to [roof replacement cost in Los Angeles](/blog/roof-replacement-cost-los-angeles/) explains how a price comes together, and [how to pay for a new roof](/blog/how-to-pay-for-a-new-roof/) covers financing.',
+        ],
+      },
+      {
+        heading: 'Questions to Ask a Shingle Roofer Before You Hire',
+        blocks: [
+          {
+            checklist: [
+              'What is your CSLB license number, and is it active? (Check it at the [CSLB website](https://www.cslb.ca.gov).)',
+              'Are you licensed, bonded and insured, and can I see the certificates?',
+              'Will a roofer inspect my roof, or a salesperson? Will I get photos of what you found?',
+              'Does your written scope list the deck, underlayment, flashings, ventilation and shingles?',
+              'How do you handle rotten decking if you find it, and how is it priced?',
+              'Who pulls the permit, and who meets the inspector?',
+              'Which shingle line do you install, and are you certified with that manufacturer?',
+              'What does your workmanship warranty cover, and what does the manufacturer’s warranty cover?',
+              'How do you protect the yard, and how do you clean up nails?',
+              'How long will the job take, and who is my point of contact?',
+            ],
+          },
+          { h3: 'Red flags' },
+          {
+            list: [
+              'A price over the phone or from the driveway, with no one on the roof.',
+              'A large deposit up front, or pressure to sign today.',
+              'An offer to skip the permit.',
+              'A scope that says “replace roof” and nothing else.',
+              'No license number on the contract or the truck.',
+            ],
+          },
+          { pov: 'A good shingle roofer is happy to answer every one of these questions in writing. If a contractor gets vague about the scope, the permit or the warranty before you sign, it won’t get clearer after.' },
+        ],
+      },
+      {
+        heading: 'How Quality Roofing Specialists Handles a Shingle Roof',
+        blocks: [
+          'We’re a family-owned roofing contractor in Los Angeles and Orange County, and shingle roofs are a large part of what our roofers do every week. Here is what you can expect from us:',
+          {
+            list: [
+              '**A free roof evaluation for homes,** led by a roofer, with *RoofScan 360* drone footage of the areas of concern and photos of what we find, explained in plain English.',
+              '**One clear next step:** repair, monitor, maintain or replace. If a [shingle roof repair](/residential-roofing/shingle-roofing/repair/) solves it, that’s what we recommend.',
+              '**A written scope and price** before any work starts.',
+              '**The *TotalShield* Shingle System** on every [shingle roof replacement](/residential-roofing/shingle-roofing/replacement/): every layer, from the deck up, in architectural shingles in many colors.',
+              '**Licensed, bonded and insured:** CSLB #1061942, licensed since January 2020, accredited by the BBB with an A+ rating, and certified with Owens Corning, IKO, GAF, CertainTeed (Master Craftsman) and Polyglass (Premio Pro).',
+              '**Permits pulled, tarps down, magnetic nail sweeps** and a final walkthrough.',
+              '**Our installs carry a 10-year workmanship warranty (call for details),** plus the manufacturer’s warranty on the materials.',
+            ],
+          },
+          'Our offices in West Hollywood, Woodland Hills and Vernon put roofers close to homes across Los Angeles County, Orange County and the Inland Empire, and our team speaks English, Spanish and Tagalog. See our [shingle roofing](/residential-roofing/shingle-roofing/) page for the full service.',
+        ],
+      },
+    ],
+    faqs: [
+      { q: 'How do I find a good shingle roofer near me?', a: 'Check the CSLB license, ask for a roofer-led inspection with photos, and get a written scope and price that lists every layer before you sign. Reviews from homeowners near you, a pulled permit and a clear warranty round it out.' },
+      { q: 'Should I repair or replace my shingle roof?', a: 'A few lifted shingles or a failed pipe boot usually mean a repair. Widespread curling, heavy granule loss or leaks in several places usually mean the roof is wearing out. A roof evaluation tells you which.' },
+      { q: 'How long does a shingle roof replacement take?', a: 'About 3 to 5 days on a typical home. Larger or steeper roofs, damaged decking and weather can add time.' },
+      { q: 'Do I need a permit to replace a shingle roof in Los Angeles?', a: 'Yes. A re-roof in the City of Los Angeles and the cities around it needs a permit, and the contractor normally pulls it. Our [roofing permit guide](/blog/roofing-permits-los-angeles/) has the details by city.' },
+      { q: 'Are architectural shingles better than 3-tab?', a: 'For most home replacements, yes: architectural shingles are thicker, hold up better to wind and look more dimensional. 3-tab still fits budget work and matching an existing roof.' },
+      { q: 'Is your roof evaluation really free?', a: 'Yes, for homes. A roofer looks at your roof with drone footage of the areas of concern, shows you photos of what they find and gives you a clear next step, with no obligation.' },
+    ],
+    closing: {
+      heading: 'Talk to a Shingle Roofer First',
+      blocks: [
+        'Start with a [free roof evaluation](#roof-check). A roofer looks at your roof, shows you what they found and gives you a written scope and price before any work. Call (310) 340-1643. Quality Roofing Specialists, CSLB #1061942.',
+        'Part of our [asphalt shingle roof guide](/blog/asphalt-shingle-roof-guide/).',
+      ],
+    },
+    related: ['/residential-roofing/shingle-roofing/', '/residential-roofing/shingle-roofing/replacement/', '/residential-roofing/shingle-roofing/repair/', '/roof-replacement/'],
+  },
   // Drip edge flashing checklist (owner, November 3 2026, from the owner's team's draft; the "drip edge flashing" searches in the owner's
   // keyword list). Left out to fit the site's rules: the cost section and every price, the lifespans in years, the photo and editor
   // placeholders, the three illustrative job stories (not real QRS jobs), the 5.0-star rating (no rating is shown on the site), a gutter
