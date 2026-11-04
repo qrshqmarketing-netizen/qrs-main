@@ -15,7 +15,6 @@ import { relatedLinks } from '@/data/content';
 import { pageJsonLd } from '@/lib/structuredData';
 import { authorOf } from '@/data/authors';
 import SiteLink from '@/components/ui/SiteLink';
-import PreferredSource from '@/components/ui/PreferredSource';
 import './BlogPost.css';
 
 const FAQ_HEADING = 'Frequently Asked Questions';
@@ -157,7 +156,6 @@ export default function BlogPost({ post }) {
             )}{' '}
             · {readMinutes(post)} min read
           </p>
-          <PreferredSource />
           {post.image && (
             <figure className="post-image">
               <Image src={post.image} alt={post.imageAlt || ''} width={1536} height={1024} sizes="(min-width: 840px) 760px, calc(100vw - 32px)" preload />

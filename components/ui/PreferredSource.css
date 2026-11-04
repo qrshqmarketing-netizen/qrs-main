@@ -4,3 +4,8 @@
 @media (hover:hover){.pref-source a:hover{border-color:var(--gold);color:var(--navy)}}
 .pref-source a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 .pref-source.pref-end{margin:40px 0 0}
+/* In the dark footer, under the BBB seal (owner, November 4 2026) */
+.pref-source.ft-pref{margin:16px 0 0;text-align:left}
+.ft-pref a{background:transparent;border-color:rgba(255,255,255,.22);color:#fff}
+.ft-pref .pref-star{color:var(--gold)}
+@media (hover:hover){.ft-pref a:hover{border-color:var(--gold);color:#fff}}

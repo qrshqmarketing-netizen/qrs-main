@@ -2,7 +2,7 @@ import { PREFERRED_SOURCE_URL } from '@/data/site';
 import './PreferredSource.css';
 
 // A small pill that opens Google's preferred-sources page for this site in a new tab (owner, October 28 2026).
-// Used where people read: articles, the blog index, the Roofing FAQ and the glossary.
+// Shown only in the footer, on every page (owner, November 4 2026; it used to sit on articles, the blog index, the FAQ and the glossary).
 export default function PreferredSource({ className = '' }) {
   return (
     <p className={`pref-source ${className}`.trim()}>

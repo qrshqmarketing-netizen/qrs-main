@@ -3,7 +3,7 @@ import PartnerLogos from '@/components/sections/PartnerLogos';
 import ProofBar from '@/components/sections/ProofBar';
 import TrustLogos from '@/components/sections/TrustLogos';
 import RoofCheck from '@/components/sections/RoofCheck';
-import { HomeAreas, HomeCommercial, HomeCores, HomeFaq, HomeGuides, HomeHero, HomeOffers, HomeProjects, HomeRepair, HomeReplacement, HomeResidential, HomeReviews, HomeStatement } from '@/components/home/HomeSections';
+import { HomeAreas, HomeAudience, HomeCommercial, HomeCores, HomeCredentials, HomeGiving, HomeFaq, HomeGuides, HomeHero, HomeOffers, HomeProjects, HomeRepair, HomeReplacement, HomeResidential, HomeReviews, HomeStatement } from '@/components/home/HomeSections';
 import HomeMotion from '@/components/home/HomeMotion';
 import JsonLd from '@/components/ui/JsonLd';
 import { HOME_DESCRIPTION, HOME_H1, HOME_TITLE } from '@/data/site';
@@ -57,6 +57,7 @@ export default async function HomePage() {
         <TrustLogos />
         {/* The statement moved up under the logos (owner, November 2 2026) */}
         <HomeStatement />
+        <HomeAudience />
         <HomeCores />
         <HomeResidential />
         <HomeCommercial />
@@ -67,8 +68,10 @@ export default async function HomePage() {
         <HomeAreas />
         <HomeProjects />
         <HomeReviews />
+        <HomeCredentials />
         <HomeOffers />
         <HomeGuides />
+        <HomeGiving />
         <HomeFaq faqs={faqs} />
         <div className="hg-form-wrap">
           <RoofCheck />

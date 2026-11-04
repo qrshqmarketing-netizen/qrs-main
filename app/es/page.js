@@ -3,7 +3,7 @@ import PartnerLogos from '@/components/sections/PartnerLogos';
 import ProofBar from '@/components/sections/ProofBar';
 import TrustLogos from '@/components/sections/TrustLogos';
 import RoofCheck from '@/components/sections/RoofCheck';
-import { HomeAreas, HomeCommercial, HomeCores, HomeFaq, HomeGuides, HomeHero, HomeOffers, HomeProjects, HomeRepair, HomeReplacement, HomeResidential, HomeReviews, HomeStatement } from '@/components/home/HomeSections';
+import { HomeAreas, HomeAudience, HomeCommercial, HomeCores, HomeCredentials, HomeGiving, HomeFaq, HomeGuides, HomeHero, HomeOffers, HomeProjects, HomeRepair, HomeReplacement, HomeResidential, HomeReviews, HomeStatement } from '@/components/home/HomeSections';
 import HomeMotion from '@/components/home/HomeMotion';
 import JsonLd from '@/components/ui/JsonLd';
 import { ES_HOME_FAQS, ES_HOME_META } from '@/data/i18n/esHome';
@@ -44,6 +44,7 @@ export default function SpanishHomePage() {
         <ProofBar strip lang={lang} />
         <TrustLogos lang={lang} />
         <HomeStatement lang={lang} />
+        <HomeAudience lang={lang} />
         <HomeCores lang={lang} />
         <HomeResidential lang={lang} />
         <HomeCommercial lang={lang} />
@@ -54,8 +55,10 @@ export default function SpanishHomePage() {
         <HomeAreas lang={lang} />
         <HomeProjects lang={lang} />
         <HomeReviews lang={lang} />
+        <HomeCredentials lang={lang} />
         <HomeOffers lang={lang} />
         <HomeGuides lang={lang} />
+        <HomeGiving lang={lang} />
         <HomeFaq faqs={ES_HOME_FAQS} lang={lang} />
         <div className="hg-form-wrap">
           <RoofCheck lang={lang} />

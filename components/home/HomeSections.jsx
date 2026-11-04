@@ -7,7 +7,10 @@ import QrsMarkSvg from '@/components/ui/QrsMarkSvg';
 import { LATEST_PROJECTS } from '@/data/projectPages';
 import { GOOGLE_REVIEWS as REVIEW_LIST } from '@/data/reviews';
 import { LOCATIONS, REGIONS, cityPath, placesIn, regionPath } from '@/data/locations';
-import { BUSINESS, GOOGLE_REVIEWS, OFFICES, PHONE, TEL } from '@/data/site';
+import { BBB, BUSINESS, GOOGLE_REVIEWS, OFFICES, PHONE, TEL } from '@/data/site';
+import { SERVICE_CATEGORIES } from '@/data/serviceCategories';
+import { CREDENTIALS_PAGE, CREDENTIALS_PUBLIC } from '@/data/pages/credentials';
+import BbbBadge from '@/components/ui/BbbBadge';
 import { listJoin } from '@/lib/lang';
 import { th } from '@/lib/langHome';
 import { ES_HOME_REVIEWS } from '@/data/i18n/esHome';
@@ -75,6 +78,15 @@ export function HomeHero({ h1, heading, text, cta, video, poster, lang = 'en' })
             </a>
           </div>
           <p className="hg-note">{T('No pressure, no mystery scope and no surprises.')}</p>
+          {/* The license and the BBB seal right in the hero (owner, November 4 2026, after a comparison with another LA roofer's home page) */}
+          <div className="hg-hero-proof">
+            <BbbBadge width={132} className="hg-hero-bbb" />
+            <ul>
+              <li>{T('CSLB #{license}', { license: BUSINESS.license })}</li>
+              <li>{T('Licensed since 2020')}</li>
+              <li>{T('Licensed, bonded & insured')}</li>
+            </ul>
+          </div>
         </div>
         <div className="hg-stage">
           <div className="hg-frame">
@@ -201,6 +213,48 @@ export function HomeStatement({ lang = 'en' }) {
         <h2>
           {T('A roof is only as good as')} <span className="hg-grad">{T('the parts you never see.')}</span>
         </h2>
+      </div>
+    </section>
+  );
+}
+
+// ---------- Who we roof for (owner, November 4 2026) ----------
+// The three kinds of property as cards, each with its own ask and its page, so a homeowner, an HOA board and a building owner each see where to
+// start right after the statement. Photos and pages from data/serviceCategories.js; the commercial card never calls the survey free.
+const AUDIENCE = [
+  { key: 'home', label: 'Homes', ask: 'Book a free roof evaluation', link: 'Residential roofing', text: 'Shingle, tile and flat roofs, from one leak to a full tear-off. A roofer looks first, and the evaluation is free.' },
+  { key: 'hoa', label: 'HOAs & multi-family', ask: 'Request an estimate', link: 'HOA & multi-family roofing', text: 'Condo and townhome communities and apartment buildings, with one point of contact and photo reports your board or manager can review.' },
+  { key: 'commercial', label: 'Commercial buildings', ask: 'Request a roof survey', link: 'Commercial roofing', text: 'Offices, retail, churches and warehouses. A roofer surveys the roof, and the written scope is built around your building and your hours.' },
+];
+export function HomeAudience({ lang = 'en' }) {
+  const T = (x) => th(lang, x);
+  return (
+    <section className="hg-section hg-bg-white-sky0" id="who-we-roof-for" style={{ paddingTop: 0 }} aria-labelledby="hg-audience">
+      <div className="container">
+        <div className="hg-head">
+          <h2 id="hg-audience">{T('Homes, communities and commercial buildings.')}</h2>
+          <p>{T('Tell us what you own or manage. Every job starts the same way: a roofer looks first, and you get a written scope and price before any work.')}</p>
+        </div>
+        <div className="hg-aud">
+          {AUDIENCE.map((a, i) => {
+            const cat = SERVICE_CATEGORIES[i];
+            return (
+              <article className="hg-aud-card" key={a.key}>
+                <div className="hg-aud-photo">
+                  <Image src={cat.image} alt="" fill sizes="(min-width: 900px) 30vw, 100vw" quality={60} loading="lazy" />
+                </div>
+                <div className="hg-aud-body">
+                  <h3>{T(a.label)}</h3>
+                  <p>{T(a.text)}</p>
+                  <div className="hg-aud-ctas">
+                    <SiteLink className="btn btn-gold" href="#roof-check">{T(a.ask)}</SiteLink>
+                    <SiteLink className="hg-arrow" href={cat.href}>{T(a.link)} <span aria-hidden="true">→</span></SiteLink>
+                  </div>
+                </div>
+              </article>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
@@ -491,6 +545,66 @@ export function HomeReviews({ lang = 'en' }) {
           <SiteLink className="hg-arrow" href="/reviews/">{T('Read more reviews')} <span aria-hidden="true">→</span></SiteLink>
         </div>
         <HomeQuotes slides={slides} labels={labels} />
+      </div>
+    </section>
+  );
+}
+
+// ---------- Credentials (owner, November 4 2026) ----------
+// "On the record": the license, insurance, manufacturer certifications and BBB accreditation as four facts anyone can check, then the badge
+// row (the five manufacturer logos from the Credentials page and the BBB seal). Only what /credentials/ already states.
+export function HomeCredentials({ lang = 'en' }) {
+  const T = (x, v) => th(lang, x, v);
+  const badges = CREDENTIALS_PUBLIC ? CREDENTIALS_PAGE.manufacturers.items.filter((m) => m.logo) : [];
+  const facts = [
+    { big: `#${BUSINESS.license}`, text: T('CSLB license, a licensed California contractor since 2020') },
+    { big: T('Bonded'), text: T('Licensed, bonded and insured on every job') },
+    { big: '5', text: T('Manufacturer certifications: Owens Corning, IKO, GAF, CertainTeed Master Craftsman and Polyglass Premio Pro') },
+    { big: BBB.rating, text: T('BBB rating, an Accredited Business since October 2026') },
+  ];
+  return (
+    <section className="hg-section hg-bg-sky" id="credentials" style={{ paddingTop: 0 }} aria-labelledby="hg-creds">
+      <div className="container">
+        <div className="hg-head">
+          <h2 id="hg-creds">{T('Licensed, certified and on the record.')}</h2>
+          <p>{T('You shouldn’t have to take a roofer’s word for it. Every one of these can be checked.')}</p>
+        </div>
+        <div className="hg-creds">
+          {facts.map((f) => (
+            <div className="hg-cred" key={f.big}><b>{f.big}</b><span>{f.text}</span></div>
+          ))}
+        </div>
+        {badges.length > 0 && (
+          <ul className="hg-cred-logos" aria-label={T('Manufacturer certifications and BBB accreditation')}>
+            {badges.map((m) => (
+              <li key={m.id}><Image src={m.logo} alt={`${m.name}${m.program ? ` ${m.program}` : ''}`} width={m.width} height={m.height} sizes="140px" loading="lazy" /></li>
+            ))}
+            <li className="hg-cred-bbb"><BbbBadge width={170} /></li>
+          </ul>
+        )}
+        <div className="hg-cred-ctas">
+          <SiteLink className="btn btn-line" href="/credentials/">{T('See our credentials')}</SiteLink>
+          <a className="hg-arrow" href={CREDENTIALS_PAGE.license.verify.href} target="_blank" rel="noopener noreferrer">{T('Verify our license with the CSLB')} <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ---------- Giving back (owner, November 4 2026; the About page's own sentence) ----------
+export function HomeGiving({ lang = 'en' }) {
+  const T = (x) => th(lang, x);
+  return (
+    <section className="hg-section hg-bg-peri" style={{ paddingTop: 0 }} aria-labelledby="hg-giving">
+      <div className="container">
+        <div className="hg-giving">
+          <span className="hg-ico" style={{ background: 'var(--plum)' }} aria-hidden="true"><IconHome /></span>
+          <div>
+            <h2 id="hg-giving">{T('Roofs for the neighborhoods we work in.')}</h2>
+            <p>{T('Giving back is part of how we operate: we’ve donated a full roof to a local church and contribute roofing work to senior living communities and elderly assistance programs in the neighborhoods we serve.')}</p>
+            <SiteLink className="hg-arrow" href="/about-us/">{T('About QRS')} <span aria-hidden="true">→</span></SiteLink>
+          </div>
+        </div>
       </div>
     </section>
   );

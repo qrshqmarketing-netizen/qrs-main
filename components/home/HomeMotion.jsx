@@ -11,7 +11,7 @@ import { useEffect } from 'react';
 //  - The hero and commercial buttons are magnetic: they lean a few pixels toward the pointer.
 //  - The commercial numbers (review count, crews, counties) count up when they come into view; the HTML always holds the real number.
 // Nothing runs for reduced motion; everything is passive and stops off screen.
-const TILT = '.hg-core, .hg-tile, .hg-plan, .hg-postcard, .hg-seg';
+const TILT = '.hg-aud-card, .hg-cred, .hg-core, .hg-tile, .hg-plan, .hg-postcard, .hg-seg';
 const MAGNET = '.hg-ctas .btn, .hg-sys-ctas .btn, .hg-hero .btn';
 
 export default function HomeMotion() {

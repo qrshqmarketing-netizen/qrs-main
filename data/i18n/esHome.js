@@ -241,6 +241,37 @@ export const ES_HOME = {
   // ---------- FAQ ----------
   'Questions, answered.': 'Preguntas, respondidas.',
   'Still curious? Call {phone}.': '¿Tiene más dudas? Llame al {phone}.',
+
+  // ---------- Hero proof, who we roof for, credentials, giving back (November 4 2026) ----------
+  'CSLB #{license}': 'CSLB #{license}',
+  'Licensed since 2020': 'Con licencia desde 2020',
+  'Licensed, bonded & insured': 'Con licencia, fianza y seguro',
+  'Homes, communities and commercial buildings.': 'Casas, comunidades y edificios comerciales.',
+  'Tell us what you own or manage. Every job starts the same way: a roofer looks first, and you get a written scope and price before any work.': 'Díganos qué tiene o administra. Todo trabajo empieza igual: primero lo revisa un techador, y usted recibe el alcance y el precio por escrito antes de cualquier trabajo.',
+  'Homes': 'Casas',
+  'HOAs & multi-family': 'HOA y multifamiliares',
+  'Commercial buildings': 'Edificios comerciales',
+  'Book a free roof evaluation': 'Agende una evaluación gratuita',
+  'Request an estimate': 'Pida un presupuesto',
+  'Request a roof survey': 'Pida una revisión del techo',
+  'Residential roofing': 'Techos residenciales',
+  'HOA & multi-family roofing': 'Techos para HOA y multifamiliares',
+  'Shingle, tile and flat roofs, from one leak to a full tear-off. A roofer looks first, and the evaluation is free.': 'Techos de tejas asfálticas, de teja y planos, desde una gotera hasta quitar el techo completo. Primero lo revisa un techador, y la evaluación es gratuita.',
+  'Condo and townhome communities and apartment buildings, with one point of contact and photo reports your board or manager can review.': 'Comunidades de condominios y townhomes y edificios de apartamentos, con un solo contacto e informes con fotos que su mesa directiva o administrador puede revisar.',
+  'Offices, retail, churches and warehouses. A roofer surveys the roof, and the written scope is built around your building and your hours.': 'Oficinas, comercios, iglesias y bodegas. Un techador revisa el techo, y el alcance por escrito se arma según su edificio y sus horarios.',
+  'Licensed, certified and on the record.': 'Con licencia, certificados y comprobables.',
+  'You shouldn’t have to take a roofer’s word for it. Every one of these can be checked.': 'No tiene que creerle a un techador solo por su palabra. Cada uno de estos datos se puede comprobar.',
+  'CSLB license, a licensed California contractor since 2020': 'Licencia CSLB, contratista con licencia en California desde 2020',
+  'Bonded': 'Con fianza',
+  'Licensed, bonded and insured on every job': 'Con licencia, fianza y seguro en cada trabajo',
+  'Manufacturer certifications: Owens Corning, IKO, GAF, CertainTeed Master Craftsman and Polyglass Premio Pro': 'Certificaciones de fabricantes: Owens Corning, IKO, GAF, CertainTeed Master Craftsman y Polyglass Premio Pro',
+  'BBB rating, an Accredited Business since October 2026': 'Calificación de BBB, negocio acreditado desde octubre de 2026',
+  'Manufacturer certifications and BBB accreditation': 'Certificaciones de fabricantes y acreditación de BBB',
+  'See our credentials': 'Vea nuestras credenciales',
+  'Verify our license with the CSLB': 'Verifique nuestra licencia en la CSLB',
+  'About QRS': 'Sobre QRS',
+  'Roofs for the neighborhoods we work in.': 'Techos para los vecindarios donde trabajamos.',
+  'Giving back is part of how we operate: we’ve donated a full roof to a local church and contribute roofing work to senior living communities and elderly assistance programs in the neighborhoods we serve.': 'Ayudar a la comunidad es parte de cómo trabajamos: donamos un techo completo a una iglesia local y aportamos trabajos de techado a residencias para personas mayores y a programas de ayuda para adultos mayores en los vecindarios donde trabajamos.',
 };
 
 // The home page FAQ in Spanish, translated from the English copy shown on the live home page on November 3 2026 (the dashboard's home_faqs).

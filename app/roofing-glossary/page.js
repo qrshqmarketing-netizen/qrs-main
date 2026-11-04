@@ -11,7 +11,6 @@ import { heroOutcome } from '@/data/heroOutcomes';
 import { GLOSSARY_PAGE as page } from '@/data/pages/glossary';
 import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
-import PreferredSource from '@/components/ui/PreferredSource';
 import './glossary.css';
 
 // The roofing glossary (copy in data/pages/glossary.js): the hero, a row of jump links to the groups, then each group as hairline rows of term and
@@ -72,7 +71,6 @@ export default function RoofingGlossaryPage() {
               </dl>
             </section>
           ))}
-          <PreferredSource className="pref-end" />
         </div>
       </section>
       <RoofCheck tone="white" />

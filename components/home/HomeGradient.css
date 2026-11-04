@@ -429,3 +429,49 @@ main.hg .hg-magnet:hover{transition:translate .1s linear,background-color .2s,co
   .hg-logo-sub{animation:hgLogoWipe .9s cubic-bezier(.65,0,.35,1) .75s both}
 }
 @keyframes hgLogoWipe{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+
+/* ---------- Additions after a comparison with another LA roofer's home page (owner, November 4 2026) ---------- */
+.hg-bg-white-sky0{background:linear-gradient(180deg,var(--paper) 0%,var(--hg-sky) 100%)}
+.hg-bg-peri{background:var(--hg-peri)}
+
+/* Hero: the BBB seal and the license, under the note */
+.hg-hero-proof{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 18px;margin-top:22px}
+.hg-hero-bbb{display:inline-block;line-height:0;border-radius:8px}
+.hg-hero-proof ul{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;margin:0;padding:0;list-style:none}
+.hg-hero-proof li{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:#fff}
+.hg-hero-proof li:before{content:"✓";font-family:var(--font-glyph);color:var(--hg-gold,var(--gold));font-size:14px}
+
+/* Who we roof for: three cards */
+.hg-aud{display:grid;gap:18px}
+.hg-aud-card{display:flex;flex-direction:column;overflow:hidden;border:1px solid var(--line);border-radius:var(--hg-r);background:var(--paper);transition:transform .3s}
+.hg-aud-photo{position:relative;aspect-ratio:16/10;background:var(--line)}
+.hg-aud-photo img{object-fit:cover}
+.hg-aud-body{display:flex;flex-direction:column;gap:12px;flex:1;padding:24px}
+body.studio-site main.hg .hg-aud-body h3{margin:0;font-size:24px}
+.hg-aud-body p{margin:0;font-size:16px;line-height:1.55;color:var(--ink)}
+.hg-aud-ctas{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;margin-top:auto;padding-top:8px}
+@media (min-width:900px){.hg-aud{grid-template-columns:repeat(3,1fr)}}
+
+/* Credentials: four facts, the badge row, two links */
+.hg-creds{display:grid;gap:14px}
+.hg-cred{display:flex;flex-direction:column;gap:10px;padding:26px 24px;border:1px solid var(--line);border-radius:var(--hg-r);background:var(--paper);transition:transform .3s}
+.hg-cred b{font-family:var(--font-heading,var(--font-text)),sans-serif;font-size:clamp(32px,3.4vw,44px);line-height:1;font-weight:700;color:var(--navy)}
+.hg-cred span{font-size:15px;line-height:1.5;color:var(--ink)}
+@media (min-width:640px){.hg-creds{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1100px){.hg-creds{grid-template-columns:repeat(4,1fr)}}
+.hg-cred-logos{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:18px 36px;margin:36px 0 0;padding:28px 20px;list-style:none;border-radius:var(--hg-r);background:var(--paper);border:1px solid var(--line)}
+.hg-cred-logos li{display:flex;align-items:center;justify-content:center;width:110px;height:60px}
+.hg-cred-logos li img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+.hg-cred-logos li.hg-cred-bbb{width:auto;height:auto}
+.hg-cred-bbb .bbb-badge{display:inline-block;line-height:0}
+:root[data-theme="dark"] .hg-cred-logos{background:#f3f6f9;border-color:transparent}
+:root[data-theme="dark"] .hg-cred b{color:var(--gold)}
+.hg-cred-ctas{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 24px;margin-top:28px}
+
+/* Giving back */
+.hg-giving{display:flex;flex-direction:column;gap:18px;max-width:880px;margin:0 auto;padding:clamp(28px,4vw,44px);border-radius:var(--hg-r);background:var(--paper);border:1px solid var(--line)}
+.hg-giving .hg-ico{display:inline-flex;align-items:center;justify-content:center;flex:none;width:54px;height:54px;border-radius:var(--hg-r);color:#fff}
+.hg-giving .hg-ico svg{width:26px;height:26px}
+body.studio-site main.hg .hg-giving h2{margin:0 0 10px;font-size:clamp(26px,3vw,36px);text-align:left!important}
+.hg-giving p{margin:0 0 14px;font-size:17px;line-height:1.6;color:var(--ink)}
+@media (min-width:700px){.hg-giving{flex-direction:row;align-items:flex-start;gap:28px}}
