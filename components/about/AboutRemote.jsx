@@ -88,9 +88,9 @@ export function AbrWho({ intro }) {
         <div className="abr-collage" aria-hidden="true">
           <span className="abr-shape abr-shape-a" />
           <span className="abr-shape abr-shape-b" />
-          <span className="abr-pic abr-pic-1"><Image src="/images/how-we-work-roofer-tablet-report.webp" alt="" fill sizes="240px" quality={60} loading="lazy" /></span>
-          <span className="abr-pic abr-pic-2"><Image src="/images/how-we-work-plain-english-homeowners.webp" alt="" fill sizes="300px" quality={60} loading="lazy" /></span>
-          <span className="abr-pic abr-pic-3"><Image src="/images/how-we-work-clean-site-tile-roof.webp" alt="" fill sizes="220px" quality={60} loading="lazy" /></span>
+          <span className="abr-pic abr-pic-1"><Image src="/images/about-office-phone-headset.webp" alt="" fill sizes="240px" quality={60} loading="lazy" style={{ objectPosition: "40% 30%" }} /></span>
+          <span className="abr-pic abr-pic-2"><Image src="/images/about-office-team-member-mug.webp" alt="" fill sizes="300px" quality={60} loading="lazy" style={{ objectPosition: "50% 20%" }} /></span>
+          <span className="abr-pic abr-pic-3"><Image src="/images/about-office-clipboard.webp" alt="" fill sizes="220px" quality={60} loading="lazy" style={{ objectPosition: "45% 40%" }} /></span>
           <span className="abr-chip">Licensed since {licensed} · CSLB #{BUSINESS.license}</span>
         </div>
         <div>

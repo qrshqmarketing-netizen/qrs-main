@@ -15,7 +15,7 @@ import { pageJsonLd } from '@/lib/structuredData';
 export const metadata = pageMetadata({ title: page.metaTitle, description: page.metaDescription, path: CAREERS_LINK.href });
 
 const CRUMBS = [HOME, CAREERS_LINK];
-const HERO_IMAGE = '/images/careers-hero-crew-shingle-roof.webp';
+const HERO_IMAGE = '/images/careers-hero-roofer-tablet-hills.webp';
 
 const schema = pageJsonLd({ path: CAREERS_LINK.href, title: page.metaTitle, description: page.metaDescription, crumbs: CRUMBS, faqs: page.faqs, image: HERO_IMAGE });
 
@@ -32,7 +32,7 @@ export default function CareersPage() {
         title={page.hero.heading}
         outcome={heroOutcome('/careers/')}
         intro={page.hero.intro}
-        media={{ image: HERO_IMAGE, alt: 'Two QRS roofers installing shingles together on a roof', position: 'center 30%' }}
+        media={{ image: HERO_IMAGE, alt: 'Smiling roofer in a hard hat and safety harness holding a tablet on a shingle roof above the neighborhood', position: '60% 30%' }}
         actions={[
           { label: 'Email Us Your Info', href: EMAIL_LINK, style: 'dark' },
           { label: `Call ${PHONE}`, href: TEL, style: 'line' },
@@ -47,8 +47,8 @@ export default function CareersPage() {
           heading={page.apply.heading}
           subheading={page.apply.subheading}
           steps={page.apply.steps}
-          image="/images/careers-process-roofer-crew.webp"
-          imageAlt="Smiling QRS roofer in gear with a crewmate working on the roof behind him"
+          image="/images/careers-apply-roofer-harness.webp"
+          imageAlt="Smiling roofer in a safety harness and tool belt on a shingle roof, a crewmate working behind him"
           showOnMobile
           tone="white"
         />
