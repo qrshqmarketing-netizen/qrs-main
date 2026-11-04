@@ -475,3 +475,8 @@ body.studio-site main.hg .hg-aud-body h3{margin:0;font-size:24px}
 body.studio-site main.hg .hg-giving h2{margin:0 0 10px;font-size:clamp(26px,3vw,36px);text-align:left!important}
 .hg-giving p{margin:0 0 14px;font-size:17px;line-height:1.6;color:var(--ink)}
 @media (min-width:700px){.hg-giving{flex-direction:row;align-items:flex-start;gap:28px}}
+/* Who we roof for sits right under the logo row now (owner, November 4 2026): it starts on the pale sky the row ends on and fades to the sky
+   the statement starts on */
+.hg-bg-sky2-paper{background:linear-gradient(180deg,var(--hg-sky-2) 0%,var(--paper) 45%,var(--hg-sky-2) 100%)}
+/* The statement heading leans toward the mouse like the cards (HomeMotion TILT), a little more depth for big type */
+main.hg .hg-statement h2.hg-tilt{transform:perspective(800px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translateY(var(--ty,0px));transform-style:preserve-3d}

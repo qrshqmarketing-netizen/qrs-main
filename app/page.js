@@ -1,13 +1,11 @@
 import FinalCta from '@/components/sections/FinalCta';
-import PartnerLogos from '@/components/sections/PartnerLogos';
 import ProofBar from '@/components/sections/ProofBar';
 import TrustLogos from '@/components/sections/TrustLogos';
 import RoofCheck from '@/components/sections/RoofCheck';
-import { HomeAreas, HomeAudience, HomeCommercial, HomeCores, HomeCredentials, HomeGiving, HomeFaq, HomeGuides, HomeHero, HomeOffers, HomeProjects, HomeRepair, HomeReplacement, HomeResidential, HomeReviews, HomeStatement } from '@/components/home/HomeSections';
+import { HomeAreas, HomeAudience, HomeCommercial, HomeCredentials, HomeGiving, HomeFaq, HomeGuides, HomeHero, HomeOffers, HomeProjects, HomeResidential, HomeReviews, HomeStatement } from '@/components/home/HomeSections';
 import HomeMotion from '@/components/home/HomeMotion';
 import JsonLd from '@/components/ui/JsonLd';
 import { HOME_DESCRIPTION, HOME_H1, HOME_TITLE } from '@/data/site';
-import { ROOF_FINANCING } from '@/data/services/programs';
 import { getHomeFaqs } from '@/lib/contentStore';
 import { openGraphBase, twitterBase } from '@/lib/seo';
 import { pageJsonLd } from '@/lib/structuredData';
@@ -56,15 +54,10 @@ export default async function HomePage() {
         {/* Google, BBB and Yelp logos linking to our profiles (owner, November 2 2026) */}
         <TrustLogos />
         {/* The statement moved up under the logos (owner, November 2 2026) */}
-        <HomeStatement />
         <HomeAudience />
-        <HomeCores />
+        <HomeStatement />
         <HomeResidential />
         <HomeCommercial />
-        <HomeRepair />
-        <HomeReplacement>
-          <PartnerLogos {...ROOF_FINANCING.partners} />
-        </HomeReplacement>
         <HomeAreas />
         <HomeProjects />
         <HomeReviews />

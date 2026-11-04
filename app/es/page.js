@@ -1,13 +1,11 @@
 import FinalCta from '@/components/sections/FinalCta';
-import PartnerLogos from '@/components/sections/PartnerLogos';
 import ProofBar from '@/components/sections/ProofBar';
 import TrustLogos from '@/components/sections/TrustLogos';
 import RoofCheck from '@/components/sections/RoofCheck';
-import { HomeAreas, HomeAudience, HomeCommercial, HomeCores, HomeCredentials, HomeGiving, HomeFaq, HomeGuides, HomeHero, HomeOffers, HomeProjects, HomeRepair, HomeReplacement, HomeResidential, HomeReviews, HomeStatement } from '@/components/home/HomeSections';
+import { HomeAreas, HomeAudience, HomeCommercial, HomeCredentials, HomeGiving, HomeFaq, HomeGuides, HomeHero, HomeOffers, HomeProjects, HomeResidential, HomeReviews, HomeStatement } from '@/components/home/HomeSections';
 import HomeMotion from '@/components/home/HomeMotion';
 import JsonLd from '@/components/ui/JsonLd';
 import { ES_HOME_FAQS, ES_HOME_META } from '@/data/i18n/esHome';
-import { ROOF_FINANCING } from '@/data/services/programs';
 import { ES_HOME, HOME_LANGUAGES, LANGS, t } from '@/lib/lang';
 import { openGraphBase, twitterBase } from '@/lib/seo';
 import { pageJsonLd } from '@/lib/structuredData';
@@ -34,7 +32,6 @@ const HERO_POSTER = '/images/home-hero-drone-poster.webp';
 
 export default function SpanishHomePage() {
   const lang = 'es';
-  const partners = ROOF_FINANCING.partners;
   return (
     <>
       <JsonLd data={pageJsonLd({ path: ES_HOME, title, description, faqs: ES_HOME_FAQS, language: LANGS.es.code })} />
@@ -43,15 +40,10 @@ export default function SpanishHomePage() {
         <HomeHero lang={lang} h1={h1} heading={heading} text={text} cta={cta} video={HERO_VIDEO} poster={HERO_POSTER} />
         <ProofBar strip lang={lang} />
         <TrustLogos lang={lang} />
-        <HomeStatement lang={lang} />
         <HomeAudience lang={lang} />
-        <HomeCores lang={lang} />
+        <HomeStatement lang={lang} />
         <HomeResidential lang={lang} />
         <HomeCommercial lang={lang} />
-        <HomeRepair lang={lang} />
-        <HomeReplacement lang={lang}>
-          <PartnerLogos {...partners} heading={t(lang, partners.heading)} intro={t(lang, partners.intro)} />
-        </HomeReplacement>
         <HomeAreas lang={lang} />
         <HomeProjects lang={lang} />
         <HomeReviews lang={lang} />

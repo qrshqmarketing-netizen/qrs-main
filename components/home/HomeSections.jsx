@@ -229,7 +229,7 @@ const AUDIENCE = [
 export function HomeAudience({ lang = 'en' }) {
   const T = (x) => th(lang, x);
   return (
-    <section className="hg-section hg-bg-white-sky0" id="who-we-roof-for" style={{ paddingTop: 0 }} aria-labelledby="hg-audience">
+    <section className="hg-section hg-bg-sky2-paper" id="who-we-roof-for" style={{ paddingTop: 24 }} aria-labelledby="hg-audience">
       <div className="container">
         <div className="hg-head">
           <h2 id="hg-audience">{T('Homes, communities and commercial buildings.')}</h2>
@@ -318,7 +318,7 @@ export function HomeResidential({ lang = 'en' }) {
 export function HomeCommercial({ lang = 'en' }) {
   const T = (x, v) => th(lang, x, v);
   return (
-    <section className="hg-section hg-bg-white" id="commercial" style={{ paddingTop: 0 }} aria-labelledby="hg-commercial">
+    <section className="hg-section hg-bg-white-sky" id="commercial" style={{ paddingTop: 0 }} aria-labelledby="hg-commercial">
       <div className="container">
         <div className="hg-sys">
           <div className="hg-head">
