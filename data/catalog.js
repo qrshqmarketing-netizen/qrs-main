@@ -97,6 +97,14 @@ export const SINGLES = {
     scenes: ['scene-inspect'],
     blurb: 'Vents checked, repaired or added so hot, humid air can leave your attic and cooler air can come in.',
   },
+  cool: {
+    key: 'cool',
+    label: 'Cool Roofing',
+    href: '/residential-roofing/cool-roofing/',
+    parent: RESIDENTIAL,
+    scenes: ['scene-flat'],
+    blurb: 'Cool roof shingles and white reflective cap sheets, installed when your roof is replaced.',
+  },
   hoa: {
     key: 'hoa',
     label: 'HOA & Multi-Family',

@@ -81,8 +81,8 @@ export default async function LocationPage({ location, page, index = 0 }) {
         paragraphs={page.intro.paragraphs}
         considerations={page.considerations}
         neighborhoods={page.neighborhoods}
-        photo={photo.src}
-        photoAlt={page.imageAlt || `A roof in ${city} from above`}
+        photo={page.storyImage || photo.src}
+        photoAlt={page.storyImage ? page.storyImageAlt : page.imageAlt || `A roof in ${city} from above`}
       />
       <div className="lc-keep">
         {/* An office's Google Maps listing, when it has one (OFFICES[].mapEmbed in data/site.js; owner, October 27 2026) */}

@@ -129,19 +129,19 @@ export const TILE_CONTENT = {
       title: 'Tile Lift & Relay · *SecondLife*',
       navLabel: 'Lift & Relay',
       card: 'Keep the tile roof you love. We lift the tiles, replace the worn underlayment underneath and reset your roof in its original pattern.',
-      metaTitle: 'Tile Lift & Relay in Los Angeles',
-      metaDescription: 'Tile lift & relay in LA & Orange County: new underlayment under your existing tiles, reset cleanly to keep your look. Start with a free roof evaluation.',
+      metaTitle: 'Tile Lift & Relay (Tile Roof Re-Paper) in Los Angeles', // "re-paper" is the LA name for the same job (owner, November 4 2026)
+      metaDescription: 'Tile lift & relay, or tile roof re-paper, in LA & Orange County: new underlayment under your existing tiles, reset to keep your look. Free roof evaluation.',
       image: '/images/tile-lift-off-and-reset-drone-view.webp',
       imageAlt: 'Aerial view of tiles lifted off a roof during a tile lift and relay, exposing the underlayment',
       hero: {
-        intro: 'Tile lift & relay keeps your roof’s look. We lift your tiles, replace the worn underlayment beneath them and reset the same tiles in their original pattern. Worn battens and flashings are renewed; only cracked or broken tiles are replaced. That’s our *SecondLife* Tile Reset, across Los Angeles and Orange County.',
+        intro: 'Tile lift & relay keeps your roof’s look. Many roofers in Los Angeles call it a tile roof re-paper. We lift your tiles, replace the worn underlayment beneath them and reset the same tiles in their original pattern. Worn battens and flashings are renewed; only cracked or broken tiles are replaced. That’s our *SecondLife* Tile Reset, across Los Angeles and Orange County.',
         highlights: ['Your tiles reused, broken ones matched', 'New underlayment and flashings', 'Written scope and price first'],
       },
       // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
       story: {
         label: 'Tile lift & relay',
         lead: 'Your tiles can last for decades. The layer __beneath__ them can’t.',
-        text: 'Underlayment dries out and cracks after years of Southern California heat, and water that slips past the tiles then has nowhere to go but into the deck. A lift & relay fixes it at the source and keeps your roof’s look.',
+        text: 'Underlayment dries out and cracks after years of Southern California heat, and water that slips past the tiles then has nowhere to go but into the deck. A lift & relay, or re-paper, fixes it at the source and keeps your roof’s look.',
         heading: 'How we do a tile lift & relay',
         image: '/images/tile-lift-off-and-reset-drone-view-2.webp',
         imageAlt: 'Aerial view of a tile roof mid lift and relay, with tiles staged and a crew member on a ladder',
@@ -153,6 +153,7 @@ export const TILE_CONTENT = {
         ],
       },
       faqs: [
+        { q: 'What is a tile roof re-paper?', a: 'It’s another name for a tile lift & relay (also written “repaper”). The “paper” is the underlayment under the tiles. In a re-paper we lift the tiles by hand, put new underlayment across the roof, renew the battens and flashings your written scope calls for, and reset the same tiles in their pattern. It’s the usual fix when the tiles are sound but the paper under them has worn out. A few broken tiles call for a [tile roof repair](/residential-roofing/tile-roofing/repair/) instead, and tiles that are failing for a [tile roof replacement](/residential-roofing/tile-roofing/replacement/).' },
         { q: 'How do I know if my tile roof needs a lift & relay?', a: 'Common signs are leaks with no visibly broken tiles, ceiling stains after heavy rain, repeated repairs in different spots, and underlayment that’s brittle or torn where it can be seen. A [tile roof inspection](/roof-inspection/#tile-roofs) confirms it with photos, and our guide to [tile roof underlayment](/blog/tile-roof-underlayment/) walks through the signs in more detail.' },
         { q: 'Will my roof look the same afterward?', a: 'That’s the point of a relay. We reuse your tiles wherever they’re sound and replace broken ones with the closest available match. Where a match isn’t exact, replacement tiles can go on less visible slopes so the originals stay where people will see them.' },
         { q: 'Is a lift & relay less expensive than a new tile roof?', a: 'Usually, because the tiles are reused. Your written scope shows the price before any work starts, and if replacement makes more sense, we’ll explain why.' },

@@ -348,6 +348,9 @@ export const LOCATION_PAGES = {
       heading: 'West Hollywood roofing',
       sub: 'For West Hollywood roofing, Quality Roofing Specialists repairs and replaces flat, tile and shingle roofs on homes, condos and multi-family buildings, from our West Hollywood office at 1444 N Poinsettia Pl. Every job starts with a free roof evaluation.',
     },
+    // The photo beside the intro (owner, November 4 2026: a real QRS roof): the round flat roof we replaced in Hollywood Hills West, next door
+    storyImage: '/images/projects/flat-roof-replacement-hollywood-hills-west-90046/hollywood-hills-west-round-flat-roof-finished.webp',
+    storyImageAlt: 'A round flat roof QRS replaced in Hollywood Hills West, finished with a white reflective cap sheet',
     intro: {
       heading: 'Roofing for a Compact, Busy City',
       paragraphs: [

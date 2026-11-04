@@ -86,7 +86,7 @@ export const FLAT_CONTENT = {
         { q: 'Can you put a new flat roof over the old one?', a: 'A full tear-off is the standard for a lasting result: taking the old layers off lets us check the deck, get rid of trapped moisture and give the new system a sound surface to start from, rather than hiding problems underneath it. On some commercial buildings, repairing an existing system that’s still sound can be the right call instead — your roof evaluation will tell you which situation you’re in.' },
         { q: 'Will a new roof stop water from ponding?', a: 'Replacement is the natural time to improve drainage, whether that means adding crickets, building up low spots or changing how water reaches the drains and scuppers. How much can change depends on the roof’s structure, and your written scope spells out the drainage work before anything starts.' },
         { q: 'Should the gutters and downspouts be replaced at the same time?', a: 'Not always, but we check them as part of the scope, because a new roof can only drain as fast as its outlets.' },
-        { q: 'Can a new flat roof have a lighter, reflective surface?', a: 'Usually, yes. Light-colored, reflective surfaces bounce back more of the sun’s heat than dark ones, which is worth considering on a roof that sits in full sun most of the year. We’ll go over the surface options that fit your system.' },
+        { q: 'Can a new flat roof have a lighter, reflective surface?', a: 'Usually, yes. Light-colored, reflective surfaces bounce back more of the sun’s heat than dark ones, which is worth considering on a roof that sits in full sun most of the year. We’ll go over the surface options that fit your system; see [cool roofing](/residential-roofing/cool-roofing/) for when one is required.' },
       ],
       related: ['/residential-roofing/flat-roofing/repair/', '/roof-inspection/#flat-roofs', '/residential-roofing/flat-roofing/installation/'],
     },
@@ -170,6 +170,48 @@ export const FLAT_CONTENT = {
         { q: 'How is the price for a new flat roof worked out?', a: 'It depends on the roof’s size, the system, the drainage details and how the roof ties into the rest of the house. Each of those items is spelled out in your written scope, with the price, before work on the roof begins. To get the process moving, [request an estimate](#roof-check) and tell us about your project.' },
       ],
       related: ['/residential-roofing/flat-roofing/replacement/', '/roof-maintenance-plans/'],
+    },
+
+    // Torch down roof installation (owner, November 4 2026, after a competitor comparison: people search "torch down roof installation" and we
+    // only had an article). Facts from the torch-down article (blog/torch-down-roofing-app-vs-sbs) and the Hollywood Hills West project.
+    {
+      slug: 'torch-down',
+      keyword: 'torch down roof installation',
+      title: 'Torch Down Roof Installation · *FlatGuard*',
+      navLabel: 'Torch Down Roofing',
+      card: 'A modified bitumen base sheet and cap sheet fused with heat into one continuous surface, with every seam, wall and drain detailed.',
+      metaTitle: 'Torch Down Roof Installation in Los Angeles',
+      metaDescription: 'Torch down roof installation in Los Angeles & Orange County: modified bitumen base and cap sheets fused with heat, every seam and flashing detailed.',
+      image: '/images/projects/flat-roof-replacement-hollywood-hills-west-90046/hollywood-hills-west-round-flat-roof-finished.webp',
+      imageAlt: 'Aerial view of a finished torch-down flat roof with a white reflective cap sheet on a round home in Hollywood Hills West',
+      hero: {
+        intro: 'Torch down roof installation by trained roofers. A torch-down roof is modified bitumen: a base sheet on the deck and a cap sheet on top, each warmed with a torch so it fuses to the layer below and every overlap melts into one waterproof surface. Part of our *FlatGuard* Roof System, on homes, ADUs, garages and small buildings across Los Angeles and Orange County. It starts with a free roof evaluation.',
+        highlights: ['Base sheet and cap sheet, fused with heat', 'Full tear-off down to the deck', 'White reflective cap sheet available'],
+      },
+      story: {
+        label: 'Torch down roofing',
+        lead: 'One of the most common flat roofs in Los Angeles, and only as good as its __details__.',
+        text: 'Torch-down suits the mild climate and the sun, especially with a granulated or reflective cap sheet, and it stands up well to foot traffic. What decides how long it lasts is the work around it: a sound deck, a good base sheet, a cap sheet that shields the asphalt from the sun and careful flashing at every wall, drain and penetration.',
+        heading: 'How we install a torch-down roof',
+        image: '/images/projects/flat-roof-replacement-hollywood-hills-west-90046/hollywood-hills-west-round-flat-roof-4.webp',
+        imageAlt: 'A flat roof stripped down to the deck before the new torch-down roof goes on',
+        principles: [
+          { title: 'Down to the deck first.', text: 'The old roof comes off down to the deck so it can be checked, and any soft or damaged boards are photographed and replaced before anything new goes on. We don’t torch a new roof over an old one.', bullets: ['Old layers torn off', 'Soft or damaged decking replaced', 'Drainage and low spots checked'] },
+          { title: 'Base sheet, then cap sheet.', text: 'The base sheet is fastened or bonded to the deck, and the cap sheet is torched over it, overlapping and fusing every seam. The cap sheet is usually covered in mineral granules that shield the asphalt from the sun, often white or light to reflect heat.' },
+          { title: 'Every edge, wall and drain flashed.', text: 'Edges, walls, parapets, drains and every penetration are flashed with matching membrane, and we check that water runs to the drains and scuppers rather than sitting in low spots.', bullets: ['Parapets and wall flashings', 'Drains and scuppers', 'Vents, skylights and HVAC curbs'] },
+          { title: 'Careful with the flame.', text: 'Torch-down uses an open flame, so our roofers work carefully around wood, parapet walls, vents and anything that can burn. Where a flame is the wrong tool, against wood siding or in tight details, a self-adhered SBS sheet is used instead. Your written scope names the system and the price before work starts, and we finish with a walkthrough, photos and our 10-year workmanship warranty (call for details).' },
+        ],
+      },
+      faqs: [
+        { q: 'What is a torch down roof?', a: 'A flat roof made of modified bitumen, an asphalt sheet strengthened with polymers, applied with heat. Most have two layers, a base sheet on the deck and a cap sheet on top, and the torch fuses the seams so the finished roof is one continuous waterproof surface. Our guide to [torch-down roofing: APP vs. SBS](/blog/torch-down-roofing-app-vs-sbs/) explains the two main types.' },
+        { q: 'Is torch down roofing good for Los Angeles?', a: 'Yes. It suits the mild climate and the sun, especially with a granulated or reflective cap sheet, and it is one of the most common flat roofs on Los Angeles homes and small buildings.' },
+        { q: 'Can a torch down roof go over my old roof?', a: 'We tear the old roof off so the deck can be checked and repaired. QRS does a full tear-off on every flat roof replacement.' },
+        { q: 'Can the cap sheet be white?', a: 'Yes. A white reflective cap sheet reflects more of the sun’s heat, as on this [round flat roof in Hollywood Hills West](/projects/flat-roof-replacement-hollywood-hills-west-90046/). See [cool roofing](/residential-roofing/cool-roofing/) for when a reflective roof is required.' },
+        { q: 'Is a torch down roof safe to install on my house?', a: 'It uses an open flame, so it needs trained roofers who work carefully around anything that can burn. Where a flame is the wrong tool, a self-adhered SBS sheet can be used instead, and your written scope says which.' },
+        { q: 'Can a torch down roof be repaired?', a: 'Yes. Open seams, blisters and failed flashing can usually be repaired with matching membrane. See [flat roof repair](/residential-roofing/flat-roofing/repair/).' },
+        { q: 'Torch down or TPO?', a: 'TPO is a single-ply membrane, usually white, whose seams are welded with hot air rather than a torch; it is common on larger commercial roofs, and we install [TPO roofing](/commercial-roofing/tpo-roofing/) on commercial buildings. Torch-down is a thicker, multi-layer asphalt system that stands up well to foot traffic and is common on homes and smaller buildings.' },
+      ],
+      related: ['/residential-roofing/flat-roofing/replacement/', '/residential-roofing/flat-roofing/repair/', '/residential-roofing/cool-roofing/'],
     },
 
   ],

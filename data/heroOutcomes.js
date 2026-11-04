@@ -41,6 +41,7 @@ export const HERO_OUTCOMES = {
   '/residential-roofing/flat-roofing/replacement/': 'A flat roof that drains well and keeps water out.',
   '/residential-roofing/flat-roofing/repair/': 'Trace the leak to its source and get back to dry.',
   '/residential-roofing/flat-roofing/installation/': 'A new flat roof for your ADU, addition or garage.',
+  '/residential-roofing/flat-roofing/torch-down/': 'One sealed surface, built to drain and stay dry.',
 
   // Metal
   '/residential-roofing/metal-roofing/': 'Clean lines and a roof built for the sun.',
@@ -50,6 +51,7 @@ export const HERO_OUTCOMES = {
   // HOA and ventilation
   '/residential-roofing/hoa-multi-family/': 'A roof plan your board can approve with confidence.',
   '/residential-roofing/attic-ventilation/': 'An attic that breathes and a more comfortable home.',
+  '/residential-roofing/cool-roofing/': 'A roof that sheds the heat and a cooler home under it.',
 
   // Commercial
   '/commercial-roofing/': 'Protect your building. Keep your business running.',
@@ -129,11 +131,13 @@ export const HERO_UNDERLINES = {
   '/residential-roofing/flat-roofing/replacement/': 'Replacement',
   '/residential-roofing/flat-roofing/repair/': 'Repair',
   '/residential-roofing/flat-roofing/installation/': 'Installation',
+  '/residential-roofing/flat-roofing/torch-down/': 'Torch',
   '/residential-roofing/metal-roofing/': 'Metal',
   '/residential-roofing/metal-roofing/standing-seam/': 'Standing Seam',
   '/residential-roofing/metal-roofing/repair/': 'Repair',
   '/residential-roofing/hoa-multi-family/': 'HOA',
   '/residential-roofing/attic-ventilation/': 'Attic',
+  '/residential-roofing/cool-roofing/': 'Cool',
   '/commercial-roofing/': 'Commercial',
   '/commercial-roofing/repair/': 'Repair',
   '/commercial-roofing/replacement/': 'Replacement',

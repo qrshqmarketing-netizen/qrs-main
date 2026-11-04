@@ -55,6 +55,7 @@ export const RESIDENTIAL_MENU = {
         { label: 'Roof Replacement', note: 'Full tear-off', href: '/residential-roofing/flat-roofing/replacement/' },
         { label: 'Roof Repairs', href: '/residential-roofing/flat-roofing/repair/' },
         { label: 'New Installations', href: '/residential-roofing/flat-roofing/installation/' },
+        { label: 'Torch Down Roofing', href: '/residential-roofing/flat-roofing/torch-down/' },
         { label: 'Inspections', href: '/roof-inspection/#flat-roofs' },
       ],
     },
@@ -76,6 +77,11 @@ export const RESIDENTIAL_MENU = {
       title: 'Attic Ventilation',
       note: 'Vents and airflow for your attic',
       href: '/residential-roofing/attic-ventilation/',
+    },
+    {
+      title: 'Cool Roofing',
+      note: 'Cool roof shingles and reflective cap sheets',
+      href: '/residential-roofing/cool-roofing/',
     },
   ],
   // Box on the right (wide screens only)
@@ -189,6 +195,7 @@ export const HEADER_MENU = [
         { label: 'Tile Lift & Relay', href: `${R}tile-roofing/lift-and-relay/` },
         { label: 'Flat Roof Replacement', href: `${R}flat-roofing/replacement/` },
         { label: 'New Flat Roof Installation', href: `${R}flat-roofing/installation/` },
+        { label: 'Torch Down Roof Installation', href: `${R}flat-roofing/torch-down/` },
       ] },
       { title: 'Roof Types', links: [
         { label: 'Shingle Roofing', href: `${R}shingle-roofing/` },
@@ -197,6 +204,7 @@ export const HEADER_MENU = [
         { label: 'Slate Tile Roofing', href: `${R}tile-roofing/slate/` },
         { label: 'Flat Roofing', href: `${R}flat-roofing/` },
         { label: 'Attic Ventilation', href: `${R}attic-ventilation/` },
+        { label: 'Cool Roofing', href: `${R}cool-roofing/` },
       ] },
       { title: 'Inspections & Care', links: [
         { label: 'Roof Inspection', href: '/roof-inspection/' },
