@@ -22,7 +22,7 @@ export default function AboutPage() {
   return (
     <main id="top" className="abr">
       <JsonLd data={schema} />
-      <AbrHero crumbs={CRUMBS} path="/about-us/" title={page.hero.heading} outcome={heroOutcome('/about-us/')} intro={page.hero.intro} media={{ image: '/images/careers-hero-qrs-crew-group.webp', alt: 'The QRS roofing crew together on a commercial flat roof', position: 'center 40%' }} tag="The QRS crew" />
+      <AbrHero crumbs={CRUMBS} path="/about-us/" title={page.hero.heading} outcome={heroOutcome('/about-us/')} intro={page.hero.intro} media={{ image: '/images/about-hero-couple-dog-walk.webp', alt: 'A couple laughing as they walk their dog on a park path', position: '55% 35%' }} />
       <AbrWho intro={page.intro} />
       <AbrNumbers />
       <AbrStory story={{ ...page.story, paragraphs: page.story.paragraphs.slice(0, 1) }} />

@@ -189,7 +189,7 @@ export function AbrProcess({ process }) {
   );
 }
 
-// The team as cards: initials for the co-founders, a roof mark for the roles (no team photos yet)
+// The team as cards: a headshot where the item has `photo` (Tony and Adva, November 4 2026), else initials, a roof mark for the roles
 const initials = (name) => (/^[A-Z][a-z]+ [A-Z][a-z]+$/.test(name) ? name.split(' ').map((w) => w[0]).join('') : null);
 
 export function AbrTeam({ team }) {

@@ -17,6 +17,7 @@ import { ES_HOME_REVIEWS } from '@/data/i18n/esHome';
 import HomeTabs from './HomeTabs';
 import HomeQuotes from './HomeQuotes';
 import CoresMotion from './CoresMotion';
+import ParallaxBg from './ParallaxBg';
 import './HomeGradient.css';
 
 // The home page's sections in the gradient story (owner, October 29 2026; adapted from the owner's reference homepage: its continuous
@@ -347,6 +348,28 @@ export function HomeCommercial({ lang = 'en' }) {
           <p className="hg-sys-note">
             {T('See a')} <SiteLink href="/projects/commercial-flat-roof-replacement-westminster-92683/">{T('commercial flat roof replacement in Westminster')}</SiteLink>.
           </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ---------- The crew, over a parallax photo (owner, November 4 2026) ----------
+// The crew group photo (also the Careers page's earlier hero) fills the band and drifts slower than the page (ParallaxBg). Facts from the About
+// page: 12 crews for shingle, tile and flat roofs, the senior production manager on quality control, three languages.
+export function HomeCrew({ lang = 'en' }) {
+  const T = (x) => th(lang, x);
+  return (
+    <section className="hg-crew" style={{ position: 'relative', overflow: 'hidden', isolation: 'isolate' }} aria-labelledby="hg-crew">
+      <ParallaxBg className="hg-crew-bg">
+        <Image src="/images/careers-hero-qrs-crew-group.webp" alt="" fill sizes="100vw" quality={70} loading="lazy" />
+      </ParallaxBg>
+      <div className="container hg-crew-copy">
+        <h2 id="hg-crew">{T('12 crews. One way of working.')}</h2>
+        <p>{T('Dedicated crews for shingle, tile and flat roofs, with our senior production manager on quality control for every job. We speak English, Spanish and Tagalog.')}</p>
+        <div className="hg-crew-ctas">
+          <SiteLink className="btn btn-gold" href="/about-us/#team">{T('Meet our team')} <span className="arrow">→</span></SiteLink>
+          <SiteLink className="btn btn-outline" href="/careers/">{T('Join the crew')}</SiteLink>
         </div>
       </div>
     </section>

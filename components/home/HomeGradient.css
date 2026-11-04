@@ -480,3 +480,14 @@ body.studio-site main.hg .hg-giving h2{margin:0 0 10px;font-size:clamp(26px,3vw,
 .hg-bg-sky2-paper{background:linear-gradient(180deg,var(--hg-sky-2) 0%,var(--paper) 45%,var(--hg-sky-2) 100%)}
 /* The statement heading leans toward the mouse like the cards (HomeMotion TILT), a little more depth for big type */
 main.hg .hg-statement h2.hg-tilt{transform:perspective(800px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translateY(var(--ty,0px));transform-style:preserve-3d}
+
+/* The crew band: the crew photo as a parallax background (owner, November 4 2026; ParallaxBg sets --cy) */
+.hg-crew{position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:center;min-height:clamp(460px,78svh,720px);padding:clamp(72px,10vw,120px) 0;color:#fff;background:#0b1f33}
+.hg-crew-bg{position:absolute;left:0;right:0;top:-18%!important;bottom:-18%!important;z-index:-2;transform:translate3d(0,var(--cy,0px),0);will-change:transform}
+.hg-crew-bg img{object-fit:cover;object-position:center 40%}
+.hg-crew:before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse 60% 55% at 50% 50%,rgba(8,22,40,.45),transparent 75%),linear-gradient(180deg,rgba(8,22,40,.6) 0%,rgba(8,22,40,.45) 45%,rgba(8,22,40,.8) 100%)}
+.hg-crew-copy{text-align:center;max-width:860px}
+body.studio-site main.hg .hg-crew h2{color:#fff;font-size:clamp(34px,5.2vw,64px);margin:0 auto 18px;text-align:center!important;text-shadow:0 2px 24px rgba(0,0,0,.35)}
+.hg-crew p{margin:0 auto;max-width:640px;font-size:clamp(17px,1.5vw,20px);line-height:1.6;color:rgba(255,255,255,.92)}
+.hg-crew-ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:30px}
+@media print,(prefers-reduced-motion:reduce){.hg-crew-bg{transform:none;top:0!important;bottom:0!important}}

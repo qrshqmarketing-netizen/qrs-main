@@ -270,6 +270,10 @@ export const ES_HOME = {
   'See our credentials': 'Vea nuestras credenciales',
   'Verify our license with the CSLB': 'Verifique nuestra licencia en la CSLB',
   'About QRS': 'Sobre QRS',
+  '12 crews. One way of working.': '12 cuadrillas. Una sola forma de trabajar.',
+  'Dedicated crews for shingle, tile and flat roofs, with our senior production manager on quality control for every job. We speak English, Spanish and Tagalog.': 'Cuadrillas dedicadas a techos de tejas asfálticas, de teja y planos, con nuestro gerente de producción sénior a cargo del control de calidad en cada trabajo. Hablamos inglés, español y tagalo.',
+  'Meet our team': 'Conozca a nuestro equipo',
+  'Join the crew': 'Únase al equipo',
   'Roofs for the neighborhoods we work in.': 'Techos para los vecindarios donde trabajamos.',
   'Giving back is part of how we operate: we’ve donated a full roof to a local church and contribute roofing work to senior living communities and elderly assistance programs in the neighborhoods we serve.': 'Ayudar a la comunidad es parte de cómo trabajamos: donamos un techo completo a una iglesia local y aportamos trabajos de techado a residencias para personas mayores y a programas de ayuda para adultos mayores en los vecindarios donde trabajamos.',
 };

@@ -2,7 +2,7 @@ import FinalCta from '@/components/sections/FinalCta';
 import ProofBar from '@/components/sections/ProofBar';
 import TrustLogos from '@/components/sections/TrustLogos';
 import RoofCheck from '@/components/sections/RoofCheck';
-import { HomeAreas, HomeAudience, HomeCommercial, HomeCredentials, HomeGiving, HomeFaq, HomeGuides, HomeHero, HomeOffers, HomeProjects, HomeResidential, HomeReviews, HomeStatement } from '@/components/home/HomeSections';
+import { HomeAreas, HomeAudience, HomeCommercial, HomeCredentials, HomeCrew, HomeGiving, HomeFaq, HomeGuides, HomeHero, HomeOffers, HomeProjects, HomeResidential, HomeReviews, HomeStatement } from '@/components/home/HomeSections';
 import HomeMotion from '@/components/home/HomeMotion';
 import JsonLd from '@/components/ui/JsonLd';
 import { HOME_DESCRIPTION, HOME_H1, HOME_TITLE } from '@/data/site';
@@ -61,6 +61,7 @@ export default async function HomePage() {
         <HomeAreas />
         <HomeProjects />
         <HomeReviews />
+        <HomeCrew />
         <HomeCredentials />
         <HomeOffers />
         <HomeGuides />
