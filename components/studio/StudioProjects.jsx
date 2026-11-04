@@ -1,3 +1,4 @@
+import { t } from '@/lib/lang';
 import Image from 'next/image';
 import CircledWord from '@/components/ui/HandCircle';
 import Mark from '@/components/ui/Mark';
@@ -28,18 +29,19 @@ function circleZip(title) {
 const toRow = (p) => ({ path: p.path || p.href, title: p.title, label: p.label || p.caption || p.title, image: p.image, photos: typeof p.photos === 'number' ? p.photos : p.photos?.length || 0 });
 
 // layout="list": every project as a hairline row with the hover photo (StudioProjectIndex) instead of the stacked cards (the city pages, to mix it up).
-export default function StudioProjects({ projects, label = 'Featured projects', heading = 'Roofs we have finished, from tear-off to the __last row__', allLink = true, more, id, layout = 'cards' }) {
+export default function StudioProjects({ projects, label = 'Featured projects', heading = 'Roofs we have finished, from tear-off to the __last row__', allLink = true, more, id, layout = 'cards', lang = 'en' }) {
+  const T = (x) => t(lang, x); // Spanish on /es/ (data/i18n/es.js); project names stay as written
   if (!projects?.length) return null;
   return (
     <section className="st-section st-projects tinted" id={id}>
       <div className="container">
         <div className="st-split st-head">
-          <p className="st-label">{label}</p>
+          <p className="st-label">{T(label)}</p>
           <div>
-            <h2><Mark text={heading} /></h2>
+            <h2><Mark text={T(heading)} /></h2>
             {allLink && (
               <SiteLink className="st-link" href="/projects/">
-                See all projects <ArrowRight />
+                {T('See all projects')} <ArrowRight />
               </SiteLink>
             )}
           </div>
@@ -57,7 +59,7 @@ export default function StudioProjects({ projects, label = 'Featured projects', 
                 <b>{circleZip(p.title)}</b>
                 {href && (
                   <span>
-                    View project <ArrowRight />
+                    {T('View project')} <ArrowRight />
                   </span>
                 )}
               </>
@@ -83,7 +85,7 @@ export default function StudioProjects({ projects, label = 'Featured projects', 
         {allLink && (
           <p className="st-proj-more">
             <SiteLink className="st-link" href="/projects/">
-              See all our roofing projects <ArrowRight />
+              {T('See all our roofing projects')} <ArrowRight />
             </SiteLink>
           </p>
         )}

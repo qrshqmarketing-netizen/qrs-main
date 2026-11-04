@@ -17,6 +17,7 @@ import StudioProjects from '@/components/studio/StudioProjects';
 import StudioServices from '@/components/studio/StudioServices';
 import JsonLd from '@/components/ui/JsonLd';
 import { SERVICE_CATEGORIES } from '@/data/serviceCategories';
+import { HOME_PRODUCTS, HOME_HERO_VIDEO as HERO_VIDEO, HOME_HERO_POSTER as HERO_POSTER } from '@/data/homeProducts';
 import { GOOGLE_REVIEWS, HERO_ANNOTATIONS, HOME_DESCRIPTION, HOME_H1, HOME_TITLE } from '@/data/site';
 import { HOME_LANGUAGES } from '@/lib/lang';
 import { LATEST_PROJECTS } from '@/data/projectPages';
@@ -39,16 +40,6 @@ export const metadata = {
 const HERO_SLIDES = LATEST_PROJECTS.map((project) => ({ src: project.image, alt: project.imageAlt, title: project.label, place: project.place.replace(/,?\s*CA\b/, ''), href: project.path }));
 // The home hero's facts under the button: the offer's first and last points, plus the warranty (no license number here: owner's choice)
 
-const HOME_PRODUCTS = [
-  { title: '*TotalShield* Shingle Systems', text: 'Complete shingle replacements and new installations, built from the deck up.', href: '/residential-roofing/shingle-roofing/replacement/', scene: 'scene-shingle', image: '/images/shingle-roof-completed-drone-view.webp' },
-  { title: '*FlatGuard* Flat Roofing', text: 'Flat roof systems planned around drainage, seams and lasting protection.', href: '/residential-roofing/flat-roofing/replacement/', scene: 'scene-flat', image: '/images/flat-roof-torch-down-drone-view-services.webp' },
-  { title: '*LeakRescue* Roof Repairs', text: 'Leaks traced to the source and repaired with clear photos and a written scope.', href: '/roof-repair/', scene: 'scene-repair', image: '/images/shingle-roof-repair-ridge-finish.webp' },
-  { title: '*RoofScan 360* Inspections', text: 'A roofer-led inspection with photos, plain-English findings and a clear next step.', href: '/roof-inspection/', scene: 'scene-inspect', image: '/images/roofscan-360-roofer-chimney-flashing.webp' },
-  { title: '*SecondLife* Tile Reset', text: 'Keep sound roof tiles while replacing the worn underlayment below.', href: '/residential-roofing/tile-roofing/lift-and-relay/', scene: 'scene-tile', image: '/images/tile-lift-off-and-reset-drone-view.webp' },
-  { title: '*RoofRevive* Roof Tune-Ups', text: 'One focused visit to fix a short list of small issues before they turn into leaks, with photos.', href: '/roof-maintenance-plans/#tune-up', scene: 'scene-repair', image: '/images/how-we-work-roofer-tablet-report.webp' },
-  { title: '*RoofCare Plan*', text: 'Scheduled roof care with seasonal visits and a photo report each time.', href: '/roof-maintenance-plans/', scene: 'scene-inspect', image: '/images/shingle-roof-inspection-overhead.webp' },
-  { title: '*ReserveReady* HOA Roofing', text: 'Roof inspections, clear scopes and planning support for community boards.', href: '/residential-roofing/hoa-multi-family/', scene: 'scene-hoa', image: '/images/shingle-roof-care-multi-family.webp' },
-];
 
 // Home page: sections in order, top to bottom, with what a customer wants first near the top: the hero and proof strip, what we do
 // (residential and commercial), what other customers say, the roofing systems, the current El Niño offer, the service area check,
@@ -62,11 +53,6 @@ const HOME_PRODUCTS = [
 // a tear-off, roofers laying shingles, two finished roofs and an orbit over a new roof), 21 seconds, looping without a jump, upscaled to 1280x720.
 // WebM first, H.264 MP4 for Safari and older browsers; its first frame (HERO_POSTER) is the first paint and the fallback (PromoCard `video` and
 // `photo`, HeroVideo.jsx). The truck reel (home-hero-brand.*) and the final clip (home-hero-background-final.*) stay in public/videos.
-const HERO_VIDEO = [
-  { src: '/videos/home-hero-drone.webm', type: 'video/webm' },
-  { src: '/videos/home-hero-drone-h264.mp4', type: 'video/mp4' },
-];
-const HERO_POSTER = '/images/home-hero-drone-poster.webp';
 // The words over the truck video (owner, October 14 2026: no El Niño wording or effects in the home hero). The keyword line above the headline is
 // the page's H1 (HOME_H1); the button jumps to the estimate form at the bottom of the page.
 const HOME_HERO = {

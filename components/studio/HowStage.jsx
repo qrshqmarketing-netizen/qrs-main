@@ -1,5 +1,6 @@
 'use client';
 
+import useLang from '@/components/ui/useLang';
 import { useEffect, useRef, useState } from 'react';
 import { BUSINESS, OFFICES } from '@/data/site';
 import './HowStage.css';
@@ -28,23 +29,24 @@ const Check = () => (
 );
 
 function Overlay({ station }) {
+  const { tr } = useLang(); // Spanish on /es/
   if (station === 0)
     return (
       <>
         <Tag anchor="s0-drone" className="hw-tag-rec">
-          <i className="hw-rec" /> Drone footage
+          <i className="hw-rec" /> {tr('Drone footage')}
         </Tag>
-        <Tag anchor="s0-roof">Roof evaluation</Tag>
+        <Tag anchor="s0-roof">{tr('Roof evaluation')}</Tag>
         <div className="hw-card hw-card-scope">
-          <p className="hw-kicker">Written scope</p>
+          <p className="hw-kicker">{tr('Written scope')}</p>
           <ul className="hw-rows">
             {['Drone footage of the areas of concern', 'Photos of what we find', 'Written scope and price'].map((row, i) => (
               <li key={row} style={{ '--d': `${0.5 + i * 0.55}s` }}>
-                <Check /> {row}
+                <Check /> {tr(row)}
               </li>
             ))}
           </ul>
-          <p className="hw-chip hw-chip-gold">Before any work starts</p>
+          <p className="hw-chip hw-chip-gold">{tr('Before any work starts')}</p>
         </div>
       </>
     );
@@ -52,20 +54,20 @@ function Overlay({ station }) {
     return (
       <>
         <Tag anchor="s1-flashing">
-          <b>Chimney flashing</b> <small>Photo 1</small>
+          <b>{tr('Chimney flashing')}</b> <small>{tr('Photo {n}', { n: 1 })}</small>
         </Tag>
         <Tag anchor="s1-boot">
-          <b>Vent boot</b> <small>Photo 2</small>
+          <b>{tr('Vent boot')}</b> <small>{tr('Photo {n}', { n: 2 })}</small>
         </Tag>
         <Tag anchor="s1-skylight">
-          <b>Skylight</b> <small>Photo 3</small>
+          <b>{tr('Skylight')}</b> <small>{tr('Photo {n}', { n: 3 })}</small>
         </Tag>
         <div className="hw-card hw-card-next">
-          <p className="hw-kicker">Your next step, in plain English</p>
+          <p className="hw-kicker">{tr('Your next step, in plain English')}</p>
           <ul className="hw-steps">
             {NEXT_STEPS.map((s, i) => (
               <li key={s} style={{ '--i': i }}>
-                {s}
+                {tr(s)}
               </li>
             ))}
           </ul>
@@ -77,16 +79,16 @@ function Overlay({ station }) {
       <>
         {OFFICES.map((o, i) => (
           <Tag anchor={`s2-office-${i}`} key={o.name} className={'hw-tag-office ' + (['hw-tag-right', 'hw-tag-left', 'hw-tag-right'][i] || '')}>
-            <b>{o.name}</b> <small>{o.address.city}</small>
+            <b>{tr(o.name)}</b> <small>{o.address.city}</small>
           </Tag>
         ))}
         <div className="hw-card hw-card-local">
           <div className="hw-stats">
             <p>
-              <b>12</b> crews
+              <b>12</b> {tr('crews')}
             </p>
             <p>
-              <b>{OFFICES.length}</b> offices
+              <b>{OFFICES.length}</b> {tr('offices')}
             </p>
           </div>
           <ul className="hw-chips">
@@ -96,28 +98,28 @@ function Overlay({ station }) {
               </li>
             ))}
           </ul>
-          <p className="hw-fine">Family-owned · Woman-owned · Locally owned</p>
+          <p className="hw-fine">{tr('Family-owned · Woman-owned · Locally owned')}</p>
         </div>
       </>
     );
   return (
     <>
-      <Tag anchor="s3-top">Shingles</Tag>
-      <Tag anchor="s3-under">Underlayment</Tag>
-      <Tag anchor="s3-deck">Deck</Tag>
+      <Tag anchor="s3-top">{tr('Shingles')}</Tag>
+      <Tag anchor="s3-under">{tr('Underlayment')}</Tag>
+      <Tag anchor="s3-deck">{tr('Deck')}</Tag>
       <div className="hw-card hw-card-backed">
-        <p className="hw-kicker">Work that’s backed</p>
+        <p className="hw-kicker">{tr('Work that’s backed')}</p>
         <p className="hw-big">
-          10-year workmanship warranty <small>(call for details)</small>
+          {tr('10-year workmanship warranty')} <small>{tr('(call for details)')}</small>
         </p>
         <ul className="hw-rows">
           {['Permits pulled', 'Landscaping tarped', 'Nail sweep every day'].map((row, i) => (
             <li key={row} style={{ '--d': `${0.5 + i * 0.45}s` }}>
-              <Check /> {row}
+              <Check /> {tr(row)}
             </li>
           ))}
         </ul>
-        <p className="hw-fine">Licensed, bonded & insured · CSLB #{BUSINESS.license}</p>
+        <p className="hw-fine">{tr('Licensed, bonded & insured')} · CSLB #{BUSINESS.license}</p>
       </div>
     </>
   );

@@ -270,6 +270,11 @@ export const ES_HOME = {
   'See our credentials': 'Vea nuestras credenciales',
   'Verify our license with the CSLB': 'Verifique nuestra licencia en la CSLB',
   'About QRS': 'Sobre QRS',
+  // Studio home page "Who we are" (StudioIntro, November 4 2026)
+  'Who we are': 'Quiénes somos',
+  'At QRS, a roofer should look at your roof before anyone tries to __sell__ you one.': 'En QRS, un techador debe revisar su techo antes de que alguien intente __venderle__ uno.',
+  'That’s how every job starts: a free roof evaluation, photos of what we find and a written scope and price before any work begins. Every [roof replacement](/roof-replacement/), [roof repair](/roof-repair/), [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/) and [flat](/residential-roofing/flat-roofing/) or [shingle roof](/residential-roofing/shingle-roofing/) across [Southern California](/service-areas/) gets the same care.': 'Así empieza cada trabajo: una evaluación gratuita del techo, fotos de lo que encontramos y el alcance y el precio por escrito antes de empezar. Cada [reemplazo de techo](/roof-replacement/), [reparación de techo](/roof-repair/), [recolocación de teja](/residential-roofing/tile-roofing/lift-and-relay/) y cada techo [plano](/residential-roofing/flat-roofing/) o [de tejas asfálticas](/residential-roofing/shingle-roofing/) en el [sur de California](/service-areas/) recibe el mismo cuidado.',
+  'More about QRS': 'Más sobre QRS',
   'Repair or replace. We’ll tell you which.': 'Reparar o reemplazar. Le decimos cuál.',
   'A roofer looks first and tells you plainly whether a repair will do or the roof is worn out. Every service, in one place:': 'Primero lo revisa un techador y le dice claramente si basta con una reparación o si el techo ya está gastado. Todos los servicios, en un solo lugar:',
   'Roof repair': 'Reparación de techos',

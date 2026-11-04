@@ -6,6 +6,7 @@ import { ArrowRight } from '@/components/ui/icons';
 import { CREDENTIALS_PAGE } from '@/data/pages/credentials';
 import { BUSINESS, OFFICES, PHONE, TEL } from '@/data/site';
 import HowStage from './HowStage';
+import useLang from '@/components/ui/useLang';
 import './Studio.css';
 
 // "How we work" on the home page (owner, October 15 2026; the story approach of the owner's reference maben.com.au, adapted to QRS): four
@@ -21,7 +22,8 @@ import './Studio.css';
 // with reduced motion it doesn't advance on its own. Every paragraph is in the HTML (the hidden ones stacked in the same cell, so the height
 // never changes). Styles: "How we work" in Studio.css, the stage in HowStage.css.
 
-const offices = OFFICES.length === 1 ? 'one office' : `${OFFICES.length} offices`;
+// Texts are templates ({offices}, {license}) so data/i18n/es.js can translate them on /es/
+const OFFICE_COUNT = OFFICES.length;
 
 const PRINCIPLES = [
   {
@@ -34,11 +36,12 @@ const PRINCIPLES = [
   },
   {
     title: 'Family-owned. Local crews.',
-    text: `QRS is family-owned, woman-owned and locally owned, with ${offices} across Southern California and one phone number that reaches them all. Our 12 crews work on shingle, tile and flat roofs, and we speak English, Spanish and Tagalog.`,
+    text: 'QRS is family-owned, woman-owned and locally owned, with {offices} across Southern California and one phone number that reaches them all. Our 12 crews work on shingle, tile and flat roofs, and we speak English, Spanish and Tagalog.',
+    offices: true,
   },
   {
     title: 'Clean sites. Work that’s backed.',
-    text: `We pull the permits, tarp the landscaping and sweep for nails every day. Installs are backed by a 10-year workmanship warranty (call for details), from a licensed, bonded and insured California contractor (CSLB #${BUSINESS.license}) certified with the manufacturers we install.`,
+    text: 'We pull the permits, tarp the landscaping and sweep for nails every day. Installs are backed by a 10-year workmanship warranty (call for details), from a licensed, bonded and insured California contractor (CSLB #{license}) certified with the manufacturers we install.',
     link: { label: 'See our credentials', href: CREDENTIALS_PAGE.path },
   },
 ];
@@ -46,6 +49,7 @@ const PRINCIPLES = [
 const AUTO_MS = 7000;
 
 export default function StudioHowWeWork() {
+  const { tr } = useLang(); // Spanish on /es/ (data/i18n/es.js)
   const root = useRef(null);
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(true); // starts paused until it is on screen
@@ -83,14 +87,14 @@ export default function StudioHowWeWork() {
     >
       <div className="container st-how-grid">
         <div className="st-how-copy">
-          <h2 id="how-we-work" className="st-how-label">How we work</h2>
+          <h2 id="how-we-work" className="st-how-label">{tr('How we work')}</h2>
           <ol className="st-how-list">
             {PRINCIPLES.map((p, i) => (
               <li key={p.title} className={i === active ? 'on' : undefined}>
                 <h3>
                   <button type="button" className="st-how-tab" aria-expanded={i === active} aria-controls={`how-body-${i}`} onClick={() => setActive(i)}>
                     <span className="st-how-n" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
-                    <span className="st-how-t">{p.title}</span>
+                    <span className="st-how-t">{tr(p.title)}</span>
                   </button>
                 </h3>
                 <span className="st-how-bar" aria-hidden="true">
@@ -103,10 +107,10 @@ export default function StudioHowWeWork() {
           <div className="st-how-panels">
             {PRINCIPLES.map((p, i) => (
               <div key={p.title} id={`how-body-${i}`} className={'st-how-body' + (i === active ? ' on' : '')} aria-hidden={i !== active}>
-                <p>{p.text}</p>
+                <p>{tr(p.text, { license: BUSINESS.license, offices: OFFICE_COUNT === 1 ? tr('one office') : tr('{n} offices', { n: OFFICE_COUNT }) })}</p>
                 {p.link && (
                   <SiteLink className="st-link" href={p.link.href} tabIndex={i === active ? undefined : -1}>
-                    {p.link.label} <ArrowRight />
+                    {tr(p.link.label)} <ArrowRight />
                   </SiteLink>
                 )}
               </div>
@@ -114,10 +118,10 @@ export default function StudioHowWeWork() {
           </div>
           <div className="st-how-actions">
             <SiteLink className="btn btn-gold" href="#roof-check">
-              Get Pro Advice <span className="arrow">→</span>
+              {tr('Get Pro Advice')} <span className="arrow">→</span>
             </SiteLink>
             <a className="btn btn-dark" href={TEL}>
-              Call {PHONE}
+              {tr('Call {phone}', { phone: PHONE })}
             </a>
           </div>
         </div>

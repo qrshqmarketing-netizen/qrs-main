@@ -1,5 +1,6 @@
 'use client';
 
+import useLang from '@/components/ui/useLang';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { GoogleLogo, Star } from '@/components/ui/icons';
@@ -20,6 +21,7 @@ const CARD_PX = 360; // a card and its gap, for working out how many copies fill
 // (`places`: the area's names, so reviews naming them lead). Never shows how many reviews there are. Reduced motion: the rows stand still and
 // scroll sideways by hand. The copies that make the loop seamless are hidden from screen readers and the keyboard (`inert`).
 export default function ReviewMarquee({ office = '', places = [], label = 'Client stories', heading = 'In their own words', text = 'Reviews from the people we roof for, on Google.' }) {
+  const { tr } = useLang(); // Spanish labels on /es/ (the reviews themselves stay as written on Google)
   const [live, setLive] = useState(null);
   const [opened, setOpened] = useState(null); // the review shown in full
   const [lit, setLit] = useState(null); // the review the bottom-left pop-up pointed to
@@ -96,13 +98,13 @@ export default function ReviewMarquee({ office = '', places = [], label = 'Clien
     const open = opened === key;
     return (
       <li className={'rmq-card' + (open ? ' open' : '') + (lit === review.name ? ' lit' : '')} key={n} {...(hidden ? { 'aria-hidden': 'true', inert: true } : {})}>
-        <div className="g-stars" role="img" aria-label="Rated 5 out of 5 stars on Google">
+        <div className="g-stars" role="img" aria-label={tr('Rated 5 out of 5 stars on Google')}>
           <Star /><Star /><Star /><Star /><Star />
         </div>
         <blockquote>{withLineBreaks(review.text)}</blockquote>
         {review.text.length > LONG && (
           <button className="rmq-more" type="button" aria-expanded={open} onClick={() => setOpened(open ? null : key)}>
-            {open ? 'Show less' : 'Read more'}
+            {tr(open ? 'Show less' : 'Read more')}
           </button>
         )}
         <div className="rmq-by">
@@ -118,8 +120,8 @@ export default function ReviewMarquee({ office = '', places = [], label = 'Clien
             </span>
             {live && (review.reviewUrl || review.reportUrl) && (
               <span className="tst-links">
-                {review.reviewUrl && <a href={review.reviewUrl} target="_blank" rel="noopener">View on Google Maps</a>}
-                {review.reportUrl && <a href={review.reportUrl} target="_blank" rel="noopener">Report</a>}
+                {review.reviewUrl && <a href={review.reviewUrl} target="_blank" rel="noopener">{tr('View on Google Maps')}</a>}
+                {review.reportUrl && <a href={review.reportUrl} target="_blank" rel="noopener">{tr('Report')}</a>}
               </span>
             )}
           </span>
@@ -129,12 +131,12 @@ export default function ReviewMarquee({ office = '', places = [], label = 'Clien
   };
 
   return (
-    <section className={'rmq' + (lit ? ' has-lit' : '') + (go ? ' go' : '')} id="reviews" ref={root} aria-label="Google reviews" data-no-reveal="">
+    <section className={'rmq' + (lit ? ' has-lit' : '') + (go ? ' go' : '')} id="reviews" ref={root} aria-label={tr('Google reviews')} data-no-reveal="">
       <div className="container rmq-head">
-        <p className="rmq-label">{label}</p>
-        <h2>{heading}</h2>
+        <p className="rmq-label">{tr(label)}</p>
+        <h2>{tr(heading)}</h2>
         <p className="rmq-sub">
-          <GoogleLogo className="g-logo-sm" /> {text}
+          <GoogleLogo className="g-logo-sm" /> {tr(text)}
         </p>
       </div>
       <div className="rmq-rows">

@@ -1,5 +1,6 @@
 'use client';
 
+import useLang from '@/components/ui/useLang';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import SiteLink from '@/components/ui/SiteLink';
@@ -21,6 +22,7 @@ const workOf = (title) => {
 // projects: [{ path, title, label, image, photos (how many) }], trimmed by StudioProjects so the page doesn't send whole project files.
 // label: the small label above the rows (null for none, when the section's own heading says it)
 export default function StudioProjectIndex({ projects, label = 'More projects' }) {
+  const { tr } = useLang(); // Spanish on /es/; project names stay as written
   const [active, setActive] = useState(0);
   const [hover, setHover] = useState(false);
   const preview = useRef(null);
@@ -53,7 +55,7 @@ export default function StudioProjectIndex({ projects, label = 'More projects' }
 
   return (
     <div className={'spi' + (hover ? ' is-hover' : '')} onPointerMove={onMove} onPointerLeave={() => setHover(false)}>
-      {label && <p className="st-label spi-label">{label}</p>}
+      {label && <p className="st-label spi-label">{tr(label)}</p>}
       <ul className="spi-list">
         {projects.map((p, i) => (
           <li key={p.path || p.image}>
@@ -63,8 +65,8 @@ export default function StudioProjectIndex({ projects, label = 'More projects' }
               </span>
               <span className="spi-name">{p.label}</span>
               <span className="spi-tags">
-                <span>{workOf(p.title)}</span>
-                {p.photos > 1 && <span>{p.photos} photos</span>}
+                <span>{tr(workOf(p.title))}</span>
+                {p.photos > 1 && <span>{tr('{n} photos', { n: p.photos })}</span>}
               </span>
               {p.path && <ArrowRight />}
             </Row>

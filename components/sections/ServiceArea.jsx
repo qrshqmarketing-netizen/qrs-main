@@ -9,6 +9,7 @@ import { miles, nominatimSearch, pointInGeoJson, zipPrefixServed } from '@/lib/g
 import { loadLeaflet, qrsPin } from '@/lib/leaflet';
 import './ServiceArea.css';
 import Mark from '@/components/ui/Mark';
+import useLang from '@/components/ui/useLang';
 
 // The QRS location closest to a [lat, lng] point: { location, index, distance } (miles)
 function nearestLocation(point) {
@@ -32,6 +33,7 @@ export default function ServiceArea({
   heading = 'Locations We Proudly __Serve__',
   sub = 'The outlined area is where we work: Los Angeles County, Orange County, and the Inland Empire from Pomona to Riverside, Corona and Temecula. Enter your ZIP code to confirm we cover you.',
 }) {
+  const { tr } = useLang(); // Spanish on /es/ (data/i18n/es.js)
   const wrapRef = useRef(null);
   const mapEl = useRef(null);
   const mapBox = useRef(null);
@@ -102,10 +104,11 @@ export default function ServiceArea({
         // A pin for every place: its popup names it and links to its page (a place with no page of its own links to its county's page)
         const markers = ALL_PLACES.map((place, i) => {
           const { city, lat, lng } = place;
-          const link = placeLinkName(place) + ' roofing page →';
-          return L.marker([lat, lng], { icon: qrsPin(L, false), title: city + ' Area', alt: city + ' Area' })
+          const link = tr('{name} roofing page', { name: placeLinkName(place) }) + ' →';
+          const area = tr('{city} Area', { city });
+          return L.marker([lat, lng], { icon: qrsPin(L, false), title: area, alt: area })
             .addTo(leafletMap)
-            .bindPopup('<b>' + city + ' Area</b><a href="' + placePath(place) + '">' + link + '</a><br><a href="' + TEL + '">' + PHONE + '</a>')
+            .bindPopup('<b>' + area + '</b><a href="' + placePath(place) + '">' + link + '</a><br><a href="' + TEL + '">' + PHONE + '</a>')
             .on('click', () => select(i, false));
         });
         map.current = { L, map: leafletMap, markers, zipPin: null, active: -1 };
@@ -147,10 +150,10 @@ export default function ServiceArea({
     e.preventDefault();
     const z = zip.trim();
     if (!/^\d{5}$/.test(z)) {
-      setMsg('Please enter a 5-digit ZIP code.');
+      setMsg(tr('Please enter a 5-digit ZIP code.'));
       return;
     }
-    setMsg('Checking ' + z + '…');
+    setMsg(tr('Checking {zip}…', { zip: z }));
     try {
       const hit = await nominatimSearch('postalcode=' + z);
       if (!hit) throw new Error('none');
@@ -167,14 +170,14 @@ export default function ServiceArea({
       }
       if (inArea) select(index, false);
       setMsg(inArea
-        ? <><b>Good news!</b> {z} is in our service area. Nearest: <Link href={placePath(location)} prefetch={false}>{location.city} Area</Link>.</>
+        ? <><b>{tr('Good news!')}</b> {tr('{zip} is in our service area. Nearest:', { zip: z })} <Link href={placePath(location)} prefetch={false}>{tr('{city} Area', { city: location.city })}</Link>.</>
         : insideOutline
-          ? <><b>Good news!</b> {z} is inside the area we serve, a longer drive from our nearest city. Call <b>{PHONE}</b> to confirm scheduling.</>
-          : <>{z} looks outside our current area. Call <b>{PHONE}</b> and we&rsquo;ll let you know.</>);
+          ? <><b>{tr('Good news!')}</b> {tr('{zip} is inside the area we serve, a longer drive from our nearest city. Call', { zip: z })} <b>{PHONE}</b> {tr('to confirm scheduling.')}</>
+          : <>{tr('{zip} looks outside our current area. Call', { zip: z })} <b>{PHONE}</b> {tr('and we’ll let you know.')}</>);
     } catch {
       setMsg(zipPrefixServed(z)
-        ? <><b>Good news!</b> {z} is in our Southern California service area.</>
-        : <>{z} may be outside our area. Call <b>{PHONE}</b> to confirm.</>);
+        ? <><b>{tr('Good news!')}</b> {tr('{zip} is in our Southern California service area.', { zip: z })}</>
+        : <>{tr('{zip} may be outside our area. Call', { zip: z })} <b>{PHONE}</b> {tr('to confirm.')}</>);
     }
   };
 
@@ -186,8 +189,8 @@ export default function ServiceArea({
   return (
     <section className="area" id="service-area">
       <div className="container">
-        <h2><Mark text={heading} /></h2>
-        <p className="area-sub">{sub}</p>
+        <h2><Mark text={tr(heading)} /></h2>
+        <p className="area-sub">{tr(sub)}</p>
 
         <div className="sa-wrap" id="locWrap" ref={wrapRef}>
           <div className="loc-search">
@@ -197,15 +200,15 @@ export default function ServiceArea({
                 <path d="M16 7.5a6 6 0 0 0-6 6c0 4.5 6 10.5 6 10.5s6-6 6-10.5a6 6 0 0 0-6-6Z" fill="#d4b572" />
                 <circle cx="16" cy="13.5" r="2.3" fill="#0f2c55" />
               </svg>
-              <span>Find Your Nearest QRS Service Area</span>
+              <span>{tr('Find Your Nearest QRS Service Area')}</span>
             </div>
             <div className="sa-zip">
               <form className="loc-form" id="locForm" noValidate onSubmit={onSearch}>
-                <label htmlFor="locZip" className="sr-only">ZIP code</label>
+                <label htmlFor="locZip" className="sr-only">{tr('ZIP code')}</label>
                 {/* A lookup box, not an address form: password managers are told to leave it alone (LastPass otherwise inserts its icon into the form
                     before React loads, which breaks hydration) */}
-                <input id="locZip" inputMode="numeric" maxLength={5} autoComplete="off" data-lpignore="true" data-1p-ignore data-bwignore data-form-type="other" placeholder="Enter Zip Code" value={zip} onChange={(e) => setZip(e.target.value.replace(/\D/g, ''))} />
-                <button type="submit" aria-label="Search ZIP code">
+                <input id="locZip" inputMode="numeric" maxLength={5} autoComplete="off" data-lpignore="true" data-1p-ignore data-bwignore data-form-type="other" placeholder={tr('Enter Zip Code')} value={zip} onChange={(e) => setZip(e.target.value.replace(/\D/g, ''))} />
+                <button type="submit" aria-label={tr('Search ZIP code')}>
                   <ArrowRight />
                 </button>
               </form>
@@ -214,12 +217,12 @@ export default function ServiceArea({
           </div>
 
           <div className="loc-map-box" ref={mapBox}>
-            <div id="qrsMap" ref={mapEl} role="region" aria-label="Map outlining the Los Angeles County, Orange County and Inland Empire area QRS serves">
+            <div id="qrsMap" ref={mapEl} role="region" aria-label={tr('Map outlining the Los Angeles County, Orange County and Inland Empire area QRS serves')}>
               {offline && (
-                <div style={{ display: 'grid', placeItems: 'center', height: '100%', color: '#cfdae5', fontSize: '.9rem' }}>Map unavailable offline</div>
+                <div style={{ display: 'grid', placeItems: 'center', height: '100%', color: '#cfdae5', fontSize: '.9rem' }}>{tr('Map unavailable offline')}</div>
               )}
             </div>
-            <button className="loc-full" id="locFull" type="button" aria-label="Toggle full screen map" onClick={toggleFullscreen}>
+            <button className="loc-full" id="locFull" type="button" aria-label={tr('Toggle full screen map')} onClick={toggleFullscreen}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="square" aria-hidden="true">
                 <path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5" />
               </svg>
@@ -227,10 +230,10 @@ export default function ServiceArea({
           </div>
 
           {/* The locations: "Santa Monica Area" and so on. The label moves the map to that pin; "Page" opens the city's page. */}
-          <div className="sa-list" ref={listRef} role="group" aria-label="Our locations">
+          <div className="sa-list" ref={listRef} role="group" aria-label={tr('Our locations')}>
             {REGIONS.map((region) => (
               <div className="sa-region" key={region.slug}>
-                <h3>{region.name}</h3>
+                <h3>{tr(region.name)}</h3>
                 <ul>
                   {ALL_PLACES.filter((p) => p.region === region.slug).map((place) => {
                     const { city, slug } = place;
@@ -238,10 +241,10 @@ export default function ServiceArea({
                     return (
                       <li className={'sa-item' + (active === i ? ' active' : '')} key={slug} ref={(el) => { itemRefs.current[i] = el; }}>
                         <button type="button" className="sa-pick" aria-pressed={active === i} onClick={() => select(i, true, true)}>
-                          {city} Area
+                          {tr('{city} Area', { city })}
                         </button>
-                        <Link className="sa-go" href={placePath(place)} prefetch={false} aria-label={`${placeLinkName(place)} roofing page`}>
-                          {hasPage(place) || place.servedBy ? 'Page' : 'County'} <ArrowRight />
+                        <Link className="sa-go" href={placePath(place)} prefetch={false} aria-label={tr('{name} roofing page', { name: placeLinkName(place) })}>
+                          {tr(hasPage(place) || place.servedBy ? 'Page' : 'County')} <ArrowRight />
                         </Link>
                       </li>
                     );
@@ -254,7 +257,7 @@ export default function ServiceArea({
 
         {allAreasLink && (
           <p className="sa-all">
-            <Link className="text-link" href="/service-areas/" prefetch={false}>View all service areas</Link>
+            <Link className="text-link" href="/service-areas/" prefetch={false}>{tr('View all service areas')}</Link>
           </p>
         )}
       </div>
