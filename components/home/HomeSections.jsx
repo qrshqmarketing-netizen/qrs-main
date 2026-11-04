@@ -586,7 +586,7 @@ export function HomeCredentials({ lang = 'en' }) {
     { big: BBB.rating, text: T('BBB rating, an Accredited Business since October 2026') },
   ];
   return (
-    <section className="hg-section hg-bg-sky" id="credentials" style={{ paddingTop: 0 }} aria-labelledby="hg-creds">
+    <section className="hg-section hg-bg-sky" id="credentials" style={{ paddingTop: 'clamp(56px, 7vw, 96px)' }} aria-labelledby="hg-creds">
       <div className="container">
         <div className="hg-head">
           <h2 id="hg-creds">{T('Licensed, certified and on the record.')}</h2>
