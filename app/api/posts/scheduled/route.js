@@ -1,5 +1,5 @@
 import { revalidateTag } from 'next/cache';
-import { POSTS_TAG } from '@/lib/postsStore';
+import { POSTS_TAG, addNewFilePosts } from '@/lib/postsStore';
 import { updateReviewCount } from '@/lib/googleReviewCount';
 
 // Publishes scheduled articles on time (owner, October 30 2026). An article dated in the future goes live at 8:00 AM Pacific on its date
@@ -15,6 +15,8 @@ export async function GET(request) {
   const fromCron = cronSecret ? request.headers.get('authorization') === `Bearer ${cronSecret}` : /vercel-cron/i.test(request.headers.get('user-agent') || '');
   const manual = Boolean(sheetSecret) && request.headers.get('x-leads-diagnostic') === sheetSecret;
   if (!fromCron && !manual) return Response.json({ ok: false, error: 'not allowed' }, { status: 401 });
+  // A backup for instrumentation.js: add any new file article to the table before the refresh
+  await addNewFilePosts().catch((err) => console.error('[posts] could not add the new file articles:', err.message));
   revalidateTag(POSTS_TAG, 'max'); // stale-while-revalidate: visitors keep getting the last good page while it refreshes (expire: 0 made failed refreshes a 500)
   // Every day, on the 8 AM run (not the 9 AM one): the Google review count (owner, November 3 2026: daily, was weekly; lib/googleReviewCount.js).
   // It commits only when the total changed. A failure is reported here and changes nothing.
