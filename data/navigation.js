@@ -174,7 +174,8 @@ export const HEADER_CTA = { label: 'Get Pro Advice', href: '#roof-check' };
 // collapsible groups in the menu panel, followed by HEADER_MORE. Metal roofing and gutters stay out while hidden. Only link pages that exist.
 const R = '/residential-roofing/';
 const C = '/commercial-roofing/';
-export const HEADER_MENU = [
+// The dropdown menu of November 2 2026, kept for when it returns (owner, November 4 2026: the bar is back to the six flat links below)
+export const HEADER_DROPDOWNS = [
   {
     label: 'Services',
     href: '/residential-roofing/',
@@ -301,13 +302,27 @@ export const HEADER_MENU = [
   },
 ];
 // The rest of the site, under the menu groups in the menu panel below 1280px (from 1280px there is no menu button: every page is in the bar's dropdowns)
+// The bar (owner, November 4 2026: back to the flat links of before November 2): six hub links, no dropdowns; everything else is in the
+// menu panel (HEADER_MORE), which the ☰ button opens at every width
+export const HEADER_MENU = [
+  { label: 'Residential', href: '/residential-roofing/' },
+  { label: 'Commercial', href: '/commercial-roofing/' },
+  { label: 'Roof Repair', href: '/roof-repair/' },
+  { label: 'Replacement', href: '/roof-replacement/' },
+  { label: 'Service Areas', href: '/service-areas/' },
+  { label: 'Projects', href: '/projects/' },
+];
 export const HEADER_MORE = [
   { label: 'Emergency Repair', href: '/roof-repair/emergency/', urgent: true },
+  { label: 'About QRS', href: '/about-us/' },
   { label: 'Reviews', href: '/reviews/' },
+  { label: 'Credentials', href: '/credentials/' },
   { label: 'Maintenance Plans', href: '/roof-maintenance-plans/' },
+  { label: 'Financing', href: '/roof-financing/' },
   { label: 'Roofing Blog', href: '/blog/' },
   { label: 'Careers', href: '/careers/' },
   { label: 'For Contractors', href: '/contractors/' },
+  { label: 'Contact', href: '/contact-us/' },
 ];
 // Kept for anything that still lists the old six bar links
 export const HEADER_LINKS = HEADER_MENU.map(({ label, href }) => ({ label, href }));

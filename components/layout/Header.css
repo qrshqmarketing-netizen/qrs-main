@@ -283,7 +283,7 @@ body:has(main.hg) .site-header:not(.is-lp):not(.is-start):not([data-scrolled]):n
 .hd-panel .hd-acc li{border-bottom:0;opacity:1;translate:none}
 @media (prefers-reduced-motion:reduce){.hd-drop,.hd-chev{transition:none!important}}
 /* No menu button from 1280px, where the whole site is in the bar's dropdowns (owner, November 2 2026): the button and its panel are hidden there */
-@media (min-width:1280px){.site-header .hd-menu,.site-header .hd-panel,.site-header .hd-backdrop{display:none}}
+/* (November 4 2026: the menu button and panel show at every width again, with the flat bar links; the rule that hid them from 1280px is gone) */
 /* The last dropdowns in the bar open toward the left so they never run off the screen */
 .hd-links > .hd-dd:last-child .hd-drop,.hd-links > .hd-dd:nth-last-child(2) .hd-drop:not(.hd-mega){left:auto;right:0}
 

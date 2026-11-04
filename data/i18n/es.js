@@ -365,4 +365,7 @@ export const ES = {
   // FAQ (Faq)
   'Frequently Asked __Questions__': 'Preguntas __frecuentes__',
   'Straight answers to the questions homeowners ask us most.': 'Respuestas directas a las preguntas que más nos hacen los propietarios.',
+  // Flat bar links (November 4 2026)
+  'Residential': 'Residencial',
+  'Replacement': 'Reemplazo',
 };

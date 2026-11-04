@@ -11,7 +11,7 @@ import { PHONE, TEL } from '@/data/site';
 import { LANGS, isHomePath, langOf, t } from '@/lib/lang';
 import './Header.css';
 
-// The header: one solid bar split by hairlines: the logo, the main menu (HEADER_MENU in data/navigation.js: Services, Service Areas,
+// The header: one solid bar split by hairlines: the logo, the main menu (HEADER_MENU in data/navigation.js: six flat hub links since November 4 2026; formerly Services, Service Areas,
 // Credentials and Roofing 101 open a dropdown on hover, focus or click, Services as a wide panel of every service page), the phone number,
 // the gold "Get Pro Advice" cell, the theme switch and a two-line menu button.
 // The menu button drops a small panel from the bar with the rest of the site (HEADER_MORE; below 1240px the main links are at the top of it).
