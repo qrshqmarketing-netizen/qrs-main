@@ -491,3 +491,16 @@ body.studio-site main.hg .hg-crew h2{color:#fff;font-size:clamp(34px,5.2vw,64px)
 .hg-crew p{margin:0 auto;max-width:640px;font-size:clamp(17px,1.5vw,20px);line-height:1.6;color:rgba(255,255,255,.92)}
 .hg-crew-ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:30px}
 @media print,(prefers-reduced-motion:reduce){.hg-crew-bg{transform:none;top:0!important;bottom:0!important}}
+
+/* Repair and replacement links (owner, November 4 2026) */
+.hg-bg-sky2{background:var(--hg-sky-2)}
+.hg-links{display:grid;gap:18px;max-width:1000px;margin:0 auto}
+.hg-links-col{padding:26px 28px;border:1px solid var(--line);border-radius:var(--hg-r);background:var(--paper)}
+body.studio-site main.hg .hg-links-col h3{margin:0 0 12px;font-size:22px}
+.hg-links-col ul{margin:0;padding:0;list-style:none}
+.hg-links-col li{border-top:1px solid var(--line)}
+.hg-links-col a{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:46px;padding:10px 2px;color:var(--ink);font-weight:600;text-decoration:none}
+.hg-links-col a span{color:var(--gold-ink);font-family:var(--font-glyph);transition:transform .2s}
+@media (hover:hover){.hg-links-col a:hover{color:var(--navy)}.hg-links-col a:hover span{transform:translateX(4px)}}
+:root[data-theme="dark"] .hg-links-col a:hover{color:var(--gold)}
+@media (min-width:760px){.hg-links{grid-template-columns:1fr 1fr}}

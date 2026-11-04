@@ -2,7 +2,7 @@ import FinalCta from '@/components/sections/FinalCta';
 import ProofBar from '@/components/sections/ProofBar';
 import TrustLogos from '@/components/sections/TrustLogos';
 import RoofCheck from '@/components/sections/RoofCheck';
-import { HomeAreas, HomeAudience, HomeCommercial, HomeCredentials, HomeCrew, HomeGiving, HomeFaq, HomeGuides, HomeHero, HomeOffers, HomeProjects, HomeResidential, HomeReviews, HomeStatement } from '@/components/home/HomeSections';
+import { HomeAreas, HomeAudience, HomeCommercial, HomeCredentials, HomeCrew, HomeServiceLinks, HomeGiving, HomeFaq, HomeGuides, HomeHero, HomeOffers, HomeProjects, HomeResidential, HomeReviews, HomeStatement } from '@/components/home/HomeSections';
 import HomeMotion from '@/components/home/HomeMotion';
 import JsonLd from '@/components/ui/JsonLd';
 import { ES_HOME_FAQS, ES_HOME_META } from '@/data/i18n/esHome';
@@ -44,6 +44,7 @@ export default function SpanishHomePage() {
         <HomeStatement lang={lang} />
         <HomeResidential lang={lang} />
         <HomeCommercial lang={lang} />
+        <HomeServiceLinks lang={lang} />
         <HomeAreas lang={lang} />
         <HomeProjects lang={lang} />
         <HomeReviews lang={lang} />

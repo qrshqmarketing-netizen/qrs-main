@@ -354,6 +354,55 @@ export function HomeCommercial({ lang = 'en' }) {
   );
 }
 
+// ---------- Repair and replacement links (owner, November 4 2026) ----------
+// A short list of links to every repair and replacement page, in place of the two card sections removed the same day, so the home page still
+// points straight at them. Only pages that exist.
+const REPAIR_LINKS = [
+  ['Roof repair', '/roof-repair/'],
+  ['Shingle roof repair', '/residential-roofing/shingle-roofing/repair/'],
+  ['Tile roof repair', '/residential-roofing/tile-roofing/repair/'],
+  ['Flat roof repair', '/residential-roofing/flat-roofing/repair/'],
+  ['Emergency roof repair', '/roof-repair/emergency/'],
+  ['Commercial roof repair', '/commercial-roofing/repair/'],
+];
+const REPLACE_LINKS = [
+  ['Roof replacement', '/roof-replacement/'],
+  ['Shingle roof replacement', '/residential-roofing/shingle-roofing/replacement/'],
+  ['Tile roof replacement', '/residential-roofing/tile-roofing/replacement/'],
+  ['Tile lift & relay (re-paper)', '/residential-roofing/tile-roofing/lift-and-relay/'],
+  ['Flat roof replacement', '/residential-roofing/flat-roofing/replacement/'],
+  ['Torch down roofing', '/residential-roofing/flat-roofing/torch-down/'],
+  ['Cool roofing', '/residential-roofing/cool-roofing/'],
+  ['Commercial roof replacement', '/commercial-roofing/replacement/'],
+];
+export function HomeServiceLinks({ lang = 'en' }) {
+  const T = (x) => th(lang, x);
+  const col = (title, links) => (
+    <nav className="hg-links-col" aria-label={T(title)}>
+      <h3>{T(title)}</h3>
+      <ul>
+        {links.map(([label, href]) => (
+          <li key={href}><SiteLink href={href}>{T(label)} <span aria-hidden="true">→</span></SiteLink></li>
+        ))}
+      </ul>
+    </nav>
+  );
+  return (
+    <section className="hg-section hg-bg-sky2" id="repair-replace" style={{ paddingTop: 0 }} aria-labelledby="hg-links">
+      <div className="container">
+        <div className="hg-head">
+          <h2 id="hg-links">{T('Repair or replace. We’ll tell you which.')}</h2>
+          <p>{T('A roofer looks first and tells you plainly whether a repair will do or the roof is worn out. Every service, in one place:')}</p>
+        </div>
+        <div className="hg-links">
+          {col('Roof repair', REPAIR_LINKS)}
+          {col('Roof replacement', REPLACE_LINKS)}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 // ---------- The crew, over a parallax photo (owner, November 4 2026) ----------
 // The crew group photo (also the Careers page's earlier hero) fills the band and drifts slower than the page (ParallaxBg). Facts from the About
 // page: 12 crews for shingle, tile and flat roofs, the senior production manager on quality control, three languages.
