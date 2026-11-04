@@ -1475,15 +1475,15 @@ export const BLOG_POSTS = [
   // laborers", and North County cities (outside the service area). Our voice with three "Our point of view" boxes.
   {
     slug: 'best-roofer-los-angeles',
-    revision: 1, // metal roofing taken out while it is hidden (owner, November 2 2026); POST /api/posts/sync/ after the deploy
+    revision: 2, // metal roofing taken out while it is hidden (owner, November 2 2026); POST /api/posts/sync/ after the deploy
     title: 'Best Roofer in LA: A Licensed & Insured Roofing Contractor Serving All of LA County',
     keyword: 'best roofer in la',
     topics: ['replacement', 'repair', 'inspection', 'storm', 'insurance'],
     metaTitle: 'Best Roofer in LA: Licensed, Insured & Warranty-Backed',
     metaDescription:
-      'Looking for the best roofer in LA? Check the license, insurance, warranty and reviews. QRS is licensed, bonded and insured with 269 Google reviews.',
+      'Looking for the best roofer in LA? Check the license, insurance, warranty and reviews. QRS is licensed, bonded and insured with 281 Google reviews.',
     datePublished: '2026-11-02',
-    dateModified: '2026-11-02',
+    dateModified: '2026-11-03',
     excerpt:
       'The best roofer in LA is one you can verify: an active California license, insurance, a written warranty, local work and strong reviews. Here is how we measure up on each, and seven checks to run on any roofer, us included.',
     image: '/images/blog/best-roofer-los-angeles.webp',
@@ -1520,7 +1520,7 @@ export const BLOG_POSTS = [
           { h3: 'Years on LA roofs' },
           'We have roofed in Los Angeles since 2020: Santa Ana wind seasons, heat waves and winter storms, on shingle, tile and flat roofs. We are family-owned, and the [projects we document](/projects/) show the work from tear-off to finished roof.',
           { h3: 'Proven by our reviews' },
-          'Homeowners have left 269 reviews for us on Google. The same things come up again and again: crews that show up on time, clean job sites and honest estimates. You can [read them here](/reviews/).',
+          'Homeowners have left 281 reviews for us on Google. The same things come up again and again: crews that show up on time, clean job sites and honest estimates. You can [read them here](/reviews/).',
           { note: '“I was looking to replace my shingles roof in Encino and contacted a few roofing companies in the neighborhood. Out of four roofers, Quality Roofing Specialist was the only one that worked with my budget as well as my schedule.” Jose, Encino (Google review)' },
           { pov: 'Don’t take our word for any of this, and don’t take any roofer’s. A license number, an insurance certificate and a warranty in writing take minutes to check, and a roofer who is proud of them will hand them over before you ask.' },
         ],
@@ -1612,7 +1612,7 @@ export const BLOG_POSTS = [
     faqs: [
       {
         q: 'Who is the best roofer in LA?',
-        a: 'The best roofer for your home is one with an active CSLB license, liability and workers’ comp insurance, a written warranty and a strong record of recent local reviews. Quality Roofing Specialists has been licensed since 2020 (CSLB #1061942), is licensed, bonded and insured, and has 269 Google reviews.',
+        a: 'The best roofer for your home is one with an active CSLB license, liability and workers’ comp insurance, a written warranty and a strong record of recent local reviews. Quality Roofing Specialists has been licensed since 2020 (CSLB #1061942), is licensed, bonded and insured, and has 281 Google reviews.',
       },
       {
         q: 'How do I check if a roofer is licensed in California?',

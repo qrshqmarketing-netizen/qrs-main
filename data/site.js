@@ -111,7 +111,7 @@ export const GOOGLE_ADS_ID = 'AW-778824076';
 // Home page title and description (search results + link previews). Worded after the searches that bring people to the home page in
 // Search Console ("roofing contractor in Los Angeles") and after how Royal Roofing, the competitor that ranks #1 for "roofing company orange county",
 // words theirs: both counties in the title, description and H1. The H1 (HOME_H1) uses the same phrase; the brand name is in the description.
-export const GOOGLE_REVIEWS = { count: 269, asOf: '2026-10-15' };
+export const GOOGLE_REVIEWS = { count: 281, asOf: '2026-11-03' };
 // Home title and description in the voice of the gradient home page (owner, October 29 2026, after the owner's reference homepage: "Brand |
 // place + service" and a short "who we are, what one team does, start with the free offer" description). The keyword "roofing contractor" and
 // both counties stay in both (October 27 2026: titles without places were rolled back after calls dropped).
@@ -124,7 +124,8 @@ export const HOME_H1 = 'Roofing Contractor in Los Angeles & Orange County';
 export const HOME_DESCRIPTION = // rolled back to the October 28 wording (owner, November 2 2026)
   'Roofing company near you in Los Angeles & Orange County: QRS is a family-owned roofing contractor. Roof repair, replacement and a free roof evaluation.'; // owner, November 3 2026 (keyword list)
 
-// The number of Google reviews across our listings (owner, October 15 2026: 269). Update it by hand from Google now and then; it shows on the
+// The number of Google reviews across our three listings (281 on November 3 2026). Updated every day by lib/googleReviewCount.js once
+// GITHUB_TOKEN is set in Vercel (until then, update it by hand); it shows on the
 // proof strip under every hero and in the home page's review section. No star rating is shown (not given by the owner).
 
 // Short trust points in the bar under the hero

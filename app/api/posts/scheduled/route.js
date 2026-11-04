@@ -16,11 +16,10 @@ export async function GET(request) {
   const manual = Boolean(sheetSecret) && request.headers.get('x-leads-diagnostic') === sheetSecret;
   if (!fromCron && !manual) return Response.json({ ok: false, error: 'not allowed' }, { status: 401 });
   revalidateTag(POSTS_TAG, 'max'); // stale-while-revalidate: visitors keep getting the last good page while it refreshes (expire: 0 made failed refreshes a 500)
-  // Mondays, on the 8 AM run (not the 9 AM one): the weekly Google review count (owner, November 2 2026; lib/googleReviewCount.js). A failure
-  // is reported here and changes nothing.
+  // Every day, on the 8 AM run (not the 9 AM one): the Google review count (owner, November 3 2026: daily, was weekly; lib/googleReviewCount.js).
+  // It commits only when the total changed. A failure is reported here and changes nothing.
   let reviewCount;
-  const monday = new Date().toLocaleDateString('en-US', { weekday: 'long', timeZone: 'America/Los_Angeles' }) === 'Monday';
-  if (monday && !new URL(request.url).searchParams.get('at')) {
+  if (!new URL(request.url).searchParams.get('at')) {
     reviewCount = await updateReviewCount().catch((e) => ({ updated: false, error: e.message }));
   }
   return Response.json({ ok: true, refreshed: POSTS_TAG, ...(reviewCount && { reviewCount }) });
