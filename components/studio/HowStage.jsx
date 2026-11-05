@@ -12,7 +12,9 @@ import './HowStage.css';
 // The scene runs only while the stage is on screen and the tab is visible, and is torn down when the stage is far off screen (so phones never
 // hold more than a couple of WebGL contexts); reduced motion draws still frames. Without WebGL the cards show on the drawn backdrop.
 // Everything here is decorative (aria-hidden): the principles' text is in the list beside it. Every fact is one the site already states.
-const OFFICE_POINTS = OFFICES.map((o) => ({ lon: o.geo.longitude, lat: o.geo.latitude }));
+// The 3D map only covers Southern California, so the San Jose office (owner, November 5 2026) isn't drawn on it; the office count still includes it
+const MAP_OFFICES = OFFICES.filter((o) => o.geo.latitude < 35);
+const OFFICE_POINTS = MAP_OFFICES.map((o) => ({ lon: o.geo.longitude, lat: o.geo.latitude }));
 const NEXT_STEPS = ['Repair', 'Monitor', 'Maintain', 'Replace'];
 
 const Tag = ({ anchor, children, className = '' }) => (
@@ -77,7 +79,7 @@ function Overlay({ station }) {
   if (station === 2)
     return (
       <>
-        {OFFICES.map((o, i) => (
+        {MAP_OFFICES.map((o, i) => (
           <Tag anchor={`s2-office-${i}`} key={o.name} className={'hw-tag-office ' + (['hw-tag-right', 'hw-tag-left', 'hw-tag-right'][i] || '')}>
             <b>{tr(o.name)}</b> <small>{o.address.city}</small>
           </Tag>

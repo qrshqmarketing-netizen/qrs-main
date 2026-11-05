@@ -34,7 +34,8 @@ const ICONS = {
 };
 
 // ---------- Hero: an inset rounded card ----------
-export function LocHero({ crumbs, path, title, outcome, sub, place, commercial }) {
+// `phone` / `tel`: an office's own number on its city page (OFFICES in data/site.js), else the main line
+export function LocHero({ crumbs, path, title, outcome, sub, place, commercial, phone = PHONE, tel = TEL }) {
   const badges = CREDENTIALS_PUBLIC ? CREDENTIALS_PAGE.manufacturers.items.filter((m) => m.logo) : [];
   return (
     <section className="lc-hero-wrap" aria-label={`QRS roofing in ${place}`}>
@@ -54,8 +55,8 @@ export function LocHero({ crumbs, path, title, outcome, sub, place, commercial }
             <SiteLink className="btn btn-dark" href="#roof-check">
               {commercial ? 'Request a roof survey' : 'Book a free roof evaluation'} <span className="arrow">→</span>
             </SiteLink>
-            <a className="btn btn-line" href={TEL}>
-              <PhoneIcon /> {PHONE}
+            <a className="btn btn-line" href={tel}>
+              <PhoneIcon /> {phone}
             </a>
           </div>
           {badges.length > 0 && (
@@ -260,7 +261,7 @@ export function LocReviews({ path, place, places = [] }) {
 }
 
 // ---------- The gradient call-to-action card ----------
-export function LocCta({ place, commercial }) {
+export function LocCta({ place, commercial, phone = PHONE, tel = TEL }) {
   return (
     <section className="lc-section lc-cta-wrap" aria-labelledby="lc-cta">
       <div className="lc-wrap">
@@ -275,8 +276,8 @@ export function LocCta({ place, commercial }) {
             <SiteLink className="btn btn-dark" href="#roof-check">
               {commercial ? 'Request a roof survey' : 'Book a free roof evaluation'} <span className="arrow">→</span>
             </SiteLink>
-            <a className="btn btn-line" href={TEL}>
-              <PhoneIcon /> {PHONE}
+            <a className="btn btn-line" href={tel}>
+              <PhoneIcon /> {phone}
             </a>
           </div>
         </div>
@@ -286,7 +287,7 @@ export function LocCta({ place, commercial }) {
 }
 
 // ---------- A two-column FAQ: the heading at the left, the questions at the right (the open one dark) ----------
-export function LocFaq({ heading, sub, faqs = [] }) {
+export function LocFaq({ heading, sub, faqs = [], phone = PHONE, tel = TEL }) {
   if (!faqs.length) return null;
   return (
     <section className="lc-section lc-bg-wash" id="faq" aria-labelledby="lc-faq">
@@ -295,7 +296,7 @@ export function LocFaq({ heading, sub, faqs = [] }) {
           <h2 id="lc-faq">{heading}</h2>
           {sub && <p className="lc-lead">{sub}</p>}
           <p className="lc-lead">
-            Still have a question? Call <a href={TEL}>{PHONE}</a>.
+            Still have a question? Call <a href={tel}>{phone}</a>.
           </p>
         </div>
         <div className="lc-acc lc-acc-faq">

@@ -231,9 +231,9 @@ export function AbrOffices() {
     <section className="abr-section abr-grid-sec" aria-labelledby="abr-offices">
       <div className="abr-wrap">
         <div className="abr-head abr-center">
-          <h2 id="abr-offices">Three offices across Los Angeles</h2>
+          <h2 id="abr-offices">Our offices</h2>
           <p>
-            Our crews work across Los Angeles County, Orange County and the Inland Empire from {names.slice(0, -1).join(', ')} and {names.at(-1)}. Each office has its own
+            Our crews work across Los Angeles County, Orange County and the Inland Empire from {names.slice(0, -2).join(', ')} and {names.at(-2)}, and in Santa Clara County from our {names.at(-1)} office. Each office has its own
             number, or call our main line, <a href={TEL}>{PHONE}</a>.
           </p>
         </div>

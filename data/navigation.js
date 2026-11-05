@@ -130,6 +130,7 @@ export const LOCATIONS_MENU = {
     const featuredCities = {
       'la-county': ['los-angeles', 'santa-monica', 'pasadena', 'long-beach'],
       'orange-county': ['huntington-beach', 'newport-beach'],
+      'santa-clara-county': ['san-jose'],
     }[r.slug] || [];
 
     return {
@@ -244,11 +245,13 @@ export const HEADER_DROPDOWNS = [
         { label: 'Orange County', href: '/service-areas/orange-county/' },
         { label: 'Riverside County', href: '/service-areas/riverside-county/' },
         { label: 'San Bernardino County', href: '/service-areas/san-bernardino-county/' },
+        { label: 'Santa Clara County', href: '/service-areas/santa-clara-county/' },
       ] },
       { title: 'Our offices', links: [
         { label: 'West Hollywood', href: '/service-areas/la-county/west-hollywood/' },
         { label: 'Woodland Hills', href: '/service-areas/la-county/woodland-hills/' },
         { label: 'Vernon', href: '/service-areas/la-county/vernon/' },
+        { label: 'San Jose', href: '/service-areas/santa-clara-county/san-jose/' },
         { label: 'All Service Areas', href: '/service-areas/' },
       ] },
     ],

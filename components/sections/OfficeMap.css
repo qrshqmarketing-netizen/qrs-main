@@ -11,3 +11,9 @@
   .office-map-inner{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:56px}
   .office-map-frame{aspect-ratio:16/10}
 }
+
+/* An office's own hours (San Jose, November 5 2026) */
+.office-map-hours{margin:0 0 18px;display:grid;gap:4px;font-size:15px}
+.office-map-hours div{display:flex;justify-content:space-between;gap:16px;max-width:320px;border-bottom:1px solid var(--line);padding:4px 0}
+.office-map-hours dt{font-weight:600;color:var(--ink)}
+.office-map-hours dd{margin:0;color:var(--muted)}

@@ -41,7 +41,7 @@ export function AboutIntro({ page }) {
 export const NUMBERS = [
   { value: '10', unit: 'year', label: 'Workmanship warranty on our installs, call for details' },
   { value: '12', unit: '', label: 'Crews for shingle, tile and flat roofs' },
-  { value: String(OFFICES.length), unit: '', label: 'Offices across Los Angeles' },
+  { value: String(OFFICES.length), unit: '', label: 'Offices in Los Angeles and San Jose' },
   { value: '3', unit: '', label: 'Languages: English, Spanish and Tagalog' },
   { value: '4', unit: 'counties', label: 'Los Angeles, Orange, Riverside and San Bernardino' },
   { value: '6,000', unit: '', label: 'Homes we aim to protect in the next 10 years' },

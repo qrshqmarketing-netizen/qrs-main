@@ -81,7 +81,7 @@ export const REGION_PAGES = {
       heading: 'Roofing Across the Inland Empire',
       paragraphs: [
         'Western Riverside County is hot and sunny for much of the year, and that heat is hard on a roof. It dries out underlayment, bakes sealants and ages shingles from above and from below, especially on south- and west-facing slopes. In Riverside, Corona, Menifee and Temecula, a roof that still looks fine from the street can be wearing out where you can’t see it.',
-        'We start with photos and a plain-English explanation of what we find, then give you a written scope and price before any work begins. That might mean a [roof repair](/roof-repair/), a [tile](/residential-roofing/tile-roofing/) or [shingle](/residential-roofing/shingle-roofing/) replacement, or a plan for an [HOA](/residential-roofing/hoa-multi-family/) community. Our offices are in Los Angeles, Woodland Hills and Vernon, and one number reaches all of them.',
+        'We start with photos and a plain-English explanation of what we find, then give you a written scope and price before any work begins. That might mean a [roof repair](/roof-repair/), a [tile](/residential-roofing/tile-roofing/) or [shingle](/residential-roofing/shingle-roofing/) replacement, or a plan for an [HOA](/residential-roofing/hoa-multi-family/) community. Our Southern California offices are in Los Angeles, Woodland Hills and Vernon, and one number reaches all of them.',
       ],
     },
     considerations: [
@@ -109,7 +109,7 @@ export const REGION_PAGES = {
       heading: 'Roofing in the Southwest Corner of the County',
       paragraphs: [
         'The part of San Bernardino County we serve sits between Pomona and Riverside: Chino, Ontario, Upland, Rancho Cucamonga, Fontana and the cities around them. Summers are hot and dry, and the Santa Ana winds can be strong, so roofs here deal with a lot of sun and wear.',
-        'We start with photos and a plain-English explanation of what we find, then give you a written scope and price before any work begins. Whether you need a [roof repair](/roof-repair/), a [roof replacement](/roof-replacement/) or a plan for an [HOA](/residential-roofing/hoa-multi-family/) community, you get one clear next step. Our offices are in Los Angeles, Woodland Hills and Vernon, and one number reaches all of them.',
+        'We start with photos and a plain-English explanation of what we find, then give you a written scope and price before any work begins. Whether you need a [roof repair](/roof-repair/), a [roof replacement](/roof-replacement/) or a plan for an [HOA](/residential-roofing/hoa-multi-family/) community, you get one clear next step. Our Southern California offices are in Los Angeles, Woodland Hills and Vernon, and one number reaches all of them.',
       ],
     },
     considerations: [
@@ -120,6 +120,35 @@ export const REGION_PAGES = {
     faqs: [
       { q: 'Which San Bernardino County cities do you serve?', a: 'We serve Chino, Chino Hills, Ontario, Montclair, Upland, Rancho Cucamonga, Fontana, Rialto, Colton and Grand Terrace, in the southwest corner of the county. If you’re elsewhere in the county, call us and we’ll tell you if we can help.' },
       { q: 'Do you serve all of San Bernardino County?', a: 'We serve the southwest corner of the county shown on our [service areas](/service-areas/) map. For an address outside it, call us and tell us where the property is.' },
+      { q: 'What roof types do you work on?', a: 'The common ones: [tile](/residential-roofing/tile-roofing/), [shingle](/residential-roofing/shingle-roofing/) and [flat](/residential-roofing/flat-roofing/) roofs, plus [HOA and multi-family](/residential-roofing/hoa-multi-family/) and [commercial](/commercial-roofing/) buildings.' },
+      { q: 'How does a project start?', a: 'With a free roof evaluation. You get photos of your roof’s condition, a plain-English explanation and a written scope and price for anything it needs.' },
+    ],
+  },
+  // Santa Clara County (owner, November 5 2026): the county around our San Jose office. Only San Jose has a page; the rest of the county is named in
+  // general terms until there is work behind it.
+  'santa-clara-county': {
+    keyword: 'santa clara county roofing',
+    metaTitle: 'Santa Clara County Roofing Services',
+    metaDescription: 'Santa Clara County roofing from our San Jose office: roof repair, replacement and inspections for shingle, tile and flat roofs. Book a free roof evaluation.',
+    hero: {
+      heading: 'Santa Clara County Roofing Services',
+      intro: 'Santa Clara County roofing from Quality Roofing Specialists is run from our office in San Jose, with roof repair, roof replacement and inspections for shingle, tile and flat roofs on homes, HOA communities and commercial buildings. Every project starts with a free roof evaluation and a written scope and price.',
+    },
+    intro: {
+      heading: 'Roofing From Our San Jose Office',
+      paragraphs: [
+        'Santa Clara County roofing from QRS starts at our [San Jose office](/service-areas/santa-clara-county/san-jose/) on Forrestal Avenue in North San Jose, the newest of our offices and the first outside Southern California. Call (408) 317-2095 to reach it.',
+        'We start with photos and a plain-English explanation of what we find, then give you a written scope and price before any work begins. Whether you need a [roof repair](/roof-repair/), a [roof replacement](/roof-replacement/) or a plan for an [HOA](/residential-roofing/hoa-multi-family/) community, you get one clear next step. For [commercial roofing](/commercial-roofing/), it starts with a roofer-led roof survey.',
+      ],
+    },
+    considerations: [
+      { title: 'A real rainy season', text: 'Most of the year’s rain falls between fall and spring, so it pays to find worn flashing and tired underlayment before the first storms.' },
+      { title: 'Shingle, tile and flat roofs', text: 'Homes here carry shingle and tile roofs, while apartment buildings, additions and commercial buildings often have flat or low-slope roofs.' },
+      { title: 'Dry summers', text: 'Long, dry summers wear on shingles, sealants and flat roof surfaces, especially on slopes facing the sun.' },
+    ],
+    faqs: [
+      { q: 'Where is your Santa Clara County office?', a: 'In San Jose, at 1423 Forrestal Ave, San Jose, CA 95110. Call (408) 317-2095.' },
+      { q: 'Which cities in Santa Clara County do you serve?', a: 'Our office is in [San Jose](/service-areas/santa-clara-county/san-jose/). For an address elsewhere in the county, call us and tell us where the property is, and we’ll tell you if we can help.' },
       { q: 'What roof types do you work on?', a: 'The common ones: [tile](/residential-roofing/tile-roofing/), [shingle](/residential-roofing/shingle-roofing/) and [flat](/residential-roofing/flat-roofing/) roofs, plus [HOA and multi-family](/residential-roofing/hoa-multi-family/) and [commercial](/commercial-roofing/) buildings.' },
       { q: 'How does a project start?', a: 'With a free roof evaluation. You get photos of your roof’s condition, a plain-English explanation and a written scope and price for anything it needs.' },
     ],

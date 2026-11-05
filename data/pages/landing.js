@@ -82,7 +82,7 @@ export const LANDING_PAGES = {
       { match: /maint|inspect|survey|check/, heading: 'Know the condition of your commercial roof.', sub: 'A roofer-led roof survey with photos and a written scope, so you can plan repairs and budgets with the facts in front of you.', tag: 'survey' },
     ],
     points: ['Roofer-led roof survey', 'Written scope and price before any work', 'Permits pulled', license],
-    proof: [reviews, 'Licensed, bonded & insured', '12 crews, 3 offices'],
+    proof: [reviews, 'Licensed, bonded & insured', '12 crews, 4 offices'],
     form: { title: 'Request a roof survey', text: 'Leave your details and a roofer will call you to plan the survey.', button: 'Request My Roof Survey', fine: 'No obligation. A roofer calls you to schedule.', askCompany: true },
     services: [
       { title: 'Commercial roof repair', text: 'A roofer traces the leak to its source; you get a written scope and price, and photos of the problem and the finished repair.' },

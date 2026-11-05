@@ -38,6 +38,8 @@ export default async function LocationPage({ location, page, index = 0 }) {
   const photo = page.image ? { src: page.image, position: page.imagePosition } : PHOTOS[index % PHOTOS.length];
   const crumbs = [HOME, LOCATIONS_LINK, { label: region.name, href: regionPath(region.slug) }, { label: city, href: cityPath(slug) }];
   const office = OFFICES.find((o) => o.citySlug === slug);
+  // An office page shows that office's own number (as on its Google listing) in the hero, the call-to-action card and the FAQ line
+  const officePhone = office?.phone ? { phone: office.phone, tel: office.tel } : {};
   const schema = pageJsonLd({
     path: cityPath(slug),
     title: page.metaTitle,
@@ -71,6 +73,7 @@ export default async function LocationPage({ location, page, index = 0 }) {
         sub={page.hero.sub}
         place={city}
         commercial={page.offer === 'commercial'}
+        {...officePhone}
       />
       {/* Google, BBB and Yelp logos linking to our profiles (owner, November 2 2026) */}
       <TrustLogos />
@@ -103,8 +106,8 @@ export default async function LocationPage({ location, page, index = 0 }) {
         <LatestArticles posts={await articlesFor(cityPath(slug))} heading="Related Roofing Articles" />
       </div>
       {FACEBOOK_FEEDS[slug] && <FacebookFeed pageId={process.env[FACEBOOK_FEEDS[slug].id]} token={process.env[FACEBOOK_FEEDS[slug].token]} place={city} />}
-      <LocCta place={city} commercial={page.offer === 'commercial'} />
-      <LocFaq heading={`${city} Roofing FAQs`} sub={`Straight answers for ${city} ${page.offer === 'commercial' ? 'clients' : 'homeowners'}.`} faqs={page.faqs} />
+      <LocCta place={city} commercial={page.offer === 'commercial'} {...officePhone} />
+      <LocFaq heading={`${city} Roofing FAQs`} sub={`Straight answers for ${city} ${page.offer === 'commercial' ? 'clients' : 'homeowners'}.`} faqs={page.faqs} {...officePhone} />
       {/* The request form, in the same column as the sections above */}
       <div className="lc-keep">
         <RoofCheck tone="white" offer={page.offer || 'home'} />

@@ -672,6 +672,41 @@ export const LOCATION_PAGES = {
     nearby: ['mid-wilshire', 'los-angeles', 'vernon'],
     final: { heading: 'Let’s Take a Look at Your Westlake Roof', text: 'Start with a free roof evaluation and a written scope for your Westlake or Koreatown home or building.' },
   },
+  // ----- San Jose (owner, November 5 2026): our Bay Area office at 1423 Forrestal Ave. Only facts the site already states; the local details
+  // (weather, roof types) are general Bay Area conditions, not claims about jobs we did here. Add a project and photos when the first job is done.
+  'san-jose': {
+    keyword: 'san jose roofing',
+    metaTitle: 'San Jose Roofing & Roof Repair',
+    metaDescription: 'San Jose roofing from our local office: roof repair, roof replacement and inspections for shingle, tile and flat roofs. Book a free roof evaluation.',
+    blurb: 'Roof repair, replacement and roofer-led evaluations for homes and businesses in San Jose, from our North San Jose office.',
+    hero: {
+      heading: 'San Jose roofing',
+      sub: 'Quality Roofing Specialists offers San Jose roofing from our office on Forrestal Avenue in North San Jose: roof repair, roof replacement and inspections for shingle, tile and flat roofs on homes, HOA communities and commercial buildings. It starts with a free roof evaluation and a written scope and price before any work.',
+    },
+    intro: {
+      heading: 'A Roofing Team With an Office in San Jose',
+      paragraphs: [
+        'San Jose roofing from Quality Roofing Specialists works the way it does at our Los Angeles offices: a roofer looks at your roof before anyone tries to sell you one. Our San Jose office, at 1423 Forrestal Ave near the airport, keeps that team close to homes and businesses across the city and the rest of Santa Clara County.',
+        'It starts with a [free roof evaluation](#roof-check). We photo-document the roof, explain what we find in plain English and give you one clear next step and a written scope and price before any work begins, whether the roof needs a [roof repair](/roof-repair/), a [roof replacement](/roof-replacement/) or a plan for an [HOA or multi-family](/residential-roofing/hoa-multi-family/) building. For [commercial roofing](/commercial-roofing/), it starts with a roofer-led roof survey.',
+        'We work on [shingle](/residential-roofing/shingle-roofing/), [tile](/residential-roofing/tile-roofing/) and [flat](/residential-roofing/flat-roofing/) roofs, pull the permits, tarp the landscaping and sweep for nails every day. Installs carry our 10-year workmanship warranty (call for details).',
+      ],
+    },
+    neighborhoods: ['North San Jose', 'Downtown San Jose', 'Willow Glen', 'Rose Garden', 'Japantown', 'Berryessa'],
+    considerations: [
+      { title: 'A real rainy season', text: 'Most of the year’s rain falls between fall and spring, so worn flashing, cracked tiles and tired underlayment are worth finding before the first storms.' },
+      { title: 'Shingle, tile and flat roofs', text: 'Neighborhoods mix shingle and tile roofs on homes with flat and low-slope roofs on additions, apartment buildings and commercial buildings, and each needs its own approach.' },
+      { title: 'Sun on south-facing slopes', text: 'Long, dry summers wear on shingles, sealants and flat roof surfaces, especially on slopes that face the sun all day.' },
+    ],
+    faqs: [
+      { q: 'Where is your San Jose office?', a: 'Our San Jose office is at 1423 Forrestal Ave, San Jose, CA 95110. Call (408) 317-2095 to book a free roof evaluation or ask a question.' },
+      { q: 'What are your San Jose office hours?', a: 'Monday to Thursday 8:00 AM to 6:00 PM, Friday 8:00 AM to 5:00 PM and Sunday 10:00 AM to 3:00 PM. The office is closed on Saturday.' },
+      { q: 'What roofing work do you do in San Jose?', a: 'Roof repair, roof replacement and inspections for [shingle](/residential-roofing/shingle-roofing/), [tile](/residential-roofing/tile-roofing/) and [flat](/residential-roofing/flat-roofing/) roofs, plus [HOA and multi-family](/residential-roofing/hoa-multi-family/) and [commercial](/commercial-roofing/) buildings.' },
+      { q: 'How does a roofing project in San Jose start?', a: 'With a free roof evaluation. A roofer on our team looks at the roof, you get photos and a plain-English explanation of what we found, and a written scope and price before any work. For commercial buildings it starts with a roofer-led roof survey.' },
+      { q: 'Do you pull the roofing permit in San Jose?', a: 'Yes. We pull the permit and handle the inspections for the work we do.' },
+    ],
+    nearby: [],
+    final: { heading: 'A Clear Next Step for Your San Jose Roof', text: 'Start with a free roof evaluation from our San Jose office and get a written scope and price before any work.' },
+  },
 };
 
 // A city page's hero photo: its own `image`, else one of these in turn (by its place in LOCATIONS) until the city has its own. Shared by the

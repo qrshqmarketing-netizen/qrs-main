@@ -10,7 +10,7 @@ export const LOCATIONS_PAGE = {
   hero: {
     heading: 'Roofing Service Areas in Los Angeles & Orange County',
     intro:
-      `Our roofing service areas cover homes and businesses in ${ALL_PLACES.length} cities across Los Angeles County, Orange County and the Inland Empire (Riverside County and the southwest corner of San Bernardino County), plus the neighborhoods around them. Find your city below, or check your ZIP code on the map.`,
+      `Our roofing service areas cover homes and businesses in ${ALL_PLACES.length} cities across Los Angeles County, Orange County and the Inland Empire (Riverside County and the southwest corner of San Bernardino County), plus the neighborhoods around them, and San Jose in Santa Clara County from our office there. Find your city below, or check your ZIP code on the map.`,
   },
   faqs: [
     {

@@ -7,6 +7,8 @@ export const REGIONS = [
   { slug: 'orange-county', name: 'Orange County', short: 'Orange County', state: 'CA' },
   { slug: 'riverside-county', name: 'Riverside County', short: 'Riverside County', state: 'CA' },
   { slug: 'san-bernardino-county', name: 'San Bernardino County', short: 'San Bernardino County', state: 'CA' },
+  // The Bay Area, around our San Jose office (owner, November 5 2026)
+  { slug: 'santa-clara-county', name: 'Santa Clara County', short: 'Santa Clara County', state: 'CA' },
 ];
 
 
@@ -32,6 +34,8 @@ export const LOCATIONS = [
   // Neighborhood pages from the map plan (owner, November 3 2026), each with a finished project
   { city: 'Mid-Wilshire', slug: 'mid-wilshire', county: 'Los Angeles County', region: 'la-county', lat: 34.0618, lng: -118.3437 },
   { city: 'Westlake', slug: 'westlake', county: 'Los Angeles County', region: 'la-county', lat: 34.0587, lng: -118.2766 },
+  // Our San Jose office (owner, November 5 2026)
+  { city: 'San Jose', slug: 'san-jose', county: 'Santa Clara County', region: 'santa-clara-county', lat: 37.3382, lng: -121.8863 },
 ];
 
 // Places inside the outlined service area (data/serviceAreaOutline.js) that have no page of their own. They have a pin and a label on the service area map
@@ -121,7 +125,7 @@ export const ALSO_SERVING = REGIONS.map((r) => ({ name: r.name, region: r.slug, 
 export const SERVICE_RADIUS_MI = 15;
 
 // Counties listed as service areas for search engines
-export const SERVICE_COUNTIES = ['Los Angeles County, CA', 'Orange County, CA', 'Riverside County, CA', 'San Bernardino County, CA'];
+export const SERVICE_COUNTIES = ['Los Angeles County, CA', 'Orange County, CA', 'Riverside County, CA', 'San Bernardino County, CA', 'Santa Clara County, CA'];
 
 export const findCity = (slug) => LOCATIONS.find((l) => l.slug === slug);
 export const findRegion = (slug) => REGIONS.find((r) => r.slug === slug);

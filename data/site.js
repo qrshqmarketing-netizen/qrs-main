@@ -77,6 +77,24 @@ export const OFFICES = [
     geo: { latitude: 34.001813, longitude: -118.218411 },
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=2850+E+46th+St+Unit+B+Vernon+CA+90058',
   },
+  // San Jose office (owner, November 5 2026): our Bay Area office, with its own number and hours (Sunday open, Saturday closed, as the owner gave them).
+  // No Google listing link yet: `gbpUrl` is empty, so "Get directions" uses `mapUrl`, and the map is a plain Google Maps embed of the address. Add the
+  // listing's link and embed when it exists. Its page is /service-areas/santa-clara-county/san-jose/.
+  {
+    name: 'San Jose Office',
+    citySlug: 'san-jose',
+    phone: '(408) 317-2095', tel: 'tel:+14083172095', phoneIntl: '+1-408-317-2095',
+    address: { street: '1423 Forrestal Ave', city: 'San Jose', region: 'CA', postalCode: '95110', country: 'US' },
+    geo: { latitude: 37.360665, longitude: -121.913306 },
+    hours: [
+      { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday'], opens: '08:00', closes: '18:00' },
+      { days: ['Friday'], opens: '08:00', closes: '17:00' },
+      { days: ['Sunday'], opens: '10:00', closes: '15:00' },
+    ],
+    closed: 'Saturday',
+    mapEmbed: 'https://www.google.com/maps?q=1423+Forrestal+Ave,+San+Jose,+CA+95110&output=embed',
+    mapUrl: 'https://www.google.com/maps/search/?api=1&query=1423+Forrestal+Ave+San+Jose+CA+95110',
+  },
 ];
 
 export const PHONE = '(310) 340-1643';
