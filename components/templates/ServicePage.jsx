@@ -3,6 +3,7 @@ import ReviewMarquee from '@/components/sections/ReviewMarquee';
 import LatestArticles from '@/components/sections/LatestArticles';
 import FeatureBand from '@/components/sections/FeatureBand';
 import FinalCta from '@/components/sections/FinalCta';
+import TrustLogos from '@/components/sections/TrustLogos';
 import Hero from '@/components/sections/Hero';
 import Overview from '@/components/sections/Overview';
 import PartnerLogos from '@/components/sections/PartnerLogos';
@@ -107,9 +108,10 @@ function processPhoto(page) {
 // overview, e.g. one per roof type on /roof-inspection/ ([{ eyebrow, heading, paragraphs, points }]). hub: the service-first
 // hub this page belongs to ({ label, href }); the overview links back to it, so the hub is the page for the general search.
 // The new design (components/svc/, ServicePageSvc.jsx): released for SVC_DESIGN_PAGES first (October 30 2026), then for every service page
-// (SVC_DESIGN_EVERYWHERE, the same day). Set it to false to send the others back to this classic layout.
-const SVC_DESIGN_PAGES = new Set(['/roof-repair/emergency/', '/roof-financing/']);
-const SVC_DESIGN_EVERYWHERE = true;
+// (SVC_DESIGN_EVERYWHERE, the same day). Owner, November 5 2026 (step 1 of bringing the sub pages back to the studio look of the home page):
+// every service page uses this studio layout again; set SVC_DESIGN_EVERYWHERE to true, or list a page in SVC_DESIGN_PAGES, to show the other.
+const SVC_DESIGN_PAGES = new Set();
+const SVC_DESIGN_EVERYWHERE = false;
 
 export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], offer, actions, hub, finalCta = page.final || closingCta(page.keyword, offer) }) {
   if (SVC_DESIGN_EVERYWHERE || SVC_DESIGN_PAGES.has(crumbs.at(-1).href)) return ServicePageSvc({ page, crumbs, eyebrow, offer, actions, hub, finalCta });
@@ -139,6 +141,8 @@ export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], 
         {...(page.heroNotes && { annotations: page.heroNotes })}
         {...(actions && { actions })}
       />
+      {/* Google, BBB and Yelp logos under the proof strip, as on the studio home page */}
+      <TrustLogos />
       {/* Pages rewritten the home page's way have a `story` (ServiceStory: statement + "How we …" principles), which replaces the overview, the
           process steps and "Why choose QRS"; the rest keep those three (owner, October 16 2026: page by page) */}
       {page.story ? (
