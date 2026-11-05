@@ -6,7 +6,9 @@ import { useEffect, useRef } from 'react';
 // than the section and drifts up to about a sixth of the section's height against the scroll; transform only, so nothing shifts. Still for
 // reduced motion and in print (CSS), and nothing runs while the section is off screen. The frame's position is also set inline (and the section's
 // in HomeCrew), so the photo can never spill over the page if the stylesheet arrives late.
-export default function ParallaxBg({ children, className = '' }) {
+// overscan: how far (in % of the section's height) the frame reaches past the top and bottom; strength: the drift as a share of the section's
+// height (it must stay under 2 x overscan or a gap shows). The transform is set inline too, so it works even if the stylesheet is late.
+export default function ParallaxBg({ children, className = '', overscan = 18, strength = 0.32 }) {
   const ref = useRef(null);
   useEffect(() => {
     const el = ref.current;
@@ -19,7 +21,9 @@ export default function ParallaxBg({ children, className = '' }) {
       const r = section.getBoundingClientRect();
       const vh = window.innerHeight;
       const p = Math.min(1, Math.max(0, (vh - r.top) / (vh + r.height))); // 0 entering at the bottom, 1 leaving at the top
-      el.style.setProperty('--cy', `${((p - 0.5) * r.height * 0.32).toFixed(1)}px`);
+      const y = ((p - 0.5) * r.height * strength).toFixed(1);
+      el.style.setProperty('--cy', `${y}px`);
+      el.style.transform = `translate3d(0, ${y}px, 0)`;
     };
     const onScroll = () => {
       if (onScreen && !queued) {
@@ -39,9 +43,9 @@ export default function ParallaxBg({ children, className = '' }) {
       window.removeEventListener('scroll', onScroll);
       window.removeEventListener('resize', onScroll);
     };
-  }, []);
+  }, [strength]);
   return (
-    <div ref={ref} className={className} style={{ position: 'absolute', inset: '-18% 0', zIndex: -2 }} aria-hidden="true">
+    <div ref={ref} className={className} style={{ position: 'absolute', left: 0, right: 0, top: `-${overscan}%`, bottom: `-${overscan}%`, zIndex: -2, willChange: 'transform' }} aria-hidden="true">
       {children}
     </div>
   );

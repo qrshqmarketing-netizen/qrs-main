@@ -10,6 +10,7 @@ import { cityPath } from '@/data/locations';
 import { BUSINESS, COMPANY, OFFICES, PHONE, TEL } from '@/data/site';
 import { NUMBERS } from './AboutSections';
 import AbrValueTabs from './AbrValueTabs';
+import ParallaxBg from '@/components/home/ParallaxBg';
 import './aboutRemote.css';
 
 // The About page after the owner's reference remote.com/about (October 29 2026), in QRS colors: an inset hero card with a three-stop vertical
@@ -292,6 +293,30 @@ export function AbrJoin({ careers, partners }) {
             </li>
           ))}
         </ul>
+      </div>
+    </section>
+  );
+}
+
+// The crew photo as a full-width band near the bottom of the page (owner, November 5 2026): the photo moves slower than the page (ParallaxBg,
+// transform only, still for reduced motion and print) under a dark overlay, with one line of facts the site already states (no buttons, owner).
+export function AbrCrew() {
+  return (
+    // The size, layout and dark base are also set inline, so the band keeps its height and the photo stays inside it even if the stylesheet
+    // arrives late (a hot reload once collapsed it to a thin strip)
+    <section
+      className="abr-crew"
+      style={{ position: 'relative', overflow: 'hidden', isolation: 'isolate', display: 'flex', alignItems: 'center', minHeight: 'clamp(560px, 80svh, 760px)', padding: 'clamp(110px, 12vw, 180px) 0', background: '#0b1f33', color: '#fff' }}
+      aria-labelledby="abr-crew"
+    >
+      <ParallaxBg className="abr-crew-bg" overscan={12} strength={0.2}>
+        <Image src="/images/careers-hero-qrs-crew-group.webp" alt="" fill sizes="100vw" quality={75} loading="lazy" style={{ objectFit: 'cover', objectPosition: 'center 40%' }} />
+      </ParallaxBg>
+      {/* The dark overlay, inline too */}
+      <div aria-hidden="true" style={{ position: 'absolute', inset: 0, zIndex: -1, background: 'radial-gradient(ellipse 60% 55% at 50% 50%, rgba(8,22,40,.45), transparent 75%), linear-gradient(180deg, rgba(8,22,40,.62) 0%, rgba(8,22,40,.48) 45%, rgba(8,22,40,.82) 100%)' }} />
+      <div className="abr-wrap abr-crew-copy" style={{ position: 'relative', textAlign: 'center', maxWidth: 960, margin: '0 auto', width: '100%', padding: '0 24px', boxSizing: 'border-box' }}>
+        <h2 id="abr-crew" style={{ color: '#fff', margin: '0 auto 18px', fontSize: 'clamp(34px, 5vw, 64px)', lineHeight: 1.08, textAlign: 'center', textShadow: '0 2px 24px rgba(0,0,0,.35)' }}>12 crews. One way of working.</h2>
+        <p style={{ color: 'rgba(255,255,255,.92)', margin: '0 auto', maxWidth: 680, fontSize: 'clamp(17px, 1.5vw, 20px)', lineHeight: 1.6 }}>Dedicated crews for shingle, tile and flat roofs, with our senior production manager on quality control for every job. We speak English, Spanish and Tagalog.</p>
       </div>
     </section>
   );

@@ -166,3 +166,9 @@ main.abr .abr-band h2{color:var(--abr-ink);text-align:center!important;margin:0 
 main.abr .abr-keep .container{width:auto;max-width:calc(1680px + 2 * var(--abr-gut));padding-left:calc(var(--abr-gut) + var(--abr-inset));padding-right:calc(var(--abr-gut) + var(--abr-inset));box-sizing:border-box}
 
 @media print{.abr-film,.abr-collage{display:none}.abr-hero,.abr-band{background:none}}
+
+/* Crew band (owner, November 5 2026): the crew photo with parallax under a dark overlay, near the bottom of the About page */
+.abr-crew{position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:center;min-height:clamp(560px,80svh,760px);padding:clamp(110px,12vw,180px) 0;color:#fff;background:#0b1f33}
+.abr-crew-bg{position:absolute;left:0;right:0;z-index:-2}
+.abr-crew-bg img{object-fit:cover;object-position:center 40%}
+@media print,(prefers-reduced-motion:reduce){.abr-crew-bg{transform:none!important;top:0!important;bottom:0!important}}

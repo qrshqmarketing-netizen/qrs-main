@@ -1,7 +1,7 @@
 import Faq from '@/components/sections/Faq';
 import ReviewMarquee from '@/components/sections/ReviewMarquee';
 import FinalCta from '@/components/sections/FinalCta';
-import { AbrGiving, AbrHero, AbrJoin, AbrNumbers, AbrOffices, AbrProcess, AbrStory, AbrTeam, AbrValues, AbrWho } from '@/components/about/AboutRemote';
+import { AbrCrew, AbrGiving, AbrHero, AbrJoin, AbrNumbers, AbrOffices, AbrProcess, AbrStory, AbrTeam, AbrValues, AbrWho } from '@/components/about/AboutRemote';
 import RoofCheck from '@/components/sections/RoofCheck';
 import JsonLd from '@/components/ui/JsonLd';
 import { ABOUT_LINK, HOME } from '@/data/catalog';
@@ -27,6 +27,8 @@ export default function AboutPage() {
       <AbrNumbers />
       <AbrStory story={{ ...page.story, paragraphs: page.story.paragraphs.slice(0, 1) }} />
       <AbrValues mission={page.mission} />
+      {/* The crew photo as a parallax band, above "Our process" (owner, November 5 2026) */}
+      <AbrCrew />
       <AbrProcess process={page.process} />
       <AbrTeam team={page.team} />
       {/* Google reviews */}
