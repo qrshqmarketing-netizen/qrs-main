@@ -676,6 +676,9 @@ export const LOCATION_PAGES = {
   // (weather, roof types) are general Bay Area conditions, not claims about jobs we did here. Add a project and photos when the first job is done.
   'san-jose': {
     keyword: 'san jose roofing',
+    // A real QRS job photo (owner, November 5 2026: not the AI palm-tree stand-in) until we have one from San Jose
+    image: '/images/shingle-roof-care-multi-family.webp',
+    imagePosition: 'center 45%',
     metaTitle: 'San Jose Roofing & Roof Repair',
     metaDescription: 'San Jose roofing from our local office: roof repair, roof replacement and inspections for shingle, tile and flat roofs. Book a free roof evaluation.',
     blurb: 'Roof repair, replacement and roofer-led evaluations for homes and businesses in San Jose, from our North San Jose office.',

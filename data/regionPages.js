@@ -128,6 +128,9 @@ export const REGION_PAGES = {
   // general terms until there is work behind it.
   'santa-clara-county': {
     keyword: 'santa clara county roofing',
+    // A real QRS job photo (owner, November 5 2026: not the AI palm-tree stand-in) until we have one from the county
+    image: '/images/home-services-residential-shingle-drone-view.webp',
+    imageAlt: 'Aerial view of a home with a new light gray shingle roof',
     metaTitle: 'Santa Clara County Roofing Services',
     metaDescription: 'Santa Clara County roofing from our San Jose office: roof repair, replacement and inspections for shingle, tile and flat roofs. Book a free roof evaluation.',
     hero: {
