@@ -11,7 +11,9 @@ export default function HeroVideo({ sources, className = '' }) {
 
   useEffect(() => {
     const video = ref.current;
-    if (!video || navigator.connection?.saveData || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined;
+    // Phones and tablets below 901px keep the photo (November 5 2026, for speed: the video is 3.7 MB, and on a phone it became the page's largest
+    // paint only once it started playing, about 6.5 seconds in on a mid-range phone)
+    if (!video || navigator.connection?.saveData || window.matchMedia('(prefers-reduced-motion: reduce)').matches || !window.matchMedia('(min-width: 901px)').matches) return undefined;
     const onPlaying = () => video.classList.add('on');
     const start = () => {
       for (const { src, type } of sources) {

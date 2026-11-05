@@ -169,7 +169,8 @@ export default function StudioMotion() {
       if (cancelled) return;
       if (LINE_REVEALS && 'IntersectionObserver' in window) stops.push(startLineReveals());
       if (IMAGE_PARALLAX && 'IntersectionObserver' in window) stops.push(startParallax());
-      if (SMOOTH_SCROLL) startSmoothScroll().then((stop) => (cancelled ? stop() : stops.push(stop)));
+      // Smooth scrolling only with a mouse or trackpad (November 5 2026): it only ever smoothed wheel scrolling, but on phones its frame loop still ran
+      if (SMOOTH_SCROLL && window.matchMedia('(hover: hover) and (pointer: fine)').matches) startSmoothScroll().then((stop) => (cancelled ? stop() : stops.push(stop)));
     };
     // After the page has loaded and the browser is idle (the line reveals need the final layout)
     const later = () => ('requestIdleCallback' in window ? window.requestIdleCallback(run, { timeout: 2500 }) : setTimeout(run, 600));

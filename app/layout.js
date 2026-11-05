@@ -147,7 +147,9 @@ export default async function RootLayout({ children }) {
     if(${JSON.stringify(Boolean(callrailSwap))}&&ok('analytics')&&!done.cr){done.cr=1;var s=document.createElement('script');s.async=1;s.src=${JSON.stringify(callrailSwap || '')};document.head.appendChild(s);}
     if(ok('clarity')&&!done.cl){done.cl=1;(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","${CLARITY_ID}");}
   };
-  function later(){(window.requestIdleCallback||setTimeout)(window.__qrsLoadTracking);}
+  /* The scripts wait for the visitor's first scroll, tap, click or key, or 4 seconds after the page has loaded, whichever comes first (November 5 2026, for speed:
+     Google Analytics, the Google Ads tag and Clarity used to start right after load, while the page was still getting ready on a phone). Events queued before then are sent when gtag.js arrives. */
+  function later(){var go=function(){['scroll','pointerdown','keydown','touchstart'].forEach(function(e){removeEventListener(e,go,true)});clearTimeout(t);(window.requestIdleCallback||setTimeout)(window.__qrsLoadTracking);},t=setTimeout(go,4000);['scroll','pointerdown','keydown','touchstart'].forEach(function(e){addEventListener(e,go,{capture:true,passive:true,once:true})});}
   if(document.readyState==='complete')later();else addEventListener('load',later,{once:true});
 })();`}
             </Script>

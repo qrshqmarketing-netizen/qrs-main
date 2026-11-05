@@ -1,7 +1,7 @@
 import Mark from '@/components/ui/Mark';
 import SiteLink from '@/components/ui/SiteLink';
 import { ArrowRight } from '@/components/ui/icons';
-import WordReveal from './WordReveal';
+import Rich from '@/components/ui/Rich';
 import { th } from '@/lib/langHome';
 
 // The belief statement (owner, October 15 2026, after the story approach of maben.com.au: one confident first-person statement and one "learn more"
@@ -21,8 +21,15 @@ export default function StudioIntro({ lang = 'en' }) {
         <p className="st-label">{T('Who we are')}</p>
         <div>
           <p className="st-lead"><Mark text={T(LEAD)} /></p>
-          {/* Bigger, and each word lights up as it scrolls through (GSAP, WordReveal; owner, October 16 2026) */}
-          <WordReveal className="st-cols st-intro-reveal" paragraphs={MORE.map(T)} />
+          {/* Bigger paragraph (owner, October 16 2026). The word-by-word GSAP reveal (WordReveal.jsx, kept in the code) was turned off for speed
+              on November 5 2026: it loaded GSAP and ScrollTrigger, whose frame loop ran for as long as the page was open */}
+          <div className="st-cols st-intro-reveal">
+            {MORE.map(T).map((text) => (
+              <p key={text}>
+                <Rich text={text} />
+              </p>
+            ))}
+          </div>
           <SiteLink className="st-link" href="/about-us/">
             {T('More about QRS')} <ArrowRight />
           </SiteLink>
