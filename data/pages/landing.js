@@ -1,4 +1,4 @@
-// Paid-ad landing pages (Facebook and Google Ads; owner, October 19 2026): /lp/residential/, /lp/commercial/ and the El Niño page
+// Paid-ad landing pages (Facebook and Google Ads; owner, October 19 2026): /lp/residential/, /lp/commercial/, /lp/emergency/ and the El Niño page
 // (/el-nino-roof-check/), all on one template (components/landing/LandingPage.jsx). Each page is a hero with the request form in it, then proof,
 // the three steps, reviews, recent work, a few FAQs and a closing call. No menu, chat, quote tab or pop-up on these pages (lib/landing.js).
 //
@@ -100,6 +100,49 @@ export const LANDING_PAGES = {
     faqs: { from: '/commercial-roofing/', count: 5 },
     reviewsHeading: 'What clients say after the job',
     closing: { heading: 'Get the facts about your roof.', text: 'A roofer-led survey, a written scope and price, and work planned around your building.' },
+  },
+
+  // Emergency roof repair and tarping (owner, November 5 2026): for emergency, storm damage, leak and tarp ads. Calling comes first (`callFirst`:
+  // a plum call button in the hero and first in the closing call). Facts from /roof-repair/emergency/ only: emergency calls taken on weekdays and
+  // weekends outside office hours, a roofer assesses and photographs the damage, a tarp or other temporary protection when it's needed, then a
+  // permanent repair with a written scope and price, photos you can share with your insurance company. No response time, no price, never "free".
+  emergency: {
+    path: '/lp/emergency/',
+    name: 'emergency',
+    callFirst: true,
+    metaTitle: 'Emergency Roof Repair & Roof Tarping in Los Angeles',
+    metaDescription: 'Emergency roof repair and roof tarping in Los Angeles and Orange County: a roofer assesses the damage, tarps it when needed and gives you a written price.',
+    image: '/images/emergency-roof-repair-hero.webp',
+    imageAlt: 'A roofer reviewing storm damage with homeowners beside a blue roof tarp',
+    eyebrow: 'Emergency roof repair · Los Angeles & Orange County',
+    heading: 'Roof leaking? Call now. We tarp it and fix it.',
+    sub: 'A roofer assesses and photographs the damage and puts a tarp in place when it’s needed to stop more water getting in. Then the permanent repair, priced in writing first.',
+    service: 'Roof repair',
+    variants: [
+      { match: /tarp|cover|temporar/, heading: 'Emergency roof tarping, then a proper repair.', sub: 'When the permanent repair has to wait, we cover the damaged area with a tarp to limit further water damage. Then a roofer gives you a written scope and price for the real fix.', tag: 'tarp' },
+      { match: /storm|wind|hail|tree|branch|santa ana/, heading: 'Storm damage to your roof? Call now.', sub: 'A roofer inspects the damaged area and the roof around it, photographs everything, adds a tarp when it’s needed and gives you a written price for the permanent repair.', tag: 'storm' },
+      { match: /leak|drip|water|ceiling/, heading: 'Water coming through the ceiling? Call now.', sub: 'Move belongings away from the leak and call us. A roofer traces where the water is getting in, tarps it when needed and gives you a written price for the repair.', tag: 'leak' },
+      { match: /insur|claim|adjuster/, heading: 'Storm damage and an insurance claim? Start with photos.', sub: 'A roofer documents the damage with photos and a written scope and price you can share with your insurance company, and tarps the roof when it’s needed.', tag: 'insurance' },
+    ],
+    points: ['Emergency calls after hours & weekends', 'Tarps when needed to stop more damage', 'Photos you can share with your insurance', license],
+    proof: [reviews, 'Licensed, bonded & insured', 'Family-owned, local crews'],
+    form: { title: 'Request emergency roof help', text: 'Can’t call right now? Leave your details and a roofer will call you back.', button: 'Get Emergency Help', fine: 'If water is coming in now, calling is fastest.' },
+    services: [
+      { title: 'Emergency roof repair', text: 'A roofer assesses the damage, follows the water’s path and photographs everything, including what you can’t see from the ground.' },
+      { title: 'Roof tarping', text: 'When the permanent repair has to wait, a tarp or other temporary protection over the damaged area limits further water damage.' },
+      { title: 'Storm & wind damage', text: 'Missing, lifted or broken shingles and tiles, torn flashings, damaged roof edges and branches on the roof.' },
+      { title: 'Sudden roof leaks', text: 'Split pipe boots, flashings that let go and leaf-packed valleys, traced to the source and fixed.' },
+      { title: 'Insurance-ready photos', text: 'A written scope and price with the photos, ready to share with your insurance company.' },
+      { title: 'The permanent repair', text: 'Priced in writing first, finished with a nail sweep, a tidy clean-up and photos of the completed work.' },
+    ],
+    steps: [
+      { title: 'You call. A roofer comes out.', text: 'Tell us what happened and what you’re seeing inside and out. Our field techs take emergency calls on weekdays and weekends outside regular office hours.' },
+      { title: 'Stop the water now.', text: 'The roofer assesses and photographs the damage and, when the permanent repair has to wait, covers the damaged area with a tarp.' },
+      { title: 'Fix it properly next.', text: 'You get a written scope and price with the photos before the permanent repair starts, ready to share with your insurance company.' },
+    ],
+    faqs: { from: '/roof-repair/emergency/', questions: ['Can you come out after hours', 'Do you tarp roofs', 'Should I climb up', 'Do you work with my insurance', 'What if a leak starts'] },
+    reviewsHeading: 'What homeowners say after the job',
+    closing: { heading: 'Water coming in? Don’t wait.', text: 'Stay off the roof, move belongings away from the leak and call us. A roofer assesses the damage and tarps it when it’s needed.' },
   },
 
   'el-nino': {

@@ -3,10 +3,10 @@ import LandingPage from '@/components/landing/LandingPage';
 import { LANDING_PAGES, pickVariant } from '@/data/pages/landing';
 import { pageMetadata } from '@/lib/pages';
 
-// /lp/residential/ and /lp/commercial/: the paid-ad landing pages (data/pages/landing.js, components/landing/LandingPage.jsx). The headline and the
+// /lp/residential/, /lp/commercial/ and /lp/emergency/: the paid-ad landing pages (data/pages/landing.js, components/landing/LandingPage.jsx). The headline and the
 // form's service follow the ad's utm tags (pickVariant), read on the server so the right headline is in the first paint. Out of search results,
 // the sitemap and the AI files.
-const NAMES = ['residential', 'commercial'];
+const NAMES = ['residential', 'commercial', 'emergency'];
 
 export const dynamicParams = false;
 export const generateStaticParams = () => NAMES.map((name) => ({ name }));

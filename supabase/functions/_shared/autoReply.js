@@ -62,7 +62,7 @@ export function autoReplyContent(lead) {
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f5f8fb"><tr><td align="center" style="padding:24px 12px">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;background:#ffffff;border:1px solid #e4eaf0;border-radius:6px">
 <tr><td style="background:#062d57;padding:18px 28px;border-radius:6px 6px 0 0">
-<img src="${SITE.siteUrl}/images/logo/qrs-logo-email.png" width="220" height="64" alt="${escapeHtml(SITE.name)}" style="display:block;border:0;outline:none;width:220px;height:auto;font:bold 18px Arial,Helvetica,sans-serif;color:#ffffff">
+<img src="${SITE.siteUrl}/images/logo/qrs-logo-email-v2.png" width="220" height="62" alt="${escapeHtml(SITE.name)}" style="display:block;border:0;outline:none;width:220px;height:auto;font:bold 18px Arial,Helvetica,sans-serif;color:#ffffff">
 </td></tr>
 <tr><td style="padding:28px;${body}">
 <p style="margin:0 0 14px">${escapeHtml(hello)}</p>

@@ -32,7 +32,7 @@ export default function Footer() {
         <HideOnStart>
           <div className="ft-grid">
             <div className="ft-col ft-brand">
-              <BrandLogo variant="dark" tagline />
+              <BrandLogo variant="dark" />
               <p className="ft-line"><T>Roofs built right, from the deck up.</T></p>
               <a className="ft-phone" href={TEL}>{PHONE}</a>
               <p className="ft-hours"><T>{hoursText(BUSINESS.hours)}</T>.</p>

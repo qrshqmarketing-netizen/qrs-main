@@ -1,4 +1,5 @@
-import BbbBadge from '@/components/ui/BbbBadge';
+import ProofBar from '@/components/sections/ProofBar';
+import TrustLogos from '@/components/sections/TrustLogos';
 import Image from 'next/image';
 import Faq from '@/components/sections/Faq';
 import ReviewMarquee from '@/components/sections/ReviewMarquee';
@@ -28,7 +29,10 @@ const plain = (text) => String(text).replace(/\[([^\]]+)\]\([^)]+\)/g, '$1'); //
 function faqsFor(spec) {
   if (spec.from === 'home') return spec.questions.map((q) => FAQS.find((f) => f.q.startsWith(q))).filter(Boolean).map((f) => ({ q: f.q, a: plain(f.a) }));
   const page = PAGE_INDEX.find((p) => p.path === spec.from);
-  return (page?.faqs || []).slice(0, spec.count || 5).map((f) => ({ q: f.q, a: plain(f.a) }));
+  const list = page?.faqs || [];
+  // `questions`: pick by the start of each question, in that order; else the first `count`
+  const picked = spec.questions ? spec.questions.map((q) => list.find((f) => f.q.startsWith(q))).filter(Boolean) : list.slice(0, spec.count || 5);
+  return picked.map((f) => ({ q: f.q, a: plain(f.a) }));
 }
 
 export default function LandingPage({ page, variant }) {
@@ -69,9 +73,16 @@ export default function LandingPage({ page, variant }) {
                 <span key={p}>{p}</span>
               ))}
             </p>
-            <a className="lp-call" href={TEL}>
-              <PhoneIcon /> Prefer to talk? Call {PHONE}
-            </a>
+            {/* Emergency (`callFirst`): a plum call button, since calling is the fastest way to get help */}
+            {page.callFirst ? (
+              <a className="btn btn-plum lp-call-btn" href={TEL}>
+                <PhoneIcon /> Call now: {PHONE}
+              </a>
+            ) : (
+              <a className="lp-call" href={TEL}>
+                <PhoneIcon /> Prefer to talk? Call {PHONE}
+              </a>
+            )}
           </div>
           <div className="lp-hero-form" id="estimate">
             <QuickLeadForm
@@ -90,22 +101,17 @@ export default function LandingPage({ page, variant }) {
         </div>
       </section>
 
-      <section className="lp-strip" aria-label="Why choose QRS">
-        <ul>
-          {page.points.map((p) => (
-            <li key={p}>{p}</li>
-          ))}
-        </ul>
-      </section>
+      {/* The scrolling proof marquee and the Google, BBB and Yelp logos under the hero, as on the site's other pages (owner, November 5 2026;
+          they replace the static check-point strip) */}
+      <ProofBar strip />
+      <TrustLogos />
 
-      {/* The manufacturer certification badges from the Credentials page (data/pages/credentials.js), right under the proof strip */}
+      {/* The manufacturer certification badges from the Credentials page (data/pages/credentials.js), under the Google, BBB and Yelp logos (the BBB
+          seal is in that row, so it isn't repeated here) */}
       {CREDENTIALS_PUBLIC && badges.length > 0 && (
         <section className="lp-badges" aria-label="Manufacturer certifications">
           <div className="lp-wrap">
             <ul>
-              <li className="lp-bbb">
-                <BbbBadge width={180} />
-              </li>
               {badges.map((m) => (
                 <li key={m.id}>
                   <Image src={m.logo} alt={`${m.name}${m.program ? ` ${m.program}` : ''} logo`} width={m.width || 400} height={m.height || 200} sizes="180px" />
@@ -137,6 +143,23 @@ export default function LandingPage({ page, variant }) {
         </section>
       )}
 
+      {/* Recent work right after "What we do" (owner, November 5 2026) */}
+      <section className="lp-work" aria-labelledby="lp-work-title">
+        <div className="lp-wrap">
+          <h2 id="lp-work-title">Recent work</h2>
+          <ul>
+            {work.map((w) => (
+              <li key={w.src}>
+                <div className="lp-work-photo">
+                  <Image src={w.src} alt={w.alt || ''} fill sizes="(min-width: 901px) 33vw, 100vw" quality={60} />
+                </div>
+                <p>{w.label}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       <section className="lp-steps" aria-labelledby="lp-steps-title">
         <div className="lp-wrap">
           <h2 id="lp-steps-title">How it works</h2>
@@ -159,22 +182,6 @@ export default function LandingPage({ page, variant }) {
 
       <ReviewMarquee heading={page.reviewsHeading} text={`${page.proof[0]} from the people we roof for.`} />
 
-      <section className="lp-work" aria-labelledby="lp-work-title">
-        <div className="lp-wrap">
-          <h2 id="lp-work-title">Recent work</h2>
-          <ul>
-            {work.map((w) => (
-              <li key={w.src}>
-                <div className="lp-work-photo">
-                  <Image src={w.src} alt={w.alt || ''} fill sizes="(min-width: 901px) 33vw, 100vw" quality={60} />
-                </div>
-                <p>{w.label}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
       {faqs.length > 0 && <Faq id="lp-faq" heading="Questions, answered" sub="" faqs={faqs} cta={false} />}
 
       <section className="lp-final" aria-labelledby="lp-final-title">
@@ -182,12 +189,25 @@ export default function LandingPage({ page, variant }) {
           <h2 id="lp-final-title">{page.closing.heading}</h2>
           <p>{page.closing.text}</p>
           <div className="lp-final-actions">
-            <a className="btn btn-gold" href="#estimate">
-              {page.form.button} <span className="arrow">→</span>
-            </a>
-            <a className="btn btn-line" href={TEL}>
-              <PhoneIcon /> Call {PHONE}
-            </a>
+            {page.callFirst ? (
+              <>
+                <a className="btn btn-plum" href={TEL}>
+                  <PhoneIcon /> Call now: {PHONE}
+                </a>
+                <a className="btn btn-line" href="#estimate">
+                  {page.form.button} <span className="arrow">→</span>
+                </a>
+              </>
+            ) : (
+              <>
+                <a className="btn btn-gold" href="#estimate">
+                  {page.form.button} <span className="arrow">→</span>
+                </a>
+                <a className="btn btn-line" href={TEL}>
+                  <PhoneIcon /> Call {PHONE}
+                </a>
+              </>
+            )}
           </div>
         </div>
       </section>

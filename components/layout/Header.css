@@ -51,7 +51,9 @@ body:has(main :is(.hero,.st-hero,.promo-home,.pd-hero)) .site-header:not([data-s
 .is-start .hd-phone span{display:none}
 /* Ad landing pages: the phone number shows in full (a call is a conversion too) */
 .is-lp .hd-phone{width:auto;padding:0 16px;gap:8px}
-.is-lp .hd-phone span{display:inline;font-size:13px;letter-spacing:.04em}
+.is-lp .hd-phone span{display:none;font-size:13px;letter-spacing:.04em}
+/* The number beside the phone icon from 440px (owner, November 5 2026: at 390px it pushed the bar 12px past the screen) */
+@media (min-width:440px){.is-lp .hd-phone span{display:inline}}
 
 /* The panel: drops down from the bar, cut open from the top */
 .hd-panel{position:absolute;top:var(--hd-h);right:0;left:0;z-index:1;max-height:calc(100dvh - var(--hd-h));overflow-y:auto;overscroll-behavior:contain;
@@ -211,6 +213,9 @@ body:has(main :is(.hero,.pd-hero,.hg-hero,.promo-home,.sv-hero)) .site-header:no
   --hd-ink:#fff;--hd-line:rgba(255,255,255,.22);background:transparent}
 body:has(main :is(.hero,.pd-hero,.hg-hero,.promo-home,.sv-hero)) .site-header:not(.is-lp):not(.is-start):not([data-scrolled]):not(.is-open) .hd-bar{background:transparent!important;border-bottom-color:transparent}
 body:has(main :is(.hero,.pd-hero,.hg-hero,.promo-home,.sv-hero)) .site-header:not(.is-lp):not(.is-start):not([data-scrolled]):not(.is-open) :is(.brand-word,.brand-sub){color:#fff}
+/* The official logo's white-text version while the bar is see-through over a photo hero */
+body:has(main :is(.hero,.pd-hero,.hg-hero,.promo-home,.sv-hero)) .site-header:not(.is-lp):not(.is-start):not([data-scrolled]):not(.is-open) .brand-img-light{display:none}
+body:has(main :is(.hero,.pd-hero,.hg-hero,.promo-home,.sv-hero)) .site-header:not(.is-lp):not(.is-start):not([data-scrolled]):not(.is-open) .brand-img-dark{display:block}
 body:has(main :is(.hero,.pd-hero,.hg-hero,.promo-home,.sv-hero)) .site-header:not(.is-lp):not(.is-start):not([data-scrolled]):not(.is-open) .hd-link:before{
   background-image:linear-gradient(115deg,var(--gold) 0%,var(--gold-2) 38%,#fffaf0 50%,var(--gold-2) 62%,var(--gold) 100%)}
 @media (min-width:1240px){

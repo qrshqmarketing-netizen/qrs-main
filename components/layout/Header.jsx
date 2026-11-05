@@ -119,7 +119,7 @@ export default function Header() {
       <div className="hd-backdrop" onClick={close} aria-hidden="true"></div>
       <div className="hd-bar">
         <div className="hd-brand">
-          <BrandLogo variant="adaptive" preload tagline />
+          <BrandLogo variant="adaptive" preload />
         </div>
         {!requestPage && (
           <nav className="hd-links" aria-label={T('Main')} ref={bar}>

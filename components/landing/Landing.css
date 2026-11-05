@@ -1,4 +1,4 @@
-/* ---------- Paid-ad landing pages (LandingPage.jsx; /lp/residential/, /lp/commercial/, /el-nino-roof-check/) ----------
+/* ---------- Paid-ad landing pages (LandingPage.jsx; /lp/residential/, /lp/commercial/, /lp/emergency/, /el-nino-roof-check/) ----------
    Phones first: the headline, then the form right away, then the points and proof. From 901px: copy at the left, the form card at the right,
    both over the photo under a dark shade. Below the hero the page is light and calm, every section ends in a way back to the form. */
 .lp{--lp-gut:20px;background:var(--paper)}
@@ -189,3 +189,8 @@ body.studio-site main.lp .rmq-label,body.studio-site main.lp .rmq-sub{justify-co
 /* The BBB seal leads the badge row (it is wider than the manufacturer logos) */
 .lp-badges li.lp-bbb{width:180px}
 .lp-badges .bbb-badge{line-height:0}
+
+/* Emergency landing page (owner, November 5 2026): the hero's call button (`callFirst`) */
+.lp-call-btn{order:3;justify-self:start;display:inline-flex;align-items:center;gap:10px;font-size:17px;padding:14px 26px;white-space:nowrap}
+.lp-call-btn svg{width:20px;height:20px}
+.lp-final-actions .btn-plum svg{width:18px;height:18px}
