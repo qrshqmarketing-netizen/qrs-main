@@ -52,8 +52,8 @@ export const ABOUT_PAGE = {
     heading: 'Our Team',
     intro: 'Real people behind every roof, from the office to the ridge line. Names and photos are on the way — here’s who does the work today.',
     items: [
-      { title: 'Tony Goldberg', photo: '/images/team/tony-goldberg-profile.webp', text: 'Co-founder and CEO. Tony co-founded QRS with Adva; his own roofing story is above.' },
-      { title: 'Adva Goldberg', photo: '/images/team/adva-goldberg-profile.webp', text: 'Co-founder and President. Adva co-founded QRS with Tony, and QRS is a family-owned, woman-owned business.' },
+      { title: 'Tony Goldberg', text: 'Co-founder and CEO. Tony co-founded QRS with Adva; his own roofing story is above.' },
+      { title: 'Adva Goldberg', text: 'Co-founder and President. Adva co-founded QRS with Tony, and QRS is a family-owned, woman-owned business.' },
       { title: 'Field Inspectors & Lead Roofers', text: 'Your free drone roof evaluation and every $199 Roof Check (the visit where we seal and maintain the roof) are done by a field inspector, lead roofer or estimator on our own team — never an outside crew.' },
       { title: 'Senior Production Manager', text: '30 years overseeing roofing projects, managing our crews and quality control on every job.' },
       { title: '12 Crews, Every Roof Type', text: 'Dedicated crews for shingle, tile and flat roofing, with vetted partner crews brought in only during overflow.' },

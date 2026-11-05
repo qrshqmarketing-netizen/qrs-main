@@ -62,7 +62,8 @@ body{
   color:var(--ink);background:var(--paper);
   -webkit-font-smoothing:antialiased;
 }
-body.menu-open{overflow:hidden}
+/* The scroll lock goes on <html> (the viewport), not <body>: overflow on <body> makes it a scroll box and the sticky header then scrolls away with the page, so the menu opened off screen when the page was scrolled */
+html:has(body.menu-open){overflow:hidden}
 a{color:inherit;text-decoration:none}
 button,input,select,textarea{font:inherit}
 button{cursor:pointer}
