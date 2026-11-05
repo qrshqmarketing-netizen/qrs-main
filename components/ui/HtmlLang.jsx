@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname } from '@/lib/sitePath';
 import { LANGS, langOf } from '@/lib/lang';
 
 // Sets <html lang> to the page's language (es-MX on the Spanish home page at /es/, en otherwise). The root layout is shared by every page, so

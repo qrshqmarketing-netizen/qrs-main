@@ -1,7 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
+import { usePathname } from '@/lib/sitePath';
 import { useEffect, useState } from 'react';
 import { LEAD_STATUSES } from '@/lib/leadStatuses';
 import AdminIcon from './AdminIcons';

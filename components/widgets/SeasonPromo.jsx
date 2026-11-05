@@ -1,7 +1,8 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { usePathname, useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
+import { usePathname } from '@/lib/sitePath';
 import { SEASON_PROMO as promo, promoLandingHref } from '@/data/promo';
 import { local, session } from '@/lib/storage';
 import { afterSplash } from '@/lib/splash';

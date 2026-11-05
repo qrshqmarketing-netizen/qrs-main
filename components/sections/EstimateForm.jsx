@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname } from '@/lib/sitePath';
 import { FOUND_US_OPTIONS, ROOF_TYPES, SERVICE_OPTIONS } from '@/data/estimateOptions';
 import { PHONE, TEL } from '@/data/site';
 import { currentAttribution } from '@/lib/attribution';

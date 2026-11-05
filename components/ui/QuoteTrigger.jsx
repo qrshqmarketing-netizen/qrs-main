@@ -1,6 +1,6 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
+import { usePathname } from '@/lib/sitePath';
 import { INSTANT_QUOTE_ENABLED, QUOTE_EXCLUDE } from '@/data/instantQuote';
 import './QuoteTrigger.css';
 

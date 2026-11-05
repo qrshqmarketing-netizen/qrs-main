@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname } from '@/lib/sitePath';
 import ArrowButton from '@/components/ui/ArrowButton';
 import { GoogleLogo, Star } from '@/components/ui/icons';
 import { GOOGLE_REVIEWS } from '@/data/reviews';

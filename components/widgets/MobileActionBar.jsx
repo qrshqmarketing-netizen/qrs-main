@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname } from '@/lib/sitePath';
 import { PhoneIcon } from '@/components/ui/icons';
 import SiteLink from '@/components/ui/SiteLink';
 import useLang from '@/components/ui/useLang';

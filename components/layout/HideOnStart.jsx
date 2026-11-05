@@ -1,6 +1,6 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
+import { usePathname } from '@/lib/sitePath';
 import { isFocusPath } from '@/lib/landing';
 
 // Leaves out what's inside on the focus pages (lib/landing.js: the /start/ request page and the ad landing pages), which keep only the logo,

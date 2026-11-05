@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname } from '@/lib/sitePath';
 
 // CallRail's swap.js (loaded by the consent-gated tracking script in app/layout.js) swaps the phone number on the page it loads on. The site
 // changes pages without a full reload, so after each page change this asks it to swap the new page's numbers too (CallTrk.swap(), CallRail's

@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname } from '@/lib/sitePath';
 
 // Two scroll-linked touches adapted from fluid.glass, re-bound on every page (mounted in app/layout.js):
 // 1. The page's hero (sub-page Hero, project cover, the home El Niño hero): as it scrolls away, its photo dims and the copy drifts down a little

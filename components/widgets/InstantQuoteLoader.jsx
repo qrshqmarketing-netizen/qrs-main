@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
-import { usePathname } from 'next/navigation';
+import { usePathname } from '@/lib/sitePath';
 import { isLandingPath } from '@/lib/landing';
 import { langOf } from '@/lib/lang';
 

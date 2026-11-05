@@ -17,10 +17,19 @@ export default function ProofMarquee({ points, label }) {
   useEffect(() => {
     const el = view.current;
     if (!el) return undefined;
+    const track = el.firstElementChild;
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const unit = () => el.scrollWidth / COPIES; // the width of one copy
-    let pos = 1, set = 1, last = 0, raf = 0, resume = 0, hover = false, focus = false, onScreen = true;
-    el.scrollLeft = 1;
+    // The drift moves the track with a transform (November 5 2026), not the strip's scroll position: setting scrollLeft 60 times a second fired
+    // a scroll event every frame, and the session-recording script (Clarity) inspected each one, which kept a phone's processor busy all the
+    // time. The visitor's own scrolling still moves scrollLeft; the two add up, and the copies repeat, so it looks the same.
+    // The width of one copy, measured once and again only when its size changes (reading it every frame forced a layout each time)
+    let width = track.scrollWidth / COPIES;
+    const unit = () => width;
+    const sizer = 'ResizeObserver' in window ? new ResizeObserver(() => { width = track.scrollWidth / COPIES; }) : null;
+    sizer?.observe(track);
+    let pos = 0, last = 0, raf = 0, resume = 0, hover = false, focus = false, onScreen = true;
+    let own = true; // our own first scroll below isn't the visitor's
+    el.scrollLeft = width; // start a copy in, so the visitor can scroll either way
 
     const paused = () => hover || focus || !onScreen || document.hidden || performance.now() < resume;
     const tick = (now) => {
@@ -30,18 +39,19 @@ export default function ProofMarquee({ points, label }) {
       if (reduced || paused() || unit() < 50) return;
       pos += SPEED * dt;
       if (pos >= unit()) pos -= unit();
-      set = pos;
-      el.scrollLeft = pos;
+      track.style.transform = `translate3d(${-pos.toFixed(1)}px,0,0)`;
     };
 
-    // A scroll we didn't make: the visitor's. Carry on from there, wrap at either end so it never runs out, and wait a moment.
+    // The visitor's scroll: wait a moment, and keep the position between one and two copies in so it never runs out at either end
     const onScroll = () => {
-      if (Math.abs(el.scrollLeft - set) <= 2) return;
+      if (own) {
+        own = false;
+        return;
+      }
       resume = performance.now() + RESUME_MS;
       const u = unit();
-      if (el.scrollLeft >= u * (COPIES - 1)) el.scrollLeft -= u;
+      if (el.scrollLeft >= u * 2) el.scrollLeft -= u;
       else if (el.scrollLeft <= 0) el.scrollLeft += u;
-      pos = set = el.scrollLeft;
     };
     const touched = () => {
       resume = performance.now() + RESUME_MS;
@@ -73,6 +83,7 @@ export default function ProofMarquee({ points, label }) {
     return () => {
       cancelAnimationFrame(raf);
       watcher?.disconnect();
+      sizer?.disconnect();
       el.removeEventListener('scroll', onScroll);
       el.removeEventListener('pointerdown', touched);
       el.removeEventListener('wheel', touched);

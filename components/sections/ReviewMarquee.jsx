@@ -2,7 +2,7 @@
 
 import useLang from '@/components/ui/useLang';
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname } from '@/lib/sitePath';
 import { GoogleLogo, Star } from '@/components/ui/icons';
 import { GOOGLE_REVIEWS } from '@/data/reviews';
 import { SHOW_REVIEW_EVENT } from '@/lib/events';

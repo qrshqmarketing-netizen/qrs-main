@@ -1,6 +1,6 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
+import { usePathname } from '@/lib/sitePath';
 import { useEffect } from 'react';
 
 // Every page: the hand-drawn underlines and circles below the first screen draw themselves as they scroll into view (a hero's underline draws on load by

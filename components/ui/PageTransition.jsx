@@ -1,6 +1,7 @@
 'use client';
 
-import { usePathname, useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
+import { usePathname } from '@/lib/sitePath';
 import { useEffect, useRef } from 'react';
 
 // Page transitions, adapted from exoape.com (the owner's reference). In a browser with the View Transitions API (Chrome, Edge, Safari 18, recent

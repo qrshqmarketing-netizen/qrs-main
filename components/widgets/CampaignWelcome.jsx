@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname } from '@/lib/sitePath';
 import SiteLink from '@/components/ui/SiteLink';
 import { CloseIcon, PhoneIcon } from '@/components/ui/icons';
 import { GBP_PROFILES, SHOW_WELCOME_CARD } from '@/data/campaigns';

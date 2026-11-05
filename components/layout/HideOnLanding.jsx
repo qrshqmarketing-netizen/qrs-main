@@ -1,6 +1,6 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
+import { usePathname } from '@/lib/sitePath';
 import { isLandingPath } from '@/lib/landing';
 
 // Leaves out what's inside on the ad landing pages (lib/landing.js), so nothing there pulls a visitor away from the form: the chat bubble

@@ -1,7 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname } from '@/lib/sitePath';
 import StartStepper from '@/components/sections/StartStepper';
 import { START_PATH } from '@/data/start';
 import { PHONE, TEL } from '@/data/site';

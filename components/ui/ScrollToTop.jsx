@@ -1,6 +1,6 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
+import { usePathname } from '@/lib/sitePath';
 import { useEffect, useRef } from 'react';
 
 // Every move to another page starts at the top of that page, whatever the page before was scrolled to: a link, a button that opens a page

@@ -1,6 +1,6 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
+import { usePathname } from '@/lib/sitePath';
 import { langOf, t } from '@/lib/lang';
 
 // The page's language from its address (/es/ is Spanish), for client components: `const { lang, tr } = useLang()`.
