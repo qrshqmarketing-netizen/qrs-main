@@ -8,6 +8,9 @@ import { currentAttribution } from '@/lib/attribution';
 import { postLead } from '@/lib/endpoints';
 import { rememberLead, trackLead } from '@/lib/tracking';
 import useLang from '@/components/ui/useLang';
+// The form's own styles (the error box stays hidden until a send fails) live with the request section; loaded here so every page that
+// shows the form has them, including the redesigned pages without RoofCheck
+import './RoofCheck.css';
 
 // The estimate form in the request section at the bottom of every page (RoofCheck.jsx, id="roof-check"), back in October 2026 after the
 // step-by-step form at /start/ brought in fewer leads. Every "Get Pro Advice" link on a page with this section scrolls to it (SiteLink).

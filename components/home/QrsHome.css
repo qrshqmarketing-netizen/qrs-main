@@ -826,3 +826,7 @@ main.qh .qh-area-cname{fill:#cfe0f2;font:600 12px var(--font-text),sans-serif}
 main.qh .qh-area-hpin{fill:var(--qh-sun);stroke:var(--qh-deep);stroke-width:2}
 main.qh .qh-area-hname{fill:#fff;font:800 17px var(--font-text),sans-serif;paint-order:stroke;stroke:var(--qh-deep);stroke-width:5px;stroke-linejoin:round}
 @media (prefers-reduced-motion:no-preference){main.qh .qh-area-hpin{transform-box:fill-box;transform-origin:bottom center;animation:qhPin .6s cubic-bezier(.2,1.6,.4,1) .4s both}}
+/* Contact page, simplified: the form on its own, centered */
+main.qh .qh-contact-form .qh-form-card{max-width:760px;margin:0 auto}
+main.qh .qh-contact-offices .container{padding-left:max(16px,4.44vw);padding-right:max(16px,4.44vw);max-width:calc(1680px + 2 * max(16px,4.44vw))}
+main.qh .qh-contact-ways + .qh-contact-form{padding-top:0}

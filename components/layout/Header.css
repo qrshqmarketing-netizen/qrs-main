@@ -314,3 +314,9 @@ body:has(main.hg) .site-header:not(.is-lp):not(.is-start):not([data-scrolled]):n
   .site-header:has(.hd-lang) .hd-lang{padding:0 10px}
   .site-header:has(.hd-lang) .hd-theme{width:48px}
 }
+/* Contact joins the bar's links (owner, November 6 2026): seven links, so from 1280 to 1439px each gets a little less padding to keep air before the
+   gold cell (measured: about 40px at 1280 in English, the same or more on the two home pages and /es/) */
+@media (min-width:1280px) and (max-width:1439.98px){
+  .site-header .hd-link{padding:0 8px}.site-header .hd-link:after{left:8px;right:8px}
+  .site-header:has(.hd-lang) .hd-link{padding:0 6px}.site-header:has(.hd-lang) .hd-link:after{left:6px;right:6px}
+}

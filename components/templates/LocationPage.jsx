@@ -8,6 +8,8 @@ import FinalCta from '@/components/sections/FinalCta';
 import OfficeMap from '@/components/sections/OfficeMap';
 import StudioProjects from '@/components/studio/StudioProjects';
 import RoofCheck from '@/components/sections/RoofCheck';
+import EstimateForm from '@/components/sections/EstimateForm';
+import { Check } from '@/components/home/QrsSections';
 import JsonLd from '@/components/ui/JsonLd';
 import { HOME, LOCATIONS_LINK } from '@/data/catalog';
 import { cityPath, findRegion, OTHER_PLACES, regionPath } from '@/data/locations';
@@ -27,6 +29,13 @@ const FACEBOOK_FEEDS = {
   vernon: { id: 'FACEBOOK_VERNON_PAGE_ID', token: 'FACEBOOK_VERNON_PAGE_TOKEN' },
 };
 
+// Lean city pages (owner, November 6 2026, after bakerroofing.com's location pages: little beyond the local copy). A pilot on three city pages
+// without an office; compare calls and Search Console after 2-3 weeks before changing the others (the office pages carry the Google listings).
+// Order: hero, review logos, "Looking for a <city> roofer you can trust?" (the page's own intro, roof conditions and neighborhoods), the request
+// form, nearby projects, reviews, up to four FAQs, the closing call to action. Left out: the generic service columns, roof types, related articles
+// and the extra call-to-action card.
+export const LEAN_CITY_PAGES = new Set(['venice', 'newport-beach', 'long-beach']);
+
 // Hero photos rotate across city pages until each city has its own
 const PHOTOS = [
   { src: '/images/home-hero-drone-view.webp', position: 'center 40%' },
@@ -42,6 +51,8 @@ export default async function LocationPage({ location, page, index = 0 }) {
   const crumbs = [HOME, LOCATIONS_LINK, { label: region.name, href: regionPath(region.slug) }, { label: city, href: cityPath(slug) }];
   const office = OFFICES.find((o) => o.citySlug === slug);
   // An office page shows that office's own number (as on its Google listing) in the hero, the call-to-action card and the FAQ line
+  const lean = LEAN_CITY_PAGES.has(slug);
+  const faqs = lean ? page.faqs.slice(0, 4) : page.faqs;
   const officePhone = office?.phone ? { phone: office.phone, tel: office.tel } : {};
   const schema = pageJsonLd({
     path: cityPath(slug),
@@ -61,7 +72,7 @@ export default async function LocationPage({ location, page, index = 0 }) {
       // A city with a branch office is served from that office (see the offices in lib/structuredData.js)
       provider: office && office !== OFFICES[0] ? `${SITE_URL}${cityPath(slug)}#office` : undefined,
     },
-    faqs: page.faqs,
+    faqs,
     image: photo.src,
   });
   const nearby = projectsNear(slug);
@@ -81,10 +92,10 @@ export default async function LocationPage({ location, page, index = 0 }) {
       />
       {/* Google, BBB and Yelp logos linking to our profiles (owner, November 2 2026) */}
       <TrustLogos />
-      <LocColumns place={city} />
+      {!lean && <LocColumns place={city} />}
       <LocStory
         place={city}
-        heading={page.intro.heading}
+        heading={lean ? `Looking for a ${city} roofer you can trust?` : page.intro.heading}
         paragraphs={page.intro.paragraphs}
         considerations={page.considerations}
         neighborhoods={page.neighborhoods}
@@ -95,7 +106,23 @@ export default async function LocationPage({ location, page, index = 0 }) {
         {/* An office's Google Maps listing, when it has one (OFFICES[].mapEmbed in data/site.js; owner, October 27 2026) */}
         {office?.mapEmbed && <OfficeMap office={office} city={city} />}
       </div>
-      <LocRoofTypes place={city} />
+      {lean && (
+        // The request form alone, as on the Contact page (no offer card), right after the local copy
+        <section className="qh-section qh-contact-form" id="roof-check" aria-labelledby="lc-form-h">
+          <div className="qh-wrap">
+            <div className="qh-form-card" id="estimate">
+              <h2 id="lc-form-h">Request service in {city}</h2>
+              <ul className="qh-perks">
+                <li><Check />{page.offer === 'commercial' ? 'A roofer-led roof survey' : 'Free roof evaluation'}</li>
+                <li><Check />A real person on our team follows up</li>
+                <li><Check />Written scope and price before any work</li>
+              </ul>
+              <EstimateForm />
+            </div>
+          </div>
+        </section>
+      )}
+      {!lean && <LocRoofTypes place={city} />}
       <LocReviews path={cityPath(slug)} place={city} places={[city, ...page.neighborhoods]} />
       <div className="lc-keep">
         {/* Only real projects in or near this city (by the project's ZIP code pin), as a list with the hover photo; with none nearby, no section */}
@@ -107,15 +134,17 @@ export default async function LocationPage({ location, page, index = 0 }) {
           allLink={false}
           layout="list"
         />
-        <LatestArticles posts={await articlesFor(cityPath(slug))} heading="Related Roofing Articles" />
+        {!lean && <LatestArticles posts={await articlesFor(cityPath(slug))} heading="Related Roofing Articles" />}
       </div>
       {FACEBOOK_FEEDS[slug] && <FacebookFeed pageId={process.env[FACEBOOK_FEEDS[slug].id]} token={process.env[FACEBOOK_FEEDS[slug].token]} place={city} />}
-      <LocCta place={city} commercial={page.offer === 'commercial'} {...officePhone} />
-      <LocFaq heading={`${city} Roofing FAQs`} sub={`Straight answers for ${city} ${page.offer === 'commercial' ? 'clients' : 'homeowners'}.`} faqs={page.faqs} {...officePhone} />
-      {/* The request form, in the same column as the sections above */}
-      <div className="lc-keep">
-        <RoofCheck tone="white" offer={page.offer || 'home'} />
-      </div>
+      {!lean && <LocCta place={city} commercial={page.offer === 'commercial'} {...officePhone} />}
+      <LocFaq heading={`${city} Roofing FAQs`} sub={`Straight answers for ${city} ${page.offer === 'commercial' ? 'clients' : 'homeowners'}.`} faqs={faqs} {...officePhone} />
+      {/* The request form, in the same column as the sections above (lean pages show it right after the intro) */}
+      {!lean && (
+        <div className="lc-keep">
+          <RoofCheck tone="white" offer={page.offer || 'home'} />
+        </div>
+      )}
       <FinalCta heading={page.final.heading} text={page.final.text} />
     </main>
   );

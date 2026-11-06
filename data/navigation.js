@@ -314,6 +314,7 @@ export const HEADER_MENU = [
   { label: 'Replacement', href: '/roof-replacement/' },
   { label: 'Service Areas', href: '/service-areas/' },
   { label: 'Projects', href: '/projects/' },
+  { label: 'Contact', href: '/contact-us/' }, // owner, November 6 2026
 ];
 export const HEADER_MORE = [
   { label: 'Emergency Repair', href: '/roof-repair/emergency/', urgent: true },
@@ -325,7 +326,6 @@ export const HEADER_MORE = [
   { label: 'Roofing Blog', href: '/blog/' },
   { label: 'Careers', href: '/careers/' },
   { label: 'For Contractors', href: '/contractors/' },
-  { label: 'Contact', href: '/contact-us/' },
 ];
 // Kept for anything that still lists the old six bar links
 export const HEADER_LINKS = HEADER_MENU.map(({ label, href }) => ({ label, href }));
