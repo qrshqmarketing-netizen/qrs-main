@@ -23,6 +23,230 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // El Niño prep articles (owner, November 6 2026, after the content approach of a large commercial roofer's seasonal guides: name the reader and
+  // the season in the title, then steps; ours go further with before / during / after, a checklist and "Our point of view"). Facts only as the
+  // site states them: forecasters expect a very strong El Niño (data/promo.js), the free roof evaluation for homes, the roofer-led roof survey for
+  // commercial buildings (never called free), written scope and price first, tarps when needed, emergency calls after hours and weekends, no
+  // coatings, no prices, no response times, no lifespans.
+  {
+    slug: 'prepare-your-roof-for-el-nino',
+    title: 'How to Prepare Your Roof for El Niño: A Homeowner’s Checklist for Los Angeles',
+    keyword: 'prepare your roof for el niño',
+    topics: ['storm', 'maintenance', 'inspection', 'leak'],
+    metaTitle: 'How to Prepare Your Roof for El Niño: Homeowner Checklist',
+    metaDescription:
+      'How to prepare your roof for El Niño in Los Angeles: a homeowner’s checklist for before, during and after the storms, and what a roofer checks first.',
+    datePublished: '2026-11-06',
+    dateModified: '2026-11-06',
+    excerpt:
+      'Forecasters expect a very strong El Niño this winter. Here is how we tell Los Angeles homeowners to prepare their roof before the storms, what to do if water gets in, and what to check after.',
+    cardImage: '/images/home-services-residential-shingle-drone-view.webp',
+    intro: [
+      'This is how we tell Los Angeles homeowners to prepare your roof for El Niño. Forecasters expect a very strong El Niño this winter ([NOAA Climate Prediction Center](https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/)), and that usually means more rain and heavier storms than a Southern California roof sees in a normal year.',
+      'Most roofs we are called to in the first big storm were not fine one day and broken the next. A pipe boot had been cracking for a while, a flashing had pulled loose, or a valley had filled with leaves over the dry months. Rain finds those spots first. The good news is that most of them are small, and they are far easier to fix before the storms than during one.',
+    ],
+    sections: [
+      {
+        heading: 'Why El Niño Is Hard on Roofs',
+        blocks: [
+          'A Los Angeles roof spends most of the year dry and in the sun. Sun and heat age shingles, dry out sealants and wear on the underlayment beneath tile. None of that shows until water arrives, and an El Niño winter brings a lot of it at once.',
+          'These are the weak spots we find most often when the first heavy rain comes:',
+          {
+            list: [
+              '**Flashing** at chimneys, walls and skylights that has lifted or cracked.',
+              '**Pipe boots and vents** whose rubber collars have split in the sun.',
+              '**Valleys** packed with leaves, so water backs up under the roofing instead of running off.',
+              '**Missing, lifted or broken shingles and tiles**, often after a windy stretch.',
+              '**Worn underlayment under a tile roof**, which can leak while every tile still looks fine.',
+              '**Flat roof drains and scuppers** blocked with debris, so water ponds instead of draining.',
+            ],
+          },
+          { pov: 'We would much rather replace a cracked pipe boot in November than chase a leak through a ceiling in January. Most El Niño leaks start as something small that was there all summer.' },
+        ],
+      },
+      {
+        heading: 'Before the Storms: Your Roof Prep Checklist',
+        blocks: [
+          'You can do most of this from the ground, from a window or from inside the house. Please stay off the roof itself: wet or dusty roofing is slippery, and tile and slate crack underfoot.',
+          {
+            checklist: [
+              'Walk around the house and look at the roof from the ground for missing, lifted or broken shingles and tiles.',
+              'Look at the ceilings and around skylights for stains, bubbling paint or soft spots.',
+              'If you can get into the attic safely, look for damp insulation, water stains or daylight coming through.',
+              'Have the gutters and downspouts cleared so water can leave the roof.',
+              'Trim branches that hang over the roof or rub against it.',
+              'On a flat roof or patio cover, make sure drains and scuppers aren’t blocked (from a safe spot, not by walking the roof).',
+              'Take photos of anything you notice, with the date, so you have a record before the storms.',
+              'Book a roofer-led roof evaluation before the first big storm.',
+            ],
+          },
+          { pov: 'If you only do one thing on this list, make it the last one. A roofer on the roof sees what nobody can see from the driveway, and you get a clear answer before the rain instead of during it.' },
+        ],
+      },
+      {
+        heading: 'What We Check on a Roof Readiness Inspection',
+        blocks: [
+          'Our roof evaluation for homes is free. A field inspector, lead roofer or estimator on our own team looks at the roof, with *RoofScan 360* drone footage of the areas of concern, and photographs what they find. On a pre-storm visit we pay the most attention to the places water gets in first:',
+          {
+            list: [
+              'Flashing at chimneys, walls, skylights and roof edges',
+              'Pipe boots, vents and anything else that comes through the roof',
+              'Valleys and the places where two roof slopes meet',
+              'Shingles and tiles that are missing, lifted, cracked or slipped',
+              'Signs that the underlayment under a tile roof is wearing out',
+              'Drains, scuppers, seams and low spots on flat roofs',
+            ],
+          },
+          'You get the photos and a plain-English explanation of what we found, with one clear next step: repair, monitor, maintain or replace. If anything needs work, you get a written scope and price before any work starts. You can [book a free roof evaluation](#roof-check) at the bottom of this page.',
+        ],
+      },
+      {
+        heading: 'During a Storm: If Water Gets In',
+        blocks: [
+          {
+            steps: [
+              '**Stay off the roof.** Don’t climb up in the rain or wind, and stay away from water near light fixtures and outlets.',
+              '**Protect your belongings.** Move furniture, rugs and electronics away from the leak and set out buckets and towels.',
+              '**Take photos** of the ceiling, the water and anything that was damaged.',
+              '**Call us.** Our field techs take emergency calls on weekdays and weekends outside regular office hours.',
+            ],
+          },
+          'A roofer assesses and photographs the damage and, when the permanent repair has to wait, puts a tarp or other temporary protection in place to limit further water damage. Then the permanent repair, priced in writing first. Our guide on [how to stop a roof leak safely until a roofer arrives](/blog/stop-a-roof-leak/) covers the first hour in more detail, and our [emergency roof repair](/roof-repair/emergency/) page explains how we handle the call.',
+          { pov: 'A tarp buys time; it isn’t a repair. We put one on when the real fix can’t happen right away, and we plan the permanent repair as soon as the roof is dry enough to work on.' },
+        ],
+      },
+      {
+        heading: 'After the Storm',
+        blocks: [
+          'Once the rain stops, look again from the ground for missing pieces, branches or debris on the roof, and keep an eye on the ceilings for a few days: a stain can show up well after the water got in. Clear the gutters again if the storm filled them.',
+          'If the storm damaged the roof, the photos you took and our photos and written scope can be shared with your insurance company. Our guide on [how to file a roof insurance claim in California](/blog/roof-insurance-claims-california/) walks through each step.',
+        ],
+      },
+      {
+        heading: 'Repair, Maintain or Replace?',
+        blocks: [
+          'Most of what we find before an El Niño winter is a [roof repair](/roof-repair/): a flashing resealed, a pipe boot replaced, a few tiles reset. A short list of small issues is what a [*RoofRevive* roof tune-up](/roof-maintenance-plans/#tune-up) is for. When a roof is near the end of its life, the photos show why, and our [roof replacement guide](/blog/roof-replacement-guide/) explains what comes next. For a full replacement on a home, [roof financing](/roof-financing/) through Momnt Financing or Service Financing is available, subject to credit approval.',
+          { pov: 'We don’t sell a new roof to a homeowner who needs a repair. If a repair will get your roof through the storms properly, that’s what we recommend.' },
+        ],
+      },
+    ],
+    faqs: [
+      { q: 'When should I prepare my roof for El Niño?', a: 'Before the first big storm. Once the rain starts, everyone calls at once and repairs have to wait for dry weather. A roof evaluation in the fall gives you time to fix small things first.' },
+      { q: 'Is the roof evaluation free?', a: 'Yes, for homes. A roofer on our team looks at the roof, with drone footage of the areas of concern, and gives you photos, a plain-English explanation and a written scope and price for anything that needs work.' },
+      { q: 'Should I tarp my own roof before the storms?', a: 'We advise against it. A tarp is a stopgap for damage that’s already there, and climbing on a roof is how many homeowners get hurt. If something needs covering, a roofer can do it safely.' },
+      { q: 'Does a tile roof need preparing for El Niño?', a: 'Yes. Tiles often outlast the underlayment beneath them, so a tile roof can leak in heavy rain while every tile looks fine. We check for broken and slipped tiles and for signs that the underlayment is wearing out.' },
+      { q: 'What should I do if my roof leaks during El Niño?', a: 'Stay off the roof, move your belongings away from the leak, take photos and call us. Our field techs take emergency calls on weekdays and weekends outside regular office hours, and a roofer can put a tarp in place when it’s needed.' },
+    ],
+    closing: {
+      heading: 'Get Your Roof Ready Before the First Big Storm',
+      blocks: [
+        'An El Niño winter is a test every roof takes at once. [Book a free roof evaluation](#roof-check) and know where your roof stands, with photos and a written price for anything it needs, before the rain does the inspecting for you.',
+      ],
+    },
+    related: ['/roof-inspection/', '/roof-repair/', '/roof-repair/emergency/'],
+  },
+  {
+    slug: 'prepare-a-commercial-roof-for-el-nino',
+    title: 'Commercial Property Owners: How to Prepare a Commercial Roof for El Niño',
+    keyword: 'prepare a commercial roof for el niño',
+    topics: ['commercial', 'storm', 'maintenance', 'flat'],
+    metaTitle: 'How to Prepare a Commercial Roof for El Niño',
+    metaDescription:
+      'How to prepare a commercial roof for El Niño: a checklist for owners and property managers before, during and after the storms, and what a roof survey covers.',
+    datePublished: '2026-11-06',
+    dateModified: '2026-11-06',
+    excerpt:
+      'For property owners and managers: how to prepare a commercial roof for a very strong El Niño winter, what to do when a tenant reports a leak, and what to check after the storm.',
+    cardImage: '/images/recent-work-commercial-flat-roof-drone-view.webp',
+    intro: [
+      'This guide is for commercial property owners and property managers who want to prepare a commercial roof for El Niño. Forecasters expect a very strong El Niño this winter ([NOAA Climate Prediction Center](https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/)), and on a commercial building a roof leak isn’t only a repair: it is wet inventory, a tenant who can’t open, or equipment that has to shut down.',
+      'Most commercial roofs here are flat or low-slope, and a flat roof depends on water leaving it. That makes the drains, the seams and everything that comes through the roof the places to look before the rain, not after.',
+    ],
+    sections: [
+      {
+        heading: 'Why Flat Roofs Feel El Niño First',
+        blocks: [
+          'A sloped roof sheds water by gravity. A flat roof has to drain it, through drains, scuppers and gutters, across a surface that has been baking in the sun all summer. In a long, heavy storm, these are the spots that give first:',
+          {
+            list: [
+              '**Drains and scuppers** blocked by leaves, dirt or debris, so water ponds and finds a seam.',
+              '**Seams** in the membrane or cap sheet that have opened up.',
+              '**Rooftop equipment**: the curbs and flashing around HVAC units, exhaust fans and other penetrations.',
+              '**Parapet walls**, their caps and the flashing where the wall meets the roof.',
+              '**Low spots** where water stands after a rain instead of draining.',
+            ],
+          },
+          { pov: 'On most commercial roofs we look at before the rainy season, the problem isn’t the whole roof. It is a blocked drain, a tired seam or the flashing around one piece of equipment, and that is a much smaller job before the storms than after.' },
+        ],
+      },
+      {
+        heading: 'Before the Rain: A Checklist for Owners and Managers',
+        blocks: [
+          {
+            checklist: [
+              'Pull the roof’s records: past repairs, the age of the roof and any open warranty.',
+              'Have the drains, scuppers, gutters and downspouts cleared of debris.',
+              'Note any stains on ceilings, around skylights or near rooftop units inside the building.',
+              'Check that access to the roof is safe and that you know who holds the keys or ladder.',
+              'Tell tenants and staff how and to whom to report a leak, and to take photos when they do.',
+              'Decide who your property manager or building engineer calls first if water gets in.',
+              'Book a roofer-led roof survey before the first big storm.',
+            ],
+          },
+          'Leave the roof walk itself to a roofer. Wet membranes are slippery, skylights can give way, and roof edges and openings are a real fall risk.',
+          { pov: 'The best time to plan for a leak is before anyone is standing under one. A tenant who knows exactly who to call, and a manager who has the roof’s photos on file, turn a storm night into a short phone call.' },
+        ],
+      },
+      {
+        heading: 'What a Roofer-Led Roof Survey Covers',
+        blocks: [
+          'A roofer walks the roof and documents what we find with photos: the membrane or cap sheet, the seams, the drains and scuppers, the parapets and the flashing around rooftop equipment. We talk it through with your property manager or building engineer in plain English.',
+          'You get a written scope and price before any work, so owners and boards can review and approve it, and we plan the work around your tenants and operations. For buildings that need regular attention, [commercial roof maintenance](/commercial-roofing/maintenance/) starts with a photo-documented baseline and gives you a photo report every visit. You can [request a roof survey](#roof-check) at the bottom of this page.',
+        ],
+      },
+      {
+        heading: 'During a Storm: When a Tenant Reports a Leak',
+        blocks: [
+          {
+            steps: [
+              '**Keep people safe first.** Keep everyone away from water near electrical equipment and from any ceiling that sags.',
+              '**Protect what’s underneath.** Move inventory and equipment, cover what can’t be moved and catch the water.',
+              '**Take photos** of the leak, where it is and what it damaged.',
+              '**Call us.** A roofer traces where the water is getting in and puts temporary protection in place when the permanent repair has to wait.',
+            ],
+          },
+          'The water on the floor is often not under the opening in the roof: it can run along the deck or a beam before it drips. That is why we trace a leak from the roof, not from the ceiling. Our photos and written scope can be shared with your insurance company.',
+        ],
+      },
+      {
+        heading: 'After the Storm',
+        blocks: [
+          'Once the rain stops, have the drains and scuppers checked again, since storms wash debris into them. Look for water standing on the roof a day or two later, and for new stains inside. Add what you find to the roof’s records, so the next survey starts from the facts.',
+        ],
+      },
+      {
+        heading: 'Repair, Maintain or Replace?',
+        blocks: [
+          'Most of what a pre-storm survey finds is a [commercial roof repair](/commercial-roofing/repair/): a drain cleared and resealed, a seam repaired, a curb reflashed. When a roof has reached the end of its life, the survey shows that too, and a [commercial roof replacement](/commercial-roofing/replacement/) can be planned section by section so your doors stay open, like the [commercial flat roof we replaced in Westminster](/projects/commercial-flat-roof-replacement-westminster-92683/). If you manage several buildings, our page for [property managers](/commercial-roofing/property-managers/) explains how we work with owners and boards.',
+          { pov: 'We would rather tell you a repair will see the roof through this winter than sell you a replacement you don’t need yet. When the roof really is done, the photos make the case for us.' },
+        ],
+      },
+    ],
+    faqs: [
+      { q: 'When should we have our commercial roof checked for El Niño?', a: 'Before the first big storm. Once the rain starts, repairs wait for dry weather, and a roof survey in the fall leaves time to fix the small things first.' },
+      { q: 'What does a roof survey include?', a: 'A roofer walks the roof, photographs the membrane, seams, drains, parapets and rooftop equipment, and talks it through with your property manager or building engineer. You get a written scope and price before any work.' },
+      { q: 'Can you work on the roof without disrupting our tenants?', a: 'In most cases, yes. We plan the work, staging and access around your tenants and operations, and keep the site clean every day.' },
+      { q: 'Do you work with property managers and HOA boards?', a: 'Yes. Our photo-documented reports and written scopes are made for owners, boards and managers to review and approve before any work.' },
+      { q: 'Do you apply roof coatings before the rainy season?', a: 'No, we don’t apply roof coatings. We repair or replace the roofing itself, and we’ll tell you plainly which one the roof needs.' },
+    ],
+    closing: {
+      heading: 'Know Where Your Roof Stands Before the Rain',
+      blocks: [
+        'An El Niño winter tests every drain, seam and flashing on a commercial roof at once. [Request a roofer-led roof survey](#roof-check) and get photos and a written scope and price before the storms, so your building stays open while the rain does its worst.',
+      ],
+    },
+    related: ['/commercial-roofing/maintenance/', '/commercial-roofing/property-managers/', '/commercial-roofing/repair/'],
+  },
   // How to choose a commercial roof repair company (owner, November 4 2026, from the team's draft; keyword "commercial roof repair company").
   // Changed to the site's rules: no lifespans, prices or repair durations; coatings described as something QRS doesn't apply; the commercial
   // survey never called free; no C-39 or workers' comp claim for QRS; the warranty as the site states it (installs, call for details; repairs
