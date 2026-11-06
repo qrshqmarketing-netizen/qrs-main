@@ -260,13 +260,16 @@ export function QhReroof({ links = [] }) {
 
 // Service Areas hero visual: the service area drawn from its Census outline (mainland only; the counties as shapes), the city pages as pins that
 // drop in and each office as a pulsing gold pin, the county names, and the counties as links underneath. Server-rendered SVG, no map library.
-export function QhAreaMap({ outline, offices = [], cities = [], links = [], note }) {
-  const B = { w: -118.98, e: -116.95, s: 33.36, n: 34.84 };
-  const k = Math.cos((34.1 * Math.PI) / 180);
+export function QhAreaMap({ outline, offices = [], cities = [], links = [], note, bounds, focus, highlight, cityLabels = false }) {
+  // bounds: { w, e, s, n } to zoom in (a county or a city); focus: a county shape's name to highlight; highlight: { name, lat, lng } for the page's
+  // own city (a large gold pin with its name); cityLabels: name the other city pins (zoomed views)
+  const B = bounds || { w: -118.98, e: -116.95, s: 33.36, n: 34.84 };
+  const k = Math.cos((((B.n + B.s) / 2) * Math.PI) / 180);
   const W = 560;
   const H = Math.round((W * (B.n - B.s)) / ((B.e - B.w) * k));
   const x = (lon) => (((lon - B.w) / (B.e - B.w)) * W).toFixed(1);
   const y = (lat) => (((B.n - lat) / (B.n - B.s)) * H).toFixed(1);
+  const inside = (lat, lng) => lat > B.s && lat < B.n && lng > B.w && lng < B.e;
   const rings = (g) => (g.type === 'Polygon' ? [g.coordinates[0]] : g.coordinates.map((p) => p[0]));
   const shapes = outline.features.map((f) => ({
     name: f.properties.name,
@@ -280,25 +283,47 @@ export function QhAreaMap({ outline, offices = [], cities = [], links = [], note
     ['Orange County', -117.8, 33.74],
     ['Riverside County', -117.22, 33.76],
     ['San Bernardino', -117.45, 34.1],
-  ];
+  ].filter(([, lon, lat]) => !bounds || inside(lat, lon));
+  const zoomed = Boolean(bounds);
   return (
-    <div className="qh-area">
+    <div className={`qh-area${zoomed ? ' zoomed' : ''}`}>
       <svg className="qh-area-map" viewBox={`0 0 ${W} ${H}`} aria-hidden="true">
-        {shapes.map((sh, i) => (
-          <path key={sh.name} d={sh.d} className={`qh-area-county qh-area-c${i}`} />
-        ))}
-        {labels.map(([t, lon, lat]) => (
-          <text key={t} x={x(lon)} y={y(lat)} className="qh-area-label" textAnchor="middle">{t}</text>
-        ))}
-        {cities.map((c, i) => (
-          <circle key={c.slug} cx={x(c.lng)} cy={y(c.lat)} r="4" className="qh-area-city" style={{ animationDelay: `${0.5 + i * 0.06}s` }} />
-        ))}
-        {offices.map((o) => (
-          <g key={o.name} transform={`translate(${x(o.geo.longitude)} ${y(o.geo.latitude)})`}>
-            <circle r="9" className="qh-area-ring" />
-            <circle r="6.5" className="qh-area-office" />
-          </g>
-        ))}
+        <defs>
+          <clipPath id="qhAreaClip">
+            <rect width={W} height={H} rx="10" />
+          </clipPath>
+        </defs>
+        <g clipPath="url(#qhAreaClip)">
+          {zoomed && <rect width={W} height={H} className="qh-area-sea" />}
+          {shapes.map((sh, i) => (
+            <path key={sh.name} d={sh.d} className={`qh-area-county qh-area-c${i}${focus === sh.name ? ' focus' : ''}`} />
+          ))}
+          {!highlight && labels.map(([t, lon, lat]) => (
+            <text key={t} x={x(lon)} y={y(lat)} className="qh-area-label" textAnchor="middle">{t}</text>
+          ))}
+          {cities.filter((c) => !bounds || inside(c.lat, c.lng)).filter((c) => !highlight || c.slug !== highlight.slug).map((c, i) => (
+            <g key={c.slug}>
+              <circle cx={x(c.lng)} cy={y(c.lat)} r="4" className="qh-area-city" style={{ animationDelay: `${0.5 + i * 0.06}s` }} />
+              {cityLabels && (+x(c.lng) > W - 110
+                ? <text x={+x(c.lng) - 8} y={+y(c.lat) + 4} textAnchor="end" className="qh-area-cname">{c.city}</text>
+                : <text x={+x(c.lng) + 8} y={+y(c.lat) + 4} className="qh-area-cname">{c.city}</text>)}
+            </g>
+          ))}
+          {offices.filter((o) => !bounds || inside(o.geo.latitude, o.geo.longitude)).map((o) => (
+            <g key={o.name} transform={`translate(${x(o.geo.longitude)} ${y(o.geo.latitude)})`}>
+              <circle r="9" className="qh-area-ring" />
+              <circle r="6.5" className="qh-area-office" />
+            </g>
+          ))}
+          {highlight && (
+            <g transform={`translate(${x(highlight.lng)} ${y(highlight.lat)})`}>
+              <circle r="16" className="qh-area-ring" />
+              <path d="M0 0c-6-8-10-12-10-17a10 10 0 0 1 20 0c0 5-4 9-10 17z" className="qh-area-hpin" />
+              <circle cy="-17" r="3.5" fill="var(--qh-deep)" />
+              <text y="-34" textAnchor="middle" className="qh-area-hname">{highlight.name}</text>
+            </g>
+          )}
+        </g>
       </svg>
       <p className="qh-area-key">
         <span><i className="qh-key-office" />QRS office</span>

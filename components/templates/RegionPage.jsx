@@ -1,6 +1,8 @@
 import TrustLogos from '@/components/sections/TrustLogos';
 import LocExplorer from '@/components/loc/LocExplorer';
-import { cityCards, LocHubHero, placeCards } from '@/components/loc/LocHub';
+import { cityCards, placeCards } from '@/components/loc/LocHub';
+import { LocRegionHero } from '@/components/loc/LocQhHero';
+import '@/components/home/QrsHome.css';
 import { LocCta, LocFaq, LocReviews, LocStory } from '@/components/loc/LocSections';
 import LatestArticles from '@/components/sections/LatestArticles';
 import FinalCta from '@/components/sections/FinalCta';
@@ -12,6 +14,7 @@ import { ALL_PLACES, citiesIn, cityPath, findCity, REGIONS, regionPath } from '@
 import { SERVICES } from '@/data/services';
 import { OFFICES } from '@/data/site';
 import { pageJsonLd } from '@/lib/structuredData';
+import { brandedTitle } from '@/lib/pages';
 import { heroOutcome } from '@/data/heroOutcomes';
 import { articlesFor } from '@/lib/articles';
 
@@ -32,7 +35,7 @@ export default async function RegionPage({ region, page }) {
   const crumbs = [HOME, LOCATIONS_LINK, { label: region.name, href: path }];
   const schema = pageJsonLd({
     path,
-    title: page.metaTitle,
+    title: brandedTitle(page.metaTitle),
     description: page.metaDescription,
     type: 'CollectionPage',
     crumbs,
@@ -52,9 +55,9 @@ export default async function RegionPage({ region, page }) {
   const cityList = cityCards(region.slug);
   const placeList = placeCards(region.slug);
   return (
-    <main id="top" className="loc">
+    <main id="top" className="qh loc">
       <JsonLd data={schema} />
-      <LocHubHero crumbs={crumbs} path={path} title={page.hero.heading} outcome={heroOutcome(path)} intro={page.hero.intro} />
+      <LocRegionHero crumbs={crumbs} title={page.hero.heading} outcome={heroOutcome(path)} text={page.hero.intro} region={region} cities={cities} offices={offices} photo={photo} />
       {/* Google, BBB and Yelp logos linking to our profiles (owner, November 2 2026) */}
       <TrustLogos />
       <LocExplorer

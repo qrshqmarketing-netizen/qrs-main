@@ -1,4 +1,6 @@
-import { LocColumns, LocCta, LocFaq, LocHero, LocReviews, LocRoofTypes, LocStory } from '@/components/loc/LocSections';
+import { LocColumns, LocCta, LocFaq, LocReviews, LocRoofTypes, LocStory } from '@/components/loc/LocSections';
+import { LocCityHero } from '@/components/loc/LocQhHero';
+import '@/components/home/QrsHome.css';
 import FacebookFeed from '@/components/loc/FacebookFeed';
 import TrustLogos from '@/components/sections/TrustLogos';
 import LatestArticles from '@/components/sections/LatestArticles';
@@ -13,6 +15,7 @@ import { projectsNear } from '@/data/projects';
 import { SERVICES } from '@/data/services';
 import { OFFICES, SITE_URL } from '@/data/site';
 import { pageJsonLd } from '@/lib/structuredData';
+import { brandedTitle } from '@/lib/pages';
 import { heroOutcome } from '@/data/heroOutcomes';
 import { articlesFor } from '@/lib/articles';
 
@@ -42,7 +45,7 @@ export default async function LocationPage({ location, page, index = 0 }) {
   const officePhone = office?.phone ? { phone: office.phone, tel: office.tel } : {};
   const schema = pageJsonLd({
     path: cityPath(slug),
-    title: page.metaTitle,
+    title: brandedTitle(page.metaTitle),
     description: page.metaDescription,
     crumbs,
     service: {
@@ -63,17 +66,18 @@ export default async function LocationPage({ location, page, index = 0 }) {
   });
   const nearby = projectsNear(slug);
   return (
-    <main id="top" className="loc">
+    <main id="top" className="qh loc">
       <JsonLd data={schema} />
-      <LocHero
+      <LocCityHero
         crumbs={crumbs}
-        path={cityPath(slug)}
         title={page.h1 || page.metaTitle}
         outcome={heroOutcome(cityPath(slug))}
-        sub={page.hero.sub}
-        place={city}
+        text={page.hero.sub}
+        location={location}
+        region={region}
+        office={office}
+        photo={{ src: photo.src, position: photo.position, alt: page.imageAlt || `A roof in ${city} from above` }}
         commercial={page.offer === 'commercial'}
-        {...officePhone}
       />
       {/* Google, BBB and Yelp logos linking to our profiles (owner, November 2 2026) */}
       <TrustLogos />
