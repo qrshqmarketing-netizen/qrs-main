@@ -6,20 +6,20 @@ import { formatDate } from '@/lib/dates';
 
 export const ABOUT_PAGE = {
   keyword: 'quality roofing specialists',
-  metaTitle: 'About Us',
+  metaTitle: 'About Quality Roofing Specialists',
   metaDescription:
-    'Quality Roofing Specialists crafts top-quality roofs with passion and precision. Licensed California contractor since 2020, serving LA & Orange County.',
+    'Quality Roofing Specialists crafts top-quality roofs with passion and precision: a family-owned, licensed California contractor since 2020, led by roofers.',
   hero: {
     eyebrow: 'About Our Company',
     heading: 'Meet Quality Roofing Specialists',
-    intro: `Quality Roofing Specialists, Inc. (QRS) is a family-owned roofing contractor serving homes and businesses across Los Angeles and Orange County, licensed in California since 2020 (CSLB #${BUSINESS.license}). Co-founded by Tony and Adva Goldberg, QRS repairs and replaces tile, shingle and flat roofs, and every project starts with a roofer-led look at the roof.`,
+    intro: `Quality Roofing Specialists, Inc. (QRS) is a family-owned roofing contractor built on one idea: a roofer should look at your roof before anyone tries to sell you one. Co-founded by Tony and Adva Goldberg and licensed in California since 2020 (CSLB #${BUSINESS.license}), QRS repairs and replaces tile, shingle and flat roofs on homes and businesses.`,
   },
   // "Who we are" (owner, October 15 2026, after the story approach of maben.com.au): what we do and where, then who owns us. How a job runs is
   // said once, in `process` below.
   intro: {
     heading: 'Your Detail-First Roofing Team',
     paragraphs: [
-      'We repair and replace tile, shingle and flat roofs on homes, [HOA and multi-family](/residential-roofing/hoa-multi-family/) buildings and [commercial](/commercial-roofing/) properties across Los Angeles, Orange County and the Inland Empire, from a single [roof repair](/roof-repair/) to a full [roof replacement](/roof-replacement/). Our approach is simple: a roofer should look at your roof before anyone tries to sell you one.',
+      'We repair and replace tile, shingle and flat roofs on homes, [HOA and multi-family](/residential-roofing/hoa-multi-family/) buildings and [commercial](/commercial-roofing/) properties, from a single [roof repair](/roof-repair/) to a full [roof replacement](/roof-replacement/). Our approach is simple: a roofer should look at your roof before anyone tries to sell you one.',
       `QRS is family-owned, woman-owned and locally owned. It was co-founded by **Tony Goldberg** and **Adva Goldberg**, and has been a licensed, bonded and insured California contractor since 2020 (CSLB #${BUSINESS.license}).`,
     ],
   },
@@ -78,7 +78,7 @@ export const ABOUT_PAGE = {
     { q: 'How can I tell if a roofing company is trustworthy?', a: `Check that its California contractor license is active on the CSLB website and that it’s bonded and insured, read its recent reviews, and expect a roofer, not a salesperson, to look at your roof. A trustworthy company gives you photos of what it found and a written scope and price before any work, and puts its warranty in writing. Ours: CSLB #1061942, licensed, bonded and insured, ${GOOGLE_REVIEWS.count} Google reviews and a 10-year workmanship warranty on installs (call for details).` },
     { q: 'Is Quality Roofing Specialists licensed and insured?', a: `Yes. QRS is licensed, bonded and insured as a California contractor: CSLB license #${BUSINESS.license}, licensed since ${formatDate(BUSINESS.licenseSince)}.` },
     { q: 'Who owns Quality Roofing Specialists?', a: 'QRS is family-owned, woman-owned and locally owned. It was co-founded by **Tony Goldberg** and **Adva Goldberg**, who serve as CEO and President. Tony did his first roofing job at 16.' },
-    { q: 'What areas do you serve?', a: 'Homes and businesses across [Los Angeles County](/service-areas/la-county/), [Orange County](/service-areas/orange-county/) and the Inland Empire ([Riverside County](/service-areas/riverside-county/) and [San Bernardino County](/service-areas/san-bernardino-county/)), from our offices in West Hollywood, Woodland Hills and Vernon.' },
+    { q: 'What areas do you serve?', a: 'Homes and businesses across our service area, from our offices. See every city and county we serve on our [service areas](/service-areas/) page.' },
     { q: 'Do you bring in outside crews?', a: 'Our own 12 crews do the work, with dedicated crews for shingle, tile and flat roofing. We bring in vetted partner crews only during overflow, and every $199 Roof Check (our sealing and maintenance visit) is done by a field inspector, lead roofer or estimator on our own team.' },
     { q: 'What languages does your team speak?', a: 'Our office team and roofers communicate in English, Spanish and Tagalog.' },
   ],

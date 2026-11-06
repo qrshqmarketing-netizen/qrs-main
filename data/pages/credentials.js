@@ -11,11 +11,11 @@ export const CREDENTIALS_PUBLIC = true;
 export const CREDENTIALS_PAGE = {
   path: '/credentials/',
   keyword: 'roofing contractor credentials',
-  metaTitle: 'Roofing Contractor Credentials: License & Certifications',
+  metaTitle: 'Roofing Contractor Credentials | Quality Roofing Specialists',
   metaDescription: `Our roofing contractor credentials: CSLB license #${BUSINESS.license}, licensed, bonded and insured, and our manufacturer certifications.`,
   hero: {
     heading: 'Roofing contractor credentials',
-    intro: `Our roofing contractor credentials in one place: ${BUSINESS.legalName} is a licensed, bonded and insured California contractor (CSLB #${BUSINESS.license}, licensed since ${formatDate(BUSINESS.licenseSince)}), and certified with the roofing manufacturers whose systems we install.`,
+    intro: `Roofing contractor credentials you can check yourself, not take on faith. ${BUSINESS.legalName} is a licensed, bonded and insured California contractor (CSLB #${BUSINESS.license}, licensed since ${formatDate(BUSINESS.licenseSince)}), and certified with the roofing manufacturers whose systems we install.`,
     image: '/images/shingle-roof-installation-underlayment.webp',
     imageAlt: 'Roofers installing underlayment on a roof deck before the new shingles',
   },

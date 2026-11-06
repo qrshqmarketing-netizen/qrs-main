@@ -368,4 +368,10 @@ export const ES = {
   // Flat bar links (November 4 2026)
   'Residential': 'Residencial',
   'Replacement': 'Reemplazo',
+  // ---------- Rotating reviews on the new home page (QhReviewRotator), November 6 2026 ----------
+  'Google review': 'Reseña de Google',
+  'Google review, translated from English': 'Reseña de Google, traducida del inglés',
+  'Previous review': 'Reseña anterior',
+  'Next review': 'Reseña siguiente',
+  'Review {n} of {total}': 'Reseña {n} de {total}',
 };

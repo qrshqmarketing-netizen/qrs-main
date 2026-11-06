@@ -35,6 +35,7 @@ export default function Footer() {
               <BrandLogo variant="dark" />
               <p className="ft-line"><T>Roofs built right, from the deck up.</T></p>
               <a className="ft-phone" href={TEL}>{PHONE}</a>
+              <a className="ft-email" href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a>
               <p className="ft-hours"><T>{hoursText(BUSINESS.hours)}</T>.</p>
               <div className="ft-asks">
                 <SiteLink className="btn btn-gold" href="#roof-check" prefetch={false}><T>Get Pro Advice</T></SiteLink>

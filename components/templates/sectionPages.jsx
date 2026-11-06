@@ -17,6 +17,9 @@ import {
 } from '@/data/content';
 import { pageMetadata } from '@/lib/pages';
 import HubPage from './HubPage';
+import QhHubPage from './QhHubPage';
+import { QhDrainPlan, QhLeakTrace, QhTileLift, QhReroof, QhShingleColors } from '@/components/home/QrsSections';
+import { ROOF_COLORS, SHOW_ROOF_COLORS } from '@/data/roofColors';
 import ServicePage from './ServicePage';
 import { isRepair, REPAIR_ACTIONS } from './shared';
 
@@ -44,8 +47,16 @@ export function SectionHub({ section, extra }) {
         imageAlt: 'Row of homes with pitched roofs along a residential street',
       }
     : null;
+  // The Commercial Roofing page in the new home page's theme (owner, November 6 2026); the other hubs keep HubPage for now
+  // Shingle roofing too, with its own hero visual: the roof cycling through the shingle colors (owner, November 6 2026)
+  const shingle = section.href === '/residential-roofing/shingle-roofing/';
+  // Flat roofing too: a flat roof seen from above, water running to its drain and scupper (owner, November 6 2026)
+  const flat = section.href === '/residential-roofing/flat-roofing/';
+  // Tile roofing too: a band of clay tiles lifting off the underlayment (owner, November 6 2026)
+  const tile = section.href === '/residential-roofing/tile-roofing/';
+  const Template = isCommercial(section) || shingle || flat || tile ? QhHubPage : HubPage;
   return (
-    <HubPage
+    <Template
       hub={section.hub}
       crumbs={sectionCrumbs(section)}
       eyebrow={section.parent ? section.parent.label : isCommercial(section) ? 'Offices, Retail & Warehouses' : 'Los Angeles & Orange County'}
@@ -57,6 +68,27 @@ export function SectionHub({ section, extra }) {
       feature={feature}
       offer={isCommercial(section) ? 'commercial' : 'home'}
       extra={extra}
+      {...(tile && {
+        visual: (
+          <QhTileLift
+            labels={['Clay, concrete and slate tile', 'The underlayment under the tile', 'Flashings and valleys']}
+            caption="The tiles often outlast the layers beneath them."
+            links={own.map((c) => ({ label: c.title.replace(/\s*·.*$/, ''), href: c.href }))}
+          />
+        ),
+      })}
+      {...(flat && {
+        visual: (
+          <QhDrainPlan
+            labels={section.hub.highlights.points.map((p) => p.title)}
+            caption="Flat roofing built so water leaves the roof."
+            links={own.map((c) => ({ label: c.title.replace(/\s*·.*$/, '').replace(/ in Los Angeles, CA$/, ''), href: c.href }))}
+          />
+        ),
+      })}
+      {...(shingle && {
+        visual: <QhShingleColors colors={ROOF_COLORS} note={SHOW_ROOF_COLORS ? 'Cool roof colors, every one rated SRI 20 or higher' : undefined} {...(!SHOW_ROOF_COLORS && { href: '#services', label: 'See our shingle roofing services' })} />,
+      })}
     />
   );
 }
@@ -109,15 +141,24 @@ export function SinglePage({ single, actions, finalCta }) {
 export const serviceHubMetadata = (page) => pageMetadata({ title: page.hub.metaTitle, description: page.hub.metaDescription, path: page.href });
 
 export function ServiceHub({ page, actions }) {
+  // Roof Repair in the new home page's theme with its own hero visual, the leak traced to its source (owner, November 6 2026)
+  // Roof Replacement too, with its own hero visual: one roof in the four stages of a replacement (owner, November 6 2026)
+  const repair = page.href === '/roof-repair/';
+  const replacement = page.href === '/roof-replacement/';
+  const cards = page.cards.map(cardFor).filter(Boolean);
+  const Template = repair || replacement ? QhHubPage : HubPage;
+  const short = (c) => ({ label: c.title.replace(/\s*·.*$/, '').replace(/ Roof (Repair|Replacement)$/, '').replace(/^Emergency.*/, 'Emergency'), href: c.href });
   return (
-    <HubPage
+    <Template
+      {...(repair && { visual: <QhLeakTrace links={cards.filter((c) => !/lift-and-relay/.test(c.href)).map(short)} /> })}
+      {...(replacement && { visual: <QhReroof links={cards.map(short)} /> })}
       hub={page.hub}
       crumbs={[HOME, { label: page.label, href: page.href }]}
       eyebrow="Roof Services"
       image={page.image}
       imageAlt={page.imageAlt}
       scene={page.scenes[0]}
-      cards={page.cards.map(cardFor).filter(Boolean)}
+      cards={cards}
       process
       offer="home"
       actions={actions}

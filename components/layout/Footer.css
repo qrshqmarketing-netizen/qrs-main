@@ -4,7 +4,7 @@
    columns and the offices, then the small print. The same in both themes. Mobile first. */
 footer,:root[data-theme="dark"] footer{
   position:relative;color:#fff;
-  padding:0 max(16px,4.44vw) 96px; /* the gold band under the card, also room so the chat bubble never covers the small print */
+  padding:96px max(16px,4.44vw); /* the band above and under the card, the same height (owner, November 6 2026); the bottom also keeps the chat bubble off the small print */
   background:linear-gradient(0deg,#1d5fae 0%,#0a3969 24%,#2c4766 48%,#8a7448 74%,#d4b572 100%);
 }
 .ft-card{max-width:1680px;margin:0 auto;background:#070b12;border-radius:var(--radius);padding:44px clamp(20px,4vw,56px) 26px}
@@ -58,3 +58,6 @@ footer,:root[data-theme="dark"] footer{
 /* The BBB Accredited Business seal under the social icons (BbbBadge) */
 .ft-bbb{display:inline-block;margin-top:14px;line-height:0;border-radius:10px}
 .ft-bbb:focus-visible{outline:3px solid rgba(212,181,114,.85);outline-offset:3px}
+
+/* The email under the phone number (owner, November 6 2026) */
+.ft-brand a.ft-email{display:inline-block;min-height:0;margin-top:6px;font-size:15px;color:#fff;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:4px}

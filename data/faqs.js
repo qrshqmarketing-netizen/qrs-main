@@ -26,7 +26,7 @@ export const FAQS = [
   },
   {
     q: 'How much does a new roof cost?',
-    a: 'It depends on the size, pitch and material of your roof, and on what we find under the old one. Our guide to [roof replacement cost in Los Angeles](/blog/roof-replacement-cost-los-angeles/) explains how a price comes together, and the free roof evaluation gives you the exact figure: a written scope and price before any work.',
+    a: 'It depends on the size, pitch and material of your roof, and on what we find under the old one. Our guide to [roof replacement cost](/blog/roof-replacement-cost-los-angeles/) explains how a price comes together, and the free roof evaluation gives you the exact figure: a written scope and price before any work.',
   },
   {
     q: 'Do you offer financing?',
@@ -37,8 +37,8 @@ export const FAQS = [
     a: 'Our installs are backed by a 10-year workmanship warranty (call for details), and the roofing materials carry the manufacturer’s warranty, which depends on the product and its warranty tier. At the final walkthrough we go over your warranty with you in plain English.',
   },
   {
-    q: 'Is Quality Roofing Specialists a licensed roofing contractor in Los Angeles?',
-    a: `Yes. QRS is a licensed, bonded and insured California roofing contractor: CSLB license #${BUSINESS.license}, licensed since ${formatDate(BUSINESS.licenseSince)}. We work on homes and businesses across Los Angeles and Orange County.`,
+    q: 'Is Quality Roofing Specialists a licensed roofing contractor?',
+    a: `Yes. QRS is a licensed, bonded and insured California roofing contractor: CSLB license #${BUSINESS.license}, licensed since ${formatDate(BUSINESS.licenseSince)}. We work on homes and businesses across our [service area](/service-areas/).`,
   },
   {
     q: 'Do you work with insurance claims?',
@@ -54,6 +54,6 @@ export const FAQS = [
   },
   {
     q: 'What areas do you serve?',
-    a: `We serve homeowners across [Southern California](/service-areas/). Enter your ZIP code in our [service area map](#service-area) to check your city, or call [${PHONE}](${TEL}).`,
+    a: `We serve homeowners across our [service area](/service-areas/). Enter your ZIP code in our [service area map](#service-area) to check your city, or call [${PHONE}](${TEL}).`,
   },
 ];

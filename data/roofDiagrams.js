@@ -21,7 +21,7 @@ const HOME_LEAKS = [
   { title: 'Valleys', text: 'A valley packed with leaves holds water right where two slopes meet' },
   { title: 'Chimney flashing', text: 'Counter and chimney flashing loosens or cracks where the chimney passes through' },
   { title: 'Skylights', text: 'Flashing and seals around them wear out' },
-  { title: 'Lifted or creased shingles', text: 'Santa Ana winds lift and crease tabs, and a creased shingle tears loose in the next strong gust' },
+  { title: 'Lifted or creased shingles', text: 'Strong winds lift and crease tabs, and a creased shingle tears loose in the next strong gust' },
   { title: 'Nail pops', text: 'A nail that backs out pushes up the shingle above it and leaves a path into the deck' },
   { title: 'Roof edges', text: 'Wind gets under loose shingles and edge metal at the eaves, and water follows' },
 ];

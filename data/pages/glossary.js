@@ -5,13 +5,13 @@
 export const GLOSSARY_PAGE = {
   path: '/roofing-glossary/',
   keyword: 'roofing terms',
-  metaTitle: 'Roofing Terms Glossary: Plain-English Definitions',
+  metaTitle: 'Roofing Terms Glossary | Quality Roofing Specialists',
   metaDescription:
-    'Roofing terms explained in plain English: flashing, underlayment, pitch, squares, valleys, torch-down, TPO, lift and relay and more, from Los Angeles roofers.',
+    'Roofing terms explained in plain English: flashing, underlayment, pitch, squares, valleys, torch-down, TPO, lift and relay and more, from working roofers.',
   hero: {
     heading: 'Roofing Terms Glossary',
     intro:
-      'Roofing terms can make an estimate hard to follow. This glossary explains the words roofers use in plain English, from the parts of a roof to the materials, the problems we find and the paperwork, so you can read a scope and ask the right questions.',
+      'Roofing terms can make an estimate hard to follow, and a scope you can’t read is a scope you can’t compare. This glossary explains the words roofers use in plain English, from the parts of a roof to the materials, the problems we find and the paperwork, so you can read a scope and ask the right questions.',
     image: '/images/shingle-roof-installation-underlayment.webp',
     imageAlt: 'Roofers laying new underlayment over the roof deck before the shingles go on',
   },
@@ -66,7 +66,7 @@ export const GLOSSARY_PAGE = {
         { term: 'Architectural shingle', def: 'A thicker, layered asphalt shingle with a dimensional look. It has largely replaced the flat three-tab shingle on new roofs.', href: '/residential-roofing/shingle-roofing/' },
         { term: 'Three-tab shingle', def: 'A thinner, single-layer asphalt shingle with three flat tabs per strip.' },
         { term: 'Starter strip', def: 'The first course of shingles along the eave, which seals the edge and gives the first visible row something to bond to.' },
-        { term: 'Clay tile', def: 'Fired clay roof tile, the classic Spanish (barrel) or flat profile seen across Southern California. The tile itself can outlast the underlayment beneath it.', href: '/residential-roofing/tile-roofing/' },
+        { term: 'Clay tile', def: 'Fired clay roof tile, the classic Spanish (barrel) or flat profile seen on Spanish and Mediterranean-style homes. The tile itself can outlast the underlayment beneath it.', href: '/residential-roofing/tile-roofing/' },
         { term: 'Concrete tile', def: 'Roof tile made from concrete, heavier than clay and made in many profiles and colors.', href: '/residential-roofing/tile-roofing/concrete/' },
         { term: 'Modified bitumen', def: 'An asphalt roofing membrane strengthened with polymers, laid in rolls on flat roofs. APP and SBS are the two main types.', href: '/blog/torch-down-roofing-app-vs-sbs/' },
         { term: 'Torch-down roofing', def: 'Modified bitumen sheets bonded to the roof by heating them with a torch, so the layers fuse into one waterproof surface.', href: '/blog/torch-down-roofing-app-vs-sbs/' },

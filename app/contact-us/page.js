@@ -1,11 +1,7 @@
-import Faq from '@/components/sections/Faq';
-import ReviewMarquee from '@/components/sections/ReviewMarquee';
 import FinalCta from '@/components/sections/FinalCta';
-import { AbrHero } from '@/components/about/AboutRemote';
 import Offices from '@/components/sections/Offices';
-import RoofCheck from '@/components/sections/RoofCheck';
 import ServiceArea from '@/components/sections/ServiceArea';
-import ValueGrid from '@/components/sections/ValueGrid';
+import { QhContactCard, QhHero, QhPoints, QhReviews, QhStart } from '@/components/home/QrsSections';
 import JsonLd from '@/components/ui/JsonLd';
 import { CONTACT_LINK, HOME } from '@/data/catalog';
 import { CONTACT_PAGE as page } from '@/data/pages/contact';
@@ -36,32 +32,52 @@ const FAQS = [
 
 const schema = pageJsonLd({ path: CONTACT_LINK.href, title: page.metaTitle, description: page.metaDescription, type: 'ContactPage', crumbs: CRUMBS, faqs: FAQS });
 
-// Contact page (content in data/pages/contact.js; offices and hours in data/site.js)
+const icon = (d) => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+    {d}
+  </svg>
+);
+
+// Contact page (content in data/pages/contact.js; offices and hours in data/site.js), in the new home page's theme (owner, November 6 2026;
+// components/home/QrsSections.jsx, QrsHome.css): the hero with the page photo and a "Talk to a roofer" card of real links (QhContactCard), the
+// offices with their addresses and numbers (the contact details themselves, so the cities in the addresses stay), the ways to reach us, a review,
+// the ZIP map, the FAQ beside the request form and the closing call to action.
 export default function ContactPage() {
   return (
-    <main id="top" className="abr">
+    <main id="top" className="qh">
       <JsonLd data={schema} />
-      <AbrHero
+      <QhHero
         crumbs={CRUMBS}
-        path="/contact-us/"
         title={page.hero.heading}
         outcome={heroOutcome('/contact-us/')}
-        intro={page.hero.intro}
-        media={{ image: page.hero.image, alt: page.hero.imageAlt }}
+        text={page.hero.intro}
+        checks={[HOURS_LINE, `Email ${BUSINESS.email}`, 'Emergency calls after hours and weekends', 'Each office has its own number']}
         actions={[
-          { label: `Call ${PHONE}`, href: TEL, style: 'dark' },
+          { label: `Call ${PHONE}`, href: TEL, style: 'gold' },
           { label: 'Request an Estimate', href: '#roof-check', style: 'line' },
         ]}
+        visual={
+          <QhContactCard
+            image={page.hero.image}
+            alt={page.hero.imageAlt}
+            rows={[
+              { label: 'Call us', value: PHONE, href: TEL, icon: icon(<path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z" />) },
+              { label: 'Email us', value: BUSINESS.email, href: `mailto:${BUSINESS.email}`, icon: icon(<><rect x="2" y="4" width="20" height="16" rx="2" /><path d="M22 6l-10 7L2 6" /></>) },
+              { label: 'Request an estimate', value: 'Two minutes, a clear next step', href: '#roof-check', icon: icon(<><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><path d="M14 2v6h6M9 13h6M9 17h6" /></>) },
+            ]}
+            caption="Talk to a roofer, not a call center."
+          />
+        }
       />
-      <div className="abr-keep">
+      <div className="lc-keep">
         <Offices sub="Visit or call any of our offices. Each office has its own number, or call our main line." note={`Hours: ${HOURS_LINE}`} photos={false} />
-        <ValueGrid heading={page.ways.heading} items={page.ways.items} />
-        {/* Google reviews, a few sections below the hero (owner, October 14 2026) */}
-        <ReviewMarquee />
-        <RoofCheck />
-        <ServiceArea heading="Check Your Service Area" sub="Enter your ZIP code to confirm we cover your address, or pick your city from the list." />
-        <Faq heading="Contact FAQs" sub="Straight answers about reaching our team." faqs={FAQS} cta={false} />
       </div>
+      <QhPoints id="ways" kicker="Contact" heading={page.ways.heading} items={page.ways.items} />
+      <QhReviews path={CONTACT_LINK.href} />
+      <div className="lc-keep">
+        <ServiceArea heading="Check Your Service Area" sub="Enter your ZIP code to confirm we cover your address, or pick your city from the list." />
+      </div>
+      <QhStart faqs={FAQS} heading="Contact FAQs" />
       <FinalCta
         heading="Talk to a Roofer, Not a Call Center"
         text="Call the office or send the form, and a roofer gets back to you with a clear next step, a written scope and a price."

@@ -24,13 +24,13 @@ export const PROJECT_PAGES = [WESTMINSTER_COMMERCIAL_PROJECT, PICO_RIVERA_PROJEC
 
 export const PROJECTS_PAGE = {
   keyword: 'roofing projects',
-  metaTitle: 'Roofing Projects in Los Angeles & Orange County',
+  metaTitle: 'Roofing Projects | Quality Roofing Specialists',
   metaDescription:
-    'Roofing projects by QRS: tile, shingle and flat roofs for homes, HOAs and businesses across Southern California. Book a free roof evaluation.',
+    'Roofing projects by QRS: tile, shingle and flat roofs for homes, HOAs and businesses, each with photos and how the work was done. Book a free roof evaluation.',
   hero: {
     heading: 'Roofing Projects in Los Angeles & Orange County',
     intro:
-      'Browse roofing projects from homes, communities and commercial properties across Southern California, featuring tile, shingle and flat roof work.',
+      'Roofing projects from homes, communities and commercial properties: tile, shingle and flat roofs, each shown in photos with how the work was done.',
     // Second paragraph under the intro, smaller type. Describes only what the project pages show.
     more:
       'Each project page shows the finished roof in photos, where it is and how the work was done. So far that includes [shingle roof replacements](/residential-roofing/shingle-roofing/replacement/) on apartment and multi-family buildings in Panorama City and San Pedro, a single-story home in San Pedro, a round, 12-sided home with a new [flat roof](/residential-roofing/flat-roofing/replacement/) in Hollywood Hills West, and a Mid-Wilshire building with both [tile](/residential-roofing/tile-roofing/replacement/) and flat roofing, a canal-side home in Venice re-roofed in new charcoal shingles with its flat roof section rebuilt, a white flat roof on a mid-century home in Los Angeles 90049, a shingle roof replacement in Garden Grove, shingle roof replacements in Westlake, South Los Angeles, Granada Hills and Hacienda Heights, and a roof replacement under solar panels in Pico Rivera, with the array taken down, stored and put back on the new roof. Use the map to find the project closest to you, or enter your ZIP code. Planning a roof of your own? [Contact us](/contact-us/) to start with a free roof evaluation.',

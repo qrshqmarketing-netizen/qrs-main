@@ -23,6 +23,312 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // Vetting commercial roofers (owner, November 6 2026, from the owner's team's draft): keyword "commercial roofing near me", which no other page
+  // uses (the commercial choosing guides keep "commercial roofing contractor" and "commercial roofing company in los angeles"; this links to them).
+  // Changed to the site's rules: the commercial survey is never called free (the draft offered a free evaluation), no prices, lifespans,
+  // project timelines or response windows, no insurance amounts, no C-39 or workers' comp claim for QRS (stated as what to check), no
+  // "in-house" roofers, FlatGuard left out (a residential system), outside blog links replaced by the CSLB license check; the warranty as the
+  // site states it. Picture: the owner's image.
+  {
+    slug: 'how-to-vet-commercial-roofing-near-me',
+    title: 'How to Vet Commercial Roofing Near Me: Questions, Red Flags and What to Expect From a Roofer-Led Inspection',
+    keyword: 'commercial roofing near me',
+    topics: ['commercial', 'inspection', 'flat', 'repair', 'replacement'],
+    metaTitle: 'How to Vet Commercial Roofing Near Me: Questions & Red Flags',
+    metaDescription:
+      'How to vet commercial roofing near me in Los Angeles and Orange County: the roofer-led inspection, credentials to check, the questions to ask and the red flags.',
+    datePublished: '2026-11-06',
+    dateModified: '2026-11-06',
+    excerpt:
+      'A roofer-led inspection, a written scope before the price, credentials you check yourself and materials named in writing: how to tell a qualified commercial roofer from a liability.',
+    image: '/images/blog/how-to-vet-commercial-roofing-near-me.webp',
+    imageAlt: 'How to vet commercial roofing near me: two roofers inspecting a white commercial flat roof around a rooftop HVAC unit',
+    intro: [
+      'When you search for commercial roofing near me, four things separate a qualified roofer from a liability: a roofer-led inspection with documented findings, a written scope before any price, credentials you can verify yourself, and materials matched to your roof and named in writing. Those four are the filter, and this guide shows how to apply them, whether you manage an office building in Los Angeles, a retail center in Orange County or a warehouse in the Inland Empire.',
+      'We are commercial roofers ourselves, so this is written from the roof: what a real inspection looks like, the credentials to check, how to read a flat roof proposal, the questions to ask at the walkthrough, and the red flags that should end the conversation. For more on choosing between companies, see our guides on [how to choose a commercial roofing contractor](/blog/how-to-choose-a-commercial-roofing-contractor/) and [choosing a commercial roofing company in Los Angeles](/blog/how-to-choose-a-commercial-roofing-company-los-angeles/).',
+    ],
+    sections: [
+      {
+        heading: 'Key Takeaways',
+        blocks: [
+          {
+            list: [
+              '**The inspection comes first.** A roofer-led survey with drone footage, photos and written findings should come before any talk of price.',
+              '**Verify the credentials yourself.** Check the license on the CSLB website and the insurance with the insurer, not just the proposal.',
+              '**The materials are named.** A real proposal names the system, the membrane and its thickness, the insulation and the flashing details, not just “flat roof replacement.”',
+              '**Compare equal scopes.** Two bids for the same roof can be far apart because one leaves out the tear-off, insulation or drains.',
+              '**Some red flags are disqualifying:** no verifiable license, a large deposit up front, a verbal-only warranty or a one-page proposal with no detail.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'What a Real Commercial Roof Inspection Includes',
+        blocks: [
+          'The first thing to find out is whether the person on your roof is a roofer or a salesperson. A roofer understands drainage, membrane failures and the details around equipment; a sales visit is built to close a contract. The difference shows in what you get afterward: a roofer’s inspection produces findings, a sales visit produces a proposal.',
+          'A thorough commercial roof inspection should give you:',
+          {
+            checklist: [
+              'Drone footage of the whole roof: the field, the membrane and the perimeter',
+              'Close-up photos of failing seams, flashings and penetrations',
+              'The drainage: slope, drains, scuppers and any ponding',
+              'HVAC curbs, vents and other penetrations',
+              'Parapet walls, coping and edge metal',
+              'Inside the building, the stains or damp areas if there are active leaks',
+              'Written findings in plain English, before any price',
+            ],
+          },
+          'A contractor who skips the inspection and quotes from the square footage alone isn’t taking a shortcut; that’s a red flag. Our [commercial roof inspection checklist](/blog/commercial-roof-inspection-checklist/) goes through the points in more detail.',
+          { pov: 'Every commercial job we take starts with a roofer-led roof survey: drone footage, photos of what we find and a written scope and price before any work. We’d rather show an owner or manager the photos and let them decide than ask anyone to sign off on a number they can’t see behind.' },
+        ],
+      },
+      {
+        heading: 'The Credentials to Verify Before You Sign',
+        blocks: [
+          'In California, a roofing contractor needs an active license from the Contractors State License Board. Don’t take the proposal’s word for it: use the CSLB’s [Check A License](https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx) to confirm the license is active, carries a roofing classification, matches the business name on the contract and shows no disciplinary actions.',
+          'On insurance, ask for certificates for general liability and workers’ compensation and confirm them with the insurer directly, using contact details you find yourself. Ask your own insurance advisor what limits your building needs, and whether to have your property named as an additional insured.',
+          { h3: 'Two Warranties, Both in Writing' },
+          'The manufacturer’s warranty covers the materials. The contractor’s workmanship warranty covers the installation, and installation is where many roof problems start, so it deserves as much attention as the product. Ask for both in writing, with what they cover and how a claim works; our article on [roof warranties](/blog/roof-warranty-explained/) explains the difference.',
+          'For our part: Quality Roofing Specialists is licensed, bonded and insured (CSLB #1061942), accredited by the BBB with an A+ rating, and our installs carry a 10-year workmanship warranty (call for details). The details are on our [credentials](/credentials/) page.',
+        ],
+      },
+      {
+        heading: 'TPO vs. Modified Bitumen: Reading a Flat Roof Proposal',
+        blocks: [
+          'A legitimate commercial flat roof proposal names the system, the materials and the construction details. You don’t need to be a roofer to read one, but knowing the two most common low-slope systems in Southern California helps you ask the right follow-up questions.',
+          '**TPO** is a single-ply membrane whose seams are welded with hot air into one continuous sheet, usually white to reflect the sun. **Modified bitumen** is a multi-layer, asphalt-based system reinforced with polyester or fiberglass, installed torch-applied, cold-applied or self-adhered, often with a white granulated cap sheet.',
+          {
+            table: {
+              head: ['Factor', 'TPO', 'Modified bitumen'],
+              rows: [
+                ['Seams', 'Hot-air welded into a continuous sheet', 'Overlapping plies, sealed by torch, adhesive or self-adhered laps'],
+                ['Surface', 'White and reflective', 'Granulated cap sheet; reflective white cap sheets are available'],
+                ['Foot traffic', 'Walk pads recommended where equipment is serviced', 'Multiple plies tolerate rooftop traffic well'],
+                ['Installation', 'Adhered or fastened, no open flame for the membrane', 'Torch-applied, or cold-applied and self-adhered where a flame isn’t right'],
+              ],
+            },
+          },
+          'Which one is right depends on the building: its drainage, its equipment, how often people are on the roof and what’s on it now. Our [TPO roofing](/commercial-roofing/tpo-roofing/) page and our comparison of [torch-down APP vs. SBS](/blog/torch-down-roofing-app-vs-sbs/) go deeper. Whatever the system, a proposal should spell out the tear-off, the deck, the insulation, the membrane, the flashings, the edge metal and the drains by name, not bundle them into one line.',
+          { pov: 'We don’t push one membrane on every building. We recommend the system that suits the roof’s drainage, equipment and traffic, and we write down exactly what goes on it, so an owner can compare our proposal line by line with anyone else’s.' },
+        ],
+      },
+      {
+        heading: 'Questions to Ask at the Estimate Walkthrough',
+        blocks: [
+          'The walkthrough is your best chance to find gaps in the scope and test the roofer. Start with the basics: is this a repair, a recover or a full tear-off? If damaged decking is found during tear-off, how will it be priced? Are the flashings, edge metal, drains and curbs included, or excluded from the base price?',
+          {
+            list: [
+              'How is deck replacement priced if damage is found during tear-off?',
+              'Are drains, edge metal and pipe boots included, or separate line items?',
+              'What is the payment schedule, and what is each payment tied to?',
+              'How are change orders approved and documented?',
+              'Which permits and inspections are included in the price? (Our guide to [roofing permits in Los Angeles](/blog/roofing-permits-los-angeles/) covers the local departments.)',
+              'How will the work be scheduled around tenants, customers or staff?',
+            ],
+          },
+          'Before you sign, confirm what you get at the end: the manufacturer’s warranty, the workmanship warranty in writing, the permit records and closeout photos. Ask how a warranty leak is reported and handled, and whether maintenance is required to keep the coverage. A contractor who resists putting any of this in writing usually has a reason.',
+        ],
+      },
+      {
+        heading: 'What Moves the Price, and Comparing Bids',
+        blocks: [
+          'We don’t publish prices in our articles, because a commercial roof’s price depends on that roof: its size and access, how many layers come off, the condition of the deck and insulation, the drains and edge details, the equipment on it, and whether the building stays occupied while the work is phased. A [commercial roof repair](/commercial-roofing/repair/) of one failed area is a very different job from a full [commercial roof replacement](/commercial-roofing/replacement/).',
+          'The lowest bid is rarely the best value when it leaves out flashings, decking or warranty terms. A comparison only means something when the scopes match: the same materials, the same included items, the same warranties and the same way of handling what’s found under the old roof.',
+        ],
+      },
+      {
+        heading: 'How the Right Roofer Protects Your Operations',
+        blocks: [
+          'A good commercial roofer plans the noisy and disruptive work around your schedule, not theirs: phased tear-off, start times that suit your tenants or customers, staging that doesn’t block entrances, and a written schedule before work begins, agreed with the people who will actually be on site. Our page for [property managers](/commercial-roofing/property-managers/) describes how we plan work around tenants.',
+          'Communities and multi-family buildings need more coordination still. Our *ReserveReady* program for [HOA and multi-family properties](/residential-roofing/hoa-multi-family/) gives boards and managers one point of contact, photo-documented reports for board records and work phased building by building.',
+          'And leaks don’t wait for a replacement schedule. When water is coming in, we take [emergency roof repair](/roof-repair/emergency/) calls after hours and on weekends and put tarps in place when they’re needed, with photos for the insurance file. A roofer who can respond like that is worth knowing before the storm.',
+          { pov: 'On an occupied building, the schedule is part of the scope. We agree in writing when the work happens, where we stage and how tenants are kept informed, and we finish with closeout photos for the owner’s files, as on our [Westminster commercial roof replacement](/projects/commercial-flat-roof-replacement-westminster-92683/).' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What should I look for when searching for commercial roofing near me?',
+        a: 'A roofer-led inspection with photos and written findings, a written scope before any price, a California license and insurance you can verify yourself, materials named in the proposal, and both warranties in writing.',
+      },
+      {
+        q: 'How often should a commercial roof be inspected?',
+        a: 'Many owners schedule an inspection at least once a year and after major storms, so drainage, flashing and penetration problems are caught early. Our [commercial roof maintenance](/commercial-roofing/maintenance/) plans put those visits on a schedule, with photo reports.',
+      },
+      {
+        q: 'Who handles the permits, and should they be in the bid?',
+        a: 'The licensed contractor usually pulls the permit. The bid should say which permits and inspections are included, or list them as exclusions, so you can compare bids on equal terms. We pull the permits on our jobs.',
+      },
+      {
+        q: 'What does your commercial roof survey include?',
+        a: 'Our commercial work starts with a roofer-led roof survey: drone footage, photos and a written scope and price before any work. [Request a roof survey](#roof-check) and we’ll explain what it includes for your building.',
+      },
+      {
+        q: 'Do you work on HOA and multi-family roofs?',
+        a: 'Yes. Our *ReserveReady* program gives [HOA and multi-family properties](/residential-roofing/hoa-multi-family/) one point of contact, photo-documented reports and work phased building by building.',
+      },
+    ],
+    closing: {
+      heading: 'The Right Contractor Clears Every Bar',
+      blocks: [
+        'The right commercial roofer leads with a roofer-led inspection, puts the findings and the scope in writing before the price, holds credentials you can verify, names the materials and has a plan for protecting your operations during the job. Those aren’t premium features; they’re the baseline, and a contractor who can’t meet all of them is a risk, not a bargain.',
+        'We serve commercial property owners and managers across Los Angeles County, Orange County and the Inland Empire, from [commercial roofing](/commercial-roofing/) repairs to full replacements, and every job starts with a roofer on your roof, not a salesperson with a clipboard. [Request a roof survey](#roof-check) to get started.',
+      ],
+    },
+    related: ['/commercial-roofing/', '/commercial-roofing/repair/', '/commercial-roofing/replacement/', '/commercial-roofing/property-managers/'],
+  },
+  // Shingle roofer qualities (owner, November 6 2026, from the owner's team's draft): keyword "qualities to look for in shingle roofers", so it
+  // doesn't compete with how-to-choose-a-shingle-roofer-los-angeles ("shingle roofer"), which it links to. Changed to the site's rules: no
+  // lifespans in years, no typical warranty ranges or prorating terms, no cost figures or repair-vs-replace percentages, no C-39 or workers' comp
+  // claim for QRS (stated as what to check), no "in-house" claim (partner crews help in overflow), the CSLB phone number left out (unverified),
+  // outside blog links replaced by the CSLB site; QRS facts as the site states them. Picture: the owner's image.
+  {
+    slug: 'top-qualities-shingle-roofers-los-angeles-orange-county',
+    title: 'Top Qualities to Look For in Shingle Roofers Serving Los Angeles & Orange County',
+    keyword: 'qualities to look for in shingle roofers',
+    topics: ['shingle', 'replacement', 'repair', 'inspection'],
+    metaTitle: 'Qualities to Look For in Shingle Roofers in Los Angeles',
+    metaDescription:
+      'The qualities to look for in shingle roofers in Los Angeles & Orange County: a roofer-led inspection, a written scope and price, a checked license, warranties.',
+    datePublished: '2026-11-06',
+    dateModified: '2026-11-06',
+    excerpt:
+      'A roofer-led inspection with photos, a written scope and price, a license you can check yourself and warranties in writing: the qualities that separate a careful shingle roofer from a risky one.',
+    image: '/images/blog/top-qualities-shingle-roofers-los-angeles-orange-county.webp',
+    imageAlt: 'Top qualities to look for in shingle roofers serving Los Angeles and Orange County: a roofer nailing asphalt shingles on a sunny Southern California roof',
+    intro: [
+      'The qualities to look for in shingle roofers are straightforward: a roofer-led inspection with photos, a written scope and price before any work starts, a California license and insurance you can verify yourself, and warranties in writing. In Los Angeles and Orange County, finding shingle roofers who actually meet all four usually takes more than a quick search and a handful of quotes.',
+      'We are shingle roofers ourselves, so this guide is written from the roof: what your shingles are likely made of, what Southern California’s sun and wind do to them, how to tell a repair from a replacement, and what to require from any contractor, including us, before a single nail goes in. For the questions to ask at the estimate, see our companion guide on [how to choose a shingle roofer in Los Angeles](/blog/how-to-choose-a-shingle-roofer-los-angeles/).',
+    ],
+    sections: [
+      {
+        heading: 'Key Takeaways',
+        blocks: [
+          {
+            list: [
+              '**A roofer looks first.** Expect a roofer, not a salesperson, on your roof, and photos (drone footage where it helps) of what they found before anyone prices the job.',
+              '**The scope is written before you sign.** It names the materials and covers the tear-off, deck, underlayment, flashings and ventilation, with a clear way to handle surprises.',
+              '**You verify the credentials yourself.** Look up the license on the CSLB website and confirm the insurance with the insurer directly.',
+              '**Two warranties, both in writing.** The manufacturer covers the shingles; the contractor’s workmanship warranty covers the installation.',
+              '**The red flags are specific:** no license number on request, a large payment up front, an offer to waive your deductible or pressure to sign today.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Know What Kind of Shingles You Have',
+        blocks: [
+          'Most shingle roofs in Southern California are one of two kinds of asphalt shingle. **3-tab shingles** are thin, flat and uniform, the older and more basic option. **Architectural shingles** (also called dimensional or laminate) are thicker, layered and textured, and they are what most homes here have been reroofed with in recent decades. You may also see composite or synthetic shingles made from polymer blends. Our comparison of [architectural vs. 3-tab shingles](/blog/architectural-vs-3-tab-shingles/) shows the difference side by side.',
+          'Knowing which you have tells a lot about what to expect, but how long a shingle roof lasts here depends more on its exposure, its ventilation and how well it was installed than on the label. The warranty term printed on a shingle bundle is a coverage term for manufacturing defects, not a promise of how long the roof will last, and it doesn’t cover a poor installation, poor attic ventilation, storm damage or normal aging. That’s why the contractor’s own workmanship warranty matters, and why you should ask for both documents in writing, not just the term in the ad.',
+        ],
+      },
+      {
+        heading: 'What Southern California’s Climate Does to Shingles',
+        blocks: [
+          'Los Angeles and Orange County are hard on a shingle roof. Strong sun and long dry seasons break down the asphalt that holds the granules, and heat speeds that up, leaving shingles harder, drier and more brittle. South- and west-facing slopes take the most sun, so one roof can age unevenly, with one side shedding granules while the other still looks fine. A lot of grit at the downspouts is often the first sign; our article on [shingle granules in the gutter](/blog/shingle-granules-in-gutter/) explains what a little and a lot mean.',
+          'Then there are the Santa Ana winds. Strong gusts lift shingle tabs, crack brittle edges and loosen flashings, and when winter storms follow, rain can be driven under the lifted edges instead of running off. A lifted tab can settle back down with its seal broken, so the damage isn’t visible from the street until the next storm finds it. A careful shingle roofer in this region checks the flashings, ridge caps and underlayment, not just how the shingles look from the ground.',
+          { pov: 'After a Santa Ana wind event, we look at the ridge, the edges and every flashing even when the roof looks fine from the street. A broken seal under a tab that has settled back down is exactly the kind of damage that turns into a leak in the first big storm.' },
+        ],
+      },
+      {
+        heading: 'Repair or Replace: Reading the Signs',
+        blocks: [
+          'Not every shingle problem needs a new roof. A few missing or lifted shingles after a windy night, one leak at a flashing or pipe boot, or a handful of cracked shingles on an otherwise sound roof are good candidates for a [shingle roof repair](/residential-roofing/shingle-roofing/repair/). What makes a repair the right call is the rest of the roof: shingles that are still flexible, granules covering most of the surface, and no soft spots or sagging in the deck.',
+          'Replacement makes more sense when the wear is widespread rather than in one spot:',
+          {
+            list: [
+              'Curling, cupping or brittle shingles across several slopes',
+              'Bald patches and heavy granule loss',
+              'Leaks that keep coming back after repairs',
+              'A wavy roofline, or soft spots in the deck',
+              'Moisture, mold, damp insulation or daylight through the sheathing in the attic',
+            ],
+          },
+          'These are signs to look for, not a formula. A roofer needs to see the deck, underlayment, ventilation and flashings in person before the recommendation is final. If you’re chasing a leak now, our guide on [how to find a roof leak](/blog/how-to-find-a-roof-leak/) walks through tracing one.',
+          { pov: 'We recommend a repair when a repair solves the problem, and we say so in writing. When the roof is worn out across most of its surface, more patching only postpones the bigger job, and we’ll show you the photos that tell us that.' },
+        ],
+      },
+      {
+        heading: 'What a Real Shingle Roof Inspection Covers',
+        blocks: [
+          'Some contractors call a few minutes in the driveway and a number from a calculator an “estimate.” That isn’t an inspection, and it can miss a soft deck, failed underlayment or broken flashing seals that only show up once the old roof comes off. A real inspection is led by a roofer and looks at:',
+          {
+            checklist: [
+              'The shingles on every slope, ridge and edge',
+              'Flashing at every wall, chimney, skylight and pipe',
+              'Valleys and the ridge caps',
+              'Signs of a soft or damaged deck',
+              'The underlayment, where it can be seen',
+              'Attic ventilation, at the eaves and the ridge',
+            ],
+          },
+          'Drone footage has changed what a thorough look can show. Photos from above cover every slope and flashing without walking on a roof that may be fragile, and they give you a record of what the roof looked like before any work started. Our [roof inspection checklist](/blog/what-does-a-roof-inspection-include/) goes through the points one by one.',
+          'After the inspection, the written scope should name the problem or the work, every material by brand and product line, the tear-off, how damaged decking will be handled and priced, the flashings, underlayment and ventilation, cleanup, who pulls the permit, and the manufacturer and workmanship warranties. A single lump-sum number with none of that gives you nothing to compare and no one to hold to it.',
+        ],
+      },
+      {
+        heading: 'What Moves the Price of a Shingle Roof',
+        blocks: [
+          'We don’t publish prices in our articles, because the honest answer depends on your roof. What moves the number in Los Angeles and Orange County: the roof’s size and pitch, how many stories it sits above the ground, how many old layers come off, damaged decking found during tear-off, flashing work at chimneys, walls and skylights, ventilation the roof needs, and disposal. Two bids that differ a lot usually differ in what they include, which is why the written scope matters more than the total.',
+          'On a [shingle roof replacement](/residential-roofing/shingle-roofing/replacement/) we install our *TotalShield* Shingle System, every layer from the deck up: decking where it’s needed, underlayment, flashings, vents and architectural shingles, with the full scope and price in writing before any work starts. Hold any contractor to that same standard.',
+        ],
+      },
+      {
+        heading: 'Credentials and Warranties to Require',
+        blocks: [
+          'In California, a roofing contractor needs an active license from the Contractors State License Board. Ask for the license number and look it up yourself on the [CSLB website](https://www.cslb.ca.gov/): check that it matches the business name on the contract, that it is active and carries a roofing classification, and whether it shows any disciplinary actions. Then ask for a certificate of insurance and confirm it with the insurer, using contact details you find yourself, for general liability and workers’ compensation through the end of your project. Workers’ compensation matters: if an uninsured worker is hurt on your property, it can become your problem.',
+          { h3: 'What a Strong Warranty Looks Like' },
+          'There are two warranties on a shingle roof. The manufacturer’s warranty covers defects in the shingles and other materials. The contractor’s workmanship warranty covers the installation itself, and it should say in writing what is covered and how to make a claim. Our [roof warranties explained](/blog/roof-warranty-explained/) article goes through both.',
+          'For our part: Quality Roofing Specialists is licensed, bonded and insured (CSLB #1061942), accredited by the BBB with an A+ rating, and our installs carry a 10-year workmanship warranty (call for details), alongside the manufacturer’s warranty on the materials. You can see the details on our [credentials](/credentials/) page.',
+          { h3: 'Red Flags' },
+          {
+            list: [
+              'No license number when you ask, or documents you can’t verify',
+              'A large payment demanded before work starts',
+              'An offer to waive or “cover” your insurance deductible',
+              'A knock on the door after a storm and pressure to sign the same day',
+              'A price with no written scope behind it',
+            ],
+          },
+          { pov: 'The right shingle roofer wants you to check everything: the license, the insurance, the scope and the warranty. If a contractor gets vague about any of them before you sign, it won’t get clearer after.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What are the most important qualities to look for in shingle roofers?',
+        a: 'A roofer-led inspection with photos, a written scope and price before any work, a California license and insurance you can verify yourself, and both the manufacturer’s and the contractor’s workmanship warranty in writing.',
+      },
+      {
+        q: 'Should a roofer offer to waive my insurance deductible after storm damage?',
+        a: 'No. An offer to waive or cover your deductible is a red flag. Pay your deductible as your policy requires, and expect the roofer’s photos and written scope to support your claim. Our guide to [roof insurance claims in California](/blog/roof-insurance-claims-california/) explains the process.',
+      },
+      {
+        q: 'How do I verify a shingle roofer’s license and insurance?',
+        a: 'Look up the license number on the [CSLB website](https://www.cslb.ca.gov/) and check the name, status, classification and any actions against it. Then call the insurance company, using contact details you find yourself, to confirm the general liability and workers’ compensation coverage.',
+      },
+      {
+        q: 'What payment protections should I ask for?',
+        a: 'Get the inspection, the photos and the written scope and price before you pay anything, and the warranty documents in writing. Walk away from anyone who demands a large payment up front or pressures you to sign the same day.',
+      },
+      {
+        q: 'How do I compare bids from different shingle roofers?',
+        a: 'Compare what each bid includes, not just the total: the named materials, the tear-off, how decking is handled, the flashings, underlayment and ventilation, the permit, cleanup, how changes are handled and the warranties. A bid based on a roofer’s inspection and photos gives you something real to compare.',
+      },
+      {
+        q: 'Do you offer a free shingle roof evaluation?',
+        a: 'Yes, for homes. A roofer from our team looks at your roof, with drone footage of the areas of concern, and you get photos, plain-English findings and a clear next step, then a written scope and price before any work. [Book your free roof evaluation](#roof-check).',
+      },
+    ],
+    closing: {
+      heading: 'Start With a Roofer Who Shows You the Roof',
+      blocks: [
+        'Finding good shingle roofers in Los Angeles and Orange County isn’t about the lowest bid. It’s about a roofer who looks first, documents what they find, puts the full scope in writing before any money changes hands and backs the work with a warranty in writing. The Southern California climate is hard on shingle roofs, and the right roofer accounts for that from the inspection on.',
+        'We offer a free roofer-led evaluation for homes, with drone footage and written findings, as the start of every [shingle roofing](/residential-roofing/shingle-roofing/) project. Hold any other contractor you consider to the same standard. Part of our [asphalt shingle roof guide](/blog/asphalt-shingle-roof-guide/).',
+      ],
+    },
+    related: ['/residential-roofing/shingle-roofing/', '/residential-roofing/shingle-roofing/replacement/', '/residential-roofing/shingle-roofing/repair/', '/roof-inspection/'],
+  },
   // El Niño prep articles (owner, November 6 2026, after the content approach of a large commercial roofer's seasonal guides: name the reader and
   // the season in the title, then steps; ours go further with before / during / after, a checklist and "Our point of view"). Facts only as the
   // site states them: forecasters expect a very strong El Niño (data/promo.js), the free roof evaluation for homes, the roofer-led roof survey for

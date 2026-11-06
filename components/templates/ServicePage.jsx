@@ -23,6 +23,7 @@ import { heroOutcome } from '@/data/heroOutcomes';
 import { articlesFor } from '@/lib/articles';
 import { searchHeading } from '@/lib/headings';
 import ServicePageSvc from './ServicePageSvc';
+import QhServicePage from './QhServicePage';
 
 const PROCESS_PHOTOS = {
   tile: [
@@ -113,11 +114,19 @@ function processPhoto(page) {
 // every service page uses this studio layout again; set SVC_DESIGN_EVERYWHERE to true, or list a page in SVC_DESIGN_PAGES, to show the other.
 const SVC_DESIGN_PAGES = new Set();
 const SVC_DESIGN_EVERYWHERE = false;
+// Service pages in the new home page's theme (owner, November 6 2026; QhServicePage.jsx), page by page; each needs a `story`
+const QH_SERVICE_PAGES = new Set(['/commercial-roofing/office-buildings/', '/commercial-roofing/retail/', '/commercial-roofing/churches/', '/commercial-roofing/industrial/', '/commercial-roofing/warehouses/', '/commercial-roofing/shops/', '/roof-financing/', '/roof-repair/emergency/']);
+// Pages without a `story` render there too (overview, process steps, reasons)
+const QH_NO_STORY_OK = true;
 
 export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], offer, actions, hub, finalCta = page.final || closingCta(page.keyword, offer) }) {
   if (SVC_DESIGN_EVERYWHERE || SVC_DESIGN_PAGES.has(crumbs.at(-1).href)) return ServicePageSvc({ page, crumbs, eyebrow, offer, actions, hub, finalCta });
   // The jump-to-form buttons' words: a roof survey on commercial pages (never called free), else the site's usual Get Pro Advice
   const jumpLabel = offer === 'commercial' ? 'Request a Roof Survey' : 'Get Pro Advice';
+  if ((page.story || QH_NO_STORY_OK) && QH_SERVICE_PAGES.has(crumbs.at(-1).href)) {
+    const [img, alt] = page.process?.image ? [page.process.image, page.process.imageAlt] : processPhoto(page);
+    return QhServicePage({ page, crumbs, eyebrow, offer, actions, finalCta, processImage: img, processImageAlt: alt });
+  }
   const [heroScene = 'scene-shingle', processScene = heroScene] = scenes;
   const [processImage, processImageAlt] = page.process?.image ? [page.process.image, page.process.imageAlt] : processPhoto(page);
   const work = projectsShownOn(crumbs.at(-1).href);

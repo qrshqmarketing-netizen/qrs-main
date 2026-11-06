@@ -1,5 +1,7 @@
+import Image from 'next/image';
 import FinalCta from '@/components/sections/FinalCta';
-import Hero from '@/components/sections/Hero';
+import TrustLogos from '@/components/sections/TrustLogos';
+import { QhHero, QhRoofAnatomy } from '@/components/home/QrsSections';
 import RoofCheck from '@/components/sections/RoofCheck';
 import JsonLd from '@/components/ui/JsonLd';
 import Rich from '@/components/ui/Rich';
@@ -21,6 +23,18 @@ const LINK = { label: 'Roofing Glossary', href: page.path };
 const CRUMBS = [HOME, LINK];
 const TERMS = page.groups.flatMap((g) => g.terms);
 
+// The parts shown on the hero's roof cut-away (QhRoofAnatomy), with their definitions from the glossary itself; x, y in its drawing
+const SPOTS = [
+  ['Ridge', 280, 44],
+  ['Valley', 360, 162],
+  ['Flashing', 229, 132],
+  ['Underlayment', 132, 178],
+  ['Roof deck (sheathing)', 92, 214],
+  ['Eave', 470, 214],
+]
+  .map(([term, x, y]) => ({ ...TERMS.find((t) => t.term === term), x, y }))
+  .filter((t) => t.def);
+
 const schema = pageJsonLd({
   path: page.path,
   title: page.metaTitle,
@@ -32,18 +46,27 @@ const schema = pageJsonLd({
 
 export default function RoofingGlossaryPage() {
   return (
-    <main id="top">
+    <main id="top" className="qh">
       <JsonLd data={schema} />
-      <Hero
+      <QhHero
         crumbs={CRUMBS}
         title={page.hero.heading}
         outcome={heroOutcome(page.path)}
-        intro={page.hero.intro}
-        image={page.hero.image}
-        imageAlt={page.hero.imageAlt}
+        text={page.hero.intro}
+        checks={[`${TERMS.length} roofing terms`, 'Plain-English definitions', 'Linked to the pages that cover them']}
+        actions={[
+          { label: 'Browse the terms', href: `#${headingId(page.groups[0].title)}`, style: 'gold' },
+          { label: 'Get Pro Advice', href: '#roof-check', style: 'line' },
+        ]}
+        visual={<QhRoofAnatomy spots={SPOTS} caption="The parts of a roof, one at a time." />}
       />
+      <TrustLogos />
       <section className="gl section">
-        <div className="container">
+        <div className="qh-wrap">
+          {/* The page's photo (it was the hero's background before the redesign) */}
+          <figure className="qh-steps-photo">
+            <Image src={page.hero.image} alt={page.hero.imageAlt} fill sizes="(min-width: 1200px) 1100px, 100vw" quality={60} />
+          </figure>
           <nav className="gl-jump" aria-label="Glossary sections">
             {page.groups.map((g) => (
               <a href={`#${headingId(g.title)}`} key={g.title}>

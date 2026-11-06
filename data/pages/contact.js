@@ -6,27 +6,27 @@ import { hoursText } from '@/lib/hours';
 
 export const CONTACT_PAGE = {
   keyword: 'contact quality roofing specialists',
-  metaTitle: 'Contact',
+  metaTitle: 'Contact Quality Roofing Specialists',
   metaDescription:
-    'Contact Quality Roofing Specialists: call (310) 340-1643, visit our LA, Valley or Vernon office, or request a free roof evaluation online.',
+    'Contact Quality Roofing Specialists: call (310) 340-1643, email us or visit one of our offices, or request a free roof evaluation online.',
   hero: {
     heading: 'Contact Quality Roofing Specialists',
     image: '/images/contact-hero-homeowners-phone.webp',
     imageAlt: 'Homeowners smiling at a phone outside their home',
-    intro: `To contact Quality Roofing Specialists, call [${PHONE}](${TEL}) (${hoursText(BUSINESS.hours)}), email [${BUSINESS.email}](mailto:${BUSINESS.email}) or send your project details through the [estimate form](#roof-check). One number reaches all of our offices, and our team gets back to you with a clear next step.`,
+    intro: `To contact Quality Roofing Specialists, call [${PHONE}](${TEL}) (${hoursText(BUSINESS.hours)}), email [${BUSINESS.email}](mailto:${BUSINESS.email}) or send your project details through the [estimate form](#roof-check). You reach roofers, not a call center, and our team gets back to you with a clear next step.`,
   },
   ways: {
     heading: 'How to Reach Us',
     items: [
-      { title: 'Call us', text: 'Talk with our team at [(310) 340-1643](tel:+13103401643). One number reaches all of our offices.' },
+      { title: 'Call us', text: 'Talk with our team at [(310) 340-1643](tel:+13103401643). Each office also has its own number, listed above.' },
       { title: 'Email us', text: 'Send questions or roof photos to [info@qualityroofingspecialists.com](mailto:info@qualityroofingspecialists.com).' },
       { title: 'Request an estimate', text: 'Tell us about the property in the [estimate form](#roof-check) and we’ll follow up to schedule.' },
       { title: 'Storm damage or a leak', text: 'Roof damaged in a storm or leaking now? Call us and see [emergency roof repair](/roof-repair/emergency/) for what to do first.' },
     ],
   },
   faqs: [
-    { q: 'Which office should I contact?', a: 'Any of them. All of our offices share one phone number, so calling (310) 340-1643 reaches our team wherever your property is.' },
+    { q: 'Which office should I contact?', a: 'Any of them. Our main line, (310) 340-1643, reaches our team wherever your property is, and each office also has its own number.' },
     { q: 'Can I send photos of my roof before a visit?', a: 'Yes. Email them with the property address and a short note about what you’re seeing. A roofer still confirms everything in person during the roof evaluation.' },
-    { q: 'Do you work in my area?', a: 'We serve homes and businesses across [Los Angeles County](/service-areas/la-county/), [Orange County](/service-areas/orange-county/) and the Inland Empire ([Riverside County](/service-areas/riverside-county/) and [San Bernardino County](/service-areas/san-bernardino-county/)). Enter your ZIP code on the map on this page to check your address.' },
+    { q: 'Do you work in my area?', a: 'Enter your ZIP code on the map on this page to check your address, or see every city we serve on our [service areas](/service-areas/) page.' },
   ],
 };

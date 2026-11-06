@@ -6,18 +6,18 @@ export const TILE_CONTENT = {
     keyword: 'tile roofing',
     // Meta for the searches the owner picked (October 30 2026: tile roof specialist(s), tile roofing los angeles, tile roofers, tile roof contractor,
     // tile roof installers). 60 / 160 characters.
-    metaTitle: 'Tile Roofing in Los Angeles & Orange County', // rolled back to the October 28 wording (owner, November 2 2026)
-    metaDescription: 'Tile roofing in Los Angeles & Orange County: clay, concrete and slate tile repair, lift & relay, replacement and roof care. Start with a free roof evaluation.',
+    metaTitle: 'Tile Roofing | Quality Roofing Specialists', // rolled back to the October 28 wording (owner, November 2 2026)
+    metaDescription: 'Tile roofing for clay, concrete and slate roofs: repairs, lift & relay, replacement and roof care, focused on the underlayment. Book a free roof evaluation.',
     hero: {
       heading: 'Tile Roofing Services',
-      intro: 'Tile roofing that looks after what’s under the tile. Repairs, tune-ups, inspections, roof care, lift & relay and replacement for clay, concrete and slate tile roofs across Los Angeles and Orange County. The tiles often outlast the layers beneath them, so we focus on the underlayment, flashings and valleys you can’t see. Every job starts with a free roof evaluation.',
+      intro: 'Tile roofing that looks after what’s under the tile. The tiles often outlast the layers beneath them, so a leak usually means worn underlayment, flashings or valleys, not broken tile. We repair, tune up, relay and replace clay, concrete and slate tile roofs, and every job starts with a free roof evaluation.',
       highlights: ['Clay, concrete and slate options', 'Focused on what’s under the tile', 'Free drone roof evaluation to start'],
     },
     overview: {
       heading: 'A Tile Roof Is More Than Its Tiles',
       paragraphs: [
-        'Tile roofing from QRS covers repairs, tune-ups, inspections, roof care, lift & relay and replacement for clay, concrete and slate tile roofs. Tile is part of the look of Southern California, from the clay barrel tile on Spanish Revival homes in Pasadena and Glendale to the concrete tile on newer Mediterranean-style homes in Irvine. The tiles themselves are tough. What actually keeps water out is the underlayment beneath them, helped by the flashings and valleys that steer water off the roof. Heat, Santa Ana winds and the occasional earthquake work on those layers for years, and they usually wear out well before the tile does. That’s why every tile job we do starts with what’s happening under the tile.',
-        'The right service depends on where your roof is in its life. A few cracked or slipped tiles call for a targeted [tile roof repair](/residential-roofing/tile-roofing/repair/). Worn underlayment beneath tiles that are still sound is the job for a [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/), which keeps your home’s original look. If you are comparing materials, explore [concrete tile roofing](/residential-roofing/tile-roofing/concrete/) and [slate tile roofing](/residential-roofing/tile-roofing/slate/). When the tiles themselves are failing, a [tile roof replacement](/residential-roofing/tile-roofing/replacement/) starts fresh. A free roof evaluation helps identify what your roof needs.',
+        'A tile roof is two roofs: the tile you see and the underlayment that actually keeps water out. Heat, strong winds and the occasional earthquake work on that hidden layer for years, and it usually wears out well before the tile does. Replacing broken tiles on top doesn’t reach it. That’s why every tile job we do starts with what’s happening under the tile, from the clay barrel tile on Spanish Revival homes to the concrete tile on newer Mediterranean-style homes.',
+        'The right service depends on where your roof is in its life. A few cracked or slipped tiles call for a [tile roof repair](/residential-roofing/tile-roofing/repair/). Worn underlayment under sound tiles is the job for a [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/), which keeps your home’s original look. Comparing materials? See [concrete tile roofing](/residential-roofing/tile-roofing/concrete/) and [slate tile roofing](/residential-roofing/tile-roofing/slate/). When the tiles themselves are failing, a [tile roof replacement](/residential-roofing/tile-roofing/replacement/) starts fresh.',
       ],
     },
     cards: {
@@ -25,7 +25,7 @@ export const TILE_CONTENT = {
       intro: 'From a single cracked tile to a complete new roof, every service starts with a roofer looking at the whole roof, not just the spot you called about.',
     },
     highlights: {
-      heading: 'Why Tile Suits Southern California',
+      heading: 'Why Tile Suits a Sunny Climate',
       points: [
         { title: 'Built for sun and heat', text: 'Clay and concrete tile stand up to intense sun, and intact tiles shade the underlayment from direct UV. That protection holds as long as the tiles stay whole and in place.' },
         { title: 'Noncombustible by nature', text: 'Tile itself doesn’t burn, which matters in wildfire country. Bird stops and eave closures help keep wind-blown embers and debris from getting under the tiles.' },
@@ -33,12 +33,12 @@ export const TILE_CONTENT = {
       ],
     },
     faqs: [
-      { q: 'How do I choose a tile roofing specialist in Los Angeles?', a: 'Look for a licensed contractor who works on tile roofs every week, not just shingles: ask how they walk the roof without cracking tile, how they match discontinued profiles and how they judge the underlayment. Check the CSLB license, ask for photos of past tile jobs and expect a written scope and price that names the underlayment, flashings and tile before any work. Our [credentials](/credentials/) page shows our license and manufacturer certifications.' },
+      { q: 'How do I choose a tile roofing specialist?', a: 'Look for a licensed contractor who works on tile roofs every week, not just shingles: ask how they walk the roof without cracking tile, how they match discontinued profiles and how they judge the underlayment. Check the CSLB license, ask for photos of past tile jobs and expect a written scope and price that names the underlayment, flashings and tile before any work. Our [credentials](/credentials/) page shows our license and manufacturer certifications.' },
       { q: 'What’s the difference between clay and concrete tile?', a: 'Clay tile is fired in a kiln, tends to hold its color and is the traditional choice for barrel and S profiles. Concrete tile is made from cement and sand, comes in flat and S profiles and can fade or turn porous as its surface weathers. Both crack under careless footsteps, and each needs its own approach when replacement tiles have to be matched.' },
-      { q: 'How long does a tile roof last?', a: 'The tiles and the layers under them age on different clocks. Well-kept clay and concrete tile can go for decades, while the underlayment beneath is usually what gives out first, especially after years of Southern California heat. When an older tile roof starts leaking, that hidden layer is the usual suspect. Our guide to [when tile roof underlayment should be replaced](/blog/tile-roof-underlayment/) covers the warning signs.' },
+      { q: 'How long does a tile roof last?', a: 'The tiles and the layers under them age on different clocks. Well-kept clay and concrete tile can go for decades, while the underlayment beneath is usually what gives out first, especially after years of summer heat. When an older tile roof starts leaking, that hidden layer is the usual suspect. Our guide to [when tile roof underlayment should be replaced](/blog/tile-roof-underlayment/) covers the warning signs.' },
       { q: 'Is it safe to walk on a tile roof?', a: 'We’d advise against it. Tiles crack when weight lands on an unsupported spot, and the damage often can’t be seen from the ground. If someone needs roof access for other work, ask how they plan to protect the tile before they climb up.' },
       { q: 'My Spanish-style home has flat roof sections too. Can you handle both?', a: 'Yes. Many Spanish Revival homes pair tile with flat areas behind parapet walls, and the transitions between them need as much attention as either roof. We look at both during the roof evaluation, and our [flat roofing](/residential-roofing/flat-roofing/) work covers the low-slope side.' },
-      { q: 'Do you work on tile roofs in my area?', a: 'We serve homeowners throughout Los Angeles County and Orange County, from Santa Monica and Burbank to Long Beach and Newport Beach. See our [service locations](/service-areas/), or book a [free roof evaluation](#roof-check) and we’ll confirm your address is covered.' },
+      { q: 'Do you work on tile roofs in my area?', a: 'See every city and county we serve on our [service locations](/service-areas/) page, or book a [free roof evaluation](#roof-check) and we’ll confirm your address is covered.' },
     ],
   },
 

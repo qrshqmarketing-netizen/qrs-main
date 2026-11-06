@@ -1,9 +1,6 @@
 import Faq from '@/components/sections/Faq';
-import FeatureBand from '@/components/sections/FeatureBand';
 import FinalCta from '@/components/sections/FinalCta';
-import { AbrHero } from '@/components/about/AboutRemote';
-import ProcessSteps from '@/components/sections/ProcessSteps';
-import ValueGrid from '@/components/sections/ValueGrid';
+import { QhFinder, QhHero, QhHiringCard, QhPoints, QhSteps } from '@/components/home/QrsSections';
 import JsonLd from '@/components/ui/JsonLd';
 import { CAREERS_LINK, HOME } from '@/data/catalog';
 import { CAREERS_PAGE as page } from '@/data/pages/careers';
@@ -21,38 +18,70 @@ const schema = pageJsonLd({ path: CAREERS_LINK.href, title: page.metaTitle, desc
 
 const EMAIL_LINK = `mailto:${page.email}?subject=${encodeURIComponent('Careers at QRS')}`;
 
-// Careers page (content in data/pages/careers.js)
+// Careers page (content in data/pages/careers.js), in the new home page's theme (owner, November 6 2026; components/home/QrsSections.jsx, QrsHome.css):
+// the hero with the page photo and a "Now hiring" card of the roles (QhHiringCard), what it's like to work here, the core values, the roles with
+// their email links (QhFinder), the FAQ, how to apply with its photo (QhSteps) and the closing call to action. No request form: it's a hiring page.
 export default function CareersPage() {
   return (
-    <main id="top" className="abr">
+    <main id="top" className="qh">
       <JsonLd data={schema} />
-      <AbrHero
+      <QhHero
         crumbs={CRUMBS}
-        path="/careers/"
         title={page.hero.heading}
         outcome={heroOutcome('/careers/')}
-        intro={page.hero.intro}
-        media={{ image: HERO_IMAGE, alt: 'Smiling roofer in a hard hat and safety harness holding a tablet on a shingle roof above the neighborhood', position: '60% 30%' }}
+        text={page.hero.intro}
+        checks={['Roofers lead the work', 'Detail-first standards', 'Written scopes and clear communication']}
         actions={[
-          { label: 'Email Us Your Info', href: EMAIL_LINK, style: 'dark' },
+          { label: 'Email Us Your Info', href: EMAIL_LINK, style: 'gold' },
           { label: `Call ${PHONE}`, href: TEL, style: 'line' },
         ]}
+        visual={
+          <QhHiringCard
+            image={HERO_IMAGE}
+            alt="Smiling roofer in a hard hat and safety harness holding a tablet on a shingle roof above the neighborhood"
+            position="60% 30%"
+            roles={page.roles.items.map((r) => r.title)}
+            email={EMAIL_LINK}
+            caption="No posting for your role? Send us your info anyway."
+          />
+        }
       />
-      <div className="abr-keep">
-        <ValueGrid heading={page.values.heading} items={page.values.items} tone="wash" pattern />
-        <FeatureBand {...page.coreValues} tone="light" />
-        <ValueGrid id="roles" heading={page.roles.heading} intro={page.roles.intro} items={page.roles.items} />
+      <QhPoints id="work-here" kicker="Working at QRS" heading={page.values.heading} paragraphs={[page.values.intro]} items={page.values.items} />
+      <QhPoints
+        id="core-values"
+        kicker={page.coreValues.eyebrow}
+        heading={page.coreValues.heading}
+        paragraphs={page.coreValues.paragraphs}
+        items={page.coreValues.points}
+        actions={
+          <div className="qh-actions">
+            <a className="qh-btn qh-btn-sun" href={page.coreValues.cta.href}>{page.coreValues.cta.label}</a>
+          </div>
+        }
+      />
+      <QhFinder
+        id="roles"
+        kicker="Openings"
+        heading={page.roles.heading}
+        intro={page.roles.intro}
+        rows={page.roles.items.map((r, i) => ({ id: `role-${i + 1}`, title: r.title, text: r.text, links: [r.link] }))}
+      />
+      <div className="lc-keep">
         <Faq heading="Careers FAQs" sub="Straight answers about working at QRS." faqs={page.faqs} cta={false} />
-        <ProcessSteps
-          heading={page.apply.heading}
-          subheading={page.apply.subheading}
-          steps={page.apply.steps}
-          image="/images/careers-apply-roofer-harness.webp"
-          imageAlt="Smiling roofer in a safety harness and tool belt on a shingle roof, a crewmate working behind him"
-          showOnMobile
-          tone="white"
-        />
       </div>
+      <QhSteps
+        heading={page.apply.heading}
+        steps={page.apply.steps}
+        image="/images/careers-apply-roofer-harness.webp"
+        imageAlt="Smiling roofer in a safety harness and tool belt on a shingle roof, a crewmate working behind him"
+        kicker={page.apply.subheading}
+        actions={
+          <div className="qh-actions">
+            <a className="qh-btn qh-btn-navy" href={EMAIL_LINK}>Email Us Your Info</a>
+            <a className="qh-link" href={TEL}>or call {PHONE}</a>
+          </div>
+        }
+      />
       <FinalCta trust={false} heading="Ready to Join the Crew?" text={`Email us your info or call ${PHONE} during business hours.`} cta={{ label: 'Email Us Your Info', href: EMAIL_LINK }} />
     </main>
   );

@@ -9,23 +9,23 @@ const apply = (role) => `mailto:${EMAIL}?subject=${encodeURIComponent(`Careers: 
 export const CAREERS_PAGE = {
   email: EMAIL,
   keyword: 'roofing jobs',
-  metaTitle: 'Roofing Jobs in Los Angeles',
+  metaTitle: 'Roofing Jobs | Quality Roofing Specialists',
   metaDescription:
-    'Roofing jobs and careers at Quality Roofing Specialists across Los Angeles & Orange County. Join a detail-first crew and send us your info today.',
+    'Roofing jobs and careers at Quality Roofing Specialists: roofers and installers, crew leads, estimators and office team. Join a detail-first crew today.',
   hero: {
     heading: 'Roofing Jobs & Careers at QRS',
     intro:
-      'Quality Roofing Specialists hires for roofing jobs across Los Angeles and Orange County: roofers and installers, crew leads, estimators, project managers and office team members. To apply, email us your info and the role you’re interested in. We’re building a team of dedicated professionals who share our core values and our mission of crafting top-quality roofs.',
+      'Roofing jobs for people who would rather do it right than do it twice. We hire roofers and installers, crew leads, estimators, project managers and office team members, and here roofers lead the work. To apply, email us your info and the role you’re interested in.',
   },
   values: {
     heading: 'What It’s Like to Work at QRS',
     // The keyword ("roofing jobs") in the first 100 words, now that the hero has no excerpt
-    intro: 'Quality Roofing Specialists hires for roofing jobs across Los Angeles and Orange County: roofers and installers, crew leads, estimators, project managers and office team members.',
+    intro: 'Quality Roofing Specialists hires for roofing jobs: roofers and installers, crew leads, estimators, project managers and office team members.',
     items: [
       { title: 'Detail-first standards', text: 'Clean lines, proper details and tidy job sites. We’d rather do it right than do it twice.' },
       { title: 'Roofers lead the work', text: 'Roofers inspect, scope and explain the work, so roofing skill sits at the center of every job.' },
       { title: 'Clear communication', text: 'Written scopes, photos and plain English, with homeowners and within the crew.' },
-      { title: 'Local projects', text: 'Work across Los Angeles and Orange County, from tile lift & relay to full roof replacements.' },
+      { title: 'Local projects', text: 'Work on homes and businesses close to our offices, from tile lift & relay to full roof replacements.' },
     ],
   },
   coreValues: {
@@ -55,7 +55,7 @@ export const CAREERS_PAGE = {
     ],
   },
   faqs: [
-    { q: 'Where are the jobs located?', a: 'Our projects are across Los Angeles County and Orange County, including [Los Angeles](/service-areas/la-county/los-angeles/), Pasadena, Long Beach, Irvine and the [other cities we serve](/service-areas/).' },
+    { q: 'Where are the jobs located?', a: 'Our projects are close to our offices, across the [cities we serve](/service-areas/).' },
     { q: 'What do you look for?', a: `People who share our core values (${VALUE_NAMES.slice(0, -1).join(', ')} and ${VALUE_NAMES.at(-1)}), take pride in careful work and treat homeowners’ property with respect.` },
     { q: 'What if I don’t see an opening for my role?', a: 'Send us your info anyway. Openings change through the year, and we’re always glad to hear from people who share our standards.' },
     { q: 'How do I apply?', a: `Email [${EMAIL}](mailto:${EMAIL}) with the role you’re interested in and a little about your experience, or call us during business hours.` },
@@ -67,7 +67,7 @@ export const CAREERS_TEASER = {
   eyebrow: 'Join the crew',
   heading: 'Roofing Careers at QRS',
   paragraphs: [
-    'We’re building a team of dedicated professionals with a bold goal: protecting 6,000 homes with quality roofing over the next 10 years. Join a detail-first crew doing tile, shingle and flat roofing across Los Angeles and Orange County.',
+    'We’re building a team of dedicated professionals with a bold goal: protecting 6,000 homes with quality roofing over the next 10 years. Join a detail-first crew doing tile, shingle and flat roofing.',
   ],
   cta: { label: 'Explore Careers', href: '/careers/' },
 };

@@ -4,21 +4,21 @@ export const EMERGENCY_ROOF_REPAIR = {
   slug: 'emergency-roof-repair',
   keyword: 'emergency roof repair',
   title: 'Emergency Roof Repair & Storm Damage',
-  h1: 'Emergency Roof Repair & Storm Damage Repair in Los Angeles & OC',
+  h1: 'Emergency Roof Repair & Storm Damage Repair',
   navLabel: 'Emergency & Storm Damage',
   card: 'Storm damage or a sudden leak? A roofer assesses and photographs the damage, adds temporary protection when it’s needed and follows with a permanent repair.',
   // Search Console wording (owner, October 23 2026; the old /residential-roofing-services/roof-storm-damage/ redirects here): "storm damage roof
   // repair", "roof storm damage repair", "wind damage roof contractor", "storm damage roof inspection", "hail damage roof repair"
   // Meta for the searches the owner picked (October 30 2026: roof repair specialist (Los Angeles), emergency roof repair (Los Angeles), LA wind
   // damage roof contractor, roofing services after LA storm), keeping "storm damage" (this page's strongest search). 55 / 159 characters.
-  metaTitle: 'Storm Damage & Emergency Roof Repair in Los Angeles', // rolled back to the October 28 wording (owner, November 2 2026)
+  metaTitle: 'Emergency Roof Repair | Quality Roofing Specialists', // owner, November 6 2026 (no place names on the redesigned pages)
   metaDescription:
-    'Emergency roof repair and storm damage roof repair in Los Angeles & Orange County: wind and hail damage, tarps when needed and photos for your insurance.',
+    'Emergency roof repair and storm damage roof repair: wind and hail damage assessed, tarps when needed, photos for your insurance. Call now, even after hours.',
   image: '/images/emergency-roof-repair-hero.webp',
-  imageAlt: 'Storm damage roof repair in Los Angeles: a roofer reviewing storm damage with homeowners beside a blue roof tarp',
+  imageAlt: 'Storm damage roof repair: a roofer reviewing storm damage with homeowners beside a blue roof tarp',
   hero: {
     intro:
-      'Emergency roof repair and storm damage roof repair in Los Angeles and Orange County. Stay off the roof, move belongings away from the leak and call QRS, even after hours or on a weekend. A roofer assesses and photographs the damage and puts a tarp in place when it’s needed. Then the permanent repair, priced in writing first.',
+      'Emergency roof repair and storm damage roof repair, even after hours or on a weekend. When water is coming in, stay off the roof, move belongings away from the leak and call QRS. A roofer assesses and photographs the damage and puts a tarp in place when it’s needed. Then the permanent repair, priced in writing first.',
     highlights: ['Damage assessed and photo-documented', 'Temporary protection, like a tarp, if needed', 'Permanent repair with a written scope'],
   },
   // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
@@ -46,12 +46,12 @@ export const EMERGENCY_ROOF_REPAIR = {
       a: 'Please don’t. Wet roofing is slippery, storm-damaged areas can give way underfoot and tiles crack easily when walked on. Take photos from the ground or a window instead, and leave the roof to a roofer.',
     },
     {
-      q: 'Do you do storm damage roof repair in Los Angeles?',
-      a: 'Yes. Roof storm damage repair is a large part of this work: wind that lifts shingles and cracks tiles, branches that puncture the roof, and the occasional hail. We handle storm damage roof repair across Los Angeles, including Glendale, [Pasadena](/service-areas/la-county/pasadena/) and Whittier, and in Orange County, including Anaheim and Orange. Our [service area](/service-areas/) page lets you check your ZIP code.',
+      q: 'Do you do storm damage roof repair?',
+      a: 'Yes. Roof storm damage repair is a large part of this work: wind that lifts shingles and cracks tiles, branches that puncture the roof, and the occasional hail. We handle storm damage roof repair across our whole service area, and our [service area](/service-areas/) page lets you check your ZIP code.',
     },
     {
       q: 'Is wind damage to a roof an emergency?',
-      a: 'If water is getting in, or shingles, tiles or flashing are loose enough to blow off, yes: call us and a roofer will assess it and add temporary protection if it’s needed. Santa Ana winds often lift shingles and shift tiles without an immediate leak, so after a strong wind a storm damage roof inspection finds those spots before the next rain.',
+      a: 'If water is getting in, or shingles, tiles or flashing are loose enough to blow off, yes: call us and a roofer will assess it and add temporary protection if it’s needed. Strong winds often lift shingles and shift tiles without an immediate leak, so after a strong wind a storm damage roof inspection finds those spots before the next rain.',
     },
     {
       q: 'Do you tarp roofs after storm damage?',
@@ -211,9 +211,11 @@ export const ROOF_FINANCING = {
     heading: 'Get Your Price, Then Your Payment Options',
     text: 'A roofer gives you a written scope and price for your roof replacement, then we walk you through monthly payments with Momnt Financing or Service Financing.',
   },
-  metaTitle: 'Roof Financing in Los Angeles & Orange County',
+  metaTitle: 'Roof Financing | Quality Roofing Specialists',
   metaDescription:
-    'Roof financing in LA & Orange County: spread a home roof replacement into monthly payments through Momnt or Service Financing. Book a free roof evaluation.',
+    'Roof financing for a home roof replacement: monthly payments through Momnt or Service Financing, subject to credit approval. Written price before you apply.',
+  // The statement beside the overview (QhServicePage), from the overview's own words
+  statement: 'Roofs don’t wait for a good moment to wear out.',
   image: '/images/financing-hero-background.webp',
   imageAlt: 'A roofer reviewing a project with homeowners',
   showReviews: false,
@@ -227,7 +229,7 @@ export const ROOF_FINANCING = {
   },
   hero: {
     intro:
-      'Roof financing for a home roof replacement in Los Angeles and Orange County. Spread the cost into monthly payments through Momnt Financing or Service Financing, subject to credit approval. You get a written scope and price before you apply, so you know exactly what you’re financing. Start with a free roof evaluation.',
+      'Roof financing for a home roof replacement. A worn-out roof rarely waits for a convenient time, so you can spread the cost into monthly payments through Momnt Financing or Service Financing, subject to credit approval. You get a written scope and price before you apply, so you know exactly what you’re financing. Start with a free roof evaluation.',
     highlights: ['For home roof replacements', 'Through Momnt Financing or Service Financing', 'Written scope and price come first', 'Example payments in our Instant Quote'],
   },
   overview: {

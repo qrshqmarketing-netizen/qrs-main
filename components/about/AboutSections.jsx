@@ -3,7 +3,7 @@ import ProjectCounter from '@/components/project/ProjectCounter';
 import Rich from '@/components/ui/Rich';
 import SiteLink from '@/components/ui/SiteLink';
 import { ArrowRight } from '@/components/ui/icons';
-import { BUSINESS, COMPANY, OFFICES, PHONE, TEL } from '@/data/site';
+import { BUSINESS, COMPANY, OFFICES, PHONE, TEL, GOOGLE_REVIEWS } from '@/data/site';
 import { cityPath } from '@/data/locations';
 import './about.css';
 import Mark from '@/components/ui/Mark';
@@ -41,9 +41,9 @@ export function AboutIntro({ page }) {
 export const NUMBERS = [
   { value: '10', unit: 'year', label: 'Workmanship warranty on our installs, call for details' },
   { value: '12', unit: '', label: 'Crews for shingle, tile and flat roofs' },
-  { value: String(OFFICES.length), unit: '', label: 'Offices in Los Angeles and San Jose' },
+  { value: String(OFFICES.length), unit: '', label: 'Offices, each with its own number' },
   { value: '3', unit: '', label: 'Languages: English, Spanish and Tagalog' },
-  { value: '4', unit: 'counties', label: 'Los Angeles, Orange, Riverside and San Bernardino' },
+  { value: String(GOOGLE_REVIEWS.count), unit: '', label: 'Google reviews from the people we roof for' },
   { value: '6,000', unit: '', label: 'Homes we aim to protect in the next 10 years' },
 ];
 

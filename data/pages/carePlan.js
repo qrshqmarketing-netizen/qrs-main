@@ -6,23 +6,23 @@ import { PHONE } from '../site';
 
 export const CARE_PLAN = {
   keyword: 'roof maintenance plans',
-  metaTitle: 'Roof Maintenance Plans & Pricing in Los Angeles',
+  metaTitle: 'Roof Maintenance Plans | Quality Roofing Specialists',
   metaDescription:
-    'Roof maintenance plans and one-time tune-ups for Los Angeles & Orange County homes: three priced tiers, seasonal visits and a photo report every time.',
+    'Roof maintenance plans and one-time tune-ups for homes: three priced tiers, visits before and after the rains, and a written photo report every time.',
   image: '/images/shingle-roof-inspection-overhead.webp',
   imageAlt: 'Aerial overhead view of a finished shingle roof inspected for ongoing care',
   hero: {
     heading: 'Roof Maintenance Plans · *RoofCare Plan*',
     intro:
-      'Roof maintenance plans, timed to the rains. One or two roofer visits a year catch small wear on Los Angeles and Orange County homes before it turns into a surprise leak. Each visit includes a full inspection, a written photo report, debris clearing and sealant top-offs. Three *RoofCare Plan* tiers, priced by roof size.',
+      'Roof maintenance plans, timed to the rains. Most leaks start as small wear nobody looked at: dried sealant, a slipped tile, a clogged valley. One or two roofer visits a year catch it first. Each visit includes a full inspection, a written photo report, debris clearing and sealant top-offs. Three *RoofCare Plan* tiers, priced by roof size.',
     highlights: ['Scheduled visits, before and after the rains', 'A written photo report every time', 'Pay after each visit — nothing up front'],
   },
   whatGoesWrong: {
-    heading: 'What Actually Goes Wrong on a Los Angeles Roof',
+    heading: 'What Actually Goes Wrong on a Roof',
     items: [
       {
         title: 'The sun, not the storm',
-        text: 'Roof maintenance plans from QRS schedule one or two roofer visits a year, timed to the rains, so small wear is caught before it turns into a surprise leak. Los Angeles gets twelve inches of rain a year — and three hundred days of sun. Your roof heats and cools every day of the year. Sealant dries and cracks; shingles go brittle and shed granules. Nothing about that waits for rain — by the time water finds the gap, the damage is already years old.',
+        text: 'Roof maintenance plans from QRS schedule one or two roofer visits a year, timed to the rains, so small wear is caught before it turns into a surprise leak. Most of the year brings sun, not rain. Your roof heats and cools every day of the year. Sealant dries and cracks; shingles go brittle and shed granules. Nothing about that waits for rain — by the time water finds the gap, the damage is already years old.',
       },
       {
         title: 'Tile lasts. The felt underneath doesn’t.',
@@ -136,7 +136,7 @@ export const CARE_PLAN = {
       },
       {
         title: 'May & June — after the rains',
-        text: 'Find out what the winter actually did — and what the Santa Anas moved. Same scope, plus anything that shifted. This is the visit that catches the small failure before it spends a summer baking in the sun.',
+        text: 'Find out what the winter actually did — and what the seasonal winds moved. Same scope, plus anything that shifted. This is the visit that catches the small failure before it spends a summer baking in the sun.',
       },
     ],
   },
