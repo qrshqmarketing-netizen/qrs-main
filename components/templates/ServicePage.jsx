@@ -4,6 +4,7 @@ import LatestArticles from '@/components/sections/LatestArticles';
 import FeatureBand from '@/components/sections/FeatureBand';
 import FinalCta from '@/components/sections/FinalCta';
 import TrustLogos from '@/components/sections/TrustLogos';
+import JumpCta from '@/components/sections/JumpCta';
 import Hero from '@/components/sections/Hero';
 import Overview from '@/components/sections/Overview';
 import PartnerLogos from '@/components/sections/PartnerLogos';
@@ -115,6 +116,8 @@ const SVC_DESIGN_EVERYWHERE = false;
 
 export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], offer, actions, hub, finalCta = page.final || closingCta(page.keyword, offer) }) {
   if (SVC_DESIGN_EVERYWHERE || SVC_DESIGN_PAGES.has(crumbs.at(-1).href)) return ServicePageSvc({ page, crumbs, eyebrow, offer, actions, hub, finalCta });
+  // The jump-to-form buttons' words: a roof survey on commercial pages (never called free), else the site's usual Get Pro Advice
+  const jumpLabel = offer === 'commercial' ? 'Request a Roof Survey' : 'Get Pro Advice';
   const [heroScene = 'scene-shingle', processScene = heroScene] = scenes;
   const [processImage, processImageAlt] = page.process?.image ? [page.process.image, page.process.imageAlt] : processPhoto(page);
   const work = projectsShownOn(crumbs.at(-1).href);
@@ -146,7 +149,7 @@ export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], 
       {/* Pages rewritten the home page's way have a `story` (ServiceStory: statement + "How we …" principles), which replaces the overview, the
           process steps and "Why choose QRS"; the rest keep those three (owner, October 16 2026: page by page) */}
       {page.story ? (
-        <ServiceStory story={page.story} image={page.story.image === false ? null : page.story.image || processImage} imageAlt={page.story.image ? page.story.imageAlt : processImageAlt} />
+        <ServiceStory cta={jumpLabel} story={page.story} image={page.story.image === false ? null : page.story.image || processImage} imageAlt={page.story.image ? page.story.imageAlt : processImageAlt} />
       ) : (
         <Overview paragraphs={page.overview.paragraphs} cta={hub && { label: `Compare All ${hub.label} Options`, href: hub.href }} />
       )}
@@ -172,6 +175,10 @@ export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], 
       <StudioProjects projects={work.projects} heading={work.exact ? 'This work, on real roofs' : 'Recent roofing projects'} />
       {/* Google reviews, a few sections below the hero (owner, October 14 2026) */}
       {page.showReviews !== false && <ReviewMarquee {...(page.reviewsHeading && { heading: page.reviewsHeading })} />}
+      {/* A jump to the estimate form under the reviews (owner, November 6 2026) */}
+      <div className="container jump-cta-band">
+        <JumpCta label={jumpLabel} align="center" />
+      </div>
       {!page.story && <WhyChoose heading={page.why.heading} intro={page.why.intro} points={page.why.points} />}
       {page.partners && <PartnerLogos {...page.partners} />}
       <LatestArticles posts={await articlesFor(crumbs.at(-1).href)} heading="Related Roofing Articles" />

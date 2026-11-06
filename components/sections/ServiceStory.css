@@ -36,3 +36,4 @@ body.studio-site main .sv-list h3{margin:0;color:var(--ink);font:400 clamp(22px,
 .sv-diagram-link{display:inline-flex;align-items:center;gap:8px;margin:18px 0 0;color:var(--navy);font-weight:600;text-decoration:underline;text-underline-offset:3px}
 .sv-diagram-link svg{width:16px;height:16px}
 @media (min-width:901px){.sv-diagram-art{margin-top:40px}.sv-diagram-link{margin-left:calc((100% - 980px) / 2)}}
+.sv-list > li.sv-list-cta{display:block;border-bottom:0;padding-top:4px}

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Mark from '@/components/ui/Mark';
 import Rich from '@/components/ui/Rich';
+import JumpCta from './JumpCta';
 import './ServiceStory.css';
 
 // A service page told the home page's way (owner, October 16 2026): one statement about this kind of work, one short paragraph, then
@@ -9,7 +10,8 @@ import './ServiceStory.css';
 // beside the principles from 901px. Data: `story` on the page (data/services/*.js):
 //   { label, lead, text, heading, principles: [{ title, text, bullets? }], image?, imageAlt? }  (lead and heading take __word__ for the gold underline;
 //   image overrides the page's usual process photo; false shows none, e.g. metal pages, which have no metal photos yet)
-export default function ServiceStory({ story, image, imageAlt }) {
+// `cta`: the words of the jump-to-form buttons after the statement and after the principles (owner, November 6 2026)
+export default function ServiceStory({ story, image, imageAlt, cta = 'Get Pro Advice' }) {
   return (
     <>
       <section className="st-section sv-lead">
@@ -22,6 +24,7 @@ export default function ServiceStory({ story, image, imageAlt }) {
                 <Rich text={story.text} />
               </p>
             )}
+            <JumpCta label={cta} />
           </div>
         </div>
       </section>
@@ -51,6 +54,9 @@ export default function ServiceStory({ story, image, imageAlt }) {
                   </div>
                 </li>
               ))}
+              <li className="sv-list-cta">
+                <JumpCta label={cta} />
+              </li>
             </ol>
             {image && (
               <div className="sv-photo">

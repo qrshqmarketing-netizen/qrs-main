@@ -1,0 +1,6 @@
+/* Jump-to-form button between sections (JumpCta.jsx) */
+.jump-cta{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin-top:28px}
+.jump-cta-center{justify-content:center}
+.jump-cta-call{display:inline-flex;align-items:center;gap:8px;color:var(--ink);font-weight:600;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:4px}
+.jump-cta-call svg{width:17px;height:17px;color:var(--gold-ink)}
+.jump-cta-band{margin:0;padding:8px 0 clamp(40px,6vw,72px)}
