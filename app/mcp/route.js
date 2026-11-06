@@ -139,7 +139,7 @@ function landingPage() {
 </head>
 <body>
 <div class="wrap">
-  <div class="brand"><img src="/images/logo/qrs-logo-official.webp" alt="${esc(BUSINESS.name)}"><span>MCP server</span></div>
+  <div class="brand"><img src="/images/logo/qrs-logo-official-v2.webp" alt="${esc(BUSINESS.name)}"><span>MCP server</span></div>
   <h1>Connect an AI agent to ${esc(BUSINESS.name)}</h1>
   <p class="lead">This is a Model Context Protocol (MCP) server, not a regular web page — it's meant to be added as a connector in an AI client (Claude, etc.), not browsed. Add the URL below to look up service-area coverage, search real site content, and (with a person's consent) request a callback.</p>
 
