@@ -830,3 +830,128 @@ main.qh .qh-area-hname{fill:#fff;font:800 17px var(--font-text),sans-serif;paint
 main.qh .qh-contact-form .qh-form-card{max-width:760px;margin:0 auto}
 main.qh .qh-contact-offices .container{padding-left:max(16px,4.44vw);padding-right:max(16px,4.44vw);max-width:calc(1680px + 2 * max(16px,4.44vw))}
 main.qh .qh-contact-ways + .qh-contact-form{padding-top:0}
+
+/* Shingle Roof Replacement hero: one slope built from the deck up, with the matching steps (owner, November 6 2026) */
+main.qh .qh-sc{position:relative;max-width:560px;width:100%;margin:0 auto}
+main.qh .qh-sc-roof{display:block;width:100%;height:auto;overflow:visible;filter:drop-shadow(0 30px 40px rgba(0,0,0,.45))}
+main.qh .qh-sc-steps{display:grid;grid-template-columns:1fr 1fr;gap:8px 18px;margin:18px 0 0;padding:0;list-style:none;counter-reset:sc}
+main.qh .qh-sc-steps li{counter-increment:sc;display:flex;align-items:center;gap:10px;font-size:13.5px;font-weight:700;line-height:1.25;color:#dbe7f3}
+main.qh .qh-sc-steps li:before{content:counter(sc);flex:none;display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--qh-sun);color:var(--qh-sun-ink);font-size:12.5px}
+@media (min-width:561px){main.qh .qh-sc-steps li{font-size:14px}}
+@media (prefers-reduced-motion:no-preference){
+  main.qh .qh-sc-l,main.qh .qh-sc-course{animation:qhScIn .6s cubic-bezier(.2,.8,.2,1) both}
+  main.qh .qh-sc-deck{animation-delay:.2s}
+  main.qh .qh-sc-under,main.qh .qh-sc-drip{animation-delay:1s}
+  main.qh .qh-sc-starter{animation-delay:1.7s}
+  main.qh .qh-sc-flash,main.qh .qh-sc-boot{animation-delay:3.4s}
+  main.qh .qh-sc-ridge{animation-delay:4.1s}
+  main.qh .qh-sc-course{animation-name:qhScCourse}
+  main.qh .qh-sc-glint{animation:qhScGlint 5s cubic-bezier(.45,0,.55,1) 5s infinite}
+  main.qh .qh-sc-steps li{animation:qhScStep .5s ease both}
+  main.qh .qh-sc-steps li:before{animation:qhScDot .5s ease both;animation-delay:inherit}
+}
+@keyframes qhScIn{from{opacity:0}}
+@keyframes qhScCourse{from{opacity:0;transform:translateY(-14px)}}
+@keyframes qhScGlint{0%{transform:translateX(0)}60%,100%{transform:translateX(760px)}}
+@keyframes qhScStep{from{opacity:.25}}
+@keyframes qhScDot{from{background:rgba(255,255,255,.12);color:#fff}}
+
+/* Shingle Roof Repair hero: one shingle swapped out on a 10 s loop (owner, November 6 2026). The finished state is the default (reduced motion). */
+main.qh .qh-sf{position:relative;max-width:560px;width:100%;margin:0 auto}
+main.qh .qh-sf-roof{display:block;width:100%;height:auto;overflow:visible;filter:drop-shadow(0 30px 40px rgba(0,0,0,.45))}
+main.qh .qh-sf-above{transform-box:fill-box;transform-origin:50% 0}
+main.qh .qh-sf-old,main.qh .qh-sf-gap,main.qh .qh-sf-ring{opacity:0}
+main.qh .qh-sf-zone{opacity:.0}
+main.qh .qh-sf-stamp{transform-box:fill-box}
+main.qh .qh-sf-steps li:before{background:var(--qh-sun);color:var(--qh-sun-ink)}
+@media (prefers-reduced-motion:no-preference){
+  main.qh .qh-sf-ring{animation:qhSfRing 10s ease infinite}
+  main.qh .qh-sf-old{animation:qhSfOld 10s cubic-bezier(.4,0,.2,1) infinite}
+  main.qh .qh-sf-new{animation:qhSfNew 10s cubic-bezier(.2,.8,.2,1) infinite}
+  main.qh .qh-sf-above{animation:qhSfLift 10s cubic-bezier(.4,0,.2,1) infinite}
+  main.qh .qh-sf-gap{animation:qhSfGap 10s ease infinite}
+  main.qh .qh-sf-zone{animation:qhSfZone 10s ease infinite}
+  main.qh .qh-sf-nail{animation:qhSfNail 10s ease infinite}
+  main.qh .qh-sf-nail2{animation-name:qhSfNail2}main.qh .qh-sf-nail3{animation-name:qhSfNail3}main.qh .qh-sf-nail4{animation-name:qhSfNail4}
+  main.qh .qh-sf-seal{animation:qhSfSeal 10s ease infinite}
+  main.qh .qh-sf-stamp{animation:qhSfStamp 10s cubic-bezier(.2,.8,.2,1) infinite}
+  main.qh .qh-sf-steps li{animation:qhSfS1 10s ease infinite}
+  main.qh .qh-sf-steps li:nth-child(2){animation-name:qhSfS2}
+  main.qh .qh-sf-steps li:nth-child(3){animation-name:qhSfS3}
+  main.qh .qh-sf-steps li:nth-child(4){animation-name:qhSfS4}
+}
+@keyframes qhSfRing{0%{opacity:0;transform:scale(1.3)}6%,16%{opacity:1;transform:scale(1)}22%,100%{opacity:0}}
+main.qh .qh-sf-ring{transform-box:fill-box;transform-origin:center}
+@keyframes qhSfOld{0%,30%{opacity:1;transform:translateY(0)}42%{opacity:0;transform:translateY(60px)}100%{opacity:0;transform:translateY(60px)}}
+@keyframes qhSfNew{0%,42%{opacity:0;transform:translateY(60px)}54%,100%{opacity:1;transform:translateY(0)}}
+@keyframes qhSfLift{0%,18%{transform:none}26%,70%{transform:translateY(-12px) rotate(-1deg)}78%,100%{transform:none}}
+@keyframes qhSfGap{0%,18%{opacity:0}26%,70%{opacity:1}78%,100%{opacity:0}}
+@keyframes qhSfZone{0%,54%{opacity:0}58%,70%{opacity:1}76%,100%{opacity:0}}
+@keyframes qhSfNail{0%,57%{opacity:0;transform:translateY(-8px)}60%,70%{opacity:1;transform:none}76%,100%{opacity:0}}
+@keyframes qhSfNail2{0%,60%{opacity:0;transform:translateY(-8px)}63%,70%{opacity:1;transform:none}76%,100%{opacity:0}}
+@keyframes qhSfNail3{0%,63%{opacity:0;transform:translateY(-8px)}66%,70%{opacity:1;transform:none}76%,100%{opacity:0}}
+@keyframes qhSfNail4{0%,66%{opacity:0;transform:translateY(-8px)}69%,70%{opacity:1;transform:none}76%,100%{opacity:0}}
+@keyframes qhSfSeal{0%,78%{opacity:0}82%,96%{opacity:.7}100%{opacity:0}}
+@keyframes qhSfStamp{0%,82%{opacity:0;transform:scale(.6)}86%,97%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes qhSfS1{0%,20%{opacity:1}24%,100%{opacity:.35}}
+@keyframes qhSfS2{0%,20%{opacity:.35}24%,40%{opacity:1}44%,100%{opacity:.35}}
+@keyframes qhSfS3{0%,42%{opacity:.35}46%,72%{opacity:1}76%,100%{opacity:.35}}
+@keyframes qhSfS4{0%,76%{opacity:.35}80%,98%{opacity:1}100%{opacity:.35}}
+
+/* Flat Roof Replacement hero: a cross-section from the old ponding roof to a new sloped roof that drains (owner, November 6 2026) */
+main.qh .qh-fr{position:relative;max-width:560px;width:100%;margin:0 auto}
+main.qh .qh-fr-svg{display:block;width:100%;height:auto;overflow:visible;filter:drop-shadow(0 30px 40px rgba(0,0,0,.45))}
+main.qh .qh-fr-old,main.qh .qh-fr-bad{opacity:0}
+main.qh .qh-fr-drop{opacity:0}
+main.qh .qh-fr-steps li:last-child{grid-column:1 / -1}
+@media (prefers-reduced-motion:no-preference){
+  main.qh .qh-fr-old{animation:qhFrOld 1.4s cubic-bezier(.4,0,.2,1) .2s both}
+  main.qh .qh-fr-bad{animation:qhFrBad 2.4s ease .2s both}
+  main.qh .qh-fr-l{animation:qhScIn .6s cubic-bezier(.2,.8,.2,1) both}
+  main.qh .qh-fr-newdeck{animation-delay:1.3s}
+  main.qh .qh-fr-base{animation:qhFrRise .7s cubic-bezier(.2,.8,.2,1) 2.2s both}
+  main.qh .qh-fr-cap{animation:qhFrRise .7s cubic-bezier(.2,.8,.2,1) 3.1s both}
+  main.qh .qh-fr-flash{animation-delay:4s}
+  main.qh .qh-fr-drop{offset-path:path("M90 132L494 145L524 146L527 262");animation:qhFrDrop 2.7s cubic-bezier(.5,0,.8,1) infinite}
+  main.qh .qh-fr-steps li{animation:qhScStep .5s ease both}
+  main.qh .qh-fr-steps li:before{animation:qhScDot .5s ease both;animation-delay:inherit}
+}
+@keyframes qhFrOld{0%,30%{opacity:1;transform:none}100%{opacity:0;transform:translateY(-46px)}}
+@keyframes qhFrBad{0%,45%{opacity:1}70%,100%{opacity:1}}
+@keyframes qhFrRise{from{opacity:0;transform:translateY(-12px)}}
+@keyframes qhFrDrop{0%{offset-distance:0%;opacity:0}8%{opacity:1}85%{opacity:1}100%{offset-distance:100%;opacity:0}}
+@media (prefers-reduced-motion:no-preference){main.qh .qh-fr-unit{animation-delay:3.4s}}
+
+/* Flat Roof Repair hero: water travels under the membrane; the search goes from the stain back to the opening (owner, November 6 2026).
+   The repaired state is the default (reduced motion). */
+main.qh .qh-ff{position:relative;max-width:560px;width:100%;margin:0 auto}
+main.qh .qh-ff-svg{display:block;width:100%;height:auto;overflow:visible;filter:drop-shadow(0 30px 40px rgba(0,0,0,.45))}
+main.qh .qh-ff-rain,main.qh .qh-ff-path,main.qh .qh-ff-stain,main.qh .qh-ff-drip,main.qh .qh-ff-ring,main.qh .qh-ff-found{opacity:0}
+main.qh .qh-ff-ring{transform-box:fill-box;transform-origin:center}
+main.qh .qh-ff-steps li:before{background:var(--qh-sun);color:var(--qh-sun-ink)}
+@media (prefers-reduced-motion:no-preference){
+  main.qh .qh-ff-rain{animation:qhFfRain 1.15s linear infinite}
+  main.qh .qh-ff-path{animation:qhFfPath 10s ease infinite}
+  main.qh .qh-ff-stain{animation:qhFfStain 10s ease infinite}
+  main.qh .qh-ff-drip{animation:qhFfDrip 10s ease-in infinite}
+  main.qh .qh-ff-ring{animation:qhFfRing 10s cubic-bezier(.45,0,.55,1) infinite}
+  main.qh .qh-ff-found{animation:qhFfFound 10s ease infinite}
+  main.qh .qh-ff-patch{animation:qhFfPatch 10s cubic-bezier(.2,.8,.2,1) infinite}
+  main.qh .qh-ff-dry{animation:qhFfDry 10s ease infinite}
+  main.qh .qh-ff-steps li{animation:qhFfS1 10s ease infinite}
+  main.qh .qh-ff-steps li:nth-child(2){animation-name:qhFfS2}
+  main.qh .qh-ff-steps li:nth-child(3){animation-name:qhFfS3}
+  main.qh .qh-ff-steps li:nth-child(4){animation-name:qhFfS4}
+}
+@keyframes qhFfRain{0%{opacity:0;transform:translateY(-10px)}30%{opacity:.9}100%{opacity:0;transform:translateY(54px)}}
+@keyframes qhFfPath{0%{opacity:1;stroke-dashoffset:1}18%,60%{opacity:1;stroke-dashoffset:0}68%,100%{opacity:0;stroke-dashoffset:0}}
+@keyframes qhFfStain{0%,14%{opacity:0}22%,100%{opacity:.85}}
+@keyframes qhFfDrip{0%,18%{opacity:0;transform:none}20%{opacity:1;transform:none}28%{opacity:0;transform:translateY(40px)}30%{opacity:0;transform:none}32%{opacity:1;transform:none}40%{opacity:0;transform:translateY(40px)}100%{opacity:0}}
+@keyframes qhFfRing{0%,22%{opacity:0;transform:none}26%{opacity:1;transform:none}36%{opacity:1;transform:translateX(90px)}44%{opacity:1;transform:translateX(180px)}52%,58%{opacity:1;transform:translate(262px,-12px)}64%,100%{opacity:0;transform:translate(262px,-12px)}}
+@keyframes qhFfFound{0%,52%{opacity:0;transform:translateY(6px)}56%,70%{opacity:1;transform:none}76%,100%{opacity:0}}
+@keyframes qhFfPatch{0%,60%{opacity:0;transform:translateY(-14px)}66%,100%{opacity:1;transform:none}}
+@keyframes qhFfDry{0%,70%{opacity:0}76%,96%{opacity:1}100%{opacity:0}}
+@keyframes qhFfS1{0%,24%{opacity:1}28%,100%{opacity:.35}}
+@keyframes qhFfS2{0%,24%{opacity:.35}28%,50%{opacity:1}54%,100%{opacity:.35}}
+@keyframes qhFfS3{0%,50%{opacity:.35}54%,62%{opacity:1}66%,100%{opacity:.35}}
+@keyframes qhFfS4{0%,62%{opacity:.35}66%,98%{opacity:1}100%{opacity:.35}}

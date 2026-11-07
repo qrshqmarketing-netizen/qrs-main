@@ -258,6 +258,312 @@ export function QhReroof({ links = [] }) {
   );
 }
 
+// Shingle Roof Replacement hero visual (owner, November 6 2026): one roof slope built from the deck up, the way the page describes it: the deck
+// checked, drip edge and underlayment, starter strips, the shingle courses laid from the eave up (staggered, row by row), step flashing and a pipe
+// boot, then the ridge cap, with the matching step lighting up in the list beside it; then a gold glint sweeps the finished roof. Drawn once
+// (SVG + CSS), still and finished for reduced motion.
+const COURSE_STEPS = ['Deck checked and photographed', 'Drip edge and underlayment', 'Starter strips at eaves and rakes', 'Shingles, course by course', 'Step flashing and pipe boots', 'Ridge caps and vents'];
+export function QhShingleCourses({ caption, links = [] }) {
+  const rows = 8;
+  const top = 46;
+  const bottom = 262;
+  const h = (bottom - top) / rows;
+  // the slope narrows toward the ridge: x at a given y
+  const left = (y) => 40 + ((bottom - y) / (bottom - top)) * 90;
+  const right = (y) => 520 - ((bottom - y) / (bottom - top)) * 90;
+  const slope = `M${left(bottom)} ${bottom}L${right(bottom)} ${bottom}L${right(top)} ${top}L${left(top)} ${top}Z`;
+  return (
+    <div className="qh-sc">
+      <svg className="qh-sc-roof" viewBox="0 0 560 300" aria-hidden="true">
+        <defs>
+          <clipPath id="qhScClip">
+            <path d={slope} />
+          </clipPath>
+          <pattern id="qhScDeck" width="96" height="27" patternUnits="userSpaceOnUse">
+            <rect width="96" height="27" fill="#c39663" />
+            <path d="M0 26.5h96M48 0v27" stroke="#9d7143" strokeWidth="1.5" />
+          </pattern>
+          {[0, 22].map((dx) => (
+            <pattern key={dx} id={`qhScTabs${dx}`} width="44" height={h} patternUnits="userSpaceOnUse" patternTransform={`translate(${dx} ${top})`}>
+              <rect width="44" height={h} fill="#414852" />
+              <path d={`M0 ${h - 1}h44M22 0v${h}`} stroke="#2b3038" strokeWidth="2" />
+              <rect x="3" y="4" width="16" height="3" fill="rgba(255,255,255,.06)" />
+            </pattern>
+          ))}
+          {/* a cut-away at the top left, so the deck and the underlayment show under the finished shingles */}
+          <clipPath id="qhScUnder">
+            <path d="M0 300H560V0H280L70 250Z" />
+          </clipPath>
+          <clipPath id="qhScShingles">
+            <path d="M0 300H560V0H370L150 280Z" />
+          </clipPath>
+        </defs>
+        <g clipPath="url(#qhScClip)">
+          <rect className="qh-sc-l qh-sc-deck" x="0" y="0" width="560" height="300" fill="url(#qhScDeck)" />
+          <rect className="qh-sc-l qh-sc-under" x="0" y="0" width="560" height="300" fill="#26313d" clipPath="url(#qhScUnder)" />
+          <rect className="qh-sc-l qh-sc-starter" x="0" y={bottom - 9} width="560" height="9" fill="#5a616b" />
+          <g clipPath="url(#qhScShingles)">
+          {Array.from({ length: rows }, (_, i) => (
+            <rect
+              key={i}
+              className="qh-sc-course"
+              style={{ animationDelay: `${2.4 + i * 0.12}s` }}
+              x="0"
+              y={bottom - (i + 1) * h}
+              width="560"
+              height={h + 1}
+              fill={`url(#qhScTabs${(rows - 1 - i) % 2 ? 22 : 0})`}
+            />
+          ))}
+          </g>
+          <rect className="qh-sc-l qh-sc-ridge" x="0" y={top - 2} width="560" height="12" fill="#5d6570" />
+          <rect className="qh-sc-glint" x="-120" y="0" width="70" height="300" fill="url(#qhScGlintFill)" />
+        </g>
+        <linearGradient id="qhScGlintFill" x1="0" x2="1">
+          <stop offset="0" stopColor="#fff" stopOpacity="0" />
+          <stop offset=".5" stopColor="#f0b43c" stopOpacity=".35" />
+          <stop offset="1" stopColor="#fff" stopOpacity="0" />
+        </linearGradient>
+        {/* step flashing along a wall at the right edge, a pipe boot and a ridge vent */}
+        <path className="qh-sc-l qh-sc-flash" d={`M${right(bottom) - 4} ${bottom}L${right(top) - 4} ${top}`} stroke="#f0b43c" strokeWidth="5" strokeDasharray="14 6" fill="none" />
+        <g className="qh-sc-l qh-sc-boot">
+          <ellipse cx="200" cy="150" rx="17" ry="7" fill="#f0b43c" />
+          <rect x="193" y="126" width="14" height="24" rx="2" fill="#cfd6de" />
+          <ellipse cx="200" cy="126" rx="7" ry="2.6" fill="#8a949f" />
+        </g>
+        <path className="qh-sc-l qh-sc-drip" d={`M${left(bottom) - 6} ${bottom + 2}H${right(bottom) + 6}`} stroke="#f0b43c" strokeWidth="5" strokeLinecap="round" />
+        <path d={slope} fill="none" stroke="rgba(255,255,255,.55)" strokeWidth="2" strokeLinejoin="round" />
+      </svg>
+      <ol className="qh-sc-steps">
+        {COURSE_STEPS.map((step, i) => (
+          <li key={step} style={{ animationDelay: `${0.3 + i * 0.75}s` }}>
+            {step}
+          </li>
+        ))}
+      </ol>
+      {caption && <p className="qh-rr-time">{caption}</p>}
+      {links.length > 0 && (
+        <ul className="qh-leak-links">
+          {links.map((l) => (
+            <li key={l.href}>
+              <SiteLink href={l.href}>{l.label}</SiteLink>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+// Shingle Roof Repair hero visual (owner, November 6 2026): a close-up of shingle courses with one creased shingle, repaired the way the page
+// describes it, on a 10 s loop: the spot is circled, the course above is lifted, the damaged piece slides out, a matching one slides in, nails go
+// into the nailing zone, the course drops back and is sealed, "Repaired" stamps on; the matching step lights up in the list. SVG + CSS; reduced
+// motion shows the finished repair, still.
+const SHINGLE_FIX_STEPS = ['Find the damaged shingle', 'Lift the course above', 'Nail a new one in the nailing zone', 'Hand-seal and photograph'];
+export function QhShingleFix({ caption, links = [] }) {
+  const W = 70;
+  const H = 46;
+  const rows = 7;
+  const cols = 9;
+  const tr = 3; // the repaired shingle: row 3, column 4
+  const tc = 4;
+  const x0 = (r) => (r % 2 ? -W / 2 : 0);
+  const tx = x0(tr) + tc * W;
+  const ty = tr * H;
+  return (
+    <div className="qh-sf">
+      <svg className="qh-sf-roof" viewBox="0 0 560 300" aria-hidden="true">
+        <defs>
+          <clipPath id="qhSfClip">
+            <rect width="560" height="300" rx="12" />
+          </clipPath>
+        </defs>
+        <g clipPath="url(#qhSfClip)">
+          <rect width="560" height="300" fill="#262b32" />
+          {Array.from({ length: rows }, (_, r) =>
+            Array.from({ length: cols }, (_, c) => {
+              if (r === tr && c === tc) return null;
+              const x = x0(r) + c * W;
+              const shade = ['#4a515b', '#434a53', '#4e5560', '#454c56'][(r * 3 + c) % 4];
+              return (
+                <g key={`${r}-${c}`} className={r === tr - 1 && Math.abs(x0(r) + c * W + W / 2 - (tx + W / 2)) < W ? 'qh-sf-above' : undefined}>
+                  <rect x={x + 1} y={r * H + 1} width={W - 2} height={H - 2} rx="2" fill={shade} />
+                  <rect x={x + 6} y={r * H + 8} width={W - 22} height="3" fill="rgba(255,255,255,.05)" />
+                </g>
+              );
+            })
+          )}
+          {/* the gap under the lifted course, the old creased shingle, the new one, nails and sealant */}
+          <rect className="qh-sf-gap" x={tx - W / 2} y={ty - H + 2} width={W * 2} height="10" fill="#14181d" />
+          <g className="qh-sf-old">
+            <path d={`M${tx + 1} ${ty + 1}h${W - 2}v${H - 2}h-${W - 2}z`} fill="#6b6f74" />
+            <path d={`M${tx + 8} ${ty + 30}l18 -12 14 9 22 -14`} stroke="#2a2d31" strokeWidth="2.5" fill="none" />
+          </g>
+          <g className="qh-sf-new">
+            <rect x={tx + 1} y={ty + 1} width={W - 2} height={H - 2} rx="2" fill="#4b525c" />
+            <rect x={tx + 6} y={ty + 8} width={W - 22} height="3" fill="rgba(255,255,255,.08)" />
+          </g>
+          <path className="qh-sf-zone" d={`M${tx - 4} ${ty - 6}h${W + 8}`} stroke="#f0b43c" strokeWidth="2" strokeDasharray="5 5" />
+          {[0.2, 0.45, 0.7, 0.92].map((f, i) => (
+            <circle key={f} className={`qh-sf-nail qh-sf-nail${i + 1}`} cx={tx + W * f - 4} cy={ty - 6} r="4" fill="#f0b43c" />
+          ))}
+          {[0.25, 0.5, 0.75].map((f) => (
+            <circle key={f} className="qh-sf-seal" cx={tx + W * f} cy={ty + 6} r="3" fill="#0e1114" opacity=".7" />
+          ))}
+          <circle className="qh-sf-ring" cx={tx + W / 2} cy={ty + H / 2} r="44" fill="none" stroke="#f0b43c" strokeWidth="3" />
+        </g>
+        <g className="qh-sf-stamp" transform={`translate(${tx + W + 34} ${ty + 4})`}>
+          <rect x="-4" y="-18" width="104" height="30" rx="15" fill="#f0b43c" />
+          <text x="48" y="2" textAnchor="middle" fill="#0b1b2e" style={{ font: '700 14px var(--font-text), sans-serif' }}>Repaired ✓</text>
+        </g>
+      </svg>
+      <ol className="qh-sc-steps qh-sf-steps">
+        {SHINGLE_FIX_STEPS.map((step) => (
+          <li key={step}>{step}</li>
+        ))}
+      </ol>
+      {caption && <p className="qh-rr-time">{caption}</p>}
+      {links.length > 0 && (
+        <ul className="qh-leak-links">
+          {links.map((l) => (
+            <li key={l.href}>
+              <SiteLink href={l.href}>{l.label}</SiteLink>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+// Flat Roof Replacement hero visual (owner, November 6 2026): a building in cross-section between a parapet and a scupper. The old roof, with a
+// pond and blisters, lifts off; a bad section of deck is replaced; the new roof goes on with a slope toward the scupper (base sheet, then a white
+// cap sheet), the parapets are flashed; then drops of water run down the slope and out of the scupper, on a loop. The steps light up with it.
+// SVG + CSS; reduced motion shows the finished roof.
+const FLAT_REROOF_STEPS = ['Tear off to the deck', 'Replace damaged decking', 'Slope it toward the drains', 'Base and cap sheets, laps sealed', 'Parapets and curbs flashed'];
+export function QhFlatReroof({ caption, links = [] }) {
+  return (
+    <div className="qh-fr">
+      <svg className="qh-fr-svg" viewBox="0 0 560 270" aria-hidden="true">
+        {/* the building under the roof */}
+        <rect x="64" y="172" width="432" height="98" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.35)" strokeWidth="2" />
+        {[110, 210, 310, 410].map((x) => (
+          <rect key={x} x={x} y="196" width="44" height="40" rx="2" fill="rgba(124,196,255,.12)" stroke="rgba(255,255,255,.3)" strokeWidth="2" />
+        ))}
+        {/* deck, with one damaged run that gets replaced */}
+        <rect x="64" y="160" width="432" height="12" fill="#c39663" />
+        <path d="M64 166h432M150 160v12M240 160v12M330 160v12M420 160v12" stroke="#9d7143" strokeWidth="1.5" />
+        <rect className="qh-fr-bad" x="240" y="160" width="90" height="12" fill="#5d4630" />
+        <rect className="qh-fr-l qh-fr-newdeck" x="240" y="160" width="90" height="12" fill="#d8ab74" />
+        {/* the old roof: flat, with a pond and blisters */}
+        <g className="qh-fr-old">
+          <rect x="64" y="148" width="432" height="12" fill="#34383e" />
+          <ellipse cx="270" cy="149" rx="70" ry="4" fill="#5aa4e6" opacity=".85" />
+          {[130, 160, 380, 420].map((x) => (
+            <ellipse key={x} cx={x} cy="148" rx="9" ry="4" fill="#41464d" />
+          ))}
+        </g>
+        {/* the new roof: a base sheet and a white cap sheet sloping toward the scupper */}
+        <path className="qh-fr-l qh-fr-base" d="M64 138L496 152V160H64Z" fill="#59606a" />
+        <path className="qh-fr-l qh-fr-cap" d="M64 134L496 148L496 153L64 139Z" fill="#eef2f6" />
+        {/* parapets, the scupper and the downspout */}
+        <rect x="40" y="96" width="24" height="76" fill="#3b4652" stroke="rgba(255,255,255,.45)" strokeWidth="2" />
+        <path d="M496 96h24v76h-24V160M496 96v44" fill="#3b4652" stroke="rgba(255,255,255,.45)" strokeWidth="2" />
+        <rect x="496" y="140" width="24" height="12" fill="#0d1a29" />
+        <path d="M520 146h10v120" stroke="rgba(255,255,255,.55)" strokeWidth="6" fill="none" strokeLinejoin="round" />
+        {/* a rooftop unit on its curb, flashed with the parapets */}
+        <g className="qh-fr-l qh-fr-unit">
+          <rect x="330" y="132" width="64" height="10" fill="#59606a" />
+          <rect x="336" y="104" width="52" height="28" rx="3" fill="#8a949f" stroke="rgba(255,255,255,.5)" strokeWidth="1.5" />
+          <path d="M344 112h36M344 118h36M344 124h36" stroke="#5d6570" strokeWidth="2" />
+        </g>
+        <path className="qh-fr-l qh-fr-flash" d="M328 141V133M396 143V133" stroke="#f0b43c" strokeWidth="4" strokeLinecap="round" />
+        <path className="qh-fr-l qh-fr-flash" d="M64 104V136M496 104V138" stroke="#f0b43c" strokeWidth="5" strokeLinecap="round" />
+        {/* water on the finished roof */}
+        {[0, 1, 2].map((i) => (
+          <circle key={i} className="qh-fr-drop" style={{ animationDelay: `${5.2 + i * 0.9}s` }} cx="0" cy="0" r="4.5" fill="#7cc4ff" />
+        ))}
+      </svg>
+      <ol className="qh-sc-steps qh-fr-steps">
+        {FLAT_REROOF_STEPS.map((step, i) => (
+          <li key={step} style={{ animationDelay: `${0.4 + i * 0.9}s` }}>
+            {step}
+          </li>
+        ))}
+      </ol>
+      {caption && <p className="qh-rr-time">{caption}</p>}
+      {links.length > 0 && (
+        <ul className="qh-leak-links">
+          {links.map((l) => (
+            <li key={l.href}>
+              <SiteLink href={l.href}>{l.label}</SiteLink>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+// Flat Roof Repair hero visual (owner, November 6 2026): a flat roof and the room under it, in cross-section, on a 10 s loop. Water gets in at an
+// open lap near the parapet, travels under the membrane and drips onto the ceiling far from the opening; a ring starts at the stain and works
+// upslope to the opening, which is photographed and repaired; then the drip stops and the roof is dry. The steps light up with it. SVG + CSS;
+// reduced motion shows the repaired roof.
+const FLAT_FIX_STEPS = ['Start at the ceiling stain', 'Check the whole area', 'Find the opening, photograph it', 'Repair it to match your roof'];
+export function QhFlatFix({ caption, links = [] }) {
+  return (
+    <div className="qh-ff">
+      <svg className="qh-ff-svg" viewBox="0 0 560 270" aria-hidden="true">
+        {/* rain on the roof */}
+        {[110, 200, 290, 380, 460].map((x, i) => (
+          <path key={x} className="qh-ff-rain" style={{ animationDelay: `${i * 0.23}s` }} d={`M${x} 40l-6 16`} stroke="#7cc4ff" strokeWidth="2.5" strokeLinecap="round" />
+        ))}
+        {/* the room: walls, ceiling and a window */}
+        <rect x="64" y="132" width="432" height="128" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.35)" strokeWidth="2" />
+        <rect x="380" y="170" width="70" height="56" rx="2" fill="rgba(124,196,255,.12)" stroke="rgba(255,255,255,.3)" strokeWidth="2" />
+        <path d="M64 142h432" stroke="rgba(255,255,255,.25)" strokeWidth="2" />
+        {/* deck and membrane, parapets */}
+        <rect x="64" y="112" width="432" height="20" fill="#c39663" />
+        <rect x="64" y="104" width="432" height="8" fill="#3d434b" />
+        <rect x="40" y="70" width="24" height="62" fill="#3b4652" stroke="rgba(255,255,255,.45)" strokeWidth="2" />
+        <rect x="496" y="70" width="24" height="62" fill="#3b4652" stroke="rgba(255,255,255,.45)" strokeWidth="2" />
+        {/* the open lap near the parapet, and its repair */}
+        <path d="M424 104l14 -6 14 6" fill="#3d434b" stroke="#22262b" strokeWidth="2" />
+        <rect className="qh-ff-patch" x="414" y="96" width="48" height="10" rx="2" fill="#4b525c" stroke="#f0b43c" strokeWidth="2.5" />
+        {/* where the water goes: in at the lap, along under the membrane, down to the ceiling */}
+        <path className="qh-ff-path" d="M438 104V114H176V140" pathLength="1" stroke="#7cc4ff" strokeWidth="3" strokeDasharray="1" fill="none" strokeLinejoin="round" />
+        <ellipse className="qh-ff-stain" cx="176" cy="144" rx="26" ry="5" fill="#8a6d4a" />
+        <circle className="qh-ff-drip" cx="176" cy="146" r="4" fill="#7cc4ff" />
+        {/* the search: from the stain, upslope to the opening */}
+        <circle className="qh-ff-ring" cx="176" cy="122" r="24" fill="none" stroke="#f0b43c" strokeWidth="3" strokeDasharray="6 5" />
+        <g className="qh-ff-found">
+          <rect x="374" y="52" width="128" height="26" rx="13" fill="#f0b43c" />
+          <text x="438" y="69" textAnchor="middle" fill="#0b1b2e" style={{ font: '700 13px var(--font-text), sans-serif' }}>Opening found</text>
+        </g>
+        <g className="qh-ff-dry">
+          <rect x="118" y="160" width="116" height="26" rx="13" fill="rgba(255,255,255,.12)" stroke="rgba(255,255,255,.4)" />
+          <text x="176" y="177" textAnchor="middle" fill="#fff" style={{ font: '700 13px var(--font-text), sans-serif' }}>Dry again ✓</text>
+        </g>
+      </svg>
+      <ol className="qh-sc-steps qh-ff-steps">
+        {FLAT_FIX_STEPS.map((step) => (
+          <li key={step}>{step}</li>
+        ))}
+      </ol>
+      {caption && <p className="qh-rr-time">{caption}</p>}
+      {links.length > 0 && (
+        <ul className="qh-leak-links">
+          {links.map((l) => (
+            <li key={l.href}>
+              <SiteLink href={l.href}>{l.label}</SiteLink>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
 // Service Areas hero visual: the service area drawn from its Census outline (mainland only; the counties as shapes), the city pages as pins that
 // drop in and each office as a pulsing gold pin, the county names, and the counties as links underneath. Server-rendered SVG, no map library.
 export function QhAreaMap({ outline, offices = [], cities = [], links = [], note, bounds, focus, highlight, cityLabels = false }) {

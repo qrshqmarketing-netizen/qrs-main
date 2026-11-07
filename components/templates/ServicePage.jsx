@@ -115,7 +115,7 @@ function processPhoto(page) {
 const SVC_DESIGN_PAGES = new Set();
 const SVC_DESIGN_EVERYWHERE = false;
 // Service pages in the new home page's theme (owner, November 6 2026; QhServicePage.jsx), page by page; each needs a `story`
-const QH_SERVICE_PAGES = new Set(['/commercial-roofing/office-buildings/', '/commercial-roofing/retail/', '/commercial-roofing/churches/', '/commercial-roofing/industrial/', '/commercial-roofing/warehouses/', '/commercial-roofing/shops/', '/roof-financing/', '/roof-repair/emergency/']);
+const QH_SERVICE_PAGES = new Set(['/commercial-roofing/office-buildings/', '/commercial-roofing/retail/', '/commercial-roofing/churches/', '/commercial-roofing/industrial/', '/commercial-roofing/warehouses/', '/commercial-roofing/shops/', '/roof-financing/', '/roof-repair/emergency/', '/residential-roofing/shingle-roofing/replacement/', '/residential-roofing/shingle-roofing/repair/', '/residential-roofing/flat-roofing/replacement/', '/residential-roofing/flat-roofing/repair/']);
 // Pages without a `story` render there too (overview, process steps, reasons)
 const QH_NO_STORY_OK = true;
 

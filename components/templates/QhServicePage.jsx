@@ -4,7 +4,7 @@ import PartnerLogos from '@/components/sections/PartnerLogos';
 import ProofBar from '@/components/sections/ProofBar';
 import RoofDiagram from '@/components/sections/RoofDiagram';
 import TrustLogos from '@/components/sections/TrustLogos';
-import { QhChurchCampus, QhFinancePath, QhHero, QhStormTarp, QhSteps, QhIndustrialRoof, QhShopPatches, QhWarehouseSections, QhOfficeLeak, QhStorefront, QhPoints, QhPosts, QhProjects, QhReviews, QhStart, QhStory } from '@/components/home/QrsSections';
+import { QhFlatFix, QhFlatReroof, QhShingleFix, QhShingleCourses, QhChurchCampus, QhFinancePath, QhHero, QhStormTarp, QhSteps, QhIndustrialRoof, QhShopPatches, QhWarehouseSections, QhOfficeLeak, QhStorefront, QhPoints, QhPosts, QhProjects, QhReviews, QhStart, QhStory } from '@/components/home/QrsSections';
 import SiteLink from '@/components/ui/SiteLink';
 import JsonLd from '@/components/ui/JsonLd';
 import { RESIDENTIAL_TYPES, ROOF_REPAIR_LINK } from '@/data/catalog';
@@ -29,6 +29,10 @@ const OTHER_LABELS = { [ROOF_REPAIR_LINK.href]: ROOF_REPAIR_LINK.label, '/roof-r
 
 // Each page's hero visual, by address
 const VISUALS = {
+  '/residential-roofing/flat-roofing/repair/': (page, links) => <QhFlatFix caption={unmark(page.story.lead)} links={links} />,
+  '/residential-roofing/flat-roofing/replacement/': (page, links) => <QhFlatReroof caption={unmark(page.story.lead)} links={links} />,
+  '/residential-roofing/shingle-roofing/repair/': (page, links) => <QhShingleFix caption={unmark(page.story.lead)} links={links} />,
+  '/residential-roofing/shingle-roofing/replacement/': (page, links) => <QhShingleCourses caption="Most home roof replacements take 3 to 5 days." links={links} />,
   '/roof-repair/emergency/': (page) => (
     <QhStormTarp
       labels={['Calls after hours and weekends', 'Tarps when needed', 'Photos for your insurance']}

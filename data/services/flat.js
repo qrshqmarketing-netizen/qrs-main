@@ -55,12 +55,13 @@ export const FLAT_CONTENT = {
       title: 'Flat Roof Replacement · *FlatGuard*',
       navLabel: 'Roof Replacement',
       card: 'A full tear-off down to the deck and a new modified bitumen or low-slope system, planned around how your roof drains.',
-      metaTitle: 'Flat Roof Replacement in Los Angeles',
-      metaDescription: 'Flat roof replacement in Los Angeles & Orange County: full tear-off to the deck and a new low-slope system planned to drain. Start with a free roof evaluation.',
+      // No place names (owner, November 6 2026: city names only on the location pages); problem first, then our process
+      metaTitle: 'Flat Roof Replacement | Quality Roofing Specialists',
+      metaDescription: 'Flat roof replacement down to the deck: damaged decking fixed, a new low-slope system sloped toward the drains, every lap sealed. Free roof evaluation.',
       image: '/images/flat-roof-replacement-completed-white-membrane.webp',
       imageAlt: 'Aerial view of a completed white flat roof membrane with tile coping',
       hero: {
-        intro: 'Flat roof replacement, planned around how your roof drains. We tear off down to the deck, fix any damaged decking and install a new modified bitumen or other low-slope system. That’s our *FlatGuard* low-slope system, across Los Angeles and Orange County. It starts with a free roof evaluation.',
+        intro: 'Flat roof replacement is about where the water goes. A new surface over a roof that ponds will pond again, so we tear off down to the deck, fix any damaged decking and install a new modified bitumen or other low-slope system planned to drain. That’s our *FlatGuard* low-slope system. It starts with a free roof evaluation.',
         highlights: ['Full tear-off down to the deck', 'Drainage planned into the new roof', '10-Year workmanship warranty (call for details)'],
       },
       // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
@@ -97,23 +98,24 @@ export const FLAT_CONTENT = {
       h1: 'Flat Roof Repair in Los Angeles & Orange County',
       navLabel: 'Roof Repairs',
       card: 'Leaks, blisters, open seams and failed flashings traced to the source, repaired carefully and documented with photos.',
-      metaTitle: 'Flat Roof Repair Near Me in Los Angeles | Flat Roof Leaks', // owner, November 3 2026 (keyword list)
+      // No place names (owner, November 6 2026: city names only on the location pages); problem first, then our process
+      metaTitle: 'Flat Roof Repair | Quality Roofing Specialists',
       // Search Console wording (owner, October 23 2026): "flat roof repair los angeles", "flat roof repair service(s)", "flat roof repairs", "flat roofing
       // experts los angeles", "roof repair specialist los angeles", "flat roof repair contractor". Polyurethane (foam) roofs, Woodland Beach and Delano
       // are not used (not a confirmed system / outside the area).
-      metaDescription: 'Flat roof repair in Los Angeles & Orange County: we trace leaks to the source and fix seams, blisters and flashings, with photos. Book a free roof evaluation.',
+      metaDescription: 'Flat roof repair that finds where the water really gets in: open seams, blisters, splits and failed flashings fixed, with photos. Free roof evaluation.',
       image: '/images/flat-roof-replacement-tear-off-drone-view.webp',
       imageAlt: 'Aerial view of a flat roof with roofing work in progress',
       cardImage: '/images/cta-white-flat-roof-tile-coping-drone-view.webp', // its card on Roof Repair and the flat hub (owner, November 2 2026)
       hero: {
-        intro: 'Flat roof repair services that trace each leak to the source. An open seam, a blister, a split or failed flashing: we find it and fix it. A ceiling stain can sit far from the actual leak, so we check the whole area. Photos of the problem and the fix, across Los Angeles County and Orange County.',
+        intro: 'Flat roof repair has to start at the opening, and on a flat roof that’s rarely above the stain: water can travel under the membrane before it drips. So we check the whole area, find the open seam, blister, split or failed flashing, fix it and show you photos of the problem and the fix.',
         highlights: ['Leaks traced to where water enters', 'Seams, blisters and flashings repaired', 'Photos of the damage and the fix'],
       },
       // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
       story: {
         label: 'Flat roof repair',
         lead: 'Water on a flat roof moves slowly and finds every __weakness__.',
-        text: 'It can travel under the membrane before it drips, so the stain on your ceiling may sit far from the opening. That’s why we check the whole area around a leak, not just the spot above the stain. As flat roofing experts in Los Angeles, we handle flat roof repairs on homes, garages, patio covers and additions across Los Angeles County and Orange County, from one open seam to a full flat roof leak repair.',
+        text: 'It can travel under the membrane before it drips, so the stain on your ceiling may sit far from the opening. That’s why we check the whole area around a leak, not just the spot above the stain. We handle flat roof repairs on homes, garages, patio covers and additions, from one open seam to a full flat roof leak repair.',
         heading: 'How we repair a flat roof',
         principles: [
           { title: 'Check the whole area. Find the opening.', text: 'A roofer works around and upslope of the leak until the cause is found, and photographs it before anything is fixed.', bullets: ['Seams, laps and blisters', 'Parapet caps and wall flashings', 'Drains, scuppers and equipment curbs', 'Vents and skylights'] },
@@ -125,7 +127,7 @@ export const FLAT_CONTENT = {
       faqs: [
         { q: 'Why does my flat roof leak in big storms but not light rain?', a: 'Light rain may drain away before it finds a weak spot, but a heavy storm deepens the water on the roof and pushes it into open laps, cracked flashings and overflowing scuppers. Water that’s still ponding after the storm is a clue that drainage is part of the problem. A [flat roof inspection](/roof-inspection/#flat-roofs) shows you where the water is getting in.' },
         { q: 'Can you fix blisters on a flat roof?', a: 'Yes. Small blisters that are still intact are often left alone and watched, while cracked or growing blisters are cut out and patched. We’ll show you which ones need attention and explain why.' },
-        { q: 'Are you a flat roof repair contractor in Los Angeles?', a: 'Yes. QRS is a licensed roofing contractor, and our flat roof repair service covers Los Angeles, the rest of Los Angeles County and Orange County. A roofer, not a salesperson, finds the leak, photographs it and gives you a written scope and price before any flat roof repairs start.' },
+        { q: 'Are you a licensed flat roof repair contractor?', a: 'Yes. QRS is a licensed roofing contractor (see our [service areas](/service-areas/) for where we work). A roofer, not a salesperson, finds the leak, photographs it and gives you a written scope and price before any flat roof repairs start.' },
         { q: 'The leak is near a wall. Is it the roof or the wall?', a: 'It can be either. On roofs with parapets, water often gets in through cracked parapet caps, gaps in the stucco or failed wall flashings rather than the roof surface itself. We check the parapet from cap to base and tell you exactly where the water is entering.' },
         { q: 'Do you repair flat roofs on garages, patio covers and additions?', a: 'Yes. These smaller low-slope roofs leak for the same reasons as the main roof, usually at the seams, the drainage or the joint where they meet the house. They get the same photo-documented approach as any other repair.' },
         { q: 'What if you find more than one problem?', a: 'We photograph each one and list it in your written scope, so you can decide what to fix now. If the roof is sound overall but has a handful of small issues, a [flat roof tune-up](/roof-maintenance-plans/#tune-up) may cover them in one visit.' },

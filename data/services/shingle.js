@@ -49,19 +49,20 @@ export const SHINGLE_CONTENT = {
       title: 'Shingle Roof Replacement · *TotalShield*',
       navLabel: 'Roof Replacement',
       card: 'A full tear-off and a complete new shingle system, from the deck and underlayment up to the ridge caps, with a written scope and price first.',
-      metaTitle: 'Shingle Roof Replacement in Los Angeles & Orange County',
-      metaDescription: 'Shingle roof replacement in Los Angeles & Orange County: full tear-off, new underlayment, flashing and balanced ventilation. Book a free roof evaluation.',
+      // No place names (owner, November 6 2026: city names only on the location pages); the page's voice is problem first, then our process
+      metaTitle: 'Shingle Roof Replacement | Quality Roofing Specialists',
+      metaDescription: 'Shingle roof replacement from the deck up: full tear-off, new underlayment, flashings and attic ventilation, with a written price first. Free roof evaluation.',
       image: '/images/shingle-roof-replacement-tear-off-drone-view.webp',
       imageAlt: 'Aerial view of a shingle roof tear-off in progress, with crew removing old shingles down to the deck',
       hero: {
-        intro: 'Shingle roof replacement, done from the deck up. We take your old roof down to the deck and build a complete new system: underlayment, flashings, balanced attic ventilation and new shingles. That’s our *TotalShield* Shingle System, across Los Angeles and Orange County. It starts with a free roof evaluation.',
+        intro: 'Shingle roof replacement makes sense when the wear is everywhere, not in one spot. New shingles laid over old weak points only hide them, so we take the roof down to the deck, fix what we find and build a complete new system: underlayment, flashings, balanced attic ventilation and new shingles. That’s our *TotalShield* Shingle System. It starts with a free roof evaluation.',
         highlights: ['Full tear-off down to the deck', 'Balanced attic intake and exhaust', 'Your choice of shingle style and color'],
       },
       // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
       story: {
         label: 'Shingle roof replacement',
         lead: 'When the wear is roof-wide, patching becomes a __chase__.',
-        text: 'Southern California sun breaks down the asphalt, the granules that shield it wash off, and the shingles turn brittle, then curl or cup at the edges. Once that wear is spread across the whole roof, a full tear-off ends the chase from one leak to the next.',
+        text: 'Years of strong sun break down the asphalt, the granules that shield it wash off, and the shingles turn brittle, then curl or cup at the edges. Once that wear is spread across the whole roof, a full tear-off ends the chase from one leak to the next.',
         heading: 'How we replace a shingle roof',
         image: '/images/shingle-roof-grey-roofing-services-card.webp',
         imageAlt: 'Close-up of a finished grey shingle roof',
@@ -80,7 +81,7 @@ export const SHINGLE_CONTENT = {
         { q: 'What signs mean my shingle roof needs replacing?', a: 'Widespread granule loss, curling or cupping across whole slopes, shingles that crack when lifted and leaks in more than one place all point that way. One or two damaged areas usually call for a repair instead, and the roof evaluation photos show which you’re dealing with.' },
         { q: 'How should I get ready for a roof replacement?', a: 'Move cars out of the driveway, take mirrors and pictures off walls that may shake during tear-off, and cover anything stored in the attic, since dust can sift through the deck. Keep pets and kids clear of the work area, and leave protecting the landscaping and cleaning up to us.' },
         { q: 'What if the decking underneath is soft or damaged?', a: 'Your written scope includes a standard allowance for deck repair, so ordinary soft spots are already covered. If we find damage beyond that allowance, we’ll show you in photos and give you the price before replacing anything further.' },
-        { q: 'How do I choose a shingle color?', a: 'Look at the whole house, so the roof works with your stucco, trim and any stone. Lighter blends tend to stay cooler in direct sun, which is worth weighing on hot inland streets in Burbank or Anaheim, while multi-tone blends bring out the depth of architectural shingles. Viewing a full-size sample outside in daylight gives a truer read than a small swatch indoors.' },
+        { q: 'How do I choose a shingle color?', a: 'Look at the whole house, so the roof works with your stucco, trim and any stone. Lighter blends tend to stay cooler in direct sun, which is worth weighing on a home that sits in full sun all day, while multi-tone blends bring out the depth of architectural shingles. Viewing a full-size sample outside in daylight gives a truer read than a small swatch indoors.' },
       ],
       related: ['/residential-roofing/shingle-roofing/repair/', '/roof-inspection/#shingle-roofs', '/residential-roofing/shingle-roofing/installation/'],
     },
@@ -91,12 +92,13 @@ export const SHINGLE_CONTENT = {
       title: 'Shingle Roof Repair',
       navLabel: 'Roof Repairs',
       card: 'Lifted tabs, cracked pipe boots, nail pops and flashing leaks, traced to their source and fixed properly, with photos of the problem and the repair.',
-      metaTitle: 'Shingle Roof Repair in Los Angeles',
-      metaDescription: 'Shingle roof repair in LA & Orange County: leaks traced to the source, and wind damage, pipe boots and flashing fixed with photos. Book a free roof evaluation.',
+      // No place names (owner, November 6 2026: city names only on the location pages); problem first, then our process
+      metaTitle: 'Shingle Roof Repair | Quality Roofing Specialists',
+      metaDescription: 'Shingle roof repair that finds where the water gets in: pipe boots, flashing, wind-lifted tabs and nail pops fixed, with photos. Free roof evaluation.',
       image: '/images/shingle-roof-repair-ridge-finish.webp',
       imageAlt: 'A roofer working near the ridge of a finished shingle roof',
       hero: {
-        intro: 'Shingle roof repair that fixes the real source. A cracked pipe boot, a wind-lifted tab, a nail pop or failed flashing: we trace the leak and fix what failed. You get photos of the problem and the fix, across Los Angeles and Orange County. No push toward a new roof.',
+        intro: 'Shingle roof repair starts where the water gets in, which is rarely right above the stain. A cracked pipe boot, a wind-lifted tab, a nail pop or failed flashing: we trace the leak to it, fix what failed and show you photos of the problem and the fix. No push toward a new roof.',
         highlights: ['Leaks traced to where water gets in', 'Wind-damaged shingles replaced and sealed', 'Before-and-after repair photos'],
       },
       // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then four principles, each fact said once
@@ -114,7 +116,7 @@ export const SHINGLE_CONTENT = {
       },
       faqs: [
         { q: 'Can you replace just a few shingles?', a: 'Yes. Damaged or missing shingles can be replaced one at a time by lifting the courses above, sliding in new pieces and resealing the tabs. Weathered shingles fade, though, and some shingle lines get discontinued, so new pieces may look slightly different at first. We use the closest available match and tell you what to expect up front.' },
-        { q: 'What should I do after Santa Ana winds damage my roof?', a: 'Check from the ground for missing shingles, tabs folded back and shingle pieces in the yard, but stay off the roof. Wind can crease a tab without tearing it off, and a creased shingle is much more likely to tear loose in the next strong gust. A roofer can find those and replace them before the rain arrives.' },
+        { q: 'What should I do after strong winds damage my roof?', a: 'Check from the ground for missing shingles, tabs folded back and shingle pieces in the yard, but stay off the roof. Wind can crease a tab without tearing it off, and a creased shingle is much more likely to tear loose in the next strong gust. A roofer can find those and replace them before the rain arrives.' },
         { q: 'Why does my roof only leak in heavy rain?', a: 'Leaks that show up only in heavy or wind-driven rain often come from flashings, valleys or pipe boots, where water gets past only when there’s a lot of it. If the drip is under a flat section over a porch or addition, our [flat roof repairs](/residential-roofing/flat-roofing/repair/) page explains how those roofs are handled.' },
         { q: 'What’s the difference between a repair and a tune-up?', a: 'A repair fixes a specific problem that’s already leaking or damaged. A [shingle roof tune-up](/roof-maintenance-plans/#tune-up) is one visit that handles several small issues, like loose tabs and dried-out sealant, before they become leaks.' },
         { q: 'Is a nail pop really a problem?', a: 'It can be. A nail that backs out pushes up the shingle above it and leaves a path for water to follow the nail into the deck. We remove or reset the fastener, seal it and replace the shingle if the nail has punched through.' },
