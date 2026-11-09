@@ -320,3 +320,31 @@ body:has(main.hg) .site-header:not(.is-lp):not(.is-start):not([data-scrolled]):n
   .site-header .hd-link{padding:0 8px}.site-header .hd-link:after{left:8px;right:8px}
   .site-header:has(.hd-lang) .hd-link{padding:0 6px}.site-header:has(.hd-lang) .hd-link:after{left:6px;right:6px}
 }
+
+/* ---------- New theme header (owner, November 9 2026) ----------
+   The new pages' type in the bar and the menu, keeping the light and dark modes (owner: "keep menu light / dark mode"): the main links, the gold
+   "Get Pro Advice" cell, the phone and the panel's main rows in the heading font (League Gothic) in capitals, with a gold rule under the current
+   page and a gold hover. Light mode: the white bar and paper panel, navy type. Dark mode: one solid deep navy bar and panel (the color the new
+   heroes' gradient starts with), white type and the white logo. */
+body .site-header .hd-link{font:400 19px/1 var(--font-heading),var(--font-text),sans-serif!important;letter-spacing:.05em!important;text-transform:uppercase;transition:color .2s ease}
+body .site-header .hd-link:after{height:2px;bottom:16px;background:var(--gold)}
+@media (hover:hover){body .site-header .hd-link:hover{color:var(--gold-ink)}}
+body .site-header .hd-cta,body .site-header .hd-phone{font:400 19px/1 var(--font-heading),var(--font-text),sans-serif!important;letter-spacing:.06em!important}
+body .site-header .hd-row-big{min-height:62px;font:400 30px/1 var(--font-heading),var(--font-text),sans-serif!important;letter-spacing:.04em!important;text-transform:uppercase}
+body .site-header .hd-row.on{color:var(--gold-ink)}
+@media (hover:hover){body .site-header .hd-row:hover{color:var(--gold-ink)}}
+body .site-header .hd-panel-foot a:first-child{font:400 30px/1 var(--font-heading),var(--font-text),sans-serif!important;letter-spacing:.04em}
+/* dark mode: deep navy bar and panel */
+:root[data-theme="dark"] body .site-header{--hd-ink:#fff;--hd-line:rgba(255,255,255,.12);color:#fff}
+:root[data-theme="dark"] body .site-header .hd-bar{background:#021428!important;border-bottom-color:rgba(255,255,255,.1)!important}
+:root[data-theme="dark"] body .site-header .hd-bar:before{display:none!important}
+:root[data-theme="dark"] body .site-header .hd-link{color:#dbe7f3}
+:root[data-theme="dark"] body .site-header .hd-link.on{color:#fff}
+@media (hover:hover){:root[data-theme="dark"] body .site-header .hd-link:hover,:root[data-theme="dark"] body .site-header .hd-row:hover{color:var(--gold)}}
+:root[data-theme="dark"] body .site-header .hd-panel{background:#031c38!important;color:#fff;border-color:rgba(255,255,255,.1)!important}
+:root[data-theme="dark"] body .site-header .hd-panel li{border-bottom-color:rgba(255,255,255,.1)!important}
+:root[data-theme="dark"] body .site-header .hd-row{color:#dbe7f3}
+:root[data-theme="dark"] body .site-header .hd-row.on{color:var(--gold)}
+:root[data-theme="dark"] body .site-header .hd-more{background:#062d57!important}
+:root[data-theme="dark"] body .site-header .hd-panel-foot a:first-child{color:var(--gold)!important}
+body .site-header .hd-more .hd-row{min-height:50px;font:400 21px/1 var(--font-heading),var(--font-text),sans-serif!important;letter-spacing:.05em!important;text-transform:uppercase}

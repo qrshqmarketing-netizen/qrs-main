@@ -4,7 +4,7 @@ import PartnerLogos from '@/components/sections/PartnerLogos';
 import ProofBar from '@/components/sections/ProofBar';
 import RoofDiagram from '@/components/sections/RoofDiagram';
 import TrustLogos from '@/components/sections/TrustLogos';
-import { QhFlatFix, QhFlatReroof, QhShingleFix, QhShingleCourses, QhChurchCampus, QhFinancePath, QhHero, QhStormTarp, QhSteps, QhIndustrialRoof, QhShopPatches, QhWarehouseSections, QhOfficeLeak, QhStorefront, QhPoints, QhPosts, QhProjects, QhReviews, QhStart, QhStory } from '@/components/home/QrsSections';
+import { QhRoofCare, QhAtticFlow, QhCommercialFix, QhCoolRoof, QhTpoWeld, QhPhasedReroof, QhTorchDown, QhConcreteStack, QhSlateRoof, QhTileRelay, QhTileFix, QhTileReroof, QhFlatInstall, QhFlatFix, QhFlatReroof, QhShingleFix, QhShingleCourses, QhChurchCampus, QhFinancePath, QhHero, QhStormTarp, QhSteps, QhIndustrialRoof, QhShopPatches, QhWarehouseSections, QhOfficeLeak, QhStorefront, QhPoints, QhPosts, QhProjects, QhReviews, QhStart, QhStory } from '@/components/home/QrsSections';
 import SiteLink from '@/components/ui/SiteLink';
 import JsonLd from '@/components/ui/JsonLd';
 import { RESIDENTIAL_TYPES, ROOF_REPAIR_LINK } from '@/data/catalog';
@@ -12,6 +12,7 @@ import { cardFor } from '@/data/content';
 import { heroOutcome } from '@/data/heroOutcomes';
 import { projectsShownOn } from '@/data/projectPages';
 import { diagramFor } from '@/data/roofDiagrams';
+import { ROOF_COLORS } from '@/data/roofColors';
 import { HERO_ANNOTATIONS, PHONE, TEL } from '@/data/site';
 import { articlesFor } from '@/lib/articles';
 import { searchHeading } from '@/lib/headings';
@@ -29,6 +30,19 @@ const OTHER_LABELS = { [ROOF_REPAIR_LINK.href]: ROOF_REPAIR_LINK.label, '/roof-r
 
 // Each page's hero visual, by address
 const VISUALS = {
+  '/commercial-roofing/maintenance/': (page, links) => <QhRoofCare caption={unmark(page.story.lead)} links={links} />,
+  '/residential-roofing/attic-ventilation/': (page, links) => <QhAtticFlow caption={unmark(page.story.lead)} links={links} />,
+  '/commercial-roofing/repair/': (page, links) => <QhCommercialFix caption={unmark(page.story.lead)} links={links} />,
+  '/residential-roofing/cool-roofing/': (page, links) => <QhCoolRoof colors={ROOF_COLORS} caption={unmark(page.story.lead)} links={links} />,
+  '/commercial-roofing/tpo-roofing/': (page, links) => <QhTpoWeld caption={unmark(page.story.lead)} links={links} />,
+  '/commercial-roofing/replacement/': (page, links) => <QhPhasedReroof caption="Replaced one section at a time, while the building stays open." links={links} />,
+  '/residential-roofing/flat-roofing/torch-down/': (page, links) => <QhTorchDown caption={unmark(page.story.lead)} links={links} />,
+  '/residential-roofing/tile-roofing/concrete/': (page, links) => <QhConcreteStack caption={unmark(page.story.lead)} links={links} />,
+  '/residential-roofing/tile-roofing/slate/': (page, links) => <QhSlateRoof caption={unmark(page.story.lead)} links={links} />,
+  '/residential-roofing/tile-roofing/lift-and-relay/': (page, links) => <QhTileRelay caption={unmark(page.story.lead)} links={links} />,
+  '/residential-roofing/tile-roofing/repair/': (page, links) => <QhTileFix caption={unmark(page.story.lead)} links={links} />,
+  '/residential-roofing/tile-roofing/replacement/': (page, links) => <QhTileReroof caption={unmark(page.story.lead)} links={links} />,
+  '/residential-roofing/flat-roofing/installation/': (page, links) => <QhFlatInstall caption={unmark(page.story.lead)} links={links} />,
   '/residential-roofing/flat-roofing/repair/': (page, links) => <QhFlatFix caption={unmark(page.story.lead)} links={links} />,
   '/residential-roofing/flat-roofing/replacement/': (page, links) => <QhFlatReroof caption={unmark(page.story.lead)} links={links} />,
   '/residential-roofing/shingle-roofing/repair/': (page, links) => <QhShingleFix caption={unmark(page.story.lead)} links={links} />,

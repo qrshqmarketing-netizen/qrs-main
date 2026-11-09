@@ -49,7 +49,7 @@ export function QhHero({ crumbs, where, title, outcome, text, checks = [], cta, 
           ) : (
             where && <p className="qh-where">{where}</p>
           )}
-          <h1 id="qh-h1">{title}</h1>
+          <h1 id="qh-h1">{typeof title === 'string' ? <Rich text={title} registeredMark /> : title}</h1>
           {outcome && <p className="qh-outcome">{outcome.replace(/__/g, '')}</p>}
           <p className="qh-hero-text">
             <Rich text={text} />
@@ -560,6 +560,1056 @@ export function QhFlatFix({ caption, links = [] }) {
           ))}
         </ul>
       )}
+    </div>
+  );
+}
+
+// Flat Roof Installation hero visual (owner, November 6 2026): planned on paper, then built. A house with a pitched roof and a new addition
+// beside it are drawn first as blueprint lines (slope arrow, drain and tie-in marked), then the built version fills in over them: walls, the
+// new low-slope roof sloping to a scupper, gold flashing where it meets the main house; then drops of water run off on a loop. The steps light
+// up with it. SVG + CSS; reduced motion shows the built roof.
+const FLAT_INSTALL_STEPS = ['Plans reviewed early', 'Slope and drains set', 'Edges and flashings built', 'Tie-in to the main roof', 'Photos of what gets hidden'];
+export function QhFlatInstall({ caption, links = [] }) {
+  const lines = [
+    'M60 262V150H280V262Z', // main house
+    'M40 150L170 72L300 150', // its pitched roof
+    'M280 262V172H500V262Z', // the addition
+    'M280 158L500 166V172H280Z', // the new flat roof
+    'M500 158H516V174H500', // scupper
+  ];
+  return (
+    <div className="qh-fi">
+      <svg className="qh-fi-svg" viewBox="0 0 560 280" aria-hidden="true">
+        <defs>
+          <pattern id="qhFiGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+            <path d="M20 0H0V20" fill="none" stroke="rgba(124,196,255,.12)" strokeWidth="1" />
+          </pattern>
+        </defs>
+        <rect width="560" height="280" rx="12" fill="url(#qhFiGrid)" />
+        {/* the built version */}
+        <g className="qh-fi-built">
+          <path d="M60 262V150H280V262Z" fill="#33414f" />
+          <path d="M40 150L170 72L300 150Z" fill="#8c5a3c" />
+          <path d="M40 150L170 72L300 150" fill="none" stroke="#6e4630" strokeWidth="3" />
+          <path d="M280 262V172H500V262Z" fill="#3a4958" />
+          <path d="M280 156L500 164V172H280Z" fill="#59606a" />
+          <path d="M280 153L500 161V165L280 157Z" fill="#eef2f6" />
+          <rect x="300" y="196" width="60" height="44" rx="2" fill="rgba(124,196,255,.16)" stroke="rgba(255,255,255,.3)" strokeWidth="2" />
+          <rect x="400" y="196" width="60" height="44" rx="2" fill="rgba(124,196,255,.16)" stroke="rgba(255,255,255,.3)" strokeWidth="2" />
+          <rect x="120" y="180" width="48" height="48" rx="2" fill="rgba(124,196,255,.16)" stroke="rgba(255,255,255,.3)" strokeWidth="2" />
+          <path d="M500 160h14v8h-14M514 164h8v96" stroke="rgba(255,255,255,.55)" strokeWidth="5" fill="none" strokeLinejoin="round" />
+        </g>
+        <path className="qh-fi-flash" d="M282 132V156" stroke="#f0b43c" strokeWidth="5" strokeLinecap="round" />
+        {/* the blueprint */}
+        <g className="qh-fi-plan" fill="none" stroke="#9fd3ff" strokeWidth="2">
+          {lines.map((d) => (
+            <path key={d} d={d} pathLength="1" strokeDasharray="1" />
+          ))}
+          <path d="M320 140L470 145" pathLength="1" strokeDasharray="1" markerEnd="url(#qhFiArrow)" />
+        </g>
+        <marker id="qhFiArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+          <path d="M0 0L10 5L0 10Z" fill="#9fd3ff" />
+        </marker>
+        <g className="qh-fi-notes" style={{ font: '700 12.5px var(--font-text), sans-serif' }}>
+          <text x="394" y="132" textAnchor="middle" fill="#9fd3ff">Slope</text>
+          <text x="508" y="146" textAnchor="middle" fill="#9fd3ff">Drain</text>
+          <text x="282" y="122" textAnchor="middle" fill="#f0b43c">Tie-in</text>
+        </g>
+        {[0, 1, 2].map((i) => (
+          <circle key={i} className="qh-fi-drop" style={{ animationDelay: `${5 + i * 0.9}s` }} cx="0" cy="0" r="4.5" fill="#7cc4ff" />
+        ))}
+      </svg>
+      <ol className="qh-sc-steps qh-fr-steps">
+        {FLAT_INSTALL_STEPS.map((step, i) => (
+          <li key={step} style={{ animationDelay: `${0.4 + i * 0.85}s` }}>
+            {step}
+          </li>
+        ))}
+      </ol>
+      {caption && <p className="qh-rr-time">{caption}</p>}
+      {links.length > 0 && (
+        <ul className="qh-leak-links">
+          {links.map((l) => (
+            <li key={l.href}>
+              <SiteLink href={l.href}>{l.label}</SiteLink>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+// Tile Roof Replacement hero visual (owner, November 9 2026): a tile roof slope built from the deck up, as the page describes it: the deck, new
+// underlayment, battens, then the tile course by course from the eave and the ridge; then the tile profile cycles through the page's options
+// (clay barrel, S tile, flat concrete), named under the roof, because replacement is the chance to choose. The steps light up as it builds.
+// SVG + CSS; reduced motion shows the finished clay roof.
+const TILE_REROOF_STEPS = ['Tear-off to the deck, photographed', 'New underlayment across the deck', 'Battens where the system calls for them', 'Your tile, course by course', 'Flashings, ridge and hip details'];
+const TILE_PROFILES = ['Clay barrel tile', 'S tile', 'Flat concrete tile'];
+export function QhTileReroof({ caption, links = [] }) {
+  const rows = 6;
+  const top = 52;
+  const bottom = 262;
+  const h = (bottom - top) / rows;
+  const left = (y) => 40 + ((bottom - y) / (bottom - top)) * 80;
+  const right = (y) => 520 - ((bottom - y) / (bottom - top)) * 80;
+  const slope = `M${left(bottom)} ${bottom}L${right(bottom)} ${bottom}L${right(top)} ${top}L${left(top)} ${top}Z`;
+  const Rows = ({ id, flat }) =>
+    Array.from({ length: rows }, (_, i) => (
+      <rect
+        key={i}
+        className="qh-tr-row"
+        style={{ animationDelay: `${2.4 + i * 0.16}s` }}
+        x="0"
+        y={bottom - (i + 1) * h}
+        width="560"
+        height={h + 1}
+        fill={`url(#${id}${flat && i % 2 ? 'b' : ''})`}
+      />
+    ));
+  return (
+    <div className="qh-tr">
+      <svg className="qh-tr-svg" viewBox="0 0 560 300" aria-hidden="true">
+        <defs>
+          <clipPath id="qhTrClip">
+            <path d={slope} />
+          </clipPath>
+          <pattern id="qhTrDeck" width="96" height="30" patternUnits="userSpaceOnUse">
+            <rect width="96" height="30" fill="#c39663" />
+            <path d="M0 29.5h96M48 0v30" stroke="#9d7143" strokeWidth="1.5" />
+          </pattern>
+          <pattern id="qhTrBarrel" width="30" height={h} patternUnits="userSpaceOnUse" patternTransform={`translate(0 ${top})`}>
+            <rect width="30" height={h} fill="#8f4629" />
+            <path d={`M0 ${h - 3}h30`} stroke="#6f351f" strokeWidth="3" />
+            <path d={`M6 -2V${h - 9}a9 9 0 0 0 18 0V-2Z`} fill="#c66a41" />
+            <path d={`M10 0V${h - 10}`} stroke="rgba(255,255,255,.2)" strokeWidth="3" strokeLinecap="round" />
+            <path d={`M6 ${h - 9}a9 9 0 0 0 18 0`} stroke="#7a3a22" strokeWidth="1.5" fill="none" />
+          </pattern>
+          <pattern id="qhTrS" width="54" height={h} patternUnits="userSpaceOnUse" patternTransform={`translate(0 ${top})`}>
+            <rect width="54" height={h} fill="#8a4529" />
+            <path d={`M0 ${h - 2}V8C8 0 19 0 27 8C35 16 46 16 54 8V${h - 2}Z`} fill="#b95f39" />
+            <path d="M6 9C11 5 17 5 21 8" stroke="rgba(255,255,255,.22)" strokeWidth="3" fill="none" />
+          </pattern>
+          {[0, 23].map((dx) => (
+            <pattern key={dx} id={`qhTrFlat${dx ? 'b' : ''}`} width="46" height={h} patternUnits="userSpaceOnUse" patternTransform={`translate(${dx} ${top})`}>
+              <rect width="46" height={h} fill="#7d8288" />
+              <path d={`M0 ${h - 1.5}h46M45 0v${h}`} stroke="#555a60" strokeWidth="3" />
+              <rect x="3" y="4" width="20" height="3" fill="rgba(255,255,255,.1)" />
+            </pattern>
+          ))}
+        </defs>
+        <g clipPath="url(#qhTrClip)">
+          <rect className="qh-tr-l qh-tr-deck" width="560" height="300" fill="url(#qhTrDeck)" />
+          <rect className="qh-tr-l qh-tr-under" width="560" height="300" fill="#26313d" />
+          {Array.from({ length: rows }, (_, i) => (
+            <rect key={i} className="qh-tr-l qh-tr-batten" style={{ animationDelay: `${1.7 + i * 0.07}s` }} x="0" y={bottom - (i + 1) * h + 4} width="560" height="6" fill="#d8ab74" />
+          ))}
+          <g className="qh-tr-p qh-tr-p1"><Rows id="qhTrBarrel" /></g>
+          <g className="qh-tr-p qh-tr-p2"><Rows id="qhTrS" /></g>
+          <g className="qh-tr-p qh-tr-p3"><Rows id="qhTrFlat" flat /></g>
+          <rect className="qh-tr-l qh-tr-ridge" x="0" y={top - 4} width="560" height="14" rx="6" fill="#a8532f" />
+        </g>
+        <path d={slope} fill="none" stroke="rgba(255,255,255,.55)" strokeWidth="2" strokeLinejoin="round" />
+        <path className="qh-tr-l qh-tr-flash" d={`M${left(bottom) - 6} ${bottom + 2}H${right(bottom) + 6}`} stroke="#f0b43c" strokeWidth="5" strokeLinecap="round" />
+        <g className="qh-tr-names" style={{ font: '700 14px var(--font-text), sans-serif' }}>
+          {TILE_PROFILES.map((name, i) => (
+            <text key={name} className={`qh-tr-n qh-tr-n${i + 1}`} x="280" y="292" textAnchor="middle" fill="#f0b43c">
+              {name}
+            </text>
+          ))}
+        </g>
+      </svg>
+      <ol className="qh-sc-steps qh-fr-steps">
+        {TILE_REROOF_STEPS.map((step, i) => (
+          <li key={step} style={{ animationDelay: `${0.3 + i * 0.8}s` }}>
+            {step}
+          </li>
+        ))}
+      </ol>
+      {caption && <p className="qh-rr-time">{caption}</p>}
+      {links.length > 0 && (
+        <ul className="qh-leak-links">
+          {links.map((l) => (
+            <li key={l.href}>
+              <SiteLink href={l.href}>{l.label}</SiteLink>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+// Tile Roof Repair hero visual (owner, November 9 2026): a clay barrel tile roof from above, on a 10 s loop: a cracked tile is circled, footprints
+// step only where the tiles are supported on the way to it, the cracked tile lifts out and the underlayment beneath is checked, the closest match
+// drops in and "Repaired ✓" shows; the steps light up in turn. SVG + CSS; reduced motion shows the repaired roof.
+const TILE_FIX_STEPS = ['Trace the water to where it gets in', 'Step only where tiles are supported', 'Check the underlayment, fit a matched tile', 'Photos before and after'];
+export function QhTileFix({ caption, links = [] }) {
+  const h = 38;
+  const cap = (x, y) => `M${x + 6} ${y - 2}V${y + h - 9}a9 9 0 0 0 18 0V${y - 2}Z`;
+  const tx = 330;
+  const ty = h * 3;
+  const steps = [
+    [70, 236],
+    [118, 228],
+    [166, 198],
+    [214, 190],
+    [262, 160],
+  ];
+  return (
+    <div className="qh-tf">
+      <svg className="qh-tf-svg" viewBox="0 0 560 280" aria-hidden="true">
+        <defs>
+          <clipPath id="qhTfClip">
+            <rect width="560" height="280" rx="12" />
+          </clipPath>
+          <pattern id="qhTfTiles" width="30" height={h} patternUnits="userSpaceOnUse">
+            <rect width="30" height={h} fill="#8f4629" />
+            <path d={`M0 ${h - 3}h30`} stroke="#6f351f" strokeWidth="3" />
+            <path d={cap(0, 0)} fill="#c66a41" />
+            <path d={`M10 0V${h - 10}`} stroke="rgba(255,255,255,.2)" strokeWidth="3" strokeLinecap="round" />
+          </pattern>
+        </defs>
+        <g clipPath="url(#qhTfClip)">
+          <rect width="560" height="280" fill="url(#qhTfTiles)" />
+          {/* under the tile being replaced: the underlayment, and its check */}
+          <rect x={tx} y={ty - 2} width="30" height={h + 2} fill="#26313d" />
+          <circle className="qh-tf-ok" cx={tx + 15} cy={ty + h / 2} r="10" fill="#f0b43c" />
+          <path className="qh-tf-ok" d={`M${tx + 10} ${ty + h / 2}l4 4 7 -8`} stroke="#0b1b2e" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+          <g className="qh-tf-new">
+            <rect x={tx} y={ty} width="30" height={h - 3} fill="#8f4629" />
+            <path d={cap(tx, ty)} fill="#c26843" />
+            <path d={`M${tx + 10} ${ty}V${ty + h - 10}`} stroke="rgba(255,255,255,.2)" strokeWidth="3" strokeLinecap="round" />
+          </g>
+          <g className="qh-tf-old">
+            <rect x={tx} y={ty} width="30" height={h - 3} fill="#8f4629" />
+            <path d={cap(tx, ty)} fill="#c66a41" />
+            <path d={`M${tx + 9} ${ty + 6}l6 9 -4 7 7 10`} stroke="#3a1a0e" strokeWidth="2" fill="none" />
+          </g>
+          {steps.map(([x, y], i) => (
+            <g key={x} className={`qh-tf-foot qh-tf-foot${i + 1}`} transform={`translate(${x} ${y}) rotate(-28)`}>
+              <ellipse cx="0" cy="0" rx="6" ry="10" fill="#f0b43c" />
+              <ellipse cx="13" cy="5" rx="6" ry="10" fill="#f0b43c" opacity=".8" />
+            </g>
+          ))}
+          <circle className="qh-tf-ring" cx={tx + 15} cy={ty + h / 2} r="30" fill="none" stroke="#f0b43c" strokeWidth="3" strokeDasharray="6 5" />
+        </g>
+        <g className="qh-tf-stamp" transform={`translate(${tx + 52} ${ty + 8})`}>
+          <rect x="-4" y="-18" width="150" height="30" rx="15" fill="#f0b43c" />
+          <text x="71" y="2" textAnchor="middle" fill="#0b1b2e" style={{ font: '700 13.5px var(--font-text), sans-serif' }}>Matched, repaired ✓</text>
+        </g>
+      </svg>
+      <ol className="qh-sc-steps qh-tf-steps">
+        {TILE_FIX_STEPS.map((step) => (
+          <li key={step}>{step}</li>
+        ))}
+      </ol>
+      {caption && <p className="qh-rr-time">{caption}</p>}
+      {links.length > 0 && (
+        <ul className="qh-leak-links">
+          {links.map((l) => (
+            <li key={l.href}>
+              <SiteLink href={l.href}>{l.label}</SiteLink>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+// Tile Lift & Relay hero visual (owner, November 9 2026): your own tiles, off and back in their pattern, on a 12 s loop. Each barrel tile (each a
+// slightly different shade, so the pattern can be followed) is lifted off to a stack beside the roof, the cracked old underlayment ("paper") is
+// replaced by new underlayment rolling across, the same tiles go back to the same places, and the one broken tile is set aside for a matched
+// one. The steps light up in turn. SVG + CSS custom properties; reduced motion shows the relaid roof.
+const RELAY_STEPS = ['Tiles off by hand, stacked', 'Old paper out, new underlayment on', 'Battens and flashings renewed', 'Same tiles, same pattern', 'Broken ones matched'];
+const RELAY_TONES = ['#c66a41', '#bb6139', '#cf7549', '#b5603b', '#c86d45', '#ad5733', '#c2663e', '#d27a4d'];
+export function QhTileRelay({ caption, links = [] }) {
+  const cols = 8;
+  const rows = 5;
+  const W = 44;
+  const H = 52;
+  const X0 = 30;
+  const Y0 = 24;
+  const broken = [3, 2]; // column, row
+  const stack = (k) => [462, 228 - (k % 10) * 7];
+  const capPath = (x, y) => `M${x + 8} ${y - 2}V${y + H - 13}a14 14 0 0 0 28 0V${y - 2}Z`;
+  const tiles = [];
+  for (let r = 0; r < rows; r++) {
+    for (let c = 0; c < cols; c++) {
+      const k = r * cols + c;
+      const x = X0 + c * W;
+      const y = Y0 + r * H;
+      const [sx, sy] = stack(k);
+      tiles.push({ k, x, y, dx: sx - x, dy: sy - y, broken: c === broken[0] && r === broken[1], tone: RELAY_TONES[(k * 5 + r) % RELAY_TONES.length] });
+    }
+  }
+  const panelW = cols * W;
+  const panelH = rows * H;
+  return (
+    <div className="qh-tl">
+      <svg className="qh-tl-svg" viewBox="0 0 560 300" aria-hidden="true">
+        <defs>
+          <clipPath id="qhTlPanel">
+            <rect x={X0} y={Y0 - 4} width={panelW} height={panelH + 4} rx="8" />
+          </clipPath>
+        </defs>
+        <g clipPath="url(#qhTlPanel)">
+          {/* the old paper, dried and cracked, then the new underlayment rolling across */}
+          <rect x={X0} y={Y0 - 4} width={panelW} height={panelH + 4} fill="#b4925f" />
+          <path d={`M${X0 + 40} ${Y0 + 30}l30 22 -12 30 26 24M${X0 + 190} ${Y0 + 60}l-20 34 24 20M${X0 + 280} ${Y0 + 150}l26 18 -8 40M${X0 + 110} ${Y0 + 190}l40 -14`} stroke="#6f5532" strokeWidth="2.5" fill="none" />
+          <rect className="qh-tl-under" x={X0} y={Y0 - 4} width={panelW} height={panelH + 4} fill="#26313d" />
+          <g className="qh-tl-under">
+            {Array.from({ length: rows }, (_, r) => (
+              <rect key={r} x={X0} y={Y0 + r * H + 6} width={panelW} height="6" fill="#d8ab74" opacity=".85" />
+            ))}
+          </g>
+        </g>
+        {/* the pallet the tiles are stacked on */}
+        <rect x="436" y="250" width="100" height="12" rx="2" fill="#9d7143" />
+        <path d="M444 262v10M486 262v10M528 262v10" stroke="#9d7143" strokeWidth="6" />
+        <text x="486" y="292" textAnchor="middle" fill="#9fb8d2" style={{ font: '700 12px var(--font-text), sans-serif' }}>
+          Your tiles, stacked
+        </text>
+        {tiles.map((t) => (
+          <g
+            key={t.k}
+            className={`qh-tl-tile${t.broken ? ' broken' : ''}`}
+            style={{ '--dx': `${t.dx}px`, '--dy': `${t.dy}px`, animationDelay: `${(t.k % cols) * 0.05 + Math.floor(t.k / cols) * 0.08}s` }}
+          >
+            <rect x={t.x} y={t.y} width={W} height={H - 4} fill="#7e3f26" />
+            <path d={capPath(t.x, t.y)} fill={t.tone} />
+            <path d={`M${t.x + 14} ${t.y}V${t.y + H - 16}`} stroke="rgba(255,255,255,.18)" strokeWidth="3.5" strokeLinecap="round" />
+            {t.broken && <path d={`M${t.x + 15} ${t.y + 6}l9 12 -6 9 9 12`} stroke="#3a1a0e" strokeWidth="2.5" fill="none" />}
+          </g>
+        ))}
+        {/* the matched tile that takes the broken one's place */}
+        {tiles
+          .filter((t) => t.broken)
+          .map((t) => (
+            <g key="match" className="qh-tl-match">
+              <rect x={t.x} y={t.y} width={W} height={H - 4} fill="#7e3f26" />
+              <path d={capPath(t.x, t.y)} fill="#c4683f" />
+              <path d={`M${t.x + 14} ${t.y}V${t.y + H - 16}`} stroke="rgba(255,255,255,.18)" strokeWidth="3.5" strokeLinecap="round" />
+              <circle className="qh-tl-ring" cx={t.x + W / 2} cy={t.y + H / 2} r="34" fill="none" stroke="#f0b43c" strokeWidth="3" strokeDasharray="6 5" />
+            </g>
+          ))}
+      </svg>
+      <ol className="qh-sc-steps qh-fr-steps qh-tl-steps">
+        {RELAY_STEPS.map((step) => (
+          <li key={step}>{step}</li>
+        ))}
+      </ol>
+      {caption && <p className="qh-rr-time">{caption}</p>}
+      {links.length > 0 && (
+        <ul className="qh-leak-links">
+          {links.map((l) => (
+            <li key={l.href}>
+              <SiteLink href={l.href}>{l.label}</SiteLink>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+// Slate Tile Roofing hero visual (owner, November 9 2026): "a slate roof starts with the structure, not the stone". A roof slope with its rafters
+// showing; a gold check sweeps along them ("Framing reviewed"); then the deck and underlayment go on, and natural slate is laid course by course
+// from the eave in staggered slates of varied width and tone, each with two copper nails; a cut-away at the top left keeps the framing in view.
+// The steps light up as it builds. SVG + CSS; reduced motion shows the finished roof.
+const SLATE_STEPS = ['Look at the home first', 'Check the framing', 'Every layer in the written scope', 'Slate laid course by course'];
+const SLATE_TONES = ['#46505c', '#3d4652', '#525d6a', '#4a5361', '#38414c', '#4f5866'];
+export function QhSlateRoof({ caption, links = [] }) {
+  const rows = 9;
+  const top = 46;
+  const bottom = 262;
+  const h = (bottom - top) / rows;
+  const left = (y) => 40 + ((bottom - y) / (bottom - top)) * 90;
+  const right = (y) => 520 - ((bottom - y) / (bottom - top)) * 90;
+  const slope = `M${left(bottom)} ${bottom}L${right(bottom)} ${bottom}L${right(top)} ${top}L${left(top)} ${top}Z`;
+  // slates of varied widths, the same on every render (a fixed sequence, no randomness)
+  const widths = [38, 46, 42, 52, 36, 48, 44, 40, 50];
+  const slateRows = Array.from({ length: rows }, (_, r) => {
+    const y = bottom - (r + 1) * h;
+    const out = [];
+    let x = r % 2 ? -22 : 0;
+    let i = r * 3;
+    while (x < 560) {
+      const w = widths[i % widths.length];
+      out.push({ x, w, tone: SLATE_TONES[(i * 7 + r) % SLATE_TONES.length] });
+      x += w;
+      i += 1;
+    }
+    return { y, slates: out };
+  });
+  return (
+    <div className="qh-sl">
+      <svg className="qh-sl-svg" viewBox="0 0 560 300" aria-hidden="true">
+        <defs>
+          <clipPath id="qhSlClip">
+            <path d={slope} />
+          </clipPath>
+          <clipPath id="qhSlCover">
+            <path d="M0 300H560V0H250L40 270Z" />
+          </clipPath>
+          <clipPath id="qhSlUnder">
+            <path d="M0 300H560V0H290L80 290Z" />
+          </clipPath>
+          <clipPath id="qhSlSlate">
+            <path d="M0 300H560V0H340L130 300Z" />
+          </clipPath>
+        </defs>
+        <g clipPath="url(#qhSlClip)">
+          <rect width="560" height="300" fill="#16202b" />
+          {/* the framing: rafters running up the slope */}
+          {Array.from({ length: 12 }, (_, i) => (
+            <rect key={i} x={20 + i * 46} y="0" width="12" height="300" fill="#b68955" />
+          ))}
+          <rect className="qh-sl-sweep" x="-80" y="0" width="80" height="300" fill="url(#qhSlSweep)" />
+          <g clipPath="url(#qhSlCover)">
+            <rect className="qh-sl-l qh-sl-deck" width="560" height="300" fill="#c39663" />
+            <rect className="qh-sl-l qh-sl-under" width="560" height="300" fill="#26313d" clipPath="url(#qhSlUnder)" />
+            <g clipPath="url(#qhSlSlate)">
+            {slateRows.map((row, r) => (
+              <g key={r} className="qh-sl-row" style={{ animationDelay: `${2.6 + r * 0.14}s` }}>
+                {row.slates.map((sl) => (
+                  <g key={sl.x}>
+                    <rect x={sl.x + 1} y={row.y + 1} width={sl.w - 2} height={h + 6} rx="1.5" fill={sl.tone} />
+                    <circle cx={sl.x + sl.w * 0.3} cy={row.y + 5} r="1.6" fill="#c9824a" />
+                    <circle cx={sl.x + sl.w * 0.7} cy={row.y + 5} r="1.6" fill="#c9824a" />
+                  </g>
+                ))}
+              </g>
+            ))}
+            </g>
+          </g>
+        </g>
+        <linearGradient id="qhSlSweep" x1="0" x2="1">
+          <stop offset="0" stopColor="#f0b43c" stopOpacity="0" />
+          <stop offset=".5" stopColor="#f0b43c" stopOpacity=".55" />
+          <stop offset="1" stopColor="#f0b43c" stopOpacity="0" />
+        </linearGradient>
+        <path d={slope} fill="none" stroke="rgba(255,255,255,.55)" strokeWidth="2" strokeLinejoin="round" />
+        <g className="qh-sl-tag" transform={`translate(${left(150) - 4} 150)`}>
+          <rect x="-8" y="-17" width="152" height="28" rx="14" fill="#f0b43c" />
+          <text x="68" y="2" textAnchor="middle" fill="#0b1b2e" style={{ font: '700 13px var(--font-text), sans-serif' }}>Framing reviewed ✓</text>
+        </g>
+      </svg>
+      <ol className="qh-sc-steps qh-sl-steps">
+        {SLATE_STEPS.map((step, i) => (
+          <li key={step} style={{ animationDelay: `${0.3 + i * 1}s` }}>
+            {step}
+          </li>
+        ))}
+      </ol>
+      {caption && <p className="qh-rr-time">{caption}</p>}
+      {links.length > 0 && (
+        <ul className="qh-leak-links">
+          {links.map((l) => (
+            <li key={l.href}>
+              <SiteLink href={l.href}>{l.label}</SiteLink>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+// Concrete Tile Roofing hero visual (owner, November 9 2026): "the tile you see is only one part of the roof". A roof section opens into an
+// exploded stack (concrete tile, battens, underlayment and flashing, deck), each layer labelled as it separates; then the tile layer cycles
+// through four colors, named under it, since choosing a profile and color is part of the job. SVG + CSS; reduced motion shows the open stack.
+const CONCRETE_LAYERS = ['Concrete tile: the part you see', 'Battens', 'Underlayment, flashing', 'Roof deck'];
+const CONCRETE_COLORS = [
+  ['Terracotta blend', '#b8673f', '#8f4a2b'],
+  ['Desert tan', '#b99b72', '#8d7552'],
+  ['Weathered gray', '#8a8f95', '#62676d'],
+  ['Charcoal', '#4d5259', '#33373c'],
+];
+export function QhConcreteStack({ caption, links = [] }) {
+  // one slab: the top face (a parallelogram) and its front edge
+  const face = (y) => `M40 ${y}L320 ${y}L400 ${y - 64}L120 ${y - 64}Z`;
+  const edge = (y, t) => `M40 ${y}L320 ${y}L320 ${y + t}L40 ${y + t}Z`;
+  const side = (y, t) => `M320 ${y}L400 ${y - 64}L400 ${y - 64 + t}L320 ${y + t}Z`;
+  const ys = [92, 150, 204, 258]; // tile, battens, underlayment, deck (open)
+  return (
+    <div className="qh-cs">
+      <svg className="qh-cs-svg" viewBox="0 0 560 300" aria-hidden="true">
+        <defs>
+          <pattern id="qhCsWave" width="40" height="13" patternUnits="userSpaceOnUse">
+            <path d="M0 9C7 1 13 1 20 9C27 17 33 17 40 9" stroke="rgba(0,0,0,.3)" strokeWidth="3" fill="none" />
+            <path d="M2 6C8 0 13 0 18 5" stroke="rgba(255,255,255,.16)" strokeWidth="2" fill="none" />
+          </pattern>
+          <pattern id="qhCsBattens" width="40" height="16" patternUnits="userSpaceOnUse" patternTransform="skewX(-51)">
+            <rect width="40" height="16" fill="#26313d" />
+            <rect x="0" y="5" width="40" height="5" fill="#d8ab74" />
+          </pattern>
+        </defs>
+        {/* deck */}
+        <g className="qh-cs-slab qh-cs-s4">
+          <path d={face(ys[3])} fill="#c39663" />
+          <path d={edge(ys[3], 10)} fill="#9d7143" />
+          <path d={side(ys[3], 10)} fill="#8a6239" />
+        </g>
+        {/* underlayment, with gold flashing along its edge */}
+        <g className="qh-cs-slab qh-cs-s3">
+          <path d={face(ys[2])} fill="#26313d" />
+          <path d={edge(ys[2], 6)} fill="#1a222b" />
+          <path d={side(ys[2], 6)} fill="#161d25" />
+          <path d={`M40 ${ys[2]}L320 ${ys[2]}L400 ${ys[2] - 64}`} stroke="#f0b43c" strokeWidth="4" fill="none" strokeLinejoin="round" />
+        </g>
+        {/* battens */}
+        <g className="qh-cs-slab qh-cs-s2">
+          <path d={face(ys[1])} fill="url(#qhCsBattens)" />
+          <path d={edge(ys[1], 5)} fill="#b68955" />
+        </g>
+        {/* concrete tile, in each color */}
+        <g className="qh-cs-slab qh-cs-s1">
+          {CONCRETE_COLORS.map(([name, top, dark], i) => (
+            <g key={name} className={`qh-cs-c qh-cs-c${i + 1}`}>
+              <path d={face(ys[0])} fill={top} />
+              <path d={face(ys[0])} fill="url(#qhCsWave)" />
+              <path d={edge(ys[0], 12)} fill={dark} />
+              <path d={side(ys[0], 12)} fill={dark} opacity=".85" />
+            </g>
+          ))}
+        </g>
+        <g style={{ font: '700 13px var(--font-text), sans-serif' }}>
+          {CONCRETE_LAYERS.map((label, i) => (
+            <g key={label} className={`qh-cs-lab qh-cs-lab${i + 1}`}>
+              <path d={`M408 ${ys[i] - 30}h18`} stroke={i === 0 ? '#f0b43c' : 'rgba(255,255,255,.5)'} strokeWidth="2" />
+              <text x="432" y={ys[i] - 26} fill={i === 0 ? '#f0b43c' : '#dbe7f3'}>
+                {label.includes(':') ? label.split(':')[0] : label}
+              </text>
+              {label.includes(':') && (
+                <text x="432" y={ys[i] - 10} fill="#9fb8d2" style={{ font: '600 11.5px var(--font-text), sans-serif' }}>
+                  {label.split(':')[1].trim()}
+                </text>
+              )}
+            </g>
+          ))}
+        </g>
+        <g style={{ font: '700 13px var(--font-text), sans-serif' }}>
+          {CONCRETE_COLORS.map(([name], i) => (
+            <text key={name} className={`qh-cs-n qh-cs-n${i + 1}`} x="220" y="20" textAnchor="middle" fill="#f0b43c">
+              {name}
+            </text>
+          ))}
+        </g>
+      </svg>
+      {caption && <p className="qh-rr-time">{caption}</p>}
+      {links.length > 0 && (
+        <ul className="qh-leak-links">
+          {links.map((l) => (
+            <li key={l.href}>
+              <SiteLink href={l.href}>{l.label}</SiteLink>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+// Torch Down hero visual (owner, November 9 2026): a flat roof in cross-section, on a 9 s loop. A roll lays the white granulated cap sheet over the
+// base sheet as a torch flame heats it at the roll, the fused seam glowing behind it; at the end the cap sheet is flashed up the parapet. A
+// magnified inset shows an overlap melted into one surface. The steps light up with it. SVG + CSS; reduced motion shows the finished roof.
+const TORCH_STEPS = ['Down to the deck', 'Base sheet on the deck', 'Cap sheet torched, seams fused', 'Edges, walls and drains flashed'];
+export function QhTorchDown({ caption, links = [] }) {
+  const x0 = 64;
+  const run = 420;
+  return (
+    <div className="qh-td">
+      <svg className="qh-td-svg" viewBox="0 0 560 290" aria-hidden="true">
+        <defs>
+          <pattern id="qhTdGran" width="10" height="8" patternUnits="userSpaceOnUse">
+            <rect width="10" height="8" fill="#e9edf0" />
+            <circle cx="2" cy="2" r="1" fill="#c9ced3" />
+            <circle cx="7" cy="5" r="1.1" fill="#d6dade" />
+          </pattern>
+          <radialGradient id="qhTdFlame" cx=".5" cy=".75" r=".6">
+            <stop offset="0" stopColor="#fff2b0" />
+            <stop offset=".45" stopColor="#ffb33c" />
+            <stop offset="1" stopColor="#ff5a1f" stopOpacity="0" />
+          </radialGradient>
+        </defs>
+        {/* the building, deck and base sheet */}
+        <rect x={x0} y="194" width={run + 16} height="70" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.3)" strokeWidth="2" />
+        <rect x="40" y="100" width="24" height="164" fill="#3b4652" stroke="rgba(255,255,255,.45)" strokeWidth="2" />
+        <rect x={x0} y="182" width={run + 16} height="12" fill="#c39663" />
+        <rect x={x0} y="175" width={run + 16} height="7" fill="#4b525c" />
+        {/* the cap sheet as it's laid, its glowing seam, the flashing up the parapet */}
+        <rect className="qh-td-cap" x={x0} y="168" width={run} height="7" fill="url(#qhTdGran)" />
+        <rect className="qh-td-glow" x={x0} y="173" width={run} height="3" fill="#ffb33c" />
+        <rect className="qh-td-flash" x={x0} y="132" width="7" height="43" fill="url(#qhTdGran)" stroke="#f0b43c" strokeWidth="1.5" />
+        {/* the roll, the torch and its flame, moving together */}
+        <g className="qh-td-roll">
+          <circle cx={x0 + 20} cy="152" r="20" fill="#e9edf0" stroke="#aab2ba" strokeWidth="2" />
+          <circle cx={x0 + 20} cy="152" r="7" fill="#8a949f" />
+          <ellipse className="qh-td-fire" cx={x0 + 46} cy="166" rx="15" ry="11" fill="url(#qhTdFlame)" />
+          <path d={`M${x0 + 56} 160L${x0 + 104} 118`} stroke="#9aa3ad" strokeWidth="5" strokeLinecap="round" />
+          <path d={`M${x0 + 104} 118L${x0 + 122} 100`} stroke="#2d3540" strokeWidth="9" strokeLinecap="round" />
+        </g>
+        {/* the seam, magnified */}
+        <g transform="translate(442 58)">
+          <circle r="46" fill="#0d1a29" stroke="rgba(255,255,255,.5)" strokeWidth="2" />
+          <clipPath id="qhTdLens">
+            <circle r="44" />
+          </clipPath>
+          <g clipPath="url(#qhTdLens)">
+            <rect x="-50" y="8" width="100" height="14" fill="#4b525c" />
+            <rect x="-50" y="-6" width="58" height="14" fill="url(#qhTdGran)" />
+            <rect x="0" y="-12" width="50" height="14" fill="url(#qhTdGran)" />
+            <rect className="qh-td-bead" x="-4" y="-3" width="14" height="6" rx="3" fill="#ffb33c" />
+          </g>
+        </g>
+        <text x="442" y="124" textAnchor="middle" fill="#cfe0f2" style={{ font: '700 12px var(--font-text), sans-serif' }}>
+          Seams fused into one surface
+        </text>
+      </svg>
+      <ol className="qh-sc-steps qh-td-steps">
+        {TORCH_STEPS.map((step) => (
+          <li key={step}>{step}</li>
+        ))}
+      </ol>
+      {caption && <p className="qh-rr-time">{caption}</p>}
+      {links.length > 0 && (
+        <ul className="qh-leak-links">
+          {links.map((l) => (
+            <li key={l.href}>
+              <SiteLink href={l.href}>{l.label}</SiteLink>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+// Commercial Roof Replacement hero visual (owner, November 9 2026): "a new roof without closing your doors". A commercial roof from above in four
+// sections, replaced one phase at a time on a 12 s loop (worn roof, torn off to the deck, new white membrane), with "Phase n of 4" counting up,
+// while the storefront under it keeps its OPEN sign lit. SVG + CSS; reduced motion shows the finished roof.
+export function QhPhasedReroof({ caption, links = [] }) {
+  const sections = [0, 1, 2, 3];
+  const X = 40;
+  const Y = 34;
+  const SW = 120;
+  const SH = 168;
+  return (
+    <div className="qh-pr">
+      <svg className="qh-pr-svg" viewBox="0 0 560 300" aria-hidden="true">
+        <defs>
+          <pattern id="qhPrWorn" width="40" height="40" patternUnits="userSpaceOnUse">
+            <rect width="40" height="40" fill="#5c6168" />
+            <rect x="6" y="8" width="14" height="9" fill="#4c5056" />
+            <rect x="24" y="26" width="10" height="8" fill="#696e75" />
+          </pattern>
+          <pattern id="qhPrNew" width="40" height="20" patternUnits="userSpaceOnUse">
+            <rect width="40" height="20" fill="#eef2f6" />
+            <path d="M0 19.5h40" stroke="#cfd6dd" strokeWidth="1" />
+          </pattern>
+        </defs>
+        {sections.map((i) => (
+          <g key={i}>
+            <rect x={X + i * SW} y={Y} width={SW} height={SH} fill="url(#qhPrWorn)" />
+            <rect className={`qh-pr-deck qh-pr-d${i + 1}`} x={X + i * SW} y={Y} width={SW} height={SH} fill="#c39663" />
+            <rect className={`qh-pr-new qh-pr-n${i + 1}`} x={X + i * SW} y={Y} width={SW} height={SH} fill="url(#qhPrNew)" />
+            <text x={X + i * SW + SW / 2} y={Y + SH - 12} textAnchor="middle" fill="rgba(11,27,46,.55)" style={{ font: '800 22px var(--font-text), sans-serif' }}>
+              {i + 1}
+            </text>
+          </g>
+        ))}
+        {/* section lines, parapet, rooftop units and drains */}
+        {[1, 2, 3].map((i) => (
+          <path key={i} d={`M${X + i * SW} ${Y}V${Y + SH}`} stroke="#f0b43c" strokeWidth="2" strokeDasharray="6 5" />
+        ))}
+        <rect x={X} y={Y} width={SW * 4} height={SH} fill="none" stroke="rgba(255,255,255,.7)" strokeWidth="4" />
+        {[[X + SW * 1.5, Y + 40], [X + SW * 3.4, Y + 70]].map(([x, y]) => (
+          <g key={x}>
+            <rect x={x - 22} y={y - 14} width="44" height="28" rx="3" fill="#8a949f" stroke="#5d6570" strokeWidth="2" />
+            <circle cx={x} cy={y} r="8" fill="none" stroke="#5d6570" strokeWidth="2" />
+          </g>
+        ))}
+        {[[X + SW * 0.5, Y + 110], [X + SW * 2.5, Y + 110]].map(([x, y]) => (
+          <circle key={x} cx={x} cy={y} r="6" fill="#1b2633" stroke="#5d6570" strokeWidth="2" />
+        ))}
+        {/* the phase tag */}
+        <g style={{ font: '700 13px var(--font-text), sans-serif' }}>
+          {['Phase 1 of 4', 'Phase 2 of 4', 'Phase 3 of 4', 'Phase 4 of 4', 'New roof, open all along ✓'].map((t, i) => (
+            <text key={t} className={`qh-pr-t qh-pr-t${i + 1}`} x="280" y="22" textAnchor="middle" fill="#f0b43c">
+              {t}
+            </text>
+          ))}
+        </g>
+        {/* the storefront below, open for business */}
+        <rect x={X} y={Y + SH} width={SW * 4} height="88" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.35)" strokeWidth="2" />
+        {[0, 1, 3].map((i) => (
+          <rect key={i} x={X + 16 + i * SW} y={Y + SH + 18} width={SW - 32} height="54" rx="2" fill="rgba(124,196,255,.16)" stroke="rgba(255,255,255,.3)" strokeWidth="2" />
+        ))}
+        <rect x={X + SW * 2 + 34} y={Y + SH + 22} width="52" height="66" fill="rgba(124,196,255,.1)" stroke="rgba(255,255,255,.35)" strokeWidth="2" />
+        <g className="qh-pr-open">
+          <rect x={X + SW * 2 + 26} y={Y + SH + 4} width="68" height="16" rx="8" fill="#f0b43c" />
+          <text x={X + SW * 2 + 60} y={Y + SH + 16} textAnchor="middle" fill="#0b1b2e" style={{ font: '800 11px var(--font-text), sans-serif', letterSpacing: '.12em' }}>
+            OPEN
+          </text>
+        </g>
+      </svg>
+      {caption && <p className="qh-rr-time">{caption}</p>}
+      {links.length > 0 && (
+        <ul className="qh-leak-links">
+          {links.map((l) => (
+            <li key={l.href}>
+              <SiteLink href={l.href}>{l.label}</SiteLink>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+// TPO Roofing hero visual (owner, November 9 2026): a white TPO roof from above on a 10 s loop. A hot-air welder travels along the seam between two
+// rolls and leaves a fused seam behind it (the earlier seam already welded), around a flashed rooftop curb; then sunlight comes in and bounces off
+// the white membrane. Labelled "Seams welded with hot air" and "White surface reflects sunlight". SVG + CSS; reduced motion shows it finished.
+export function QhTpoWeld({ caption, links = [] }) {
+  const X = 40;
+  const W = 480;
+  const seams = [108, 178];
+  return (
+    <div className="qh-tp">
+      <svg className="qh-tp-svg" viewBox="0 0 560 300" aria-hidden="true">
+        <rect x={X} y="40" width={W} height="218" rx="4" fill="#eef2f6" stroke="rgba(255,255,255,.8)" strokeWidth="4" />
+        {/* roll edges and their overlaps */}
+        {seams.map((y) => (
+          <rect key={y} x={X} y={y - 6} width={W} height="12" fill="#e1e6eb" />
+        ))}
+        <rect x={X} y={seams[0] - 1.5} width={W} height="3" fill="#aab3bc" />
+        <rect className="qh-tp-weld" x={X} y={seams[1] - 1.5} width={W} height="3" fill="#aab3bc" />
+        <rect className="qh-tp-heat" x={X} y={seams[1] - 4} width={W} height="8" fill="#ffb33c" opacity=".35" />
+        {/* a rooftop unit on its curb, flashed with membrane */}
+        <rect x="190" y="208" width="74" height="40" rx="3" fill="#c4ccd4" stroke="#f0b43c" strokeWidth="3" />
+        <rect x="198" y="214" width="58" height="28" rx="2" fill="#8a949f" />
+        <circle cx="227" cy="228" r="9" fill="none" stroke="#5d6570" strokeWidth="2.5" />
+        <circle cx="90" cy="230" r="7" fill="#c4ccd4" stroke="#8a949f" strokeWidth="2" />
+        {/* the welder on the seam */}
+        <g className="qh-tp-welder">
+          <rect x={X - 20} y={seams[1] - 20} width="38" height="40" rx="6" fill="#3b4652" stroke="#f0b43c" strokeWidth="2" />
+          <rect x={X + 14} y={seams[1] - 4} width="14" height="8" rx="2" fill="#ffb33c" />
+          <path d={`M${X - 6} ${seams[1] - 20}V${seams[1] - 44}H${X - 26}`} stroke="#9aa3ad" strokeWidth="4" fill="none" strokeLinecap="round" />
+        </g>
+        {/* sunlight, reflected */}
+        <g className="qh-tp-sun">
+          <circle cx="64" cy="10" r="16" fill="#f0b43c" />
+          {[0, 1, 2].map((i) => (
+            <path key={i} className={`qh-tp-ray qh-tp-ray${i + 1}`} d={`M${120 + i * 130} -4L${165 + i * 130} 92L${210 + i * 130} -4`} stroke="#f0b43c" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round" pathLength="1" strokeDasharray="1" />
+          ))}
+        </g>
+        <g style={{ font: '700 12.5px var(--font-text), sans-serif' }}>
+          <g className="qh-tp-lab1">
+            <rect x="300" y={seams[1] + 14} width="196" height="24" rx="12" fill="#0b1b2e" opacity=".85" />
+            <text x="398" y={seams[1] + 30} textAnchor="middle" fill="#f0b43c">Seams welded with hot air</text>
+          </g>
+          <g className="qh-tp-lab2">
+            <rect x="60" y="126" width="210" height="24" rx="12" fill="#0b1b2e" opacity=".85" />
+            <text x="165" y="142" textAnchor="middle" fill="#f0b43c">White surface reflects sunlight</text>
+          </g>
+        </g>
+      </svg>
+      {caption && <p className="qh-rr-time">{caption}</p>}
+      {links.length > 0 && (
+        <ul className="qh-leak-links">
+          {links.map((l) => (
+            <li key={l.href}>
+              <SiteLink href={l.href}>{l.label}</SiteLink>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+// Cool Roofing hero visual (owner, November 9 2026): two homes in the sun on a 12 s loop. Sunlight hits both; the standard dark roof soaks it up and
+// heat rises into a red-tinted attic, while the cool roof reflects it back and its attic stays blue; then the cool roof cycles through four of the
+// eleven cool shingle colors (data/roofColors.js), down to Midnight, because a cool roof doesn't have to be white. SVG + CSS; reduced motion shows
+// the comparison, still.
+export function QhCoolRoof({ colors = [], caption, links = [] }) {
+  const pick = ['shasta-white', 'amber', 'copper-trail', 'midnight'].map((id) => colors.find((c) => c.id === id)).filter(Boolean);
+  const house = (x, roofFill, attic, cls) => (
+    <g className={cls}>
+      <rect x={x + 20} y="160" width="200" height="96" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.4)" strokeWidth="2" />
+      <path className="qh-cr-attic" d={`M${x + 20} 160L${x + 120} 112L${x + 220} 160Z`} fill={attic} />
+      <path d={`M${x} 166L${x + 120} 96L${x + 240} 166`} fill="none" stroke={roofFill} strokeWidth="14" strokeLinejoin="round" />
+      <rect x={x + 96} y="200" width="48" height="56" rx="2" fill="rgba(124,196,255,.12)" stroke="rgba(255,255,255,.3)" strokeWidth="2" />
+    </g>
+  );
+  return (
+    <div className="qh-cr">
+      <svg className="qh-cr-svg" viewBox="0 0 560 300" aria-hidden="true">
+        <circle cx="280" cy="22" r="18" fill="#f0b43c" />
+        {/* left: a standard dark roof, soaking up the sun */}
+        {house(18, '#2b2e33', 'rgba(255,90,60,.32)', 'qh-cr-hot')}
+        <path className="qh-cr-in qh-cr-in1" d="M262 34L150 106" stroke="#f0b43c" strokeWidth="3" strokeLinecap="round" pathLength="1" strokeDasharray="1" />
+        {[118, 138, 158].map((x, i) => (
+          <path key={x} className={`qh-cr-heat qh-cr-heat${i + 1}`} d={`M${x} 154c-6 -8 6 -12 0 -20c-6 -8 6 -12 0 -20`} stroke="#ff7a50" strokeWidth="3" fill="none" strokeLinecap="round" />
+        ))}
+        {/* right: a cool roof, reflecting it back, in four colors */}
+        {house(302, 'transparent', 'rgba(124,196,255,.18)', 'qh-cr-cool')}
+        {pick.map((c, i) => (
+          <path key={c.id} className={`qh-cr-c qh-cr-c${i + 1}`} d="M302 166L422 96L542 166" fill="none" stroke={c.hex} strokeWidth="14" strokeLinejoin="round" />
+        ))}
+        <path className="qh-cr-in qh-cr-in2" d="M298 34L410 106L470 30" stroke="#f0b43c" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" pathLength="1" strokeDasharray="1" />
+        <g style={{ font: '700 12.5px var(--font-text), sans-serif' }}>
+          <text x="138" y="282" textAnchor="middle" fill="#9fb8d2">Standard dark roof</text>
+          <text x="422" y="282" textAnchor="middle" fill="#f0b43c">Cool roof</text>
+          {pick.map((c, i) => (
+            <text key={c.id} className={`qh-cr-n qh-cr-n${i + 1}`} x="422" y="298" textAnchor="middle" fill="#cfe0f2" style={{ font: '600 11.5px var(--font-text), sans-serif' }}>
+              {c.name}, SRI 20+
+            </text>
+          ))}
+        </g>
+      </svg>
+      {caption && <p className="qh-rr-time">{caption}</p>}
+      {links.length > 0 && (
+        <ul className="qh-leak-links">
+          {links.map((l) => (
+            <li key={l.href}>
+              <SiteLink href={l.href}>{l.label}</SiteLink>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+// Commercial Roof Repair hero visual (owner, November 9 2026): a commercial building in cross-section with three tenant suites, on an 11 s loop.
+// Water gets in at a roof drain above Suite A, travels along the deck and drips into a bucket in Suite C; a ring traces it from the drip back to
+// the drain, the drain flashing is repaired, and a before-and-after photo card comes up, "Sent to owners and tenants". SVG + CSS; reduced motion
+// shows the repaired roof with the photo card.
+export function QhCommercialFix({ caption, links = [] }) {
+  return (
+    <div className="qh-cf">
+      <svg className="qh-cf-svg" viewBox="0 0 560 300" aria-hidden="true">
+        {/* building, suites, roof */}
+        <rect x="40" y="104" width="480" height="150" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.35)" strokeWidth="2" />
+        <path d="M200 104V254M360 104V254" stroke="rgba(255,255,255,.25)" strokeWidth="2" />
+        <rect x="40" y="94" width="480" height="10" fill="#c39663" />
+        <rect x="40" y="88" width="480" height="6" fill="#d9dee3" />
+        <rect x="24" y="60" width="16" height="44" fill="#3b4652" stroke="rgba(255,255,255,.45)" strokeWidth="2" />
+        <rect x="520" y="60" width="16" height="44" fill="#3b4652" stroke="rgba(255,255,255,.45)" strokeWidth="2" />
+        {/* rooftop unit and the drain */}
+        <rect x="290" y="56" width="70" height="32" rx="3" fill="#8a949f" stroke="#5d6570" strokeWidth="2" />
+        <rect x="282" y="82" width="86" height="6" fill="#59606a" />
+        <ellipse cx="130" cy="88" rx="16" ry="4" fill="#1b2633" />
+        <ellipse className="qh-cf-fixed" cx="130" cy="88" rx="22" ry="6" fill="none" stroke="#f0b43c" strokeWidth="3" />
+        {/* the water: in at the drain, along the deck, down into Suite C */}
+        <path className="qh-cf-path" d="M130 90V99H452V200" pathLength="1" stroke="#7cc4ff" strokeWidth="3" strokeDasharray="1" fill="none" strokeLinejoin="round" />
+        <circle className="qh-cf-drip" cx="452" cy="206" r="4" fill="#7cc4ff" />
+        <path d="M436 226h32l-4 26h-24Z" fill="#59606a" stroke="#8a949f" strokeWidth="2" />
+        <circle className="qh-cf-ring" cx="452" cy="96" r="22" fill="none" stroke="#f0b43c" strokeWidth="3" strokeDasharray="6 5" />
+        <g style={{ font: '700 12px var(--font-text), sans-serif' }} fill="#9fb8d2">
+          <text x="120" y="244" textAnchor="middle">Suite A</text>
+          <text x="280" y="244" textAnchor="middle">Suite B</text>
+          <text x="400" y="244" textAnchor="middle">Suite C</text>
+        </g>
+        {/* the photo record */}
+        <g className="qh-cf-card">
+          <rect x="196" y="118" width="196" height="96" rx="10" fill="#fff" />
+          <rect x="208" y="130" width="80" height="52" rx="4" fill="#3b4652" />
+          <ellipse cx="248" cy="160" rx="16" ry="5" fill="#1b2633" />
+          <path d="M236 152l8 8M252 150l-6 10" stroke="#7cc4ff" strokeWidth="2" />
+          <rect x="300" y="130" width="80" height="52" rx="4" fill="#3b4652" />
+          <ellipse cx="340" cy="160" rx="16" ry="5" fill="#1b2633" />
+          <ellipse cx="340" cy="160" rx="22" ry="7" fill="none" stroke="#f0b43c" strokeWidth="2.5" />
+          <g style={{ font: '700 10.5px var(--font-text), sans-serif' }}>
+            <text x="248" y="176" textAnchor="middle" fill="#fff">Before</text>
+            <text x="340" y="176" textAnchor="middle" fill="#fff">After</text>
+            <text x="294" y="203" textAnchor="middle" fill="#0b1b2e" style={{ font: '700 11.5px var(--font-text), sans-serif' }}>Sent to owners and tenants</text>
+          </g>
+        </g>
+      </svg>
+      {caption && <p className="qh-rr-time">{caption}</p>}
+      {links.length > 0 && (
+        <ul className="qh-leak-links">
+          {links.map((l) => (
+            <li key={l.href}>
+              <SiteLink href={l.href}>{l.label}</SiteLink>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+// Attic Ventilation hero visual (owner, November 9 2026): a house's attic in cross-section on a 10 s loop. First the intake at the eaves is blocked
+// by insulation and the attic glows hot ("Intake blocked"); the eaves are cleared (a gold ring, baffles in); then cool air flows in low at the
+// eaves and warm air leaves at the ridge vent, and the attic turns cool: "Air in low, out high". SVG + CSS; reduced motion shows the flowing state.
+export function QhAtticFlow({ caption, links = [] }) {
+  const flow = (d, cls) => <path className={`qh-af-flow ${cls}`} d={d} fill="none" strokeWidth="4" strokeLinecap="round" strokeDasharray="10 12" />;
+  return (
+    <div className="qh-af">
+      <svg className="qh-af-svg" viewBox="0 0 560 300" aria-hidden="true">
+        <defs>
+          <marker id="qhAfArrowC" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#7cc4ff" /></marker>
+          <marker id="qhAfArrowW" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#ffa35c" /></marker>
+        </defs>
+        {/* the attic space, hot then cool */}
+        <path className="qh-af-hot" d="M70 196L280 70L490 196Z" fill="rgba(255,90,60,.34)" />
+        <path className="qh-af-cool" d="M70 196L280 70L490 196Z" fill="rgba(124,196,255,.16)" />
+        {/* roof, ridge vent, walls, ceiling and insulation */}
+        <path d="M40 206L280 62L520 206" fill="none" stroke="#4a515b" strokeWidth="16" strokeLinejoin="round" />
+        <rect x="258" y="46" width="44" height="12" rx="3" fill="#8a949f" stroke="#5d6570" strokeWidth="2" />
+        <rect x="70" y="196" width="420" height="10" fill="#c39663" />
+        <path d="M76 196q14 -14 28 0t28 0t28 0t28 0t28 0t28 0t28 0t28 0t28 0t28 0t28 0t28 0t28 0t28 0t28 0" fill="#e6c98f" stroke="#c9a86a" strokeWidth="2" />
+        <rect x="70" y="206" width="420" height="70" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.35)" strokeWidth="2" />
+        {/* the insulation blocking the eaves, and the baffles that clear them */}
+        <g className="qh-af-block">
+          <ellipse cx="88" cy="190" rx="22" ry="12" fill="#e6c98f" />
+          <ellipse cx="472" cy="190" rx="22" ry="12" fill="#e6c98f" />
+          <path d="M70 168l20 20M90 168l-20 20M470 168l20 20M490 168l-20 20" stroke="#ff7a50" strokeWidth="3.5" strokeLinecap="round" />
+        </g>
+        <g className="qh-af-fix">
+          <path d="M66 198L104 176M494 198L456 176" stroke="#f0b43c" strokeWidth="4" strokeLinecap="round" />
+          <circle cx="86" cy="190" r="24" fill="none" stroke="#f0b43c" strokeWidth="2.5" strokeDasharray="5 4" />
+          <circle cx="474" cy="190" r="24" fill="none" stroke="#f0b43c" strokeWidth="2.5" strokeDasharray="5 4" />
+        </g>
+        {/* the airflow */}
+        <g className="qh-af-air">
+          <g stroke="#7cc4ff" markerEnd="url(#qhAfArrowC)">
+            {flow('M30 222Q70 214 96 184Q150 150 210 128', 'c1')}
+            {flow('M530 222Q490 214 464 184Q410 150 350 128', 'c2')}
+          </g>
+          <g stroke="#ffa35c" markerEnd="url(#qhAfArrowW)">
+            {flow('M236 112Q262 88 270 40', 'w1')}
+            {flow('M324 112Q298 88 290 40', 'w2')}
+          </g>
+        </g>
+        <g style={{ font: '700 12.5px var(--font-text), sans-serif' }}>
+          <g className="qh-af-tag1">
+            <rect x="200" y="140" width="160" height="26" rx="13" fill="#0b1b2e" opacity=".85" />
+            <text x="280" y="157" textAnchor="middle" fill="#ff9a70">Intake blocked</text>
+          </g>
+          <g className="qh-af-tag2">
+            <rect x="196" y="140" width="168" height="26" rx="13" fill="#0b1b2e" opacity=".85" />
+            <text x="280" y="157" textAnchor="middle" fill="#f0b43c">Air in low, out high ✓</text>
+          </g>
+          <text x="40" y="244" fill="#9fb8d2" style={{ font: '600 11.5px var(--font-text), sans-serif' }}>Eave intake</text>
+          <text x="280" y="32" textAnchor="middle" fill="#9fb8d2" style={{ font: '600 11.5px var(--font-text), sans-serif' }}>Ridge exhaust</text>
+        </g>
+      </svg>
+      {caption && <p className="qh-rr-time">{caption}</p>}
+      {links.length > 0 && (
+        <ul className="qh-leak-links">
+          {links.map((l) => (
+            <li key={l.href}>
+              <SiteLink href={l.href}>{l.label}</SiteLink>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+// Commercial Roof Maintenance hero visual (owner, November 9 2026): three scheduled visits to a commercial roof on a 12 s loop. Visit 1 clears a
+// drain choked with leaves, visit 2 reseals the cracked flashing at a pipe, visit 3 seals a split at the parapet; each ends with a camera flash and
+// a photo report card added to the stack beside the roof, while a timeline fills in visit by visit. SVG + CSS; reduced motion shows all three done.
+export function QhRoofCare({ caption, links = [] }) {
+  return (
+    <div className="qh-rc">
+      <svg className="qh-rc-svg" viewBox="0 0 560 300" aria-hidden="true">
+        {/* the roof */}
+        <rect x="30" y="30" width="370" height="196" rx="4" fill="#d9dee3" stroke="rgba(255,255,255,.8)" strokeWidth="4" />
+        <path d="M30 95h370M30 160h370" stroke="#c3cad1" strokeWidth="2" />
+        <rect x="236" y="48" width="76" height="40" rx="3" fill="#8a949f" stroke="#5d6570" strokeWidth="2" />
+        {/* visit 1: the drain, choked then clear */}
+        <circle cx="96" cy="182" r="12" fill="#1b2633" stroke="#5d6570" strokeWidth="2" />
+        <g className="qh-rc-leaves">
+          {[[86, 176], [100, 172], [106, 186], [90, 190], [96, 182]].map(([x, y], i) => (
+            <ellipse key={i} cx={x} cy={y} rx="7" ry="4" fill={i % 2 ? '#8a6d3b' : '#6f7a3a'} transform={`rotate(${i * 40} ${x} ${y})`} />
+          ))}
+        </g>
+        <circle className="qh-rc-ok qh-rc-ok1" cx="96" cy="182" r="22" fill="none" stroke="#f0b43c" strokeWidth="3" />
+        {/* visit 2: a pipe, its flashing cracked then resealed */}
+        <circle cx="170" cy="70" r="9" fill="#aab3bc" stroke="#5d6570" strokeWidth="2" />
+        <path className="qh-rc-crack" d="M158 62l6 6-4 5 7 6" stroke="#3a1a0e" strokeWidth="2.5" fill="none" />
+        <circle className="qh-rc-ok qh-rc-ok2" cx="170" cy="70" r="16" fill="none" stroke="#f0b43c" strokeWidth="4" />
+        {/* visit 3: a split at the parapet, then sealed */}
+        <path className="qh-rc-split" d="M344 226l8 -10 6 10 8 -10" stroke="#3a1a0e" strokeWidth="3" fill="none" />
+        <rect className="qh-rc-ok qh-rc-ok3" x="334" y="214" width="42" height="12" rx="3" fill="#f0b43c" />
+        <rect className="qh-rc-flash" x="30" y="30" width="370" height="196" rx="4" fill="#fff" />
+        {/* the photo reports, stacking up */}
+        {[0, 1, 2].map((i) => (
+          <g key={i} className={`qh-rc-rep qh-rc-rep${i + 1}`} transform={`translate(${430 + i * 8} ${150 - i * 30})`}>
+            <rect width="100" height="74" rx="6" fill="#fff" stroke="#cfd6dd" />
+            <rect x="8" y="8" width="38" height="28" rx="3" fill="#3b4652" />
+            <rect x="52" y="10" width="40" height="5" rx="2" fill="#c3cad1" />
+            <rect x="52" y="20" width="32" height="5" rx="2" fill="#c3cad1" />
+            <rect x="8" y="44" width="84" height="5" rx="2" fill="#dfe4e8" />
+            <text x="50" y="66" textAnchor="middle" fill="#0b1b2e" style={{ font: '700 10.5px var(--font-text), sans-serif' }}>
+              Visit {i + 1} report
+            </text>
+          </g>
+        ))}
+        {/* the visit timeline */}
+        <path d="M60 262H520" stroke="rgba(255,255,255,.3)" strokeWidth="3" />
+        <path className="qh-rc-line" d="M60 262H520" stroke="#f0b43c" strokeWidth="3" pathLength="1" strokeDasharray="1" />
+        {[0, 1, 2].map((i) => (
+          <g key={i}>
+            <circle cx={120 + i * 160} cy="262" r="9" fill="#0d1a29" stroke="rgba(255,255,255,.5)" strokeWidth="2" />
+            <circle className={`qh-rc-dot qh-rc-dot${i + 1}`} cx={120 + i * 160} cy="262" r="6" fill="#f0b43c" />
+            <text x={120 + i * 160} y="290" textAnchor="middle" fill="#9fb8d2" style={{ font: '700 12px var(--font-text), sans-serif' }}>
+              {['Drains cleared', 'Flashings resealed', 'Parapet sealed'][i]}
+            </text>
+          </g>
+        ))}
+      </svg>
+      {caption && <p className="qh-rr-time">{caption}</p>}
+      {links.length > 0 && (
+        <ul className="qh-leak-links">
+          {links.map((l) => (
+            <li key={l.href}>
+              <SiteLink href={l.href}>{l.label}</SiteLink>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+// Roofing FAQ hero visual (owner, November 9 2026): "ask a roofer". Four real questions from the page cycle on a 16 s loop as a chat: the question
+// comes in, typing dots, then the first sentence of the page's own answer and the page it comes from. Every word is the FAQ's own (passed in by
+// app/roofing-faq/page.js). SVG-free, HTML + CSS; reduced motion shows the first question and answer.
+export function QhFaqChat({ items = [], caption }) {
+  return (
+    <div className="qh-fq">
+      <div className="qh-fq-phone">
+        <p className="qh-fq-head">
+          <span className="qh-fq-dot" aria-hidden="true" />
+          Ask a roofer
+        </p>
+        <div className="qh-fq-stage">
+          {items.slice(0, 4).map((it, i) => (
+            <div className={`qh-fq-pair qh-fq-p${i + 1}`} key={it.q}>
+              <p className="qh-fq-q">{it.q}</p>
+              <p className="qh-fq-typing" aria-hidden="true">
+                <i />
+                <i />
+                <i />
+              </p>
+              <p className="qh-fq-a">
+                {it.a}
+                <small>{it.label}</small>
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+      {caption && <p className="qh-rr-time">{caption}</p>}
     </div>
   );
 }

@@ -6,8 +6,7 @@ import './dark-theme.css'; // dark theme colors, toggled from the header and sav
 import '@/components/studio/StudioSite.css'; // the studio look for every page (STUDIO_THEME in data/promo.js)
 
 import Script from 'next/script';
-import { Big_Shoulders, Open_Sans } from 'next/font/google';
-import localFont from 'next/font/local';
+import { Big_Shoulders, League_Gothic, Open_Sans } from 'next/font/google';
 import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
 import HideOnLanding from '@/components/layout/HideOnLanding';
@@ -44,7 +43,10 @@ const bodyFont = Open_Sans({ subsets: ['latin'], variable: '--font-text' });
 const bigShoulders = Big_Shoulders({ subsets: ['latin'], variable: '--font-condensed' });
 // Headings and the logo's words (owner, October 29 2026): Xmind, the owner's font (SIL Open Font License, app/fonts/Xmind-OFL.txt). The upright
 // variable font (every weight in one file), converted from the owner's TTF to WOFF2 (67 KB); served from this site and preloaded like the others.
-const headingFont = localFont({ src: './fonts/Xmind-Variable.woff2', variable: '--font-heading', weight: '100 900', display: 'swap' });
+// November 9 2026 (owner: "use the font family of the headings of bakerroofing.com"): that site's headings are Field Gothic XCondensed, a paid
+// Adobe Fonts face locked to its own kit, so the headings here use League Gothic, the closest free extra-condensed gothic (Google Fonts, SIL OFL).
+// To use the licensed Field Gothic instead, load it from your own Adobe Fonts kit and point --font-heading at it. Xmind stays in app/fonts, unused.
+const headingFont = League_Gothic({ subsets: ['latin'], variable: '--font-heading', display: 'swap' });
 
 // Defaults for every page. A page's own `metadata` export overrides these.
 export const metadata = {

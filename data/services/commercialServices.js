@@ -6,18 +6,19 @@ export const COMMERCIAL_SERVICES = [
     slug: 'repair',
     keyword: 'commercial roof repair',
     title: 'Commercial Roof Repair',
-    h1: 'Commercial Roof Repair in Los Angeles & Orange County',
+    h1: 'Commercial Roof Repair',
     navLabel: 'Roof Repair',
     card: 'Leaks traced to where the water gets in, then repaired at drains, parapets, seams and rooftop equipment, with before-and-after photos.',
     // Meta for the searches the owner picked (October 30 2026: commercial roof repair (services, experts), commercial roof repair los angeles,
     // commercial roofing repair(s) orange county, commercial roof leak repair los angeles, commercial roofing replacement orange county).
     // 58 / 160 characters; the survey is never called free.
-    metaTitle: 'Commercial Roof Repair Near Me in Los Angeles', // owner, November 3 2026 (keyword list)
-    metaDescription: 'Commercial roof repair in LA & Orange County: leaks traced at drains, parapets and rooftop units, fixed and photo-documented. Request an estimate.',
+    // No place names (owner, November 9 2026: city names only on the location pages); problem first, then our process
+    metaTitle: 'Commercial Roof Repair | Quality Roofing Specialists',
+    metaDescription: 'Commercial roof repair that finds where water gets in: drains, parapets, seams and rooftop units fixed with photos, while you stay open. Request an estimate.',
     image: '/images/cta-flat-roof-install-drone-view.webp',
     imageAlt: 'Roofers working on a white low-slope roof with rooftop units, seen from above',
     hero: {
-      intro: 'Commercial roof repair starts where the water gets in. A drain, a parapet, a seam or the flashing at rooftop equipment: we trace the leak and fix what failed. Your building stays open, and every repair gets before-and-after photos, across Los Angeles and Orange County.',
+      intro: 'Commercial roof repair has to start where the water gets in, and on a low-slope roof that’s rarely above the stain: it can travel the deck and show up over another suite. So we trace it to the drain, parapet, seam or rooftop flashing that failed, fix it with the building open, and give owners and tenants before-and-after photos.',
       highlights: ['Leaks traced to where water enters', 'Drains, parapets and penetrations', 'Photo records for owners and tenants'],
     },
     // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
@@ -34,7 +35,7 @@ export const COMMERCIAL_SERVICES = [
       ],
     },
     faqs: [
-      { q: 'Can you repair storm damage on a commercial roof?', a: 'Yes. When Santa Ana winds or a winter storm damage the roof or start a leak, call us: a roofer assesses and photo-documents the damage and adds temporary protection if it’s needed to limit further water damage. The permanent repair follows with a written scope and price, and our photos and scope can be shared with your insurance company. Learn more about [emergency and storm-damage roof repair](/roof-repair/emergency/).' },
+      { q: 'Can you repair storm damage on a commercial roof?', a: 'Yes. When strong winds or a winter storm damage the roof or start a leak, call us: a roofer assesses and photo-documents the damage and adds temporary protection if it’s needed to limit further water damage. The permanent repair follows with a written scope and price, and our photos and scope can be shared with your insurance company. Learn more about [emergency and storm-damage roof repair](/roof-repair/emergency/).' },
       { q: 'Our roof drain keeps backing up. Is that a roofing problem?', a: 'Often, yes. Debris can clog the strainer, the flashing around the drain bowl can fail, or low spots can keep water from reaching the drain at all. We check all three and repair the roofing side, and if the blockage is deeper in the drain line, we’ll tell you so a plumber can clear it.' },
       { q: 'Will you need access inside the building?', a: 'Sometimes. Seeing where water shows up inside helps us trace a leak, so we may ask to look at a ceiling or the area under a drain. Most repair work happens on the roof, and we’ll arrange any interior visit with you ahead of time.' },
       { q: 'Can you send the repair details to our owner or tenants?', a: 'Yes. Along with the written scope, you get before-and-after photos and a plain-English note on what failed and what we did. It’s easy to forward to ownership, file with your building records or share with the tenant who reported the leak.' },
@@ -47,43 +48,44 @@ export const COMMERCIAL_SERVICES = [
     slug: 'replacement',
     keyword: 'commercial roof replacement',
     title: 'Commercial Roof Replacement',
-    h1: 'Commercial Roof Replacement in Los Angeles & Orange County',
+    h1: 'Commercial Roof Replacement',
     navLabel: 'Roof Replacement',
     card: 'When repairs stop adding up: a roofer-led survey, the right low-slope system for your building and phased work that keeps you open.',
     // Broader title for the general "commercial roofing Los Angeles" searches (owner, October 22 2026; the keyword stays in it, the H1 is unchanged)
-    metaTitle: 'Commercial Roof Replacement & Installation in Los Angeles', // owner, November 3 2026 (keyword list)
-    metaDescription: 'Commercial roof replacement in LA & Orange County: a roofer-led survey, the right low-slope system and phased work that keeps you open. Request an estimate.',
+    // No place names (owner, November 9 2026: city names only on the location pages); problem first, then our process
+    metaTitle: 'Commercial Roof Replacement | Quality Roofing Specialists',
+    metaDescription: 'Commercial roof replacement in phases, so your doors stay open: a roofer-led survey, the right low-slope system and a written scope first. Request an estimate.',
     image: '/images/flat-roof-replacement-tear-off-drone-view.webp',
-    imageAlt: 'Commercial roof replacement in Los Angeles: flat roof aerial view, with the old roofing stripped back',
-    heroNotes: [`Los Angeles commercial roofing contractor · CSLB #${BUSINESS.license}`, 'Serving LA, Orange County & Southern California', 'Roofer-led roof survey', 'Written scope and price before any work'],
+    imageAlt: 'Commercial roof replacement: flat roof aerial view, with the old roofing stripped back',
+    heroNotes: [`Licensed commercial roofing contractor · CSLB #${BUSINESS.license}`, 'Roofer-led roof survey', 'Phased so your building stays open', 'Written scope and price before any work'],
     // A short section after "How we replace a commercial roof" (ServicePage `about`)
     about: {
-      heading: 'Commercial roofing company in Los __Angeles__',
+      heading: 'A commercial roofing company you can check',
       paragraphs: [
-        `QRS is a Los Angeles commercial roofing company with ${GOOGLE_REVIEWS.count} Google reviews from the people we roof for. Our commercial roofing contractors handle replacement, installation and [commercial roofing repair](/commercial-roofing/repair/) in Los Angeles, CA, from small retail buildings to [warehouses](/commercial-roofing/warehouses/) and other large flat roofs, with [roof maintenance](/commercial-roofing/maintenance/) once the work is done. If you’re comparing commercial roofers in Los Angeles, start with a roofer-led roof survey and a written price, then read [how to choose a commercial roofing contractor in Los Angeles](/blog/how-to-choose-a-commercial-roofing-contractor/).`,
+        `QRS is a licensed commercial roofing company with ${GOOGLE_REVIEWS.count} Google reviews from the people we roof for. Our commercial roofing contractors handle replacement, installation and [commercial roofing repair](/commercial-roofing/repair/), from small retail buildings to [warehouses](/commercial-roofing/warehouses/) and other large flat roofs, with [roof maintenance](/commercial-roofing/maintenance/) once the work is done. If you’re comparing commercial roofers, start with a roofer-led roof survey and a written price, then read [how to choose a commercial roofing contractor](/blog/how-to-choose-a-commercial-roofing-contractor/).`,
       ],
     },
-    reviewsHeading: 'What people in Los Angeles say after the __job__',
+    reviewsHeading: 'What people say after the job',
     hero: {
-      intro: 'Commercial roof replacement in phases, so your doors stay open. Section by section, the worn roof comes off and a new low-slope system chosen for your building goes on. It starts with a roofer-led survey that shows whether replacement is due now or can wait, across Los Angeles and Orange County.',
+      intro: 'Commercial roof replacement shouldn’t mean closing your doors, and it shouldn’t start with a sales pitch. So it starts with a roofer-led survey that shows whether replacement is due now or can wait. Then, section by section, the worn roof comes off and a new low-slope system chosen for your building goes on while you stay open.',
       highlights: ['Survey before any recommendation', 'System chosen for drainage and use', 'Phased so your building stays open'],
     },
     // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
     story: {
       label: 'Commercial roof replacement',
       lead: 'A new roof should rest on photos and facts, not a __pitch__.',
-      text: 'Leaks in new places every rainy season, seams opening across the field, surfacing worn thin by the sun and soft spots underfoot are signs that [commercial roof repair](/commercial-roofing/repair/) in Los Angeles has run its course. As commercial roofers serving Los Angeles and Orange County, we start with a roofer-led survey that shows whether replacement is due now, belongs in next year’s budget or can wait.',
+      text: 'Leaks in new places every rainy season, seams opening across the field, surfacing worn thin by the sun and soft spots underfoot are signs that [commercial roof repair](/commercial-roofing/repair/) has run its course. As commercial roofers, we start with a roofer-led survey that shows whether replacement is due now, belongs in next year’s budget or can wait.',
       heading: 'How we replace a commercial roof',
       principles: [
         { title: 'Survey the whole roof first.', text: 'A roofer walks the entire roof, photographs it area by area and notes how water drains, where equipment sits and how the roof has held up.', bullets: ['Seams, surfacing and past patches', 'Soft or wet areas underfoot', 'Drains, curbs and parapet details'] },
-        { title: 'A system matched to the building.', text: 'Drainage, rooftop equipment and foot traffic shape what we recommend, from [modified bitumen and other low-slope systems](/residential-roofing/flat-roofing/) to [TPO roofing](/commercial-roofing/tpo-roofing/), for commercial roof installation in Los Angeles, CA. The scope, price and phasing plan are in writing before work starts.' },
-        { title: 'Section by section, so your doors stay open.', text: 'Whether your commercial roof is replaced in Los Angeles or elsewhere in Southern California, our crews, from a local Los Angeles roofing company, take one section at a time down to the deck, photograph the deck while it’s exposed and install the new system with new flashings at curbs, drains and edges before moving on. Staging, hoisting and debris removal are planned around your hours, deliveries, entrances and customer paths.' },
+        { title: 'A system matched to the building.', text: 'Drainage, rooftop equipment and foot traffic shape what we recommend, from [modified bitumen and other low-slope systems](/residential-roofing/flat-roofing/) to [TPO roofing](/commercial-roofing/tpo-roofing/), for commercial roof installation and replacement. The scope, price and phasing plan are in writing before work starts.' },
+        { title: 'Section by section, so your doors stay open.', text: 'Our crews take one section at a time down to the deck, photograph the deck while it’s exposed and install the new system with new flashings at curbs, drains and edges before moving on. Staging, hoisting and debris removal are planned around your hours, deliveries, entrances and customer paths.' },
         { title: 'A clean site and closeout photos.', text: 'Tarps protect landscaping and nail sweeps keep walkways and parking clear. When the last section is done, we walk the roof with your team, hand over closeout photos and go over our 10-year workmanship warranty (call for details).' },
       ],
     },
     faqs: [
-      { q: 'Do you do commercial roof repair in Los Angeles?', a: 'Yes. [Commercial roof repair](/commercial-roofing/repair/) in Los Angeles and Orange County makes sense when the problems are local: a leak at a curb or drain, an open seam, storm damage to one area, on a roof that is otherwise sound. When leaks keep moving, large areas are worn or soft, or repair bills keep adding up, replacement is usually the better use of the budget. The roof survey photos show which one your building needs.' },
-      { q: 'How do I choose a commercial roofing contractor in Los Angeles?', a: 'Check the contractor’s California license, ask who will survey the roof (a roofer or a salesperson), expect a written scope and price that names the roof system, and ask how the work will be phased around your tenants and customers. Our article on [how to choose a commercial roofing contractor in Los Angeles](/blog/how-to-choose-a-commercial-roofing-contractor/) walks through each question, and our [credentials](/credentials/) page shows our license.' },
+      { q: 'Do you do commercial roof repair too?', a: 'Yes. [Commercial roof repair](/commercial-roofing/repair/) makes sense when the problems are local: a leak at a curb or drain, an open seam, storm damage to one area, on a roof that is otherwise sound. When leaks keep moving, large areas are worn or soft, or repair bills keep adding up, replacement is usually the better use of the budget. The roof survey photos show which one your building needs.' },
+      { q: 'How do I choose a commercial roofing contractor?', a: 'Check the contractor’s California license, ask who will survey the roof (a roofer or a salesperson), expect a written scope and price that names the roof system, and ask how the work will be phased around your tenants and customers. Our article on [how to choose a commercial roofing contractor](/blog/how-to-choose-a-commercial-roofing-contractor/) walks through each question, and our [credentials](/credentials/) page shows our license.' },
       { q: 'Do you pull the permits?', a: 'Yes. When the project needs a building permit, we pull it for you.' },
       { q: 'How do we know it’s time to replace and not repair again?', a: 'Look at the pattern rather than the latest leak. If repair bills keep adding up, leaks appear in new places each season, or large areas of the roof are worn, soft or holding water, replacement is usually the sounder investment. Our survey photos show which situation you’re in.' },
       { q: 'Which roof system will you recommend?', a: 'That depends on your building. We install modified bitumen and other low-slope systems, and we weigh drainage, rooftop equipment, foot traffic and the structure underneath before recommending one. Your written scope names the system and explains why it fits.' },
@@ -98,23 +100,24 @@ export const COMMERCIAL_SERVICES = [
     slug: 'tpo-roofing',
     keyword: 'tpo roofing',
     title: 'TPO Roofing',
-    h1: 'TPO Roofing in Los Angeles & Orange County',
+    h1: 'TPO Roofing',
     navLabel: 'TPO Roofing',
     card: 'A white, heat-welded single-ply membrane for flat and low-slope commercial roofs, installed over a roof surface prepared for it.',
-    metaTitle: 'TPO Roofing in Los Angeles & Orange County',
-    metaDescription: 'TPO roofing in Los Angeles & Orange County: a reflective single-ply membrane for commercial flat roofs, seams welded, work phased so you stay open. Roof survey.',
+    // No place names (owner, November 9 2026: city names only on the location pages); problem first, then our process
+    metaTitle: 'TPO Roofing | Quality Roofing Specialists',
+    metaDescription: 'TPO roofing for commercial flat roofs: a white, reflective single-ply membrane with hot-air welded seams, recommended only when it fits. Request a roof survey.',
     image: '/images/home-services-commercial-flat-roof-drone-view.webp',
     imageAlt: 'Aerial view of a white low-slope commercial roof',
     hero: {
       intro:
-        'TPO roofing: a white, reflective single-ply membrane for flat and low-slope commercial roofs. A roofer surveys and photographs the roof first and recommends TPO only if it suits the building. A written scope and price before any work. Planned in phases, so your building stays open, across Los Angeles and Orange County.',
+        'TPO roofing is a white, reflective single-ply membrane for flat and low-slope commercial roofs, and it’s only as good as its seams and details. So a roofer surveys and photographs the roof first and recommends TPO only if it suits the building, with a written scope and price before any work, planned in phases so your building stays open.',
       highlights: ['White membrane that reflects sunlight', 'Seams welded with hot air', 'Planned in phases so the building stays open'],
     },
     // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
     story: {
       label: 'TPO roofing',
       lead: 'A TPO roof is only as good as its __seams__ and its details.',
-      text: 'TPO (thermoplastic polyolefin) is a white single-ply membrane laid in wide rolls and joined with hot air, so the seams fuse into one continuous surface. In Southern California the appeal is the sun: a white membrane reflects much of its energy instead of absorbing it, which can keep the roof surface cooler.',
+      text: 'TPO (thermoplastic polyolefin) is a white single-ply membrane laid in wide rolls and joined with hot air, so the seams fuse into one continuous surface. The appeal is the sun: a white membrane reflects much of its energy instead of absorbing it, which can keep the roof surface cooler.',
       heading: 'How we install a TPO roof',
       image: '/images/recent-work-commercial-flat-roof-drone-view.webp',
       imageAlt: 'Aerial view of a large white commercial flat roof with its rooftop units, above a parking lot',
@@ -131,7 +134,7 @@ export const COMMERCIAL_SERVICES = [
         a: 'TPO is a single-ply roofing membrane made of thermoplastic polyolefin. It is usually white, comes in wide rolls and is joined at the seams with hot air. It is widely used on flat and low-slope commercial roofs.',
       },
       {
-        q: 'Is TPO a good choice for Southern California?',
+        q: 'Is TPO a good choice for a sunny climate?',
         a: 'It often is, because a white membrane reflects sunlight and can keep the roof surface cooler, and California’s Title 24 energy code has cool roof requirements for many low-slope commercial roofs. Whether it fits your building depends on the roof, so a roofer should survey it first.',
       },
       {
@@ -160,19 +163,20 @@ export const COMMERCIAL_SERVICES = [
     title: 'Commercial Roof Maintenance & Inspections',
     navLabel: 'Inspection & Maintenance',
     card: 'Scheduled inspections and upkeep for commercial roofs, with photo reports for owners, managers and boards, and drain and flashing issues caught early.',
-    metaTitle: 'Commercial Roof Maintenance in Los Angeles',
-    metaDescription: 'Commercial roof maintenance in LA & Orange County: scheduled inspections, photo reports and drains and flashings kept in check. Ask about a maintenance plan.',
+    // No place names (owner, November 9 2026: city names only on the location pages); problem first, then our process
+    metaTitle: 'Commercial Roof Maintenance | Quality Roofing Specialists',
+    metaDescription: 'Commercial roof maintenance that catches wear before it reaches the ceiling: scheduled visits, drains and flashings kept in check, a photo report every visit.',
     image: '/images/flat-roof-torch-down-drone-view-services.webp',
     imageAlt: 'Aerial view of a flat roof surface used for commercial roof maintenance',
     hero: {
-      intro: 'Commercial roof maintenance catches early wear before it becomes interior damage. Scheduled roofer visits clear drains and gutters and reseal flashings where needed. It starts with a baseline roof survey, and every visit ends with a photo report for owners, managers or boards, across Los Angeles and Orange County.',
+      intro: 'Commercial roof maintenance catches small problems before they reach the ceiling. A low-slope roof wears gradually, at drains, flashings and parapets, long before a stain shows inside. So scheduled roofer visits clear drains and gutters and reseal flashings where needed, starting from a baseline roof survey, and every visit ends with a photo report for owners, managers or boards.',
       highlights: ['Scheduled visits with photo reports', 'Drains and flashings checked early', 'Reports owners and boards can follow'],
     },
     // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
     story: {
       label: 'Commercial roof maintenance',
       lead: 'A low-slope roof wears gradually, then seems to fail all at __once__.',
-      text: 'Leaves and grit build up at drains and scuppers, sealant around penetrations dries out in the sun, and near the coast, from Santa Monica to Huntington Beach, salt air works on metal flashing and fasteners. A small split at a parapet can let water in for months before anyone sees a stain.',
+      text: 'Leaves and grit build up at drains and scuppers, sealant around penetrations dries out in the sun, and near the coast, salt air works on metal flashing and fasteners. A small split at a parapet can let water in for months before anyone sees a stain.',
       heading: 'How we maintain a commercial roof',
       principles: [
         { title: 'A baseline to compare against.', text: 'A roofer inspects the whole roof and photo-documents its condition, the starting point every later visit is compared with.', bullets: ['Drains, scuppers and gutters', 'Flashings, seams and penetrations', 'Parapets, coping and roof hatches'] },

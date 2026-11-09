@@ -16,3 +16,7 @@ main.hg .trust-logos .tl-label{color:var(--hg-ink,var(--muted))}
 main.loc .trust-logos{background:transparent;border-bottom:0;padding:28px 0 4px}
 /* On the service, hub, Residential and Maintenance Plans pages (main.svc) the row sits under the proof strip, on the page itself */
 main.svc .trust-logos{background:transparent;border-bottom:0;padding:28px 0 4px}
+/* The blog timeline (components/blog/PostVisuals.css) also has a global .tl-item (a grid with a line before it); on pages with a roof diagram it
+   loaded too and put the caption over the logo. Scoped here so the logo row always wins. */
+.trust-logos .tl-item{position:static;display:flex;flex-direction:column;align-items:center;grid-template-columns:none;gap:8px;margin:0;padding:10px 14px}
+.trust-logos .tl-item:before{content:none}

@@ -3,12 +3,13 @@
 export const FAQ_PAGE = {
   path: '/roofing-faq/',
   keyword: 'roofing FAQ',
-  metaTitle: 'Roofing FAQ: Answers From Los Angeles Roofers',
+  // No place names (owner, November 9 2026: city names only on the location pages)
+  metaTitle: 'Roofing FAQ | Quality Roofing Specialists',
   metaDescription:
     'Roofing FAQ from Quality Roofing Specialists: straight answers on roof repair, replacement, inspections, tile, shingle and flat roofs, and financing.',
   heading: 'Roofing FAQ',
   intro:
-    'This roofing FAQ gathers the questions homeowners and property managers ask our roofers most, in one place: repairs, replacements, inspections, each roof type, maintenance, financing and our license. Every answer links to the page that covers it in full.',
+    'This roofing FAQ answers the questions homeowners and property managers ask our roofers most, because most roof decisions come down to the same few: repair or replace, what drives the price, how long it takes and who to trust. Repairs, replacements, inspections, each roof type, maintenance, financing and our license, with every answer linked to the page that covers it in full.',
   image: '/images/contractors-hero-roofer-tablet.webp',
   imageAlt: 'A QRS roofer on a roof holding a tablet, reviewing findings',
 };

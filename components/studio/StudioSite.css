@@ -427,3 +427,41 @@ body.studio-site .hero .hero-roof-texture:before{
    --font-text. Product names inside a heading keep their serif italic (.product-brand sets its own font on the span). */
 body.studio-site :is(h1,h2,h3,h4,h5,h6),
 body.studio-site :is(.hg-wordmark,.hg-title,.hg-big,.hg-stat b,.hg-q-stat b,.hero-title,.promo-title,.pd-hero h1){font-family:var(--font-heading),var(--font-text),ui-sans-serif,system-ui,sans-serif!important}
+
+/* Headings after bakerroofing.com (owner, November 9 2026; overrides the Xmind heading font above): League Gothic (--font-heading, app/layout.js),
+   the free stand-in for its Field Gothic XCondensed. It has one weight, so the browser must not fake bold or heavier weights; the big headings
+   (h1, h2 and the story statements styled as headings) are in capitals, as there, with a little tracking; h3-h6 keep their case. */
+:root{font-synthesis-weight:none}
+body.studio-site :is(h1,h2,h3,h4,h5,h6),
+body.studio-site :is(.hg-wordmark,.hg-title,.hg-big,.hg-stat b,.hg-q-stat b,.hero-title,.promo-title,.pd-hero h1),
+body.studio-site .qh-h2{font-weight:400!important}
+body.studio-site :is(h1,h2),body.studio-site .qh-h2{text-transform:uppercase;letter-spacing:.012em!important}
+body.studio-site :is(h3,h4,h5,h6){letter-spacing:.01em!important}
+/* Heading sizes after bakerroofing.com (owner, November 9 2026, measured at 375 and 1440px): hero h1 52px on phones to 98px, statement h2 40px to
+   64px (theirs; their few-word section titles go to 98-120px, but most of ours are sentences), card h3 30px to 48px, all with tight line height.
+   Inside the page content only (not the header, footer or menus); articles' own headings a step smaller so long ones still read. !important,
+   because many components size their headings with their own rules. */
+body.studio-site main h1{font-size:clamp(52px,6.8vw,98px)!important;line-height:.88!important}
+body.studio-site main h2,body.studio-site main .qh-h2{font-size:clamp(40px,4.45vw,64px)!important;line-height:.92!important}
+body.studio-site main h3{font-size:clamp(30px,3.3vw,48px)!important;line-height:.95!important}
+body.studio-site main :is(h4,h5,h6){font-size:clamp(24px,2vw,30px)!important;line-height:1!important}
+body.studio-site main .post :is(h2){font-size:clamp(34px,3.2vw,46px)!important}
+body.studio-site main .post :is(h3){font-size:clamp(27px,2.3vw,34px)!important}
+/* Small labels set in the heading font, sized up to read in a condensed face */
+body.studio-site main.qh .qh-trust strong{font-size:23px;font-weight:400}
+body.studio-site main.qh .qh-svc-list .name{font-size:clamp(24px,2.3vw,28px);font-weight:400}
+body.studio-site main.qh .qh-proj-title{font-size:clamp(26px,2.4vw,36px);font-weight:400}
+body.studio-site main.qh .qh-post-title{font-size:clamp(26px,2.2vw,32px);font-weight:400}
+body.studio-site .sv-rel b{font-size:26px;font-weight:400}
+body.studio-site .sv-tile-body b{font-size:25px;font-weight:400}
+/* Hero excerpts a step smaller everywhere (owner, November 9 2026): the new-theme hero line (location and company heroes use the same QhHero),
+   the studio hero's intro and the older location/company hero lines */
+body.studio-site main.qh .qh-hero-text{font-size:clamp(16px,1.2vw,17.5px);line-height:1.6;max-width:56ch}
+body.studio-site .hero.hero.hero .hero-sub{font-size:clamp(16px,1.2vw,17.5px)!important}
+/* Product names inside headings (owner, November 9 2026): the heading font in italics instead of the serif italic, so "Roof Repair with
+   LeakRescue" reads as one line of type; League Gothic has no italic, so the browser slants it. The ® is small and raised. Product names in body
+   copy keep their serif italic. */
+body.studio-site :is(h1,h2,h3,h4,h5,h6,.qh-h2) .product-brand{font-family:var(--font-heading),var(--font-text),sans-serif!important;font-style:italic;font-synthesis-style:auto;text-transform:uppercase!important;letter-spacing:inherit}
+body.studio-site :is(h1,h2,h3,h4,h5,h6,.qh-h2) .product-brand sup{font-size:.34em;vertical-align:super;line-height:0;font-family:var(--font-text),sans-serif;font-style:normal}
+body.studio-site :is(h3,h4,h5,h6) .product-brand{text-transform:none!important}
+body.studio-site :is(h1,h2,h3,h4,h5,h6,.qh-h2) .product-brand sup{margin-left:.14em}
