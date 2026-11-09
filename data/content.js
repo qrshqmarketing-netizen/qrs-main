@@ -130,6 +130,7 @@ export const relatedLinks = (hrefs = []) => hrefs.filter((href) => LABELS.has(hr
 export const ALL_PATHS = [
   '/',
   '/es/', // the Spanish home page (app/es/page.js)
+  '/es/residential-roofing/', // Residential in Spanish (app/es/residential-roofing/page.js)
   RESIDENTIAL.href,
   ...SERVICE_HUB_PAGES.map((h) => h.href),
   ...SECTIONS.flatMap((s) => [s.href, ...sectionPages(s).map((svc) => serviceHref(s, svc))]),

@@ -13,7 +13,7 @@ import { IMAGE_PARALLAX, LINE_REVEALS, SMOOTH_SCROLL } from '@/data/promo';
 //     map and other inner scrollers keep theirs; it pauses while a menu or popup has locked the page.
 
 const LINE_TARGETS = 'main h2, main .st-lead';
-const LINE_SKIP = '.hero, .st-hero, .faq-item, .st-card, .sa-wrap, .post-toc, [data-no-reveal], .mega, .qa-log, .rm-body, nav';
+const LINE_SKIP = '.hero, .st-hero, .faq-item, .st-card, .sa-wrap, .post-toc, [data-no-reveal], .mega, .qa-log, .rm-body, nav, .qh-sr, .sr-only'; // .qh-sr / .sr-only: visually hidden headings (their split words stuck out past phone screens)
 const PARALLAX = '.st-proj img, .st-cat img, .cg-media img, .split-media img, .process-block-media img, .post-image img, .lp-work-photo img';
 const EASE = 'cubic-bezier(0.17, 0.84, 0.44, 1)';
 

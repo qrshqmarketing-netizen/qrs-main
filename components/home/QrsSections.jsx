@@ -91,18 +91,18 @@ export function QhHero({ crumbs, where, title, outcome, text, checks = [], cta, 
         </div>
         )}
       </div>
-      {badges && <QhBrandRow />}
+      {badges && <QhBrandRow lang={lang} />}
     </section>
   );
 }
 
 // The manufacturer logos from the Credentials page, along the bottom of a sub page's hero (white tiles on the dark blue)
-function QhBrandRow() {
+function QhBrandRow({ lang = "en" }) {
   const logos = CREDENTIALS_PUBLIC ? CREDENTIALS_PAGE.manufacturers.items.filter((m) => m.logo) : [];
   if (!logos.length) return null;
   return (
     <div className="qh-wrap qh-brands">
-      <p>Certified with the manufacturers we install</p>
+      <p>{th(lang, 'Certified with the manufacturers we install')}</p>
       <ul>
         {logos.map((m) => (
           <li key={m.id}>
@@ -117,7 +117,7 @@ function QhBrandRow() {
 }
 
 // Residential hero visual: the three roof types as fanned photo cards, each a link to its page (straighten and lift on hover)
-export function QhRoofFan({ items }) {
+export function QhRoofFan({ items, caption = 'Shingle, tile and flat roofs, one team' }) {
   return (
     <div className="qh-fan">
       {items.slice(0, 3).map((t, i) => (
@@ -129,7 +129,7 @@ export function QhRoofFan({ items }) {
           </span>
         </SiteLink>
       ))}
-      <span className="qh-fan-cap">Shingle, tile and flat roofs, one team</span>
+      <span className="qh-fan-cap">{caption}</span>
     </div>
   );
 }
@@ -2874,30 +2874,31 @@ export function QhStormTarp({ labels = [], caption }) {
 }
 
 // Credentials and numbers (the content of the service pages' "Local roofers. Real accountability.")
-export function QhAccount({ commercial = false }) {
+export function QhAccount({ commercial = false, lang = 'en' }) {
+  const T = (x, v) => th(lang, x, v);
   const points = [
-    `Licensed, bonded and insured California contractor, CSLB #${BUSINESS.license}`,
+    T('Licensed, bonded and insured California contractor, CSLB #{license}', { license: BUSINESS.license }),
     'Certified with the manufacturers whose systems we install',
     'We pull the permits',
     'A written scope and price before any work',
     '10-year workmanship warranty on installs (call for details)',
-  ];
+  ].map((p, i) => (i ? T(p) : p));
   const stats = [
     [GOOGLE_REVIEWS.count, 'Google reviews from the people we roof for'],
     ['2020', 'Licensed California contractor since'],
     ['12', 'Crews for shingle, tile and flat roofs'],
     ['3', 'Languages: English, Spanish and Tagalog'],
-  ];
+  ].map(([n, l]) => [n, T(l)]);
   return (
     <section className="qh-section qh-account" aria-labelledby="qh-acc-h">
       <div className="qh-wrap">
         <div>
-          <p className="qh-kicker">Credentials</p>
-          <h2 id="qh-acc-h">Local roofers. Real accountability.</h2>
+          <p className="qh-kicker">{T('Credentials')}</p>
+          <h2 id="qh-acc-h">{T('Local roofers. Real accountability.')}</h2>
           <p className="qh-lede">
             {commercial
               ? 'A roofer surveys your building first, and you get photos and a written scope and price before any work. One company answers for the roof, from the survey to the closeout photos for your files.'
-              : 'A roofer looks at your roof first, and you get photos and a written price before anything starts. One family-owned company answers for the roof, from the first visit to the walk across the finished roof with you.'}
+              : T('A roofer looks at your roof first, and you get photos and a written price before anything starts. One family-owned company answers for the roof, from the first visit to the walk across the finished roof with you.')}
           </p>
           <ul className="qh-list">
             {points.map((p) => (
@@ -2907,7 +2908,7 @@ export function QhAccount({ commercial = false }) {
               </li>
             ))}
           </ul>
-          <SiteLink className="qh-link" href="/credentials/">See our credentials</SiteLink>
+          <SiteLink className="qh-link" href="/credentials/">{T('See our credentials')}</SiteLink>
         </div>
         <div className="qh-stats">
           {stats.map(([n, l]) => (
@@ -2923,34 +2924,35 @@ export function QhAccount({ commercial = false }) {
 }
 
 // The written-price offer (home: the free roof evaluation; commercial: the roofer-led roof survey, never called free)
-export function QhOffer({ offer = 'home' }) {
+export function QhOffer({ offer = 'home', lang = 'en' }) {
+  const T = (x, v) => th(lang, x, v);
   const o = OFFERS[offer] || OFFERS.home;
   const home = offer !== 'commercial';
   return (
     <section className="qh-section qh-offer" aria-labelledby="qh-off-h">
       <div className="qh-wrap">
         <div>
-          <p className="qh-kicker">{home ? 'Roof evaluation' : 'Roof survey'}</p>
-          <h2 id="qh-off-h">{home ? 'A written price, before any work.' : 'A written scope, before any work.'}</h2>
-          <p className="qh-lede">{home ? 'Start with a free roof evaluation. A roofer tells you what’s worth fixing, and you decide what to hire us for.' : o.text}</p>
+          <p className="qh-kicker">{T(home ? 'Roof evaluation' : 'Roof survey')}</p>
+          <h2 id="qh-off-h">{T(home ? 'A written price, before any work.' : 'A written scope, before any work.')}</h2>
+          <p className="qh-lede">{T(home ? 'Start with a free roof evaluation. A roofer tells you what’s worth fixing, and you decide what to hire us for.' : o.text)}</p>
           <ul className="qh-list">
             {o.points.map((p) => (
               <li key={p.title}>
                 <Check />
                 <span>
-                  <b>{p.title}</b> {p.text}
+                  <b>{T(p.title)}</b> {T(p.text)}
                 </span>
               </li>
             ))}
           </ul>
         </div>
         <div className="qh-offer-card">
-          <small>{o.eyebrow}</small>
-          <h3>{home ? 'Roof evaluation' : 'Roof survey'}</h3>
-          <p className="qh-offer-big">{home ? 'Free' : 'Roofer-led'}</p>
-          <p className="qh-offer-sub">{home ? 'no obligation' : 'written scope and price'}</p>
-          <p>{home ? o.text : 'Photos you can share with owners and tenants, and a clear next step.'}</p>
-          <SiteLink className="qh-btn qh-btn-sun" href="#roof-check">{home ? 'Book my free evaluation' : 'Request a roof survey'}</SiteLink>
+          <small>{T(o.eyebrow)}</small>
+          <h3>{T(home ? 'Roof evaluation' : 'Roof survey')}</h3>
+          <p className="qh-offer-big">{T(home ? 'Free' : 'Roofer-led')}</p>
+          <p className="qh-offer-sub">{T(home ? 'no obligation' : 'written scope and price')}</p>
+          <p>{T(home ? o.text : 'Photos you can share with owners and tenants, and a clear next step.')}</p>
+          <SiteLink className="qh-btn qh-btn-sun" href="#roof-check">{T(home ? 'Book my free evaluation' : 'Request a roof survey')}</SiteLink>
         </div>
       </div>
     </section>

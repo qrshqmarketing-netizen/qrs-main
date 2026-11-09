@@ -12,8 +12,11 @@ import { articlesFor } from '@/lib/articles';
 import { noPlace } from '@/lib/headings';
 import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
+import { languagesFor } from '@/lib/lang';
 
-export const metadata = pageMetadata({ title: page.metaTitle, description: page.metaDescription, path: RESIDENTIAL.href });
+const base = pageMetadata({ title: page.metaTitle, description: page.metaDescription, path: RESIDENTIAL.href });
+// The Spanish version is /es/residential-roofing/ (app/es/residential-roofing/page.js; hreflang both ways)
+export const metadata = { ...base, alternates: { ...base.alternates, languages: languagesFor(RESIDENTIAL.href) } };
 
 const CRUMBS = [HOME, RESIDENTIAL];
 const HERO_IMAGE = '/images/home-hero-drone-view.webp';

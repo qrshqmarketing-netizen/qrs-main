@@ -375,3 +375,12 @@ body .site-header .hd-more .hd-row{min-height:50px;font:400 21px/1 var(--font-he
 :root[data-theme="dark"] .hd-search-hits li a.on,:root[data-theme="dark"] .hd-search-hits li a:hover{background:rgba(255,255,255,.07)}
 :root[data-theme="dark"] .hd-search-all a{color:var(--gold)!important}
 @media (prefers-reduced-motion:reduce){.hd-search-box{transition:none}}
+/* Phones (owner, November 9 2026): with the language switch and the search button the bar holds five items, so the icon cells are a little
+   narrower up to 480px (46px instead of 56px) and the logo cell's padding tighter; measured: no sideways scroll at 360 and 390px */
+body .site-header .hd-cell{min-width:46px;padding:0 11px}
+body .site-header :is(.hd-search,.hd-theme,.hd-menu,.hd-lang){width:46px;min-width:46px;padding:0}
+body .site-header .hd-lang svg{display:none}
+body .site-header .hd-brand{padding:0 12px 0 14px}
+@media (min-width:481px){body .site-header .hd-cell{min-width:56px;padding:0 18px}body .site-header :is(.hd-search,.hd-theme,.hd-menu,.hd-lang){width:auto;min-width:56px;padding:0 18px}body .site-header .hd-lang svg{display:block}body .site-header .hd-brand{padding:0 18px 0 16px}}
+body .site-header .hd-brand .brand{font-size:16px}@media (min-width:381px){body .site-header .hd-brand .brand{font-size:19px}}
+@media (min-width:901px){body .site-header .hd-brand .brand{font-size:22px}}

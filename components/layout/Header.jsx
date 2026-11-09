@@ -9,7 +9,7 @@ import { HEADER_CTA, HEADER_MENU, HEADER_MORE } from '@/data/navigation';
 import { isFocusPath, isLandingPath } from '@/lib/landing';
 import HeaderSearch from './HeaderSearch';
 import { PHONE, TEL } from '@/data/site';
-import { LANGS, isHomePath, langOf, t } from '@/lib/lang';
+import { LANGS, esHref, langOf, langPair, t } from '@/lib/lang';
 import './Header.css';
 
 // The header: one solid bar split by hairlines: the logo, the main menu (HEADER_MENU in data/navigation.js: six flat hub links since November 4 2026; formerly Services, Service Areas,
@@ -27,7 +27,8 @@ export default function Header() {
   // Spanish home page (/es/): the menus in Spanish (data/i18n/es.js); the language switcher shows on the two home pages only (owner, November 3 2026)
   const lang = langOf(pathname || '/');
   const T = (x, v) => t(lang, x, v);
-  const showLang = isHomePath(pathname || '');
+  const pair = langPair(pathname || '');
+  const showLang = Boolean(pair); // pages with a Spanish (or English) version: the home page and Residential (ES_PAGES in lib/lang.js)
   const requestPage = isFocusPath(pathname); // /start/ and the ad landing pages: logo, theme switch and phone only (lib/landing.js)
   const landing = isLandingPath(pathname);
   const button = useRef(null);
@@ -101,9 +102,9 @@ export default function Header() {
   const hoverClose = () => { clearTimeout(leave.current); leave.current = setTimeout(() => setDrop(null), 160); };
   const inMenu = (item) => isCurrent(pathname, item.href) || item.groups?.some((g) => g.links.some((l) => isCurrent(pathname, l.href.split('#')[0])));
   const link = (l, className) => {
-    const on = isCurrent(pathname, l.href);
+    const on = isCurrent(pathname, l.href) || isCurrent(pathname, esHref(l.href));
     return (
-      <SiteLink className={className + (on ? ' on' : '')} href={l.href} prefetch={false} aria-current={on ? 'page' : undefined} onClick={close}>
+      <SiteLink className={className + (on ? ' on' : '')} href={lang === 'es' ? esHref(l.href) : l.href} prefetch={false} aria-current={on ? 'page' : undefined} onClick={close}>
         {l.urgent && <i className="hd-urgent" aria-hidden="true" />}
         {T(l.label)}
       </SiteLink>
@@ -170,7 +171,7 @@ export default function Header() {
           {showLang && (
             <SiteLink
               className="hd-cell hd-lang"
-              href={LANGS[lang === 'es' ? 'en' : 'es'].home}
+              href={pair}
               hrefLang={LANGS[lang === 'es' ? 'en' : 'es'].code}
               lang={LANGS[lang === 'es' ? 'en' : 'es'].code}
               aria-label={lang === 'es' ? 'View in English' : 'Ver en español'}
