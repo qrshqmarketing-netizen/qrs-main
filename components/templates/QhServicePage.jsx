@@ -4,7 +4,7 @@ import PartnerLogos from '@/components/sections/PartnerLogos';
 import ProofBar from '@/components/sections/ProofBar';
 import RoofDiagram from '@/components/sections/RoofDiagram';
 import TrustLogos from '@/components/sections/TrustLogos';
-import { QhRoofCare, QhAtticFlow, QhCommercialFix, QhCoolRoof, QhTpoWeld, QhPhasedReroof, QhTorchDown, QhConcreteStack, QhSlateRoof, QhTileRelay, QhTileFix, QhTileReroof, QhFlatInstall, QhFlatFix, QhFlatReroof, QhShingleFix, QhShingleCourses, QhChurchCampus, QhFinancePath, QhHero, QhStormTarp, QhSteps, QhIndustrialRoof, QhShopPatches, QhWarehouseSections, QhOfficeLeak, QhStorefront, QhPoints, QhPosts, QhProjects, QhReviews, QhStart, QhStory } from '@/components/home/QrsSections';
+import { QhDroneScan, QhShingleInstall, QhCommunityPlan, QhCenterPhases, QhPortfolio, QhRoofCare, QhAtticFlow, QhCommercialFix, QhCoolRoof, QhTpoWeld, QhPhasedReroof, QhTorchDown, QhConcreteStack, QhSlateRoof, QhTileRelay, QhTileFix, QhTileReroof, QhFlatInstall, QhFlatFix, QhFlatReroof, QhShingleFix, QhShingleCourses, QhChurchCampus, QhFinancePath, QhHero, QhStormTarp, QhSteps, QhIndustrialRoof, QhShopPatches, QhWarehouseSections, QhOfficeLeak, QhStorefront, QhPoints, QhPosts, QhProjects, QhReviews, QhStart, QhStory } from '@/components/home/QrsSections';
 import SiteLink from '@/components/ui/SiteLink';
 import JsonLd from '@/components/ui/JsonLd';
 import { RESIDENTIAL_TYPES, ROOF_REPAIR_LINK } from '@/data/catalog';
@@ -30,6 +30,11 @@ const OTHER_LABELS = { [ROOF_REPAIR_LINK.href]: ROOF_REPAIR_LINK.label, '/roof-r
 
 // Each page's hero visual, by address
 const VISUALS = {
+  '/roof-inspection/': (page, links) => <QhDroneScan caption="Drone footage, every finding photographed, one next step." links={links} />,
+  '/residential-roofing/shingle-roofing/installation/': (page, links) => <QhShingleInstall caption={unmark(page.story.lead)} links={links} />,
+  '/residential-roofing/hoa-multi-family/': (page, links) => <QhCommunityPlan caption={unmark(page.story.lead)} links={links} />,
+  '/commercial-roofing/malls/': (page, links) => <QhCenterPhases caption={unmark(page.story.lead)} links={links} />,
+  '/commercial-roofing/property-managers/': (page, links) => <QhPortfolio caption={unmark(page.story.lead)} links={links} />,
   '/commercial-roofing/maintenance/': (page, links) => <QhRoofCare caption={unmark(page.story.lead)} links={links} />,
   '/residential-roofing/attic-ventilation/': (page, links) => <QhAtticFlow caption={unmark(page.story.lead)} links={links} />,
   '/commercial-roofing/repair/': (page, links) => <QhCommercialFix caption={unmark(page.story.lead)} links={links} />,

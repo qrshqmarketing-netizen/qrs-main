@@ -4,7 +4,7 @@ import { ALLOW_INDEXING } from '@/lib/seo';
 // The team's dashboard (lib/adminAuth.js); it also sends noindex headers (next.config.mjs) and needs a login
 const PRIVATE = ['/admin/', '/api/admin/'];
 // Not pages: the form and chat endpoints (/api/) and the review-link redirects (/go/, which also carry a noindex tag). Crawlers don't need either.
-const NOT_PAGES = ['/api/', '/go/'];
+const NOT_PAGES = ['/api/', '/go/', '/search/']; // /search/: the site search results (noindex too), so spam searches never get crawled
 
 // AI assistants and AI search crawlers, allowed so QRS can be found and quoted in AI answers.
 // To keep one out, move its name into a rule with `disallow: '/'`.

@@ -130,12 +130,13 @@ export const SHINGLE_CONTENT = {
       title: 'New Shingle Roof Installation · *TotalShield*',
       navLabel: 'New Installations',
       card: 'Shingle roofs for new homes, additions and ADUs, or a switch from wood shakes or tile, built as a complete system with ventilation designed in.',
-      metaTitle: 'New Shingle Roof Installation in Los Angeles',
-      metaDescription: 'New shingle roof installation for homes, additions and ADUs in Los Angeles & Orange County, built to the manufacturer’s requirements. Request an estimate.',
+      // No place names (owner, November 9 2026: city names only on the location pages); problem first, then our process
+      metaTitle: 'New Shingle Roof Installation | Quality Roofing Specialists',
+      metaDescription: 'New shingle roof installation for homes, additions and ADUs, with ventilation, flashing and edges decided before the first bundle. Request an estimate.',
       image: '/images/shingle-roof-repair-ridge-finish.webp',
       imageAlt: 'Aerial view of a nearly finished light grey shingle roof, with a roofer working near the ridge',
       hero: {
-        intro: 'Shingle roof installation, planned from the deck up. A new home, an addition, an ADU or garage, or a switch from wood shakes or tile. We settle the ventilation, flashing and edge details before the first bundle goes on. That’s our *TotalShield* Shingle System, across Los Angeles and Orange County.',
+        intro: 'Shingle roof installation is decided before the first bundle goes on. Ventilation, the flashing where new meets old and the edge details are easy to plan and hard to fix later, so we settle them first, on a new home, an addition, an ADU or garage, or a switch from wood shakes or tile. That’s our *TotalShield* Shingle System.',
         highlights: ['New homes, additions, ADUs and garages', 'Clean tie-ins to your existing roof', 'Switches from shake and other roof types'],
       },
       // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
@@ -157,7 +158,7 @@ export const SHINGLE_CONTENT = {
         { q: 'Do you pull the permits?', a: 'Yes. When your roofing project needs a building permit, we pull it for you.' },
         { q: 'Can the roof on my ADU match my house?', a: 'Usually, yes. We look for the same or a closely matching shingle and color, though a brand-new roof can look a little brighter next to one that’s been weathering for a while. If your main roof is near the end of its life, a [shingle roof replacement](/residential-roofing/shingle-roofing/replacement/) at the same time gives the whole property one consistent look.' },
         { q: 'Can you replace a wood shake roof with shingles?', a: 'We can. Wood shakes are often laid over spaced boards, so solid decking goes on before the underlayment and shingles. You end up with a smoother, more uniform roof, and asphalt shingles are commonly fire-rated.' },
-        { q: 'Do you work with builders and contractors?', a: 'We do, on new homes, additions and ADUs across Los Angeles and Orange County, with a written scope and price that builders can plan around. See how we [work with contractors](/contractors/).' },
+        { q: 'Do you work with builders and contractors?', a: 'We do, on new homes, additions and ADUs, with a written scope and price that builders can plan around. See how we [work with contractors](/contractors/).' },
         { q: 'Should I switch my tile roof to shingles?', a: 'It can make sense if the tile is badly broken or you want a lighter roof, but it changes the character of the house. If you love your tile and the real problem is worn underlayment, a [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/) keeps the tiles and renews what’s underneath.' },
         { q: 'Where do the attic vents go on a new shingle roof?', a: 'Intake vents sit low, at the eaves or soffits, and exhaust vents sit high, at or near the ridge. Balancing the two lets hot air escape as cooler air comes in, and we avoid mixing exhaust types on one attic, since that can short-circuit the airflow.' },
       ],

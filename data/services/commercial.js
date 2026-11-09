@@ -279,12 +279,12 @@ export const COMMERCIAL_CONTENT = {
       title: 'Mall & Shopping Center Roofing',
       navLabel: 'Malls',
       card: 'Roofing for malls and shopping centers, phased across tenant spaces and common areas and planned to keep the center open for business.',
-      metaTitle: 'Mall & Shopping Center Roofing in Los Angeles',
-      metaDescription: 'Mall and shopping center roofing in LA & Orange County: leak tracing, repairs and phased replacement across tenant spaces and common areas. Request an estimate.',
+      metaTitle: 'Shopping Center Roofing | Quality Roofing Specialists', // no place names (owner, November 9 2026)
+      metaDescription: 'Mall and shopping center roofing: leak tracing, repairs and phased replacement across tenant spaces and common areas, with stores open. Request an estimate.',
       image: '/images/flat-roof-replacement-completed-white-membrane.webp',
       imageAlt: 'Aerial view of a white flat roof membrane with roofers working across a large roof',
       hero: {
-        intro: 'Shopping center roofing, in phases. The many roofs over tenant spaces and common areas, surveyed, repaired and replaced. Coordinated with center management and planned around store hours, deliveries, entrances and parking, so tenants and shoppers carry on, across Los Angeles and Orange County.',
+        intro: 'Shopping center roofing has to happen while the stores stay open. The many roofs over tenant spaces and common areas are surveyed, repaired and replaced in phases, coordinated with center management and planned around store hours, deliveries, entrances and parking, so tenants and shoppers carry on.',
         highlights: ['Phased across tenant spaces', 'Common areas and entrances planned', 'Photo records by roof section'],
       },
       // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
@@ -297,7 +297,7 @@ export const COMMERCIAL_CONTENT = {
           { title: 'Leaks followed across sections.', text: 'We survey every roof section and tenant space and track water across connected areas to where it actually starts, even when that’s above a different tenant.', bullets: ['Rooftop units and tenant penetrations', 'Skylights over common areas', 'Drains, scuppers and parapet flashing'] },
           { title: 'Phases agreed with center management.', text: 'The written scope and price set out phases by roof section, with work hours, access routes and staging agreed with center management around store hours, deliveries, entrances and parking.' },
           { title: 'Every store open while the roof is done.', text: 'Crews work one phase at a time, and tenants get the details they ask about, like which areas are affected and when, from one source.' },
-          { title: 'Records for every space.', text: 'Closeout photos for each phase help with ownership reports and when a space changes hands, and scheduled care keeps a long-term plan for the whole center. It starts with a roof survey anywhere [across Los Angeles and Orange County](/service-areas/).' },
+          { title: 'Records for every space.', text: 'Closeout photos for each phase help with ownership reports and when a space changes hands, and scheduled care keeps a long-term plan for the whole center. It starts with a roof survey anywhere in [our service area](/service-areas/).' },
         ],
       },
       faqs: [
@@ -319,12 +319,12 @@ export const COMMERCIAL_CONTENT = {
       title: 'Property Management Roofing',
       navLabel: 'Property Managers',
       card: 'One roofer for the buildings you manage: photo reports, written scopes for owner approval and work planned around tenants.',
-      metaTitle: 'Property Management Roofing in Los Angeles & Orange County',
-      metaDescription: 'Property management roofing in LA & Orange County: roofer-led surveys, photo reports and written scopes owners can approve. Request a roof survey.',
+      metaTitle: 'Property Management Roofing | Quality Roofing Specialists', // no place names (owner, November 9 2026)
+      metaDescription: 'Property management roofing: roofer-led surveys, photo reports and written scopes owners can approve, with work planned around tenants. Request a roof survey.',
       image: '/images/projects/commercial-flat-roof-replacement-westminster-92683/commercial-flat-roof-westminster-92683-14.webp',
-      imageAlt: 'Rows of new white cap sheet with sealed laps along the parapet edge of a commercial flat roof in Westminster',
+      imageAlt: 'Rows of new white cap sheet with sealed laps along the parapet edge of a commercial flat roof',
       hero: {
-        intro: 'Property management roofing for every building you look after. Apartment and condo buildings, retail, offices and warehouses, across Los Angeles, Orange County and the Inland Empire. A roofer surveys each roof. You get photos and a written scope to send to the owner or board. The work is planned around your tenants.',
+        intro: 'Property management roofing means answering to owners for roofs you can’t see from the office. Apartment and condo buildings, retail, offices and warehouses: a roofer surveys each roof. You get photos and a written scope to send to the owner or board. The work is planned around your tenants.',
         highlights: ['Photo reports for owners and boards', 'Written scope and price before any work', 'Work planned around tenants'],
       },
       // Told the home page's way (ServiceStory): one statement, one paragraph, then the principles, each fact said once
@@ -341,12 +341,12 @@ export const COMMERCIAL_CONTENT = {
         ],
       },
       faqs: [
-        { q: 'What kinds of properties do you roof for property managers?', a: 'Apartment and condo buildings, HOA communities, retail centers, offices, warehouses and industrial buildings across Los Angeles County, Orange County and the Inland Empire. Communities with a board and reserve study are covered on our [HOA & multi-family roofing](/residential-roofing/hoa-multi-family/) page.' },
+        { q: 'What kinds of properties do you roof for property managers?', a: 'Apartment and condo buildings, HOA communities, retail centers, offices, warehouses and industrial buildings across our [service area](/service-areas/). Communities with a board and reserve study are covered on our [HOA & multi-family roofing](/residential-roofing/hoa-multi-family/) page.' },
         { q: 'Can you send the photos and scope straight to the owner or board?', a: 'Yes. You decide who gets them: you, the owner, an asset manager or a board contact. Everyone works from the same photos and written scope, and nothing starts until it is approved.' },
         { q: 'How do you handle tenants during roof work?', a: 'We plan access, staging, noise and timing with you or the site contact before work begins. If an area needs to be cleared, you know ahead of time, so tenants can be told.' },
         { q: 'What happens when a tenant reports a leak?', a: 'Call us. If water is coming in, we can tarp the area to stop more damage, then a roofer finds the source and you get photos and a written scope for the repair. See [emergency roof repair](/roof-repair/emergency/) for what to do in the meantime.' },
         { q: 'Do you help with insurance claims after storm damage?', a: 'We work with insurance adjusters where we can, and the photos and written scope we provide can be shared with the carrier. Our guide to [roof insurance claims](/blog/roof-insurance-claims-california/) explains the process.' },
-        { q: 'Have you worked on commercial buildings like ours?', a: 'Yes. On a [commercial building in Westminster](/projects/commercial-flat-roof-replacement-westminster-92683/), our roofers tore the old roof off down to the deck and put on a new base sheet and white cap sheet, flashed at every curb and wall, while the loading yard kept working.' },
+        { q: 'Have you worked on commercial buildings like ours?', a: 'Yes. On a [commercial building we re-roofed](/projects/commercial-flat-roof-replacement-westminster-92683/), our roofers tore the old roof off down to the deck and put on a new base sheet and white cap sheet, flashed at every curb and wall, while the loading yard kept working.' },
       ],
       related: ['/commercial-roofing/maintenance/', '/residential-roofing/hoa-multi-family/', '/commercial-roofing/repair/', '/commercial-roofing/replacement/'],
     },

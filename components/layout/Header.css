@@ -348,3 +348,30 @@ body .site-header .hd-panel-foot a:first-child{font:400 30px/1 var(--font-headin
 :root[data-theme="dark"] body .site-header .hd-more{background:#062d57!important}
 :root[data-theme="dark"] body .site-header .hd-panel-foot a:first-child{color:var(--gold)!important}
 body .site-header .hd-more .hd-row{min-height:50px;font:400 21px/1 var(--font-heading),var(--font-text),sans-serif!important;letter-spacing:.05em!important;text-transform:uppercase}
+
+/* Header search (owner, November 9 2026; components/layout/HeaderSearch.jsx): a magnifier cell before the theme switch opens a bar under the
+   header with the search field and up to six instant suggestions; light and dark modes follow the bar. */
+.hd-search svg{width:19px;height:19px}
+.hd-search.on{background:color-mix(in srgb,currentColor 8%,transparent)}
+.hd-search-box{position:absolute;top:100%;left:0;right:0;z-index:3;padding:14px max(16px,4.44vw) 18px;background:var(--paper);border-bottom:1px solid var(--line);
+  box-shadow:0 18px 40px rgba(3,20,40,.18);clip-path:inset(0 0 100% 0);visibility:hidden;transition:clip-path .4s cubic-bezier(.76,0,.24,1),visibility 0s linear .4s}
+.hd-search-box.is-open{clip-path:inset(0 0 -60px 0);visibility:visible;transition:clip-path .4s cubic-bezier(.76,0,.24,1)}
+.hd-search-box form{position:relative;display:flex;gap:10px;max-width:980px;margin:0 auto}
+.hd-search-box form > svg{position:absolute;left:16px;top:50%;width:20px;height:20px;translate:0 -50%;color:var(--muted);pointer-events:none}
+.hd-search-box input{flex:1;min-width:0;height:52px;padding:0 16px 0 46px;border:1px solid var(--line);border-radius:12px;background:var(--wash,#f3f6f9);color:var(--ink);font:500 16px/1.2 var(--font-text),sans-serif}
+.hd-search-box input:focus{outline:3px solid var(--gold);outline-offset:1px}
+.hd-search-box button{flex:none;height:52px;padding:0 22px;border:0;border-radius:12px;background:var(--gold);color:#10243a;font:400 20px/1 var(--font-heading),var(--font-text),sans-serif;letter-spacing:.05em;text-transform:uppercase;cursor:pointer}
+@media (hover:hover){.hd-search-box button:hover{background:var(--gold-2,#ffc556)}}
+.hd-search-hits{max-width:980px;margin:10px auto 0;padding:0;list-style:none}
+.hd-search-hits li a{display:flex;align-items:baseline;justify-content:space-between;gap:14px;padding:11px 14px;border-radius:10px;color:var(--ink);text-decoration:none}
+.hd-search-hits li a b{font:400 20px/1.15 var(--font-heading),var(--font-text),sans-serif;letter-spacing:.03em;text-transform:uppercase}
+.hd-search-hits li a small{flex:none;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.hd-search-hits li a.on,.hd-search-hits li a:focus-visible{background:var(--wash,#f3f6f9);outline:none}
+@media (hover:hover){.hd-search-hits li a:hover{background:var(--wash,#f3f6f9)}}
+.hd-search-all a{justify-content:flex-start!important;font-weight:700;color:var(--gold-ink)!important}
+:root[data-theme="dark"] .hd-search-box{background:#031c38;border-color:rgba(255,255,255,.1)}
+:root[data-theme="dark"] .hd-search-box input{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18);color:#fff}
+:root[data-theme="dark"] .hd-search-hits li a{color:#fff}
+:root[data-theme="dark"] .hd-search-hits li a.on,:root[data-theme="dark"] .hd-search-hits li a:hover{background:rgba(255,255,255,.07)}
+:root[data-theme="dark"] .hd-search-all a{color:var(--gold)!important}
+@media (prefers-reduced-motion:reduce){.hd-search-box{transition:none}}

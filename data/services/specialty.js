@@ -105,14 +105,15 @@ export const HOA_MULTI_FAMILY = {
   title: 'HOA & Multi-Family Roofing · *ReserveReady*',
   navLabel: 'HOA & Multi-Family',
   card: 'Roofing for HOA communities and multi-family properties, with photo-documented reports, work phased building by building and one point of contact.',
-  metaTitle: 'HOA & Multi-Family Roofing in Los Angeles & Orange County',
+  // No place names (owner, November 9 2026: city names only on the location pages); problem first, then our process
+  metaTitle: 'HOA & Multi-Family Roofing | Quality Roofing Specialists',
   metaDescription:
-    'HOA & multi-family roofing in Los Angeles & Orange County: photo-documented reports, phased work and one point of contact. Request an estimate.',
+    'HOA & multi-family roofing: every building surveyed, photo reports for the board, phased proposals and one point of contact. Request a roof survey.',
   image: '/images/shingle-roof-care-multi-family.webp',
   imageAlt: 'Aerial view of a multi-family property with a shingle roof',
   hero: {
     intro:
-      'HOA & multi-family roofing for boards and property management clients. Roof inspections, repairs and replacements, phased building by building. Our *ReserveReady* program gives your board photo reports, phased proposals and long-range budget planning, with one point of contact throughout. Across Los Angeles and Orange County, starting with a roofer-led roof survey of each building.',
+      'HOA & multi-family roofing means many roofs aging at different rates, and a board that has to plan for all of them. Roof inspections, repairs and replacements, phased building by building. Our *ReserveReady* program gives your board photo reports, phased proposals and long-range budget planning, with one point of contact throughout, starting with a roofer-led roof survey of each building.',
     highlights: ['Photo reports your board can review', 'Work phased building by building', 'One point of contact, start to finish'],
   },
   // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once

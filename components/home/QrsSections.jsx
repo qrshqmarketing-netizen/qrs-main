@@ -1614,6 +1614,262 @@ export function QhFaqChat({ items = [], caption }) {
   );
 }
 
+// Roof Inspection hero visual (owner, November 9 2026): RoofScan 360 on a 12 s loop. A drone crosses over a home with a scan beam, three findings
+// get numbered pins (flashing, a vent boot, worn shingles), then the report card lights up one next step of four: repair, monitor, maintain,
+// replace. SVG + CSS; reduced motion shows the finished report.
+export function QhDroneScan({ caption, links = [] }) {
+  const pins = [[188, 118, 1], [300, 136, 2], [368, 112, 3]];
+  return (
+    <div className="qh-ds">
+      <svg className="qh-ds-svg" viewBox="0 0 560 300" aria-hidden="true">
+        <clipPath id="qhDsRoof">
+          <path d="M70 196L250 96L430 196Z" />
+        </clipPath>
+        <path d="M70 196L250 96L430 196Z" fill="#4a515b" />
+        <g clipPath="url(#qhDsRoof)">
+          {Array.from({ length: 6 }, (_, i) => (
+            <path key={i} d={`M60 ${184 - i * 15}H440`} stroke="#3c4249" strokeWidth="2" opacity=".8" />
+          ))}
+        </g>
+        <path d="M70 196L250 96L430 196" fill="none" stroke="#2c3138" strokeWidth="6" strokeLinejoin="round" />
+        <rect x="350" y="96" width="22" height="40" fill="#6b4a3a" />
+        <rect x="100" y="196" width="300" height="70" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.35)" strokeWidth="2" />
+        <rect x="220" y="216" width="40" height="50" fill="rgba(124,196,255,.12)" stroke="rgba(255,255,255,.3)" strokeWidth="2" />
+        <g className="qh-ds-drone">
+          <path className="qh-ds-beam" d="M0 18L-58 118H58Z" fill="rgba(240,180,60,.16)" />
+          <rect x="-16" y="4" width="32" height="12" rx="4" fill="#dbe7f3" />
+          <path d="M-30 6H30" stroke="#dbe7f3" strokeWidth="3" />
+          <ellipse className="qh-ds-prop" cx="-30" cy="4" rx="12" ry="2.5" fill="#9fb8d2" />
+          <ellipse className="qh-ds-prop" cx="30" cy="4" rx="12" ry="2.5" fill="#9fb8d2" />
+        </g>
+        {pins.map(([x, y, n]) => (
+          <g key={n} className={`qh-ds-pin qh-ds-pin${n}`}>
+            <circle cx={x} cy={y} r="11" fill="#f0b43c" stroke="#0b1b2e" strokeWidth="2" />
+            <text x={x} y={y + 4.5} textAnchor="middle" fill="#0b1b2e" style={{ font: '800 12px var(--font-text), sans-serif' }}>{n}</text>
+          </g>
+        ))}
+        <g className="qh-ds-card" transform="translate(438 110)">
+          <rect width="112" height="150" rx="10" fill="#fff" />
+          <text x="12" y="22" fill="#0b1b2e" style={{ font: '700 11px var(--font-text), sans-serif' }}>Your next step</text>
+          {['Repair', 'Monitor', 'Maintain', 'Replace'].map((t, i) => (
+            <g key={t} className={i === 0 ? 'qh-ds-pick' : undefined}>
+              <rect x="10" y={34 + i * 27} width="92" height="21" rx="10.5" fill={i === 0 ? '#f0b43c' : '#e8ecf0'} />
+              <text x="56" y={48.5 + i * 27} textAnchor="middle" fill="#0b1b2e" style={{ font: '700 11px var(--font-text), sans-serif' }}>{t}</text>
+            </g>
+          ))}
+        </g>
+      </svg>
+      {caption && <p className="qh-rr-time">{caption}</p>}
+      {links.length > 0 && (
+        <ul className="qh-leak-links">
+          {links.map((l) => (
+            <li key={l.href}>
+              <SiteLink href={l.href}>{l.label}</SiteLink>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+// Shingle Roof Installation hero visual (owner, November 9 2026): "the hardest decisions come before the first bundle". A home with a new addition;
+// three decisions get pinned and checked in turn (ventilation, flashing at the tie-in, edges), then the new shingle courses go on the addition's
+// roof row by row. SVG + CSS; reduced motion shows the finished roof.
+export function QhShingleInstall({ caption, links = [] }) {
+  const rows = 5;
+  return (
+    <div className="qh-si">
+      <svg className="qh-si-svg" viewBox="0 0 560 300" aria-hidden="true">
+        <defs>
+          <clipPath id="qhSiRoof">
+            <path d="M286 170L410 98L534 170Z" />
+          </clipPath>
+          <pattern id="qhSiTabs" width="30" height="16" patternUnits="userSpaceOnUse">
+            <rect width="30" height="16" fill="#4b525c" />
+            <path d="M0 15h30M15 0v16" stroke="#2f343b" strokeWidth="2" />
+          </pattern>
+        </defs>
+        {/* the existing home */}
+        <path d="M26 176L156 96L286 176Z" fill="#59606a" />
+        <rect x="46" y="176" width="220" height="90" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.35)" strokeWidth="2" />
+        <rect x="136" y="206" width="40" height="60" fill="rgba(124,196,255,.12)" stroke="rgba(255,255,255,.3)" strokeWidth="2" />
+        {/* the addition: deck, then shingles */}
+        <path d="M286 170L410 98L534 170Z" fill="#c39663" />
+        <g clipPath="url(#qhSiRoof)">
+          {Array.from({ length: rows }, (_, i) => (
+            <rect key={i} className="qh-si-row" style={{ animationDelay: `${3.4 + i * 0.22}s` }} x="280" y={170 - (i + 1) * 15} width="260" height="16" fill="url(#qhSiTabs)" />
+          ))}
+        </g>
+        <path d="M286 170L410 98L534 170" fill="none" stroke="rgba(255,255,255,.55)" strokeWidth="2" strokeLinejoin="round" />
+        <rect x="300" y="170" width="214" height="96" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.35)" strokeDasharray="6 5" strokeWidth="2" />
+        <text x="407" y="250" textAnchor="middle" fill="#9fb8d2" style={{ font: '700 12px var(--font-text), sans-serif' }}>New addition</text>
+        {/* the three decisions */}
+        {[
+          [410, 92, 'Ridge and intake vents', 'qh-si-d1'],
+          [290, 150, 'Flashed tie-in', 'qh-si-d2'],
+          [520, 178, 'Drip edge and rakes', 'qh-si-d3'],
+        ].map(([x, y, t, cls], i) => (
+          <g key={t} className={`qh-si-d ${cls}`}>
+            <circle cx={x} cy={y} r="11" fill="#f0b43c" stroke="#0b1b2e" strokeWidth="2" />
+            <path d={`M${x - 5} ${y}l3.5 3.5 6 -7`} stroke="#0b1b2e" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+            <text x={[x + 16, x - 18, x - 4][i]} y={[y - 10, y - 18, y + 30][i]} textAnchor={['start', 'end', 'end'][i]} fill="#f0b43c" style={{ font: '700 12px var(--font-text), sans-serif' }}>{t}</text>
+          </g>
+        ))}
+      </svg>
+      {caption && <p className="qh-rr-time">{caption}</p>}
+      {links.length > 0 && (
+        <ul className="qh-leak-links">
+          {links.map((l) => (
+            <li key={l.href}>
+              <SiteLink href={l.href}>{l.label}</SiteLink>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+// HOA & Multi-Family hero visual (owner, November 9 2026): "a collection of roofs". A community site plan of six buildings, each tagged repair,
+// maintain or replace after the survey; the work moves through them phase by phase (a gold outline), and a board report card sums it up.
+// SVG + CSS; reduced motion shows the tagged plan.
+export function QhCommunityPlan({ caption, links = [] }) {
+  const bldgs = [
+    [40, 40, 'A', 'Maintain'], [168, 40, 'B', 'Repair'], [296, 40, 'C', 'Replace'],
+    [40, 150, 'D', 'Replace'], [168, 150, 'E', 'Maintain'], [296, 150, 'F', 'Repair'],
+  ];
+  const tone = { Repair: '#f0b43c', Maintain: '#7cc4ff', Replace: '#ff8a65' };
+  return (
+    <div className="qh-cp">
+      <svg className="qh-cp-svg" viewBox="0 0 560 300" aria-hidden="true">
+        <path d="M24 128H412M152 24V262M280 24V262" stroke="rgba(255,255,255,.12)" strokeWidth="14" />
+        {bldgs.map(([x, y, id, st], i) => (
+          <g key={id}>
+            <rect x={x} y={y} width="108" height="82" rx="4" fill="#59606a" stroke="rgba(255,255,255,.5)" strokeWidth="2" />
+            <path d={`M${x} ${y + 41}H${x + 108}`} stroke="#4a515b" strokeWidth="3" />
+            <text x={x + 12} y={y + 24} fill="#fff" style={{ font: '800 16px var(--font-text), sans-serif' }}>{id}</text>
+            <g className={`qh-cp-tag qh-cp-tag${i + 1}`}>
+              <rect x={x + 10} y={y + 52} width="78" height="20" rx="10" fill={tone[st]} />
+              <text x={x + 49} y={y + 66} textAnchor="middle" fill="#0b1b2e" style={{ font: '700 11px var(--font-text), sans-serif' }}>{st}</text>
+            </g>
+          </g>
+        ))}
+        <rect className="qh-cp-phase" x="290" y="34" width="120" height="94" rx="7" fill="none" stroke="#f0b43c" strokeWidth="3.5" strokeDasharray="8 6" />
+        <g transform="translate(428 52)">
+          <rect width="122" height="180" rx="10" fill="#fff" />
+          <text x="12" y="24" fill="#0b1b2e" style={{ font: '700 11.5px var(--font-text), sans-serif' }}>Board report</text>
+          {['Phase 1', 'Phase 2', 'Phase 3'].map((t, i) => (
+            <g key={t}>
+              <text x="12" y={52 + i * 40} fill="#5d6570" style={{ font: '700 10.5px var(--font-text), sans-serif' }}>{t}</text>
+              <rect x="12" y={58 + i * 40} width="98" height="9" rx="4.5" fill="#e8ecf0" />
+              <rect className={`qh-cp-bar qh-cp-bar${i + 1}`} x="12" y={58 + i * 40} width={[72, 52, 86][i]} height="9" rx="4.5" fill="#f0b43c" />
+            </g>
+          ))}
+          <text x="12" y="168" fill="#0b1b2e" style={{ font: '700 10.5px var(--font-text), sans-serif' }}>Photos per building</text>
+        </g>
+      </svg>
+      {caption && <p className="qh-rr-time">{caption}</p>}
+      {links.length > 0 && (
+        <ul className="qh-leak-links">
+          {links.map((l) => (
+            <li key={l.href}>
+              <SiteLink href={l.href}>{l.label}</SiteLink>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+// Shopping Center hero visual (owner, November 9 2026): a strip center from above on a 12 s loop. The roof over six tenant spaces and the common
+// area is surveyed and then replaced one space at a time (a work zone with cones moving along), while each storefront below keeps its "Open"
+// sign lit and the parking stays clear. SVG + CSS; reduced motion shows the finished roof.
+export function QhCenterPhases({ caption, links = [] }) {
+  const n = 6;
+  const W = 78;
+  return (
+    <div className="qh-cc">
+      <svg className="qh-cc-svg" viewBox="0 0 560 300" aria-hidden="true">
+        {Array.from({ length: n }, (_, i) => (
+          <g key={i}>
+            <rect x={44 + i * W} y="40" width={W} height="110" fill="#5c6168" stroke="#3c4249" strokeWidth="2" />
+            <rect className={`qh-cc-new qh-cc-new${i + 1}`} x={44 + i * W} y="40" width={W} height="110" fill="#eef2f6" stroke="#cfd6dd" strokeWidth="2" />
+            <text x={44 + i * W + W / 2} y="138" textAnchor="middle" fill="rgba(11,27,46,.5)" style={{ font: '700 11px var(--font-text), sans-serif' }}>Space {i + 1}</text>
+            <rect x={44 + i * W + 8} y="150" width={W - 16} height="22" fill="rgba(124,196,255,.16)" stroke="rgba(255,255,255,.35)" strokeWidth="1.5" />
+            <g className="qh-cc-open">
+              <rect x={44 + i * W + W / 2 - 18} y="176" width="36" height="13" rx="6.5" fill="#f0b43c" />
+              <text x={44 + i * W + W / 2} y="185.5" textAnchor="middle" fill="#0b1b2e" style={{ font: '800 8.5px var(--font-text), sans-serif', letterSpacing: '.1em' }}>OPEN</text>
+            </g>
+          </g>
+        ))}
+        <rect x="44" y="40" width={W * n} height="110" fill="none" stroke="rgba(255,255,255,.75)" strokeWidth="4" />
+        <g className="qh-cc-zone">
+          <rect x="44" y="40" width={W} height="110" fill="rgba(240,180,60,.18)" stroke="#f0b43c" strokeWidth="3" strokeDasharray="7 5" />
+          {[0, 1, 2].map((i) => (
+            <path key={i} d={`M${56 + i * 24} 112l7 -16 7 16Z`} fill="#ff8a3c" />
+          ))}
+        </g>
+        {/* parking */}
+        {Array.from({ length: 11 }, (_, i) => (
+          <path key={i} d={`M${60 + i * 42} 212V252`} stroke="rgba(255,255,255,.28)" strokeWidth="2" />
+        ))}
+        <text x="280" y="280" textAnchor="middle" fill="#9fb8d2" style={{ font: '700 12px var(--font-text), sans-serif' }}>Stores open, parking clear</text>
+      </svg>
+      {caption && <p className="qh-rr-time">{caption}</p>}
+      {links.length > 0 && (
+        <ul className="qh-leak-links">
+          {links.map((l) => (
+            <li key={l.href}>
+              <SiteLink href={l.href}>{l.label}</SiteLink>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+// Property Management hero visual (owner, November 9 2026): "you answer for the roof". A portfolio list of the kinds of buildings managers look
+// after (apartments, retail, office, warehouse), each checked off with its photo report on a 10 s loop, then "Sent to the owner" with a paper
+// plane. HTML + CSS; reduced motion shows the finished list.
+export function QhPortfolio({ caption, links = [] }) {
+  const items = [['Apartment building', 'Repair'], ['Retail center', 'Maintain'], ['Office building', 'Monitor'], ['Warehouse', 'Replace']];
+  return (
+    <div className="qh-pf">
+      <div className="qh-pf-card">
+        <p className="qh-pf-head">Your buildings</p>
+        <ul>
+          {items.map(([name, step], i) => (
+            <li key={name} className={`qh-pf-row qh-pf-r${i + 1}`}>
+              <span className="qh-pf-photo" aria-hidden="true" />
+              <span className="qh-pf-name">
+                {name}
+                <small>Photo report · Next step: {step}</small>
+              </span>
+              <span className="qh-pf-check" aria-hidden="true">✓</span>
+            </li>
+          ))}
+        </ul>
+        <p className="qh-pf-send">
+          <span aria-hidden="true">➤</span> Sent to the owner and the board
+        </p>
+      </div>
+      {caption && <p className="qh-rr-time">{caption}</p>}
+      {links.length > 0 && (
+        <ul className="qh-leak-links">
+          {links.map((l) => (
+            <li key={l.href}>
+              <SiteLink href={l.href}>{l.label}</SiteLink>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
 // Service Areas hero visual: the service area drawn from its Census outline (mainland only; the counties as shapes), the city pages as pins that
 // drop in and each office as a pulsing gold pin, the county names, and the counties as links underneath. Server-rendered SVG, no map library.
 export function QhAreaMap({ outline, offices = [], cities = [], links = [], note, bounds, focus, highlight, cityLabels = false }) {

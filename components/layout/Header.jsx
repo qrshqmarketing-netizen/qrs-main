@@ -7,6 +7,7 @@ import SiteLink from '@/components/ui/SiteLink';
 import { MoonIcon, PhoneIcon, SunIcon } from '@/components/ui/icons';
 import { HEADER_CTA, HEADER_MENU, HEADER_MORE } from '@/data/navigation';
 import { isFocusPath, isLandingPath } from '@/lib/landing';
+import HeaderSearch from './HeaderSearch';
 import { PHONE, TEL } from '@/data/site';
 import { LANGS, isHomePath, langOf, t } from '@/lib/lang';
 import './Header.css';
@@ -179,6 +180,7 @@ export default function Header() {
               <span>{LANGS[lang === 'es' ? 'en' : 'es'].short}</span>
             </SiteLink>
           )}
+          {!requestPage && <HeaderSearch onOpen={() => setOpen(false)} />}
           <button
             className="hd-cell hd-theme"
             type="button"
