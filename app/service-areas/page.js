@@ -8,7 +8,7 @@ import ServiceArea from '@/components/sections/ServiceArea';
 import JsonLd from '@/components/ui/JsonLd';
 import { HOME, LOCATIONS_LINK } from '@/data/catalog';
 import { ALL_PLACES, cityPath, LOCATIONS, REGIONS, regionPath } from '@/data/locations';
-import { SERVICE_AREA_OUTLINE } from '@/data/serviceAreaOutline';
+import { SANTA_CLARA_OUTLINE, SERVICE_AREA_OUTLINE } from '@/data/serviceAreaOutline';
 import { OFFICES } from '@/data/site';
 import { LOCATIONS_PAGE as page } from '@/data/pages/locations';
 import { heroOutcome } from '@/data/heroOutcomes';
@@ -53,6 +53,12 @@ export default function LocationsPage() {
             outline={SERVICE_AREA_OUTLINE}
             offices={SOCAL_OFFICES}
             cities={LOCATIONS.filter((l) => l.lat < 35)}
+            inset={{
+              outline: SANTA_CLARA_OUTLINE,
+              name: 'Santa Clara County',
+              offices: OFFICES.filter((o) => o.geo.latitude >= 35),
+              cities: LOCATIONS.filter((l) => l.region === 'santa-clara-county' && !OFFICES.some((o) => o.citySlug === l.slug)),
+            }}
             note={`${LOCATIONS.length} city guides and ${ALL_PLACES.length} places we serve`}
             links={REGIONS.map((r) => ({ label: r.name, href: regionPath(r.slug) }))}
           />

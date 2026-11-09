@@ -1872,7 +1872,9 @@ export function QhPortfolio({ caption, links = [] }) {
 
 // Service Areas hero visual: the service area drawn from its Census outline (mainland only; the counties as shapes), the city pages as pins that
 // drop in and each office as a pulsing gold pin, the county names, and the counties as links underneath. Server-rendered SVG, no map library.
-export function QhAreaMap({ outline, offices = [], cities = [], links = [], note, bounds, focus, highlight, cityLabels = false }) {
+export function QhAreaMap({ outline, offices = [], cities = [], links = [], note, bounds, focus, highlight, cityLabels = false, inset }) {
+  // inset: { outline, name, offices, cities, href } drawn in a box in the empty top-right corner (Santa Clara County, about 300 miles north:
+  // its own scale, labelled, with its office pin), only on the full Southern California view
   // bounds: { w, e, s, n } to zoom in (a county or a city); focus: a county shape's name to highlight; highlight: { name, lat, lng } for the page's
   // own city (a large gold pin with its name); cityLabels: name the other city pins (zoomed views)
   const B = bounds || { w: -118.98, e: -116.95, s: 33.36, n: 34.84 };
@@ -1927,6 +1929,7 @@ export function QhAreaMap({ outline, offices = [], cities = [], links = [], note
               <circle r="6.5" className="qh-area-office" />
             </g>
           ))}
+          {inset && !bounds && <AreaInset {...inset} W={W} />}
           {highlight && (
             <g transform={`translate(${x(highlight.lng)} ${y(highlight.lat)})`}>
               <circle r="16" className="qh-area-ring" />
@@ -1952,6 +1955,41 @@ export function QhAreaMap({ outline, offices = [], cities = [], links = [], note
         </ul>
       )}
     </div>
+  );
+}
+
+// The inset box of QhAreaMap: a far-away county on its own scale in the top-right corner, its name, its office pin(s) and city pins
+function AreaInset({ outline, name, offices = [], cities = [], W }) {
+  const ring = outline.features[0].geometry.coordinates[0];
+  const lons = ring.map((p) => p[0]);
+  const lats = ring.map((p) => p[1]);
+  const b = { w: Math.min(...lons), e: Math.max(...lons), s: Math.min(...lats), n: Math.max(...lats) };
+  const k = Math.cos((((b.n + b.s) / 2) * Math.PI) / 180);
+  const box = { x: W - 176, y: 14, w: 160, h: 150 };
+  const pad = 14;
+  const top = 30; // room for the name
+  const sc = Math.min((box.w - pad * 2) / ((b.e - b.w) * k), (box.h - top - pad) / (b.n - b.s));
+  const ox = box.x + (box.w - (b.e - b.w) * k * sc) / 2;
+  const oy = box.y + top + (box.h - top - pad - (b.n - b.s) * sc) / 2;
+  const x = (lon) => (ox + (lon - b.w) * k * sc).toFixed(1);
+  const y = (lat) => (oy + (b.n - lat) * sc).toFixed(1);
+  const d = 'M' + ring.map(([lon, lat]) => `${x(lon)} ${y(lat)}`).join('L') + 'Z';
+  return (
+    <g className="qh-area-inset">
+      <rect x={box.x} y={box.y} width={box.w} height={box.h} rx="8" className="qh-area-inset-box" />
+      <text x={box.x + box.w / 2} y={box.y + 19} textAnchor="middle" className="qh-area-label">{name}</text>
+      <path d={d} className="qh-area-county qh-area-inset-county" />
+      {cities.map((c) => (
+        <circle key={c.slug} cx={x(c.lng)} cy={y(c.lat)} r="4" className="qh-area-city" />
+      ))}
+      {offices.map((o) => (
+        <g key={o.name} transform={`translate(${x(o.geo.longitude)} ${y(o.geo.latitude)})`}>
+          <circle r="9" className="qh-area-ring" />
+          <circle r="6.5" className="qh-area-office" />
+          <text x="13" y="4" className="qh-area-cname">{o.name.replace(/ Office$/, '')}</text>
+        </g>
+      ))}
+    </g>
   );
 }
 

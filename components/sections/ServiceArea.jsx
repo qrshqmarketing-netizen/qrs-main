@@ -78,7 +78,7 @@ export default function ServiceArea({
     const mobileLayout = window.matchMedia('(max-width: 900px)').matches;
     const begin = async () => {
       try {
-        const [L, { SERVICE_AREA_OUTLINE, SERVICE_AREA_BOUNDS }] = await Promise.all([loadLeaflet(), import('@/data/serviceAreaOutline')]);
+        const [L, { SERVICE_AREA_OUTLINE, SANTA_CLARA_OUTLINE, SERVICE_AREA_BOUNDS }] = await Promise.all([loadLeaflet(), import('@/data/serviceAreaOutline')]);
         if (cancelled || !mapEl.current) return;
         const leafletMap = L.map(mapEl.current, {
           dragging: !mobileLayout,
@@ -95,7 +95,7 @@ export default function ServiceArea({
           referrerPolicy: 'strict-origin-when-cross-origin',
           attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         }).addTo(leafletMap);
-        L.geoJSON(SERVICE_AREA_OUTLINE, {
+        L.geoJSON({ type: 'FeatureCollection', features: [...SERVICE_AREA_OUTLINE.features, ...SANTA_CLARA_OUTLINE.features] }, {
           interactive: false,
           style: { color: '#062d57', weight: 3, opacity: 0.9, fillColor: '#d4b572', fillOpacity: 0.22 },
         }).addTo(leafletMap);
@@ -160,8 +160,8 @@ export default function ServiceArea({
       const pt = [+hit.lat, +hit.lon];
       const { location, index, distance } = nearestLocation(pt);
       const inArea = distance <= SERVICE_RADIUS_MI;
-      const { SERVICE_AREA_OUTLINE } = await import('@/data/serviceAreaOutline');
-      const insideOutline = inArea || pointInGeoJson(pt, SERVICE_AREA_OUTLINE);
+      const { SERVICE_AREA_OUTLINE, SANTA_CLARA_OUTLINE } = await import('@/data/serviceAreaOutline');
+      const insideOutline = inArea || pointInGeoJson(pt, SERVICE_AREA_OUTLINE) || pointInGeoJson(pt, SANTA_CLARA_OUTLINE);
       const m = map.current;
       if (m) {
         m.zipPin?.remove();
