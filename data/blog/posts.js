@@ -23,6 +23,129 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // Roof repair cost (owner, November 9 2026, from the HomeAdvisor analysis: cost pages are where the lead-generation sites win roofing searches,
+  // and the site had no page for "roof repair cost"). No dollar figures (owner: articles describe cost in general terms); it explains what moves
+  // the price, the kinds of repairs, when a repair stops making sense, and sends readers to the free roof evaluation for the written price.
+  // Facts only as the site states them. Card picture: a stand-in (a real QRS repair photo) until it has its own image.
+  {
+    slug: 'roof-repair-cost',
+    title: 'Roof Repair Cost: What Sets the Price of a Roof Repair, and How to Get Yours in Writing',
+    keyword: 'roof repair cost',
+    topics: ['repair', 'leak', 'shingle', 'tile', 'flat', 'insurance'],
+    metaTitle: 'Roof Repair Cost: What Sets the Price of a Roof Repair',
+    metaDescription:
+      'Roof repair cost depends on the damage, roof type, access and what’s hidden underneath. See what moves the price, get it in writing after a free evaluation.',
+    datePublished: '2026-11-09',
+    dateModified: '2026-11-09',
+    excerpt:
+      'Why one roof repair costs more than another: the damage, the roof type, the pitch and access, and what turns up underneath. Plus when a repair stops making sense, and how to get a written price.',
+    cardImage: '/images/shingle-roof-repair-ridge-finish.webp',
+    intro: [
+      'Roof repair cost comes down to five things: what failed, what your roof is made of, how hard it is to reach, how far the water has traveled and whether anything under the roofing has to be replaced. Two leaks that look the same from the ceiling can need very different repairs, which is why a fair price starts with a roofer finding the real source.',
+      'We don’t publish a price list for repairs, because a number quoted before anyone has looked at the roof is a guess. This guide explains what moves the price, the most common kinds of repairs, the point where repairing stops making sense, and how to get a written price for your roof before any work starts.',
+    ],
+    sections: [
+      {
+        heading: 'What Sets the Cost of a Roof Repair',
+        blocks: [
+          'Every repair price is built from the same few factors. Knowing them helps you read a quote and compare two of them fairly.',
+          {
+            table: {
+              head: ['Factor', 'Why it changes the price'],
+              rows: [
+                ['What failed', 'Resealing a vent boot is a small job. Rebuilding flashing at a chimney or a wall takes more time and material.'],
+                ['Your roof type', 'Shingles, clay or concrete tile and flat roofs are repaired differently. Tile has to be lifted by hand without cracking the tiles around it, and older tile can be hard to match.'],
+                ['Pitch, height and access', 'A steep or second-story roof needs more safety setup and takes longer to work on than a low, walkable one.'],
+                ['How far the water traveled', 'Water often runs along the underlayment or a rafter before it drips, so the opening can be far from the stain. Finding it is part of the job.'],
+                ['What’s hidden underneath', 'Soft decking, worn underlayment or rot found once the roofing is opened up adds to the scope. A good roofer photographs it and prices it before replacing anything more.'],
+                ['Permits', 'Most small repairs don’t need one. Larger work can, and the roofer should pull it for you.'],
+              ],
+            },
+          },
+          { pov: 'A price for a repair should come after someone has found the cause, not before. When we see a leak, we trace it back to where the water gets in, photograph it and put the fix and the price in writing. That way you are paying to solve the leak, not to patch the stain.' },
+        ],
+      },
+      {
+        heading: 'Common Roof Repairs, From Small to Large',
+        blocks: [
+          'Most repairs fall into a handful of kinds. In rough order from smaller jobs to larger ones:',
+          {
+            list: [
+              '**Pipe boots and vent collars.** The rubber around a plumbing vent splits in the sun, and water follows the pipe in.',
+              '**Lifted, creased or missing shingles.** Wind lifts and creases tabs; the damaged pieces are replaced and sealed, with the courses above lifted carefully. See [shingle roof repair](/residential-roofing/shingle-roofing/repair/).',
+              '**Cracked or slipped tiles.** Broken tiles are replaced with the closest available match and the underlayment beneath is checked. See [tile roof repair](/residential-roofing/tile-roofing/repair/).',
+              '**Open seams, blisters and splits on a flat roof.** The damaged membrane is cut out and repaired with materials that work with your existing system. See [flat roof repair](/residential-roofing/flat-roofing/repair/).',
+              '**Flashing at walls, chimneys and skylights.** Failed flashing is reset or rebuilt rather than covered with another layer of sealant.',
+              '**Storm damage.** Wind, branches and hail can damage a larger area at once; a tarp protects the house when it’s needed. See [emergency roof repair](/roof-repair/emergency/).',
+              '**Soft or rotted decking.** Found when the roofing is opened up, it is photographed and priced before it is replaced.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Repair or Replace? When a Repair Stops Making Sense',
+        blocks: [
+          'A targeted repair makes sense when the rest of the roof is in reasonable shape: one leak, one damaged area, one failed detail. It stops making sense when the problems are spread across the roof:',
+          {
+            list: [
+              'Leaks keep showing up in new places, season after season',
+              'Shingles are curling, brittle or losing their granules across whole slopes',
+              'Many tiles are cracked, or the underlayment under a tile roof is worn out',
+              'A flat roof has blisters and open seams across much of its surface, or soft areas underfoot',
+              'Repair bills keep adding up on the same roof',
+            ],
+          },
+          'On a tile roof there is often a middle path: when the tiles are sound but the underlayment beneath them is worn, a [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/) replaces the underlayment and reuses your tiles. When replacement is the better call, our [roof replacement](/roof-replacement/) page explains what’s involved, and the Instant Quote on this site gives a quick estimated range for a new roof.',
+          { pov: 'A cracked pipe boot is not a reason to sell you a new roof. If a repair will do, we say so. If the wear is roof-wide, we show you the photos and explain why more repairs would only delay a replacement. Either way, you decide with the evidence in front of you.' },
+        ],
+      },
+      {
+        heading: 'How to Get an Accurate Repair Price',
+        blocks: [
+          {
+            steps: [
+              '**Note what you’ve seen.** Where water shows up inside, when it happens (every rain, or only in heavy, wind-driven rain) and any past repairs. It helps the roofer start in the right place.',
+              '**Book a roofer-led look at the roof.** Our [free roof evaluation](#roof-check) uses drone footage and photos; a roofer, not a salesperson, finds the cause.',
+              '**Get the scope and price in writing.** You should see exactly what will be repaired, with what, and for how much, before any work begins.',
+              '**Ask what happens if more turns up.** A clear scope says how hidden damage, like soft decking, will be handled and priced before anything extra is done.',
+              '**Ask for photos of the finished repair.** You should be able to see what was wrong and what was done.',
+            ],
+          },
+          'If the damage came from a storm, the same photos and written scope are what your adjuster needs; our guide to [roof insurance claim help](/blog/roof-insurance-claims-california/) explains how that works.',
+        ],
+      },
+      {
+        heading: 'How to Keep Repair Costs Down',
+        blocks: [
+          'The cheapest repair is the small one caught early. A slow leak left alone can soak the underlayment and the decking, and what started as a seal or a single tile becomes a larger job.',
+          {
+            list: [
+              'Call when you first see a stain, a slipped tile or shingle pieces in the yard',
+              'Keep drains, scuppers, gutters and valleys clear, especially before the rainy season',
+              'Ask other trades (HVAC, solar, painters) to tell you when they have been on the roof, and have it checked afterward',
+              'Consider a [roof tune-up or maintenance plan](/roof-maintenance-plans/), which handles small issues like loose pieces and dried-out sealant in one visit',
+            ],
+          },
+          { pov: 'Most expensive repairs we see started as cheap ones. A roof checked before the rainy season usually needs a little sealing and clearing; the same roof checked after a winter of leaks often needs decking and underlayment too.' },
+        ],
+      },
+    ],
+    faqs: [
+      { q: 'How much does a roof repair cost?', a: 'It depends on what failed, your roof type, the pitch and access, how far the water has traveled and whether anything underneath needs replacing. That’s why we give you a written scope and price after a [free roof evaluation](#roof-check), before any work begins, instead of a number over the phone.' },
+      { q: 'Is the roof evaluation really free?', a: 'Yes. The drone roof evaluation is free, with no obligation. You get photos of what we find, a plain-English explanation and a clear next step: repair, monitor, maintain or replace.' },
+      { q: 'Can you give me a price over the phone?', a: 'Not an accurate one. The same symptom, a stain on the ceiling, can come from a cracked pipe boot or from worn underlayment across a whole slope. A roofer has to find the cause first; then the price goes in writing.' },
+      { q: 'Is it cheaper to repair or replace my roof?', a: 'A repair costs less when the rest of the roof is sound. When leaks keep moving or the wear is roof-wide, more repairs often just delay a replacement. On a tile roof with sound tiles, a [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/) is often the middle ground.' },
+      { q: 'Will insurance pay for my roof repair?', a: 'Insurance usually covers sudden damage, such as from a storm, not wear and tear. Your insurer decides. A roofer’s photos and written scope help your adjuster see the damage; see our guide to [roof insurance claim help](/blog/roof-insurance-claims-california/).' },
+      { q: 'Do roof repairs come with a warranty?', a: 'Repairs carry the manufacturer’s warranty on the materials used. Our 10-year workmanship warranty (call for details) covers installs, such as a roof replacement.' },
+    ],
+    closing: {
+      heading: 'Get a Written Price for Your Repair',
+      blocks: [
+        'Call [(310) 340-1643](tel:+13103401643) or [request a free roof evaluation](#roof-check). A roofer finds the real source, shows you the photos and puts the repair and the price in writing before any work begins.',
+      ],
+    },
+    related: ['/roof-repair/', '/residential-roofing/shingle-roofing/repair/', '/residential-roofing/tile-roofing/repair/', '/residential-roofing/flat-roofing/repair/'],
+  },
   // Vetting commercial roofers (owner, November 6 2026, from the owner's team's draft): keyword "commercial roofing near me", which no other page
   // uses (the commercial choosing guides keep "commercial roofing contractor" and "commercial roofing company in los angeles"; this links to them).
   // Changed to the site's rules: the commercial survey is never called free (the draft offered a free evaluation), no prices, lifespans,
@@ -6660,16 +6783,16 @@ export const BLOG_POSTS = [
     // article keeps its rankings and links. `revision` copies this text over the live copy in Supabase once (lib/postsStore.js applyFileRevisions).
     // Left out of the draft: its byline (every article is by Tony G.), its publishing notes and the signing place of AB 1795 (the Department of
     // Insurance's release doesn't give it); "we work with adjusters regularly" follows the owner's own wording (we help where we can).
-    revision: 8, // November 3 2026: meta title (keyword list)
+    revision: 9, // November 9 2026: the 'roof insurance claim help' section, checklist, FAQs and meta (after the HomeAdvisor analysis); POST /api/posts/sync/ after the deploy
     revisionImage: true, // the new thumbnail goes to the live copy with this revision
     title: 'How to File a Roof Insurance Claim in California: Step-by-Step (and When to Bring in a Roofer)',
     keyword: 'roof insurance claim',
     topics: ['insurance', 'storm', 'emergency', 'repair', 'replacement', 'tile'],
-    metaTitle: 'Roof Insurance Claim in California: How a Roofer Helps',
+    metaTitle: 'Roof Insurance Claim Help in California: Who Does What',
     metaDescription:
-      'How to file a roof insurance claim in California: what to document, insurer deadlines, the adjuster visit, what’s covered and new rules for fire-area homes.',
+      'Roof insurance claim help in California: who does what, what to have ready, how to file, insurer deadlines, the adjuster visit and what a roofer can do.',
     datePublished: '2026-10-05',
-    dateModified: '2026-10-30',
+    dateModified: '2026-11-09',
     excerpt:
       'To file a roof insurance claim in California, make the roof safe, photograph the damage, report the loss promptly, get a roofer’s written inspection report and meet the adjuster with it. Here is each step, the deadlines insurers must meet and when to bring in a roofer.',
     image: '/images/blog/how-to-file-roof-insurance-claim-california.webp',
@@ -6717,6 +6840,36 @@ export const BLOG_POSTS = [
             ],
           },
           { pov: 'Photograph first, protect second, report third, and do all three the same day if you can. We see more trouble from damage that was cleaned up or left uncovered for a week than from anything an adjuster says. A tarp and a camera roll protect both your home and your claim.' },
+        ],
+      },
+      {
+        heading: 'Roof Insurance Claim Help: Who Does What',
+        blocks: [
+          'Most homeowners file a roof claim once or twice in their lives, so it helps to know who handles which part. Getting the right help from the right person is most of the battle.',
+          {
+            table: {
+              head: ['Who', 'What they do in a roof claim'],
+              rows: [
+                ['You, the homeowner', 'Report the damage to your insurer promptly, protect the roof and the house from more damage, keep every receipt and decide who to hire.'],
+                ['Your insurer and adjuster', 'Inspect the damage for the insurance company, decide what your policy covers and calculate the payment, including your deductible and any depreciation.'],
+                ['Your roofer', 'Inspects the roof, photographs the damage, explains the likely cause, tarps it when needed and gives you a written scope and price to share with the adjuster. Then does the repair or replacement once you approve it.'],
+                ['A licensed public adjuster (optional)', 'Represents you in the claim and negotiates with the insurer, for a fee.'],
+                ['California Department of Insurance', 'Helps if you have a problem with how your insurer is handling the claim.'],
+              ],
+            },
+          },
+          { h3: 'What to Have Ready Before You Call Your Insurer' },
+          {
+            checklist: [
+              'Your policy number and your agent’s or insurer’s claim line',
+              'The date of the storm or the day you first saw the damage',
+              'Wide and close-up photos of the roof, taken from the ground or by a roofer, and of any water inside',
+              'A list of interior damage: stained ceilings, wet insulation, damaged belongings',
+              'Receipts for anything you paid to protect the house, such as a tarp or water cleanup',
+              'A roofer’s written inspection report, if you already have one',
+            ],
+          },
+          { pov: 'The most useful help we give on a claim is evidence: dated photos, the cause in plain English and a written scope and price. We can’t file or negotiate the claim for you, and we tell homeowners that up front. What we can do is make sure the adjuster sees exactly what we saw on the roof.' },
         ],
       },
       {
@@ -6851,6 +7004,14 @@ export const BLOG_POSTS = [
       {
         q: 'Can a roofer handle my insurance claim for me?',
         a: 'No. A roofing contractor can inspect, document and give you a written scope and price, but cannot file or negotiate the claim for you. For full claim representation, you can hire a licensed public adjuster, who charges a fee.',
+      },
+      {
+        q: 'What does roof insurance claim help from a roofer include?',
+        a: 'An inspection of the roof, dated photos of the damage close-up and wide, the likely cause in plain English, a tarp when needed to stop more damage, and a written scope and price you can give your adjuster. A roofer can’t file or negotiate the claim; that’s between you and your insurer, or a licensed public adjuster.',
+      },
+      {
+        q: 'Should I call my insurer or a roofer first?',
+        a: 'Report the damage to your insurer promptly, since policies set deadlines for that. Then have a roofer inspect the roof, ideally before the adjuster visits, so the damage and its cause are documented with photos when the adjuster arrives.',
       },
       {
         q: 'Where can I get help with a roof insurance claim?',

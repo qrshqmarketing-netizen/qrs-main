@@ -216,7 +216,7 @@ body .adm :is(h1,h2,h3,h4){font-family:var(--font-text),system-ui,sans-serif;tex
 /* Status chips (the lead pipeline) */
 .adm-status{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:500;color:var(--a-text)}
 .adm-status:before,.adm-choice span:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--dot,#7d8aa0)}
-.s-new{--dot:#2f6fdb}.s-contacted{--dot:#c48a12}.s-scheduled{--dot:#7a4bd6}.s-won{--dot:#1f8a52}.s-lost{--dot:#9aa3af}.s-remarketing{--dot:#d0632a}
+.s-new{--dot:#2f6fdb}.s-contacted{--dot:#c48a12}.s-scheduled{--dot:#7a4bd6}.s-won{--dot:#1f8a52}.s-lost{--dot:#9aa3af}.s-remarketing{--dot:#d0632a}.s-spam{--dot:#b4232a}
 
 /* Leads toolbar: status segments and the search */
 .adm-toolbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin:0 0 20px}
@@ -406,3 +406,5 @@ body .adm-dialog-head h2{margin:0;font-family:var(--font-text),system-ui,sans-se
 .adm-dialog .adm-choices{margin-bottom:14px}
 .adm-dialog .adm-choices:disabled{opacity:.6}
 @media (min-width:621px){.adm-dialog-card{padding:28px 28px 24px}}
+.adm-imp-example{max-width:280px;color:var(--a-muted,#5d6570);font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.adm-import .adm-table select{min-height:38px;padding:6px 10px;border:1px solid var(--a-line);border-radius:8px;background:var(--a-card);color:var(--a-text);font:inherit}
+.adm-chip.on{background:rgba(36,128,76,.12);border-color:rgba(36,128,76,.35);color:#1f6b40}.adm-step .adm-section-head{display:flex;align-items:center;justify-content:space-between;gap:12px}.adm-step h2 .adm-hint{font-weight:400}.adm-run-msg{flex-basis:100%}

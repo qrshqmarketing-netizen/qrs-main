@@ -1,6 +1,7 @@
 import { revalidateTag } from 'next/cache';
 import { POSTS_TAG, addNewFilePosts } from '@/lib/postsStore';
 import { updateReviewCount } from '@/lib/googleReviewCount';
+import { runDrips } from '@/lib/drips';
 
 // Publishes scheduled articles on time (owner, October 30 2026). An article dated in the future goes live at 8:00 AM Pacific on its date
 // (isLive in lib/postsStore.js; or the hour in PUBLISH_HOURS); this route, run by the daily Vercel Cron Jobs in vercel.json at those hours, refreshes the cached article list so
@@ -8,6 +9,7 @@ import { updateReviewCount } from '@/lib/googleReviewCount';
 // data. Who may run it: Vercel's cron (with CRON_SECRET set in Vercel, its `Authorization: Bearer` header is required), or a request with the
 // setup check's x-leads-diagnostic header (the LEADS_SHEET_SECRET). Anything else is turned away. Running it again is harmless.
 export const dynamic = 'force-dynamic';
+export const maxDuration = 300; // the drip run can send up to 150 emails at about two a second
 
 export async function GET(request) {
   const cronSecret = (process.env.CRON_SECRET || '').trim();
@@ -24,5 +26,8 @@ export async function GET(request) {
   if (!new URL(request.url).searchParams.get('at')) {
     reviewCount = await updateReviewCount().catch((e) => ({ updated: false, error: e.message }));
   }
-  return Response.json({ ok: true, refreshed: POSTS_TAG, ...(reviewCount && { reviewCount }) });
+  // The drip campaigns (owner, November 9 2026; lib/drips.js), on the 8 AM run only: enroll and send what is due. A failure changes nothing.
+  let drips;
+  if (!new URL(request.url).searchParams.get('at')) drips = await runDrips().catch((e) => ({ ok: false, error: e.message }));
+  return Response.json({ ok: true, refreshed: POSTS_TAG, ...(reviewCount && { reviewCount }), ...(drips && { drips }) });
 }

@@ -2,9 +2,10 @@
 //   { action: 'create', lead: {...} }          adds a lead by hand          → { ok, id }
 //   { action: 'update', id, lead: {...} }      edits any of its fields      → { ok, lead }
 //   { action: 'delete', id }                   deletes it for good          → { ok }
+//   { action: 'import', rows, status, source, skipDuplicates }  CSV import (up to 500 rows a request) → { ok, added, skipped }
 //   { id, status?, notes? }                    the follow-up panel and Kanban moves (the same as 'update')
 import { isAdmin, sameOrigin } from '@/lib/adminAuth';
-import { createLead, deleteLead, updateLeadFields } from '@/lib/adminLeads';
+import { createLead, deleteLead, importLeads, updateLeadFields } from '@/lib/adminLeads';
 
 const fail = (status, error) => Response.json({ ok: false, error }, { status });
 
@@ -22,6 +23,10 @@ export async function POST(request) {
       const { lead, errors } = await createLead(body.lead || {});
       if (errors) return fail(400, errors.join(' '));
       return Response.json({ ok: true, id: lead?.id });
+    }
+    if (body?.action === 'import') {
+      const result = await importLeads(body.rows, { status: body.status, source: body.source, skipDuplicates: body.skipDuplicates !== false });
+      return Response.json({ ok: true, ...result });
     }
     if (body?.action === 'delete') {
       if (!(await deleteLead(body.id))) return fail(404, 'That lead was not found.');

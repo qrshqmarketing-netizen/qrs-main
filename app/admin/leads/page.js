@@ -53,9 +53,14 @@ export default async function LeadsPage({ searchParams }) {
         title="Leads"
         text="Every request from the website, the Instant Quote and the chat. Move each one along as you follow up."
         actions={
-          <Link className="adm-btn adm-btn-primary" href="/admin/leads/new/">
-            <AdminIcon name="plus" /> New lead
-          </Link>
+          <>
+            <Link className="adm-btn" href="/admin/leads/import/">
+              <AdminIcon name="list" /> Import CSV
+            </Link>
+            <Link className="adm-btn adm-btn-primary" href="/admin/leads/new/">
+              <AdminIcon name="plus" /> New lead
+            </Link>
+          </>
         }
       />
       {problem ? (
