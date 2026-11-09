@@ -3,9 +3,10 @@ export const maxDuration = 300; // "Run now" can send up to 150 emails at about 
 //   { action: 'save', id?, campaign }      add or update a campaign      → { ok, id }
 //   { action: 'delete', id }                delete it (its enrollments and send log go with it)
 //   { action: 'test', campaign, step, to }  send one of its emails to an address, marked TEST
+//   { action: 'preview', campaign, step }   the finished email as HTML, for the editor's Preview
 //   { action: 'run' }                       run the drips now (the daily 8 AM run does the same)
 import { isAdmin, sameOrigin } from '@/lib/adminAuth';
-import { deleteCampaign, runDrips, saveCampaign, sendTest } from '@/lib/drips';
+import { deleteCampaign, previewEmail, runDrips, saveCampaign, sendTest } from '@/lib/drips';
 
 const fail = (status, error) => Response.json({ ok: false, error }, { status });
 const missingTables = (err) => /PGRST205|relation .* does not exist|Could not find the table/i.test(err.message || '');
@@ -34,6 +35,10 @@ export async function POST(request) {
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(to)) return fail(400, 'Enter an email address to send the test to.');
       const result = await sendTest({ campaign: body.campaign || {}, stepIndex: Number(body.step) || 0, to });
       return result.ok ? Response.json({ ok: true }) : fail(400, result.error);
+    }
+    if (body?.action === 'preview') {
+      const email = previewEmail({ campaign: body.campaign || {}, stepIndex: Number(body.step) || 0 });
+      return email ? Response.json({ ok: true, subject: email.subject, html: email.html }) : fail(400, 'Nothing to preview.');
     }
     if (body?.action === 'run') return Response.json(await runDrips());
     return fail(400, 'Unknown action.');

@@ -19,11 +19,12 @@ export default function CampaignEditor({ campaign, me = '' }) {
     name: campaign.name || '',
     audience_status: campaign.audience_status || 'remarketing',
     active: Boolean(campaign.active),
-    steps: (campaign.steps || []).map((s) => ({ delay_days: s.delay_days ?? 0, subject: s.subject || '', body: s.body || '' })),
+    steps: (campaign.steps || []).map((s) => ({ delay_days: s.delay_days ?? 0, subject: s.subject || '', body: s.body || '', image: s.image || '', image_alt: s.image_alt || '', image_at: s.image_at || 'top' })),
   }));
   const [testTo, setTestTo] = useState(me);
   const [msg, setMsg] = useState(null);
   const [busy, setBusy] = useState('');
+  const [preview, setPreview] = useState(null); // { step, subject, html }
   const set = (k, v) => setForm((f) => ({ ...f, [k]: v }));
   const setStep = (i, k, v) => setForm((f) => ({ ...f, steps: f.steps.map((s, j) => (j === i ? { ...s, [k]: v } : s)) }));
   const move = (i, d) =>
@@ -54,12 +55,38 @@ export default function CampaignEditor({ campaign, me = '' }) {
     setMsg(res.ok ? { text: `Test of email ${i + 1} sent to ${testTo}.` } : { bad: true, text: res.error || 'Could not send the test.' });
   };
 
+  const showPreview = async (i) => {
+    setBusy(`prev${i}`);
+    const res = await adminApi('/api/admin/campaigns', { action: 'preview', campaign: form, step: i });
+    setBusy('');
+    if (!res.ok) return setMsg({ bad: true, text: res.error || 'Could not show the preview.' });
+    setPreview({ step: i, subject: res.subject, html: res.html });
+  };
+
   const remove = async () => {
     if (!campaign.id || !window.confirm(`Delete “${form.name}”? Its send history goes with it. This can’t be undone.`)) return;
     const res = await adminApi('/api/admin/campaigns', { action: 'delete', id: campaign.id });
     if (!res.ok) return setMsg({ bad: true, text: res.error || 'Could not delete.' });
     router.push('/admin/campaigns/');
     router.refresh();
+  };
+
+  // A picture for one email: uploaded to the site's picture storage (the same upload as the article editor, app/api/admin/upload)
+  const upload = async (i, file) => {
+    if (!file) return;
+    setBusy(`img${i}`);
+    setMsg(null);
+    const body = new FormData();
+    body.append('file', file);
+    try {
+      const res = await fetch('/api/admin/upload/', { method: 'POST', body });
+      const data = await res.json().catch(() => ({}));
+      if (res.ok && data.url) setStep(i, 'image', data.url);
+      else setMsg({ bad: true, text: data.error || 'The upload did not work.' });
+    } catch {
+      setMsg({ bad: true, text: 'Could not reach the site. Check your connection and try again.' });
+    }
+    setBusy('');
   };
 
   let day = 0;
@@ -125,19 +152,66 @@ export default function CampaignEditor({ campaign, me = '' }) {
             <div className="adm-field">
               <label htmlFor={`cp-b${i}`}>Message</label>
               <textarea id={`cp-b${i}`} rows={10} value={s.body} maxLength={8000} onChange={(e) => setStep(i, 'body', e.target.value)} />
-              <p className="adm-hint">A blank line starts a new paragraph. [Link words](/page/) makes a link, **words** is bold, {'{first_name}'} and {'{phone}'} are filled in. The company’s address and an unsubscribe link are added at the bottom.</p>
+              <p className="adm-hint">A blank line starts a new paragraph. [Link words](/page/) makes a link, **words** is bold, {'{first_name}'} and {'{phone}'} are filled in, and {'{unsubscribe}'} puts an unsubscribe link right there. Every email also ends with the company’s name and address and an unsubscribe link.</p>
+            </div>
+            <div className="adm-email-image">
+              <div className="adm-field">
+                <label htmlFor={`cp-i${i}`}>Picture (optional)</label>
+                <input id={`cp-i${i}`} value={s.image} placeholder="Upload one, or paste an image address" onChange={(e) => setStep(i, 'image', e.target.value)} />
+                <div className="adm-form-actions">
+                  <label className="adm-btn">
+                    <input type="file" accept="image/jpeg,image/png,image/webp,image/avif" hidden onChange={(e) => upload(i, e.target.files?.[0])} />
+                    {busy === `img${i}` ? 'Uploading…' : 'Upload a picture'}
+                  </label>
+                  {s.image && (
+                    <button className="adm-btn" type="button" onClick={() => setStep(i, 'image', '')}>
+                      Remove
+                    </button>
+                  )}
+                </div>
+                <p className="adm-hint">JPEG or PNG show in every email app (WebP and AVIF don’t in Outlook). About 1100 pixels wide is ideal. It links where the email’s first link goes.</p>
+                {/\.(webp|avif)(\?|$)/i.test(s.image) && <p className="adm-msg warn">This picture is WebP or AVIF: some email apps, like Outlook, won’t show it. A JPEG or PNG is safer.</p>}
+              </div>
+              {s.image && (
+                <div>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img className="adm-email-thumb" src={s.image} alt="" />
+                  <div className="adm-field">
+                    <label htmlFor={`cp-a${i}`}>Describe the picture (shown if it doesn’t load)</label>
+                    <input id={`cp-a${i}`} value={s.image_alt} maxLength={150} onChange={(e) => setStep(i, 'image_alt', e.target.value)} />
+                  </div>
+                  <div className="adm-field">
+                    <label htmlFor={`cp-p${i}`}>Where it goes</label>
+                    <select id={`cp-p${i}`} value={s.image_at} onChange={(e) => setStep(i, 'image_at', e.target.value)}>
+                      <option value="top">At the top of the email</option>
+                      <option value="after">After the first paragraph</option>
+                    </select>
+                  </div>
+                </div>
+              )}
             </div>
             <div className="adm-form-actions">
+              <button className="adm-btn" type="button" disabled={Boolean(busy)} onClick={() => (preview?.step === i ? setPreview(null) : showPreview(i))}>
+                {busy === `prev${i}` ? 'Loading…' : preview?.step === i ? 'Hide preview' : 'Preview'}
+              </button>
               <button className="adm-btn" type="button" disabled={Boolean(busy) || !testTo} onClick={() => test(i)}>
                 <AdminIcon name="mail" /> {busy === `test${i}` ? 'Sending…' : 'Send me a test'}
               </button>
             </div>
+            {preview?.step === i && (
+              <div className="adm-email-preview">
+                <p className="adm-hint">
+                  Subject: <strong>{preview.subject}</strong> · shown with a sample name
+                </p>
+                <iframe title={`Preview of email ${i + 1}`} srcDoc={preview.html} sandbox="" />
+              </div>
+            )}
           </section>
         );
       })}
 
       {form.steps.length < 10 && (
-        <button className="adm-btn" type="button" onClick={() => setForm((f) => ({ ...f, steps: [...f.steps, { delay_days: 7, subject: '', body: 'Hi {first_name},\n\n\n\nThe QRS team' }] }))}>
+        <button className="adm-btn" type="button" onClick={() => setForm((f) => ({ ...f, steps: [...f.steps, { delay_days: 7, subject: '', body: 'Hi {first_name},\n\n\n\nThe QRS team', image: '', image_alt: '', image_at: 'top' }] }))}>
           <AdminIcon name="plus" /> Add an email
         </button>
       )}

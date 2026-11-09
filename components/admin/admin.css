@@ -408,3 +408,5 @@ body .adm-dialog-head h2{margin:0;font-family:var(--font-text),system-ui,sans-se
 @media (min-width:621px){.adm-dialog-card{padding:28px 28px 24px}}
 .adm-imp-example{max-width:280px;color:var(--a-muted,#5d6570);font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.adm-import .adm-table select{min-height:38px;padding:6px 10px;border:1px solid var(--a-line);border-radius:8px;background:var(--a-card);color:var(--a-text);font:inherit}
 .adm-chip.on{background:rgba(36,128,76,.12);border-color:rgba(36,128,76,.35);color:#1f6b40}.adm-step .adm-section-head{display:flex;align-items:center;justify-content:space-between;gap:12px}.adm-step h2 .adm-hint{font-weight:400}.adm-run-msg{flex-basis:100%}
+.adm-email-image{display:grid;gap:16px;margin:0 0 6px}@media (min-width:900px){.adm-email-image{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}.adm-email-thumb{display:block;width:100%;max-width:420px;height:auto;margin:0 0 12px;border:1px solid var(--a-line);border-radius:8px}
+.adm-email-preview{margin-top:14px}.adm-email-preview iframe{display:block;width:100%;height:640px;border:1px solid var(--a-line);border-radius:10px;background:#f4f6f8}

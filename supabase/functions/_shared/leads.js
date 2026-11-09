@@ -70,7 +70,9 @@ async function sendEmail(lead, { env, fetch: f }) {
   const key = setting(env, 'RESEND_API_KEY');
   if (!key) return 'off';
   const to = leadRecipients(env);
-  const from = setting(env, 'LEADS_FROM_EMAIL') || 'QRS Website <onboarding@resend.dev>';
+  // Sent as the company's name (owner, November 9 2026: not "QRS Website"), from the verified address in LEADS_FROM_EMAIL (as lib/leads.js)
+  const raw = setting(env, 'LEADS_FROM_EMAIL') || 'onboarding@resend.dev';
+  const from = `${SITE.name} <${(raw.match(/<([^>]+)>/) || [, raw])[1].trim()}>`;
   const res = await f('https://api.resend.com/emails', {
     method: 'POST',
     headers: { Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' },
