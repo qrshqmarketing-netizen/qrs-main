@@ -8,8 +8,8 @@ import { t } from '@/lib/lang';
 
 const TRUST = ['CSLB licensed, bonded & insured', '10-year workmanship warranty (call for details)', 'Google customer reviews'];
 
-// Closing call to action above the footer: white copy on a navy gradient that deepens toward the footer, where the page's closing
-// gradient carries on into gold (owner, October 29 2026: the WebGL contour lines of October 28 were removed; the job-site photo, CtaParallax, is no longer used), the main button plus a
+// Closing call to action above the footer: white copy on solid navy with a faint gold roof-line pattern (owner, November 10 2026: the navy-to-gold
+// gradient is gone; the footer under it is solid navy again; the job-site photo, CtaParallax, is no longer used), the main button plus a
 // call button, and a short trust row. It stays full width as it scrolls into view (owner, October 29 2026: no longer opens from an inset card; data-expand is off). Pages can change the words and the main button (cta.style: 'gold', or
 // 'plum' for a "call now" button — the separate call button is then left out). trust={false} hides the trust row.
 export default function FinalCta({
@@ -23,6 +23,7 @@ export default function FinalCta({
   const isCall = cta.href.startsWith('tel:');
   return (
     <section className="final">
+      <div className="final-pattern" aria-hidden="true" />
       <div className="container final-inner">
         <h2><Mark text={T(heading)} /></h2>
         <p>{T(text)}</p>

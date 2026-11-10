@@ -2,10 +2,10 @@
 // app/page.js and components/home/HomeSections.jsx; a text missing here shows in English. Every claim is the English page's own: nothing
 // added. Product names stay in English. Usted throughout. This file is imported by server components only.
 export const ES_HOME_META = {
-  // No place names (owner, November 6 2026: city names only on the location pages), as on the English home page
-  title: 'Quality Roofing Specialists | Contratista de Techos Residenciales y Comerciales',
+  // Meta back to the November 4 wording with the places (owner, November 10 2026), as on the English home page; the hero keeps h1 and text below
+  title: 'Contratista de Techos en Los Ángeles y el Condado de Orange',
   description:
-    'QRS es un contratista de techos familiar, residencial y comercial: reparación, reemplazo e inspección de techos. Las casas empiezan con una evaluación gratuita.',
+    'QRS es un contratista de techos familiar en Los Ángeles y el Condado de Orange: reparación y reemplazo de techos, con una evaluación gratuita del techo.',
   h1: 'Contratista de techos residenciales y comerciales',
   heading: 'Techos bien hechos, desde la __base__.',
   // carries the keyword ("contratista de techos") in the first 100 words, as the English line does
@@ -417,14 +417,14 @@ export const ES_HOME_FAQS = [
   { q: '¿Tengo que pagar algo por adelantado?', a: 'No. La evaluación del techo es gratuita, y si elige el Roof Check opcional de $199, no hay depósito: paga después de la visita.' },
   { q: '¿Necesito reemplazar todo el techo?', a: 'No siempre. Muchos techos solo necesitan una reparación puntual o un [levantamiento y reinstalación de teja](/residential-roofing/tile-roofing/lift-and-relay/). La evaluación gratuita del techo le dice lo que su techo realmente necesita, para que no pague por trabajo que no hace falta.' },
   { q: '¿Sabré el precio antes de que empiece el trabajo?', a: 'Sí. Antes de empezar cualquier trabajo, usted recibe el alcance y el precio por escrito. Sin presión, sin precios misteriosos y sin sorpresas.' },
-  { q: '¿Cuánto cuesta un techo nuevo?', a: 'Depende del tamaño, la inclinación y el material de su techo, y de lo que encontremos debajo del techo viejo. Nuestra guía sobre el [costo de reemplazar un techo](/blog/roof-replacement-cost-los-angeles/) (en inglés) explica cómo se arma un precio, y la evaluación gratuita del techo le da la cifra exacta: alcance y precio por escrito antes de cualquier trabajo.' },
+  { q: '¿Cuánto cuesta un techo nuevo?', a: 'Depende del tamaño, la inclinación y el material de su techo, y de lo que encontremos debajo del techo viejo. Nuestra guía sobre el [costo de reemplazar un techo en Los Ángeles](/blog/roof-replacement-cost-los-angeles/) (en inglés) explica cómo se arma un precio, y la evaluación gratuita del techo le da la cifra exacta: alcance y precio por escrito antes de cualquier trabajo.' },
   { q: '¿Ofrecen financiamiento?', a: 'Sí, para reemplazos de techo de casas: con Momnt Financing o Service Financing puede pagar el costo en mensualidades. No cubre reparaciones ni proyectos comerciales. Vea [financiamiento de techos](/roof-financing/) (en inglés) para saber cómo funciona, y pregúntenos cuando tenga su alcance y precio por escrito.' },
   { q: '¿Qué garantía ofrecen?', a: 'Nuestras instalaciones tienen una garantía de mano de obra de 10 años (llame para más detalles), y los materiales del techo tienen la garantía del fabricante, que depende del producto y de su nivel de garantía. En la revisión final repasamos su garantía con usted en palabras sencillas.' },
-  { q: '¿Quality Roofing Specialists es un contratista de techos con licencia?', a: 'Sí. QRS es un contratista de techos de California con licencia, fianza y seguro: licencia CSLB #1061942, con licencia desde el 3 de enero de 2020. Trabajamos en casas y negocios en toda nuestra [área de servicio](/service-areas/).' },
+  { q: '¿Quality Roofing Specialists es un contratista de techos con licencia en Los Ángeles?', a: 'Sí. QRS es un contratista de techos de California con licencia, fianza y seguro: licencia CSLB #1061942, con licencia desde el 3 de enero de 2020. Trabajamos en casas y negocios en todo Los Ángeles y el Condado de Orange.' },
   { q: '¿Trabajan con reclamos al seguro?', a: 'Sí, según lo permita nuestra agenda. Nuestro equipo es pequeño, así que no siempre podemos estar cuando visita el ajustador, pero le ayudamos en lo que podamos, y nuestras fotos y el alcance por escrito le dan documentación clara para compartir con su aseguradora.' },
   { q: '¿Qué tan pronto pueden revisar mi techo?', a: 'Llame al [(310) 340-1643](tel:+13103401643) o envíe el formulario de esta página, y acordaremos un horario para su evaluación gratuita del techo que le funcione. Si está entrando agua ahora mismo, llámenos y vea [reparación de techos de emergencia](/roof-repair/emergency/) (en inglés).' },
   { q: '¿En qué tipos de techo trabajan?', a: 'Trabajamos techos de [teja](/residential-roofing/tile-roofing/), de [tejas asfálticas](/residential-roofing/shingle-roofing/) y [planos](/residential-roofing/flat-roofing/), incluyendo reemplazos, reparaciones, levantamiento y reinstalación de teja, inspecciones y mantenimiento continuo.' },
-  { q: '¿Qué áreas atienden?', a: 'Atendemos a propietarios en toda nuestra [área de servicio](/service-areas/). Llame al [(310) 340-1643](tel:+13103401643) para confirmar su ciudad, o vea nuestras [áreas de servicio](/service-areas/).' },
+  { q: '¿Qué áreas atienden?', a: 'Atendemos a propietarios en todo el [sur de California](/service-areas/). Llame al [(310) 340-1643](tel:+13103401643) para confirmar su ciudad, o vea nuestras [áreas de servicio](/service-areas/).' },
 ];
 
 // The four reviews on the home page, translated from the reviewers' English (shown with "traducida del inglés"); keyed by reviewer.
