@@ -6,7 +6,7 @@ import './dark-theme.css'; // dark theme colors, toggled from the header and sav
 import '@/components/studio/StudioSite.css'; // the studio look for every page (STUDIO_THEME in data/promo.js)
 
 import Script from 'next/script';
-import { Big_Shoulders, League_Gothic, Open_Sans } from 'next/font/google';
+import { Big_Shoulders, EB_Garamond, League_Gothic, Open_Sans } from 'next/font/google';
 import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
 import HideOnLanding from '@/components/layout/HideOnLanding';
@@ -47,6 +47,9 @@ const bigShoulders = Big_Shoulders({ subsets: ['latin'], variable: '--font-conde
 // Adobe Fonts face locked to its own kit, so the headings here use League Gothic, the closest free extra-condensed gothic (Google Fonts, SIL OFL).
 // To use the licensed Field Gothic instead, load it from your own Adobe Fonts kit and point --font-heading at it. Xmind stays in app/fonts, unused.
 const headingFont = League_Gothic({ subsets: ['latin'], variable: '--font-heading', display: 'swap' });
+// Product names inside headings (TotalShield, LeakRescue, SecondLife…): EB Garamond italic, a traditional serif, in normal case (owner,
+// November 10 2026; Playfair Display in capitals was tried first). Italic only, not preloaded (needed only where a heading names a product).
+const brandFont = EB_Garamond({ subsets: ['latin'], style: ['italic'], variable: '--font-brand', display: 'swap', preload: false });
 
 // Defaults for every page. A page's own `metadata` export overrides these.
 export const metadata = {
@@ -89,7 +92,7 @@ export default async function RootLayout({ children }) {
   // CallRail's number-swap script (lib/callrail.js), production only; null without a key or company
   const callrailSwap = LOAD_TRACKING ? await callrailSwapScript() : null;
   return (
-    <html lang="en" className={bodyFont.variable + ' ' + bigShoulders.variable + ' ' + headingFont.variable} data-scroll-behavior="smooth" suppressHydrationWarning>
+    <html lang="en" className={bodyFont.variable + ' ' + bigShoulders.variable + ' ' + headingFont.variable + ' ' + brandFont.variable} data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
         {/* WebMCP origin trial (components/widgets/WebMcpTools.jsx): set NEXT_PUBLIC_WEBMCP_OT_TOKEN to Google's token for this domain */}
         {process.env.NEXT_PUBLIC_WEBMCP_OT_TOKEN && <meta httpEquiv="origin-trial" content={process.env.NEXT_PUBLIC_WEBMCP_OT_TOKEN} />}
