@@ -59,6 +59,7 @@ export const FLAT_CONTENT = {
       metaTitle: 'Flat Roof Replacement in Los Angeles',
       metaDescription: 'Flat roof replacement in Los Angeles & Orange County: full tear-off to the deck and a new low-slope system planned to drain. Start with a free roof evaluation.',
       image: '/images/flat-roof-replacement-completed-white-membrane.webp',
+      cardImage: '/images/flat-roof-replacement-white-cap-sheet-tile-coping-drone-view.webp', // owner, November 10 2026: the card's photo on /roof-replacement/ (and the flat hub); the page keeps its own hero
       imageAlt: 'Aerial view of a completed white flat roof membrane with tile coping',
       hero: {
         intro: 'Flat roof replacement, planned around how your roof drains. We tear off down to the deck, fix any damaged decking and install a new modified bitumen or other low-slope system. That’s our *FlatGuard* low-slope system, across Los Angeles and Orange County. It starts with a free roof evaluation.',

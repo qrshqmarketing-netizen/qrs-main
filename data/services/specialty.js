@@ -150,6 +150,7 @@ export const HOA_MULTI_FAMILY = {
       q: 'Can carports and common-area roofs be included?',
       a: 'Yes. Carports, clubhouses and other common-area roofs can be part of the same report and phasing plan. Many carports are flat or low-slope, so they get a [flat roofing](/residential-roofing/flat-roofing/) system planned around drainage.',
     },
+    { q: 'Our owners or board members don’t live on site. How do they follow the work?', a: 'From the photos and the written scope. Owners, board members and managers approve the work from the same photo-documented report wherever they are, and each phase ends with photos of the finished roof for the building’s records.' },
   ],
   related: ['/residential-roofing/flat-roofing/replacement/', '/residential-roofing/tile-roofing/replacement/'],
 };

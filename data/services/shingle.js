@@ -52,6 +52,7 @@ export const SHINGLE_CONTENT = {
       metaTitle: 'Shingle Roof Replacement in Los Angeles & Orange County',
       metaDescription: 'Shingle roof replacement in Los Angeles & Orange County: full tear-off, new underlayment, flashing and balanced ventilation. Book a free roof evaluation.',
       image: '/images/shingle-roof-replacement-tear-off-drone-view.webp',
+      cardImage: '/images/shingle-roof-replacement-tear-off-crew-drone-view.webp', // owner, November 10 2026: the card's photo on /roof-replacement/ (and the shingle hub); the page keeps its own hero
       imageAlt: 'Aerial view of a shingle roof tear-off in progress, with crew removing old shingles down to the deck',
       hero: {
         intro: 'Shingle roof replacement, done from the deck up. We take your old roof down to the deck and build a complete new system: underlayment, flashings, balanced attic ventilation and new shingles. That’s our *TotalShield* Shingle System, across Los Angeles and Orange County. It starts with a free roof evaluation.',
@@ -81,6 +82,7 @@ export const SHINGLE_CONTENT = {
         { q: 'How should I get ready for a roof replacement?', a: 'Move cars out of the driveway, take mirrors and pictures off walls that may shake during tear-off, and cover anything stored in the attic, since dust can sift through the deck. Keep pets and kids clear of the work area, and leave protecting the landscaping and cleaning up to us.' },
         { q: 'What if the decking underneath is soft or damaged?', a: 'Your written scope includes a standard allowance for deck repair, so ordinary soft spots are already covered. If we find damage beyond that allowance, we’ll show you in photos and give you the price before replacing anything further.' },
         { q: 'How do I choose a shingle color?', a: 'Look at the whole house, so the roof works with your stucco, trim and any stone. Lighter blends tend to stay cooler in direct sun, which is worth weighing on hot inland streets in Burbank or Anaheim, while multi-tone blends bring out the depth of architectural shingles. Viewing a full-size sample outside in daylight gives a truer read than a small swatch indoors.' },
+        { q: 'What happens if it rains during my roof replacement?', a: 'Rain can push the schedule back. If rain is forecast while part of your roof is open, we protect it with tarps when needed, and the work picks up again once the roof is dry enough to continue. We let you know when the schedule changes.' },
       ],
       related: ['/residential-roofing/shingle-roofing/repair/', '/roof-inspection/#shingle-roofs', '/residential-roofing/shingle-roofing/installation/'],
     },

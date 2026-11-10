@@ -132,6 +132,7 @@ export const TILE_CONTENT = {
       metaTitle: 'Tile Lift & Relay (Tile Roof Re-Paper) in Los Angeles', // "re-paper" is the LA name for the same job (owner, November 4 2026)
       metaDescription: 'Tile lift & relay, or tile roof re-paper, in LA & Orange County: new underlayment under your existing tiles, reset to keep your look. Free roof evaluation.',
       image: '/images/tile-lift-off-and-reset-drone-view.webp',
+      cardImage: '/images/tile-lift-and-relay-crew-stacking-tiles-drone-view.webp', // owner, November 10 2026: the card's photo on /roof-replacement/ (and the tile hub); the page keeps its own hero
       imageAlt: 'Aerial view of tiles lifted off a roof during a tile lift and relay, exposing the underlayment',
       hero: {
         intro: 'Tile lift & relay keeps your roof’s look. Many roofers in Los Angeles call it a tile roof re-paper. We lift your tiles, replace the worn underlayment beneath them and reset the same tiles in their original pattern. Worn battens and flashings are renewed; only cracked or broken tiles are replaced. That’s our *SecondLife* Tile Reset, across Los Angeles and Orange County.',

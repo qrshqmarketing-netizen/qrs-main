@@ -39,6 +39,7 @@ export const COMMERCIAL_SERVICES = [
       { q: 'Will you need access inside the building?', a: 'Sometimes. Seeing where water shows up inside helps us trace a leak, so we may ask to look at a ceiling or the area under a drain. Most repair work happens on the roof, and we’ll arrange any interior visit with you ahead of time.' },
       { q: 'Can you send the repair details to our owner or tenants?', a: 'Yes. Along with the written scope, you get before-and-after photos and a plain-English note on what failed and what we did. It’s easy to forward to ownership, file with your building records or share with the tenant who reported the leak.' },
       { q: 'How can we keep the next leak from happening?', a: 'Most commercial leaks start at details that wear gradually, like a drain that collects debris or sealant that dries out in the sun. Scheduled [commercial roof maintenance](/commercial-roofing/maintenance/) catches those early and ends each visit with a photo report. If a repair is due, you’ll see a written price first.' },
+      { q: 'Our roof was patched before and still leaks. What will you do differently?', a: 'Start where the water gets in, not where it shows up. On a commercial roof that is often a drain, a curb flashing, a seam or a penetration some distance from the wet ceiling tile. You get photos of the source and of any earlier patch that didn’t hold, and a written scope and price before any repair.' },
     ],
     related: ['/commercial-roofing/replacement/', '/commercial-roofing/maintenance/', '/roof-repair/emergency/'],
   },
@@ -54,6 +55,7 @@ export const COMMERCIAL_SERVICES = [
     metaTitle: 'Commercial Roof Replacement & Installation in Los Angeles', // owner, November 3 2026 (keyword list)
     metaDescription: 'Commercial roof replacement in LA & Orange County: a roofer-led survey, the right low-slope system and phased work that keeps you open. Request an estimate.',
     image: '/images/flat-roof-replacement-tear-off-drone-view.webp',
+    cardImage: '/images/commercial-roof-replacement-tear-off-overhead-drone-view.webp', // owner, November 10 2026: the card's photo on /roof-replacement/ (and the commercial hub); the page keeps its own hero
     imageAlt: 'Commercial roof replacement in Los Angeles: flat roof aerial view, with the old roofing stripped back',
     heroNotes: [`Los Angeles commercial roofing contractor · CSLB #${BUSINESS.license}`, 'Serving LA, Orange County & Southern California', 'Roofer-led roof survey', 'Written scope and price before any work'],
     // A short section after "How we replace a commercial roof" (ServicePage `about`)
@@ -90,6 +92,7 @@ export const COMMERCIAL_SERVICES = [
       { q: 'Will tenants and customers be affected during the replacement?', a: 'Your building stays open during the work. We phase the replacement by roof section and settle noise, access, staging and delivery times with you in advance, so you can give tenants and staff dates for each phase.' },
       { q: 'Can a large roof be replaced in stages?', a: 'Yes. Big roofs are divided into sections and replaced in a planned order, and phases can be spread across budget cycles when that fits your plans. Our [warehouse roofing](/commercial-roofing/warehouses/) page shows how we approach long, flat spans.' },
       { q: 'How do we look after the new roof?', a: 'Keep drains clear and have the roof checked on a schedule, especially ahead of the rainy season and after other trades work up there. Our [commercial roof maintenance](/commercial-roofing/maintenance/) service handles both, with a photo report after each visit.' },
+      { q: 'What happens if rain comes in the middle of a commercial reroof?', a: 'We replace a commercial roof in sections, so only part of it is open at a time, and when rain is forecast that section is protected with temporary cover when needed. Work continues once it is dry, and the schedule shifts with it; you or your site contact hear about any change.' },
     ],
     related: ['/commercial-roofing/repair/', '/commercial-roofing/maintenance/', '/residential-roofing/flat-roofing/replacement/'],
   },
@@ -104,6 +107,7 @@ export const COMMERCIAL_SERVICES = [
     metaTitle: 'TPO Roofing in Los Angeles & Orange County',
     metaDescription: 'TPO roofing in Los Angeles & Orange County: a reflective single-ply membrane for commercial flat roofs, seams welded, work phased so you stay open. Roof survey.',
     image: '/images/home-services-commercial-flat-roof-drone-view.webp',
+    cardImage: '/images/commercial-low-slope-roof-install-crew-drone-view.webp', // owner, November 10 2026: the card's photo on /roof-replacement/ (and the commercial hub); the page keeps its own hero
     imageAlt: 'Aerial view of a white low-slope commercial roof',
     hero: {
       intro:
@@ -187,6 +191,7 @@ export const COMMERCIAL_SERVICES = [
       { q: 'Can other contractors’ rooftop work cause leaks?', a: 'It can. HVAC service, sign installs and new equipment can leave behind damaged flashing, open penetrations or dropped screws that end up in the drains. A check after that work catches the damage before the next rain finds it.' },
       { q: 'Can you inspect a commercial roof before we buy or lease the building?', a: 'Yes. A roofer-led survey shows the roof’s condition in photos, so any repair or replacement needs are part of your decision instead of a surprise later. Learn more about our [roof inspections](/roof-inspection/).' },
       { q: 'What happens if an inspection finds a leak or damage?', a: 'We show you the photos, explain what we found and give you a written scope and price for the fix. You decide whether and when to go ahead, and the work gets the same before-and-after photos as any [commercial roof repair](/commercial-roofing/repair/).' },
+      { q: 'Can one maintenance plan cover several buildings?', a: 'Yes. Each building keeps its own visit schedule and its own photo report, so you can compare the condition of every roof and plan repairs and budgets across all of them.' },
     ],
     related: ['/roof-maintenance-plans/', '/commercial-roofing/repair/', '/commercial-roofing/replacement/'],
   },
