@@ -77,7 +77,7 @@ export default async function HomePage() {
         <div className="qh-scope">
           <QhHero
             where={`Family-owned · Licensed since ${new Date(BUSINESS.licenseSince).getUTCFullYear()}`}
-            title="Residential & Commercial Roofing Contractor"
+            title="Trusted Los Angeles Residential & Commercial Roofing Contractor"
             text={HERO_TEXT}
             checks={HOME_HERO.points}
             visual={false}
