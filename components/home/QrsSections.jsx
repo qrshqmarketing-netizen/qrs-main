@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import HeroVideo from '@/components/widgets/HeroVideo';
 import Link from 'next/link';
 import EstimateForm from '@/components/sections/EstimateForm';
 import Rich from '@/components/ui/Rich';
@@ -31,11 +32,19 @@ export const Check = () => (
 const BTN = { gold: 'qh-btn-sun', plum: 'qh-btn-plum', line: 'qh-btn-ghost' };
 
 // Hero: dark blue gradient, an optional breadcrumb trail (sub pages), the H1, one line, two buttons, check points and the exploded roof layers
-export function QhHero({ crumbs, where, title, outcome, text, checks = [], cta, actions, visual, badges = false, layers = ['Shingle, tile or flat roof', 'New underlayment', 'Deck, inspected and secured'], lang = 'en' }) {
+// background: { poster, alt, sources } puts a photo with a muted looping video over it (HeroVideo: from 901px only, after load; the photo is the
+// first paint and the fallback) behind the hero; visual={false} leaves the right-hand visual out (the home page, owner, November 9 2026)
+export function QhHero({ crumbs, where, title, outcome, text, checks = [], cta, actions, visual, background, badges = false, layers = ['Shingle, tile or flat roof', 'New underlayment', 'Deck, inspected and secured'], lang = 'en' }) {
   const T = (x, v) => th(lang, x, v);
   cta = cta || T('Book a free roof evaluation');
   return (
-    <section className="qh-hero" aria-labelledby="qh-h1">
+    <section className={`qh-hero${background ? ' qh-hero-media' : ''}`} aria-labelledby="qh-h1">
+      {background && (
+        <div className="qh-hero-bg">
+          <Image src={background.poster} alt={background.alt || ''} fill priority sizes="100vw" quality={70} />
+          {background.sources && <HeroVideo sources={background.sources} />}
+        </div>
+      )}
       <div className="qh-wrap qh-hero-in">
         <div>
           {crumbs ? (
@@ -79,7 +88,7 @@ export function QhHero({ crumbs, where, title, outcome, text, checks = [], cta, 
             ))}
           </ul>
         </div>
-        {visual || (
+        {visual === false ? null : visual || (
         <div className="qh-stack" aria-hidden="true">
           <div className="qh-layer qh-l-deck" />
           <div className="qh-layer qh-l-under" />

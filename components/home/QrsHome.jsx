@@ -40,6 +40,17 @@ const PROGRAM = [
   { title: 'Long-range budget planning', text: 'Clear scopes your board can plan around for the years ahead.', icon: <><rect x="3" y="4" width="18" height="17" rx="2" /><path d="M3 9h18M8 2v4M16 2v4M8 14l2.5 2.5L16 12" /></> },
 ];
 
+// Home hero background (owner, November 9 2026): the final cut of the "Need a Roof" reel (home-hero-final.mp4, 4K source) (truck, tear-off, underlayment, new shingles, the yard sign), silent,
+// 1600x900, VP9 WebM with an H.264 fallback; its first frame is the poster photo (phones and tablets keep the photo, see HeroVideo)
+export const HERO_BACKGROUND = {
+  poster: '/images/home-hero-final-poster.webp',
+  alt: 'A Quality Roofing Specialists truck parked at a job site',
+  sources: [
+    { src: '/videos/home-hero-final.webm', type: 'video/webm' },
+    { src: '/videos/home-hero-final-h264.mp4', type: 'video/mp4' },
+  ],
+};
+
 // `lang` (owner, November 6 2026): the Spanish home page at /es/ renders this too; every English text goes through `th` (data/i18n/esHome.js, then
 // data/i18n/es.js), so the English page is unchanged and a missing Spanish text shows in English
 const COUNT_WORDS = { en: ['no', 'one', 'two', 'three', 'four', 'five', 'six'], es: ['ninguna', 'una', 'dos', 'tres', 'cuatro', 'cinco', 'seis'] };
@@ -49,7 +60,7 @@ export default function QrsHome({ heroText, faqs = [], posts = [], projects = []
   const tr = (list, keys) => list.map((it) => ({ ...it, ...Object.fromEntries(keys.map((k) => [k, T(it[k])])) }));
   return (
     <main id="top" className="qh" {...(lang === 'es' && { lang: 'es-MX' })}>
-      <QhHero lang={lang} where={T('Family-owned · Licensed since {year}', { year: new Date(BUSINESS.licenseSince).getUTCFullYear() })} title={h1 || T(HOME_HERO_H1)} text={heroText} checks={HERO_ANNOTATIONS.home.slice(0, 3).map((c) => T(c))} />
+      <QhHero lang={lang} where={T('Family-owned · Licensed since {year}', { year: new Date(BUSINESS.licenseSince).getUTCFullYear() })} title={h1 || T(HOME_HERO_H1)} text={heroText} checks={HERO_ANNOTATIONS.home.slice(0, 3).map((c) => T(c))} visual={false} background={HERO_BACKGROUND} />
       <QhTrust lang={lang} />
       {/* Google, BBB and Yelp logos linking to our profiles (owner, November 6 2026) */}
       <TrustLogos lang={lang} />

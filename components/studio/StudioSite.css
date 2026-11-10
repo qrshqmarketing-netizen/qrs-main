@@ -448,15 +448,15 @@ body.studio-site main :is(h4,h5,h6){font-size:clamp(24px,2vw,30px)!important;lin
 body.studio-site main .post :is(h2){font-size:clamp(34px,3.2vw,46px)!important}
 body.studio-site main .post :is(h3){font-size:clamp(27px,2.3vw,34px)!important}
 /* Small labels set in the heading font, sized up to read in a condensed face */
-body.studio-site main.qh .qh-trust strong{font-size:23px;font-weight:400}
-body.studio-site main.qh .qh-svc-list .name{font-size:clamp(24px,2.3vw,28px);font-weight:400}
-body.studio-site main.qh .qh-proj-title{font-size:clamp(26px,2.4vw,36px);font-weight:400}
-body.studio-site main.qh .qh-post-title{font-size:clamp(26px,2.2vw,32px);font-weight:400}
+body.studio-site :is(main.qh,main .qh-scope) .qh-trust strong{font-size:23px;font-weight:400}
+body.studio-site :is(main.qh,main .qh-scope) .qh-svc-list .name{font-size:clamp(24px,2.3vw,28px);font-weight:400}
+body.studio-site :is(main.qh,main .qh-scope) .qh-proj-title{font-size:clamp(26px,2.4vw,36px);font-weight:400}
+body.studio-site :is(main.qh,main .qh-scope) .qh-post-title{font-size:clamp(26px,2.2vw,32px);font-weight:400}
 body.studio-site .sv-rel b{font-size:26px;font-weight:400}
 body.studio-site .sv-tile-body b{font-size:25px;font-weight:400}
 /* Hero excerpts a step smaller everywhere (owner, November 9 2026): the new-theme hero line (location and company heroes use the same QhHero),
    the studio hero's intro and the older location/company hero lines */
-body.studio-site main.qh .qh-hero-text{font-size:clamp(16px,1.2vw,17.5px);line-height:1.6;max-width:56ch}
+body.studio-site :is(main.qh,main .qh-scope) .qh-hero-text{font-size:clamp(16px,1.2vw,17.5px);line-height:1.6;max-width:56ch}
 body.studio-site .hero.hero.hero .hero-sub{font-size:clamp(16px,1.2vw,17.5px)!important}
 /* Product names inside headings (owner, November 9 2026): the heading font in italics instead of the serif italic, so "Roof Repair with
    LeakRescue" reads as one line of type; League Gothic has no italic, so the browser slants it. The ® is small and raised. Product names in body

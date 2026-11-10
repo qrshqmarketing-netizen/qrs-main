@@ -136,11 +136,11 @@ export const GOOGLE_REVIEWS = { count: 281, asOf: '2026-11-03' };
 // "Roofer" searches (owner, October 30 2026, from Search Console, last 28 days: "roofer los angeles" 179 impressions at 12, "roofers los angeles"
 // 164 at 17, "roofers in los angeles" 145 at 18, "roofer in los angeles" 140 at 11, plus licensed / best / quality roofers): the title leads with
 // "Roofers in Los Angeles" and keeps "Roofing Contractor" (the home keyword) and both counties. 59 characters, no brand suffix.
-export const HOME_TITLE = 'Quality Roofing Specialists | Residential & Commercial Roofing Contractor'; // owner, November 6 2026 (shown as is: app/page.js sets it as `absolute`)
+export const HOME_TITLE = 'Roofing Contractor Los Angeles CA | Roofers Near Me'; // owner, November 3 2026 (position tracking report); restored November 10 2026 with the studio home
 export const HOME_H1 = 'Roofing Contractor in Los Angeles & Orange County';
 // "Licensed roofers" for those searches; the review count answers the "best roofers" ones without claiming "best". 149 characters.
 export const HOME_DESCRIPTION = // rolled back to the October 28 wording (owner, November 2 2026)
-  'QRS is a family-owned residential and commercial roofing contractor: roof repair, replacement and inspections. Homes start with a free roof evaluation.'; // owner, November 6 2026: no place names in the meta of the redesigned pages (city names only on the location pages)
+  'Roofing company near you in Los Angeles & Orange County: QRS is a family-owned roofing contractor. Roof repair, replacement and a free roof evaluation.'; // owner, November 3 2026 (keyword list); restored November 10 2026
 
 // The number of Google reviews across our three listings (281 on November 3 2026). Updated every day by lib/googleReviewCount.js once
 // GITHUB_TOKEN is set in Vercel (until then, update it by hand); it shows on the
