@@ -465,3 +465,6 @@ body.studio-site :is(h1,h2,h3,h4,h5,h6,.qh-h2) .product-brand{font-family:var(--
 body.studio-site :is(h1,h2,h3,h4,h5,h6,.qh-h2) .product-brand sup{font-size:.34em;vertical-align:super;line-height:0;font-family:var(--font-text),sans-serif;font-style:normal}
 body.studio-site :is(h3,h4,h5,h6) .product-brand{text-transform:none!important}
 body.studio-site :is(h1,h2,h3,h4,h5,h6,.qh-h2) .product-brand sup{margin-left:.14em}
+/* Every hero heading and section heading in capitals, the studio home page's too (owner, November 10 2026): main.studio's own heading rule
+   in Studio.css set them back to normal case, so this rule is a step more specific. */
+body.studio-site main :is(h1,h2),body.studio-site main .qh-h2{text-transform:uppercase}
