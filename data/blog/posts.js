@@ -23,6 +23,123 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // Stopping a leaking roof now (owner, November 10 2026, from the owner's team's draft): keyword "stop a leaking roof". It sits next to
+  // stop-a-roof-leak ("stop a roof leak", five temporary fixes) and how-to-find-a-roof-leak, and links to both: this one is the whole sequence
+  // (contain, trace from the attic, temporary fix, repair by roof type, repair or replace). Changed to the site's rules: no prices or cost
+  // ranges (the draft's DIY and contractor costs are gone), no other companies named as sources, no tarp lifespan in days, no underlayment age
+  // in years, no "in-house" roofers, no mold timeline; SecondLife is the tile lift & relay as the service page describes it; outside links kept
+  // only to OSHA. Picture: the owner's image.
+  {
+    slug: 'how-to-stop-a-leaking-roof-now',
+    title: 'How to Stop a Leaking Roof Now: Roofer-Led Emergency Steps and Temporary Fixes',
+    keyword: 'stop a leaking roof',
+    topics: ['leak', 'emergency', 'repair', 'storm', 'tile', 'flat', 'shingle'],
+    metaTitle: 'How to Stop a Leaking Roof Now: Emergency Steps',
+    metaDescription:
+      'How to stop a leaking roof now: contain the water, trace the leak from the attic, pick the right temporary fix, then repair it right for your roof type.',
+    datePublished: '2026-11-10',
+    dateModified: '2026-11-10',
+    excerpt:
+      'Water coming in? The order that works: contain it inside, trace the leak from the attic, put the right temporary fix in place, then get a written plan for the permanent repair.',
+    image: '/images/blog/how-to-stop-a-leaking-roof-now.webp',
+    imageAlt: 'Stop roof leaks now: a homeowner on the phone catching water from a leaking ceiling in a bucket, with steps to call a roofer, make temporary fixes and protect your home',
+    intro: [
+      'To stop a leaking roof now, do three things in this order: contain the water inside with buckets and plastic sheeting, go into the attic with a flashlight to find the highest wet spot before anyone touches the roof, and put a temporary tarp or patch in place to keep more water out. That order limits the damage on almost any roof, and it makes the permanent repair smaller and simpler.',
+      'A winter storm, a cracked pipe boot or a failed step flashing can turn a faint ceiling stain into soaked drywall and insulation quickly when nobody acts. We are Quality Roofing Specialists, a licensed roofing contractor (CSLB #1061942) working on homes and buildings across Los Angeles and Orange County, from emergency tarps to drone roof evaluations. This guide covers how to spot and trace the leak, which temporary fix to use, how each roof type is repaired, and how to decide between repair and replacement.',
+    ],
+    sections: [
+      {
+        heading: 'Key Takeaways',
+        blocks: [
+          {
+            list: [
+              '**Start in the attic.** The ceiling stain is rarely right under the opening; water runs downslope, so follow wet insulation and dark streaks uphill toward the ridge.',
+              '**A tarp is the best temporary fix** for broad or uncertain damage, when it is tucked under the course above the damage and anchored with boards, not loose weights.',
+              '**Tile leaks are often underlayment leaks.** Tiles that look fine from the ground can sit on underlayment that no longer sheds water.',
+              '**Waiting costs more.** A slow leak spreads into insulation, drywall and decking, and a small repair becomes a larger one.',
+              '**Drone footage finds what a ladder misses**, documenting slopes, valleys and penetrations before anything is opened up.',
+              '**Get the scope and price in writing** before any permanent work begins.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Warning Signs That Your Roof Is Leaking',
+        blocks: [
+          'Most homeowners see it from inside first: a water stain on the ceiling, bubbling or peeling paint, damp drywall or a drip during rain. The stain is almost never where the water gets in. Water enters the roof at a high point, runs along the underlayment or a rafter, and drips at a low point, often several feet away.',
+          'Notice when the stain shows up. If it appears only during or after rain, the roof is the likely source. If it appears in dry weather, the cause may be an HVAC condensate line, plumbing or attic condensation, and ruling that out first can save you a service call.',
+          'Before anyone climbs a ladder, look in the attic with a good flashlight: wet or matted insulation, dark streaks along the rafters, rusty nail tips, soft or stained decking, or daylight showing through. A leak that has only reached the insulation is a much smaller job than one that has soaked the framing or the drywall below. Our guide on [how to find a roof leak](/blog/how-to-find-a-roof-leak/) goes through the search step by step.',
+        ],
+      },
+      {
+        heading: 'How to Trace a Roof Leak to Where It Gets In',
+        blocks: [
+          'Water goes in high and comes out low, so start at the ceiling stain and work toward the highest wet mark you can find in the attic. During or just after rain, follow the wet insulation, streaks or damp sheathing uphill toward the ridge. The highest wet spot is usually close to where the water is getting in.',
+          'Most home leaks start at a handful of places: step flashing at walls and chimneys, cracked or hardened pipe boots, valley flashing that was lapped the wrong way, and missing or curled shingles. If you can’t find the source while it rains, a hose test on a dry day helps. One person wets one small area of the roof at a time, starting below the suspected spot and working up, while a second person watches from the attic and calls out when water appears. Give each area several minutes before moving on.',
+          'Know where to stop. If the roof is steep, wet or fragile, or the source is still unclear after the attic check, call a roofer instead of searching from the roof. Walking an uncertain roof can damage it and is a real [fall hazard](https://obis.osha.gov/Publications/reducing-falls-roof-repair-factsheet.html).',
+          { pov: 'The attic tells you more than the ceiling. When a homeowner can tell us where the highest wet spot is, we start our search in the right place, and the repair is usually smaller. When nobody has looked, we look there first, before we touch the roof.' },
+        ],
+      },
+      {
+        heading: 'Emergency Steps to Stop Water Coming In',
+        blocks: [
+          'Start inside. Put buckets under the drip, cover furniture and floors with plastic sheeting, and turn off the breaker for any light or outlet the water is near. Wet drywall and insulation keep getting worse after the drip stops, so containment is not optional.',
+          'Then pick a temporary fix, from most to least reliable:',
+          {
+            list: [
+              '**A heavy-duty tarp.** Tucked under the shingle course above the damage and held down with 2x4 boards rather than loose weights, it is the most dependable stopgap for broad or uncertain damage, until the permanent repair.',
+              '**Wet-patch roofing cement.** Good for small gaps around flashing or nail heads, and it sticks to damp surfaces, but it won’t hold back running water or large tears.',
+              '**Butyl or flashing tape.** Works on small punctures and seams when the surface is reachable and fairly dry.',
+            ],
+          },
+          'If the roof is steep, high or wet, leave the tarp to a roofer. We take emergency calls after hours and on weekends and put tarps in place when they are needed; see [emergency roof repair](/roof-repair/emergency/). Our article on [safe ways to stop a roof leak until a roofer arrives](/blog/stop-a-roof-leak/) and our guide to [temporary roof repair options](/blog/temporary-roof-repair-options/) cover each fix in more detail.',
+          { pov: 'A temporary fix is there to keep the house dry, not to become the repair. We would rather see a tarp done right than a layer of cement over a spot nobody has diagnosed, because cement in the wrong place can hide where the water is really getting in.' },
+        ],
+      },
+      {
+        heading: 'How a Leaking Roof Is Repaired, by Roof Type',
+        blocks: [
+          { h3: 'Asphalt shingles and valleys' },
+          'For a damaged shingle, the tabs above are lifted carefully, the damaged shingle and its exposed nails are removed, a matching shingle is slid in and nailed to the manufacturer’s pattern, and the tabs are sealed back down. Valleys are more involved: because the water gets in well above the stain, the shingles on both sides come off, the underlayment and flashing are replaced with the laps running the right way, and both sides are re-shingled with nails kept out of the channel where the water runs. A valley built wrong leaks again, which is why it is a job for a licensed roofer. See [shingle roof repair](/residential-roofing/shingle-roofing/repair/).',
+          { h3: 'Tile roofs and worn underlayment' },
+          'Many tile roof leaks have nothing to do with broken tiles. The tiles look fine from the street, but the underlayment beneath them has worn out and no longer sheds water. Signs: leaks in heavy or wind-driven rain with no visible tile damage, leaks that come back in the same place after tiles are swapped, a musty attic, and brittle or crumbling felt when a tile is lifted.',
+          'When the tiles are sound, our *SecondLife* [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/) keeps them: we lift them, replace the underlayment, battens and flashings, and relay your tiles, for less than a new tile roof. For single cracked tiles, see [tile roof repair](/residential-roofing/tile-roofing/repair/).',
+          { h3: 'Flat roofs and membrane patches' },
+          'The damaged area is cleaned and dried, primed with a product made for the membrane, and patched with a piece that reaches at least two inches past the damage on every side, with rounded corners so it doesn’t peel. The patch is pressed from the center out and rolled to push out air, and its edges are sealed with a compatible lap sealant; TPO and PVC membranes are heat-welded instead. The most common mistake on a flat roof is coating over standing water or wet insulation, which traps the moisture and speeds up the failure. See [flat roof repair](/residential-roofing/flat-roofing/repair/).',
+        ],
+      },
+      {
+        heading: 'Doing It Yourself vs. Hiring a Licensed Roofer',
+        blocks: [
+          'On a dry, low, one-story roof with one clearly found problem, a handy homeowner can replace a few shingles or reseal a small flashing gap. A repair that fails has no workmanship warranty, though, and the savings disappear when it has to be done again.',
+          'Call a licensed roofer for steep or two-story roofs, tile and flat roofs, chimney and wall flashing, valleys, soft or rotted decking, and any leak whose source is still unclear after the attic check. What a repair costs depends on what failed, the roof type, access and what turns up underneath; our guide to [roof repair cost](/blog/roof-repair-cost/) explains what moves the price.',
+        ],
+      },
+      {
+        heading: 'Repair or Replace? What Your Roof Actually Needs',
+        blocks: [
+          'A targeted repair stops making sense when the roof is near the end of its life, leaks show up in several places, the underlayment has failed across the roof, the decking is soft in more than one area, or earlier repairs haven’t lasted. At that point more repairs mostly delay a replacement.',
+          'A written assessment settles it. Our [free roof evaluation](#roof-check) sends a roofer with a drone to document the damage with footage and photos, and you get a plain-English answer and a written scope and price before any work begins. If the leak is isolated, the scope covers the repair. If the roof needs replacing, the same documentation helps with an insurance claim or an HOA board’s reserve request; see our guide to [roof insurance claim help](/blog/roof-insurance-claims-california/).',
+          { pov: 'One leak is rarely a reason for a new roof. If a repair will do, we say so and put it in writing. When the wear is roof-wide, we show you the photos and explain why, so you decide with the evidence in front of you.' },
+        ],
+      },
+    ],
+    faqs: [
+      { q: 'What is the first thing to do when my roof is leaking?', a: 'Contain the water inside: buckets under the drip, plastic over furniture and floors, and the breaker off for any light or outlet the water is near. Then check the attic for the highest wet spot, and call a roofer if the roof is steep, wet or the source isn’t clear.' },
+      { q: 'How long will a tarp protect my roof?', a: 'A tarp is a stopgap, not a repair. Tucked under the course above the damage and anchored with boards, it keeps water out until the permanent repair, as long as wind doesn’t lift it. Check it after every storm, and book the repair rather than leaving the tarp in place for the season.' },
+      { q: 'Is it safe to go into the attic and trace the leak myself?', a: 'Yes, if you step only on the framing or a walkway, not between the joists, and use a good flashlight. That attic check is the best first step. If the roof is steep, wet or fragile, or the source is still unclear afterward, call a roofer instead of searching from the roof.' },
+      { q: 'Can drone footage and a written scope help with an insurance claim?', a: 'Yes. Our roofer-led drone evaluation gives you footage, photos and a written scope and price, which your adjuster can use to see the damage. Your insurer decides what is covered; our guide to [roof insurance claim help](/blog/roof-insurance-claims-california/) explains the process.' },
+      { q: 'What should I do after a tarp or patch is in place?', a: 'Have a licensed roofer find the source and put the permanent repair in writing before any work begins. The written scope helps you decide between repair and replacement and keeps a record for your warranty or insurance.' },
+      { q: 'Do you handle emergency leaks after hours?', a: 'Yes. We take emergency calls after hours and on weekends and put tarps in place when they are needed. Call [(310) 340-1643](tel:+13103401643), or see [emergency roof repair](/roof-repair/emergency/).' },
+    ],
+    closing: {
+      heading: 'Get the Leak Fixed Before the Next Rain',
+      blocks: [
+        'The order holds for every roof: contain the water, trace it from the attic, put the right temporary fix in place, and get a roofer’s written assessment before paying for materials or labor. Call [(310) 340-1643](tel:+13103401643) or [request a free roof evaluation](#roof-check): a roofer finds the real source, shows you the photos and puts the repair and the price in writing.',
+      ],
+    },
+    related: ['/roof-repair/emergency/', '/roof-repair/', '/residential-roofing/tile-roofing/lift-and-relay/', '/residential-roofing/flat-roofing/repair/'],
+  },
   // Roof repair cost (owner, November 9 2026, from the HomeAdvisor analysis: cost pages are where the lead-generation sites win roofing searches,
   // and the site had no page for "roof repair cost"). No dollar figures (owner: articles describe cost in general terms); it explains what moves
   // the price, the kinds of repairs, when a repair stops making sense, and sends readers to the free roof evaluation for the written price.
