@@ -6,7 +6,7 @@ export const ES_HOME_META = {
   title: 'Contratista de Techos en Los Ángeles y el Condado de Orange',
   description:
     'QRS es un contratista de techos familiar en Los Ángeles y el Condado de Orange: reparación y reemplazo de techos, con una evaluación gratuita del techo.',
-  h1: 'Contratista de techos residenciales y comerciales',
+  h1: 'Contratista de techos residenciales y comerciales de confianza en Los Ángeles', // owner, November 10 2026: as the English "Trusted Los Angeles …"
   heading: 'Techos bien hechos, desde la __base__.',
   // carries the keyword ("contratista de techos") in the first 100 words, as the English line does
   text: 'Techos bien hechos, desde la base. Como contratista de techos familiar, un techador revisa su techo primero, usted recibe fotos y un precio por escrito antes de cualquier trabajo, y las instalaciones tienen nuestra garantía de mano de obra de 10 años (llame para más detalles).',
