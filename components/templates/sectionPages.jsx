@@ -17,7 +17,6 @@ import {
 } from '@/data/content';
 import { pageMetadata } from '@/lib/pages';
 import HubPage from './HubPage';
-import QhHubPage from './QhHubPage';
 import { QhDrainPlan, QhLeakTrace, QhTileLift, QhReroof, QhShingleColors } from '@/components/home/QrsSections';
 import { ROOF_COLORS, SHOW_ROOF_COLORS } from '@/data/roofColors';
 import ServicePage from './ServicePage';
@@ -54,7 +53,7 @@ export function SectionHub({ section, extra }) {
   const flat = section.href === '/residential-roofing/flat-roofing/';
   // Tile roofing too: a band of clay tiles lifting off the underlayment (owner, November 6 2026)
   const tile = section.href === '/residential-roofing/tile-roofing/';
-  const Template = isCommercial(section) || shingle || flat || tile ? QhHubPage : HubPage;
+  const Template = HubPage; // the new-theme hero only (HubQhHero), on the earlier layout (owner, November 10 2026)
   return (
     <Template
       hub={section.hub}
@@ -146,7 +145,7 @@ export function ServiceHub({ page, actions }) {
   const repair = page.href === '/roof-repair/';
   const replacement = page.href === '/roof-replacement/';
   const cards = page.cards.map(cardFor).filter(Boolean);
-  const Template = repair || replacement ? QhHubPage : HubPage;
+  const Template = HubPage; // the new-theme hero only (HubQhHero), on the earlier layout (owner, November 10 2026)
   const short = (c) => ({ label: c.title.replace(/\s*·.*$/, '').replace(/ Roof (Repair|Replacement)$/, '').replace(/^Emergency.*/, 'Emergency'), href: c.href });
   return (
     <Template

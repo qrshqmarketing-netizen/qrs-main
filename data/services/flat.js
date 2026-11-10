@@ -4,25 +4,26 @@
 export const FLAT_CONTENT = {
   hub: {
     keyword: 'flat roofing',
-    metaTitle: 'Flat Roofing | Quality Roofing Specialists', // owner, October 22 2026 (the H1 stays "Flat Roofing in Los Angeles & Orange County")
-    metaDescription: 'Residential flat roofing: modified bitumen and low-slope roofs for homes, ADUs, garages and patio covers, with drains, laps and flashings detailed.',
+    metaTitle: 'Residential Flat Roofing in Los Angeles & Orange County', // owner, October 22 2026 (the H1 stays "Flat Roofing in Los Angeles & Orange County")
+    metaDescription: 'Residential flat roofing in Los Angeles & Orange County: modified bitumen roofs for homes, ADUs, garages and patio covers, planned around drainage.',
     // The hero's check points on this page (Hero `annotations`), in place of the home set
-    heroNotes: ['Licensed flat roof contractor · CSLB #1061942', 'Free roof evaluation', 'Written price before any work', '10-year workmanship warranty (call for details)'],
+    heroNotes: ['Licensed flat roof contractor serving LA & Orange County · CSLB #1061942', 'Free roof evaluation', 'Written price before any work', '10-year workmanship warranty (call for details)'],
     // A card on this hub reads differently from the same page's card elsewhere (menus and the service-first hubs keep `title` and `card`)
     cardOverrides: {
-      replacement: { title: 'Flat Roof Replacement · *FlatGuard*', text: 'Flat roof replacement: a full tear-off down to the deck and a new modified bitumen or low-slope system, planned around how your roof drains.' },
+      replacement: { title: 'Flat Roof Replacement in Los Angeles, CA · *FlatGuard*', text: 'Flat roof replacement in Los Angeles, CA: a full tear-off down to the deck and a new modified bitumen or low-slope system, planned around how your roof drains.' },
     },
-    projectMore: 'View this flat roof project',
+    projectMore: 'View this Los Angeles flat roof project',
     hero: {
       heading: 'Flat Roofing Services · *FlatGuard*',
-      intro: 'Flat roofing built so water leaves the roof. Most flat roof leaks start where water sits: a low spot, a blocked drain or an open seam. We detail every drain, lap and flashing on homes, ADUs, garages and patio covers, and our *FlatGuard* Roof System covers low-slope replacements and new installs. Start with a free roof evaluation.',
+      intro: 'Flat roofing built so water leaves the roof. New installs, replacements and repairs for modified bitumen and other low-slope roofs on homes, ADUs, garages and patio covers across Los Angeles and Orange County. Every drain, seam and flashing is detailed. Our *FlatGuard* Roof System covers low-slope replacements and new installs. Start with a free roof evaluation.',
       highlights: ['Modified bitumen and low-slope systems', 'Drains, scuppers and parapets detailed', 'Written scope and price before work starts'],
     },
     overview: {
       heading: 'Flat Roofs Need Their Own Kind of Detail',
       paragraphs: [
-        'A flat roof is really a low-slope roof, and it still has to drain. It needs a gentle, deliberate slope that carries water to a drain, a scupper (an opening through the parapet) or a gutter. When that slope is missing or a drain is blocked, water ponds, the sun bakes the membrane, and seams and flashings start to give way. QRS is a flat roof specialist for the low-slope roofs on homes, ADUs, garages, patio covers and the flat sections behind parapet walls.',
-        'We install **modified bitumen and other low-slope systems**, chosen for your roof’s condition, how it drains and what sits on it, from HVAC equipment to skylights. The advice comes from a roofer on your roof, not a salesperson at your kitchen table. The [free roof evaluation](#roof-check) photo-documents the membrane, seams, drains and flashings and ends with one next step. You get a written scope and price before any work, and installs carry our 10-year workmanship warranty (call for details).',
+        'QRS is a flat roof specialist in Los Angeles, California, and Orange County: our flat roofing covers new installs, replacements and repairs for low-slope roofs on homes, ADUs, garages and patio covers. Low-slope roofs are everywhere in Southern California: on mid-century and modern homes, over garages, patio covers and room additions, on new backyard ADUs, and tucked behind the parapet walls of Spanish-style houses. Every one of them still has to drain. That takes a gentle, deliberate slope that carries rainwater to a drain, a scupper (an opening through the parapet) or a gutter instead of letting it sit. When that slope is missing or a drain is blocked, water ponds, the sun bakes the membrane, and seams and flashings start to give way.',
+        'We install **modified bitumen and other low-slope systems**, chosen for your roof’s condition, how it drains and what sits on it, from HVAC equipment to skylights. Our advice comes from a roofer on your roof, not a salesperson at your kitchen table. The [free roof evaluation](#roof-check) photo-documents the membrane, seams, drains and flashings, explains the findings in plain English and ends with a clear next step: repair, monitor, maintain or replace. You see a written scope and price before any work begins, and finished installs carry our 10-year workmanship warranty (call for details).',
+        'As Orange County flat roofers, we serve Irvine, Costa Mesa, [Newport Beach](/service-areas/orange-county/newport-beach/), Anaheim, Santa Ana, [Huntington Beach](/service-areas/orange-county/huntington-beach/) and the rest of [Orange County](/service-areas/orange-county/) with the same free roof evaluation, written price and 10-year workmanship warranty (call for details) as our Los Angeles homeowners.',
       ],
     },
     cards: {
@@ -38,12 +39,12 @@ export const FLAT_CONTENT = {
       ],
     },
     faqs: [
-      { q: 'How do I maintain a flat roof?', a: 'Keep the drains, scuppers and gutters clear, especially before the rainy season and after strong winds. Look for water that is still standing a day or two after rain, and keep foot traffic and other trades off the roof unless needed. Have a roofer check the seams, flashings and parapet caps once a year; a [roof maintenance plan](/roof-maintenance-plans/) schedules those visits with a photo report each time.' },
+      { q: 'How do I maintain a flat roof in Los Angeles?', a: 'Keep the drains, scuppers and gutters clear, especially before the rainy season and after Santa Ana winds. Look for water that is still standing a day or two after rain, and keep foot traffic and other trades off the roof unless needed. Have a roofer check the seams, flashings and parapet caps once a year; a [roof maintenance plan](/roof-maintenance-plans/) schedules those visits with a photo report each time.' },
       { q: 'Is a flat roof actually flat?', a: 'No. Unlike steep-slope roofs, which shed water quickly, a flat roof is really a low-slope roof that needs a gentle pitch toward its drains. On a well-built one that slope is often too gentle to notice, but it moves water off the roof. If water still sits in the same spots long after the rain stops, the slope or the drainage needs attention.' },
-      { q: 'What is modified bitumen?', a: 'It’s a tough, asphalt-based roofing membrane with built-in reinforcement, typically installed in layers with overlapping, sealed laps. It handles routine foot traffic and strong sun well, one reason it’s so common on low-slope homes. The right system for your roof still depends on its condition and drainage.' },
+      { q: 'What is modified bitumen?', a: 'It’s a tough, asphalt-based roofing membrane with built-in reinforcement, typically installed in layers with overlapping, sealed laps. It handles routine foot traffic and strong sun well, one reason it’s so common on low-slope homes in Southern California. The right system for your roof still depends on its condition and drainage.' },
       { q: 'Do you work on the flat sections of Spanish-style homes?', a: 'Yes. Many Spanish and Mediterranean homes pair [tile roofing](/residential-roofing/tile-roofing/) with flat sections hidden behind parapet walls, drained by scuppers through the wall. We look at the flat areas, the parapet caps and the wall flashings, not just the tile you can see from the street.' },
-      { q: 'Do you work on flat roofs for commercial buildings?', a: 'Yes. As a flat roof contractor, we also work on the low-slope roofs of offices, shops, warehouses and many other commercial buildings, planned around each building’s condition and drainage. Visit our [commercial roofing](/commercial-roofing/) section for details.' },
-      { q: 'Do you work on flat roofs in my area?', a: 'Our [service area](/service-areas/) page shows every city and county we serve, and its map checks your ZIP code.' },
+      { q: 'Do you work on flat roofs for commercial buildings?', a: 'Yes. As a flat roof contractor in Los Angeles and Orange County, we also work on the low-slope roofs of offices, shops, warehouses and many other commercial buildings, planned around each building’s condition and drainage. Visit our [commercial roofing](/commercial-roofing/) section for details.' },
+      { q: 'Do you work on flat roofs in my part of LA or Orange County?', a: 'We work across Los Angeles County and Orange County, in cities such as Glendale, Torrance, Anaheim, Santa Ana and Huntington Beach as well as Los Angeles itself. Our [service area](/service-areas/) page shows whether your city is on the list.' },
       { q: 'How long does a flat roof last?', a: 'There’s no single answer. The roofing system, how well the roof drains, how much sun it takes and how often it’s maintained all play a part, and water that sits on a flat roof after rain shortens its life. Rather than guessing from the roof’s age, a [free roof evaluation](#roof-check) looks at its actual condition.' },
     ],
   },
@@ -55,13 +56,12 @@ export const FLAT_CONTENT = {
       title: 'Flat Roof Replacement · *FlatGuard*',
       navLabel: 'Roof Replacement',
       card: 'A full tear-off down to the deck and a new modified bitumen or low-slope system, planned around how your roof drains.',
-      // No place names (owner, November 6 2026: city names only on the location pages); problem first, then our process
-      metaTitle: 'Flat Roof Replacement | Quality Roofing Specialists',
-      metaDescription: 'Flat roof replacement down to the deck: damaged decking fixed, a new low-slope system sloped toward the drains, every lap sealed. Free roof evaluation.',
+      metaTitle: 'Flat Roof Replacement in Los Angeles',
+      metaDescription: 'Flat roof replacement in Los Angeles & Orange County: full tear-off to the deck and a new low-slope system planned to drain. Start with a free roof evaluation.',
       image: '/images/flat-roof-replacement-completed-white-membrane.webp',
       imageAlt: 'Aerial view of a completed white flat roof membrane with tile coping',
       hero: {
-        intro: 'Flat roof replacement is about where the water goes. A new surface over a roof that ponds will pond again, so we tear off down to the deck, fix any damaged decking and install a new modified bitumen or other low-slope system planned to drain. That’s our *FlatGuard* low-slope system. It starts with a free roof evaluation.',
+        intro: 'Flat roof replacement, planned around how your roof drains. We tear off down to the deck, fix any damaged decking and install a new modified bitumen or other low-slope system. That’s our *FlatGuard* low-slope system, across Los Angeles and Orange County. It starts with a free roof evaluation.',
         highlights: ['Full tear-off down to the deck', 'Drainage planned into the new roof', '10-Year workmanship warranty (call for details)'],
       },
       // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
@@ -98,24 +98,23 @@ export const FLAT_CONTENT = {
       h1: 'Flat Roof Repair in Los Angeles & Orange County',
       navLabel: 'Roof Repairs',
       card: 'Leaks, blisters, open seams and failed flashings traced to the source, repaired carefully and documented with photos.',
-      // No place names (owner, November 6 2026: city names only on the location pages); problem first, then our process
-      metaTitle: 'Flat Roof Repair | Quality Roofing Specialists',
+      metaTitle: 'Flat Roof Repair Near Me in Los Angeles | Flat Roof Leaks', // owner, November 3 2026 (keyword list)
       // Search Console wording (owner, October 23 2026): "flat roof repair los angeles", "flat roof repair service(s)", "flat roof repairs", "flat roofing
       // experts los angeles", "roof repair specialist los angeles", "flat roof repair contractor". Polyurethane (foam) roofs, Woodland Beach and Delano
       // are not used (not a confirmed system / outside the area).
-      metaDescription: 'Flat roof repair that finds where the water really gets in: open seams, blisters, splits and failed flashings fixed, with photos. Free roof evaluation.',
+      metaDescription: 'Flat roof repair in Los Angeles & Orange County: we trace leaks to the source and fix seams, blisters and flashings, with photos. Book a free roof evaluation.',
       image: '/images/flat-roof-replacement-tear-off-drone-view.webp',
       imageAlt: 'Aerial view of a flat roof with roofing work in progress',
       cardImage: '/images/cta-white-flat-roof-tile-coping-drone-view.webp', // its card on Roof Repair and the flat hub (owner, November 2 2026)
       hero: {
-        intro: 'Flat roof repair has to start at the opening, and on a flat roof that’s rarely above the stain: water can travel under the membrane before it drips. So we check the whole area, find the open seam, blister, split or failed flashing, fix it and show you photos of the problem and the fix.',
+        intro: 'Flat roof repair services that trace each leak to the source. An open seam, a blister, a split or failed flashing: we find it and fix it. A ceiling stain can sit far from the actual leak, so we check the whole area. Photos of the problem and the fix, across Los Angeles County and Orange County.',
         highlights: ['Leaks traced to where water enters', 'Seams, blisters and flashings repaired', 'Photos of the damage and the fix'],
       },
       // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
       story: {
         label: 'Flat roof repair',
         lead: 'Water on a flat roof moves slowly and finds every __weakness__.',
-        text: 'It can travel under the membrane before it drips, so the stain on your ceiling may sit far from the opening. That’s why we check the whole area around a leak, not just the spot above the stain. We handle flat roof repairs on homes, garages, patio covers and additions, from one open seam to a full flat roof leak repair.',
+        text: 'It can travel under the membrane before it drips, so the stain on your ceiling may sit far from the opening. That’s why we check the whole area around a leak, not just the spot above the stain. As flat roofing experts in Los Angeles, we handle flat roof repairs on homes, garages, patio covers and additions across Los Angeles County and Orange County, from one open seam to a full flat roof leak repair.',
         heading: 'How we repair a flat roof',
         principles: [
           { title: 'Check the whole area. Find the opening.', text: 'A roofer works around and upslope of the leak until the cause is found, and photographs it before anything is fixed.', bullets: ['Seams, laps and blisters', 'Parapet caps and wall flashings', 'Drains, scuppers and equipment curbs', 'Vents and skylights'] },
@@ -127,7 +126,7 @@ export const FLAT_CONTENT = {
       faqs: [
         { q: 'Why does my flat roof leak in big storms but not light rain?', a: 'Light rain may drain away before it finds a weak spot, but a heavy storm deepens the water on the roof and pushes it into open laps, cracked flashings and overflowing scuppers. Water that’s still ponding after the storm is a clue that drainage is part of the problem. A [flat roof inspection](/roof-inspection/#flat-roofs) shows you where the water is getting in.' },
         { q: 'Can you fix blisters on a flat roof?', a: 'Yes. Small blisters that are still intact are often left alone and watched, while cracked or growing blisters are cut out and patched. We’ll show you which ones need attention and explain why.' },
-        { q: 'Are you a licensed flat roof repair contractor?', a: 'Yes. QRS is a licensed roofing contractor (see our [service areas](/service-areas/) for where we work). A roofer, not a salesperson, finds the leak, photographs it and gives you a written scope and price before any flat roof repairs start.' },
+        { q: 'Are you a flat roof repair contractor in Los Angeles?', a: 'Yes. QRS is a licensed roofing contractor, and our flat roof repair service covers Los Angeles, the rest of Los Angeles County and Orange County. A roofer, not a salesperson, finds the leak, photographs it and gives you a written scope and price before any flat roof repairs start.' },
         { q: 'The leak is near a wall. Is it the roof or the wall?', a: 'It can be either. On roofs with parapets, water often gets in through cracked parapet caps, gaps in the stucco or failed wall flashings rather than the roof surface itself. We check the parapet from cap to base and tell you exactly where the water is entering.' },
         { q: 'Do you repair flat roofs on garages, patio covers and additions?', a: 'Yes. These smaller low-slope roofs leak for the same reasons as the main roof, usually at the seams, the drainage or the joint where they meet the house. They get the same photo-documented approach as any other repair.' },
         { q: 'What if you find more than one problem?', a: 'We photograph each one and list it in your written scope, so you can decide what to fix now. If the roof is sound overall but has a handful of small issues, a [flat roof tune-up](/roof-maintenance-plans/#tune-up) may cover them in one visit.' },
@@ -141,13 +140,12 @@ export const FLAT_CONTENT = {
       title: 'New Flat Roof Installation · *FlatGuard*',
       navLabel: 'New Installations',
       card: 'New low-slope roofs for ADUs, additions, garages and patio covers, with slope, drains and tie-ins planned from the start.',
-      // No place names (owner, November 6 2026: city names only on the location pages); problem first, then our process
-      metaTitle: 'Flat Roof Installation | Quality Roofing Specialists',
-      metaDescription: 'New flat roof installation for ADUs, additions, garages and patio covers, with slope, drains and tie-ins planned before the first layer. Request an estimate.',
+      metaTitle: 'Flat Roof Installation in Los Angeles',
+      metaDescription: 'New flat roof installation for ADUs, additions, garages and patio covers in Los Angeles & Orange County, planned around slope and drains. Request an estimate.',
       image: '/images/flat-roof-torch-down-drone-view-services.webp',
       imageAlt: 'Aerial view of a completed flat roof system',
       hero: {
-        intro: 'Flat roof installation goes right or wrong on paper. Slope, drains and the joint with your main roof are easy to plan before the framing and hard to fix after move-in. So we look at your ADU, addition, garage or patio cover early and build a modified bitumen or other low-slope roof to match. Part of our *FlatGuard* Roof System.',
+        intro: 'Flat roof installation for an ADU, addition, garage or patio cover. A new modified bitumen or other low-slope roof, with the slope, drains and tie-ins planned before the first layer goes down. Part of our *FlatGuard* Roof System, across Los Angeles and Orange County. Request an estimate to get started.',
         highlights: ['ADUs, additions, garages and patio covers', 'Slope and drain locations planned early', 'Clean tie-ins to your existing roof'],
       },
       // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
@@ -182,19 +180,18 @@ export const FLAT_CONTENT = {
       title: 'Torch Down Roof Installation · *FlatGuard*',
       navLabel: 'Torch Down Roofing',
       card: 'A modified bitumen base sheet and cap sheet fused with heat into one continuous surface, with every seam, wall and drain detailed.',
-      // No place names (owner, November 9 2026: city names only on the location pages); problem first, then our process
-      metaTitle: 'Torch Down Roof Installation | Quality Roofing Specialists',
-      metaDescription: 'Torch down roof installation: modified bitumen base and cap sheets fused with heat into one surface, every seam, wall and drain detailed. Free roof evaluation.',
+      metaTitle: 'Torch Down Roof Installation in Los Angeles',
+      metaDescription: 'Torch down roof installation in Los Angeles & Orange County: modified bitumen base and cap sheets fused with heat, every seam and flashing detailed.',
       image: '/images/projects/flat-roof-replacement-hollywood-hills-west-90046/hollywood-hills-west-round-flat-roof-finished.webp',
-      imageAlt: 'Aerial view of a finished torch-down flat roof with a white reflective cap sheet on a round home',
+      imageAlt: 'Aerial view of a finished torch-down flat roof with a white reflective cap sheet on a round home in Hollywood Hills West',
       hero: {
-        intro: 'Torch down roof installation lives or dies at the seams and the edges. A torch-down roof is modified bitumen: a base sheet on the deck and a cap sheet on top, each warmed with a torch so it fuses to the layer below and every overlap melts into one waterproof surface. Our trained roofers install it as part of our *FlatGuard* Roof System, on homes, ADUs, garages and small buildings. It starts with a free roof evaluation.',
+        intro: 'Torch down roof installation by trained roofers. A torch-down roof is modified bitumen: a base sheet on the deck and a cap sheet on top, each warmed with a torch so it fuses to the layer below and every overlap melts into one waterproof surface. Part of our *FlatGuard* Roof System, on homes, ADUs, garages and small buildings across Los Angeles and Orange County. It starts with a free roof evaluation.',
         highlights: ['Base sheet and cap sheet, fused with heat', 'Full tear-off down to the deck', 'White reflective cap sheet available'],
       },
       story: {
         label: 'Torch down roofing',
-        lead: 'One of the most common flat roofs, and only as good as its __details__.',
-        text: 'Torch-down suits a mild, sunny climate, especially with a granulated or reflective cap sheet, and it stands up well to foot traffic. What decides how long it lasts is the work around it: a sound deck, a good base sheet, a cap sheet that shields the asphalt from the sun and careful flashing at every wall, drain and penetration.',
+        lead: 'One of the most common flat roofs in Los Angeles, and only as good as its __details__.',
+        text: 'Torch-down suits the mild climate and the sun, especially with a granulated or reflective cap sheet, and it stands up well to foot traffic. What decides how long it lasts is the work around it: a sound deck, a good base sheet, a cap sheet that shields the asphalt from the sun and careful flashing at every wall, drain and penetration.',
         heading: 'How we install a torch-down roof',
         image: '/images/projects/flat-roof-replacement-hollywood-hills-west-90046/hollywood-hills-west-round-flat-roof-4.webp',
         imageAlt: 'A flat roof stripped down to the deck before the new torch-down roof goes on',
@@ -207,9 +204,9 @@ export const FLAT_CONTENT = {
       },
       faqs: [
         { q: 'What is a torch down roof?', a: 'A flat roof made of modified bitumen, an asphalt sheet strengthened with polymers, applied with heat. Most have two layers, a base sheet on the deck and a cap sheet on top, and the torch fuses the seams so the finished roof is one continuous waterproof surface. Our guide to [torch-down roofing: APP vs. SBS](/blog/torch-down-roofing-app-vs-sbs/) explains the two main types.' },
-        { q: 'Is torch down roofing good for a hot, sunny climate?', a: 'Yes. It suits a mild, sunny climate, especially with a granulated or reflective cap sheet, and it is one of the most common flat roofs on homes and small buildings.' },
+        { q: 'Is torch down roofing good for Los Angeles?', a: 'Yes. It suits the mild climate and the sun, especially with a granulated or reflective cap sheet, and it is one of the most common flat roofs on Los Angeles homes and small buildings.' },
         { q: 'Can a torch down roof go over my old roof?', a: 'We tear the old roof off so the deck can be checked and repaired. QRS does a full tear-off on every flat roof replacement.' },
-        { q: 'Can the cap sheet be white?', a: 'Yes. A white reflective cap sheet reflects more of the sun’s heat, as on this [round flat roof we replaced](/projects/flat-roof-replacement-hollywood-hills-west-90046/). See [cool roofing](/residential-roofing/cool-roofing/) for when a reflective roof is required.' },
+        { q: 'Can the cap sheet be white?', a: 'Yes. A white reflective cap sheet reflects more of the sun’s heat, as on this [round flat roof in Hollywood Hills West](/projects/flat-roof-replacement-hollywood-hills-west-90046/). See [cool roofing](/residential-roofing/cool-roofing/) for when a reflective roof is required.' },
         { q: 'Is a torch down roof safe to install on my house?', a: 'It uses an open flame, so it needs trained roofers who work carefully around anything that can burn. Where a flame is the wrong tool, a self-adhered SBS sheet can be used instead, and your written scope says which.' },
         { q: 'Can a torch down roof be repaired?', a: 'Yes. Open seams, blisters and failed flashing can usually be repaired with matching membrane. See [flat roof repair](/residential-roofing/flat-roofing/repair/).' },
         { q: 'Torch down or TPO?', a: 'TPO is a single-ply membrane, usually white, whose seams are welded with hot air rather than a torch; it is common on larger commercial roofs, and we install [TPO roofing](/commercial-roofing/tpo-roofing/) on commercial buildings. Torch-down is a thicker, multi-layer asphalt system that stands up well to foot traffic and is common on homes and smaller buildings.' },

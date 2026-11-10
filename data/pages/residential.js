@@ -6,20 +6,20 @@ export const RESIDENTIAL_PAGE = {
   // Meta for the searches the owner picked (October 30 2026: roof repair specialist (Los Angeles, CA), tile roof inspection near me, roofers Los
   // Angeles County CA, certified roofing specialists, local roofing experts Los Angeles). 57 / 158 characters; "certified" = the manufacturer
   // certifications on /credentials/, "free" = the home roof evaluation.
-  metaTitle: 'Residential Roofing | Quality Roofing Specialists', // rolled back to the October 28 wording (owner, November 2 2026)
+  metaTitle: 'Residential Roofing in Los Angeles', // rolled back to the October 28 wording (owner, November 2 2026)
   metaDescription:
-    'Residential roofing for shingle, tile and flat roofs, plus HOA and multi-family roofing. A roofer looks first, then a written price. Free roof evaluation.',
+    'Residential roofing in Los Angeles & Orange County: shingle, tile and flat roofs, plus HOA and multi-family roofing. Start with a free roof evaluation.',
   hero: {
     heading: 'Residential Roofing in Los Angeles & Orange County',
     intro:
-      'Residential roofing for shingle, tile and flat roofs. Most leaks and worn roofs start at a detail you can’t see from the ground: a flashing, a valley, a seam. A roofer finds it first, photographs it and puts the fix in writing before any work. Every job starts with a free roof evaluation, not a sales pitch.',
+      'Residential roofing for every kind of home roof. Repair, replacement and ongoing care for shingle, tile and flat roofs across Los Angeles and Orange County. From a leak on a tile roof to a full tear-off on a shingle home, Quality Roofing Specialists starts every job with a free roof evaluation, not a sales pitch.',
     highlights: ['Shingle, tile and flat roofs', 'Written scope and price before work', '10-Year workmanship warranty (call for details)'],
   },
   overview: {
     heading: 'One Team for Every Roof on Your Home',
     paragraphs: [
-      'Many homes have more than one kind of roof: a tile main roof with a flat section behind the parapet, a shingle house with a low-slope patio cover, a garage or ADU with a system of its own. Hire a different roofer for each and nobody owns the joints between them. Our crews work on all three, so one roofer-led assessment covers the whole house and one written scope says what each part needs.',
-      'Start with your roof type below, or go straight to the service you need. Not sure where to begin? A [free roof evaluation](#roof-check) gives you photos of your roof’s condition and one clear next step: repair, monitor, maintain or replace.',
+      'Quality Roofing Specialists provides residential roofing for homes across Los Angeles and Orange County: repair, replacement and ongoing care for shingle, tile and flat roofs. Many Southern California homes have more than one kind of roof: a tile main roof with a flat section behind the parapet, a shingle house with a low-slope patio cover, a garage or ADU with a system of its own. Our crews work on all of them, so one roofer-led assessment covers the whole house and one written scope explains what each part needs.',
+      'Start with your roof type below, or jump straight to the service you’re after. Not sure where to begin? A [free roof evaluation](#roof-check) gives you photos of your roof’s condition and a clear next step: repair, monitor, maintain or replace.',
     ],
   },
   cards: {
@@ -104,7 +104,7 @@ export const RESIDENTIAL_PAGE = {
   faqs: [
     {
       q: 'What kinds of homes do you work on?',
-      a: 'Single-family homes, townhomes, ADUs and garages, plus HOA and multi-family properties. We work on [shingle](/residential-roofing/shingle-roofing/), [tile](/residential-roofing/tile-roofing/) and [flat](/residential-roofing/flat-roofing/) roofs.',
+      a: 'Single-family homes, townhomes, ADUs and garages, plus HOA and multi-family properties across Los Angeles and Orange County. We work on [shingle](/residential-roofing/shingle-roofing/), [tile](/residential-roofing/tile-roofing/) and [flat](/residential-roofing/flat-roofing/) roofs.',
     },
     {
       q: 'How do I know whether I need a repair or a new roof?',
@@ -116,7 +116,7 @@ export const RESIDENTIAL_PAGE = {
     },
     {
       q: 'Which areas do you serve?',
-      a: 'See every city and county we serve on our [service areas](/service-areas/) page, or check your ZIP code on its map.',
+      a: 'Homes across Los Angeles and Orange County, including Los Angeles, Santa Monica, Pasadena, Long Beach, Irvine and Newport Beach. See every city on our [service areas](/service-areas/) page.',
     },
   ],
 };

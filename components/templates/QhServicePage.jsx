@@ -26,10 +26,10 @@ import { pageJsonLd } from '@/lib/structuredData';
 // page's `about` and `sections`, projects, a review, partner logos, articles, the FAQ beside the request form and the closing call to action.
 
 // Labels for related pages that have no card (the service-first hubs)
-const OTHER_LABELS = { [ROOF_REPAIR_LINK.href]: ROOF_REPAIR_LINK.label, '/roof-replacement/': 'Roof Replacement' };
+export const OTHER_LABELS = { [ROOF_REPAIR_LINK.href]: ROOF_REPAIR_LINK.label, '/roof-replacement/': 'Roof Replacement' };
 
 // Each page's hero visual, by address
-const VISUALS = {
+export const VISUALS = {
   '/roof-inspection/': (page, links) => <QhDroneScan caption="Drone footage, every finding photographed, one next step." links={links} />,
   '/residential-roofing/shingle-roofing/installation/': (page, links) => <QhShingleInstall caption={unmark(page.story.lead)} links={links} />,
   '/residential-roofing/hoa-multi-family/': (page, links) => <QhCommunityPlan caption={unmark(page.story.lead)} links={links} />,

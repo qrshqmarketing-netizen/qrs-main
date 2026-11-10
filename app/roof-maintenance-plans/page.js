@@ -1,24 +1,28 @@
 import CarePlanPricing from '@/components/sections/CarePlanPricing';
+import Faq from '@/components/sections/Faq';
+import LatestArticles from '@/components/sections/LatestArticles';
+import FeatureBand from '@/components/sections/FeatureBand';
 import FinalCta from '@/components/sections/FinalCta';
-import PlanScope from '@/components/sections/PlanScope';
 import ProofBar from '@/components/sections/ProofBar';
 import TrustLogos from '@/components/sections/TrustLogos';
-import { QhAccount, QhHero, QhPoints, QhPosts, QhReviews, QhSeasonDial, QhStart, QhSteps } from '@/components/home/QrsSections';
-import SiteLink from '@/components/ui/SiteLink';
+import { QhHero, QhSeasonDial } from '@/components/home/QrsSections';
+import '@/components/home/QrsHome.css';
+import { SvcReviews, SvcTrust } from '@/components/svc/SvcSections';
+import PlanScope from '@/components/sections/PlanScope';
+import ProcessSteps from '@/components/sections/ProcessSteps';
+import RoofCheck from '@/components/sections/RoofCheck';
+import ValueGrid from '@/components/sections/ValueGrid';
 import JsonLd from '@/components/ui/JsonLd';
 import { HOME, PROGRAMS } from '@/data/catalog';
 import { CARE_PLAN as page } from '@/data/pages/carePlan';
-import { heroOutcome } from '@/data/heroOutcomes';
 import { articlesFor } from '@/lib/articles';
-import { searchHeading } from '@/lib/headings';
+import { heroOutcome } from '@/data/heroOutcomes';
 import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
+import { searchHeading } from '@/lib/headings';
 
-// The Roof Care Plan (content in data/pages/carePlan.js): three priced maintenance tiers with an interactive size-based pricing table
-// (components/sections/CarePlanPricing.jsx). In the new home page's theme (owner, November 6 2026; components/home/QrsSections.jsx, QrsHome.css):
-// the hero with its own visual, a year dial with the two plan visits (QhSeasonDial), the manufacturer logos, then the proof strip and review logos,
-// what goes wrong on a roof, the pricing table and plan scope, a review, what each visit checks by roof type, the two seasonal visits, the one-time
-// tune-up, member benefits, credentials and numbers, articles, the FAQ beside the request form and the closing call to action.
+// The Roof Care Plan (content in data/pages/carePlan.js): three priced maintenance tiers with an
+// interactive size-based pricing table (components/sections/CarePlanPricing.jsx).
 const LINK = PROGRAMS.plans;
 
 export const metadata = pageMetadata({ title: page.metaTitle, description: page.metaDescription, path: LINK.href });
@@ -26,62 +30,50 @@ export const metadata = pageMetadata({ title: page.metaTitle, description: page.
 const CRUMBS = [HOME, { label: LINK.label, href: LINK.href }];
 const schema = pageJsonLd({ path: LINK.href, title: page.metaTitle, description: page.metaDescription, crumbs: CRUMBS, faqs: page.faqs, image: page.image });
 
-const jump = (label) => (
-  <div className="qh-actions">
-    <SiteLink className="qh-btn qh-btn-sun" href="#roof-check">{label}</SiteLink>
-  </div>
-);
-
 export default async function RoofMaintenancePlansPage() {
   return (
-    <main id="top" className="qh">
+    // Layout (owner, October 29 2026): the service pages' gradient hero with the WebGL roof frame, credibility and review cards (components/svc/);
+    // the plan's own sections (pricing, scope, schedule, tune-up, member benefits) stay as they were
+    <main id="top" className="svc">
       <JsonLd data={schema} />
-      <QhHero
-        crumbs={CRUMBS}
-        title={searchHeading(page.hero.heading, { place: false })}
-        outcome={heroOutcome(LINK.href)}
-        text={page.hero.intro}
-        checks={page.hero.highlights}
-        badges
-        visual={
-          <QhSeasonDial
-            labels={['Sep & Oct: before the rains', 'May & Jun: after the rains', 'A written photo report every time']}
-            caption="Two visits, timed to the season."
-            links={[
-              { label: 'One-time tune-up', href: '#tune-up' },
-              { label: 'Roof Inspection', href: '/roof-inspection/' },
-              { label: 'Roof Repair', href: '/roof-repair/' },
-            ]}
-          />
-        }
-      />
+      {/* The new-theme hero (owner, November 10 2026) on the earlier layout and content */}
+      <div className="qh-scope">
+        <QhHero
+          crumbs={CRUMBS}
+          title={searchHeading(page.hero.heading)}
+          outcome={heroOutcome(PROGRAMS.plans.href)}
+          text={page.hero.intro}
+          checks={page.hero.highlights}
+          badges
+          visual={
+            <QhSeasonDial
+              labels={['Sep & Oct: before the rains', 'May & Jun: after the rains', 'A written photo report every time']}
+              caption="Two visits, timed to the season."
+              links={[
+                { label: 'One-time tune-up', href: '#tune-up' },
+                { label: 'Roof Inspection', href: '/roof-inspection/' },
+                { label: 'Roof Repair', href: '/roof-repair/' },
+              ]}
+            />
+          }
+        />
+      </div>
       <ProofBar strip />
+      {/* Google, BBB and Yelp logos linking to our profiles (owner, November 2 2026) */}
       <TrustLogos />
-      <QhPoints id="what-goes-wrong" kicker="Why maintenance" heading={page.whatGoesWrong.heading} items={page.whatGoesWrong.items} />
+      <ValueGrid heading={page.whatGoesWrong.heading} items={page.whatGoesWrong.items} tone="wash" pattern />
       <CarePlanPricing />
       <PlanScope />
-      <QhReviews path={LINK.href} />
-      <QhPoints id="roof-types" kicker="Every visit" heading={page.byRoof.heading} paragraphs={[page.byRoof.intro]} items={page.byRoof.items} />
-      <QhSteps heading={page.schedule.heading} steps={page.schedule.steps} image={page.schedule.image} imageAlt={page.schedule.imageAlt} />
-      <QhPoints
-        id={page.tuneUp.id}
-        kicker={page.tuneUp.eyebrow}
-        heading={page.tuneUp.heading}
-        paragraphs={page.tuneUp.paragraphs}
-        items={page.tuneUp.points}
-        actions={jump(page.tuneUp.cta.label)}
-      />
-      <QhPoints
-        id="member-benefits"
-        kicker={page.memberBenefits.eyebrow}
-        heading={page.memberBenefits.heading}
-        paragraphs={page.memberBenefits.paragraphs}
-        items={page.memberBenefits.points}
-        actions={jump('Get Started')}
-      />
-      <QhAccount />
-      <QhPosts posts={await articlesFor(LINK.href)} heading="Related roofing articles" />
-      <QhStart faqs={page.faqs} heading="Roof Care Plan FAQs" />
+      {/* Google reviews, a few sections below the hero (owner, October 14 2026) */}
+      <SvcReviews path={PROGRAMS.plans.href} />
+      <ValueGrid id="roof-types" heading={page.byRoof.heading} intro={page.byRoof.intro} items={page.byRoof.items} columns={3} tone="wash" />
+      <ProcessSteps heading={page.schedule.heading} steps={page.schedule.steps} scene="scene-inspect" image={page.schedule.image} imageAlt={page.schedule.imageAlt} tone="white" />
+      <FeatureBand {...page.tuneUp} tone="light" />
+      <FeatureBand eyebrow={page.memberBenefits.eyebrow} heading={page.memberBenefits.heading} paragraphs={page.memberBenefits.paragraphs} points={page.memberBenefits.points} cta={{ label: 'Get Started', href: '#roof-check' }} />
+      <SvcTrust path={PROGRAMS.plans.href} />
+      <LatestArticles posts={await articlesFor(PROGRAMS.plans.href)} heading="Related Roofing Articles" />
+      <Faq heading="Roof Care Plan FAQs" sub="Straight answers about how the plan works." faqs={page.faqs} />
+      <RoofCheck />
       <FinalCta heading={page.final.heading} text={page.final.text} />
     </main>
   );

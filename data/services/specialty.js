@@ -105,15 +105,14 @@ export const HOA_MULTI_FAMILY = {
   title: 'HOA & Multi-Family Roofing · *ReserveReady*',
   navLabel: 'HOA & Multi-Family',
   card: 'Roofing for HOA communities and multi-family properties, with photo-documented reports, work phased building by building and one point of contact.',
-  // No place names (owner, November 9 2026: city names only on the location pages); problem first, then our process
-  metaTitle: 'HOA & Multi-Family Roofing | Quality Roofing Specialists',
+  metaTitle: 'HOA & Multi-Family Roofing in Los Angeles & Orange County',
   metaDescription:
-    'HOA & multi-family roofing: every building surveyed, photo reports for the board, phased proposals and one point of contact. Request a roof survey.',
+    'HOA & multi-family roofing in Los Angeles & Orange County: photo-documented reports, phased work and one point of contact. Request an estimate.',
   image: '/images/shingle-roof-care-multi-family.webp',
   imageAlt: 'Aerial view of a multi-family property with a shingle roof',
   hero: {
     intro:
-      'HOA & multi-family roofing means many roofs aging at different rates, and a board that has to plan for all of them. Roof inspections, repairs and replacements, phased building by building. Our *ReserveReady* program gives your board photo reports, phased proposals and long-range budget planning, with one point of contact throughout, starting with a roofer-led roof survey of each building.',
+      'HOA & multi-family roofing for boards and property management clients. Roof inspections, repairs and replacements, phased building by building. Our *ReserveReady* program gives your board photo reports, phased proposals and long-range budget planning, with one point of contact throughout. Across Los Angeles and Orange County, starting with a roofer-led roof survey of each building.',
     highlights: ['Photo reports your board can review', 'Work phased building by building', 'One point of contact, start to finish'],
   },
   // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
@@ -161,17 +160,16 @@ export const ATTIC_VENTILATION = {
   slug: 'attic-ventilation',
   keyword: 'attic ventilation',
   title: 'Attic Ventilation Repair & Installation',
-  h1: 'Attic Ventilation',
+  h1: 'Attic Ventilation in Los Angeles & Orange County',
   navLabel: 'Attic Ventilation',
   card: 'Blocked, missing or mismatched vents found and fixed, so hot, humid air can leave your attic and cooler air can come in.',
-  // No place names (owner, November 9 2026: city names only on the location pages); problem first, then our process
-  metaTitle: 'Attic Ventilation Repair | Quality Roofing Specialists',
-  metaDescription: 'Attic ventilation repair and installation: blocked or missing vents found, intake and exhaust balanced, each vent flashed and photographed. Free evaluation.',
+  metaTitle: 'Attic Ventilation Repair in Los Angeles & Orange County',
+  metaDescription: 'Attic ventilation repair and installation in Los Angeles & Orange County: vents inspected, airflow balanced, every finding photographed. Free roof evaluation.',
   image: '/images/projects/shingle-roof-replacement-panorama-city-91402/shingle-panorama-city-91402-09.webp',
   imageAlt: 'New box vents and pipe jacks flashed into a light gray shingle roof',
   hero: {
     intro:
-      'Attic ventilation problems don’t show on the roof until the shingles curl. Heat and moisture trapped in the attic age the roof from the inside, so we check how air moves through it, fix vents that are blocked, missing or mismatched, and add the right ones when your roof is replaced. A roofer photographs the vents, eaves and ridge, with a written scope and price before any work.',
+      'Attic ventilation that lets your roof breathe. We check how air moves through your attic, fix vents that are blocked, missing or mismatched, and add the right ones when your roof is replaced. A roofer photographs the vents, eaves and ridge, with a written scope and price before any work, across Los Angeles and Orange County. Start with a free roof evaluation.',
     highlights: ['Intake and exhaust vents checked together', 'Photos of every vent and finding', 'Fixed on its own or built into a new roof'],
   },
   // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
@@ -225,38 +223,37 @@ export const COOL_ROOFING = {
   slug: 'cool-roofing',
   keyword: 'cool roofing',
   title: 'Cool Roofing: Cool Roof Shingles & Cap Sheets',
-  h1: 'Cool Roofing',
+  h1: 'Cool Roofing in Los Angeles & Orange County',
   navLabel: 'Cool Roofing',
   card: 'Cool-rated shingles in eleven colors and white reflective cap sheets on flat roofs, installed when your roof is replaced.',
-  // No place names (owner, November 9 2026: city names only on the location pages); problem first, then our process
-  metaTitle: 'Cool Roofing | Quality Roofing Specialists',
-  metaDescription: 'Cool roofing that sheds the sun’s heat: cool-rated shingles in 11 colors, SRI 20+, and white reflective cap sheets on flat roofs, installed with a new roof.',
+  metaTitle: 'Cool Roofing Los Angeles | Cool Roof Shingles & Cap Sheets',
+  metaDescription: 'Cool roofing in Los Angeles & Orange County: cool-rated shingles in 11 colors and white reflective cap sheets for flat roofs, installed with a new roof.',
   image: '/images/projects/white-flat-roof-los-angeles-90049/flat-white-los-angeles-90049-11.webp',
-  imageAlt: 'Aerial view of a white reflective flat roof on a mid-century home',
+  imageAlt: 'Aerial view of a white reflective flat roof on a mid-century home in Brentwood, Los Angeles',
   hero: {
     intro:
-      'Cool roofing keeps the sun’s heat off your home. A dark roof can run far hotter than the air on a sunny day, and that heat ends up in the attic and the rooms below. A cool roof reflects more sunlight and gives off the heat it does absorb more easily. We install cool roof shingles on pitched roofs and white reflective cap sheets on flat roofs when your roof is replaced. It starts with a free roof evaluation.',
+      'Cool roofing that keeps the sun’s heat off your home. A cool roof reflects more sunlight and gives off the heat it does absorb more easily, so the roof and the rooms under it stay cooler. We install cool roof shingles on pitched roofs and white reflective cap sheets on flat roofs when your roof is replaced, across Los Angeles and Orange County. It starts with a free roof evaluation.',
     highlights: ['Cool roof shingles in 11 colors, SRI 20+', 'White reflective cap sheets on flat roofs', 'Written scope names the cool roof product'],
   },
   story: {
     label: 'Cool roofing',
     lead: 'A cool roof doesn’t have to be __white__.',
-    text: 'Where roofs bake in the sun for much of the year, a dark roof can run far hotter than the air on a sunny day. A cool roof stays much closer to it. On a flat roof that usually means a white cap sheet; on a shingle roof it can be a warm brown or a dark gray, because the cooling comes from reflective granules, not only from the color.',
+    text: 'In the inland valleys of Los Angeles and Orange County, roofs bake for much of the year, and a dark roof can run far hotter than the air on a sunny day. A cool roof stays much closer to it. On a flat roof that usually means a white cap sheet; on a shingle roof it can be a warm brown or a dark gray, because the cooling comes from reflective granules, not only from the color.',
     heading: 'How we install a cool roof',
     image: '/images/roof-colors-single-story-home.webp',
     imageAlt: 'A single-story home with a gray shingle roof seen from the street',
     principles: [
       { title: 'Cool roof shingles, in real colors.', text: 'On a [shingle roof replacement](/residential-roofing/shingle-roofing/replacement/) you can choose from eleven cool roof colors, from Shasta White to Midnight, every one rated SRI 20 or higher. The Solar Reflectance Index measures how well a roof sheds the sun’s heat. You can try them on a home photo in the [shingle colors](/residential-roofing/shingle-roofing/#shingle-colors) section.', bullets: ['Eleven colors, light to dark', 'Every color rated SRI 20+', 'Installed from the deck up'] },
-      { title: 'White cap sheets on flat roofs.', text: 'A flat roof can be finished with a white or light reflective cap sheet on a [torch-down roof](/residential-roofing/flat-roofing/torch-down/), as on this [white flat roof on a mid-century home](/projects/white-flat-roof-los-angeles-90049/) and this [round flat roof](/projects/flat-roof-replacement-hollywood-hills-west-90046/).' },
-      { title: 'The permit decides what’s required.', text: 'California’s energy code (Title 24, Part 6) and some local building departments set cool roof requirements for some roof replacements. Some call for a cool roof product rated by the Cool Roof Rating Council (CRRC) when more than half of a home’s roof is replaced, while a tile lift & relay that resets the same tiles may not be held to it. We pull the permit and write the cool roof product into your scope. Our [roofing permit guide](/blog/roofing-permits-los-angeles/) has the details.', bullets: ['Title 24 and local rules checked', 'CRRC-rated product named in the scope', 'Permits pulled for you'] },
+      { title: 'White cap sheets on flat roofs.', text: 'A flat roof can be finished with a white or light reflective cap sheet on a [torch-down roof](/residential-roofing/flat-roofing/torch-down/), as on this [white flat roof in Brentwood](/projects/white-flat-roof-los-angeles-90049/) and this [round flat roof in Hollywood Hills West](/projects/flat-roof-replacement-hollywood-hills-west-90046/).' },
+      { title: 'The permit decides what’s required.', text: 'California’s energy code (Title 24, Part 6) and the City of Los Angeles set cool roof requirements for some roof replacements. In Los Angeles, when more than half of a home’s roof is replaced, the building department’s bulletin calls for a cool roof product rated by the Cool Roof Rating Council (CRRC); a tile lift & relay that resets the same tiles isn’t held to it. We pull the permit and write the cool roof product into your scope. Our [roofing permit guide](/blog/roofing-permits-los-angeles/) has the details.', bullets: ['Title 24 and LADBS rules checked', 'CRRC-rated product named in the scope', 'Permits pulled for you'] },
       { title: 'With a new roof, not a coating.', text: 'QRS doesn’t apply roof coatings. A cool roof is part of a new shingle roof or a new flat roof, planned with the [attic ventilation](/residential-roofing/attic-ventilation/) so heat that does get in can get out. Your written scope and price come before work starts, and the roof is backed by our 10-year workmanship warranty (call for details).' },
     ],
   },
   faqs: [
-    { q: 'What is a cool roof?', a: 'A roof surface that reflects more sunlight and gives off the heat it does absorb more easily than a standard roof. On a hot day it stays cooler, and so does the attic or the room under it. Our guide to [cool roofs](/blog/cool-roof-southern-california/) explains how they work.' },
+    { q: 'What is a cool roof?', a: 'A roof surface that reflects more sunlight and gives off the heat it does absorb more easily than a standard roof. On a hot day it stays cooler, and so does the attic or the room under it. Our guide to [cool roofs in Southern California](/blog/cool-roof-southern-california/) explains how they work.' },
     { q: 'Does a cool roof have to be white?', a: 'No. White is the most reflective, but cool-rated shingles come in many colors using reflective granules. The eleven shingle colors we offer are all cool roof colors rated SRI 20 or higher, from light to dark.' },
-    { q: 'Is a cool roof required?', a: 'Sometimes. Some building departments require a cool roof product rated by the Cool Roof Rating Council when more than half of a home’s roof is replaced, and California’s Title 24 energy code has cool roof rules for some other roofs, depending on the building, the roof slope and the climate zone. The permit for your job sets what applies, and we pull it for you.' },
-    { q: 'Do I need a cool roof for a tile lift & relay?', a: 'Often not. Some building departments list lifting the tiles, putting down new underlayment and resetting the same tiles as a job with no cool roof requirement; your permit says which applies. See [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/).' },
+    { q: 'Is a cool roof required in Los Angeles?', a: 'Sometimes. In the City of Los Angeles, a cool roof product rated by the Cool Roof Rating Council is required when more than half of a home’s roof is replaced, and California’s Title 24 energy code has cool roof rules for some other roofs, depending on the building, the roof slope and the climate zone. The permit for your job sets what applies, and we pull it for you.' },
+    { q: 'Do I need a cool roof for a tile lift & relay?', a: 'In Los Angeles, the building department lists lifting the tiles, putting down new underlayment and resetting the same tiles as a job with no cool roof requirement. See [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/).' },
     { q: 'Can you turn my existing roof into a cool roof?', a: 'QRS does not apply roof coatings. We install cool-rated materials when a roof is replaced, or when a flat roof is redone with a white reflective cap sheet.' },
     { q: 'Will a cool roof lower my energy bill?', a: 'It keeps the roof and the space under it cooler on sunny days, which can reduce how hard the air conditioning works. How much depends on the home, its insulation and ventilation and how it is cooled, so we don’t promise a number.' },
     { q: 'Do you install cool roofs on commercial buildings?', a: 'Yes. On commercial flat roofs a white membrane such as [TPO](/commercial-roofing/tpo-roofing/) or a reflective cap sheet is common. See [commercial roofing](/commercial-roofing/).' },

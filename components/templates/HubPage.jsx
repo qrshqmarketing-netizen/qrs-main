@@ -10,7 +10,8 @@ import StudioProjects from '@/components/studio/StudioProjects';
 import RoofDiagram from '@/components/sections/RoofDiagram';
 import { diagramFor } from '@/data/roofDiagrams';
 import JsonLd from '@/components/ui/JsonLd';
-import { SvcCardGrid, SvcHero, SvcIncludes, SvcIntro, SvcOffer, SvcReviews, SvcTrust } from '@/components/svc/SvcSections';
+import { HubQhHero } from './qhHeroes';
+import { SvcCardGrid, SvcIncludes, SvcIntro, SvcOffer, SvcReviews, SvcTrust } from '@/components/svc/SvcSections';
 import { pageJsonLd } from '@/lib/structuredData';
 import { closingCta, faqSub } from './shared';
 import { heroOutcome } from '@/data/heroOutcomes';
@@ -24,7 +25,7 @@ import { searchHeading } from '@/lib/headings';
 // (commercial services); feature: optional SplitFeature props (e.g. contractors teaser); actions: hero buttons (Hero);
 // process: show the general "QRS Way" steps (the service-first hubs /roof-repair/ and /roof-replacement/).
 // `extra`: a section of the hub's own, after its highlights (the shingle roofing page's shingle colors)
-export default async function HubPage({ hub, crumbs, eyebrow, image, imageAlt, cards, extraGrid, feature, offer, actions, process = false, extra }) {
+export default async function HubPage({ hub, crumbs, eyebrow, image, imageAlt, cards, extraGrid, feature, offer, actions, process = false, extra, visual }) {
   const schema = pageJsonLd({
     path: crumbs.at(-1).href,
     title: hub.metaTitle,
@@ -42,14 +43,8 @@ export default async function HubPage({ hub, crumbs, eyebrow, image, imageAlt, c
   return (
     <main id="top" className="svc">
       <JsonLd data={schema} />
-      <SvcHero
-        crumbs={crumbs}
-        title={searchHeading(hub.hero.heading)}
-        outcome={heroOutcome(path)}
-        intro={hub.hero.intro}
-        {...(hub.heroNotes && { annotations: hub.heroNotes })}
-        {...(actions && { actions })}
-      />
+      {/* The new-theme hero with the hub's own animation on the earlier layout (owner, November 10 2026; qhHeroes.jsx) */}
+      <HubQhHero hub={hub} crumbs={crumbs} offer={offer} actions={actions} visual={visual} image={image} imageAlt={imageAlt} cards={cards} />
       <ProofBar strip />
       {/* Google, BBB and Yelp logos linking to our profiles (owner, November 2 2026) */}
       <TrustLogos />

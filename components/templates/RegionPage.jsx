@@ -14,7 +14,6 @@ import { ALL_PLACES, citiesIn, cityPath, findCity, REGIONS, regionPath } from '@
 import { SERVICES } from '@/data/services';
 import { OFFICES } from '@/data/site';
 import { pageJsonLd } from '@/lib/structuredData';
-import { brandedTitle } from '@/lib/pages';
 import { heroOutcome } from '@/data/heroOutcomes';
 import { articlesFor } from '@/lib/articles';
 
@@ -35,7 +34,7 @@ export default async function RegionPage({ region, page }) {
   const crumbs = [HOME, LOCATIONS_LINK, { label: region.name, href: path }];
   const schema = pageJsonLd({
     path,
-    title: brandedTitle(page.metaTitle),
+    title: page.metaTitle,
     description: page.metaDescription,
     type: 'CollectionPage',
     crumbs,
@@ -55,9 +54,12 @@ export default async function RegionPage({ region, page }) {
   const cityList = cityCards(region.slug);
   const placeList = placeCards(region.slug);
   return (
-    <main id="top" className="qh loc">
+    <main id="top" className="loc">
       <JsonLd data={schema} />
-      <LocRegionHero crumbs={crumbs} title={page.hero.heading} outcome={heroOutcome(path)} text={page.hero.intro} region={region} cities={cities} offices={offices} photo={photo} />
+      {/* The new-theme hero with the county map (owner, November 10 2026) on the earlier layout and content */}
+      <div className="qh-scope">
+        <LocRegionHero crumbs={crumbs} title={page.hero.heading} outcome={heroOutcome(path)} text={page.hero.intro} region={region} cities={cities} offices={offices} photo={photo} />
+      </div>
       {/* Google, BBB and Yelp logos linking to our profiles (owner, November 2 2026) */}
       <TrustLogos />
       <LocExplorer

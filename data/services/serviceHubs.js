@@ -2,18 +2,18 @@
 
 export const ROOF_REPAIR_HUB = {
   keyword: 'roof repair',
-  metaTitle: 'Roof Repair | Quality Roofing Specialists', // owner, November 3 2026 (roof repair near me, roof leak repair)
-  metaDescription: 'Roof repair for shingle, tile and flat roofs: we trace the leak to where water gets in, fix it there and show you photos. Written price first. Free evaluation.', // owner, November 3 2026 (keyword list)
+  metaTitle: 'Roof Repair Near Me in Los Angeles | Roof Leak Repair', // owner, November 3 2026 (roof repair near me, roof leak repair)
+  metaDescription: 'Roof repair near you in Los Angeles & Orange County: we fix roof leaks on shingle, tile and flat roofs, with a written price first. Book a free roof evaluation.', // owner, November 3 2026 (keyword list)
   hero: {
     heading: 'Roof Repair in Los Angeles & Orange County\u00a0· *LeakRescue*',
-    intro: 'Roof repair that fixes the source, not the stain. Water rarely drips where it gets in, so a roofer traces it upslope to the flashing, seam or tile that failed and fixes it there. Our *LeakRescue* repair service shows you photos of the problem and the finished repair, with a written scope and price before any work. Start with a free roof evaluation.',
+    intro: 'Roof repair in Los Angeles, at the source. As roof repair specialists, we find where water is really getting into your shingle, tile or flat roof and fix it there, across Los Angeles and Orange County. Our *LeakRescue* repair service shows you photos of the problem and the finished repair, with a written scope and price before any work. Start with a free roof evaluation.',
     highlights: ['Leaks traced to the real entry point', 'Storm damage assessed and photographed', 'Honest advice on repair vs. replace'],
   },
   overview: {
     heading: 'Find the Cause Before Anything Gets Fixed',
     paragraphs: [
-      'Most leaks show up far from where they start. Water slips past a lifted shingle, a cracked tile or an open seam, runs along the underlayment or a rafter, and stains a ceiling somewhere else. Patching the stain doesn’t stop it. Our roof repair specialists start upslope of it, at the flashings, valleys, vents and roof edges where leaks usually begin, and photograph the cause before fixing it: nail pops and pipe boots on shingles, slipped tiles and worn underlayment on tile, open laps and clogged drains on flat roofs.',
-      'Not every leak means a new roof. When the roof is sound overall and the problem is local, a targeted repair is the right fix, and several small issues can often be handled in one tune-up visit. When wear runs across the whole roof, or the same spots keep failing, we say so and show you the photos, so you can weigh a [roof replacement](/roof-replacement/) on the evidence. Either way, the written scope and price come first.',
+      'Roof repair in Los Angeles, CA from QRS finds where water is really getting into your shingle, tile or flat roof and fixes it at the source. Our roof repair specialists handle roofing repairs across Los Angeles County and Orange County, from one leak to storm damage. Water rarely drips where it gets in. It slips past a lifted shingle, a cracked tile or an open seam, runs along the underlayment or a rafter, and shows up somewhere else entirely. So we start upslope of the stain, at the flashings, valleys, vents and roof edges where leaks usually begin, and we photograph the cause before we fix it. What that looks like depends on your roof: nail pops, pipe boots and wind-lifted tabs on shingles; slipped tiles, ridge mortar and worn underlayment on tile; open laps, blisters and clogged drains on a flat roof.',
+      'Not every leak means you need a new roof. When the roof is sound overall and the problem is local, such as one failed flashing, a few broken pieces or a single open seam, a targeted repair is the sensible fix, and a handful of small issues can often be handled in one tune-up visit. When wear is spread across the whole roof, or the same spots keep failing, we’ll say so and show you the photos, so you can weigh a [roof replacement](/roof-replacement/) on the evidence. Either way, the written scope and price come before any work.',
     ],
   },
   cards: {
@@ -30,8 +30,8 @@ export const ROOF_REPAIR_HUB = {
   },
   faqs: [
     { q: 'Can you fix a leaking roof without replacing it?', a: 'Often, yes. Most leaks start at one detail, such as a flashing, a vent boot, a valley, a cracked tile or an open seam, and a targeted repair fixes it while the rest of the roof still has life. Replacement only makes sense when the wear is spread across the roof. The [free roof evaluation](/roof-inspection/) shows which one you’re looking at, with photos.' },
-    { q: 'How do I choose a roof repair specialist?', a: 'Check that the roofer’s California license is active on the CSLB website and that they are bonded and insured, and expect a roofer, not a salesperson, to find the leak and show you photos of it. A good roof repair specialist explains whether a repair will do or the roof is worn out, and puts the scope and price in writing before any work. Ours: CSLB #1061942, licensed, bonded and insured, with a BBB A+ rating. Our guide on [how to choose a roofer](/blog/how-to-choose-a-roofer-los-angeles-ca/) lists the questions to ask.' },
-    { q: 'Where do you do roof repairs?', a: 'Across our whole service area, from our offices. Our [service areas](/service-areas/) page lists every city and county we cover, and its map checks your ZIP code.' },
+    { q: 'How do I choose a roof repair specialist in Los Angeles?', a: 'Check that the roofer’s California license is active on the CSLB website and that they are bonded and insured, and expect a roofer, not a salesperson, to find the leak and show you photos of it. A good roof repair specialist explains whether a repair will do or the roof is worn out, and puts the scope and price in writing before any work. Ours: CSLB #1061942, licensed, bonded and insured, with a BBB A+ rating. Our guide on [how to choose a roofer in Los Angeles](/blog/how-to-choose-a-roofer-los-angeles-ca/) lists the questions to ask.' },
+    { q: 'Where in Los Angeles do you do roof repairs?', a: 'Across the City of Los Angeles and the rest of Los Angeles County, from our offices in [West Hollywood](/service-areas/la-county/west-hollywood/), [Woodland Hills](/service-areas/la-county/woodland-hills/) and [Vernon](/service-areas/la-county/vernon/): [Los Angeles](/service-areas/la-county/los-angeles/), [Santa Monica](/service-areas/la-county/santa-monica/), [Pasadena](/service-areas/la-county/pasadena/), [Burbank](/service-areas/la-county/burbank/), [Long Beach](/service-areas/la-county/long-beach/) and more, plus [Orange County](/service-areas/orange-county/). Our [service areas](/service-areas/) page has the full list.' },
     { q: 'How much does a roof repair cost?', a: 'It depends on what failed and how much needs fixing. A cracked pipe boot or a few slipped tiles is a small job, while a failed valley, flashing or damaged decking takes more work. We trace the leak to its source first, then give you a written scope and price before any repair begins, so you know the cost up front. Our guide to [roof repair cost](/blog/roof-repair-cost/) explains what moves the price.' },
     { q: 'Is there a warranty on roof repairs?', a: 'The materials in a repair carry the manufacturer’s warranty, and what it covers depends on the product and its warranty tier. Our 10-year workmanship warranty applies to new roof installs (call for details).' },
     { q: 'Do you work with insurance adjusters?', a: 'Yes, as our schedule allows. Our team is small, so we can’t always be there when the adjuster visits, but we’ll help you where we can, and our photos and written scope give you clear documentation to share with your insurance company. Our guide on [how to file a roof insurance claim in California](/blog/roof-insurance-claims-california/) walks through each step.' },
@@ -45,18 +45,18 @@ export const ROOF_REPAIR_HUB = {
 
 export const ROOF_REPLACEMENT_HUB = {
   keyword: 'roof replacement',
-  metaTitle: 'Roof Replacement | Quality Roofing Specialists', // owner, November 3 2026 (roof installers near me)
-  metaDescription: 'Roof replacement down to the deck: a complete new shingle, tile or flat roof, permits pulled and a written scope and price first. Book a free roof evaluation.',
+  metaTitle: 'Roof Replacement Los Angeles | Roof Installers Near Me', // owner, November 3 2026 (roof installers near me)
+  metaDescription: 'Roof replacement in Los Angeles & Orange County: full tear-off, a new shingle, tile or flat roof and a written scope first. Book a free roof evaluation.',
   hero: {
     heading: 'Roof Replacement in Los Angeles & Orange County',
-    intro: 'Roof replacement decided by your roof’s real condition, not its age. When wear runs across the whole roof, we take it down to the deck, repair what’s under it and build a complete new shingle, tile or flat roof system. It starts with a roofer-led free roof evaluation, not a sales pitch.',
+    intro: 'Roof replacement in Los Angeles, decided on your roof’s real condition. We remove your old roof down to the deck and build a complete new shingle, tile or flat roof system, for homes across Los Angeles and Orange County. It starts with a roofer-led free roof evaluation, not a sales pitch.',
     highlights: ['Tear-off and a complete new roof system', 'Shingle, tile and flat roofing', 'Backed by a 10-year workmanship warranty (call for details)'],
   },
   overview: {
     heading: 'When a New Roof Is the Right Call',
     paragraphs: [
-      'A roof replacement from QRS removes the old roof down to the deck and builds a complete new system, installed by our own roofers. It makes sense when the roof is worn out as a whole, not in one spot: shingles brittle and bare on every slope, tile and underlayment failing together, or a flat roof carrying patch on top of patch. At that stage each [roof repair](/roof-repair/) buys less time than the last. For tile with sound tiles and failed underlayment, a [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/) replaces that layer and puts your own tiles back.',
-      'A roof laid over old problems inherits them. A full tear-off lets us check the decking and fix soft or damaged sections before building up again with new underlayment, flashings at every wall and penetration, and the ventilation or drainage your roof type needs. Your written scope lists all of it before work begins, including the material, profile and color, and how any decking damage found under the old roof will be handled.',
+      'A roof replacement in Los Angeles from QRS removes your old roof down to the deck and builds a complete new shingle, tile or flat roof system, installed by our own roofers. Replacement makes sense when a roof is worn out as a whole, not in one spot. That looks like shingles gone brittle and bare of granules on every slope, tile and underlayment failing together, or a flat roof carrying patch on top of patch with water reaching the deck. At that stage, each [roof repair](/roof-repair/) buys less time than the last. It isn’t the only option for tile, though: when the tiles are still sound and it’s the underlayment that has failed, a [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/) replaces that layer and puts your own tiles back.',
+      'A full tear-off takes the roof down to the deck. That lets us check the decking and address soft or damaged sections before building up again with new underlayment, flashings at every wall and penetration, the ventilation or drainage details your roof type calls for, and the new roofing itself. Your written scope lists all of it before work begins, including the material, profile and color you’ve chosen and how any decking damage found under the old roof will be handled. Qualified crews then install the agreed system cleanly and to spec.',
     ],
   },
   cards: {
@@ -64,7 +64,7 @@ export const ROOF_REPLACEMENT_HUB = {
     intro: 'Compare replacement by roof type, see how a lift & relay keeps your tiles, or look at commercial replacement and financing options.',
   },
   highlights: {
-    heading: 'Choosing the Right Roof for Your Home',
+    heading: 'Choosing a Roof for Southern California',
     points: [
       { title: 'Start with the framing', text: 'Clay and concrete tile are far heavier than shingles, so a switch to tile depends on whether the structure can carry it. Moving from tile to a lighter roof is usually simpler on that front.' },
       { title: 'Match the roof to the house', text: 'Tile suits Spanish and Mediterranean homes, shingles fit Craftsman and ranch styles, and low-slope sections need a system built to drain, not shingles or tile.' },
@@ -72,8 +72,8 @@ export const ROOF_REPLACEMENT_HUB = {
     ],
   },
   faqs: [
-    { q: 'How much does a roof replacement cost?', a: 'It depends on your roof: its size, pitch and number of stories, the roofing material, how many old layers come off and whether any decking needs replacing. Tile usually costs the most to install. For a quick estimated range, our Instant Quote measures your roof from satellite imagery. Your actual price comes in a written scope after a [free roof evaluation](#roof-check), before any work begins, and [financing](/roof-financing/) can spread it into monthly payments.' },
-    { q: 'Who installs new roofs near me?', a: 'Our own roofers, with 12 crews for shingle, tile and flat roofs, from offices across our [service area](/service-areas/). Every roof replacement starts with a roofer on your roof and a written scope and price.' },
+    { q: 'How much does a roof replacement cost in Los Angeles?', a: 'It depends on your roof: its size, pitch and number of stories, the roofing material, how many old layers come off and whether any decking needs replacing. Tile usually costs the most to install. For a quick estimated range, our Instant Quote measures your roof from satellite imagery. Your actual price comes in a written scope after a [free roof evaluation](#roof-check), before any work begins, and [financing](/roof-financing/) can spread it into monthly payments.' },
+    { q: 'Who installs new roofs near me in Los Angeles?', a: 'Our own roofers, from offices in [West Hollywood](/service-areas/la-county/west-hollywood/), [Woodland Hills](/service-areas/la-county/woodland-hills/) and [Vernon](/service-areas/la-county/vernon/), with 12 crews for shingle, tile and flat roofs. We replace roofs across [Los Angeles](/service-areas/la-county/los-angeles/), the rest of [Los Angeles County](/service-areas/la-county/) and [Orange County](/service-areas/orange-county/). Every roof replacement starts with a roofer on your roof and a written scope and price.' },
     { q: 'How long does a roof replacement take?', a: 'Most home roof replacements take 3 to 5 days. The roof’s size, the roofing material, any decking repairs and the weather can change that.' },
     { q: 'Do you pull the permits?', a: 'Yes. When your roofing project needs a building permit, we pull it for you.' },
     { q: 'What are the signs I need a new roof?', a: 'Look for wear across the whole roof rather than one problem: shingles that are brittle, curling or shedding granules everywhere, a flat roof membrane worn through in many places, leaks that keep coming back in different spots, or soft decking. Tile is different, because the tiles often outlast the underlayment, so a [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/) may be all you need. A free roof evaluation shows which one you’re dealing with.' },

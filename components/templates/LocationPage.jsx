@@ -8,8 +8,6 @@ import FinalCta from '@/components/sections/FinalCta';
 import OfficeMap from '@/components/sections/OfficeMap';
 import StudioProjects from '@/components/studio/StudioProjects';
 import RoofCheck from '@/components/sections/RoofCheck';
-import EstimateForm from '@/components/sections/EstimateForm';
-import { Check } from '@/components/home/QrsSections';
 import JsonLd from '@/components/ui/JsonLd';
 import { HOME, LOCATIONS_LINK } from '@/data/catalog';
 import { cityPath, findRegion, OTHER_PLACES, regionPath } from '@/data/locations';
@@ -17,7 +15,6 @@ import { projectsNear } from '@/data/projects';
 import { SERVICES } from '@/data/services';
 import { OFFICES, SITE_URL } from '@/data/site';
 import { pageJsonLd } from '@/lib/structuredData';
-import { brandedTitle } from '@/lib/pages';
 import { heroOutcome } from '@/data/heroOutcomes';
 import { articlesFor } from '@/lib/articles';
 
@@ -28,13 +25,6 @@ const FACEBOOK_FEEDS = {
   'woodland-hills': { id: 'FACEBOOK_PAGE_ID', token: 'FACEBOOK_PAGE_TOKEN' },
   vernon: { id: 'FACEBOOK_VERNON_PAGE_ID', token: 'FACEBOOK_VERNON_PAGE_TOKEN' },
 };
-
-// Lean city pages (owner, November 6 2026, after bakerroofing.com's location pages: little beyond the local copy). A pilot on three city pages
-// without an office; compare calls and Search Console after 2-3 weeks before changing the others (the office pages carry the Google listings).
-// Order: hero, review logos, "Looking for a <city> roofer you can trust?" (the page's own intro, roof conditions and neighborhoods), the request
-// form, nearby projects, reviews, up to four FAQs, the closing call to action. Left out: the generic service columns, roof types, related articles
-// and the extra call-to-action card.
-export const LEAN_CITY_PAGES = new Set(['venice', 'newport-beach', 'long-beach']);
 
 // Hero photos rotate across city pages until each city has its own
 const PHOTOS = [
@@ -51,12 +41,10 @@ export default async function LocationPage({ location, page, index = 0 }) {
   const crumbs = [HOME, LOCATIONS_LINK, { label: region.name, href: regionPath(region.slug) }, { label: city, href: cityPath(slug) }];
   const office = OFFICES.find((o) => o.citySlug === slug);
   // An office page shows that office's own number (as on its Google listing) in the hero, the call-to-action card and the FAQ line
-  const lean = LEAN_CITY_PAGES.has(slug);
-  const faqs = lean ? page.faqs.slice(0, 4) : page.faqs;
   const officePhone = office?.phone ? { phone: office.phone, tel: office.tel } : {};
   const schema = pageJsonLd({
     path: cityPath(slug),
-    title: brandedTitle(page.metaTitle),
+    title: page.metaTitle,
     description: page.metaDescription,
     crumbs,
     service: {
@@ -72,30 +60,33 @@ export default async function LocationPage({ location, page, index = 0 }) {
       // A city with a branch office is served from that office (see the offices in lib/structuredData.js)
       provider: office && office !== OFFICES[0] ? `${SITE_URL}${cityPath(slug)}#office` : undefined,
     },
-    faqs,
+    faqs: page.faqs,
     image: photo.src,
   });
   const nearby = projectsNear(slug);
   return (
-    <main id="top" className="qh loc">
+    <main id="top" className="loc">
       <JsonLd data={schema} />
-      <LocCityHero
-        crumbs={crumbs}
-        title={page.h1 || page.metaTitle}
-        outcome={heroOutcome(cityPath(slug))}
-        text={page.hero.sub}
-        location={location}
-        region={region}
-        office={office}
-        photo={{ src: photo.src, position: photo.position, alt: page.imageAlt || `A roof in ${city} from above` }}
-        commercial={page.offer === 'commercial'}
-      />
+      {/* The new-theme hero with the zoomed service area map (owner, November 10 2026) on the earlier layout and content */}
+      <div className="qh-scope">
+        <LocCityHero
+          crumbs={crumbs}
+          title={page.h1 || page.metaTitle}
+          outcome={heroOutcome(cityPath(slug))}
+          text={page.hero.sub}
+          location={location}
+          region={region}
+          office={office}
+          photo={{ src: photo.src, position: photo.position, alt: page.imageAlt || `A roof in ${city} from above` }}
+          commercial={page.offer === 'commercial'}
+        />
+      </div>
       {/* Google, BBB and Yelp logos linking to our profiles (owner, November 2 2026) */}
       <TrustLogos />
-      {!lean && <LocColumns place={city} />}
+      <LocColumns place={city} />
       <LocStory
         place={city}
-        heading={lean ? `Looking for a ${city} roofer you can trust?` : page.intro.heading}
+        heading={page.intro.heading}
         paragraphs={page.intro.paragraphs}
         considerations={page.considerations}
         neighborhoods={page.neighborhoods}
@@ -106,23 +97,7 @@ export default async function LocationPage({ location, page, index = 0 }) {
         {/* An office's Google Maps listing, when it has one (OFFICES[].mapEmbed in data/site.js; owner, October 27 2026) */}
         {office?.mapEmbed && <OfficeMap office={office} city={city} />}
       </div>
-      {lean && (
-        // The request form alone, as on the Contact page (no offer card), right after the local copy
-        <section className="qh-section qh-contact-form" id="roof-check" aria-labelledby="lc-form-h">
-          <div className="qh-wrap">
-            <div className="qh-form-card" id="estimate">
-              <h2 id="lc-form-h">Request service in {city}</h2>
-              <ul className="qh-perks">
-                <li><Check />{page.offer === 'commercial' ? 'A roofer-led roof survey' : 'Free roof evaluation'}</li>
-                <li><Check />A real person on our team follows up</li>
-                <li><Check />Written scope and price before any work</li>
-              </ul>
-              <EstimateForm />
-            </div>
-          </div>
-        </section>
-      )}
-      {!lean && <LocRoofTypes place={city} />}
+      <LocRoofTypes place={city} />
       <LocReviews path={cityPath(slug)} place={city} places={[city, ...page.neighborhoods]} />
       <div className="lc-keep">
         {/* Only real projects in or near this city (by the project's ZIP code pin), as a list with the hover photo; with none nearby, no section */}
@@ -134,17 +109,15 @@ export default async function LocationPage({ location, page, index = 0 }) {
           allLink={false}
           layout="list"
         />
-        {!lean && <LatestArticles posts={await articlesFor(cityPath(slug))} heading="Related Roofing Articles" />}
+        <LatestArticles posts={await articlesFor(cityPath(slug))} heading="Related Roofing Articles" />
       </div>
       {FACEBOOK_FEEDS[slug] && <FacebookFeed pageId={process.env[FACEBOOK_FEEDS[slug].id]} token={process.env[FACEBOOK_FEEDS[slug].token]} place={city} />}
-      {!lean && <LocCta place={city} commercial={page.offer === 'commercial'} {...officePhone} />}
-      <LocFaq heading={`${city} Roofing FAQs`} sub={`Straight answers for ${city} ${page.offer === 'commercial' ? 'clients' : 'homeowners'}.`} faqs={faqs} {...officePhone} />
-      {/* The request form, in the same column as the sections above (lean pages show it right after the intro) */}
-      {!lean && (
-        <div className="lc-keep">
-          <RoofCheck tone="white" offer={page.offer || 'home'} />
-        </div>
-      )}
+      <LocCta place={city} commercial={page.offer === 'commercial'} {...officePhone} />
+      <LocFaq heading={`${city} Roofing FAQs`} sub={`Straight answers for ${city} ${page.offer === 'commercial' ? 'clients' : 'homeowners'}.`} faqs={page.faqs} {...officePhone} />
+      {/* The request form, in the same column as the sections above */}
+      <div className="lc-keep">
+        <RoofCheck tone="white" offer={page.offer || 'home'} />
+      </div>
       <FinalCta heading={page.final.heading} text={page.final.text} />
     </main>
   );

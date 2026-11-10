@@ -7,18 +7,18 @@ export const SHINGLE_CONTENT = {
     // Search Console wording (owner, October 23 2026): "shingle roofing services/company/contractor", "shingle roofing los angeles", "shingle roofer(s)",
     // "shingle roofing installers", "comp shingle roof installation los angeles county", "asphalt/architectural shingles los angeles", "composition roof
     // orange county". The H1 is unchanged.
-    metaTitle: 'Shingle Roofing | Quality Roofing Specialists', // owner, November 3 2026 (asphalt shingle roofers, shingle roofers)
-    metaDescription: 'Shingle roofing for homes: replacement, repairs, new installs, inspections and tune-ups, built from the deck up with architectural shingles. Free evaluation.',
+    metaTitle: 'Shingle Roofing Los Angeles | Asphalt Shingle Roofers', // owner, November 3 2026 (asphalt shingle roofers, shingle roofers)
+    metaDescription: 'Shingle roofing for Los Angeles & Orange County homes: replacement, repairs, new installs, inspections, tune-ups and roof care. Book a free roof evaluation.',
     hero: {
       heading: 'Shingle Roofing Services · *TotalShield*',
-      intro: 'Shingle roofing built as a complete system, not a fresh layer of shingles. Sun, wind and tired flashing wear a shingle roof from the edges in, so the underlayment, flashings and attic ventilation get the same care as the shingles. Our *TotalShield* Shingle System covers every layer from the deck up. Each job starts with a free roof evaluation.',
+      intro: 'Shingle roofing from a licensed shingle roofing contractor. Replacement, new installs, repairs, inspections, tune-ups and ongoing roof care for homes across Los Angeles and Orange County. The underlayment, flashings and attic ventilation get the same care as the shingles. Our complete package is the *TotalShield* Shingle System. Each job starts with a free roof evaluation.',
       highlights: ['Premium shingle systems, installed to spec', 'Proper ventilation and tidy detailing', '10-Year workmanship warranty on installs (call for details)'],
     },
     overview: {
-      heading: 'Shingle Roofs Built to Last',
+      heading: 'Shingle Roofs Built for Southern California',
       paragraphs: [
-        'Asphalt shingles, often called comp or composition shingles, are one of the most common roofs on homes, and the climate is hard on them. Strong sun bakes the asphalt and loosens the granules that protect it, dry winds pry at tabs that have lost their seal, and winter storms find any tired flashing. New shingles over those weak points don’t last. A shingle roof holds up when it’s built as a system: drip edge and starter strips at the eaves, underlayment across the deck, flashing at every wall and chimney, and balanced attic ventilation.',
-        'As shingle roofing installers and a licensed California contractor since 2020, we install architectural shingle systems to the manufacturer’s requirements, with clean lines and tidy detailing at every edge and penetration. Whether your roof needs a [shingle roof replacement](/residential-roofing/shingle-roofing/replacement/), a targeted [shingle roof repair](/residential-roofing/shingle-roofing/repair/) or a tune-up, it starts the same way: a roofer-led [free roof evaluation](#roof-check), photos of what we found and a clear next step. No deposit to book it.',
+        'Shingle roofing from QRS, a licensed shingle roofing company in Los Angeles, CA, covers replacement, new installs, repairs, inspections, tune-ups and ongoing roof care for homes across Los Angeles and Orange County. Our shingle roofers work on asphalt shingles, often called comp or composition shingles, which you’ll find on homes all over Los Angeles County and Orange County. Our climate is hard on them. Strong sun bakes the asphalt and loosens the granules that protect it, dry Santa Ana winds pry at tabs that have lost their seal, and winter storms find any tired flashing. A shingle roof holds up when it’s built as a complete system: drip edge and starter strips at the eaves, underlayment across the deck, careful flashing at every wall and chimney, and balanced attic ventilation so heat doesn’t cook the shingles from below.',
+        'As shingle roofing installers and a licensed California contractor since 2020, QRS installs premium architectural shingle systems to the manufacturer’s requirements, with proper ventilation, clean lines and tidy detailing at every edge and penetration. Whether your roof needs a [shingle roof replacement](/residential-roofing/shingle-roofing/replacement/), a targeted [shingle roof repair](/residential-roofing/shingle-roofing/repair/) or a simple tune-up, it starts the same way: a roofer-led [free roof evaluation](#roof-check). You see photos of what we found, hear what it means in plain English and get a clear next step. There’s no deposit to book it, and you pay after the visit.',
       ],
     },
     cards: {
@@ -35,10 +35,10 @@ export const SHINGLE_CONTENT = {
     },
     faqs: [
       { q: 'What’s the difference between architectural and 3-tab shingles?', a: 'A 3-tab shingle is a single flat layer cut into three tabs, which gives the roof a uniform look. Architectural shingles are laminated from more than one layer, so they’re thicker, show more depth and generally handle wind better. They’re the usual choice for new shingle roofs today.' },
-      { q: 'Do you install shingle roofs in my area?', a: 'Yes. Our shingle roofers handle comp shingle roof installation, replacement and repair across our whole service area. Visit our [service area](/service-areas/) page to find your city.' },
+      { q: 'Do you install shingle roofs across Los Angeles County and Orange County?', a: 'Yes. Our shingle roofers handle comp shingle roof installation, replacement and repair across Los Angeles County, from Santa Monica, Pasadena and Long Beach to the valleys, and composition roofs in Orange County, from Anaheim to Irvine and Newport Beach. Visit our [service area](/service-areas/) page to find your city.' },
       { q: 'Should I choose shingles or tile for my home?', a: 'It comes down to your home’s framing, style and budget. Tile has its own distinct look and is much heavier, while shingles are lighter and usually cost less to install. You can compare the two on our [tile roofing](/residential-roofing/tile-roofing/) page, and we’re glad to talk through the tradeoffs for your home.' },
       { q: 'Can shingles go on a flat or very low-slope roof?', a: 'No. Shingles rely on the roof’s pitch to shed water, so flat and very low-slope areas need a different system. Plenty of homes here pair a shingled main roof with a low-slope section over a porch or addition, and our [flat roofing](/residential-roofing/flat-roofing/) page covers those.' },
-      { q: 'How long will a shingle roof last?', a: 'There’s no single answer. Shingle quality, installation, attic ventilation and sun exposure all play a part, and a sunny slope in the inland valleys usually ages faster than a shaded one near the coast. Rather than guessing from the roof’s age, a free roof evaluation looks at its actual condition.' },
+      { q: 'How long will a shingle roof last in Southern California?', a: 'There’s no single answer. Shingle quality, installation, attic ventilation and sun exposure all play a part, and a sunny slope in the inland valleys usually ages faster than a shaded one near the coast. Rather than guessing from the roof’s age, a free roof evaluation looks at its actual condition.' },
     ],
   },
 
@@ -49,20 +49,19 @@ export const SHINGLE_CONTENT = {
       title: 'Shingle Roof Replacement · *TotalShield*',
       navLabel: 'Roof Replacement',
       card: 'A full tear-off and a complete new shingle system, from the deck and underlayment up to the ridge caps, with a written scope and price first.',
-      // No place names (owner, November 6 2026: city names only on the location pages); the page's voice is problem first, then our process
-      metaTitle: 'Shingle Roof Replacement | Quality Roofing Specialists',
-      metaDescription: 'Shingle roof replacement from the deck up: full tear-off, new underlayment, flashings and attic ventilation, with a written price first. Free roof evaluation.',
+      metaTitle: 'Shingle Roof Replacement in Los Angeles & Orange County',
+      metaDescription: 'Shingle roof replacement in Los Angeles & Orange County: full tear-off, new underlayment, flashing and balanced ventilation. Book a free roof evaluation.',
       image: '/images/shingle-roof-replacement-tear-off-drone-view.webp',
       imageAlt: 'Aerial view of a shingle roof tear-off in progress, with crew removing old shingles down to the deck',
       hero: {
-        intro: 'Shingle roof replacement makes sense when the wear is everywhere, not in one spot. New shingles laid over old weak points only hide them, so we take the roof down to the deck, fix what we find and build a complete new system: underlayment, flashings, balanced attic ventilation and new shingles. That’s our *TotalShield* Shingle System. It starts with a free roof evaluation.',
+        intro: 'Shingle roof replacement, done from the deck up. We take your old roof down to the deck and build a complete new system: underlayment, flashings, balanced attic ventilation and new shingles. That’s our *TotalShield* Shingle System, across Los Angeles and Orange County. It starts with a free roof evaluation.',
         highlights: ['Full tear-off down to the deck', 'Balanced attic intake and exhaust', 'Your choice of shingle style and color'],
       },
       // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
       story: {
         label: 'Shingle roof replacement',
         lead: 'When the wear is roof-wide, patching becomes a __chase__.',
-        text: 'Years of strong sun break down the asphalt, the granules that shield it wash off, and the shingles turn brittle, then curl or cup at the edges. Once that wear is spread across the whole roof, a full tear-off ends the chase from one leak to the next.',
+        text: 'Southern California sun breaks down the asphalt, the granules that shield it wash off, and the shingles turn brittle, then curl or cup at the edges. Once that wear is spread across the whole roof, a full tear-off ends the chase from one leak to the next.',
         heading: 'How we replace a shingle roof',
         image: '/images/shingle-roof-grey-roofing-services-card.webp',
         imageAlt: 'Close-up of a finished grey shingle roof',
@@ -81,7 +80,7 @@ export const SHINGLE_CONTENT = {
         { q: 'What signs mean my shingle roof needs replacing?', a: 'Widespread granule loss, curling or cupping across whole slopes, shingles that crack when lifted and leaks in more than one place all point that way. One or two damaged areas usually call for a repair instead, and the roof evaluation photos show which you’re dealing with.' },
         { q: 'How should I get ready for a roof replacement?', a: 'Move cars out of the driveway, take mirrors and pictures off walls that may shake during tear-off, and cover anything stored in the attic, since dust can sift through the deck. Keep pets and kids clear of the work area, and leave protecting the landscaping and cleaning up to us.' },
         { q: 'What if the decking underneath is soft or damaged?', a: 'Your written scope includes a standard allowance for deck repair, so ordinary soft spots are already covered. If we find damage beyond that allowance, we’ll show you in photos and give you the price before replacing anything further.' },
-        { q: 'How do I choose a shingle color?', a: 'Look at the whole house, so the roof works with your stucco, trim and any stone. Lighter blends tend to stay cooler in direct sun, which is worth weighing on a home that sits in full sun all day, while multi-tone blends bring out the depth of architectural shingles. Viewing a full-size sample outside in daylight gives a truer read than a small swatch indoors.' },
+        { q: 'How do I choose a shingle color?', a: 'Look at the whole house, so the roof works with your stucco, trim and any stone. Lighter blends tend to stay cooler in direct sun, which is worth weighing on hot inland streets in Burbank or Anaheim, while multi-tone blends bring out the depth of architectural shingles. Viewing a full-size sample outside in daylight gives a truer read than a small swatch indoors.' },
       ],
       related: ['/residential-roofing/shingle-roofing/repair/', '/roof-inspection/#shingle-roofs', '/residential-roofing/shingle-roofing/installation/'],
     },
@@ -92,13 +91,12 @@ export const SHINGLE_CONTENT = {
       title: 'Shingle Roof Repair',
       navLabel: 'Roof Repairs',
       card: 'Lifted tabs, cracked pipe boots, nail pops and flashing leaks, traced to their source and fixed properly, with photos of the problem and the repair.',
-      // No place names (owner, November 6 2026: city names only on the location pages); problem first, then our process
-      metaTitle: 'Shingle Roof Repair | Quality Roofing Specialists',
-      metaDescription: 'Shingle roof repair that finds where the water gets in: pipe boots, flashing, wind-lifted tabs and nail pops fixed, with photos. Free roof evaluation.',
+      metaTitle: 'Shingle Roof Repair in Los Angeles',
+      metaDescription: 'Shingle roof repair in LA & Orange County: leaks traced to the source, and wind damage, pipe boots and flashing fixed with photos. Book a free roof evaluation.',
       image: '/images/shingle-roof-repair-ridge-finish.webp',
       imageAlt: 'A roofer working near the ridge of a finished shingle roof',
       hero: {
-        intro: 'Shingle roof repair starts where the water gets in, which is rarely right above the stain. A cracked pipe boot, a wind-lifted tab, a nail pop or failed flashing: we trace the leak to it, fix what failed and show you photos of the problem and the fix. No push toward a new roof.',
+        intro: 'Shingle roof repair that fixes the real source. A cracked pipe boot, a wind-lifted tab, a nail pop or failed flashing: we trace the leak and fix what failed. You get photos of the problem and the fix, across Los Angeles and Orange County. No push toward a new roof.',
         highlights: ['Leaks traced to where water gets in', 'Wind-damaged shingles replaced and sealed', 'Before-and-after repair photos'],
       },
       // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then four principles, each fact said once
@@ -116,7 +114,7 @@ export const SHINGLE_CONTENT = {
       },
       faqs: [
         { q: 'Can you replace just a few shingles?', a: 'Yes. Damaged or missing shingles can be replaced one at a time by lifting the courses above, sliding in new pieces and resealing the tabs. Weathered shingles fade, though, and some shingle lines get discontinued, so new pieces may look slightly different at first. We use the closest available match and tell you what to expect up front.' },
-        { q: 'What should I do after strong winds damage my roof?', a: 'Check from the ground for missing shingles, tabs folded back and shingle pieces in the yard, but stay off the roof. Wind can crease a tab without tearing it off, and a creased shingle is much more likely to tear loose in the next strong gust. A roofer can find those and replace them before the rain arrives.' },
+        { q: 'What should I do after Santa Ana winds damage my roof?', a: 'Check from the ground for missing shingles, tabs folded back and shingle pieces in the yard, but stay off the roof. Wind can crease a tab without tearing it off, and a creased shingle is much more likely to tear loose in the next strong gust. A roofer can find those and replace them before the rain arrives.' },
         { q: 'Why does my roof only leak in heavy rain?', a: 'Leaks that show up only in heavy or wind-driven rain often come from flashings, valleys or pipe boots, where water gets past only when there’s a lot of it. If the drip is under a flat section over a porch or addition, our [flat roof repairs](/residential-roofing/flat-roofing/repair/) page explains how those roofs are handled.' },
         { q: 'What’s the difference between a repair and a tune-up?', a: 'A repair fixes a specific problem that’s already leaking or damaged. A [shingle roof tune-up](/roof-maintenance-plans/#tune-up) is one visit that handles several small issues, like loose tabs and dried-out sealant, before they become leaks.' },
         { q: 'Is a nail pop really a problem?', a: 'It can be. A nail that backs out pushes up the shingle above it and leaves a path for water to follow the nail into the deck. We remove or reset the fastener, seal it and replace the shingle if the nail has punched through.' },
@@ -130,13 +128,12 @@ export const SHINGLE_CONTENT = {
       title: 'New Shingle Roof Installation · *TotalShield*',
       navLabel: 'New Installations',
       card: 'Shingle roofs for new homes, additions and ADUs, or a switch from wood shakes or tile, built as a complete system with ventilation designed in.',
-      // No place names (owner, November 9 2026: city names only on the location pages); problem first, then our process
-      metaTitle: 'New Shingle Roof Installation | Quality Roofing Specialists',
-      metaDescription: 'New shingle roof installation for homes, additions and ADUs, with ventilation, flashing and edges decided before the first bundle. Request an estimate.',
+      metaTitle: 'New Shingle Roof Installation in Los Angeles',
+      metaDescription: 'New shingle roof installation for homes, additions and ADUs in Los Angeles & Orange County, built to the manufacturer’s requirements. Request an estimate.',
       image: '/images/shingle-roof-repair-ridge-finish.webp',
       imageAlt: 'Aerial view of a nearly finished light grey shingle roof, with a roofer working near the ridge',
       hero: {
-        intro: 'Shingle roof installation is decided before the first bundle goes on. Ventilation, the flashing where new meets old and the edge details are easy to plan and hard to fix later, so we settle them first, on a new home, an addition, an ADU or garage, or a switch from wood shakes or tile. That’s our *TotalShield* Shingle System.',
+        intro: 'Shingle roof installation, planned from the deck up. A new home, an addition, an ADU or garage, or a switch from wood shakes or tile. We settle the ventilation, flashing and edge details before the first bundle goes on. That’s our *TotalShield* Shingle System, across Los Angeles and Orange County.',
         highlights: ['New homes, additions, ADUs and garages', 'Clean tie-ins to your existing roof', 'Switches from shake and other roof types'],
       },
       // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
@@ -158,7 +155,7 @@ export const SHINGLE_CONTENT = {
         { q: 'Do you pull the permits?', a: 'Yes. When your roofing project needs a building permit, we pull it for you.' },
         { q: 'Can the roof on my ADU match my house?', a: 'Usually, yes. We look for the same or a closely matching shingle and color, though a brand-new roof can look a little brighter next to one that’s been weathering for a while. If your main roof is near the end of its life, a [shingle roof replacement](/residential-roofing/shingle-roofing/replacement/) at the same time gives the whole property one consistent look.' },
         { q: 'Can you replace a wood shake roof with shingles?', a: 'We can. Wood shakes are often laid over spaced boards, so solid decking goes on before the underlayment and shingles. You end up with a smoother, more uniform roof, and asphalt shingles are commonly fire-rated.' },
-        { q: 'Do you work with builders and contractors?', a: 'We do, on new homes, additions and ADUs, with a written scope and price that builders can plan around. See how we [work with contractors](/contractors/).' },
+        { q: 'Do you work with builders and contractors?', a: 'We do, on new homes, additions and ADUs across Los Angeles and Orange County, with a written scope and price that builders can plan around. See how we [work with contractors](/contractors/).' },
         { q: 'Should I switch my tile roof to shingles?', a: 'It can make sense if the tile is badly broken or you want a lighter roof, but it changes the character of the house. If you love your tile and the real problem is worn underlayment, a [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/) keeps the tiles and renews what’s underneath.' },
         { q: 'Where do the attic vents go on a new shingle roof?', a: 'Intake vents sit low, at the eaves or soffits, and exhaust vents sit high, at or near the ridge. Balancing the two lets hot air escape as cooler air comes in, and we avoid mixing exhaust types on one attic, since that can short-circuit the airflow.' },
       ],

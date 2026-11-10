@@ -1,9 +1,12 @@
 import TrustLogos from '@/components/sections/TrustLogos';
 import LocExplorer from '@/components/loc/LocExplorer';
 import { cityCards, countyCards, placeCards } from '@/components/loc/LocHub';
-import { QhAreaMap, QhHero, QhReviews, QhStart } from '@/components/home/QrsSections';
+import { QhAreaMap, QhHero } from '@/components/home/QrsSections';
+import '@/components/home/QrsHome.css';
+import { LocFaq, LocReviews } from '@/components/loc/LocSections';
 import FinalCta from '@/components/sections/FinalCta';
 import Offices from '@/components/sections/Offices';
+import RoofCheck from '@/components/sections/RoofCheck';
 import ServiceArea from '@/components/sections/ServiceArea';
 import JsonLd from '@/components/ui/JsonLd';
 import { HOME, LOCATIONS_LINK } from '@/data/catalog';
@@ -31,39 +34,40 @@ const schema = pageJsonLd({
   image: HERO_IMAGE,
 });
 
-// Service Areas page (content in data/pages/locations.js). In the new home page's theme (owner, November 6 2026; components/home/QrsSections.jsx,
-// QrsHome.css): dark blue hero with its own visual, the service area drawn from its Census outline with the offices and city pages as pins and
-// the counties as links, the manufacturer logos, then the review logos, the explorer (search, a county filter, the county cards, every city page
-// and the places with no page of their own; Loc.css, hence the "loc" class too), the offices, the ZIP map, a review, the FAQ beside the request
-// form and the closing call to action.
+// Service Areas page, the main location hub after remote.com/us-state-explorer (owner, October 29 2026): the short gradient band, the explorer
+// (search, a county filter, the four county cards, every city page and the places with no page of their own), then the offices, the ZIP map,
+// reviews and FAQs (content in data/pages/locations.js)
 const SOCAL_OFFICES = OFFICES.filter((o) => o.geo.latitude < 35);
 
 export default function LocationsPage() {
   return (
-    <main id="top" className="qh loc">
+    <main id="top" className="loc">
       <JsonLd data={schema} />
-      <QhHero
-        crumbs={CRUMBS}
-        title={page.hero.heading}
-        outcome={heroOutcome('/service-areas/')}
-        text={page.hero.intro}
-        badges
-        visual={
-          <QhAreaMap
-            outline={SERVICE_AREA_OUTLINE}
-            offices={SOCAL_OFFICES}
-            cities={LOCATIONS.filter((l) => l.lat < 35)}
-            inset={{
-              outline: SANTA_CLARA_OUTLINE,
-              name: 'Santa Clara County',
-              offices: OFFICES.filter((o) => o.geo.latitude >= 35),
-              cities: LOCATIONS.filter((l) => l.region === 'santa-clara-county' && !OFFICES.some((o) => o.citySlug === l.slug)),
-            }}
-            note={`${LOCATIONS.length} city guides and ${ALL_PLACES.length} places we serve`}
-            links={REGIONS.map((r) => ({ label: r.name, href: regionPath(r.slug) }))}
-          />
-        }
-      />
+      {/* The new-theme hero with the service area map (owner, November 10 2026) on the earlier layout and content */}
+      <div className="qh-scope">
+        <QhHero
+          crumbs={CRUMBS}
+          title={page.hero.heading}
+          outcome={heroOutcome('/service-areas/')}
+          text={page.hero.intro}
+          badges
+          visual={
+            <QhAreaMap
+              outline={SERVICE_AREA_OUTLINE}
+              offices={SOCAL_OFFICES}
+              cities={LOCATIONS.filter((l) => l.lat < 35)}
+              inset={{
+                outline: SANTA_CLARA_OUTLINE,
+                name: 'Santa Clara County',
+                offices: OFFICES.filter((o) => o.geo.latitude >= 35),
+                cities: LOCATIONS.filter((l) => l.region === 'santa-clara-county' && !OFFICES.some((o) => o.citySlug === l.slug)),
+              }}
+              note={`${LOCATIONS.length} city guides and ${ALL_PLACES.length} places we serve`}
+              links={REGIONS.map((r) => ({ label: r.name, href: regionPath(r.slug) }))}
+            />
+          }
+        />
+      </div>
       {/* Google, BBB and Yelp logos linking to our profiles (owner, November 2 2026) */}
       <TrustLogos />
       <LocExplorer
@@ -81,8 +85,11 @@ export default function LocationsPage() {
         <Offices sub="Our offices serve homes and businesses across Los Angeles County, Orange County and the Inland Empire. Each office has its own number, or call our main line." />
         <ServiceArea heading="Check Your ZIP Code" sub="Enter your ZIP code to confirm we cover your address, or pick your city from the list." />
       </div>
-      <QhReviews path={LOCATIONS_LINK.href} heading="What people in our service area say" />
-      <QhStart faqs={page.faqs} heading="Service Area FAQs" />
+      <LocReviews path={LOCATIONS_LINK.href} place="your area" />
+      <LocFaq heading="Service Area FAQs" sub="Straight answers about where we work." faqs={page.faqs} />
+      <div className="lc-keep">
+        <RoofCheck tone="white" />
+      </div>
       <FinalCta
         heading="Local Roofers Across Southern California"
         text="Wherever you are in our service area, a local roofer looks at your roof and gives you a clear next step with a written scope and price."

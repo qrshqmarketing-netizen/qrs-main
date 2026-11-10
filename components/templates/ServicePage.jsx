@@ -5,7 +5,6 @@ import FeatureBand from '@/components/sections/FeatureBand';
 import FinalCta from '@/components/sections/FinalCta';
 import TrustLogos from '@/components/sections/TrustLogos';
 import JumpCta from '@/components/sections/JumpCta';
-import Hero from '@/components/sections/Hero';
 import Overview from '@/components/sections/Overview';
 import PartnerLogos from '@/components/sections/PartnerLogos';
 import ProcessSteps from '@/components/sections/ProcessSteps';
@@ -23,7 +22,8 @@ import { heroOutcome } from '@/data/heroOutcomes';
 import { articlesFor } from '@/lib/articles';
 import { searchHeading } from '@/lib/headings';
 import ServicePageSvc from './ServicePageSvc';
-import QhServicePage from './QhServicePage';
+import ProofBar from '@/components/sections/ProofBar';
+import { ServiceQhHero } from './qhHeroes';
 
 const PROCESS_PHOTOS = {
   tile: [
@@ -114,19 +114,13 @@ function processPhoto(page) {
 // every service page uses this studio layout again; set SVC_DESIGN_EVERYWHERE to true, or list a page in SVC_DESIGN_PAGES, to show the other.
 const SVC_DESIGN_PAGES = new Set();
 const SVC_DESIGN_EVERYWHERE = false;
-// Service pages in the new home page's theme (owner, November 6 2026; QhServicePage.jsx), page by page; each needs a `story`
-const QH_SERVICE_PAGES = new Set(['/commercial-roofing/office-buildings/', '/commercial-roofing/retail/', '/commercial-roofing/churches/', '/commercial-roofing/industrial/', '/commercial-roofing/warehouses/', '/commercial-roofing/shops/', '/roof-financing/', '/roof-repair/emergency/', '/residential-roofing/shingle-roofing/replacement/', '/residential-roofing/shingle-roofing/repair/', '/residential-roofing/flat-roofing/replacement/', '/residential-roofing/flat-roofing/repair/', '/residential-roofing/flat-roofing/installation/', '/residential-roofing/tile-roofing/replacement/', '/residential-roofing/tile-roofing/repair/', '/residential-roofing/tile-roofing/lift-and-relay/', '/residential-roofing/tile-roofing/slate/', '/residential-roofing/tile-roofing/concrete/', '/residential-roofing/flat-roofing/torch-down/', '/commercial-roofing/replacement/', '/commercial-roofing/tpo-roofing/', '/residential-roofing/cool-roofing/', '/commercial-roofing/repair/', '/residential-roofing/attic-ventilation/', '/commercial-roofing/maintenance/', '/roof-inspection/', '/residential-roofing/shingle-roofing/installation/', '/residential-roofing/hoa-multi-family/', '/commercial-roofing/malls/', '/commercial-roofing/property-managers/']);
-// Pages without a `story` render there too (overview, process steps, reasons)
-const QH_NO_STORY_OK = true;
+// The new-theme layout (QhServicePage.jsx, November 6-9 2026) is no longer used: since November 10 2026 every service page is this studio
+// layout with the earlier content and meta, under the new-theme hero (ServiceQhHero).
 
 export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], offer, actions, hub, finalCta = page.final || closingCta(page.keyword, offer) }) {
   if (SVC_DESIGN_EVERYWHERE || SVC_DESIGN_PAGES.has(crumbs.at(-1).href)) return ServicePageSvc({ page, crumbs, eyebrow, offer, actions, hub, finalCta });
   // The jump-to-form buttons' words: a roof survey on commercial pages (never called free), else the site's usual Get Pro Advice
   const jumpLabel = offer === 'commercial' ? 'Request a Roof Survey' : 'Get Pro Advice';
-  if ((page.story || QH_NO_STORY_OK) && QH_SERVICE_PAGES.has(crumbs.at(-1).href)) {
-    const [img, alt] = page.process?.image ? [page.process.image, page.process.imageAlt] : processPhoto(page);
-    return QhServicePage({ page, crumbs, eyebrow, offer, actions, finalCta, processImage: img, processImageAlt: alt });
-  }
   const [heroScene = 'scene-shingle', processScene = heroScene] = scenes;
   const [processImage, processImageAlt] = page.process?.image ? [page.process.image, page.process.imageAlt] : processPhoto(page);
   const work = projectsShownOn(crumbs.at(-1).href);
@@ -142,17 +136,9 @@ export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], 
   return (
     <main id="top">
       <JsonLd data={schema} />
-      <Hero
-        crumbs={crumbs}
-        eyebrow={eyebrow}
-        title={searchHeading(page.h1 || page.title)}
-        outcome={heroOutcome(crumbs.at(-1).href)}
-        intro={page.hero.intro}
-        image={page.image}
-        imageAlt={page.imageAlt}
-        {...(page.heroNotes && { annotations: page.heroNotes })}
-        {...(actions && { actions })}
-      />
+      {/* The new-theme hero with the page's own animation on the earlier layout (owner, November 10 2026; qhHeroes.jsx) */}
+      <ServiceQhHero page={page} crumbs={crumbs} offer={offer} actions={actions} />
+      <ProofBar strip />
       {/* Google, BBB and Yelp logos under the proof strip, as on the studio home page */}
       <TrustLogos />
       {/* Pages rewritten the home page's way have a `story` (ServiceStory: statement + "How we …" principles), which replaces the overview, the

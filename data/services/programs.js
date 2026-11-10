@@ -4,21 +4,21 @@ export const EMERGENCY_ROOF_REPAIR = {
   slug: 'emergency-roof-repair',
   keyword: 'emergency roof repair',
   title: 'Emergency Roof Repair & Storm Damage',
-  h1: 'Emergency Roof Repair & Storm Damage Repair',
+  h1: 'Emergency Roof Repair & Storm Damage Repair in Los Angeles & OC',
   navLabel: 'Emergency & Storm Damage',
   card: 'Storm damage or a sudden leak? A roofer assesses and photographs the damage, adds temporary protection when it’s needed and follows with a permanent repair.',
   // Search Console wording (owner, October 23 2026; the old /residential-roofing-services/roof-storm-damage/ redirects here): "storm damage roof
   // repair", "roof storm damage repair", "wind damage roof contractor", "storm damage roof inspection", "hail damage roof repair"
   // Meta for the searches the owner picked (October 30 2026: roof repair specialist (Los Angeles), emergency roof repair (Los Angeles), LA wind
   // damage roof contractor, roofing services after LA storm), keeping "storm damage" (this page's strongest search). 55 / 159 characters.
-  metaTitle: 'Emergency Roof Repair | Quality Roofing Specialists', // owner, November 6 2026 (no place names on the redesigned pages)
+  metaTitle: 'Storm Damage & Emergency Roof Repair in Los Angeles', // rolled back to the October 28 wording (owner, November 2 2026)
   metaDescription:
-    'Emergency roof repair and storm damage roof repair: wind and hail damage assessed, tarps when needed, photos for your insurance. Call now, even after hours.',
+    'Emergency roof repair and storm damage roof repair in Los Angeles & Orange County: wind and hail damage, tarps when needed and photos for your insurance.',
   image: '/images/emergency-roof-repair-hero.webp',
-  imageAlt: 'Storm damage roof repair: a roofer reviewing storm damage with homeowners beside a blue roof tarp',
+  imageAlt: 'Storm damage roof repair in Los Angeles: a roofer reviewing storm damage with homeowners beside a blue roof tarp',
   hero: {
     intro:
-      'Emergency roof repair and storm damage roof repair, even after hours or on a weekend. When water is coming in, stay off the roof, move belongings away from the leak and call QRS. A roofer assesses and photographs the damage and puts a tarp in place when it’s needed. Then the permanent repair, priced in writing first.',
+      'Emergency roof repair and storm damage roof repair in Los Angeles and Orange County. Stay off the roof, move belongings away from the leak and call QRS, even after hours or on a weekend. A roofer assesses and photographs the damage and puts a tarp in place when it’s needed. Then the permanent repair, priced in writing first.',
     highlights: ['Damage assessed and photo-documented', 'Temporary protection, like a tarp, if needed', 'Permanent repair with a written scope'],
   },
   // Told the home page's way (owner, October 16 2026; ServiceStory): one statement, one paragraph, then the principles, each fact said once
@@ -46,12 +46,12 @@ export const EMERGENCY_ROOF_REPAIR = {
       a: 'Please don’t. Wet roofing is slippery, storm-damaged areas can give way underfoot and tiles crack easily when walked on. Take photos from the ground or a window instead, and leave the roof to a roofer.',
     },
     {
-      q: 'Do you do storm damage roof repair?',
-      a: 'Yes. Roof storm damage repair is a large part of this work: wind that lifts shingles and cracks tiles, branches that puncture the roof, and the occasional hail. We handle storm damage roof repair across our whole service area, and our [service area](/service-areas/) page lets you check your ZIP code.',
+      q: 'Do you do storm damage roof repair in Los Angeles?',
+      a: 'Yes. Roof storm damage repair is a large part of this work: wind that lifts shingles and cracks tiles, branches that puncture the roof, and the occasional hail. We handle storm damage roof repair across Los Angeles, including Glendale, [Pasadena](/service-areas/la-county/pasadena/) and Whittier, and in Orange County, including Anaheim and Orange. Our [service area](/service-areas/) page lets you check your ZIP code.',
     },
     {
       q: 'Is wind damage to a roof an emergency?',
-      a: 'If water is getting in, or shingles, tiles or flashing are loose enough to blow off, yes: call us and a roofer will assess it and add temporary protection if it’s needed. Strong winds often lift shingles and shift tiles without an immediate leak, so after a strong wind a storm damage roof inspection finds those spots before the next rain.',
+      a: 'If water is getting in, or shingles, tiles or flashing are loose enough to blow off, yes: call us and a roofer will assess it and add temporary protection if it’s needed. Santa Ana winds often lift shingles and shift tiles without an immediate leak, so after a strong wind a storm damage roof inspection finds those spots before the next rain.',
     },
     {
       q: 'Do you tarp roofs after storm damage?',
@@ -93,26 +93,25 @@ export const ROOF_INSPECTION = {
   slug: 'roof-inspection',
   keyword: 'roof inspection',
   title: 'Roof Inspection Services · *RoofScan 360*',
-  h1: 'Roof Inspection · *RoofScan 360*',
+  h1: 'Roof Inspection in Los Angeles & Orange County\u00a0· *RoofScan 360*',
   navLabel: 'Roof Inspection',
   card: 'Our free, roofer-led roof evaluation for shingle, tile and flat roofs: every finding photographed and explained, with one clear next step.',
   // Search Console wording (owner, October 23 2026): "roof inspection los angeles", "roof inspection service/company", "professional roof inspection",
   // "roof inspection and repair", "roofing consultation". The H1 is unchanged.
   // Meta for the searches the owner picked (October 30 2026: roof inspection los angeles, roof inspection service, roof repair specialist, tile roof
   // inspection, roof inspection company near me). 58 / 157 characters.
-  // No place names (owner, November 9 2026: city names only on the location pages); problem first, then our process
-  metaTitle: 'Roof Inspection | Quality Roofing Specialists',
-  metaDescription: 'A free roof inspection from a roofer, not a salesperson: drone footage, every finding photographed and explained, and one clear next step. Book yours.',
+  metaTitle: 'Roof Inspection Los Angeles | Professional Roof Inspections', // rolled back to the October 28 wording (owner, November 2 2026)
+  metaDescription: 'Roof inspection company in Los Angeles & Orange County: a free, professional roof inspection service with photos, plain-English advice and one next step.',
   image: '/images/shingle-roof-inspection-overhead.webp',
   imageAlt: 'Aerial overhead view of a finished dark grey shingle roof',
   hero: {
-    intro: 'A roof inspection is only useful if it ends in a straight answer, and a salesperson’s visit rarely does. Ours is free and done by a roofer: the roofing, flashings, edges and gutters on shingle, tile and flat roofs, with drone footage from our *RoofScan 360* evaluation, every finding explained in plain English and one clear next step.',
+    intro: 'A roof inspection from a roofer, not a salesperson. Our free, professional roof inspection service checks the roofing, flashings, edges and gutters on shingle, tile and flat roofs across Los Angeles and Orange County. Our *RoofScan 360* evaluation uses drone footage, explains every finding in plain English and ends with one clear next step.',
     highlights: ['A roofer on the roof, not a salesperson', 'Every finding photographed and explained', 'Free, with no obligation'],
   },
   overview: {
     paragraphs: [
-      'A roof inspection from QRS is a free, professional roof inspection service for homes. As a local roof inspection company, we send a roofer, not a salesperson, so the visit is a roofing consultation backed by real roofing expertise. Every roof type has its own weak points, so the roofer adapts the inspection to what’s on your house; the sections below show what we check on shingle, tile and flat roofs. Every roof also gets a close look at the flashings where it meets walls, chimneys, skylights and vents, and at the edges and any gutters that carry water away. We photograph each finding, which lets you judge the roof’s condition with your own eyes.',
-      'It’s worth booking one when you’re **buying or selling a home**, after a storm, strong winds or a noticeable earthquake, when an older roof leaves you unsure of its condition, or before choosing between a [roof repair](/roof-repair/) and a [roof replacement](/roof-replacement/). The visit ends with one recommendation: repair, monitor, maintain or replace, and because we handle roof inspection and repair, the roofer who found the problem can explain the fix. Sometimes the honest answer is that your roof is fine for now, and we’ll say so. There’s no deposit, you pay after the visit, and you’re under no obligation to hire us for any work.',
+      'A roof inspection from QRS is a free, professional roof inspection service for homes across Los Angeles and Orange County. As a local roof inspection company, we send a roofer, not a salesperson, so the visit is a roofing consultation backed by real roofing expertise. Every roof type has its own weak points, so the roofer adapts the inspection to what’s on your house; the sections below show what we check on shingle, tile and flat roofs. Every roof also gets a close look at the flashings where it meets walls, chimneys, skylights and vents, and at the edges and any gutters that carry water away. We photograph each finding, which lets you judge the roof’s condition with your own eyes.',
+      'It’s worth booking one when you’re **buying or selling a home**, after a storm, strong Santa Ana winds or a noticeable earthquake, when an older roof leaves you unsure of its condition, or before choosing between a [roof repair](/roof-repair/) and a [roof replacement](/roof-replacement/). The visit ends with one recommendation: repair, monitor, maintain or replace, and because we handle roof inspection and repair, the roofer who found the problem can explain the fix. Sometimes the honest answer is that your roof is fine for now, and we’ll say so. There’s no deposit, you pay after the visit, and you’re under no obligation to hire us for any work.',
     ],
   },
   sectionsHeading: 'What we check on each __roof__ type', // the heading over the three roof-type cards (BandCards)
@@ -189,7 +188,7 @@ export const ROOF_INSPECTION = {
     { q: 'Is the roof inspection really free?', a: 'Yes. For homes, our roofer-led roof evaluation is free, with no obligation and nothing to pay up front. We use drone footage to see the roof’s condition, explain what we find in plain English and give you a clear next step. The optional $199 Roof Check is a separate tune-up visit, and the $199 is credited toward a repair or replacement if you move forward.' },
     { q: 'What do I get after the roof evaluation?', a: 'Photos of what we found, a plain-English explanation of what they show and one clear recommendation: repair, monitor, maintain or replace. If work is needed, you get a written scope and price before anything starts, with no pressure to decide on the spot.' },
     { q: 'Do you do roof inspection and repair?', a: 'Yes. The roofer who inspects your roof can explain how a problem would be fixed, and if you want us to do the work, you get a written scope and price first. Small issues often go to [roof repair](/roof-repair/); you’re never obliged to hire us after the evaluation.' },
-    { q: 'Is QRS a roof inspection company near me?', a: 'We inspect roofs from our local offices across our whole service area. Our [service area](/service-areas/) page lists every city and lets you check your ZIP code.' },
+    { q: 'Is QRS a roof inspection company near me?', a: 'We inspect roofs across Los Angeles and Orange County, plus parts of Riverside and San Bernardino Counties, from offices in West Hollywood, Woodland Hills and Vernon. Our [service area](/service-areas/) page lets you check your ZIP code.' },
     { q: 'I’m buying a home. Is a general home inspection enough for the roof?', a: 'A general home inspection looks at the whole house, and the roof is one item on a long list. A roofer’s evaluation focuses on the roof alone, with photos of the roofing, flashings and vents. That matters most on tile, which can look sound from the street even when its underlayment is near the end, and on homes with flat sections that are easy to miss from the ground.' },
     { q: 'Can you tell how much life my roof has left?', a: 'We can tell you what condition it’s in and what kind of wear to expect next, but nobody can promise an exact number of years. On tile, most of the underlayment is hidden, so we judge it from the areas we can see, the roof’s history and signs like leaks or stains. The photos help you plan ahead instead of reacting to a leak.' },
     { q: 'Is a free roof evaluation worth it after a storm if nothing is leaking?', a: 'Often, yes. High winds and heavy rain can loosen flashings, shift tiles and break shingle seals without an immediate leak, and a noticeable earthquake can crack ridge mortar and nudge tiles out of place. Those weak spots tend to give way in the next storm. If water is already coming in, our [emergency roof repair](/roof-repair/emergency/) page explains how we handle it.' },
@@ -212,11 +211,9 @@ export const ROOF_FINANCING = {
     heading: 'Get Your Price, Then Your Payment Options',
     text: 'A roofer gives you a written scope and price for your roof replacement, then we walk you through monthly payments with Momnt Financing or Service Financing.',
   },
-  metaTitle: 'Roof Financing | Quality Roofing Specialists',
+  metaTitle: 'Roof Financing in Los Angeles & Orange County',
   metaDescription:
-    'Roof financing for a home roof replacement: monthly payments through Momnt or Service Financing, subject to credit approval. Written price before you apply.',
-  // The statement beside the overview (QhServicePage), from the overview's own words
-  statement: 'Roofs don’t wait for a good moment to wear out.',
+    'Roof financing in LA & Orange County: spread a home roof replacement into monthly payments through Momnt or Service Financing. Book a free roof evaluation.',
   image: '/images/financing-hero-background.webp',
   imageAlt: 'A roofer reviewing a project with homeowners',
   showReviews: false,
@@ -230,7 +227,7 @@ export const ROOF_FINANCING = {
   },
   hero: {
     intro:
-      'Roof financing for a home roof replacement. A worn-out roof rarely waits for a convenient time, so you can spread the cost into monthly payments through Momnt Financing or Service Financing, subject to credit approval. You get a written scope and price before you apply, so you know exactly what you’re financing. Start with a free roof evaluation.',
+      'Roof financing for a home roof replacement in Los Angeles and Orange County. Spread the cost into monthly payments through Momnt Financing or Service Financing, subject to credit approval. You get a written scope and price before you apply, so you know exactly what you’re financing. Start with a free roof evaluation.',
     highlights: ['For home roof replacements', 'Through Momnt Financing or Service Financing', 'Written scope and price come first', 'Example payments in our Instant Quote'],
   },
   overview: {

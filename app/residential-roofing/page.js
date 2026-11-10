@@ -1,25 +1,33 @@
+import Faq from '@/components/sections/Faq';
+import LatestArticles from '@/components/sections/LatestArticles';
 import FinalCta from '@/components/sections/FinalCta';
 import ProofBar from '@/components/sections/ProofBar';
 import TrustLogos from '@/components/sections/TrustLogos';
-import { QhAccount, QhFinder, QhHero, QhOffer, QhPosts, QhProjects, QhReviews, QhRoofFan, QhServices, QhStart, QhStory } from '@/components/home/QrsSections';
-import { heroOutcome } from '@/data/heroOutcomes';
+import RoofCheck from '@/components/sections/RoofCheck';
+import ServiceFinder from '@/components/sections/ServiceFinder';
+import StudioProjects from '@/components/studio/StudioProjects';
+import { QhHero, QhRoofFan } from '@/components/home/QrsSections';
+import '@/components/home/QrsHome.css';
+import { HERO_ANNOTATIONS } from '@/data/site';
+import { languagesFor } from '@/lib/lang';
+import { SvcCardGrid, SvcIntro, SvcOffer, SvcReviews, SvcTrust } from '@/components/svc/SvcSections';
+import { projectsShownOn } from '@/data/projectPages';
 import { closingCta } from '@/components/templates/shared';
 import JsonLd from '@/components/ui/JsonLd';
-import { HOME, RESIDENTIAL, RESIDENTIAL_TYPES } from '@/data/catalog';
+import { HOME, RESIDENTIAL, RESIDENTIAL_TYPES, typeCard } from '@/data/catalog';
 import { RESIDENTIAL_PAGE as page } from '@/data/pages/residential';
-import { projectsShownOn } from '@/data/projectPages';
-import { articlesFor } from '@/lib/articles';
-import { noPlace } from '@/lib/headings';
+import { heroOutcome } from '@/data/heroOutcomes';
 import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
-import { languagesFor } from '@/lib/lang';
+import { articlesFor } from '@/lib/articles';
 
 const base = pageMetadata({ title: page.metaTitle, description: page.metaDescription, path: RESIDENTIAL.href });
-// The Spanish version is /es/residential-roofing/ (app/es/residential-roofing/page.js; hreflang both ways)
-export const metadata = { ...base, alternates: { ...base.alternates, languages: languagesFor(RESIDENTIAL.href) } };
+export const metadata = { ...base, alternates: { ...base.alternates, languages: languagesFor(RESIDENTIAL.href) } }; // the Spanish page is /es/residential-roofing/
 
 const CRUMBS = [HOME, RESIDENTIAL];
 const HERO_IMAGE = '/images/home-hero-drone-view.webp';
+
+const TYPES = RESIDENTIAL_TYPES.map((t) => ({ title: t.label, text: t.blurb, href: t.href, image: t.cardImage || t.image, caption: t.label }));
 
 const schema = pageJsonLd({
   path: RESIDENTIAL.href,
@@ -32,45 +40,34 @@ const schema = pageJsonLd({
   image: HERO_IMAGE,
 });
 
-// The page's roof types as the hover list (each links to its hub; the photo swaps beside the list)
-const TYPES = RESIDENTIAL_TYPES.map((t) => ({ title: t.label, text: t.blurb, href: t.href, image: t.cardImage || t.image, caption: t.label }));
-
-const SERVICE_LINKS = [
-  { label: 'Roof repair', href: '/roof-repair/' },
-  { label: 'Roof replacement', href: '/roof-replacement/' },
-  { label: 'Roof inspection', href: '/roof-inspection/' },
-  { label: 'Maintenance plans', href: '/roof-maintenance-plans/' },
-];
-
-// Residential hub (owner, November 6 2026): the page's own content (data/pages/residential.js: hero, overview, roof types, service finder,
-// FAQs) in the new home page's theme (components/home/QrsSections.jsx + QrsHome.css, scoped main.qh): dark blue hero with the breadcrumb
-// trail and the shingle, tile and flat roofs as fanned photo cards (not the home page's roof layers), the proof strip and review logos, the overview beside a photo collage, the roof types as the hover list, the service finder as
-// cards, credentials and numbers, the free roof evaluation offer, projects, reviews matched to the page, related articles, the FAQ beside the request form and the closing call to action.
+// Residential hub: every roof type, then every service by roof type (content in data/pages/residential.js). Layout (owner, October 29 2026):
+// the service pages' design after remote.com (components/svc/): gradient hero with the WebGL roof frame, the proof strip, the overview, the
+// roof types as photo cards, the service finder, credibility with numbers, the written-price offer, projects, review cards, articles, FAQ,
+// the request form and the closing call to action.
 export default async function ResidentialRoofingPage() {
   return (
-    <main id="top" className="qh">
+    <main id="top" className="svc">
       <JsonLd data={schema} />
-      <QhHero crumbs={CRUMBS} title={noPlace(page.hero.heading)} outcome={heroOutcome(RESIDENTIAL.href)} text={page.hero.intro} checks={page.hero.highlights} visual={<QhRoofFan items={TYPES} />} badges />
+      {/* The new-theme hero (owner, November 10 2026) on the earlier layout and content */}
+      <div className="qh-scope">
+        <QhHero crumbs={CRUMBS} title={page.hero.heading} outcome={heroOutcome(RESIDENTIAL.href)} text={page.hero.intro} checks={page.hero.highlights || HERO_ANNOTATIONS.home} visual={<QhRoofFan items={TYPES} />} badges />
+      </div>
       <ProofBar strip />
+      {/* Google, BBB and Yelp logos linking to our profiles (owner, November 2 2026) */}
       <TrustLogos />
-      <QhStory
-        id="overview"
-        heading={page.overview.heading}
-        paragraphs={page.overview.paragraphs}
-        images={[
-          { src: '/images/home-services-residential-shingle-drone-view.webp', alt: 'Drone view of a home with a new light gray shingle roof' },
-          { src: '/images/tile-roof-replacement.webp', alt: 'A tile roof on a home' },
-          { src: '/images/flat-roof-replacement-completed-white-membrane.webp', alt: 'A finished white flat roof' },
-        ]}
-      />
-      <QhServices id="roof-types" heading={page.cards.heading} lede={page.cards.intro} cats={SERVICE_LINKS} items={TYPES} />
-      <QhFinder heading={page.finder.heading} intro={page.finder.intro} rows={page.finder.rows} />
-      <QhAccount />
-      <QhOffer />
-      <QhProjects projects={projectsShownOn(RESIDENTIAL.href).projects} heading="Recent roofing projects" />
-      <QhReviews path={RESIDENTIAL.href} heading="What homeowners say after the job" />
-      <QhPosts posts={await articlesFor(RESIDENTIAL.href)} heading="Related roofing articles" />
-      <QhStart faqs={page.faqs} heading="Residential roofing questions" />
+      <SvcIntro heading={page.overview.heading} paragraphs={page.overview.paragraphs} />
+      <SvcCardGrid id="roof-types" heading={page.cards.heading} cards={RESIDENTIAL_TYPES.map(typeCard)} />
+      <ServiceFinder heading={page.finder.heading} intro={page.finder.intro} rows={page.finder.rows} />
+      <SvcTrust path={RESIDENTIAL.href} />
+      <SvcOffer offer="home" />
+      {/* The work itself (owner, October 15 2026, after maben.com.au) */}
+      <StudioProjects projects={projectsShownOn(RESIDENTIAL.href).projects} heading="Recent roofing projects" />
+      <SvcReviews path={RESIDENTIAL.href} />
+      <LatestArticles posts={await articlesFor(RESIDENTIAL.href)} heading="Related Roofing Articles" />
+      <div className="sv-faq-wrap">
+        <Faq heading="Frequently Asked __Questions__" sub="Straight answers about residential roofing." faqs={page.faqs} cta={false} />
+      </div>
+      <RoofCheck tone="white" />
       <FinalCta {...closingCta(page.keyword)} />
     </main>
   );
