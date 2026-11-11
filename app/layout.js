@@ -6,7 +6,7 @@ import './dark-theme.css'; // dark theme colors, toggled from the header and sav
 import '@/components/studio/StudioSite.css'; // the studio look for every page (STUDIO_THEME in data/promo.js)
 
 import Script from 'next/script';
-import { Big_Shoulders, EB_Garamond, League_Gothic, Open_Sans } from 'next/font/google';
+import { Big_Shoulders, EB_Garamond, Gilda_Display, Poppins } from 'next/font/google';
 import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
 import HideOnLanding from '@/components/layout/HideOnLanding';
@@ -24,6 +24,7 @@ import MobileActionBar from '@/components/widgets/MobileActionBar';
 import SeasonPromo from '@/components/widgets/SeasonPromo';
 import RoofAssistant from '@/components/widgets/RoofAssistant';
 import RevealSections from '@/components/ui/RevealSections';
+import SiteEffects from '@/components/ui/SiteEffects';
 import StudioMotion from '@/components/studio/StudioMotion';
 import HelpfulTitles from '@/components/ui/HelpfulTitles';
 import { INSTANT_QUOTE_ENABLED } from '@/data/instantQuote';
@@ -38,7 +39,9 @@ import { callrailSwapScript } from '@/lib/callrail';
 // weight (the site uses 300-900), and the stylesheet carries only a few font rules instead of dozens.
 // Paragraphs, menus, buttons and labels: Open Sans (owner, October 29 2026; it replaces Libre Franklin), a variable Google font.
 // Arrows, checks and stars stay in var(--font-glyph): in Open Sans they would pull in two extra font files (see AGENTS.md, Page speed).
-const bodyFont = Open_Sans({ subsets: ['latin'], variable: '--font-text' });
+// Body, menus, buttons, labels and the smaller headings (h3-h6): Poppins (owner, November 11 2026, the reference agency site's text face; it
+// replaced Open Sans). Not a variable font, so the weights in use are listed.
+const bodyFont = Poppins({ subsets: ['latin'], weight: ['300', '400', '500', '600', '700'], variable: '--font-text', display: 'swap' });
 // Uppercase condensed display face for every heading (h1–h6 and the hero headline): Big Shoulders, a tall, sturdy, signage-style face
 const bigShoulders = Big_Shoulders({ subsets: ['latin'], variable: '--font-condensed' });
 // Headings and the logo's words (owner, October 29 2026): Xmind, the owner's font (SIL Open Font License, app/fonts/Xmind-OFL.txt). The upright
@@ -46,7 +49,9 @@ const bigShoulders = Big_Shoulders({ subsets: ['latin'], variable: '--font-conde
 // November 9 2026 (owner: "use the font family of the headings of bakerroofing.com"): that site's headings are Field Gothic XCondensed, a paid
 // Adobe Fonts face locked to its own kit, so the headings here use League Gothic, the closest free extra-condensed gothic (Google Fonts, SIL OFL).
 // To use the licensed Field Gothic instead, load it from your own Adobe Fonts kit and point --font-heading at it. Xmind stays in app/fonts, unused.
-const headingFont = League_Gothic({ subsets: ['latin'], variable: '--font-heading', display: 'swap' });
+// h1, h2 and the big numbers: Gilda Display, a classical serif with one weight (owner, November 11 2026, the reference agency site's heading
+// face; it replaced League Gothic). Sizes and the header's type are in the last blocks of StudioSite.css and Header.css.
+const headingFont = Gilda_Display({ subsets: ['latin'], weight: '400', variable: '--font-heading', display: 'swap' });
 // Product names inside headings (TotalShield, LeakRescue, SecondLife…): EB Garamond italic, a traditional serif, in normal case (owner,
 // November 10 2026; Playfair Display in capitals was tried first). Italic only, not preloaded (needed only where a heading names a product).
 const brandFont = EB_Garamond({ subsets: ['latin'], style: ['italic'], variable: '--font-brand', display: 'swap', preload: false });
@@ -104,6 +109,8 @@ export default async function RootLayout({ children }) {
         <SiteChrome>
           <Header />
           {SCROLL_REVEALS && <RevealSections />}
+          {/* Tiles wiping in, items popping, rows sliding and numbers counting up as each group scrolls into view (SiteEffects.jsx) */}
+          <SiteEffects />
           <StudioMotion />
           <HelpfulTitles />
         </SiteChrome>

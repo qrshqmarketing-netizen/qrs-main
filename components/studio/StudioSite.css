@@ -470,3 +470,24 @@ body.studio-site main :is(h1,h2),body.studio-site main .qh-h2{text-transform:upp
 /* Product names in every heading (h1-h6): EB Garamond italic, a traditional serif, in normal case even inside a capitalized heading (owner,
    November 10 2026; app/layout.js loads it as --font-brand). Body copy keeps the Georgia serif italic. */
 body.studio-site :is(h1,h2,h3,h4,h5,h6,.qh-h2) .product-brand{font-family:var(--font-brand),Georgia,serif!important;font-style:italic;font-weight:500;text-transform:none!important;letter-spacing:0}
+
+/* Fonts after the reference agency site (owner, November 11 2026; overrides the League Gothic sizes above): h1, h2, the statements styled as
+   headings and the big numbers are Gilda Display (--font-heading), a wide classical serif with one weight, in capitals with a little tracking,
+   so they are sized well below the condensed face they replace; h3-h6 are Poppins Light (--font-text) with open tracking, as the reference
+   sets its sub-headings; body, menus, buttons and labels are Poppins. `html` in front makes these win over the earlier !important rules. */
+html body.studio-site main h1{font-size:clamp(30px,3.5vw,52px)!important;line-height:1.1!important;letter-spacing:.02em!important}
+html body.studio-site main h2,html body.studio-site main .qh-h2{font-size:clamp(25px,2.7vw,40px)!important;line-height:1.16!important;letter-spacing:.02em!important}
+html body.studio-site :is(h3,h4,h5,h6){font-family:var(--font-text),ui-sans-serif,system-ui,sans-serif!important;font-weight:300!important;letter-spacing:.04em!important}
+html body.studio-site main h3{font-size:clamp(20px,1.7vw,26px)!important;line-height:1.22!important}
+html body.studio-site main :is(h4,h5,h6){font-size:clamp(16px,1.25vw,19px)!important;line-height:1.3!important}
+html body.studio-site main .post h2{font-size:clamp(24px,2.3vw,32px)!important}
+html body.studio-site main .post h3{font-size:clamp(19px,1.6vw,23px)!important}
+/* Labels that were sized up for the condensed face */
+html body.studio-site :is(main.qh,main .qh-scope) .qh-trust strong{font-size:17px}
+html body.studio-site :is(main.qh,main .qh-scope) .qh-svc-list .name{font-size:clamp(18px,1.6vw,21px)}
+html body.studio-site :is(main.qh,main .qh-scope) .qh-proj-title{font-size:clamp(18px,1.6vw,22px)}
+html body.studio-site :is(main.qh,main .qh-scope) .qh-post-title{font-size:18px}
+html body.studio-site .sv-rel b,html body.studio-site .sv-tile-body b{font-size:18px;letter-spacing:.01em}
+html body.studio-site :is(.sv-stat b,.sv-price-big){letter-spacing:0}
+html body.studio-site main.srch .srch-form button{font:600 14px/1 var(--font-text),sans-serif;letter-spacing:.08em}
+html body.studio-site main.srch .srch-title{font-size:clamp(19px,1.7vw,23px);letter-spacing:.02em}

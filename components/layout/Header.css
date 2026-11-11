@@ -384,3 +384,14 @@ body .site-header .hd-brand{padding:0 12px 0 14px}
 @media (min-width:481px){body .site-header .hd-cell{min-width:56px;padding:0 18px}body .site-header :is(.hd-search,.hd-theme,.hd-menu,.hd-lang){width:auto;min-width:56px;padding:0 18px}body .site-header .hd-lang svg{display:block}body .site-header .hd-brand{padding:0 18px 0 16px}}
 body .site-header .hd-brand .brand{font-size:16px}@media (min-width:381px){body .site-header .hd-brand .brand{font-size:19px}}
 @media (min-width:901px){body .site-header .hd-brand .brand{font-size:22px}}
+
+/* Header type after the reference agency site (owner, November 11 2026; overrides the League Gothic header above): the links, the gold cell,
+   the phone and the menu rows are Poppins in small spaced capitals. Re-measure the bar if a link is added or renamed. */
+html body .site-header .hd-link{font:500 11.5px/1 var(--font-text),sans-serif!important;letter-spacing:.06em!important;text-transform:uppercase}
+html body .site-header .hd-cta,html body .site-header .hd-phone{font:600 11.5px/1 var(--font-text),sans-serif!important;letter-spacing:.06em!important}
+html body .site-header .hd-row-big{min-height:54px;font:500 19px/1.1 var(--font-text),sans-serif!important;letter-spacing:.06em!important;text-transform:uppercase}
+html body .site-header .hd-panel-foot a:first-child{font:600 21px/1 var(--font-text),sans-serif!important;letter-spacing:.03em}
+html body .site-header .hd-more .hd-row{min-height:46px;font:500 14px/1 var(--font-text),sans-serif!important;letter-spacing:.08em!important;text-transform:uppercase}
+html body .hd-search-box button{font:600 13px/1 var(--font-text),sans-serif;letter-spacing:.09em}
+html body .hd-search-hits li a b{font:500 15px/1.25 var(--font-text),sans-serif;letter-spacing:.01em;text-transform:none}
+@media (min-width:1280px) and (max-width:1439px){html body .site-header .hd-link{font-size:10.5px!important;letter-spacing:.04em!important;padding-left:7px!important;padding-right:7px!important}html body .site-header .hd-cta{font-size:10.5px!important;letter-spacing:.04em!important}}

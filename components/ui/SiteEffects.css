@@ -1,0 +1,25 @@
+/* Scroll effects on every page (SiteEffects.jsx). The classes are added by the script only to groups still below the fold, and taken off when done. */
+@media (prefers-reduced-motion: no-preference) {
+  /* Tiles wipe in from a random side */
+  main .fx-hold .fx-tile{clip-path:var(--fx-clip);transition:clip-path .95s cubic-bezier(.2,.7,.25,1) var(--fx-d,0ms)}
+  main .fx-hold.fx-in .fx-tile{clip-path:inset(0)}
+  /* Small items pop in */
+  main .fx-hold .fx-pop{opacity:0;transform:scale(.6);transition:opacity .45s ease var(--fx-d,0ms),transform .65s cubic-bezier(.34,1.45,.64,1) var(--fx-d,0ms)}
+  main .fx-hold.fx-in .fx-pop{opacity:1;transform:none}
+  /* Buttons and check points rise */
+  main .fx-hold .fx-rise{opacity:0;transform:translate3d(0,18px,0);transition:opacity .6s ease var(--fx-d,0ms),transform .7s cubic-bezier(.2,.7,.25,1) var(--fx-d,0ms)}
+  main .fx-hold.fx-in .fx-rise{opacity:1;transform:none}
+  /* Rows and steps slide in from the left */
+  main .fx-hold .fx-slide{opacity:0;transform:translate3d(-28px,0,0);transition:opacity .55s ease var(--fx-d,0ms),transform .75s cubic-bezier(.2,.7,.25,1) var(--fx-d,0ms)}
+  main .fx-hold.fx-in .fx-slide{opacity:1;transform:none}
+  /* List rows: the number pops, then the words slide in */
+  main .fx-hold .fx-row{opacity:0;transition:opacity .5s ease var(--fx-d,0ms)}
+  main .fx-hold .fx-row .st-row-n{transform:scale(.4);transition:transform .6s cubic-bezier(.34,1.45,.64,1) var(--fx-d,0ms)}
+  main .fx-hold .fx-row .st-row-t{transform:translate3d(-26px,0,0);transition:transform .7s cubic-bezier(.2,.7,.25,1) var(--fx-d,0ms)}
+  main .fx-hold.fx-in .fx-row{opacity:1}
+  main .fx-hold.fx-in .fx-row .st-row-n,main .fx-hold.fx-in .fx-row .st-row-t{transform:none}
+  /* The closing call to action's pattern settles */
+  main .final-pattern.fx-settle{opacity:0;transform:scale(1.14);transition:opacity 1.2s ease,transform 1.8s cubic-bezier(.2,.7,.25,1)}
+  main .final-pattern.fx-settle.fx-in{opacity:.6;transform:none}
+}
+@media print{main .fx-hold .fx-tile{clip-path:none!important}main .fx-hold :is(.fx-pop,.fx-rise,.fx-row,.fx-slide),main .final-pattern.fx-settle{opacity:1!important;transform:none!important}}
