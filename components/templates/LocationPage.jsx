@@ -109,7 +109,7 @@ export default async function LocationPage({ location, page, index = 0 }) {
           allLink={false}
           layout="list"
         />
-        <LatestArticles posts={await articlesFor(cityPath(slug))} heading="Related Roofing Articles" />
+        <LatestArticles posts={await articlesFor(cityPath(slug))} heading={`Roofing Articles for ${city}`} />
       </div>
       {FACEBOOK_FEEDS[slug] && <FacebookFeed pageId={process.env[FACEBOOK_FEEDS[slug].id]} token={process.env[FACEBOOK_FEEDS[slug].token]} place={city} />}
       <LocCta place={city} commercial={page.offer === 'commercial'} {...officePhone} />

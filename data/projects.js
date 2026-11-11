@@ -15,6 +15,7 @@
 
 import { findCity } from './locations';
 import { PROJECT_PAGES } from './pages/projects';
+import { ALL_PLACES } from './locations';
 
 export const PROJECTS = [
   {
@@ -114,4 +115,13 @@ export function projectsNear(slug) {
     .map(({ page }) => ({ title: page.title, caption: (page.place || page.title).replace(/,?\s*CA\b/, ''), image: page.image, alt: page.imageAlt, href: page.path, place: page.place, label: page.label, photos: page.photos?.length || 0 }));
   const projects = [...tagged, ...nearby].slice(0, 6);
   return { projects, local: tagged.length > 0 || nearby.some((p) => p.place?.includes(center.city)) };
+}
+
+// Project pages in a county (the county pages, owner November 10 2026): each project belongs to the county of the place nearest its ZIP pin
+// (ALL_PLACES), newest first as in PROJECT_PAGES, up to `limit`. Same row shape as projectsNear.
+export function projectsInRegion(regionSlug, limit = 6) {
+  const regionOf = (geo) => ALL_PLACES.reduce((best, pl) => { const d = milesBetween(geo, [pl.lat, pl.lng]); return d < best.d ? { d, region: pl.region } : best; }, { d: Infinity, region: null }).region;
+  return PROJECT_PAGES.filter((page) => page.geo && regionOf(page.geo) === regionSlug)
+    .slice(0, limit)
+    .map((page) => ({ title: page.title, caption: (page.place || page.title).replace(/,?\s*CA\b/, ''), image: page.image, alt: page.imageAlt, href: page.path, place: page.place, label: page.label, photos: page.photos?.length || 0 }));
 }

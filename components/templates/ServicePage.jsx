@@ -17,7 +17,7 @@ import JsonLd from '@/components/ui/JsonLd';
 import { projectsShownOn } from '@/data/projectPages';
 import StudioProjects from '@/components/studio/StudioProjects';
 import { pageJsonLd } from '@/lib/structuredData';
-import { closingCta, faqSub } from './shared';
+import { closingCta, faqHeading, faqSub, nearYou, projectsHeading, REVIEWS_HEADING } from './shared';
 import { heroOutcome } from '@/data/heroOutcomes';
 import { articlesFor } from '@/lib/articles';
 import { searchHeading } from '@/lib/headings';
@@ -167,9 +167,9 @@ export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], 
       )}
       {/* The story in order (owner, October 15 2026, after maben.com.au): what we do, how we do it, then the work itself on real roofs, what people
           say, why QRS, and the questions. The projects used to sit at the bottom, under the FAQ. */}
-      <StudioProjects projects={work.projects} heading={work.exact ? 'This work, on real roofs' : 'Recent roofing projects'} />
+      <StudioProjects projects={work.projects} heading={projectsHeading(page.keyword, work.exact)} />
       {/* Google reviews, a few sections below the hero (owner, October 14 2026) */}
-      {page.showReviews !== false && <ReviewMarquee {...(page.reviewsHeading && { heading: page.reviewsHeading })} />}
+      {page.showReviews !== false && <ReviewMarquee heading={page.reviewsHeading || REVIEWS_HEADING} />}
       {/* A jump to the estimate form under the reviews (owner, November 6 2026) */}
       <div className="container jump-cta-band">
         <JumpCta label={jumpLabel} align="center" />
@@ -177,7 +177,9 @@ export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], 
       {!page.story && <WhyChoose heading={page.why.heading} intro={page.why.intro} points={page.why.points} />}
       {page.partners && <PartnerLogos {...page.partners} />}
       <LatestArticles posts={await articlesFor(crumbs.at(-1).href)} heading="Related Roofing Articles" />
-      {page.faqs?.length > 0 && <Faq heading="Frequently Asked __Questions__" sub={faqSub(page.keyword)} faqs={page.faqs} cta={false} />}
+      {/* Where we do this work, with links to the county and office pages (owner, November 10 2026) */}
+      <Overview {...nearYou(page.keyword, offer)} />
+      {page.faqs?.length > 0 && <Faq heading={faqHeading(page.keyword)} sub={faqSub(page.keyword)} faqs={page.faqs} cta={false} />}
       <RoofCheck tone="white" offer={offer} />
       <FinalCta {...finalCta} />
     </main>

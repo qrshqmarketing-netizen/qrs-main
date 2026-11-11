@@ -13,7 +13,7 @@ import JsonLd from '@/components/ui/JsonLd';
 import { HubQhHero } from './qhHeroes';
 import { SvcCardGrid, SvcIncludes, SvcIntro, SvcOffer, SvcReviews, SvcTrust } from '@/components/svc/SvcSections';
 import { pageJsonLd } from '@/lib/structuredData';
-import { closingCta, faqSub } from './shared';
+import { closingCta, faqHeading, faqSub, nearYou, REVIEWS_HEADING } from './shared';
 import { heroOutcome } from '@/data/heroOutcomes';
 import { articlesFor } from '@/lib/articles';
 import { projectsShownOn } from '@/data/projectPages';
@@ -59,12 +59,14 @@ export default async function HubPage({ hub, crumbs, eyebrow, image, imageAlt, c
       {process && <Process />}
       <SvcOffer offer={offer} />
       <StudioProjects projects={projectsShownOn(path).projects} heading="Recent roofing projects" />
-      <SvcReviews path={path} />
+      <SvcReviews path={path} heading={REVIEWS_HEADING} />
       {feature && <SplitFeature {...feature} tone="wash" />}
       <LatestArticles posts={await articlesFor(path)} heading="Related Roofing Articles" />
+      {/* Where we do this work, with links to the county and office pages (owner, November 10 2026) */}
+      <SvcIntro {...nearYou(hub.keyword, offer)} />
       {hub.faqs?.length > 0 && (
         <div className="sv-faq-wrap">
-          <Faq heading="Frequently Asked __Questions__" sub={faqSub(hub.keyword)} faqs={hub.faqs} cta={false} />
+          <Faq heading={faqHeading(hub.keyword)} sub={faqSub(hub.keyword)} faqs={hub.faqs} cta={false} />
         </div>
       )}
       <RoofCheck tone="white" offer={offer} />

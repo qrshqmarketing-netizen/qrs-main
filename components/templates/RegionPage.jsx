@@ -7,6 +7,8 @@ import { LocCta, LocFaq, LocReviews, LocStory } from '@/components/loc/LocSectio
 import LatestArticles from '@/components/sections/LatestArticles';
 import FinalCta from '@/components/sections/FinalCta';
 import OfficeMap from '@/components/sections/OfficeMap';
+import StudioProjects from '@/components/studio/StudioProjects';
+import { projectsInRegion } from '@/data/projects';
 import RoofCheck from '@/components/sections/RoofCheck';
 import JsonLd from '@/components/ui/JsonLd';
 import { HOME, LOCATIONS_LINK } from '@/data/catalog';
@@ -98,7 +100,9 @@ export default async function RegionPage({ region, page }) {
       </div>
       <LocReviews path={path} place={region.name} />
       <div className="lc-keep">
-        <LatestArticles posts={await articlesFor(path)} heading="Related Roofing Articles" />
+        {/* The county's finished projects, newest first (owner, November 10 2026); a county with none shows no section */}
+        <StudioProjects id="projects" label={`Projects in ${region.name}`} heading={`Roofing Projects in ${region.name}`} projects={projectsInRegion(region.slug)} layout="list" />
+        <LatestArticles posts={await articlesFor(path)} heading={`Roofing Articles for ${region.name}`} />
       </div>
       <LocCta place={region.name} />
       <LocFaq heading={`${region.name} Roofing FAQs`} sub={`Straight answers for property owners across ${region.name}.`} faqs={page.faqs} />

@@ -233,7 +233,7 @@ export function LocReviews({ path, place, places = [] }) {
   return (
     <section className="lc-section" id="reviews" aria-labelledby="lc-reviews">
       <div className="lc-wrap">
-        <h2 id="lc-reviews" className="lc-center">A word from the people we roof for.</h2>
+        <h2 id="lc-reviews" className="lc-center">Roofing reviews near {place}</h2>
         <p className="lc-center lc-lead">Google reviews from homeowners and clients across Los Angeles and Orange County, the ones closest to {place} first.</p>
         <div className="lc-quotes">
           {reviews.map((r) => (

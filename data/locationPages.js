@@ -146,6 +146,9 @@ export const LOCATION_PAGES = {
       { q: 'Why does attic ventilation matter for my Burbank roof?', a: 'Heat that builds up in the attic cooks shingles from below. Balanced intake and exhaust ventilation helps shingles last, and it’s one of the things we look at during a [shingle roof inspection](/roof-inspection/#shingle-roofs).' },
       { q: 'Do you work on mid-century homes with flat sections?', a: 'Yes. We handle the low-slope additions and patio covers common on Burbank homes, and we plan them around drainage so water actually leaves the roof.' },
       { q: 'Which parts of Burbank do you serve?', a: 'All of Burbank, including Magnolia Park, the Media District, Downtown Burbank, the Rancho Equestrian District and the Burbank Hills.' },
+      { q: 'Do you pull the roofing permit in Burbank?', a: 'Yes. When your roofing project needs a building permit, we pull it for you, and the permit is listed in your written scope.' },
+      { q: 'Do you do roof repairs in Burbank, or only replacements?', a: 'Both. Many roofs need a [roof repair](/roof-repair/), not a [roof replacement](/roof-replacement/). A roofer looks at the roof first and tells you which one yours needs, with photos and a written price before any work.' },
+      { q: 'Which office serves Burbank?', a: 'Our West Hollywood office, at (310) 340-1643.' },
     ],
     nearby: ['los-angeles', 'pasadena', 'woodland-hills'],
     final: { heading: 'Clear, Careful Roofing for Burbank', text: 'Get photos, plain-English answers and a written scope for your Burbank roof, starting with a free roof evaluation.' },
@@ -312,7 +315,7 @@ export const LOCATION_PAGES = {
       heading: 'Roofing Built for Vernon’s Industrial Buildings',
       paragraphs: [
         'Vernon calls itself “exclusively industrial,” and the roofs here show it: wide, low-slope roofs over warehouses, manufacturing plants and food-processing facilities, built to cover large open floor plans rather than a typical house roof. Our Vernon office keeps us close to these buildings and to the surrounding industrial areas near Downtown Los Angeles.',
-        'It starts with a roofer-led [roof survey](#roof-check), not a sales pitch. We photo-document the roof, explain what we find in plain English and give you a written scope and price before any work begins — the same process whether the job is a [flat roof repair](/residential-roofing/flat-roofing/repair/), a full [commercial roof replacement](/commercial-roofing/replacement/) or ongoing [commercial roof maintenance](/commercial-roofing/maintenance/).',
+        'It starts with a roofer-led [roof survey](#roof-check), not a sales pitch. We photo-document the roof, explain what we find in plain English and give you a written scope and price before any work begins — the same process whether the job is a [flat roof repair](/residential-roofing/flat-roofing/repair/), a full [commercial roof replacement](/commercial-roofing/replacement/) or ongoing [commercial roof maintenance](/commercial-roofing/maintenance/). See how we handle [industrial roofing](/commercial-roofing/industrial/), [warehouse roofing](/commercial-roofing/warehouses/), [commercial roof repair](/commercial-roofing/repair/) and [property management roofing](/commercial-roofing/property-managers/).',
         // Homes near the office (owner, November 3 2026: the Vernon listing's residential side; facts the site already states)
         'Our Vernon office also serves the homes and apartment buildings around it, in Huntington Park, Maywood, Bell, Bell Gardens, South Gate, Commerce, Boyle Heights and Downtown Los Angeles. For a house there, it starts with a [free roof evaluation](#roof-check) and a written price before any work, whether the roof needs a [roof repair](/roof-repair/), a [shingle roof replacement](/residential-roofing/shingle-roofing/replacement/) or a [flat roof repair](/residential-roofing/flat-roofing/repair/). Our office team and roofers speak English and Spanish.',
       ],
@@ -402,6 +405,9 @@ export const LOCATION_PAGES = {
     faqs: [
       { q: 'Have you worked in Venice?', a: 'Yes. We replaced the shingle roof on a [canal-side home in Venice 90291](/projects/shingle-roof-replacement-venice-90291/), working around its stone chimney, skylights, rear terrace and a flat upper roof crowded with HVAC units.' },
       { q: 'Can you replace a roof that has skylights and rooftop equipment?', a: 'Yes. Each skylight, vent and equipment curb is flashed as part of the new roof, since those are the points where leaks usually start.' },
+      { q: 'Do you pull the roofing permit in Venice?', a: 'Yes. When your roofing project needs a building permit, we pull it for you. Venice is in the City of Los Angeles, so permits go through its Department of Building and Safety; our [roofing permit guide](/blog/roofing-permits-los-angeles/) explains what it asks for.' },
+      { q: 'Do you do roof repairs in Venice, or only replacements?', a: 'Both. Many roofs need a [roof repair](/roof-repair/), not a [roof replacement](/roof-replacement/). A roofer looks at the roof first and tells you which one yours needs, with photos and a written price before any work.' },
+      { q: 'Which office serves Venice?', a: 'Our West Hollywood office, at (310) 340-1643.' },
       { q: 'How do I get started?', a: 'Book a free roof evaluation. A roofer inspects your roof with drone footage and photos, explains what they find and gives you a clear next step: repair, monitor, maintain or replace.' },
     ],
     nearby: ['santa-monica', 'los-angeles', 'west-hollywood'],
@@ -434,6 +440,9 @@ export const LOCATION_PAGES = {
     faqs: [
       { q: 'Have you worked in the Hollywood Hills?', a: 'Yes. We replaced the flat roof on a [12-sided round home in Hollywood Hills West 90046](/projects/flat-roof-replacement-hollywood-hills-west-90046/), with a white reflective cap sheet and every deck post sealed.' },
       { q: 'Can you work on a steep hillside lot?', a: 'Yes. Access, deliveries and safety are planned for each property and written into the scope before work starts.' },
+      { q: 'Do you pull the roofing permit in the Hollywood Hills?', a: 'Yes. When your roofing project needs a building permit, we pull it for you. The Hollywood Hills area is in the City of Los Angeles, so permits go through its Department of Building and Safety; our [roofing permit guide](/blog/roofing-permits-los-angeles/) explains what it asks for.' },
+      { q: 'Do you do roof repairs in the Hollywood Hills, or only replacements?', a: 'Both. Many roofs need a [roof repair](/roof-repair/), not a [roof replacement](/roof-replacement/). A roofer looks at the roof first and tells you which one yours needs, with photos and a written price before any work.' },
+      { q: 'Which office serves the Hollywood Hills?', a: 'Our West Hollywood office, at (310) 340-1643.' },
       { q: 'How do I get started?', a: 'Book a free roof evaluation. A roofer inspects your roof with drone footage and photos, explains what they find and gives you a clear next step: repair, monitor, maintain or replace.' },
     ],
     nearby: ['west-hollywood', 'los-angeles', 'burbank'],
@@ -466,6 +475,9 @@ export const LOCATION_PAGES = {
     faqs: [
       { q: 'Have you worked in San Pedro?', a: 'Yes, twice: a [full roof replacement in 90732](/projects/full-roof-replacement-san-pedro-90732/), shingles plus a flat patio roof, and a [multi-family shingle roof in 90731](/projects/shingle-roof-replacements-90731/).' },
       { q: 'Can you replace a shingle roof and a flat patio roof at the same time?', a: 'Yes. Handling both together means one scope, one crew schedule and a clean tie-in where the two roofs meet.' },
+      { q: 'Do you pull the roofing permit in San Pedro?', a: 'Yes. When your roofing project needs a building permit, we pull it for you. San Pedro is in the City of Los Angeles, so permits go through its Department of Building and Safety; our [roofing permit guide](/blog/roofing-permits-los-angeles/) explains what it asks for.' },
+      { q: 'Do you do roof repairs in San Pedro, or only replacements?', a: 'Both. Many roofs need a [roof repair](/roof-repair/), not a [roof replacement](/roof-replacement/). A roofer looks at the roof first and tells you which one yours needs, with photos and a written price before any work.' },
+      { q: 'Which office serves San Pedro?', a: 'Our Vernon office, at (213) 263-5976.' },
       { q: 'How do I get started?', a: 'Book a free roof evaluation. A roofer inspects your roof with drone footage and photos, explains what they find and gives you a clear next step: repair, monitor, maintain or replace.' },
     ],
     nearby: ['long-beach', 'los-angeles'],
@@ -498,6 +510,9 @@ export const LOCATION_PAGES = {
     faqs: [
       { q: 'Have you worked in Panorama City?', a: 'Yes. We replaced the shingle roof on a [two-story apartment building in 91402](/projects/shingle-roof-replacement-panorama-city-91402/), flashing every AC platform and vent and adding new box vents.' },
       { q: 'Which office serves Panorama City?', a: 'Our Valley office in Woodland Hills, at (818) 918-3184.' },
+      { q: 'Do you pull the roofing permit in Panorama City?', a: 'Yes. When your roofing project needs a building permit, we pull it for you. Panorama City is in the City of Los Angeles, so permits go through its Department of Building and Safety; our [roofing permit guide](/blog/roofing-permits-los-angeles/) explains what it asks for.' },
+      { q: 'Do you do roof repairs in Panorama City, or only replacements?', a: 'Both. Many roofs need a [roof repair](/roof-repair/), not a [roof replacement](/roof-replacement/). A roofer looks at the roof first and tells you which one yours needs, with photos and a written price before any work.' },
+      { q: 'What kinds of roofs do you work on in Panorama City?', a: 'Shingle, tile and flat roofs: see [shingle roofing](/residential-roofing/shingle-roofing/), [tile roofing](/residential-roofing/tile-roofing/) and [flat roofing](/residential-roofing/flat-roofing/). Many homes here have more than one, and we handle them under one written scope.' },
       { q: 'How do I get started?', a: 'Book a free roof evaluation. A roofer inspects your roof with drone footage and photos, explains what they find and gives you a clear next step: repair, monitor, maintain or replace.' },
     ],
     nearby: ['granada-hills', 'woodland-hills', 'burbank'],
@@ -530,6 +545,9 @@ export const LOCATION_PAGES = {
     faqs: [
       { q: 'Have you worked in Granada Hills?', a: 'Yes. We replaced the shingle roof on a [large single-story home in 91344](/projects/shingle-roof-replacement-granada-hills-91344/), with its chimney, skylights and vents built into the new roof.' },
       { q: 'Which office serves Granada Hills?', a: 'Our Valley office in Woodland Hills, at (818) 918-3184.' },
+      { q: 'Do you pull the roofing permit in Granada Hills?', a: 'Yes. When your roofing project needs a building permit, we pull it for you. Granada Hills is in the City of Los Angeles, so permits go through its Department of Building and Safety; our [roofing permit guide](/blog/roofing-permits-los-angeles/) explains what it asks for.' },
+      { q: 'Do you do roof repairs in Granada Hills, or only replacements?', a: 'Both. Many roofs need a [roof repair](/roof-repair/), not a [roof replacement](/roof-replacement/). A roofer looks at the roof first and tells you which one yours needs, with photos and a written price before any work.' },
+      { q: 'What kinds of roofs do you work on in Granada Hills?', a: 'Shingle, tile and flat roofs: see [shingle roofing](/residential-roofing/shingle-roofing/), [tile roofing](/residential-roofing/tile-roofing/) and [flat roofing](/residential-roofing/flat-roofing/). Many homes here have more than one, and we handle them under one written scope.' },
       { q: 'How do I get started?', a: 'Book a free roof evaluation. A roofer inspects your roof with drone footage and photos, explains what they find and gives you a clear next step: repair, monitor, maintain or replace.' },
     ],
     nearby: ['woodland-hills', 'panorama-city', 'burbank'],
@@ -562,6 +580,9 @@ export const LOCATION_PAGES = {
     faqs: [
       { q: 'Have you worked in Pico Rivera?', a: 'Yes. We replaced the roof under a solar array on a [home in 90660](/projects/shingle-roof-replacement-solar-pico-rivera-90660/), with new OSB over the old plank deck and every mounting point flashed.' },
       { q: 'What if my old roof has gaps in the decking?', a: 'If the deck under the old roof is plank decking with gaps, new sheathing goes over it so the new roof has a solid base. It’s listed in the written scope.' },
+      { q: 'Do you pull the roofing permit in Pico Rivera?', a: 'Yes. When your roofing project needs a building permit, we pull it for you, and the permit is listed in your written scope.' },
+      { q: 'Do you do roof repairs in Pico Rivera, or only replacements?', a: 'Both. Many roofs need a [roof repair](/roof-repair/), not a [roof replacement](/roof-replacement/). A roofer looks at the roof first and tells you which one yours needs, with photos and a written price before any work.' },
+      { q: 'Which office serves Pico Rivera?', a: 'Our Vernon office, at (213) 263-5976.' },
       { q: 'How do I get started?', a: 'Book a free roof evaluation. A roofer inspects your roof with drone footage and photos, explains what they find and gives you a clear next step: repair, monitor, maintain or replace.' },
     ],
     nearby: ['hacienda-heights', 'vernon', 'los-angeles'],
@@ -594,6 +615,9 @@ export const LOCATION_PAGES = {
     faqs: [
       { q: 'Have you worked in Hacienda Heights?', a: 'Yes. We replaced the shingle roof on a [large single-story home in 91745](/projects/shingle-roof-replacement-hacienda-heights-91745/), with every vent flashed into the new roof.' },
       { q: 'Do you replace roofs on large single-story homes?', a: 'Yes. Wide roofs with many hips and valleys are common for us, and each line is finished and sealed on its own.' },
+      { q: 'Do you pull the roofing permit in Hacienda Heights?', a: 'Yes. When your roofing project needs a building permit, we pull it for you, and the permit is listed in your written scope.' },
+      { q: 'Do you do roof repairs in Hacienda Heights, or only replacements?', a: 'Both. Many roofs need a [roof repair](/roof-repair/), not a [roof replacement](/roof-replacement/). A roofer looks at the roof first and tells you which one yours needs, with photos and a written price before any work.' },
+      { q: 'Which office serves Hacienda Heights?', a: 'Our Vernon office, at (213) 263-5976.' },
       { q: 'How do I get started?', a: 'Book a free roof evaluation. A roofer inspects your roof with drone footage and photos, explains what they find and gives you a clear next step: repair, monitor, maintain or replace.' },
     ],
     nearby: ['pico-rivera', 'los-angeles'],
