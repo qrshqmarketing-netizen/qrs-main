@@ -1,8 +1,11 @@
 import ThankYou from '@/components/sections/ThankYou';
 import JsonLd from '@/components/ui/JsonLd';
+import ChatGptPixel from '@/components/ui/ChatGptPixel';
 import LeadConversion from '@/components/ui/LeadConversion';
 import { HOME } from '@/data/catalog';
 import { THANK_YOU_PAGE as page } from '@/data/pages/thankYou';
+import { OPENAI_PIXEL_ID } from '@/data/site';
+import { LOAD_TRACKING } from '@/lib/seo';
 import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
 
@@ -17,6 +20,8 @@ export default function ThankYouPage() {
     <main id="top">
       <JsonLd data={pageJsonLd({ path: page.path, title: page.metaTitle, description: page.metaDescription, crumbs: CRUMBS })} />
       <LeadConversion />
+      {/* ChatGPT ads conversion pixel: this page only, live site only, with the Analytics cookie choice (owner, November 11 2026) */}
+      {LOAD_TRACKING && <ChatGptPixel pixelId={OPENAI_PIXEL_ID} />}
       <ThankYou page={page} />
     </main>
   );

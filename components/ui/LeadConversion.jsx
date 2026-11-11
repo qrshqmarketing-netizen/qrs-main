@@ -8,7 +8,10 @@ import { takeRememberedLead, trackLead } from '@/lib/tracking';
 export default function LeadConversion() {
   useEffect(() => {
     const source = takeRememberedLead();
-    if (source) trackLead(source);
+    if (source) {
+      window.__qrsLead = true; // read by ChatGptPixel: this visit follows a delivered form
+      trackLead(source);
+    }
   }, []);
   return null;
 }

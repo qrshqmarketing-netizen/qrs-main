@@ -3,6 +3,10 @@
 
 export const SITE_URL = 'https://qualityroofingspecialists.com';
 
+// OpenAI (ChatGPT ads) conversion pixel (owner, November 11 2026): loaded only on /thank-you/, only on the live site and only with the visitor's
+// Analytics choice (components/ui/ChatGptPixel.jsx).
+export const OPENAI_PIXEL_ID = 'YaBuojKQNC3M5hqixqLaWm';
+
 // The hours shown in the footer, day by day (owner, November 11 2026). The company-wide `BUSINESS.hours` below (Monday-Friday 8 am-6 pm) still feeds the
 // Contact page, the structured data, the confirmation email, the chat assistant and the visit-date rules; change it too if these become the hours there.
 export const FOOTER_HOURS = [
