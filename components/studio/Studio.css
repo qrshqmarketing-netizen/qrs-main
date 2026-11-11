@@ -218,3 +218,16 @@ main.studio .section,main.studio .faq,main.studio .latest-articles{background-im
 .wr-w{will-change:opacity}
 
 /* "How we work" 3D stage (HowStage.jsx): fills .st-how-media (see "How we work" above) */
+
+/* Link sections (StudioLinks.jsx): the commercial and industrial pages, and the repair and replacement pages, as hairline cards */
+.st-links .st-head h2{max-width:24ch}
+.st-links-text{margin:18px 0 0;max-width:62ch;font:400 17px/1.6 var(--font-text),sans-serif;color:var(--muted)}
+.st-links-grid{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.st-links-grid a{position:relative;display:block;height:100%;padding:20px 52px 20px 20px;border:1px solid var(--line);border-radius:var(--radius);background:var(--paper);color:var(--ink);transition:border-color .25s ease}
+.st-links-grid b{display:block;font:600 17px/1.3 var(--font-text),sans-serif}
+.st-links-grid span{display:block;margin-top:6px;font:400 14.5px/1.5 var(--font-text),sans-serif;color:var(--muted)}
+.st-links-grid i{position:absolute;right:18px;top:20px;display:grid;place-items:center;color:var(--muted);transition:transform .25s ease,color .25s ease}
+.st-links-grid i svg{width:18px;height:18px}
+@media (hover:hover){.st-links-grid a:hover{border-color:var(--gold)}.st-links-grid a:hover i{transform:translateX(4px);color:var(--ink)}}
+@media (min-width:621px){.st-links-grid{grid-template-columns:repeat(2,1fr);gap:16px}}
+@media (min-width:1101px){.st-links-grid{grid-template-columns:repeat(3,1fr)}}

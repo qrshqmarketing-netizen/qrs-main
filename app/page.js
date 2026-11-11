@@ -16,6 +16,7 @@ import StudioIntro from '@/components/studio/StudioIntro';
 import StudioHowWeWork from '@/components/studio/StudioHowWeWork';
 import StudioProjects from '@/components/studio/StudioProjects';
 import StudioServices from '@/components/studio/StudioServices';
+import StudioLinks from '@/components/studio/StudioLinks';
 import JsonLd from '@/components/ui/JsonLd';
 import { SERVICE_CATEGORIES } from '@/data/serviceCategories';
 import { HOME_PRODUCTS } from '@/data/homeProducts';
@@ -66,6 +67,30 @@ const HOME_HERO = {
 const HERO_TEXT =
   'Roofs built right, from the deck up. As a family-owned roofing contractor, we have a roofer look at your roof first, you get photos and a written price before any work, and installs carry our 10-year workmanship warranty (call for details).';
 
+// The pages the two link sections list (StudioLinks; names and lines come from each page's own card)
+const COMMERCIAL_LINKS = [
+  '/commercial-roofing/repair/',
+  '/commercial-roofing/replacement/',
+  '/commercial-roofing/maintenance/',
+  '/commercial-roofing/tpo-roofing/',
+  '/commercial-roofing/industrial/',
+  '/commercial-roofing/warehouses/',
+  '/commercial-roofing/property-managers/',
+  '/commercial-roofing/office-buildings/',
+  '/commercial-roofing/retail/',
+];
+const REPAIR_REPLACEMENT_LINKS = [
+  '/residential-roofing/shingle-roofing/repair/',
+  '/residential-roofing/tile-roofing/repair/',
+  '/residential-roofing/flat-roofing/repair/',
+  '/roof-repair/emergency/',
+  '/residential-roofing/shingle-roofing/replacement/',
+  '/residential-roofing/tile-roofing/replacement/',
+  '/residential-roofing/flat-roofing/replacement/',
+  '/residential-roofing/flat-roofing/torch-down/',
+  '/residential-roofing/cool-roofing/',
+];
+
 export default async function HomePage() {
   const faqs = await getHomeFaqs(); // from the dashboard (lib/contentStore.js), else data/faqs.js
   return (
@@ -88,18 +113,36 @@ export default async function HomePage() {
         {/* Google, BBB and Yelp logos linking to our profiles (owner, November 2 2026) */}
         <TrustLogos />
         <StudioIntro />
-        <StudioServices categories={SERVICE_CATEGORIES} items={HOME_PRODUCTS} />
+        <StudioServices categories={SERVICE_CATEGORIES} items={HOME_PRODUCTS} heading="Roof repair, replacement and inspection for every __home__ and building" />
+        {/* Commercial and industrial pages, then the repair and replacement pages, as plain links (owner, November 10 2026, from the home page
+            search review: the home page named commercial roofing twice, industrial never, and linked to none of these pages) */}
+        <StudioLinks
+          id="commercial"
+          tinted
+          label="Commercial & industrial"
+          heading="Commercial roofing and industrial roofing that keeps your __building__ open"
+          text="Our commercial roofing work starts with a roofer-led roof survey, photos and a written scope and price your owners can approve. Then we plan the work around your tenants and operations, from [commercial roof repair](/commercial-roofing/repair/) to [industrial roofing](/commercial-roofing/industrial/)."
+          more={{ href: '/commercial-roofing/', label: 'All commercial roofing' }}
+          links={COMMERCIAL_LINKS}
+        />
+        <StudioLinks
+          id="repair-replacement"
+          label="Repair & replacement"
+          heading="Roof repair and roof replacement for shingle, tile and __flat__ roofs"
+          text="A roofer looks at the roof first and tells you which one it needs. See [roof repair](/roof-repair/) and [roof replacement](/roof-replacement/), or go straight to your roof type."
+          links={REPAIR_REPLACEMENT_LINKS}
+        />
         {/* The home page's story (owner, October 15 2026, after maben.com.au): the belief statement (StudioIntro), the services, then "How we work"
             (four principles, pinned while it scrolls; it replaces "Why QRS", the process steps and the credentials strip), the reviews and the projects.
             The shingle colors moved to the shingle roofing page; "Giving back" (on the About page) and the careers band were taken off. */}
         <StudioHowWeWork />
-        <ReviewMarquee heading="What people say after the job" text={`${GOOGLE_REVIEWS.count} reviews from the people we roof for, on Google.`} />
-        <StudioProjects projects={LATEST_PROJECTS.slice(0, 3)} more={LATEST_PROJECTS.slice(3)} />
+        <ReviewMarquee heading="Roofing reviews from the people we work for" text={`${GOOGLE_REVIEWS.count} reviews from the people we roof for, on Google.`} />
+        <StudioProjects heading="Roofing projects we have finished in __Los Angeles__ & Orange County" projects={LATEST_PROJECTS.slice(0, 3)} more={LATEST_PROJECTS.slice(3)} />
         {!promo.active && <PromoSection />}
         <ServiceArea allAreasLink />
         <PartnerLogos {...ROOF_FINANCING.partners} />
         <LatestArticles posts={await latestArticles(3)} />
-        <Faq cta={false} faqs={faqs} />
+        <Faq cta={false} faqs={faqs} heading="Roofing contractor __questions__, answered" />
         <RoofCheck />
         <FinalCta />
       </main>

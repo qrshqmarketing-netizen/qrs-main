@@ -12,7 +12,8 @@ import useLang from '@/components/ui/useLang';
 // Services in two parts. First the two main kinds of work as large photo cards; then the roofing systems as a long, light list: hovering (or focusing)
 // a row shows its photo beside the list on desktop, and on phones each row is just its name, a line and an arrow.
 // items: [{ title, text, href, image }]. categories: [{ title, text, href, image }].
-export default function StudioServices({ categories, items }) {
+// heading: the section's H2 (the English home page passes one that names the work; /es/ keeps the default)
+export default function StudioServices({ categories, items, heading = 'Roofing for every __home__ and building we work on' }) {
   const [active, setActive] = useState(0);
   const { tr } = useLang(); // Spanish on /es/; titles with a product name stay as written (Rich)
   return (
@@ -20,7 +21,7 @@ export default function StudioServices({ categories, items }) {
       <div className="container">
         <div className="st-split st-head">
           <p className="st-label">{tr('Services')}</p>
-          <h2><Mark text={tr('Roofing for every __home__ and building we work on')} /></h2>
+          <h2><Mark text={tr(heading)} /></h2>
         </div>
 
         <div className="st-cats">
