@@ -55,6 +55,7 @@ export const CREDENTIALS_PAGE = {
     { q: 'Are you bonded and insured?', a: 'Yes. We are licensed, bonded and insured as a California contractor.' },
     { q: 'Are you BBB accredited?', a: `Yes. Quality Roofing Specialists is a BBB Accredited Business since ${formatDate(BBB.accreditedSince)}, with an ${BBB.rating} rating. You can [see our BBB business profile](${BBB.url}).` },
     { q: 'Which roofing manufacturers are you certified with?', a: 'Owens Corning, IKO, GAF, CertainTeed (Master Craftsman) and Polyglass (Premio Pro).' },
+    { q: 'Is QRS a GAF certified roofing contractor?', a: 'QRS is certified with GAF, and with Owens Corning, IKO, CertainTeed (Master Craftsman) and Polyglass (Premio Pro). Ask us which manufacturer’s system fits your roof during your roof evaluation.' },
     { q: 'What warranty comes with a new roof?', a: 'Our installs are backed by a 10-year workmanship warranty (call for details), and the roofing materials carry the manufacturer’s warranty, which depends on the product and its warranty tier. We go over yours with you at the final walkthrough.' },
   ],
 };

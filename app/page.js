@@ -121,7 +121,7 @@ export default async function HomePage() {
           tinted
           label="Commercial & industrial"
           heading="Commercial roofing and industrial roofing that keeps your __building__ open"
-          text="Our commercial roofing work starts with a roofer-led roof survey, photos and a written scope and price your owners can approve. Then we plan the work around your tenants and operations, from [commercial roof repair](/commercial-roofing/repair/) to [industrial roofing](/commercial-roofing/industrial/)."
+          text="As commercial roofing contractors in Los Angeles and Orange County, our commercial roofers start with a roof survey led by a roofer, photos and a written scope and price your owners can approve. Then we plan the work around your tenants and operations, from [commercial roof repair](/commercial-roofing/repair/) to [industrial roofing](/commercial-roofing/industrial/)."
           more={{ href: '/commercial-roofing/', label: 'All commercial roofing' }}
           links={COMMERCIAL_LINKS}
         />
@@ -129,7 +129,7 @@ export default async function HomePage() {
           id="repair-replacement"
           label="Repair & replacement"
           heading="Roof repair and roof replacement for shingle, tile and __flat__ roofs"
-          text="A roofer looks at the roof first and tells you which one it needs. See [roof repair](/roof-repair/) and [roof replacement](/roof-replacement/), or go straight to your roof type."
+          text="Need roof repair in Los Angeles or Orange County? Our licensed roofers look at the roof first and tell you whether it needs a repair or a replacement. See [roof repair](/roof-repair/) and [roof replacement](/roof-replacement/), or go straight to your roof type."
           links={REPAIR_REPLACEMENT_LINKS}
         />
         {/* The home page's story (owner, October 15 2026, after maben.com.au): the belief statement (StudioIntro), the services, then "How we work"

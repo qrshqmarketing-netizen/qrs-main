@@ -153,6 +153,10 @@ export const CARE_PLAN = {
   },
   faqs: [
     {
+      q: 'Do you offer roof maintenance in Los Angeles?',
+      a: 'Yes. Roof maintenance in Los Angeles and Orange County is what the *RoofCare Plan* is for: seasonal visits with a photo report each time, on shingle, tile and flat roofs. For a commercial building, see [commercial roof maintenance](/commercial-roofing/maintenance/).',
+    },
+    {
       q: 'My roof is almost new. Why start a plan now?',
       a: 'Most manufacturer warranties have maintenance conditions in them, and claims get denied for missing records. Starting now builds the paper trail that protects the warranty you already paid for.',
     },
