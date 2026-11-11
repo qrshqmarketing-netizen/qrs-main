@@ -209,6 +209,8 @@ export const ES = {
   'Cookie settings': 'Configuración de cookies',
   'Valley': 'Valle',
   'Monday–Friday 8 am–6 pm': 'De lunes a viernes, de 8 am a 6 pm',
+  'Sunday': 'Domingo', 'Monday': 'Lunes', 'Tuesday': 'Martes', 'Wednesday': 'Miércoles', 'Thursday': 'Jueves', 'Friday': 'Viernes', 'Saturday': 'Sábado',
+  '10 am–3 pm': '10 am–3 pm', '8 am–6 pm': '8 am–6 pm', '8 am–5 pm': '8 am–5 pm', 'CLOSED': 'CERRADO',
   'MCP': 'MCP',
 
   // ---------- Floating widgets ----------

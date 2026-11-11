@@ -6,8 +6,7 @@ import { FacebookIcon, InstagramIcon, LinkedInIcon, YouTubeIcon } from '@/compon
 import CookieSettingsLink from '@/components/ui/CookieSettingsLink';
 import SiteLink from '@/components/ui/SiteLink';
 import { FOOTER } from '@/data/navigation';
-import { BUSINESS, OFFICES, PHONE, SOCIAL, TEL } from '@/data/site';
-import { hoursText } from '@/lib/hours';
+import { BUSINESS, FOOTER_HOURS, OFFICES, PHONE, SOCIAL, TEL } from '@/data/site';
 import CopyrightYear from './CopyrightYear';
 import FooterWord from './FooterWord';
 import HideOnStart from './HideOnStart';
@@ -34,7 +33,14 @@ export default function Footer() {
               <a className="ft-phone" href={TEL}>{PHONE}</a>
               <br />
               <a className="ft-email" href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a>
-              <p className="ft-hours"><T>{hoursText(BUSINESS.hours)}</T>.</p>
+              <dl className="ft-hours">
+                {FOOTER_HOURS.map(([day, time]) => (
+                  <div key={day}>
+                    <dt><T>{day}</T></dt>
+                    <dd><T>{time}</T></dd>
+                  </div>
+                ))}
+              </dl>
             </div>
             <div className="ft-offices">
               {OFFICES.map((office) => (

@@ -491,3 +491,6 @@ html body.studio-site .sv-rel b,html body.studio-site .sv-tile-body b{font-size:
 html body.studio-site :is(.sv-stat b,.sv-price-big){letter-spacing:0}
 html body.studio-site main.srch .srch-form button{font:600 14px/1 var(--font-text),sans-serif;letter-spacing:.08em}
 html body.studio-site main.srch .srch-title{font-size:clamp(19px,1.7vw,23px);letter-spacing:.02em}
+/* Wider hero headings (owner, November 11 2026, "show fewer lines of heading text"): the new-theme hero's H1 may run to the width of its
+   column (it was held to 15ch, which with Gilda Display broke a long H1 onto five lines) */
+html body.studio-site :is(main.qh,main .qh-scope) .qh-hero h1{max-width:26ch}

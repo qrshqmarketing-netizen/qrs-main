@@ -1402,3 +1402,18 @@ main.qh.abr{--abr-inset:0px !important}
 @media (min-width:901px){
   :is(main.qh,main .qh-scope) .qh-hero-media .qh-hero-in{min-height:min(100svh,1000px);padding-top:calc(var(--hd-h,60px) + 140px);padding-bottom:150px}
 }
+
+/* Realistic hero houses (owner, November 11 2026): the wall is an SVG in the .qh-rr-wall box, the Roof Replacement stages and the shingle color
+   texture are SVGs filling their roof boxes (the color still cycles on the div behind the texture) */
+:is(main.qh,main .qh-scope) .qh-rr-wallx{border:0;background:none;padding:0;overflow:hidden}
+:is(main.qh,main .qh-scope) .qh-rr-wallx svg{display:block;width:100%;height:100%}
+:is(main.qh,main .qh-scope) .qh-rr-roofx{display:block}
+:is(main.qh,main .qh-scope) .qh-rr-roofx svg{display:block;width:100%;height:100%}
+:is(main.qh,main .qh-scope) .qh-rr-roofx .qh-rr-s{border:0;transform-box:fill-box}
+:is(main.qh,main .qh-scope) .qh-col-roofx{background-image:none}
+:is(main.qh,main .qh-scope) .qh-col-roofx svg{display:block;width:100%;height:100%}
+:is(main.qh,main .qh-scope) .qh-tile-underx{background:none}
+:is(main.qh,main .qh-scope) .qh-tile-underx svg,:is(main.qh,main .qh-scope) .qh-tile-rowx svg{display:block;width:100%;height:100%}
+:is(main.qh,main .qh-scope) .qh-tile-rowx{background:none;overflow:hidden}
+:is(main.qh,main .qh-scope) .qh-pf-photox{background:none;overflow:hidden}
+:is(main.qh,main .qh-scope) .qh-pf-photox svg{display:block;width:100%;height:100%}

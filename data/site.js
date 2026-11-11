@@ -3,6 +3,18 @@
 
 export const SITE_URL = 'https://qualityroofingspecialists.com';
 
+// The hours shown in the footer, day by day (owner, November 11 2026). The company-wide `BUSINESS.hours` below (Monday-Friday 8 am-6 pm) still feeds the
+// Contact page, the structured data, the confirmation email, the chat assistant and the visit-date rules; change it too if these become the hours there.
+export const FOOTER_HOURS = [
+  ['Sunday', '10 am–3 pm'],
+  ['Monday', '8 am–6 pm'],
+  ['Tuesday', '8 am–6 pm'],
+  ['Wednesday', '8 am–6 pm'],
+  ['Thursday', '8 am–6 pm'],
+  ['Friday', '8 am–5 pm'],
+  ['Saturday', 'CLOSED'],
+];
+
 export const BUSINESS = {
   name: 'Quality Roofing Specialists',
   legalName: 'Quality Roofing Specialists, Inc.', // the company's full name: copyright, legal pages, structured data, emails
