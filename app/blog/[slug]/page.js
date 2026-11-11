@@ -26,5 +26,5 @@ export async function generateMetadata({ params }) {
 export default async function BlogPostPage({ params }) {
   const post = await getPost((await params).slug);
   if (!post) notFound();
-  return <BlogPost post={post} />;
+  return <BlogPost post={post} posts={await getBlogPosts()} />;
 }

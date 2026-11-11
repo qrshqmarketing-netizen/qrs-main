@@ -14,6 +14,7 @@ import { BLOG_LINK, blogPath, HOME } from '@/data/catalog';
 import { relatedLinks } from '@/data/content';
 import { pageJsonLd } from '@/lib/structuredData';
 import { authorOf } from '@/data/authors';
+import { KEEP_READING } from '@/data/blog/links';
 import SiteLink from '@/components/ui/SiteLink';
 import './BlogPost.css';
 
@@ -118,7 +119,22 @@ function PostSection({ section, id, slug }) {
 
 // One blog post (/blog/<slug>/): thumbnail, byline, intro, table of contents, sections, FAQs and a closing section.
 // Content shape: data/blog/posts.js
-export default function BlogPost({ post }) {
+// "Keep reading" (data/blog/links.js): live articles by their current title, service pages by their menu name; anything the article's own
+// text already links to is left out. posts: the live article list (app/blog/[slug]/page.js).
+function keepReading(post, posts = []) {
+  const own = JSON.stringify([post.intro, post.sections, post.faqs, post.closing]);
+  return (KEEP_READING[post.slug] || [])
+    .filter((href) => !own.includes(`(${href})`))
+    .map((href) => {
+      if (!href.startsWith('/blog/')) return relatedLinks([href])[0];
+      const other = posts.find((p) => blogPath(p.slug) === href);
+      return other && { href, label: other.title };
+    })
+    .filter(Boolean);
+}
+
+export default function BlogPost({ post, posts }) {
+  const more = keepReading(post, posts);
   const path = blogPath(post.slug);
   const crumbs = [HOME, BLOG_LINK, { label: post.title, href: path }];
   const faqs = post.faqs || [];
@@ -195,6 +211,18 @@ export default function BlogPost({ post }) {
             </section>
           )}
           {post.closing && <PostSection section={post.closing} id={headingId(post.closing.heading)} />}
+          {more.length > 0 && (
+            <nav className="post-more" aria-labelledby="keep-reading">
+              <h2 id="keep-reading">Keep reading</h2>
+              <ul>
+                {more.map((l) => (
+                  <li key={l.href}>
+                    <SiteLink href={l.href}>{l.label}</SiteLink>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          )}
           {/* Who wrote it (E-E-A-T): the author's name, role and a short bio from the About page, with a link there */}
           <aside className="post-author-box" aria-label="About the author">
             <span className="post-author-mark" aria-hidden="true">{author.name.charAt(0)}</span>
