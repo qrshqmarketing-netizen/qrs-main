@@ -111,7 +111,8 @@ function LocHouse({ place, commercial }) {
 }
 
 // ---------- A centered heading over three icon columns, and two dark buttons ----------
-export function LocColumns({ place }) {
+// comma: false leaves out the comma after the place (San Jose, owner November 11 2026)
+export function LocColumns({ place, comma = true }) {
   const cols = [
     { icon: 'repair', title: 'Roof repair', text: 'Leaks traced to the source and fixed, with photos of the problem and the fix.', href: '/roof-repair/' },
     { icon: 'replace', title: 'Roof replacement', text: 'A complete new roof from the deck up, with a written price before any work.', href: '/roof-replacement/' },
@@ -120,7 +121,7 @@ export function LocColumns({ place }) {
   return (
     <section className="lc-section" aria-labelledby="lc-cols">
       <div className="lc-wrap">
-        <h2 id="lc-cols" className="lc-center">Roofing in {place}, start to finish.</h2>
+        <h2 id="lc-cols" className="lc-center">Roofing in {place}{comma ? ',' : ''} start to finish.</h2>
         <ul className="lc-cols">
           {cols.map((c) => (
             <li key={c.title}>

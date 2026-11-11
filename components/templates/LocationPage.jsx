@@ -83,7 +83,7 @@ export default async function LocationPage({ location, page, index = 0 }) {
       </div>
       {/* Google, BBB and Yelp logos linking to our profiles (owner, November 2 2026) */}
       <TrustLogos />
-      <LocColumns place={city} />
+      <LocColumns place={city} comma={slug !== 'san-jose'} />
       <LocStory
         place={city}
         heading={page.intro.heading}
