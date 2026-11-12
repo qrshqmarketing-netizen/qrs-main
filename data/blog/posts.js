@@ -23,6 +23,191 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // Choosing a roofing firm (owner, November 12 2026, from the owner's team's draft): keyword "roofing firm near me". It sits next to
+  // how-to-choose-a-roofer-los-angeles-ca ("roofer in los angeles, ca") and links to it. Changed to the site's rules: no dollar figures (the draft's
+  // 2026 cost benchmark from a third-party site is gone), no warranty or roof lifespans in years from the industry (only our 10-year workmanship
+  // warranty, call for details), no contractor bond amount, no repair-vs-replace age rule, no unverified install-time claims (the site's 3 to 5 days
+  // is used), no C-39 claim stated for QRS beyond the license number, FlatGuard only for home flat roofs, the commercial survey never called free,
+  // the draft's outside links replaced by the CSLB site. Picture: the owner's image.
+  {
+    slug: 'how-to-choose-a-roofing-firm-near-me',
+    title: 'How to Choose a Roofing Firm Near Me: Key Questions to Ask Before You Hire',
+    keyword: 'roofing firm near me',
+    topics: ['replacement', 'inspection', 'repair', 'shingle', 'tile', 'flat'],
+    metaTitle: 'How to Choose a Roofing Firm Near Me: Questions to Ask',
+    metaDescription:
+      'Choosing a roofing firm near me? Check the CSLB license and insurance, ask for a roofer-led inspection and a written scope, and compare warranties first.',
+    datePublished: '2026-11-12',
+    dateModified: '2026-11-12',
+    image: '/images/blog/how-to-choose-a-roofing-firm-near-me.webp',
+    imageAlt: 'How to Choose the Right Roofing Firm Near Me, questions to ask: a roofer in a hard hat with a clipboard talks with a couple in front of their home, with a checklist reading licensed, warranty, experience',
+    excerpt:
+      'Three checks sort out most roofing firms: a valid CSLB license with insurance, a roofer-led inspection, and a written scope before a price. Here are the questions we would ask any roofing firm near you, us included.',
+    intro: [
+      'When you choose a roofing firm near me, three checks separate the careful ones from the risky ones: a valid CSLB roofing license with insurance on file, an inspection led by a roofer, and a written scope before anyone gives you a price. We are Quality Roofing Specialists, a family-owned roofing contractor, and we hold ourselves to the same standard we are asking you to apply to everyone else.',
+      'This guide walks through the whole hiring process, from the first inspection to the final warranty paper, so you can compare any local roofing company with confidence.',
+    ],
+    sections: [
+      {
+        heading: 'The Short Version',
+        blocks: [
+          {
+            list: [
+              '**Check the license first.** Look up the contractor on the CSLB website before you talk price.',
+              '**Want a roofer on your roof.** A licensed roofer with drone footage and close-up photos finds what a sales rep photographing from the driveway misses.',
+              '**Get the scope in writing before the price.** A quote without a scope is a guess.',
+              '**Know the two warranties.** The manufacturer covers the material, and the contractor covers the installation.',
+              '**Take your time.** Pressure to sign today is the clearest red flag there is.',
+              '**Keep a file.** License check, certificate of insurance, written scope and written warranty all belong in it before work begins.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'What Credentials Should a Roofing Firm Have?',
+        blocks: [
+          'In California, roofing work needs a contractor license from the Contractors State License Board (CSLB), and the roofing classification is C-39. Getting licensed means passing a trade and law exam and meeting the board’s bonding and insurance requirements. Those requirements matter to you directly: if a contractor abandons a job or damages your property, they are part of how you can recover. Workers’ compensation matters just as much, because without it an injured worker on your roof can become your problem.',
+          { h3: 'How to check, in ten minutes' },
+          {
+            steps: [
+              'Look up the license on the [CSLB website](https://www.cslb.ca.gov/). Confirm it is active, that the classification fits the work and that the business name on the license matches the name on the contract.',
+              'Ask for a certificate of insurance and have it sent to you by the insurance agent, not handed over by the contractor. If the contractor’s own paper is the only proof, you only have their word for it.',
+              'Check that workers’ compensation is on file. The CSLB record shows it, and an exemption on a roofing firm with a crew is a reason to walk away.',
+              'Search the business name for complaints and for the CSLB’s disciplinary records. Look for patterns and unresolved problems, not one unhappy review.',
+            ],
+          },
+          { note: '**Our credentials:** Quality Roofing Specialists holds CSLB license #1061942 and is licensed, bonded and insured, with an A+ rating from the BBB. See our [credentials page](/credentials/) for the details and the link to verify the license yourself.' },
+          { pov: 'We would rather you check our license than take our word for it. A roofing firm that is happy to be looked up, and sends you the insurance certificate straight from the agent, is showing you how it runs the rest of the job.' },
+        ],
+      },
+      {
+        heading: 'How Should a Roofing Firm Inspect Before Quoting?',
+        blocks: [
+          { h3: 'A roofer, not a sales rep with a clipboard' },
+          'A licensed roofer knows what to look for: failed flashings, cracked pipe boots, soft decking and underlayment failure that a wide-angle photo from the driveway will never show. Our free roof evaluation is led by a roofer, with drone footage and close-up photos, so you get documented findings in plain English, not a sales pitch. [RoofScan 360](/roof-inspection/) is how we describe the inspection itself.',
+          'Drone footage adds reliability. It captures the whole roof surface, including steep slopes and sections that cannot be reached safely from a ladder, so the picture of what your roof needs is complete before anyone talks about price.',
+          { h3: 'Why the scope has to come before the price' },
+          'A price without a scope is a guess dressed up as a quote. A real written scope names the materials (the shingle or tile, the underlayment, the flashing, the vents), the order of the work, what is removed and hauled away and what the finished job includes. When a contractor skips the scope and goes straight to a number, nothing says what the number buys, and that gap is where change orders come from.',
+          'The scope also protects you. It is the standard you measure the finished work against. Without it, “done” means whatever the contractor says it means.',
+          { pov: 'We write the scope first and the price second, and you get both before any work starts. If a roofing firm gives you only a number, ask what it covers, and if they cannot answer line by line, you have learned something.' },
+        ],
+      },
+      {
+        heading: 'Repair or Replacement: What Does Your Roof Need?',
+        blocks: [
+          'A good roofing firm tells you which one your roof needs, and shows you why with photos. A few cracked shingles, a failed vent boot or a separated flashing can often be repaired. When the wear is spread across the whole roof, or the deck is soft in several places, a replacement is the sounder choice.',
+          { h3: 'Shingle roofs' },
+          'A full replacement from the deck up covers the decking, underlayment, flashings, vents and the new shingles in one job. That is how our *TotalShield* system works, and it is built to fix the whole system rather than a symptom. See our [shingle roof replacement](/residential-roofing/shingle-roofing/replacement/) page.',
+          { h3: 'Tile roofs' },
+          'Tile roofs most often fail at the underlayment, not the tiles. When the tiles are sound, our *SecondLife* tile reset replaces the underlayment, battens and flashings and keeps the tiles you already have. Our guide to [tile roof reset vs. repair](/blog/tile-roof-reset-vs-repair/) explains how to decide.',
+          { h3: 'Flat roofs' },
+          'The usual failure points are open laps, ponding water and failed seams. When those problems are widespread, a complete tear-off and a new membrane is the right answer. For homes, our *FlatGuard* system is built around drainage, with sealed laps and white reflective cap sheets. See [flat roofing](/residential-roofing/flat-roofing/).',
+        ],
+      },
+      {
+        heading: 'Red Flags When Comparing Roofing Firms',
+        blocks: [
+          { h3: 'Storm chasers and pressure' },
+          'The pattern is the same every time: an unsolicited knock after a weather event, an urgent offer of a “free” inspection and pressure to sign before you have had time to think. Watch for “today only” discounts, promises to waive your deductible and offers to handle your insurance claim for you. A contractor who puts themselves between you and your insurer is rarely working in your interest. Our guide to [roof insurance claims in California](/blog/roof-insurance-claims-california/) explains who does what.',
+          'A roofer who will not tolerate comparison shopping is telling you how they do business. Take your time.',
+          { h3: 'Payment, permits and contract warning signs' },
+          {
+            list: [
+              'A demand for full payment up front, or a large cash deposit.',
+              'A refusal to pull the permits, or a request that you pull them yourself. Our [roofing permit guide](/blog/roofing-permits-los-angeles/) explains why that is the contractor’s job.',
+              'Blank lines in the contract, no physical business address, and no plain-language answer about the warranty.',
+            ],
+          },
+          'A trustworthy firm pulls its own permits, accepts traceable payment and ties payments to finished stages of the work.',
+          { pov: 'Anyone who tells you to sign today is selling urgency, not a roof. We give you the written scope and price and let you compare them at your own pace, because a roof should be a decision you made with the facts in front of you.' },
+        ],
+      },
+      {
+        heading: 'Warranty Terms: What to Get in Writing',
+        blocks: [
+          'Two warranties apply to a roof, and they cover different things.',
+          {
+            table: {
+              head: ['Warranty', 'What it covers', 'What it does not cover', 'Who stands behind it'],
+              rows: [
+                ['Manufacturer (material)', 'Defects in the shingles, tiles or membrane', 'Installation mistakes, poor ventilation, storm damage, owner neglect', 'The manufacturer, on its own terms and tiers'],
+                ['Contractor (workmanship)', 'Installation failures: fastening, flashing, underlayment, sealing', 'Defects in the material, storm damage, changes made by someone else', 'The roofing firm that did the work'],
+              ],
+            },
+          },
+          'The manufacturer’s warranty covers the product, not how it was installed. If the flashing was done wrong or the underlayment was not lapped properly, only the workmanship warranty helps you. We back our installations with a 10-year workmanship warranty (call for details), and the materials carry the manufacturer’s warranty. Our guide to [roof warranties](/blog/roof-warranty-explained/) goes through the questions to ask.',
+          { h3: 'The file to have before work begins' },
+          {
+            checklist: [
+              'The signed contract, with the contractor’s legal business name and license number',
+              'The written scope of work',
+              'The manufacturer’s warranty paperwork',
+              'The contractor’s written workmanship warranty, stating how long it lasts and what it covers',
+              'The certificate of insurance, sent by the agent',
+              'The permit, pulled by the contractor',
+            ],
+          },
+          'If any of it exists only as a verbal promise, it does not exist in any way that matters when you need it.',
+        ],
+      },
+      {
+        heading: 'What Homeowners, HOAs and Commercial Owners Should Know',
+        blocks: [
+          'A home roof replacement usually takes 3 to 5 days once materials and permits are in place. Roof size, material, decking repairs and weather can change that, and a good firm tells you so before it starts. Prices vary with all of those too, which is one more reason to compare scopes, not totals.',
+          { h3: 'HOA boards and property managers' },
+          'A board needs photo documentation, one point of contact and work planned around occupied units. Our [HOA and multi-family roofing](/residential-roofing/hoa-multi-family/) service and the *ReserveReady* program are built for that, and our [property management roofing](/commercial-roofing/property-managers/) page shows how we work with managers.',
+          { h3: 'Commercial owners' },
+          'For offices, retail centers and warehouses, we start with a roofer-led roof survey and a written scope, and plan the work around your operating hours. Our guide to [choosing a commercial roofing company](/blog/how-to-choose-a-commercial-roofing-company-los-angeles/) has the questions for that side of the business.',
+          'Before you sign with any roofing firm, run through this list:',
+          {
+            checklist: [
+              'License verified on the CSLB website',
+              'Certificate of insurance confirmed with the agent, not taken from the contractor',
+              'Written scope received before any price discussion',
+              'Written warranty terms in hand, with what they cover',
+              'Permit pulled by the contractor, not by you',
+              'Payments tied to finished stages, not paid in full up front',
+            ],
+          },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What should be in a written scope of work?',
+        a: 'The materials (shingle or tile, underlayment, flashing, vents), the order of the work, what is removed and disposed of, and what the finished roof includes. That detail is what the price actually buys, and it is the standard you hold the finished job to.',
+      },
+      {
+        q: 'How do I check a roofing firm’s license?',
+        a: 'Look up the license number on the CSLB website. Confirm it is active, that the classification fits roofing, that workers’ compensation is on file and that the business name matches your contract. Then ask for a certificate of insurance from the insurance agent.',
+      },
+      {
+        q: 'Should the roofing firm handle my insurance claim for me?',
+        a: 'No. A contractor who inserts themselves between you and your insurer is a red flag. Keep control of the claim, and use the roofer’s photos and written scope as documentation. Our [roof insurance claim guide](/blog/roof-insurance-claims-california/) explains the steps.',
+      },
+      {
+        q: 'What is the difference between a manufacturer warranty and a workmanship warranty?',
+        a: 'The manufacturer’s warranty covers defects in the product. The workmanship warranty covers how the roofing firm installed it. We back our installations with a 10-year workmanship warranty (call for details).',
+      },
+      {
+        q: 'How long does a roof replacement take?',
+        a: 'Most home roof replacements take 3 to 5 days. The roof’s size, the material, any decking repairs and the weather can change that, and a good roofing firm tells you before it starts.',
+      },
+      {
+        q: 'Will I know the price before the work starts?',
+        a: 'Yes. We give you a written scope and price, with photos, before any work begins. Book a [free roof evaluation](#roof-check) to start.',
+      },
+    ],
+    closing: {
+      heading: 'Choose a Roofing Firm You Can Check',
+      blocks: [
+        'The best roofing firm near you is one you can verify: a license you can look up, insurance confirmed by the agent, a roofer on your roof and everything in writing before work starts.',
+        'Quality Roofing Specialists provides [roof repair](/roof-repair/), [roof replacement](/roof-replacement/) and [roof inspections](/roof-inspection/) for homes, HOAs and commercial buildings, with photos of what we find and a written scope and price first. Book a [free roof evaluation](#roof-check) and we will send a roofer, not a sales rep.',
+        'See also [how to choose a roofer in Los Angeles](/blog/how-to-choose-a-roofer-los-angeles-ca/), and our [roof replacement guide](/blog/roof-replacement-guide/) for what a replacement involves from start to finish.',
+      ],
+    },
+    related: ['/roof-replacement/', '/roof-inspection/', '/roof-repair/'],
+  },
   // Spanish tile roofs (owner, November 12 2026, picked from the Ubersuggest data: "spanish tile roof" and "spanish clay tile" 260 searches a month
   // each in Los Angeles at difficulty 19, "spanish roofing" 30; no article or page targeted them). Keyword "spanish tile roof". Facts only from the
   // site: barrel and S tile on Spanish Revival and Mediterranean homes, clay holds its color, the underlayment wears out before the tile, tile-to-flat

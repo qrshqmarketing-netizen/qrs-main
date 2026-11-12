@@ -36,6 +36,7 @@ export const KEEP_READING = {
   'tpo-roofing-pros-and-cons': [B('most-in-demand-commercial-roofing'), B('commercial-roof-replacement-planning'), WAREHOUSES, INDUSTRIAL],
   'most-in-demand-commercial-roofing': [B('tpo-roofing-pros-and-cons'), B('torch-down-roofing-app-vs-sbs'), B('commercial-roof-replacement-planning'), INDUSTRIAL, WAREHOUSES],
   // Tile
+  'how-to-choose-a-roofing-firm-near-me': [B('how-to-choose-a-roofer-los-angeles-ca'), B('roof-warranty-explained'), B('how-to-choose-a-shingle-roofer-los-angeles'), B('tile-roofing-specialist-los-angeles')],
   'tile-roof-guide-southern-california': [B('spanish-tile-roof-los-angeles'), B('tile-roof-reset-vs-repair'), B('tile-roofing-specialist-los-angeles'), B('roof-warranty-explained')],
   'spanish-tile-roof-los-angeles': [B('tile-roof-guide-southern-california'), B('clay-vs-concrete-tile-roof'), B('tile-roof-underlayment'), B('tile-roof-reset-vs-repair'), B('tile-lift-and-relay-vs-new-tile-roof')],
   'tile-lift-and-relay-vs-new-tile-roof': [B('tile-roof-reset-vs-repair'), B('tile-roofing-specialist-los-angeles')],
@@ -52,8 +53,8 @@ export const KEEP_READING = {
   // Replacement and choosing a roofer
   'roof-replacement-guide': [B('how-to-choose-a-roofer-los-angeles-ca'), B('roof-warranty-explained'), B('roofing-permits-los-angeles'), B('roof-replacement-cost-los-angeles'), B('how-to-pay-for-a-new-roof')],
   'best-roofer-los-angeles': [B('how-to-choose-a-roofer-los-angeles-ca'), B('top-qualities-shingle-roofers-los-angeles-orange-county')],
-  'how-to-choose-a-roofer-los-angeles-ca': [B('best-roofer-los-angeles'), B('how-to-choose-a-shingle-roofer-los-angeles'), B('how-to-vet-commercial-roofing-near-me')],
-  'roof-warranty-explained': [B('how-to-choose-a-roofer-los-angeles-ca')],
+  'how-to-choose-a-roofer-los-angeles-ca': [B('how-to-choose-a-roofing-firm-near-me'), B('best-roofer-los-angeles'), B('how-to-choose-a-shingle-roofer-los-angeles'), B('how-to-vet-commercial-roofing-near-me')],
+  'roof-warranty-explained': [B('how-to-choose-a-roofing-firm-near-me'), B('how-to-choose-a-roofer-los-angeles-ca')],
   // Flat
   'flat-roofs-los-angeles-guide': [B('torch-down-roofing-app-vs-sbs'), B('cool-roof-southern-california'), B('most-in-demand-commercial-roofing'), '/residential-roofing/flat-roofing/torch-down/'],
 };
