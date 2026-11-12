@@ -6,6 +6,8 @@
 export const REGION_PAGES = {
   'la-county': {
     keyword: 'los angeles county roofing',
+    image: '/images/los-angeles-drone-view.webp', // the county card on /service-areas/ and the county page's photo (owner, November 12 2026)
+    imageAlt: 'Aerial view of Los Angeles neighborhoods and rooftops',
     // Meta for the searches the owner picked (October 30 2026: roofing specialists, roof repair specialist Los Angeles, roof replacement services
     // Los Angeles County, local roofing experts Los Angeles); the keyword stays first, the free evaluation is the call to action. 60 / 160 characters.
     metaTitle: 'Los Angeles County Roofing', // rolled back to the October 28 wording (owner, November 2 2026)
@@ -71,6 +73,8 @@ export const REGION_PAGES = {
 
   'riverside-county': {
     keyword: 'riverside county roofing',
+    image: '/images/riverside-county-drone-view.webp', // the county card on /service-areas/ (owner, November 12 2026)
+    imageAlt: 'Aerial view of downtown Riverside with its courthouse and office buildings and snow-capped mountains behind',
     metaTitle: 'Riverside County Roofing Services',
     metaDescription: 'Riverside County roofing for homes, HOAs and businesses from Riverside and Corona to Temecula: tile, shingle and flat roofs. Book a free roof evaluation today.',
     hero: {
@@ -99,6 +103,8 @@ export const REGION_PAGES = {
 
   'san-bernardino-county': {
     keyword: 'san bernardino county roofing',
+    image: '/images/san-bernardino-county-drone-view.webp', // the county card on /service-areas/ (owner, November 12 2026)
+    imageAlt: 'Aerial view of a San Bernardino County neighborhood of homes beside a golf course, with a snow-capped mountain behind',
     metaTitle: 'San Bernardino County Roofing Services',
     metaDescription: 'San Bernardino County roofing for homes, HOAs and businesses in Chino, Ontario and Rancho Cucamonga: tile, shingle and flat roofs. Book a free roof evaluation.',
     hero: {
@@ -128,9 +134,8 @@ export const REGION_PAGES = {
   // general terms until there is work behind it.
   'santa-clara-county': {
     keyword: 'santa clara county roofing',
-    // A real QRS job photo (owner, November 5 2026: not the AI palm-tree stand-in) until we have one from the county
-    image: '/images/home-services-residential-shingle-drone-view.webp',
-    imageAlt: 'Aerial view of a home with a new light gray shingle roof',
+    image: '/images/santa-clara-county-san-jose-drone-view.webp', // an aerial of San Jose (owner, November 12 2026; it replaced a QRS shingle job photo)
+    imageAlt: 'Aerial view of a San Jose street with homes and shops and green hills behind',
     metaTitle: 'Santa Clara County Roofing Services',
     metaDescription: 'Santa Clara County roofing from our San Jose office: roof repair, replacement and inspections for shingle, tile and flat roofs. Book a free roof evaluation.',
     hero: {
