@@ -129,7 +129,7 @@ export default async function HomePage() {
           id="repair-replacement"
           label="Repair & replacement"
           heading="Roof repair and roof replacement for shingle, tile and __flat__ roofs"
-          text="Need roof repair in Los Angeles or Orange County? Our licensed roofers look at the roof first and tell you whether it needs a repair or a replacement. See [roof repair](/roof-repair/) and [roof replacement](/roof-replacement/), or go straight to your roof type."
+          text="Need roof repair or roof replacement in Los Angeles or Orange County? As a family-owned roofing company, our licensed roofers look at the roof first and tell you whether it needs a repair or a replacement. See [roof repair](/roof-repair/) and [roof replacement](/roof-replacement/), or go straight to your roof type."
           links={REPAIR_REPLACEMENT_LINKS}
         />
         {/* The home page's story (owner, October 15 2026, after maben.com.au): the belief statement (StudioIntro), the services, then "How we work"
