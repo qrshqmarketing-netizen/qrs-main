@@ -2,6 +2,7 @@ import { revalidateTag } from 'next/cache';
 import { POSTS_TAG, addNewFilePosts } from '@/lib/postsStore';
 import { updateReviewCount } from '@/lib/googleReviewCount';
 import { runDrips } from '@/lib/drips';
+import { notifyNewArticles } from '@/lib/newsletter';
 
 // Publishes scheduled articles on time (owner, October 30 2026). An article dated in the future goes live at 8:00 AM Pacific on its date
 // (isLive in lib/postsStore.js; or the hour in PUBLISH_HOURS); this route, run by the daily Vercel Cron Jobs in vercel.json at those hours, refreshes the cached article list so
@@ -29,5 +30,8 @@ export async function GET(request) {
   // The drip campaigns (owner, November 9 2026; lib/drips.js), on the 8 AM run only: enroll and send what is due. A failure changes nothing.
   let drips;
   if (!new URL(request.url).searchParams.get('at')) drips = await runDrips().catch((e) => ({ ok: false, error: e.message }));
-  return Response.json({ ok: true, refreshed: POSTS_TAG, ...(reviewCount && { reviewCount }), ...(drips && { drips }) });
+  // The article newsletter (owner, November 12 2026; lib/newsletter.js): email each new article to the confirmed subscribers. It runs on both daily
+  // runs (an article can go live at 8 or 9 AM), after the cache refresh above, and carries on where it stopped if a run ran out of budget.
+  const newsletter = await notifyNewArticles().catch((e) => ({ ok: false, error: e.message }));
+  return Response.json({ ok: true, refreshed: POSTS_TAG, ...(reviewCount && { reviewCount }), ...(drips && { drips }), newsletter });
 }

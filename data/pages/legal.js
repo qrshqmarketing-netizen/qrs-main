@@ -56,6 +56,7 @@ export const PRIVACY_POLICY = {
         'To respond to your requests, schedule roof evaluations and Roof Checks and prepare estimates and written scopes',
         'To provide our roofing services and follow up after the work',
         'To contact you by phone, text or email about your request or project',
+        'To email you our latest articles, only if you subscribe (in the footer, or with the checkbox on a request form): you confirm by clicking a link in an email, and every email has an unsubscribe link',
         'To keep the website working, secure and useful',
         'To meet legal, tax and accounting obligations',
       ],

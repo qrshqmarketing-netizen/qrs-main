@@ -4496,7 +4496,7 @@ export function QhAccount({ commercial = false, lang = 'en' }) {
           <h2 id="qh-acc-h">{T('Local roofers. Real accountability.')}</h2>
           <p className="qh-lede">
             {commercial
-              ? 'A roofer surveys your building first, and you get photos and a written scope and price before any work. One company answers for the roof, from the survey to the closeout photos for your files.'
+              ? T('A roofer surveys your building first, and you get photos and a written scope and price before any work. One company answers for the roof, from the survey to the closeout photos for your files.')
               : T('A roofer looks at your roof first, and you get photos and a written price before anything starts. One family-owned company answers for the roof, from the first visit to the walk across the finished roof with you.')}
           </p>
           <ul className="qh-list">

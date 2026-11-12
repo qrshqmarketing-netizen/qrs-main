@@ -13,6 +13,8 @@ import { zipPrefixServed } from '@/lib/geo';
 import { hoursText } from '@/lib/hours';
 import { lastPage } from '@/lib/pageTrail';
 import { postLead } from '@/lib/endpoints';
+import NewsletterCheck from '@/components/ui/NewsletterCheck';
+import { subscribeNewsletter } from '@/lib/subscribeClient';
 import { rememberLead, trackEvent, trackLead } from '@/lib/tracking';
 import './RoofCheck.css'; // the offer card and form card styles
 import './StartStepper.css';
@@ -32,6 +34,7 @@ export default function StartStepper({ modal = false, need: linkNeed = '', prope
   const [days, setDays] = useState({ min: '', max: '' });
   const [step, setStep] = useState('need');
   const [prefilled, setPrefilled] = useState(false);
+  const [news, setNews] = useState(true); // "email me the latest news": checked by default (owner, November 12 2026), counts only with an email, and a confirmation email still has to be clicked
   const [status, setStatus] = useState('idle'); // 'idle' | 'sending' | 'sent' | 'error'
   const [error, setError] = useState('');
   const heading = useRef(null);
@@ -113,6 +116,7 @@ export default function StartStepper({ modal = false, need: linkNeed = '', prope
       // `page` is the page the visitor was on before /start/, so the lead says where it came from
       const res = await postLead({ ...leadFields(answers, contact), website: contact.website, source: 'estimate-form', page: lastPage() || START_PATH, utm: currentAttribution() });
       if (!res.ok) throw new Error(String(res.status));
+      if (news && contact.email.trim()) subscribeNewsletter({ email: contact.email, name: contact.name, source: 'start-form' }, { keepalive: true }).catch(() => {});
       setStatus('sent');
       // Off to the thank-you page, which reports the conversion; if storage is blocked, report it here instead
       if (!rememberLead('estimate_form')) trackLead('estimate_form');
@@ -324,6 +328,7 @@ export default function StartStepper({ modal = false, need: linkNeed = '', prope
               <input id="st-website" name="website" tabIndex={-1} autoComplete="off" value={contact.website} onChange={setField('website')} />
             </div>
 
+            <NewsletterCheck id="st-news" checked={news} onChange={setNews} />
             <div className="st-actions">
               <button className="btn btn-gold" type="submit" disabled={status === 'sending' || status === 'sent'}>
                 {status === 'sending' ? 'Sending…' : status === 'sent' ? 'Request Sent ✓' : <>Request My Estimate <span className="arrow">→</span></>}

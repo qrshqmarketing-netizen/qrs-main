@@ -9,6 +9,8 @@ import { currentAttribution } from '@/lib/attribution';
 import { trackLead } from '@/lib/tracking';
 import { PHONE, TEL } from '@/data/site';
 import { postLead } from '@/lib/endpoints';
+import NewsletterCheck from '@/components/ui/NewsletterCheck';
+import { subscribeNewsletter } from '@/lib/subscribeClient';
 import { loadLeaflet, qrsPin } from '@/lib/leaflet';
 import { buildingInsights, DEMO, fmt, geocode, money, monthly, myLocation, priceFor, styleOf, summarize } from '@/lib/roofQuote';
 import './InstantQuote.css';
@@ -48,6 +50,7 @@ const MAX_FIXES = 5; // map taps per address (see pickBuilding)
 export default function InstantQuote({ openFrom = null, onReady }) {
   const [open, setOpen] = useState(false);
   const [step, setStep] = useState(1);
+  const [news, setNews] = useState(true); // "email me the latest news": checked by default (owner, November 12 2026), counts only with an email, and a confirmation email still has to be clicked
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState(null);
   const [roof, setRoof] = useState(null); // measured roof, or null when entered by hand
@@ -248,6 +251,8 @@ export default function InstantQuote({ openFrom = null, onReady }) {
       return { material, low: est.low, high: est.high, monthly: Math.round(monthly((est.low + est.high) / 2, term)) };
     });
     setQuote(q);
+    // The newsletter checkbox (owner, November 12 2026): a confirmation email is requested; it never affects the estimate
+    if (news && String(q.email || '').trim()) subscribeNewsletter({ email: q.email, name: q.name, source: 'instant-quote' }, { keepalive: true }).catch(() => {});
     // The lead goes to the lead endpoint (lib/endpoints.js: email + leads spreadsheet + database) while the visitor sees their estimate
     postLead({ ...q, foundUs: f.get('foundUs') || '', website: f.get('website') || '', source: 'instant-quote', page: window.location.pathname, utm: currentAttribution() }, { keepalive: true })
       .then((res) => res.ok && trackLead('instant_quote'))
@@ -479,6 +484,7 @@ export default function InstantQuote({ openFrom = null, onReady }) {
                   {FOUND_US_OPTIONS.map((option) => <option key={option}>{option}</option>)}
                 </select>
               </div>
+              <NewsletterCheck id="rmNews" checked={news} onChange={setNews} />
               {/* Spam trap: hidden from people, but bots fill it in (the server then quietly drops the request) */}
               <div className="sr-only" aria-hidden="true">
                 <label htmlFor="rmWebsite">Leave this field empty</label>

@@ -175,6 +175,8 @@ input:focus,select:focus,textarea:focus{border-color:var(--gold);box-shadow:0 0 
 textarea{min-height:105px;resize:vertical}
 .field{margin-bottom:15px}
 .form-note{font-size:13px;line-height:1.5;color:var(--muted);margin-top:12px}
+.form-check{display:flex;align-items:flex-start;gap:10px;margin:12px 0 0;font-size:14px;line-height:1.45;cursor:pointer}
+.form-check input{flex:none;width:20px;height:20px;margin:1px 0 0;accent-color:var(--navy,#0b2440)}
 @media (min-width:621px){
   label{font-size:.78rem}
   input,select,textarea{min-height:0;font-size:inherit}

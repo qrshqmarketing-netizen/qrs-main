@@ -8,6 +8,8 @@ import { currentAttribution } from '@/lib/attribution';
 import { postLead } from '@/lib/endpoints';
 import { rememberLead, trackLead } from '@/lib/tracking';
 import useLang from '@/components/ui/useLang';
+import NewsletterCheck from '@/components/ui/NewsletterCheck';
+import { subscribeNewsletter } from '@/lib/subscribeClient';
 // The form's own styles (the error box stays hidden until a send fails) live with the request section; loaded here so every page that
 // shows the form has them, including the redesigned pages without RoofCheck
 import './RoofCheck.css';
@@ -49,6 +51,7 @@ function Form({ pathname }) {
     service: fromPath(SERVICE_BY_PATH, pathname, 'Not sure yet'),
     roofType: fromPath(ROOF_BY_PATH, pathname, 'Not sure'),
   });
+  const [news, setNews] = useState(true); // "email me the latest news": checked by default (owner, November 12 2026), counts only with an email, and a confirmation email still has to be clicked
   const [state, setState] = useState({ status: 'idle', error: '' });
   const set = (k) => (e) => setF((v) => ({ ...v, [k]: e.target.value }));
 
@@ -76,6 +79,8 @@ function Form({ pathname }) {
         utm: currentAttribution(),
       });
       if (!res.ok) throw new Error(String(res.status));
+      // The newsletter checkbox: asks for a confirmation email; never holds up or fails the request
+      if (news && f.email.trim()) subscribeNewsletter({ email: f.email, name: f.name, source: 'estimate-form' }, { keepalive: true }).catch(() => {});
       // Off to the thank-you page, which reports the conversion; if storage is blocked, report it here instead
       if (!rememberLead('estimate_form')) trackLead('estimate_form');
       window.location.assign('/thank-you/');
@@ -131,6 +136,7 @@ function Form({ pathname }) {
           {FOUND_US_OPTIONS.map((o) => <option key={o} value={o}>{tr(o)}</option>)}
         </select>
       </div>
+      <NewsletterCheck id="ef-news" checked={news} onChange={setNews} tr={tr} />
       {/* Spam trap: hidden from people (and from password managers), bots fill it in and the server quietly drops the request */}
       <div className="sr-only" aria-hidden="true">
         <label htmlFor="ef-leave-empty">{tr('Leave this field empty')}</label>

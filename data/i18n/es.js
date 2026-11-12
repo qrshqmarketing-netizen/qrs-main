@@ -4,6 +4,15 @@
 // The words people see in the page body of the Spanish home page are in data/i18n/esHome.js (server only, so they stay out of the browser code).
 // Product names (TotalShield, SecondLife, FlatGuard, ReserveReady, RoofCare Plan, RoofScan 360, Roof Check) stay in English. Usted throughout.
 export const ES = {
+  // Newsletter (owner, November 12 2026)
+  'Email me QRS’s latest roofing news and new articles.': 'Quiero recibir por correo las noticias y los artículos nuevos de QRS sobre techos.',
+  'Get our latest articles by email': 'Reciba nuestros artículos más recientes por correo',
+  'A short email when we publish a new roofing article. No spam, and you can unsubscribe any time.': 'Un correo corto cuando publiquemos un artículo nuevo sobre techos (los artículos están en inglés). Sin spam, y puede cancelar cuando quiera.',
+  'Email address': 'Correo electrónico',
+  'Subscribe': 'Suscribirme',
+  'Please check your email address.': 'Revise su correo electrónico.',
+  'Sorry, that didn’t go through. Please try again in a moment.': 'Lo sentimos, no se pudo enviar. Inténtelo de nuevo en un momento.',
+  'Check your inbox: we sent you a link to confirm your subscription.': 'Revise su bandeja de entrada: le enviamos un enlace para confirmar su suscripción.',
   // ---------- Header ----------
   'Services': 'Servicios',
   'Service Areas': 'Cobertura', // short, so the Spanish menu fits the bar at 1280px

@@ -1,5 +1,6 @@
 import BbbBadge from '@/components/ui/BbbBadge';
 import PreferredSource from '@/components/ui/PreferredSource';
+import NewsletterSignup from '@/components/ui/NewsletterSignup';
 import T from '@/components/ui/T';
 import BrandLogo from '@/components/ui/BrandLogo';
 import { FacebookIcon, InstagramIcon, LinkedInIcon, YouTubeIcon } from '@/components/ui/icons';
@@ -59,6 +60,8 @@ export default function Footer() {
               ))}
             </div>
           </div>
+
+          <NewsletterSignup />
 
           <div className="ft-grid">
             <div className="ft-col ft-brand">

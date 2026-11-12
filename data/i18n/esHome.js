@@ -408,6 +408,28 @@ export const ES_HOME = {
   'What kind of property is the roof on?': '¿En qué tipo de propiedad está el techo?',
   'Homes, ADUs, HOAs and multi-family: shingle, tile and flat roofs': 'Casas, ADU, HOA y multifamiliares: techos de tejas asfálticas, teja y planos',
   'Offices, retail, warehouses, churches and industrial buildings': 'Oficinas, comercios, bodegas, iglesias y edificios industriales',
+  // Commercial pages (owner, November 12 2026: /es/commercial-roofing/)
+  'Commercial, HOA & partner projects': 'Proyectos comerciales, de HOA y de socios',
+  'Start with a roofer-led roof survey.': 'Empiece con una revisión del techo hecha por un techador.',
+  'Tell us about the building or project and we’ll start with a roofer’s look at the roof, not a sales pitch.': 'Cuéntenos sobre el edificio o el proyecto y empezaremos con la revisión de un techador, no con un discurso de ventas.',
+  'Roofer first.': 'Primero, un techador.',
+  'Condition-focused survey of the roof.': 'Revisión del estado del techo.',
+  'Photos you can share with owners and tenants.': 'Fotos que puede compartir con dueños e inquilinos.',
+  'Written scope & price.': 'Alcance y precio por escrito.',
+  'Before any work starts.': 'Antes de empezar cualquier trabajo.',
+  'Repair, maintain or replace, in plain English.': 'Reparar, dar mantenimiento o reemplazar, en palabras sencillas.',
+  'A written scope, before any work.': 'Un alcance por escrito, antes de cualquier trabajo.',
+  'Roof survey': 'Revisión del techo',
+  'Roofer-led': 'Dirigida por un techador',
+  'written scope and price': 'alcance y precio por escrito',
+  'Photos you can share with owners and tenants, and a clear next step.': 'Fotos que puede compartir con dueños e inquilinos, y un siguiente paso claro.',
+  'A roofer surveys your building first, and you get photos and a written scope and price before any work. One company answers for the roof, from the survey to the closeout photos for your files.': 'Un techador revisa primero su edificio, y usted recibe fotos y un alcance y precio por escrito antes de cualquier trabajo. Una sola empresa responde por el techo, desde la revisión hasta las fotos de cierre para sus archivos.',
+  'Written scope and price before any work': 'Alcance y precio por escrito antes de cualquier trabajo',
+  'Request a roof survey.': 'Pida una revisión del techo.',
+  'Photos of every finding': 'Fotos de cada hallazgo',
+  'A written scope': 'Un alcance por escrito',
+  'The price, before any work': 'El precio, antes de cualquier trabajo',
+  'Photos, a written scope and price before any work.': 'Fotos, un alcance y precio por escrito antes de cualquier trabajo.',
 };
 
 // The home page FAQ in Spanish, translated from the English copy shown on the live home page on November 3 2026 (the dashboard's home_faqs).

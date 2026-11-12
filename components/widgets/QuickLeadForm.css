@@ -13,3 +13,6 @@
 .qlf .btn:disabled{opacity:.6;cursor:wait}
 .qlf-fine{margin:0;color:var(--muted);font-size:12.5px;line-height:1.5;text-align:center;text-shadow:none}
 @media (min-width:621px){.qlf{padding:28px}}
+
+.qlf-check{display:flex;align-items:flex-start;gap:9px;margin:0;font-size:13.5px;line-height:1.45;color:var(--ink);text-shadow:none;cursor:pointer}
+.qlf-check input{flex:none;width:19px;height:19px;margin:1px 0 0;accent-color:var(--navy,#0b2440)}

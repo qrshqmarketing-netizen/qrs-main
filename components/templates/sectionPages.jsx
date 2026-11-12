@@ -16,6 +16,7 @@ import {
   singleCrumbs,
 } from '@/data/content';
 import { pageMetadata } from '@/lib/pages';
+import { ES_PAGES, languagesFor } from '@/lib/lang';
 import HubPage from './HubPage';
 import { QhDrainPlan, QhLeakTrace, QhRoofSurvey, QhTileLift, QhReroof, QhShingleColors } from '@/components/home/QrsSections';
 import { ROOF_COLORS, SHOW_ROOF_COLORS } from '@/data/roofColors';
@@ -28,8 +29,11 @@ const isCommercial = (section) => section.key === 'commercial';
 const SHARED_CARDS = [PROGRAMS.inspection.href, PROGRAMS.plans.href];
 
 // ----- Hub pages (/residential-roofing/tile-roofing/, /commercial-roofing/, …) -----
-export const hubMetadata = (section) =>
-  pageMetadata({ title: section.hub.metaTitle, description: section.hub.metaDescription, path: section.href });
+export const hubMetadata = (section) => {
+  const meta = pageMetadata({ title: section.hub.metaTitle, description: section.hub.metaDescription, path: section.href });
+  // Pages with a Spanish version point to it with hreflang (lib/lang.js ES_PAGES)
+  return ES_PAGES[section.href] ? { ...meta, alternates: { ...meta.alternates, languages: languagesFor(section.href) } } : meta;
+};
 
 export function SectionHub({ section, extra }) {
   // `hub.cardOverrides` (by service slug) changes a card's title or line on this hub only

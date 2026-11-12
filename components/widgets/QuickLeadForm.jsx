@@ -4,6 +4,8 @@ import { useState } from 'react';
 import { ArrowRight } from '@/components/ui/icons';
 import { currentAttribution } from '@/lib/attribution';
 import { postLead } from '@/lib/endpoints';
+import NewsletterCheck from '@/components/ui/NewsletterCheck';
+import { subscribeNewsletter } from '@/lib/subscribeClient';
 import { rememberLead, trackLead } from '@/lib/tracking';
 import './QuickLeadForm.css';
 
@@ -13,6 +15,7 @@ import './QuickLeadForm.css';
 // `fine`: the line under the button; `askCompany`: an optional "Company or property" field (commercial pages), added to the message.
 export default function QuickLeadForm({ title = 'Book your free roof evaluation', text, service = 'Roof inspection / roof check', note, page, leadSource = 'quick_form', button = 'Book My Free Evaluation', fine = 'Free and no obligation. A roofer calls you to schedule.', askCompany = false, source = 'estimate-form' }) {
   const [f, setF] = useState({ name: '', phone: '', email: '', zip: '', company: '', website: '' });
+  const [news, setNews] = useState(true); // "email me the latest news": checked by default (owner, November 12 2026), counts only with an email, and a confirmation email still has to be clicked
   const [state, setState] = useState({ status: 'idle', error: '' });
   const set = (k) => (e) => setF((v) => ({ ...v, [k]: e.target.value }));
 
@@ -38,6 +41,7 @@ export default function QuickLeadForm({ title = 'Book your free roof evaluation'
         utm: currentAttribution(),
       });
       if (!res.ok) throw new Error(String(res.status));
+      if (news && f.email.trim()) subscribeNewsletter({ email: f.email, name: f.name, source: 'quick-form' }, { keepalive: true }).catch(() => {});
       if (!rememberLead(leadSource)) trackLead(leadSource);
       window.location.assign('/thank-you/');
     } catch {
@@ -77,6 +81,7 @@ export default function QuickLeadForm({ title = 'Book your free roof evaluation'
         <span>Leave this field empty</span>
         <input name="qlf-leave-empty" tabIndex={-1} autoComplete="off" data-1p-ignore data-lpignore="true" value={f.website} onChange={set('website')} />
       </label>
+      <NewsletterCheck id="qlf-news" checked={news} onChange={setNews} className="qlf-check" />
       {state.error && <p className="qlf-error" role="alert">{state.error}</p>}
       <button className="btn btn-gold" type="submit" disabled={state.status === 'sending'}>
         {state.status === 'sending' ? 'Sending…' : <>{button} <ArrowRight /></>}
