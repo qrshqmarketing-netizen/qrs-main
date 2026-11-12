@@ -153,17 +153,20 @@ export const LANDING_PAGES = {
     image: '/images/season-promo-storm-over-los-angeles.webp',
     imageAlt: 'Storm clouds rolling over the Los Angeles skyline',
     storm: true,
-    eyebrow: 'Get your roof ready before the rain',
-    heading: 'Is your roof ready for a super El Niño?',
-    sub: 'Forecasters expect a very strong El Niño this winter. Book your roof readiness inspection today and find the weak spots before the storms do.',
+    // More urgent (owner, November 12 2026): the storms are close, so the page says so and asks for the booking now. No invented deadline, scarcity or
+    // response time: only what the site already says (the forecast, the free evaluation, a roofer who calls to schedule).
+    alert: true, // a pulsing dot in front of the eyebrow
+    eyebrow: 'Storm alert: El Niño rain is on the way',
+    heading: 'El Niño storms are coming. Is your roof ready?',
+    sub: 'Forecasters expect a very strong El Niño this winter, and the first big storm tests every weak spot on your roof at once. Book your free roofer-led evaluation now and find them before the rain does.',
     service: 'Roof inspection / roof check',
     variants: [
-      { match: /leak|repair|fix|damage|storm/, heading: 'Fix the weak spots before El Niño does.', sub: 'A roofer finds where water could get in, shows you photos and gives you a written scope and price for any repair, before the first big storm.', service: 'Roof repair', tag: 'repair' },
-      { match: /replac|new.?roof|re.?roof/, heading: 'Will your old roof make it through El Niño?', sub: 'A roofer looks at your whole roof with drone footage and tells you plainly whether it needs repair, maintenance or replacement, with a written price.', service: 'Roof replacement', tag: 'replacement' },
+      { match: /leak|repair|fix|damage|storm/, heading: 'Fix the weak spots before the storms find them.', sub: 'The first big El Niño storm tests every weak spot at once. Book now and a roofer finds where water could get in, shows you photos and gives you a written scope and price for any repair.', service: 'Roof repair', tag: 'repair' },
+      { match: /replac|new.?roof|re.?roof/, heading: 'Will your old roof make it through El Niño?', sub: 'Don’t find out in the first big storm. Book now and a roofer looks at your whole roof with drone footage and tells you plainly whether it needs repair, maintenance or replacement, with a written price.', service: 'Roof replacement', tag: 'replacement' },
     ],
-    points: ['Free roofer-led drone evaluation', 'Photos of what we find', 'Written scope and price before any work', license],
+    points: ['Free roofer-led drone evaluation, booked now', 'Weak spots found before the first big storm', 'Written scope and price before any work', license],
     proof: [reviews, 'Licensed, bonded & insured', 'Family-owned, local crews'],
-    form: { title: 'Book your free El Niño roof evaluation', text: 'Leave your details and a roofer will call you to schedule it.', button: 'Claim My Free Evaluation', fine: 'Free and no obligation. A roofer calls you to schedule.' },
+    form: { title: 'Get your roof checked before the storms', text: 'Leave your details now and a roofer will call you to schedule your free evaluation.', button: 'Book My Free Evaluation Now', fine: 'Free and no obligation. A roofer calls you to schedule.' },
     steps: [
       { title: 'A roofer looks first', text: 'A trained in-house roofer checks your whole roof with drone footage, before the storms arrive.' },
       { title: 'Photos and plain English', text: 'You see what we find, explained plainly, with a clear next step: repair, monitor, maintain or replace.' },
@@ -171,7 +174,7 @@ export const LANDING_PAGES = {
     ],
     faqs: { from: 'home', questions: ['Is the roof evaluation free', 'How soon can someone', 'Will I know the price', 'Do you work with insurance', 'What kind of warranty'] },
     reviewsHeading: 'What homeowners say after the job',
-    closing: { heading: 'Don’t wait for the first big storm.', text: 'Book your roof readiness inspection today and know where your roof stands.' },
+    closing: { heading: 'The storms won’t wait. Neither should your roof.', text: 'Book your free roof evaluation now and know where your roof stands before the rain starts.' },
   },
 };
 

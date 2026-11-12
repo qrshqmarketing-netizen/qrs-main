@@ -57,6 +57,7 @@ export const PRIVACY_POLICY = {
         'To provide our roofing services and follow up after the work',
         'To contact you by phone, text or email about your request or project',
         'To email you our latest articles, only if you subscribe (in the footer, or with the checkbox on a request form): you confirm by clicking a link in an email, and every email has an unsubscribe link',
+        'To see which of our emails are opened and which links are clicked, so we can improve them: our emails to you (the roof-care series and the article newsletter) contain a tiny image and tracked links, which record the time, the link and your mail app’s type, never your IP address or location',
         'To keep the website working, secure and useful',
         'To meet legal, tax and accounting obligations',
       ],

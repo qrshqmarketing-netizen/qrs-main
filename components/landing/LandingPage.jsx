@@ -60,7 +60,7 @@ export default function LandingPage({ page, variant }) {
         {page.storm && <PromoRain rich />}
         <div className="lp-hero-inner">
           <div className="lp-hero-copy">
-            <p className="lp-eyebrow">{page.eyebrow}</p>
+            <p className={'lp-eyebrow' + (page.alert ? ' lp-alert' : '')}>{page.eyebrow}</p>
             <h1 id="lp-title">{variant.heading}</h1>
             <p className="lp-sub">{variant.sub}</p>
             <ul className="lp-points">

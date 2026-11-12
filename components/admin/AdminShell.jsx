@@ -16,6 +16,7 @@ const NAV = [
   { href: '/admin/', label: 'Dashboard', icon: 'dashboard', exact: true },
   { href: '/admin/leads/', label: 'Leads', icon: 'leads' },
   { href: '/admin/campaigns/', label: 'Campaigns', icon: 'mail' },
+  { href: '/admin/subscribers/', label: 'Subscribers', icon: 'user' },
   { href: '/admin/articles/', label: 'Articles', icon: 'articles', also: ['/admin/posts/', '/admin/new/', '/admin/preview/'] },
   { href: '/admin/content/', label: 'Site text', icon: 'content' },
   { href: '/admin/users/', label: 'Users', icon: 'team', badge: 'pending', also: ['/admin/team/'] },

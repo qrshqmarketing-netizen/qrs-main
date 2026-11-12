@@ -12,6 +12,9 @@ import { dbConfigured } from '@/lib/supabase';
 // is for, whether it is sending, how many emails it has and its numbers; "Run now" runs what the daily 8 AM run does.
 export const dynamic = 'force-dynamic';
 
+// "12 (40%)" of the emails sent; a dash when tracking isn't set up yet (scripts/supabase-email-tracking.sql)
+const pct = (n, of) => (n == null ? '–' : `${n}${of ? ` (${Math.round((n / of) * 100)}%)` : ''}`);
+
 export default async function CampaignsPage() {
   if (!(await isAdmin())) redirect('/admin/');
   let campaigns = [];
@@ -41,6 +44,7 @@ export default async function CampaignsPage() {
           </>
         }
       />
+      <p className="adm-hint">Opened and Clicked count each email once (a click also counts as an open) and leave out mail scanners. Opens are a picture load, so they run low where a mail app blocks pictures and high where it loads them for everyone (Apple Mail’s privacy setting): clicks are the number to trust. Tracking needs <code>scripts/supabase-email-tracking.sql</code> run once; until then these columns show a dash.</p>
       {!resendReady() && <div className="adm-msg warn">Resend is not set up for sending: the site needs RESEND_API_KEY and LEADS_FROM_EMAIL in Vercel (the same ones the lead emails use). Campaigns can be written, but nothing is sent.</div>}
       {problem ? (
         <div className="adm-msg bad">{problem}</div>
@@ -62,6 +66,8 @@ export default async function CampaignsPage() {
                 <th>Emails</th>
                 <th>Enrolled</th>
                 <th>Sent</th>
+                <th>Opened</th>
+                <th>Clicked</th>
                 <th>Finished</th>
                 <th>Stopped</th>
                 <th>Unsubscribed</th>
@@ -83,6 +89,22 @@ export default async function CampaignsPage() {
                   <td>{c.steps?.length || 0}</td>
                   <td>{c.stats.enrolled}</td>
                   <td>{c.stats.sent}</td>
+                  <td>{pct(c.tracking?.opened, c.stats.sent)}</td>
+                  <td>
+                    {pct(c.tracking?.clicked, c.stats.sent)}
+                    {c.tracking?.links?.length > 0 && (
+                      <details className="adm-hint">
+                        <summary>Top links</summary>
+                        <ul>
+                          {c.tracking.links.map((l) => (
+                            <li key={l.url}>
+                              {l.clicks} × {l.url.replace(/^https?:\/\/[^/]+/, '').replace(/[?#].*$/, '') || '/'}
+                            </li>
+                          ))}
+                        </ul>
+                      </details>
+                    )}
+                  </td>
                   <td>{c.stats.completed}</td>
                   <td>{c.stats.stopped}</td>
                   <td>{c.stats.unsubscribed}</td>
