@@ -11,20 +11,30 @@ export default function HeroVideo({ sources, className = '' }) {
 
   useEffect(() => {
     const video = ref.current;
-    // Phones and tablets below 901px keep the photo (November 5 2026, for speed: the video is 3.7 MB, and on a phone it became the page's largest
-    // paint only once it started playing, about 6.5 seconds in on a mid-range phone)
-    if (!video || navigator.connection?.saveData || window.matchMedia('(prefers-reduced-motion: reduce)').matches || !window.matchMedia('(min-width: 901px)').matches) return undefined;
+    // Plays on every screen size, phones included (owner, November 11 2026; from November 5 until then phones and tablets below 901px kept the photo
+    // for speed: the video is 3.5 to 4.5 MB). It is still fetched only after the page has loaded, so the photo is what paints first. A visitor with
+    // Data Saver on or who asks for reduced motion keeps the photo.
+    if (!video || navigator.connection?.saveData || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined;
     const onPlaying = () => video.classList.add('on');
     const start = () => {
+      if (!video.querySelector('source')) {
       for (const { src, type } of sources) {
         const s = document.createElement('source');
         s.src = src;
         s.type = type;
         video.appendChild(s);
       }
+      }
       video.muted = true;
+      video.setAttribute('muted', ''); // iOS Safari reads the attribute, not only the property
+      video.setAttribute('playsinline', '');
       video.load();
-      video.play().catch(() => {}); // blocked: the photo stays
+      // Blocked (iOS in Low Power Mode, some Android data savers): the photo stays, and the first tap or click on the page tries once more, since
+      // those browsers allow a muted video to start from a user gesture
+      video.play().catch(() => {
+        const retry = () => video.play().catch(() => {});
+        for (const type of ['touchstart', 'pointerdown', 'click']) window.addEventListener(type, retry, { once: true, passive: true });
+      });
     };
     video.addEventListener('playing', onPlaying);
     const later = () => ('requestIdleCallback' in window ? window.requestIdleCallback(start, { timeout: 1500 }) : setTimeout(start, 300));

@@ -32,7 +32,7 @@ export const Check = () => (
 const BTN = { gold: 'qh-btn-sun', plum: 'qh-btn-plum', line: 'qh-btn-ghost' };
 
 // Hero: dark blue gradient, an optional breadcrumb trail (sub pages), the H1, one line, two buttons, check points and the exploded roof layers
-// background: { poster, alt, sources } puts a photo with a muted looping video over it (HeroVideo: from 901px only, after load; the photo is the
+// background: { poster, alt, sources } puts a photo with a muted looping video over it (HeroVideo: on every screen size, after load; the photo is the
 // first paint and the fallback) behind the hero; visual={false} leaves the right-hand visual out (the home page, owner, November 9 2026)
 export function QhHero({ crumbs, where, title, outcome, text, checks = [], cta, actions, visual, background, badges = false, layers = ['Shingle, tile or flat roof', 'New underlayment', 'Deck, inspected and secured'], lang = 'en' }) {
   const T = (x, v) => th(lang, x, v);
@@ -4982,5 +4982,337 @@ export function QhStart({ faqs = [], heading, formHeading, offer = 'home', finan
         </div>
       </div>
     </section>
+  );
+}
+
+// Residential hub hero visual (owner, November 12 2026: "animated and premium instead of the photo components"; it replaces the fanned photo
+// cards, QhRoofFan): a street of three homes at dusk, one per roof type: a gabled home in architectural shingles with a brick chimney, a
+// Spanish-style home under a hipped clay tile roof, and a modern home with a parapet and a white flat roof. A drone crosses the street on a
+// 12 s loop; as it passes, each roof lights up, its name appears above it and a gold check pops ("one team for every roof"). The three roof
+// types stay links to their pages (the chips under the picture). Still, with every check shown, for reduced motion.
+// items: [{ title, href }] (the roof types; matched to a house by "shingle", "tile" or "flat" in the address).
+export function QhHomeStreet({ items = [], caption = 'Shingle, tile and flat roofs, one team' }) {
+  const pick = (word) => items.find((t) => t.href.includes(word));
+  const homes = [
+    { key: 'shingle', item: pick('shingle'), cx: 106, cy: 150 },
+    { key: 'tile', item: pick('tile'), cx: 285, cy: 148 },
+    { key: 'flat', item: pick('flat'), cx: 465, cy: 150 },
+  ].filter((h) => h.item);
+  const name = (t) => t.title.replace(/\s*Roofing$/i, '');
+  return (
+    <div className="qh-hs">
+      <svg className="qh-hs-svg" viewBox="0 0 560 330" aria-hidden="true">
+        <defs>
+          <linearGradient id="qhHsSky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stopColor="#0a2444" />
+            <stop offset="1" stopColor="#1d4a7d" />
+          </linearGradient>
+          <pattern id="qhHsShingle" width="34" height="11" patternUnits="userSpaceOnUse">
+            <rect width="34" height="11" fill="#4a515b" />
+            <rect x="0" y="0" width="17" height="10" fill="#525a65" />
+            <path d="M0 10.5H34" stroke="rgba(0,0,0,.55)" strokeWidth="1.4" />
+            <path d="M8 0V10M25 5V10" stroke="rgba(0,0,0,.3)" strokeWidth="1" />
+          </pattern>
+          <linearGradient id="qhHsCap" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stopColor="#8f4629" />
+            <stop offset="0.45" stopColor="#d9805a" />
+            <stop offset="1" stopColor="#7a3a22" />
+          </linearGradient>
+          <pattern id="qhHsTile" width="14" height="16" patternUnits="userSpaceOnUse">
+            <rect width="14" height="16" fill="#8f4629" />
+            <rect x="2" y="-1" width="10" height="15" rx="5" fill="url(#qhHsCap)" />
+            <path d="M0 15.2h14" stroke="rgba(60,20,8,.6)" strokeWidth="1.6" />
+          </pattern>
+          <pattern id="qhHsBrick" width="12" height="7" patternUnits="userSpaceOnUse">
+            <rect width="12" height="7" fill="#7a4a3c" />
+            <path d="M0 6.5h12M6 0v3.5M0 3.5h12M3 3.5v3.5M9 3.5v3.5" stroke="#c9b9a8" strokeWidth=".9" />
+          </pattern>
+          <linearGradient id="qhHsWallA" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stopColor="#e3dccc" />
+            <stop offset="1" stopColor="#bdb4a3" />
+          </linearGradient>
+          <linearGradient id="qhHsWallB" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stopColor="#f0e7d6" />
+            <stop offset="1" stopColor="#d2c5ac" />
+          </linearGradient>
+          <linearGradient id="qhHsWallC" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stopColor="#e9ecef" />
+            <stop offset="1" stopColor="#b9c0c8" />
+          </linearGradient>
+          <linearGradient id="qhHsGlow" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stopColor="#ffe9a8" />
+            <stop offset="1" stopColor="#f0b43c" />
+          </linearGradient>
+          <linearGradient id="qhHsGlass" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stopColor="#dcefff" />
+            <stop offset="1" stopColor="#3f78ad" />
+          </linearGradient>
+        </defs>
+        {/* Dusk sky, a few stars, the street */}
+        <rect width="560" height="330" rx="12" fill="url(#qhHsSky)" />
+        {[[40, 34], [128, 22], [226, 46], [330, 20], [418, 40], [512, 26], [476, 64], [78, 70]].map(([x, y], i) => (
+          <circle key={x} className="qh-hs-star" style={{ animationDelay: `${i * 0.7}s` }} cx={x} cy={y} r="1.3" fill="#fff" />
+        ))}
+        <rect x="0" y="270" width="560" height="60" fill="#12233a" />
+        <rect x="0" y="270" width="560" height="10" fill="#b9b4a8" />
+        <path d="M0 304h560" stroke="#d9c86b" strokeWidth="1.5" strokeDasharray="16 14" />
+
+        {/* Home 1: architectural shingles on a gable, a brick chimney, gutters */}
+        <g>
+          <rect x="36" y="190" width="140" height="80" fill="url(#qhHsWallA)" />
+          <rect x="36" y="190" width="140" height="4" fill="rgba(0,0,0,.2)" />
+          <rect x="146" y="132" width="16" height="42" fill="url(#qhHsBrick)" />
+          <rect x="143" y="128" width="22" height="5" rx="1" fill="#a39b8c" />
+          <path d="M22 192L106 128L190 192Z" fill="url(#qhHsShingle)" />
+          <path d="M106 128L190 192L22 192Z" fill="rgba(0,0,0,.1)" />
+          <path d="M98 134l8-6 8 6" fill="none" stroke="#353b44" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M18 194h176" stroke="#aeb6bf" strokeWidth="4" strokeLinecap="round" />
+          <path d="M20 196v74" stroke="#aeb6bf" strokeWidth="3" />
+          <rect x="50" y="208" width="40" height="34" rx="2" fill="#f3efe6" />
+          <rect x="53" y="211" width="34" height="28" fill="url(#qhHsGlow)" />
+          <path d="M70 211v28M53 225h34" stroke="#f3efe6" strokeWidth="2" />
+          <rect x="124" y="208" width="40" height="34" rx="2" fill="#f3efe6" />
+          <rect x="127" y="211" width="34" height="28" fill="url(#qhHsGlass)" />
+          <path d="M144 211v28M127 225h34" stroke="#f3efe6" strokeWidth="2" />
+          <rect x="94" y="218" width="26" height="52" rx="2" fill="#4a3a2c" stroke="#f3efe6" strokeWidth="2" />
+          <circle cx="115" cy="246" r="1.6" fill="#d6c08a" />
+          <path className="qh-hs-lit qh-hs-lit1" d="M22 192L106 128L190 192" fill="none" stroke="#f0b43c" strokeWidth="4" strokeLinejoin="round" />
+        </g>
+
+        {/* Home 2: a hipped clay tile roof on stucco, arched windows and door */}
+        <g>
+          <rect x="214" y="182" width="142" height="88" fill="url(#qhHsWallB)" />
+          <rect x="214" y="182" width="142" height="4" fill="rgba(0,0,0,.18)" />
+          <path d="M202 184L236 138H334L368 184Z" fill="url(#qhHsTile)" />
+          <path d="M236 138H334L368 184H334Z" fill="rgba(0,0,0,.08)" />
+          <path d="M234 138h102" stroke="#6f351f" strokeWidth="5" strokeLinecap="round" />
+          <path d="M202 184h166" stroke="rgba(60,20,8,.5)" strokeWidth="2" />
+          {[232, 318].map((x) => (
+            <g key={x}>
+              <path d={`M${x - 3} 246v-26a13 13 0 0 1 26 0v26z`} fill="#fff8ea" />
+              <path d={`M${x} 244v-24a10 10 0 0 1 20 0v24z`} fill="url(#qhHsGlow)" />
+              <path d={`M${x + 10} 210v34`} stroke="#fff8ea" strokeWidth="1.6" />
+            </g>
+          ))}
+          <path d="M270 270v-36a15 15 0 0 1 30 0v36z" fill="#5a3a26" stroke="#fff8ea" strokeWidth="2" />
+          <circle cx="294" cy="250" r="1.6" fill="#d6c08a" />
+          <path className="qh-hs-lit qh-hs-lit2" d="M202 184L236 138H334L368 184" fill="none" stroke="#f0b43c" strokeWidth="4" strokeLinejoin="round" />
+        </g>
+
+        {/* Home 3: a modern home with a coped parapet around a white flat roof, big glass, a lower wing */}
+        <g>
+          <rect x="392" y="170" width="146" height="100" fill="url(#qhHsWallC)" />
+          <rect x="486" y="200" width="60" height="70" fill="#8d6b47" />
+          {[206, 214, 222, 230, 238, 246, 254, 262].map((y) => <path key={y} d={`M486 ${y}h60`} stroke="rgba(0,0,0,.18)" />)}
+          <rect x="388" y="162" width="154" height="9" rx="2" fill="#a39b8c" stroke="rgba(0,0,0,.3)" />
+          <rect x="392" y="158" width="146" height="5" rx="1" fill="#eef2f6" />
+          <rect x="482" y="193" width="68" height="8" rx="2" fill="#a39b8c" stroke="rgba(0,0,0,.3)" />
+          <rect x="404" y="186" width="70" height="56" rx="2" fill="#5d6570" />
+          <rect x="407" y="189" width="64" height="50" fill="url(#qhHsGlow)" />
+          <path d="M439 189v50M407 214h64" stroke="#5d6570" strokeWidth="2" />
+          <rect x="500" y="216" width="28" height="54" fill="url(#qhHsGlass)" stroke="#5d6570" strokeWidth="2" />
+          <rect x="430" y="150" width="22" height="9" rx="1" fill="#8a949f" />
+          <path className="qh-hs-lit qh-hs-lit3" d="M388 171V162H542V171" fill="none" stroke="#f0b43c" strokeWidth="4" strokeLinejoin="round" />
+        </g>
+
+        {/* Trees and hedges between the homes */}
+        {[[196, 250, 14], [378, 252, 13], [10, 256, 10]].map(([x, y, r]) => (
+          <g key={x}>
+            <path d={`M${x} 270V${y}`} stroke="#5a3a26" strokeWidth="4" />
+            <circle cx={x} cy={y - r + 4} r={r} fill="#2f6a3a" />
+            <circle cx={x - 4} cy={y - r} r={r * 0.5} fill="#4c8a4a" />
+          </g>
+        ))}
+
+        {/* The drone and its scan beam */}
+        <g className="qh-hs-drone">
+          <path className="qh-hs-beam" d="M0 18L-46 92H46Z" fill="rgba(240,180,60,.18)" />
+          <path d="M-30 4L30 8M-30 8L30 4" stroke="#aeb6bf" strokeWidth="2.5" strokeLinecap="round" />
+          <rect x="-16" y="2" width="32" height="12" rx="5" fill="#dbe7f3" stroke="#8a949f" />
+          <rect x="-6" y="14" width="12" height="6" rx="2" fill="#4c555e" />
+          <circle cx="0" cy="20" r="4" fill="#1b2027" stroke="#8a949f" />
+          <circle cx="0" cy="20" r="1.6" fill="#7cc4ff" />
+          <circle cx="-12" cy="8" r="1.6" fill="#ff5a5a" />
+          <circle cx="12" cy="8" r="1.6" fill="#5aff7a" />
+          <ellipse className="qh-ds-prop" cx="-30" cy="4" rx="12" ry="2.5" fill="#9fb8d2" />
+          <ellipse className="qh-ds-prop" cx="30" cy="4" rx="12" ry="2.5" fill="#9fb8d2" />
+        </g>
+
+        {/* Each roof's name and its check, as the drone passes */}
+        {homes.map((h, i) => (
+          <g key={h.key} className={`qh-hs-tag qh-hs-tag${i + 1}`}>
+            <rect x={h.cx - 62} y="96" width="124" height="24" rx="12" fill="#fff" />
+            <text x={h.cx + 8} y="112.5" textAnchor="middle" fill="#0b1b2e" style={{ font: '700 11.5px var(--font-text), sans-serif' }}>{name(h.item)}</text>
+            <circle cx={h.cx - 48} cy="108" r="8" fill="#f0b43c" />
+            <path d={`M${h.cx - 52} 108l3 3 5-6`} stroke="#0b1b2e" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+          </g>
+        ))}
+      </svg>
+      {caption && <p className="qh-rr-time">{caption}</p>}
+      {homes.length > 0 && (
+        <ul className="qh-leak-links">
+          {homes.map((h) => (
+            <li key={h.item.href}>
+              <SiteLink href={h.item.href}>{h.item.title}</SiteLink>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+// Commercial hub hero visual (owner, November 12 2026; it replaces the framed photo, QhSurveyFrame, on the hub): a commercial building seen
+// from above the corner, with a glass storefront, a loading side and a flat roof inside its parapet (courses of white cap sheet, two rooftop
+// units on curbs, skylights, a drain, a hatch). On a 12 s loop a gold survey line crosses the roof, three findings are pinned as it passes
+// (a drain, a curb flashing, the parapet), and the survey card beside it ticks off its three lines. The building types stay links (the
+// chips under the picture). card: { title, text }; chips: [{ label, href }]. Still, with every pin and check shown, for reduced motion.
+export function QhRoofSurvey({ chips = [], card = { title: 'Roofer-led roof survey', text: 'Photos, a written scope and price before any work.' }, rows = ['Photos of every finding', 'A written scope', 'The price, before any work'] }) {
+  // a point on the roof: u along the front (0 to 1), v toward the back (0 to 1)
+  const P = (u, v) => [70 + 330 * u + 90 * v, 150 - 60 * v];
+  const pt = (u, v) => P(u, v).join(' ');
+  const quad = (u0, v0, u1, v1) => `M${pt(u0, v0)}L${pt(u1, v0)}L${pt(u1, v1)}L${pt(u0, v1)}Z`;
+  const unit = (u, v, w = 0.12, d = 0.22, h = 22) => {
+    const [x0, y0] = P(u, v);
+    const [x1, y1] = P(u + w, v);
+    const [x2, y2] = P(u + w, v + d);
+    const [x3, y3] = P(u, v + d);
+    return (
+      <g key={`${u}${v}`}>
+        <path d={quad(u - 0.012, v - 0.03, u + w + 0.012, v + d + 0.03)} fill="#8e8a80" stroke="#f0b43c" strokeWidth="1.5" />
+        <path d={`M${x0} ${y0}L${x1} ${y1}L${x1} ${y1 - h}L${x0} ${y0 - h}Z`} fill="#8a949f" />
+        <path d={`M${x1} ${y1}L${x2} ${y2}L${x2} ${y2 - h}L${x1} ${y1 - h}Z`} fill="#6f7882" />
+        <path d={`M${x0} ${y0 - h}L${x1} ${y1 - h}L${x2} ${y2 - h}L${x3} ${y3 - h}Z`} fill="#c4ccd4" />
+        <ellipse cx={(x0 + x2) / 2} cy={(y0 + y2) / 2 - h} rx="11" ry="6" fill="#5b646e" stroke="rgba(255,255,255,.4)" />
+        <path d={`M${x0 + 6} ${y0 - 6}h${x1 - x0 - 12}M${x0 + 6} ${y0 - 12}h${x1 - x0 - 12}`} stroke="rgba(0,0,0,.3)" strokeWidth="1.5" />
+      </g>
+    );
+  };
+  const pins = [P(0.22, 0.5), P(0.6, 0.42), P(0.93, 0.97)];
+  return (
+    <div className="qh-rs">
+      <svg className="qh-rs-svg" viewBox="0 0 560 330" aria-hidden="true">
+        <defs>
+          <linearGradient id="qhRsFront" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stopColor="#dcd5c7" />
+            <stop offset="1" stopColor="#b7ae9e" />
+          </linearGradient>
+          <linearGradient id="qhRsSide" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stopColor="#a9a192" />
+            <stop offset="1" stopColor="#8a8375" />
+          </linearGradient>
+          <linearGradient id="qhRsGlass" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stopColor="#dcefff" />
+            <stop offset="0.5" stopColor="#7fb4e6" />
+            <stop offset="1" stopColor="#2f5f8f" />
+          </linearGradient>
+          <linearGradient id="qhRsRoof" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stopColor="#f2f5f8" />
+            <stop offset="1" stopColor="#cfd6dd" />
+          </linearGradient>
+          <filter id="qhRsGrain" x="0" y="0" width="1" height="1">
+            <feTurbulence type="fractalNoise" baseFrequency="1.3" numOctaves="2" seed="21" stitchTiles="stitch" />
+            <feColorMatrix type="saturate" values="0" />
+            <feComponentTransfer><feFuncA type="linear" slope="0.5" /></feComponentTransfer>
+          </filter>
+          <clipPath id="qhRsField"><path d={quad(0.02, 0.05, 0.98, 0.95)} /></clipPath>
+          <linearGradient id="qhRsBeam" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stopColor="#f0b43c" stopOpacity="0" />
+            <stop offset="1" stopColor="#f0b43c" stopOpacity=".45" />
+          </linearGradient>
+        </defs>
+        {/* The lot: asphalt, stalls, a sidewalk, the building's shadow */}
+        <path d="M20 300h520l-40 26H0z" fill="#12233a" />
+        <path d="M30 292h380l90-60h44v68H30z" fill="#27313d" />
+        <path d="M70 290h330l90-60v8l-90 60H70z" fill="#b9b4a8" />
+        {[110, 160, 210, 260, 310, 360].map((x) => <path key={x} d={`M${x} 300l-14 22`} stroke="rgba(255,255,255,.3)" strokeWidth="2" />)}
+        {/* Side wall: a roll-up door, windows, a downspout */}
+        <path d="M400 150L490 90V230L400 290Z" fill="url(#qhRsSide)" />
+        <path d="M420 252L452 231V190L420 211Z" fill="#6f7882" />
+        {[0, 1, 2, 3].map((k) => <path key={k} d={`M420 ${219 + k * 9}L452 ${198 + k * 9}`} stroke="rgba(0,0,0,.3)" strokeWidth="1.5" />)}
+        <path d="M462 176L482 163V190L462 203Z" fill="url(#qhRsGlass)" />
+        <path d="M494 92v136" stroke="#8a949f" strokeWidth="4" strokeLinecap="round" />
+        {/* Front wall: sign band, storefront glass in bays, the entrance and its canopy */}
+        <rect x="70" y="150" width="330" height="140" fill="url(#qhRsFront)" />
+        <rect x="70" y="150" width="330" height="5" fill="rgba(0,0,0,.2)" />
+        <rect x="170" y="166" width="130" height="20" rx="3" fill="#0b1b2e" />
+        <path d="M184 176h70M262 176h24" stroke="#f0b43c" strokeWidth="5" strokeLinecap="round" />
+        {[84, 152, 268, 336].map((x) => (
+          <g key={x}>
+            <rect x={x - 3} y="203" width="58" height="72" fill="#e8ecf0" />
+            <rect x={x} y="206" width="52" height="66" fill="url(#qhRsGlass)" />
+            <path d={`M${x + 26} 206v66M${x} 240h52`} stroke="#e8ecf0" strokeWidth="2" />
+            <path d={`M${x + 5} 212l12-3`} stroke="rgba(255,255,255,.7)" strokeWidth="2" strokeLinecap="round" />
+          </g>
+        ))}
+        <rect x="212" y="198" width="48" height="6" rx="2" fill="#4c5a6b" />
+        <rect x="216" y="210" width="40" height="80" fill="url(#qhRsGlass)" stroke="#5d6570" strokeWidth="2" />
+        <path d="M236 210v80M230 250h4M238 250h4" stroke="#5d6570" strokeWidth="2" />
+        {/* Roof: the parapet and its coping, the cap sheet in courses, crickets to the drain */}
+        <path d={quad(0, 0, 1, 1)} fill="#a39b8c" stroke="rgba(0,0,0,.35)" />
+        <path d={quad(0.02, 0.05, 0.98, 0.95)} fill="url(#qhRsRoof)" />
+        <path d={quad(0.02, 0.05, 0.98, 0.95)} filter="url(#qhRsGrain)" opacity="0.28" style={{ mixBlendMode: 'multiply' }} />
+        <g clipPath="url(#qhRsField)">
+          {[0.2, 0.35, 0.5, 0.65, 0.8].map((v) => (
+            <g key={v}>
+              <path d={`M${pt(0, v)}L${pt(1, v)}`} stroke="rgba(255,255,255,.7)" strokeWidth="1.2" />
+              <path d={`M${pt(0, v - 0.012)}L${pt(1, v - 0.012)}`} stroke="rgba(40,50,60,.28)" strokeWidth="1.4" />
+            </g>
+          ))}
+          <path d={`M${pt(0.02, 0.05)}L${pt(0.22, 0.5)}L${pt(0.02, 0.95)}M${pt(0.42, 0.05)}L${pt(0.22, 0.5)}L${pt(0.42, 0.95)}`} fill="none" stroke="rgba(40,50,60,.16)" />
+          <ellipse cx={pins[0][0]} cy={pins[0][1]} rx="34" ry="14" fill="rgba(0,0,0,.1)" />
+          {/* The survey line and its trailing glow */}
+          <g className="qh-rs-scan">
+            <path d={`M${pt(-0.14, 0)}L${pt(0, 0)}L${pt(0, 1)}L${pt(-0.14, 1)}Z`} fill="url(#qhRsBeam)" />
+            <path d={`M${pt(0, 0)}L${pt(0, 1)}`} stroke="#f0b43c" strokeWidth="3" />
+          </g>
+        </g>
+        <path d={`M${pt(0, 0)}L${pt(1, 0)}`} stroke="rgba(255,255,255,.5)" strokeWidth="1.2" />
+        {/* Skylights, the hatch, the drain */}
+        {[[0.72, 0.2], [0.82, 0.2]].map(([u, v]) => (
+          <g key={u}>
+            <path d={quad(u, v, u + 0.07, v + 0.22)} fill="#8e8a80" stroke="#f0b43c" strokeWidth="1.5" />
+            <path d={quad(u + 0.01, v + 0.03, u + 0.06, v + 0.19)} fill="rgba(160,210,255,.85)" />
+          </g>
+        ))}
+        <path d={quad(0.06, 0.68, 0.12, 0.86)} fill="#8a949f" stroke="rgba(0,0,0,.35)" />
+        <ellipse cx={pins[0][0]} cy={pins[0][1]} rx="9" ry="5" fill="#2b323a" stroke="#9aa3ad" strokeWidth="1.5" />
+        {/* Rooftop units on their flashed curbs */}
+        {unit(0.52, 0.3)}
+        {unit(0.34, 0.6, 0.1, 0.2, 18)}
+        {/* Findings, pinned as the line passes */}
+        {pins.map(([x, y], i) => (
+          <g key={i} className={`qh-rs-pin qh-rs-pin${i + 1}`}>
+            <circle className="qh-leak-ring" cx={x} cy={y - 14} r="12" fill="none" stroke="#f0b43c" strokeWidth="2" />
+            <path d={`M${x} ${y}c-7-9-11-13-11-19a11 11 0 0 1 22 0c0 6-4 10-11 19z`} fill="#f0b43c" stroke="#0b1b2e" strokeWidth="1.5" />
+            <text x={x} y={y - 15} textAnchor="middle" fill="#0b1b2e" style={{ font: '800 11px var(--font-text), sans-serif' }}>{i + 1}</text>
+          </g>
+        ))}
+        {/* The survey card: its three lines tick off after the pass */}
+        <g className="qh-rs-card" transform="translate(338 196)">
+          <rect width="208" height="118" rx="10" fill="#fff" />
+          <rect width="208" height="30" rx="10" fill="#0b1b2e" />
+          <rect y="20" width="208" height="10" fill="#0b1b2e" />
+          <text x="14" y="20" fill="#f0b43c" style={{ font: '700 12px var(--font-text), sans-serif' }}>{card.title}</text>
+          {rows.map((r, i) => (
+            <g key={r} className={`qh-rs-row qh-rs-row${i + 1}`}>
+              <circle cx="20" cy={50 + i * 24} r="8" fill="#f0b43c" />
+              <path d={`M16 ${50 + i * 24}l3 3 5-6`} stroke="#0b1b2e" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+              <text x="36" y={54 + i * 24} fill="#0b1b2e" style={{ font: '600 11.5px var(--font-text), sans-serif' }}>{r}</text>
+            </g>
+          ))}
+        </g>
+      </svg>
+      {card.text && <p className="qh-rr-time">{card.text}</p>}
+      {chips.length > 0 && (
+        <ul className="qh-leak-links">
+          {chips.map((c) => (
+            <li key={c.href}>
+              <SiteLink href={c.href}>{c.label}</SiteLink>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
   );
 }

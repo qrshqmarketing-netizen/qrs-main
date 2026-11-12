@@ -17,7 +17,7 @@ import {
 } from '@/data/content';
 import { pageMetadata } from '@/lib/pages';
 import HubPage from './HubPage';
-import { QhDrainPlan, QhLeakTrace, QhTileLift, QhReroof, QhShingleColors } from '@/components/home/QrsSections';
+import { QhDrainPlan, QhLeakTrace, QhRoofSurvey, QhTileLift, QhReroof, QhShingleColors } from '@/components/home/QrsSections';
 import { ROOF_COLORS, SHOW_ROOF_COLORS } from '@/data/roofColors';
 import ServicePage from './ServicePage';
 import { isRepair, REPAIR_ACTIONS } from './shared';
@@ -67,6 +67,9 @@ export function SectionHub({ section, extra }) {
       feature={feature}
       offer={isCommercial(section) ? 'commercial' : 'home'}
       extra={extra}
+      {...(isCommercial(section) && {
+        visual: <QhRoofSurvey chips={cards.slice(0, 6).map((c) => ({ label: c.title.replace(/ Roofing$/, ''), href: c.href }))} />,
+      })}
       {...(tile && {
         visual: (
           <QhTileLift

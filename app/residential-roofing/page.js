@@ -6,7 +6,7 @@ import TrustLogos from '@/components/sections/TrustLogos';
 import RoofCheck from '@/components/sections/RoofCheck';
 import ServiceFinder from '@/components/sections/ServiceFinder';
 import StudioProjects from '@/components/studio/StudioProjects';
-import { QhHero, QhRoofFan } from '@/components/home/QrsSections';
+import { QhHero, QhHomeStreet } from '@/components/home/QrsSections';
 import '@/components/home/QrsHome.css';
 import { HERO_ANNOTATIONS } from '@/data/site';
 import { languagesFor } from '@/lib/lang';
@@ -50,7 +50,7 @@ export default async function ResidentialRoofingPage() {
       <JsonLd data={schema} />
       {/* The new-theme hero (owner, November 10 2026) on the earlier layout and content */}
       <div className="qh-scope">
-        <QhHero crumbs={CRUMBS} title={page.hero.heading} outcome={heroOutcome(RESIDENTIAL.href)} text={page.hero.intro} checks={page.hero.highlights || HERO_ANNOTATIONS.home} visual={<QhRoofFan items={TYPES} />} badges />
+        <QhHero crumbs={CRUMBS} title={page.hero.heading} outcome={heroOutcome(RESIDENTIAL.href)} text={page.hero.intro} checks={page.hero.highlights || HERO_ANNOTATIONS.home} visual={<QhHomeStreet items={TYPES} />} badges />
       </div>
       <ProofBar strip />
       {/* Google, BBB and Yelp logos linking to our profiles (owner, November 2 2026) */}

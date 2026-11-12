@@ -1417,3 +1417,48 @@ main.qh.abr{--abr-inset:0px !important}
 :is(main.qh,main .qh-scope) .qh-tile-rowx{background:none;overflow:hidden}
 :is(main.qh,main .qh-scope) .qh-pf-photox{background:none;overflow:hidden}
 :is(main.qh,main .qh-scope) .qh-pf-photox svg{display:block;width:100%;height:100%}
+
+/* Residential hub hero: a street of three homes and the evaluation drone (QhHomeStreet); Commercial hub hero: a building under survey (QhRoofSurvey) */
+:is(main.qh,main .qh-scope) :is(.qh-hs,.qh-rs){position:relative;max-width:560px;width:100%;margin:0 auto}
+:is(main.qh,main .qh-scope) :is(.qh-hs-svg,.qh-rs-svg){display:block;width:100%;height:auto;overflow:visible;filter:drop-shadow(0 30px 40px rgba(0,0,0,.45))}
+:is(main.qh,main .qh-scope) .qh-hs-drone{transform:translate(285px,40px)}
+:is(main.qh,main .qh-scope) .qh-hs-lit{opacity:0}
+:is(main.qh,main .qh-scope) .qh-hs-star{opacity:.7}
+:is(main.qh,main .qh-scope) :is(.qh-hs-tag,.qh-rs-pin,.qh-rs-row){transform-box:fill-box;transform-origin:center}
+:is(main.qh,main .qh-scope) .qh-rs-scan{opacity:0}
+@media (prefers-reduced-motion:no-preference){
+  :is(main.qh,main .qh-scope) .qh-hs-star{animation:qhHsStar 4.2s ease-in-out infinite}
+  :is(main.qh,main .qh-scope) .qh-hs-drone{animation:qhHsFly 12s cubic-bezier(.45,0,.55,1) infinite}
+  :is(main.qh,main .qh-scope) .qh-hs-beam{animation:qhHsBeam 12s ease infinite}
+  :is(main.qh,main .qh-scope) .qh-hs-lit1{animation:qhHsLit1 12s ease infinite}
+  :is(main.qh,main .qh-scope) .qh-hs-lit2{animation:qhHsLit2 12s ease infinite}
+  :is(main.qh,main .qh-scope) .qh-hs-lit3{animation:qhHsLit3 12s ease infinite}
+  :is(main.qh,main .qh-scope) .qh-hs-tag1{animation:qhHsTag1 12s cubic-bezier(.2,.8,.2,1) infinite}
+  :is(main.qh,main .qh-scope) .qh-hs-tag2{animation:qhHsTag2 12s cubic-bezier(.2,.8,.2,1) infinite}
+  :is(main.qh,main .qh-scope) .qh-hs-tag3{animation:qhHsTag3 12s cubic-bezier(.2,.8,.2,1) infinite}
+  :is(main.qh,main .qh-scope) .qh-rs-scan{animation:qhRsScan 12s cubic-bezier(.45,0,.55,1) infinite}
+  :is(main.qh,main .qh-scope) .qh-rs-pin1{animation:qhRsPin1 12s cubic-bezier(.2,.8,.2,1) infinite}
+  :is(main.qh,main .qh-scope) .qh-rs-pin2{animation:qhRsPin2 12s cubic-bezier(.2,.8,.2,1) infinite}
+  :is(main.qh,main .qh-scope) .qh-rs-pin3{animation:qhRsPin3 12s cubic-bezier(.2,.8,.2,1) infinite}
+  :is(main.qh,main .qh-scope) .qh-rs-row1{animation:qhRsRow1 12s ease infinite}
+  :is(main.qh,main .qh-scope) .qh-rs-row2{animation:qhRsRow2 12s ease infinite}
+  :is(main.qh,main .qh-scope) .qh-rs-row3{animation:qhRsRow3 12s ease infinite}
+  :is(main.qh,main .qh-scope) .qh-rs-card{animation:qhFade .8s ease .4s both}
+}
+@keyframes qhHsStar{0%,100%{opacity:.25}50%{opacity:.9}}
+@keyframes qhHsFly{0%{transform:translate(-40px,52px)}8%{transform:translate(106px,40px)}26%{transform:translate(106px,40px)}34%{transform:translate(285px,34px)}52%{transform:translate(285px,34px)}60%{transform:translate(465px,40px)}78%{transform:translate(465px,40px)}90%,100%{transform:translate(620px,20px)}}
+@keyframes qhHsBeam{0%,7%{opacity:0}10%,25%{opacity:1}28%,33%{opacity:0}36%,51%{opacity:1}54%,59%{opacity:0}62%,77%{opacity:1}80%,100%{opacity:0}}
+@keyframes qhHsLit1{0%,9%{opacity:0}13%,88%{opacity:1}96%,100%{opacity:0}}
+@keyframes qhHsLit2{0%,35%{opacity:0}39%,88%{opacity:1}96%,100%{opacity:0}}
+@keyframes qhHsLit3{0%,61%{opacity:0}65%,88%{opacity:1}96%,100%{opacity:0}}
+@keyframes qhHsTag1{0%,14%{opacity:0;transform:translateY(8px) scale(.9)}19%,88%{opacity:1;transform:none}96%,100%{opacity:0;transform:none}}
+@keyframes qhHsTag2{0%,40%{opacity:0;transform:translateY(8px) scale(.9)}45%,88%{opacity:1;transform:none}96%,100%{opacity:0;transform:none}}
+@keyframes qhHsTag3{0%,66%{opacity:0;transform:translateY(8px) scale(.9)}71%,88%{opacity:1;transform:none}96%,100%{opacity:0;transform:none}}
+@keyframes qhRsScan{0%,4%{transform:none;opacity:0}8%{opacity:1}52%{transform:translateX(330px);opacity:1}56%,100%{transform:translateX(330px);opacity:0}}
+@keyframes qhRsPin1{0%,17%{opacity:0;transform:translateY(-10px) scale(.6)}21%,90%{opacity:1;transform:none}97%,100%{opacity:0;transform:none}}
+@keyframes qhRsPin2{0%,34%{opacity:0;transform:translateY(-10px) scale(.6)}38%,90%{opacity:1;transform:none}97%,100%{opacity:0;transform:none}}
+@keyframes qhRsPin3{0%,50%{opacity:0;transform:translateY(-10px) scale(.6)}54%,90%{opacity:1;transform:none}97%,100%{opacity:0;transform:none}}
+@keyframes qhRsRow1{0%,58%{opacity:.25}62%,90%{opacity:1}97%,100%{opacity:.25}}
+@keyframes qhRsRow2{0%,65%{opacity:.25}69%,90%{opacity:1}97%,100%{opacity:.25}}
+@keyframes qhRsRow3{0%,72%{opacity:.25}76%,90%{opacity:1}97%,100%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){:is(main.qh,main .qh-scope) .qh-hs-lit{opacity:1}:is(main.qh,main .qh-scope) .qh-hs-beam{opacity:0}}

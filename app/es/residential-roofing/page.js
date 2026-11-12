@@ -1,7 +1,7 @@
 import FinalCta from '@/components/sections/FinalCta';
 import ProofBar from '@/components/sections/ProofBar';
 import TrustLogos from '@/components/sections/TrustLogos';
-import { QhAccount, QhFinder, QhHero, QhOffer, QhPosts, QhProjects, QhReviews, QhRoofFan, QhServices, QhStart, QhStory } from '@/components/home/QrsSections';
+import { QhAccount, QhFinder, QhHero, QhOffer, QhPosts, QhProjects, QhReviews, QhHomeStreet, QhServices, QhStart, QhStory } from '@/components/home/QrsSections';
 import JsonLd from '@/components/ui/JsonLd';
 import { RESIDENTIAL, RESIDENTIAL_TYPES } from '@/data/catalog';
 import { ES_RESIDENTIAL as page, ES_RESIDENTIAL_PATH as PATH } from '@/data/i18n/esResidential';
@@ -55,7 +55,7 @@ export default async function SpanishResidentialRoofingPage() {
         outcome={page.hero.outcome}
         text={page.hero.intro}
         checks={page.hero.highlights}
-        visual={<QhRoofFan items={TYPES} caption={page.fanCaption} />}
+        visual={<QhHomeStreet items={TYPES} caption={page.fanCaption} />}
         badges
       />
       <ProofBar strip lang="es" />

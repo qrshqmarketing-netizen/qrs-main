@@ -107,7 +107,7 @@ export default function HeaderSearch({ onOpen }) {
         <SearchIcon />
       </button>
       <div className={'hd-search-box' + (open ? ' is-open' : '')} id="hdSearch" ref={box} inert={!open}>
-        <form action="/search/" method="get" role="search" onSubmit={() => setOpen(false)}>
+        <form action="/search/" method="get" role="search" rel="nofollow" onSubmit={() => setOpen(false)}>
           <SearchIcon />
           <label className="sr-only" htmlFor="hdSearchQ">
             Search the site
@@ -140,7 +140,7 @@ export default function HeaderSearch({ onOpen }) {
               </li>
             ))}
             <li className="hd-search-all">
-              <SiteLink href={`/search/?q=${encodeURIComponent(q.trim())}`} prefetch={false} onClick={() => setOpen(false)}>
+              <SiteLink href={`/search/?q=${encodeURIComponent(q.trim())}`} prefetch={false} rel="nofollow" onClick={() => setOpen(false)}>
                 See all results for “{q.trim()}”
               </SiteLink>
             </li>
