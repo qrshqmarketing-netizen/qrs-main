@@ -3,4 +3,4 @@ assets
 supabase
 seo-audit
 gbp-photos
-*.pdf
+/*.pdf

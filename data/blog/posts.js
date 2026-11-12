@@ -4772,22 +4772,29 @@ export const BLOG_POSTS = [
     slug: 'clay-vs-concrete-tile-roof',
     title: 'Clay vs. Concrete Tile Roofs: How They Differ and Which to Choose',
     keyword: 'clay vs. concrete tile',
-    revision: 1,
+    revision: 2,
     topics: ['tile', 'replacement', 'underlayment', 'repair'],
     metaTitle: 'Clay vs. Concrete Tile Roofs: Key Differences',
     metaDescription:
       'Clay vs. concrete tile for a Southern California roof: what each is made of, weight, color, how they age and how to tell which you have.',
     datePublished: '2026-10-13',
-    dateModified: '2026-10-13',
+    dateModified: '2026-11-12',
     excerpt:
       'Clay and concrete tile can look alike from the street, but they are made differently, weigh differently and age differently. Here is how to tell them apart and which one suits your home.',
     image: '/images/blog/clay-vs-concrete-tile-roof.webp',
     imageAlt: 'Illustration: orange clay barrel tiles beside gray flat concrete roof tiles',
     intro: [
       'Clay vs. concrete tile is a choice most tile roof owners in Southern California face sooner or later, whether they are replacing a roof or just matching a few broken pieces. From the street the two can look alike, but they are made from different materials and behave differently on a roof.',
-      'This guide explains the differences, how to tell which you have and what to weigh when you choose.',
+      'If you have a concrete tile roof, or are thinking about one, this guide explains what it is, how it differs from clay, how to tell which you have and what to weigh when you choose.',
     ],
     sections: [
+      {
+        heading: 'What Is a Concrete Tile Roof?',
+        blocks: [
+          'A concrete tile roof is made of tiles molded from sand, cement and water and then cured. It comes in many profiles, including looks that copy clay, slate and wood shake, and it is a common roof on newer tract homes and Mediterranean-style homes across Southern California.',
+          'Compared with clay, a concrete tile roof is generally heavier, usually costs less and can fade or turn porous as its surface wears. Like any tile roof, what keeps water out is the underlayment beneath the tiles, and it wears out well before the tile does.',
+        ],
+      },
       {
         heading: 'Clay vs. Concrete Tile at a Glance',
         blocks: [
@@ -4858,6 +4865,14 @@ export const BLOG_POSTS = [
     ],
     faqs: [
       {
+        q: 'What is a concrete tile roof?',
+        a: 'A concrete tile roof is made of tiles molded from sand, cement and water and cured. It comes in many profiles, is generally heavier than clay and usually costs less. The underlayment beneath the tiles is what keeps water out.',
+      },
+      {
+        q: 'How do I know if I have a concrete tile roof?',
+        a: 'A broken edge tells you: concrete shows gray cement and sand inside, even when the surface is colored, while clay is one fired color all the way through. Older concrete tile often looks rough or faded. A roof inspection confirms it.',
+      },
+      {
         q: 'Which is better, clay or concrete tile?',
         a: 'Neither is better for every home. Clay holds its color and is generally lighter; concrete usually costs less and comes in more profiles but is heavier and can fade. The home’s style, framing and budget decide it.',
       },
@@ -4868,10 +4883,6 @@ export const BLOG_POSTS = [
       {
         q: 'Can I replace a few clay tiles with concrete ones?',
         a: 'It is better to match the material and profile. A close match placed on a less visible slope keeps the roof looking right and sheds water the same way.',
-      },
-      {
-        q: 'How do I know if my roof is clay or concrete tile?',
-        a: 'A broken edge tells you: clay is one fired color all the way through, while concrete shows gray cement and sand inside. A roof inspection confirms it.',
       },
     ],
     closing: {
@@ -6232,7 +6243,8 @@ export const BLOG_POSTS = [
     metaDescription:
       'A roof leak rarely drips where the water gets in. Learn the signs, the usual causes on shingle, tile and flat roofs, and what to do next.',
     datePublished: '2026-10-05',
-    dateModified: '2026-10-05',
+    dateModified: '2026-11-12',
+    revision: 1,
     excerpt:
       'A ceiling stain rarely sits under the spot where water gets in. Here is how to read the signs of a roof leak, the usual causes on shingle, tile and flat roofs, and what to do while you wait for a repair.',
     image: '/images/blog/roof-leak-source-ceiling-drip.webp',
@@ -6240,6 +6252,7 @@ export const BLOG_POSTS = [
     intro: [
       'A roof leak is rarely where it seems to be. Water slips past a lifted shingle, a cracked tile or an open seam, runs along the underlayment or a rafter, and shows up somewhere else entirely.',
       'That is why a stain on the ceiling is a clue, not an address. Finding the real source takes a methodical look at the roof, starting above the stain and working across the details where leaks usually begin.',
+      'Leaks in a roof tend to start in the same handful of places, whatever the roof type, and knowing them tells you where a roofer will look first.',
       'This guide explains the signs of a roof leak, the most common causes on each roof type, what you can safely check yourself and how a roofer finds the source.',
     ],
     sections: [
@@ -6283,6 +6296,23 @@ export const BLOG_POSTS = [
         ],
       },
       {
+        heading: 'Where Leaks in a Roof Usually Start',
+        blocks: [
+          'Leaks in a roof almost always start at a break in the surface or at a detail where one part of the roof meets another, not in the middle of an unbroken field of shingles, tiles or membrane.',
+          {
+            list: [
+              '**Flashing** at chimneys, skylights, walls and dormers, where metal has pulled loose or sealant has failed.',
+              '**Penetrations:** pipe boots, vent collars and exhaust vents with cracked rubber or loose seals.',
+              '**Valleys,** where two slopes meet and water, leaves and debris collect.',
+              '**Roof edges,** where drip edge or the first course of roofing has lifted.',
+              '**Damaged or worn roofing:** lifted or missing shingles, cracked or slipped tiles, open seams on a flat roof.',
+              '**Worn underlayment** beneath roofing that still looks fine, most often on older tile roofs.',
+            ],
+          },
+          'A roofer checks these in order, starting upslope of the stain. If you have a leak and want it traced, start with [roof repair](/roof-repair/).',
+        ],
+      },
+      {
         heading: 'What You Can Check Safely',
         blocks: [
           'You do not need to go on the roof to learn useful things. Stay on the ground and inside the house.',
@@ -6315,6 +6345,10 @@ export const BLOG_POSTS = [
       },
     ],
     faqs: [
+      {
+        q: 'Where do leaks in a roof usually start?',
+        a: 'Most start at flashing around chimneys, skylights and walls, at pipe boots and vents, in valleys and along the roof edge, or at damaged roofing. Water then runs downhill before it drips, so the stain is usually below the real source.',
+      },
       {
         q: 'Can a roof leak with no visible damage?',
         a: 'Yes. A worn flashing, a cracked pipe boot or failing underlayment can let water in without any obvious damage on the surface. A roofer checks the details up close and photographs what they find.',

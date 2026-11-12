@@ -220,7 +220,7 @@ export const TILE_CONTENT = {
       story: {
         label: 'Concrete tile roofing',
         lead: 'The tile you see is only one part of the __roof__.',
-        text: 'Concrete tile suits many home styles, from Spanish-inspired architecture to newer Mediterranean designs. What keeps it dry is planned underneath: the deck, the underlayment, the flashing and the way water runs off.',
+        text: 'A concrete tile roof suits many home styles, from Spanish-inspired architecture to newer Mediterranean designs. What keeps it dry is planned underneath: the deck, the underlayment, the flashing and the way water runs off.',
         heading: 'How we plan a concrete tile roof',
         principles: [
           { title: 'Start with the roof you have.', text: 'We photograph the roof, check what can be seen and talk through your goals. If the tiles can be reused and the underlayment is the real concern, a [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/) may be worth considering instead.' },
@@ -230,6 +230,9 @@ export const TILE_CONTENT = {
         ],
       },
       faqs: [
+        { q: 'What is a concrete tile roof?', a: 'A concrete tile roof is made of tiles molded from sand, cement and water and cured, in many profiles and colors. It is generally heavier than clay and usually costs less. What keeps it dry is the system beneath the tile: the deck, underlayment, flashing and drainage details. Our [clay vs. concrete tile](/blog/clay-vs-concrete-tile-roof/) article explains the differences.' },
+        { q: 'How do I know if I have a concrete tile roof?', a: 'A broken edge tells you: concrete shows gray cement and sand inside, even when the surface is colored, while clay is one fired color all the way through. A roof inspection confirms it, with photos, and shows the condition of the underlayment beneath.' },
+        { q: 'Do concrete tile roofs need maintenance?', a: 'Yes. Concrete tile can turn porous as its surface wears, and the underlayment beneath it wears out before the tile does, so a periodic [tile roof inspection](/roof-inspection/#tile-roofs) is worth having. Cracked or slipped tiles call for a [tile roof repair](/residential-roofing/tile-roofing/repair/).' },
         { q: 'What concrete tile styles are available?', a: 'Concrete tiles come in different profiles and colors. The options available for your project depend on the home, product selection and scope; we can review those during the estimate.' },
         { q: 'Can you replace only damaged concrete tiles?', a: 'Often, yes. We inspect the surrounding tiles and underlayment, then explain whether a targeted [tile roof repair](/residential-roofing/tile-roofing/repair/) or more extensive work makes sense.' },
         { q: 'Can concrete tile be installed over my existing roof?', a: 'That depends on the existing roof assembly and project requirements. We evaluate the roof and describe any tear-off or preparation needed in the written scope.' },
