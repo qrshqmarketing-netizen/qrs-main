@@ -23,6 +23,144 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // Spanish tile roofs (owner, November 12 2026, picked from the Ubersuggest data: "spanish tile roof" and "spanish clay tile" 260 searches a month
+  // each in Los Angeles at difficulty 19, "spanish roofing" 30; no article or page targeted them). Keyword "spanish tile roof". Facts only from the
+  // site: barrel and S tile on Spanish Revival and Mediterranean homes, clay holds its color, the underlayment wears out before the tile, tile-to-flat
+  // transitions at parapet walls leak, walking on tile cracks it, matching discontinued tiles, lift & relay vs. new tile. No prices, no lifespans in
+  // years. Live Wednesday November 18 at 8 AM Pacific (scheduled by its date). Picture: a real QRS tile roof (`cardImage`) until it has its own.
+  {
+    slug: 'spanish-tile-roof-los-angeles',
+    title: 'Spanish Tile Roofs in Los Angeles: What They Are, What Goes Wrong and When to Repair, Reset or Replace',
+    keyword: 'spanish tile roof',
+    topics: ['tile', 'repair', 'replacement', 'underlayment', 'inspection'],
+    metaTitle: 'Spanish Tile Roof: Types, Common Problems and Repairs',
+    metaDescription:
+      'A Spanish tile roof is clay barrel or S tile. Learn how to tell yours, what usually fails (the underlayment, not the tile) and when to repair, reset or replace.',
+    datePublished: '2026-11-18',
+    dateModified: '2026-11-18',
+    cardImage: '/images/tile-roof-replacement.webp',
+    excerpt:
+      'A Spanish tile roof is one of the signatures of Southern California homes, and one of the most misunderstood. Here is what it is made of, what usually goes wrong and how we decide between a repair, a reset and a new roof.',
+    intro: [
+      'A Spanish tile roof is what most people picture when they think of a Southern California home: rounded clay tiles in warm terra-cotta, rows of them over a stucco house with arched windows. It is part of what makes Spanish Revival and Mediterranean homes look right, and it is why so many owners ask us to keep it that way when something goes wrong.',
+      'Here is the part that surprises people. When a Spanish tile roof leaks, the tile is usually not the problem. The layers hidden beneath it are. This guide explains what a Spanish tile roof is, the two main profiles, what we see go wrong and how we decide between a repair, a reset and a replacement.',
+    ],
+    sections: [
+      {
+        heading: 'What Is a Spanish Tile Roof?',
+        blocks: [
+          'A Spanish tile roof is a clay tile roof in a traditional barrel or S profile, the look associated with Spanish Revival and Mediterranean architecture. The tile is fired clay, so its color runs through the tile and holds up well in the sun. Many of these roofs sit on homes built in the 1920s and 1930s, and the style has been used on newer homes since.',
+          'It is also a system, not just the tile you see. Under the tile there is underlayment, usually battens, flashing at walls, chimneys and valleys, and the roof deck. Almost everything that keeps water out is in those hidden layers, and they are where most problems start.',
+          { note: '**Concrete tile can look the same.** Many roofs that people call Spanish tile are concrete tile made in a barrel or S shape. A broken edge tells you: clay is one fired color all the way through, while concrete shows gray cement and sand inside. Our article on [clay vs. concrete tile](/blog/clay-vs-concrete-tile-roof/) explains the difference.' },
+        ],
+      },
+      {
+        heading: 'Barrel Tile and S Tile',
+        blocks: [
+          'Two profiles make up most Spanish tile roofs.',
+          { h3: 'Barrel (Spanish) tile' },
+          'The classic look: half-round tiles laid in alternating rows, one row curving up and the next curving over it, with the roof surface showing the deep ridges that give Spanish roofs their character. It is the profile most people mean by a Spanish tile roof.',
+          { h3: 'S tile' },
+          'A single tile shaped like a wave, so the up and over curves are in one piece. It gives a similar look with fewer pieces to lay, and it comes in both clay and concrete.',
+          'Which one you have matters when you need a repair, because replacement tiles have to match the profile as well as the color.',
+        ],
+      },
+      {
+        heading: 'What Usually Goes Wrong With a Spanish Tile Roof',
+        blocks: [
+          'In our experience the problems fall into a few groups, and the tile itself is only one of them.',
+          {
+            list: [
+              '**Worn underlayment.** Tiles shade the layer beneath them, but years of heat still wear it out, and it usually gives out well before the tile does. A roof can leak with every tile looking perfect. Our guide to [tile roof underlayment](/blog/tile-roof-underlayment/) covers the warning signs.',
+              '**Cracked or slipped tiles.** Foot traffic is the usual cause, and so are branches and wind. Clay cracks under a careless step, and the damage can stay hidden until the next storm.',
+              '**Failed flashing.** Walls, chimneys, valleys and vents all need metal shaped to the curve of the tile. Sealant in place of real flashing is a common reason for repeat leaks.',
+              '**Where tile meets a flat section.** Many Spanish Revival homes pair tile with flat roof areas behind parapet walls. That transition is a common leak point, so we check both sides of it.',
+              '**Mismatched past repairs.** A roof patched over the years with whatever tile was on hand ends up with a patchwork of colors and profiles, and often with water still getting in.',
+            ],
+          },
+          { pov: 'If your Spanish tile roof is leaking, we would look under the tile before we look at the tile. Replacing broken tiles over worn underlayment fixes the picture and not the leak, so our first question is always what the layers beneath look like.' },
+        ],
+      },
+      {
+        heading: 'Repair, Reset or Replace',
+        blocks: [
+          'There are three honest options, and which one fits depends on what the photos show.',
+          {
+            table: {
+              head: ['Option', 'Best when', 'What it involves'],
+              rows: [
+                ['Tile repair', 'A few tiles are cracked or slipped and the layers below are sound', 'Replace the broken pieces with the closest match, check the underlayment beneath them and photograph the repair'],
+                ['Lift and relay (reset)', 'Most tiles are sound but the underlayment is worn', 'Lift the tiles, replace the underlayment, battens and flashing, and put the same tiles back in their pattern'],
+                ['New tile roof', 'The tiles themselves are failing, or the roof carries more patches than sound tile', 'Take the roof down to the deck and build a complete new system'],
+              ],
+            },
+          },
+          'A reset keeps the look of the original roof, which is why it suits so many Spanish-style homes. Our article on [tile roof reset vs. repair](/blog/tile-roof-reset-vs-repair/) goes through how to decide, and [tile lift and relay vs. a new tile roof](/blog/tile-lift-and-relay-vs-new-tile-roof/) compares the last two.',
+          { pov: 'On a Spanish tile roof with sound tiles and worn underlayment, a lift and relay is often the right answer, and we will say so even though a full replacement would be a bigger job. The photos tell us which side of that line your roof is on.' },
+        ],
+      },
+      {
+        heading: 'Matching Spanish Tile for a Repair',
+        blocks: [
+          'Matching is the hard part of a Spanish tile repair. Many older clay profiles and colors have been discontinued, and weathered tiles rarely look identical to new ones.',
+          'We look for the closest available match and tell you up front how close it will be. Where we can, salvaged or close-match tiles go on the less visible slopes, so the original tiles stay where people see them from the street. See our [tile roof repair](/residential-roofing/tile-roofing/repair/) page for how that works.',
+        ],
+      },
+      {
+        heading: 'Keeping a Spanish Tile Roof in Good Shape',
+        blocks: [
+          'Most of the care is simple, and a few items belong to a roofer rather than the homeowner.',
+          {
+            checklist: [
+              'Stay off the roof. Tiles crack underfoot, and a wet tile roof is slippery.',
+              'From the ground, look for cracked, slipped or missing tiles, especially after wind or a storm.',
+              'Check the ceilings under the roof for new stains after rain.',
+              'Keep valleys and gutters clear of leaves and debris.',
+              'Have a roofer look at the underlayment, flashing and the transitions to any flat sections before the rainy season.',
+              'When anyone needs to go on the roof, whether for a satellite dish or a repair, make sure they know how to walk on tile.',
+            ],
+          },
+          'For homeowners who want that regular look, our [roof maintenance plans](/roof-maintenance-plans/) schedule seasonal visits with photos of every one.',
+          { pov: 'The cheapest thing you can do for a Spanish tile roof is have it checked before the rains, not after the first stain. A roofer on the roof with a tablet will find a slipped tile or a worn flashing while it is still a small repair.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What is a Spanish tile roof?',
+        a: 'A Spanish tile roof is a tile roof in a traditional barrel or S profile, usually clay, the look of Spanish Revival and Mediterranean homes. The tiles are only part of the roof: the underlayment, flashing and deck beneath them do most of the work of keeping water out.',
+      },
+      {
+        q: 'Is a Spanish tile roof clay or concrete?',
+        a: 'Both exist. Traditional Spanish tile is fired clay, with its color all the way through, but concrete tile is made in the same barrel and S shapes. A broken edge tells you which you have, and a roof inspection confirms it.',
+      },
+      {
+        q: 'Why does my Spanish tile roof leak when the tiles look fine?',
+        a: 'Usually because the underlayment beneath the tiles has worn out, or because flashing at a wall, chimney, valley or flat section has failed. A roofer checks those details, with photos, before deciding on a repair or a lift and relay.',
+      },
+      {
+        q: 'Can you match my old Spanish tiles?',
+        a: 'Often, though not always perfectly. Many older clay profiles and colors have been discontinued, so we look for the closest available match and tell you up front how close it will be.',
+      },
+      {
+        q: 'Do you reset Spanish tile roofs?',
+        a: 'Yes. A [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/) lifts the tiles, replaces the underlayment and flashing and puts the same tiles back in their pattern, which keeps the original look. It works when the tiles are sound, and a roof evaluation shows whether yours are.',
+      },
+      {
+        q: 'Can I walk on my Spanish tile roof?',
+        a: 'We do not recommend it. Clay tile cracks under foot traffic, a wet roof is slippery and the damage can stay hidden until the next storm. A roofer who works on tile every week knows where to step.',
+      },
+    ],
+    closing: {
+      heading: 'Have Your Spanish Tile Roof Looked At',
+      blocks: [
+        'A Spanish tile roof can last a long time when the layers under it are looked after. The way to know what yours needs is to have a roofer look at it, with photos.',
+        'Quality Roofing Specialists provides [tile roof repair](/residential-roofing/tile-roofing/repair/), [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/) and [tile roof replacement](/residential-roofing/tile-roofing/replacement/) for homes across Los Angeles and Orange County. Book a [free roof evaluation](#roof-check) and a roofer will check your tile, the underlayment and the flashing and give you a written scope and price before any work.',
+        'Part of our [tile roof guide](/blog/tile-roof-guide-southern-california/), which ties together everything a Southern California tile roof owner needs to know.',
+      ],
+    },
+    related: ['/residential-roofing/tile-roofing/', '/residential-roofing/tile-roofing/repair/', '/residential-roofing/tile-roofing/lift-and-relay/'],
+  },
   // Stopping a leaking roof now (owner, November 10 2026, from the owner's team's draft): keyword "stop a leaking roof". It sits next to
   // stop-a-roof-leak ("stop a roof leak", five temporary fixes) and how-to-find-a-roof-leak, and links to both: this one is the whole sequence
   // (contain, trace from the attic, temporary fix, repair by roof type, repair or replace). Changed to the site's rules: no prices or cost

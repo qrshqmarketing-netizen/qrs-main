@@ -36,11 +36,12 @@ export const KEEP_READING = {
   'tpo-roofing-pros-and-cons': [B('most-in-demand-commercial-roofing'), B('commercial-roof-replacement-planning'), WAREHOUSES, INDUSTRIAL],
   'most-in-demand-commercial-roofing': [B('tpo-roofing-pros-and-cons'), B('torch-down-roofing-app-vs-sbs'), B('commercial-roof-replacement-planning'), INDUSTRIAL, WAREHOUSES],
   // Tile
-  'tile-roof-guide-southern-california': [B('tile-roof-reset-vs-repair'), B('tile-roofing-specialist-los-angeles'), B('roof-warranty-explained')],
+  'tile-roof-guide-southern-california': [B('spanish-tile-roof-los-angeles'), B('tile-roof-reset-vs-repair'), B('tile-roofing-specialist-los-angeles'), B('roof-warranty-explained')],
+  'spanish-tile-roof-los-angeles': [B('tile-roof-guide-southern-california'), B('clay-vs-concrete-tile-roof'), B('tile-roof-underlayment'), B('tile-roof-reset-vs-repair'), B('tile-lift-and-relay-vs-new-tile-roof')],
   'tile-lift-and-relay-vs-new-tile-roof': [B('tile-roof-reset-vs-repair'), B('tile-roofing-specialist-los-angeles')],
-  'tile-roof-underlayment': [B('tile-roof-reset-vs-repair'), B('tile-roofing-specialist-los-angeles')],
-  'clay-vs-concrete-tile-roof': [B('tile-roof-reset-vs-repair')],
-  'tile-roof-reset-vs-repair': [B('tile-roof-underlayment'), B('tile-lift-and-relay-vs-new-tile-roof')],
+  'tile-roof-underlayment': [B('spanish-tile-roof-los-angeles'), B('tile-roof-reset-vs-repair'), B('tile-roofing-specialist-los-angeles')],
+  'clay-vs-concrete-tile-roof': [B('spanish-tile-roof-los-angeles'), B('tile-roof-reset-vs-repair')],
+  'tile-roof-reset-vs-repair': [B('spanish-tile-roof-los-angeles'), B('tile-roof-underlayment'), B('tile-lift-and-relay-vs-new-tile-roof')],
   // Shingle
   'asphalt-shingle-roof-guide': [B('roof-drip-edge-flashing'), B('how-to-choose-a-shingle-roofer-los-angeles'), B('top-qualities-shingle-roofers-los-angeles-orange-county')],
   'how-to-choose-a-shingle-roofer-los-angeles': [B('top-qualities-shingle-roofers-los-angeles-orange-county'), B('roof-drip-edge-flashing'), B('how-to-choose-a-roofer-los-angeles-ca')],
