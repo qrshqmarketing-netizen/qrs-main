@@ -210,8 +210,8 @@ export const COMMERCIAL_CONTENT = {
       card: 'Roof repairs and replacement for small commercial buildings: workshops, auto and repair shops, studios and storefront businesses.',
       metaTitle: 'Shop & Small Business Roofing in Los Angeles',
       metaDescription: 'Shop and small business roofing in LA & Orange County: auto shops, workshops, studios and storefronts, with a written price first. Request an estimate.',
-      image: '/images/cta-white-flat-roof-tile-coping-drone-view.webp',
-      imageAlt: 'Aerial view of a white flat roof with a clay tile edge and rooftop equipment',
+      image: '/images/projects/commercial-flat-roof-replacement-westminster-92683/commercial-flat-roof-westminster-92683-07.webp',
+      imageAlt: 'Aerial view of a small commercial building with a white flat roof and rooftop equipment',
       hero: {
         intro: 'Small business roofing, kept simple. A roofer shows you photos of what’s wrong. You get a written price before any work starts. The job is planned around your work days. Repairs and replacements for auto and repair shops, workshops, studios and storefront businesses across Los Angeles and Orange County.',
         highlights: ['Small roofs, same attention to detail', 'Straight answers for the owner', 'Written price before any work'],
@@ -288,8 +288,8 @@ export const COMMERCIAL_CONTENT = {
       card: 'Roofing for malls and shopping centers, phased across tenant spaces and common areas and planned to keep the center open for business.',
       metaTitle: 'Mall & Shopping Center Roofing in Los Angeles',
       metaDescription: 'Mall and shopping center roofing in LA & Orange County: leak tracing, repairs and phased replacement across tenant spaces and common areas. Request an estimate.',
-      image: '/images/flat-roof-replacement-completed-white-membrane.webp',
-      imageAlt: 'Aerial view of a white flat roof membrane with roofers working across a large roof',
+      image: '/images/how-we-work-local-crews-commercial-roof.webp',
+      imageAlt: 'A crew installing a white membrane across a large commercial roof with rooftop units',
       hero: {
         intro: 'Shopping center roofing, in phases. The many roofs over tenant spaces and common areas, surveyed, repaired and replaced. Coordinated with center management and planned around store hours, deliveries, entrances and parking, so tenants and shoppers carry on, across Los Angeles and Orange County.',
         highlights: ['Phased across tenant spaces', 'Common areas and entrances planned', 'Photo records by roof section'],

@@ -46,8 +46,8 @@ export function SectionHub({ section, extra }) {
         subheading: 'For contractors, builders and property management clients',
         paragraphs: ['Need a roofing partner for your projects? We bring roofer-led assessments, written scopes and photo-documented work to every job we do with you.'],
         cta: { label: 'Partner with us', href: CONTRACTORS_LINK.href },
-        image: '/images/bottom-cta-background.webp',
-        imageAlt: 'Row of homes with pitched roofs along a residential street',
+        image: '/images/commercial-low-slope-roof-install-crew-drone-view.webp', // a commercial roof, not homes (owner, November 12 2026)
+        imageAlt: 'A crew installing a low-slope commercial roof',
       }
     : null;
   // The Commercial Roofing page in the new home page's theme (owner, November 6 2026); the other hubs keep HubPage for now

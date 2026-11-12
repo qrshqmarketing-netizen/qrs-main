@@ -73,7 +73,7 @@ export default async function SpanishCommercialRoofingPage() {
       <QhOffer lang="es" offer="commercial" />
       <QhProjects lang="es" projects={projectsShownOn(COMMERCIAL.href).projects} heading={page.projectsHeading} />
       <QhReviews lang="es" path={COMMERCIAL.href} heading={page.reviewsHeading} />
-      <QhBanner lang="es" heading={page.banner.heading} text={page.banner.text} image="/images/bottom-cta-background.webp" cta={page.banner.cta} href={CONTRACTORS_LINK.href} links={false} />
+      <QhBanner lang="es" heading={page.banner.heading} text={page.banner.text} image="/images/commercial-low-slope-roof-install-crew-drone-view.webp" cta={page.banner.cta} href={CONTRACTORS_LINK.href} links={false} />
       <QhPosts lang="es" posts={await articlesFor(COMMERCIAL.href)} heading={page.postsHeading} />
       <QhStart lang="es" offer="commercial" faqs={page.faqs} heading={page.faqHeading} />
       <FinalCta lang="es" heading={page.final.heading} text={page.final.text} />

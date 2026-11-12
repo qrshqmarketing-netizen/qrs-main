@@ -14,8 +14,8 @@ export const COMMERCIAL_SERVICES = [
     // 58 / 160 characters; the survey is never called free.
     metaTitle: 'Commercial Roof Repair Near Me in Los Angeles', // owner, November 3 2026 (keyword list)
     metaDescription: 'Commercial roof repair in LA & Orange County: leaks traced at drains, parapets and rooftop units, fixed and photo-documented. Request an estimate.',
-    image: '/images/cta-flat-roof-install-drone-view.webp',
-    imageAlt: 'Roofers working on a white low-slope roof with rooftop units, seen from above',
+    image: '/images/projects/commercial-flat-roof-replacement-westminster-92683/commercial-flat-roof-westminster-92683-16.webp', // commercial roofs on every commercial page (owner, November 12 2026): a rooftop unit and its flashed curb
+    imageAlt: 'Roofers working around a rooftop unit and its flashed curb on a white low-slope commercial roof',
     hero: {
       intro: 'Commercial roof repair starts where the water gets in. A drain, a parapet, a seam or the flashing at rooftop equipment: we trace the leak and fix what failed. Your building stays open, and every repair gets before-and-after photos, across Los Angeles and Orange County.',
       highlights: ['Leaks traced to where water enters', 'Drains, parapets and penetrations', 'Photo records for owners and tenants'],
@@ -55,9 +55,9 @@ export const COMMERCIAL_SERVICES = [
     // Broader title for the general "commercial roofing Los Angeles" searches (owner, October 22 2026; the keyword stays in it, the H1 is unchanged)
     metaTitle: 'Commercial Roof Replacement & Installation in Los Angeles', // owner, November 3 2026 (keyword list)
     metaDescription: 'Commercial roof replacement in LA & Orange County: a roofer-led survey, the right low-slope system and phased work that keeps you open. Request an estimate.',
-    image: '/images/flat-roof-replacement-tear-off-drone-view.webp',
+    image: '/images/projects/commercial-flat-roof-replacement-westminster-92683/commercial-flat-roof-westminster-92683-02.webp',
     cardImage: '/images/commercial-roof-replacement-tear-off-overhead-drone-view.webp', // owner, November 10 2026: the card's photo on /roof-replacement/ (and the commercial hub); the page keeps its own hero
-    imageAlt: 'Commercial roof replacement in Los Angeles: flat roof aerial view, with the old roofing stripped back',
+    imageAlt: 'Commercial roof replacement in Los Angeles: aerial view of a warehouse-style roof with the old roofing stripped back',
     heroNotes: [`Los Angeles commercial roofing contractor · CSLB #${BUSINESS.license}`, 'Serving LA, Orange County & Southern California', 'Roofer-led roof survey', 'Written scope and price before any work'],
     // A short section after "How we replace a commercial roof" (ServicePage `about`)
     about: {
@@ -167,8 +167,8 @@ export const COMMERCIAL_SERVICES = [
     card: 'Scheduled inspections and upkeep for commercial roofs, with photo reports for owners, managers and boards, and drain and flashing issues caught early.',
     metaTitle: 'Commercial Roof Maintenance in Los Angeles',
     metaDescription: 'Commercial roof maintenance in LA & Orange County: scheduled inspections, photo reports and drains and flashings kept in check. Ask about a maintenance plan.',
-    image: '/images/flat-roof-torch-down-drone-view-services.webp',
-    imageAlt: 'Aerial view of a flat roof surface used for commercial roof maintenance',
+    image: '/images/projects/commercial-flat-roof-replacement-westminster-92683/commercial-flat-roof-westminster-92683-12.webp',
+    imageAlt: 'A white commercial roof surface with a rooftop unit, seams and flashings, as checked during commercial roof maintenance',
     hero: {
       intro: 'Commercial roof maintenance catches early wear before it becomes interior damage. Scheduled roofer visits clear drains and gutters and reseal flashings where needed. It starts with a baseline roof survey, and every visit ends with a photo report for owners, managers or boards, across Los Angeles and Orange County.',
       highlights: ['Scheduled visits with photo reports', 'Drains and flashings checked early', 'Reports owners and boards can follow'],

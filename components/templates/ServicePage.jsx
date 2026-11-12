@@ -36,9 +36,14 @@ const PROCESS_PHOTOS = {
     ['/images/flat-roof-replacement-completed-white-membrane.webp', 'Completed white membrane flat roof'],
     ['/images/flat-roof-torch-down-drone-view-services.webp', 'Flat roofing installation in progress'],
   ],
+  // Commercial pages only ever get commercial roofs (owner, November 12 2026): real QRS commercial jobs, no homes
   commercial: [
     ['/images/recent-work-commercial-flat-roof-drone-view.webp', 'Aerial view of a commercial flat roof project'],
     ['/images/home-services-commercial-flat-roof-drone-view.webp', 'Aerial view of a commercial flat roof'],
+    ['/images/projects/commercial-flat-roof-replacement-westminster-92683/commercial-flat-roof-westminster-92683-09.webp', 'Aerial view of a commercial building with a new white flat roof'],
+    ['/images/projects/commercial-flat-roof-replacement-westminster-92683/commercial-flat-roof-westminster-92683-13.webp', 'A rooftop unit and flashed curb on a new white commercial roof'],
+    ['/images/commercial-low-slope-roof-install-crew-drone-view.webp', 'A crew installing a low-slope commercial roof'],
+    ['/images/commercial-roof-replacement-tear-off-overhead-drone-view.webp', 'Overhead view of a commercial roof tear-off in progress'],
   ],
   industrial: [
     ['/images/recent-work-commercial-flat-roof-drone-view.webp', 'Aerial view of an industrial flat roof with rooftop equipment'],
@@ -85,10 +90,11 @@ const PROCESS_PHOTOS = {
   ],
 };
 
-function processPhoto(page) {
+function processPhoto(page, commercial = false) {
   const description = `${page.keyword || ''} ${page.title || ''} ${page.slug || ''}`.toLowerCase();
   let category = 'general';
-  if (description.includes('hoa') || description.includes('multi-family') || description.includes('multifamily')) category = 'hoa';
+  if (commercial && !description.includes('hoa') && !description.includes('multi-family') && !description.includes('multifamily') && !description.includes('industrial')) category = 'commercial'; // the pages under /commercial-roofing/
+  else if (description.includes('hoa') || description.includes('multi-family') || description.includes('multifamily')) category = 'hoa';
   else if (description.includes('industrial')) category = 'industrial';
   else if (description.includes('commercial')) category = 'commercial';
   else if (description.includes('gutter')) category = 'gutter';
@@ -99,8 +105,8 @@ function processPhoto(page) {
   else if (description.includes('shingle')) category = 'shingle';
   else if (description.includes('repair')) category = 'repair';
   else if (description.includes('replace') || description.includes('installation') || description.includes('install')) category = 'replacement';
-  const match = PROCESS_PHOTOS[category].find(([src]) => src !== page.image) || PROCESS_PHOTOS.general.find(([src]) => src !== page.image);
-  return match || PROCESS_PHOTOS.general[0];
+  const match = PROCESS_PHOTOS[category].find(([src]) => src !== page.image) || (commercial ? undefined : PROCESS_PHOTOS.general.find(([src]) => src !== page.image));
+  return match || (commercial ? PROCESS_PHOTOS.commercial[0] : PROCESS_PHOTOS.general[0]);
 }
 
 // A service page (e.g. /residential-roofing/tile-roofing/lift-and-relay/). Content shape: see data/services/*.js.
@@ -122,7 +128,7 @@ export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], 
   // The jump-to-form buttons' words: a roof survey on commercial pages (never called free), else the site's usual Get Pro Advice
   const jumpLabel = offer === 'commercial' ? 'Request a Roof Survey' : 'Get Pro Advice';
   const [heroScene = 'scene-shingle', processScene = heroScene] = scenes;
-  const [processImage, processImageAlt] = page.process?.image ? [page.process.image, page.process.imageAlt] : processPhoto(page);
+  const [processImage, processImageAlt] = page.process?.image ? [page.process.image, page.process.imageAlt] : processPhoto(page, offer === 'commercial');
   const work = projectsShownOn(crumbs.at(-1).href);
   const schema = pageJsonLd({
     path: crumbs.at(-1).href,
