@@ -86,7 +86,7 @@ export default function LeadsWorkspace({ leads: initial, total = 0, page = 1, pa
       <div className="adm-toolbar">
         <nav className="adm-segments adm-views" aria-label="View">
           {VIEWS.map((v) => (
-            <button key={v.id} type="button" className={view === v.id ? 'on' : ''} aria-pressed={view === v.id} onClick={() => go({ view: v.id === 'cards' ? '' : v.id })}>
+            <button key={v.id} type="button" className={view === v.id ? 'on' : ''} aria-pressed={view === v.id} onClick={() => go({ view: v.id === 'list' ? '' : v.id })}>
               <AdminIcon name={v.icon} /> {v.label}
             </button>
           ))}

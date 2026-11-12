@@ -17,7 +17,7 @@ const one = (v) => (Array.isArray(v) ? v[0] : v) || '';
 export default async function LeadsPage({ searchParams }) {
   if (!(await isAdmin())) redirect('/admin/');
   const sp = await searchParams;
-  const view = VIEWS.includes(one(sp.view)) ? one(sp.view) : 'cards';
+  const view = VIEWS.includes(one(sp.view)) ? one(sp.view) : 'list'; // List is the default (owner, November 12 2026)
   const filters = {
     status: view === 'kanban' ? '' : one(sp.status),
     q: one(sp.q),
