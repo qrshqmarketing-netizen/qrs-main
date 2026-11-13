@@ -209,7 +209,7 @@ export const PRIVACY_POLICY_URL = '/privacy-policy/';
 // Footer social links. Leave one '' to hide that icon until you have a real profile URL for it.
 export const SOCIAL = {
   facebook: 'https://www.facebook.com/QualityRoofingSpecialists/',
-  instagram: '',
+  instagram: 'https://www.instagram.com/qualityroofingspecialists/',
   linkedin: '',
   youtube: '',
 };
