@@ -14,6 +14,16 @@ export default function Credentials({ page }) {
           <div>
             <h2><Mark text={license.heading} /></h2>
             <p className="cr-lead">{license.text}</p>
+            {license.classifications && (
+              <>
+                <p className="cr-lead"><strong>{license.classificationsHeading}</strong></p>
+                <ul className="cr-classes">
+                  {license.classifications.map((c) => (
+                    <li key={c.label}><a href={c.href} target="_blank" rel="noopener">{c.label}</a></li>
+                  ))}
+                </ul>
+              </>
+            )}
             <a className="cr-link" href={license.verify.href} target="_blank" rel="noopener">
               {license.verify.label} <ArrowRight />
             </a>

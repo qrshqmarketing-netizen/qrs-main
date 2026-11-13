@@ -4064,6 +4064,86 @@ export function QhFinancePath({ items = [], lenders = [], labels = [], caption, 
   );
 }
 
+// Credentials page hero visual: a home under a good roof, with a shield in front that draws itself and is checked; then the three license
+// classifications (B, C39, C33) light up one after another with their ticks, and the CSLB number is verified (the page: a license you can check)
+export function QhCredentialShield({ license, classes = [], caption, links = [] }) {
+  return (
+    <div className="qh-cred">
+      <div className="qh-cred-art" aria-hidden="true">
+        <svg viewBox="0 0 560 330" role="presentation">
+          <defs>
+            <linearGradient id="qhCrSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#0b2a4d" /><stop offset="1" stopColor="#2c5a8c" /></linearGradient>
+            <linearGradient id="qhCrRoof" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#5b6572" /><stop offset="1" stopColor="#3b434e" /></linearGradient>
+            <linearGradient id="qhCrShield" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#f7d27a" /><stop offset="1" stopColor="#d9a23a" /></linearGradient>
+            <filter id="qhCrGrain"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="4" /><feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .35 0" /><feComposite in2="SourceGraphic" operator="in" /></filter>
+            <clipPath id="qhCrRoofClip"><polygon points="70,150 280,48 490,150 490,172 70,172" /></clipPath>
+          </defs>
+          <rect width="560" height="330" rx="14" fill="url(#qhCrSky)" />
+          {[[60, 36], [150, 70], [430, 40], [500, 88], [330, 24], [220, 28]].map(([x, y], k) => (
+            <circle key={k} className="qh-cred-star" cx={x} cy={y} r="1.6" fill="#fff" style={{ animationDelay: `${k * 0.5}s` }} />
+          ))}
+          {/* house */}
+          <rect x="92" y="168" width="376" height="130" fill="#e7dccb" />
+          <rect x="92" y="168" width="376" height="130" fill="#000" filter="url(#qhCrGrain)" opacity=".5" />
+          <rect x="84" y="164" width="392" height="9" fill="#fff" opacity=".9" />
+          <rect x="84" y="173" width="392" height="3" fill="#000" opacity=".12" />
+          {[118, 380].map((x) => (
+            <g key={x}>
+              <rect x={x} y="196" width="62" height="64" fill="#cfe6f6" stroke="#fff" strokeWidth="5" />
+              <path d={`M${x} 196 l62 64 M${x + 62} 196 l-62 64`} stroke="#fff" strokeWidth="1.5" opacity=".5" />
+              <line x1={x + 31} y1="196" x2={x + 31} y2="260" stroke="#fff" strokeWidth="3" />
+              <line x1={x} y1="228" x2={x + 62} y2="228" stroke="#fff" strokeWidth="3" />
+            </g>
+          ))}
+          <rect x="248" y="214" width="64" height="84" fill="#6b4a32" stroke="#fff" strokeWidth="5" />
+          <circle cx="302" cy="258" r="3" fill="#f7d27a" />
+          <rect x="60" y="298" width="440" height="32" fill="#3d6b3f" />
+          {/* roof: shingle courses */}
+          <polygon points="70,150 280,48 490,150 490,170 70,170" fill="url(#qhCrRoof)" />
+          <g clipPath="url(#qhCrRoofClip)" stroke="#2b323b" strokeWidth="1" opacity=".55">
+            {Array.from({ length: 9 }, (_, i) => (
+              <line key={i} x1="60" x2="500" y1={60 + i * 13} y2={60 + i * 13} />
+            ))}
+            {Array.from({ length: 36 }, (_, i) => (
+              <line key={'v' + i} x1={80 + i * 12} x2={80 + i * 12} y1={60 + (i % 2) * 6} y2="172" strokeDasharray="6 7" />
+            ))}
+          </g>
+          <polyline points="70,150 280,48 490,150" fill="none" stroke="#202830" strokeWidth="5" strokeLinejoin="round" />
+          <rect x="372" y="62" width="26" height="52" fill="#9a5b3d" />
+          <rect x="368" y="58" width="34" height="7" fill="#6e6a66" />
+          {/* shield */}
+          <g className="qh-cred-shield">
+            <path d="M280 108 L334 128 V190 C334 228 308 252 280 264 C252 252 226 228 226 190 V128 Z" fill="url(#qhCrShield)" stroke="#fff" strokeWidth="4" strokeLinejoin="round" />
+            <path className="qh-cred-edge" pathLength="1" d="M280 120 L324 136 V190 C324 220 303 241 280 252 C257 241 236 220 236 190 V136 Z" fill="none" stroke="#7a5412" strokeWidth="2" opacity=".55" />
+            <polyline className="qh-cred-check" pathLength="1" points="256,190 274,208 308,166" fill="none" stroke="#fff" strokeWidth="11" strokeLinecap="round" strokeLinejoin="round" />
+            <path className="qh-cred-glint" d="M240 120 L262 120 L226 240 L218 240 Z" fill="#fff" opacity=".0" />
+          </g>
+        </svg>
+      </div>
+      <ul className="qh-cred-classes" aria-hidden="true">
+        {classes.map((c, k) => (
+          <li key={c.code} style={{ animationDelay: `${1.6 + k * 0.7}s` }}>
+            <Check />
+            <b>{c.code}</b>
+            <span>{c.label}</span>
+          </li>
+        ))}
+      </ul>
+      {license && <p className="qh-cred-num" aria-hidden="true"><span>CSLB {license}</span><em>Verified</em></p>}
+      {caption && <p className="qh-leak-cap">{caption}</p>}
+      {links.length > 0 && (
+        <ul className="qh-leak-links">
+          {links.map((l) => (
+            <li key={l.href}>
+              <SiteLink href={l.href}>{l.label}</SiteLink>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
 // Roof maintenance plans hero visual: a year dial. A hand sweeps through the months; the two plan visits are gold arcs (September and October
 // before the rains, May and June after them) and the rainy months a soft blue band inside (the page: two visits, timed to the season)
 export function QhSeasonDial({ labels = [], caption, links = [] }) {

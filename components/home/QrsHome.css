@@ -1462,3 +1462,31 @@ main.qh.abr{--abr-inset:0px !important}
 @keyframes qhRsRow2{0%,65%{opacity:.25}69%,90%{opacity:1}97%,100%{opacity:.25}}
 @keyframes qhRsRow3{0%,72%{opacity:.25}76%,90%{opacity:1}97%,100%{opacity:.25}}
 @media (prefers-reduced-motion:reduce){:is(main.qh,main .qh-scope) .qh-hs-lit{opacity:1}:is(main.qh,main .qh-scope) .qh-hs-beam{opacity:0}}
+
+/* Credentials hero: the shield (owner, November 13 2026) */
+:is(main.qh,main .qh-scope) .qh-cred{max-width:560px;width:100%;margin:0 auto}
+:is(main.qh,main .qh-scope) .qh-cred-art svg{display:block;width:100%;height:auto;border-radius:14px;box-shadow:0 30px 50px -28px rgba(0,0,0,.7)}
+:is(main.qh,main .qh-scope) .qh-cred-classes{list-style:none;display:grid;gap:8px;margin:14px 0 0;padding:0}
+:is(main.qh,main .qh-scope) .qh-cred-classes li{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;background:#fff;color:var(--qh-navy);font-size:14px}
+:is(main.qh,main .qh-scope) .qh-cred-classes svg{width:16px;height:16px;color:#2a9d5c;flex:none}
+:is(main.qh,main .qh-scope) .qh-cred-classes b{min-width:42px;font-weight:800}
+:is(main.qh,main .qh-scope) .qh-cred-classes span{font-weight:600;color:#44566a}
+:is(main.qh,main .qh-scope) .qh-cred-num{display:flex;justify-content:center;align-items:center;gap:10px;margin:12px 0 0;font-size:14px;font-weight:700}
+:is(main.qh,main .qh-scope) .qh-cred-num span{padding:6px 12px;border-radius:6px;background:var(--qh-sun);color:var(--qh-sun-ink)}
+:is(main.qh,main .qh-scope) .qh-cred-num em{padding:4px 10px;border:2px solid #2a9d5c;border-radius:4px;color:#7be0a5;font-style:normal;font-size:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;transform:rotate(-4deg)}
+@media (prefers-reduced-motion:no-preference){
+  :is(main.qh,main .qh-scope) .qh-cred-star{animation:qhCrTwinkle 3s ease-in-out infinite}
+  :is(main.qh,main .qh-scope) .qh-cred-shield{transform-origin:280px 190px;animation:qhCrPop .8s cubic-bezier(.2,1.5,.4,1) .3s both}
+  :is(main.qh,main .qh-scope) .qh-cred-edge{stroke-dasharray:1;animation:qhCrDraw 1.2s ease .5s both}
+  :is(main.qh,main .qh-scope) .qh-cred-check{stroke-dasharray:1;animation:qhCrDraw .7s ease 1s both}
+  :is(main.qh,main .qh-scope) .qh-cred-glint{animation:qhCrGlint 5s ease-in-out 3.5s infinite}
+  :is(main.qh,main .qh-scope) .qh-cred-classes li{animation:qhCrIn .5s ease both}
+  :is(main.qh,main .qh-scope) .qh-cred-classes svg{animation:qhLicTick .4s cubic-bezier(.2,1.6,.4,1) both;animation-delay:inherit}
+  :is(main.qh,main .qh-scope) .qh-cred-num span{animation:qhFade .5s ease 3.8s both}
+  :is(main.qh,main .qh-scope) .qh-cred-num em{animation:qhStamp .5s cubic-bezier(.2,1.6,.4,1) 4.3s both}
+}
+@keyframes qhCrTwinkle{50%{opacity:.25}}
+@keyframes qhCrPop{from{opacity:0;transform:scale(.4) translateY(30px)}}
+@keyframes qhCrDraw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes qhCrGlint{0%,70%,100%{opacity:0;transform:translateX(-10px)}80%{opacity:.5;transform:translateX(70px)}}
+@keyframes qhCrIn{from{opacity:0;transform:translateX(-14px)}}

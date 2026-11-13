@@ -1,11 +1,11 @@
-import { QhHero, QhLicenseCard, QhReviews, QhStart } from '@/components/home/QrsSections';
+import { QhHero, QhCredentialShield, QhReviews, QhStart } from '@/components/home/QrsSections';
 import Credentials from '@/components/sections/Credentials';
 import FinalCta from '@/components/sections/FinalCta';
 import JsonLd from '@/components/ui/JsonLd';
 import { CREDENTIALS_LINK, HOME } from '@/data/catalog';
 import { CREDENTIALS_PAGE as page, CREDENTIALS_PUBLIC } from '@/data/pages/credentials';
 import { heroOutcome } from '@/data/heroOutcomes';
-import { BBB } from '@/data/site';
+import { BUSINESS } from '@/data/site';
 import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
 
@@ -38,12 +38,11 @@ export default function CredentialsPage() {
         text={page.hero.intro}
         checks={['Licensed, bonded and insured', 'BBB A+ rating', 'Manufacturer certified']}
         visual={
-          <QhLicenseCard
-            image={page.hero.image}
-            alt={page.hero.imageAlt}
-            facts={page.license.facts.map((f) => (f.label === 'BBB' ? { ...f, value: `Accredited, ${BBB.rating} rating` } : f))}
-            verify={page.license.verify}
-            caption="Check the license yourself on the CSLB website."
+          <QhCredentialShield
+            license={`#${BUSINESS.license}`}
+            classes={page.license.classifications.map((c) => ({ code: c.label.split(' - ')[0], label: c.label.split(' - ')[1].toLowerCase().replace(/^./, (m) => m.toUpperCase()) }))}
+            caption="A California license you can check yourself."
+            links={[{ label: 'Verify our CSLB license', href: page.license.verify.href }]}
           />
         }
       />

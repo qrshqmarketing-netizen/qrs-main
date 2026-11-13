@@ -28,6 +28,12 @@ export const CREDENTIALS_PAGE = {
       { label: 'Status', value: 'Licensed, bonded and insured' },
       { label: 'BBB', value: `Accredited Business since ${formatDate(BBB.accreditedSince)}, ${BBB.rating} rating` },
     ],
+    classificationsHeading: 'Our license is for:',
+    classifications: [
+      { label: 'B - GENERAL BUILDING', href: 'https://cslb.ca.gov/About_Us/Library/Licensing_Classifications/Licensing_Classifications_Detail.aspx?Class=B' },
+      { label: 'C39 - ROOFING', href: 'https://cslb.ca.gov/About_Us/Library/Licensing_Classifications/Licensing_Classifications_Detail.aspx?Class=C39' },
+      { label: 'C33 - PAINTING AND DECORATING', href: 'https://cslb.ca.gov/About_Us/Library/Licensing_Classifications/Licensing_Classifications_Detail.aspx?Class=C33' },
+    ],
     verify: { label: 'Verify our license on the CSLB website', href: 'https://www.cslb.ca.gov/' },
   },
   manufacturers: {
