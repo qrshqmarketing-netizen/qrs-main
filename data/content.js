@@ -33,6 +33,8 @@ import { PICO_RIVERA_PROJECT } from './pages/pico-rivera-project';
 import { WESTMINSTER_COMMERCIAL_PROJECT } from './pages/westminster-commercial-project';
 import { LA_90057_PROJECT } from './pages/la-90057-project';
 import { LA_90061_PROJECT } from './pages/la-90061-project';
+import { LA_90020_PROJECT } from './pages/la-90020-project';
+import { GARDEN_GROVE_FLAT_PROJECT } from './pages/garden-grove-flat-project';
 import { VENICE_PROJECT } from './pages/venice-project';
 import { WHITE_FLAT_PROJECT } from './pages/white-flat-roof-project';
 import { SAN_PEDRO_FULL_ROOF_PROJECT } from './pages/san-pedro-full-roof-project';
@@ -157,6 +159,8 @@ export const ALL_PATHS = [
   PICO_RIVERA_PROJECT.path,
   WESTMINSTER_COMMERCIAL_PROJECT.path,
   LA_90061_PROJECT.path,
+  LA_90020_PROJECT.path,
+  GARDEN_GROVE_FLAT_PROJECT.path,
   REVIEWS_LINK.href,
   // The blog index is listed once it has a published post (until then it's a "coming soon" page, kept out of search)
   ...(PUBLISHED_POSTS.length > 0 ? [BLOG_LINK.href] : []),
