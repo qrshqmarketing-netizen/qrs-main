@@ -136,7 +136,6 @@ function Form({ pathname }) {
           {FOUND_US_OPTIONS.map((o) => <option key={o} value={o}>{tr(o)}</option>)}
         </select>
       </div>
-      <NewsletterCheck id="ef-news" checked={news} onChange={setNews} tr={tr} />
       {/* Spam trap: hidden from people (and from password managers), bots fill it in and the server quietly drops the request */}
       <div className="sr-only" aria-hidden="true">
         <label htmlFor="ef-leave-empty">{tr('Leave this field empty')}</label>
@@ -146,6 +145,7 @@ function Form({ pathname }) {
       <button className="btn btn-gold" type="submit" disabled={state.status === 'sending'}>
         {state.status === 'sending' ? tr('Sending…') : <>{tr('Request My Free Estimate')} <span className="arrow">→</span></>}
       </button>
+      <NewsletterCheck id="ef-news" checked={news} onChange={setNews} tr={tr} />
       <p className="form-note">
         {tr('By submitting, you agree QRS may contact you by phone, text or email about your request, including with automated technology. Message and data rates may apply; consent isn’t required to do business with us. See our')} <a href="/privacy-policy/">{tr('Privacy Policy')}</a> {tr('and')} <a href="/terms-and-conditions/">{tr('Terms & Conditions')}</a>.
       </p>

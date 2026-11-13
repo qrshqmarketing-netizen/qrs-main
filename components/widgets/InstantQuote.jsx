@@ -484,7 +484,6 @@ export default function InstantQuote({ openFrom = null, onReady }) {
                   {FOUND_US_OPTIONS.map((option) => <option key={option}>{option}</option>)}
                 </select>
               </div>
-              <NewsletterCheck id="rmNews" checked={news} onChange={setNews} />
               {/* Spam trap: hidden from people, but bots fill it in (the server then quietly drops the request) */}
               <div className="sr-only" aria-hidden="true">
                 <label htmlFor="rmWebsite">Leave this field empty</label>
@@ -494,6 +493,7 @@ export default function InstantQuote({ openFrom = null, onReady }) {
                 <button className="rm-back" type="button" onClick={() => setStep(2)}>Back</button>
                 <button className="btn btn-gold" type="submit">See my estimate</button>
               </div>
+              <NewsletterCheck id="rmNews" checked={news} onChange={setNews} />
               <p className="form-note">By sending, you agree QRS may call or text you about your project. No spam, ever. See our <a href="/privacy-policy/">Privacy Policy</a> and <a href="/terms-and-conditions/">Terms &amp; Conditions</a>.</p>
             </form>
           </section>

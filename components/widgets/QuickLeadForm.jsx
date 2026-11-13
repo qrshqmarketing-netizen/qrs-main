@@ -81,11 +81,11 @@ export default function QuickLeadForm({ title = 'Book your free roof evaluation'
         <span>Leave this field empty</span>
         <input name="qlf-leave-empty" tabIndex={-1} autoComplete="off" data-1p-ignore data-lpignore="true" value={f.website} onChange={set('website')} />
       </label>
-      <NewsletterCheck id="qlf-news" checked={news} onChange={setNews} className="qlf-check" />
       {state.error && <p className="qlf-error" role="alert">{state.error}</p>}
       <button className="btn btn-gold" type="submit" disabled={state.status === 'sending'}>
         {state.status === 'sending' ? 'Sending…' : <>{button} <ArrowRight /></>}
       </button>
+      <NewsletterCheck id="qlf-news" checked={news} onChange={setNews} className="qlf-check" />
       {fine && <p className="qlf-fine">{fine}</p>}
     </form>
   );

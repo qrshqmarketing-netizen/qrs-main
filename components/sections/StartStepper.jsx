@@ -328,12 +328,12 @@ export default function StartStepper({ modal = false, need: linkNeed = '', prope
               <input id="st-website" name="website" tabIndex={-1} autoComplete="off" value={contact.website} onChange={setField('website')} />
             </div>
 
-            <NewsletterCheck id="st-news" checked={news} onChange={setNews} />
             <div className="st-actions">
               <button className="btn btn-gold" type="submit" disabled={status === 'sending' || status === 'sent'}>
                 {status === 'sending' ? 'Sending…' : status === 'sent' ? 'Request Sent ✓' : <>Request My Estimate <span className="arrow">→</span></>}
               </button>
             </div>
+            <NewsletterCheck id="st-news" checked={news} onChange={setNews} />
             <p className="form-note">
               By submitting, you agree QRS may contact you by phone, text or email about your request, including with automated technology. Message and data rates may apply; consent isn't required to do business with us. See our <a href="/privacy-policy/">Privacy Policy</a> and <a href="/terms-and-conditions/">Terms &amp; Conditions</a>.
             </p>
