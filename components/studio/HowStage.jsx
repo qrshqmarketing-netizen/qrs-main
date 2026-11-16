@@ -9,6 +9,7 @@ import './HowStage.css';
 // blueprint grid, a WebGL scene from howEngine.js (Three.js, fetched only when the stage is within 400px of the screen) and glass HTML cards and
 // labels on top. `stations` lists the principles this stage shows (desktop: one stage for all four, the camera flying between them as `active`
 // changes; phones: one stage per principle). The labels with data-anchor follow their 3D points (moved by the engine); the rest are fixed cards.
+// The engine also hides a label until its moment in the scene's loop (data-off) and marks the one in focus (data-live: the spot the photo is being taken of).
 // The scene runs only while the stage is on screen and the tab is visible, and is torn down when the stage is far off screen (so phones never
 // hold more than a couple of WebGL contexts); reduced motion draws still frames. Without WebGL the cards show on the drawn backdrop.
 // Everything here is decorative (aria-hidden): the principles' text is in the list beside it. Every fact is one the site already states.
@@ -39,6 +40,7 @@ function Overlay({ station }) {
           <i className="hw-rec" /> {tr('Drone footage')}
         </Tag>
         <Tag anchor="s0-roof">{tr('Roof evaluation')}</Tag>
+        <Tag anchor="s0-spot" className="hw-tag-spot">{tr('Area of concern')}</Tag>
         <div className="hw-card hw-card-scope">
           <p className="hw-kicker">{tr('Written scope')}</p>
           <ul className="hw-rows">
@@ -84,6 +86,7 @@ function Overlay({ station }) {
             <b>{tr(o.name)}</b> <small>{o.address.city}</small>
           </Tag>
         ))}
+        <Tag anchor="s2-crew" className="hw-tag-spot">{tr('Crew on the way')}</Tag>
         <div className="hw-card hw-card-local">
           <div className="hw-stats">
             <p>
@@ -109,6 +112,9 @@ function Overlay({ station }) {
       <Tag anchor="s3-top">{tr('Shingles')}</Tag>
       <Tag anchor="s3-under">{tr('Underlayment')}</Tag>
       <Tag anchor="s3-deck">{tr('Deck')}</Tag>
+      <Tag anchor="s3-tarp" className="hw-tag-left">{tr('Landscaping tarped')}</Tag>
+      <Tag anchor="s3-permit" className="hw-tag-left">{tr('Permits pulled')}</Tag>
+      <Tag anchor="s3-sweep" className="hw-tag-spot">{tr('Nail sweep every day')}</Tag>
       <div className="hw-card hw-card-backed">
         <p className="hw-kicker">{tr('Work that’s backed')}</p>
         <p className="hw-big">

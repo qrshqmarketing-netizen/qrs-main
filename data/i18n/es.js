@@ -284,6 +284,8 @@ export const ES = {
   'See our credentials': 'Vea nuestras credenciales',
   'Drone footage': 'Video de dron',
   'Roof evaluation': 'Evaluación del techo',
+  'Area of concern': 'Área que preocupa',
+  'Crew on the way': 'Cuadrilla en camino',
   'Written scope': 'Alcance por escrito',
   'Drone footage of the areas of concern': 'Video de dron de las áreas que preocupan',
   'Photos of what we find': 'Fotos de lo que encontramos',
