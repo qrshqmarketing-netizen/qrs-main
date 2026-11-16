@@ -73,6 +73,7 @@ export const OTHER_PLACES = [
   { city: 'Manhattan Beach', slug: 'manhattan-beach', county: 'Los Angeles County', region: 'la-county', lat: 33.8847, lng: -118.4109 },
   { city: 'Fullerton', slug: 'fullerton', county: 'Orange County', region: 'orange-county', lat: 33.8704, lng: -117.9243 },
   { city: 'Brea', slug: 'brea', county: 'Orange County', region: 'orange-county', lat: 33.9167, lng: -117.9006 },
+  { city: 'Placentia', slug: 'placentia', county: 'Orange County', region: 'orange-county', lat: 33.8722, lng: -117.8703 },
   { city: 'Yorba Linda', slug: 'yorba-linda', county: 'Orange County', region: 'orange-county', lat: 33.8886, lng: -117.8131 },
   { city: 'Orange', slug: 'orange', county: 'Orange County', region: 'orange-county', lat: 33.7879, lng: -117.8531 },
   { city: 'Tustin', slug: 'tustin', county: 'Orange County', region: 'orange-county', lat: 33.7458, lng: -117.8261 },
