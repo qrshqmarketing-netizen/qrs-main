@@ -24,7 +24,7 @@ import { BUSINESS, GOOGLE_REVIEWS, HERO_ANNOTATIONS, HOME_DESCRIPTION, HOME_TITL
 import { HOME_LANGUAGES } from '@/lib/lang';
 import { LATEST_PROJECTS } from '@/data/projectPages';
 import { ROOF_FINANCING } from '@/data/services/programs';
-import { latestArticles } from '@/lib/articles';
+import { homeArticles } from '@/lib/articles';
 import { getHomeFaqs } from '@/lib/contentStore';
 import { openGraphBase, twitterBase } from '@/lib/seo';
 import { pageJsonLd } from '@/lib/structuredData';
@@ -141,7 +141,8 @@ export default async function HomePage() {
         {!promo.active && <PromoSection />}
         <ServiceArea allAreasLink />
         <PartnerLogos {...ROOF_FINANCING.partners} />
-        <LatestArticles posts={await latestArticles(3)} />
+        {/* the articles given a spot 1 to 3 in the dashboard (/admin/articles/), then the newest for any spot left empty */}
+        <LatestArticles posts={await homeArticles()} heading="Featured Roofing __Articles__" />
         <Faq cta={false} faqs={faqs} heading="Roofing contractor __questions__, answered" />
         <RoofCheck />
         <FinalCta />

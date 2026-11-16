@@ -10,7 +10,7 @@ import { t } from '@/lib/lang';
 const SCENES = ['scene-shingle', 'scene-tile', 'scene-flat', 'scene-repair', 'scene-inspect', 'scene-replace']; // art for a post without a picture yet
 
 // A row of roofing blog article cards: the picture, the date, the title and a "Read the article" link. posts: from lib/articles.js
-// (latestArticles for the home page, articlesFor(path) for a service or city page).
+// (homeArticles for the home page: the dashboard's spots 1 to 3, then the newest; articlesFor(path) for a service or city page).
 // lang: 'es' on the Spanish home page (labels in data/i18n/es.js; the articles themselves are in English)
 export default function LatestArticles({ posts = [], heading = 'Latest Roofing __Articles__', lang = 'en' }) {
   if (!posts.length) return null;

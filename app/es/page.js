@@ -21,7 +21,7 @@ import { LATEST_PROJECTS } from '@/data/projectPages';
 import { SERVICE_CATEGORIES } from '@/data/serviceCategories';
 import { ROOF_FINANCING } from '@/data/services/programs';
 import { BUSINESS, GOOGLE_REVIEWS, HERO_ANNOTATIONS } from '@/data/site';
-import { latestArticles } from '@/lib/articles';
+import { homeArticles } from '@/lib/articles';
 import { ES_HOME, HOME_LANGUAGES, LANGS, t } from '@/lib/lang';
 import { th } from '@/lib/langHome';
 import { openGraphBase, twitterBase } from '@/lib/seo';
@@ -72,7 +72,7 @@ export default async function SpanishHomePage() {
         <StudioProjects lang={lang} projects={LATEST_PROJECTS.slice(0, 3)} more={LATEST_PROJECTS.slice(3)} />
         <ServiceArea allAreasLink />
         <PartnerLogos {...partners} heading={t(lang, partners.heading)} intro={t(lang, partners.intro)} />
-        <LatestArticles lang={lang} posts={await latestArticles(3)} />
+        <LatestArticles lang={lang} posts={await homeArticles()} heading="Featured Roofing __Articles__" />
         <Faq cta={false} faqs={ES_HOME_FAQS} heading={t(lang, 'Frequently Asked __Questions__')} sub={t(lang, 'Straight answers to the questions homeowners ask us most.')} />
         <RoofCheck lang={lang} />
         <FinalCta lang={lang} />

@@ -372,6 +372,7 @@ export const ES = {
   'View all service areas': 'Ver todas las zonas de servicio',
   // Articles (LatestArticles): the articles are in English
   'Latest Roofing __Articles__': 'Últimos __artículos__ sobre techos',
+  'Featured Roofing __Articles__': '__Artículos__ destacados sobre techos',
   'Articles in English': 'Artículos en inglés',
   'Read the article': 'Leer el artículo',
   'See all roofing articles': 'Ver todos los artículos sobre techos',
