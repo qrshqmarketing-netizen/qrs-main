@@ -23,6 +23,186 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // Best roof for solar panels (owner, November 16 2026, from the owner's team's draft): keyword "best roof for solar panels" (about 430 searches a
+  // month with its variants, Ubersuggest). In our voice with three "Our point of view" boxes. Changed to the site's rules: every dollar figure and the
+  // removal-and-reinstall cost tables are gone (the cost is described, not priced), no roof lifespans in years (only the panels' own warranty, from
+  // EnergySage), no Thousand Oaks (outside the service area; "some cities" instead), nothing claiming who removes and reinstalls panels on QRS jobs
+  // (to confirm with the owner), the free evaluation is described as the evaluation page does (drone footage, photos, one of four next steps), not as
+  // covering the draft's seven points, no warranty claim about solar mounts, no federal tax credit line. Live on its date. Picture: the owner's image.
+  {
+    slug: 'best-roof-for-solar-panels',
+    title: 'The Best Roof for Solar Panels Is One That Outlasts Them: A Roofer’s Answer for Southern California',
+    keyword: 'best roof for solar panels',
+    topics: ['replacement', 'inspection', 'underlayment', 'tile', 'shingle', 'flat'],
+    metaTitle: 'Best Roof for Solar Panels: A Roofer’s Answer',
+    metaDescription:
+      'The best roof for solar panels is one that will outlast them. A Los Angeles roofer explains the math, the roof types and what to check before panels go on.',
+    datePublished: '2026-11-16',
+    dateModified: '2026-11-16',
+    image: '/images/blog/best-roof-for-solar-panels.webp',
+    imageAlt: 'The best roof for solar panels outlasts them: a roofer in a hard hat and safety vest points to a Southern California home with solar panels on its tile roof',
+    excerpt:
+      'The best roof for solar panels is one that will last as long as the panels sit on it. Here is how a roofer checks that before the solar contract is signed, roof type by roof type.',
+    intro: [
+      'The best roof for solar panels is one that will last as long as the panels sit on it: a roof with years of life left that match the panels’ warranty, a solid deck underneath and every mounting point flashed into the roof. The material comes second.',
+      'Most guides answer this with a ranked list of materials. We answer it as the roofers who get the call when a roof under an array starts to leak. Here is how we think about the roof before solar goes on, and what to do if the panels are already up there.',
+    ],
+    sections: [
+      {
+        heading: 'What Is the Best Roof for Solar Panels?',
+        blocks: [
+          'The best roof for solar panels is one that will last as long as the panels sit on it. Solar panel systems typically last [25 to 30 years](https://www.energysage.com/solar/solar-panel-roof-replacement/), and any roof that wears out sooner means paying to take the array down and put it back.',
+          'So before you compare shingle, tile and flat, ask one question: how many years does this roof have left? That is a question for a roofer, on the roof, before the solar contract is signed.',
+          { pov: 'We would rather look at your roof first and answer the solar question second. A roofer on the roof can tell you what is left in it. A ranked list of materials cannot.' },
+        ],
+      },
+      {
+        heading: 'How Many Years Should a Roof Have Left Before Solar Goes On?',
+        blocks: [
+          'At least as many as the panels’ warranty, and most panel brands carry a warranty of about 25 years. The panels will still be worth keeping at that age, because output declines slowly over time. The roof under them has to keep up.',
+          {
+            table: {
+              head: ['What is on the roof', 'What it means for solar'],
+              rows: [
+                ['Solar panels', 'This is the length of time the roof has to match'],
+                ['Asphalt shingles', 'The covering most likely to run out of life first. An older shingle roof should be evaluated before panels go on'],
+                ['Tile', 'The tile can outlast the panels, but the underlayment beneath it may not'],
+              ],
+            },
+          },
+          'The tile row is the one Southern California homeowners miss. On a tile roof, the tile sheds most of the water, but the underlayment below it is what keeps the house dry. A tile roof can look perfect from the street and still be near the end of its underlayment.',
+          'Age is only a starting point. Two roofs of the same age can be in very different shape, depending on sun, ventilation and how they were installed. That is why we look before we answer.',
+        ],
+      },
+      {
+        heading: 'What Does It Cost if the Roof Wears Out First?',
+        blocks: [
+          'Taking an array off and putting it back is usually charged per panel, and it comes on top of the price of the new roof. The more panels, the bigger that second bill. [EnergySage](https://www.energysage.com/solar/solar-panel-roof-replacement/) publishes typical figures if you want a rough idea, and your written price depends on the system, the roof and the city.',
+          'The invoice is not the only cost. Three more are easy to miss:',
+          {
+            list: [
+              '**Two permits.** A reroof under solar can need a roofing permit and a separate electrical permit. Some cities require both.',
+              '**Warranties.** Removing panels can affect the panel manufacturer’s warranty, and installing solar can affect the roofing warranty for the section under the array. Ask both companies, in writing, before either job.',
+              '**A second trip to the roof.** Every time the array comes off, it is another set of mounting points to disconnect, protect and put back.',
+            ],
+          },
+          'A roof evaluation before the solar contract costs nothing. A second removal and reinstall costs a great deal more.',
+          { pov: 'If your roof is due for replacement anyway, do it before the array goes on. The roof and the panels then start their years together, and nobody has to pay to move panels twice.' },
+        ],
+      },
+      {
+        heading: 'Which Roof Types Work Best Under Solar in Southern California?',
+        blocks: [
+          'Shingle, tile and flat roofs can all carry solar. What differs is the thing most likely to go wrong under the array, and that is what a roofer checks first.',
+          {
+            table: {
+              head: ['Roof type', 'What decides whether it is ready', 'What we check before panels go on'],
+              rows: [
+                ['Shingle', 'Age. Shingles have the shortest life of the three.', 'Years left in the shingles, the deck under them, and every vent and pipe flashing near the array'],
+                ['Tile', 'The underlayment, not the tile.', 'Underlayment condition, cracked or slipped tiles, and how the mounts will pass through the tile'],
+                ['Flat', 'Drainage. Racks and conduit sit in the path of the water.', 'Where water runs and ponds, seams, drains and the walls at the roof’s edge'],
+              ],
+            },
+          },
+          'Shingle roofs are the simplest to mount on, and the most likely to run out of life first. If yours is getting older, find out what it has left before you sign. Our [asphalt shingle roof guide](/blog/asphalt-shingle-roof-guide/) explains what wears and why.',
+          'Tile roofs raise a different question: do you need new tile, or only new underlayment? Often it is only the underlayment. A [tile lift and relay](/residential-roofing/tile-roofing/lift-and-relay/) keeps your sound tiles and replaces the worn layer below, and the time to do it is before the array goes on. See our [tile roof guide](/blog/tile-roof-guide-southern-california/) for more.',
+          'Flat roofs live or die by drainage. A rack that blocks the path to a drain can turn a dry roof into a pond. We plan every flat roof around how it drains, and solar is one more thing that plan has to include. Our [flat roofs guide](/blog/flat-roofs-los-angeles-guide/) covers how.',
+          'One local note: some cities set their own rules for the whole assembly, for example fire-rating requirements that cover the racking as well as the roof. Check your city before you choose materials.',
+        ],
+      },
+      {
+        heading: 'What Can Be Hiding Under the Panels?',
+        blocks: [
+          'More than you can see from the ground, and sometimes more than you can see from the roof. A home in Pico Rivera showed us exactly that.',
+          'The house had a solar array on a shingle roof that was ready to be replaced. When the old roof came off, the deck underneath turned out to be wide wood planks with gaps between them. Some gaps were open all the way through. The shingles, and the array on top of them, had been hiding it.',
+          { h3: 'How that job went, in order' },
+          {
+            steps: [
+              '**Documented first.** The solar equipment was photographed, a reading was taken at the solar circuit, and the array’s position was measured from the roof vents and edges.',
+              '**Panels down and stored.** Panels came off row by row and were stacked flat on boards in the yard, under a tarp, away from the work.',
+              '**Deck made solid.** New OSB sheathing went over the plank deck, so every shingle and every mounting point has a continuous base.',
+              '**Underlayment, then mounts.** The whole roof went into synthetic underlayment. Each new mounting point was flashed into the roof before a single shingle was laid.',
+              '**Array back where it was.** Rails, microinverters and panels returned to their measured positions, and a second circuit reading confirmed the system.',
+            ],
+          },
+          'Every bolt that holds a solar rail is a hole in the roof that has to stay dry. That is the part of a solar project no production estimate covers. See all the photos from the [Pico Rivera roof replacement under solar](/projects/shingle-roof-replacement-solar-pico-rivera-90660/).',
+          { pov: 'A roof under solar should be replaced as one planned job: the array measured and documented before it comes off, the deck made solid, every mount flashed before the shingles go on. Anything less is a patch on a roof that will need opening again.' },
+        ],
+      },
+      {
+        heading: 'What Should a Roofer Check Before the Solar Company Arrives?',
+        blocks: [
+          'Seven things, and all of them are easier to fix before an array is in the way.',
+          {
+            steps: [
+              '**Years left in the roof covering.** Compared against the years the panels will be up there.',
+              '**The deck.** Solid and continuous where the mounts will go, with no soft spots or open gaps.',
+              '**The underlayment.** On tile roofs especially, this is the layer that decides everything.',
+              '**Flashings.** Vents, pipes, chimneys, skylights and walls, since these are where most leaks start.',
+              '**What sits where the array will go.** A vent or pipe in the way should be moved now, not worked around later.',
+              '**Drainage.** On flat roofs, where the water runs and whether racks or conduit will block it.',
+              '**The attic.** Stains or damp wood under the planned array mean there is already a leak to trace.',
+            ],
+          },
+          'Our [free roof evaluation](/roof-inspection/) is led by a roofer, with drone footage of the areas of concern and photos of what we find. Then you get one of four next steps in plain English: repair, monitor, maintain or replace.',
+          'Take that report to your solar company. If the roof is ready, you will have it in writing. If it is not, you will know before the panels make the fix more expensive.',
+        ],
+      },
+      {
+        heading: 'Already Have Solar on an Aging Roof?',
+        blocks: [
+          'You have the same four options as any homeowner, and replacement is only one of them. The array changes the planning, not the choices.',
+          {
+            table: {
+              head: ['Next step', 'When it fits', 'What it looks like with solar'],
+              rows: [
+                ['Repair', 'One leak or one failed flashing on a roof that is otherwise sound', 'Trace the leak to its source, often a mount or a nearby flashing, and fix that spot'],
+                ['Monitor', 'The roof is aging but dry', 'A photo record now, and another look after the rainy season'],
+                ['Maintain', 'Small issues are adding up', 'Seal vents, pipes and flashings and clear debris around the array before it holds water'],
+                ['Replace', 'Repairs have stopped adding up', 'Plan the roof and the array as one job: who removes the panels, which permits, and in what order'],
+              ],
+            },
+          },
+          'If it is time to replace, ask who is licensed to take the array down and put it back, and which permits each part of the work needs. Rules vary by city, so ask before the work is scheduled. Our [roofing permit guide](/blog/roofing-permits-los-angeles/) explains how the roofing side works.',
+          'Then ask for what was done in Pico Rivera: the array measured and documented before it comes off, and a reading taken before and after.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Should I replace my roof before installing solar panels?',
+        a: 'Not always, but an older shingle roof often should be. [EnergySage](https://www.energysage.com/solar/solar-panel-roof-replacement/) advises replacing an aging shingle roof first. We would put it differently: have a roofer look first. Some older roofs have many good years left, and some do not.',
+      },
+      {
+        q: 'How much does it cost to remove and reinstall solar panels for a new roof?',
+        a: 'It is usually charged per panel, on top of the price of the roof itself, so it grows with the size of the system. Ask for it in writing before the roof is scheduled, and compare it with the cost of replacing the roof before the array goes on.',
+      },
+      {
+        q: 'Do solar panels damage a roof?',
+        a: 'The panels themselves do not. They shade the roof beneath them from sun and rain. The risk is at the mounting points, because each one is a hole through the roof. Flashed correctly, they stay dry. Flashed poorly, they are where the leak starts.',
+      },
+      {
+        q: 'Does installing solar void my roof warranty?',
+        a: 'It can affect the warranty for the section under the panels. Some solar companies offer their own roof warranty to fill that gap. Get the answer from the roofing company and the solar company in writing before the install.',
+      },
+      {
+        q: 'Can solar go on a tile roof or a flat roof?',
+        a: 'Yes to both. On tile, check the underlayment first and ask how the mounts will pass through the tile. On a flat roof, make sure the racks and conduit will not block the way to the drains.',
+      },
+      {
+        q: 'What is the best roof to pair with new solar?',
+        a: 'A new one, or one a roofer has confirmed will go the distance. If your roof is due anyway, replacing it before the array goes on means the roof and the panels start their years together.',
+      },
+    ],
+    closing: {
+      heading: 'Planning Solar? Have a Roofer Look First.',
+      blocks: [
+        'A free roof evaluation tells you what your roof has left before you commit to years of panels. You get photos, a plain-English next step, and a written scope and price before any work. Call (310) 340-1643 or [request your evaluation](#roof-check).',
+        'See also our [roof replacement guide](/blog/roof-replacement-guide/) and [tile roof reset vs. repair](/blog/tile-roof-reset-vs-repair/), and our [roof replacement](/roof-replacement/) and [roof inspection](/roof-inspection/) pages.',
+      ],
+    },
+    related: ['/roof-inspection/', '/roof-replacement/', '/residential-roofing/tile-roofing/lift-and-relay/'],
+  },
   // Choosing a roofing firm (owner, November 12 2026, from the owner's team's draft): keyword "roofing firm near me". It sits next to
   // how-to-choose-a-roofer-los-angeles-ca ("roofer in los angeles, ca") and links to it. Changed to the site's rules: no dollar figures (the draft's
   // 2026 cost benchmark from a third-party site is gone), no warranty or roof lifespans in years from the industry (only our 10-year workmanship

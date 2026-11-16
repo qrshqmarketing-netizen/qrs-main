@@ -42,7 +42,8 @@ export const KEEP_READING = {
   'tile-lift-and-relay-vs-new-tile-roof': [B('tile-roof-reset-vs-repair'), B('tile-roofing-specialist-los-angeles')],
   'tile-roof-underlayment': [B('spanish-tile-roof-los-angeles'), B('tile-roof-reset-vs-repair'), B('tile-roofing-specialist-los-angeles')],
   'clay-vs-concrete-tile-roof': [B('spanish-tile-roof-los-angeles'), B('tile-roof-reset-vs-repair')],
-  'tile-roof-reset-vs-repair': [B('spanish-tile-roof-los-angeles'), B('tile-roof-underlayment'), B('tile-lift-and-relay-vs-new-tile-roof')],
+  'tile-roof-reset-vs-repair': [B('spanish-tile-roof-los-angeles'), B('tile-roof-underlayment'), B('tile-lift-and-relay-vs-new-tile-roof'), B('best-roof-for-solar-panels')],
+  'best-roof-for-solar-panels': [B('roof-replacement-guide'), B('tile-roof-guide-southern-california'), B('asphalt-shingle-roof-guide'), B('flat-roofs-los-angeles-guide'), B('tile-roof-underlayment'), B('roof-warranty-explained')],
   // Shingle
   'asphalt-shingle-roof-guide': [B('roof-drip-edge-flashing'), B('how-to-choose-a-shingle-roofer-los-angeles'), B('top-qualities-shingle-roofers-los-angeles-orange-county')],
   'how-to-choose-a-shingle-roofer-los-angeles': [B('top-qualities-shingle-roofers-los-angeles-orange-county'), B('roof-drip-edge-flashing'), B('how-to-choose-a-roofer-los-angeles-ca')],
@@ -51,7 +52,7 @@ export const KEEP_READING = {
   'shingle-granules-in-gutter': [B('roof-drip-edge-flashing')],
   'roof-drip-edge-flashing': [B('shingle-granules-in-gutter'), B('roof-maintenance-checklist')],
   // Replacement and choosing a roofer
-  'roof-replacement-guide': [B('how-to-choose-a-roofer-los-angeles-ca'), B('roof-warranty-explained'), B('roofing-permits-los-angeles'), B('roof-replacement-cost-los-angeles'), B('how-to-pay-for-a-new-roof')],
+  'roof-replacement-guide': [B('how-to-choose-a-roofer-los-angeles-ca'), B('roof-warranty-explained'), B('roofing-permits-los-angeles'), B('roof-replacement-cost-los-angeles'), B('how-to-pay-for-a-new-roof'), B('best-roof-for-solar-panels')],
   'best-roofer-los-angeles': [B('how-to-choose-a-roofer-los-angeles-ca'), B('top-qualities-shingle-roofers-los-angeles-orange-county')],
   'how-to-choose-a-roofer-los-angeles-ca': [B('how-to-choose-a-roofing-firm-near-me'), B('best-roofer-los-angeles'), B('how-to-choose-a-shingle-roofer-los-angeles'), B('how-to-vet-commercial-roofing-near-me')],
   'roof-warranty-explained': [B('how-to-choose-a-roofing-firm-near-me'), B('how-to-choose-a-roofer-los-angeles-ca')],
