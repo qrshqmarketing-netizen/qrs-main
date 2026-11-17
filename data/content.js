@@ -39,6 +39,7 @@ import { PLACENTIA_PROJECT } from './pages/placentia-project';
 import { DOWNEY_PROJECT } from './pages/downey-project';
 import { BURBANK_PROJECT } from './pages/burbank-project';
 import { ENCINO_PROJECT } from './pages/encino-project';
+import { SAN_BERNARDINO_PROJECT } from './pages/san-bernardino-project';
 import { VENICE_PROJECT } from './pages/venice-project';
 import { WHITE_FLAT_PROJECT } from './pages/white-flat-roof-project';
 import { SAN_PEDRO_FULL_ROOF_PROJECT } from './pages/san-pedro-full-roof-project';
@@ -169,6 +170,7 @@ export const ALL_PATHS = [
   DOWNEY_PROJECT.path,
   BURBANK_PROJECT.path,
   ENCINO_PROJECT.path,
+  SAN_BERNARDINO_PROJECT.path,
   REVIEWS_LINK.href,
   // The blog index is listed once it has a published post (until then it's a "coming soon" page, kept out of search)
   ...(PUBLISHED_POSTS.length > 0 ? [BLOG_LINK.href] : []),
