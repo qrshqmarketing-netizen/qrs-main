@@ -11,6 +11,10 @@ export const PM_BUILDING_COUNTS = ['1', '2 to 5', '6 to 20', 'More than 20'];
 export const PM_PACKET = {
   heading: 'Get the property manager roof __packet__',
   lede: 'A two-page PDF you can forward to owners and your vendor team. It explains how our Portfolio Roof Assessment works and gives your accounts payable team the vendor details they ask for.',
+  // The owner's photo (November 17 2026) at the top of the content, fading into the panel
+  image: '/images/property-manager-packet-clipboard.webp',
+  imageAlt: 'A property manager with a clipboard of reports on a street of commercial and industrial buildings',
+  imageTag: 'For property managers',
   pages: ['Portfolio Roof Assessment', 'Vendor Information Sheet'],
   caption: 'PDF, 2 pages',
   points: [

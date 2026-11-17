@@ -4,6 +4,7 @@
 // page data): what the two-page PDF holds beside a short form. It posts to app/api/pm-packet/ (a lead in the CRM, source "Property manager
 // packet", and the PDF by email), then shows a direct download link. Copy in data/pmPacket.js, styles in PmPacket.css.
 import { useState } from 'react';
+import Image from 'next/image';
 import Mark from '@/components/ui/Mark';
 import { ArrowRight, PhoneIcon } from '@/components/ui/icons';
 import { PHONE, TEL } from '@/data/site';
@@ -48,6 +49,11 @@ export default function PmPacket() {
     <section className="section pmp" id="property-manager-packet" aria-labelledby="pmp-title">
       <div className="container pmp-inner">
         <div className="pmp-copy">
+          {/* The photo heads the content column and fades into the panel, so the heading sits on its lower edge */}
+          <div className="pmp-photo">
+            <Image src={P.image} alt={P.imageAlt} fill sizes="(min-width: 1440px) 900px, (min-width: 901px) 62vw, 100vw" quality={75} />
+            <span className="pmp-photo-tag">{P.imageTag}</span>
+          </div>
           <h2 id="pmp-title"><Mark text={P.heading} /></h2>
           <p className="pmp-lede">{P.lede}</p>
           <div className="pmp-packet">
