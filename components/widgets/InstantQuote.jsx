@@ -47,8 +47,10 @@ const MAX_FIXES = 5; // map taps per address (see pickBuilding)
 
 // openFrom: a button tapped before this was loaded (InstantQuoteLoader), which opens the drawer; onReady: told once the
 // drawer is mounted and listening for its own buttons.
-export default function InstantQuote({ openFrom = null, onReady }) {
-  const [open, setOpen] = useState(false);
+// inline: the same four steps as a card in the page instead of the side tab and drawer (the Free Online Roof Estimate page,
+// app/free-roof-estimate/page.js): always open, no tab, shade, close button or focus trap; title/kicker replace the drawer's heading.
+export default function InstantQuote({ openFrom = null, onReady, inline = false, title = 'Instant Quote', kicker = 'Free roof measurement · 30 seconds' }) {
+  const [open, setOpen] = useState(inline);
   const [step, setStep] = useState(1);
   const [news, setNews] = useState(true); // "email me the latest news": checked by default (owner, November 12 2026), counts only with an email, and a confirmation email still has to be clicked
   const [busy, setBusy] = useState(false);
@@ -62,6 +64,7 @@ export default function InstantQuote({ openFrom = null, onReady }) {
   const [quote, setQuote] = useState(null);
   const [term, setTerm] = useState(FINANCE.defaultTerm);
 
+  const rootRef = useRef(null);
   const drawerRef = useRef(null);
   const tabRef = useRef(null);
   const bodyRef = useRef(null);
@@ -84,6 +87,12 @@ export default function InstantQuote({ openFrom = null, onReady }) {
 
   // opener: the button that opened the drawer, so focus can return to it (the tab is hidden on phones)
   function openDrawer(opener) {
+    if (inline) {
+      // A "Get an Instant Quote" button on the page: bring the estimator into view and start at the address
+      rootRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (stepRef.current === 1) setTimeout(() => addrRef.current?.focus({ preventScroll: true }), 450);
+      return;
+    }
     openerRef.current = opener || tabRef.current;
     setOpen(true);
     setTimeout(() => {
@@ -98,12 +107,23 @@ export default function InstantQuote({ openFrom = null, onReady }) {
   }
 
   useEffect(() => {
-    document.body.classList.toggle('rm-lock', open);
-  }, [open]);
+    if (!inline) document.body.classList.toggle('rm-lock', open);
+  }, [open, inline]);
 
+  const firstStep = useRef(true);
   useEffect(() => {
-    if (bodyRef.current) bodyRef.current.scrollTop = 0;
-  }, [step]);
+    if (!inline) {
+      if (bodyRef.current) bodyRef.current.scrollTop = 0;
+      return;
+    }
+    // In the page: a new step brings the top of the estimator back into view when it has scrolled above the screen
+    if (firstStep.current) {
+      firstStep.current = false;
+      return;
+    }
+    const top = rootRef.current?.getBoundingClientRect().top;
+    if (top !== undefined && top < 0) rootRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, [step, inline]);
 
   // Any element with a data-rm-open attribute opens the drawer (handy for extra buttons)
   useEffect(() => {
@@ -274,6 +294,7 @@ export default function InstantQuote({ openFrom = null, onReady }) {
 
   // Focus stays inside the drawer while it's open; Escape closes it
   const onDrawerKeyDown = (e) => {
+    if (inline) return;
     if (e.key === 'Escape') return closeDrawer();
     if (e.key !== 'Tab') return;
     const focusable = [...drawerRef.current.querySelectorAll('button,input,a[href],summary')].filter(
@@ -305,7 +326,8 @@ export default function InstantQuote({ openFrom = null, onReady }) {
     : '';
 
   return (
-    <div className={'rm' + (open ? ' open' : '') + (manual ? ' rm-manual' : '')} id="rm" data-step={step}>
+    <div className={'rm' + (open ? ' open' : '') + (manual ? ' rm-manual' : '') + (inline ? ' rm-inline' : '')} id="rm" data-step={step} ref={rootRef} {...(inline ? { 'data-no-reveal': '' } : {})}>
+      {!inline && <>
       <button className="rm-tab" type="button" id="rmTab" ref={tabRef} aria-controls="rmDrawer" aria-expanded={open} onClick={() => openDrawer()}>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <path d="M3 11 12 4l9 7" />
@@ -315,16 +337,24 @@ export default function InstantQuote({ openFrom = null, onReady }) {
         <span>Instant Quote</span>
       </button>
       <div className="rm-shade" id="rmShade" onClick={closeDrawer}></div>
+      </>}
 
-      <aside className="rm-drawer" id="rmDrawer" ref={drawerRef} role="dialog" aria-modal="true" aria-labelledby="rmTitle" inert={!open} onKeyDown={onDrawerKeyDown}>
+      <aside
+        className="rm-drawer"
+        id="rmDrawer"
+        ref={drawerRef}
+        {...(inline ? { 'aria-labelledby': 'rmTitle' } : { role: 'dialog', 'aria-modal': 'true', 'aria-labelledby': 'rmTitle', inert: !open, onKeyDown: onDrawerKeyDown })}
+      >
         <header className="rm-head">
           <div>
-            <span>Free roof measurement · 30 seconds</span>
-            <b id="rmTitle">Instant Quote</b>
+            <span>{kicker}</span>
+            {inline ? <h2 id="rmTitle">{title}</h2> : <b id="rmTitle">{title}</b>}
           </div>
-          <button className="rm-x" type="button" id="rmClose" ref={closeRef} aria-label="Close instant quote" onClick={closeDrawer}>
-            <CloseIcon />
-          </button>
+          {!inline && (
+            <button className="rm-x" type="button" id="rmClose" ref={closeRef} aria-label="Close instant quote" onClick={closeDrawer}>
+              <CloseIcon />
+            </button>
+          )}
         </header>
         <ol className="rm-steps" aria-label="Progress">
           {STEPS.map((label, i) => (

@@ -34,6 +34,7 @@ import { WESTMINSTER_COMMERCIAL_PROJECT } from './pages/westminster-commercial-p
 import { LA_90057_PROJECT } from './pages/la-90057-project';
 import { LA_90061_PROJECT } from './pages/la-90061-project';
 import { LA_90020_PROJECT } from './pages/la-90020-project';
+import { QUOTE_PAGE_PATH } from './pages/freeRoofEstimate';
 import { WEST_HOLLYWOOD_FLAT_PROJECT } from './pages/west-hollywood-flat-project';
 import { GARDEN_GROVE_FLAT_PROJECT } from './pages/garden-grove-flat-project';
 import { PLACENTIA_PROJECT } from './pages/placentia-project';
@@ -146,6 +147,7 @@ export const ALL_PATHS = [
   ...SECTIONS.flatMap((s) => [s.href, ...sectionPages(s).map((svc) => serviceHref(s, svc))]),
   ...SINGLE_PAGES.map((p) => p.href),
   CONTRACTORS_LINK.href,
+  QUOTE_PAGE_PATH, // the Free Online Roof Estimate page (app/free-roof-estimate/page.js)
   ...(CREDENTIALS_PUBLIC ? [CREDENTIALS_LINK.href] : []),
   FAQ_PAGE.path,
   GLOSSARY_PAGE.path,

@@ -323,6 +323,7 @@ export const HEADER_MORE = [
   { label: 'Credentials', href: '/credentials/' },
   { label: 'Maintenance Plans', href: '/roof-maintenance-plans/' },
   { label: 'Financing', href: '/roof-financing/' },
+  { label: 'Free Online Roof Estimate', href: '/free-roof-estimate/' },
   { label: 'Roofing Blog', href: '/blog/' },
   { label: 'Careers', href: '/careers/' },
   { label: 'For Contractors', href: '/contractors/' },
@@ -356,6 +357,7 @@ export const FOOTER = {
         { label: 'Roof Replacement', href: '/roof-replacement/' },
         { label: 'Maintenance Plans', href: '/roof-maintenance-plans/' },
         { label: 'Roof Financing', href: '/roof-financing/' },
+        { label: 'Free Online Roof Estimate', href: '/free-roof-estimate/' },
       ],
     },
     {

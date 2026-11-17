@@ -47,6 +47,7 @@ export const ES = {
   'Roof Maintenance Plans': 'Planes de mantenimiento de techos',
   'Roof Tune-Ups': 'Afinaciones de techos',
   'Roof Financing': 'Financiamiento de techos',
+  'Free Online Roof Estimate': 'Estimado de techo gratis en línea',
   'Commercial': 'Comercial',
   'All Commercial Roofing': 'Todos los techos comerciales',
   'Commercial Roof Repair': 'Reparación de techos comerciales',

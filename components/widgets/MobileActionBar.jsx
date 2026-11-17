@@ -7,9 +7,10 @@ import SiteLink from '@/components/ui/SiteLink';
 import useLang from '@/components/ui/useLang';
 import { PHONE, TEL } from '@/data/site';
 import { START_PATH } from '@/data/start';
+import { QUOTE_PAGE_PATH } from '@/data/pages/freeRoofEstimate';
 import './MobileActionBar.css';
 
-const HIDE_ON = [START_PATH, '/thank-you/'];
+const HIDE_ON = [START_PATH, QUOTE_PAGE_PATH, '/thank-you/'];
 const SHOW_AFTER_PX = 480; // once the hero's own buttons have scrolled away
 
 // Phones and small tablets: a slim bar fixed to the bottom with the two actions a visitor on a phone wants, call and get advice. It slides in

@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
 import { usePathname } from '@/lib/sitePath';
-import { isLandingPath } from '@/lib/landing';
+import { isLandingPath, isQuotePath } from '@/lib/landing';
 import { langOf } from '@/lib/lang';
 
 // The Instant Quote (the side tab, the drawer and the roof-measuring and price code, about 20 KB compressed) isn't part of
@@ -13,8 +13,9 @@ const InstantQuote = dynamic(() => import('./InstantQuote'), { ssr: false });
 
 export default function InstantQuoteLoader() {
   const pathname = usePathname();
-  // not on the ad landing pages (lib/landing.js), nor on the Spanish home page (the quote tool is English)
-  const landing = isLandingPath(pathname) || langOf(pathname) === 'es';
+  // not on the ad landing pages (lib/landing.js), nor on the Spanish home page (the quote tool is English), nor on the Free Online Roof
+  // Estimate page, which shows the estimator in the page itself
+  const landing = isLandingPath(pathname) || isQuotePath(pathname) || langOf(pathname) === 'es';
   const [load, setLoad] = useState(false);
   const [opener, setOpener] = useState(null); // the button tapped before the drawer was ready
   const ready = useRef(false);
