@@ -13,7 +13,7 @@
 // A tile with a photo opens it in the full-screen gallery (ProjectLightbox); tiles without one just show the
 // roof-type artwork below and aren't clickable.
 
-import { findCity } from './locations';
+import { cityPath, findCity } from './locations';
 import { PROJECT_PAGES } from './pages/projects';
 import { ALL_PLACES } from './locations';
 
@@ -108,10 +108,13 @@ const milesBetween = ([lat1, lng1], [lat2, lng2]) => {
 export function projectsNear(slug) {
   const center = findCity(slug);
   if (!center) return { projects: [], local: false };
+  const here = cityPath(slug);
   const tagged = PROJECTS.filter((p) => p.city === slug && p.image).map((p) => ({ ...p, place: [p.area, center.city].filter(Boolean).join(', ') }));
   const nearby = PROJECT_PAGES.map((page) => ({ page, miles: page.geo ? milesBetween([center.lat, center.lng], page.geo) : Infinity }))
-    .filter(({ page, miles }) => miles <= NEAR_MI || page.place?.includes(center.city))
-    .sort((a, b) => a.miles - b.miles)
+    .filter(({ page, miles }) => miles <= NEAR_MI || page.place?.includes(center.city) || page.related?.includes(here))
+    // a project that lists this city page in `related` comes first (the owner files some jobs under an office's city, e.g. Ladera Heights under Vernon),
+    // then the nearest
+    .sort((a, b) => Number(Boolean(b.page.related?.includes(here))) - Number(Boolean(a.page.related?.includes(here))) || a.miles - b.miles)
     .map(({ page }) => ({ title: page.title, caption: (page.place || page.title).replace(/,?\s*CA\b/, ''), image: page.image, alt: page.imageAlt, href: page.path, place: page.place, label: page.label, photos: page.photos?.length || 0 }));
   const projects = [...tagged, ...nearby].slice(0, 6);
   return { projects, local: tagged.length > 0 || nearby.some((p) => p.place?.includes(center.city)) };
