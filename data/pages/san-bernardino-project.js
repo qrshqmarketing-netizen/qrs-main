@@ -1,26 +1,27 @@
 // Project page: a single-story home in north San Bernardino re-roofed in brown-blend architectural shingles, with metal valleys, a flashed
 // chimney and a rooftop package air conditioner set back on its curb (from the owner's drone photos, November 17 2026, sent as "Northern San
-// Bernardino"; all show the finished roof). 18 of the 20 photos are used: one was an exact copy of a photo from the Encino project and one a
-// duplicate. The house number is blurred in photos 01, 06 and 07. No ZIP was given, so the address has none and the map pin is an approximate
-// point in north San Bernardino (add the ZIP to the path, `place` and `geo` if the owner sends it, with a redirect). The white flat roof along the
+// Bernardino", ZIP 92346 sent afterwards; all show the finished roof). 18 of the 20 photos are used: one was an exact copy of a photo from the Encino project and one a
+// duplicate. The house number is blurred in photos 01, 06 and 07. The first address without the ZIP
+// (/projects/shingle-roof-replacement-north-san-bernardino/) redirects here. 92346's postal city is Highland; the owner calls the place north San
+// Bernardino, so the page does too. The white flat roof along the
 // back shows in some photos; the owner didn't say it was part of the job, so the page only says the shingles finish against it.
-// Photos in public/images/projects/shingle-roof-replacement-north-san-bernardino/ (WebP, 1500-1800px long side). No brand was named.
+// Photos in public/images/projects/shingle-roof-replacement-san-bernardino-92346/ (WebP, 1500-1800px long side). No brand was named.
 import { mediaUrl } from '@/lib/media';
 
-const DIR = 'projects/shingle-roof-replacement-north-san-bernardino/shingle-san-bernardino-';
+const DIR = 'projects/shingle-roof-replacement-san-bernardino-92346/shingle-san-bernardino-';
 const photo = (n, alt) => ({ src: mediaUrl(`${DIR}${String(n).padStart(2, '0')}.webp`), alt });
 
 export const SAN_BERNARDINO_PROJECT = {
-  path: '/projects/shingle-roof-replacement-north-san-bernardino/',
+  path: '/projects/shingle-roof-replacement-san-bernardino-92346/',
   keyword: 'shingle roof replacement in San Bernardino',
-  title: 'Shingle Roof Replacement in North San Bernardino',
-  metaTitle: 'Shingle Roof Replacement in North San Bernardino',
+  title: 'Shingle Roof Replacement in North San Bernardino 92346',
+  metaTitle: 'Shingle Roof Replacement in San Bernardino 92346',
   description:
-    'Shingle roof replacement in north San Bernardino: a single-story home re-roofed in brown architectural shingles, with metal valleys, chimney flashing and the rooftop AC unit flashed in.',
+    'Shingle roof replacement in north San Bernardino 92346: a single-story home re-roofed in brown architectural shingles, with metal valleys, chimney flashing and the rooftop AC unit flashed in.',
   image: mediaUrl(`${DIR}01.webp`), // the front of the house from above the lawn; also the first photo in `photos`
   imageAlt: 'Aerial view of a single-story home in north San Bernardino with a new brown architectural shingle roof, a brick chimney and a rooftop AC unit',
   // Short name for the "Recent projects" links on the pages this project is listed under (`related`)
-  label: 'Shingle roof replacement, San Bernardino',
+  label: 'Shingle roof replacement, San Bernardino 92346',
   related: [
     '/residential-roofing/shingle-roofing/replacement/',
     '/residential-roofing/shingle-roofing/',
@@ -36,9 +37,9 @@ export const SAN_BERNARDINO_PROJECT = {
   },
   // The photo after each chapter (index in `photos`)
   chapterPhotos: { 1: 7, 2: 12, 3: 15, 4: 1 },
-  place: 'San Bernardino, CA',
-  // Map pin on /projects/: an approximate point in north San Bernardino, not the home's address, so the client's address stays private
-  geo: [34.165, -117.29],
+  place: 'San Bernardino, CA 92346',
+  // Map pin on /projects/: the center of the ZIP code, not the home's address, so the client's address stays private
+  geo: [34.1306, -117.2045],
   // Photo slider and gallery, in the order shown
   photos: [
     photo(1, 'Aerial view of a single-story home in north San Bernardino with a new brown architectural shingle roof, a brick chimney and a rooftop AC unit'),
@@ -61,7 +62,7 @@ export const SAN_BERNARDINO_PROJECT = {
     photo(18, 'The new shingles finishing cleanly against the white flat roof along the back of the house'),
   ],
   paragraphs: [
-    'This shingle roof replacement in north San Bernardino covered a long single-story home with a front wing, a garage at one end and a hip at each end. Our roofers re-roofed it in new brown-blend architectural shingles, from the porch to the garage.',
+    'This shingle roof replacement in north San Bernardino 92346 covered a long single-story home with a front wing, a garage at one end and a hip at each end. Our roofers re-roofed it in new brown-blend architectural shingles, from the porch to the garage.',
     'The roof is one long ranch roof with a wing crossing it at the front. Every slope is laid in even courses from the eave up, and the ridge and all the hips are capped in matching shingles, so the roof reads as one piece from the street.',
     'Where two slopes meet, the water from both runs down one valley. Each valley here is lined with metal, and the shingles are cut cleanly along it. The brick chimney sits next to one of those valleys, and it has new metal flashing at its base, set into the new shingles.',
     'A rooftop air conditioner is one of the hardest things on a roof to keep dry, because it sits on a curb and has lines and drains running from it. Here the unit sits on its curb with metal flashing around its base, and the vents, vent caps and plumbing pipes each have their own flashing. Read more about [attic ventilation](/residential-roofing/attic-ventilation/).',

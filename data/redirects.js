@@ -56,6 +56,7 @@ export const REDIRECTS = [
   ['/hoa-multi-family/', '/residential-roofing/hoa-multi-family/'],
   ['/emergency-roof-repair/', '/roof-repair/emergency/'],
   ['/project/tile-flat-roofing-in-mid-wilshire-90019/', '/projects/tile-flat-roofing-in-mid-wilshire-90019/'],
+  ['/projects/shingle-roof-replacement-north-san-bernardino/', '/projects/shingle-roof-replacement-san-bernardino-92346/'], // the ZIP added (November 17 2026)
   ['/commercial-roofing/roof-replacement/', '/commercial-roofing/replacement/'],
   ['/residential-roofing/roof-inspection/', '/roof-inspection/'],
   // Service pages
