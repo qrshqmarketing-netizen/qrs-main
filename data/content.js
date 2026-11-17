@@ -34,6 +34,7 @@ import { WESTMINSTER_COMMERCIAL_PROJECT } from './pages/westminster-commercial-p
 import { LA_90057_PROJECT } from './pages/la-90057-project';
 import { LA_90061_PROJECT } from './pages/la-90061-project';
 import { LA_90020_PROJECT } from './pages/la-90020-project';
+import { WEST_HOLLYWOOD_FLAT_PROJECT } from './pages/west-hollywood-flat-project';
 import { GARDEN_GROVE_FLAT_PROJECT } from './pages/garden-grove-flat-project';
 import { PLACENTIA_PROJECT } from './pages/placentia-project';
 import { DOWNEY_PROJECT } from './pages/downey-project';
@@ -166,6 +167,7 @@ export const ALL_PATHS = [
   WESTMINSTER_COMMERCIAL_PROJECT.path,
   LA_90061_PROJECT.path,
   LA_90020_PROJECT.path,
+  WEST_HOLLYWOOD_FLAT_PROJECT.path,
   GARDEN_GROVE_FLAT_PROJECT.path,
   PLACENTIA_PROJECT.path,
   DOWNEY_PROJECT.path,
