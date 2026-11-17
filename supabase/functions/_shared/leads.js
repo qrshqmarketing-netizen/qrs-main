@@ -9,6 +9,7 @@ export const SOURCE_LABELS = {
   'estimate-form': 'Estimate form',
   'instant-quote': 'Instant Quote',
   'landing-page': 'Ad landing page',
+  'pm-packet': 'Property manager packet', // posted to the site's own app/api/pm-packet, listed here so the two label lists match
   'roof-assistant-chat': 'Roof Assistant chat',
   mcp: 'AI agent (MCP)',
 };

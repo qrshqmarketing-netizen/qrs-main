@@ -24,6 +24,7 @@ import { searchHeading } from '@/lib/headings';
 import ServicePageSvc from './ServicePageSvc';
 import ProofBar from '@/components/sections/ProofBar';
 import { ServiceQhHero } from './qhHeroes';
+import PmPacket from '@/components/sections/PmPacket';
 
 const PROCESS_PHOTOS = {
   tile: [
@@ -171,6 +172,8 @@ export default async function ServicePage({ page, crumbs, eyebrow, scenes = [], 
           imageAlt={processImageAlt}
         />
       )}
+      {/* A lead magnet of the page's own (`leadMagnet` in the page data): the property manager roof packet (owner, November 17 2026) */}
+      {page.leadMagnet === 'pm-packet' && <PmPacket />}
       {/* The story in order (owner, October 15 2026, after maben.com.au): what we do, how we do it, then the work itself on real roofs, what people
           say, why QRS, and the questions. The projects used to sit at the bottom, under the FAQ. */}
       <StudioProjects projects={work.projects} heading={projectsHeading(page.keyword, work.exact)} />

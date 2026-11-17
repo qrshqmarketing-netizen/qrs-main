@@ -1,0 +1,57 @@
+/* Property manager roof packet (PmPacket.jsx): copy and a drawn two-page PDF at the left, the request card at the right from 901px.
+   Theme tokens only, so the dark theme follows. Mobile first. */
+.pmp{background:transparent}
+.pmp-inner{display:grid;gap:0;align-items:stretch;background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:var(--radius);overflow:hidden}
+.pmp-copy{padding:clamp(24px,4vw,48px)}
+.pmp-copy h2{margin:0 0 14px;text-align:left}
+.pmp-lede{margin:0 0 28px;font-size:17px;line-height:1.6;max-width:58ch;color:var(--ink)}
+
+.pmp-packet{display:grid;gap:24px;align-items:start}
+.pmp-pages{position:relative;width:168px;height:212px}
+.pmp-page{position:absolute;width:150px;height:194px;background:#fff;border:1px solid var(--line);border-radius:3px;box-shadow:0 1px 2px rgba(6,45,87,.08),0 10px 24px rgba(6,45,87,.12);overflow:hidden}
+.pmp-page-back{top:0;left:18px;transform:rotate(4deg)}
+.pmp-page-front{top:16px;left:0}
+.pmp-page-bar{height:16px;background:#062d57;border-bottom:2px solid var(--gold)}
+.pmp-page-body{padding:10px 11px}
+.pmp-page-body i{display:block;height:4px;border-radius:2px;background:#d3dde8;margin-bottom:5px}
+.pmp-page-title{margin:0 0 8px;font:700 10.5px/1.2 var(--font-text),sans-serif;color:#062d57;text-transform:none;letter-spacing:0}
+.pmp-tiles{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:9px}
+.pmp-tiles span{height:26px;background:#eef3f8;border-left:2px solid var(--gold)}
+.pmp-page-foot{position:absolute;left:11px;right:11px;bottom:10px;height:20px;background:#062d57;border-radius:2px}
+.pmp-caption{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.pmp-list{list-style:none;margin:0;padding:0}
+.pmp-list li{position:relative;padding:0 0 14px 24px;line-height:1.55;color:var(--ink)}
+.pmp-list li:before{content:"";position:absolute;left:0;top:.45em;width:10px;height:10px;border:2px solid var(--gold-ink);border-radius:2px}
+.pmp-list strong{color:var(--navy);font-weight:600}
+
+.pmp-card{background:var(--wash);border-top:1px solid var(--line);padding:clamp(24px,4vw,40px)}
+.pmp-card-title{margin:0 0 4px;font-size:20px;font-weight:600;color:var(--ink)}
+.pmp-intro{margin:0 0 20px;color:var(--muted);font-size:15px;line-height:1.5}
+.pmp-card form{display:grid;gap:14px}
+.pmp-row{display:grid;gap:14px}
+.pmp-card label{display:grid;gap:5px;font-size:14px;font-weight:600;color:var(--ink)}
+.pmp-card label small{font-weight:400;color:var(--muted)}
+.pmp-card input,.pmp-card select{width:100%;min-height:46px;font:inherit;font-size:16px;font-weight:400;color:var(--ink);padding:10px 12px;border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--paper)}
+.pmp-card select{appearance:auto}
+.pmp-card input:focus-visible,.pmp-card select:focus-visible{outline:3px solid color-mix(in srgb,var(--gold) 55%,transparent);outline-offset:1px;border-color:var(--gold-ink)}
+.pmp-card .btn{width:100%;justify-content:center;margin-top:4px}
+.pmp-card .btn svg,.pmp-done .btn svg{width:17px;height:17px;flex:none}
+.pmp-card .btn:disabled{opacity:.6;cursor:wait}
+.pmp-hp{position:absolute!important;left:-9999px;width:1px;height:1px;overflow:hidden}
+.pmp-error{margin:0;padding:10px 12px;border-radius:var(--radius-sm);background:color-mix(in srgb,var(--plum) 12%,var(--paper));color:var(--plum);font-size:14px;line-height:1.45}
+.pmp-consent{margin:0;font-size:12px;line-height:1.5;color:var(--muted)}
+.pmp-consent a{color:var(--ink)}
+.pmp-done p{margin:0 0 14px;line-height:1.55;color:var(--ink)}
+.pmp-done .btn{width:auto}
+.pmp-alt{margin:18px 0 0;padding-top:16px;border-top:1px solid var(--line);font-size:15px;color:var(--ink)}
+.pmp-alt a{display:inline-flex;align-items:center;gap:6px;color:var(--ink);font-weight:700;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:4px;white-space:nowrap}
+.pmp-alt svg{width:16px;height:16px;color:var(--gold-ink)}
+
+@media (min-width:561px){
+  .pmp-packet{grid-template-columns:168px 1fr;gap:28px}
+  .pmp-row{grid-template-columns:1fr 1fr}
+}
+@media (min-width:901px){
+  .pmp-inner{grid-template-columns:minmax(0,1fr) minmax(0,440px)}
+  .pmp-card{border-top:0;border-left:1px solid var(--line)}
+}

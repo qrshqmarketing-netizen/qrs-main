@@ -358,6 +358,8 @@ export const COMMERCIAL_CONTENT = {
         { q: 'Will roofing fumes or odor bother our tenants or staff?', a: 'It depends on the roof system. Torch-applied roofing is fused with heat, and near air intakes, occupied spaces or anything that shouldn’t be near a flame, a self-adhered system that needs no torch is often the better choice. We choose the system and plan the order of work around your building, and tell you ahead of any step that could be noticed inside.' },
       ],
       related: ['/commercial-roofing/maintenance/', '/residential-roofing/hoa-multi-family/', '/commercial-roofing/repair/', '/commercial-roofing/replacement/'],
+      // The property manager roof packet (PDF) section after the story, before the projects (components/sections/PmPacket.jsx, data/pmPacket.js)
+      leadMagnet: 'pm-packet',
     },
   ],
 };
