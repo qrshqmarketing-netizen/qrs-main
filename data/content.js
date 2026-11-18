@@ -39,6 +39,7 @@ import { WEST_HOLLYWOOD_FLAT_PROJECT } from './pages/west-hollywood-flat-project
 import { HUNTINGTON_BEACH_FLAT_PROJECT } from './pages/huntington-beach-flat-project';
 import { EAST_LOS_ANGELES_PROJECT } from './pages/east-los-angeles-project';
 import { SAN_DIMAS_PROJECT } from './pages/san-dimas-project';
+import { SOUTH_PASADENA_PROJECT } from './pages/south-pasadena-project';
 import { GARDEN_GROVE_FLAT_PROJECT } from './pages/garden-grove-flat-project';
 import { PLACENTIA_PROJECT } from './pages/placentia-project';
 import { DOWNEY_PROJECT } from './pages/downey-project';
@@ -176,6 +177,7 @@ export const ALL_PATHS = [
   HUNTINGTON_BEACH_FLAT_PROJECT.path,
   SAN_DIMAS_PROJECT.path,
   EAST_LOS_ANGELES_PROJECT.path,
+  SOUTH_PASADENA_PROJECT.path,
   GARDEN_GROVE_FLAT_PROJECT.path,
   PLACENTIA_PROJECT.path,
   DOWNEY_PROJECT.path,

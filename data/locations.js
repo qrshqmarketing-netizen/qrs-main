@@ -65,6 +65,7 @@ export const OTHER_PLACES = [
   { city: 'Calabasas', slug: 'calabasas', county: 'Los Angeles County', region: 'la-county', lat: 34.1367, lng: -118.6615 },
   { city: 'Inglewood', slug: 'inglewood', county: 'Los Angeles County', region: 'la-county', lat: 33.9617, lng: -118.3531 },
   { city: 'Alhambra', slug: 'alhambra', county: 'Los Angeles County', region: 'la-county', lat: 34.0953, lng: -118.127 },
+  { city: 'South Pasadena', slug: 'south-pasadena', county: 'Los Angeles County', region: 'la-county', lat: 34.1161, lng: -118.1503, servedBy: 'pasadena' },
   { city: 'Arcadia', slug: 'arcadia', county: 'Los Angeles County', region: 'la-county', lat: 34.1397, lng: -118.0353 },
   { city: 'Pomona', slug: 'pomona', county: 'Los Angeles County', region: 'la-county', lat: 34.0551, lng: -117.75 },
   { city: 'San Dimas', slug: 'san-dimas', county: 'Los Angeles County', region: 'la-county', lat: 34.1067, lng: -117.8067 },
