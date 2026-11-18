@@ -37,6 +37,8 @@ import { LA_90020_PROJECT } from './pages/la-90020-project';
 import { QUOTE_PAGE_PATH } from './pages/freeRoofEstimate';
 import { WEST_HOLLYWOOD_FLAT_PROJECT } from './pages/west-hollywood-flat-project';
 import { HUNTINGTON_BEACH_FLAT_PROJECT } from './pages/huntington-beach-flat-project';
+import { EAST_LOS_ANGELES_PROJECT } from './pages/east-los-angeles-project';
+import { SAN_DIMAS_PROJECT } from './pages/san-dimas-project';
 import { GARDEN_GROVE_FLAT_PROJECT } from './pages/garden-grove-flat-project';
 import { PLACENTIA_PROJECT } from './pages/placentia-project';
 import { DOWNEY_PROJECT } from './pages/downey-project';
@@ -172,6 +174,8 @@ export const ALL_PATHS = [
   LA_90020_PROJECT.path,
   WEST_HOLLYWOOD_FLAT_PROJECT.path,
   HUNTINGTON_BEACH_FLAT_PROJECT.path,
+  SAN_DIMAS_PROJECT.path,
+  EAST_LOS_ANGELES_PROJECT.path,
   GARDEN_GROVE_FLAT_PROJECT.path,
   PLACENTIA_PROJECT.path,
   DOWNEY_PROJECT.path,
