@@ -3037,7 +3037,7 @@ export function QhProjectWall({ projects = [] }) {
           </div>
         ))}
       </div>
-      <p className="qh-rr-time">{projects.length} finished roofs, each with its own photos and story</p>
+      <p className="qh-rr-time">{projects.length} finished roofs, so far! Each with its own photos and story.</p>
     </div>
   );
 }
