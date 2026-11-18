@@ -381,7 +381,7 @@ export const LOCATION_PAGES = {
 
   venice: {
     keyword: 'venice roofing',
-    image: '/images/projects/shingle-roof-replacement-venice-90291/shingle-venice-90291-23.webp',
+    image: '/images/projects/shingle-roof-replacement-venice-90291/shingle-venice-90291-44.webp',
     metaTitle: 'Venice Roofing & Roof Replacement',
     metaDescription: 'Venice roofing from a team that re-roofed a canal-side home here: shingle, flat and tile roof repair and replacement. Book a free roof evaluation.',
     blurb: 'Roof repair and replacement for Venice homes, from the canals to Oakwood, by the team that re-roofed a canal-side home here.',
