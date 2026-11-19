@@ -137,7 +137,7 @@ export default async function HomePage() {
             The shingle colors moved to the shingle roofing page; "Giving back" (on the About page) and the careers band were taken off. */}
         <StudioHowWeWork />
         <ReviewMarquee heading="Roofing reviews from the people we work for" text={`${GOOGLE_REVIEWS.count} reviews from the people we roof for, on Google.`} />
-        <StudioProjects heading="Roofing projects we have finished in __Los Angeles__ & Orange County" projects={LATEST_PROJECTS.slice(0, 3)} more={LATEST_PROJECTS.slice(3)} />
+        <StudioProjects heading="Roofing projects we have finished in __Los Angeles__ & Orange County" projects={LATEST_PROJECTS.slice(0, 3)} more={LATEST_PROJECTS.slice(3, 8)} />
         {!promo.active && <PromoSection />}
         <ServiceArea allAreasLink />
         <PartnerLogos {...ROOF_FINANCING.partners} />

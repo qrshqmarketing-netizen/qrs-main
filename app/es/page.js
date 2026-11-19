@@ -69,7 +69,7 @@ export default async function SpanishHomePage() {
           heading={t(lang, 'What people say after the job')}
           text={t(lang, '{count} reviews from the people we roof for, on Google.', { count: GOOGLE_REVIEWS.count })}
         />
-        <StudioProjects lang={lang} projects={LATEST_PROJECTS.slice(0, 3)} more={LATEST_PROJECTS.slice(3)} />
+        <StudioProjects lang={lang} projects={LATEST_PROJECTS.slice(0, 3)} more={LATEST_PROJECTS.slice(3, 8)} />
         <ServiceArea allAreasLink />
         <PartnerLogos {...partners} heading={t(lang, partners.heading)} intro={t(lang, partners.intro)} />
         <LatestArticles lang={lang} posts={await homeArticles()} heading="Featured Roofing __Articles__" />

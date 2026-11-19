@@ -73,8 +73,8 @@ export const GROUPS = {
     href: '/commercial-roofing/',
     parent: null,
     scenes: ['scene-commercial', 'scene-flat', 'scene-inspect', 'scene-tile'],
-    image: '/images/recent-work-commercial-flat-roof-drone-view.webp',
-    imageAlt: 'Aerial view of a completed commercial flat roof',
+    image: '/images/projects/flat-roof-replacement-los-angeles-90029/flat-los-angeles-90029-01.webp', // the Los Angeles 90029 commercial project (owner, November 19 2026)
+    imageAlt: 'Aerial view of a two-story commercial building in Los Angeles with a new white flat roof and a stepped parapet',
     blurb: 'Roofing for offices, retail, churches, warehouses and other commercial buildings across LA and Orange County.',
   },
 };

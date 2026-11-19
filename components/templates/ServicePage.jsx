@@ -39,6 +39,8 @@ const PROCESS_PHOTOS = {
   ],
   // Commercial pages only ever get commercial roofs (owner, November 12 2026): real QRS commercial jobs, no homes
   commercial: [
+    ['/images/projects/flat-roof-replacement-los-angeles-90029/flat-los-angeles-90029-04.webp', 'A new white cap sheet on a commercial flat roof, with skylights and vents sealed into it'], // Los Angeles 90029 (owner, November 19 2026)
+    ['/images/projects/flat-roof-replacement-los-angeles-90029/flat-los-angeles-90029-07.webp', 'A parapet corner on a commercial roof, wrapped in the same white cap sheet as the roof'],
     ['/images/recent-work-commercial-flat-roof-drone-view.webp', 'Aerial view of a commercial flat roof project'],
     ['/images/home-services-commercial-flat-roof-drone-view.webp', 'Aerial view of a commercial flat roof'],
     ['/images/projects/commercial-flat-roof-replacement-westminster-92683/commercial-flat-roof-westminster-92683-09.webp', 'Aerial view of a commercial building with a new white flat roof'],
