@@ -3,7 +3,10 @@
 // order they were taken; they show the job in progress (some roofs finished in white, the rest at the base sheet), so there is no before-and-after
 // wipe. Photos in public/images/projects/townhome-flat-roof-replacement-west-hollywood-90046/ (WebP, 1800px long side), converted from the
 // originals with no location data. No plate or house number is readable at that size. The map pin is the center of the ZIP code, not the
-// building. The owner named Polyglass by the printing on the base sheet; the page doesn't say whether the sheets were torched or self-adhered.
+// building. The owner named Polyglass by the printing on the base sheet.
+// Earlier photos added November 18 2026: 17 from the flight of June 25 2026 (9:21-9:23 AM, the day before), files 19-35, shown first: the old roof
+// off down to the wood deck on the far roofs, new plywood in places and the base sheet going on. The rolls on the roof read "Elastoflex SA V"
+// (Polyglass's self-adhered base sheet), so the page names it; it still says nothing about how the cap sheet was applied.
 import { mediaUrl } from '@/lib/media';
 
 const DIR = 'projects/townhome-flat-roof-replacement-west-hollywood-90046/flat-west-hollywood-90046-';
@@ -28,19 +31,37 @@ export const WEST_HOLLYWOOD_FLAT_PROJECT = {
   ], // shown as "Related services" here, and this project is linked back from them
   // An H2 above the paragraph at each position below (they describe the paragraphs, nothing is added to the story)
   headings: {
-    1: 'A Polyglass base sheet on every roof',
-    2: 'A white cap sheet with sealed laps',
-    3: 'Every AC curb, skylight and vent flashed',
-    4: 'Materials up by lift, one roof at a time',
-    5: 'Flat roofing in West Hollywood',
+    1: 'Down to the deck first',
+    2: 'A Polyglass base sheet on every roof',
+    3: 'A white cap sheet with sealed laps',
+    4: 'Every AC curb, skylight and vent flashed',
+    5: 'Materials up by lift, one roof at a time',
+    6: 'Flat roofing in West Hollywood',
   },
   // The photo after each chapter (index in `photos`)
-  chapterPhotos: { 1: 15, 2: 10, 3: 8, 4: 1 },
+  chapterPhotos: { 1: 5, 2: 32, 3: 27, 4: 25, 5: 18 },
   place: 'West Hollywood, CA 90046',
   // Map pin on /projects/: the center of the ZIP code, not the building's address, so the client's address stays private
   geo: [34.1074, -118.3653],
-  // Photo slider and gallery, in the order the photos were taken (one drone flight, June 26 2026)
+  // Photo slider and gallery, in the order the photos were taken (June 25 2026, then June 26 2026)
   photos: [
+    photo(19, 'Angled view down the row from the end unit: base sheet on the near roofs, the crew at work and bare deck on the far roofs'),
+    photo(20, 'The row from above the parking lot, with base sheet on the near roofs and rolls staged beside the AC units'),
+    photo(21, 'The row from the courtyard side, with the scissor lift and the debris chute running down from the roof edge'),
+    photo(22, 'Looking down on the middle roofs: base sheet on, the skylight curbs and AC units ready for flashing, roofers at work'),
+    photo(23, 'The roofs from above the courtyard: bare wood deck on the far roof, base sheet on the rest, the debris chute at the edge'),
+    photo(24, 'The far roofs down to the bare deck, with new sheets of plywood beside the slatted opening and rolls ready to go'),
+    photo(25, 'Angled view from the far end: two roofs down to the deck, the base sheet starting across them and the lift in the courtyard'),
+    photo(26, 'The far end from above the parking lot, where the bare deck meets the base sheet between two roofs'),
+    photo(27, 'The two end roofs at an angle, the old roofing gone down to the deck and rolls of base sheet laid out'),
+    photo(28, 'Straight down on the two far roofs: bare deck, the skylights, the AC units and the first runs of base sheet'),
+    photo(29, 'The middle roofs with base sheet on, roofers working at a skylight curb and the deck still bare on the far roof'),
+    photo(30, 'The middle and near roofs, the base sheet run around every AC unit, pipe and skylight'),
+    photo(31, 'The end roof from above the parking lot, base sheet on and a roofer at work by the AC unit'),
+    photo(32, 'Looking down the row from above the parking lot to the bare deck on the far roof'),
+    photo(33, 'The far end roof with the scissor lift alongside, the old roof off down to the deck'),
+    photo(34, 'Straight-down view of the whole row: base sheet on most roofs, the far ones down to the bare deck'),
+    photo(35, 'The whole row straight down from the other side, above the courtyard and the scissor lift'),
     photo(1, 'Angled view down the row of townhomes from one end: the near roofs finished in white cap sheet, the crew at work on the far roofs'),
     photo(2, 'The row from the side, with the scissor lift that brought the materials up and a roofer working at the edge of a finished white roof'),
     photo(3, 'Looking down on three townhome roofs: white cap sheet on the finished ones, black base sheet next door, tools set out by the AC units'),
@@ -62,7 +83,8 @@ export const WEST_HOLLYWOOD_FLAT_PROJECT = {
   ],
   paragraphs: [
     'This townhome flat roof replacement in West Hollywood 90046 covered a row of attached townhomes, each with its own flat roof, rooftop AC unit, skylight and open slatted sections over the terraces. Our roofers re-roofed them with a Polyglass base sheet and a white granulated cap sheet, working across the row one roof at a time.',
-    'Every roof got a black Polyglass base sheet first, run across the roof, out to the edges and up around the curbs. It is the first layer of the new roof, and the photos show it in place on the roofs the crew had not yet finished, with the rolls staged beside the skylights.',
+    'The day before, the old roofing came off down to the wood deck, one roof at a time, and the debris went down a chute into the courtyard instead of past anyone’s door. With the deck bare, new sheets of plywood went in where it needed them before anything covered it.',
+    'Every roof got a black Polyglass base sheet first, Elastoflex SA V, a self-adhered sheet, run across the roof, out to the edges and up around the curbs. It is the first layer of the new roof, and the photos show it in place on the roofs the crew had not yet finished, with the rolls staged beside the skylights.',
     'The white cap sheet went on over the base sheet in long rows, each overlapping the one before it, and our roofers sealed every lap by hand. The finished roofs read as one clean white surface from above, with no loose edges at the parapets or around the slatted openings. Our [flat roof replacement](/residential-roofing/flat-roofing/replacement/) page explains how we build these roofs.',
     'A flat roof leaks most often where something goes through it, and these roofs have a lot: an AC unit on a curb, a skylight, plumbing vents and the edges of the slatted openings on every home. Each AC curb was flashed in metal, each skylight curb was wrapped, and the pipe vents got new flashings before the cap sheet went on around them.',
     'With homes side by side and a walkway between the buildings, the crew brought the rolls and tools up with a scissor lift from the walkway instead of carrying them through anyone’s home. The roofs were finished one after another, so in the photos the finished white roofs sit beside the ones still at the base sheet stage.',
