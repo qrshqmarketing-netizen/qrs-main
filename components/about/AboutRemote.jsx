@@ -11,7 +11,27 @@ import { BUSINESS, COMPANY, OFFICES, PHONE, TEL } from '@/data/site';
 import { NUMBERS } from './AboutSections';
 import AbrValueTabs from './AbrValueTabs';
 import ParallaxBg from '@/components/home/ParallaxBg';
+import { Caveat, Dancing_Script, Homemade_Apple, Kalam, Nothing_You_Could_Do, Satisfy, Shadows_Into_Light } from 'next/font/google';
 import './aboutRemote.css';
+
+// Handwriting fonts for the team names (owner, November 19 2026): one per person, loaded only on the pages that import this file (About).
+// `size` evens out how large each face looks at the same font size.
+const caveat = Caveat({ subsets: ['latin'], weight: '600', display: 'swap' });
+const dancing = Dancing_Script({ subsets: ['latin'], weight: '600', display: 'swap' });
+const homemade = Homemade_Apple({ subsets: ['latin'], weight: '400', display: 'swap' });
+const kalam = Kalam({ subsets: ['latin'], weight: '400', display: 'swap' });
+const nothing = Nothing_You_Could_Do({ subsets: ['latin'], weight: '400', display: 'swap' });
+const satisfy = Satisfy({ subsets: ['latin'], weight: '400', display: 'swap' });
+const shadows = Shadows_Into_Light({ subsets: ['latin'], weight: '400', display: 'swap' });
+const HANDS = [
+  { font: dancing, size: 1.15 },
+  { font: homemade, size: 0.9 },
+  { font: caveat, size: 1.3 },
+  { font: satisfy, size: 1.1 },
+  { font: kalam, size: 0.98 },
+  { font: shadows, size: 1.12 },
+  { font: nothing, size: 0.98 },
+];
 
 // The About page after the owner's reference remote.com/about (October 29 2026), in QRS colors: an inset hero card with a three-stop vertical
 // gradient (the reference's violet → lilac → aqua, here soft plum → warm cream → sky) holding the H1 and intro at the left and the drone video in a
@@ -190,32 +210,27 @@ export function AbrProcess({ process }) {
   );
 }
 
-// The team as cards: a headshot where the item has `photo` (Tony and Adva, November 4 2026), else initials, a roof mark for the roles
-const initials = (name) => (/^[A-Z][a-z]+ [A-Z][a-z]+$/.test(name) ? name.split(' ').map((w) => w[0]).join('') : null);
 
+// The team as one full-width card (owner, November 19 2026): a hand-drawn Open Peeps character (CC0, public/images/team/peeps/), then the first
+// name in its own handwriting font and the role under it
 export function AbrTeam({ team }) {
   return (
     <section className="abr-section" id="team" aria-labelledby="abr-team">
       <div className="abr-wrap">
         <div className="abr-head abr-center">
           <h2 id="abr-team">Meet our team</h2>
-          <p>Real people behind every roof, from the office to the ridge line.</p>
+          <p>{team.intro}</p>
         </div>
-        <ul className="abr-team">
-          {team.items.map((m) => {
-            const ini = initials(m.title);
+        <ul className="abr-team-card">
+          {team.items.map((m, i) => {
+            const hand = HANDS[i % HANDS.length];
             return (
               <li key={m.title}>
-                <span className={'abr-avatar' + (m.photo ? ' photo' : ini ? '' : ' role')} aria-hidden="true">
-                  {m.photo ? <Image src={m.photo} alt="" width={160} height={160} sizes="80px" loading="lazy" /> : ini || (
-                    <svg viewBox="0 0 24 24">
-                      <path d="M2.5 13 12 5l9.5 8" />
-                      <path d="M5 11v8.5h14V11" />
-                    </svg>
-                  )}
+                {m.peep && <img className="abr-team-peep" src={m.peep} alt="" width="160" height="192" loading="lazy" decoding="async" />}
+                <span className={'abr-team-name ' + hand.font.className} style={{ '--hand': hand.size }}>
+                  {m.title}
                 </span>
-                <h3>{m.title}</h3>
-                <p>{m.text}</p>
+                <span className="abr-team-role">{m.text}</span>
               </li>
             );
           })}

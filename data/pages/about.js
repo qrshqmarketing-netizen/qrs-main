@@ -50,14 +50,16 @@ export const ABOUT_PAGE = {
   },
   team: {
     heading: 'Our Team',
-    intro: 'Real people behind every roof, from the office to the ridge line. Names and photos are on the way — here’s who does the work today.',
+    intro: 'Real people behind every roof, from the office to the ridge line.',
+    // One card, first name and role (owner, November 19 2026); `text` is the role, `peep` the hand-drawn character above the name (only Adva drawn as a woman)
     items: [
-      { title: 'Tony Goldberg', text: 'Co-founder and CEO. Tony co-founded QRS with Adva; his own roofing story is above.' },
-      { title: 'Adva Goldberg', text: 'Co-founder and President. Adva co-founded QRS with Tony, and QRS is a family-owned, woman-owned business.' },
-      { title: 'Field Inspectors & Lead Roofers', text: 'Your free drone roof evaluation and every $199 Roof Check (the visit where we seal and maintain the roof) are done by a field inspector, lead roofer or estimator on our own team — never an outside crew.' },
-      { title: 'Senior Production Manager', text: '30 years overseeing roofing projects, managing our crews and quality control on every job.' },
-      { title: '12 Crews, Every Roof Type', text: 'Dedicated crews for shingle, tile and flat roofing, with vetted partner crews brought in only during overflow.' },
-      { title: 'Bilingual Office Team & Roofers', text: 'Our team communicates in English, Spanish and Tagalog.' },
+      { title: 'Tony', peep: '/images/team/peeps/tony.svg', text: 'CEO & Co-Founder' },
+      { title: 'Adva', peep: '/images/team/peeps/adva.svg', text: 'President & Co-Founder' },
+      { title: 'Abner', peep: '/images/team/peeps/abner.svg', text: 'Estimating Manager' },
+      { title: 'George', peep: '/images/team/peeps/george.svg', text: 'Production Manager' },
+      { title: 'Steve', peep: '/images/team/peeps/steve.svg', text: 'Marketing Manager' },
+      { title: 'Shade', peep: '/images/team/peeps/shade.svg', text: 'Field Roof Inspector' },
+      { title: 'Daniel', peep: '/images/team/peeps/daniel.svg', text: 'Field Roofing Associate' },
     ],
   },
   services: {

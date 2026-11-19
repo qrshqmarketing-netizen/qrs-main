@@ -172,3 +172,17 @@ main.abr .abr-keep .container{width:auto;max-width:calc(1680px + 2 * var(--abr-g
 .abr-crew-bg{position:absolute;left:0;right:0;z-index:-2}
 .abr-crew-bg img{object-fit:cover;object-position:center 40%}
 @media print,(prefers-reduced-motion:reduce){.abr-crew-bg{transform:none!important;top:0!important;bottom:0!important}}
+
+/* Team as one card (owner, November 19 2026): names in handwriting fonts (AboutRemote.jsx HANDS), the role in small spaced capitals under each */
+.abr-team-card{list-style:none;margin:0;padding:clamp(28px,4vw,56px) clamp(16px,3vw,48px);border:1px solid var(--line);border-radius:var(--radius);background:var(--paper);
+  display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(26px,3.4vw,48px) clamp(20px,4vw,64px)}
+.abr-team-card li{flex:0 1 calc((100% - clamp(20px,4vw,64px)) / 2);display:grid;justify-items:center;align-content:start;gap:10px;text-align:center}
+.abr-team-name{display:block;color:var(--ink);font-size:calc(clamp(34px,3.4vw,46px) * var(--hand,1));line-height:1.15;white-space:nowrap}
+.abr-team-role{color:var(--muted);font:600 12px/1.4 var(--font-text),sans-serif;letter-spacing:.14em;text-transform:uppercase}
+/* Three per row from 621px: 3 + 3 + 1, so three rows (owner, November 19 2026); two per row on phones */
+@media (min-width:621px){.abr-team-card li{flex-basis:calc((100% - 2 * clamp(20px,4vw,64px)) / 3)}}
+/* The hand-drawn character above each name (Open Peeps, navy/gold line art on white); in the dark theme it sits on a soft light disc so the ink lines show */
+.abr-team-peep{display:block;width:clamp(92px,9vw,128px);height:auto;aspect-ratio:940/1130;margin-bottom:-4px}
+/* Names in the different handwriting fonts sit at different heights: a fixed line box keeps each role level with its row */
+.abr-team-card .abr-team-name{display:flex;align-items:center;justify-content:center;height:clamp(52px,4.6vw,64px)}
+:root[data-theme="dark"] .abr-team-peep{background:radial-gradient(circle at 50% 55%,#f4efe4 0 62%,transparent 63%);border-radius:50%}

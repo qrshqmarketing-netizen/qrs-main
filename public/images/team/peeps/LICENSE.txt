@@ -1,0 +1,2 @@
+Open Peeps by Pablo Stanley (https://www.openpeeps.com), released under CC0 1.0 (public domain); composed with the
+@opeepsfun/open-peeps package (MIT). Recolored to the site's navy, gold and ink, November 19 2026.
