@@ -242,6 +242,13 @@ export const ES = {
   'Settings': 'Configuración',
   'Necessary only': 'Solo las necesarias',
   'Accept all': 'Aceptar todas',
+  'We value your privacy': 'Valoramos su privacidad',
+  'We use cookies to keep the site working and, with your OK, to see how it’s used and which of our ads bring requests. By clicking “Accept All”, you agree to our use of cookies.':
+    'Usamos cookies para que el sitio funcione y, con su permiso, para ver cómo se usa y qué anuncios nos traen solicitudes. Al hacer clic en “Aceptar todas”, acepta nuestro uso de cookies.',
+  'Cookie Policy': 'Política de cookies',
+  'Customize': 'Personalizar',
+  'Reject All': 'Rechazar todas',
+  'Accept All': 'Aceptar todas',
   'Hi! Questions about your roof? I can help.': '¡Hola! ¿Preguntas sobre su techo? Le puedo ayudar.',
 
   // ---------- Studio home page sections on /es/ (November 4 2026) ----------

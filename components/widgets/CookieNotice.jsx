@@ -9,8 +9,9 @@ import { local } from '@/lib/storage';
 import { afterSplash } from '@/lib/splash';
 import './CookieNotice.css';
 
-// The cookie bar (owner, October 15 2026): the full width of the bottom of the screen, on a first visit until the visitor chooses.
-// "Accept all", "Necessary only", or "Settings", which opens switches for each kind of cookie (lib/consent.js applies and saves them).
+// The cookie notice (owner, October 15 2026; a card in the bottom-left corner since November 19 2026, after a reference the owner liked:
+// "We value your privacy", a short line with the Cookie Policy link, and Customize / Reject All / Accept All). On phones it spans the width
+// above the action bar. "Customize" opens switches for each kind of cookie (lib/consent.js applies and saves them).
 // The October 26 version that opened with the switches showing (about 612px tall on a phone) was taken back on October 27 after calls dropped.
 // The footer's "Cookie settings" link opens it again at the settings. While it is up, body has `cookie-open` (the El Niño pop-up waits for it).
 
@@ -60,7 +61,8 @@ export default function CookieNotice() {
     const root = document.documentElement;
     const el = bar.current;
     if (!open || !el || !('ResizeObserver' in window)) return undefined;
-    const watch = new ResizeObserver(() => root.style.setProperty('--cookie-h', `${el.offsetHeight}px`));
+    // Only on phones, where the card spans the width; from 621px it sits at the left and the bubble at the right stays put
+    const watch = new ResizeObserver(() => root.style.setProperty('--cookie-h', window.innerWidth < 621 ? `${el.offsetHeight + 12}px` : '0px'));
     watch.observe(el);
     return () => {
       watch.disconnect();
@@ -86,6 +88,7 @@ export default function CookieNotice() {
   return (
     <div className={'cookie' + (settings ? ' is-settings' : '')} role="region" aria-label={tr('Cookie settings')} ref={bar}>
       <div className="cookie-inner">
+        <p className="cookie-title">{tr('We value your privacy')}</p>
         {settings && (
           <fieldset className="cookie-kinds" ref={panel}>
             <legend>{tr('Choose which cookies we can use')}</legend>
@@ -108,30 +111,32 @@ export default function CookieNotice() {
           </fieldset>
         )}
         <div className="cookie-bar">
-          <p>
-            {tr('We use cookies to keep the site working and, with your OK, to understand how it’s used.')}
-            {PRIVACY_POLICY_URL && (
-              <>
-                {' '}
-                <a href={PRIVACY_POLICY_URL}>{tr('Privacy policy')}</a>
-              </>
-            )}
-          </p>
+          {!settings && (
+            <p>
+              {tr('We use cookies to keep the site working and, with your OK, to see how it’s used and which of our ads bring requests. By clicking “Accept All”, you agree to our use of cookies.')}
+              {PRIVACY_POLICY_URL && (
+                <>
+                  {' '}
+                  <a href={PRIVACY_POLICY_URL}>{tr('Cookie Policy')}</a>
+                </>
+              )}
+            </p>
+          )}
           <div className="cookie-actions">
             {settings ? (
               <button className="cookie-btn cookie-line" type="button" onClick={() => save(choice)}>
                 {tr('Save my choices')}
               </button>
             ) : (
-              <button className="cookie-btn cookie-text" type="button" aria-expanded="false" onClick={() => setSettings(true)}>
-                {tr('Settings')}
+              <button className="cookie-btn cookie-line" type="button" aria-expanded="false" onClick={() => setSettings(true)}>
+                {tr('Customize')}
               </button>
             )}
-            <button className="cookie-btn cookie-line" type="button" onClick={() => save({ analytics: false, clarity: false })}>
-              {tr('Necessary only')}
+            <button className="cookie-btn cookie-ok" type="button" onClick={() => save({ analytics: false, clarity: false })}>
+              {tr('Reject All')}
             </button>
             <button className="cookie-btn cookie-ok" type="button" onClick={() => save({ analytics: true, clarity: true })}>
-              {tr('Accept all')}
+              {tr('Accept All')}
             </button>
           </div>
         </div>
