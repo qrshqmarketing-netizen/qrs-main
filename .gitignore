@@ -19,3 +19,10 @@ npm-debug.log*
 
 # Claude Code personal settings
 .claude/settings.local.json
+
+# JPG originals stay on this computer only (owner, November 19 2026): the site uses WebP copies. The social sharing image is the exception.
+*.jpg
+*.jpeg
+*.JPG
+*.JPEG
+!public/og-image.jpg
