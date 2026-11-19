@@ -8,11 +8,11 @@ const photo = (n, alt) => ({ src: mediaUrl(`${DIR}${String(n).padStart(2, '0')}.
 
 export const GARDEN_GROVE_FLAT_PROJECT = {
   path: '/projects/single-family-shingle-flat-roof-garden-grove-92840/',
-  keyword: 'shingle roof replacement in Garden Grove',
+  keyword: 'shingle and flat roof replacement in Garden Grove',
   title: 'Single-Family Shingle & Flat Roof Replacement in Garden Grove 92840',
   metaTitle: 'Shingle & Flat Roof Replacement in Garden Grove 92840',
   description:
-    'Single-family roof replacement in Garden Grove 92840: new Owens Corning shingles on every pitched roof and a Polyglass flat roof where the roofs meet.',
+    'Shingle and flat roof replacement in Garden Grove 92840: new Owens Corning shingles on every pitched roof and a Polyglass flat roof where the roofs meet.',
   image: mediaUrl(`${DIR}09.webp`), // the whole house from above at an angle; also the first photo in `photos`
   imageAlt: 'Angled aerial view of a single-family home in Garden Grove with a new gray shingle roof, two skylights and white flat roof sections between the roof planes',
   // Short name for the "Recent projects" links on the pages this project is listed under (`related`)
@@ -51,7 +51,7 @@ export const GARDEN_GROVE_FLAT_PROJECT = {
     photo(8, 'The white flat roof on the rear building, in long rows with sealed laps and a flashed edge against the shingle roof'),
   ],
   paragraphs: [
-    'This single-family roof replacement in Garden Grove 92840 gave a home with several roof planes one clean, consistent finish. Our roofers re-roofed the pitched roofs in new Owens Corning shingles and covered the flat sections, where the roofs meet and on the rear building, with a Polyglass flat roof.',
+    'This shingle and flat roof replacement in Garden Grove 92840 gave a single-family home with several roof planes one clean, consistent finish. Our roofers re-roofed the pitched roofs in new Owens Corning shingles and covered the flat sections, where the roofs meet and on the rear building, with a Polyglass flat roof.',
     'The home has a roof with many hips, ridges and valleys, and every one is finished in matching shingles. The courses run in even rows from the eave up, the ridge and hip caps are straight, and the rear building has the same new shingle roof as the house.',
     'Where two roof planes meet in a low spot, or where a roof is nearly flat, shingles are the wrong tool. Those sections got a white Polyglass flat roof in rows with sealed laps, carried up to the shingles and the walls, so water that collects there has a roof built for it. Our [flat roof replacement](/residential-roofing/flat-roofing/replacement/) page explains how we build these.',
     'The roof has two skylights, box vents and plumbing pipes. Each was flashed into the new roof, so the roof drains clear of all of them and the attic can still breathe. Read more about [attic ventilation](/residential-roofing/attic-ventilation/).',

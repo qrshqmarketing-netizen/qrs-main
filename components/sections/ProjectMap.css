@@ -17,3 +17,6 @@
   .loc-item.proj-item{grid-template-columns:72px minmax(0,1fr);padding:18px 16px 18px 12px}
   .proj-thumb{width:72px;height:56px}
 }
+/* Project names in the map list stay small (owner, November 18 2026): the site-wide `main h3` size (20-26px, !important, StudioSite.css) made
+   each title run to four or five lines; this is more specific, so it wins */
+html body.studio-site main .loc-item.proj-item h3{font-size:16px!important;line-height:1.35!important;font-weight:400!important;letter-spacing:.01em!important}
