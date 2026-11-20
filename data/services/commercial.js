@@ -326,7 +326,7 @@ export const COMMERCIAL_CONTENT = {
       title: 'Property Management Roofing',
       navLabel: 'Property Managers',
       card: 'One roofer for the buildings you manage: photo reports, written scopes for owner approval and work planned around tenants.',
-      metaTitle: 'Property Management Roofing in Los Angeles & Orange County',
+      metaTitle: 'Property Management Roofing Services in Los Angeles', // Search Console, Nov 12-18 2026 (owner, November 20 2026): property management roofing services (289 impressions at 8.5); was '... in Los Angeles & Orange County'
       metaDescription: 'Property management roofing in LA & Orange County: roofer-led surveys, photo reports and written scopes owners can approve. Request a roof survey.',
       image: '/images/projects/commercial-flat-roof-replacement-westminster-92683/commercial-flat-roof-westminster-92683-14.webp',
       imageAlt: 'Rows of new white cap sheet with sealed laps along the parapet edge of a commercial flat roof in Westminster',

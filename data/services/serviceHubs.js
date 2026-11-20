@@ -2,7 +2,7 @@
 
 export const ROOF_REPAIR_HUB = {
   keyword: 'roof repair',
-  metaTitle: 'Roof Repair Near Me in Los Angeles | Roof Leak Repair', // owner, November 3 2026 (roof repair near me, roof leak repair)
+  metaTitle: 'Roof Repair Los Angeles | Roof Leak Repair Specialists', // Search Console, Nov 12-18 2026 (owner, November 20 2026): roof repair los angeles, roof repair specialist, roof leak repair los angeles; was 'Roof Repair Near Me in Los Angeles | Roof Leak Repair'
   metaDescription: 'Roof repair near you in Los Angeles & Orange County: we fix roof leaks on shingle, tile and flat roofs, with a written price first. Book a free roof evaluation.', // owner, November 3 2026 (keyword list)
   hero: {
     heading: 'Roof Repair in Los Angeles & Orange County\u00a0· *LeakRescue*',

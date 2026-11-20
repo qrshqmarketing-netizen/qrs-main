@@ -3003,11 +3003,11 @@ export const BLOG_POSTS = [
   // laborers", and North County cities (outside the service area). Our voice with three "Our point of view" boxes.
   {
     slug: 'best-roofer-los-angeles',
-    revision: 2, // metal roofing taken out while it is hidden (owner, November 2 2026); POST /api/posts/sync/ after the deploy
+    revision: 3, // 3: meta title from Search Console (November 20 2026) // metal roofing taken out while it is hidden (owner, November 2 2026); POST /api/posts/sync/ after the deploy
     title: 'Best Roofer in LA: A Licensed & Insured Roofing Contractor Serving All of LA County',
     keyword: 'best roofer in la',
     topics: ['replacement', 'repair', 'inspection', 'storm', 'insurance'],
-    metaTitle: 'Best Roofer in LA: Licensed, Insured & Warranty-Backed',
+    metaTitle: 'Best Roofer in LA: How to Find a Top-Rated Roofing Company',
     metaDescription:
       'Looking for the best roofer in LA? Check the license, insurance, warranty and reviews. QRS is licensed, bonded and insured with 281 Google reviews.',
     datePublished: '2026-11-02',
@@ -5038,14 +5038,14 @@ export const BLOG_POSTS = [
     title: 'Asphalt Shingle vs. Tile Roof: Cost, Weight and Upkeep in Los Angeles',
     keyword: 'shingle vs. tile roof',
     topics: ['replacement', 'shingle', 'tile', 'underlayment'],
-    metaTitle: 'Shingle vs. Tile Roof: Which Is Right for Your Home?',
+    metaTitle: 'Shingle vs. Tile Roof: Cost, Weight and Which Fits Your Home',
     metaDescription:
       'Shingle vs. tile roof for a Los Angeles home: how cost, weight, aging, fire rating and upkeep compare, and which homes each roof suits best.',
     datePublished: '2026-10-13',
     dateModified: '2026-10-16',
     // No prices in this article (owner, October 16 2026): cost is described in general terms. `revision` copies this text over the live
     // copy in Supabase once (lib/postsStore.js applyFileRevisions); raise it after the next change made here.
-    revision: 3,
+    revision: 4, // 4: meta title from Search Console (November 20 2026)
     excerpt:
       'Asphalt shingles and tile are the two roofs you see most across Los Angeles. Here is how they compare on cost, weight, aging, fire rating and upkeep, and how to tell which one your home is built for.',
     image: '/images/blog/asphalt-shingle-vs-tile-roof.webp',
@@ -5275,9 +5275,9 @@ export const BLOG_POSTS = [
     slug: 'clay-vs-concrete-tile-roof',
     title: 'Clay vs. Concrete Tile Roofs: How They Differ and Which to Choose',
     keyword: 'clay vs. concrete tile',
-    revision: 2,
+    revision: 3, // 3: meta title from Search Console (November 20 2026)
     topics: ['tile', 'replacement', 'underlayment', 'repair'],
-    metaTitle: 'Clay vs. Concrete Tile Roofs: Key Differences',
+    metaTitle: 'Clay vs. Concrete Tile Roofs: Differences and How to Tell',
     metaDescription:
       'Clay vs. concrete tile for a Southern California roof: what each is made of, weight, color, how they age and how to tell which you have.',
     datePublished: '2026-10-13',
@@ -5748,11 +5748,11 @@ export const BLOG_POSTS = [
   {
     slug: 'torch-down-roofing-app-vs-sbs',
     // Search Console FAQ additions (owner, October 26 2026); `revision` copies this text over the live copy once
-    revision: 2,
+    revision: 3, // 3: meta title from Search Console (November 20 2026)
     title: 'Torch-Down Roofing: APP vs. SBS Modified Bitumen for Flat Roofs',
     keyword: 'torch-down roofing',
     topics: ['flat', 'replacement', 'repair', 'commercial'],
-    metaTitle: 'Torch-Down Roofing: APP vs. SBS for Flat Roofs',
+    metaTitle: 'What Is Torch-Down Roofing? APP vs. SBS Explained',
     metaDescription:
       'Torch-down roofing explained: how APP and SBS modified bitumen differ, how a two-layer flat roof is built, signs it needs repair and how it compares with TPO.',
     datePublished: '2026-10-13',
@@ -7437,12 +7437,12 @@ export const BLOG_POSTS = [
     // article keeps its rankings and links. `revision` copies this text over the live copy in Supabase once (lib/postsStore.js applyFileRevisions).
     // Left out of the draft: its byline (every article is by Tony G.), its publishing notes and the signing place of AB 1795 (the Department of
     // Insurance's release doesn't give it); "we work with adjusters regularly" follows the owner's own wording (we help where we can).
-    revision: 9, // November 9 2026: the 'roof insurance claim help' section, checklist, FAQs and meta (after the HomeAdvisor analysis); POST /api/posts/sync/ after the deploy
+    revision: 10, // 10: meta title from Search Console (November 20 2026) // November 9 2026: the 'roof insurance claim help' section, checklist, FAQs and meta (after the HomeAdvisor analysis); POST /api/posts/sync/ after the deploy
     revisionImage: true, // the new thumbnail goes to the live copy with this revision
     title: 'How to File a Roof Insurance Claim in California: Step-by-Step (and When to Bring in a Roofer)',
     keyword: 'roof insurance claim',
     topics: ['insurance', 'storm', 'emergency', 'repair', 'replacement', 'tile'],
-    metaTitle: 'Roof Insurance Claim Help in California: Who Does What',
+    metaTitle: 'Roof Insurance Claims in California: Filing Step by Step',
     metaDescription:
       'Roof insurance claim help in California: who does what, what to have ready, how to file, insurer deadlines, the adjuster visit and what a roofer can do.',
     datePublished: '2026-10-05',

@@ -6,7 +6,7 @@ export const RESIDENTIAL_PAGE = {
   // Meta for the searches the owner picked (October 30 2026: roof repair specialist (Los Angeles, CA), tile roof inspection near me, roofers Los
   // Angeles County CA, certified roofing specialists, local roofing experts Los Angeles). 57 / 158 characters; "certified" = the manufacturer
   // certifications on /credentials/, "free" = the home roof evaluation.
-  metaTitle: 'Residential Roofing in Los Angeles', // rolled back to the October 28 wording (owner, November 2 2026)
+  metaTitle: 'Residential Roofing Services in Los Angeles, CA', // Search Console, Nov 12-18 2026 (owner, November 20 2026): residential roofing services los angeles; was 'Residential Roofing in Los Angeles'
   metaDescription:
     'Residential roofing in Los Angeles & Orange County: shingle, tile and flat roofs, plus HOA and multi-family roofing. Start with a free roof evaluation.',
   hero: {
