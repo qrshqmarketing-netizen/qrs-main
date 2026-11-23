@@ -21,6 +21,14 @@ export const POST_VISUALS = {
   'how-to-trace-a-roof-leak-in-the-attic': {
     'Stop 3: Look Up and Read the Roof Deck': { table: 'cards' },
   },
+  'curling-cracked-missing-shingles': {
+    'Curling, Cracked and Missing Shingles Side by Side': { table: 'cards' },
+    'Repair or Replace? The Questions That Decide It': { table: 'decide' },
+  },
+  'shingle-granule-loss': {
+    'Show: What You Scoop Out of the Gutter': { table: 'cards' },
+    'Tell: What the Amount Means': { table: 'decide' },
+  },
   'how-to-read-a-ceiling-stain': {
     'Roof Leak, Condensation or Plumbing: Side by Side': { table: 'cards' },
     'Which Sounds Like Your Stain?': { table: 'decide' },

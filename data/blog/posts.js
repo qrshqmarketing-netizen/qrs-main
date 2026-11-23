@@ -24,6 +24,379 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // Curling vs. cracked vs. missing shingles (owner, November 23 2026): keyword "missing shingles". Educational, side by side: what each looks
+  // like, what causes it, which is serious (missing is the most urgent today, roof-wide curling the most serious for the roof's future), then the
+  // questions that decide repair or replace, to set up that conversation. Our voice, three "Our point of view" boxes, no prices, no lifespans in
+  // years, insurance as the site states it (we document, the insurer decides). Pictures: the owner's images (thumbnail and six in the text).
+  {
+    slug: 'curling-cracked-missing-shingles',
+    title: 'Curling vs. Cracked vs. Missing Shingles: Which Is Serious?',
+    keyword: 'missing shingles',
+    topics: ['shingle', 'repair', 'replacement', 'storm', 'inspection'],
+    metaTitle: 'Curling vs. Cracked vs. Missing Shingles: Which Is Serious?',
+    metaDescription:
+      'Curling, cracked or missing shingles? See them side by side: what each one means, which is most serious, and when it is a repair or a new roof.',
+    datePublished: '2026-11-23',
+    dateModified: '2026-11-23',
+    image: '/images/blog/curling-cracked-missing-shingles.webp',
+    imageAlt: 'Curling, cracked and missing shingles on one gray asphalt shingle roof: curled tabs at the left, a split across a tab in the middle and a gap with the underlayment showing at the right',
+    excerpt:
+      'Curling, cracked and missing shingles side by side: what each one looks like, what causes it, which is most serious, and the questions that decide a repair or a new roof.',
+    intro: [
+      'Curling, cracked and missing shingles all look bad from the driveway, but they don’t mean the same thing. Missing shingles are usually the most urgent today. Curling across the whole roof is usually the most serious for the roof’s future. Cracked shingles sit in between, and how many there are decides which way they go.',
+      'Below, we put the three side by side: what each one looks like, what causes it and how serious it is. Then we walk through the questions our roofers ask to decide between a repair and a new roof, so you can have that conversation with the photos in front of you.',
+    ],
+    sections: [
+      {
+        heading: 'Curling, Cracked and Missing Shingles Side by Side',
+        blocks: [
+          'Here are the three problems next to each other. Most roofs with one of them have a little of the others too, so read all three columns.',
+          { img: '/images/blog/curling-cracked-missing-shingles-side-by-side.webp', alt: 'Three close-ups of gray asphalt shingles labeled Curling, Cracked and Missing: curled tabs, a split running across two tabs, and a gap with the underlayment and nails showing', caption: 'The same roof, three problems: tabs curling up at the edges, a crack running across two tabs, and a gap where shingles have blown off.' },
+          {
+            table: {
+              head: ['Problem', 'What it looks like', 'What usually causes it', 'How serious', 'Usual answer'],
+              rows: [
+                ['Curling', 'Shingle edges turned up at the corners (cupping), or the middle humped up with the edges down (clawing), usually across a whole slope', 'Age and sun drying out the asphalt, a hot attic baking the shingles from below, sometimes how they were installed', 'A sign the shingles are wearing out. Across the roof, it is the most serious of the three for the roof’s future.', 'On one slope, find the cause. Across the roof, plan a replacement.'],
+                ['Cracked', 'A split across a shingle tab, or fine cracks running over the surface', 'Shingles turned brittle with age and heat, wind flexing a tab that has come loose, foot traffic', 'A few cracks on a sound roof are a repair. Cracks on shingle after shingle mean the roof has gone brittle.', 'A few: repair. Many, on every slope: plan a replacement.'],
+                ['Missing', 'A gap in the pattern, with dark underlayment or bare wood showing, and often the shingle in the yard', 'Wind lifting a tab whose seal let go, or nails that didn’t hold', 'The most urgent today: the layer under the shingles is out in the weather.', 'Usually a repair, soon, if the rest of the roof is sound.'],
+              ],
+            },
+          },
+          { pov: 'We tell homeowners to judge a shingle problem by the rest of the roof, not by the one bad spot. Three missing shingles on a roof in good shape is a small repair. Three missing shingles on a roof that is curling everywhere is the roof telling you something bigger.' },
+        ],
+      },
+      {
+        heading: 'Which Is Most Serious?',
+        blocks: [
+          {
+            list: [
+              '**Most urgent today: missing shingles.** The underlayment beneath them isn’t built to sit in the sun and rain on its own. Get it covered before the next storm.',
+              '**Most serious for the roof’s future: curling across the roof.** One curled shingle is a detail. Curling on every slope means the shingles have dried out and are near the end, and repairs won’t stay ahead of it for long.',
+              '**It depends: cracked shingles.** A couple of cracked tabs are a simple repair. Cracks everywhere mean the shingles are brittle, and brittle shingles crack again when they are handled.',
+            ],
+          },
+{ img: '/images/blog/curling-cracked-missing-shingles-shingle-on-lawn.webp', alt: 'A homeowner on the front lawn looks up at a gap in the shingles at the edge of his single-story home, with a torn shingle lying on the grass', caption: 'A shingle in the yard after a windy night is the first sign most homeowners notice. Look up for the gap it came from.' },
+          'The order changes once water comes in. A stain on a ceiling, from any of the three, moves it to the top of the list. If water is coming in now, call for an [emergency roof repair](/roof-repair/emergency/).',
+        ],
+      },
+      {
+        heading: 'Show: Curling Shingles Up Close',
+        blocks: [
+          'Curling comes in two shapes, and both are easiest to see from the side, with the sun low.',
+          {
+            list: [
+              '**Cupping.** The corners and edges of each tab turn up, so the shingle looks like a shallow dish.',
+              '**Clawing.** The middle of the tab humps up while the edges stay down, like fingers curled under.',
+            ],
+          },
+{ img: '/images/blog/curling-cracked-missing-shingles-curling-close-up.webp', alt: 'Low sun across an old asphalt shingle roof, showing row after row of tabs curled up at the edges, with cracks and worn patches', caption: 'Low sun shows curling best. When it runs course after course like this, the shingles have dried out across the roof.' },
+          'Both mean the asphalt has dried and shrunk. That usually comes with age and sun, and it shows first on the slopes that face south and west. A hot attic speeds it up by baking the shingles from below, so curling on a roof that isn’t old is a reason to have the [attic ventilation](/residential-roofing/attic-ventilation/) checked. Curling often travels with granule loss, too: our article on [granule loss](/blog/shingle-granule-loss/) shows what to look for in the gutters.',
+          'Curled shingles catch the wind. Their edges lift, the seal strips let go, and that is how a curling roof turns into a roof with missing shingles after the next windy night.',
+        ],
+      },
+      {
+        heading: 'Show: Cracked Shingles Up Close',
+        blocks: [
+          'Cracks show up in a few different ways, and each one says something different.',
+          {
+            list: [
+              '**A single split across one tab.** Often a tab that came loose and flexed in the wind, or a spot someone stepped on. Usually a repair.',
+              '**Cracks on tab after tab, often in a line.** The shingles have gone brittle with age and heat. This one points toward a replacement.',
+              '**Fine cracks across the surface, sometimes with granules gone.** The asphalt is drying out. Read it together with the rest of the roof.',
+            ],
+          },
+          'A crack lets water reach the nails and the layer under the shingle. Most single cracks don’t leak right away, but they are where the next leak usually starts.',
+        ],
+      },
+      {
+        heading: 'Show: Missing Shingles Up Close',
+        blocks: [
+          'Missing shingles are easy to spot: a gap in the pattern, a different color showing through, and often the shingle itself in the yard or the gutter after a windy night. Look at what shows in the gap.',
+          {
+            list: [
+              '**Dark underlayment.** The layer under the shingles is still there. It buys you a little time, not a season. Have it covered before the next rain.',
+              '**Bare wood.** The underlayment is gone too, and water can reach the roof deck. Treat it as urgent.',
+              '**A shingle that is creased but still there.** It lifted in the wind and folded back. It is about to become a missing shingle.',
+            ],
+          },
+{ img: '/images/blog/curling-cracked-missing-shingles-missing-shingles.webp', alt: 'A gap in a gray shingle roof with dark underlayment and loose nails showing, a creased shingle folded back beside it and broken shingle pieces in the gutter', caption: 'Underlayment showing where shingles blew off, a creased shingle about to follow, and the pieces in the gutter. This needs covering before the next rain.' },
+          'Please don’t climb up to put a shingle back yourself. If water is getting in, our article on [how to stop a roof leak](/blog/stop-a-roof-leak/) covers what you can safely do from inside until a roofer arrives.',
+          { pov: 'Missing shingles are the call we would rather get early. The repair is usually small, and the damage that comes from waiting, wet deck and stained ceilings, is not.' },
+        ],
+      },
+      {
+        heading: 'Repair or Replace? The Questions That Decide It',
+        blocks: [
+          'Whichever of the three you have, the same questions decide whether a repair makes sense or the roof is due:',
+          {
+            checklist: [
+              'How many shingles are affected: a few, or many?',
+              'Is it on one slope or in one spot, or on every slope?',
+              'How old is the roof, and what does the paperwork from the installation say?',
+              'Are the rest of the shingles still flexible, or brittle and dry?',
+              'Are the granules mostly there, or are there bare patches?',
+              'Has the roof leaked before, in more than one place?',
+              'Does the deck feel soft anywhere, or sag along the roofline?',
+            ],
+          },
+          'Then find the row closest to your roof.',
+          { img: '/images/blog/curling-cracked-missing-shingles-healthy-vs-worn-slope.webp', alt: 'Drone view of a home where one slope of the gray shingle roof is even and sound with one small damaged spot, and the other slope is curled, cracked and missing shingles all over', caption: 'One small damaged spot on a sound slope is a repair. A slope worn like the one on the right is the roof telling you it is due.' },
+          {
+            table: {
+              head: ['What you see', 'Usually a repair when…', 'Usually a replacement when…'],
+              rows: [
+                ['Curling', 'It is on one slope or one area with a cause that can be fixed, such as a hot spot in the attic', 'It is on every slope and the shingles are dry and brittle'],
+                ['Cracked', 'There are a few cracks and the rest of the roof is flexible', 'Cracks run tab after tab across the roof'],
+                ['Missing', 'A few blew off in the wind and the rest of the roof is sound', 'They keep coming off, storm after storm, because the shingles around them are worn out'],
+                ['A mix of all three', 'It is limited to one area and the rest of the roof has life in it', 'It is everywhere, with granule loss and more than one leak'],
+              ],
+            },
+          },
+        ],
+      },
+      {
+        heading: 'Why a Repair on a Worn Roof Is Harder Than It Looks',
+        blocks: [
+          'To replace a shingle, the courses above it are lifted, the new one is nailed in the manufacturer’s nailing zone and the lot is sealed down. On a flexible roof that is routine. On a brittle roof, the shingles around the repair can crack as they are lifted, and the repair grows.',
+          'Matching is the other question. A new shingle is the closest available match, but an older roof has faded in the sun, so a repaired spot can show. On a roof in good shape that is a small trade. On a roof near the end, it is a patch on something that is wearing out everywhere.',
+          { pov: 'A repair on a sound roof is money well spent. On a roof that is curling and cracking everywhere, we would rather show you the photos and talk about a new roof than sell you repair after repair.' },
+        ],
+      },
+      {
+        heading: 'How We Have the Repair-or-Replace Conversation',
+        blocks: [
+          'At QRS, a roofer looks at your roof before anyone tries to sell you one. For curling, cracked or missing shingles, that means:',
+          {
+            list: [
+              'Drone footage and photos of every slope with *RoofScan 360*, so you see the problem spots and the rest of the roof side by side.',
+              'A close look at the shingles around the damage: are they flexible or brittle, are the granules there, are the seals holding?',
+              'A check of the flashings, pipe boots and vents, where leaks usually start, and of the attic ventilation.',
+              'One clear next step: repair, monitor, maintain or replace, explained in plain English.',
+            ],
+          },
+          'If it is a repair, our [roof repair](/roof-repair/) service, *LeakRescue*, fixes what failed and shows you photos of the problem and the finished repair. If it is time for a new roof, a [shingle roof replacement](/residential-roofing/shingle-roofing/replacement/) with our *TotalShield* Shingle System takes the old roof down to the deck and builds a complete new system: underlayment, flashings, balanced attic ventilation and new shingles. Most home roof replacements take 3 to 5 days, installs are backed by a 10-year workmanship warranty (call for details), and home replacements can be paid over time with [financing](/roof-financing/) through Momnt Financing or Service Financing, subject to credit approval.',
+{ img: '/images/blog/curling-cracked-missing-shingles-roofer-tablet-homeowners.webp', alt: 'A roofer in a hard hat and safety vest shows a homeowner couple drone photos of their shingle roof on a tablet at their patio table, with a damaged spot circled', caption: 'The repair-or-replace conversation goes best with the photos on the table: the damage, and every slope around it.' },
+          'Either way, you get a written scope and price before any work starts. For homes, the [roof evaluation](/roof-inspection/) is free.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Are curling shingles a sign I need a new roof?',
+        a: 'Curling across the whole roof usually is: it means the shingles have dried out and are near the end. Curling on one slope or in one area can have a cause worth fixing, such as poor attic ventilation, and may not mean a new roof yet.',
+      },
+      {
+        q: 'Can you replace just a few missing shingles?',
+        a: 'Yes, when the rest of the roof is sound. The courses above are lifted, new shingles are nailed in the manufacturer’s nailing zone and sealed, in the closest available match. If the shingles around them are brittle, we will show you the photos and tell you.',
+      },
+      {
+        q: 'Is a cracked shingle an emergency?',
+        a: 'Usually not. A single crack rarely leaks right away, but it is where the next leak tends to start, so have it repaired before the rainy season. If water is already coming in, it is an emergency call.',
+      },
+      {
+        q: 'Will new shingles match my old roof?',
+        a: 'We use the closest available match. An older roof has faded in the sun, so a repaired spot can show a little. On a roof with plenty of life left, that is usually a fair trade for a repair.',
+      },
+      {
+        q: 'Does insurance cover missing shingles?',
+        a: 'Your insurer decides that, case by case, usually depending on whether a storm caused the damage or the roof wore out. We give you photos and a written scope you can share with them. Our article on [roof insurance claims](/blog/roof-insurance-claims-california/) explains the process.',
+      },
+      {
+        q: 'Can new shingles go over curled or cracked ones?',
+        a: 'We don’t lay new shingles over a worn roof. New shingles over old weak points only hide them, so a replacement takes the old roof down to the deck and builds a complete new system from there.',
+      },
+    ],
+    closing: {
+      heading: 'Not Sure Which One You’re Looking At?',
+      blocks: [
+        'Send us the photos, or let a roofer look. A free roof evaluation shows you every slope in drone footage and photos, tells you whether it is a repair or a new roof, and comes with a written scope and price before any work. Call [(310) 340-1643](tel:+13103401643) or [request your evaluation](#roof-check). If water is coming in now, it is an [emergency roof repair](/roof-repair/emergency/) call.',
+        'Part of our [asphalt shingle roof guide](/blog/asphalt-shingle-roof-guide/).',
+      ],
+    },
+    related: ['/residential-roofing/shingle-roofing/repair/', '/residential-roofing/shingle-roofing/replacement/', '/roof-inspection/', '/roof-repair/emergency/'],
+  },
+  // Shingle granule loss as an early replacement signal (owner, November 23 2026): keyword "granule loss" (the older shingle-granules-in-gutter
+  // owns "granules in your gutter" and answers "is it normal?"; this one is a show-and-tell of what you find and what it means, and links to it).
+  // Our voice, three "Our point of view" boxes, no prices, no lifespans in years, no coatings (we don't apply them). cardImage is a stand-in (a real
+  // QRS shingle roof) until the owner's thumbnail arrives.
+  {
+    slug: 'shingle-granule-loss',
+    title: 'What Shingle Granules in Your Gutter Are Telling You: Granule Loss as an Early Replacement Signal',
+    keyword: 'granule loss',
+    topics: ['shingle', 'replacement', 'inspection', 'maintenance'],
+    metaTitle: 'Shingle Granule Loss: An Early Sign a Roof Needs Replacing',
+    metaDescription:
+      'What shingle granules in your gutter are telling you: how to read granule loss, where it shows first, and why it is an early sign to plan a new roof.',
+    datePublished: '2026-11-23',
+    dateModified: '2026-11-23',
+    cardImage: '/images/shingle-roof-completed-drone-view.webp',
+    excerpt:
+      'A show-and-tell of shingle granule loss: what you scoop out of the gutter, what the shingles look like as the granules go, and why it is the early signal to start planning a new roof, before the leaks.',
+    intro: [
+      'Shingle granules in your gutter are your roof talking. Granule loss is how an asphalt shingle roof wears out: the grains that shield the asphalt from the sun come loose, wash down the roof and collect in your gutters and at your downspouts. Read early, they tell you a replacement is coming while the roof is still keeping you dry.',
+      'This is a show-and-tell. First we show you what to look at: what you scoop out of the gutter, what the shingles look like as the granules go, and where on the roof it shows first. Then we tell you what each sight means, and when it is time to start planning a new roof instead of waiting for a leak.',
+      'If your roof is only a few months or a few years old, start with our article on [granules in your gutter](/blog/shingle-granules-in-gutter/): on a new roof, some shedding is normal.',
+    ],
+    sections: [
+      {
+        heading: 'Show: What You Scoop Out of the Gutter',
+        blocks: [
+          'Put on gloves, take a handful from the gutter or from the bottom of a downspout, and spread it on a sheet of white paper in daylight. Here is how to tell shingle granules from everything else that ends up in a gutter.',
+          {
+            table: {
+              head: ['What it is', 'What it looks like', 'What it means'],
+              rows: [
+                ['Shingle granules', 'Small, hard, even grains like coarse sand, the same color as your roof: dark gray, black, brown or speckled. They sink in water and don’t smear.', 'Your shingles are shedding. The amount and the age of the roof decide whether it matters.'],
+                ['Sand and dirt', 'Grains of mixed size and color, usually lighter than the roof, that turn to mud when wet', 'Blown in from the yard or the street. Not from the roof.'],
+                ['Leaves, needles and seed pods', 'Plant matter that breaks down into a dark, soft muck', 'A gutter that needs cleaning. Not from the roof, but it holds water against the edge.'],
+                ['Pieces of tile', 'Chips of red or brown clay, or gray concrete', 'A cracked or broken tile on a tile roof. Tile roofs don’t shed granules; shingle roofs do.'],
+              ],
+            },
+          },
+          'Then look at the amount. A sprinkle along the bottom of the gutter is one thing. A layer you can scoop is another, and a fan of grit spread out at the bottom of each downspout after a rain is another again.',
+          { pov: 'When a homeowner calls about granules, we ask for a photo of that sheet of paper and the year the roof went on. Grit in a gutter means very little on its own. Grit plus the roof’s age plus a look at each slope tells us most of the story.' },
+        ],
+      },
+      {
+        heading: 'Tell: What the Amount Means',
+        blocks: [
+          'Find the row closest to what you scooped out.',
+          {
+            table: {
+              head: ['What you find', 'What it usually means', 'What to do next'],
+              rows: [
+                ['A sprinkle after the first rains on a new roof', 'Extra granules from manufacturing washing off. Normal, and it tapers off over the first months.', 'Clean the gutters and check again after the next rain. See [granules in your gutter](/blog/shingle-granules-in-gutter/).'],
+                ['A little after each rain on a roof that has been up for years, with even color across the roof', 'Normal weathering. The roof is aging the way roofs do.', 'Take dated photos once a season so you can compare. Nothing to book yet.'],
+                ['A layer you can scoop, or grit fanned out at the downspouts after every storm', 'The bond between the granules and the asphalt is letting go across the roof. This is the early replacement signal.', 'Book a roof evaluation and start planning, before the shingles crack and curl.'],
+                ['Granules plus bare patches, curling shingles or a stain inside', 'The roof is past the early signal: the asphalt is exposed and wearing out.', 'Book a roof evaluation soon. If water is coming in now, call for an [emergency roof repair](/roof-repair/emergency/).'],
+              ],
+            },
+          },
+          'Age matters as much as the amount. The shingle line, the sun and the attic ventilation all change how long a roof lasts, so the paperwork from your installation and the date it went on are the best guides to what is normal for yours.',
+        ],
+      },
+      {
+        heading: 'Show: What Shingles Look Like as the Granules Go',
+        blocks: [
+          'From the ground, with binoculars or your phone’s zoom, granule loss shows up in four stages. Stay off the roof: worn shingles are slippery, and walking on them scuffs off more granules.',
+          {
+            steps: [
+              '**Full coverage.** Even color across every slope, a texture like fine gravel up close, crisp shingle edges.',
+              '**Thinning.** The roof looks lighter, blotchy or faded in places, often on the slopes that get the afternoon sun. The shingles still lie flat.',
+              '**Bare spots.** Dark, smooth patches where the asphalt shows through. In the worst spots the mat inside the shingle shows as a lighter, fibrous texture.',
+              '**Curling and cracking.** Without the granules, the sun dries the asphalt out. Edges cup or curl, tabs crack and the shingles turn brittle. This is when leaks start.',
+            ],
+          },
+          'Most roofs don’t move through the stages evenly. One slope can be at stage three while another still looks close to new.',
+        ],
+      },
+      {
+        heading: 'Where Granule Loss Shows First',
+        blocks: [
+          {
+            list: [
+              '**South- and west-facing slopes.** They take the most sun, so they usually lose their granules first.',
+              '**Where an upper roof drains onto a lower one.** A downspout that empties onto a lower roof sends water down the same path in every storm, and it can wear a lighter trail into the shingles below.',
+              '**Valleys.** Water from two slopes runs through them, so they carry more of it than anywhere else on the roof.',
+              '**Along foot paths.** Where people have walked the roof to reach an air conditioner, a dish or solar panels, granules can be scuffed off in a trail.',
+              '**Above a hot attic.** Poor [attic ventilation](/residential-roofing/attic-ventilation/) bakes the shingles from below and speeds up wear across the roof.',
+            ],
+          },
+          'Loss in one area points to a cause worth finding, which may mean a [shingle roof repair](/residential-roofing/shingle-roofing/repair/). Loss across the whole roof points to age, and to a plan.',
+        ],
+      },
+      {
+        heading: 'Why Granule Loss Is an Early Replacement Signal',
+        blocks: [
+          'Granules are the shingle’s sunscreen. They shield the asphalt from ultraviolet light, which breaks it down. Once they are gone, the asphalt dries, shrinks and cracks, the shingles curl, and water finds its way under them.',
+          'That order is the useful part. The grit shows up in the gutter before the shingles crack, and the shingles crack before the ceiling stains. Read early, granule loss gives you time to plan, instead of a phone call in the middle of a storm.',
+          { pov: 'We would rather plan a new roof with you from a gutter full of granules than from a ceiling stain. Planned, you choose the timing, the color and how to pay for it. After a leak, the roof chooses for you, and there is drywall to fix as well.' },
+          'Planning ahead also means a calm comparison: a written scope and price, time for questions, and time to read up on [what sets the price of a new roof](/blog/roof-replacement-cost-los-angeles/), without a bucket on the floor.',
+        ],
+      },
+      {
+        heading: 'A Simple Jar Test Over One Season',
+        blocks: [
+          'One handful tells you what is coming off the roof. A few handfuls over a season tell you how fast. This is the test we suggest to homeowners who want to know whether the shedding is picking up.',
+          {
+            steps: [
+              '**Start with clean gutters.** Scoop everything out, or have it done, so you start from zero.',
+              '**Pick one downspout.** Choose one that drains a sunny slope, and set a bucket under the outlet.',
+              '**After each rain, pour off the water and save the grit in a jar.** Label the jar with the date.',
+              '**Line the jars up.** If each one holds about the same, the roof is shedding at a steady pace. If they grow, the shedding is picking up.',
+              '**Photograph the jars and the roof together.** Dated photos of the jars and of each slope give a roofer a lot to work with.',
+            ],
+          },
+          'Use a steady ladder for the gutters or have someone clean them for you, and never climb onto the roof for this.',
+        ],
+      },
+      {
+        heading: 'How We Read Granule Loss at a Roof Evaluation',
+        blocks: [
+          'At QRS, a roofer looks at your roof before anyone tries to sell you one. When granules are the worry, our roofers:',
+          {
+            list: [
+              'Ask how old the roof is and what you have found in the gutters, and look at your jars and photos if you have them.',
+              'Fly the drone over every slope with *RoofScan 360*, so the sun-facing slopes can be compared with the shaded ones.',
+              'Look closely for bare asphalt, blistering, cracking and curling, and check the flashings, vents and pipes, where leaks usually start.',
+              'Look at the attic ventilation, which changes how fast shingles age.',
+            ],
+          },
+          'You get the drone footage and photos, a plain-English explanation and one clear next step: repair, monitor, maintain or replace. If you go ahead, you get a written scope and price before any work starts. For homes, the [roof evaluation](/roof-inspection/) is free.',
+          { pov: 'If your roof has life left in it, we will say so. Granules in a gutter are a reason to look, not a reason to replace, and we would rather tell you to keep an eye on it than sell you a roof you don’t need yet.' },
+        ],
+      },
+      {
+        heading: 'When It’s Time: A New Roof From the Deck Up',
+        blocks: [
+          'If the granule loss runs across the whole roof and the shingles are starting to dry out, a [shingle roof replacement](/residential-roofing/shingle-roofing/replacement/) is the fix. New shingles over old weak points only hide them, so we take the old roof down to the deck and build a complete new system: underlayment, flashings, balanced attic ventilation and new shingles. That is our *TotalShield* Shingle System.',
+          {
+            list: [
+              'Most home roof replacements take 3 to 5 days.',
+              'Our roofers pull the permit, cover the yard and plants with tarps, and sweep for nails with a magnet when the work is done.',
+              'You can choose a cool roof color: our shingle colors are all rated SRI 20 or higher. See [shingle roofing](/residential-roofing/shingle-roofing/).',
+              'Our installs are backed by a 10-year workmanship warranty (call for details).',
+              'Home roof replacements can be paid over time with [financing](/roof-financing/) through Momnt Financing or Service Financing, subject to credit approval.',
+            ],
+          },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What does granule loss on shingles mean?',
+        a: 'It means the grains pressed into the top of your asphalt shingles are coming loose. A little is normal on a new roof and as a roof ages. Heavy or growing loss, especially with bare spots, means the shingles are wearing out and a replacement is coming.',
+      },
+      {
+        q: 'How much granule loss is too much?',
+        a: 'There isn’t a set amount. A sprinkle after rain is usually normal. A layer you can scoop, grit fanned out at the downspouts after every storm, or bare dark patches on the roof are signs to have it looked at. The age of the roof matters as much as the amount.',
+      },
+      {
+        q: 'Can lost granules be put back on?',
+        a: 'No. Once granules come off, they don’t go back, and coatings and sealants don’t put them back either (we don’t apply coatings). A worn area can sometimes be repaired; wear across the whole roof means planning a new one.',
+      },
+      {
+        q: 'Will a roof with granule loss leak right away?',
+        a: 'Usually not. The asphalt underneath still sheds water for a while. But without the granules it dries out, cracks and curls faster, and that is when leaks start. That gap is why granule loss is a useful early signal.',
+      },
+      {
+        q: 'Why is one side of my roof losing more granules?',
+        a: 'Slopes that face south and west take the most sun and usually wear first. Loss in one spot can also come from water draining off an upper roof, from foot traffic or from a damaged area. A roofer can tell age apart from a cause that needs fixing.',
+      },
+      {
+        q: 'Is it safe to check my roof for granule loss myself?',
+        a: 'From the ground, yes: look in the gutters and at the downspouts, and use binoculars or your phone’s zoom on each slope. Please don’t walk on the roof. Worn shingles are slippery, and walking on them scuffs off more granules.',
+      },
+    ],
+    closing: {
+      heading: 'Read the Grit Early',
+      blocks: [
+        'Granules in the gutter are your roof’s early warning, and it is a lot easier to act on in dry weather. Book a [free roof evaluation](#roof-check) and a roofer will tell you how much life your shingles have left, show you the photos, and give you a written scope and price before any work. Or call [(310) 340-1643](tel:+13103401643).',
+        'Part of our [asphalt shingle roof guide](/blog/asphalt-shingle-roof-guide/).',
+      ],
+    },
+    related: ['/residential-roofing/shingle-roofing/replacement/', '/roof-inspection/', '/residential-roofing/shingle-roofing/repair/', '/roof-financing/'],
+  },
   // Tracing a roof leak from the attic (owner, November 23 2026): keyword "trace a roof leak". A flashlight walkthrough, stop by stop, of what we
   // look for in an attic and what each sight means, then how our roofers take it from there. It sits beside how-to-find-a-roof-leak ("how to find
   // a roof leak", the whole house-to-roof guide) and links to it; this one stays in the attic. Our voice, three "Our point of view" boxes, no
