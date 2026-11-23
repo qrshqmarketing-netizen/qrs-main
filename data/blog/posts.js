@@ -178,7 +178,7 @@ export const BLOG_POSTS = [
           },
 { img: '/images/blog/sagging-roofline-urgent-roofer-drone-homeowner.webp', alt: 'A roofer in a hard hat and safety vest shows a homeowner drone photos of his roof on a tablet in the front yard while a drone hovers over the house', caption: 'A roofer looks first: drone photos of the roofline, shown to you on the spot.' },
           'If the roof needs replacing, a full tear-off takes it down to the deck so every soft section can be found and replaced; our [roof replacement](/roof-replacement/) page explains how it runs. For homes, the [roof evaluation](/roof-inspection/) is free.',
-          { pov: 'Call as soon as you notice a sag. You don’t need to be sure it’s serious before you call; finding that out is our job.' },
+          { pov: 'Calls about a sagging roof go to the front of our list. You don’t need to be sure it’s serious before you call; that is our job.' },
         ],
       },
     ],
