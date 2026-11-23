@@ -24,6 +24,181 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // Moss on the roof, myth vs. fact (owner, November 23 2026): keyword "moss on your roof". Seven myths with the facts, moss vs. algae vs. lichen,
+  // where moss grows on Southern California roofs, what to do (no pressure washing, as the maintenance plans page says), then the door to
+  // maintenance: the RoofCare Plan and the RoofRevive tune-up as the plans page describes them (visits timed to the rains, debris cleared from the
+  // roof surface, valleys, gutters and downspouts, moss watched for on shaded or coastal slopes, a photo report, month to month, pay after each
+  // visit). No prices, no moss treatment or tree trimming claimed for QRS (the plan excludes tree trimming), no coatings. Pictures: the owner's images
+  // (thumbnail and seven in the text).
+  {
+    slug: 'moss-on-roof-myth-vs-fact',
+    title: 'Is Moss on Your Roof Actually Hurting It? Myth vs. Fact',
+    keyword: 'moss on your roof',
+    topics: ['maintenance', 'shingle', 'tile', 'inspection'],
+    metaTitle: 'Is Moss on Your Roof Hurting It? Myth vs. Fact',
+    metaDescription:
+      'Is moss on your roof a problem or just cosmetic? Seven myths and the facts, how to tell moss from algae, and how regular maintenance keeps it away.',
+    datePublished: '2026-11-23',
+    dateModified: '2026-11-23',
+    image: '/images/blog/moss-on-roof-myth-vs-fact.webp',
+    imageAlt: 'Moss on a roof: thick green moss growing in the gaps between gray asphalt shingles on a shaded slope, with one shingle edge lifted',
+    excerpt:
+      'Is moss on your roof just a green patch, or a problem? Seven common myths and the facts, how to tell moss from algae and lichen, and how regular maintenance keeps it from coming back.',
+    intro: [
+      'Moss on your roof can look harmless, even charming. It isn’t. Moss holds water against the roof like a sponge, and that is the problem. Algae, the dark streaks many roofs have, is a different story: mostly cosmetic.',
+      'Southern California roofs get less moss than roofs in rainier places, which is where a lot of the myths come from. Below, we go through seven of the most common ones and the facts behind them, show you how to tell moss from its look-alikes, and explain what keeps it from coming back.',
+    ],
+    sections: [
+      {
+        heading: 'Seven Myths About Roof Moss, and the Facts',
+        blocks: [
+          { h3: 'Myth 1: Moss is just cosmetic' },
+          '**Fact:** Moss soaks up water and holds it against the roof long after the rain stops. On a shingle roof it grows into the gaps between shingles and can lift their edges, so water and wind get underneath. The streaks of algae are mostly cosmetic; moss is not.',
+{ img: '/images/blog/moss-on-roof-myth-vs-fact-lifting-shingle.webp', alt: 'Close-up of green moss beaded with water growing under the edge of an asphalt shingle and prying it up, leaving a dark gap beneath', caption: 'Moss holding water right at the edge of a shingle and prying it up. That gap is where wind and water get underneath.' },
+          { h3: 'Myth 2: Roofs here don’t get moss' },
+          '**Fact:** It is less common than in rainier climates, but it happens. Shaded slopes, roofs under trees and homes near the coast, where the marine layer keeps roofs damp in the morning, can all grow it.',
+          { h3: 'Myth 3: The dark streaks are moss' },
+          '**Fact:** Usually not. Black or dark green streaks running down a slope are almost always algae. Moss is thicker, green and soft, and grows in clumps you can see from the ground. The difference matters, because the two need different answers.',
+          { h3: 'Myth 4: Pressure washing is the quickest fix' },
+          '**Fact:** It is the quickest way to damage the roof. A pressure washer strips the granules that protect shingles from the sun, and on a tile roof it can drive water under the tiles. Moss comes off; so does part of your roof.',
+{ img: '/images/blog/moss-on-roof-myth-vs-fact-pressure-washed-stripe.webp', alt: 'A mossy, lichen-spotted shingle roof with one pressure-washed stripe down the middle where the granules are gone and the dark asphalt shows', caption: 'The moss is gone from the pressure-washed stripe, and so are the granules. The dark asphalt left behind now ages in the sun.' },
+          { h3: 'Myth 5: Scrape it off and you’re done' },
+          '**Fact:** Moss comes back if the conditions stay the same: shade, leaves and needles in the valleys, and a roof that stays damp. Scraping hard can also tear shingles that have gone brittle. Removing the moss is half the job; changing what feeds it is the other half.',
+          { h3: 'Myth 6: Moss can’t hurt a tile roof' },
+          '**Fact:** The tiles won’t rot, but the roof under them can get wet. Moss and the debris it traps can slow the water running through the tiles and hold it where they overlap, and a wet, mossy tile roof is slippery to work on. On tile, the real protection is the underlayment beneath, and it is the part you don’t want water sitting on.',
+{ img: '/images/blog/moss-on-roof-myth-vs-fact-tile-roof.webp', alt: 'Close-up of a wet clay barrel tile roof with moss and fallen leaves packed into the overlaps and the channels between the tiles', caption: 'Moss and wet leaves packed into the channels and overlaps of a tile roof slow the water and hold it where the tiles lap.' },
+          { h3: 'Myth 7: Moss means you need a new roof' },
+          '**Fact:** Usually not. Most of the time it means the roof needs clearing, a check of what is underneath and a fix for the shade or debris that let it grow. A new roof only comes up when the shingles under the moss have curled, cracked or worn out across the roof.',
+          { pov: 'We would much rather talk about moss during a maintenance visit than after a leak. Caught early, moss is a cleanup and a few changes. Left for years, it is what a roof under it has been dealing with all that time.' },
+        ],
+      },
+      {
+        heading: 'Moss, Algae or Lichen? Side by Side',
+        blocks: [
+          'Three things grow on roofs, and from the street they can look alike. Here is how to tell them apart.',
+          {
+            table: {
+              head: ['What it is', 'What it looks like', 'Is it hurting the roof?', 'What to do'],
+              rows: [
+                ['Moss', 'Thick, soft, green clumps, often along the edges of shingles or tiles and in shady spots', 'Yes, over time. It holds water and can lift shingle edges.', 'Have it cleared gently and fix what is feeding it: shade, debris, a damp slope.'],
+                ['Algae', 'Black or dark green streaks running down the slope, flat against the roof', 'Mostly cosmetic. It stains rather than holds water.', 'Nothing urgent. Never pressure wash it off.'],
+                ['Lichen', 'Small, crusty, gray-green or pale patches stuck tight to the surface', 'It grips the surface and can pull granules away if it is scraped off.', 'Leave the removal to a roofer, and point it out at your next visit.'],
+              ],
+            },
+          },
+        ],
+      },
+      {
+        heading: 'Where Moss Grows on Southern California Roofs',
+        blocks: [
+          'Moss needs shade and moisture. On roofs here, that usually means:',
+          {
+            list: [
+              '**North-facing and shaded slopes.** Slopes that see little direct sun stay damp longer after rain or morning fog.',
+              '**Under trees.** Branches shade the roof and drop leaves and needles that hold water.',
+              '**Valleys and gutters full of debris.** Wet leaves in a valley or a clogged gutter make a damp bed for moss to start in.',
+              '**Near the coast.** Where the marine layer lingers, roofs stay damp into the morning.',
+              '**Around sprinklers.** A sprinkler that hits the roof or the eaves every day keeps the edge wet.',
+            ],
+          },
+{ img: '/images/blog/moss-on-roof-myth-vs-fact-shaded-slope.webp', alt: 'A single-story stucco home where the roof slope under a large oak tree is covered in moss and leaves while the sunny slope beside it is clean', caption: 'The same roof, two slopes: the one under the oak stays shaded and covered in leaves, and that is the one growing moss.' },
+          'If moss shows up only on one slope, that slope is telling you about its shade and debris more than about the roof’s age.',
+        ],
+      },
+      {
+        heading: 'What Moss Can Do Under the Surface',
+        blocks: [
+          'The damage from moss is mostly out of sight. From the ground you see the green; under it, the roof may be dealing with:',
+          {
+            list: [
+              '**Lifted shingle edges.** Moss growing into the gaps pries shingles up, breaking the seal that holds them down in the wind.',
+              '**Water wicking under the shingles.** A damp clump at the edge of a shingle feeds water upward and underneath it.',
+              '**Lost granules.** Rough removal pulls granules off with the moss, leaving bare spots that age in the sun.',
+              '**Clogged valleys and gutters.** Bits of moss wash down and join the leaves, so water backs up at the edges.',
+            ],
+          },
+{ img: '/images/blog/moss-on-roof-myth-vs-fact-under-the-moss.webp', alt: 'A gloved hand lifts a shingle where moss had grown, showing dark, wet, worn material and debris trapped underneath', caption: 'What a patch of moss can hide: lift the shingle and the surface under it is wet, dark and worn.' },
+          'That is why we look under a patch of moss, not just at it. The question is what the roof looks like once the green is gone.',
+        ],
+      },
+      {
+        heading: 'What You Can Do About It, Safely',
+        blocks: [
+          'Please don’t climb onto the roof to deal with moss. A mossy roof is slippery even when it is dry, and walking on it scuffs shingles and cracks tiles. From the ground, you can:',
+          {
+            checklist: [
+              'Keep the gutters and downspouts clear, from a steady ladder, or have someone do it',
+              'Have overhanging branches trimmed back by a tree service, so more sun reaches the roof',
+              'Adjust sprinklers so they don’t spray the roof or the eaves',
+              'Take dated photos of any green patches so you can see if they grow',
+              'Point out moss, streaks or lichen at your next roof visit',
+            ],
+          },
+{ img: '/images/blog/moss-on-roof-myth-vs-fact-clearing-gutter.webp', alt: 'A homeowner in work gloves on a ladder clearing wet leaves and bits of moss out of a white gutter at the edge of a shaded shingle roof, with a bucket hanging on the ladder', caption: 'Clearing the gutters from a ladder is one of the best things a homeowner can do against moss. Walking the roof is not.' },
+          'And skip the pressure washer. As our [roof maintenance](/roof-maintenance-plans/) page says, it strips the granules that protect shingles and can drive water under tiles.',
+        ],
+      },
+      {
+        heading: 'How Regular Maintenance Keeps Moss Away',
+        blocks: [
+          'Moss grows where debris sits and water lingers, which is exactly what regular roof maintenance takes away. Our *RoofCare Plan* schedules one or two roofer visits a year, timed to the rains. Each visit includes:',
+          {
+            list: [
+              'A full inspection of the roof covering, valleys, flashings, vents and ridge',
+              'Debris cleared from the roof surface, valleys, gutters and downspouts',
+              'On shingle roofs, a watch for dark streaks and moss on shaded or coastal slopes, and a note of the overhanging branches that drop leaves into the valleys',
+              'A written photo report you can compare year to year',
+            ],
+          },
+{ img: '/images/blog/moss-on-roof-myth-vs-fact-roofer-clearing-valley.webp', alt: 'A roofer in a hard hat and safety harness, a tablet clipped to his belt, brushes fallen leaves and pine needles out of a metal roof valley on a gray shingle roof', caption: 'A maintenance visit: debris swept out of a valley before it can hold water and give moss a place to start.' },
+          'The plans are month to month, and you pay after each visit. If something needs fixing, you get a price first and decide.',
+          'Not ready for a plan? A one-time [*RoofRevive* roof tune-up](/roof-maintenance-plans/#tune-up) is one focused visit for a roof that is basically sound but showing its age in small ways, with a written list of fixes and one price before we start.',
+          { pov: 'Most moss problems we see aren’t roof problems at first. They are debris and shade problems that were left long enough to become roof problems. A couple of visits a year is usually all it takes to keep it that way round.' },
+        ],
+      },
+      {
+        heading: 'When Moss Points to a Bigger Problem',
+        blocks: [
+          'Sometimes the moss is a symptom. If the shingles under it have curled, cracked or lost their granules across the roof, clearing the moss won’t buy much time. Our articles on [curling, cracked and missing shingles](/blog/curling-cracked-missing-shingles/) and [granule loss](/blog/shingle-granule-loss/) explain how to tell. On a tile roof, a damp patch that keeps coming back can mean the underlayment beneath is wearing out, which a [tile lift & relay](/residential-roofing/tile-roofing/lift-and-relay/) addresses.',
+          'Either way, a roofer looks first. A [free roof evaluation](/roof-inspection/) for homes comes with drone footage and photos, a plain-English explanation and one clear next step: repair, monitor, maintain or replace.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Does moss damage a roof?',
+        a: 'Over time, yes. Moss holds water against the roof, grows into the gaps between shingles and can lift their edges, letting water and wind underneath. The sooner it is cleared and the cause fixed, the less it does.',
+      },
+      {
+        q: 'Is moss common on roofs in Los Angeles?',
+        a: 'Less than in rainier places, but it happens on shaded and north-facing slopes, under trees, near the coast where the marine layer lingers, and wherever debris sits in valleys and gutters.',
+      },
+      {
+        q: 'What is the difference between moss, algae and lichen on a roof?',
+        a: 'Moss is thick, soft and green and holds water. Algae shows as dark streaks running down the slope and is mostly cosmetic. Lichen is small, crusty and stuck tight to the surface, and scraping it off can pull granules away.',
+      },
+      {
+        q: 'Can I pressure wash moss off my roof?',
+        a: 'Please don’t. Pressure washing strips the granules that protect shingles from the sun and can drive water under tiles. It removes the moss and part of the roof with it.',
+      },
+      {
+        q: 'Will moss come back after it is removed?',
+        a: 'It will if the conditions stay the same. Shade, debris in the valleys and a roof that stays damp all bring it back, which is why trimming branches, keeping gutters clear and regular visits matter as much as the removal.',
+      },
+      {
+        q: 'Does a roof maintenance plan help with moss?',
+        a: 'Yes. Each *RoofCare Plan* visit clears debris from the roof surface, valleys, gutters and downspouts, watches for moss and streaks on shaded or coastal slopes, and records it in a photo report, so you can see if it is growing.',
+      },
+    ],
+    closing: {
+      heading: 'Green on the Roof? Let a Roofer Take a Look.',
+      blocks: [
+        'Moss is easiest to deal with early, and a roofer can tell you whether it is a cleanup or a sign of something more. Book a [free roof evaluation](#roof-check), or ask about our [roof maintenance plans](/roof-maintenance-plans/) to keep it from coming back. Call [(310) 340-1643](tel:+13103401643).',
+        'See also our [roof maintenance checklist](/blog/roof-maintenance-checklist/) and [how to check your roof from the ground](/blog/how-to-check-your-roof-from-the-ground/).',
+      ],
+    },
+    related: ['/roof-maintenance-plans/', '/roof-inspection/', '/residential-roofing/shingle-roofing/repair/', '/residential-roofing/tile-roofing/'],
+  },
   // Failing chimney flashing (owner, November 23 2026): keyword "chimney flashing". A close-up demo of the flashing parts around a chimney and the
   // signs each one is failing, how to tell flashing from a chimney problem (crown, cap, brick and mortar go to a chimney sweep or a mason; we
   // don't claim masonry), and why re-flashing is usually a small, contained repair (no time promised). Our voice, three "Our point of view" boxes,
