@@ -1710,6 +1710,8 @@ export const BLOG_POSTS = [
   // covering the draft's seven points, no warranty claim about solar mounts, no federal tax credit line. Live on its date. Picture: the owner's image.
   {
     slug: 'best-roof-for-solar-panels',
+    revision: 1, // new thumbnail (owner, November 23 2026): a plain photo, so the title is written over it; revisionImage copies it to the live copy
+    revisionImage: true,
     title: 'The Best Roof for Solar Panels Is One That Outlasts Them: A Roofer’s Answer for Southern California',
     keyword: 'best roof for solar panels',
     topics: ['replacement', 'inspection', 'underlayment', 'tile', 'shingle', 'flat'],
@@ -1718,8 +1720,8 @@ export const BLOG_POSTS = [
       'The best roof for solar panels is one that will outlast them. A Los Angeles roofer explains the math, the roof types and what to check before panels go on.',
     datePublished: '2026-11-16',
     dateModified: '2026-11-16',
-    image: '/images/blog/best-roof-for-solar-panels.webp',
-    imageAlt: 'The best roof for solar panels outlasts them: a roofer in a hard hat and safety vest points to a Southern California home with solar panels on its tile roof',
+    image: '/images/blog/best-roof-for-solar-panels-v2.webp',
+    imageAlt: 'The best roof for solar panels: a roofer in a safety harness kneels beside a row of solar panels on a Southern California home, hills and palm trees behind',
     excerpt:
       'The best roof for solar panels is one that will last as long as the panels sit on it. Here is how a roofer checks that before the solar contract is signed, roof type by roof type.',
     intro: [
