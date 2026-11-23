@@ -13,15 +13,16 @@ const C_REPAIR = '/commercial-roofing/repair/';
 
 export const KEEP_READING = {
   // Roof leaks
-  'roof-leak-source': [B('how-to-read-a-ceiling-stain'), B('how-to-find-a-roof-leak'), B('how-to-stop-a-leaking-roof-now'), B('roof-repair-cost')],
+  'roof-leak-source': [B('how-to-trace-a-roof-leak-in-the-attic'), B('how-to-read-a-ceiling-stain'), B('how-to-find-a-roof-leak'), B('how-to-stop-a-leaking-roof-now'), B('roof-repair-cost')],
   'temporary-roof-repair-options': [B('how-to-stop-a-leaking-roof-now'), B('stop-a-roof-leak'), B('roof-repair-cost')],
   'stop-a-roof-leak': [B('how-to-stop-a-leaking-roof-now'), B('how-to-find-a-roof-leak'), B('roof-repair-cost')],
   'how-to-stop-a-leaking-roof-now': [B('how-to-read-a-ceiling-stain'), B('roof-leak-source'), B('roof-insurance-claims-california')],
-  'how-to-find-a-roof-leak': [B('how-to-read-a-ceiling-stain'), B('how-to-stop-a-leaking-roof-now'), B('roof-repair-cost')],
+  'how-to-find-a-roof-leak': [B('how-to-trace-a-roof-leak-in-the-attic'), B('how-to-read-a-ceiling-stain'), B('how-to-stop-a-leaking-roof-now'), B('roof-repair-cost')],
   'roof-repair-cost': [B('how-to-find-a-roof-leak'), B('how-to-stop-a-leaking-roof-now'), B('roof-restoration-vs-replacement')],
   // Storms and upkeep
   'roof-storm-damage-signs': [B('how-to-check-your-roof-from-the-ground'), B('prepare-your-roof-for-el-nino'), B('how-to-stop-a-leaking-roof-now'), B('roof-insurance-claims-california')],
-  'how-to-read-a-ceiling-stain': [B('roof-leak-source'), B('stop-a-roof-leak'), B('roof-repair-cost')],
+  'how-to-trace-a-roof-leak-in-the-attic': [B('roof-leak-source'), B('how-to-stop-a-leaking-roof-now'), B('roof-repair-cost')],
+  'how-to-read-a-ceiling-stain': [B('how-to-trace-a-roof-leak-in-the-attic'), B('roof-leak-source'), B('stop-a-roof-leak'), B('roof-repair-cost')],
   'how-to-check-your-roof-from-the-ground': [B('how-to-read-a-ceiling-stain'), B('roof-storm-damage-signs'), B('roof-leak-source'), B('roof-drip-edge-flashing')],
   'roof-maintenance-checklist': [B('how-to-check-your-roof-from-the-ground'), B('prepare-your-roof-for-el-nino'), B('roof-drip-edge-flashing'), B('what-does-a-roof-inspection-include')],
   'prepare-your-roof-for-el-nino': [B('roof-maintenance-checklist'), B('roof-storm-damage-signs'), B('stop-a-roof-leak'), B('prepare-a-commercial-roof-for-el-nino')],

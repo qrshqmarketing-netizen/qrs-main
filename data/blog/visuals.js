@@ -18,6 +18,9 @@
 //   table: 'cards'          rows to compare as cards with labelled lines
 //   table: 'hotspots'       "where / what goes wrong" rows as an interactive picture of a flat commercial roof
 export const POST_VISUALS = {
+  'how-to-trace-a-roof-leak-in-the-attic': {
+    'Stop 3: Look Up and Read the Roof Deck': { table: 'cards' },
+  },
   'how-to-read-a-ceiling-stain': {
     'Roof Leak, Condensation or Plumbing: Side by Side': { table: 'cards' },
     'Which Sounds Like Your Stain?': { table: 'decide' },

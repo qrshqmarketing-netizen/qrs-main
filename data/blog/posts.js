@@ -24,6 +24,209 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // Tracing a roof leak from the attic (owner, November 23 2026): keyword "trace a roof leak". A flashlight walkthrough, stop by stop, of what we
+  // look for in an attic and what each sight means, then how our roofers take it from there. It sits beside how-to-find-a-roof-leak ("how to find
+  // a roof leak", the whole house-to-roof guide) and links to it; this one stays in the attic. Our voice, three "Our point of view" boxes, no
+  // prices, no tools claimed for QRS beyond what the site states (a roofer, drone footage and photos, one of four next steps, a written scope and
+  // price). "Inspectors" in the brief became roofers (terminology rule).
+  {
+    slug: 'how-to-trace-a-roof-leak-in-the-attic',
+    title: 'How to Trace a Roof Leak From Inside Your Attic: A Flashlight Walkthrough',
+    keyword: 'trace a roof leak',
+    topics: ['leak', 'repair', 'inspection', 'ventilation'],
+    metaTitle: 'How to Trace a Roof Leak From Inside Your Attic',
+    metaDescription:
+      'Trace a roof leak from inside your attic with a flashlight: where to look, what wet wood, stains and nails tell you, and how roofers find the source outside.',
+    datePublished: '2026-11-23',
+    dateModified: '2026-11-23',
+    image: '/images/blog/how-to-trace-a-roof-leak-in-the-attic.webp',
+    imageAlt: 'Tracing a roof leak in the attic: a man in a headlamp kneels on a walk board and shines a flashlight on a wet trail running down the roof deck and a rafter',
+    excerpt:
+      'A flashlight walkthrough of the attic, stop by stop: how to trace a roof leak from the stain on your ceiling to where the water comes through the roof deck, and how our roofers take it from there.',
+    intro: [
+      'You can trace a roof leak from inside your attic with nothing more than a flashlight, a phone and a careful step. The attic is where the water shows you the path it took, before it ever reached your ceiling.',
+      'This is the same walk our roofers take when we look at a leak from the inside: six stops, from the hatch to the highest wet spot, and what each thing in the flashlight beam is telling you. At the end, we show you how we take your notes up onto the roof.',
+    ],
+    sections: [
+      {
+        heading: 'Before You Climb Up',
+        blocks: [
+          'Go up during the rain or within a few hours after it, while the trail is still wet and easy to follow. Go in the morning if you can: attics get hot fast.',
+          {
+            checklist: [
+              'A bright flashlight, plus a headlamp so you have a hand free',
+              'Your phone, for photos with the date',
+              'Painter’s tape and a marker',
+              'A tape measure',
+              'A dust mask, gloves and long sleeves',
+            ],
+          },
+          { note: '**Stay safe:** Step only on the joists or a walk board, never on the drywall between them. Watch your head for roofing nails coming through the deck. If water is near a light fixture or wiring, switch that circuit off at the breaker first. No safe way in? Skip the attic and call us.' },
+          'Our full guide to [how to find a roof leak](/blog/how-to-find-a-roof-leak/) covers the whole house, from the ceiling stain to the roof. This walkthrough stays in the attic.',
+        ],
+      },
+      {
+        heading: 'Stop 1: At the Hatch, Stop and Look Around',
+        blocks: [
+          'Before you crawl anywhere, stand on the ladder with your head and shoulders in the attic and give it a minute.',
+          {
+            list: [
+              '**Listen.** During rain, a drip on insulation or a plastic duct is easy to hear in a quiet attic.',
+              '**Smell.** A musty, damp smell means moisture has been there a while.',
+              '**Sweep the light slowly** across the underside of the roof from one end to the other. You are looking for anything darker than the wood around it.',
+              '**Turn the light off.** On a shingle roof, a pinpoint of daylight through the roof deck is a hole. Give your eyes a few seconds to adjust.',
+            ],
+          },
+          { img: '/images/blog/how-to-trace-a-roof-leak-in-the-attic-hatch.webp', alt: 'A person on a ladder at an attic hatch sweeps a flashlight beam across rafters and insulation, with a pinpoint of daylight showing through the roof deck in the distance', caption: 'From the hatch, sweep the light slowly across the whole attic. That small point of daylight at the far end is a hole in the roof.' },
+        ],
+      },
+      {
+        heading: 'Stop 2: Above the Stain, Start at the Insulation',
+        blocks: [
+          'Measure the stain’s position from two walls before you go up, for example 6 feet from the outside wall and 4 feet from the hallway wall. In the attic, use those numbers, or count joists from a wall, to find the spot above it.',
+          {
+            list: [
+              '**Wet insulation is darker, matted and cold to the touch.** It is often stained brown or yellow from what the water carried through the wood.',
+              '**Pull the insulation back gently** and look at the top of the drywall. A wet or stained patch there confirms you are in the right spot.',
+              '**Don’t stop here.** The spot above the stain is where the water landed, not where it got in.',
+            ],
+          },
+          { img: '/images/blog/how-to-trace-a-roof-leak-in-the-attic-wet-insulation.webp', alt: 'A gloved hand lifts brown, water-stained insulation from between two joists, showing a stained patch on the top of the drywall beneath', caption: 'Stained, matted insulation and a ring on the top of the drywall: this is where the water landed. Now look up for where it came from.' },
+          { pov: 'The stain on your ceiling is the end of the trail. On most leaks we trace, the water got in somewhere uphill of it, sometimes several feet away. That is why we never start a repair right above the stain.' },
+        ],
+      },
+      {
+        heading: 'Stop 3: Look Up and Read the Roof Deck',
+        blocks: [
+          'Now shine the light straight up at the underside of the roof deck and the rafters, the slanted boards that hold it up. Hold the flashlight close to the wood and nearly flat against it. Light coming in from the side makes streaks, ridges and stains stand out far better than light shone straight on.',
+          'Here is what you might see in the beam, and what it usually means.',
+          { img: '/images/blog/how-to-trace-a-roof-leak-in-the-attic-side-light.webp', alt: 'A flashlight held flat against the underside of a roof deck lights a wet streak with white mineral lines and rusty nail tips with drops of water hanging from them', caption: 'Held flat against the wood, the flashlight shows a wet streak, white mineral lines from earlier leaks and water dripping from rusty nails.' },
+          {
+            table: {
+              head: ['What you see', 'What it usually means', 'What to do'],
+              rows: [
+                ['A dark, damp streak or a shiny wet trail', 'An active leak. Water is getting in now, or got in during the last rain', 'Follow it uphill (Stop 4)'],
+                ['A dry brown stain with a darker edge', 'An older leak that dried out. Check whether a fresh, darker trail runs through it', 'Note it and photograph it; it may be the same leak coming back'],
+                ['White, chalky lines on the wood', 'Minerals left behind by water that has come and gone many times', 'A repeat leak: follow it uphill'],
+                ['Rusty nail tips, or drops of water hanging from them', 'Moisture is reaching the nails, from a leak nearby or from condensation', 'If only a few nails near a trail are wet, it is the leak. If nails across the whole attic are wet, look at ventilation'],
+                ['Soft, spongy or layered wood that comes apart', 'Water has been getting in for a long time', 'Don’t push on it. Tell your roofer: the deck may need replacing in that area'],
+                ['Dark spotting spread evenly across the deck, with no single trail', 'Moist air trapped in the attic, not a leak', 'Have the [attic ventilation](/residential-roofing/attic-ventilation/) checked'],
+              ],
+            },
+          },
+        ],
+      },
+      {
+        heading: 'Stop 4: Follow the Trail Uphill',
+        blocks: [
+          'Water that comes through the roof rarely drips straight down. It runs along the underside of the deck and down the rafters until it reaches a low point, then drips. Your job is to walk that path backward.',
+          {
+            steps: [
+              '**Start at the wettest spot above the stain** and shine the light along the rafter it is on.',
+              '**Follow the streak toward the peak of the roof.** Move one joist at a time, and check the rafters on either side too: water can jump from one to the next at a nail or a seam in the deck.',
+              '**Find the highest wet point.** Above it, the wood is dry. This is as close as you can get, from the inside, to where water is coming through the deck.',
+              '**Mark it.** A strip of painter’s tape on the rafter, with the date written on it, means anyone can find it again.',
+            ],
+          },
+          { img: '/images/blog/how-to-trace-a-roof-leak-in-the-attic-taped-rafter.webp', alt: 'A strip of blue painter’s tape marks the top of a wet, dark trail running down a rafter toward the attic floor', caption: 'The trail is wet below the tape and dry above it. That tape marks the highest wet point, as close as you can get to the leak from inside.' },
+          'On a tile roof, keep one thing in mind: the highest wet point shows where water came through the deck, not always where it came through the roof covering. Water can travel on top of the underlayment, under the tiles, before it finds a way through. Our [tile roof guide](/blog/tile-roof-guide-southern-california/) explains why the underlayment is the layer that matters.',
+        ],
+      },
+      {
+        heading: 'Stop 5: Check Everything That Comes Through the Roof',
+        blocks: [
+          'If the trail leads toward something that goes through the roof, look closely at it. These are where most leaks start.',
+          {
+            list: [
+              '**Plumbing vent pipes:** a wet ring of wood around the pipe, or water running down the pipe itself, usually points to a cracked or worn rubber boot on the roof.',
+              '**The chimney:** stains on the wood framing around the chimney, often on the uphill side, point to the flashing where the chimney meets the roof.',
+              '**Skylight shafts:** water stains in the corners of the shaft or on its framing point to the flashing around the skylight. Drips only on cold mornings may be condensation instead.',
+              '**Valleys:** where two slopes of the roof meet, a heavier rafter runs along the inside. A trail along it points to the valley.',
+              '**Bathroom and kitchen fan ducts:** a duct that ends in the attic, or a loose connection, puts moist air into the attic. Wet wood around it may be condensation, not a leak.',
+            ],
+          },
+          { img: '/images/blog/how-to-trace-a-roof-leak-in-the-attic-vent-pipe.webp', alt: 'A dark ring of wet, stained wood on the roof deck around a plumbing vent pipe, with water running down the pipe', caption: 'A wet ring around a vent pipe and water running down the pipe: the boot that seals it on the roof has most likely failed.' },
+          { pov: 'Most roof leaks we find start at a flashing, a vent boot or a valley, not in the middle of a slope. If your trail leads to one of them, you have most likely found your leak, and it is usually a [repair](/roof-repair/), not a new roof.' },
+        ],
+      },
+      {
+        heading: 'Stop 6: Measure It and Write It Down',
+        blocks: [
+          'Before you climb down, turn what you found into something a roofer can find from the outside.',
+          {
+            steps: [
+              '**Measure from something that goes through the roof.** A vent pipe, chimney or skylight shows on both sides. For example: 3 feet below and 2 feet left of the vent pipe.',
+              '**Take photos two ways:** one with the flash and one with only your flashlight held from the side. The side light shows the trail better.',
+              '**Take one wide photo** that shows where the spot is in the attic, and one close-up.',
+              '**Write down the date, the weather and when the stain appeared.** A leak that shows only in wind-driven rain from one direction tells a different story from one that leaks in every rain.',
+            ],
+          },
+          { img: '/images/blog/how-to-trace-a-roof-leak-in-the-attic-measuring.webp', alt: 'A man in a headlamp measures with a tape from a vent pipe to a wet spot outlined in blue tape on the roof deck, taking a photo with his phone', caption: 'Measure from the nearest vent pipe, chimney or skylight to your taped spot, and photograph it. Those numbers let a roofer find the same spot from outside.' },
+          {
+            checklist: [
+              'Where the ceiling stain is (two wall measurements)',
+              'Where the highest wet point is (taped and dated)',
+              'Its distance from the nearest vent pipe, chimney or skylight',
+              'Photos: wide, close-up, flash and side-lit',
+              'When it leaks: every rain, only heavy rain, only wind from one side, or dry days too',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'How Our Roofers Take It From Here',
+        blocks: [
+          'Your notes cut straight to the part that matters. Here is how a roofer turns them into a diagnosis:',
+          { img: '/images/blog/how-to-trace-a-roof-leak-in-the-attic-roofer-vent-boot.webp', alt: 'A roofer in a hard hat kneels on a shingle roof beside a vent pipe with a cracked rubber boot, holding a tablet that shows a photo of the attic', caption: 'From the attic to the roof: the trail inside led to this vent pipe, and its cracked rubber boot is where the water was getting in.' },
+          {
+            steps: [
+              '**Start from your notes and the stain.** We line up your measurements with what goes through the roof above them.',
+              '**Work upslope on the roof.** We look at the spots that line up with your trail: the flashing, the vent boots, the valley, a cracked tile or a lifted shingle, and the roofing above them.',
+              '**Document what we find.** Our [free roof evaluation](/roof-inspection/) includes drone footage of the areas of concern and photos of what we find, so you see the same thing we do.',
+              '**Give you one next step in plain English:** repair, monitor, maintain or replace.',
+              '**Put it in writing.** If work is needed, you get a written scope and price before any work starts.',
+            ],
+          },
+          'If the attic points somewhere else, like a fan venting into the attic or a sweating air conditioning duct, we will tell you, so you can call the right trade.',
+          { pov: 'A homeowner who has already traced the trail in the attic saves everyone time. Bring us your photos and your taped spot. It is the best head start a roof leak can get.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Can you find a roof leak from inside the attic?',
+        a: 'You can usually trace it to where water comes through the roof deck. Follow the wet trail on the underside of the deck and the rafters uphill to the highest wet point. The exact opening in the roof covering is found from outside, often a little above that point.',
+      },
+      {
+        q: 'How can I tell an old leak from an active one?',
+        a: 'An active leak is dark, damp or shiny, and the wood feels cool and wet. An old leak is a dry brown stain, often with a darker edge or white mineral lines. A fresh, darker trail running through an old stain means the leak is back.',
+      },
+      {
+        q: 'Why is the wood wet all over the attic but I can’t find a drip?',
+        a: 'Wet nails, damp wood or dark spotting spread across the whole attic usually means moist air is trapped there and condensing, not a leak. That points to attic ventilation, or a fan or dryer venting into the attic.',
+      },
+      {
+        q: 'What if my house has no attic?',
+        a: 'Many homes with flat roofs or vaulted ceilings have no attic, or only a shallow space you can’t safely enter. Skip the attic and have a roofer trace the leak from the roof. Your notes on when and where the stain appears still help.',
+      },
+      {
+        q: 'Is it safe to go into my attic to look for a leak?',
+        a: 'Only with safe footing: step on the joists or a walk board, never on the drywall between them. Wear a mask and gloves, watch for nails, and switch off any circuit near water. If you can’t move around safely, don’t go up.',
+      },
+      {
+        q: 'What should I tell the roofer?',
+        a: 'Where the ceiling stain is, where you taped the highest wet point, its distance from the nearest vent pipe, chimney or skylight, your photos, and when it leaks. That is most of what we need to start in the right place.',
+      },
+    ],
+    closing: {
+      heading: 'Found the Trail? Have a Roofer Finish the Job.',
+      blocks: [
+        'Bring us what you found in the attic, and we will take it from there. A free roof evaluation finds where the water gets in, with drone footage, photos, a plain-English next step and a written scope and price before any work. Call (310) 340-1643 or [request your evaluation](#roof-check). If water is coming in now, it is an [emergency roof repair](/roof-repair/emergency/) call.',
+        'See also [how to read a ceiling stain](/blog/how-to-read-a-ceiling-stain/), [how to find a roof leak](/blog/how-to-find-a-roof-leak/) and our [roof repair](/roof-repair/) page.',
+      ],
+    },
+    related: ['/roof-repair/', '/roof-inspection/', '/residential-roofing/attic-ventilation/'],
+  },
   // Reading a ceiling stain (owner, November 23 2026): keyword "ceiling stain". Educational, built around a side-by-side of the three usual
   // sources (roof leak, condensation, plumbing) and the four clues that tell them apart; the call to action is that roof leaks are the ones we
   // fix. Our voice, three "Our point of view" boxes, no prices, no claim that QRS does plumbing or HVAC work (we point people to those trades),
