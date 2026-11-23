@@ -24,6 +24,189 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // Reading a ceiling stain (owner, November 23 2026): keyword "ceiling stain". Educational, built around a side-by-side of the three usual
+  // sources (roof leak, condensation, plumbing) and the four clues that tell them apart; the call to action is that roof leaks are the ones we
+  // fix. Our voice, three "Our point of view" boxes, no prices, no claim that QRS does plumbing or HVAC work (we point people to those trades),
+  // attic ventilation linked as our own service. Picture: the owner's image.
+  {
+    slug: 'how-to-read-a-ceiling-stain',
+    title: 'How to Read a Ceiling Stain: Roof Leak, Condensation or Plumbing?',
+    keyword: 'ceiling stain',
+    topics: ['leak', 'repair', 'inspection', 'ventilation', 'emergency'],
+    metaTitle: 'Ceiling Stain: Roof Leak, Condensation or Plumbing?',
+    metaDescription:
+      'How to read a ceiling stain: the clues that tell a roof leak from attic condensation or a plumbing leak, side by side, and who to call for each one.',
+    datePublished: '2026-11-23',
+    dateModified: '2026-11-23',
+    image: '/images/blog/how-to-read-a-ceiling-stain.webp',
+    imageAlt: 'Reading a ceiling stain: a man in a work shirt and tool belt shines a flashlight on brown water rings spreading across a bedroom ceiling',
+    excerpt:
+      'A ceiling stain can come from the roof, from condensation in the attic or from a pipe. Here are the clues that tell them apart, side by side, and who to call for each one.',
+    intro: [
+      'A ceiling stain is water telling you something, but not always where it came from. The three usual sources are a roof leak, condensation in the attic, and plumbing, and each one leaves different clues.',
+      'Roof leaks are the ones we fix. Before you call anyone, though, it helps to know which of the three you are looking at, so the right trade comes out first. Here is how we read a stain, side by side, from the four clues we look at on every call.',
+    ],
+    sections: [
+      {
+        heading: 'First, Is It Safe?',
+        blocks: [
+          'Most stains are dry marks from water that has come and gone. Some are not. Before you study it, check that the ceiling itself is not a hazard.',
+          {
+            list: [
+              '**A sagging or bulging ceiling** can be holding water. Keep people and pets out from under it and move what you can out of the way.',
+              '**A stain near a light or a ceiling fan:** switch that circuit off at the breaker until someone has looked at it.',
+              '**Water dripping now:** put a bucket under it and protect the floor.',
+            ],
+          },
+          { img: '/images/blog/how-to-read-a-ceiling-stain-dripping-hallway-ceiling.webp', alt: 'A stained hallway ceiling with bubbling, peeling paint and a drop of water falling from its lowest point', caption: 'Bubbling paint and a drip at the lowest point mean water is sitting above the drywall. Treat it as active: bucket under it, people out from under it.' },
+          { note: '**Water coming in during rain?** That is an [emergency roof repair](/roof-repair/emergency/) call. Emergency calls are taken after hours and on weekends, and we tarp the roof when it needs it.' },
+        ],
+      },
+      {
+        heading: 'Roof Leak, Condensation or Plumbing: Side by Side',
+        blocks: [
+          'Here are the three usual sources of a ceiling stain next to each other. Most stains match one column far better than the other two.',
+          { img: '/images/blog/how-to-read-a-ceiling-stain-side-by-side.webp', alt: 'Three ceiling stains side by side: brown rings with dark edges near a wall, gray spots of mildew around an air conditioning vent, and a damp, darker stain with a drip forming', caption: 'Left to right: the rings of a roof leak, condensation spotting around an air conditioning vent, and the damp, spreading stain of a plumbing leak.' },
+          {
+            table: {
+              head: ['Source', 'When it shows up', 'Where on the ceiling', 'What it looks like', 'Who to call'],
+              rows: [
+                ['Roof leak', 'During or after rain, sometimes a day or two later. It stays the same in dry weather and grows with the next storm.', 'Top-floor ceilings, often near an outside wall, a chimney, a skylight or a vent pipe, but it can be feet away from where water gets in', 'Brown or yellow rings with darker edges, a new ring after each storm', 'A roofer'],
+                ['Condensation', 'In dry weather: on cool mornings, or when the air conditioning runs hard on a hot day', 'Top-floor ceilings under the attic, around air conditioning vents, ducts, and bathroom or kitchen fan vents', 'Small, faint gray or brown spots, damp drywall around a vent, sometimes mildew', 'A roofer for attic ventilation, or an HVAC technician for ducts and drain lines'],
+                ['Plumbing', 'Any time, rain or shine, often after a shower, a flush or an appliance runs', 'Under a bathroom, kitchen, laundry room or water heater, or along the line of a pipe, on any floor', 'A stain that keeps growing or stays damp, sometimes a drip that comes with water use', 'A plumber'],
+              ],
+            },
+          },
+          { pov: 'We would rather tell you it isn’t the roof than sell you a roof repair you don’t need. Reading the stain first saves you a wrong call, and gets the right trade out sooner.' },
+        ],
+      },
+      {
+        heading: 'Clue 1: When Did the Stain Show Up?',
+        blocks: [
+          'Timing is the strongest clue, and it costs nothing to collect.',
+          {
+            list: [
+              '**Only after rain:** the roof is the likely source. Windows and walls can also let wind-driven rain in, but those stains usually sit at the edge of the ceiling next to the window or wall.',
+              '**In dry weather:** look at condensation, the air conditioning or plumbing first.',
+              '**Any time, and it grows:** something is still feeding it. Plumbing is the usual suspect.',
+            ],
+          },
+          'Write down the date you first saw it and the weather that week. Then trace the edge of the stain lightly in pencil and add the date. If it grows past the line after the next rain, you have your answer.',
+          { img: '/images/blog/how-to-read-a-ceiling-stain-pencil-outline.webp', alt: 'A hand tracing the edge of a brown ceiling stain in pencil next to a rain-streaked window', caption: 'Trace the edge in pencil and write the date beside it. If the stain grows past the line after the next rain, the roof is the likely source.' },
+        ],
+      },
+      {
+        heading: 'Clue 2: Where Is the Stain?',
+        blocks: [
+          'Think about what is directly above the stain, and one level higher.',
+          {
+            list: [
+              '**On the top floor, under the attic:** it could be any of the three.',
+              '**On the ground floor of a two-story home:** the roof is far away. A stain here, especially under a bathroom, points to plumbing.',
+              '**Near a chimney, skylight or vent pipe, or under a valley in the roof:** these are where roof leaks most often start.',
+              '**Around an air conditioning vent or a fan vent:** condensation or a duct problem is likely.',
+            ],
+          },
+          { img: '/images/blog/how-to-read-a-ceiling-stain-skylight-sloped-ceiling.webp', alt: 'Brown water stains and peeling paint on a sloped bedroom ceiling near a skylight, with streaks running down the wall below', caption: 'Top floor, near a skylight, under a slope of the roof: this stain sits right where roof leaks most often start.' },
+          'One thing makes roof leaks hard to read: water rarely drips straight down. It gets in, runs along the deck and the framing, and drips where it finds a low point. A roof leak can stain a ceiling several feet from the spot where it gets in. That is why we start upslope of the stain, not right above it. Our guide on [how to find a roof leak](/blog/how-to-find-a-roof-leak/) shows how we trace it.',
+        ],
+      },
+      {
+        heading: 'Clue 3: What Does the Stain Look Like?',
+        blocks: [
+          {
+            list: [
+              '**Rings with darker edges:** water that came, dried and came back. Each ring is another wetting. This is the classic roof leak pattern, one ring per storm.',
+              '**A spot that stays damp or soft:** a steady supply of water, which usually means plumbing, or a roof leak during a wet stretch.',
+              '**Many small, faint spots, or gray blotches near vents:** condensation, especially if there is mildew.',
+              '**Bubbling or peeling paint, or a sag:** water is sitting in or above the drywall. Treat it as active.',
+            ],
+          },
+          { img: '/images/blog/how-to-read-a-ceiling-stain-water-rings.webp', alt: 'Close-up of a ceiling water stain with several brown rings and darker edges around a patch of cracked, peeling paint', caption: 'Each ring is another wetting and drying. Several rings with dark edges usually mean water has come back storm after storm.' },
+          'On a flat or low-slope roof, stains can show up far from the edges of the roof, because water can travel a long way under a flat membrane before it finds a way down. Our [flat roofs guide](/blog/flat-roofs-los-angeles-guide/) explains where those roofs usually let water in.',
+        ],
+      },
+      {
+        heading: 'Clue 4: What Is Above the Stain?',
+        blocks: [
+          'If your home has an attic with a safe way in, a flashlight answers a lot. Step only on the framing, never on the drywall between it, and skip this if there is no safe footing.',
+          {
+            list: [
+              '**Stains or wet trails on the underside of the roof deck or down a rafter:** a roof leak. Follow the trail uphill.',
+              '**Wet or matted insulation right above the stain:** water has been landing there. Look straight up and upslope from it.',
+              '**Ducts beaded with water, or an air conditioning drain pan that is full or overflowing:** condensation or the drain line. That is a job for an HVAC technician.',
+              '**A damp pipe, a wet fitting or a fan duct that ends in the attic:** plumbing, or a fan venting moist air into the attic instead of outside.',
+              '**Dark staining spread across the deck, or a musty smell, with no single trail:** moist air trapped in the attic, often a ventilation problem.',
+            ],
+          },
+          { img: '/images/blog/how-to-read-a-ceiling-stain-attic-water-trail.webp', alt: 'A flashlight lights a dark wet trail running down the underside of an attic roof deck and along a rafter, with stained, matted insulation below', caption: 'A wet trail down the underside of the roof deck and a rafter, and soaked insulation below it: a roof leak. Follow the trail uphill to find where water gets in.' },
+          'Take photos of what you find. They help whoever comes out next, and they help your insurance claim if you make one. Our article on [roof insurance claims](/blog/roof-insurance-claims-california/) covers what to document.',
+          { pov: 'An attic that sweats is a roof problem too. Trapped heat and moisture wear the deck and the roof from underneath. If the stain turns out to be condensation, have the attic ventilation checked, not just the drywall painted.' },
+        ],
+      },
+      {
+        heading: 'Which Sounds Like Your Stain?',
+        blocks: [
+          'Put the four clues together and pick the closest match.',
+          {
+            table: {
+              head: ['Source', 'Sounds like yours if…', 'What to do next'],
+              rows: [
+                ['Roof leak', 'It showed up after rain, it is on the top floor, it has rings, and there is a wet trail in the attic running uphill', 'Book a roof evaluation. If water is coming in now, call for an emergency repair.'],
+                ['Condensation', 'It showed up in dry weather, sits near vents or ducts, and the attic smells musty or the ducts are wet', 'Have the [attic ventilation](/residential-roofing/attic-ventilation/) checked, and an HVAC technician look at ducts and drain lines.'],
+                ['Plumbing', 'It shows up any time, sits under a bathroom, kitchen or laundry, and grows when water is used', 'Call a plumber. If they find the pipes dry, call us.'],
+              ],
+            },
+          },
+          'Not sure? That is normal. Stains don’t always read cleanly, and sometimes two causes overlap. A roofer on the roof and in the attic can rule the roof in or out.',
+        ],
+      },
+      {
+        heading: 'Roof Leaks Are the Ones We Fix',
+        blocks: [
+          'If the clues point to the roof, don’t wait for the stain to grow. The water you can see is the part that reached the ceiling. The wet deck, framing and insulation above it are the part you can’t.',
+          { img: '/images/blog/how-to-read-a-ceiling-stain-roofer-chimney-flashing.webp', alt: 'A roofer in a hard hat and safety vest kneels beside a brick chimney on a shingle roof, pointing at the metal flashing at its base and holding a tablet', caption: 'Roof leaks often start at flashings like this one, where a chimney meets the roof. On the roof, we look for where the water gets in, not where it shows.' },
+          'Our [free roof evaluation](/roof-inspection/) starts where the water does. A roofer looks at the roof, with drone footage of the areas of concern and photos of what we find, and works from the stain upslope to where the water gets in. Then you get one of four next steps in plain English: repair, monitor, maintain or replace. If work is needed, you get a written scope and price before any work starts.',
+          'If what we find points to plumbing or the air conditioning instead, we will tell you, so you can call the right trade.',
+          { pov: 'Most roof leaks start small, at a flashing, a vent boot or a valley, and most are a [roof repair](/roof-repair/), not a new roof. Caught at the first ring, they stay that way.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Is a ceiling stain always a roof leak?',
+        a: 'No. A ceiling stain can come from a roof leak, from condensation in the attic or around air conditioning ducts, or from plumbing. When it shows up, where it is and what is above it usually tell them apart.',
+      },
+      {
+        q: 'Why does my ceiling stain only appear after it rains?',
+        a: 'That points to the roof, or to a window or wall letting wind-driven rain in. A stain in the middle of a top-floor ceiling is more likely the roof; one at the edge next to a window or wall may be the window or wall.',
+      },
+      {
+        q: 'Can condensation cause a ceiling stain?',
+        a: 'Yes. Air conditioning ducts and drain lines in the attic can sweat or overflow, and a poorly ventilated attic can trap moist air that condenses on cool surfaces. These stains usually show up in dry weather, near vents.',
+      },
+      {
+        q: 'Why is the stain so far from where the roof leaks?',
+        a: 'Water runs along the roof deck and the framing before it drips. A roof leak can stain the ceiling several feet from the spot where it gets in, which is why we trace it from the stain upslope.',
+      },
+      {
+        q: 'Can I just paint over a ceiling stain?',
+        a: 'Only after the source is fixed and the drywall is fully dry. Paint over an active leak and the stain comes back, while the damage above it keeps growing.',
+      },
+      {
+        q: 'What should I do if water is dripping from the ceiling right now?',
+        a: 'Put a bucket under it, keep people out from under a sagging spot, switch off any light or fan near it at the breaker, and call. If it is raining, it is an [emergency roof repair](/roof-repair/emergency/) call, and emergency calls are taken after hours and on weekends.',
+      },
+    ],
+    closing: {
+      heading: 'Think It’s the Roof? Have a Roofer Trace It.',
+      blocks: [
+        'Roof leaks are the ones we fix. A free roof evaluation finds where the water gets in, with photos, a plain-English next step, and a written scope and price before any work. Call (310) 340-1643 or [request your evaluation](#roof-check).',
+        'See also [how to stop a leaking roof now](/blog/how-to-stop-a-leaking-roof-now/), [how to check your roof from the ground](/blog/how-to-check-your-roof-from-the-ground/) and our [roof repair](/roof-repair/) page.',
+      ],
+    },
+    related: ['/roof-repair/', '/roof-inspection/', '/residential-roofing/attic-ventilation/'],
+  },
   // Checking a roof from the ground (owner, November 23 2026): keyword "check your roof from the ground". A homeowner's 60-second walk-around with
   // binoculars or a phone's zoom, roof type by roof type, what each sign means and when to call. Our voice, three "Our point of view" boxes, only
   // claims the site already makes (free roofer-led evaluation with drone footage and photos, one of four next steps, written scope and price before

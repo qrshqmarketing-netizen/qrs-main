@@ -18,6 +18,10 @@
 //   table: 'cards'          rows to compare as cards with labelled lines
 //   table: 'hotspots'       "where / what goes wrong" rows as an interactive picture of a flat commercial roof
 export const POST_VISUALS = {
+  'how-to-read-a-ceiling-stain': {
+    'Roof Leak, Condensation or Plumbing: Side by Side': { table: 'cards' },
+    'Which Sounds Like Your Stain?': { table: 'decide' },
+  },
   'asphalt-shingle-vs-tile-roof': {
     'Shingle vs. Tile at a Glance': { table: 'versus' },
     'Which Is Right for Your Home?': { table: 'decide' },
