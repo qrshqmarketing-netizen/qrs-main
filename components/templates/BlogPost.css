@@ -22,6 +22,10 @@
 /* Thumbnail */
 .post-image{margin:0 0 28px;border-radius:var(--radius);overflow:hidden;background:var(--wash)}
 .post-image img{display:block;width:100%;height:auto}
+/* A picture inside the article ({ img, alt } block) */
+.post-figure{margin:28px 0}
+.post-figure img{display:block;width:100%;height:auto;border-radius:var(--radius);background:var(--wash)}
+main .post-figure figcaption{margin:10px 2px 0;font-size:14px;line-height:1.5;color:var(--muted)}
 
 /* Table of contents */
 .post-toc{margin:28px 0 8px;padding:20px 22px;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:var(--radius);background:var(--wash)}

@@ -17,6 +17,7 @@
 //     'a paragraph'               { h3: 'Subheading' }          { note: 'Callout paragraph' }
 //     { pov: 'Our point of view: QRS\'s own bottom-line recommendation, in a box' }
 //     { list: ['…', '…'] }        { steps: ['…', '…'] }         { checklist: ['…', '…'] }
+//     { img: '/images/blog/file.webp', alt: 'What the picture shows', caption: 'Optional line under it' }  (![alt](/path "caption") in the dashboard)
 //     { table: { head: ['…', '…'], rows: [['…', '…'], …] } }
 //   Text accepts [link text](/path/) and **bold**; outside links open in a new tab.
 
@@ -29,6 +30,7 @@ export const BLOG_POSTS = [
   // any work, emergency calls after hours and weekends), no prices, no lifespans. Picture: the owner's image.
   {
     slug: 'how-to-check-your-roof-from-the-ground',
+    revision: 1, // 1: five pictures in the text (owner, November 23 2026); POST /api/posts/sync/ after the deploy copies them to the live copy
     title: 'How to Check Your Roof From the Ground in 60 Seconds',
     keyword: 'check your roof from the ground',
     topics: ['inspection', 'maintenance', 'leak', 'storm', 'shingle', 'tile', 'flat'],
@@ -57,6 +59,7 @@ export const BLOG_POSTS = [
               '**A spot back from the house.** Across the street or at the far end of the yard lets you see more of each slope.',
             ],
           },
+          { img: '/images/blog/how-to-check-your-roof-from-the-ground-phone-zoom.webp', alt: 'A homeowner checks her roof from the ground, standing across the street and zooming in on the shingles with her phone', caption: 'Stay on the ground: binoculars or your phone’s zoom, from across the street, are all this check needs.' },
           { note: '**Stay safe:** If water is coming in right now, skip the check and call. Emergency roof calls are taken after hours and on weekends, and we tarp the roof when it needs it.' },
           { pov: 'We would rather you look at your roof from the lawn every season than climb onto it once. A minute on the ground catches most of what matters, and the rest is our job.' },
         ],
@@ -74,6 +77,7 @@ export const BLOG_POSTS = [
               '**Seconds 50 to 60: the edges and eaves.** Look at the fascia boards and the underside of the eaves for stains, peeling paint or soft-looking wood. Water that gets past the edge of the roof shows up here first.',
             ],
           },
+          { img: '/images/blog/how-to-check-your-roof-from-the-ground-chimney-flashing.webp', alt: 'Metal flashing at the base of a brick chimney on a shingle roof, bent and lifted at one corner, beside a plumbing vent', caption: 'Metal flashing pulled away from a chimney is one of the most common places a leak starts. A bent or lifted corner is worth a call.' },
           'That is the whole check. If everything looks even, straight and in place, write down the date and look again after the next big storm. If something looks off, take a photo and read on.',
         ],
       },
@@ -81,6 +85,7 @@ export const BLOG_POSTS = [
         heading: 'What to Look For on a Shingle, Tile or Flat Roof',
         blocks: [
           'Every roof type wears in its own way, so the details you look for change with what is on your house.',
+          { img: '/images/blog/how-to-check-your-roof-from-the-ground-lifted-missing-shingles.webp', alt: 'Lifted and missing asphalt shingles on a roof slope, with the dark underlayment showing through the gap', caption: 'Lifted and missing shingles leave the underlayment exposed to sun and rain. From the ground, look for gaps in the pattern.' },
           {
             table: {
               head: ['Roof type', 'What you can see from the ground', 'What it can mean'],
@@ -106,6 +111,7 @@ export const BLOG_POSTS = [
               '**Around skylights.** Stains on the frame or the drywall around it.',
             ],
           },
+          { img: '/images/blog/how-to-check-your-roof-from-the-ground-ceiling-stain.webp', alt: 'A homeowner looks up at brown water stain rings on a bedroom ceiling near the corner of the room', caption: 'A ceiling stain is rarely right under the spot where water gets in. Water runs along the deck and framing before it drips.' },
           'A stain on the ceiling is rarely right under where the water gets in. Water runs along the deck and the framing before it drips. If you find one, our guide to [how to find a roof leak](/blog/how-to-find-a-roof-leak/) explains how we trace it back to the source.',
         ],
       },
@@ -113,6 +119,7 @@ export const BLOG_POSTS = [
         heading: 'What Your Roof Check Means: Watch, Book or Call Now',
         blocks: [
           'Not everything you see needs a roofer tomorrow. Here is how we would sort it.',
+          { img: '/images/blog/how-to-check-your-roof-from-the-ground-downspout-granules.webp', alt: 'Dark asphalt shingle granules washed out of a downspout onto a wet concrete patio', caption: 'Granules washing out of a downspout mean the shingles are shedding their protective surface. A few after a new roof are normal; a steady amount is not.' },
           {
             table: {
               head: ['What you saw', 'What to do'],

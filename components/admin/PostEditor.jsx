@@ -16,6 +16,8 @@ A paragraph. It can have [a link](/roof-repair/) and **bold** words.
 
 POV: Our point of view, our bottom-line recommendation in a box.
 
+![What the picture shows](/images/blog/picture.webp "A caption under it (optional)")
+
 - A bullet
 - Another bullet
 

@@ -13,6 +13,7 @@ import renderSection from '@/components/blog/PostVisuals';
 import { BLOG_LINK, blogPath, HOME } from '@/data/catalog';
 import { relatedLinks } from '@/data/content';
 import { pageJsonLd } from '@/lib/structuredData';
+import { articleImageSrc } from '@/lib/articleFormat';
 import { authorOf } from '@/data/authors';
 import { KEEP_READING } from '@/data/blog/links';
 import SiteLink from '@/components/ui/SiteLink';
@@ -43,6 +44,22 @@ function Block({ block }) {
           <Rich text={block.pov} />
         </p>
       </aside>
+    );
+  }
+  // A picture inside the article (owner, November 23 2026): { img, alt, caption? }, written ![alt](/path "caption") in the dashboard. 16:9 is assumed for the space it
+  // keeps while loading; the picture keeps its own shape once it arrives.
+  if (block.img) {
+    const src = articleImageSrc(block.img);
+    if (!src) return null;
+    return (
+      <figure className="post-figure">
+        <Image src={src} alt={block.alt || ''} width={1600} height={900} sizes="(min-width: 840px) 760px, calc(100vw - 32px)" loading="lazy" />
+        {block.caption && (
+          <figcaption>
+            <Rich text={block.caption} />
+          </figcaption>
+        )}
+      </figure>
     );
   }
   if (block.note) {
