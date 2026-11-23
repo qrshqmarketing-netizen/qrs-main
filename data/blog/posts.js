@@ -24,6 +24,185 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // Failing chimney flashing (owner, November 23 2026): keyword "chimney flashing". A close-up demo of the flashing parts around a chimney and the
+  // signs each one is failing, how to tell flashing from a chimney problem (crown, cap, brick and mortar go to a chimney sweep or a mason; we
+  // don't claim masonry), and why re-flashing is usually a small, contained repair (no time promised). Our voice, three "Our point of view" boxes,
+  // no prices; "reset or replaced, not covered with another layer of sealant" as the shingle repair page says it. Pictures: the owner's images (thumbnail
+  // and six in the text).
+  {
+    slug: 'failing-chimney-flashing',
+    title: 'How to Spot Failing Chimney Flashing: A Close-Up Look at Where Chimney Leaks Start',
+    keyword: 'chimney flashing',
+    topics: ['leak', 'repair', 'shingle', 'inspection'],
+    metaTitle: 'How to Spot Failing Chimney Flashing: A Close-Up Guide',
+    metaDescription:
+      'How to spot failing chimney flashing up close: cracked sealant, loose counter-flashing, rust and missing step flashing, and why the repair is usually small.',
+    datePublished: '2026-11-23',
+    dateModified: '2026-11-23',
+    image: '/images/blog/failing-chimney-flashing.webp',
+    imageAlt: 'Failing chimney flashing: rust streaks running down the metal at the base of a brick chimney, cracked sealant along the top edge and a gap opening between the metal and the brick',
+    excerpt:
+      'A close-up look at the metal around your chimney: the parts of chimney flashing, the signs each one is failing, how to tell it from a chimney problem, and why the repair is usually small.',
+    intro: [
+      'Chimney flashing is the metal that seals the gap where your roof meets the chimney, and it is one of the most common places a roof leaks. The good news: when it fails, the fix is usually a small repair around the chimney, not a new roof.',
+      'This is a close-up demo. We walk around the chimney piece by piece, show you what each part of the flashing does and what it looks like when it starts to fail, and help you tell a flashing leak from a problem with the chimney itself.',
+    ],
+    sections: [
+      {
+        heading: 'The Parts of Chimney Flashing',
+        blocks: [
+          'A chimney isn’t sealed with one piece of metal. It takes several, each doing one job, and they have to overlap in the right order so water always runs over the next piece down, never behind it.',
+          {
+            list: [
+              '**Base flashing (the apron).** The piece across the downhill face of the chimney, lying over the shingles below it.',
+              '**Step flashing.** Small L-shaped pieces up each side, woven in with the shingles one course at a time, so every shingle laps over its own piece of metal.',
+              '**Counter-flashing.** The metal on the brick that laps down over the step and base flashing. It is usually set into a mortar joint cut into the brick, then sealed along the top.',
+              '**The back pan, or a cricket.** On the uphill side, where water runs straight into the chimney. A cricket (also called a saddle) is a small peaked roof behind the chimney that splits the water around it; building codes usually call for one behind wider chimneys.',
+            ],
+          },
+{ img: '/images/blog/failing-chimney-flashing-new-flashing-cricket.webp', alt: 'A brick chimney on a gray shingle roof with new metal flashing: the base flashing across the front, stepped flashing up the side and a small shingled cricket with metal edges behind it', caption: 'New flashing in the right order: base flashing across the front, flashing stepped up the side with the shingles, and a cricket behind the chimney to split the water around it.' },
+          'If any one of these is missing, loose or in the wrong order, water finds the gap. That is why we look at all four, not just the piece with the stain under it.',
+        ],
+      },
+      {
+        heading: 'Close Up: Seven Signs Chimney Flashing Is Failing',
+        blocks: [
+          'Most of these can be seen from the ground with binoculars or your phone’s zoom. Please don’t climb onto the roof to look: the area around a chimney is steep, cluttered and easy to slip on.',
+{ img: '/images/blog/failing-chimney-flashing-cracked-sealant.webp', alt: 'Close-up of dried, cracked sealant peeling off the top edge of chimney counter-flashing, with a dark gap opening between the metal and the brick', caption: 'Sign one up close: the sealant along the top of the counter-flashing has dried, cracked and pulled away, and the gap behind it now lets water run down behind the metal.' },
+          {
+            steps: [
+              '**Cracked or pulled-away sealant.** The sealant along the top of the counter-flashing has dried, cracked or come away from the brick, leaving a dark line where water can run behind the metal.',
+              '**Counter-flashing pulled out of the mortar joint.** The top edge of the metal has lifted away from the brick, or was never set into the joint at all and is only stuck on the face of the chimney.',
+              '**Layers of roof cement smeared over everything.** Thick black patches over the metal and the shingles are the mark of past quick fixes. They usually mean the flashing underneath failed before, and may be failing again.',
+              '**Rust.** Rust streaks running down the brick or onto the shingles, or rust holes in the metal itself, mean the flashing is wearing through.',
+              '**Bent, lifted or loose metal.** A corner that has lifted in the wind, or metal that moves, leaves an opening on every storm.',
+              '**No step flashing.** Shingles butted against the brick with only a bead of caulk between them, and no metal weaving up the side.',
+              '**Debris piled behind the chimney.** Leaves and grit collecting on the uphill side mean water pools there too. A missing or too-small cricket is often the reason.',
+            ],
+          },
+{ img: '/images/blog/failing-chimney-flashing-debris-no-cricket.webp', alt: 'Leaves, pine needles and grit piled against the uphill side of a brick chimney on a shingle roof, with only a black strip of sealant where the shingles meet the brick', caption: 'Debris piled on the uphill side and nothing but a strip of sealant where the shingles meet the brick: no cricket to turn the water, and no step flashing woven in.' },
+          { pov: 'When we see three coats of roof cement around a chimney, we know the leak has been patched before and come back. That is our cue to look under the patches, not to add a fourth.' },
+        ],
+      },
+      {
+        heading: 'The Signs Inside the House',
+        blocks: [
+          'Flashing leaks often show up indoors before anyone spots them on the roof. Look for:',
+          {
+            checklist: [
+              'A stain on the ceiling or wall right next to the chimney or fireplace, often after rain driven by wind',
+              'Peeling paint or bubbling drywall on the chimney wall',
+              'Dark, damp wood or wet insulation around the chimney in the attic',
+              'A musty smell in the room with the fireplace',
+            ],
+          },
+{ img: '/images/blog/failing-chimney-flashing-stain-by-fireplace.webp', alt: 'A living room with a brick fireplace wall and a brown water stain spreading across the ceiling and down the wall beside the chimney, the paint bubbling and peeling', caption: 'A stain beside the chimney breast after rain, with paint bubbling down the wall, is the classic indoor sign of a flashing leak.' },
+          'If you can get into the attic safely, a flashlight on the framing around the chimney tells you a lot. Our [attic walkthrough](/blog/how-to-trace-a-roof-leak-in-the-attic/) shows what to look for, and our guide to [reading a ceiling stain](/blog/how-to-read-a-ceiling-stain/) helps rule out condensation and plumbing.',
+        ],
+      },
+      {
+        heading: 'Flashing or the Chimney Itself?',
+        blocks: [
+          'Not every chimney leak is the flashing. Water can also come through the top of the chimney or through the brick. Here is how the usual sources compare.',
+          { img: '/images/blog/failing-chimney-flashing-flashing-vs-crown.webp', alt: 'Two close-ups of chimneys side by side: on the left, rusted and bent flashing pulling away where the brick meets the shingle roof; on the right, a cracked concrete crown and crumbling mortar at the top of a chimney', caption: 'Left: rusted, loose flashing where the chimney meets the roof, a job for a roofer. Right: a cracked crown and crumbling mortar at the top, a job for a mason.' },
+          {
+            table: {
+              head: ['Source', 'What you see', 'Who fixes it'],
+              rows: [
+                ['Chimney flashing', 'Stains on the ceiling or wall beside the chimney after rain; cracked sealant, loose, rusted or missing metal where the chimney meets the roof', 'A roofer'],
+                ['The crown or cap at the top', 'Water in the firebox or dripping down the inside of the chimney; a cracked concrete top or a missing cap', 'A chimney sweep or a mason'],
+                ['The brick and mortar', 'Crumbling mortar joints, damp brick, white powdery stains on the brick', 'A mason'],
+                ['The roof around the chimney', 'Worn, cracked or missing shingles or broken tiles near the chimney', 'A roofer'],
+              ],
+            },
+          },
+          'Often it is more than one. Counter-flashing is set into the mortar, so crumbling joints and failing flashing tend to go together. We will tell you what we find on the roof side and say plainly when the brick or the crown needs a mason too.',
+        ],
+      },
+      {
+        heading: 'Why Flashing Repair Is Usually a Small Job',
+        blocks: [
+          'Chimney flashing covers a few feet of roof. Fixing it means working on that small area, not the whole roof, which is why it is one of the most common repairs we do.',
+          {
+            steps: [
+              '**Open up the area.** The shingles around the chimney are lifted carefully so the old flashing can come out.',
+              '**Take out what failed.** Rusted, bent or missing pieces, and any old roof cement, come off.',
+              '**Install new flashing in the right order.** Base flashing first, step flashing woven in with the shingles up each side, then the back pan or cricket on the uphill side.',
+              '**Set the counter-flashing into the brick.** A joint is cut into the mortar, the counter-flashing is set into it and the top is sealed.',
+              '**Close it up and photograph it.** The shingles go back down and are sealed, and you get photos of the problem and the finished repair.',
+            ],
+          },
+{ img: '/images/blog/failing-chimney-flashing-new-step-flashing.webp', alt: 'A roofer in leather work gloves slides a new piece of metal step flashing under a lifted gray shingle along the side of a brick chimney, a hammer resting on the roof beside him', caption: 'Step flashing going in: the shingles beside the chimney are lifted, and each new piece of metal is woven in under its own shingle, one course at a time.' },
+          'Loose counter-flashing that is still sound can sometimes be reset rather than replaced. What we don’t do is cover failed flashing with another layer of sealant: as our [shingle roof repair](/residential-roofing/shingle-roofing/repair/) page says, failed flashing is reset or replaced.',
+          { pov: 'A chimney leak sounds big, and it usually isn’t. Most of the time the right answer is new flashing around the chimney, done in the right order, not a new roof. We would rather fix the few feet that failed and show you the photos.' },
+        ],
+      },
+      {
+        heading: 'Why Caulk Alone Doesn’t Last',
+        blocks: [
+          'Sealant and roof cement are the first thing most people reach for, and the first thing to fail. They dry out in the sun, crack as the chimney and roof move at different rates, and pull away from the brick. A bead of caulk can stop a drip for a while, but it only covers the gap that metal in the right order is supposed to close.',
+          'If water is coming in now, a temporary fix is reasonable until a roofer can get there. Our article on [how to stop a roof leak](/blog/stop-a-roof-leak/) covers what you can safely do from inside, and for active leaks we take [emergency roof repair](/roof-repair/emergency/) calls after hours and on weekends.',
+        ],
+      },
+      {
+        heading: 'When Flashing Points to a Bigger Job',
+        blocks: [
+          'Sometimes the flashing is fine and the roof around it isn’t. If the shingles near the chimney are curling, cracking or bare of granules across the whole roof, new flashing on an old roof is a short-term answer. Our articles on [curling, cracked and missing shingles](/blog/curling-cracked-missing-shingles/) and [granule loss](/blog/shingle-granule-loss/) explain how to tell.',
+          'In that case the chimney is re-flashed as part of a [shingle roof replacement](/residential-roofing/shingle-roofing/replacement/): our *TotalShield* Shingle System takes the roof down to the deck and builds a complete new system, flashings included, and adds a cricket behind the chimney where one is needed.',
+        ],
+      },
+      {
+        heading: 'How We Check Chimney Flashing',
+        blocks: [
+          'At QRS, a roofer looks at your roof before anyone tries to sell you one. Around a chimney, that means:',
+          {
+            list: [
+              'Drone footage and photos with *RoofScan 360*, including the uphill side behind the chimney, which you can’t see from the street.',
+              'A close look at every piece of flashing: base, step, counter-flashing and the back pan or cricket.',
+              'A check of the shingles or tiles around the chimney, and of the stain inside if there is one, to match the two up.',
+              'One clear next step: repair, monitor, maintain or replace, explained in plain English.',
+            ],
+          },
+          'If it is a repair, our [roof repair](/roof-repair/) service, *LeakRescue*, fixes what failed and shows you photos of the problem and the finished repair. You get a written scope and price before any work starts, and for homes the [roof evaluation](/roof-inspection/) is free.',
+          { pov: 'If the leak is coming through the brick or the crown, not the flashing, we will tell you, even though that means the job isn’t ours. Fixing the wrong thing just means a second stain.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What is chimney flashing?',
+        a: 'It is the metal that seals the joint between your roof and the chimney: base flashing across the front, step flashing up the sides, counter-flashing on the brick lapping over them, and a back pan or cricket on the uphill side.',
+      },
+      {
+        q: 'How do I know if my chimney flashing is leaking?',
+        a: 'Look for a stain on the ceiling or wall beside the chimney after rain, and from the ground, for cracked sealant, counter-flashing pulled away from the brick, rust, loose metal or thick patches of roof cement. A roofer can confirm it from the roof and the attic.',
+      },
+      {
+        q: 'Can chimney flashing be repaired, or does it have to be replaced?',
+        a: 'It depends on the metal. Counter-flashing that has pulled loose but is still sound can sometimes be reset into the mortar joint. Rusted, bent or missing pieces are replaced, and the shingles around the chimney are lifted so the new flashing goes in the right order.',
+      },
+      {
+        q: 'Is roof cement or caulk enough to fix chimney flashing?',
+        a: 'Only as a stopgap. Sealant dries out, cracks and pulls away from the brick, so a leak sealed that way tends to come back. Failed flashing should be reset or replaced.',
+      },
+      {
+        q: 'Do I need a new roof to fix a chimney leak?',
+        a: 'Usually not. Chimney flashing is a small area, and re-flashing it is a contained repair. A new roof is only the answer when the roof around the chimney is worn out too.',
+      },
+      {
+        q: 'Who fixes a chimney leak, a roofer or a mason?',
+        a: 'A roofer fixes the flashing and the roof around the chimney. Cracked crowns, missing caps and crumbling brick or mortar are a chimney sweep’s or a mason’s job. We will tell you which one you need.',
+      },
+    ],
+    closing: {
+      heading: 'Seeing Signs Around Your Chimney?',
+      blocks: [
+        'A small flashing problem is a small repair, if it is caught before the wood around it gets wet. Book a [free roof evaluation](#roof-check) and a roofer will check every piece of flashing around your chimney, show you the photos and give you a written scope and price before any work. Or call [(310) 340-1643](tel:+13103401643). If water is coming in now, it is an [emergency roof repair](/roof-repair/emergency/) call.',
+        'Part of our [asphalt shingle roof guide](/blog/asphalt-shingle-roof-guide/).',
+      ],
+    },
+    related: ['/roof-repair/', '/residential-roofing/shingle-roofing/repair/', '/roof-inspection/', '/roof-repair/emergency/'],
+  },
   // Curling vs. cracked vs. missing shingles (owner, November 23 2026): keyword "missing shingles". Educational, side by side: what each looks
   // like, what causes it, which is serious (missing is the most urgent today, roof-wide curling the most serious for the roof's future), then the
   // questions that decide repair or replace, to set up that conversation. Our voice, three "Our point of view" boxes, no prices, no lifespans in

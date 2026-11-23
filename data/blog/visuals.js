@@ -21,6 +21,9 @@ export const POST_VISUALS = {
   'how-to-trace-a-roof-leak-in-the-attic': {
     'Stop 3: Look Up and Read the Roof Deck': { table: 'cards' },
   },
+  'failing-chimney-flashing': {
+    'Flashing or the Chimney Itself?': { table: 'cards' },
+  },
   'curling-cracked-missing-shingles': {
     'Curling, Cracked and Missing Shingles Side by Side': { table: 'cards' },
     'Repair or Replace? The Questions That Decide It': { table: 'decide' },
