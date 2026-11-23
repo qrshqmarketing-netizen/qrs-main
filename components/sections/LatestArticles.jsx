@@ -4,6 +4,7 @@ import { ArrowRight } from '@/components/ui/icons';
 import { BLOG_LINK, blogPath } from '@/data/catalog';
 import { articleDate } from '@/lib/articles';
 import './LatestArticles.css';
+import { titleOverPicture } from '@/data/blog/thumbnails';
 import Mark from '@/components/ui/Mark';
 import { t } from '@/lib/lang';
 
@@ -21,26 +22,34 @@ export default function LatestArticles({ posts = [], heading = 'Latest Roofing _
         <h2 id="articles-title"><Mark text={T(heading)} /></h2>
         {lang === 'es' && <p className="art-lang">{T('Articles in English')}</p>}
         <div className="art-grid">
-          {posts.map((post, i) => (
+          {posts.map((post, i) => {
+            const src = post.image || post.cardImage;
+            const over = titleOverPicture(src); // the title on the picture (a picture without its own title text)
+            const title = (
+              <h3 className={over ? 'art-over' : undefined}>
+                <SiteLink className="art-link" href={blogPath(post.slug)} prefetch={false}>{post.title}</SiteLink>
+              </h3>
+            );
+            const media = src ? (
+              <div className="art-media">
+                <Image src={src} alt="" fill sizes="(min-width: 901px) 360px, (min-width: 621px) 50vw, 100vw" quality={60} />
+              </div>
+            ) : (
+              <div className={`art-media art ${SCENES[i % SCENES.length]}`} aria-hidden="true"></div>
+            );
+            return (
             <article className="art-card" key={post.slug}>
-              {post.image || post.cardImage ? (
-                <div className="art-media">
-                  <Image src={post.image || post.cardImage} alt="" fill sizes="(min-width: 901px) 360px, (min-width: 621px) 50vw, 100vw" quality={60} />
-                </div>
-              ) : (
-                <div className={`art-media art ${SCENES[i % SCENES.length]}`} aria-hidden="true"></div>
-              )}
+              {over ? <div className="art-top">{media}{title}</div> : media}
               <div className="art-body">
                 <time dateTime={post.datePublished}>{articleDate(post.datePublished, lang)}</time>
-                <h3>
-                  <SiteLink className="art-link" href={blogPath(post.slug)} prefetch={false}>{post.title}</SiteLink>
-                </h3>
+                {!over && title}
                 <span className="art-more" aria-hidden="true">
                   {T('Read the article')} <ArrowRight />
                 </span>
               </div>
             </article>
-          ))}
+            );
+          })}
         </div>
         <p className="art-all">
           <SiteLink href={BLOG_LINK.href}>{T('See all roofing articles')}</SiteLink>

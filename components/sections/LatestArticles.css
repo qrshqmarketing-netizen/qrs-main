@@ -22,3 +22,8 @@
   .articles{padding:80px 0}
   .art-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
 }
+/* Title on the picture (owner, November 23 2026): see .pc-top in PostCards.css; same pattern for the article rows on the site */
+.art-top{display:grid}
+.art-top>*{grid-area:1/1}
+.art-top .art-media:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,20,40,0) 28%,rgba(2,20,40,.5) 58%,rgba(2,20,40,.9));pointer-events:none}
+html body .art-card h3.art-over{align-self:end;z-index:1;margin:0!important;padding:0 20px 16px;color:#fff!important;font-family:var(--font-text),ui-sans-serif,system-ui,sans-serif!important;font-size:clamp(18px,1.45vw,21px)!important;font-weight:500!important;line-height:1.25!important;letter-spacing:.005em!important;text-align:left;text-shadow:0 1px 14px rgba(0,0,0,.5)}

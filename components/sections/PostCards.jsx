@@ -8,11 +8,21 @@ export const postDate = (iso) => new Date(`${iso}T12:00:00Z`).toLocaleDateString
 
 // One blog index card: its thumbnail (placeholder art for a post without one), date, title and excerpt. `hidden` keeps the card in the
 // page's HTML but out of sight (the filters and pages in BlogBrowser.jsx), so every article stays a link on the page.
-// post: { slug, href, title, excerpt, datePublished, dateLabel, picture, scene }
+// post: { slug, href, title, excerpt, datePublished, dateLabel, picture, overlay (the title goes on the picture, data/blog/thumbnails.js), scene }
 export function PostCard({ post, hidden = false }) {
   return (
     <article className="pc-card" hidden={hidden}>
-      {post.picture ? (
+      {post.picture && post.overlay ? (
+        // a picture without its own title: the title sits on it (grid-stacked, so the link still covers the whole card)
+        <div className="pc-top">
+          <div className="pc-media">
+            <Image src={post.picture} alt="" fill sizes="(min-width: 901px) 360px, (min-width: 621px) 50vw, 100vw" />
+          </div>
+          <h3 className="pc-over">
+            <SiteLink className="pc-link" href={post.href}>{post.title}</SiteLink>
+          </h3>
+        </div>
+      ) : post.picture ? (
         <div className="pc-media">
           <Image src={post.picture} alt="" fill sizes="(min-width: 901px) 360px, (min-width: 621px) 50vw, 100vw" />
         </div>
@@ -20,9 +30,11 @@ export function PostCard({ post, hidden = false }) {
         <div className={`pc-media art ${SCENES[post.scene % SCENES.length]}`} aria-hidden="true"></div>
       )}
       <time dateTime={post.datePublished}>{post.dateLabel}</time>
-      <h3>
-        <SiteLink className="pc-link" href={post.href}>{post.title}</SiteLink>
-      </h3>
+      {!(post.picture && post.overlay) && (
+        <h3>
+          <SiteLink className="pc-link" href={post.href}>{post.title}</SiteLink>
+        </h3>
+      )}
       <p>{post.excerpt}</p>
       <span className="pc-more" aria-hidden="true">
         Read the article <ArrowRight />

@@ -42,3 +42,11 @@
   .post-cards{padding:100px 0}
   .pc-grid{grid-template-columns:repeat(3,1fr)}
 }
+/* Title on the picture (owner, November 23 2026): a card whose thumbnail has no title of its own (data/blog/thumbnails.js) stacks the
+   picture and the title in one grid cell, with a dark fade at the bottom so the white title reads on any photo. The link's stretched
+   :after still covers the whole card, since the grid wrapper isn't positioned. */
+.pc-top{display:grid;margin-bottom:18px;border-radius:var(--radius) var(--radius) 0 0;overflow:hidden}
+.pc-top>*{grid-area:1/1}
+.pc-top .pc-media{margin-bottom:0;border-radius:0}
+.pc-top .pc-media:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,20,40,0) 28%,rgba(2,20,40,.5) 58%,rgba(2,20,40,.9));pointer-events:none}
+html body .pc-card h3.pc-over{align-self:end;z-index:1;margin:0!important;padding:0 20px 16px;color:#fff!important;font-family:var(--font-text),ui-sans-serif,system-ui,sans-serif!important;font-size:clamp(18px,1.45vw,21px)!important;font-weight:500!important;line-height:1.25!important;letter-spacing:.005em!important;text-align:left;text-shadow:0 1px 14px rgba(0,0,0,.5)}

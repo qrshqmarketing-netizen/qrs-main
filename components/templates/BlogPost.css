@@ -77,3 +77,15 @@ main .post-pov p:last-child{margin:0;font-size:17px;line-height:1.6;color:var(--
 .post-more ul{margin:0;padding-left:20px}
 .post-more li{margin-bottom:6px;font-size:16px;line-height:1.5}
 .post-more a{color:var(--navy);font-weight:600;text-decoration:underline;text-decoration-color:rgba(212,181,114,.7);text-underline-offset:3px}
+/* Title on the cover (owner, November 23 2026): an article whose thumbnail is a plain photo (data/blog/thumbnails.js) puts the eyebrow and
+   the H1 on the picture, bottom left, over a dark fade; the byline follows below. Square on phones so a long title has room, 3:2 from 621px.
+   Still the page's only H1, as real text. */
+.post-cover{display:grid;margin:18px 0 22px;border-radius:var(--radius);overflow:hidden;background:var(--surface-navy,#062d57)}
+.post-cover>*{grid-area:1/1}
+.post-cover .post-image{position:relative;margin:0;border-radius:0;aspect-ratio:1/1}
+.post-cover .post-image img{width:100%;height:100%;object-fit:cover}
+.post-cover .post-image:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,20,40,0) 25%,rgba(2,20,40,.55) 55%,rgba(2,20,40,.92));pointer-events:none}
+.post-cover-text{align-self:end;z-index:1;padding:clamp(18px,4.5vw,36px)}
+html body.studio-site main .post .post-cover .eyebrow,.post .post-cover .eyebrow{margin:0 0 6px;color:var(--gold-2,#e8c98a)!important;text-align:left!important;text-shadow:0 1px 10px rgba(0,0,0,.45)}
+html body.studio-site main .post .post-cover h1,.post .post-cover h1{margin:0!important;color:#fff!important;font-size:clamp(24px,3.6vw,40px)!important;line-height:1.1!important;text-align:left!important;text-shadow:0 2px 18px rgba(0,0,0,.5);text-wrap:balance}
+@media (min-width:621px){.post-cover .post-image{aspect-ratio:3/2}}

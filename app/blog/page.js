@@ -1,4 +1,5 @@
 import Hero from '@/components/sections/Hero';
+import { titleOverPicture } from '@/data/blog/thumbnails';
 import HeroLatestPost from '@/components/sections/HeroLatestPost';
 import IndexNote from '@/components/sections/IndexNote';
 import BlogBrowser from '@/components/sections/BlogBrowser';
@@ -41,6 +42,7 @@ export default async function BlogPage() {
     datePublished: post.datePublished,
     dateLabel: postDate(post.datePublished),
     picture: post.image || post.cardImage || null,
+    overlay: titleOverPicture(post.image || post.cardImage),
     scene: i,
     topics: post.topics || [],
     featured: post.slug === featured?.slug,
