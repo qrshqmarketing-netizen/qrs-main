@@ -20,10 +20,11 @@ export const KEEP_READING = {
   'how-to-find-a-roof-leak': [B('how-to-stop-a-leaking-roof-now'), B('roof-repair-cost')],
   'roof-repair-cost': [B('how-to-find-a-roof-leak'), B('how-to-stop-a-leaking-roof-now'), B('roof-restoration-vs-replacement')],
   // Storms and upkeep
-  'roof-storm-damage-signs': [B('prepare-your-roof-for-el-nino'), B('how-to-stop-a-leaking-roof-now'), B('roof-insurance-claims-california')],
-  'roof-maintenance-checklist': [B('prepare-your-roof-for-el-nino'), B('roof-drip-edge-flashing'), B('what-does-a-roof-inspection-include')],
+  'roof-storm-damage-signs': [B('how-to-check-your-roof-from-the-ground'), B('prepare-your-roof-for-el-nino'), B('how-to-stop-a-leaking-roof-now'), B('roof-insurance-claims-california')],
+  'how-to-check-your-roof-from-the-ground': [B('roof-storm-damage-signs'), B('roof-leak-source'), B('roof-drip-edge-flashing')],
+  'roof-maintenance-checklist': [B('how-to-check-your-roof-from-the-ground'), B('prepare-your-roof-for-el-nino'), B('roof-drip-edge-flashing'), B('what-does-a-roof-inspection-include')],
   'prepare-your-roof-for-el-nino': [B('roof-maintenance-checklist'), B('roof-storm-damage-signs'), B('stop-a-roof-leak'), B('prepare-a-commercial-roof-for-el-nino')],
-  'what-does-a-roof-inspection-include': [B('roof-maintenance-checklist'), B('commercial-roof-inspection-checklist')],
+  'what-does-a-roof-inspection-include': [B('how-to-check-your-roof-from-the-ground'), B('roof-maintenance-checklist'), B('commercial-roof-inspection-checklist')],
   // Commercial and industrial
   'prepare-a-commercial-roof-for-el-nino': [B('commercial-roof-inspection-checklist'), B('commercial-roof-leak-repair'), C_MAINT, WAREHOUSES, INDUSTRIAL],
   'commercial-roof-inspection-checklist': [B('prepare-a-commercial-roof-for-el-nino'), B('how-to-vet-commercial-roofing-near-me'), C_MAINT, MANAGERS],
@@ -49,7 +50,7 @@ export const KEEP_READING = {
   'how-to-choose-a-shingle-roofer-los-angeles': [B('top-qualities-shingle-roofers-los-angeles-orange-county'), B('roof-drip-edge-flashing'), B('how-to-choose-a-roofer-los-angeles-ca')],
   'top-qualities-shingle-roofers-los-angeles-orange-county': [B('how-to-choose-a-roofer-los-angeles-ca'), B('roof-drip-edge-flashing')],
   'architectural-vs-3-tab-shingles': [B('roof-drip-edge-flashing'), B('top-qualities-shingle-roofers-los-angeles-orange-county')],
-  'shingle-granules-in-gutter': [B('roof-drip-edge-flashing')],
+  'shingle-granules-in-gutter': [B('roof-drip-edge-flashing'), B('how-to-check-your-roof-from-the-ground')],
   'roof-drip-edge-flashing': [B('shingle-granules-in-gutter'), B('roof-maintenance-checklist')],
   // Replacement and choosing a roofer
   'roof-replacement-guide': [B('how-to-choose-a-roofer-los-angeles-ca'), B('roof-warranty-explained'), B('roofing-permits-los-angeles'), B('roof-replacement-cost-los-angeles'), B('how-to-pay-for-a-new-roof'), B('best-roof-for-solar-panels')],

@@ -23,6 +23,173 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // Checking a roof from the ground (owner, November 23 2026): keyword "check your roof from the ground". A homeowner's 60-second walk-around with
+  // binoculars or a phone's zoom, roof type by roof type, what each sign means and when to call. Our voice, three "Our point of view" boxes, only
+  // claims the site already makes (free roofer-led evaluation with drone footage and photos, one of four next steps, written scope and price before
+  // any work, emergency calls after hours and weekends), no prices, no lifespans. Picture: the owner's image.
+  {
+    slug: 'how-to-check-your-roof-from-the-ground',
+    title: 'How to Check Your Roof From the Ground in 60 Seconds',
+    keyword: 'check your roof from the ground',
+    topics: ['inspection', 'maintenance', 'leak', 'storm', 'shingle', 'tile', 'flat'],
+    metaTitle: 'How to Check Your Roof From the Ground in 60 Seconds',
+    metaDescription:
+      'Check your roof from the ground in 60 seconds: what to look for with binoculars on shingle, tile and flat roofs, what each sign means and when to call a roofer.',
+    datePublished: '2026-11-23',
+    dateModified: '2026-11-23',
+    image: '/images/blog/how-to-check-your-roof-from-the-ground.webp',
+    imageAlt: 'How to check your roof from the ground: a homeowner holding binoculars in her front yard, in front of a craftsman home with a gray shingle roof',
+    excerpt:
+      'You can check your roof from the ground in about a minute, with binoculars or your phone’s zoom and both feet on the lawn. Here is the walk-around we would do, what each sign means and when it is time to call.',
+    intro: [
+      'You can check your roof from the ground in about 60 seconds, with binoculars or your phone’s zoom and both feet on the lawn. No ladder, no climbing, no guesswork about what you are looking at.',
+      'We are the roofers who get the call after a leak shows up on a ceiling. Most of those roofs gave a sign first, and many of those signs were visible from the street. Here is the quick walk-around we would do at our own homes, what each thing you see means, and when it is time to have a roofer take a closer look.',
+    ],
+    sections: [
+      {
+        heading: 'Before You Start: Stay on the Ground',
+        blocks: [
+          'Everything in this check happens from the yard, the sidewalk or across the street. You do not need to climb a ladder, and you should not walk on the roof. Tile cracks underfoot, wet shingles are slippery, and a fall from any roof is serious.',
+          {
+            list: [
+              '**Binoculars or a phone with zoom.** Take a photo of anything that looks off, so you can compare it later or show it to a roofer.',
+              '**Daylight, ideally with the sun behind you.** Low sun across a slope shows lifted and missing pieces best.',
+              '**A spot back from the house.** Across the street or at the far end of the yard lets you see more of each slope.',
+            ],
+          },
+          { note: '**Stay safe:** If water is coming in right now, skip the check and call. Emergency roof calls are taken after hours and on weekends, and we tarp the roof when it needs it.' },
+          { pov: 'We would rather you look at your roof from the lawn every season than climb onto it once. A minute on the ground catches most of what matters, and the rest is our job.' },
+        ],
+      },
+      {
+        heading: 'The 60-Second Roof Check, Step by Step',
+        blocks: [
+          'Walk around the house once and give each part of the roof a few seconds. Start with the whole roof and work down to the details.',
+          {
+            steps: [
+              '**Seconds 0 to 10: the whole roofline.** Stand back and look at the ridge and the edges. They should run straight. A dip or a sag along the ridge or the middle of a slope can mean a problem with the deck underneath.',
+              '**Seconds 10 to 25: the roof surface.** Scan each slope you can see for missing, lifted, curled or cracked shingles, or for slipped, broken or missing tiles. Gaps in the pattern stand out from a distance.',
+              '**Seconds 25 to 40: everything that comes through the roof.** Look at the chimney, vents, pipes and skylights, and anywhere a wall meets the roof. Most leaks start at these spots, where metal flashing seals the roof around them. Look for metal that is loose, bent, rusted or missing.',
+              '**Seconds 40 to 50: the gutters and downspouts.** Look for gutters pulling away from the house, debris piled up, and dark, sand-like granules collecting in the gutter or washing out of the downspouts.',
+              '**Seconds 50 to 60: the edges and eaves.** Look at the fascia boards and the underside of the eaves for stains, peeling paint or soft-looking wood. Water that gets past the edge of the roof shows up here first.',
+            ],
+          },
+          'That is the whole check. If everything looks even, straight and in place, write down the date and look again after the next big storm. If something looks off, take a photo and read on.',
+        ],
+      },
+      {
+        heading: 'What to Look For on a Shingle, Tile or Flat Roof',
+        blocks: [
+          'Every roof type wears in its own way, so the details you look for change with what is on your house.',
+          {
+            table: {
+              head: ['Roof type', 'What you can see from the ground', 'What it can mean'],
+              rows: [
+                ['Asphalt shingle', 'Missing, lifted, curled or cracked shingles; bare or patchy spots; granules in the gutters', 'Wind damage, a sealed edge that has let go, or shingles wearing out from the sun'],
+                ['Clay or concrete tile', 'Slipped, cracked, broken or missing tiles; a gap in the pattern; tiles sitting crooked', 'A broken tile lets more water and sun reach the underlayment below, the layer that keeps the house dry'],
+                ['Flat or low-slope', 'Usually little of the roof itself. Look at the edges, stains running down walls under the roof’s edge, and water spilling from the scuppers or downspouts long after rain', 'Water sitting on the roof or getting in at the edges and walls'],
+              ],
+            },
+          },
+          'On a tile roof, remember that the tile is only half the roof. The tiles can look fine from the street while the underlayment beneath them is near the end of its life. A ground check can spot broken tiles. It cannot see the layer underneath. Our [tile roof guide](/blog/tile-roof-guide-southern-california/) explains why.',
+          'On a flat roof, the surface is hard to see from the ground at all. That makes the edges, the walls and the drains your best clues. Our [flat roofs guide](/blog/flat-roofs-los-angeles-guide/) covers what wears on them.',
+        ],
+      },
+      {
+        heading: 'Add One Minute Inside',
+        blocks: [
+          'A roof problem often shows up indoors before it shows on the roof. While you are at it, take one more minute inside:',
+          {
+            list: [
+              '**Ceilings on the top floor.** Look for brown rings, yellow stains or bubbling paint, especially near the chimney, skylights and outside walls.',
+              '**Closets and corners.** Leaks often show first in rooms nobody looks at.',
+              '**Around skylights.** Stains on the frame or the drywall around it.',
+            ],
+          },
+          'A stain on the ceiling is rarely right under where the water gets in. Water runs along the deck and the framing before it drips. If you find one, our guide to [how to find a roof leak](/blog/how-to-find-a-roof-leak/) explains how we trace it back to the source.',
+        ],
+      },
+      {
+        heading: 'What Your Roof Check Means: Watch, Book or Call Now',
+        blocks: [
+          'Not everything you see needs a roofer tomorrow. Here is how we would sort it.',
+          {
+            table: {
+              head: ['What you saw', 'What to do'],
+              rows: [
+                ['Water coming in, or a stain that is growing', 'Call now. This is an [emergency roof repair](/roof-repair/emergency/) call, and a tarp can protect the house until the repair.'],
+                ['Missing shingles or broken tiles after wind or a storm', 'Book a roof evaluation soon, before the next rain finds the opening. See the [signs of roof storm damage](/blog/roof-storm-damage-signs/).'],
+                ['Loose flashing, a lifted vent or a sag in the roofline', 'Book a roof evaluation. These are spots where small problems become leaks.'],
+                ['Granules in the gutters, curling or patchy shingles', 'Book a roof evaluation to find out how much life the roof has left. Read [what granules in the gutter mean](/blog/shingle-granules-in-gutter/).'],
+                ['Debris in the gutters or on the roof', 'Clear the gutters from a ladder at the eave if you are comfortable doing it, or ask us. Leave the roof itself to a roofer.'],
+                ['Nothing out of place', 'Note the date and check again after the next big storm and before the rainy season.'],
+              ],
+            },
+          },
+          { pov: 'One missing shingle or one broken tile is usually a small repair. The same opening left through a rainy season is how a small repair becomes a ceiling, a deck and a much bigger job. If you saw it, have it looked at.' },
+        ],
+      },
+      {
+        heading: 'When to Check Your Roof From the Ground',
+        blocks: [
+          'A minute a few times a year is plenty. The times that matter most:',
+          {
+            checklist: [
+              'Before the rainy season starts',
+              'After strong winds or a big storm',
+              'After work on the roof by anyone else: solar, satellite dishes, chimney or HVAC work',
+              'When you notice granules in the gutters or a new stain inside',
+              'Before you buy or sell a home',
+            ],
+          },
+          'If you want someone else to keep track of it, our [roof maintenance plans](/roof-maintenance-plans/) put a roofer on your roof on a schedule. And for a full seasonal list, see our [roof maintenance checklist](/blog/roof-maintenance-checklist/) and how to [prepare your roof for El Niño](/blog/prepare-your-roof-for-el-nino/).',
+        ],
+      },
+      {
+        heading: 'What a Ground Check Can’t Tell You',
+        blocks: [
+          'A ground check finds what is visible from the yard. It cannot see the underlayment under tile or shingles, the condition of the deck, the back side of the chimney, or the slopes you cannot see from any spot on the lot. Those are the parts that decide how long a roof will last.',
+          'That is what our [free roof evaluation](/roof-inspection/) is for. A roofer looks at the roof, with drone footage of the areas of concern and photos of what we find. Then you get one of four next steps in plain English: repair, monitor, maintain or replace. If work is needed, you get a written scope and price before any work starts.',
+          'Bring your own photos. If you spotted something from the ground, show us, and we will start there. Our article on [what a roof inspection includes](/blog/what-does-a-roof-inspection-include/) covers the rest of the list.',
+          { pov: 'Your 60 seconds and our evaluation do different jobs. Yours tells you when to call. Ours tells you what is actually going on up there, and what, if anything, it needs.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Can I check my own roof?',
+        a: 'Yes, from the ground. With binoculars or your phone’s zoom you can spot missing or lifted shingles, broken tiles, loose flashing, sagging lines and granules in the gutters. Leave anything that needs someone on the roof to a roofer.',
+      },
+      {
+        q: 'Is it safe to walk on my roof to check it?',
+        a: 'We don’t recommend it. Tiles crack underfoot, shingles are slippery when wet or dusty, and a fall from a roof is serious. Everything in a homeowner’s check can be done from the ground.',
+      },
+      {
+        q: 'What should I look for with binoculars?',
+        a: 'Missing, lifted, curled or cracked shingles; slipped or broken tiles; loose or rusted metal around the chimney, vents, pipes and skylights; a dip in the roofline; and gutters full of granules or pulling away from the house.',
+      },
+      {
+        q: 'How often should I check my roof from the ground?',
+        a: 'A few times a year, and always before the rainy season and after strong winds or a big storm. It takes about a minute.',
+      },
+      {
+        q: 'I found shingle granules in my gutter. Is that a problem?',
+        a: 'A few after a new roof is normal. A steady amount, or bare spots on the shingles, usually means the shingles are wearing. Our article on [granules in the gutter](/blog/shingle-granules-in-gutter/) explains what to look for, and a roof evaluation will tell you how much life is left.',
+      },
+      {
+        q: 'What should I do if I see something on my roof?',
+        a: 'Take a photo and book a free roof evaluation. If water is coming in now, call right away: emergency calls are taken after hours and on weekends, and we tarp the roof when it needs it.',
+      },
+    ],
+    closing: {
+      heading: 'Saw Something From the Ground? Have a Roofer Look.',
+      blocks: [
+        'Your 60-second check is the first step. A free roof evaluation is the second: a roofer, drone footage and photos, a plain-English next step, and a written scope and price before any work. Call (310) 340-1643 or [request your evaluation](#roof-check).',
+        'See also our [roof repair](/roof-repair/) and [roof inspection](/roof-inspection/) pages, and our [asphalt shingle roof guide](/blog/asphalt-shingle-roof-guide/).',
+      ],
+    },
+    related: ['/roof-inspection/', '/roof-repair/', '/roof-maintenance-plans/'],
+  },
   // Best roof for solar panels (owner, November 16 2026, from the owner's team's draft): keyword "best roof for solar panels" (about 430 searches a
   // month with its variants, Ubersuggest). In our voice with three "Our point of view" boxes. Changed to the site's rules: every dollar figure and the
   // removal-and-reinstall cost tables are gone (the cost is described, not priced), no roof lifespans in years (only the panels' own warranty, from
