@@ -21,6 +21,10 @@ export const POST_VISUALS = {
   'how-to-trace-a-roof-leak-in-the-attic': {
     'Stop 3: Look Up and Read the Roof Deck': { table: 'cards' },
   },
+  'first-hour-active-roof-leak': {
+    'What Not to Do in the First Hour': { list: 'flags' },
+    'Your First-Hour Checklist': { checklist: 'tracker' },
+  },
   'sagging-roofline-urgent': {
     'Step 2: Read What Kind of Sag It Is': { table: 'cards' },
     'Step 4: Decide How Fast to Call': { table: 'decide' },

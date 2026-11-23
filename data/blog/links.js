@@ -15,8 +15,8 @@ export const KEEP_READING = {
   // Roof leaks
   'roof-leak-source': [B('failing-chimney-flashing'), B('how-to-trace-a-roof-leak-in-the-attic'), B('how-to-read-a-ceiling-stain'), B('how-to-find-a-roof-leak'), B('how-to-stop-a-leaking-roof-now'), B('roof-repair-cost')],
   'temporary-roof-repair-options': [B('how-to-stop-a-leaking-roof-now'), B('stop-a-roof-leak'), B('roof-repair-cost')],
-  'stop-a-roof-leak': [B('how-to-stop-a-leaking-roof-now'), B('how-to-find-a-roof-leak'), B('roof-repair-cost')],
-  'how-to-stop-a-leaking-roof-now': [B('how-to-read-a-ceiling-stain'), B('roof-leak-source'), B('roof-insurance-claims-california')],
+  'stop-a-roof-leak': [B('first-hour-active-roof-leak'), B('how-to-stop-a-leaking-roof-now'), B('how-to-find-a-roof-leak'), B('roof-repair-cost')],
+  'how-to-stop-a-leaking-roof-now': [B('first-hour-active-roof-leak'), B('how-to-read-a-ceiling-stain'), B('roof-leak-source'), B('roof-insurance-claims-california')],
   'how-to-find-a-roof-leak': [B('how-to-trace-a-roof-leak-in-the-attic'), B('how-to-read-a-ceiling-stain'), B('how-to-stop-a-leaking-roof-now'), B('roof-repair-cost')],
   'roof-repair-cost': [B('how-to-find-a-roof-leak'), B('how-to-stop-a-leaking-roof-now'), B('roof-restoration-vs-replacement')],
   // Storms and upkeep
@@ -52,7 +52,8 @@ export const KEEP_READING = {
   'how-to-choose-a-shingle-roofer-los-angeles': [B('top-qualities-shingle-roofers-los-angeles-orange-county'), B('roof-drip-edge-flashing'), B('how-to-choose-a-roofer-los-angeles-ca')],
   'top-qualities-shingle-roofers-los-angeles-orange-county': [B('how-to-choose-a-roofer-los-angeles-ca'), B('roof-drip-edge-flashing')],
   'architectural-vs-3-tab-shingles': [B('roof-drip-edge-flashing'), B('top-qualities-shingle-roofers-los-angeles-orange-county')],
-  'sagging-roofline-urgent': [B('how-to-stop-a-leaking-roof-now'), B('roof-storm-damage-signs'), B('roof-replacement-guide')],
+  'first-hour-active-roof-leak': [B('how-to-read-a-ceiling-stain'), B('roof-leak-source'), B('roof-repair-cost')],
+  'sagging-roofline-urgent': [B('first-hour-active-roof-leak'), B('how-to-stop-a-leaking-roof-now'), B('roof-storm-damage-signs'), B('roof-replacement-guide')],
   'moss-on-roof-myth-vs-fact': [B('shingle-granules-in-gutter'), B('roof-drip-edge-flashing'), B('prepare-your-roof-for-el-nino')],
   'failing-chimney-flashing': [B('roof-leak-source'), B('how-to-find-a-roof-leak'), B('roof-repair-cost'), B('roof-drip-edge-flashing')],
   'curling-cracked-missing-shingles': [B('roof-storm-damage-signs'), B('roof-repair-cost'), B('how-to-check-your-roof-from-the-ground')],

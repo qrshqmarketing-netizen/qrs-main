@@ -24,6 +24,205 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // First hour of an active roof leak (owner, November 23 2026): keyword "active roof leak". Purchase intent, feeds emergency calls: a timed
+  // step-by-step (safety, catch the water, call, document, look from the ground), what not to do (`list: 'flags'`), what our roofer does on
+  // arrival and a first-hour checklist (`checklist: 'tracker'`). Every safety line and service fact as the emergency page states it (stay off
+  // the roof, away from water near lights and outlets, not under a sagging ceiling, 911 for a tree or a downed line; emergency calls after hours
+  // and weekends; tarps when needed; photos for insurance; written scope and price before the permanent repair). It sits beside
+  // how-to-stop-a-leaking-roof-now and stop-a-roof-leak (temporary fixes) and links to both. No response time, no prices. Interior drying sent to a
+  // water damage company (not claimed). Pictures: the owner's images (thumbnail and eight in the text).
+  {
+    slug: 'first-hour-active-roof-leak',
+    title: 'What to Do in the First Hour of an Active Roof Leak: Step by Step',
+    keyword: 'active roof leak',
+    topics: ['emergency', 'leak', 'repair', 'storm', 'insurance'],
+    metaTitle: 'Active Roof Leak? What to Do in the First Hour',
+    metaDescription:
+      'An active roof leak, step by step: make it safe, catch the water, call a roofer, document the damage, and what to skip. What to do in the first hour.',
+    datePublished: '2026-11-23',
+    dateModified: '2026-11-23',
+    image: '/images/blog/first-hour-active-roof-leak.webp',
+    imageAlt: 'An active roof leak: water pouring from a stained living room ceiling into a blue bucket on towels, the furniture covered in plastic, while a homeowner calls for help by the rainy window',
+    excerpt:
+      'Water coming through the ceiling right now? A minute-by-minute plan for the first hour of an active roof leak: make it safe, catch the water, call, document, and what not to do.',
+    intro: [
+      'An active roof leak is stressful, and the first hour is when the right moves save the most. You don’t need to fix the roof. You need to keep everyone safe, keep the water off your things, get a roofer on the way and write down what happened.',
+      'Here is the hour, step by step. If water is coming in right now, call us at [(310) 340-1643](tel:+13103401643) as soon as everyone is safe: we take [emergency roof repair](/roof-repair/emergency/) calls after hours and on weekends.',
+    ],
+    sections: [
+      {
+        heading: 'Minutes 0 to 5: Make It Safe',
+        blocks: [
+          'Before you think about buckets, think about people.',
+          {
+            list: [
+              '**Keep away from water near lights, fans and outlets.** If water is near a fixture or wiring, switch that circuit off at the breaker, but only if you can reach the panel without standing in water.',
+              '**Don’t stand under a sagging ceiling.** A ceiling that bulges or holds water can come down. Keep everyone, and pets, out of that room.',
+              '**Stay off the roof.** A wet roof in the rain is no place for anyone, and a roofer will handle what is up there.',
+              '**A tree through the roof or a downed power line?** Keep everyone clear and call 911 first.',
+            ],
+          },
+{ img: '/images/blog/first-hour-active-roof-leak-breaker-panel.webp', alt: 'A hand switching off a breaker in a home electrical panel while the other hand holds a flashlight on it', caption: 'Water near a light or an outlet? Switch that circuit off at the panel, but only if you can reach it without standing in water.' },
+          { pov: 'The first hour is about people, then belongings, then the roof. We can fix a roof. We would much rather hear about a wet couch than a fall off a ladder.' },
+        ],
+      },
+      {
+        heading: 'Minutes 5 to 15: Catch the Water',
+        blocks: [
+          'Now limit the damage inside.',
+          {
+            steps: [
+              '**Put a bucket under every drip.** A towel in the bottom stops the splash.',
+              '**Move what you can.** Furniture, rugs, electronics and anything paper go out of the wet area first.',
+              '**Cover what you can’t move.** Plastic sheeting or a tarp over beds, couches and shelves.',
+              '**Soak up standing water.** Towels on the floor, wrung out often, so it doesn’t spread under walls and cabinets.',
+            ],
+          },
+{ img: '/images/blog/first-hour-active-roof-leak-bucket-and-plastic.webp', alt: 'A homeowner setting a blue bucket with a towel in it under a ceiling drip, a couch and floor lamp covered in plastic sheeting behind her', caption: 'A towel in the bucket to stop the splash, and plastic over what can’t be moved. Five minutes of this saves a lot.' },
+          'Water rarely drips right below where it gets in, so if a second spot starts, give it a bucket too and note where it is.',
+        ],
+      },
+      {
+        heading: 'Minutes 15 to 20: Call a Roofer',
+        blocks: [
+          'Call as soon as the water is contained. The sooner a roofer knows, the sooner one is on the way. Call [(310) 340-1643](tel:+13103401643); our field techs take emergency calls outside regular office hours, on weekdays and weekends, and we will tell you when a roofer can be there.',
+{ img: '/images/blog/first-hour-active-roof-leak-calling-a-roofer.webp', alt: 'A homeowner on the phone in the kitchen looking up at a water stain spreading across the ceiling, rain streaking the window behind', caption: 'Once the water is contained, call. The roofer will want to know where it is coming in, how fast, and whether it is still raining.' },
+          'Have these ready when you call:',
+          {
+            checklist: [
+              'Where the water is coming in, and how fast it is dripping',
+              'When it started, and whether it is still raining',
+              'Your roof type, if you know it: shingle, tile or flat',
+              'Whether a ceiling is sagging or anything fell on the roof',
+              'Photos, if you already took some',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Minutes 20 to 40: Document Everything',
+        blocks: [
+          'While you wait, take photos and short videos. They help the roofer find the source and help your insurance company if you file a claim.',
+          {
+            list: [
+              '**The ceiling and walls:** the stain, the drip and any sagging, from a safe distance.',
+              '**What got wet:** furniture, floors, belongings, before you move or throw anything away.',
+              '**The outside, from the ground:** missing shingles, a fallen branch, overflowing gutters, anything the storm moved.',
+              '**The time:** your phone stamps every photo, so take them as you go.',
+            ],
+          },
+{ img: '/images/blog/first-hour-active-roof-leak-photo-of-the-leak.webp', alt: 'Hands holding a phone up to photograph a dripping, stained ceiling, with the bucket catching the water visible on the screen and below', caption: 'Photos as you go: the ceiling, the drip and what got wet. Your phone stamps the time on every one.' },
+          'Keep receipts for anything you buy to protect the house. Our article on [roof insurance claims](/blog/roof-insurance-claims-california/) explains what insurers usually ask for.',
+        ],
+      },
+      {
+        heading: 'Minutes 40 to 60: Look From the Ground',
+        blocks: [
+          'If the rain eases and it is safe to step outside, walk around the house and look up. Don’t climb anything.',
+          {
+            list: [
+              'Missing, lifted or broken shingles or tiles above the leak',
+              'A branch or debris on the roof',
+              'Gutters or downspouts overflowing, especially above the wet wall',
+              'Loose metal around a chimney, a skylight or a vent',
+            ],
+          },
+{ img: '/images/blog/first-hour-active-roof-leak-branch-on-roof.webp', alt: 'A homeowner in a rain jacket stands in the front yard looking up at a large branch lying across the shingle roof of a single-story stucco home, shingles missing beside it', caption: 'From the ground, in a lull in the rain: a branch on the roof and missing shingles beside it. Note it, photograph it, and leave it for the roofer.' },
+          'Our guide to [checking your roof from the ground](/blog/how-to-check-your-roof-from-the-ground/) shows what to look for. If you can get into the attic safely, a flashlight on the wet wood above the stain tells the roofer even more; our [attic walkthrough](/blog/how-to-trace-a-roof-leak-in-the-attic/) shows how.',
+        ],
+      },
+      {
+        heading: 'What Not to Do in the First Hour',
+        blocks: [
+          {
+            list: [
+              '**Don’t climb onto the roof.** Not to look, not to tarp, not in the rain. Falls from roofs are the worst outcome of any leak.',
+              '**Don’t stand under a sagging ceiling.** Keep the room clear until a roofer has looked.',
+              '**Don’t use electricity near the water.** No vacuums, fans or extension cords in a wet area until the circuit is off.',
+              '**Don’t caulk or tar from the inside.** Water comes from above; sealing the ceiling only moves the drip.',
+              '**Don’t wait to see if it stops.** A leak that stops when the rain stops will start again with the next storm, and the wet wood keeps getting worse in between.',
+            ],
+          },
+{ img: '/images/blog/first-hour-active-roof-leak-ladder-tarp-danger.webp', alt: 'A ladder against the edge of a wet shingle roof in heavy rain, a blue tarp bunched up and held by cinder blocks on the roof, water pouring off the gutter', caption: 'What not to do: a ladder on wet ground, a tarp half on in the rain. A leak is never worth a fall.' },
+          'If you want to know what a temporary fix looks like once the rain stops, our articles on [how to stop a leaking roof now](/blog/how-to-stop-a-leaking-roof-now/) and [how to stop a roof leak](/blog/stop-a-roof-leak/) cover what is safe and what to leave to a roofer.',
+        ],
+      },
+      {
+        heading: 'What Our Roofer Does When They Arrive',
+        blocks: [
+          {
+            steps: [
+              '**Assesses and photographs the damage.** A storm damage roof inspection covers the damaged area and the roof around it, following the water’s path, including what you can’t see from the ground.',
+              '**Stops the water now.** When the permanent repair has to wait, we cover the damaged area, for example with a tarp, to limit further water damage.',
+              '**Explains what happened.** Storm damage is often limited to one part of the roof, and when a repair will fix it, that is what we recommend.',
+              '**Puts the price in writing.** Before the permanent repair starts, you get a written scope and price with the photos, ready to share with your insurance company.',
+              '**Finishes clean.** A nail sweep, a tidy clean-up and photos of the completed work.',
+            ],
+          },
+{ img: '/images/blog/first-hour-active-roof-leak-roofers-tarping.webp', alt: 'Two roofers in hard hats and safety harnesses fasten a blue tarp with wood battens over a damaged, torn-open section of a wet shingle roof', caption: 'Roofers in harnesses cover the damaged area with a tarp and battens, so the permanent repair can wait for dry weather.' },
+          { pov: 'We would rather get the call in the first hour than the day after. A tarp on the same day can save a ceiling; a leak left overnight usually means more to dry out and more to fix.' },
+        ],
+      },
+      {
+        heading: 'After the First Hour: Drying Out',
+        blocks: [
+          'Once the water has stopped, keep the area dry and the air moving. Wet drywall and insulation hold water and can grow mold if they stay wet, so a ceiling that got soaked may need to be opened up and replaced. That interior work is a job for a water damage or restoration company; we fix the roof that let the water in, and our photos help them see where it came from.',
+          { img: '/images/blog/first-hour-active-roof-leak-drying-out.webp', alt: 'A living room with a section of wet ceiling drywall cut out to expose the joists and insulation, box fans and a dehumidifier running on the floor below', caption: 'Drying out: the wet drywall opened up, fans and a dehumidifier running. A water damage company handles this part; we fix the roof.' },
+        ],
+      },
+      {
+        heading: 'Your First-Hour Checklist',
+        blocks: [
+          'Save this for the next storm.',
+          {
+            checklist: [
+              'Everyone out from under any sagging ceiling',
+              'Breaker off for any light or outlet near the water',
+              'Buckets under every drip',
+              'Furniture, rugs and electronics moved or covered',
+              'Roofer called: (310) 340-1643',
+              'Photos and videos of the inside and outside',
+              'A walk around the house from the ground, if it is safe',
+              'Receipts kept for anything you bought',
+            ],
+          },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Should I go on the roof to stop an active leak?',
+        a: 'No. A wet roof is slippery, and a fall is far worse than any leak. Contain the water inside, take photos and call a roofer, who can cover the damaged area safely.',
+      },
+      {
+        q: 'Is an active roof leak an emergency?',
+        a: 'If water is coming in now, yes. We take emergency roof repair calls after hours and on weekends, and we will tell you when a roofer can be there.',
+      },
+      {
+        q: 'Can a roofer fix a leak while it is raining?',
+        a: 'Usually the permanent repair waits for dry weather. In the meantime, we cover the damaged area, for example with a tarp, to limit further water damage, and you get a written scope and price for the permanent repair.',
+      },
+      {
+        q: 'What should I tell the roofer when I call?',
+        a: 'Where the water is coming in and how fast, when it started, whether it is still raining, your roof type if you know it, and whether anything is sagging or fell on the roof. Photos help too.',
+      },
+      {
+        q: 'What if the ceiling is bulging with water?',
+        a: 'Keep everyone out from under it, move what you can out of the room, switch off any light or outlet near it at the breaker, and call right away.',
+      },
+      {
+        q: 'Will my insurance cover a roof leak?',
+        a: 'Your insurer decides, usually depending on the cause: sudden storm damage is treated differently from wear. Photos from the first hour help, and we give you a written scope and our photos to share with them.',
+      },
+    ],
+    closing: {
+      heading: 'Water Coming In Right Now? Call.',
+      blocks: [
+        'Make it safe, catch the water, then call [(310) 340-1643](tel:+13103401643), even after hours or on a weekend. A roofer will find where the water is getting in, cover it if the repair has to wait, and give you a written scope and price for the permanent fix. See our [emergency roof repair](/roof-repair/emergency/) page, or [request a roof evaluation](#roof-check) if the water has already stopped.',
+      ],
+    },
+    related: ['/roof-repair/emergency/', '/roof-repair/', '/roof-inspection/'],
+  },
   // Sagging roofline (owner, November 23 2026): keyword "sagging roofline". Purchase-intent walkthrough: safety first (the emergency page's own
   // safety lines: don't stand under a sagging ceiling, call 911 for a tree through the roof or a downed power line), then four steps from the
   // street to the attic, what kind of sag it is (`table: 'cards'`), how fast to call (`table: 'decide'`), causes, and why a sag is a structural
