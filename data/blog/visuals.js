@@ -21,6 +21,10 @@ export const POST_VISUALS = {
   'how-to-trace-a-roof-leak-in-the-attic': {
     'Stop 3: Look Up and Read the Roof Deck': { table: 'cards' },
   },
+  'sagging-roofline-urgent': {
+    'Step 2: Read What Kind of Sag It Is': { table: 'cards' },
+    'Step 4: Decide How Fast to Call': { table: 'decide' },
+  },
   'moss-on-roof-myth-vs-fact': {
     'Moss, Algae or Lichen? Side by Side': { table: 'cards' },
   },

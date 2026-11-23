@@ -24,6 +24,199 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // Sagging roofline (owner, November 23 2026): keyword "sagging roofline". Purchase-intent walkthrough: safety first (the emergency page's own
+  // safety lines: don't stand under a sagging ceiling, call 911 for a tree through the roof or a downed power line), then four steps from the
+  // street to the attic, what kind of sag it is (`table: 'cards'`), how fast to call (`table: 'decide'`), causes, and why a sag is a structural
+  // call. Claims kept to the site's: we replace soft or damaged deck (the replacement pages); framing (rafters, ridge, walls) may need a structural
+  // engineer and a framing contractor, and we say so rather than claim that work. Emergency calls after hours and weekends, tarps when needed,
+  // no response time, no prices. Pictures: the owner's images (thumbnail and seven in the text).
+  {
+    slug: 'sagging-roofline-urgent',
+    title: 'How to Tell if a Sagging Roofline Is Urgent: A Walkthrough',
+    keyword: 'sagging roofline',
+    topics: ['emergency', 'repair', 'replacement', 'inspection', 'leak'],
+    metaTitle: 'Sagging Roofline: How to Tell if It’s Urgent',
+    metaDescription:
+      'A sagging roofline is a structural call, not a cosmetic one. Walk through the signs from the street to the attic, how urgent each one is, and who to call today.',
+    datePublished: '2026-11-23',
+    dateModified: '2026-11-23',
+    image: '/images/blog/sagging-roofline-urgent.webp',
+    imageAlt: 'A sagging roofline: a single-story stucco home whose gray shingle roof dips in the middle of the ridge, seen from across the street under an overcast sky',
+    excerpt:
+      'A sagging roofline is a structural call, not a cosmetic one. A walkthrough from the street to the attic: what each kind of sag means, how fast to act, and who to call today.',
+    intro: [
+      'A sagging roofline is a structural problem, not a cosmetic one, and it is one of the few roof problems we tell people not to wait on. Some sags are old and have stopped moving. Others are getting worse with every rain. From the ground, you can’t tell which, so the safe answer is to have a roofer look today.',
+      'This walkthrough takes you from the street to the attic: what to look for, what each kind of sag usually means, and how fast to act. If anything inside the house is bulging, cracking or making noise, skip to the first section and get everyone clear.',
+    ],
+    sections: [
+      {
+        heading: 'First: Is Anyone in Danger Right Now?',
+        blocks: [
+          'Before you look at the roof, look at the ceilings. Leave the room and keep everyone out if you see any of these:',
+          {
+            checklist: [
+              'A ceiling that bulges, droops or holds water',
+              'New cracks spreading across a ceiling or down a wall near the sag',
+              'Creaking, popping or cracking sounds from above',
+              'Doors or windows near the sag that suddenly stick or won’t close',
+              'A tree or a large branch resting on the roof',
+            ],
+          },
+{ img: '/images/blog/sagging-roofline-urgent-bulging-ceiling.webp', alt: 'A living room ceiling sagging and cracking under a large brown water stain, with pieces of drywall and paint fallen onto the floor', caption: 'A ceiling that bulges, cracks and drops pieces like this is the moment to leave the room and call, not to wait and watch.' },
+          'Don’t stand under a sagging ceiling. If a tree has come through the roof or a power line is down, keep everyone clear and call 911. Then call us: we take [emergency roof repair](/roof-repair/emergency/) calls after hours and on weekends.',
+          { pov: 'A sag is the one roof problem we ask people not to sleep on. Most of the time it is not about to come down, but nobody can promise that from the street, and the cost of guessing wrong is too high.' },
+        ],
+      },
+      {
+        heading: 'Step 1: Look at the Roofline From the Street',
+        blocks: [
+          'Stand across the street, or at the far end of the yard, and look along the roof. A healthy roof has straight lines. Look for:',
+          {
+            list: [
+              '**The ridge.** The peak should run dead straight. A dip in the middle, or a ridge that droops toward one end, is the most serious kind of sag.',
+              '**The slopes.** A slope should look flat. Waves or dips between the rafters, like a washboard, mean the roof deck is giving way.',
+              '**The eaves.** The lower edge should be level. A drooping eave or a wavy fascia often means rot at the edge of the roof.',
+              '**A flat roof.** Look for a low spot that holds water long after the rain stops.',
+            ],
+          },
+{ img: '/images/blog/sagging-roofline-urgent-photo-from-street.webp', alt: 'A homeowner standing across the street photographs his house with a phone, the ridge of the shingle roof dipping in the middle', caption: 'Across the street is the best place to see a roofline. A photo from the same spot each time shows whether it is changing.' },
+          'Take a photo from the same spot each time. Older photos of the house, yours or a street-view image, can show whether the sag is new or has been there for years.',
+        ],
+      },
+      {
+        heading: 'Step 2: Read What Kind of Sag It Is',
+        blocks: [
+          'Where the sag is tells you a lot about what is behind it and how urgent it is.',
+          { img: '/images/blog/sagging-roofline-urgent-waves-between-rafters.webp', alt: 'Low sun across a shingle roof slope showing the courses dipping in waves between the rafters', caption: 'Waves running across a slope in low sun: the roof deck is giving way between the rafters.' },
+          {
+            table: {
+              head: ['Where it sags', 'What it usually means', 'How urgent'],
+              rows: [
+                ['A dip in the ridge', 'The ridge or the rafters are giving way, or the walls below are being pushed apart', 'Call today. This is framing, and it can get worse quickly.'],
+                ['Waves between the rafters', 'The roof deck has softened, usually from water over a long time, or it was too thin for the span', 'Soon, and today if there is a leak or the attic is wet'],
+                ['A drooping eave', 'Rot at the edge of the roof, often from years of water at a gutter or a failed drip edge', 'Soon. Check inside for leaks along that wall.'],
+                ['A low spot on a flat roof', 'The deck or the framing under it has dropped, and ponding water adds weight with every storm', 'Call today, especially before rain'],
+                ['A sag under a heavy roof', 'Tile, extra layers of old roofing or equipment on framing that wasn’t built for the weight', 'Call today. Weight problems don’t fix themselves.'],
+              ],
+            },
+          },
+          { img: '/images/blog/sagging-roofline-urgent-flat-roof-ponding.webp', alt: 'Drone view of a flat roof with a large pond of water sitting in a sunken area between the drains after rain', caption: 'A flat roof holding a pond long after the rain: the low spot adds weight with every storm, so call before the next one.' },
+        ],
+      },
+      {
+        heading: 'Step 3: Check Inside the House',
+        blocks: [
+          'Inside, the top-floor ceilings under the sag tell you whether water or movement has reached the house.',
+          {
+            list: [
+              '**Ceilings.** Sagging drywall, new cracks, nail pops in a line, or a water stain under the sag.',
+              '**Walls.** Cracks running from the corners of doors and windows on the top floor.',
+              '**The attic.** If you can get in safely, shine a flashlight on the roof deck and the rafters under the sag: dark, wet or soft-looking wood, a cracked or split rafter, deck boards dipping between the rafters, or daylight where there shouldn’t be any.',
+            ],
+          },
+          'In the attic, stay on the framing or a walk board and never step between the joists; the ceiling below won’t hold you. Our [attic walkthrough](/blog/how-to-trace-a-roof-leak-in-the-attic/) shows how to look safely.',
+        ],
+      },
+      {
+        heading: 'Step 4: Decide How Fast to Call',
+        blocks: [
+          'Put what you found together and pick the closest match.',
+          {
+            table: {
+              head: ['What you found', 'How fast', 'What to do'],
+              rows: [
+                ['A bulging or cracking ceiling, noises from above, or a tree on the roof', 'Right now', 'Get everyone out of the area. Call 911 for a tree through the roof or a downed line, then call us.'],
+                ['A new sag, a sag with a leak, a wet attic, or a flat roof holding water before rain', 'Today', 'Call us today. A roofer will look and, if water is getting in, cover it.'],
+                ['An old sag that hasn’t changed, with a dry attic and no leaks', 'This week', 'Book a roof evaluation. Keep taking photos from the same spot until a roofer has seen it.'],
+              ],
+            },
+          },
+        ],
+      },
+      {
+        heading: 'What Causes a Roofline to Sag',
+        blocks: [
+          {
+            list: [
+              '**Long-term leaks.** Water that gets in for years softens the roof deck and rots rafters, often far from any stain inside.',
+              '**Too much weight.** A heavy tile roof on framing not designed for it, several layers of old roofing left in place, or water ponding on a flat roof.',
+              '**Framing that was cut or removed.** Remodels sometimes take out rafters, ties or a wall that was holding the roof up.',
+              '**Spreading walls.** When the rafters push the tops of the walls outward, the ridge drops in the middle.',
+              '**Age and storms.** Old framing, a fallen branch or a heavy storm can finish what years of wear started.',
+            ],
+          },
+{ img: '/images/blog/sagging-roofline-urgent-rotted-eave.webp', alt: 'A drooping roof eave with rotted fascia and crumbling rafter ends behind a gutter pulled away from the house', caption: 'Years of water at the edge of the roof: the fascia and the rafter ends behind it have rotted, and the eave is starting to drop.' },
+          'Most sags are the end of a long story. That is why the fix starts with finding the cause, not with new shingles over the dip.',
+        ],
+      },
+      {
+        heading: 'Why a Sag Is a Structural Call',
+        blocks: [
+          'A sag is the roof structure telling you it is carrying more than it can, or that part of it has been damaged. New shingles or a coat of anything over a sagging roof only hide the shape. The structure under it has to be fixed.',
+          'Who fixes it depends on what is sagging:',
+          {
+            list: [
+              '**The roof deck.** Soft, rotted or damaged deck boards and sheathing are roofing work. On a repair or a replacement, our roofers take the roof down to the deck and replace the sections that are soft or damaged before anything new goes on.',
+              '**The framing.** Cracked rafters, a dropping ridge or spreading walls are structural. They may need a structural engineer to design the fix and a framing contractor to build it, before the roof goes back on. We will tell you plainly when that is the case.',
+            ],
+          },
+{ img: '/images/blog/sagging-roofline-urgent-attic-cracked-rafter.webp', alt: 'Two men in hard hats and safety vests in an attic, one shining a flashlight up at a long crack running along a rafter', caption: 'A cracked rafter is framing, not roofing. That is when a structural engineer looks at it before the roof goes back on.' },
+          { pov: 'If the framing needs an engineer, we would rather tell you on day one than put a new roof on a structure that isn’t ready for it. The roof is only as good as what it sits on.' },
+        ],
+      },
+      {
+        heading: 'What Happens When You Call Us',
+        blocks: [
+          {
+            steps: [
+              '**You call.** Tell us what you see from the street and inside. Our field techs take emergency calls after hours and on weekends, and we will tell you when a roofer can be there.',
+              '**A roofer looks first.** Drone footage and photos of the roofline with *RoofScan 360*, a close look at the area around the sag and, where it is safe, the attic underneath.',
+              '**Water stopped, if it’s getting in.** When the permanent fix has to wait, we cover the damaged area, for example with a tarp.',
+              '**One clear next step.** Repair, monitor, maintain or replace, in plain English, and whether the framing needs a structural engineer first.',
+              '**A written scope and price.** Before any work starts, with the photos, ready to share with your insurance company if the sag came from a storm or a fallen tree.',
+            ],
+          },
+{ img: '/images/blog/sagging-roofline-urgent-roofer-drone-homeowner.webp', alt: 'A roofer in a hard hat and safety vest shows a homeowner drone photos of his roof on a tablet in the front yard while a drone hovers over the house', caption: 'A roofer looks first: drone photos of the roofline, shown to you on the spot.' },
+          'If the roof needs replacing, a full tear-off takes it down to the deck so every soft section can be found and replaced; our [roof replacement](/roof-replacement/) page explains how it runs. For homes, the [roof evaluation](/roof-inspection/) is free.',
+          { pov: 'Call as soon as you notice a sag. You don’t need to be sure it’s serious before you call; finding that out is our job.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Is a sagging roof an emergency?',
+        a: 'It can be. A bulging ceiling, cracking sounds, a tree on the roof or a sag with water coming in is an emergency: get everyone clear and call. A sag that is old, unchanged and dry still needs a roofer to look soon, because you can’t tell from the ground whether it is moving.',
+      },
+      {
+        q: 'Can a sagging roof collapse?',
+        a: 'In serious cases, yes, which is why the warning signs inside the house matter. Most sags give plenty of warning, but a ceiling that bulges or a noise from above means leave the area and call right away.',
+      },
+      {
+        q: 'Can a sagging roof be fixed without replacing it?',
+        a: 'Sometimes. If the cause is a soft section of deck, it can be opened up and replaced. If the framing has failed, it has to be repaired first, and on an old, worn roof that is often the moment to replace the roof as well. A roofer looking at it will tell you which.',
+      },
+      {
+        q: 'Do I call a roofer or a structural engineer?',
+        a: 'Start with a roofer. We can tell whether the problem is the roof deck, which is roofing work, or the framing, which may need a structural engineer and a framing contractor. If it is the framing, we will say so before any roofing work.',
+      },
+      {
+        q: 'Will insurance cover a sagging roof?',
+        a: 'Your insurer decides that, usually depending on the cause: sudden damage from a storm or a fallen tree is treated differently from years of wear. We give you photos and a written scope to share with them. Our article on [roof insurance claims](/blog/roof-insurance-claims-california/) explains the process.',
+      },
+      {
+        q: 'Why is my flat roof sagging in the middle?',
+        a: 'Usually the deck or the framing under it has dropped, often after years of small leaks, and the low spot then holds water, which adds weight with every storm. It is worth a call before the next rain.',
+      },
+    ],
+    closing: {
+      heading: 'Seeing a Sag? Call Today.',
+      blocks: [
+        'Don’t wait for the next storm to find out how serious it is. Call [(310) 340-1643](tel:+13103401643), even after hours or on a weekend, and a roofer will look at the roofline, find the cause and tell you what it needs, with a written scope and price before any work. Or [request your roof evaluation](#roof-check) now.',
+        'See also our [emergency roof repair](/roof-repair/emergency/) page and [how to check your roof from the ground](/blog/how-to-check-your-roof-from-the-ground/).',
+      ],
+    },
+    related: ['/roof-repair/emergency/', '/roof-replacement/', '/roof-inspection/', '/roof-repair/'],
+  },
   // Moss on the roof, myth vs. fact (owner, November 23 2026): keyword "moss on your roof". Seven myths with the facts, moss vs. algae vs. lichen,
   // where moss grows on Southern California roofs, what to do (no pressure washing, as the maintenance plans page says), then the door to
   // maintenance: the RoofCare Plan and the RoofRevive tune-up as the plans page describes them (visits timed to the rains, debris cleared from the

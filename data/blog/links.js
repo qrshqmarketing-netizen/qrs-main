@@ -20,8 +20,8 @@ export const KEEP_READING = {
   'how-to-find-a-roof-leak': [B('how-to-trace-a-roof-leak-in-the-attic'), B('how-to-read-a-ceiling-stain'), B('how-to-stop-a-leaking-roof-now'), B('roof-repair-cost')],
   'roof-repair-cost': [B('how-to-find-a-roof-leak'), B('how-to-stop-a-leaking-roof-now'), B('roof-restoration-vs-replacement')],
   // Storms and upkeep
-  'roof-storm-damage-signs': [B('curling-cracked-missing-shingles'), B('how-to-check-your-roof-from-the-ground'), B('prepare-your-roof-for-el-nino'), B('how-to-stop-a-leaking-roof-now'), B('roof-insurance-claims-california')],
-  'how-to-trace-a-roof-leak-in-the-attic': [B('roof-leak-source'), B('how-to-stop-a-leaking-roof-now'), B('roof-repair-cost')],
+  'roof-storm-damage-signs': [B('sagging-roofline-urgent'), B('curling-cracked-missing-shingles'), B('how-to-check-your-roof-from-the-ground'), B('prepare-your-roof-for-el-nino'), B('how-to-stop-a-leaking-roof-now'), B('roof-insurance-claims-california')],
+  'how-to-trace-a-roof-leak-in-the-attic': [B('sagging-roofline-urgent'), B('roof-leak-source'), B('how-to-stop-a-leaking-roof-now'), B('roof-repair-cost')],
   'how-to-read-a-ceiling-stain': [B('how-to-trace-a-roof-leak-in-the-attic'), B('roof-leak-source'), B('stop-a-roof-leak'), B('roof-repair-cost')],
   'how-to-check-your-roof-from-the-ground': [B('shingle-granule-loss'), B('how-to-read-a-ceiling-stain'), B('roof-storm-damage-signs'), B('roof-leak-source'), B('roof-drip-edge-flashing')],
   'roof-maintenance-checklist': [B('moss-on-roof-myth-vs-fact'), B('how-to-check-your-roof-from-the-ground'), B('prepare-your-roof-for-el-nino'), B('roof-drip-edge-flashing'), B('what-does-a-roof-inspection-include')],
@@ -52,6 +52,7 @@ export const KEEP_READING = {
   'how-to-choose-a-shingle-roofer-los-angeles': [B('top-qualities-shingle-roofers-los-angeles-orange-county'), B('roof-drip-edge-flashing'), B('how-to-choose-a-roofer-los-angeles-ca')],
   'top-qualities-shingle-roofers-los-angeles-orange-county': [B('how-to-choose-a-roofer-los-angeles-ca'), B('roof-drip-edge-flashing')],
   'architectural-vs-3-tab-shingles': [B('roof-drip-edge-flashing'), B('top-qualities-shingle-roofers-los-angeles-orange-county')],
+  'sagging-roofline-urgent': [B('how-to-stop-a-leaking-roof-now'), B('roof-storm-damage-signs'), B('roof-replacement-guide')],
   'moss-on-roof-myth-vs-fact': [B('shingle-granules-in-gutter'), B('roof-drip-edge-flashing'), B('prepare-your-roof-for-el-nino')],
   'failing-chimney-flashing': [B('roof-leak-source'), B('how-to-find-a-roof-leak'), B('roof-repair-cost'), B('roof-drip-edge-flashing')],
   'curling-cracked-missing-shingles': [B('roof-storm-damage-signs'), B('roof-repair-cost'), B('how-to-check-your-roof-from-the-ground')],
