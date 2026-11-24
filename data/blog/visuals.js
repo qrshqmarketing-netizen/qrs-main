@@ -21,6 +21,12 @@ export const POST_VISUALS = {
   'how-to-trace-a-roof-leak-in-the-attic': {
     'Stop 3: Look Up and Read the Roof Deck': { table: 'cards' },
   },
+  'hail-damage-vs-normal-wear': {
+    'Hail Damage vs. Normal Wear on Shingles, Up Close': { table: 'cards' },
+    'Tile and Flat Roofs: Hail or Wear?': { table: 'cards' },
+    'Which Sounds Like Your Roof?': { table: 'decide' },
+    'Red Flags After a Hailstorm': { list: 'flags' },
+  },
   'small-roof-leak-big-problem': {
     'Nine Signs a Small Leak Is Bigger Than It Looks': { list: 'facts-numbered' },
     'Small Repair or Bigger Problem? Side by Side': { table: 'cards' },

@@ -24,6 +24,203 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // Hail damage vs. normal wear (owner, November 24 2026): keyword "hail damage". A close-up comparison: why the difference matters (insurance
+  // covers sudden storm damage, not wear; the insurer and the policy decide), clues from the ground (dented soft metals, granules after one storm),
+  // shingles side by side (`table: 'cards'`), what a hail hit and normal wear each look like (h3s), tile and flat roofs (`table: 'cards'`),
+  // "Which sounds like your roof?" (`table: 'decide'`), what to do after a hailstorm, red flags with door-to-door roofers (`list: 'flags'`), and
+  // how we check a roof after hail (free roof evaluation for homes, RoofScan 360, photos for the insurer, one of four next steps, written scope
+  // and price). Hail stated as less common here, as the emergency page and the leak source article say ("the occasional hail"). Our voice, three
+  // "Our point of view" boxes, no prices, no hail sizes, no lifespans. Pictures: the owner's images (thumbnail and seven in the text).
+  {
+    slug: 'hail-damage-vs-normal-wear',
+    title: 'How to Spot Hail Damage vs. Normal Wear on Your Roof: A Close-Up Comparison',
+    keyword: 'hail damage',
+    topics: ['storm', 'inspection', 'insurance', 'shingle', 'repair'],
+    metaTitle: 'Hail Damage vs. Normal Wear: How to Tell Them Apart',
+    metaDescription:
+      'Hail damage and normal wear can look alike from the street. A close-up comparison for shingle, tile and flat roofs, and what to do after a hailstorm.',
+    datePublished: '2026-11-24',
+    dateModified: '2026-11-24',
+    image: '/images/blog/hail-damage-vs-normal-wear.webp',
+    imageAlt: 'Hail damage on a gray asphalt shingle roof: round dark spots where the granules were knocked off, melting hailstones on the shingles and granules washed into the gutter',
+    excerpt:
+      'Hail damage and normal wear can look alike from the street. Here is how to tell them apart up close on shingle, tile and flat roofs, and what to do after a hailstorm.',
+    intro: [
+      'Hail damage and normal wear can look a lot alike from the street. Both can leave dark patches, loose granules and cracked shingles. Up close, they tell very different stories: one is a single storm that hit the roof all at once, the other is years of sun doing its slow work.',
+      'The difference matters. Sudden storm damage is the kind homeowners insurance is meant for; wear is not. And a roof hit by hail may need a repair or a replacement it didn’t need the week before. Here is how to tell them apart, roof type by roof type, and what to do after a hailstorm.',
+    ],
+    sections: [
+      {
+        heading: 'Why the Difference Matters',
+        blocks: [
+          'Telling hail damage from normal wear changes two things:',
+          {
+            list: [
+              '**Who pays.** Hail and other sudden storm damage are typically handled through homeowners insurance. Wear and tear from age and sun usually is not. Your insurer and your policy decide what is covered, and photos of the damage, taken soon after the storm, help them decide.',
+              '**What the roof needs.** A few hail hits on a sound roof can often be repaired. A roof bruised across every slope, or an old roof the hail finished off, may need replacing.',
+            ],
+          },
+          'Hail is less common in Los Angeles and Orange County than in much of the country, so it is easy to blame it for wear, or to miss it when it does come. Our storms bring the occasional burst of hail with a thunderstorm, and it can damage a roof in a few minutes.',
+          { pov: 'We call it the way we see it. If the roof is worn, we say worn, even when hail would make a better story. If hail did the damage, the photos will show it.' },
+        ],
+      },
+      {
+        heading: 'Start From the Ground: Where Hail Leaves Clues',
+        blocks: [
+          'Stay off the roof. Hail clues are easier to find on the softer things around the house first:',
+          {
+            list: [
+              '**Dents in soft metal:** gutters, downspouts, vent caps, the air conditioning unit’s fins, a metal mailbox or patio furniture.',
+              '**Dings on the car** if it was parked outside during the storm.',
+              '**Torn window screens** and chipped paint on the side of the house that faced the storm.',
+              '**A fresh pile of granules** at the downspouts after one storm, rather than a little at a time over months.',
+              '**Shredded leaves and broken twigs** on the ground right after the storm.',
+            ],
+          },
+          { img: '/images/blog/hail-damage-vs-normal-wear-dented-gutter-vent.webp', alt: 'A gutter and a round metal roof vent covered in small round dents from hail, with hailstones and torn leaves in the gutter', caption: 'Hail leaves its clearest marks on soft metal. Dents like these in the gutter and the vent cap mean the shingles beside them took the same hits.' },
+          'None of these proves the roof was damaged, but if the gutters and vent caps took dents, the roof took the same hits. Our guide to [checking your roof from the ground](/blog/how-to-check-your-roof-from-the-ground/) walks through a safe look at the roof itself.',
+        ],
+      },
+      {
+        heading: 'Hail Damage vs. Normal Wear on Shingles, Up Close',
+        blocks: [
+          {
+            table: {
+              head: ['What you see', 'Hail damage', 'Normal wear'],
+              rows: [
+                ['Granule loss', 'Round spots where the granules were knocked off in one place, with the dark mat showing', 'Thinning spread over the whole slope, worst on the sides that get the most sun'],
+                ['Dark spots', 'Scattered at random, with no pattern, often roughly round', 'Blisters that pop and leave small pits, or streaks and stains that follow the water'],
+                ['Feel of the shingle', 'Soft or bruised where it was hit, like a bruise on an apple', 'Stiff and dry, the same all over'],
+                ['Cracks', 'A split or fracture at the spot of a hit', 'Fine cracks across old, brittle shingles, curling edges and corners'],
+                ['Where on the roof', 'Mostly the slopes that faced the storm, with dents in the vents and gutters there too', 'Mostly the slopes that face the sun, and where water runs off an upper roof'],
+                ['When it showed up', 'All at once, right after a storm', 'Slowly, over years'],
+              ],
+            },
+          },
+          { h3: 'What a hail hit looks like' },
+          'A hail hit on an asphalt shingle is a roughly round spot where the granules have been knocked off and the dark mat shows through. Press it gently and a fresh hit can feel soft. Hits land at random: no line, no pattern, some close together and some far apart. Over the following months, a bruised spot can lose more granules and crack, which is why hail damage can turn into a leak long after the storm.',
+          { img: '/images/blog/hail-damage-vs-normal-wear-hail-hit-close-up.webp', alt: 'A close-up of one hail hit on an asphalt shingle: a round spot where the granules are gone, the dark mat showing and a fine crack starting in the middle', caption: 'One hail hit up close: the granules knocked off in a rough circle, the mat showing through and a crack starting at the center.' },
+          { h3: 'What normal wear looks like' },
+          'Normal wear is even. Granules thin out across a slope, worst on the sides that get the most sun. Blisters, small bubbles that pop and leave pits, come from heat and trapped moisture, not impact. Old shingles curl at the edges, crack in fine lines and lose their seal. Scuffs along a path across the roof are foot traffic. Our articles on [shingle granule loss](/blog/shingle-granule-loss/) and [curling, cracked and missing shingles](/blog/curling-cracked-missing-shingles/) show each one up close.',
+          { img: '/images/blog/hail-damage-vs-normal-wear-normal-wear-close-up.webp', alt: 'A close-up of old, sun-worn asphalt shingles with thin granules, small pits from popped blisters, fine cracks and a curling corner', caption: 'Normal wear up close: thin granules all over, pits where blisters popped, fine cracks and a corner curling up. It came on slowly, not in one storm.' },
+          { pov: 'One spot rarely tells you anything. We look for the pattern: random round hits on the slopes that faced the storm, matched by dents in the metal on that side, mean hail. Even wear on the sunny slopes means age.' },
+        ],
+      },
+      {
+        heading: 'Tile and Flat Roofs: Hail or Wear?',
+        blocks: [
+          {
+            table: {
+              head: ['Roof type', 'Hail damage', 'Normal wear'],
+              rows: [
+                ['Clay or concrete tile', 'Fresh chips and cracks on the exposed top of the tiles, with clean, light-colored edges, scattered across the slopes that faced the storm', 'Cracks from people walking on the roof, slipped tiles, faded color, weathered edges and worn underlayment beneath tiles that look fine'],
+                ['Flat roof (cap sheet or membrane)', 'Round dents or bruises in the surface, granules knocked off in spots, small punctures or splits', 'Blisters, cracking across the surface, seams lifting at the edges and dirt rings where water sits after rain'],
+              ],
+            },
+          },
+          { img: '/images/blog/hail-damage-vs-normal-wear-tile-chip-vs-old-crack.webp', alt: 'Clay barrel tiles on a wet roof: one tile with a fresh chip and a bright orange broken edge, and behind it an old tile with a long, dirty, moss-darkened crack', caption: 'A fresh break (front) has a bright, clean edge. An old crack (behind) is dirty and weathered. The difference helps tell storm damage from age.' },
+          { img: '/images/blog/hail-damage-vs-normal-wear-flat-roof-hail.webp', alt: 'A white granulated cap sheet on a flat roof with round spots where hail knocked the granules off, melting hailstones and a puddle near the parapet', caption: 'Hail on a flat roof: round bruises where the granules were knocked off the cap sheet, in a random scatter across the surface.' },
+          'On tile, the color of the broken edge helps: a fresh break is bright, an old one is dirty and weathered. A tile roof is also easy to damage further by walking on it, so a hail check on tile is a job for a roofer who knows where to step. Our [tile roof guide](/blog/tile-roof-guide-southern-california/) explains why the layers under the tiles matter more than the tiles. On a flat roof, our guide to [flat roofs](/blog/flat-roofs-los-angeles-guide/) covers what normal aging looks like.',
+        ],
+      },
+      {
+        heading: 'Which Sounds Like Your Roof?',
+        blocks: [
+          {
+            table: {
+              head: ['What you’re seeing', 'Most likely', 'What to do next'],
+              rows: [
+                ['Dents in the gutters and vents, and random round spots on the shingles, all after one storm', 'Hail damage', 'Photograph it from the ground and book a roof evaluation before you decide whether to file a claim.'],
+                ['Thin granules on the sunny slopes, curling edges, small pits from blisters, getting worse each year', 'Normal wear', 'Book a roof evaluation to see whether a repair or a replacement is due.'],
+                ['Some round spots, an old roof with plenty of wear too', 'Both', 'A roofer can photograph each kind separately, so the storm damage is documented for your insurer.'],
+                ['Water coming in after the storm', 'Damage that needs attention now', 'Call for an [emergency roof repair](/roof-repair/emergency/). A tarp can go on when it’s needed.'],
+              ],
+            },
+          },
+        ],
+      },
+      {
+        heading: 'What to Do After a Hailstorm',
+        blocks: [
+          {
+            steps: [
+              '**Stay off the roof.** Hail-damaged shingles and tiles can be slippery and fragile, and tiles crack underfoot.',
+              '**Write down the date and time of the storm.** Your insurer will ask.',
+              '**Photograph from the ground.** Dents in the gutters, vents and air conditioning unit, granules at the downspouts, anything in the yard.',
+              '**Check inside.** New ceiling stains, or a wet spot in the attic under the slopes that faced the storm.',
+              '**Book a roof evaluation.** A roofer’s photos of the roof itself show whether there is hail damage, and how much, before you decide what to do. Our guide to [roof insurance claims in California](/blog/roof-insurance-claims-california/) walks through the claim process step by step.',
+            ],
+          },
+          { img: '/images/blog/hail-damage-vs-normal-wear-photographing-ac-unit.webp', alt: 'A homeowner in a rain jacket photographs a hail-battered air conditioning unit beside a stucco house, with hailstones and torn leaves on the lawn', caption: 'Photos from the ground, taken right after the storm, help your insurer. Start with the soft metals: the air conditioning unit, gutters and vents.' },
+        ],
+      },
+      {
+        heading: 'Red Flags After a Hailstorm',
+        blocks: [
+          'Storms bring knocks on the door. Be careful with anyone who:',
+          {
+            list: [
+              '**Shows up uninvited and wants on your roof right away.** Nobody should be on your roof without your say-so.',
+              '**Says your roof has hail damage before looking at it.**',
+              '**Pressures you to sign today,** or asks you to sign over your insurance claim.',
+              '**Can’t show a California contractor license.** Check any roofer’s license on the [Contractors State License Board](https://www.cslb.ca.gov/) website before you hire.',
+              '**Won’t put the scope and price in writing.**',
+            ],
+          },
+          { pov: 'A real hail check is never in a hurry. We photograph what we find, show it to you, and leave you a written scope and price. What you do with it is up to you.' },
+        ],
+      },
+      {
+        heading: 'How We Check a Roof After Hail',
+        blocks: [
+          'At QRS, a roofer looks at your roof before anyone tries to sell you one. After a hailstorm, that means:',
+          {
+            list: [
+              'Drone footage and photos of every slope with *RoofScan 360*, including the slopes you can’t see from the street.',
+              'Close-up photos of hail hits and of normal wear, so you can see the difference for yourself.',
+              'A check of the soft metals, the flashings and, where it helps, the attic below the slopes that faced the storm.',
+              'One clear next step: repair, monitor, maintain or replace, explained in plain English.',
+            ],
+          },
+          { img: '/images/blog/hail-damage-vs-normal-wear-roofer-drone-check.webp', alt: 'A roofer in a hard hat and safety harness kneels on a gray shingle roof, holding a tablet with a drone photo of the roof and pointing at a hail hit while a drone hovers above', caption: 'After a hailstorm, a roofer checks the hits up close while the drone photographs every slope, including the ones you can’t see from the street.' },
+          'Your insurer and its adjuster decide what the policy covers. What we give you is the evidence: photos of the damage, where it is and what it will take to fix, with a written scope and price before any work starts. If a few hits can be fixed, our [roof repair](/roof-repair/) service, *LeakRescue*, fixes them. If the hail finished off a roof that was already near the end, we will show you why a [roof replacement](/roof-replacement/) makes more sense. For homes, the [roof evaluation](/roof-inspection/) is free.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Does hail damage show up right away?',
+        a: 'Not always. Dents in metal and broken tiles show up at once, but a bruised shingle can look fine for months before it loses its granules and cracks. That is why it is worth having the roof checked soon after a hailstorm, even if nothing is leaking.',
+      },
+      {
+        q: 'Does homeowners insurance cover hail damage?',
+        a: 'Hail and other sudden storm damage are typically handled through homeowners insurance, while normal wear usually is not. Your insurer and your policy decide what is covered. Photos taken soon after the storm, and a roofer’s photos of the roof itself, help.',
+      },
+      {
+        q: 'Can hail damage a tile roof?',
+        a: 'Yes. Hail can chip and crack clay and concrete tiles, usually on the slopes that faced the storm. Fresh breaks have clean, light-colored edges. Don’t walk on the roof to check: tiles crack underfoot, which adds damage hail didn’t do.',
+      },
+      {
+        q: 'How do I know if it’s hail damage or just an old roof?',
+        a: 'Hail leaves random, roughly round hits on the slopes that faced the storm, usually with dents in the gutters and vents on that side, all at once. Wear is even, worst on the sunny slopes, and builds up over years. A roof can have both, and a roofer can photograph each separately.',
+      },
+      {
+        q: 'Is a roof check worth it after a hailstorm if nothing is leaking?',
+        a: 'Often, yes. Hail can bruise shingles and crack tiles without an immediate leak, and those spots tend to give way in later storms. For homes, our roof evaluation is free.',
+      },
+      {
+        q: 'Should I call my insurer or a roofer first?',
+        a: 'Many homeowners have a roofer look first, so they know whether there is hail damage, and how much, before deciding whether to file. Either way, write down the storm’s date and take photos from the ground. Our guide to [roof insurance claims in California](/blog/roof-insurance-claims-california/) covers the steps.',
+      },
+    ],
+    closing: {
+      heading: 'Think Hail Hit Your Roof?',
+      blocks: [
+        'Find out before the next storm does. Book a [free roof evaluation](#roof-check) and you get drone footage and close-up photos of every slope, a plain-English answer on whether it is hail damage or normal wear, and a written scope and price before any work. Or call [(310) 340-1643](tel:+13103401643); if water is coming in now, it is an [emergency roof repair](/roof-repair/emergency/) call.',
+      ],
+    },
+    related: ['/roof-repair/emergency/', '/roof-inspection/', '/roof-repair/', '/residential-roofing/shingle-roofing/repair/'],
+  },
   // Small roof leak, big problem (owner, November 23 2026): keyword "small roof leak". Nine signs a small leak is bigger than it looks
   // (`list: 'facts-numbered'`), small repair vs. bigger problem side by side (`table: 'cards'`), what waiting costs (no prices), what to do this
   // week and how our roofers size up a leak (traced from the stain upslope, RoofScan 360, one of four next steps, LeakRescue repair, written scope
