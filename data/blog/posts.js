@@ -1892,6 +1892,8 @@ export const BLOG_POSTS = [
   // the draft's outside links replaced by the CSLB site. Picture: the owner's image.
   {
     slug: 'how-to-choose-a-roofing-firm-near-me',
+    revision: 1, // new thumbnail (owner, November 23 2026): a plain photo, so the title is written over it; revisionImage copies it to the live copy
+    revisionImage: true,
     title: 'How to Choose a Roofing Firm Near Me: Key Questions to Ask Before You Hire',
     keyword: 'roofing firm near me',
     topics: ['replacement', 'inspection', 'repair', 'shingle', 'tile', 'flat'],
@@ -1900,8 +1902,8 @@ export const BLOG_POSTS = [
       'Choosing a roofing firm near me? Check the CSLB license and insurance, ask for a roofer-led inspection and a written scope, and compare warranties first.',
     datePublished: '2026-11-12',
     dateModified: '2026-11-12',
-    image: '/images/blog/how-to-choose-a-roofing-firm-near-me.webp',
-    imageAlt: 'How to Choose the Right Roofing Firm Near Me, questions to ask: a roofer in a hard hat with a clipboard talks with a couple in front of their home, with a checklist reading licensed, warranty, experience',
+    image: '/images/blog/how-to-choose-a-roofing-firm-near-me-v2.webp',
+    imageAlt: 'Choosing a roofing firm near me: a roofer in a safety vest points up at a homeowner’s roof while the homeowner takes notes, shingle samples on a table beside them',
     excerpt:
       'Three checks sort out most roofing firms: a valid CSLB license with insurance, a roofer-led inspection, and a written scope before a price. Here are the questions we would ask any roofing firm near you, us included.',
     intro: [
@@ -2215,6 +2217,8 @@ export const BLOG_POSTS = [
   // only to OSHA. Picture: the owner's image.
   {
     slug: 'how-to-stop-a-leaking-roof-now',
+    revision: 1, // new thumbnail (owner, November 23 2026): a plain photo, so the title is written over it; revisionImage copies it to the live copy
+    revisionImage: true,
     title: 'How to Stop a Leaking Roof Now: Roofer-Led Emergency Steps and Temporary Fixes',
     keyword: 'stop a leaking roof',
     topics: ['leak', 'emergency', 'repair', 'storm', 'tile', 'flat', 'shingle'],
@@ -2225,8 +2229,8 @@ export const BLOG_POSTS = [
     dateModified: '2026-11-10',
     excerpt:
       'Water coming in? The order that works: contain it inside, trace the leak from the attic, put the right temporary fix in place, then get a written plan for the permanent repair.',
-    image: '/images/blog/how-to-stop-a-leaking-roof-now.webp',
-    imageAlt: 'Stop roof leaks now: a homeowner on the phone catching water from a leaking ceiling in a bucket, with steps to call a roofer, make temporary fixes and protect your home',
+    image: '/images/blog/how-to-stop-a-leaking-roof-now-v2.webp',
+    imageAlt: 'Stopping a leaking roof now: a roofer in a safety harness fastens a blue tarp over a damaged section of a wet shingle roof with wood battens',
     intro: [
       'To stop a leaking roof now, do three things in this order: contain the water inside with buckets and plastic sheeting, go into the attic with a flashlight to find the highest wet spot before anyone touches the roof, and put a temporary tarp or patch in place to keep more water out. That order limits the damage on almost any roof, and it makes the permanent repair smaller and simpler.',
       'A winter storm, a cracked pipe boot or a failed step flashing can turn a faint ceiling stain into soaked drywall and insulation quickly when nobody acts. We are Quality Roofing Specialists, a licensed roofing contractor (CSLB #1061942) working on homes and buildings across Los Angeles and Orange County, from emergency tarps to drone roof evaluations. This guide covers how to spot and trace the leak, which temporary fix to use, how each roof type is repaired, and how to decide between repair and replacement.',
@@ -2330,6 +2334,8 @@ export const BLOG_POSTS = [
   // Facts only as the site states them. Card picture: a stand-in (a real QRS repair photo) until it has its own image.
   {
     slug: 'roof-repair-cost',
+    revision: 1, // its own thumbnail (owner, November 23 2026), replacing the card stand-in; revisionImage copies it to the live copy
+    revisionImage: true,
     title: 'Roof Repair Cost: What Sets the Price of a Roof Repair, and How to Get Yours in Writing',
     keyword: 'roof repair cost',
     topics: ['repair', 'leak', 'shingle', 'tile', 'flat', 'insurance'],
@@ -2340,7 +2346,8 @@ export const BLOG_POSTS = [
     dateModified: '2026-11-09',
     excerpt:
       'Why one roof repair costs more than another: the damage, the roof type, the pitch and access, and what turns up underneath. Plus when a repair stops making sense, and how to get a written price.',
-    cardImage: '/images/shingle-roof-repair-ridge-finish.webp',
+    image: '/images/blog/roof-repair-cost.webp',
+    imageAlt: 'Roof repair cost in writing: a roofer in a safety vest goes over a written estimate on a clipboard with a homeowner in the driveway while roofers work on the roof behind them',
     intro: [
       'Roof repair cost comes down to five things: what failed, what your roof is made of, how hard it is to reach, how far the water has traveled and whether anything under the roofing has to be replaced. Two leaks that look the same from the ceiling can need very different repairs, which is why a fair price starts with a roofer finding the real source.',
       'We don’t publish a price list for repairs, because a number quoted before anyone has looked at the roof is a guess. This guide explains what moves the price, the most common kinds of repairs, the point where repairing stops making sense, and how to get a written price for your roof before any work starts.',
