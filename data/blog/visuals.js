@@ -21,6 +21,12 @@ export const POST_VISUALS = {
   'how-to-trace-a-roof-leak-in-the-attic': {
     'Stop 3: Look Up and Read the Roof Deck': { table: 'cards' },
   },
+  'how-old-is-my-roof': {
+    'Seven Quick Ways to Find Out How Old Your Roof Is': { list: 'facts-numbered' },
+    'Signs of Age You Can See, by Roof Type': { table: 'cards' },
+    'Age vs. Condition: Which Decides?': { table: 'decide' },
+    'What to Gather Before You Call a Roofer': { checklist: 'tracker' },
+  },
   'hail-damage-vs-normal-wear': {
     'Hail Damage vs. Normal Wear on Shingles, Up Close': { table: 'cards' },
     'Tile and Flat Roofs: Hail or Wear?': { table: 'cards' },

@@ -24,6 +24,171 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // How old is your roof (owner, November 24 2026): keyword "how old your roof is". Quick tips: why the age matters (planning, selling or buying,
+  // insurers who ask, warranties), seven quick ways to find out (`list: 'facts-numbered'`: home paperwork, the permit, the installer's paperwork,
+  // the previous owner, historical aerial photos, the attic, the roof edge), signs of age by roof type (`table: 'cards'`), age vs. condition
+  // (`table: 'decide'`), a checklist of what to gather (`checklist: 'tracker'`) and how we read a roof's age (free roof evaluation, RoofScan 360,
+  // one of four next steps, TotalShield / SecondLife, financing). No lifespans in years (as the flat roofing FAQ says, condition over age), no
+  // prices. Our voice, three "Our point of view" boxes. Pictures: the owner's images (thumbnail and six in the text).
+  {
+    slug: 'how-old-is-my-roof',
+    title: 'How to Find Out How Old Your Roof Is: 7 Quick Ways',
+    keyword: 'how old your roof is',
+    topics: ['replacement', 'inspection', 'shingle', 'tile', 'flat', 'maintenance'],
+    metaTitle: 'How to Find Out How Old Your Roof Is: 7 Quick Ways',
+    metaDescription:
+      'Not sure how old your roof is? Seven quick ways to find out, from permits and paperwork to the attic, plus what the age means for repair or replacement.',
+    datePublished: '2026-11-24',
+    dateModified: '2026-11-24',
+    image: '/images/blog/how-old-is-my-roof.webp',
+    imageAlt: 'A homeowner on the driveway holding a folder of house papers and looking up at a faded, aging gray shingle roof on a single-story stucco home',
+    excerpt:
+      'Not sure how old your roof is? Seven quick ways to find out, from permits and paperwork to clues in the attic, and what the age really means for repair or replacement.',
+    intro: [
+      'Knowing how old your roof is changes the whole conversation about it. A leak on a roof put on a few years ago is usually a repair. The same leak on a roof nobody can date is a question: is this one spot, or the first sign the roof is wearing out?',
+      'Plenty of homeowners don’t know. The roof came with the house, the paperwork is long gone, and the seller wasn’t sure. Here are seven quick ways to find out, what to look for on each roof type, and why age starts the replacement conversation but doesn’t finish it.',
+    ],
+    sections: [
+      {
+        heading: 'Why Your Roof’s Age Matters',
+        blocks: [
+          {
+            list: [
+              '**Planning.** A roof that is getting on in years is one to budget for, so a replacement doesn’t arrive as a surprise after the first big storm.',
+              '**Repair or replace.** Age tells a roofer what to expect, and helps decide whether a repair is buying real time or just patching a roof near its end.',
+              '**Buying or selling.** Buyers, inspectors and agents ask. An answer with paperwork behind it is worth more than a guess.',
+              '**Insurance.** Some insurers now ask about roof age and condition when you buy or renew a policy.',
+              '**Warranties.** The installation date decides what a manufacturer’s warranty or a workmanship warranty still covers.',
+            ],
+          },
+          { pov: 'We ask every homeowner how old the roof is. “I don’t know” is a fine answer. It just means we read the age off the roof instead of the paperwork.' },
+        ],
+      },
+      {
+        heading: 'Seven Quick Ways to Find Out How Old Your Roof Is',
+        blocks: [
+          {
+            list: [
+              '**Check the papers from when you bought the house:** the seller’s disclosure and the home inspection report often mention the roof, and sometimes when it was replaced.',
+              '**Look up the roofing permit:** a roof replacement normally needs a permit, and your city or county building department keeps permit records by address. Many let you search online; otherwise call or visit the counter.',
+              '**Find the installer’s paperwork:** an invoice, a contract or a warranty certificate carries the date. Check the house file, the garage and the drawer where the appliance manuals live.',
+              '**Ask the people who would know:** the previous owner, the real estate agent who sold you the house, or a neighbor who has lived on the street a long time and remembers the roofers.',
+              '**Look at historical aerial photos:** free map tools with a history slider, such as Google Earth on a computer, show older aerial pictures of your street. When the roof’s color changes between two pictures, it was likely replaced in between.',
+              '**Look in the attic:** sheets of roof deck often carry a printed stamp, and some stamps include a date. New, clean deck next to old, dark boards can also show where a past repair or replacement went.',
+              '**Look at the roof edge from the ground:** two layers of shingles stacked at the eave mean the roof was put on over an older one, and the older layer is older still.',
+            ],
+          },
+          { img: '/images/blog/how-old-is-my-roof-house-paperwork.webp', alt: 'A homeowner at a kitchen table going through a folder of house papers, a home inspection report and an old roofing invoice beside a laptop', caption: 'The house file is the quickest place to start: the seller’s disclosure, the home inspection report and any roofing invoice or warranty.' },
+          { img: '/images/blog/how-old-is-my-roof-attic-deck-stamp.webp', alt: 'A flashlight in an attic lighting a printed stamp on a sheet of roof deck between two rafters', caption: 'Many sheets of roof deck carry a printed stamp, and some include a date. Look from the attic, with a flashlight, staying on the joists.' },
+          { img: '/images/blog/how-old-is-my-roof-two-layers-eave.webp', alt: 'The edge of a shingle roof at the eave showing two layers of shingles stacked one on top of the other above the gutter', caption: 'Two layers at the edge: the roof was put on over an older one. The bottom layer is the older of the two.' },
+          'The permit is usually the most reliable, because it carries a date and an address. Our guide to [roofing permits](/blog/roofing-permits-los-angeles/) explains how permits work in the cities around us.',
+        ],
+      },
+      {
+        heading: 'Signs of Age You Can See, by Roof Type',
+        blocks: [
+          'If the paperwork comes up empty, the roof itself gives clues. Each roof type ages in its own way:',
+          {
+            table: {
+              head: ['Roof type', 'Signs of age you can see', 'What can hide the age'],
+              rows: [
+                ['Asphalt shingle', 'Granules thinning across the slope, especially the sunny sides; edges curling; fine cracks; faded color; granules in the gutters', 'Sun-facing slopes age faster than shady ones, so one side can look much older than the other'],
+                ['Clay or concrete tile', 'Faded, weathered tiles, slipped or cracked tiles, old patches, leaks around chimneys and valleys', 'The tiles often outlast the underlayment beneath them, so tiles that look fine can sit on worn-out layers'],
+                ['Flat roof', 'Cracks across the surface, blisters, seams lifting at the edges, dirt rings where water sits after rain', 'A coat of paint or a patch on top can make an old flat roof look newer than it is'],
+              ],
+            },
+          },
+          { img: '/images/blog/how-old-is-my-roof-aging-shingles.webp', alt: 'A close-up of an aging asphalt shingle roof with thin granules, curled edges, fine cracks and faded color on the sunny slope', caption: 'Shingles show their age on the sunny side first: thin granules, curled edges and fine cracks.' },
+          { img: '/images/blog/how-old-is-my-roof-tile-underlayment.webp', alt: 'A clay tile lifted on a roof to show dark, brittle, cracked underlayment beneath tiles that look sound', caption: 'On a tile roof the tiles can look fine while the underlayment beneath them is brittle and cracked. The tiles aren’t the roof’s real age.' },
+          'Our articles on [shingle granule loss](/blog/shingle-granule-loss/), the [tile roof guide](/blog/tile-roof-guide-southern-california/) and [flat roofs](/blog/flat-roofs-los-angeles-guide/) show each kind of aging up close.',
+        ],
+      },
+      {
+        heading: 'Age vs. Condition: Which Decides?',
+        blocks: [
+          'Age tells you when to start looking closely. Condition tells you what to do. How long a roof lasts depends on the material, the sun it takes, the attic ventilation, how well it was installed and how well it has been kept, so two roofs of the same age can be in very different shape.',
+          {
+            table: {
+              head: ['Your roof', 'What it usually means', 'What to do next'],
+              rows: [
+                ['Older, but sound and dry', 'Well installed and well kept. Time to plan, not panic.', 'A roof evaluation to see where it stands, and regular upkeep to keep it that way.'],
+                ['Younger, but already worn or leaking', 'Often an installation, flashing or ventilation problem, not age', 'Have a roofer find the cause before it spreads.'],
+                ['Older and worn across the board', 'The roof is near the end of its life', 'Start the replacement conversation: a written scope and price, and time to plan.'],
+                ['Nobody knows how old it is', 'The roof has to speak for itself', 'A roof evaluation reads the age and the condition off the roof.'],
+              ],
+            },
+          },
+          { pov: 'We don’t replace roofs because of a number. We replace them because of what we find. Age is the reason to look; the photos are the reason to decide.' },
+        ],
+      },
+      {
+        heading: 'What to Gather Before You Call a Roofer',
+        blocks: [
+          {
+            checklist: [
+              'The seller’s disclosure and home inspection report from when you bought the house',
+              'Any roofing invoice, contract or warranty certificate',
+              'The roofing permit record from your city or county',
+              'A note of past leaks and repairs, with dates if you have them',
+              'Photos of the roof from the ground, and of any ceiling stains',
+              'What you found in the attic or at the roof edge',
+            ],
+          },
+          'Whatever you find, write the date on it and keep it in one place. The next person who asks, a buyer, an insurer or a roofer, will ask for the same things.',
+        ],
+      },
+      {
+        heading: 'How We Read a Roof’s Age',
+        blocks: [
+          'At QRS, a roofer looks at your roof before anyone tries to sell you one. When the paperwork is missing, our [free roof evaluation](/roof-inspection/) reads the age off the roof itself:',
+          {
+            list: [
+              'Drone footage and photos of every slope with *RoofScan 360*, including the ones you can’t see from the street.',
+              'A close look at the materials: granules and edges on shingles, tiles and underlayment on tile, the surface and seams on a flat roof.',
+              'The edges, the flashings and the number of layers, where they show.',
+              'One clear next step: repair, monitor, maintain or replace, explained in plain English.',
+            ],
+          },
+          { img: '/images/blog/how-old-is-my-roof-roofer-with-homeowners.webp', alt: 'A roofer showing a homeowner couple drone photos of their roof on a tablet in front of their house', caption: 'After the evaluation, a roofer walks you through the photos and the one next step: repair, monitor, maintain or replace.' },
+          'If the roof has years left, we will tell you, and our [roof maintenance plans](/roof-maintenance-plans/) help keep it that way. If it is near the end, we will show you the photos and explain your [roof replacement](/roof-replacement/) options: *TotalShield* for shingle roofs from the deck up, or *SecondLife* lift and relay when tile is sound and only the underlayment is worn. Either way, you get a written scope and price before any work starts, and [roof financing](/roof-financing/) is available for home replacements, subject to credit approval.',
+          { pov: 'A roof that nobody can date is not a reason to replace it. It is a reason to look. Plenty of “old” roofs we see have years left, and we would rather tell you that than sell you a roof early.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'How can I find out how old my roof is?',
+        a: 'Start with the papers from when you bought the house, then look up the roofing permit with your city or county building department, which keeps records by address. The installer’s invoice or warranty, the previous owner, historical aerial photos, the attic and the roof edge are the other clues. A roofer can read the rest off the roof.',
+      },
+      {
+        q: 'Is a roof replacement on public record?',
+        a: 'Usually, through the permit. A roof replacement normally needs a permit, and the building department keeps permit records by address. Work done without a permit won’t show up, which is one more reason to check the house papers too.',
+      },
+      {
+        q: 'How long does a roof last?',
+        a: 'There’s no single answer. The material, how much sun the roof takes, attic ventilation, installation quality and upkeep all play a part, so two roofs of the same age can be in very different shape. A roof evaluation looks at the actual condition instead of guessing from the age.',
+      },
+      {
+        q: 'Should I replace my roof just because it’s old?',
+        a: 'Not on age alone. An older roof that is sound and dry may only need upkeep. Age is the reason to have it looked at; what the roofer finds is the reason to repair, maintain or replace.',
+      },
+      {
+        q: 'Can you tell how old a tile roof is?',
+        a: 'The tiles can be much older than the underlayment beneath them, or the other way round. A roofer looks at the tiles and, where it helps, at the underlayment under a lifted tile. When the tiles are sound and only the underlayment is worn, a lift and relay can reuse them.',
+      },
+      {
+        q: 'Do insurance companies care how old my roof is?',
+        a: 'Some insurers now ask about roof age and condition when you buy or renew a policy. Having the date and current photos makes that conversation easier. Your insurer decides how the age affects your policy.',
+      },
+    ],
+    closing: {
+      heading: 'Not Sure How Old Your Roof Is?',
+      blocks: [
+        'Let a roofer read it for you. Book a [free roof evaluation](#roof-check) and you get drone footage and photos of every slope, a plain-English answer on where your roof stands, and a written scope and price before any work. Or call [(310) 340-1643](tel:+13103401643).',
+      ],
+    },
+    related: ['/roof-replacement/', '/roof-inspection/', '/roof-maintenance-plans/', '/residential-roofing/shingle-roofing/replacement/'],
+  },
   // Hail damage vs. normal wear (owner, November 24 2026): keyword "hail damage". A close-up comparison: why the difference matters (insurance
   // covers sudden storm damage, not wear; the insurer and the policy decide), clues from the ground (dented soft metals, granules after one storm),
   // shingles side by side (`table: 'cards'`), what a hail hit and normal wear each look like (h3s), tile and flat roofs (`table: 'cards'`),
