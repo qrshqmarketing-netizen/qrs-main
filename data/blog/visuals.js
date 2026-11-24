@@ -21,6 +21,10 @@ export const POST_VISUALS = {
   'how-to-trace-a-roof-leak-in-the-attic': {
     'Stop 3: Look Up and Read the Roof Deck': { table: 'cards' },
   },
+  'small-roof-leak-big-problem': {
+    'Nine Signs a Small Leak Is Bigger Than It Looks': { list: 'facts-numbered' },
+    'Small Repair or Bigger Problem? Side by Side': { table: 'cards' },
+  },
   'first-hour-active-roof-leak': {
     'What Not to Do in the First Hour': { list: 'flags' },
     'Your First-Hour Checklist': { checklist: 'tracker' },

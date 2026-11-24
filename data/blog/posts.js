@@ -24,6 +24,168 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // Small roof leak, big problem (owner, November 23 2026): keyword "small roof leak". Nine signs a small leak is bigger than it looks
+  // (`list: 'facts-numbered'`), small repair vs. bigger problem side by side (`table: 'cards'`), what waiting costs (no prices), what to do this
+  // week and how our roofers size up a leak (traced from the stain upslope, RoofScan 360, one of four next steps, LeakRescue repair, written scope
+  // and price). "Small openings tend to grow with each storm" as the Roof Repair hub's FAQ says it. Our voice, three "Our point of view" boxes,
+  // no prices, no lifespans. Links the other leak articles. Pictures: the owner's images (thumbnail and six in the text).
+  {
+    slug: 'small-roof-leak-big-problem',
+    title: 'How to Tell When a Small Roof Leak Is Really a Big Problem',
+    keyword: 'small roof leak',
+    topics: ['leak', 'repair', 'inspection', 'replacement'],
+    metaTitle: 'Small Roof Leak or Big Problem? 9 Signs to Look For',
+    metaDescription:
+      'A small roof leak can hide a bigger problem. Nine signs it has gone past a drip, what waiting costs, and how a roofer sizes it up before the next rain.',
+    datePublished: '2026-11-23',
+    dateModified: '2026-11-23',
+    image: '/images/blog/small-roof-leak-big-problem.webp',
+    imageAlt: 'A small roof leak: a brown water stain on a white ceiling with a drop forming, a pencil line marking its edge and a fainter ring already spreading past it',
+    excerpt:
+      'A small roof leak can hide a much bigger problem. Nine signs it has gone past a drip, what waiting costs you, and how a roofer sizes it up before the next rain.',
+    intro: [
+      'A small roof leak rarely stays small, and it is rarely as small as it looks. The drip you see is only the water that made it all the way through. Above it, the same water may have been soaking insulation, the roof deck and the framing for weeks.',
+      'Here is how to tell when a small leak is really a big problem: nine signs to look for inside, in the attic and from the ground, what each one means, and what to do this week.',
+    ],
+    sections: [
+      {
+        heading: 'Why a Small Leak Rarely Stays Small',
+        blocks: [
+          'Three things make a small leak bigger than it looks:',
+          {
+            list: [
+              '**Water travels.** It gets in at a flashing, a vent or a cracked shingle, then runs along the underlayment or a rafter and drips somewhere else. The stain on your ceiling is where it ended up, not where it started.',
+              '**Wood and insulation soak it up first.** A ceiling stain usually shows only after the insulation is wet and the deck above it has been damp for a while.',
+              '**Openings grow.** Small openings tend to grow with each storm, as the edges of a crack or a lifted shingle let more water and wind in every time.',
+            ],
+          },
+{ img: '/images/blog/small-roof-leak-big-problem-water-travels.webp', alt: 'An attic where water from a cracked pipe boot runs down a rafter and soaks the insulation well away from where it came in', caption: 'Water gets in at a cracked pipe boot, runs down the rafter and soaks the insulation several feet away. The ceiling stain shows up where it ends, not where it starts.' },
+          { pov: 'When someone calls about a small leak, we assume nothing until we have seen the roof and the attic. Some really are small. The ones that aren’t almost always looked small first.' },
+        ],
+      },
+      {
+        heading: 'Nine Signs a Small Leak Is Bigger Than It Looks',
+        blocks: [
+          {
+            list: [
+              '**The stain keeps growing:** a new ring after every rain, or edges that spread between storms.',
+              '**It shows up in more than one place:** two stains, or a stain plus peeling paint on a nearby wall.',
+              '**It leaks in light rain, not just storms:** an opening big enough for a drizzle is not a small one.',
+              '**The ceiling is changing shape:** bubbling paint, soft or sagging drywall, nail pops in a line.',
+              '**It smells musty:** a damp smell or dark spots in a corner mean water has been sitting long enough for mold to start.',
+              '**The attic is wet:** damp or flattened insulation, dark or soft roof deck, water trails down the rafters.',
+              '**Water is near electricity:** a stain by a light, a ceiling fan or an outlet. Switch that circuit off and call.',
+              '**The roof outside shows wear:** missing or curling shingles, bare patches of granules, broken tiles, or water ponding on a flat roof.',
+              '**It keeps coming back:** a leak that has been patched before and returned, often in the same spot.',
+            ],
+          },
+{ img: '/images/blog/small-roof-leak-big-problem-ceiling-signs.webp', alt: 'A bedroom ceiling corner with a spreading water stain, bubbling and peeling paint, a line of nail pops and dark mildew in the corner', caption: 'Several signs at once: the stain has spread, the paint is bubbling, nail pops run in a line and mildew has started in the corner.' },
+          'One sign on its own may still be a small repair. Two or more together usually mean the leak has been going on longer, or reaches further, than the drip suggests.',
+        ],
+      },
+      {
+        heading: 'Small Repair or Bigger Problem? Side by Side',
+        blocks: [
+{ img: '/images/blog/small-roof-leak-big-problem-small-vs-big.webp', alt: 'Two roofs side by side: a single cracked pipe boot on a healthy gray shingle roof, and a worn shingle roof with curling shingles and bare patches along a valley', caption: 'Left: one cracked pipe boot on a sound roof, a small repair. Right: wear across the roof, where the leak is only the first sign.' },
+          {
+            table: {
+              head: ['What you see', 'Usually a small repair when…', 'Usually a bigger problem when…'],
+              rows: [
+                ['A ceiling stain', 'It is new, dry between rains and isn’t growing', 'It grows with every storm, or the drywall is soft or sagging'],
+                ['The attic', 'One damp spot under a vent or a flashing', 'Wet insulation over a wide area, or dark, soft roof deck'],
+                ['The roof outside', 'One cracked pipe boot, a lifted shingle or a loose flashing', 'Wear across the whole roof: curling, granule loss, broken tiles, ponding'],
+                ['The history', 'The first leak in years', 'Patched before, and back again'],
+              ],
+            },
+          },
+          'Our articles on [reading a ceiling stain](/blog/how-to-read-a-ceiling-stain/) and [tracing a leak in the attic](/blog/how-to-trace-a-roof-leak-in-the-attic/) walk through each of these up close.',
+        ],
+      },
+      {
+        heading: 'What Waiting Costs',
+        blocks: [
+          'A small leak left for a season can turn a small repair into a list of them:',
+          {
+            list: [
+              '**Wet insulation** that stops insulating and has to come out.',
+              '**Stained or sagging drywall** that has to be cut out and replaced.',
+              '**A soft roof deck** that has to be replaced before the roof can be fixed properly.',
+              '**Rot in the framing** at the eaves or under a valley.',
+              '**Mold** where things stayed damp.',
+            ],
+          },
+{ img: '/images/blog/small-roof-leak-big-problem-rotted-deck.webp', alt: 'An attic flashlight view of a rotted, splitting section of roof deck between rafters, with mold spots and soaked, matted insulation below', caption: 'What a small leak left for seasons can do: a roof deck rotted through between the rafters and soaked insulation beneath it.' },
+          'None of that shows from the street, which is why a leak that “only drips in big storms” is worth a look before the next one. Our guide to [what sets the price of a roof repair](/blog/roof-repair-cost/) explains why catching it early usually keeps the repair small.',
+          { pov: 'The cheapest leak we ever fix is the one someone calls about the first time it drips. By the third storm, we are usually replacing wood as well as flashing.' },
+        ],
+      },
+      {
+        heading: 'What to Do This Week',
+        blocks: [
+          {
+            steps: [
+              '**Contain it.** A bucket under the drip, plastic over anything below it, and the breaker off for any light or outlet near the water.',
+              '**Mark and photograph it.** Draw a light pencil line around the stain and date it, so you can see if it grows. Take photos after each rain.',
+              '**Look from below, safely.** If you can get into the attic, a flashlight on the wood above the stain shows how far the water has gone.',
+              '**Look from the ground.** Missing shingles, broken tiles or a loose flashing above the stain. Stay off the roof.',
+              '**Book a roof evaluation.** If water is coming in right now, it is an [emergency roof repair](/roof-repair/emergency/) call; our guide to [the first hour of an active roof leak](/blog/first-hour-active-roof-leak/) covers what to do while you wait.',
+            ],
+          },
+          { img: '/images/blog/small-roof-leak-big-problem-marking-the-stain.webp', alt: 'A homeowner on a step stool draws a pencil line around a ceiling stain and photographs it, a bucket on a towel below', caption: 'A pencil line and a dated photo after each rain show whether the stain is growing.' },
+        ],
+      },
+      {
+        heading: 'How We Size Up a Leak',
+        blocks: [
+          'At QRS, a roofer looks at your roof before anyone tries to sell you one. For a leak, that means:',
+          {
+            list: [
+              'Starting from the stain inside and working upslope on the roof to where the water actually gets in.',
+              'Drone footage and photos with *RoofScan 360*, including the parts of the roof you can’t see from the street.',
+              'A look at the attic and the deck around the leak, to see how far the water has gone.',
+              'One clear next step: repair, monitor, maintain or replace, explained in plain English.',
+            ],
+          },
+{ img: '/images/blog/small-roof-leak-big-problem-roofer-pipe-boot.webp', alt: 'A roofer in a hard hat and safety harness points at a cracked pipe boot on a gray shingle roof while a drone hovers overhead', caption: 'A roofer finds where the water gets in, here a cracked pipe boot, and the drone photographs the rest of the roof.' },
+          'If it really is small, our [roof repair](/roof-repair/) service, *LeakRescue*, fixes what failed and shows you photos of the problem and the finished repair. If the roof is worn out across the board, we will show you the photos and explain when a [roof replacement](/roof-replacement/) makes more sense; our articles on [curling, cracked and missing shingles](/blog/curling-cracked-missing-shingles/) and [granule loss](/blog/shingle-granule-loss/) show what that looks like. Either way, you get a written scope and price before any work starts, and for homes the [roof evaluation](/roof-inspection/) is free.',
+          { pov: 'A small leak is not a reason to sell you a new roof. If it is one cracked pipe boot, we fix the pipe boot. If it is the whole roof, we show you why.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Can a small roof leak wait until the rainy season is over?',
+        a: 'It’s a risky bet. Water that gets in can soak insulation, stain drywall and soften the roof deck long before the damage is obvious, and small openings tend to grow with each storm. Fixing it early usually keeps the repair small.',
+      },
+      {
+        q: 'Is a small roof leak an emergency?',
+        a: 'If water is coming in right now, near electricity, or the ceiling is sagging, yes: call, even after hours or on a weekend. A small stain that is dry between rains still needs a roofer to look soon, but it can usually wait for a scheduled evaluation.',
+      },
+      {
+        q: 'Why does my roof only leak in heavy rain?',
+        a: 'Heavy or wind-driven rain reaches openings that light rain doesn’t: under a lifted shingle, behind a loose flashing or up a valley. It still means there is an opening, and it tends to grow.',
+      },
+      {
+        q: 'How do I know if the leak has damaged the roof deck?',
+        a: 'From the attic, look for dark, stained or soft-looking wood above the stain, and wet or flattened insulation. A roofer can confirm it from the roof and the attic, and a soft deck is replaced before the roof is repaired.',
+      },
+      {
+        q: 'Can a small leak cause mold?',
+        a: 'Yes, if things stay damp. A musty smell or dark spots near the stain are a sign water has been sitting a while. Fixing the roof stops the water; mold inside the house is a job for a water damage or mold specialist.',
+      },
+      {
+        q: 'Can a small leak be fixed without replacing the roof?',
+        a: 'Usually. Most small leaks come from one failed spot, such as a pipe boot, a flashing or a few shingles, and a repair fixes it. A replacement only comes up when the roof is worn out across the board.',
+      },
+    ],
+    closing: {
+      heading: 'Not Sure How Big Your Leak Is?',
+      blocks: [
+        'Let a roofer find out before the next rain. Book a [free roof evaluation](#roof-check) and you get drone footage and photos of where the water gets in, a plain-English answer on how big the problem is, and a written scope and price before any work. Or call [(310) 340-1643](tel:+13103401643); if water is coming in now, it is an [emergency roof repair](/roof-repair/emergency/) call.',
+      ],
+    },
+    related: ['/roof-repair/', '/roof-repair/emergency/', '/roof-inspection/', '/residential-roofing/shingle-roofing/repair/'],
+  },
   // First hour of an active roof leak (owner, November 23 2026): keyword "active roof leak". Purchase intent, feeds emergency calls: a timed
   // step-by-step (safety, catch the water, call, document, look from the ground), what not to do (`list: 'flags'`), what our roofer does on
   // arrival and a first-hour checklist (`checklist: 'tracker'`). Every safety line and service fact as the emergency page states it (stay off
