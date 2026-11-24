@@ -21,6 +21,11 @@ export const POST_VISUALS = {
   'how-to-trace-a-roof-leak-in-the-attic': {
     'Stop 3: Look Up and Read the Roof Deck': { table: 'cards' },
   },
+  'repair-or-replace-roof-3-question-test': {
+    'How to Score the Test': { table: 'decide' },
+    'Your Repair-or-Replace Checklist': { checklist: 'tracker' },
+    'Answers That Should Make You Pause': { list: 'flags' },
+  },
   'how-old-is-my-roof': {
     'Seven Quick Ways to Find Out How Old Your Roof Is': { list: 'facts-numbered' },
     'Signs of Age You Can See, by Roof Type': { table: 'cards' },

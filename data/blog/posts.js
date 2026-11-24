@@ -24,6 +24,196 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // Repair or replace: the 3-question test (owner, November 24 2026): keyword "repair or replace your roof". Talking head + checklist, comparative,
+  // honest framing: the three questions our roofers ask (one place or all over; is what's underneath still sound; will a repair buy real time),
+  // how to score them (`table: 'decide'`), the middle options (SecondLife lift and relay, maintenance and the RoofRevive tune-up), a checklist
+  // (`checklist: 'tracker'`), answers that should make you pause (`list: 'flags'`) and how we answer it (free roof evaluation, RoofScan 360, one of
+  // four next steps, LeakRescue / TotalShield / SecondLife / FlatGuard, written scope and price, financing). "When a repair will fix it, that's
+  // what we recommend", as the emergency page says. No prices, no lifespans. Our voice, three "Our point of view" boxes.
+  // Pictures: the owner's images (thumbnail and six in the text).
+  {
+    slug: 'repair-or-replace-roof-3-question-test',
+    title: 'Repair or Replace Your Roof? The 3-Question Test Our Roofers Use',
+    keyword: 'repair or replace your roof',
+    topics: ['replacement', 'repair', 'inspection', 'shingle', 'tile', 'flat'],
+    metaTitle: 'Repair or Replace Your Roof? A Simple 3-Question Test',
+    metaDescription:
+      'Should you repair or replace your roof? The three questions our roofers ask, how to score them, the middle options, and a checklist for your roof.',
+    datePublished: '2026-11-24',
+    dateModified: '2026-11-24',
+    image: '/images/blog/repair-or-replace-roof-3-question-test.webp',
+    imageAlt: 'A roofer at a kitchen table showing a homeowner a drone photo of her roof on a tablet, a checklist on a clipboard between them',
+    excerpt:
+      'Should you repair or replace your roof? The three questions our roofers ask at every evaluation, how to score them, the options in between, and a checklist for your own roof.',
+    intro: [
+      'Whether to repair or replace your roof is the biggest question most homeowners ever ask a roofer, and the one they trust the answer to least. It is easy to see why: the person answering usually earns more if the answer is “replace.”',
+      'So here is how our roofers actually decide, out loud. It comes down to three questions. Answer them honestly, with photos, and the choice usually makes itself. Below are the three questions, how to score them, the options in between, and a checklist you can use on your own roof.',
+    ],
+    sections: [
+      {
+        heading: 'Question 1: Is the Problem in One Place, or All Over the Roof?',
+        blocks: [
+          'Start with where the trouble is. A leak at one pipe boot, a few shingles torn off in a storm, a cracked tile over the kitchen, a flashing that let go at the chimney: those are problems in one place, and a repair fixes them.',
+          'Now look at the rest of the roof. If the granules are thin on every sunny slope, shingle edges are curling across the roof, tiles are slipping on more than one side, or the flat roof is cracked and blistered from one edge to the other, the problem isn’t a place. It’s the roof.',
+          { h3: 'What to look for' },
+          {
+            list: [
+              '**One place:** the damage sits in one area, and the roof around it looks the same as the rest of the roof.',
+              '**All over:** the same wear shows up on several slopes or sides, and fixing one spot would leave the next one waiting.',
+            ],
+          },
+          { img: '/images/blog/repair-or-replace-roof-3-question-test-one-spot.webp', alt: 'A drone view straight down on a gray shingle roof where a few shingles are torn away beside a vent pipe and the rest of the roof is even and sound', caption: 'A problem in one place: a few shingles gone beside a vent pipe on a roof that is otherwise sound. That is a repair.' },
+          'Our articles on [curling, cracked and missing shingles](/blog/curling-cracked-missing-shingles/) and [shingle granule loss](/blog/shingle-granule-loss/) show the difference up close.',
+          { pov: 'One spot is a repair, almost every time. We say so even when the rest of the roof is older, as long as the rest of the roof is sound.' },
+        ],
+      },
+      {
+        heading: 'Question 2: Is What’s Underneath Still Sound?',
+        blocks: [
+          'The surface is only part of a roof. Under the shingles, tiles or cap sheet are the underlayment and the roof deck, and those decide more than the surface does.',
+          {
+            list: [
+              '**Shingle roofs:** a soft, dark or rotted deck under a leak means the wood has been wet for a while. A small area can be replaced during a repair; soft deck in many places points to a replacement from the deck up.',
+              '**Tile roofs:** the tiles often outlast the underlayment beneath them. Sound tiles over worn-out underlayment is the classic case for a lift and relay: the tiles come off, new underlayment goes down, and the same tiles go back.',
+              '**Flat roofs:** water that has gotten under the membrane in many places, or a deck that gives underfoot, means the layers below have failed, not just the surface.',
+            ],
+          },
+          { img: '/images/blog/repair-or-replace-roof-3-question-test-soft-deck.webp', alt: 'A roofer’s gloved hand pressing on a dark, water-stained and splintered section of plywood roof deck where shingles and underlayment have been pulled back', caption: 'Under the shingles: a section of roof deck stained dark and splintering where water sat. A small area like this is replaced during a repair; soft deck in many places points to a replacement.' },
+          'You can’t answer this one from the street. It takes a roofer on the roof, and sometimes a look in the attic; our guide to [tracing a leak in the attic](/blog/how-to-trace-a-roof-leak-in-the-attic/) shows what the deck tells you from below.',
+        ],
+      },
+      {
+        heading: 'Question 3: Will a Repair Buy Real Time, or Just Delay the Next Leak?',
+        blocks: [
+          'A good repair should buy real time: seasons of a dry house, not weeks. Ask what happens after it.',
+          {
+            list: [
+              '**How many repairs before this one?** A roof patched again and again, in different places, is telling you something.',
+              '**Will the repair hold to the roof around it?** New shingles hold poorly to old, brittle ones, and a patch on a flat roof that is cracking all over has nothing sound to hold to.',
+              '**How old is the roof, and what shape is it in?** Age alone doesn’t decide it, but an old roof that is also worn across the board is near the end. Our guide to [finding out how old your roof is](/blog/how-old-is-my-roof/) helps.',
+              '**What are your plans?** If you are staying for years, money spent on a replacement goes further. If you are selling soon, a sound repair with photos may be the right call; tell your roofer either way.',
+            ],
+          },
+          { img: '/images/blog/repair-or-replace-roof-3-question-test-patched-roof.webp', alt: 'A worn shingle roof covered in old patches: mismatched shingle colors, smears of roof cement and a strip of flashing tape around a vent', caption: 'A roof repaired again and again, in different places. When the patches outnumber the good shingles, the next leak is already lined up.' },
+          { pov: 'We would rather fix a roof twice than replace it a year early. But when the next leak is already lined up behind this one, a repair is just a payment toward a replacement you are going to make anyway, and we will tell you that.' },
+        ],
+      },
+      {
+        heading: 'How to Score the Test',
+        blocks: [
+          {
+            table: {
+              head: ['Your answers', 'What it usually means', 'What to do next'],
+              rows: [
+                ['One place, sound underneath, a repair will hold', 'Repair', 'Fix what failed, with photos of the problem and the finished repair.'],
+                ['One place, but the layers underneath are worn', 'It depends on the roof', 'On a tile roof with sound tiles, a lift and relay. On shingle or flat, a larger repair or a replacement.'],
+                ['Problems all over, or repairs keep coming back', 'Replace', 'Plan the replacement with a written scope and price, before the next storm decides the timing.'],
+                ['Sound roof, no leak, just older', 'Maintain and monitor', 'Regular upkeep and a look after big storms. No reason to replace it yet.'],
+              ],
+            },
+          },
+          'Notice that “older” on its own never lands on replace. Age is a reason to look closely; the three questions are what decide.',
+        ],
+      },
+      {
+        heading: 'The Options in Between',
+        blocks: [
+          'Repair and replace aren’t the only two answers:',
+          {
+            list: [
+              '**Tile lift and relay.** Our *SecondLife* lift and relay keeps your sound tiles and replaces the worn underlayment and flashings beneath them. See [tile lift and relay vs. a new tile roof](/blog/tile-lift-and-relay-vs-new-tile-roof/).',
+              '**A tune-up.** A one-time *RoofRevive* tune-up takes care of the small things before they become leaks.',
+              '**A maintenance plan.** Our [roof maintenance plans](/roof-maintenance-plans/) time visits to the rainy season, so a sound roof stays that way.',
+            ],
+          },
+          { img: '/images/blog/repair-or-replace-roof-3-question-test-lift-and-relay.webp', alt: 'A roofer in a harness carries clay barrel tiles back onto a roof covered in new underlayment and wood battens, with the old tiles stacked near the ridge', caption: 'A tile lift and relay in progress: the sound tiles stacked near the ridge, new underlayment and battens down, the same tiles going back.' },
+        ],
+      },
+      {
+        heading: 'Your Repair-or-Replace Checklist',
+        blocks: [
+          {
+            checklist: [
+              'I know where the problem is: one place, or several',
+              'I have photos of the problem, from the ground and from inside',
+              'I know how many times the roof has been repaired before',
+              'I know roughly how old the roof is, or I have asked a roofer to read it',
+              'A roofer has looked at what is under the surface, not just the surface',
+              'I have been told why a repair will or won’t hold, in plain English',
+              'I have a written scope and price for what was recommended',
+              'I know how long I plan to stay in the house',
+            ],
+          },
+          { img: '/images/blog/repair-or-replace-roof-3-question-test-checklist.webp', alt: 'A homeowner in the front yard of a single-story stucco home holds a clipboard with a checklist, looking up at the shingle roof', caption: 'Walk the checklist before you decide: where the problem is, what has been repaired before, and what a roofer found underneath.' },
+        ],
+      },
+      {
+        heading: 'Answers That Should Make You Pause',
+        blocks: [
+          'Whoever looks at your roof should be able to answer the three questions with photos. Be careful with:',
+          {
+            list: [
+              '**“You need a new roof” before anyone has been on it.**',
+              '**A replacement recommended with no photos of why.**',
+              '**A repair promised to fix a roof that is worn out across the board.**',
+              '**“Replace it now, the price goes up tomorrow.”**',
+              '**A scope and price that only exist as a number said out loud.**',
+            ],
+          },
+          { pov: 'If we tell you to replace, the photos will show you why. If they don’t, ask us. A recommendation you can’t see shouldn’t be one you pay for.' },
+        ],
+      },
+      {
+        heading: 'How We Answer It',
+        blocks: [
+          'At QRS, a roofer looks at your roof before anyone tries to sell you one. Our [free roof evaluation](/roof-inspection/) is built around these three questions:',
+          {
+            list: [
+              'Drone footage and photos of every slope with *RoofScan 360*, so you see whether the problem is in one place or all over.',
+              'A look at what is underneath where it matters: the deck around a leak, the underlayment under a lifted tile, the layers of a flat roof.',
+              'One clear next step: repair, monitor, maintain or replace, explained in plain English.',
+              'A written scope and price before any work starts.',
+            ],
+          },
+          { img: '/images/blog/repair-or-replace-roof-3-question-test-roofer-photos.webp', alt: 'A roofer in a hard hat and safety vest on a front porch shows a homeowner a drone photo of his roof with one area circled on a tablet, a drone in its case at their feet', caption: 'Every answer comes with photos: the roofer shows you where the problem is and why it is a repair, or why it isn’t.' },
+          'When a repair will fix it, that is what we recommend: our [roof repair](/roof-repair/) service, *LeakRescue*, fixes what failed. When the roof is done, we will show you why and walk you through a [roof replacement](/roof-replacement/): *TotalShield* for shingle roofs from the deck up, *SecondLife* for tile, *FlatGuard* for flat roofs, and [roof financing](/roof-financing/) for home replacements, subject to credit approval.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'How do I know whether to repair or replace my roof?',
+        a: 'Ask three questions: is the problem in one place or all over the roof, is what’s underneath (the deck and underlayment) still sound, and will a repair buy real time or just delay the next leak? One place, sound underneath and a repair that will hold means repair. Problems all over, or repairs that keep coming back, mean replace.',
+      },
+      {
+        q: 'Should I replace my roof just because it’s old?',
+        a: 'Not on age alone. An older roof that is sound and dry may only need upkeep. Age is the reason to have it looked at; what the roofer finds is the reason to repair, maintain or replace.',
+      },
+      {
+        q: 'Is it worth repairing an old roof?',
+        a: 'Often, when the problem is in one place and the roof around it is sound. It stops being worth it when the roof is worn across the board, the layers underneath have failed, or the repairs keep coming back.',
+      },
+      {
+        q: 'Can part of a roof be replaced?',
+        a: 'Sometimes a larger section can be repaired or rebuilt, for example around a chimney or over a damaged area of deck. When wear is spread across the roof, a full replacement usually makes more sense than replacing it a section at a time.',
+      },
+      {
+        q: 'What if my tile roof leaks but the tiles look fine?',
+        a: 'That usually points to the underlayment beneath the tiles. If the tiles are sound, a lift and relay keeps them and replaces the underlayment and flashings underneath. If many tiles are broken or brittle, a new tile roof may make more sense.',
+      },
+      {
+        q: 'Will you tell me if I only need a repair?',
+        a: 'Yes. When a repair will fix it, that is what we recommend. Every evaluation ends with one next step, repair, monitor, maintain or replace, with photos that show why.',
+      },
+    ],
+    closing: {
+      heading: 'Not Sure Which Side of the Test Your Roof Is On?',
+      blocks: [
+        'Let a roofer answer the three questions with photos. Book a [free roof evaluation](#roof-check) and you get drone footage of every slope, a plain-English answer on repair or replace, and a written scope and price before any work. Or call [(310) 340-1643](tel:+13103401643).',
+      ],
+    },
+    related: ['/roof-repair/', '/roof-replacement/', '/roof-inspection/', '/residential-roofing/tile-roofing/lift-and-relay/'],
+  },
   // How old is your roof (owner, November 24 2026): keyword "how old your roof is". Quick tips: why the age matters (planning, selling or buying,
   // insurers who ask, warranties), seven quick ways to find out (`list: 'facts-numbered'`: home paperwork, the permit, the installer's paperwork,
   // the previous owner, historical aerial photos, the attic, the roof edge), signs of age by roof type (`table: 'cards'`), age vs. condition
