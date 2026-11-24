@@ -18,6 +18,11 @@
 //   table: 'cards'          rows to compare as cards with labelled lines
 //   table: 'hotspots'       "where / what goes wrong" rows as an interactive picture of a flat commercial roof
 export const POST_VISUALS = {
+  'types-of-asphalt-shingles': {
+    'The 60-Second Version': { table: 'versus' },
+    'Five Ways to Tell Which Shingle Is on Your Roof': { list: 'facts-numbered' },
+    'Which Should You Choose?': { table: 'decide' },
+  },
   'how-to-trace-a-roof-leak-in-the-attic': {
     'Stop 3: Look Up and Read the Roof Deck': { table: 'cards' },
   },

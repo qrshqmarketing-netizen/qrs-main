@@ -24,6 +24,157 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // Types of asphalt shingles in 60 seconds (owner, November 24 2026): brief "Architectural vs. 3-tab shingles in 60 seconds, side-by-side
+  // samples, comparative, product options you install". The keyword is "types of asphalt shingles", not "architectural vs. 3-tab shingles",
+  // which belongs to the older comparison article (architectural-vs-3-tab-shingles) and is linked from here. A quick, sample-on-the-table
+  // format: the 60-second version (`table: 'versus'`), five ways to tell which is on your roof (`list: 'facts-numbered'`), the two samples in
+  // your hand, the shingle options we install (architectural shingles from the manufacturers we're certified with, the eleven cool roof colors
+  // rated SRI 20+, color-matched drip edge, TotalShield from the deck up), which to choose (`table: 'decide'`). No weights, prices, lifespans or
+  // wind ratings (the older article covers the general ranges); designer shingles only as a general category, not a QRS product. Our voice,
+  // three "Our point of view" boxes. Thumbnail and six pictures in the text are the owner's images.
+  {
+    slug: 'types-of-asphalt-shingles',
+    title: 'Types of Asphalt Shingles in 60 Seconds: 3-Tab vs. Architectural, Side by Side',
+    keyword: 'types of asphalt shingles',
+    topics: ['shingle', 'replacement', 'repair'],
+    metaTitle: 'Types of Asphalt Shingles, Side by Side in 60 Seconds',
+    metaDescription:
+      'The types of asphalt shingles in 60 seconds: 3-tab and architectural samples side by side, how to tell which is on your roof, and the options we install.',
+    datePublished: '2026-11-24',
+    dateModified: '2026-11-24',
+    image: '/images/blog/types-of-asphalt-shingles.webp',
+    imageAlt: 'A flat gray 3-tab shingle sample beside a thicker, layered brown architectural shingle sample on a wooden table',
+    excerpt:
+      'Two samples on a table and a minute is all it takes: how 3-tab and architectural shingles differ, how to tell which one is on your roof, and the shingle styles and colors we install.',
+    intro: [
+      'There are two main types of asphalt shingles on homes around here: 3-tab and architectural. Put one of each on a table and you can see the difference in a few seconds, and once you know what to look for, you can spot it from the sidewalk too.',
+      'This is the 60-second version: the two samples side by side, five quick ways to tell which one is on your roof, the shingle options we install and how to choose. For the longer comparison, see our article on [architectural vs. 3-tab shingles](/blog/architectural-vs-3-tab-shingles/).',
+    ],
+    sections: [
+      {
+        heading: 'The 60-Second Version',
+        blocks: [
+          {
+            table: {
+              head: ['Compare', '3-tab shingles', 'Architectural shingles'],
+              rows: [
+                ['Layers', 'One flat layer', 'Two or more layers bonded together'],
+                ['The bottom edge', 'One straight line, cut into three even tabs', 'Uneven, with tabs of different widths'],
+                ['On the roof', 'Neat, identical rows, like a grid', 'Texture and shadow lines, closer to shake or slate'],
+                ['In your hand', 'Thin and flexible', 'Noticeably thicker and stiffer'],
+                ['Where you see it', 'Mostly on older roofs', 'Most new shingle roofs'],
+                ['For a repair', 'Fewer lines made today, so a match can take searching', 'Easier to find a close match'],
+              ],
+            },
+          },
+          { img: '/images/blog/types-of-asphalt-shingles-samples-flat-lay.webp', alt: 'A 3-tab shingle with two even slots beside an architectural shingle with staggered tabs of different widths', caption: 'Side by side: the 3-tab shingle (left) is one flat layer with even tabs; the architectural shingle (right) is layered, with tabs of different widths.' },
+          { pov: 'If you only remember one thing: 3-tab is flat and even, architectural has depth. Almost every new shingle roof we put on is architectural, and that is what we recommend for a full replacement.' },
+        ],
+      },
+      {
+        heading: 'Five Ways to Tell Which Shingle Is on Your Roof',
+        blocks: [
+          {
+            list: [
+              '**Look at the bottom edge:** from the street, a 3-tab roof shows a straight, even edge on every row. Architectural shingles leave a ragged, staggered edge.',
+              '**Count the cutouts:** 3-tab shingles have slots at even spacing that make a regular grid down the roof. Architectural shingles don’t repeat that way.',
+              '**Look for shadow lines:** in low morning or evening sun, architectural shingles cast small shadows where the layers overlap. 3-tab looks flat in any light.',
+              '**Check the garage or shed:** a leftover bundle or a spare shingle often has the brand and line printed on the wrapper.',
+              '**Check the paperwork:** the contract or invoice from the last roof usually names the shingle. Our guide to [finding out how old your roof is](/blog/how-old-is-my-roof/) lists where to look.',
+            ],
+          },
+          { img: '/images/blog/types-of-asphalt-shingles-three-tab-roof-from-street.webp', alt: 'A single-story stucco home with an older gray 3-tab shingle roof seen from the sidewalk', caption: 'From the sidewalk, a 3-tab roof reads as neat, even rows with straight edges.' },
+          { img: '/images/blog/types-of-asphalt-shingles-architectural-shadow-lines.webp', alt: 'A brown architectural shingle roof in low evening sun, small shadows where the layers overlap', caption: 'In low sun, architectural shingles cast small shadows where their layers overlap.' },
+          'Stay on the ground for all of this. A phone’s zoom or a pair of binoculars is enough, as our guide to [checking your roof from the ground](/blog/how-to-check-your-roof-from-the-ground/) shows.',
+        ],
+      },
+      {
+        heading: 'The Two Samples in Your Hand',
+        blocks: [
+          'When we bring samples to a roof evaluation, the difference is obvious before anyone says a word.',
+          {
+            list: [
+              '**The 3-tab sample** is one flat sheet with two slots cut into its lower edge, making three tabs the same size. It bends easily and looks the same from one end to the other.',
+              '**The architectural sample** is two layers bonded together. Turn it over and you can see where the top layer is cut into tabs of different widths over a solid lower layer. It is thicker, stiffer and heavier in the hand, and the granules show a blend of tones instead of one flat color.',
+            ],
+          },
+          { img: '/images/blog/types-of-asphalt-shingles-samples-in-hand.webp', alt: 'Gloved hands holding a layered architectural shingle edge-on beside a thin, flat 3-tab shingle', caption: 'Edge-on, the difference is easy to feel: two bonded layers on the left, one thin layer on the right.' },
+          'Both are asphalt shingles with ceramic-coated granules on top, and both go on the same way: over underlayment on a sound deck, in courses from the eave up. What changes is how they look and how they hold up on the roof.',
+        ],
+      },
+      {
+        heading: 'The Shingle Options We Install',
+        blocks: [
+          'For a [shingle roof replacement](/residential-roofing/shingle-roofing/replacement/), here is what you choose from with us:',
+          {
+            list: [
+              '**Architectural shingles** from the manufacturers we are certified with: Owens Corning, GAF, CertainTeed and IKO. The brand and line are named in your written scope.',
+              '**Eleven cool roof colors,** light to dark: Shasta White, Oyster Shell, Amber, Golden Meadow, Sierra Grey, Cliffside Gray, Rolling Stone, Mystic Gray, Copper Trail, Prairie Wood and Midnight. Every one is rated SRI 20 or higher, so the roof sheds more of the sun’s heat. You can try them on a home photo in our [shingle colors](/residential-roofing/shingle-roofing/#shingle-colors) section.',
+              '**A drip edge in a matching color,** so the roof edge doesn’t stand out against the shingles.',
+              '**A close match for part of a roof.** When only part of a roof is replaced, we pick the closest available match to the shingles that stay, as on a [partial shingle roof replacement in Northeast Los Angeles](/projects/partial-shingle-roof-replacement-los-angeles-90065/) beside a solar array.',
+            ],
+          },
+          { img: '/images/blog/types-of-asphalt-shingles-choosing-colors.webp', alt: 'A roofer laying out a fan of shingle color samples on a kitchen table for a homeowner couple', caption: 'Choosing a color at the kitchen table, from light cool roof shades to the darker ones.' },
+          'Whichever color you pick, it goes on as part of our *TotalShield* Shingle System: a full tear-off, a deck check, new underlayment, flashings, drip edge and balanced attic ventilation, then the shingles. Read more about [cool roofing](/residential-roofing/cool-roofing/).',
+          { pov: 'The shingle you see is the last layer of the roof, not the whole roof. We would rather talk about the deck, the underlayment and the flashings first, then help you pick the color you love.' },
+        ],
+      },
+      {
+        heading: 'Which Should You Choose?',
+        blocks: [
+          {
+            table: {
+              head: ['If this sounds like you', 'Our recommendation', 'Why'],
+              rows: [
+                ['You are replacing the whole roof', 'Architectural shingles', 'The look most homeowners want, the widest choice of colors and the standard on new roofs'],
+                ['You are repairing a few shingles on a 3-tab roof', 'The closest 3-tab match', 'A different shingle can look patched and may not seal into the rows around it the same way'],
+                ['Your 3-tab roof is worn all over', 'A full replacement in architectural', 'When wear is everywhere, patching buys less time each round'],
+                ['You want a cooler attic', 'A cool roof color rated SRI 20+', 'Lighter, more reflective shingles shed more of the sun’s heat'],
+                ['Only part of the roof is being replaced', 'The closest available match', 'So the new section blends with the shingles that stay'],
+              ],
+            },
+          },
+          { img: '/images/blog/types-of-asphalt-shingles-new-architectural-roof.webp', alt: 'Aerial view of a single-story home with a new brown architectural shingle roof and a matching drip edge', caption: 'A full replacement in architectural shingles, with ridge caps and a drip edge in a matching color.' },
+          'Not sure which you have, or whether to repair or replace? Our [3-question repair-or-replace test](/blog/repair-or-replace-roof-3-question-test/) is a good next read.',
+          { pov: 'We will tell you if a repair is the right call on an older 3-tab roof. When the whole surface is worn, we will tell you that too, and show you why in the photos.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What are the types of asphalt shingles?',
+        a: 'The two you see most are 3-tab shingles, one flat layer cut into three even tabs, and architectural shingles, two or more layers bonded together for a thicker, dimensional look. Some manufacturers also make heavier premium or designer shingles shaped to look like slate or shake.',
+      },
+      {
+        q: 'How can I tell if my roof has 3-tab or architectural shingles?',
+        a: 'Look at the bottom edge of the rows from the ground. A straight, even edge with a regular grid of slots is 3-tab. A staggered edge with shadow lines between layers is architectural.',
+      },
+      {
+        q: 'Which type of shingle do you install?',
+        a: 'Architectural shingles for new roofs, from Owens Corning, GAF, CertainTeed and IKO, the manufacturers we are certified with, in eleven cool roof colors rated SRI 20 or higher. For a repair, we match the existing shingle as closely as we can.',
+      },
+      {
+        q: 'Can I see shingle samples before I choose?',
+        a: 'Yes. Ask during your free roof evaluation, and you can also try all eleven colors on a home photo in the shingle colors section of our shingle roofing page.',
+      },
+      {
+        q: 'Do architectural shingles cost more than 3-tab?',
+        a: 'Usually a little more per square. For most full replacements the look, the color choice and how they hold up on the roof make them the better value. Your written scope shows the shingle line and the price before any work.',
+      },
+      {
+        q: 'What about designer or luxury shingles?',
+        a: 'They are a premium category of asphalt shingle made to look like slate or wood shake. Whether one fits your roof and budget is something we can talk through at your roof evaluation.',
+      },
+    ],
+    closing: {
+      heading: 'Want to See the Samples Side by Side?',
+      blocks: [
+        'Book a [free roof evaluation](#roof-check). A roofer checks your roof with drone footage and photos, tells you which shingle you have now, shows you the options and gives you a written scope and price before any work. Or call [(310) 340-1643](tel:+13103401643).',
+        'Part of our [asphalt shingle roof guide](/blog/asphalt-shingle-roof-guide/).',
+      ],
+    },
+    related: ['/residential-roofing/shingle-roofing/replacement/', '/residential-roofing/shingle-roofing/', '/residential-roofing/cool-roofing/', '/residential-roofing/shingle-roofing/repair/'],
+  },
   // Why the cheapest roofing quote can cost you more (owner, November 24 2026): keyword "cheapest roofing quote". Story/example, comparative,
   // justifies quality pricing: an illustration of two quotes for the same roof (labelled as an illustration, no real client, no dollar
   // figures), where the low number usually comes from (`list: 'facts-numbered'`), the two quotes line by line (`table: 'versus'`), what it costs
