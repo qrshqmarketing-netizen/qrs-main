@@ -18,6 +18,25 @@
 //   table: 'cards'          rows to compare as cards with labelled lines
 //   table: 'hotspots'       "where / what goes wrong" rows as an interactive picture of a flat commercial roof
 export const POST_VISUALS = {
+  'commercial-roof-drains-and-scuppers': {
+    'The Parts of Each Outlet': { list: 'facts-numbered' },
+    'A Checklist for Your Maintenance Staff': { checklist: 'tracker' },
+    'Warning Signs to Call a Roofer': { table: 'cards' },
+    'What Not to Do': { list: 'flags' },
+  },
+  'find-a-leak-on-a-commercial-flat-roof': {
+    'Why a Flat Roof Leak Is So Hard to Locate': { list: 'facts-numbered' },
+    'What the Timing Tells You': { table: 'cards' },
+    'Keep a Leak Log Your Roofer Can Use': { steps: 'timeline' },
+    'What Not to Do': { list: 'flags' },
+    'How Our Roofers Trace a Commercial Flat Roof Leak': { steps: 'timeline' },
+  },
+  'ponding-water-commercial-flat-roof': {
+    'Normal, Watch It or Call a Roofer?': { table: 'decide' },
+    'Why Water Ponds on a Commercial Flat Roof': { list: 'facts-numbered' },
+    'How to Check for Ponding Safely': { checklist: 'tracker' },
+    'What to Do, and What Not to Do': { list: 'flags' },
+  },
   'clean-gutters-without-damaging-roof-edge': {
     'How Gutter Cleaning Damages a Roof Edge': { list: 'facts-numbered' },
     'Before You Start': { checklist: 'tracker' },

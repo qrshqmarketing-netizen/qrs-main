@@ -24,6 +24,536 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // Keeping commercial roof drains and scuppers clear (owner, November 24 2026): keyword "roof drains and scuppers", for property managers,
+  // building engineers and maintenance staff. Why they matter, the parts of each outlet (`list: 'facts-numbered'`), what clogs them, how often
+  // to check, a staff checklist (`checklist: 'tracker'`), warning signs (`table: 'cards'`), what not to do (`list: 'flags'`), roofing side vs.
+  // plumbing side (the commercial repair page's own answer: the roofer fixes the drain's roofing side, a deeper drain-line blockage goes to a
+  // plumber), and how we help: scheduled commercial roof maintenance that clears drains and debris and checks flashings with a photo report,
+  // repairs at drain and scupper flashing, crickets or the slope rebuilt during a phased replacement, the roofer-led roof survey (never free).
+  // Overflow outlets described as the general building practice, not a code citation. No prices. Our voice, three "Our point of view" boxes.
+  // Thumbnail and seven pictures in the text are the owner's images.
+  {
+    slug: 'commercial-roof-drains-and-scuppers',
+    title: 'Keeping Commercial Roof Drains and Scuppers Clear: A Guide for Property Managers',
+    keyword: 'roof drains and scuppers',
+    topics: ['commercial', 'flat', 'maintenance', 'leak', 'repair'],
+    metaTitle: 'Keeping Commercial Roof Drains and Scuppers Clear',
+    metaDescription:
+      'How to keep commercial roof drains and scuppers clear: what clogs them, how often to check, a staff checklist, the warning signs and when to call a roofer.',
+    datePublished: '2026-11-24',
+    dateModified: '2026-11-24',
+    image: '/images/blog/commercial-roof-drains-and-scuppers.webp',
+    imageAlt: 'A maintenance worker on a commercial flat roof bagging wet leaves cleared from around a roof drain strainer',
+    excerpt:
+      'Roof drains and scuppers are the only way water leaves a commercial flat roof. What clogs them, how often to check, a checklist your staff can use and the warning signs that mean it is time to call a roofer.',
+    intro: [
+      'Roof drains and scuppers are the only way rainwater leaves a commercial flat roof. When one clogs, the water has nowhere to go: it backs up across the roof, adds weight, finds any weak seam or flashing, and can end up on a tenant’s ceiling.',
+      'Keeping them clear is one of the simplest things a building can do for its roof. Here is how each outlet works, what clogs it, how often to check, a checklist your staff can use, the warning signs, and where the roofer’s job ends and the plumber’s begins.',
+    ],
+    sections: [
+      {
+        heading: 'Why Clear Drains and Scuppers Matter',
+        blocks: [
+          'A commercial flat roof is built with a gentle slope that carries water to its outlets. The roof can only drain as fast as those outlets let it. A drain half-covered with leaves in a light rain becomes a pond in a heavy one, and standing water wears the roof faster, adds weight to the deck and keeps pressing on the flashing around the drain itself.',
+          { img: '/images/blog/commercial-roof-drains-and-scuppers-clogged-drain.webp', alt: 'A roof drain buried under leaves and a plastic bag in the middle of a large pond of water on a commercial flat roof', caption: 'One drain, one bag and a season of leaves: the whole roof backs up around it.' },
+          'Our guide to [ponding water on a commercial flat roof](/blog/ponding-water-commercial-flat-roof/) explains what standing water does over time, and our guide to [finding a flat roof leak](/blog/find-a-leak-on-a-commercial-flat-roof/) explains why a leak at a drain can show up on a ceiling well away from it.',
+          { pov: 'A clogged drain is the cheapest roof problem there is to fix, and one of the most expensive to ignore. We clear them on every maintenance visit for that reason.' },
+        ],
+      },
+      {
+        heading: 'The Parts of Each Outlet',
+        blocks: [
+          {
+            list: [
+              '**Roof drain:** an opening in the field of the roof with a drain bowl set into the deck, a clamping ring that holds the roofing in place around it, and a dome-shaped strainer on top to keep debris out of the pipe.',
+              '**Scupper:** an opening through the parapet wall at the roof’s edge, lined with metal and flashed into the roofing.',
+              '**Conductor head and downspout:** the box on the outside of the wall that catches the water from a scupper, and the pipe that carries it down.',
+              '**Overflow drains and scuppers:** on many buildings, a second set of outlets sits a little higher than the main ones, so water can still get off the roof if a main outlet clogs.',
+              '**Crickets:** small raised sections that steer water around rooftop units and toward the outlets.',
+            ],
+          },
+          { img: '/images/blog/commercial-roof-drains-and-scuppers-roof-drain-parts.webp', alt: 'A cast metal dome strainer bolted over a roof drain bowl with its clamping ring, the membrane flashed around it', caption: 'A roof drain: the dome strainer on top, the clamping ring bolted down and the roofing flashed into the bowl.' },
+          { img: '/images/blog/commercial-roof-drains-and-scuppers-scupper-conductor-head.webp', alt: 'A metal-lined scupper through a stucco parapet emptying into a conductor head and downspout', caption: 'A scupper through the parapet, with the conductor head and downspout that carry its water down the wall.' },
+        ],
+      },
+      {
+        heading: 'What Clogs Roof Drains and Scuppers',
+        blocks: [
+          {
+            list: [
+              'Leaves, needles and seed pods from nearby trees',
+              'Trash, bags and paper blown onto the roof',
+              'Granules washed off an older cap sheet',
+              'Bird nests, especially in scuppers and conductor heads',
+              'Debris left from rooftop work: filters, screws, cut-offs and packaging from HVAC service',
+              'A missing or broken strainer, which lets debris into the drain line itself',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'How Often to Check Them',
+        blocks: [
+          'At a minimum, before the rainy season starts. Check again after a big storm or strong winds, after any work on the roof, and more often on a building under trees or next to a lot where trash blows around. A quick look from the hatch after each heavy rain tells you whether water is reaching the outlets and leaving.',
+          'Our [commercial roof maintenance](/commercial-roofing/maintenance/) visits clear drains and debris before the rainy season, check and reseal the flashings where needed, and end with a photo report you can compare visit to visit.',
+        ],
+      },
+      {
+        heading: 'A Checklist for Your Maintenance Staff',
+        blocks: [
+          {
+            checklist: [
+              'Follow your building’s roof access and safety rules, and never go up during a storm or on a wet roof',
+              'Bag the debris around each drain by hand; don’t push it toward the opening',
+              'Check that every strainer is in place, unbroken and secured',
+              'Look at the flashing and clamping ring around each drain for cracks, gaps or old patches',
+              'Clear each scupper opening, and check the conductor head and downspout below it',
+              'Check that the overflow drains and scuppers are open too',
+              'Look for water rings or dirt rings around the outlets, which show where water has been standing',
+              'Photograph each outlet and log the date and what you found',
+            ],
+          },
+          { img: '/images/blog/commercial-roof-drains-and-scuppers-staff-photo-log.webp', alt: 'Gloved hands photographing a roof drain with a phone, a checklist on a clipboard and a bag of cleared debris beside it', caption: 'Clear it, bag it, photograph it and log it.' },
+          'Keep the log with the building records. It helps the next roofer, and it shows a pattern long before a ceiling does.',
+        ],
+      },
+      {
+        heading: 'Warning Signs to Call a Roofer',
+        blocks: [
+          {
+            table: {
+              head: ['What you see', 'What it usually means', 'What to do'],
+              rows: [
+                ['Water pouring from an overflow scupper or drain', 'The main outlet is blocked', 'Clear the main outlet, and have it checked if it keeps happening'],
+                ['Water still standing around a drain days after rain', 'The drain is partly blocked, or set higher than the roof around it', 'Have a roofer look at the drain and the slope'],
+                ['A ceiling stain below or near a drain', 'The flashing around the drain bowl may have failed', 'Call a roofer, and log the stain'],
+                ['Downspouts that run slowly or not at all', 'A clog in the conductor head or the downspout', 'Clear it, or have it cleared before the next storm'],
+                ['A missing, cracked or loose strainer', 'Debris can get into the drain line', 'Have it replaced'],
+                ['Rust streaks on the wall below a scupper', 'Water is getting behind the scupper lining or the conductor head', 'Have the scupper flashing checked'],
+              ],
+            },
+          },
+          { img: '/images/blog/commercial-roof-drains-and-scuppers-overflow-scupper.webp', alt: 'Water gushing from an overflow scupper on a brick building in heavy rain while the main scupper beside it is packed with debris', caption: 'The main scupper is packed with debris, so the overflow beside it is doing all the work.' },
+        ],
+      },
+      {
+        heading: 'What Not to Do',
+        blocks: [
+          {
+            list: [
+              '**Don’t take the strainers off** to make water drain faster. Debris goes straight into the pipe.',
+              '**Don’t push debris into the drain.** Bag it and take it off the roof.',
+              '**Don’t smear roof cement around a drain** that seems to leak. It rarely seals the real gap and makes the proper repair harder.',
+              '**Don’t store materials or equipment** where they block the path to an outlet.',
+              '**Don’t go up during a storm** to clear a drain. Wait until it is safe.',
+            ],
+          },
+          { pov: 'Most drain problems start small: a strainer that went missing, a bag that blew in, a patch that didn’t seal. A five-minute check before the rains catches all three.' },
+        ],
+      },
+      {
+        heading: 'Roofer or Plumber?',
+        blocks: [
+          'A drain has two sides. The roofing side is the strainer, the clamping ring, the drain bowl and the flashing that ties the roof into it, plus the scupper lining, its flashing and the slope that brings water to them: that is our work. The drain line inside the building is the plumbing side.',
+          { img: '/images/blog/commercial-roof-drains-and-scuppers-roofer-at-drain-bowl.webp', alt: 'A roofer kneeling at an open roof drain with the strainer lifted off, inspecting the drain bowl and its flashing with a flashlight', caption: 'The roofing side of a drain: the bowl, the clamping ring and the flashing around it.' },
+          'When a drain keeps backing up, we check the strainer, the flashing around the drain bowl and whether low spots keep water from reaching it, and repair the roofing side. If the blockage is deeper in the drain line, we tell you so a plumber can clear it. See [commercial roof repair](/commercial-roofing/repair/).',
+        ],
+      },
+      {
+        heading: 'How We Help Keep the Water Moving',
+        blocks: [
+          {
+            list: [
+              '**A roofer-led roof survey** photographs every drain, scupper and low spot, so you can see where water stands and why.',
+              '**Repairs at the outlets:** new flashing around a drain bowl or a scupper, a new strainer, a worn area around the outlet repaired.',
+              '**Better drainage when it is time:** crickets around rooftop units, or the slope rebuilt in an area during a phased [commercial roof replacement](/commercial-roofing/replacement/), so the building stays open.',
+              '**Scheduled maintenance** that clears the outlets before the rains and documents them every visit.',
+            ],
+          },
+          { img: '/images/blog/commercial-roof-drains-and-scuppers-clear-roof-draining.webp', alt: 'Drone view of a white commercial flat roof after rain with water running freely to clear roof drains among rooftop units', caption: 'Clear outlets after a rain: the water runs straight to the drains and off the roof.' },
+          'Large, nearly flat roofs have the longest path to a drain, which is why we survey [warehouse roofs](/commercial-roofing/warehouses/) in sections. If you manage several buildings, see [property management roofing](/commercial-roofing/property-managers/).',
+          { pov: 'We would rather spend a maintenance visit clearing drains than a repair visit tracing the leak a clogged one caused.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'How often should commercial roof drains and scuppers be cleaned?',
+        a: 'At least before the rainy season, and again after big storms, strong winds and any work on the roof. A building under trees may need it more often.',
+      },
+      {
+        q: 'What is the difference between a roof drain and a scupper?',
+        a: 'A roof drain is an opening in the field of the roof that carries water down through a pipe inside the building. A scupper is an opening through the parapet wall at the roof’s edge that sends water to a conductor head and a downspout outside.',
+      },
+      {
+        q: 'Why is water coming out of our overflow scupper?',
+        a: 'Usually because the main drain or scupper it backs up is blocked. Clear the main outlet when it is safe, and have a roofer look at it if it keeps happening.',
+      },
+      {
+        q: 'Who clears a clogged roof drain, a roofer or a plumber?',
+        a: 'Both, depending on where the clog is. A roofer handles the strainer, the drain bowl and the flashing around it. If the blockage is deeper in the drain line inside the building, a plumber clears it, and we tell you when that is the case.',
+      },
+      {
+        q: 'Can our maintenance staff clean the drains?',
+        a: 'Yes, if they follow your building’s roof access and safety rules: bag the debris by hand, keep the strainers in place and log what they find. Leave repairs to the flashing to a roofer.',
+      },
+      {
+        q: 'Do you clean roof drains as part of maintenance?',
+        a: 'Yes. Our commercial roof maintenance visits clear drains and debris, check and reseal flashings where needed and end with a photo report.',
+      },
+    ],
+    closing: {
+      heading: 'Want Your Drains Checked Before the Rains?',
+      blocks: [
+        'Request a [roof survey](#roof-check). A roofer photographs every drain, scupper and low spot, tells you in plain English what each needs, and gives you a written scope and price before any work. Or call [(310) 340-1643](tel:+13103401643).',
+      ],
+    },
+    related: ['/commercial-roofing/maintenance/', '/commercial-roofing/repair/', '/commercial-roofing/property-managers/', '/commercial-roofing/warehouses/'],
+  },
+  // Finding a leak on a commercial flat roof (owner, November 24 2026, brief "How to find a leak on a flat roof / Why is a flat roof leak so
+  // hard to locate?", for commercial flat roofs at the owner's request): keyword "flat roof leak". A how-to for property managers and building
+  // engineers, kept apart from commercial-roof-leak-repair (keyword "commercial roof leak repair", the repair-focused article, linked here):
+  // why a flat roof leak is so hard to locate on a commercial building (`list: 'facts-numbered'`), where it usually starts, what the timing
+  // tells you (`table: 'cards'`), a leak log and roof plan the building's own staff can keep (`steps: 'timeline'`), what not to do
+  // (`list: 'flags'`), how our roofers trace it (a roofer-led roof survey, never called free: the leak log, upslope from the stain, every
+  // detail in the water's path, photos, a water test one section at a time from the bottom up), then repair or a phased replacement, and
+  // scheduled maintenance. An AC condensate line goes to the HVAC contractor, a deeper drain-line blockage to a plumber, as the commercial
+  // repair page says. No prices, no tools we haven't claimed. Our voice, three "Our point of view" boxes. Thumbnail and seven pictures in the
+  // text are the owner's images.
+  {
+    slug: 'find-a-leak-on-a-commercial-flat-roof',
+    title: 'How to Find a Flat Roof Leak on a Commercial Building, and Why It’s So Hard to Locate',
+    keyword: 'flat roof leak',
+    topics: ['commercial', 'flat', 'leak', 'repair', 'maintenance'],
+    metaTitle: 'How to Find a Flat Roof Leak on a Commercial Building',
+    metaDescription:
+      'Why a flat roof leak is so hard to locate on a commercial building, where it usually starts, what the timing tells you and how to log it for your roofer.',
+    datePublished: '2026-11-24',
+    dateModified: '2026-11-24',
+    image: '/images/blog/find-a-leak-on-a-commercial-flat-roof.webp',
+    imageAlt: 'A roofer kneeling on a commercial flat roof, checking the flashing at the base of a rooftop air conditioning curb with a flashlight',
+    excerpt:
+      'On a commercial flat roof, the wet ceiling tile and the opening in the roof are rarely in the same place. Why the leak is so hard to locate, where it usually starts and how to log it so your roofer finds it faster.',
+    intro: [
+      'A flat roof leak on a commercial building is one of the hardest leaks to find. Water can get through an open lap or a cracked flashing, run along the deck, the insulation or a seam, and come through a ceiling tile in a tenant’s space well away from where it got in.',
+      'This guide is for property managers, owners and building engineers: why the leak is so hard to locate, where it usually starts, what the timing of the drip tells you, how your own staff can log it, and how our roofers trace it to the source.',
+    ],
+    sections: [
+      {
+        heading: 'Why a Flat Roof Leak Is So Hard to Locate',
+        blocks: [
+          {
+            list: [
+              '**Water travels under the surface:** once it is through the membrane, it runs along the deck, the insulation boards or a seam, following the slope, before it finds a way down.',
+              '**The ceiling hides the path:** above a drop ceiling, water can run along a beam, a duct or a pipe and drip onto a tile several feet away.',
+              '**Big roofs, many details:** a commercial roof carries drains, scuppers, parapets, HVAC curbs, vents, skylights and hatches, each one a possible opening.',
+              '**Wet insulation holds water:** it can keep dripping for days after the rain, which hides when and where the water got in.',
+              '**Old roofs are layered:** each re-roof over the last one leaves gaps where water sits and moves between layers.',
+              '**Other trades walk the roof:** service visits to the rooftop units can cut or puncture the membrane far from where anyone looks.',
+              '**Old patches hide the evidence:** roof cement smeared over a suspected spot can cover the real opening, or move the water a few feet over.',
+            ],
+          },
+          { img: '/images/blog/find-a-leak-on-a-commercial-flat-roof-water-path-cutaway.webp', alt: 'Cutaway of a commercial flat roof: water through an open lap runs across the insulation and the metal deck, then drips through a ceiling tile further along', caption: 'Why the leak is so hard to find: water through one open lap crosses the insulation and the deck before it drips through a tile somewhere else.' },
+          { pov: 'On a commercial flat roof, the wet ceiling tile tells us where the water ended up, not where it got in. We start there and work back toward the high side of the roof, every time.' },
+        ],
+      },
+      {
+        heading: 'Where Commercial Flat Roof Leaks Usually Start',
+        blocks: [
+          'Most of the flat roof leaks we trace start where the roof meets something, not out in the open field:',
+          {
+            list: [
+              '**HVAC curbs:** the flashing around the base of each rooftop unit.',
+              '**Drains and scuppers:** the flashing around the drain bowl and the scupper box.',
+              '**Parapet walls and coping:** where the roof turns up the wall and finishes under the cap.',
+              '**Vents, pipes, skylights and roof hatches:** each needs its own flashing, not just a bead of sealant.',
+              '**Laps and seams:** where one sheet overlaps the next, especially around low spots.',
+              '**Equipment service paths:** where foot traffic and dropped tools wear or puncture the surface.',
+              '**Ponding spots:** where standing water has worn through the surface.',
+            ],
+          },
+          { img: '/images/blog/find-a-leak-on-a-commercial-flat-roof-failed-curb-flashing.webp', alt: 'The corner of a rooftop unit curb with cracked flashing and old roof cement, a wet patch spreading on the membrane beside it', caption: 'A common source: the flashing at the corner of an HVAC curb has split, and old roof cement around it has cracked.' },
+          'Our guide to [ponding water on a commercial flat roof](/blog/ponding-water-commercial-flat-roof/) explains why the low spots wear first.',
+        ],
+      },
+      {
+        heading: 'What the Timing Tells You',
+        blocks: [
+          'Before anyone goes up on the roof, note when the drip shows up. It narrows the search more than anything else.',
+          {
+            table: {
+              head: ['When it leaks', 'What it often points to', 'Where to look'],
+              rows: [
+                ['Only in heavy rain', 'Water backing up at a drain or a scupper, or a pond reaching an open lap', 'The outlets and the low spots around them'],
+                ['When rain comes with wind', 'Water driven sideways at the edges', 'Parapet coping, wall flashing and edge metal'],
+                ['Every rain, in the same spot', 'An opening close to that spot', 'Seams, curbs and penetrations upslope of the stain'],
+                ['Days after the rain stops', 'Water trapped in the insulation or between layers', 'A wider area upslope; the roof may be wet in more than one place'],
+                ['Right after a rooftop unit was serviced', 'A cut, a puncture or a loosened panel from the visit', 'The service path and the unit’s curb'],
+                ['Under a rooftop unit, even on dry days', 'Often the unit’s condensate drain line, not the roof', 'Call your HVAC contractor first'],
+              ],
+            },
+          },
+          { img: '/images/blog/find-a-leak-on-a-commercial-flat-roof-condensate-line.webp', alt: 'A puddle on a dry, sunny commercial roof under the condensate drain pipe of a rooftop unit', caption: 'Water under a unit on a dry day is often its condensate line, a job for your HVAC contractor, not a roof leak.' },
+        ],
+      },
+      {
+        heading: 'Keep a Leak Log Your Roofer Can Use',
+        blocks: [
+          {
+            steps: [
+              '**Log every report.** The date, the weather, the suite or room and what the tenant saw: a stain, a drip or water on the floor.',
+              '**Mark it on a plan.** Put each leak on a simple floor plan and, if you have one, a roof plan. A pattern usually shows up after two or three storms.',
+              '**Look above the ceiling.** Lift the wet ceiling tile and look with a flashlight for where the water runs along a beam, a duct or a pipe. Photograph it.',
+              '**Measure to the walls.** Measure from the wet spot to two outside walls, so the same spot can be found on the roof.',
+              '**Note what changed.** Recent HVAC service, a new antenna or solar mount, or other trades on the roof are all worth writing down.',
+              '**Keep people out from under it.** Catch the drip, move what can be damaged and cordon off a sagging ceiling.',
+            ],
+          },
+          { img: '/images/blog/find-a-leak-on-a-commercial-flat-roof-above-the-ceiling.webp', alt: 'Looking up through a lifted ceiling tile with a flashlight at water running along a beam and dripping off a duct', caption: 'Lift the wet tile and look up: here the water runs along a beam and off a duct before it reaches the ceiling.' },
+          { img: '/images/blog/find-a-leak-on-a-commercial-flat-roof-leak-log.webp', alt: 'A property manager holding a clipboard with a floor plan marked with red dots beside a tablet showing a stained ceiling tile', caption: 'A floor plan with each leak marked, and a photo of each stain: the most useful thing your staff can hand us.' },
+          'A good log turns a search of the whole roof into a search of one area. It is the most useful thing your staff can hand us.',
+        ],
+      },
+      {
+        heading: 'What Not to Do',
+        blocks: [
+          {
+            list: [
+              '**Don’t have staff smear roof cement** over the area above the stain. It rarely finds the opening and makes the next search harder.',
+              '**Don’t pop a blister** to see if it is wet. It opens a new hole.',
+              '**Don’t send anyone onto a wet roof,** especially over the leak.',
+              '**Don’t assume a patch fixed it.** Watch the next rain, and keep logging.',
+              '**Don’t ignore a sagging ceiling.** It can come down; keep people out from under it.',
+            ],
+          },
+          { img: '/images/blog/find-a-leak-on-a-commercial-flat-roof-roof-cement-patch.webp', alt: 'A large smear of roof cement on a commercial flat roof, a bucket and trowel beside it, an open seam a few feet away', caption: 'A bucket of roof cement over the wrong spot: the open seam a few feet away is still letting water in.' },
+          { pov: 'Maintenance staff mean well when they grab a bucket of roof cement. But a patch placed over the stain often sits a few feet from the real opening, and the leak keeps going.' },
+        ],
+      },
+      {
+        heading: 'How Our Roofers Trace a Commercial Flat Roof Leak',
+        blocks: [
+          {
+            steps: [
+              '**Start with your log.** The dates, the weather and the spots on the plan tell us where to begin.',
+              '**Look inside first, when it helps.** Seeing where water shows up inside helps us trace it, so we may ask to look at a ceiling or the area under a drain, arranged with you ahead of time.',
+              '**Work upslope on the roof.** A roofer checks every detail in the water’s path: seams, curbs, vents, drains, scuppers, parapets and hatches.',
+              '**Photograph it.** You get photos of the source, and of any earlier patch that didn’t hold, ready to share with the owner or the tenant.',
+              '**Prove the source.** When it isn’t obvious, a water test one section at a time, from the bottom up, shows which spot lets water in before anything is repaired.',
+              '**Give you one next step,** with a written scope and price before any work.',
+            ],
+          },
+          { img: '/images/blog/find-a-leak-on-a-commercial-flat-roof-water-test.webp', alt: 'A roofer running a hose gently over a roof drain beside an open roof hatch with a radio and clipboard, testing one section at a time', caption: 'A water test, one section at a time, with someone below watching for the drip.' },
+          'When the opening is one detail, a [commercial roof repair](/commercial-roofing/repair/) fixes it at the source while the building stays open. If the blockage is deeper in a drain line, we tell you so a plumber can clear it. When water has spread through the roof, a [commercial roof replacement](/commercial-roofing/replacement/) is phased section by section. On a [commercial building in Westminster](/projects/commercial-flat-roof-replacement-westminster-92683/), the roof came off down to the deck and new plywood went in where the deck needed it.',
+          { img: '/images/blog/find-a-leak-on-a-commercial-flat-roof-drain-repaired.webp', alt: 'A roof drain on a commercial flat roof with new membrane flashing around the drain bowl and a clean dome strainer', caption: 'Fixed at the source: new flashing around the drain bowl and a clean strainer on top.' },
+          'To keep the next one from starting, scheduled [commercial roof maintenance](/commercial-roofing/maintenance/) clears drains and checks flashings, with a photo report every visit. Our article on [commercial roof leak repair](/blog/commercial-roof-leak-repair/) goes further into the repair itself.',
+          { pov: 'A patch that doesn’t stop the leak isn’t cheaper, it is a second service call and another tenant complaint. We would rather spend the time to prove where the water gets in, then fix that.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Why is a flat roof leak so hard to find?',
+        a: 'Water can get under the surface and travel along the deck, the insulation or a seam before it comes through the ceiling, often well away from where it got in. Above a drop ceiling it can run along a beam or a duct too, and old layers and patches hide the evidence.',
+      },
+      {
+        q: 'Can a flat roof leak be far from the wet ceiling tile?',
+        a: 'Yes. The tile shows where the water came through the ceiling, not where it got into the roof. The opening is usually upslope of it, toward the high side of the roof.',
+      },
+      {
+        q: 'Why does our flat roof leak only in heavy rain?',
+        a: 'Light rain drains away before it finds a weak spot, but heavy rain deepens the water on the roof and pushes it into open laps, cracked flashings and overflowing drains and scuppers. A roof survey pinpoints which one it is.',
+      },
+      {
+        q: 'Is the water under our rooftop unit a roof leak?',
+        a: 'Not always. A clogged or disconnected condensate drain line can drip on dry days, and that is for your HVAC contractor. If it only shows up in rain, the flashing around the unit’s curb is a common source.',
+      },
+      {
+        q: 'What should our maintenance staff do when a tenant reports a leak?',
+        a: 'Catch the drip, protect what is below it, log the date, the weather and the location, look above the ceiling tile and photograph it, then call a roofer. Leave the roof itself to the roofer.',
+      },
+      {
+        q: 'Can the leak be fixed while the building stays open?',
+        a: 'Usually, yes. Most repairs happen on the roof, and any interior visit is arranged with you ahead of time. Larger work is phased so tenants keep working.',
+      },
+    ],
+    closing: {
+      heading: 'Chasing a Leak on a Commercial Roof?',
+      blocks: [
+        'Request a [roof survey](#roof-check). A roofer traces the leak from your log to the source, photographs it, and gives you a plain-English answer and a written scope and price before any work. Or call [(310) 340-1643](tel:+13103401643).',
+        'For homes, see our guide to [finding a roof leak](/blog/how-to-find-a-roof-leak/).',
+      ],
+    },
+    related: ['/commercial-roofing/repair/', '/commercial-roofing/maintenance/', '/commercial-roofing/property-managers/', '/commercial-roofing/replacement/'],
+  },
+  // Ponding water on a commercial flat roof (owner, November 24 2026, brief "Ponding water on a flat roof: when it's a problem / Is standing
+  // water on my flat roof normal?", adapted for commercial flat roofs at the owner's request when the pictures came in): keyword "ponding
+  // water". For owners, property managers and building engineers. The common industry rule of thumb (water still there about 48 hours after
+  // the rain, in drying weather, is ponding), normal / watch / call (`table: 'decide'`), why water ponds on a commercial roof
+  // (`list: 'facts-numbered'`), what it does (to the roof and to the tenants below), how to check safely (`checklist: 'tracker'`), what not to
+  // do (`list: 'flags'`), how we fix it: worded as the commercial repair, warehouse and replacement pages say (outlets and flashing repaired,
+  // a deeper drain-line blockage sent to a plumber, crickets or the slope rebuilt during a phased replacement, scheduled maintenance that
+  // clears drains), starting with a roofer-led roof survey, never called free. No coatings (we don't apply them), no prices. Our voice, three
+  // "Our point of view" boxes. Thumbnail and seven pictures in the text are the owner's images.
+  {
+    slug: 'ponding-water-commercial-flat-roof',
+    title: 'Ponding Water on a Commercial Flat Roof: When Standing Water Is Normal and When It’s a Problem',
+    keyword: 'ponding water',
+    topics: ['commercial', 'flat', 'repair', 'maintenance', 'leak', 'replacement'],
+    metaTitle: 'Ponding Water on a Commercial Flat Roof: When It’s a Problem',
+    metaDescription:
+      'Ponding water on a commercial flat roof: when standing water after rain is normal, why it happens, what it costs the roof and tenants, and how it gets fixed.',
+    datePublished: '2026-11-24',
+    dateModified: '2026-11-24',
+    image: '/images/blog/ponding-water-commercial-flat-roof.webp',
+    imageAlt: 'Two ponds of standing water on the white flat roof of a shopping center with a clay tile mansard and a rooftop air conditioning unit',
+    excerpt:
+      'Some water on a commercial flat roof after rain is normal. Water still there two days later is ponding. How to tell the difference, why it collects, what it does to the roof and the tenants below, and how it gets fixed.',
+    intro: [
+      'Ponding water is the standing water that stays on a commercial flat roof long after the rain has stopped. Every low-slope roof holds a little water right after a storm. What matters is how long it stays and where.',
+      'This guide is for owners, property managers and building engineers: how to tell normal puddles from ponding, why water collects on a commercial roof, what it does to the roof and the tenants under it, how to check it safely, and how we fix it.',
+    ],
+    sections: [
+      {
+        heading: 'Is Standing Water on a Commercial Flat Roof Normal?',
+        blocks: [
+          'For a few hours after rain, yes. A commercial flat roof isn’t really flat: it has a gentle slope that carries water across a wide span to the drains, the scuppers (openings through the parapet wall) or the gutters, and small puddles in shallow spots are normal while it drains and dries.',
+          'Roofers generally call it ponding when water is still standing about 48 hours after the rain stops, in weather that would normally dry it. Water that hangs around that long is sitting on the roof, not draining off it.',
+          { img: '/images/blog/ponding-water-commercial-flat-roof-puddles-drying.webp', alt: 'Shallow puddles drying on a gray commercial flat roof around a roof drain a few hours after rain', caption: 'A few hours after rain: shallow puddles that are already drying toward the drain are normal.' },
+          { pov: 'On a commercial roof, we follow the water first. Where it sits tells us more about the roof’s future than almost anything else we look at.' },
+        ],
+      },
+      {
+        heading: 'Normal, Watch It or Call a Roofer?',
+        blocks: [
+          {
+            table: {
+              head: ['What you see', 'What it usually means', 'What to do'],
+              rows: [
+                ['Small puddles that are gone within a day or two', 'Normal drying on a roof that drains', 'Nothing, beyond keeping the drains and scuppers clear'],
+                ['The same shallow spots after every rain, still drying within about two days', 'Low spots worth watching', 'Photograph them after each storm and compare'],
+                ['Water still standing two days or more after the rain', 'Ponding: the roof isn’t draining', 'Have a roofer survey the slope and the outlets'],
+                ['Water backed up around a drain or a scupper', 'A blocked or undersized outlet', 'Have it cleared, and the flashing around it checked'],
+                ['Ponding plus a tenant reporting a stain or a drip', 'Water is getting through', 'Call a roofer now'],
+                ['A pond that gets deeper or wider year after year, or a sag you can see', 'The deck may be giving way under the weight', 'Call a roofer now, and keep people out from under it'],
+              ],
+            },
+          },
+          { img: '/images/blog/ponding-water-commercial-flat-roof-deep-pond.webp', alt: 'A large, deep pond of standing water with leaves floating in it on an older commercial flat roof, a dirt ring around its edge', caption: 'Two days after the rain: a pond this size, with a dirt ring around it, is ponding, and the roof isn’t draining.' },
+        ],
+      },
+      {
+        heading: 'Why Water Ponds on a Commercial Flat Roof',
+        blocks: [
+          {
+            list: [
+              '**Not enough slope:** across a wide span, water travels a long way to a drain, and a roof built too flat, or flattened by an earlier re-roof, leaves it standing.',
+              '**A low spot in the deck:** framing that has sagged, or a soft area from an old leak, makes a dip that holds water.',
+              '**Blocked outlets:** leaves and debris in a drain strainer, a scupper or the downspout below it back the water up.',
+              '**Outlets in the wrong place:** a drain set higher than the roof around it, or too few outlets for the size of the roof.',
+              '**Equipment in the way:** an air conditioning curb, a skylight or a duct run that dams water on its uphill side, with no cricket to steer it around.',
+              '**Layers built up around the edges:** each re-roof raises the edges and the area around the drains, leaving the field lower.',
+            ],
+          },
+          { img: '/images/blog/ponding-water-commercial-flat-roof-clogged-scupper.webp', alt: 'A scupper through a stucco parapet wall clogged with leaves and twigs, water backed up in front of it', caption: 'A clogged scupper: the only way out for the water is blocked, so it backs up across the roof.' },
+          { img: '/images/blog/ponding-water-commercial-flat-roof-hvac-curb.webp', alt: 'Standing water trapped along the uphill side of a rooftop air conditioning unit on its curb', caption: 'A rooftop unit dams the water on its uphill side; a cricket steers it around the curb toward the drain.' },
+        ],
+      },
+      {
+        heading: 'What Ponding Costs the Roof, and the Tenants Below',
+        blocks: [
+          'A flat roof is made to shed water, not to hold it. When water sits, the sun works on the wet surface day after day, and the roof wears out first at those spots. Dirt and debris settle in the pond and stay after it dries. Standing water also finds any open lap, seam or flashing, and keeps pushing on that weak spot for days instead of minutes.',
+          'Water is heavy, too. A pond adds weight to the deck in the very spot that is already low, and a deck that bends a little holds a little more water the next time.',
+          { img: '/images/blog/ponding-water-commercial-flat-roof-worn-ring.webp', alt: 'A dried ring of dirt on a commercial flat roof, the cap sheet inside it worn, blistered and missing its granules', caption: 'Where a pond sat: a ring of dirt, and inside it a cap sheet worn down to the bare membrane.' },
+          'On a commercial building, the cost doesn’t stop at the roof. A leak under a pond means a stained ceiling tile over a sales floor, an office or a stockroom, a tenant on the phone and a space that may have to close while it is dealt with. Check the roof’s warranty paperwork, too: some manufacturer warranties exclude damage from ponding water.',
+          { pov: 'Fix the water path before you fix the surface. A new roof over a deck that still ponds wears out first at the same low spots.' },
+        ],
+      },
+      {
+        heading: 'How to Check for Ponding Safely',
+        blocks: [
+          {
+            checklist: [
+              'Look the day after a rain, and again about two days after',
+              'Look from the roof hatch, an upper floor, a neighboring building or the top of a ladder, not by walking a wet roof',
+              'Photograph each pond with something in the frame for scale, and note where it is on a roof plan',
+              'On a dry day, look for rings of dirt or stained patches: they show where water sat',
+              'Check that every drain strainer and scupper is open',
+              'Check the downspouts below: water should run out freely in the next rain',
+              'Ask tenants about ceiling stains, bubbling paint or drips, and look under the wet areas',
+            ],
+          },
+          { img: '/images/blog/ponding-water-commercial-flat-roof-checking-from-ladder.webp', alt: 'A man on a ladder at the edge of a commercial flat roof photographing a pond of standing water without stepping onto the roof', caption: 'Photograph it from the ladder or the hatch; don’t send anyone out onto a wet roof.' },
+          'Keep staff and other trades off a wet flat roof. It is slippery, and nobody can see a soft spot under the water.',
+        ],
+      },
+      {
+        heading: 'What to Do, and What Not to Do',
+        blocks: [
+          'Keeping the drains, scuppers and downspouts clear is the one thing a building’s own staff can do between visits, from the hatch or a ladder. Our guide to [cleaning gutters without damaging your roof edge](/blog/clean-gutters-without-damaging-roof-edge/) covers the ladder setup.',
+          {
+            list: [
+              '**Don’t poke a hole** to drain a pond. It makes a leak where there wasn’t one.',
+              '**Don’t send someone out to sweep it off.** A wet flat roof is slippery, and walking it can damage the surface.',
+              '**Don’t paint over it.** A coating doesn’t change where water goes, and it can hide the wear underneath.',
+              '**Don’t add layers to fill a low spot** without fixing why it is low.',
+              '**Don’t wait for a tenant’s ceiling** to tell you. By then the water has been getting in for a while.',
+            ],
+          },
+          { img: '/images/blog/ponding-water-commercial-flat-roof-retail-ceiling.webp', alt: 'A large water stain with peeling paint on the ceiling of a retail store, clothing racks below and a wet parking lot outside', caption: 'The ceiling is the last place a ponding problem shows up, usually over the sales floor.' },
+        ],
+      },
+      {
+        heading: 'How We Fix Ponding Water on a Commercial Roof',
+        blocks: [
+          'It starts with a roofer-led roof survey. A roofer walks the roof, follows the water, checks the slope, the low spots and whether the drains, scuppers and downspouts can keep up with a winter storm, and photographs what we find for the owner or the property manager. You get a written scope and price before any work.',
+          {
+            list: [
+              '**When the roof is sound,** the fix is often at the outlets: clearing them, repairing the flashing around the drain bowl or the scupper, or repairing the worn membrane where water has been sitting. If a blockage is deeper in the drain line, we tell you so a plumber can clear it. See [commercial roof repair](/commercial-roofing/repair/).',
+              '**When the slope is the problem,** the fix ranges from adding crickets, small raised sections that steer water around curbs toward the outlets, to rebuilding the slope in that area during a replacement. A [commercial roof replacement](/commercial-roofing/replacement/) is phased section by section, so the building stays open.',
+              '**To keep it from coming back,** scheduled [commercial roof maintenance](/commercial-roofing/maintenance/) clears drains and debris before the rainy season and ends every visit with a photo report you can compare visit to visit.',
+            ],
+          },
+          'Large, nearly flat roofs pond the most, which is why we survey warehouses in sections; see [warehouse roofing](/commercial-roofing/warehouses/). If you manage several buildings, see [property management roofing](/commercial-roofing/property-managers/).',
+          { pov: 'We would rather tell you a puddle is normal than sell you a roof you don’t need. When the water is telling us the slope is wrong, we will show you that too, in the photos.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Is standing water on a commercial flat roof normal?',
+        a: 'For a little while after rain, yes. Water that is still standing about 48 hours after the rain stops, in weather that would dry it, is ponding, and it means the roof isn’t draining the way it should.',
+      },
+      {
+        q: 'How long can water sit on a flat roof?',
+        a: 'Roofers generally use about 48 hours after the rain as the line. Puddles that dry within a day or two are normal; water that stays longer is ponding.',
+      },
+      {
+        q: 'Will ponding water cause a leak?',
+        a: 'Not right away, but it wears the surface faster where it sits and keeps pressing on any open lap, seam or flashing it reaches, which is how ponding turns into a leak over a tenant’s space.',
+      },
+      {
+        q: 'Can ponding be fixed without replacing the roof?',
+        a: 'Often, when the cause is a blocked or poorly flashed drain or scupper, or a small worn area. Crickets can steer water around rooftop equipment. When the whole field lacks slope, rebuilding it is usually part of a phased replacement.',
+      },
+      {
+        q: 'Our roof drain keeps backing up. Is that a roofing problem?',
+        a: 'Often, yes: a clogged strainer, failed flashing around the drain bowl or low spots that keep water from reaching the drain. We check all three and repair the roofing side, and if the blockage is deeper in the drain line, we tell you so a plumber can clear it.',
+      },
+      {
+        q: 'Can a coating fix ponding?',
+        a: 'A coating doesn’t change where water goes, so the water still sits in the same spots. We don’t apply coatings; we fix the outlets, repair the roof, add crickets or build the drainage into a new roof.',
+      },
+    ],
+    closing: {
+      heading: 'Water Still Sitting on Your Roof?',
+      blocks: [
+        'Request a [roof survey](#roof-check). A roofer walks the roof, photographs where the water sits and why, and gives you a plain-English answer and a written scope and price before any work. Or call [(310) 340-1643](tel:+13103401643).',
+        'For homes, see our guide to [flat roofs in Los Angeles](/blog/flat-roofs-los-angeles-guide/).',
+      ],
+    },
+    related: ['/commercial-roofing/repair/', '/commercial-roofing/maintenance/', '/commercial-roofing/replacement/', '/commercial-roofing/warehouses/'],
+  },
   // Cleaning gutters without damaging the roof edge (owner, November 24 2026, brief "How to clean gutters without damaging your roof edge",
   // demo, educational, leads to edge repair work): keyword "clean gutters". Rain gutters are not a QRS service (no gutter repair or
   // replacement: the RoofCare Plan excludes it), so the article never offers gutter work; it leads to the roof edge itself (drip edge, edge
