@@ -2,6 +2,7 @@
 // service pages (rain gutters, HOA, emergency, maintenance plans, financing) and the service-first hubs
 // (roof repair, replacement, inspection). The route files in app/ call these.
 
+import ReplacementNearYou from '@/components/sections/ReplacementNearYou';
 import { CONTRACTORS_LINK, HOME, PROGRAMS } from '@/data/catalog';
 import {
   cardFor,
@@ -157,7 +158,7 @@ export function ServiceHub({ page, actions }) {
   return (
     <Template
       {...(repair && { visual: <QhLeakTrace links={cards.filter((c) => !/lift-and-relay/.test(c.href)).map(short)} /> })}
-      {...(replacement && { visual: <QhReroof links={cards.map(short)} /> })}
+      {...(replacement && { visual: <QhReroof links={cards.map(short)} />, extra: <ReplacementNearYou /> })}
       hub={page.hub}
       crumbs={[HOME, { label: page.label, href: page.href }]}
       eyebrow="Roof Services"

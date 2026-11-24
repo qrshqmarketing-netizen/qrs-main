@@ -1,0 +1,16 @@
+/* "Roof replacement near you" on /roof-replacement/ (ReplacementNearYou.jsx). Theme tokens, hairline cards. */
+.rny-region{margin-top:clamp(32px,4vw,48px)}
+.rny-region h3{margin:0 0 18px;font-size:clamp(19px,1.7vw,24px)}
+.rny-region h3 a{color:var(--ink);text-decoration:none;border-bottom:2px solid var(--gold)}
+.rny-region h3 a:hover{color:var(--gold-ink)}
+.rny-grid{list-style:none;margin:0;padding:0;display:grid;gap:16px;grid-template-columns:1fr}
+@media (min-width:621px){.rny-grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1100px){.rny-grid{grid-template-columns:repeat(3,1fr)}}
+.rny-card{display:flex;flex-direction:column;gap:4px;height:100%;padding:0 0 16px;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--paper);color:var(--ink);text-decoration:none}
+.rny-img{position:relative;display:block;aspect-ratio:16/10;background:var(--wash);margin-bottom:10px}
+.rny-img img{object-fit:cover}
+.rny-card b{padding:0 16px;font-size:16px;line-height:1.35}
+.rny-card span:last-child{padding:0 16px;font-size:14px;color:var(--muted)}
+@media (hover:hover){.rny-card:hover{border-color:var(--gold)}.rny-card:hover b{color:var(--gold-ink)}}
+.rny-more{margin:16px 0 0;font-size:15px;line-height:1.7;color:var(--muted)}
+.rny-more a{color:var(--gold-ink);text-decoration:underline;text-underline-offset:3px}

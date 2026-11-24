@@ -282,3 +282,7 @@ main.loc .lc-places-title{margin:0;font-size:22px;color:var(--ink);text-align:le
 main.loc .lc-hub-hero .crumbs ol{display:flex;flex-wrap:wrap;justify-content:center}
 main.loc .lc-hero .crumbs ol{justify-content:flex-start}
 @media (min-width:621px){.lc-tools:not(:has(.lc-select)){grid-template-columns:minmax(0,1fr)}}
+/* Roof replacement in <city> (LocReplacement, owner November 24 2026) */
+.lc-replace .lc-lead{max-width:68ch}
+.lc-replace-link{margin:20px auto 0}
+.lc-replace-link a{color:var(--gold-ink);font-weight:600;text-decoration:underline;text-underline-offset:3px}

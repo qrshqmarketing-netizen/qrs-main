@@ -128,3 +128,22 @@ export function projectsInRegion(regionSlug, limit = 6) {
     .slice(0, limit)
     .map((page) => ({ title: page.title, caption: (page.place || page.title).replace(/,?\s*CA\b/, ''), image: page.image, alt: page.imageAlt, href: page.path, place: page.place, label: page.label, photos: page.photos?.length || 0 }));
 }
+
+// Roof replacements (owner, November 24 2026, the "roof replacement near me" section on /roof-replacement/ and the city pages): a project page
+// counts as a replacement when its address says so (replacement, lift and relay) or it lists a replacement page in `related`.
+const REPLACEMENT_RE = /replacement|lift-and-relay/;
+export const isReplacementProject = (page) => REPLACEMENT_RE.test(page.path) || Boolean(page.related?.some((href) => REPLACEMENT_RE.test(href)));
+const projectRow = (page) => ({ title: page.title, caption: (page.place || page.title).replace(/,?\s*CA\b/, ''), image: page.image, alt: page.imageAlt, href: page.path, place: page.place, label: page.label, photos: page.photos?.length || 0 });
+const regionOfGeo = (geo) => ALL_PLACES.reduce((best, pl) => { const d = milesBetween(geo, [pl.lat, pl.lng]); return d < best.d ? { d, region: pl.region } : best; }, { d: Infinity, region: null }).region;
+
+// Every replacement project, grouped by county in REGIONS order (empty counties left out), newest first inside each.
+export function replacementProjectsByRegion(regions) {
+  const rows = PROJECT_PAGES.filter((page) => page.geo && isReplacementProject(page)).map((page) => ({ region: regionOfGeo(page.geo), row: projectRow(page) }));
+  return regions.map((r) => ({ region: r, projects: rows.filter((x) => x.region === r.slug).map((x) => x.row) })).filter((g) => g.projects.length > 0);
+}
+
+// The replacement projects shown on a city page: the same set as projectsNear, replacements only, up to `limit`.
+export function replacementProjectsNear(slug, limit = 4) {
+  const pages = new Map(PROJECT_PAGES.map((page) => [page.path, page]));
+  return projectsNear(slug).projects.filter((p) => pages.has(p.href) && isReplacementProject(pages.get(p.href))).slice(0, limit);
+}

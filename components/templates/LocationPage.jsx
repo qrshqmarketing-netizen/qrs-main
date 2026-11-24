@@ -1,4 +1,4 @@
-import { LocColumns, LocCta, LocFaq, LocReviews, LocRoofTypes, LocStory } from '@/components/loc/LocSections';
+import { LocColumns, LocCta, LocFaq, LocReviews, LocReplacement, LocRoofTypes, LocStory } from '@/components/loc/LocSections';
 import { LocCityHero } from '@/components/loc/LocQhHero';
 import '@/components/home/QrsHome.css';
 import FacebookFeed from '@/components/loc/FacebookFeed';
@@ -11,7 +11,8 @@ import RoofCheck from '@/components/sections/RoofCheck';
 import JsonLd from '@/components/ui/JsonLd';
 import { HOME, LOCATIONS_LINK } from '@/data/catalog';
 import { cityPath, findRegion, OTHER_PLACES, regionPath } from '@/data/locations';
-import { projectsNear } from '@/data/projects';
+import { projectsNear, replacementProjectsNear } from '@/data/projects';
+import { permitOfficeFor } from '@/data/permitOffices';
 import { SERVICES } from '@/data/services';
 import { OFFICES, SITE_URL } from '@/data/site';
 import { pageJsonLd } from '@/lib/structuredData';
@@ -98,6 +99,7 @@ export default async function LocationPage({ location, page, index = 0 }) {
         {office?.mapEmbed && <OfficeMap office={office} city={city} />}
       </div>
       <LocRoofTypes place={city} />
+      <LocReplacement place={city} permit={permitOfficeFor(slug)} replacements={replacementProjectsNear(slug, 6).length} commercial={page.offer === 'commercial'} />
       <LocReviews path={cityPath(slug)} place={city} places={[city, ...page.neighborhoods]} />
       <div className="lc-keep">
         {/* Only real projects in or near this city (by the project's ZIP code pin), as a list with the hover photo; with none nearby, no section */}

@@ -228,6 +228,30 @@ export function LocRoofTypes({ place }) {
   );
 }
 
+// ---------- Roof replacement in <city> (owner, November 24 2026: local substance for "roof replacement near me") ----------
+// One short section per city page, built from data the page already has: who issues the permit there (data/permitOffices.js) and how many
+// of the projects listed below are replacements (replacementProjectsNear). Commercial pages never call the survey free.
+export function LocReplacement({ place, permit, replacements = 0, commercial }) {
+  const start = commercial ? 'starts with a roofer-led roof survey' : 'starts with a free roof evaluation';
+  const permitLine = permit
+    ? ` We pull the permit with ${permit.name}${permit.guide ? ' (our [guide to roofing permits](/blog/roofing-permits-los-angeles/) explains the rules)' : ''}, and the inspection is booked when the roof is done.`
+    : ' We pull the permit with the local building department, and the inspection is booked when the roof is done.';
+  const proof = replacements > 0 ? ` So far our roofers have replaced ${replacements === 1 ? 'one roof' : `${replacements} roofs`} in and around ${place}; ${replacements === 1 ? 'it is' : 'each is'} listed under [the projects below](#projects) with photos and how the work was done.` : '';
+  return (
+    <section className="lc-section lc-replace" aria-labelledby="lc-replace">
+      <div className="lc-wrap">
+        <h2 id="lc-replace" className="lc-center">Roof replacement in {place}.</h2>
+        <p className="lc-center lc-lead">
+          <Rich text={`A roof replacement in ${place} ${start} and a written scope and price before any work. We take the old roof down to the deck, replace damaged deck, and build the new roof with new underlayment and flashings.${permitLine}${proof}`} />
+        </p>
+        <p className="lc-center lc-replace-link">
+          <SiteLink href="/roof-replacement/">How a roof replacement works</SiteLink>
+        </p>
+      </div>
+    </section>
+  );
+}
+
 // ---------- Customer quote cards ----------
 export function LocReviews({ path, place, places = [] }) {
   const reviews = sortReviewsFor(REVIEW_LIST, path, places).slice(0, 4);
