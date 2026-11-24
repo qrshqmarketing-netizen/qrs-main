@@ -18,6 +18,13 @@
 //   table: 'cards'          rows to compare as cards with labelled lines
 //   table: 'hotspots'       "where / what goes wrong" rows as an interactive picture of a flat commercial roof
 export const POST_VISUALS = {
+  'clean-gutters-without-damaging-roof-edge': {
+    'How Gutter Cleaning Damages a Roof Edge': { list: 'facts-numbered' },
+    'Before You Start': { checklist: 'tracker' },
+    'Step by Step, From the Ladder': { steps: 'timeline' },
+    'What to Look For at the Roof Edge While You Are Up There': { table: 'cards' },
+    'What Not to Do': { list: 'flags' },
+  },
   'prepare-for-a-roof-replacement': {
     'A Week Before the Roofers Arrive': { checklist: 'tracker' },
     'Outside the House': { list: 'facts-numbered' },

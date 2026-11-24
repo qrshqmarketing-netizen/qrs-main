@@ -51,6 +51,7 @@ export const KEEP_READING = {
   'asphalt-shingle-roof-guide': [B('types-of-asphalt-shingles'), B('new-shingles-over-old-shingles'), B('roof-drip-edge-flashing'), B('how-to-choose-a-shingle-roofer-los-angeles'), B('top-qualities-shingle-roofers-los-angeles-orange-county')],
   'how-to-choose-a-shingle-roofer-los-angeles': [B('top-qualities-shingle-roofers-los-angeles-orange-county'), B('roof-drip-edge-flashing'), B('how-to-choose-a-roofer-los-angeles-ca')],
   'top-qualities-shingle-roofers-los-angeles-orange-county': [B('how-to-choose-a-roofer-los-angeles-ca'), B('roof-drip-edge-flashing')],
+  'clean-gutters-without-damaging-roof-edge': [B('roof-drip-edge-flashing'), B('shingle-granules-in-gutter'), B('roof-maintenance-checklist'), B('how-to-check-your-roof-from-the-ground'), B('moss-on-roof-myth-vs-fact')],
   'prepare-for-a-roof-replacement': [B('roof-replacement-guide'), B('cheapest-roofing-quote'), B('new-shingles-over-old-shingles'), B('roofing-permits-los-angeles'), B('how-to-pay-for-a-new-roof')],
   'types-of-asphalt-shingles': [B('architectural-vs-3-tab-shingles'), B('asphalt-shingle-roof-guide'), B('new-shingles-over-old-shingles'), B('shingle-granule-loss'), B('curling-cracked-missing-shingles')],
   'architectural-vs-3-tab-shingles': [B('types-of-asphalt-shingles'), B('new-shingles-over-old-shingles'), B('roof-drip-edge-flashing'), B('top-qualities-shingle-roofers-los-angeles-orange-county')],
@@ -68,8 +69,8 @@ export const KEEP_READING = {
   'failing-chimney-flashing': [B('roof-leak-source'), B('how-to-find-a-roof-leak'), B('roof-repair-cost'), B('roof-drip-edge-flashing')],
   'curling-cracked-missing-shingles': [B('repair-or-replace-roof-3-question-test'), B('hail-damage-vs-normal-wear'), B('roof-storm-damage-signs'), B('roof-repair-cost'), B('how-to-check-your-roof-from-the-ground')],
   'shingle-granule-loss': [B('curling-cracked-missing-shingles'), B('shingle-granules-in-gutter'), B('how-to-check-your-roof-from-the-ground'), B('architectural-vs-3-tab-shingles')],
-  'shingle-granules-in-gutter': [B('shingle-granule-loss'), B('roof-drip-edge-flashing'), B('how-to-check-your-roof-from-the-ground')],
-  'roof-drip-edge-flashing': [B('failing-chimney-flashing'), B('shingle-granules-in-gutter'), B('roof-maintenance-checklist')],
+  'shingle-granules-in-gutter': [B('clean-gutters-without-damaging-roof-edge'), B('shingle-granule-loss'), B('roof-drip-edge-flashing'), B('how-to-check-your-roof-from-the-ground')],
+  'roof-drip-edge-flashing': [B('clean-gutters-without-damaging-roof-edge'), B('failing-chimney-flashing'), B('shingle-granules-in-gutter'), B('roof-maintenance-checklist')],
   // Replacement and choosing a roofer
   'roof-replacement-guide': [B('prepare-for-a-roof-replacement'), B('new-shingles-over-old-shingles'), B('repair-or-replace-roof-3-question-test'), B('how-old-is-my-roof'), B('how-to-choose-a-roofer-los-angeles-ca'), B('roof-warranty-explained'), B('roofing-permits-los-angeles'), B('roof-replacement-cost-los-angeles'), B('how-to-pay-for-a-new-roof'), B('best-roof-for-solar-panels')],
   'best-roofer-los-angeles': [B('how-to-choose-a-roofer-los-angeles-ca'), B('top-qualities-shingle-roofers-los-angeles-orange-county')],

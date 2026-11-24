@@ -24,6 +24,175 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // Cleaning gutters without damaging the roof edge (owner, November 24 2026, brief "How to clean gutters without damaging your roof edge",
+  // demo, educational, leads to edge repair work): keyword "clean gutters". Rain gutters are not a QRS service (no gutter repair or
+  // replacement: the RoofCare Plan excludes it), so the article never offers gutter work; it leads to the roof edge itself (drip edge, edge
+  // shingles, eave tiles, flat roof edge metal) through the shingle, tile and flat repair pages, and to the maintenance plan, whose visits clear
+  // the roof surface, valleys, gutters and downspouts (as data/pages/carePlan.js says) and the RoofRevive tune-up. Why cleaning damages the edge
+  // (`list: 'facts-numbered'`), before you start (`checklist: 'tracker'`), the demo (`steps: 'timeline'`), what to look for at the edge
+  // (`table: 'cards'`), what not to do (`list: 'flags'`), tile and flat roofs, when it's ours. No prices. Our voice, three "Our point of view"
+  // boxes. Thumbnail and seven pictures in the text are the owner's images.
+  {
+    slug: 'clean-gutters-without-damaging-roof-edge',
+    title: 'How to Clean Gutters Without Damaging Your Roof Edge: A Step-by-Step Demo',
+    keyword: 'clean gutters',
+    topics: ['maintenance', 'repair', 'shingle', 'tile', 'flat'],
+    metaTitle: 'How to Clean Gutters Without Damaging Your Roof Edge',
+    metaDescription:
+      'How to clean gutters without bending the drip edge or breaking edge shingles and tiles: a safe ladder setup, the steps, and what to look for at the roof edge.',
+    datePublished: '2026-11-24',
+    dateModified: '2026-11-24',
+    image: '/images/blog/clean-gutters-without-damaging-roof-edge.webp',
+    imageAlt: 'A homeowner on a ladder with a standoff scooping leaves from a gutter into a bucket while a helper steadies the ladder',
+    excerpt:
+      'Most roof edge damage from gutter cleaning comes from the ladder, the boots or the pressure washer. How to clean gutters from a well-set ladder, step by step, and what to look for at the roof edge while you are up there.',
+    intro: [
+      'To clean gutters is a simple job that can do real damage to the roof right above them. A ladder leaned on the gutter bends the drip edge, a boot on the edge cracks a shingle or a tile, and a pressure washer pointed the wrong way drives water under the roof.',
+      'This is the way we would do it: what to set up before you climb, the steps from the ladder, what to look for at the roof edge while you are there, and what to leave alone. Clean gutters matter, because water that can’t get away from the roof edge finds its way into the wood behind it.',
+    ],
+    sections: [
+      {
+        heading: 'How Gutter Cleaning Damages a Roof Edge',
+        blocks: [
+          {
+            list: [
+              '**A ladder resting on the gutter:** the weight bends the gutter and the drip edge behind it, and can pull the gutter away from the fascia.',
+              '**Walking the edge of the roof:** the eave is where shingles are easiest to crack and tiles easiest to break, and it is the least safe place to stand.',
+              '**Prying under the shingles:** a trowel or screwdriver slid under the first course breaks the seal that holds the edge shingles down in wind.',
+              '**A pressure washer:** a strong jet aimed up the roof drives water under the shingles and tiles and strips the granules off the edge.',
+              '**Pulling on the gutter:** grabbing it to steady yourself loosens its hangers and the edge metal it is fastened behind.',
+            ],
+          },
+          { img: '/images/blog/clean-gutters-without-damaging-roof-edge-ladder-on-gutter.webp', alt: 'A ladder leaning on a dented gutter, the drip edge above it bent and the edge shingles lifted', caption: 'A ladder leaned on the gutter: the gutter is crushed, the drip edge behind it is bent and the edge shingles have lifted.' },
+          { pov: 'Most roof edge damage from a gutter cleaning happens in a few seconds: a ladder leaned in the wrong place or one step onto the edge. The fix is simple: work from a well-set ladder, and keep your weight off the gutter and the roof.' },
+        ],
+      },
+      {
+        heading: 'Before You Start',
+        blocks: [
+          {
+            checklist: [
+              'A dry, calm day, not after rain or in wind',
+              'A sturdy extension ladder on firm, level ground',
+              'A ladder standoff (stabilizer) so the ladder rests on the wall or roof, not on the gutter',
+              'A helper on the ground to hold the ladder and hand things up',
+              'Gloves and eye protection',
+              'A bucket with a hook, and a plastic gutter scoop',
+              'A garden hose with a nozzle that has a gentle setting',
+              'The power line to the house located, and the ladder kept well away from it',
+            ],
+          },
+          { img: '/images/blog/clean-gutters-without-damaging-roof-edge-gear.webp', alt: 'A ladder standoff, work gloves, safety glasses, a plastic scoop, a bucket with a hook and a garden hose with a spray nozzle', caption: 'Everything you need: a ladder standoff, gloves, glasses, a plastic scoop, a bucket with a hook and a hose with a gentle setting.' },
+          'If your house is two stories, your roof is steep or the gutter sits above a slope, leave it to a pro. A fall from a ladder is the real danger here, more than anything that can happen to the roof.',
+        ],
+      },
+      {
+        heading: 'Step by Step, From the Ladder',
+        blocks: [
+          {
+            steps: [
+              '**Set the ladder with a standoff.** Place it so its arms rest on the wall or on the roof surface beside the gutter, never on the gutter itself, and climb only as high as you can reach in comfortably.',
+              '**Scoop, don’t pry.** Lift the leaves and muck out with the plastic scoop into the bucket. Stay above the bottom of the gutter, and never slide a tool under the edge of the roofing.',
+              '**Move the ladder often.** Clean an arm’s length at a time, then climb down and move the ladder. Leaning out sideways is how ladders tip and gutters get pulled.',
+              '**Clear the downspout outlet.** Pull the clog out of the opening at the bottom of the gutter by hand.',
+              '**Flush gently.** Run the garden hose along the gutter toward the downspout, pointed down the gutter, never up under the shingles or tiles.',
+              '**Watch the downspout.** Water should run out the bottom freely. If it backs up, the downspout is clogged lower down; flush it from the bottom or call someone to clear it.',
+            ],
+          },
+          { img: '/images/blog/clean-gutters-without-damaging-roof-edge-scoop-dont-pry.webp', alt: 'A gloved hand scooping wet leaves out of a gutter with a plastic scoop, the shingle edge above untouched', caption: 'Scoop from the gutter channel and leave the edge of the roofing alone.' },
+          { img: '/images/blog/clean-gutters-without-damaging-roof-edge-flush-gently.webp', alt: 'A garden hose spraying gently along a clean gutter toward the downspout opening', caption: 'Flush along the gutter toward the downspout, never up under the shingles.' },
+          { pov: 'If you have to choose between reaching a little farther and moving the ladder again, move the ladder. We do, every time.' },
+        ],
+      },
+      {
+        heading: 'What to Look For at the Roof Edge While You Are Up There',
+        blocks: [
+          'With the gutter clean, you have the best view of the roof edge you will get without climbing on the roof. Take a photo of anything that looks like this.',
+          {
+            table: {
+              head: ['What you see', 'What it may mean', 'What to do'],
+              rows: [
+                ['A layer of granules in the gutter', 'Shingles shedding their surface; a little is normal on a new roof, a lot on an older one is a sign of wear', 'Read our guide to granule loss, and book a roof evaluation if it is heavy'],
+                ['A bent, rusted or missing drip edge', 'Water can run behind the gutter into the fascia and the roof deck', 'Have a roofer check the edge'],
+                ['Water stains or soft wood behind the gutter', 'Water has been getting behind the gutter for a while', 'Have the edge and the wood behind it checked before the rains'],
+                ['A lifted, cracked or missing edge shingle', 'Wind or foot traffic broke the seal or the shingle', 'A repair, before wind lifts the courses above it'],
+                ['A slipped or broken tile at the eave, or missing bird stops', 'Water and nests can get under the first row of tile', 'Have the eave tiles reset or replaced'],
+                ['Loose edge metal or a peeling edge on a flat roof', 'The membrane is coming away from its edge', 'Have the edge secured and sealed'],
+              ],
+            },
+          },
+          { img: '/images/blog/clean-gutters-without-damaging-roof-edge-roof-edge-warning-signs.webp', alt: 'Granules in the bottom of a gutter, a rusted and bent drip edge above it and water stains on the fascia below', caption: 'Three warning signs in one view: granules in the gutter, a rusted, bent drip edge and water stains on the board behind the gutter.' },
+          'Our guides to [shingle granules in the gutter](/blog/shingle-granules-in-gutter/) and [drip edge flashing](/blog/roof-drip-edge-flashing/) go further on the first two.',
+        ],
+      },
+      {
+        heading: 'What Not to Do',
+        blocks: [
+          {
+            list: [
+              '**Don’t lean the ladder on the gutter.** Use a standoff.',
+              '**Don’t walk the roof edge,** and never step on tile.',
+              '**Don’t pressure wash the gutters or the roof.**',
+              '**Don’t pry under shingles** to dig out debris.',
+              '**Don’t pull on the gutter** to steady yourself or the ladder.',
+              '**Don’t work near the power line** to the house.',
+              '**Don’t clean gutters in wind or rain,** or alone.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Tile and Flat Roofs Need a Little Extra Care',
+        blocks: [
+          'On a **tile roof**, work only from the ladder. The tiles at the eave break easily underfoot, and leaves and nests often collect under the first row, behind the bird stops. Lift out what you can reach without moving any tile.',
+          { img: '/images/blog/clean-gutters-without-damaging-roof-edge-tile-eave.webp', alt: 'A gloved hand reaching from a ladder to pull leaves from the eave of a clay barrel tile roof', caption: 'On a tile roof, reach in from the ladder and leave the tiles where they are.' },
+          'On a **flat roof**, the water usually leaves through a scupper, an opening in the parapet wall, into a downspout or a small gutter. Clear the scupper and the downspout from the ladder, and don’t stand on the edge metal or lean on the parapet cap. See our guide to [flat roofs in Los Angeles](/blog/flat-roofs-los-angeles-guide/) for more.',
+        ],
+      },
+      {
+        heading: 'When the Roof Edge Needs a Roofer',
+        blocks: [
+          'Gutters themselves aren’t our trade: for a gutter that is sagging, leaking at its seams or pulling off the house, call a gutter contractor. The roof edge behind it is ours. A bent drip edge, a broken edge shingle, a slipped eave tile or loose edge metal on a flat roof is a roof repair: see [shingle roof repair](/residential-roofing/shingle-roofing/repair/), [tile roof repair](/residential-roofing/tile-roofing/repair/) or [flat roof repair](/residential-roofing/flat-roofing/repair/).',
+          { img: '/images/blog/clean-gutters-without-damaging-roof-edge-roofer-at-the-edge.webp', alt: 'A roofer on a ladder photographing a damaged roof edge with a tablet while a homeowner watches from the lawn', caption: 'A roofer photographs the damaged edge, so you see exactly what it needs.' },
+          'If you would rather not climb at all, our [roof maintenance plans](/roof-maintenance-plans/) clear debris from the roof surface, valleys, gutters and downspouts on every visit, with a photo report each time. A one-time *RoofRevive* roof tune-up clears the valleys and eaves and fixes the small things, like lifted tabs or loose edge metal, with a written price first.',
+          { pov: 'A clean gutter is a few hours of your weekend. A bent drip edge or a cracked edge shingle is something we would rather catch at a roof evaluation than after the first storm.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'How do I clean gutters without damaging the roof?',
+        a: 'Work from a well-set ladder with a standoff so it doesn’t rest on the gutter, scoop the debris out by hand instead of prying under the shingles, flush gently with a garden hose pointed down the gutter, and stay off the roof edge.',
+      },
+      {
+        q: 'How often should gutters be cleaned?',
+        a: 'At least before the rainy season, and again after strong winds or heavy leaf drop. A house under trees may need it more often.',
+      },
+      {
+        q: 'Can I lean a ladder against my gutters?',
+        a: 'It is better not to. The weight can bend the gutter and the drip edge behind it. A ladder standoff lets the ladder rest on the wall or roof instead.',
+      },
+      {
+        q: 'Can I pressure wash my gutters or roof?',
+        a: 'We don’t recommend it. A strong jet can drive water under shingles and tiles and strip granules off the roof edge. A garden hose on a gentle setting is enough to flush a gutter.',
+      },
+      {
+        q: 'Do you clean gutters?',
+        a: 'Our roof maintenance plan visits clear debris from the roof surface, valleys, gutters and downspouts. We don’t repair or replace gutters; for that, call a gutter contractor.',
+      },
+      {
+        q: 'Who fixes a damaged roof edge?',
+        a: 'A roofer. A bent drip edge, a broken edge shingle, a slipped eave tile or loose edge metal on a flat roof is a roof repair. Book a free roof evaluation and we will photograph it and tell you what it needs.',
+      },
+    ],
+    closing: {
+      heading: 'Found Something at the Roof Edge?',
+      blocks: [
+        'Book a [free roof evaluation](#roof-check) and bring your photos: drone footage and photos of your roof, a plain-English answer on what the edge needs, and a written scope and price before any work. Or call [(310) 340-1643](tel:+13103401643).',
+      ],
+    },
+    related: ['/roof-maintenance-plans/', '/residential-roofing/shingle-roofing/repair/', '/residential-roofing/tile-roofing/repair/', '/residential-roofing/flat-roofing/repair/'],
+  },
   // Getting your home ready before the roofers arrive (owner, November 24 2026): keyword "prepare for a roof replacement". Checklist,
   // purchase intent, and customer onboarding content too (the page to send a homeowner once a job is booked). A week before
   // (`checklist: 'tracker'`), the outside of the house (`list: 'facts-numbered'`), inside the house, pets, kids and noise, what happens on
