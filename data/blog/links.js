@@ -18,7 +18,7 @@ export const KEEP_READING = {
   'stop-a-roof-leak': [B('first-hour-active-roof-leak'), B('how-to-stop-a-leaking-roof-now'), B('how-to-find-a-roof-leak'), B('roof-repair-cost')],
   'how-to-stop-a-leaking-roof-now': [B('first-hour-active-roof-leak'), B('how-to-read-a-ceiling-stain'), B('roof-leak-source'), B('roof-insurance-claims-california')],
   'how-to-find-a-roof-leak': [B('how-to-trace-a-roof-leak-in-the-attic'), B('how-to-read-a-ceiling-stain'), B('how-to-stop-a-leaking-roof-now'), B('roof-repair-cost')],
-  'roof-repair-cost': [B('small-roof-leak-big-problem'), B('how-to-find-a-roof-leak'), B('how-to-stop-a-leaking-roof-now'), B('roof-restoration-vs-replacement')],
+  'roof-repair-cost': [B('cheapest-roofing-quote'), B('small-roof-leak-big-problem'), B('how-to-find-a-roof-leak'), B('how-to-stop-a-leaking-roof-now'), B('roof-restoration-vs-replacement')],
   // Storms and upkeep
   'roof-storm-damage-signs': [B('hail-damage-vs-normal-wear'), B('sagging-roofline-urgent'), B('curling-cracked-missing-shingles'), B('how-to-check-your-roof-from-the-ground'), B('prepare-your-roof-for-el-nino'), B('how-to-stop-a-leaking-roof-now'), B('roof-insurance-claims-california')],
   'how-to-trace-a-roof-leak-in-the-attic': [B('sagging-roofline-urgent'), B('roof-leak-source'), B('how-to-stop-a-leaking-roof-now'), B('roof-repair-cost')],
@@ -53,7 +53,9 @@ export const KEEP_READING = {
   'top-qualities-shingle-roofers-los-angeles-orange-county': [B('how-to-choose-a-roofer-los-angeles-ca'), B('roof-drip-edge-flashing')],
   'architectural-vs-3-tab-shingles': [B('new-shingles-over-old-shingles'), B('roof-drip-edge-flashing'), B('top-qualities-shingle-roofers-los-angeles-orange-county')],
   'roof-restoration-vs-replacement': [B('repair-or-replace-roof-3-question-test'), B('how-old-is-my-roof')],
-  'new-shingles-over-old-shingles': [B('asphalt-shingle-roof-guide'), B('repair-or-replace-roof-3-question-test'), B('architectural-vs-3-tab-shingles'), B('roof-replacement-guide')],
+  'roof-replacement-cost-los-angeles': [B('cheapest-roofing-quote'), B('repair-or-replace-roof-3-question-test')],
+  'cheapest-roofing-quote': [B('how-to-choose-a-roofer-los-angeles-ca'), B('roof-warranty-explained'), B('repair-or-replace-roof-3-question-test'), B('roofing-permits-los-angeles')],
+  'new-shingles-over-old-shingles': [B('cheapest-roofing-quote'), B('asphalt-shingle-roof-guide'), B('repair-or-replace-roof-3-question-test'), B('architectural-vs-3-tab-shingles'), B('roof-replacement-guide')],
   'repair-or-replace-roof-3-question-test': [B('new-shingles-over-old-shingles'), B('roof-restoration-vs-replacement'), B('roof-replacement-guide'), B('roof-repair-cost'), B('small-roof-leak-big-problem')],
   'how-old-is-my-roof': [B('new-shingles-over-old-shingles'), B('repair-or-replace-roof-3-question-test'), B('roof-replacement-guide'), B('curling-cracked-missing-shingles'), B('how-to-check-your-roof-from-the-ground'), B('what-does-a-roof-inspection-include')],
   'hail-damage-vs-normal-wear': [B('roof-storm-damage-signs'), B('curling-cracked-missing-shingles'), B('roof-insurance-claims-california'), B('what-does-a-roof-inspection-include')],
@@ -69,7 +71,7 @@ export const KEEP_READING = {
   // Replacement and choosing a roofer
   'roof-replacement-guide': [B('new-shingles-over-old-shingles'), B('repair-or-replace-roof-3-question-test'), B('how-old-is-my-roof'), B('how-to-choose-a-roofer-los-angeles-ca'), B('roof-warranty-explained'), B('roofing-permits-los-angeles'), B('roof-replacement-cost-los-angeles'), B('how-to-pay-for-a-new-roof'), B('best-roof-for-solar-panels')],
   'best-roofer-los-angeles': [B('how-to-choose-a-roofer-los-angeles-ca'), B('top-qualities-shingle-roofers-los-angeles-orange-county')],
-  'how-to-choose-a-roofer-los-angeles-ca': [B('how-to-choose-a-roofing-firm-near-me'), B('best-roofer-los-angeles'), B('how-to-choose-a-shingle-roofer-los-angeles'), B('how-to-vet-commercial-roofing-near-me')],
+  'how-to-choose-a-roofer-los-angeles-ca': [B('cheapest-roofing-quote'), B('how-to-choose-a-roofing-firm-near-me'), B('best-roofer-los-angeles'), B('how-to-choose-a-shingle-roofer-los-angeles'), B('how-to-vet-commercial-roofing-near-me')],
   'roof-warranty-explained': [B('how-to-choose-a-roofing-firm-near-me'), B('how-to-choose-a-roofer-los-angeles-ca')],
   // Flat
   'flat-roofs-los-angeles-guide': [B('torch-down-roofing-app-vs-sbs'), B('cool-roof-southern-california'), B('most-in-demand-commercial-roofing'), '/residential-roofing/flat-roofing/torch-down/'],

@@ -21,6 +21,12 @@ export const POST_VISUALS = {
   'how-to-trace-a-roof-leak-in-the-attic': {
     'Stop 3: Look Up and Read the Roof Deck': { table: 'cards' },
   },
+  'cheapest-roofing-quote': {
+    'Where the Low Number Usually Comes From': { list: 'facts-numbered' },
+    'The Two Quotes, Line by Line': { table: 'versus' },
+    'Red Flags in a Low Quote': { list: 'flags' },
+    'How to Compare Roofing Quotes Fairly': { checklist: 'tracker' },
+  },
   'new-shingles-over-old-shingles': {
     'Overlay vs. Tear-Off, Side by Side': { table: 'versus' },
     'Questions to Ask a Roofer Who Suggests an Overlay': { checklist: 'tracker' },

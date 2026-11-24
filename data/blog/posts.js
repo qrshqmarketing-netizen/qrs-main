@@ -24,6 +24,189 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // Why the cheapest roofing quote can cost you more (owner, November 24 2026): keyword "cheapest roofing quote". Story/example, comparative,
+  // justifies quality pricing: an illustration of two quotes for the same roof (labelled as an illustration, no real client, no dollar
+  // figures), where the low number usually comes from (`list: 'facts-numbered'`), the two quotes line by line (`table: 'versus'`), what it costs
+  // later, red flags (`list: 'flags'`, with the CSLB license and down payment rules as the best roofer article states them), how to compare quotes
+  // fairly (`checklist: 'tracker'`) and what is in our written scope (TotalShield from the deck up, permit, tarps, magnetic nail sweep, warranty
+  // with "call for details", 3 to 5 days, financing). No prices. Our voice, three "Our point of view" boxes. Pictures: the owner's images (thumbnail and six
+  // in the text).
+  {
+    slug: 'cheapest-roofing-quote',
+    title: 'Why the Cheapest Roofing Quote Can Cost You More: Two Quotes, Side by Side',
+    keyword: 'cheapest roofing quote',
+    topics: ['replacement', 'repair', 'shingle', 'inspection'],
+    metaTitle: 'Why the Cheapest Roofing Quote Can Cost You More',
+    metaDescription:
+      'Why the cheapest roofing quote can cost you more: two quotes for the same roof side by side, where the low number comes from, and how to compare bids.',
+    datePublished: '2026-11-24',
+    dateModified: '2026-11-24',
+    image: '/images/blog/cheapest-roofing-quote.webp',
+    imageAlt: 'Two roofing quotes on a kitchen table: a crumpled single page with one circled total, and a neat multi-page itemized scope in a folder with a photo of the roof clipped to it',
+    excerpt:
+      'The cheapest roofing quote isn’t always the cheapest roof. Two quotes for the same house side by side, where the low number usually comes from, and how to compare bids line by line.',
+    intro: [
+      'The cheapest roofing quote is tempting for a simple reason: a roof is a big bill, and three quotes for the same house can be far apart. It is natural to assume they are three prices for the same thing.',
+      'They usually aren’t. A low quote is often a smaller job written to look like the same one. Below is how that plays out on one house, where the low number usually comes from, what it costs later, and how to compare quotes so you are paying for the same roof.',
+    ],
+    sections: [
+      {
+        heading: 'A Tale of Two Quotes for the Same Roof',
+        blocks: [
+          { note: 'This is an illustration, not a real job, but every detail in it is one we see on quotes homeowners show us.' },
+          'A homeowner with a worn shingle roof gets two quotes for a replacement. Both say “new roof.” One is noticeably lower.',
+          '**Quote A**, the cheaper one, is a single page: “Remove and replace roof, new shingles, cleanup.” One price at the bottom. No permit mentioned. Deck repairs “as needed, extra.” Nothing about flashings, underlayment, drip edge or ventilation. The warranty is a sentence said out loud.',
+          '**Quote B** runs several pages. It names the tear-off down to the deck, the underlayment, new flashings at the chimney and walls, new drip edge, vents, the shingle line and color, the permit, tarps over the landscaping, the magnetic nail sweep, the warranty in writing, and how damaged deck will be handled.',
+          { img: '/images/blog/cheapest-roofing-quote-two-quotes.webp', alt: 'A homeowner at a dining table holding a one-page quote in one hand and a thick multi-page quote in the other, comparing them', caption: 'Two quotes for the same roof: one page in one hand, a full written scope in the other. They rarely describe the same job.' },
+          'Quote A wins. On tear-off day the crew finds soft deck along one eave, and “as needed” turns into a change order. The old chimney flashing is reused, because it was never in the quote. The first heavy rain finds it. When the homeowner calls, the warranty turns out to cover the shingles, not the work around the chimney. By the end of the second winter, Quote A has cost more than Quote B would have, and the roof still isn’t right.',
+          { img: '/images/blog/cheapest-roofing-quote-deck-change-order.webp', alt: 'A section of water-stained, rotted roof deck exposed along the eave during a tear-off, with a tape measure laid across it and old shingles piled nearby', caption: 'Tear-off day: soft deck along the eave. On a quote that said “as needed, extra,” this is where the change order starts.' },
+          { pov: 'We are rarely the cheapest quote, and we are fine with that. A price that leaves out the deck, the flashings and the permit isn’t a lower price for the same roof. It is a lower price for less roof.' },
+        ],
+      },
+      {
+        heading: 'Where the Low Number Usually Comes From',
+        blocks: [
+          {
+            list: [
+              '**Skipping the tear-off:** new shingles laid over the old ones. Our article on [new shingles over old shingles](/blog/new-shingles-over-old-shingles/) explains what that hides.',
+              '**Leaving the deck out:** damaged deck priced “as needed” after you have signed, when you can no longer compare.',
+              '**Reusing old flashings:** the chimney, wall, vent and valley flashings stay, and so do the weak points of the old roof.',
+              '**Thinner underlayment, fewer details:** a cheaper underlayment, no drip edge, no attention to attic ventilation.',
+              '**No permit:** no inspection, and trouble later when you sell or file an insurance claim.',
+              '**No license or insurance:** a contractor without a license or the right insurance can underbid one who carries both.',
+              '**Cleanup left out:** no tarps over the landscaping, no magnetic nail sweep.',
+              '**A warranty you can’t hold anyone to:** spoken, not written, or covering the materials but not the work.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'The Two Quotes, Line by Line',
+        blocks: [
+          {
+            table: {
+              head: ['Compare', 'The cheapest quote', 'A complete quote'],
+              rows: [
+                ['The old roof', 'Sometimes left on, or not mentioned', 'Torn off down to the deck'],
+                ['Roof deck', '“As needed, extra”', 'Checked, with damaged sections replaced and how that is priced written down'],
+                ['Underlayment', 'Not named', 'Named, over the whole deck'],
+                ['Flashings and drip edge', 'Not mentioned, often reused', 'New, listed by location'],
+                ['Ventilation', 'Not mentioned', 'Checked and balanced'],
+                ['Permit', 'Not mentioned', 'Pulled, with the inspection booked'],
+                ['Cleanup', '“Cleanup”', 'Tarps over landscaping, magnetic nail sweep, a walk-through'],
+                ['Warranty', 'Spoken, or materials only', 'Written, covering the work as well as the materials'],
+              ],
+            },
+          },
+          'Put your quotes side by side like this. Anything one quote names and the other doesn’t is either missing from the cheaper one, or will show up later as an extra.',
+        ],
+      },
+      {
+        heading: 'What the Cheapest Quote Costs Later',
+        blocks: [
+          {
+            list: [
+              '**Change orders** for deck and flashing work that was never in the price.',
+              '**Leaks** at reused flashings, usually in the first real storm.',
+              '**A second tear-off** when an overlay wears out, with two layers to remove.',
+              '**Trouble selling** when a buyer’s inspector asks for the permit.',
+              '**No one to call** when the warranty was a handshake, or the contractor is gone.',
+              '**Your own risk** if an unlicensed or uninsured worker is hurt on your property.',
+            ],
+          },
+          { img: '/images/blog/cheapest-roofing-quote-reused-flashing.webp', alt: 'A new gray shingle roof laid up to an old, rusted chimney flashing smeared with black roof cement, water running down the brick below', caption: 'A new roof around an old flashing. The shingles are new; the leak is the one the old roof already had.' },
+          { pov: 'The most expensive roof we see is the one that has to be done twice. Most of those started as the cheapest quote.' },
+        ],
+      },
+      {
+        heading: 'Red Flags in a Low Quote',
+        blocks: [
+          {
+            list: [
+              '**One page, one number,** and no list of what is included.',
+              '**No license number,** or one that doesn’t match the business. In California, [anyone doing home improvement work of $1,000 or more must be licensed](https://cslb.ca.gov/Resources/GuidesAndPublications/WSSK_ENG0125_ADA.pdf); check it on [cslb.ca.gov](https://www.cslb.ca.gov).',
+              '**A big deposit.** A California home improvement down payment [cannot exceed 10% of the contract price or $1,000, whichever is less](https://www.cslb.ca.gov/consumers/hire_a_contractor/Home_Improvement_Contracts/Homeowner_Checklists.aspx).',
+              '**“We don’t need a permit for that.”**',
+              '**Deck and flashings “as needed,”** with no explanation of how they will be priced.',
+              '**Pressure to sign today** for the low price.',
+            ],
+          },
+          { img: '/images/blog/cheapest-roofing-quote-door-to-door.webp', alt: 'A man from an unmarked pickup truck hands a homeowner a single sheet of paper at her front door while she hesitates', caption: 'An unmarked truck and a one-page quote at the door. Ask for the license number and a written scope before anything else.' },
+        ],
+      },
+      {
+        heading: 'How to Compare Roofing Quotes Fairly',
+        blocks: [
+          {
+            checklist: [
+              'Every quote is for the same work: tear-off, deck, underlayment, flashings, drip edge, ventilation',
+              'The shingle line, style and color are named',
+              'How damaged deck will be handled, and priced, is in writing',
+              'The permit is included',
+              'Cleanup, tarps and a magnetic nail sweep are included',
+              'The warranty is in writing and says what it covers',
+              'The license number is on the quote, and it checks out on cslb.ca.gov',
+              'The payment schedule follows the work, with a small down payment',
+            ],
+          },
+          { img: '/images/blog/cheapest-roofing-quote-compare-quotes.webp', alt: 'A homeowner highlighting lines on one itemized roofing quote that are missing from a second quote beside it, with a calculator and pen on the table', caption: 'Line the quotes up item by item and highlight what one names and the other leaves out.' },
+          'If one quote is much lower once all of that lines up, ask what is different. A good roofer can tell you.',
+        ],
+      },
+      {
+        heading: 'What Goes Into Our Written Scope',
+        blocks: [
+          'At QRS, a roofer looks at your roof before anyone tries to sell you one. The price comes after the [free roof evaluation](/roof-inspection/), in a written scope that names the work, so you can line it up against any other quote. For a shingle roof replacement, our *TotalShield* Shingle System includes:',
+          {
+            list: [
+              'The permit, pulled before work starts, and tarps over your landscaping.',
+              'A full tear-off down to the deck, with damaged sections replaced.',
+              'New underlayment, flashings, drip edge and balanced attic ventilation.',
+              'Your choice of shingle style and color.',
+              'A magnetic nail sweep of the yard and driveway, and a walk-through of the finished roof.',
+              'Our 10-year workmanship warranty on installs (call for details), on top of the manufacturer’s.',
+            ],
+          },
+          { img: '/images/blog/cheapest-roofing-quote-written-scope.webp', alt: 'A roofer walks a homeowner couple through a printed, itemized written scope at their patio table, a tablet showing a drone photo of their roof', caption: 'Our written scope, line by line, with the drone photos of your roof beside it. Ask us to go through it next to any other quote.' },
+          'Most home roof replacements take 3 to 5 days, and [roof financing](/roof-financing/) is available for home replacements, subject to credit approval. Our guide to [roof replacement cost](/blog/roof-replacement-cost-los-angeles/) explains what moves the price.',
+          { pov: 'Ask us to walk through our scope line by line next to any other quote. If someone else is offering the same work for less, we will tell you so.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Should I just pick the cheapest roofing quote?',
+        a: 'Only if it is for the same work. Line the quotes up item by item: tear-off, deck, underlayment, flashings, drip edge, ventilation, permit, cleanup and a written warranty. A low quote that leaves things out is a smaller job, not a better price.',
+      },
+      {
+        q: 'Why are roofing quotes so different?',
+        a: 'Usually because they describe different jobs: one tears off and replaces the flashings, another lays over the old roof and reuses them. Licensing, insurance, permits and the warranty also vary. Compare what each quote includes, not just the total.',
+      },
+      {
+        q: 'What should a roofing quote include?',
+        a: 'The tear-off, how damaged deck is handled and priced, the underlayment, flashings, drip edge and ventilation, the shingle line and color, the permit, cleanup, the warranty in writing, the payment schedule and the contractor’s license number.',
+      },
+      {
+        q: 'Is a roofing deposit required in California?',
+        a: 'A deposit is common, but California limits a home improvement down payment to 10% of the contract price or $1,000, whichever is less. Later payments should follow completed work.',
+      },
+      {
+        q: 'What does “deck repair as needed” mean on a quote?',
+        a: 'It means damaged deck found during the tear-off will cost extra. That is normal, since nobody can see the whole deck before the old roof comes off, but the quote should say how it will be priced, so it can’t become an open-ended change order.',
+      },
+      {
+        q: 'Will you match a lower quote?',
+        a: 'We will compare it with ours line by line and show you what each includes. If the other quote covers the same work, we will tell you so.',
+      },
+    ],
+    closing: {
+      heading: 'Comparing Roofing Quotes?',
+      blocks: [
+        'Get one that names every part of the job. Book a [free roof evaluation](#roof-check) and you get drone footage and photos of your roof, a plain-English answer on repair or replace, and a written scope and price before any work, ready to line up against any other quote. Or call [(310) 340-1643](tel:+13103401643).',
+      ],
+    },
+    related: ['/roof-replacement/', '/residential-roofing/shingle-roofing/replacement/', '/roof-inspection/', '/roof-financing/'],
+  },
   // New shingles over old ones (owner, November 24 2026): keyword "shingles over old shingles". Myth vs. fact, comparative, explains why we tear
   // off: six myths with the facts (h3 + "**Fact:**", as the moss article), an overlay vs. tear-off comparison (`table: 'versus'`), when an overlay
   // is even allowed (building codes generally: one layer over a single sound layer of asphalt shingles, never over two layers, a wet or
