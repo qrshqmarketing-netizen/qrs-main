@@ -44,6 +44,7 @@ import { GARDEN_GROVE_TILE_PROJECT } from './pages/garden-grove-tile-project';
 import { LA_90029_PROJECT } from './pages/la-90029-project';
 import { LA_90048_PROJECT } from './pages/la-90048-project';
 import { LA_90063_HILLSIDE_PROJECT } from './pages/la-90063-hillside-project';
+import { LA_90065_PROJECT } from './pages/la-90065-project';
 import { GARDEN_GROVE_FLAT_PROJECT } from './pages/garden-grove-flat-project';
 import { PLACENTIA_PROJECT } from './pages/placentia-project';
 import { DOWNEY_PROJECT } from './pages/downey-project';
@@ -186,6 +187,7 @@ export const ALL_PATHS = [
   LA_90029_PROJECT.path,
   LA_90048_PROJECT.path,
   LA_90063_HILLSIDE_PROJECT.path,
+  LA_90065_PROJECT.path,
   GARDEN_GROVE_FLAT_PROJECT.path,
   PLACENTIA_PROJECT.path,
   DOWNEY_PROJECT.path,
