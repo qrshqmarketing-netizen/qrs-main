@@ -24,6 +24,191 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // Getting your home ready before the roofers arrive (owner, November 24 2026): keyword "prepare for a roof replacement". Checklist,
+  // purchase intent, and customer onboarding content too (the page to send a homeowner once a job is booked). A week before
+  // (`checklist: 'tracker'`), the outside of the house (`list: 'facts-numbered'`), inside the house, pets, kids and noise, what happens on
+  // tear-off day (`steps: 'timeline'`), during the job, the final walkthrough, and the whole list in one place (`checklist: 'tracker'`). Only
+  // what the site already says we do: permits pulled and posted, tarps over landscaping, the old roof straight into a bin or truck, daily
+  // cleanup and magnetic nail sweeps, damaged deck photographed and explained before it is replaced, 3 to 5 days, the inspection booked, a
+  // walk-through, the warranty with "call for details". No arrival times, no promise about solar panels or satellite dishes (we say to call
+  // their company). Our voice, three "Our point of view" boxes. Thumbnail and eight pictures in the text are the owner's images.
+  {
+    slug: 'prepare-for-a-roof-replacement',
+    title: 'How to Prepare for a Roof Replacement: Get Your Home Ready Before the Roofers Arrive',
+    keyword: 'prepare for a roof replacement',
+    topics: ['replacement', 'shingle', 'tile', 'flat'],
+    metaTitle: 'How to Prepare for a Roof Replacement: A Homeowner Checklist',
+    metaDescription:
+      'How to prepare for a roof replacement: what to do a week before, outside and inside the house, on tear-off day and at the final walkthrough.',
+    datePublished: '2026-11-24',
+    dateModified: '2026-11-24',
+    image: '/images/blog/prepare-for-a-roof-replacement.webp',
+    imageAlt: 'A single-story home ready for a roof replacement: a clear driveway, a debris bin, tarps over the shrubs and patio chairs moved onto the lawn',
+    excerpt:
+      'A roof replacement goes smoother when the house is ready for it. What to do a week before, outside and inside, what happens on tear-off day, and what to check at the final walkthrough.',
+    intro: [
+      'A little time spent to prepare for a roof replacement makes the days of the job easier for everyone: fewer surprises, less to move in a hurry and nothing fragile in the way. Most of it takes an afternoon.',
+      'This is the checklist we give homeowners once a job is on the calendar: what to do a week before, outside and inside the house, what happens on tear-off day, and what to check when the roof is done. The work itself, the protection and the cleanup are ours.',
+    ],
+    sections: [
+      {
+        heading: 'A Week Before the Roofers Arrive',
+        blocks: [
+          {
+            checklist: [
+              'Confirm the start date, and ask how the roof will be protected if rain is in the forecast',
+              'Read your written scope once more: the shingle or tile, the color and how damaged deck will be handled',
+              'Tell your neighbors: there will be noise, a bin or truck and work trucks out front for a few days',
+              'If you have an HOA, check whether the new roof needs its approval',
+              'If you have solar panels or a satellite dish, call that company about them before the start date',
+              'Plan around the noise: calls, naps, a pet that hates loud sounds',
+              'Make sure the side yards and gates are open or unlocked',
+            ],
+          },
+          { img: '/images/blog/prepare-for-a-roof-replacement-tell-the-neighbors.webp', alt: 'Two neighbors chatting over a wooden fence in front of a single-story home with an older shingle roof', caption: 'A friendly word over the fence a few days ahead goes a long way when the trucks and the noise arrive.' },
+          'You don’t need to pull the permit: we do, and it is posted on site before the work starts.',
+        ],
+      },
+      {
+        heading: 'Outside the House',
+        blocks: [
+          {
+            list: [
+              '**Cars out of the driveway:** park on the street or away from the house, so the driveway is clear for the bin or truck and nothing lands on your car.',
+              '**Patio furniture, grills and toys:** move them away from the walls and the eaves, where debris comes down.',
+              '**Potted plants and decor:** bring them in or set them well back from the house. We tarp the landscaping, but what can move should.',
+              '**Garage:** if the garage roof is part of the job, cover what is stored on open shelves, since dust can come through.',
+              '**Side yards and gates:** clear a path along each side of the house, and unlock the gates.',
+              '**Pool or spa:** if it is close to the house, cover it if you can.',
+            ],
+          },
+          { img: '/images/blog/prepare-for-a-roof-replacement-clear-the-walls-outside.webp', alt: 'A homeowner carrying a potted plant away from the side of a stucco house, patio chairs, a grill and toys already moved onto the lawn', caption: 'Pots, chairs, the grill and toys moved away from the walls, so the strip along the house is clear.' },
+          { pov: 'Protecting your yard is our job: tarps over the landscaping and the sides of the house go down before the tear-off starts. What helps us most is a clear driveway and open gates.' },
+        ],
+      },
+      {
+        heading: 'Inside the House',
+        blocks: [
+          'Hammering and tear-off carry through the framing, so the walls and ceilings below the roof feel it.',
+          {
+            list: [
+              'Take pictures, mirrors and anything fragile off the walls, especially on the top floor.',
+              'Clear the tops of tall shelves and cabinets.',
+              'Cover what is stored in the attic with old sheets or plastic, since dust can sift through the deck when the old roof comes off.',
+              'If a light fixture or ceiling fan has always been a little loose, check it before and after.',
+            ],
+          },
+          { img: '/images/blog/prepare-for-a-roof-replacement-pictures-off-the-walls.webp', alt: 'Hands lifting a framed picture off a hallway wall, two other frames already leaning against the floor', caption: 'Pictures and mirrors come off the walls before tear-off, since the hammering carries through the house.' },
+          { img: '/images/blog/prepare-for-a-roof-replacement-cover-attic-storage.webp', alt: 'Boxes and furniture in an attic covered with plastic sheeting and old sheets', caption: 'Old sheets or plastic over what is stored in the attic keep the dust off when the old roof comes off.' },
+        ],
+      },
+      {
+        heading: 'Pets, Kids and Noise',
+        blocks: [
+          'Tear-off is the loudest day. Keep pets inside or away from the house, or plan a day with a friend or at daycare for a dog that doesn’t like noise. Keep children away from the work area, the bin and the sides of the house until the job is done and the yard has been swept for nails. If you work from home, plan your calls around the first day.',
+          { img: '/images/blog/prepare-for-a-roof-replacement-pets-inside.webp', alt: 'A golden retriever lying on a living room rug while roofers work on a roof seen through the window', caption: 'Inside and calm: a quiet room is the best place for a pet on tear-off day.' },
+        ],
+      },
+      {
+        heading: 'What Happens on Tear-Off Day',
+        blocks: [
+          {
+            steps: [
+              '**Protection first.** Tarps go down over the landscaping and along the sides of the house.',
+              '**The old roof comes off.** Every layer, down to the deck, straight into a bin or truck.',
+              '**The deck is checked.** If we find soft or damaged sections, we photograph them while the roof is open, explain them and replace them as your written scope says.',
+              '**Underlayment goes on.** The bare deck is covered with new underlayment, so the house isn’t left open.',
+              '**Cleanup.** We clean up at the end of every day, with a magnetic sweep for nails around the house and yard.',
+            ],
+          },
+          { img: '/images/blog/prepare-for-a-roof-replacement-tear-off-day.webp', alt: 'Drone view of roofers tearing old shingles off a house down to the wood deck, debris going into a bin, tarps over the shrubs', caption: 'Tear-off day: the old roof comes off down to the deck and goes straight into the bin, with tarps over the plants below.' },
+          'Someone should be reachable by phone that day, in case a question comes up about the deck. On a [partial shingle roof replacement in Northeast Los Angeles](/projects/partial-shingle-roof-replacement-los-angeles-90065/), the homeowner approved a deck repair the same day and the job kept moving.',
+          { pov: 'The day the old roof comes off is the day we see what it was hiding. We would rather show you a photo and explain it than make a call you never saw.' },
+        ],
+      },
+      {
+        heading: 'While the Work Is Going On',
+        blocks: [
+          'Most home roof replacements take 3 to 5 days. A bigger roof, a tile roof, deck repairs and rain can add time. If rain comes through, the work pauses and the roof is protected until it clears. You will see the new roof go on in stages: underlayment, flashings, drip edge and vents, then the shingles or tile and the ridge.',
+          'It is fine to stay home through the job; most homeowners do. Just stay out of the work area and off the ladders, and let us know if anything inside the house changes, like a new stain or a picture that fell.',
+          { img: '/images/blog/prepare-for-a-roof-replacement-magnetic-nail-sweep.webp', alt: 'A roofer pushing a wheeled magnetic nail sweeper across a driveway, nails stuck to the magnet', caption: 'The magnetic sweep picks up stray nails from the driveway and yard at the end of each day.' },
+        ],
+      },
+      {
+        heading: 'The Final Walkthrough',
+        blocks: [
+          'When the roof is done, we walk it with you, or walk the yard and go through the photos of each stage. We book the city inspection for the permit. Before you sign off, check:',
+          {
+            checklist: [
+              'The yard, driveway and gutters are clear of nails and debris',
+              'Vents, pipe flashings and the chimney flashing are finished',
+              'Nothing inside the house was knocked loose',
+              'You have photos of the deck, underlayment and flashings from before they were covered',
+              'You know when the city inspection is, and you get the sign-off',
+              'You have your warranty paperwork: our 10-year workmanship warranty on installs (call for details) and the manufacturer’s',
+            ],
+          },
+          { img: '/images/blog/prepare-for-a-roof-replacement-final-walkthrough.webp', alt: 'A roofer showing a smiling homeowner couple photos on a tablet in front of their home with a new shingle roof', caption: 'The walkthrough: photos of each stage, then the finished roof.' },
+        ],
+      },
+      {
+        heading: 'Your Before-the-Roofers Checklist',
+        blocks: [
+          {
+            checklist: [
+              'Start date confirmed, and the rain plan',
+              'Written scope read again, color confirmed',
+              'Neighbors told',
+              'HOA approval, if needed',
+              'Solar or satellite company called, if needed',
+              'Cars out of the driveway',
+              'Patio furniture, grills, pots and toys moved away from the house',
+              'Gates unlocked, side yards clear',
+              'Pictures and fragile things off the walls',
+              'Attic storage covered',
+              'Plan for pets and kids on tear-off day',
+              'Someone reachable by phone',
+            ],
+          },
+          { pov: 'A prepared house makes a smoother job, but you don’t need to be a roofer to get it ready. If anything on this list doesn’t fit your home, ask us at your roof evaluation and we will tell you what matters for yours.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'How do I prepare for a roof replacement?',
+        a: 'Move cars out of the driveway, move patio furniture and pots away from the walls, take pictures and fragile items off the walls inside, cover anything stored in the attic, unlock the gates and plan for pets and kids on tear-off day. Protecting the landscaping and the cleanup are ours.',
+      },
+      {
+        q: 'Do I need to be home during a roof replacement?',
+        a: 'Not all day, but someone should be reachable by phone, in case a question comes up about the deck once the old roof is off. Many homeowners stay home through the job.',
+      },
+      {
+        q: 'Can I stay in the house while the roof is replaced?',
+        a: 'Yes, most homeowners do. It is loud, especially on tear-off day, so plan around calls, naps and pets, and stay out of the work area.',
+      },
+      {
+        q: 'Will a roof replacement make a mess inside the house?',
+        a: 'Hammering can shake things on the walls, and dust can sift through the deck into the attic when the old roof comes off. Take fragile items off the walls and cover what is stored in the attic.',
+      },
+      {
+        q: 'What do roofers do to protect my yard?',
+        a: 'We tarp the landscaping and the sides of the house before the tear-off, send the old roof straight into a bin or truck, clean up every day and run a magnetic sweep for nails around the house and yard.',
+      },
+      {
+        q: 'How long does a roof replacement take?',
+        a: 'Most home roof replacements take 3 to 5 days. A bigger roof, a tile roof, deck repairs and rain can add time.',
+      },
+    ],
+    closing: {
+      heading: 'Getting Ready for a New Roof?',
+      blocks: [
+        'It starts with a [free roof evaluation](#roof-check): drone footage and photos of your roof, a plain-English answer on repair or replace, and a written scope and price before any work. Once the job is on the calendar, this checklist is all you need. Or call [(310) 340-1643](tel:+13103401643).',
+        'Part of our [roof replacement guide](/blog/roof-replacement-guide/).',
+      ],
+    },
+    related: ['/roof-replacement/', '/residential-roofing/shingle-roofing/replacement/', '/residential-roofing/tile-roofing/replacement/', '/residential-roofing/flat-roofing/replacement/'],
+  },
   // Types of asphalt shingles in 60 seconds (owner, November 24 2026): brief "Architectural vs. 3-tab shingles in 60 seconds, side-by-side
   // samples, comparative, product options you install". The keyword is "types of asphalt shingles", not "architectural vs. 3-tab shingles",
   // which belongs to the older comparison article (architectural-vs-3-tab-shingles) and is linked from here. A quick, sample-on-the-table

@@ -18,6 +18,13 @@
 //   table: 'cards'          rows to compare as cards with labelled lines
 //   table: 'hotspots'       "where / what goes wrong" rows as an interactive picture of a flat commercial roof
 export const POST_VISUALS = {
+  'prepare-for-a-roof-replacement': {
+    'A Week Before the Roofers Arrive': { checklist: 'tracker' },
+    'Outside the House': { list: 'facts-numbered' },
+    'What Happens on Tear-Off Day': { steps: 'timeline' },
+    'The Final Walkthrough': { checklist: 'tracker' },
+    'Your Before-the-Roofers Checklist': { checklist: 'tracker' },
+  },
   'types-of-asphalt-shingles': {
     'The 60-Second Version': { table: 'versus' },
     'Five Ways to Tell Which Shingle Is on Your Roof': { list: 'facts-numbered' },
