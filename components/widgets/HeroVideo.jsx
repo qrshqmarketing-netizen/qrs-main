@@ -48,5 +48,5 @@ export default function HeroVideo({ sources, className = '' }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return <video ref={ref} className={'hero-video ' + className} muted loop playsInline preload="none" aria-hidden="true" tabIndex={-1} disablePictureInPicture />;
+  return <video ref={ref} className={'hero-video ' + className} width={1600} height={900} muted loop playsInline preload="none" aria-hidden="true" tabIndex={-1} disablePictureInPicture />;
 }

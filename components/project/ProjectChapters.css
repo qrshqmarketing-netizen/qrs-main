@@ -23,8 +23,8 @@
 @media (min-width:1200px){.pd-ch-strip{width:min(var(--max),calc(100% - 96px))}}
 
 /* Pinned and sliding sideways */
-.pd-chapters.is-pinned{height:calc(100vh + var(--run,0px));padding:0;background:#0a1b2c;color:#fff} /* always dark, in both themes, like the footer */
-.pd-chapters.is-pinned .pd-ch-stage{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
+.pd-chapters.is-pinned{height:calc(100svh + var(--run,0px));padding:0;background:#0a1b2c;color:#fff} /* always dark, in both themes, like the footer */
+.pd-chapters.is-pinned .pd-ch-stage{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
 .pd-chapters.is-pinned .pd-ch-top{position:absolute;top:104px;left:0;right:0;margin:0 auto}
 .pd-chapters.is-pinned .pd-label{color:rgba(255,255,255,.7)}
 .pd-chapters.is-pinned .pd-ch-bar{display:block;flex:1;height:1px;background:rgba(255,255,255,.18);overflow:hidden}

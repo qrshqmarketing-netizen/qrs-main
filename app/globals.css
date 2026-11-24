@@ -55,7 +55,8 @@
 
 /* ---------- Base ---------- */
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;color-scheme:light} /* dark theme: color-scheme:dark in app/dark-theme.css, so native controls and scrollbars follow */
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}} /* never smooth-scroll for reduced motion (Chrome Modern Web Guidance) */
 body{
   margin:0;
   font-family:var(--font-body);font-size:15px;font-weight:500;line-height:1.7;
@@ -433,3 +434,15 @@ html.vt-cover::view-transition-new(vt-cw),html.vt-cover::view-transition-new(vt-
 @keyframes headRise{from{translate:0 .55em;clip-path:inset(-.55em 0 .55em 0);opacity:0}to{translate:0 0;clip-path:inset(-.2em 0 -.2em 0);opacity:1}}
 html.page-arrive :is(main .hero-title,.pd-hero h1,.promo-home .promo-title){animation:headRise .9s cubic-bezier(.17,.84,.44,1) .5s both}
 @media (prefers-reduced-motion:reduce){html.page-arrive :is(main .hero-title,.pd-hero h1,.promo-home .promo-title){animation:none}}
+
+/* Chrome Modern Web Guidance 1.0 (November 2026), applied site-wide:
+   - Focus rings need 3:1 contrast with what is around them. The light gold used across the components is about 1.9:1 on white, so on
+     light surfaces every ring takes the deeper gold (--gold-ink, about 5:1); on the dark surfaces (footer, navy bands, photo heroes, the
+     dark theme) it stays the bright gold. Only the color changes; each component keeps its own width and offset.
+   - Form fields are flagged only after the visitor has touched them (:user-invalid, never on page load), with a red edge.
+   - Autofilled fields get a gold bar on their left edge (an inset shadow: no layout shift), not just the browser's tint. */
+:root{--focus-ring:var(--gold-ink)}
+:is(footer,.final,.hero,.qh-hero,.promo,.pd-hero,.lp-hero,.st-hero,.morph-slider-stage,.morph-slider-indicators){--focus-ring:var(--gold)}
+:focus-visible{outline-color:var(--focus-ring)!important}
+:is(input,select,textarea):user-invalid{border-color:#b3261e!important;box-shadow:inset 3px 0 0 #b3261e}
+input:autofill,select:autofill,textarea:autofill{box-shadow:inset 4px 0 0 var(--gold),inset 0 0 0 100px var(--paper)!important;-webkit-text-fill-color:var(--ink)}

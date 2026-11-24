@@ -85,6 +85,19 @@ export default function Header() {
     return () => document.removeEventListener('keydown', onKey);
   }, [open]);
 
+  // Another open tab switched the theme: follow it, so every tab shows the same one (Chrome Modern Web Guidance: storage event)
+  useEffect(() => {
+    const onStorage = (e) => {
+      if (e.key !== 'qrs-theme') return;
+      const next = e.newValue === 'dark' ? 'dark' : 'light';
+      if (next === 'dark') document.documentElement.dataset.theme = 'dark';
+      else document.documentElement.removeAttribute('data-theme');
+      setTheme(next);
+    };
+    window.addEventListener('storage', onStorage);
+    return () => window.removeEventListener('storage', onStorage);
+  }, []);
+
   const toggleTheme = () => {
     const nextTheme = theme === 'dark' ? 'light' : 'dark';
     if (nextTheme === 'dark') document.documentElement.dataset.theme = 'dark';

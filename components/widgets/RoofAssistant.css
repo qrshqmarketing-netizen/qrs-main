@@ -88,7 +88,7 @@
   .qa-bubble{width:64px;height:64px}
   .qa.open .qa-bubble{opacity:1;pointer-events:auto}
   .qa-teaser{right:78px;max-width:230px}
-  .qa-panel{position:absolute;inset:auto 0 80px auto;right:0;bottom:80px;width:380px;height:min(600px,calc(100vh - 130px));border-radius:var(--radius)}
+  .qa-panel{position:absolute;inset:auto 0 80px auto;right:0;bottom:80px;width:380px;height:min(600px,calc(100dvh - 130px));border-radius:var(--radius)}
   .qa-new,.qa-x{width:34px;height:34px}
   .qa-chip{min-height:0}
   .qa-form textarea{font-size:.9rem}
