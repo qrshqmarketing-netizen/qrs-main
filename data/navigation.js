@@ -265,7 +265,6 @@ export const HEADER_DROPDOWNS = [
         { label: 'License, Bonding & Insurance', href: '/credentials/' },
         { label: 'Manufacturer Certifications', href: '/credentials/#certifications' },
         { label: 'Reviews', href: '/reviews/' },
-        { label: 'Our Team', href: '/about-us/#team' },
       ] },
     ],
   },
@@ -295,7 +294,6 @@ export const HEADER_DROPDOWNS = [
     groups: [
       { title: 'Company', links: [
         { label: 'About QRS', href: '/about-us/' },
-        { label: 'Our Team', href: '/about-us/#team' },
         { label: 'Reviews', href: '/reviews/' },
         { label: 'Careers', href: '/careers/' },
         { label: 'For Contractors', href: '/contractors/' },

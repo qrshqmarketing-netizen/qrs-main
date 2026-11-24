@@ -1,7 +1,7 @@
 import FinalCta from '@/components/sections/FinalCta';
 import Image from 'next/image';
 import { QhHero, QhReviews, QhStart } from '@/components/home/QrsSections';
-import { AbrGiving, AbrJoin, AbrNumbers, AbrOffices, AbrProcess, AbrStory, AbrTeam, AbrValues, AbrWho } from '@/components/about/AboutRemote';
+import { AbrGiving, AbrJoin, AbrNumbers, AbrOffices, AbrProcess, AbrStory, AbrValues, AbrWho } from '@/components/about/AboutRemote';
 import JsonLd from '@/components/ui/JsonLd';
 import { ABOUT_LINK, HOME } from '@/data/catalog';
 import { ABOUT_PAGE as page } from '@/data/pages/about';
@@ -45,7 +45,6 @@ export default function AboutPage() {
       <AbrStory story={{ ...page.story, paragraphs: page.story.paragraphs.slice(0, 1) }} />
       <AbrValues mission={page.mission} />
       <AbrProcess process={page.process} />
-      <AbrTeam team={page.team} />
       <QhReviews path={ABOUT_LINK.href} />
       <AbrOffices />
       <AbrGiving text={page.story.paragraphs[1]} />

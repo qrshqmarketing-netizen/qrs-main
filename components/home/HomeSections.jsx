@@ -417,7 +417,7 @@ export function HomeCrew({ lang = 'en' }) {
         <h2 id="hg-crew">{T('12 crews. One way of working.')}</h2>
         <p>{T('Dedicated crews for shingle, tile and flat roofs, with our senior production manager on quality control for every job. We speak English, Spanish and Tagalog.')}</p>
         <div className="hg-crew-ctas">
-          <SiteLink className="btn btn-gold" href="/about-us/#team">{T('Meet our team')} <span className="arrow">→</span></SiteLink>
+          <SiteLink className="btn btn-gold" href="/about-us/">{T('Meet our team')} <span className="arrow">→</span></SiteLink>
           <SiteLink className="btn btn-outline" href="/careers/">{T('Join the crew')}</SiteLink>
         </div>
       </div>

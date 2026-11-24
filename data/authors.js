@@ -9,7 +9,7 @@ export const AUTHORS = {
     name: 'Tony G.',
     role: 'Owner',
     bio: 'Tony is the owner of Quality Roofing Specialists, which he co-founded with Adva. He did his first roofing job at 16 and worked in the roofing departments of other companies before starting QRS, a licensed California contractor since 2020.',
-    href: `${ABOUT_LINK.href}#team`,
+    href: ABOUT_LINK.href,
   },
 };
 
