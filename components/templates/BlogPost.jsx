@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { titleOverPicture } from '@/data/blog/thumbnails';
 import Breadcrumbs from '@/components/sections/Breadcrumbs';
 import FinalCta from '@/components/sections/FinalCta';
 import RelatedLinks from '@/components/sections/RelatedLinks';
@@ -166,7 +165,6 @@ export default function BlogPost({ post, posts }) {
     image: post.image,
     article: { headline: post.title, datePublished: post.datePublished, dateModified: post.dateModified, author },
   });
-  const cover = titleOverPicture(post.image);
   const toc = [...post.sections.map((s) => ({ id: headingId(s.heading), label: s.heading })), ...(faqs.length ? [{ id: headingId(FAQ_HEADING), label: FAQ_HEADING }] : [])];
   return (
     <main id="top">
@@ -175,23 +173,8 @@ export default function BlogPost({ post, posts }) {
       <article className="post">
         <div className="container post-inner">
           <Breadcrumbs items={crumbs} />
-          {cover ? (
-            // a plain photo thumbnail: the eyebrow and the H1 sit on the picture (data/blog/thumbnails.js)
-            <div className="post-cover">
-              <figure className="post-image">
-                <Image src={post.image} alt={post.imageAlt || ''} width={1536} height={1024} sizes="(min-width: 840px) 760px, calc(100vw - 32px)" preload />
-              </figure>
-              <div className="post-cover-text">
-                <div className="eyebrow">Roofing Blog</div>
-                <h1>{post.title}</h1>
-              </div>
-            </div>
-          ) : (
-            <>
-              <div className="eyebrow">Roofing Blog</div>
-              <h1>{post.title}</h1>
-            </>
-          )}
+          <div className="eyebrow">Roofing Blog</div>
+          <h1>{post.title}</h1>
           <p className="post-meta">
             By{' '}
             <SiteLink className="post-author" href={author.href} rel="author">
@@ -206,7 +189,7 @@ export default function BlogPost({ post, posts }) {
             )}{' '}
             · {readMinutes(post)} min read
           </p>
-          {post.image && !cover && (
+          {post.image && (
             <figure className="post-image">
               <Image src={post.image} alt={post.imageAlt || ''} width={1536} height={1024} sizes="(min-width: 840px) 760px, calc(100vw - 32px)" preload />
             </figure>
