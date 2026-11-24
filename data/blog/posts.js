@@ -24,6 +24,158 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // New shingles over old ones (owner, November 24 2026): keyword "shingles over old shingles". Myth vs. fact, comparative, explains why we tear
+  // off: six myths with the facts (h3 + "**Fact:**", as the moss article), an overlay vs. tear-off comparison (`table: 'versus'`), when an overlay
+  // is even allowed (building codes generally: one layer over a single sound layer of asphalt shingles, never over two layers, a wet or
+  // deteriorated roof, or tile; the building department decides), questions to ask a roofer who suggests one (`checklist: 'tracker'`) and why we
+  // tear off ("We do full tear-offs", as the shingle replacement FAQ says; TotalShield from the deck up, permit, tarps, magnetic nail sweep, 3 to
+  // 5 days). No prices, no lifespans, no warranty terms. Our voice, three "Our point of view" boxes. Pictures: the owner's images (thumbnail and six
+  // in the text).
+  {
+    slug: 'new-shingles-over-old-shingles',
+    title: 'Can You Put New Shingles Over Old Shingles? Myth vs. Fact',
+    keyword: 'shingles over old shingles',
+    topics: ['replacement', 'shingle', 'inspection'],
+    metaTitle: 'New Shingles Over Old Shingles? Myth vs. Fact',
+    metaDescription:
+      'Can you put new shingles over old shingles? Six myths about roof overlays, an overlay vs. tear-off comparison, and why we take roofs down to the deck.',
+    datePublished: '2026-11-24',
+    dateModified: '2026-11-24',
+    image: '/images/blog/new-shingles-over-old-shingles.webp',
+    imageAlt: 'New gray shingles laid over an old layer of worn brown shingles at the edge of a roof, the new shingles rippling where they ride over the old ones',
+    excerpt:
+      'Can new shingles go over old ones? Six common myths about roof overlays and the facts, a side-by-side look at overlay vs. tear-off, and why we take every shingle roof down to the deck.',
+    intro: [
+      'Putting new shingles over old shingles, an “overlay” or “roof-over,” sounds like a shortcut with no downside: no tear-off, less mess, a new-looking roof by the weekend. In some places the building code even allows it, once.',
+      'But a new roof is only as good as what it sits on, and an overlay leaves the old roof, and everything wrong with it, underneath. Below are six common myths about overlays and the facts behind them, a side-by-side comparison with a tear-off, and why we take every shingle roof we replace down to the deck.',
+    ],
+    sections: [
+      {
+        heading: 'Six Myths About Roofing Over Old Shingles, and the Facts',
+        blocks: [
+          { h3: 'Myth 1: An overlay is just as good as a tear-off' },
+          '**Fact:** An overlay is a new surface on an old roof. The deck, the old underlayment and the old flashings all stay where they were, unseen. A tear-off is a new roof: everything comes off down to the deck, and the deck itself gets checked before anything covers it.',
+          { h3: 'Myth 2: The old shingles act as extra protection' },
+          '**Fact:** Old shingles aren’t underlayment. They are worn, brittle and often curled, and the new shingles lie on top of every bump, so they don’t sit flat or seal down evenly. The water barrier that matters is the underlayment on the deck, and an overlay doesn’t replace it.',
+          { img: '/images/blog/new-shingles-over-old-shingles-lumpy-overlay.webp', alt: 'A shingle roof laid over an old layer, its courses rippling and lifting in places where the new shingles ride over the old ones', caption: 'New shingles over old ones: the courses ripple where they ride over the curls and bumps underneath, and some tabs never seal flat.' },
+          { h3: 'Myth 3: If the roof looks fine, the deck is fine' },
+          '**Fact:** Soft or rotted deck from an old leak doesn’t show from the roof surface. Covering it with a second layer means nobody sees it until it gives way underfoot or starts to sag. Our guide to [a sagging roofline](/blog/sagging-roofline-urgent/) shows where that can lead.',
+          { img: '/images/blog/new-shingles-over-old-shingles-hidden-rotted-deck.webp', alt: 'A roofer peels back old shingles during a tear-off to reveal a dark, rotted section of plywood roof deck that was hidden underneath', caption: 'What a tear-off finds: rotted deck under shingles that looked fine from the street. An overlay would have covered it again.' },
+          { h3: 'Myth 4: The old flashings can stay' },
+          '**Fact:** Flashings at chimneys, walls, vents and valleys are where many leaks start. An overlay usually works around them or reuses them, so the weak points of the old roof become the weak points of the new one. Our article on [failing chimney flashing](/blog/failing-chimney-flashing/) shows what those look like.',
+          { img: '/images/blog/new-shingles-over-old-shingles-old-chimney-flashing.webp', alt: 'Old, rusted chimney flashing caked in cracked roof cement where it meets a newer gray shingle roof', caption: 'Newer shingles laid up to old, rusted flashing caked in roof cement. The weak point of the old roof is still the weak point of the new one.' },
+          { h3: 'Myth 5: Two layers can’t hurt' },
+          '**Fact:** Two layers add weight to the framing, hold more heat, and make nails reach through both layers before they find the deck. They also make the next repair harder: a roofer chasing a leak has two roofs to look through.',
+          { h3: 'Myth 6: An overlay saves money in the end' },
+          '**Fact:** It saves the tear-off now and adds it later. When the overlay wears out, both layers have to come off, and whatever was wrong underneath has had years to get worse. You can usually spot an overlay from the ground: two layers at the roof edge, or courses that look lumpy. Our guide to [finding out how old your roof is](/blog/how-old-is-my-roof/) shows how.',
+          { pov: 'We don’t put new shingles over old ones. We tear off, because the only way to know what’s under a roof is to take it off, and the only way to stand behind the new one is to build it on something sound.' },
+        ],
+      },
+      {
+        heading: 'Overlay vs. Tear-Off, Side by Side',
+        blocks: [
+          {
+            table: {
+              head: ['Compare', 'Overlay (new over old)', 'Tear-off (down to the deck)'],
+              rows: [
+                ['The old roof', 'Stays on, under the new shingles', 'Comes off, every layer'],
+                ['The roof deck', 'Covered, unseen and unchecked', 'Checked, and soft or damaged sections replaced'],
+                ['Underlayment', 'The old one stays', 'New underlayment over the whole deck'],
+                ['Flashings and drip edge', 'Often worked around or reused', 'Replaced'],
+                ['How the new shingles lie', 'Over the bumps and curls of the old roof', 'Flat on a clean, new surface'],
+                ['Weight on the framing', 'Two layers', 'One layer'],
+                ['The next replacement', 'Two layers to tear off', 'One layer to tear off'],
+              ],
+            },
+          },
+          { img: '/images/blog/new-shingles-over-old-shingles-overlay-vs-tear-off.webp', alt: 'Side by side: on the left a lumpy shingle overlay with a double edge at the gutter, on the right the same roof torn off to plywood deck with new underlayment and a new white drip edge', caption: 'Left: an overlay, lumpy, with two layers at the edge. Right: torn off to the deck, with new underlayment and new drip edge going on.' },
+        ],
+      },
+      {
+        heading: 'When an Overlay Is Even Allowed',
+        blocks: [
+          'Building codes generally allow one new layer of asphalt shingles over a single existing layer, and only when that roof is in sound condition. They generally don’t allow it:',
+          {
+            list: [
+              'Over a roof that already has two layers.',
+              'Over a roof that is wet, soft or deteriorated.',
+              'Over tile, slate or wood shakes.',
+            ],
+          },
+          'Your city or county building department has the final word, and the permit for a reroof says what it allows. Our guide to [roofing permits](/blog/roofing-permits-los-angeles/) explains how permits work in the cities around us. “Allowed once” is not the same as “a good idea,” which is the rest of this article.',
+        ],
+      },
+      {
+        heading: 'Questions to Ask a Roofer Who Suggests an Overlay',
+        blocks: [
+          {
+            checklist: [
+              'How many layers are on the roof now, and how do you know?',
+              'How will you check the deck if the old shingles stay on?',
+              'What happens to the flashings at the chimney, walls, vents and valleys?',
+              'Is new underlayment part of the job?',
+              'Does the permit allow an overlay on this roof?',
+              'What does the shingle manufacturer’s warranty say about installing over an old layer?',
+              'Can I see the scope and price in writing, next to the price of a tear-off?',
+            ],
+          },
+          { pov: 'Ask any roofer who suggests an overlay to price a tear-off next to it. If the only difference they can name is the tear-off itself, you are being sold less roof, not a better deal.' },
+        ],
+      },
+      {
+        heading: 'Why We Tear Off Every Shingle Roof We Replace',
+        blocks: [
+          'We do full tear-offs. Our *TotalShield* Shingle System is a [shingle roof replacement](/residential-roofing/shingle-roofing/replacement/) from the deck up:',
+          {
+            steps: [
+              '**Permit first.** We pull the permit and protect your landscaping with tarps before the tear-off starts.',
+              '**Tear off.** Every layer of the old roof comes off, down to the deck.',
+              '**Check the deck.** Soft or damaged sections are replaced, so the new roof sits on something sound.',
+              '**Build it new.** New underlayment, flashings, drip edge and balanced attic ventilation, then the new shingles and ridge caps.',
+              '**Clean up.** A magnetic nail sweep of the yard and driveway, and a walk-through of the finished roof.',
+            ],
+          },
+          { img: '/images/blog/new-shingles-over-old-shingles-tear-off-drone-view.webp', alt: 'A drone view of a single-story home mid tear-off: part of the roof stripped to plywood deck with new sheets in places, the rest under new underlayment, tarps over the plants and a debris trailer in the driveway', caption: 'A tear-off in progress: down to the deck on one side, with damaged sheets replaced, new underlayment on the other, and tarps over the plants below.' },
+          'Most home roof replacements take 3 to 5 days. You get a written scope and price before any work starts, and [roof financing](/roof-financing/) is available for home replacements, subject to credit approval.',
+          { img: '/images/blog/new-shingles-over-old-shingles-magnetic-nail-sweep.webp', alt: 'A roofer rolls a magnetic nail sweeper across a driveway in front of a home with a finished gray shingle roof', caption: 'The last step of a tear-off: a magnetic nail sweep of the driveway and yard, so the old roof leaves with us.' },
+          { pov: 'A tear-off is the day we find out what the old roof was hiding, and it is the day we fix it. Nobody should pay for a new roof built on top of an old problem.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Can you put new shingles over old shingles?',
+        a: 'Building codes generally allow one new layer over a single existing layer of asphalt shingles in sound condition, but not over two layers, a wet or deteriorated roof, or tile. Allowed isn’t the same as a good idea: an overlay leaves the deck, the old underlayment and the old flashings unseen. We do full tear-offs.',
+      },
+      {
+        q: 'Is a roof overlay cheaper than a tear-off?',
+        a: 'Up front, usually, because the tear-off is skipped. But when the overlay wears out, both layers have to come off, and anything wrong underneath has had years to get worse. Ask for both prices in writing and compare what each one includes.',
+      },
+      {
+        q: 'How many layers of shingles can a roof have?',
+        a: 'Codes generally allow no more than two, and many roofs with two layers can’t take a third. Your building department decides for your roof. A tear-off takes the roof back to one layer.',
+      },
+      {
+        q: 'How can I tell if my roof already has two layers?',
+        a: 'Look at the edge of the roof from the ground or a ladder at the gutter: two layers often show as a double edge. Lumpy, uneven courses can also be a sign. A roofer can confirm it during a roof evaluation.',
+      },
+      {
+        q: 'Do you install new shingles over old roofs?',
+        a: 'No. We do full tear-offs, so we can check the deck, replace worn flashings and give the new shingles a flat, clean surface to lie on.',
+      },
+      {
+        q: 'How long does a tear-off take?',
+        a: 'Most home roof replacements, tear-off included, take 3 to 5 days. The size of the roof, its pitch, any deck repairs and the weather can change that.',
+      },
+    ],
+    closing: {
+      heading: 'Thinking About a New Shingle Roof?',
+      blocks: [
+        'Start with what is under the old one. Book a [free roof evaluation](#roof-check) and you get drone footage and photos of your roof, a plain-English answer on repair or replace, and a written scope and price before any work. Or call [(310) 340-1643](tel:+13103401643).',
+      ],
+    },
+    related: ['/residential-roofing/shingle-roofing/replacement/', '/roof-replacement/', '/residential-roofing/shingle-roofing/', '/roof-inspection/'],
+  },
   // Repair or replace: the 3-question test (owner, November 24 2026): keyword "repair or replace your roof". Talking head + checklist, comparative,
   // honest framing: the three questions our roofers ask (one place or all over; is what's underneath still sound; will a repair buy real time),
   // how to score them (`table: 'decide'`), the middle options (SecondLife lift and relay, maintenance and the RoofRevive tune-up), a checklist

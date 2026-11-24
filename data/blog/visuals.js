@@ -21,6 +21,11 @@ export const POST_VISUALS = {
   'how-to-trace-a-roof-leak-in-the-attic': {
     'Stop 3: Look Up and Read the Roof Deck': { table: 'cards' },
   },
+  'new-shingles-over-old-shingles': {
+    'Overlay vs. Tear-Off, Side by Side': { table: 'versus' },
+    'Questions to Ask a Roofer Who Suggests an Overlay': { checklist: 'tracker' },
+    'Why We Tear Off Every Shingle Roof We Replace': { steps: 'timeline' },
+  },
   'repair-or-replace-roof-3-question-test': {
     'How to Score the Test': { table: 'decide' },
     'Your Repair-or-Replace Checklist': { checklist: 'tracker' },
