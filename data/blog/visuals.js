@@ -18,6 +18,15 @@
 //   table: 'cards'          rows to compare as cards with labelled lines
 //   table: 'hotspots'       "where / what goes wrong" rows as an interactive picture of a flat commercial roof
 export const POST_VISUALS = {
+  'keep-critters-out-of-your-roofline': {
+    'Where Critters Get Into a Roofline': { list: 'facts-numbered' },
+    'Who Is Getting In?': { table: 'cards' },
+    'A Quick Demo: Check Your Roofline in Ten Minutes': { steps: 'timeline' },
+    'Signs You Already Have Guests': { list: 'flags' },
+    'What Fixes Which Opening': { table: 'decide' },
+    'Your Roofline Checklist': { checklist: 'tracker' },
+    'How We Help Close Up the Roofline': { steps: 'timeline' },
+  },
   'yearly-roof-tune-up': {
     'Ride Along: One Visit, Stop by Stop': { steps: 'timeline' },
     'What a Tune-Up Catches': { table: 'cards' },

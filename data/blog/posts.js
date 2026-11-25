@@ -24,6 +24,203 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // Keeping critters out of the roofline (owner, November 25 2026, brief "How to keep critters out of your roofline / Quick demo /
+  // Educational / Soffit and fascia repair"): keyword "critters out of your roofline". Soffit and fascia repair is NOT a confirmed QRS
+  // service (the Newport Beach note leaves it out for that reason), so the article claims only the roofing side the site already states:
+  // bird stops and eave closures on tile roofs (tile pages), attic vent repair at the eaves and soffits (attic ventilation FAQ), vent
+  // screens and eave closures checked on maintenance plan visits; rotted soffit or fascia boards are carpentry, pointed out in the photos;
+  // animals inside go to pest control or wildlife removal. Where they get in (`list: 'facts-numbered'`), who is getting in
+  // (`table: 'cards'`), a ten-minute check (`steps: 'timeline'`), signs (`list: 'flags'`), what fixes which opening (`table: 'decide'`),
+  // a checklist (`checklist: 'tracker'`) and how we help (`steps: 'timeline'`). No prices. Our voice, three "Our point of view" boxes.
+  // cardImage is a stand-in until the owner's thumbnail arrives.
+  {
+    slug: 'keep-critters-out-of-your-roofline',
+    title: 'How to Keep Critters Out of Your Roofline: A Quick Demo',
+    keyword: 'critters out of your roofline',
+    topics: ['maintenance', 'ventilation', 'tile', 'repair', 'inspection'],
+    metaTitle: 'How to Keep Critters Out of Your Roofline: A Quick Demo',
+    metaDescription:
+      'How to keep critters out of your roofline: where rats, squirrels and birds get in at the eaves and vents, a ten-minute check, and what fixes each opening.',
+    datePublished: '2026-11-25',
+    dateModified: '2026-11-25',
+    image: '/images/blog/keep-critters-out-of-your-roofline.webp',
+    imageAlt: 'A squirrel peeking out of an open tile end at the eave of a clay tile roof, beside a torn soffit vent screen',
+    excerpt:
+      'Rats, squirrels and birds rarely chew through a roof. They find a gap at the roofline that is already there. Where they get in, a ten-minute check from the ground, the signs you already have guests, and what fixes each opening.',
+    intro: [
+      'The best way to keep critters out of your roofline is to close the gaps before they find them. Rats, squirrels and birds rarely make a new hole in a roof. They find one that is already there: an open tile end at the eave, a torn vent screen, a gap where the roof edge meets the fascia, a soffit board that has rotted loose.',
+      'Here is where they usually get in, who is likely getting in, a quick check you can do from the ground in about ten minutes, the signs you already have guests, and what fixes each kind of opening, including which ones are a roofer’s job and which aren’t.',
+    ],
+    sections: [
+      {
+        heading: 'Where Critters Get Into a Roofline',
+        blocks: [
+          { img: '/images/blog/keep-critters-out-of-your-roofline-nests-in-tile-ends.webp', alt: 'Nesting twigs poking out of two open tile ends along the bottom row of a clay tile roof', caption: 'Open tile ends at the eave, already moved into: twigs and nesting material in the bottom row.' },
+          {
+            list: [
+              '**Open tile ends at the eaves.** On a tile roof, the curved ends of the bottom row leave openings unless they are closed off with bird stops or eave closures.',
+              '**Torn or loose vent screens.** Soffit, eave and gable vents are covered with screen to let air in and keep animals out. Once a screen tears or pulls loose, it is an open door to the attic.',
+              '**Damaged roof vents.** A cracked vent hood or a missing screen on a roof vent lets animals in from above.',
+              '**Gaps at the roof edge.** Where the roofing, the drip edge and the fascia board don’t meet tightly, small animals can squeeze in behind them.',
+              '**Rotted or loose soffit and fascia boards.** Wood that has been wet for years softens, splits or pulls away, leaving a gap at the corner.',
+              '**Where the roof meets a wall.** At dormers, second stories and chimneys, gaps behind the flashing or at the eave corners.',
+              '**A path from a tree.** Branches that reach the roof give squirrels and rats an easy way up. Our guide to [tree branches over your roof](/blog/tree-branches-over-your-roof/) covers which ones to trim.',
+            ],
+          },
+          { img: '/images/blog/keep-critters-out-of-your-roofline-torn-soffit-vent.webp', alt: 'A soffit vent with its metal screen torn open and the wood chewed and splintered around the frame', caption: 'A torn soffit vent screen with chewed wood around it: an open door to the attic.' },
+          { pov: 'Most of the critter problems we see start with a small gap that has been there for years. Close the gap, and the problem usually goes with it.' },
+        ],
+      },
+      {
+        heading: 'Who Is Getting In?',
+        blocks: [
+          { img: '/images/blog/keep-critters-out-of-your-roofline-rat-at-eave-corner.webp', alt: 'A rat squeezing into a gap at the corner of a roof eave where a rotted fascia board has split away from the roof edge', caption: 'A rat working its way into a gap at the eave corner, where the wood has rotted and split.' },
+          {
+            table: {
+              head: ['Critter', 'Signs', 'Where they usually get in'],
+              rows: [
+                ['Rats and mice', 'Scratching in the walls or ceiling at night, droppings in the attic, chewed insulation', 'Small gaps at the eaves, torn vent screens, open tile ends'],
+                ['Squirrels', 'Noise in the attic early in the morning and late afternoon, chewed edges at the roofline', 'Gaps at the roof edge and corners, often reached from a tree'],
+                ['Birds', 'Nesting material poking out of tile ends or vents, chirping at the eaves in spring', 'Open tile ends, vent openings, gaps behind the gutters'],
+                ['Raccoons', 'Heavy thumping, torn vent covers, displaced roofing at an edge', 'Weak vents, loose soffit panels and roof edges they can pull open'],
+              ],
+            },
+          },
+        ],
+      },
+      {
+        heading: 'A Quick Demo: Check Your Roofline in Ten Minutes',
+        blocks: [
+          'Stay on the ground. Binoculars or your phone’s zoom will show you most of what matters.',
+          { img: '/images/blog/keep-critters-out-of-your-roofline-binoculars-side-yard.webp', alt: 'A homeowner in a side yard looking up at the eaves of a stucco house with a tile roof through binoculars', caption: 'The ten-minute check, done from the ground: binoculars on the eaves, the vents and the corners.' },
+          {
+            steps: [
+              '**Walk the eaves.** Go slowly around the house and look up at the line where the roof meets the wall, all the way around.',
+              '**Look at the tile ends.** On a tile roof, check the bottom row: is each curved end closed off, or can you see into it?',
+              '**Look at every vent.** Soffit and eave vents under the overhang, gable vents at the peaks, and the vents on the roof. Look for torn, bent or missing screens.',
+              '**Check the corners.** The corners of the eaves and where the roof meets a wall are where boards split and gaps open first.',
+              '**Look at the boards.** Peeling paint, dark stains, sagging or soft-looking soffit and fascia boards point to wood that has been wet.',
+              '**Look for the path up.** Branches touching the roof, vines on the walls, a fence or patio cover next to the eaves.',
+              '**Listen and look at dusk.** Animals that live in the attic often come and go around sunrise and sunset; watching an eave corner for a few minutes can show you exactly where.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Signs You Already Have Guests',
+        blocks: [
+          { img: '/images/blog/keep-critters-out-of-your-roofline-attic-signs.webp', alt: 'A flashlight beam in an attic showing tunneled pink insulation, droppings and shredded nesting material near an eave vent', caption: 'Tunneled insulation, droppings and nesting material by an eave vent: signs someone is already living there.' },
+          {
+            list: [
+              '**Scratching or scurrying** in the ceiling or walls, especially at night or early morning.',
+              '**Droppings or nesting material** in the attic, at the eaves or below a vent.',
+              '**Chewed wood or vent screens** at the roofline.',
+              '**Grease or rub marks** along an edge where an animal squeezes through again and again.',
+              '**Flattened or tunneled insulation** in the attic.',
+              '**A smell** in a room under the attic.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Get Them Out Before You Close It Up',
+        blocks: [
+          'Never seal an opening with an animal still inside. A trapped animal will chew a new way out, often through the inside of the house, or die in the attic.',
+          { note: '**Call a licensed pest control or wildlife removal company first.** They can make sure the animals are out before the openings are closed, and they know the rules for active bird nests, many of which are protected.' },
+          { pov: 'We fix the roofline; we don’t remove animals. The order matters: get them out, then close the openings, so the repair is the end of the problem.' },
+        ],
+      },
+      {
+        heading: 'What Fixes Which Opening',
+        blocks: [
+          { img: '/images/blog/keep-critters-out-of-your-roofline-rotted-fascia-corner.webp', alt: 'The corner of a roof eave with rotted, split fascia boards, peeling paint and a gap opening between the boards and the soffit', caption: 'Rotted fascia and soffit boards at a corner: carpentry, and one of the gaps animals use most.' },
+          {
+            table: {
+              head: ['The opening', 'The fix', 'Who to call'],
+              rows: [
+                ['Open tile ends at the eaves', 'Bird stops or eave closures fitted to the bottom row', 'A roofer'],
+                ['A torn or missing soffit or eave vent screen', 'The vent repaired or replaced', 'A roofer'],
+                ['A damaged roof vent', 'The vent replaced and flashed into the roofing', 'A roofer'],
+                ['A gap at the roof edge', 'The roof edge and drip edge repaired', 'A roofer'],
+                ['Rotted or broken soffit or fascia boards', 'The wood repaired or replaced', 'A carpenter or general contractor'],
+                ['Branches that reach the roof', 'Trimmed back from the roof', 'A tree service'],
+                ['Animals still inside', 'Removed before anything is sealed', 'Pest control or wildlife removal'],
+              ],
+            },
+          },
+          { img: '/images/blog/keep-critters-out-of-your-roofline-bird-stops.webp', alt: 'The bottom row of a clay tile roof with terracotta bird stops closing every curved tile end above a copper gutter', caption: 'Bird stops closing every curved tile end along the eave.' },
+          'Steel wool and expanding foam stuffed into a gap may slow an animal down, but they aren’t a lasting fix for an opening in the roof itself.',
+        ],
+      },
+      {
+        heading: 'Your Roofline Checklist',
+        blocks: [
+          {
+            checklist: [
+              'Walked all the way around the eaves from the ground',
+              'Checked the bottom row of tiles for open ends',
+              'Checked every soffit, gable and roof vent for torn or missing screens',
+              'Looked at the eave corners and where the roof meets a wall',
+              'Looked for stained, peeling or soft soffit and fascia boards',
+              'Noted any branches, vines or structures that give animals a way up',
+              'Called pest control if there are signs of animals inside',
+              'Booked a roofer for the roof openings and a carpenter for any rotted wood',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'How We Help Close Up the Roofline',
+        blocks: [
+          {
+            steps: [
+              '**Book a free roof evaluation.** A roofer looks at the roof and the roofline, with *RoofScan 360* drone footage and photos of the eaves, the vents and the edges.',
+              '**Find every opening.** Open tile ends, torn vent screens, damaged roof vents and gaps at the roof edge, each one photographed.',
+              '**Tell you who fixes what.** The roof openings are our work. If soffit or fascia boards are rotted, we show you in the photos so a carpenter can repair them.',
+              '**Give you a written scope and price** before any work.',
+            ],
+          },
+          { img: '/images/blog/keep-critters-out-of-your-roofline-roofer-fits-vent.webp', alt: 'A roofer on a ladder fitting a new screened vent into the soffit under the eave of a tile-roofed stucco home', caption: 'A new screened vent going into the soffit under the eave.' },
+          'On a tile roof, missing bird stops and eave closures are replaced as part of a [tile roof repair](/residential-roofing/tile-roofing/repair/), and put back in place during a [tile lift and relay](/residential-roofing/tile-roofing/lift-and-relay/). Torn intake vents at the eaves and soffits are repaired or replaced as part of our [attic ventilation](/residential-roofing/attic-ventilation/) work. Our [roof maintenance plans](/roof-maintenance-plans/) check and photograph the vent screens and eave closures on every visit.',
+          { img: '/images/blog/keep-critters-out-of-your-roofline-eave-closures-weep-holes.webp', alt: 'Terracotta eave closures with small holes fitted under each curved tile along the bottom row of a clay tile roof', caption: 'Eave closures along the bottom row; some have small holes so water can drain while animals stay out.' },
+          { pov: 'A roofline that keeps animals out also keeps embers and wind-driven rain out. The same small gaps let all three in.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'How do critters get into the roofline?',
+        a: 'Usually through an opening that is already there: open tile ends at the eaves, torn soffit or gable vent screens, damaged roof vents, gaps where the roof edge meets the fascia, or rotted soffit and fascia boards.',
+      },
+      {
+        q: 'What are bird stops?',
+        a: 'Bird stops, or eave closures, close off the open curved ends of the bottom row of tiles on a tile roof. Without them, birds, rodents, debris and embers can get in under the tiles.',
+      },
+      {
+        q: 'Should I seal the gaps myself?',
+        a: 'Not until you know nothing is living inside. Sealing an animal in forces it to chew a new way out. Have pest control or wildlife removal check first, then have the openings closed properly.',
+      },
+      {
+        q: 'Do you remove animals from the attic?',
+        a: 'No. That is a job for a licensed pest control or wildlife removal company. We repair the roof openings they get in through, once the animals are out.',
+      },
+      {
+        q: 'Do you repair soffit and fascia?',
+        a: 'We repair the roofing side of the roofline: tile bird stops and eave closures, eave and soffit vents, roof vents and the roof edge. If the soffit or fascia boards themselves are rotted, we show you in the photos so a carpenter can repair the wood.',
+      },
+      {
+        q: 'Can animals damage the roof itself?',
+        a: 'They can. Squirrels and rats chew at edges and vent screens, raccoons can pull roofing and vents loose, and nesting material in tile ends and vents holds water and debris. Closing the openings protects the roof too.',
+      },
+    ],
+    closing: {
+      heading: 'Hearing Something in the Attic?',
+      blocks: [
+        'Once the animals are out, find out where they got in. [Book a free roof evaluation](#roof-check): a roofer photographs the roofline, shows you every opening and gives you a written scope and price before any work. Or call [(310) 340-1643](tel:+13103401643).',
+      ],
+    },
+    related: ['/residential-roofing/attic-ventilation/', '/residential-roofing/tile-roofing/repair/', '/roof-maintenance-plans/', '/roof-inspection/'],
+  },
   // What a yearly roof tune-up catches (owner, November 25 2026, brief "What a yearly roof tune-up catches / Ride-along / Purchase-intent /
   // Annual maintenance service"): keyword "roof tune-up". A ride-along on one visit, stop by stop (`steps: 'timeline'`), what it catches
   // (`table: 'cards'`), what it doesn't cover (`list: 'flags'`), a one-time *RoofRevive* tune-up or the yearly *RoofCare Plan*
