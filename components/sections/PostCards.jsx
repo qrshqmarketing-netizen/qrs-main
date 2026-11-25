@@ -8,7 +8,8 @@ export const postDate = (iso) => new Date(`${iso}T12:00:00Z`).toLocaleDateString
 
 // One blog index card: its thumbnail (placeholder art for a post without one), date, title and excerpt. `hidden` keeps the card in the
 // page's HTML but out of sight (the filters and pages in BlogBrowser.jsx), so every article stays a link on the page.
-// post: { slug, href, title, excerpt, datePublished, dateLabel, picture, overlay (the title goes on the picture, data/blog/thumbnails.js), scene }
+// post: { slug, href, title, excerpt, datePublished, dateLabel, category ('Residential', 'Commercial' or both, lib/blogFilters.js), picture,
+// overlay (the title goes on the picture, data/blog/thumbnails.js), scene }
 export function PostCard({ post, hidden = false }) {
   return (
     <article className="pc-card" hidden={hidden}>
@@ -29,7 +30,10 @@ export function PostCard({ post, hidden = false }) {
       ) : (
         <div className={`pc-media art ${SCENES[post.scene % SCENES.length]}`} aria-hidden="true"></div>
       )}
-      <time dateTime={post.datePublished}>{post.dateLabel}</time>
+      <p className="pc-meta">
+        {post.category && <span className="pc-cat">{post.category}</span>}
+        <time dateTime={post.datePublished}>{post.dateLabel}</time>
+      </p>
       {!(post.picture && post.overlay) && (
         <h3>
           <SiteLink className="pc-link" href={post.href}>{post.title}</SiteLink>

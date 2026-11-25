@@ -61,7 +61,7 @@ export default function BlogBrowser({ posts = [], heading }) {
   const a = find(AUDIENCE_FILTERS, audience);
   const t = find(TOPIC_FILTERS, topic);
   const filtering = Boolean(a || t);
-  const fits = (post, wantA = a, wantT = t) => (!wantA || wantA.matches(post.topics)) && (!wantT || wantT.matches(post.topics));
+  const fits = (post, wantA = a, wantT = t) => (!wantA || wantA.matches(post)) && (!wantT || wantT.matches(post.topics));
   const shown = posts.filter((post) => fits(post) && (filtering || !post.featured));
   const pages = Math.max(1, Math.ceil(shown.length / PAGE_SIZE));
   const current = Math.min(page, pages);
@@ -69,7 +69,7 @@ export default function BlogBrowser({ posts = [], heading }) {
   const onPage = new Set(shown.slice(first, first + PAGE_SIZE).map((post) => post.slug));
 
   // A filter is offered when some article has it, and it can be added to the other filter that is on
-  const audiences = AUDIENCE_FILTERS.filter((f) => posts.some((post) => f.matches(post.topics)));
+  const audiences = AUDIENCE_FILTERS.filter((f) => posts.some((post) => f.matches(post)));
   const topics = TOPIC_FILTERS.filter((f) => posts.some((post) => f.matches(post.topics)));
 
   const pick = (setFilter) => (key) => {

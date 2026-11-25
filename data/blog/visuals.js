@@ -18,6 +18,12 @@
 //   table: 'cards'          rows to compare as cards with labelled lines
 //   table: 'hotspots'       "where / what goes wrong" rows as an interactive picture of a flat commercial roof
 export const POST_VISUALS = {
+  'tpo-vs-epdm-vs-modified-bitumen': {
+    'TPO vs. EPDM vs. Modified Bitumen, Side by Side': { table: 'cards' },
+    'Which System Fits Which Building?': { table: 'decide' },
+    'Questions to Ask Before You Choose a System': { checklist: 'tracker' },
+    'How We Choose a System for Your Roof': { steps: 'timeline' },
+  },
   'roof-coating-worth-it': {
     'When a Roof Coating Can Make Sense': { table: 'decide' },
     'When a Roof Coating Doesn’t Work': { list: 'flags' },

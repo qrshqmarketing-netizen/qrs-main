@@ -11,6 +11,7 @@ import { BLOG_PAGE as page } from '@/data/pages/blog';
 import { heroOutcome } from '@/data/heroOutcomes';
 import { pageMetadata } from '@/lib/pages';
 import { pageJsonLd } from '@/lib/structuredData';
+import { categoryOf } from '@/lib/blogFilters';
 import RoofCheck from '@/components/sections/RoofCheck';
 
 // Kept out of search results until there's a published post
@@ -45,6 +46,7 @@ export default async function BlogPage() {
     overlay: titleOverPicture(post.image || post.cardImage),
     scene: i,
     topics: post.topics || [],
+    category: categoryOf(post).label,
     featured: post.slug === featured?.slug,
   }));
   return (

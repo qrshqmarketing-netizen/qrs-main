@@ -17,6 +17,7 @@ import { articleImageSrc } from '@/lib/articleFormat';
 import { authorOf } from '@/data/authors';
 import { KEEP_READING } from '@/data/blog/links';
 import SiteLink from '@/components/ui/SiteLink';
+import { categoryOf } from '@/lib/blogFilters';
 import './BlogPost.css';
 
 const FAQ_HEADING = 'Frequently Asked Questions';
@@ -155,6 +156,7 @@ export default function BlogPost({ post, posts }) {
   const path = blogPath(post.slug);
   const crumbs = [HOME, BLOG_LINK, { label: post.title, href: path }];
   const faqs = post.faqs || [];
+  const category = categoryOf(post); // Residential, Commercial or both (lib/blogFilters.js), above the title with a link to that filter
   const author = authorOf(post); // Tony G., the owner, unless the article names another known author (data/authors.js)
   const schema = pageJsonLd({
     path,
@@ -173,7 +175,12 @@ export default function BlogPost({ post, posts }) {
       <article className="post">
         <div className="container post-inner">
           <Breadcrumbs items={crumbs} />
-          <div className="eyebrow">Roofing Blog</div>
+          <div className="eyebrow">
+            Roofing Blog ·{' '}
+            <SiteLink className="post-category" href={category.href}>
+              {category.label}
+            </SiteLink>
+          </div>
           <h1>{post.title}</h1>
           <p className="post-meta">
             By{' '}

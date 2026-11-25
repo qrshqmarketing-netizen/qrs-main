@@ -24,6 +24,159 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // TPO vs. EPDM vs. modified bitumen (owner, November 24 2026, brief "TPO vs. EPDM vs. modified bitumen / Which flat roof system fits my
+  // building?"): keyword "tpo vs. epdm vs. modified bitumen", for commercial owners and property managers. It goes deeper than the TPO pros
+  // and cons article (keyword "tpo roofing") and the systems table in the commercial contractor article, both linked. What each system is
+  // (TPO: white single-ply, hot-air welded seams; EPDM: synthetic rubber, usually black, seams taped or glued; modified bitumen: asphalt sheets
+  // in layers, base and cap, torch-applied or self-adhered, a granulated white cap sheet available), side by side (`table: 'cards'`), which fits
+  // which building (`table: 'decide'`), questions to ask (`checklist: 'tracker'`), how we choose (as the commercial pages say: a roofer-led
+  // survey, never free; drainage, rooftop equipment, foot traffic and the structure weighed; the written scope names the system; phased so the
+  // building stays open). We install TPO and modified bitumen on commercial buildings (as the contractor article says); EPDM is explained, not
+  // offered. Cool roof rules worded as that article does. No prices, lifespans or performance figures. Our voice, three "Our point of view"
+  // boxes. Thumbnail and six pictures in the text are the owner's images.
+  {
+    slug: 'tpo-vs-epdm-vs-modified-bitumen',
+    title: 'TPO vs. EPDM vs. Modified Bitumen: Which Flat Roof System Fits Your Building?',
+    keyword: 'tpo vs. epdm vs. modified bitumen',
+    topics: ['commercial', 'flat', 'tpo', 'replacement'],
+    metaTitle: 'TPO vs. EPDM vs. Modified Bitumen: Which Fits Your Building?',
+    metaDescription:
+      'TPO vs. EPDM vs. modified bitumen: how the three flat roof systems differ, which fits which kind of building, and what to ask before you choose one.',
+    datePublished: '2026-11-24',
+    dateModified: '2026-11-24',
+    image: '/images/blog/tpo-vs-epdm-vs-modified-bitumen.webp',
+    imageAlt: 'Three neighboring commercial flat roofs side by side: a white TPO roof, a black EPDM roof and a gray granulated modified bitumen roof',
+    excerpt:
+      'TPO, EPDM and modified bitumen are the three flat roof systems most commercial owners hear about. How they differ, which fits which kind of building, and the questions to ask before your roofer names one.',
+    intro: [
+      'TPO vs. EPDM vs. modified bitumen is the choice most commercial building owners face when a flat roof needs replacing. All three can be good roofs. None of them is the best roof for every building.',
+      'Here is what each system is, how they compare side by side, which tends to fit which kind of building, the questions to ask, and how we choose one for a roof we are replacing.',
+    ],
+    sections: [
+      {
+        heading: 'The Three Systems in Plain English',
+        blocks: [
+          { h3: 'TPO' },
+          'TPO is a single-ply membrane, a single sheet of thermoplastic, usually white. The sheets are laid across the roof and their seams are welded together with hot air, so the seams become part of the membrane. The white surface reflects sunlight, which helps keep the roof and the space below cooler. Our [TPO roofing](/commercial-roofing/tpo-roofing/) page and our guide to [TPO pros and cons](/blog/tpo-roofing-pros-and-cons/) go further.',
+          { img: '/images/blog/tpo-vs-epdm-vs-modified-bitumen-tpo-seam-welding.webp', alt: 'A roofer running a hot-air welding machine along a seam between two sheets of white TPO membrane', caption: 'TPO: the seams are welded with hot air, so they become part of the membrane.' },
+          { h3: 'EPDM' },
+          'EPDM is a single-ply synthetic rubber membrane, usually black, with a long track record on commercial roofs. It stays flexible, and its seams are joined with tape or adhesive rather than welded. Standard black EPDM absorbs heat; white versions exist.',
+          { img: '/images/blog/tpo-vs-epdm-vs-modified-bitumen-epdm-seam.webp', alt: 'Close-up of a black EPDM rubber roof with a taped seam and a pipe boot flashing', caption: 'EPDM: black synthetic rubber, its seams joined with tape or adhesive.' },
+          { h3: 'Modified bitumen' },
+          'Modified bitumen is asphalt modified with polymers, made into rolls and installed in layers: a base sheet, then a cap sheet on top. The layers are torch-applied, or self-adhered where an open flame isn’t right for the building. A granulated white cap sheet gives a reflective surface. Our guide to [torch-down roofing: APP vs. SBS](/blog/torch-down-roofing-app-vs-sbs/) explains the two main types.',
+          { img: '/images/blog/tpo-vs-epdm-vs-modified-bitumen-modified-bitumen-layers.webp', alt: 'A gloved hand pressing down the lap of a white granulated cap sheet over a black base sheet at a roof edge', caption: 'Modified bitumen: a base sheet below, a granulated cap sheet lapped over it.' },
+          { pov: 'The system matters less than how it is installed and detailed. Most of the leaks we trace on commercial roofs, of any kind, start at a flashing, a drain or a seam, not in the open field.' },
+        ],
+      },
+      {
+        heading: 'TPO vs. EPDM vs. Modified Bitumen, Side by Side',
+        blocks: [
+          {
+            table: {
+              head: ['System', 'What it is', 'Seams', 'Surface', 'Often chosen for'],
+              rows: [
+                ['TPO', 'A single sheet of thermoplastic membrane', 'Welded with hot air into one piece', 'Usually white and reflective', 'Large, open roofs where a reflective surface and welded seams matter'],
+                ['EPDM', 'A single sheet of synthetic rubber', 'Taped or glued', 'Usually black; white versions exist', 'Roofs where a flexible membrane and a long track record are the priority'],
+                ['Modified bitumen', 'Two or more layers of polymer-modified asphalt sheets', 'Lapped and fused with heat, or self-adhered', 'Granulated cap sheet, available in white', 'Roofs with foot traffic, lots of equipment or many details to flash'],
+              ],
+            },
+          },
+          { img: '/images/blog/tpo-vs-epdm-vs-modified-bitumen-samples.webp', alt: 'Three roof membrane samples on a table: white TPO, black EPDM and a gray granulated modified bitumen sample, a hand pointing at its layers', caption: 'Side by side: TPO, EPDM and a two-layer modified bitumen sample.' },
+          'California’s energy code has cool roof requirements for many nonresidential reroofs, depending on how much of the roof is replaced, the climate zone and the building, so the surface you choose may be decided partly by the permit. Your roofer should know which path applies and handle it with the permit.',
+        ],
+      },
+      {
+        heading: 'Which System Fits Which Building?',
+        blocks: [
+          {
+            table: {
+              head: ['If your building has…', 'Often a good fit', 'Why'],
+              rows: [
+                ['A large, open roof with few penetrations', 'TPO', 'Wide sheets and welded seams cover big areas cleanly, with a reflective surface'],
+                ['Lots of rooftop equipment and service traffic', 'Modified bitumen, with walk pads on the service paths', 'Several layers stand up to foot traffic and are straightforward to repair'],
+                ['Many curbs, pipes and details to flash', 'Modified bitumen or TPO', 'Both can be detailed well around penetrations; the detailing matters more than the system'],
+                ['Occupied spaces where an open flame isn’t right', 'TPO or self-adhered modified bitumen', 'Hot-air welding and self-adhered sheets avoid a torch'],
+                ['A sound EPDM roof with some life left', 'Keep it maintained', 'A roof that works doesn’t need replacing just because another system is popular'],
+                ['A roof that ponds', 'Whichever system is chosen, with the drainage fixed', 'No membrane likes standing water; crickets or a rebuilt slope come first'],
+              ],
+            },
+          },
+          { img: '/images/blog/tpo-vs-epdm-vs-modified-bitumen-equipment-and-walk-pads.webp', alt: 'A technician walking along walk pads across a commercial roof crowded with rooftop units and ductwork', caption: 'A roof full of equipment and service traffic: walk pads protect the surface on the paths people use.' },
+          { pov: 'Be wary of a roofer who recommends the same system for every building. The right answer depends on your roof’s drainage, its equipment, its foot traffic and the structure underneath.' },
+        ],
+      },
+      {
+        heading: 'Questions to Ask Before You Choose a System',
+        blocks: [
+          {
+            checklist: [
+              'Why this system for my building, and not the other two?',
+              'Is the old roof coming off, and what happens if the deck or insulation is wet?',
+              'How will the drainage be improved, and are crickets or new slope in the scope?',
+              'How will the flashings at curbs, drains, walls and penetrations be done?',
+              'Does the reroof trigger the cool roof rules, and how is that handled?',
+              'Will there be an open flame, and how is the building protected?',
+              'How will the work be phased around tenants and operations?',
+              'What does the manufacturer’s warranty cover, and what does the workmanship warranty cover?',
+              'Can I see the scope and price in writing, naming the system and its layers?',
+            ],
+          },
+          'Our guide to [vetting a commercial roofer](/blog/how-to-vet-commercial-roofing-near-me/) has more questions to ask before you hire.',
+        ],
+      },
+      {
+        heading: 'How We Choose a System for Your Roof',
+        blocks: [
+          'We install TPO and modified bitumen on commercial buildings. Every recommendation starts with a roofer-led roof survey: a roofer walks the roof, photographs it area by area and notes how water drains, where the equipment sits, how people move across the roof and how the roof has held up.',
+          {
+            steps: [
+              '**Survey the whole roof first.** Seams, surfacing, past patches, soft or wet areas, drains, curbs and parapet details, all photographed.',
+              '**Weigh what the roof has to do.** Drainage, rooftop equipment, foot traffic and the structure underneath decide the system, not habit.',
+              '**Name it in writing.** Your written scope names the system and explains why it fits, with the price, before any work.',
+              '**Phase the work.** A [commercial roof replacement](/commercial-roofing/replacement/) is phased section by section, so the building stays open.',
+              '**Walk it at the end.** Closeout photos and our 10-year workmanship warranty (call for details), on top of the manufacturer’s.',
+            ],
+          },
+          { img: '/images/blog/tpo-vs-epdm-vs-modified-bitumen-phased-replacement.webp', alt: 'Drone view of a commercial roof replaced in phases: a finished white section, a section down to the deck with roofers at work, and the old roof beyond', caption: 'Phased so the building stays open: one section finished, the next being installed, the rest still the old roof.' },
+          'If your building has an EPDM roof, the survey tells you what condition it is in and whether it needs a repair, maintenance or a replacement. On a [commercial building in Westminster](/projects/commercial-flat-roof-replacement-westminster-92683/), the old roof came off down to the deck and a new white cap sheet went on.',
+          { pov: 'We would rather put the right roof on your building than the one that is easiest for us to sell. If your roof doesn’t need replacing yet, the survey will say so.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What is the difference between TPO, EPDM and modified bitumen?',
+        a: 'TPO is a white thermoplastic single-ply membrane with hot-air welded seams. EPDM is a synthetic rubber single-ply membrane, usually black, with taped or glued seams. Modified bitumen is two or more layers of polymer-modified asphalt sheets, torch-applied or self-adhered, often with a granulated white cap sheet.',
+      },
+      {
+        q: 'Which flat roof system is best for a commercial building?',
+        a: 'It depends on the building: its drainage, rooftop equipment, foot traffic, structure and how much the surface needs to reflect heat. A roofer should survey the roof and explain why one system fits better than the others.',
+      },
+      {
+        q: 'Is TPO better than modified bitumen?',
+        a: 'Not in every case. TPO’s welded seams and white surface suit large, open roofs; modified bitumen’s layers stand up well to foot traffic and many details. Both can be excellent when they are installed and flashed well.',
+      },
+      {
+        q: 'Is EPDM a good choice in a hot, sunny climate?',
+        a: 'Standard black EPDM absorbs heat, so a white surface is often preferred where the sun is strong and cool roof rules apply. White EPDM exists, and a sound EPDM roof that is working doesn’t need replacing just because of its color.',
+      },
+      {
+        q: 'Which systems does QRS install?',
+        a: 'We install TPO and modified bitumen on commercial buildings, chosen after a roofer-led roof survey. The written scope names the system and explains why it fits your building.',
+      },
+      {
+        q: 'Do cool roof rules affect which system I can choose?',
+        a: 'They can. California’s energy code has cool roof requirements for many nonresidential reroofs, depending on how much of the roof is replaced, the climate zone and the building. Your roofer should know which path applies and handle it with the permit.',
+      },
+    ],
+    closing: {
+      heading: 'Choosing a System for Your Building?',
+      blocks: [
+        'Start with the roof you have. Request a [roof survey](#roof-check): a roofer photographs the roof, explains in plain English which system fits your building and why, and gives you a written scope and price before any work. Or call [(310) 340-1643](tel:+13103401643).',
+      ],
+    },
+    related: ['/commercial-roofing/tpo-roofing/', '/commercial-roofing/replacement/', '/commercial-roofing/', '/commercial-roofing/repair/'],
+  },
   // Roof coatings, when they work and when they don't (owner, November 24 2026, brief "Roof coatings: when they work and when they don't. Is a
   // roof coating worth it for my building?"): keyword "roof coating", for commercial building owners and property managers. QRS doesn't
   // apply coatings (owner-confirmed), so the article says so plainly and stays honest: what a coating is and isn't (acrylic, silicone and
