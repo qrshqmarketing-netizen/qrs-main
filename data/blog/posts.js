@@ -24,6 +24,168 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // Roof coatings, when they work and when they don't (owner, November 24 2026, brief "Roof coatings: when they work and when they don't. Is a
+  // roof coating worth it for my building?"): keyword "roof coating", for commercial building owners and property managers. QRS doesn't
+  // apply coatings (owner-confirmed), so the article says so plainly and stays honest: what a coating is and isn't (acrylic, silicone and
+  // polyurethane named only as the common types), when it can make sense (`table: 'decide'`), when it doesn't (`list: 'flags'`), questions to
+  // ask before you coat (`checklist: 'tracker'`), coating vs. repair vs. replacement (`table: 'cards'`), why we don't apply them and what we
+  // do instead (repair, scheduled maintenance, a phased replacement with a white cap sheet or TPO, the roofer-led roof survey, never free).
+  // No prices, no lifespans in years, no performance figures. Our voice, three "Our point of view" boxes. Thumbnail and seven
+  // pictures in the text are the owner's images.
+  {
+    slug: 'roof-coating-worth-it',
+    title: 'Roof Coating: When It Works, When It Doesn’t, and Is It Worth It for Your Building?',
+    keyword: 'roof coating',
+    topics: ['commercial', 'flat', 'restoration', 'repair', 'replacement', 'maintenance'],
+    metaTitle: 'Is a Roof Coating Worth It? When It Works and When It Won’t',
+    metaDescription:
+      'Is a roof coating worth it for your building? What a coating can and can’t do, when it makes sense, when it doesn’t, and what to ask before you coat.',
+    datePublished: '2026-11-24',
+    dateModified: '2026-11-24',
+    image: '/images/blog/roof-coating-worth-it.webp',
+    imageAlt: 'A worker rolling a white coating over half of a weathered gray commercial flat roof',
+    excerpt:
+      'A roof coating can be a reasonable step for a sound roof and a waste of money on a worn one. What a coating can and can’t do, when it makes sense, when it doesn’t, and the questions to ask before you coat your building.',
+    intro: [
+      'A roof coating is a liquid applied over an existing low-slope roof that cures into a seamless surface layer. Coating salespeople often pitch it as a new roof without the tear-off. Sometimes it is a reasonable step; often it isn’t.',
+      'We should say up front: we don’t apply roof coatings. We repair, maintain and replace commercial roofs, so we have no coating to sell you. Here is what a coating can and can’t do, when it makes sense, when it doesn’t, and what to ask before you coat your building.',
+    ],
+    sections: [
+      {
+        heading: 'What a Roof Coating Is, and What It Isn’t',
+        blocks: [
+          'Most roof coatings are acrylic, silicone or polyurethane, rolled or sprayed over the roof that is already there. Done well, on the right roof, a coating renews the top surface, can make a dark roof more reflective, and seals over small surface wear.',
+          'What a coating isn’t is a new roof. It sits on top of everything that is already there: the deck, the insulation, the seams, the flashings and the slope. It doesn’t dry out wet insulation, fix a failed flashing at a curb or a drain, or change where water goes.',
+          { img: '/images/blog/roof-coating-worth-it-coating-over-wet-roof-cutaway.webp', alt: 'Cutaway of a commercial roof: a white coating on top of a cracked old membrane, wet, decayed insulation and a rusting metal deck below', caption: 'A coating only covers the top: under this one, the old membrane is cracked, the insulation is wet and the deck is rusting.' },
+          { pov: 'A coating only ever covers the top of a roof. Most of the leaks we trace start somewhere a coating can’t reach: a flashing, a drain, a seam that has already let go.' },
+        ],
+      },
+      {
+        heading: 'When a Roof Coating Can Make Sense',
+        blocks: [
+          {
+            table: {
+              head: ['Your roof today', 'Is a coating worth considering?', 'Why'],
+              rows: [
+                ['Sound, dry, a few years from worn out, with a weathered surface', 'Possibly', 'A coating renews the surface on a roof that is otherwise doing its job'],
+                ['A dark roof you want to make more reflective, otherwise in good shape', 'Possibly', 'A light-colored coating can reflect more sun, if the roof underneath is sound'],
+                ['Leaking at a few flashings or seams', 'Not by itself', 'Those details need repairing first; a coating over them hides the problem'],
+                ['Wet insulation under the surface', 'No', 'A coating traps the water in; the wet areas have to come out'],
+                ['Ponding across large areas', 'Rarely', 'The water still sits there, and many coatings don’t hold up under standing water'],
+                ['Blistered, split or worn through across most of the roof', 'No', 'The roof is near the end; a replacement is the honest answer'],
+              ],
+            },
+          },
+          { img: '/images/blog/roof-coating-worth-it-sound-roof.webp', alt: 'Drone view of a sound, dry, slightly weathered gray commercial flat roof with tight seams and clear drains', caption: 'The kind of roof a coating can work on: sound, dry, draining well, with a surface that is only weathered.' },
+        ],
+      },
+      {
+        heading: 'When a Roof Coating Doesn’t Work',
+        blocks: [
+          {
+            list: [
+              '**Over wet insulation.** The coating seals the moisture in, and the roof keeps deteriorating under a nice new surface.',
+              '**To stop an active leak.** If the source is a failed flashing, a drain or an open seam, a coating over the top rarely seals it for long.',
+              '**On a roof that ponds.** Water still collects in the same low spots, and many coatings break down where it sits.',
+              '**On a roof at the end of its life.** Blisters, splits and loose seams across the field mean the roof itself is failing, not just its surface.',
+              '**Without real prep.** Coatings need a clean, repaired, dry surface. Skipping the prep is how coatings peel.',
+              '**As a substitute for a survey.** If nobody has checked what is under the surface, nobody knows if the roof is a candidate.',
+            ],
+          },
+          { img: '/images/blog/roof-coating-worth-it-coating-blistering.webp', alt: 'A hand pressing on a blistered white coating on a flat roof, water seeping out from underneath', caption: 'Coating over a wet roof: the moisture trapped below lifts it into blisters.' },
+          { img: '/images/blog/roof-coating-worth-it-coating-peeling-in-pond.webp', alt: 'A pond of standing water on a white-coated flat roof, the coating peeling and stained inside the pond', caption: 'Where water ponds, the coating breaks down first.' },
+          { img: '/images/blog/roof-coating-worth-it-coating-over-failed-flashing.webp', alt: 'White coating painted over a cracked flashing at a rooftop unit curb, the crack open again and a rust-colored stain beside it', caption: 'Painted over, not fixed: the cracked flashing at this curb opened right back up.' },
+          { pov: 'When a coating fails early, the product is rarely the problem. It is usually a good product put over a wet or failing roof, and the owner pays twice: once for the coating, then for the replacement it delayed.' },
+        ],
+      },
+      {
+        heading: 'Questions to Ask Before You Coat',
+        blocks: [
+          {
+            checklist: [
+              'Has someone checked whether the insulation under the roof is dry, and how?',
+              'Where does water pond after a rain, and will it still pond after the coating?',
+              'Which seams, flashings, drains and curbs need repairs first, and are those repairs in the scope?',
+              'How many roofs are already on the building?',
+              'What prep is included: cleaning, repairs, primer?',
+              'What does the coating manufacturer’s warranty require, and what does it exclude?',
+              'How often will it need recoating, and what does that involve?',
+              'If the roof is replaced later, does the coating make the tear-off harder?',
+              'Can I see the scope and price in writing, next to a repair and a replacement?',
+            ],
+          },
+          { img: '/images/blog/roof-coating-worth-it-core-cut.webp', alt: 'A roofer holding a core cut from a commercial flat roof showing wet insulation while a property manager looks on with a tablet', caption: 'A core cut answers the first question: is the insulation under the roof dry?' },
+          'Any contractor offering a coating should be able to answer all of these before you sign.',
+        ],
+      },
+      {
+        heading: 'Coating, Repair or Replacement?',
+        blocks: [
+          {
+            table: {
+              head: ['Option', 'What it does', 'Makes sense when'],
+              rows: [
+                ['Roof coating', 'Renews the top surface of the existing roof', 'The roof is sound and dry, and the goal is surface wear or reflectivity'],
+                ['Targeted repair', 'Fixes the detail that failed: a flashing, a drain, a seam, a worn area', 'Problems are in a few places and the rest of the roof is sound'],
+                ['Scheduled maintenance', 'Keeps drains clear, catches worn flashings early, documents the roof', 'The roof has life left and you want to keep it that way'],
+                ['Replacement', 'A new roof from the deck up, with drainage improved where the structure allows', 'Wear, wet insulation or ponding run across the roof'],
+              ],
+            },
+          },
+        ],
+      },
+      {
+        heading: 'Why We Don’t Apply Coatings, and What We Do Instead',
+        blocks: [
+          'We don’t apply roof coatings. Our work is the roof itself: tracing leaks, repairing what failed and replacing roofs that have reached the end. That means we have no reason to steer you toward a coating, or away from one. If your roof is a good candidate, we will tell you so.',
+          {
+            list: [
+              '**A roofer-led roof survey** photographs the surface, the seams, the flashings, the drains and the low spots, so you know what you are working with before anyone sells you anything.',
+              '**[Commercial roof repair](/commercial-roofing/repair/)** fixes the details that leak, while the building stays open.',
+              '**[Commercial roof maintenance](/commercial-roofing/maintenance/)** keeps drains clear and flashings sound, with a photo report every visit.',
+              '**[Commercial roof replacement](/commercial-roofing/replacement/)** puts on a new roof, phased section by section, and a white cap sheet or a [TPO roof](/commercial-roofing/tpo-roofing/) gives you a reflective surface from day one.',
+            ],
+          },
+          { img: '/images/blog/roof-coating-worth-it-phased-replacement.webp', alt: 'Drone view of a commercial roof being replaced in phases: a finished white section, a section torn off to the metal deck with roofers at work, and the old roof beyond', caption: 'A phased replacement: one section finished in a white roof, the next torn off to the deck, the rest still in use.' },
+          'Our guides to [ponding water](/blog/ponding-water-commercial-flat-roof/) and [finding a flat roof leak](/blog/find-a-leak-on-a-commercial-flat-roof/) explain two of the problems a coating can’t fix.',
+          { pov: 'Spend the money on the part of the roof that is failing. Sometimes that is a few flashings, sometimes it is the whole roof. Almost never is it only the top surface.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Is a roof coating worth it?',
+        a: 'On a sound, dry roof with a weathered surface, it can be a reasonable step. On a roof with wet insulation, active leaks at flashings, widespread ponding or worn-out seams, it usually isn’t, because the coating only covers the surface.',
+      },
+      {
+        q: 'Can a roof coating stop a leak?',
+        a: 'Rarely for long. Most leaks start at a flashing, a drain or an open seam, and those need a repair. A coating over the top can hide the problem without fixing it.',
+      },
+      {
+        q: 'Can you coat a roof that has ponding water?',
+        a: 'Water will still collect in the same spots after the coating, and many coatings break down under standing water. The drainage problem has to be dealt with first.',
+      },
+      {
+        q: 'Is a roof coating the same as a new roof?',
+        a: 'No. A coating is a new surface on the existing roof. The deck, the insulation, the seams, the flashings and the slope underneath stay as they were.',
+      },
+      {
+        q: 'Does QRS apply roof coatings?',
+        a: 'No. We repair, maintain and replace commercial roofs. Because we have no coating to sell, we can tell you honestly whether your roof is a candidate for one.',
+      },
+      {
+        q: 'What should I do before deciding on a coating?',
+        a: 'Have the roof surveyed: whether the insulation is dry, where water ponds, and which details need repairs. Then compare a coating, a repair and a replacement in writing.',
+      },
+    ],
+    closing: {
+      heading: 'Weighing a Coating for Your Building?',
+      blocks: [
+        'Get an honest look at the roof first. Request a [roof survey](#roof-check): a roofer photographs the roof, tells you in plain English whether it needs a repair, maintenance or a replacement, and gives you a written scope and price before any work. Or call [(310) 340-1643](tel:+13103401643).',
+      ],
+    },
+    related: ['/commercial-roofing/repair/', '/commercial-roofing/replacement/', '/commercial-roofing/maintenance/', '/commercial-roofing/tpo-roofing/'],
+  },
   // Keeping commercial roof drains and scuppers clear (owner, November 24 2026): keyword "roof drains and scuppers", for property managers,
   // building engineers and maintenance staff. Why they matter, the parts of each outlet (`list: 'facts-numbered'`), what clogs them, how often
   // to check, a staff checklist (`checklist: 'tracker'`), warning signs (`table: 'cards'`), what not to do (`list: 'flags'`), roofing side vs.

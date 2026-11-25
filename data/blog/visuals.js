@@ -18,6 +18,12 @@
 //   table: 'cards'          rows to compare as cards with labelled lines
 //   table: 'hotspots'       "where / what goes wrong" rows as an interactive picture of a flat commercial roof
 export const POST_VISUALS = {
+  'roof-coating-worth-it': {
+    'When a Roof Coating Can Make Sense': { table: 'decide' },
+    'When a Roof Coating Doesn’t Work': { list: 'flags' },
+    'Questions to Ask Before You Coat': { checklist: 'tracker' },
+    'Coating, Repair or Replacement?': { table: 'cards' },
+  },
   'commercial-roof-drains-and-scuppers': {
     'The Parts of Each Outlet': { list: 'facts-numbered' },
     'A Checklist for Your Maintenance Staff': { checklist: 'tracker' },
