@@ -24,6 +24,177 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // Never pressure wash shingles (owner, November 25 2026, brief "Why you should never pressure-wash shingles / Myth vs. fact / Educational /
+  // Prevents damage you'd otherwise fix"): keyword "pressure wash shingles". Myth vs. fact in the moss article's format (h3 myth, **Fact:**),
+  // as the maintenance plans FAQ says (pressure washing strips the granules that protect shingles and can drive water under tiles): how a
+  // shingle is built, seven myths, what a pressure washer does (`table: 'cards'`), signs a roof has already been washed (`list: 'flags'`),
+  // what to do instead (`checklist: 'tracker'`; QRS doesn't offer roof cleaning or moss treatment: the plan visits clear debris and watch for
+  // moss; tree trimming goes to a tree service), tile and flat roofs, and what we check after a wash (`steps: 'timeline'`: free roof
+  // evaluation, *LeakRescue*, *RoofRevive*, *TotalShield*). No prices, no lifespans, no warranty terms. Our voice, three "Our point of view"
+  // boxes. cardImage is a stand-in until the owner's thumbnail arrives.
+  {
+    slug: 'never-pressure-wash-shingles',
+    title: 'Why You Should Never Pressure Wash Shingles: Myth vs. Fact',
+    keyword: 'pressure wash shingles',
+    topics: ['shingle', 'maintenance', 'repair', 'inspection'],
+    metaTitle: 'Why You Should Never Pressure Wash Shingles: Myth vs. Fact',
+    metaDescription:
+      'Thinking of having someone pressure wash shingles on your roof? Seven myths and the facts, what a pressure washer does to a roof and what to do instead.',
+    datePublished: '2026-11-25',
+    dateModified: '2026-11-25',
+    image: '/images/blog/never-pressure-wash-shingles.webp',
+    imageAlt: 'A pressure washer jet blasting a gray shingle roof, with granules and dirty water running down the slope into the gutter',
+    excerpt:
+      'A pressure washer makes a streaky roof look cleaner for a week and older for good. Seven myths about pressure washing a roof and the facts, the damage it does, the signs a roof has already been washed and what to do instead.',
+    intro: [
+      'Should you pressure wash shingles to get rid of dark streaks, moss or grime? Our answer is no, never. The granules on the surface of a shingle are what protect it from the sun, and a pressure washer strips them off. Aimed up the slope, the water also gets under the shingles, where a roof isn’t built to keep it out.',
+      'Pressure washing is sold as roof cleaning, and it often looks great the day it is done. Below we go through seven common myths and the facts, what the washer does to the roof, how to tell if yours has already been washed and what to do instead.',
+    ],
+    sections: [
+      {
+        heading: 'How a Shingle Is Built, and Why It Matters',
+        blocks: [
+          'An asphalt shingle is a fiberglass mat soaked in asphalt, with a layer of mineral granules pressed into the top. The asphalt keeps the water out. The granules shield the asphalt from the sun, which is what wears a shingle out, and give the roof its color.',
+          { img: '/images/blog/never-pressure-wash-shingles-shingle-layers.webp', alt: 'Close-up of the cut edge of an asphalt shingle on a roof deck, showing the fiberglass mat, the asphalt and the granules on top', caption: 'A shingle in cross-section: the fiberglass mat and asphalt keep water out, the granules on top shield them from the sun.' },
+          'Each course overlaps the one below it, held by nails and a strip of sealant that bonds the shingle above to the one below once the sun warms it. That overlap is built for water running downhill, the way rain falls on a roof, not for water pushed sideways or uphill.',
+          { pov: 'The granules are the part of the shingle doing the work. Anything that takes them off, a pressure washer more than anything, takes years off the roof with them.' },
+        ],
+      },
+      {
+        heading: 'Seven Myths About Pressure Washing a Roof, and the Facts',
+        blocks: [
+          { h3: 'Myth 1: A low pressure setting is safe' },
+          '**Fact:** A jet strong enough to lift moss, algae or grime is strong enough to lift granules, especially on an older roof where they are already loose. And at any pressure, water aimed up the slope runs under the overlap of the shingles.',
+          { img: '/images/blog/never-pressure-wash-shingles-water-under-shingles.webp', alt: 'A gloved hand aiming a pressure washer wand up a shingle roof, the jet lifting a shingle and spraying water underneath it', caption: 'Aimed up the slope, the jet lifts the shingle and sends water underneath, where the roof isn’t built to keep it out.' },
+          { h3: 'Myth 2: Pressure washing makes an old roof look new' },
+          '**Fact:** It makes it look cleaner for a while. Where the granules come off, the dark asphalt is left facing the sun, and those patches age faster than the rest of the roof.',
+          { img: '/images/blog/never-pressure-wash-shingles-stripped-stripes.webp', alt: 'A pressure-washed shingle roof with dark stripes of bare asphalt running down the slope where the wand passed', caption: 'Dark stripes where the wand passed: the granules are gone and the bare asphalt is left facing the sun.' },
+          { h3: 'Myth 3: The dark streaks are rotting the roof' },
+          '**Fact:** The black or dark green streaks running down a slope are usually algae, and they are mostly cosmetic. Moss is different: it holds water, and our article on [moss on your roof](/blog/moss-on-roof-myth-vs-fact/) explains why.',
+          { h3: 'Myth 4: A clean roof lasts longer' },
+          '**Fact:** A roof lasts longer when it keeps its granules, sheds water and stays clear of debris. Taking the surface off to make it clean does the opposite.',
+          { h3: 'Myth 5: Water can’t get through a shingle roof' },
+          '**Fact:** Rain runs down over the shingles. A pressure washer drives water up under them, past the sealant strip and around the nails, onto the underlayment and the deck, and sometimes into the attic.',
+          { img: '/images/blog/never-pressure-wash-shingles-new-ceiling-stain.webp', alt: 'A hand pointing at a fresh brown water stain on a ceiling in the corner of a room', caption: 'A new ceiling stain after a roof cleaning, often before any rain at all.' },
+          { h3: 'Myth 6: A professional cleaning company does it safely' },
+          '**Fact:** The problem is the equipment, not who holds it. The asphalt roofing industry advises against pressure washing asphalt shingles, whoever does it.',
+          { h3: 'Myth 7: Walking the roof to clean it is harmless' },
+          '**Fact:** Shingles scuff easily, especially when they are warm, and a wet roof is slippery. Every trip across it wears the surface, and a fall from a roof is the most serious risk of all.',
+        ],
+      },
+      {
+        heading: 'What a Pressure Washer Does to Shingles',
+        blocks: [
+          {
+            table: {
+              head: ['Damage', 'What happens', 'What it leads to'],
+              rows: [
+                ['Stripped granules', 'The jet blasts the mineral granules off the surface', 'Bare asphalt that ages in the sun, uneven color and granules piled in the gutters'],
+                ['Water under the shingles', 'Water aimed up the slope runs under the overlap', 'A wet underlayment and deck, ceiling stains and leaks that weren’t there before'],
+                ['Broken sealant strips', 'The jet lifts the edges of the shingles and breaks the bond', 'Shingles that lift, flap and blow off in the next strong wind'],
+                ['Torn or cracked shingles', 'Brittle older shingles tear under the force of the water', 'Openings that need a repair'],
+                ['Scuffs and footprints', 'Cleaners walk a wet, warm roof', 'Worn paths and cracked shingles where they stood'],
+              ],
+            },
+          },
+          { img: '/images/blog/never-pressure-wash-shingles-granules-in-gutter.webp', alt: 'A gutter full of wet shingle granules and grit, with dark runoff spreading across the walkway below the downspout', caption: 'Granules washed off the roof end up in the gutter and at the downspout.' },
+          'Our guide to [shingle granule loss](/blog/shingle-granule-loss/) explains why losing granules matters so much.',
+        ],
+      },
+      {
+        heading: 'Signs Your Roof Has Already Been Pressure Washed',
+        blocks: [
+          {
+            list: [
+              '**Stripes or patches of darker, bare asphalt,** often in straight lines where the wand moved.',
+              '**A lot of granules in the gutters** or at the downspouts right after the cleaning.',
+              '**Lifted or flapping shingle edges** that weren’t there before.',
+              '**A new ceiling stain or leak** after the roof was washed, often before any rain.',
+              '**Uneven color across the roof,** lighter where it wasn’t washed and darker where it was.',
+              '**Torn or missing shingles** along the areas that were cleaned hardest.',
+            ],
+          },
+          { img: '/images/blog/never-pressure-wash-shingles-lifted-edges.webp', alt: 'Close-up of asphalt shingles with lifted, torn edges, a cracked sealant strip and bare patches where the granules are gone', caption: 'Lifted edges, a broken sealant strip and bare patches: the marks a pressure washer leaves.' },
+          { pov: 'When a homeowner calls us about a new leak right after a roof cleaning, the first thing we look at is where the water was aimed. That is usually where it got in.' },
+        ],
+      },
+      {
+        heading: 'What to Do Instead',
+        blocks: [
+          {
+            checklist: [
+              'Leave the algae streaks alone, or ask the shingle manufacturer what cleaning it allows',
+              'Keep the gutters clear, from a well-set ladder, without leaning on the roof edge',
+              'Have overhanging branches trimmed by a tree service, so less debris and shade reach the roof',
+              'Point sprinklers away from the roof and the walls',
+              'Have moss and piled-up debris handled by a roofer, not with a pressure washer',
+              'Watch for granules in the gutters, lifted edges and ceiling stains, and call when you see them',
+              'When it is time for a new roof, ask about algae-resistant shingles',
+            ],
+          },
+          { img: '/images/blog/never-pressure-wash-shingles-gutter-by-hand.webp', alt: 'A homeowner on a ladder beside a shingle roof, scooping leaves out of the gutter by hand into a bucket', caption: 'The job you can do yourself: gutters cleared by hand from a well-set ladder, nothing pointed at the roof.' },
+          'Our guide to [cleaning gutters without damaging the roof edge](/blog/clean-gutters-without-damaging-roof-edge/) covers the job you can do yourself. Our [roof maintenance plans](/roof-maintenance-plans/) clear debris from the roof, valleys and gutters, keep an eye on moss on shaded slopes and send a photo report every visit.',
+        ],
+      },
+      {
+        heading: 'Tile and Flat Roofs, Too',
+        blocks: [
+          'The same advice holds on other roofs. On a tile roof, a pressure washer can drive water under the tiles onto the underlayment, and walking the tiles to clean them cracks them. On a flat roof with a granulated cap sheet, the jet strips the granules just as it does on shingles. Our [tile roof guide](/blog/tile-roof-guide-southern-california/) explains why the layer under the tiles matters most.',
+        ],
+      },
+      {
+        heading: 'Already Pressure Washed? What We Check',
+        blocks: [
+          {
+            steps: [
+              '**Book a free roof evaluation.** A roofer looks at the roof, with *RoofScan 360* drone footage and photos.',
+              '**Look at the granules.** Where the surface is bare, how much of the roof is affected and how much is in the gutters.',
+              '**Check the edges and laps.** Lifted shingles, broken seals and torn pieces, especially where the washing was heaviest.',
+              '**Follow any new stains to the source,** working upslope from where the water showed up.',
+              '**Give you one next step** in plain English: repair, monitor, maintain or replace, with a written scope and price before any work.',
+            ],
+          },
+          { img: '/images/blog/never-pressure-wash-shingles-roofer-checks.webp', alt: 'A roofer in a hard hat kneeling on a shingle roof beside torn and stripped shingles, recording them on a tablet while a drone flies overhead', caption: 'A roofer documenting stripped and torn shingles, with drone footage of the whole roof.' },
+          'Lifted or torn shingles in a few places are a [*LeakRescue* repair](/residential-roofing/shingle-roofing/repair/). A roof that is sound but needs a short list of fixes can be a one-time [*RoofRevive* tune-up](/roof-maintenance-plans/#tune-up). When the surface is stripped across the roof, a [*TotalShield* replacement](/residential-roofing/shingle-roofing/replacement/) from the deck up may be the honest answer.',
+          { pov: 'We would much rather talk you out of a pressure washing than fix what it left behind. If the streaks bother you, ask us first; it costs nothing to look.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Can you pressure wash shingles?',
+        a: 'We advise against it. A pressure washer strips the granules that protect shingles from the sun, and water aimed up the slope gets under the shingles, past the sealant strip and onto the deck.',
+      },
+      {
+        q: 'Is a low pressure setting safe for a roof?',
+        a: 'Not really. A jet strong enough to lift moss or grime can lift granules too, especially on an older roof, and water aimed up the slope gets under the shingles at any pressure.',
+      },
+      {
+        q: 'What are the black streaks on my shingle roof?',
+        a: 'Usually algae. It is mostly cosmetic and doesn’t need a pressure washer. Moss, which grows in thick green clumps, holds water and is worth having a roofer look at.',
+      },
+      {
+        q: 'My roof was pressure washed. Is it damaged?',
+        a: 'Look for bare stripes, granules in the gutters, lifted shingle edges and new ceiling stains. If you see any of them, a roof evaluation shows how much of the roof was affected and whether it needs a repair.',
+      },
+      {
+        q: 'Does QRS clean roofs?',
+        a: 'We don’t offer roof washing. Our maintenance plan visits clear debris from the roof, valleys and gutters and keep an eye on moss, with a photo report every visit.',
+      },
+      {
+        q: 'Can I pressure wash a tile roof?',
+        a: 'We advise against that too. It can drive water under the tiles onto the underlayment, and walking the tiles to clean them can crack them.',
+      },
+    ],
+    closing: {
+      heading: 'Worried About Your Roof’s Surface?',
+      blocks: [
+        'Before anyone points a pressure washer at it, [book a free roof evaluation](#roof-check). A roofer looks at the roof, tells you in plain English what it needs, and gives you a written scope and price before any work. Or call [(310) 340-1643](tel:+13103401643).',
+        'Part of our [asphalt shingle roof guide](/blog/asphalt-shingle-roof-guide/).',
+      ],
+    },
+    related: ['/residential-roofing/shingle-roofing/repair/', '/roof-maintenance-plans/', '/residential-roofing/shingle-roofing/', '/roof-inspection/'],
+  },
   // Reflective commercial roofs and cooling costs (owner, November 25 2026, brief "Reflective commercial roofs and cooling costs / Can a
   // cool roof cut my building's energy bill?"): keyword "commercial cool roof", so it doesn't compete with cool-roof-southern-california
   // ("cool roof", the homeowner guide), which it links to. No savings figures, percentages or prices (site rule, as on the cool roofing

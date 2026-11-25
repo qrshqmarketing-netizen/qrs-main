@@ -18,6 +18,12 @@
 //   table: 'cards'          rows to compare as cards with labelled lines
 //   table: 'hotspots'       "where / what goes wrong" rows as an interactive picture of a flat commercial roof
 export const POST_VISUALS = {
+  'never-pressure-wash-shingles': {
+    'What a Pressure Washer Does to Shingles': { table: 'cards' },
+    'Signs Your Roof Has Already Been Pressure Washed': { list: 'flags' },
+    'What to Do Instead': { checklist: 'tracker' },
+    'Already Pressure Washed? What We Check': { steps: 'timeline' },
+  },
   'commercial-cool-roof-cooling-costs': {
     'Which Buildings Are Most Likely to Notice It': { table: 'decide' },
     'What Decides How Much a Cool Roof Helps': { list: 'facts-numbered' },
