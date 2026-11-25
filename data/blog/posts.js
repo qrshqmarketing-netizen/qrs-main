@@ -24,6 +24,198 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // What voids a commercial roof warranty (owner, November 25 2026, brief "What voids a commercial roof warranty / What could cancel my roof
+  // warranty?", from the commercial owners' questions on the brief sheet): keyword "commercial roof warranty", kept apart from
+  // roof-warranty-explained ("roof warranties", the homeowner guide), which it links to. General, as "many warranties" (every warranty
+  // document is different; read yours): two warranties on one roof (`table: 'cards'`), common ways a warranty is put at risk
+  // (`list: 'facts-numbered'`), voided vs. excluded (`table: 'decide'`), who should work on the roof, what to read in your warranty
+  // (`list: 'flags'` is avoided; plain list), how to keep it valid (`checklist: 'tracker'`) and how we help (`steps: 'timeline'`: roofer-led
+  // roof survey, never free; repairs with compatible materials; flashing other trades' penetrations; scheduled maintenance with a photo
+  // report every visit; closeout photos and our 10-year workmanship warranty (call for details) on top of the manufacturer's on a
+  // replacement, as the systems article says). No warranty terms, years, notice periods or wind speeds. Our voice, three "Our point of view"
+  // boxes. cardImage is a stand-in until the owner's thumbnail arrives.
+  {
+    slug: 'what-voids-a-commercial-roof-warranty',
+    title: 'What Voids a Commercial Roof Warranty? What Could Cancel Yours',
+    keyword: 'commercial roof warranty',
+    topics: ['commercial', 'flat', 'tpo', 'maintenance', 'repair', 'replacement'],
+    metaTitle: 'What Voids a Commercial Roof Warranty? Common Pitfalls',
+    metaDescription:
+      'What can void a commercial roof warranty: unapproved repairs, other trades cutting in, missed maintenance and late leak reports, and how to keep it valid.',
+    datePublished: '2026-11-25',
+    dateModified: '2026-11-25',
+    image: '/images/blog/what-voids-a-commercial-roof-warranty.webp',
+    imageAlt: 'A hand holding a printed roof warranty on a white commercial roof, with a pipe sealed in black roof cement and rooftop units behind',
+    excerpt:
+      'A commercial roof warranty can be lost long before the roof wears out. The common ways owners put a warranty at risk, the difference between voided and excluded, and the simple habits that keep yours valid.',
+    intro: [
+      'A commercial roof warranty can be lost long before the roof wears out. It rarely happens all at once: an HVAC contractor cuts a new opening, a handyman patches a leak with whatever was on the truck, a maintenance visit gets skipped, a leak goes unreported. Each one can give the warranty holder a reason to deny the next claim.',
+      'Here is what usually backs a commercial roof, the common ways owners put a warranty at risk, the difference between a voided warranty and an excluded claim, and the simple habits that keep yours valid. Every warranty document is different, so treat this as a guide to what to look for in yours.',
+    ],
+    sections: [
+      {
+        heading: 'Two Warranties on One Roof',
+        blocks: [
+          'Most new commercial roofs come with two kinds of coverage, and they protect against different things.',
+          { img: '/images/blog/what-voids-a-commercial-roof-warranty-two-warranties.webp', alt: 'A building owner and a roofer at a desk reviewing two folders of warranty documents, with a commercial rooftop outside the window', caption: 'Two warranties, two documents: the manufacturer’s and the roofing contractor’s.' },
+          {
+            table: {
+              head: ['Coverage', 'Manufacturer’s warranty', 'Workmanship warranty'],
+              rows: [
+                ['Who backs it', 'The company that made the roofing system', 'The roofing contractor who installed it'],
+                ['What it is about', 'The materials, and on some warranties the whole system', 'How the roof was installed'],
+                ['What it usually depends on', 'An approved installation, registration, maintenance and following the claim process', 'The roof being left to the installer, or to roofers who don’t undo the work'],
+                ['Where to look', 'The warranty document from the manufacturer', 'The contractor’s written warranty and your contract'],
+              ],
+            },
+          },
+          'Our guide to [roof warranties](/blog/roof-warranty-explained/) explains the two in more depth.',
+          { pov: 'Ask for both warranties in writing before the work starts, and read the conditions, not just the term. The conditions are where warranties are won and lost.' },
+        ],
+      },
+      {
+        heading: 'Common Ways a Commercial Roof Warranty Is Put at Risk',
+        blocks: [
+          { img: '/images/blog/what-voids-a-commercial-roof-warranty-curb-sealed-by-another-trade.webp', alt: 'A new rooftop curb on a white membrane roof sealed with smeared roof cement and caulk instead of flashing, with tools left beside it', caption: 'A new curb sealed with cement and caulk instead of flashed in by a roofer: a common way a warranty is put at risk.' },
+          {
+            list: [
+              '**Repairs by someone who isn’t authorized.** Many warranties require repairs to be made by the installer or another approved roofer, with compatible materials.',
+              '**Other trades cutting into the roof.** A new rooftop unit, vent, solar mount, sign or satellite dish installed without a roofer flashing it in.',
+              '**The wrong materials.** Roof cement, tape or a coating that isn’t compatible with the membrane, or isn’t approved by its manufacturer.',
+              '**Missed maintenance.** Many warranties expect the owner to keep the roof maintained: drains clear, debris off, small problems fixed, with records to prove it.',
+              '**Late or missing leak reports.** Most warranties set a time and a way to report a leak. Waiting, or letting someone else fix it first, can cost the claim.',
+              '**Damage from use.** Foot traffic, dropped tools, equipment dragged across the roof, or vehicles and storage on it.',
+              '**Changes to the building.** A new use, new rooftop equipment or a structural change the warranty didn’t anticipate.',
+              '**Paperwork left undone.** A warranty that was never registered, fees that were never paid, or a sale of the building without following the transfer steps.',
+            ],
+          },
+          { img: '/images/blog/what-voids-a-commercial-roof-warranty-tape-and-cement-patch.webp', alt: 'Cracked roof cement and peeling duct tape patched over a split in a white roof membrane', caption: 'Tape and roof cement on a single-ply membrane: the wrong materials, and a repair the warranty may not accept.' },
+        ],
+      },
+      {
+        heading: 'Voided or Just Not Covered?',
+        blocks: [
+          'Two different things can happen to a claim. A warranty can be **voided**, so nothing is covered anymore, or a particular claim can be **excluded**, so that damage isn’t covered while the rest of the warranty still stands.',
+          { img: '/images/blog/what-voids-a-commercial-roof-warranty-missed-maintenance.webp', alt: 'A neglected commercial flat roof with a roof drain buried in leaves, standing water and debris along the parapet', caption: 'Years without maintenance: a clogged drain, standing water and debris. Missing records can sink a claim.' },
+          {
+            table: {
+              head: ['What happened', 'What it can mean', 'What to do'],
+              rows: [
+                ['Another trade cut a new opening and sealed it themselves', 'Leaks there may not be covered, and on some warranties the whole warranty is at risk', 'Have a roofer flash it properly and document it'],
+                ['A handyman patched a leak with roof cement', 'The repair, and leaks around it, may not be covered', 'Have the repair redone properly by an approved roofer'],
+                ['No maintenance records for years', 'A claim can be denied for lack of maintenance', 'Start a maintenance schedule with photo reports now'],
+                ['A storm beyond what the warranty covers', 'The damage is usually excluded; the warranty itself stands', 'Document it, call your roofer and your insurer'],
+                ['A leak reported weeks later', 'The claim can be refused if the notice period was missed', 'Report every leak right away, in the way the warranty asks'],
+                ['The building was sold', 'Coverage may not carry over unless the transfer steps are followed', 'Check the transfer terms before closing'],
+              ],
+            },
+          },
+        ],
+      },
+      {
+        heading: 'Who Should Work on Your Roof',
+        blocks: [
+          'The simplest way to protect a warranty is to control who works on the roof. Keep a short list of who is allowed up, and make sure every trade knows the rule: nothing cuts through the membrane, and nothing is sealed to it, without a roofer.',
+          {
+            list: [
+              '**Repairs and leaks:** the installing roofer, or a roofer the warranty allows.',
+              '**New penetrations:** the trade installs the equipment, a roofer flashes it into the roof.',
+              '**Rooftop service:** technicians use walk pads and report anything they damage.',
+              '**Maintenance:** a roofer, on a schedule, with a written record of every visit.',
+            ],
+          },
+          { img: '/images/blog/what-voids-a-commercial-roof-warranty-roofer-flashes-penetration.webp', alt: 'A roofer heat-welding a membrane boot around a new pipe on a white TPO roof while an HVAC technician works in the background', caption: 'The trade installs the equipment; a roofer flashes it into the roof.' },
+          { pov: 'Most warranty problems we see start with a well-meaning trade, not a careless owner. A one-line rule for everyone who goes on the roof prevents most of them.' },
+        ],
+      },
+      {
+        heading: 'What to Read in Your Warranty',
+        blocks: [
+          {
+            list: [
+              '**What it covers:** materials only, labor too, or the whole roofing system.',
+              '**The term,** and whether coverage changes over time.',
+              '**The exclusions:** storms above a certain strength, ponding, foot traffic, other trades, acts of nature.',
+              '**Maintenance requirements:** what the owner has to do, and what records to keep.',
+              '**How to report a leak:** who to call, how, and how soon.',
+              '**Who may repair the roof,** and with what materials.',
+              '**Changes and additions:** what to do before adding equipment or openings.',
+              '**Transfer:** what happens if the building is sold.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'How to Keep Your Warranty Valid',
+        blocks: [
+          {
+            checklist: [
+              'Keep the warranty documents, the registration and the installer’s contact together',
+              'Make a roof-access rule: no cutting, sealing or mounting without a roofer',
+              'Schedule maintenance, and keep the photo reports',
+              'Keep drains, scuppers and the roof surface clear of debris',
+              'Put walk pads on the paths to rooftop equipment',
+              'Report every leak right away, the way the warranty asks',
+              'Use only an approved roofer and compatible materials for repairs',
+              'Check the transfer steps before selling the building',
+            ],
+          },
+          { img: '/images/blog/what-voids-a-commercial-roof-warranty-maintenance-records.webp', alt: 'A roofer showing a property manager a photo report on a tablet on a white commercial roof, the manager holding a binder of records', caption: 'A photo report from every visit, kept with the warranty: the paper trail a claim depends on.' },
+          'Our guide to [keeping drains and scuppers clear](/blog/commercial-roof-drains-and-scuppers/) covers one of the simplest maintenance habits.',
+        ],
+      },
+      {
+        heading: 'How We Help Protect Your Warranty',
+        blocks: [
+          {
+            steps: [
+              '**A roofer-led roof survey.** A roofer walks the roof and photographs it area by area, so you have a record of its condition.',
+              '**Repairs with compatible materials.** A [commercial roof repair](/commercial-roofing/repair/) matches the membrane, rather than covering it with whatever is handy.',
+              '**Penetrations flashed for other trades.** When new equipment goes on the roof, the roofing around it is done by a roofer.',
+              '**Maintenance with a paper trail.** [Commercial roof maintenance](/commercial-roofing/maintenance/) clears drains and checks flashings, with a photo report every visit.',
+              '**On a new roof, both warranties in writing.** A [commercial roof replacement](/commercial-roofing/replacement/) comes with closeout photos and our 10-year workmanship warranty (call for details), on top of the manufacturer’s.',
+            ],
+          },
+          { img: '/images/blog/what-voids-a-commercial-roof-warranty-closeout-photos.webp', alt: 'Drone view of a finished white commercial flat roof with flashed rooftop units and clear drains, a roofer photographing the work with a tablet', caption: 'Closeout photos of a finished roof: the first page of its record.' },
+          'If you manage several buildings, see [property management roofing](/commercial-roofing/property-managers/).',
+          { pov: 'A warranty is only as good as the records behind it. We would rather leave you a stack of photos you never need than a claim you can’t support.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What voids a commercial roof warranty?',
+        a: 'Common causes are repairs by someone who isn’t authorized, other trades cutting into the roof without a roofer, incompatible materials or coatings, missed maintenance, leaks reported late, damage from use, and paperwork like registration or transfer left undone. Every warranty is different, so check yours.',
+      },
+      {
+        q: 'Can an HVAC contractor void my roof warranty?',
+        a: 'They can put it at risk. A new opening cut through the roof and sealed by someone other than a roofer can mean leaks there aren’t covered. Have a roofer flash every new penetration.',
+      },
+      {
+        q: 'Does skipping maintenance void a roof warranty?',
+        a: 'It can be a reason a claim is denied. Many warranties expect the owner to keep the roof maintained, so scheduled maintenance with written records protects you.',
+      },
+      {
+        q: 'Can I repair my own commercial roof without voiding the warranty?',
+        a: 'Usually not safely. Many warranties require repairs by the installer or an approved roofer, with compatible materials. Call before anyone patches the roof.',
+      },
+      {
+        q: 'Does a roof warranty transfer when I sell the building?',
+        a: 'Some do, and some only if certain steps are followed. Check the transfer terms in your warranty before closing.',
+      },
+      {
+        q: 'What warranty comes with a QRS commercial roof replacement?',
+        a: 'The manufacturer’s warranty on the roofing system, plus our 10-year workmanship warranty (call for details), with closeout photos of the finished roof.',
+      },
+    ],
+    closing: {
+      heading: 'Want to Protect Your Roof Warranty?',
+      blocks: [
+        'Start with a record of where the roof stands. Request a [roof survey](#roof-check): a roofer photographs the roof, tells you in plain English what it needs, and gives you a written scope and price before any work. Or call [(310) 340-1643](tel:+13103401643).',
+      ],
+    },
+    related: ['/commercial-roofing/maintenance/', '/commercial-roofing/repair/', '/commercial-roofing/replacement/', '/commercial-roofing/property-managers/'],
+  },
   // Picking a shingle color (owner, November 25 2026, brief "How to pick a shingle color that suits your house / Visual examples /
   // Purchase-intent / Your color"): keyword "shingle color". Seven rules (`list: 'facts-numbered'`), the eleven cool roof colors we offer
   // (data/roofColors.js: names only, no brand or line name, all SRI 20+, light to dark), color ideas by house (`table: 'cards'`, design

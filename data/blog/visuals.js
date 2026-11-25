@@ -18,6 +18,13 @@
 //   table: 'cards'          rows to compare as cards with labelled lines
 //   table: 'hotspots'       "where / what goes wrong" rows as an interactive picture of a flat commercial roof
 export const POST_VISUALS = {
+  'what-voids-a-commercial-roof-warranty': {
+    'Two Warranties on One Roof': { table: 'cards' },
+    'Common Ways a Commercial Roof Warranty Is Put at Risk': { list: 'facts-numbered' },
+    'Voided or Just Not Covered?': { table: 'decide' },
+    'How to Keep Your Warranty Valid': { checklist: 'tracker' },
+    'How We Help Protect Your Warranty': { steps: 'timeline' },
+  },
   'how-to-pick-a-shingle-color': {
     'Seven Rules for Picking a Shingle Color': { list: 'facts-numbered' },
     'The Eleven Cool Roof Colors We Offer': { table: 'cards' },
