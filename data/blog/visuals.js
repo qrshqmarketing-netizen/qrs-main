@@ -18,6 +18,15 @@
 //   table: 'cards'          rows to compare as cards with labelled lines
 //   table: 'hotspots'       "where / what goes wrong" rows as an interactive picture of a flat commercial roof
 export const POST_VISUALS = {
+  'tree-branches-over-your-roof': {
+    'Why Branches Matter to a Roof': { list: 'facts-numbered' },
+    'The Yard Walkthrough': { steps: 'timeline' },
+    'Which Branches Are a Threat?': { table: 'decide' },
+    'Trees That Drop the Most on Roofs': { table: 'cards' },
+    'Signs a Branch Has Already Done Damage': { list: 'flags' },
+    'Your Walkthrough Checklist': { checklist: 'tracker' },
+    'How We Check a Roof Under Trees': { steps: 'timeline' },
+  },
   'leaking-skylight-reseal-or-replace': {
     'Is It a Leak or Condensation?': { table: 'cards' },
     'A Skylight, Up Close': { list: 'facts-numbered' },

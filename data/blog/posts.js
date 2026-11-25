@@ -24,6 +24,209 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // Tree branches and the roof (owner, November 25 2026, brief "Which tree branches are a threat to your roof / Yard walkthrough /
+  // Educational / Inspection hook"): keyword "tree branches over your roof". A walk around the yard: why branches matter to a roof
+  // (`list: 'facts-numbered'`), the walkthrough (`steps: 'timeline'`), which branches are a threat (`table: 'decide'`), trees that drop
+  // the most onto roofs (`table: 'cards'`, general species habits only), signs a branch has already done damage (`list: 'flags'`), who to
+  // call (QRS doesn't trim trees: the maintenance plan excludes tree trimming, so trimming goes to a tree service or certified arborist and
+  // power lines to the utility), a checklist (`checklist: 'tracker'`) and how we check a roof under trees (free roof evaluation with
+  // *RoofScan 360*, debris cleared on plan visits, *LeakRescue*, tarps after a fallen limb). No prices, no distances or clearance rules
+  // presented as code. Our voice, three "Our point of view" boxes. cardImage is a stand-in until the owner's thumbnail arrives.
+  {
+    slug: 'tree-branches-over-your-roof',
+    title: 'Which Tree Branches Over Your Roof Are a Threat? A Yard Walkthrough',
+    keyword: 'tree branches over your roof',
+    topics: ['maintenance', 'inspection', 'storm', 'repair', 'shingle', 'tile'],
+    metaTitle: 'Tree Branches Over Your Roof: Which Ones Are a Threat?',
+    metaDescription:
+      'Tree branches over your roof scrape, drop debris, shade it and can fall. A yard walkthrough: which branches are a threat, who to call and what to check.',
+    datePublished: '2026-11-25',
+    dateModified: '2026-11-25',
+    image: '/images/blog/tree-branches-over-your-roof.webp',
+    imageAlt: 'A single-story home with a large oak tree spreading over its shingle roof, leaves piled across the slope',
+    excerpt:
+      'A branch over the roof can scrape it, fill its valleys, keep it damp or come down in the next wind. Walk the yard with us: which branches are a threat, who to call about them and what to check on the roof underneath.',
+    intro: [
+      'Tree branches over your roof are easy to stop noticing. They have been there for years, and the roof hasn’t leaked. But a branch can scrape the roof every time the wind blows, fill the valleys and gutters with leaves, keep a shaded slope damp, give animals a way up and, in a strong wind, come down on the house.',
+      'You don’t need to climb anything to see which branches matter. Walk the yard with us: why branches matter to a roof, a step-by-step walkthrough from the ground, which branches are a threat and which aren’t, who to call about them and what to check on the roof underneath.',
+    ],
+    sections: [
+      {
+        heading: 'Why Branches Matter to a Roof',
+        blocks: [
+          {
+            list: [
+              '**Scraping:** a branch resting on or brushing the roof wears through the surface every time it moves, scuffing granules off shingles and knocking tiles.',
+              '**Debris:** leaves, needles, bark and seed pods pile up in valleys, behind chimneys and in gutters, where they hold water and block its path off the roof.',
+              '**Shade:** a slope that rarely sees the sun stays damp longer, which is where moss grows.',
+              '**Falling limbs:** dead or heavy limbs can break off in wind, landing on the roof with enough force to crack tiles, tear shingles or break the deck.',
+              '**A path for animals:** branches that reach the roof give squirrels and rats an easy way up to the vents and eaves.',
+              '**Embers:** dry debris in valleys and gutters can catch embers in a wildfire.',
+            ],
+          },
+          { img: '/images/blog/tree-branches-over-your-roof-branch-scraping.webp', alt: 'A tree branch lying across asphalt shingles beside a worn patch where the granules have been scraped away to bare asphalt', caption: 'A branch that rests on the roof wears the same spot every time it moves, down to the bare asphalt.' },
+          { pov: 'Most of the roofs we see under trees aren’t damaged by one big limb. They are worn down slowly by branches that scrape and leaves that pile up, year after year.' },
+        ],
+      },
+      {
+        heading: 'The Yard Walkthrough',
+        blocks: [
+          'Stay on the ground for all of this. Binoculars or your phone’s zoom will show you more than you think.',
+          { img: '/images/blog/tree-branches-over-your-roof-walkthrough-binoculars.webp', alt: 'A homeowner standing across the street looking at a house through binoculars, with large trees reaching over its roof', caption: 'Start across the street: binoculars or a phone’s zoom show which trees reach over the roof.' },
+          {
+            steps: [
+              '**Start across the street.** Look at the whole roofline. Which trees reach over the roof, and where? Note any limbs that hang over the house rather than beside it.',
+              '**Walk each side of the house.** Look up from under the eaves. Is any branch touching the roof, the gutters or the walls? Look for rub marks on the roof right below a branch.',
+              '**Look for dead wood.** Branches with no leaves when the rest of the tree has them, peeling or missing bark, cracks where a limb meets the trunk, or limbs already broken and hanging.',
+              '**Look at the tree itself.** A trunk that leans toward the house, mushrooms or soft wood at the base, or roots lifting the soil are reasons to have the tree looked at.',
+              '**Check the valleys and gutters.** Leaves, needles and seed pods piled where two roof slopes meet, behind the chimney or along the gutters show which trees drop the most.',
+              '**Look at the shaded slopes.** Green or dark patches, moss, or shingles that stay damp long after the rest of the roof has dried.',
+              '**Note the wires.** Any branch near the power line coming into the house is a job for the utility, not for you.',
+              '**Walk it again after a strong wind.** New debris, a broken branch on the roof or fresh scrape marks tell you which branches move the most.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Which Branches Are a Threat?',
+        blocks: [
+          { img: '/images/blog/tree-branches-over-your-roof-dead-limb.webp', alt: 'Looking up at a large tree with a dead, cracked limb hanging over a shingle roof while the rest of the tree is green', caption: 'A dead, split limb over the roof: the one branch on this list to call about today.' },
+          {
+            table: {
+              head: ['What you see', 'How serious', 'What to do'],
+              rows: [
+                ['A dead or broken limb hanging over the roof', 'Urgent', 'Call a certified arborist or tree service now; keep people out from under it'],
+                ['A branch resting on or rubbing the roof', 'Fix soon', 'Have it trimmed back, then have a roofer check the spot it rubbed'],
+                ['A large, healthy limb hanging over the house', 'Plan for it', 'Ask an arborist whether it should be trimmed or reduced'],
+                ['Branches near the power line to the house', 'Not yours to touch', 'Call the utility'],
+                ['A tree that fills the valleys and gutters every season', 'Ongoing', 'Keep the roof clear on a schedule, and consider trimming back the overhang'],
+                ['Branches beside the house, clear of the roof', 'Low', 'Keep an eye on them after strong winds'],
+              ],
+            },
+          },
+          { pov: 'A branch that touches the roof is never “fine.” Even a small one wears the same spot every time the wind moves it, and that spot is often where the next leak starts.' },
+        ],
+      },
+      {
+        heading: 'Trees That Drop the Most on Roofs',
+        blocks: [
+          { img: '/images/blog/tree-branches-over-your-roof-valley-debris.webp', alt: 'A roof valley packed with pine needles and leaves, with damp dark patches on the shingles beside it and a gutter full of debris', caption: 'Needles and leaves packed into a valley hold water against the roof and block its way to the gutter.' },
+          {
+            table: {
+              head: ['Tree', 'What it drops', 'What to watch on the roof'],
+              rows: [
+                ['Palms', 'Heavy dead fronds and seed stalks', 'Fronds caught in valleys and gutters; falling fronds can crack tiles'],
+                ['Pines', 'Needles and cones', 'Needles packed into valleys, behind chimneys and in gutters'],
+                ['Eucalyptus', 'Bark, leaves and limbs', 'Strips of bark in valleys and gutters; falling limbs in wind'],
+                ['Oaks and other leafy trees', 'Leaves, acorns and seed pods', 'Leaves piling up in valleys and gutters; shade on the slopes below'],
+              ],
+            },
+          },
+          { img: '/images/blog/tree-branches-over-your-roof-palm-fronds-tile.webp', alt: 'Dead palm fronds lying across a clay tile roof and caught in a valley beside a tall palm, with a cracked tile near the eave', caption: 'Dead palm fronds across a tile roof and caught in the valley, with a cracked tile near the edge.' },
+          'Whatever the tree, the roof’s low points collect the most. Our guide to [cleaning gutters without damaging the roof edge](/blog/clean-gutters-without-damaging-roof-edge/) covers the part you can do from a ladder.',
+        ],
+      },
+      {
+        heading: 'Signs a Branch Has Already Done Damage',
+        blocks: [
+          { img: '/images/blog/tree-branches-over-your-roof-shaded-moss.webp', alt: 'Moss growing between the shingles of a shaded roof slope under the branches of a large oak tree', caption: 'A slope that lives in the shade stays damp, and moss moves in.' },
+          {
+            list: [
+              '**Scuffed or bare patches** on shingles right under a branch.',
+              '**Cracked, broken or shifted tiles** below an overhanging limb.',
+              '**Debris packed into valleys** and dark, damp patches beside it.',
+              '**Moss on a shaded slope,** or shingles that stay wet long after rain. See our article on [moss on your roof](/blog/moss-on-roof-myth-vs-fact/).',
+              '**A ceiling stain** in a room under a tree.',
+              '**Chewed vents, eave gaps or droppings** where animals have been using the branches to reach the roof.',
+              '**A dent, crack or hole** where a limb landed.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Who to Call About Which Problem',
+        blocks: [
+          {
+            list: [
+              '**A certified arborist or a licensed tree service** for trimming, dead limbs and trees that may be failing. We don’t trim trees, and limbs over a house are a job for a tree professional.',
+              '**The utility** for any branch near a power line.',
+              '**A roofer** for what the branches have done to the roof: scrape marks, broken shingles or tiles, debris-packed valleys, leaks.',
+            ],
+          },
+          { img: '/images/blog/tree-branches-over-your-roof-tree-service.webp', alt: 'A tree service worker in a bucket lift cutting back a large limb over a shingle roof', caption: 'Trimming is a job for a tree professional; the roof underneath is ours to check afterward.' },
+          'If you live in a fire hazard area, your local fire department has rules and guidance on clearing vegetation near the house; our guide to [fire-resistant roofs](/blog/wildfire-resistant-roof-los-angeles/) explains where embers get into a roof.',
+        ],
+      },
+      {
+        heading: 'Your Walkthrough Checklist',
+        blocks: [
+          {
+            checklist: [
+              'Walked the whole roofline from across the street',
+              'Checked each side of the house for branches touching the roof or gutters',
+              'Looked for dead, cracked or hanging limbs over the house',
+              'Looked at the trunk and base of each tree near the house',
+              'Checked the valleys and gutters for piled debris',
+              'Checked the shaded slopes for moss or damp patches',
+              'Noted any branches near the power line',
+              'Called a tree service or arborist about the limbs that need it',
+              'Booked a roof evaluation for the spots the branches have touched',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'How We Check a Roof Under Trees',
+        blocks: [
+          {
+            steps: [
+              '**Book a free roof evaluation.** A roofer looks at the roof, with *RoofScan 360* drone footage and photos, including the slopes you can’t see from the yard.',
+              '**Check where the branches touch.** Scrape marks, scuffed granules and cracked or shifted tiles under each overhanging limb.',
+              '**Look at the valleys, flashings and gutters,** where debris piles up and holds water.',
+              '**Look at the shaded slopes** for moss and damp patches.',
+              '**Give you one next step** in plain English: repair, monitor, maintain or replace, with a written scope and price before any work.',
+            ],
+          },
+          { img: '/images/blog/tree-branches-over-your-roof-roofer-checks.webp', alt: 'A roofer in a hard hat kneeling on a shingle roof under a trimmed tree, recording scraped and torn shingles on a tablet while a drone flies overhead', caption: 'After the trimming: a roofer documents the scraped and torn shingles the branches left behind.' },
+          'A few damaged shingles or tiles under a branch are a [*LeakRescue* repair](/residential-roofing/shingle-roofing/repair/), or a [tile roof repair](/residential-roofing/tile-roofing/repair/) on a tile roof. For a house under trees, our [roof maintenance plans](/roof-maintenance-plans/) clear debris from the roof, valleys and gutters, keep an eye on moss on shaded slopes and send a photo report every visit. If a limb has already come down on the roof, our [emergency roof repair](/roof-repair/emergency/) team takes calls after hours and weekends and puts tarps on when needed.',
+          { pov: 'Have the tree work done first, then have the roof checked. A roofer can’t fix the spot a branch rubs while the branch is still rubbing it.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Are tree branches over my roof a problem?',
+        a: 'They can be. Branches that touch the roof scrape it, overhanging trees fill the valleys and gutters with debris, shade keeps slopes damp, and dead or heavy limbs can fall in wind. Branches beside the house that stay clear of the roof are usually less of a concern.',
+      },
+      {
+        q: 'Which branches should be trimmed first?',
+        a: 'Dead, cracked or hanging limbs over the house first, then branches resting on or rubbing the roof, then large limbs that hang over the roof. A certified arborist can tell you which to remove and how.',
+      },
+      {
+        q: 'Do you trim trees?',
+        a: 'No. Tree trimming is a job for a certified arborist or a licensed tree service. We check and repair what the branches have done to the roof, and our maintenance plan visits clear debris from the roof, valleys and gutters.',
+      },
+      {
+        q: 'Can I trim branches over my roof myself?',
+        a: 'Small, low branches you can reach safely from the ground, perhaps. Anything that needs a ladder against the house, a climb onto the roof or work near a power line is a job for a professional.',
+      },
+      {
+        q: 'Can a branch rubbing the roof cause a leak?',
+        a: 'Yes. It wears the same spot over and over, scuffing granules off shingles or cracking tiles, and that worn spot can let water in. Have the branch trimmed back, then have the spot checked.',
+      },
+      {
+        q: 'A limb fell on my roof. What should I do?',
+        a: 'Stay out of the rooms under the damage and keep away from any downed wires. Call the utility for wires and a tree service to remove the limb, then call a roofer. Our emergency roof repair team takes calls after hours and weekends and puts tarps on when needed.',
+      },
+    ],
+    closing: {
+      heading: 'Trees Over Your Roof?',
+      blocks: [
+        'See what the branches have done to it. [Book a free roof evaluation](#roof-check): a roofer checks the roof under the trees with drone footage and photos, tells you in plain English what it needs, and gives you a written scope and price before any work. Or call [(310) 340-1643](tel:+13103401643).',
+      ],
+    },
+    related: ['/roof-inspection/', '/roof-maintenance-plans/', '/roof-repair/', '/roof-repair/emergency/'],
+  },
   // Leaking skylight, reseal or replace (owner, November 25 2026, brief "Leaking skylight: reseal or replace? / Close-up demo / Comparative /
   // Skylight work"): keyword "leaking skylight". Most skylight leaks start at the flashing and the roofing around the curb, not the glass,
   // so the honest comparison is three-way: reseal (caulk), reflash, or replace the skylight. What the site confirms we do: the roofing side
