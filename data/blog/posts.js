@@ -24,6 +24,187 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // What's under your shingles (owner, November 25 2026, brief "What's under your shingles: underlayment, decking, drip edge / Cutaway demo /
+  // Educational / Explains line items in your quotes"): keyword "under your shingles". A cutaway from the framing up (`list:
+  // 'facts-numbered'`), the line items in a quote (`table: 'cards'`), signs a hidden layer has failed (`table: 'decide'`), what a thin quote
+  // leaves out (`list: 'flags'`), how to read the layers in your quote (`checklist: 'tracker'`) and how we build it (`steps: 'timeline'`).
+  // Facts as the shingle replacement page and project pages state them: full tear-off, the deck checked and photographed, soft or damaged
+  // sections replaced as the written scope says, layers lapped to shed water, synthetic underlayment (Owens Corning DeckDefense on recent
+  // projects), self-adhered membrane where water collects, color-matched drip edge, flashings, balanced ventilation, ridge caps,
+  // *TotalShield*, 3 to 5 days, the warranty with "call for details". No prices or lifespans. Our voice, three "Our point of view" boxes.
+  // cardImage is a stand-in until the owner's thumbnail arrives.
+  {
+    slug: 'whats-under-your-shingles',
+    title: 'What’s Under Your Shingles: Underlayment, Decking and Drip Edge, Explained',
+    keyword: 'under your shingles',
+    topics: ['shingle', 'replacement', 'ventilation'],
+    metaTitle: 'What’s Under Your Shingles? Underlayment, Deck and Drip Edge',
+    metaDescription:
+      'What’s under your shingles: the deck, underlayment, drip edge, flashings and vents, what each line item in a roofing quote means and what to ask about it.',
+    datePublished: '2026-11-25',
+    dateModified: '2026-11-25',
+    image: '/images/blog/whats-under-your-shingles.webp',
+    imageAlt: 'A cutaway of a shingle roof corner showing shingles, underlayment, a valley membrane, the plywood deck, the trusses beneath and metal drip edge along the eave',
+    excerpt:
+      'The shingles are the part you see. Most of what keeps water out is under them. A cutaway of a shingle roof from the deck up, what each line item in your quote means, and what to ask about the layers you never see.',
+    intro: [
+      'What’s under your shingles matters more than the shingles themselves. The shingles are the part you see from the street, but the deck, the underlayment, the drip edge, the flashings and the vents underneath them are what keep the water out and the roof lasting.',
+      'They are also the lines in a roofing quote that are easiest to skim past. Here is a cutaway of a shingle roof from the framing up, what each layer does, what each line item in your quote means, and what to ask so you know what you are paying for.',
+    ],
+    sections: [
+      {
+        heading: 'The Layers, From the Bottom Up',
+        blocks: [
+          {
+            list: [
+              '**The framing:** the rafters or trusses that hold the roof up. You see them from the attic.',
+              '**The deck:** plywood or OSB sheets, or older plank boards, nailed to the framing. Everything else is fastened to it.',
+              '**Drip edge:** a metal strip along the edges of the roof that turns water into the gutter and away from the fascia boards.',
+              '**Underlayment:** a water-resistant layer over the whole deck, the backup that keeps water off the wood if anything gets past the shingles.',
+              '**Self-adhered membrane:** a sticky, waterproof sheet in the places water collects or moves fastest, like valleys and low-slope sections.',
+              '**Starter strip:** the first course along the eaves, which seals the bottom edge of the roof.',
+              '**Flashings:** metal pieces at walls, chimneys, skylights and valleys, and boots around pipes, where the roof meets anything else.',
+              '**Shingles:** the layer you see, nailed course by course from the eaves up, each lapping over the one below.',
+              '**Ventilation and ridge caps:** vents low at the eaves and high near the ridge so the attic can breathe, and caps that finish the top of the roof.',
+            ],
+          },
+          { img: '/images/blog/whats-under-your-shingles-layers-stepped.webp', alt: 'A roof section showing its layers side by side: rafters, plywood deck, grey underlayment and the first courses of shingles', caption: 'The layers side by side: framing, deck, underlayment, then the shingles.' },
+          { pov: 'Every layer laps over the one below it, so water always runs down and out. When a roof leaks, it is usually because one of these layers was skipped, reused or put on in the wrong order.' },
+        ],
+      },
+      {
+        heading: 'The Line Items in Your Quote',
+        blocks: [
+          { img: '/images/blog/whats-under-your-shingles-new-deck-panel.webp', alt: 'A new light OSB panel set into a weathered plywood roof deck after the old roof was torn off, a nail gun beside it', caption: 'A damaged section of deck replaced with a new panel while the roof is open: the line item called deck repair.' },
+          {
+            table: {
+              head: ['Line item', 'What it means', 'What to ask'],
+              rows: [
+                ['Tear-off to the deck', 'The old roof comes off down to the wood', 'How many layers come off, and where the debris goes'],
+                ['Deck repair or replacement', 'Soft or damaged sections of the deck are replaced', 'How damaged deck is handled and priced, and whether you see photos first'],
+                ['Underlayment', 'The water-resistant layer over the whole deck', 'What kind, synthetic or felt, and which brand'],
+                ['Self-adhered membrane', 'A waterproof sheet where water collects', 'Where it goes: valleys, low-slope areas, around penetrations'],
+                ['Drip edge', 'Metal at the eaves and rakes', 'Is it new, and does it match the roof or the trim'],
+                ['Flashings', 'Metal at walls, chimneys, skylights and valleys, boots at pipes', 'Are they replaced, or reused'],
+                ['Ventilation', 'Intake at the eaves, exhaust near the ridge', 'Is the system balanced, and are vents added or replaced'],
+                ['Shingles and ridge caps', 'The finished surface', 'Which shingle, which color, and the manufacturer’s warranty'],
+                ['Permit and inspection', 'The building department’s sign-off', 'Who pulls the permit and books the inspection'],
+              ],
+            },
+          },
+          { img: '/images/blog/whats-under-your-shingles-drip-edge-underlayment.webp', alt: 'New metal drip edge along a roof eave with grey synthetic underlayment over it and a gutter below', caption: 'New drip edge at the eave, with the underlayment lapped over it so water runs into the gutter.' },
+          'Our guide to [the types of asphalt shingles](/blog/types-of-asphalt-shingles/) explains the top layer, and our guide to [drip edge flashing](/blog/roof-drip-edge-flashing/) goes further into the edge.',
+        ],
+      },
+      {
+        heading: 'Signs a Hidden Layer Has Failed',
+        blocks: [
+          {
+            table: {
+              head: ['What you notice', 'The layer that usually failed', 'What it usually means'],
+              rows: [
+                ['A soft or spongy spot when the roof is walked', 'The deck', 'Wood that has been wet; it gets replaced during a repair or replacement'],
+                ['A sagging line or dip in the roof', 'The deck or the framing', 'Have it looked at soon; our guide to a [sagging roofline](/blog/sagging-roofline-urgent/) explains'],
+                ['Stains on the fascia or rotted edges below the gutter', 'The drip edge', 'Water is running behind the gutter instead of into it'],
+                ['A leak around a chimney, skylight or pipe', 'The flashing', 'The metal or boot has failed, not the shingles'],
+                ['Damp, stained wood in the attic across the roof', 'Ventilation, or the underlayment', 'Moisture trapped in the attic, or water getting past the shingles'],
+                ['Curling, blistering shingles across the roof', 'Ventilation, or the shingles’ age', 'Heat trapped under the roof wears shingles faster'],
+              ],
+            },
+          },
+          { img: '/images/blog/whats-under-your-shingles-step-flashing-pipe-boot.webp', alt: 'New metal step flashing along a brick chimney and a new pipe boot on a shingle roof', caption: 'New step flashing at the chimney and a new boot at the pipe: the details where most leaks start.' },
+        ],
+      },
+      {
+        heading: 'What a Thin Quote Leaves Out',
+        blocks: [
+          { img: '/images/blog/whats-under-your-shingles-reading-the-quote.webp', alt: 'A homeowner at a kitchen table comparing a long, detailed roofing quote with a one-page quote', caption: 'A detailed quote next to a one-page one: the difference is usually in the layers.' },
+          {
+            list: [
+              '**No mention of the deck.** Damaged wood found later becomes a surprise charge.',
+              '**“Underlayment” with no type or brand.** You can’t compare it to another bid.',
+              '**Old drip edge and flashings reused.** New shingles laid against tired metal leak at the edges.',
+              '**Nothing about ventilation.** A new roof over an attic that can’t breathe ages early.',
+              '**New shingles over the old ones.** The deck and underlayment underneath are never seen. Our guide to [shingles over old shingles](/blog/new-shingles-over-old-shingles/) explains why we tear off.',
+            ],
+          },
+          'Our guide to [why the cheapest roofing quote can cost you more](/blog/cheapest-roofing-quote/) compares two quotes line by line.',
+          { pov: 'If a layer isn’t written in the quote, assume it isn’t in the price. Ask for it in writing, or ask why it was left out.' },
+        ],
+      },
+      {
+        heading: 'How to Read the Layers in Your Quote',
+        blocks: [
+          {
+            checklist: [
+              'The tear-off is written in, down to the deck',
+              'Damaged deck is covered: how it is found, shown to you and replaced',
+              'The underlayment is named, with its type',
+              'Self-adhered membrane is listed where water collects',
+              'Drip edge, flashings and pipe boots are new, not reused',
+              'Ventilation is part of the scope',
+              'The shingle, color and ridge caps are named',
+              'The permit and the inspection are included',
+            ],
+          },
+          { img: '/images/blog/whats-under-your-shingles-valley-membrane.webp', alt: 'A roofer pressing a strip of self-adhered membrane into a roof valley over a plywood deck', caption: 'Self-adhered membrane in a valley, where water on the roof moves fastest.' },
+        ],
+      },
+      {
+        heading: 'How We Build a Shingle Roof From the Deck Up',
+        blocks: [
+          { img: '/images/blog/whats-under-your-shingles-ridge-vent-caps.webp', alt: 'A roofer nailing ridge cap shingles over a ridge vent at the peak of a new grey shingle roof', caption: 'Ridge caps going on over the ridge vent, where warm air leaves the attic.' },
+          {
+            steps: [
+              '**Tear-off to the deck,** with the landscaping tarped and debris going straight to a bin or truck.',
+              '**The deck checked and photographed** while it is open, and soft or damaged sections replaced as your written scope says.',
+              '**Drip edge and underlayment.** On recent projects that has meant Owens Corning DeckDefense synthetic underlayment, with self-adhered membrane where water collects.',
+              '**Flashings and vents.** New flashings at walls, chimneys and valleys, boots at every pipe, and balanced ventilation, intake low and exhaust high.',
+              '**Shingles and ridge caps,** each course lapping over the one below.',
+              '**Cleanup and a walkthrough,** with a magnetic sweep for nails.',
+            ],
+          },
+          'That is our [*TotalShield* shingle roof replacement](/residential-roofing/shingle-roofing/replacement/), usually 3 to 5 days, with every layer named in a written scope and price before any work. Installs are backed by our 10-year workmanship warranty (call for details). On a [solar home in Pico Rivera](/projects/shingle-roof-replacement-solar-pico-rivera-90660/), the gapped plank deck was covered with new OSB before the new layers went on.',
+          { img: '/images/blog/whats-under-your-shingles-finished-roof.webp', alt: 'Drone view of a finished grey shingle roof with new ridge caps, pipe boots, vents and chimney flashing', caption: 'Finished: every layer under the shingles done once, and done right.' },
+          { pov: 'The layers under your shingles are the part of a roof you only pay for once. We would rather put them in right than save a little where no one will see it.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What is under the shingles on a roof?',
+        a: 'From the bottom up: the framing, the deck, the drip edge at the edges, the underlayment over the whole deck, self-adhered membrane where water collects, the starter strip, the flashings, then the shingles, the vents and the ridge caps.',
+      },
+      {
+        q: 'What does roof underlayment do?',
+        a: 'It is the water-resistant layer over the deck, the backup that keeps water off the wood if anything gets past the shingles, and it protects the deck while the roof is being built.',
+      },
+      {
+        q: 'What is roof decking?',
+        a: 'The plywood, OSB or older plank boards nailed to the framing. Everything else on the roof is fastened to it, which is why soft or damaged sections are replaced during a roof replacement.',
+      },
+      {
+        q: 'Do I need a new drip edge with a new roof?',
+        a: 'In most cases, yes. A new drip edge goes on with the underlayment so water is turned into the gutter and away from the fascia boards.',
+      },
+      {
+        q: 'Why does my roofing quote list so many items?',
+        a: 'Because a roof is a system of layers, and each one matters. A detailed quote shows what is being replaced and how, so you can compare bids line by line.',
+      },
+      {
+        q: 'How do I know if my roof deck is damaged?',
+        a: 'Soft or spongy spots, a sag in the roofline or stained wood in the attic are common signs. On a replacement, the deck is checked and photographed while it is open.',
+      },
+    ],
+    closing: {
+      heading: 'Want to Know What’s Under Your Shingles?',
+      blocks: [
+        '[Book a free roof evaluation](#roof-check). A roofer looks at your roof, explains what is under it in plain English, and gives you a written scope and price with every layer named before any work. Or call [(310) 340-1643](tel:+13103401643).',
+        'Part of our [asphalt shingle roof guide](/blog/asphalt-shingle-roof-guide/).',
+      ],
+    },
+    related: ['/residential-roofing/shingle-roofing/replacement/', '/residential-roofing/shingle-roofing/', '/residential-roofing/attic-ventilation/', '/roof-replacement/'],
+  },
   // Roof replacement day, hour by hour (owner, November 25 2026, brief "What happens on roof replacement day, hour by hour / Time-lapse /
   // Purchase-intent / Removes fear of the process"): keyword "roof replacement day". A typical first day on a shingle roof in time blocks,
   // not clock times (no confirmed start or finish hours): arrival and protection, tear-off, the deck, dry-in, flashings and vents, shingles,
@@ -35,6 +216,7 @@ export const BLOG_POSTS = [
   // prepare-for-a-roof-replacement (linked both ways). No prices. Our voice, three "Our point of view" boxes. cardImage is a stand-in.
   {
     slug: 'roof-replacement-day-hour-by-hour',
+    revision: 1, // new family-indoors picture (owner, November 25 2026); POST /api/posts/sync/ after the deploy
     title: 'What Happens on Roof Replacement Day, Hour by Hour',
     keyword: 'roof replacement day',
     topics: ['replacement', 'shingle'],
@@ -97,7 +279,7 @@ export const BLOG_POSTS = [
               ],
             },
           },
-          { img: '/images/blog/roof-replacement-day-hour-by-hour-inside-the-house.webp', alt: 'A dog asleep on a living room rug and a girl reading with headphones while a roofer works on the roof outside the window', caption: 'Inside, life goes on: pets settled and headphones on while the work happens overhead.' },
+          { img: '/images/blog/roof-replacement-day-hour-by-hour-inside-the-house-v2.webp', alt: 'A dog asleep on a living room rug and a girl reading with headphones while a roofer in a hard hat works on the roof outside the window', caption: 'Inside, life goes on: pets settled and headphones on while the work happens overhead.' },
         ],
       },
       {

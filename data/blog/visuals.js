@@ -18,6 +18,14 @@
 //   table: 'cards'          rows to compare as cards with labelled lines
 //   table: 'hotspots'       "where / what goes wrong" rows as an interactive picture of a flat commercial roof
 export const POST_VISUALS = {
+  'whats-under-your-shingles': {
+    'The Layers, From the Bottom Up': { list: 'facts-numbered' },
+    'The Line Items in Your Quote': { table: 'cards' },
+    'Signs a Hidden Layer Has Failed': { table: 'decide' },
+    'What a Thin Quote Leaves Out': { list: 'flags' },
+    'How to Read the Layers in Your Quote': { checklist: 'tracker' },
+    'How We Build a Shingle Roof From the Deck Up': { steps: 'timeline' },
+  },
   'roof-replacement-day-hour-by-hour': {
     'Replacement Day, Hour by Hour': { steps: 'timeline' },
     'What You’ll Hear, See and Notice': { table: 'cards' },
