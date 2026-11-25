@@ -59,6 +59,7 @@ export default async function BlogPage() {
         outcome={heroOutcome('/blog/')}
         intro={page.hero.intro}
         breath={false}
+        className="blog-hero"
         {...(featured && { aside: <HeroLatestPost post={featured} /> })}
       />
       <BlogBrowser posts={cards} heading={published.length ? 'Browse Articles' : 'Coming Soon'} />

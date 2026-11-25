@@ -494,3 +494,5 @@ html body.studio-site main.srch .srch-title{font-size:clamp(19px,1.7vw,23px);let
 /* Wider hero headings (owner, November 11 2026, "show fewer lines of heading text"): the new-theme hero's H1 may run to the width of its
    column (it was held to 15ch, which with Gilda Display broke a long H1 onto five lines) */
 html body.studio-site :is(main.qh,main .qh-scope) .qh-hero h1{max-width:26ch}
+/* Blog index hero heading in capitals, like the article headings (owner, November 25 2026); its gold outcome line keeps its own case. */
+body.studio-site .hero .blog-hero .hero-title{text-transform:uppercase}

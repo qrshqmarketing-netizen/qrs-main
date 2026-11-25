@@ -24,6 +24,212 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // Attic condensation (owner, November 25 2026, brief "How to spot attic condensation before it turns to mold / Attic close-up /
+  // Educational / Ventilation and decking repair"): keyword "attic condensation". What it is, condensation vs. a roof leak (`table: 'cards'`),
+  // an attic close-up (`steps: 'timeline'`), what causes it (`list: 'facts-numbered'`), early signs vs. mold (`table: 'decide'`), what not to
+  // do (`list: 'flags'`), who fixes what, a checklist (`checklist: 'tracker'`) and how we help (`steps: 'timeline'`). Service facts from the
+  // attic ventilation page (intake low, exhaust high, balanced; blocked intake cleared, vents repaired, replaced or added and flashed; the
+  // attic checked where it can be reached; part of the free roof evaluation; planned with a replacement when the roof is near the end) and
+  // the replacement pages (soft or damaged deck replaced when the roof is open). Mold cleanup goes to a mold remediation company, exhaust
+  // ducts that end in the attic to the contractor who installs them; we flash the roof vent cap. No prices, no humidity figures or timelines
+  // for mold. Our voice, three "Our point of view" boxes. cardImage is a stand-in until the owner's thumbnail arrives.
+  {
+    slug: 'attic-condensation-before-mold',
+    title: 'How to Spot Attic Condensation Before It Turns to Mold: An Attic Close-Up',
+    keyword: 'attic condensation',
+    topics: ['ventilation', 'inspection', 'repair', 'maintenance', 'leak'],
+    metaTitle: 'Attic Condensation: How to Spot It Before It Turns to Mold',
+    metaDescription:
+      'How to spot attic condensation before it turns to mold: what it looks like up close, how it differs from a roof leak, what causes it and how it gets fixed.',
+    datePublished: '2026-11-25',
+    dateModified: '2026-11-25',
+    image: '/images/blog/attic-condensation-before-mold.webp',
+    imageAlt: 'The underside of an attic roof deck lit by a flashlight, dark stains spreading across the plywood above the insulation and soffit vents',
+    excerpt:
+      'Attic condensation looks a lot like a roof leak, but the cause is the air in the attic, not a hole in the roof. What it looks like up close, how to tell it from a leak, what causes it and how it gets fixed before it turns to mold.',
+    intro: [
+      'Attic condensation is water that forms on the underside of the roof when warm, damp air from the house meets a cold roof deck. It shows up on cool mornings as droplets on nail tips and dark stains on the wood, and it can look a lot like a roof leak. Left alone, the same damp spots can grow mold and soften the deck.',
+      'Here is how to spot it up close before it turns to mold: what to look for in the attic, how to tell it from a roof leak, what causes it, what not to do, and how it gets fixed, from the vents to the decking.',
+    ],
+    sections: [
+      {
+        heading: 'What Attic Condensation Is',
+        blocks: [
+          'Every home puts moisture into the air: showers, cooking, laundry, even breathing. Some of that warm, damp air rises into the attic. On a cool night the roof deck cools down, and when the damp air touches it, the moisture turns to water on the coldest surfaces first: the underside of the deck and the tips of the roofing nails poking through it.',
+          'A well-ventilated attic carries that damp air out before it settles. When the air can’t move, the moisture stays, night after night, and the wood stays damp long enough for stains, rot and mold to start.',
+          { img: '/images/blog/attic-condensation-before-mold-droplets-on-nails.webp', alt: 'Water droplets hanging from the tips of roofing nails poking through the underside of an attic roof deck, with rust streaks on the wood', caption: 'Droplets on the nail tips on a cool morning: the coldest metal in the attic is where condensation shows first.' },
+          { pov: 'Condensation isn’t a roof problem in the usual sense. The roof is often fine; the attic just can’t breathe. That is why patching shingles never fixes it.' },
+        ],
+      },
+      {
+        heading: 'Condensation or a Roof Leak?',
+        blocks: [
+          { img: '/images/blog/attic-condensation-before-mold-staining-across-deck.webp', alt: 'Dark staining and grey-black spotting spread across several sheets of an attic roof deck, worst up high near the ridge', caption: 'Staining spread across the deck and worst up high: the pattern condensation leaves, unlike a leak’s single trail.' },
+          {
+            table: {
+              head: ['Clue', 'Attic condensation', 'A roof leak'],
+              rows: [
+                ['When it happens', 'Cool mornings, often in dry weather', 'During or after rain'],
+                ['Where it shows', 'Spread across the underside of the deck, often worst high up near the ridge or on the coolest side', 'One spot or a trail, below a vent, flashing, valley or damaged roofing'],
+                ['What the nails look like', 'Droplets or rust on many nail tips across the attic', 'Rust or drips around one area'],
+                ['The stain pattern', 'Even darkening or spotting over a wide area', 'A trail running downhill from one point'],
+                ['What fixes it', 'Ventilation, and stopping the moisture at its source', 'Finding and repairing the opening in the roof'],
+              ],
+            },
+          },
+          'Our guides to [tracing a roof leak in the attic](/blog/how-to-trace-a-roof-leak-in-the-attic/) and [reading a ceiling stain](/blog/how-to-read-a-ceiling-stain/) cover the leak side of the question.',
+        ],
+      },
+      {
+        heading: 'An Attic Close-Up: What to Look For',
+        blocks: [
+          'Only go up if the attic has a safe way in and a floor or joists to stand on. Step only on the joists or a walkway, never on the ceiling between them, and take a bright flashlight.',
+          { img: '/images/blog/attic-condensation-before-mold-checking-from-hatch.webp', alt: 'A homeowner on a ladder with his head and shoulders through an attic hatch, shining a flashlight across the rafters', caption: 'Check from the hatch first, with a bright flashlight, before stepping onto the joists.' },
+          {
+            steps: [
+              '**At the hatch, smell first.** A musty, damp smell is often the first sign.',
+              '**Look at the nail tips.** On a cool morning, droplets hanging from the nails that poke through the deck, or rust streaks running from them, point to condensation.',
+              '**Look at the underside of the deck.** Dark staining, black spotting or a blotchy grey film spread over a wide area, often worst high up.',
+              '**Feel for damp.** Insulation that is damp, matted or compressed, and wood that feels soft when pressed.',
+              '**Look at the eaves.** Insulation pushed against the soffit vents blocks the air coming in.',
+              '**Follow the ducts.** A bathroom, kitchen or dryer duct that ends loose in the attic is blowing damp air straight into it.',
+              '**Look for fuzz or spots.** White, green or black fuzzy growth on the wood is likely mold, and a reason to call a professional.',
+              '**Photograph everything.** A roofer can tell a lot from your photos of the deck, the nails and the eaves.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'What Causes Attic Condensation',
+        blocks: [
+          {
+            list: [
+              '**Too little ventilation.** Not enough intake at the eaves, not enough exhaust near the ridge, or the two out of balance.',
+              '**Blocked intake.** Insulation, paint or debris covering the soffit and eave vents, so air can’t come in low.',
+              '**Exhaust fans venting into the attic.** Bathroom, kitchen or dryer ducts that stop in the attic instead of going outside.',
+              '**Air leaks from the house.** Gaps around light fixtures, the attic hatch and pipes let warm, damp air rise into the attic.',
+              '**Extra moisture inside.** Long showers without the fan, drying laundry indoors, many people under one roof.',
+              '**Cool, damp mornings.** Near the coast and in the cooler months, the marine layer and cold nights make the deck the coldest thing around.',
+            ],
+          },
+          { img: '/images/blog/attic-condensation-before-mold-duct-ending-in-attic.webp', alt: 'A flexible metal exhaust duct lying open on the attic insulation, with the roof deck above it stained dark', caption: 'An exhaust duct that ends in the attic, blowing damp air straight at the deck above it.' },
+          { pov: 'The one we see most is a vent on the roof with nothing feeding it from below. Exhaust without intake just moves the problem around the attic.' },
+        ],
+      },
+      {
+        heading: 'Early Signs or Mold Already?',
+        blocks: [
+          { img: '/images/blog/attic-condensation-before-mold-mold-on-deck.webp', alt: 'Fuzzy white and black mold growing across a damp attic roof deck and onto a rafter', caption: 'Fuzzy white and black growth on the deck and rafter: likely mold, and a job for a mold remediation company.' },
+          {
+            table: {
+              head: ['What you see', 'What it usually means', 'What to do'],
+              rows: [
+                ['Droplets on nail tips on cool mornings, wood still sound', 'Early condensation', 'Fix the ventilation and the moisture sources now'],
+                ['Rust streaks from many nails, dark staining on the deck', 'Condensation that has been happening for a while', 'Fix the cause and have the deck checked'],
+                ['Damp, matted insulation near the eaves', 'Blocked intake, or moisture collecting low', 'Clear the intake, check the insulation'],
+                ['Fuzzy white, green or black growth on the wood', 'Likely mold', 'Call a mold remediation company, then fix the cause'],
+                ['Wood that is soft, delaminating or crumbling', 'Damage to the deck', 'Have a roofer check it; damaged decking gets replaced'],
+              ],
+            },
+          },
+        ],
+      },
+      {
+        heading: 'What Not to Do',
+        blocks: [
+          {
+            list: [
+              '**Don’t block the vents** to keep the attic warmer. It traps the moisture in.',
+              '**Don’t add more roof vents** without checking the intake. Exhaust with nothing feeding it can pull damp air up from the house.',
+              '**Don’t paint over or spray mold and leave it.** Covering it doesn’t fix the moisture that grew it.',
+              '**Don’t step between the joists.** The ceiling below won’t hold you.',
+              '**Don’t assume it’s a roof leak** and pay for patching shingles. Check the timing and the pattern first.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Who Fixes What',
+        blocks: [
+          { img: '/images/blog/attic-condensation-before-mold-soft-decking.webp', alt: 'A gloved finger pressing into soft, delaminating, water-stained roof decking seen from the attic', caption: 'Decking that has gone soft and delaminated: a roofer’s job, and replaced so the roof has something sound to hold onto.' },
+          {
+            list: [
+              '**A roofer** balances the ventilation: clearing blocked intake at the eaves and soffits, repairing, replacing or adding vents, and flashing every vent into the roof. A roofer also replaces soft or damaged roof decking.',
+              '**The contractor who installs your fans and ducts** extends bathroom, kitchen and dryer ducts to the outside. Where a duct exits through the roof, the vent cap is flashed into the roofing.',
+              '**A mold remediation company** cleans up mold that has already grown.',
+              '**You** cut the moisture at the source: run the bathroom fan during and after showers, use the kitchen hood, and vent the dryer outside.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Your Attic Condensation Checklist',
+        blocks: [
+          {
+            checklist: [
+              'Checked the attic on a cool morning, with a flashlight, from the joists',
+              'Looked at the nail tips for droplets or rust',
+              'Looked at the underside of the deck for staining or spotting',
+              'Checked the insulation near the eaves for damp or blocked vents',
+              'Followed the bathroom, kitchen and dryer ducts to where they end',
+              'Photographed what I found',
+              'Called a mold remediation company if there is growth on the wood',
+              'Booked a roofer to check the ventilation and the decking',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'How We Help',
+        blocks: [
+          {
+            steps: [
+              '**Book a free roof evaluation.** A roofer checks the vents from the roof and, where it can be reached, from the attic.',
+              '**Photograph every vent and finding.** The intake at the eaves, the exhaust near the ridge, the decking and the insulation.',
+              '**Explain the likely cause** in plain English: a blocked intake, a missing side of the system, a duct ending in the attic, or a roof leak after all.',
+              '**Give you a written scope and price** before any work: which vents to clear, repair, replace or add, and where.',
+            ],
+          },
+          { img: '/images/blog/attic-condensation-before-mold-roofer-ridge-vent.webp', alt: 'A roofer kneeling on a shingle roof working along the ridge vent, with soffit vents under the eave below', caption: 'Exhaust at the ridge, intake at the soffits below: the two sides of a balanced attic.' },
+          'The vents are fixed as our [attic ventilation](/residential-roofing/attic-ventilation/) work, every one flashed into the roof so it doesn’t become a leak. Soft or damaged decking found under the roofing is replaced, and when a roof is near the end of its life, the ventilation is planned with a [shingle roof replacement](/residential-roofing/shingle-roofing/replacement/), where the deck is checked and photographed while it is exposed.',
+          { pov: 'Catch it at the nail tips and it is a ventilation fix. Catch it at soft decking and mold and it is a much bigger job. A look in the attic each fall is worth the five minutes.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What causes condensation in the attic?',
+        a: 'Warm, damp air from the house reaching a cold roof deck. It happens when the attic doesn’t vent well, when the intake at the eaves is blocked, when bathroom, kitchen or dryer ducts end in the attic, or when air leaks up from the rooms below.',
+      },
+      {
+        q: 'How do I know if it’s condensation or a roof leak?',
+        a: 'Condensation shows up on cool mornings, often in dry weather, spread across the deck and on many nail tips. A roof leak shows up with rain, in one spot or a trail running downhill from an opening.',
+      },
+      {
+        q: 'Can attic condensation cause mold?',
+        a: 'Yes. Wood that stays damp night after night can grow mold and eventually soften. Fixing the ventilation and the moisture sources early keeps it from getting that far.',
+      },
+      {
+        q: 'Will more roof vents fix attic condensation?',
+        a: 'Only if the system is balanced. Air has to come in low at the eaves and leave high near the ridge. Adding exhaust without intake can make it worse.',
+      },
+      {
+        q: 'Do you remove attic mold?',
+        a: 'No. Mold cleanup is a job for a mold remediation company. We fix the ventilation that let the moisture build up and replace roof decking that has been damaged.',
+      },
+      {
+        q: 'Do you replace damaged roof decking?',
+        a: 'Yes. Soft or damaged decking found under the roofing is replaced, during a repair or when the roof is replaced, and photographed so you can see it.',
+      },
+    ],
+    closing: {
+      heading: 'Seeing Droplets or Stains in the Attic?',
+      blocks: [
+        'Find out whether it is condensation or a leak. [Book a free roof evaluation](#roof-check): a roofer checks the vents and, where it can be reached, the attic, photographs what is there and gives you a written scope and price before any work. Or call [(310) 340-1643](tel:+13103401643).',
+      ],
+    },
+    related: ['/residential-roofing/attic-ventilation/', '/roof-inspection/', '/roof-repair/', '/residential-roofing/shingle-roofing/replacement/'],
+  },
   // Splitting seams on a flat roof membrane (owner, November 25 2026, brief "Splitting seams on a flat roof membrane / Why are my roof seams
   // opening up?", from the commercial building owners' questions on the brief sheet): keyword "roof seams opening up", written for commercial
   // flat roofs (owners, property managers, building engineers) like the other flat roof briefs. How each system's seams hold (`table:

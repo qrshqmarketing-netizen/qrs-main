@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Breadcrumbs from '@/components/sections/Breadcrumbs';
 import FinalCta from '@/components/sections/FinalCta';
 import RelatedLinks from '@/components/sections/RelatedLinks';
-import RoofCheck from '@/components/sections/RoofCheck';
+import LatestArticles from '@/components/sections/LatestArticles';
 import { postDate } from '@/components/sections/PostCards';
 import JsonLd from '@/components/ui/JsonLd';
 import Rich from '@/components/ui/Rich';
@@ -137,7 +137,7 @@ function PostSection({ section, id, slug }) {
 
 // One blog post (/blog/<slug>/): thumbnail, byline, intro, table of contents, sections, FAQs and a closing section.
 // Content shape: data/blog/posts.js
-// "Keep reading" (data/blog/links.js): live articles by their current title, service pages by their menu name; anything the article's own
+// "Keep reading" (data/blog/links.js; the articles already shown as related cards are left out of it): live articles by their current title, service pages by their menu name; anything the article's own
 // text already links to is left out. posts: the live article list (app/blog/[slug]/page.js).
 function keepReading(post, posts = []) {
   const own = JSON.stringify([post.intro, post.sections, post.faqs, post.closing]);
@@ -151,8 +151,27 @@ function keepReading(post, posts = []) {
     .filter(Boolean);
 }
 
+// Related articles shown as cards at the end of an article (owner, November 25 2026, in place of the request form): first the live articles
+// this one lists in KEEP_READING (data/blog/links.js), then the ones sharing the most topics with it, newest first on a tie; never itself.
+function relatedArticles(post, posts = [], limit = 3) {
+  const others = posts.filter((p) => p.slug !== post.slug);
+  const listed = (KEEP_READING[post.slug] || [])
+    .filter((href) => href.startsWith('/blog/'))
+    .map((href) => others.find((p) => blogPath(p.slug) === href))
+    .filter(Boolean);
+  const topics = post.topics || [];
+  const byTopic = others
+    .filter((p) => !listed.includes(p))
+    .map((p) => ({ p, score: (p.topics || []).filter((t) => topics.includes(t)).length }))
+    .sort((a, b) => b.score - a.score || b.p.datePublished.localeCompare(a.p.datePublished))
+    .map((x) => x.p);
+  return [...listed, ...byTopic].slice(0, limit);
+}
+
 export default function BlogPost({ post, posts }) {
-  const more = keepReading(post, posts);
+  const related = relatedArticles(post, posts);
+  const shown = new Set(related.map((p) => blogPath(p.slug)));
+  const more = keepReading(post, posts).filter((l) => !shown.has(l.href)); // the related cards below already link these
   const path = blogPath(post.slug);
   const crumbs = [HOME, BLOG_LINK, { label: post.title, href: path }];
   const faqs = post.faqs || [];
@@ -260,7 +279,7 @@ export default function BlogPost({ post, posts }) {
         </div>
       </article>
       <RelatedLinks heading="Related services" links={relatedLinks(post.related)} />
-      <RoofCheck />
+      <LatestArticles posts={related} heading="Related __Articles__" />
       <FinalCta
         heading="Have a Question About Your Roof?"
         text="An article only goes so far. A roofer, not a salesperson, can look at your roof and give you a clear next step with a written scope and price."

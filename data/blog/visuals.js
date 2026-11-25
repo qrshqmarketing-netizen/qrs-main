@@ -18,6 +18,15 @@
 //   table: 'cards'          rows to compare as cards with labelled lines
 //   table: 'hotspots'       "where / what goes wrong" rows as an interactive picture of a flat commercial roof
 export const POST_VISUALS = {
+  'attic-condensation-before-mold': {
+    'Condensation or a Roof Leak?': { table: 'cards' },
+    'An Attic Close-Up: What to Look For': { steps: 'timeline' },
+    'What Causes Attic Condensation': { list: 'facts-numbered' },
+    'Early Signs or Mold Already?': { table: 'decide' },
+    'What Not to Do': { list: 'flags' },
+    'Your Attic Condensation Checklist': { checklist: 'tracker' },
+    'How We Help': { steps: 'timeline' },
+  },
   'flat-roof-seams-opening-up': {
     'How a Flat Roof Seam Is Supposed to Hold': { table: 'cards' },
     'Why Roof Seams Open Up': { list: 'facts-numbered' },
