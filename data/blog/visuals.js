@@ -18,6 +18,14 @@
 //   table: 'cards'          rows to compare as cards with labelled lines
 //   table: 'hotspots'       "where / what goes wrong" rows as an interactive picture of a flat commercial roof
 export const POST_VISUALS = {
+  'how-to-pick-a-shingle-color': {
+    'Seven Rules for Picking a Shingle Color': { list: 'facts-numbered' },
+    'The Eleven Cool Roof Colors We Offer': { table: 'cards' },
+    'Color Ideas for Your House': { table: 'cards' },
+    'Which Way Should You Lean?': { table: 'decide' },
+    'How to Check a Sample Before You Decide': { checklist: 'tracker' },
+    'How We Help You Choose': { steps: 'timeline' },
+  },
   'attic-condensation-before-mold': {
     'Condensation or a Roof Leak?': { table: 'cards' },
     'An Attic Close-Up: What to Look For': { steps: 'timeline' },

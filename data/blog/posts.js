@@ -24,6 +24,188 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // Picking a shingle color (owner, November 25 2026, brief "How to pick a shingle color that suits your house / Visual examples /
+  // Purchase-intent / Your color"): keyword "shingle color". Seven rules (`list: 'facts-numbered'`), the eleven cool roof colors we offer
+  // (data/roofColors.js: names only, no brand or line name, all SRI 20+, light to dark), color ideas by house (`table: 'cards'`, design
+  // suggestions, not claims), which way to lean (`table: 'decide'`), how to check a sample (`checklist: 'tracker'`), HOA and permit notes
+  // (some building departments call for a cool roof; the permit says which applies, as the cool roofing page words it) and how we help you
+  // choose (`steps: 'timeline'`: free roof evaluation, physical samples in your own light as the color section says, the try-on tool at
+  // /residential-roofing/shingle-roofing/#shingle-colors, the color named in the written scope, *TotalShield*). Screen colors are approximate.
+  // No prices, no lifespans. Our voice, three "Our point of view" boxes. cardImage is a stand-in until the owner's thumbnail arrives.
+  {
+    slug: 'how-to-pick-a-shingle-color',
+    title: 'How to Pick a Shingle Color That Suits Your House: Visual Examples',
+    keyword: 'shingle color',
+    topics: ['shingle', 'replacement'],
+    metaTitle: 'How to Pick a Shingle Color That Suits Your House',
+    metaDescription:
+      'How to pick a shingle color that suits your house: seven simple rules, color ideas for stucco, brick and wood homes, and how to check a sample first.',
+    datePublished: '2026-11-25',
+    dateModified: '2026-11-25',
+    image: '/images/blog/how-to-pick-a-shingle-color.webp',
+    imageAlt: 'A hand holding brown, grey and charcoal shingle samples against the cream stucco wall and white trim of a home',
+    excerpt:
+      'The shingle color you pick will be on your house for the life of the roof. Seven simple rules, color ideas for stucco, brick and wood homes, the eleven cool roof colors we offer, and how to check a sample before you decide.',
+    intro: [
+      'Choosing a shingle color is one of the few roofing decisions that is purely yours, and one you will look at every day for the life of the roof. A color that looks great on a small swatch can look very different across a whole roof, in full sun, next to your walls and trim.',
+      'Here are seven simple rules that make the choice easier, color ideas for common Southern California homes, the eleven cool roof colors we offer, and how to check a sample so the roof you get is the roof you pictured. To see the colors on a real roof, try our [shingle color picker](/residential-roofing/shingle-roofing/#shingle-colors).',
+    ],
+    sections: [
+      {
+        heading: 'Seven Rules for Picking a Shingle Color',
+        blocks: [
+          { img: '/images/blog/how-to-pick-a-shingle-color-ranch-home-grey-roof.webp', alt: 'A single-story cream stucco ranch home with white trim, a wood front door and a mid-grey shingle roof, seen from the street', caption: 'A cream house, white trim, a wood door and a mid-grey roof: every part of the house works together.' },
+          {
+            list: [
+              '**Start with what you can’t change.** Brick, stone, a tile accent or a colored stucco will be there as long as the roof is. Pick a roof that works with them.',
+              '**Match warm with warm, cool with cool.** Beige, tan, cream and red brick usually look best under browns and warm blends; white, grey and blue walls under greys and charcoals.',
+              '**Let the roof contrast or blend, on purpose.** A darker roof frames a light house; a roof close to the wall color makes a house look calm and longer.',
+              '**Think about the style of the house.** Craftsman homes often suit earthy browns, ranch and mid-century homes greys, and modern homes a crisp light or very dark roof.',
+              '**Look at the street.** You don’t have to match the neighbors, but a roof that fits the block usually looks right longer.',
+              '**Consider the sun.** Lighter colors reflect more of the sun’s heat. Every color we offer is a cool roof color, so even the darker ones shed more heat than a standard dark shingle.',
+              '**Choose from a real sample, outside.** A screen or a small chip indoors never shows the color the way the sun will.',
+            ],
+          },
+          { pov: 'The best roof color usually isn’t the boldest one. It is the one that makes the whole house look finished, and still looks right after you repaint.' },
+        ],
+      },
+      {
+        heading: 'The Eleven Cool Roof Colors We Offer',
+        blocks: [
+          'On a shingle roof replacement, you can choose from eleven cool roof colors, from light to dark. Every one is rated SRI 20 or higher; the Solar Reflectance Index measures how well a roof sheds the sun’s heat, so a higher number means a cooler roof and attic.',
+          { img: '/images/blog/how-to-pick-a-shingle-color-sample-row.webp', alt: 'Eleven asphalt shingle samples laid out on a wooden table from near-white through tans, greys and browns to near-black', caption: 'Light to dark, side by side. Colors on screen are approximate; check the real sample outside.' },
+          {
+            table: {
+              head: ['Family', 'Colors', 'Often chosen for'],
+              rows: [
+                ['Light', 'Shasta White, Oyster Shell', 'White or very light homes, modern homes, the coolest-looking roof'],
+                ['Warm', 'Amber, Golden Meadow', 'Cream, tan and beige stucco, Spanish and Mediterranean-style homes with shingles'],
+                ['Grey', 'Sierra Grey, Cliffside Gray, Rolling Stone, Mystic Gray', 'White, grey and blue homes, ranch and mid-century homes, the most versatile choice'],
+                ['Brown', 'Copper Trail, Prairie Wood', 'Craftsman homes, wood siding, red brick and earthy tones'],
+                ['Dark', 'Midnight', 'Light homes that want strong contrast, modern and traditional homes alike'],
+              ],
+            },
+          },
+          'Tap any color in our [shingle color picker](/residential-roofing/shingle-roofing/#shingle-colors) to see it on a home’s roof. Colors on screen are approximate, so check a physical sample before you decide.',
+        ],
+      },
+      {
+        heading: 'Color Ideas for Your House',
+        blocks: [
+          { img: '/images/blog/how-to-pick-a-shingle-color-white-house-dark-roof.webp', alt: 'A two-story white stucco home with black window frames and a near-black shingle roof under a clear blue sky', caption: 'A white house under a near-black roof: strong contrast and a crisp outline.' },
+          {
+            table: {
+              head: ['Your house', 'Colors to try', 'Why'],
+              rows: [
+                ['White or light grey stucco', 'Mystic Gray, Midnight, Sierra Grey', 'A grey or dark roof gives a light house a crisp outline'],
+                ['Beige, tan or cream stucco', 'Amber, Golden Meadow, Prairie Wood', 'Warm blends pick up the warm tones in the walls'],
+                ['Red or brown brick', 'Copper Trail, Prairie Wood, Rolling Stone', 'Browns and warm greys sit comfortably with brick'],
+                ['Blue, green or grey siding', 'Cliffside Gray, Sierra Grey, Mystic Gray', 'Cool greys keep a cool-colored house calm'],
+                ['Craftsman with wood or natural tones', 'Prairie Wood, Copper Trail, Rolling Stone', 'Earthy colors suit the style'],
+                ['Modern, flat walls, dark trim', 'Midnight, Shasta White, Oyster Shell', 'A very dark or very light roof suits clean lines'],
+              ],
+            },
+          },
+          { img: '/images/blog/how-to-pick-a-shingle-color-craftsman-brown-roof.webp', alt: 'A Craftsman bungalow with grey-green siding, a stone porch and a brown shingle roof among mature trees', caption: 'A Craftsman with stone and wood under an earthy brown roof.' },
+          { img: '/images/blog/how-to-pick-a-shingle-color-warm-stucco-brown-roof.webp', alt: 'A tan stucco home with dark wood trim and a warm brown shingle roof, with desert landscaping in golden light', caption: 'Warm walls, warm roof: a brown blend picks up the tones in tan stucco.' },
+          'These are starting points, not rules. Your trim, your door, your landscaping and the light on your street all change how a color reads.',
+        ],
+      },
+      {
+        heading: 'Which Way Should You Lean?',
+        blocks: [
+          { img: '/images/blog/how-to-pick-a-shingle-color-light-vs-dark-roofs.webp', alt: 'Two matching single-story homes side by side, one with a light grey shingle roof and one with a near-black shingle roof', caption: 'The same house twice: a light roof reads soft and cool, a dark one frames the house.' },
+          {
+            table: {
+              head: ['If you want…', 'Lean toward', 'Keep in mind'],
+              rows: [
+                ['A roof that stays cooler in the sun', 'The lighter colors', 'Light colors show dirt and streaks more than dark ones'],
+                ['A roof that hides wear and streaks', 'Mid greys, browns and blends', 'Blended colors hide small marks best'],
+                ['Strong curb appeal on a light house', 'Midnight or a dark grey', 'A dark roof makes the house stand out on the street'],
+                ['A calm, timeless look', 'A grey or brown close to the walls', 'Easy to live with through repainting'],
+                ['A roof that suits future paint colors', 'A neutral grey', 'Greys work with the widest range of wall colors'],
+              ],
+            },
+          },
+        ],
+      },
+      {
+        heading: 'How to Check a Sample Before You Decide',
+        blocks: [
+          {
+            checklist: [
+              'Ask for a physical sample, not just a picture on a screen',
+              'Look at it outside, against your wall and your trim',
+              'Look at it in the morning and in the late afternoon',
+              'Step back to the street; a roof is seen from a distance',
+              'Hold it next to your brick, stone or any tile you are keeping',
+              'Check with your HOA if you have one; some approve roof colors',
+              'Ask whether your permit calls for a cool roof',
+              'Make sure the color you chose is named in the written scope',
+            ],
+          },
+          { img: '/images/blog/how-to-pick-a-shingle-color-sample-from-the-street.webp', alt: 'A roofer at the curb holding up a dark shingle sample toward a house while the homeowner compares it from the street', caption: 'Checking a sample from the street, where the roof will actually be seen.' },
+          { pov: 'Look at the sample from where your neighbors will see the roof, not from arm’s length. Colors look lighter and greyer from the street than they do in your hand.' },
+        ],
+      },
+      {
+        heading: 'HOAs, Permits and Cool Roof Rules',
+        blocks: [
+          'Many HOAs approve roof colors, so check your community’s rules and get the approval before the order is placed. Some local building departments call for a cool roof on a replacement, and your permit says which rule applies; every color we offer is a cool roof color rated SRI 20 or higher. Our [cool roofing](/residential-roofing/cool-roofing/) page explains how cool roofs work.',
+        ],
+      },
+      {
+        heading: 'How We Help You Choose',
+        blocks: [
+          {
+            steps: [
+              '**Book a free roof evaluation.** A roofer looks at your roof and tells you plainly whether it needs a repair or a replacement.',
+              '**Try colors on a home photo** in our [shingle color picker](/residential-roofing/shingle-roofing/#shingle-colors) to narrow it down.',
+              '**See physical samples in your own light.** We can bring samples so you see the color against your walls and trim.',
+              '**Get the color in writing.** Your written scope names the shingle and the color, with the price, before any work.',
+              '**A new roof from the deck up.** A [*TotalShield* shingle roof replacement](/residential-roofing/shingle-roofing/replacement/), usually 3 to 5 days, with a final walkthrough.',
+            ],
+          },
+          'Our guide to [the types of asphalt shingles](/blog/types-of-asphalt-shingles/) explains 3-tab and architectural shingles, which also change how a color looks on the roof.',
+          { pov: 'Take your time with the color. It is the one part of a roof replacement you will notice every day, and the one part that is entirely your call.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'How do I choose a shingle color for my house?',
+        a: 'Start with what you can’t change, like brick, stone or the color of your stucco, then pick a warm roof for a warm house or a cool grey for a cool one. Decide whether you want contrast or a blend, and choose from a physical sample outside, not from a screen.',
+      },
+      {
+        q: 'What shingle colors do you offer?',
+        a: 'Eleven cool roof colors, from light to dark: Shasta White, Oyster Shell, Amber, Golden Meadow, Sierra Grey, Cliffside Gray, Rolling Stone, Mystic Gray, Copper Trail, Prairie Wood and Midnight. Every one is rated SRI 20 or higher.',
+      },
+      {
+        q: 'Does a darker roof make the house hotter?',
+        a: 'Darker colors absorb more of the sun’s heat than lighter ones. Every color we offer is a cool roof color rated SRI 20 or higher, so even the darker choices shed more heat than a standard dark shingle.',
+      },
+      {
+        q: 'What shingle color goes with a white house?',
+        a: 'Greys and dark roofs give a white house a crisp outline: Mystic Gray, Sierra Grey or Midnight. A light roof like Oyster Shell gives a softer, all-light look.',
+      },
+      {
+        q: 'Can I see the color on my house before I decide?',
+        a: 'Yes. Try every color on a home photo in our [shingle color picker](/residential-roofing/shingle-roofing/#shingle-colors), and we can bring physical samples so you see the color against your own walls, in your own light.',
+      },
+      {
+        q: 'Does my HOA have to approve the roof color?',
+        a: 'Many do. Check your community’s rules and get the approval before the shingles are ordered.',
+      },
+    ],
+    closing: {
+      heading: 'Ready to Choose Your Color?',
+      blocks: [
+        'Narrow it down in our [shingle color picker](/residential-roofing/shingle-roofing/#shingle-colors), then [book a free roof evaluation](#roof-check). A roofer looks at your roof, brings samples so you can see the colors in your own light, and gives you a written scope and price, with your color named, before any work. Or call [(310) 340-1643](tel:+13103401643).',
+        'Part of our [asphalt shingle roof guide](/blog/asphalt-shingle-roof-guide/).',
+      ],
+    },
+    related: ['/residential-roofing/shingle-roofing/', '/residential-roofing/shingle-roofing/replacement/', '/residential-roofing/cool-roofing/', '/roof-replacement/'],
+  },
   // Attic condensation (owner, November 25 2026, brief "How to spot attic condensation before it turns to mold / Attic close-up /
   // Educational / Ventilation and decking repair"): keyword "attic condensation". What it is, condensation vs. a roof leak (`table: 'cards'`),
   // an attic close-up (`steps: 'timeline'`), what causes it (`list: 'facts-numbered'`), early signs vs. mold (`table: 'decide'`), what not to
