@@ -24,6 +24,189 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // What a yearly roof tune-up catches (owner, November 25 2026, brief "What a yearly roof tune-up catches / Ride-along / Purchase-intent /
+  // Annual maintenance service"): keyword "roof tune-up". A ride-along on one visit, stop by stop (`steps: 'timeline'`), what it catches
+  // (`table: 'cards'`), what it doesn't cover (`list: 'flags'`), a one-time *RoofRevive* tune-up or the yearly *RoofCare Plan*
+  // (`table: 'decide'`), when to book (`checklist: 'tracker'`) and what you get at the end. Every service fact is from the maintenance
+  // plans page (data/pages/carePlan.js): the tune-up's work by roof type, one written price and before-and-after photos; plan visits timed
+  // to the rains (September-October, May-June), full inspection, photo report with a condition rating, debris cleared, sealant topped off,
+  // tile resets, fire-code vent check, a priced list, month to month, pay after each visit, repairs quoted separately, the exclusions, our
+  // own roofer every time. No prices, discounts, response times or remaining-life figures. Our voice, three "Our point of view" boxes.
+  // cardImage is a stand-in until the owner's thumbnail arrives.
+  {
+    slug: 'yearly-roof-tune-up',
+    title: 'What a Yearly Roof Tune-Up Catches: Ride Along on a Visit',
+    keyword: 'roof tune-up',
+    topics: ['maintenance', 'inspection', 'repair', 'shingle', 'tile', 'flat'],
+    metaTitle: 'What a Yearly Roof Tune-Up Catches: Ride Along on a Visit',
+    metaDescription:
+      'Ride along on a yearly roof tune-up: what a roofer checks stop by stop, the small problems it catches before the rains, and a tune-up vs. a maintenance plan.',
+    datePublished: '2026-11-25',
+    dateModified: '2026-11-25',
+    image: '/images/blog/yearly-roof-tune-up.webp',
+    imageAlt: 'A roofer in a hard hat kneeling on a gray shingle roof, pressing a lifted shingle back down, with a tablet beside him and palm trees behind',
+    excerpt:
+      'Ride along with one of our roofers on a yearly roof tune-up: what gets checked stop by stop, the small problems it catches before the rains turn them into leaks, and whether a one-time tune-up or a yearly plan fits your roof.',
+    intro: [
+      'A roof tune-up is one focused visit for a roof that is basically sound but showing its age in small ways: a lifted shingle tab, a split pipe boot, a slipped tile, a valley full of leaves. None of them leaks yet. Each of them is how a leak usually starts.',
+      'Here is what one of our roofers actually does on a yearly visit, stop by stop, the problems those stops tend to catch, what a tune-up doesn’t cover, and how to choose between a one-time *RoofRevive* tune-up and the yearly visits of a *RoofCare Plan*.',
+    ],
+    sections: [
+      {
+        heading: 'Why Once a Year Makes Sense Here',
+        blocks: [
+          'Most of the year, a roof here sees sun, not rain. It heats and cools every day: sealant dries and cracks, shingles go brittle and shed granules, and tiles slip a little at a time. None of that waits for a storm, but a storm is when you find out about it.',
+          'A yearly visit timed before the rains catches that slow wear while it is still a small fix, and the photos from each visit build a record of the roof you can compare year to year.',
+          { img: '/images/blog/yearly-roof-tune-up-valley-cleared.webp', alt: 'Gloved hands clearing pine needles and leaves from a roof valley into a bucket, the cleared valley metal showing below', caption: 'A valley cleared before the rains, so water can reach the gutter instead of backing up under the shingles.' },
+          { pov: 'Water on the ceiling usually means it has been in the roof for a while. We would much rather reseal a pipe boot in October than trace a leak in January.' },
+        ],
+      },
+      {
+        heading: 'Ride Along: One Visit, Stop by Stop',
+        blocks: [
+          { img: '/images/blog/yearly-roof-tune-up-driveway-walk.webp', alt: 'A roofer in a hi-vis shirt pointing up at the roofline of a single-story home while talking with the homeowner in the driveway', caption: 'The first stop is the driveway: the roofline, the gutters, the trees, and what the homeowner has noticed.' },
+          {
+            steps: [
+              '**From the driveway.** Before anyone climbs, the roofer walks around the house and looks at the roofline, the gutters, the downspouts and the trees over the roof, and asks you about anything you have noticed inside.',
+              '**Photos before the work.** The roof is photographed as it is, including anything already cracked or worn, so the report shows what was there before the visit.',
+              '**The gutters and downspouts.** Cleared of debris so water can leave the roof, and checked for granules washing off the shingles.',
+              '**The valleys.** Where two slopes meet and debris piles up. Cleared and checked for worn or lifted roofing along the metal.',
+              '**Everything that comes through the roof.** Pipe boots, vents, skylights and the chimney, where most leaks start. Cracked boots and dried sealant are noted, and sealant is topped off.',
+              '**The flashings.** Where the roof meets walls and chimneys, checked for slipped, rusted or open pieces.',
+              '**The field of the roof.** On shingles: lifted tabs, nail pops and missing pieces. On tile: slipped, loose or cracked tiles, ridge mortar and bird stops. On a flat roof: seams, laps, blisters and the drains and scuppers.',
+              '**The vents for fire season.** Attic and soffit vent screens and eave closures, checked and photographed.',
+              '**The photo report.** What was found, what was done, and anything else worth fixing, with a price.',
+            ],
+          },
+          { img: '/images/blog/yearly-roof-tune-up-photos-before-work.webp', alt: 'A roofer in a harness on a clay tile roof photographing a slipped tile with a tablet before starting work', caption: 'Photos of the roof as it is, before any work, so the report shows what was already there.' },
+        ],
+      },
+      {
+        heading: 'What a Tune-Up Catches',
+        blocks: [
+          { img: '/images/blog/yearly-roof-tune-up-split-pipe-boot.webp', alt: 'A gloved finger pointing at a sun-cracked, split rubber pipe boot around a plumbing vent on a shingle roof', caption: 'A split pipe boot: one of the most common sources of a leak into a bathroom or kitchen ceiling.' },
+          {
+            table: {
+              head: ['What we find', 'Left alone, it becomes', 'What the visit does'],
+              rows: [
+                ['Lifted shingle tabs', 'Shingles that blow off in the next strong wind', 'Hand-sealed back down'],
+                ['Nail pops', 'Holes in the shingle above, where water gets in', 'Reset'],
+                ['A split pipe boot', 'One of the most common leaks into a bathroom or kitchen ceiling', 'Replaced on a tune-up'],
+                ['Dried, cracked sealant at flashings', 'Water running behind the flashing in heavy rain', 'Renewed'],
+                ['Slipped or loose tiles', 'Sun and water reaching the underlayment beneath them', 'Reset'],
+                ['A few cracked tiles', 'Openings that grow with every storm', 'Replaced with the closest available match on a tune-up'],
+                ['Valleys and gutters full of debris', 'Water backing up under the roofing', 'Cleared'],
+                ['A clogged flat roof drain or scupper', 'Ponding and leaks at the drain', 'Cleared'],
+                ['Small blisters and splits on a flat roof', 'Openings in the membrane', 'Patched on a tune-up'],
+              ],
+            },
+          },
+          { img: '/images/blog/yearly-roof-tune-up-nail-pop-lifted-tab.webp', alt: 'Close-up of a nail head pushed up through an asphalt shingle with the shingle tab above lifted at the corner', caption: 'A nail pop and a lifted tab: small today, an opening for wind and water by the next storm.' },
+          'Our [roof maintenance checklist](/blog/roof-maintenance-checklist/) lists what you can keep an eye on yourself between visits.',
+        ],
+      },
+      {
+        heading: 'What a Tune-Up Doesn’t Cover',
+        blocks: [
+          {
+            list: [
+              '**An active leak that needs tracing.** If the source isn’t small and obvious, a [roof repair](/roof-repair/) is the right fit, and we will tell you so.',
+              '**Worn underlayment under tile.** That is a [tile lift and relay](/residential-roofing/tile-roofing/lift-and-relay/), planned on your timeline.',
+              '**A roof that is worn out across the board.** A tune-up buys time on a sound roof; it isn’t a substitute for a replacement.',
+              '**Decking, structural or interior repairs.**',
+              '**Skylight, solar, chimney and gutter repair or replacement.**',
+              '**Tree trimming.** That goes to a tree service; our guide to [tree branches over your roof](/blog/tree-branches-over-your-roof/) explains which ones matter.',
+            ],
+          },
+          { pov: 'If the list is longer than a tune-up should handle, we say so. Patching a worn-out roof one visit at a time isn’t maintenance, it is postponing a decision.' },
+        ],
+      },
+      {
+        heading: 'A One-Time Tune-Up or a Yearly Plan?',
+        blocks: [
+          'Both start from the same idea: catch small wear before it becomes a leak. The difference is how often and what comes with it.',
+          { img: '/images/blog/yearly-roof-tune-up-tile-reset.webp', alt: 'A roofer kneeling on a clay tile roof resetting a slipped barrel tile, with cracked tiles and tools set aside on a cloth', caption: 'On a tile roof, slipped tiles are reset and cracked ones set aside for the closest available match.' },
+          {
+            table: {
+              head: ['Your roof', 'Usually the better fit', 'Why'],
+              rows: [
+                ['Sound, but showing its age in small ways, and it hasn’t been looked at in years', 'A one-time *RoofRevive* tune-up', 'One visit, a written list of fixes and one price before any work, and photos of every fix'],
+                ['Sound, and you want it checked every year before the rains', 'A *RoofCare Plan*', 'Scheduled visits, a photo report every time and a running record of the roof'],
+                ['A tile roof or a hillside home', 'A *RoofCare Plan* with two visits a year', 'Before and after the rains, so slipped tiles and what the winter moved are caught early'],
+                ['Almost new', 'A *RoofCare Plan*', 'Many manufacturer warranties have maintenance conditions, and the visits build the record'],
+                ['Leaking now, or worn across the roof', 'A repair or a replacement first', 'A tune-up is for a roof that is basically sound'],
+              ],
+            },
+          },
+          { img: '/images/blog/yearly-roof-tune-up-flat-roof-drain.webp', alt: 'A roofer kneeling on a white flat roof clearing leaves from a roof drain into a bucket, a rooftop unit behind him', caption: 'On a flat roof, the drains, scuppers and downspouts are cleared so water doesn’t pond.' },
+          'It often makes sense to start with a tune-up, then move into a plan. Plans are month to month: you pay after each visit and can cancel any time. See [roof maintenance plans](/roof-maintenance-plans/) for the details.',
+        ],
+      },
+      {
+        heading: 'When to Book a Tune-Up',
+        blocks: [
+          {
+            checklist: [
+              'Late summer or fall, after the hottest months and before the winter storms',
+              'After strong winds or a noticeable earthquake',
+              'After other trades have been on the roof: solar, HVAC, cable or painters',
+              'Before you sell your home, or soon after you buy one',
+              'When you notice granules in the gutters, a lifted shingle or a slipped tile from the ground',
+              'When it has been more than a year since anyone looked at the roof',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'What You Get at the End of the Visit',
+        blocks: [
+          { img: '/images/blog/yearly-roof-tune-up-photo-report.webp', alt: 'A roofer showing a homeowner photos of her roof on a tablet in front of her house', caption: 'The end of the visit: photos of what was found and what was fixed, and a priced list of anything else.' },
+          {
+            list: [
+              '**Photos of the roof as it was, and of every fix.**',
+              '**A written photo report** with a condition rating, yours to keep.',
+              '**A priced list** of anything we recommend beyond the visit, with no obligation.',
+              '**One of our own roofers,** every time, never a call-center technician or an outside crew.',
+            ],
+          },
+          { pov: 'The best tune-up report is a boring one: a few small fixes, clear photos and nothing to worry about until next year. That is exactly what it is for.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What is a roof tune-up?',
+        a: 'One focused visit for a roof that is basically sound but showing its age in small ways. A roofer checks the roof, fixes the small problems on a written list with one price before any work, and photographs every fix.',
+      },
+      {
+        q: 'What does a roof tune-up include?',
+        a: 'It depends on the roof. On shingles: lifted tabs resealed, nail pops reset, flashing sealant renewed, split pipe boots and broken shingles replaced, valleys cleared. On tile: slipped tiles reset, a few cracked ones replaced, vents and flashings resealed, valleys and eaves cleared. On a flat roof: flashings resealed, edge metal secured, small blisters and splits patched, drains and scuppers cleared.',
+      },
+      {
+        q: 'How often should I have a roof tune-up?',
+        a: 'Once a year, before the rains, works for most sound roofs. Tile roofs and hillside homes benefit from a second visit after the rains to catch what the winter moved.',
+      },
+      {
+        q: 'Is a tune-up the same as a maintenance plan?',
+        a: 'Not quite. A *RoofRevive* tune-up is a one-time visit to fix a list of small issues. A *RoofCare Plan* is ongoing, with scheduled visits and a running photo record. Many homeowners start with a tune-up and then move into a plan.',
+      },
+      {
+        q: 'Will a tune-up fix an active leak?',
+        a: 'Sometimes, if it comes from a small, obvious source like a split pipe boot, a slipped tile or a clogged drain. Leaks that need tracing, or that come from worn underlayment or a failed flashing, need a proper roof repair.',
+      },
+      {
+        q: 'When is the best time for a roof tune-up?',
+        a: 'Late summer and fall, after the hottest months and before the winter storms. It also makes sense after strong winds, after other trades have been on the roof, and before you sell or soon after you buy.',
+      },
+    ],
+    closing: {
+      heading: 'Get Your Roof Ready Before the Rains',
+      blocks: [
+        'Book a [*RoofRevive* tune-up](/roof-maintenance-plans/#tune-up) or ask about a [*RoofCare Plan*](/roof-maintenance-plans/). Not sure your roof is a candidate? [Book a free roof evaluation](#roof-check) first: a roofer tells you in plain English whether it needs a tune-up, a repair or more. Or call [(310) 340-1643](tel:+13103401643).',
+      ],
+    },
+    related: ['/roof-maintenance-plans/', '/roof-repair/', '/roof-inspection/', '/residential-roofing/shingle-roofing/repair/'],
+  },
   // Tree branches and the roof (owner, November 25 2026, brief "Which tree branches are a threat to your roof / Yard walkthrough /
   // Educational / Inspection hook"): keyword "tree branches over your roof". A walk around the yard: why branches matter to a roof
   // (`list: 'facts-numbered'`), the walkthrough (`steps: 'timeline'`), which branches are a threat (`table: 'decide'`), trees that drop

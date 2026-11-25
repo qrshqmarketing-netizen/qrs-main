@@ -24,7 +24,8 @@ export const KEEP_READING = {
   'how-to-trace-a-roof-leak-in-the-attic': [B('sagging-roofline-urgent'), B('roof-leak-source'), B('how-to-stop-a-leaking-roof-now'), B('roof-repair-cost')],
   'how-to-read-a-ceiling-stain': [B('leaking-skylight-reseal-or-replace'), B('how-to-trace-a-roof-leak-in-the-attic'), B('roof-leak-source'), B('stop-a-roof-leak'), B('roof-repair-cost')],
   'how-to-check-your-roof-from-the-ground': [B('tree-branches-over-your-roof'), B('how-old-is-my-roof'), B('hail-damage-vs-normal-wear'), B('shingle-granule-loss'), B('how-to-read-a-ceiling-stain'), B('roof-storm-damage-signs'), B('roof-leak-source'), B('roof-drip-edge-flashing')],
-  'roof-maintenance-checklist': [B('moss-on-roof-myth-vs-fact'), B('how-to-check-your-roof-from-the-ground'), B('prepare-your-roof-for-el-nino'), B('roof-drip-edge-flashing'), B('what-does-a-roof-inspection-include')],
+  'yearly-roof-tune-up': [B('how-to-check-your-roof-from-the-ground'), B('never-pressure-wash-shingles'), B('prepare-your-roof-for-el-nino'), B('how-old-is-my-roof'), B('repair-or-replace-roof-3-question-test')],
+  'roof-maintenance-checklist': [B('yearly-roof-tune-up'), B('moss-on-roof-myth-vs-fact'), B('how-to-check-your-roof-from-the-ground'), B('prepare-your-roof-for-el-nino'), B('roof-drip-edge-flashing'), B('what-does-a-roof-inspection-include')],
   'prepare-your-roof-for-el-nino': [B('roof-maintenance-checklist'), B('roof-storm-damage-signs'), B('stop-a-roof-leak'), B('prepare-a-commercial-roof-for-el-nino')],
   'what-does-a-roof-inspection-include': [B('how-to-check-your-roof-from-the-ground'), B('roof-maintenance-checklist'), B('commercial-roof-inspection-checklist')],
   // Commercial and industrial
@@ -75,7 +76,7 @@ export const KEEP_READING = {
   'first-hour-active-roof-leak': [B('small-roof-leak-big-problem'), B('how-to-read-a-ceiling-stain'), B('roof-leak-source'), B('roof-repair-cost')],
   'sagging-roofline-urgent': [B('first-hour-active-roof-leak'), B('how-to-stop-a-leaking-roof-now'), B('roof-storm-damage-signs'), B('roof-replacement-guide')],
   'never-pressure-wash-shingles': [B('moss-on-roof-myth-vs-fact'), B('shingle-granules-in-gutter'), B('curling-cracked-missing-shingles'), B('roof-maintenance-checklist'), B('how-to-check-your-roof-from-the-ground')],
-  'tree-branches-over-your-roof': [B('how-to-check-your-roof-from-the-ground'), B('roof-storm-damage-signs'), B('roof-maintenance-checklist'), B('first-hour-active-roof-leak'), B('never-pressure-wash-shingles')],
+  'tree-branches-over-your-roof': [B('yearly-roof-tune-up'), B('how-to-check-your-roof-from-the-ground'), B('roof-storm-damage-signs'), B('roof-maintenance-checklist'), B('first-hour-active-roof-leak'), B('never-pressure-wash-shingles')],
   'moss-on-roof-myth-vs-fact': [B('tree-branches-over-your-roof'), B('never-pressure-wash-shingles'), B('shingle-granules-in-gutter'), B('roof-drip-edge-flashing'), B('prepare-your-roof-for-el-nino')],
   'leaking-skylight-reseal-or-replace': [B('roof-leak-source'), B('failing-chimney-flashing'), B('how-to-trace-a-roof-leak-in-the-attic'), B('small-roof-leak-big-problem'), B('roof-repair-cost')],
   'failing-chimney-flashing': [B('leaking-skylight-reseal-or-replace'), B('roof-leak-source'), B('how-to-find-a-roof-leak'), B('roof-repair-cost'), B('roof-drip-edge-flashing')],

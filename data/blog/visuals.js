@@ -18,6 +18,13 @@
 //   table: 'cards'          rows to compare as cards with labelled lines
 //   table: 'hotspots'       "where / what goes wrong" rows as an interactive picture of a flat commercial roof
 export const POST_VISUALS = {
+  'yearly-roof-tune-up': {
+    'Ride Along: One Visit, Stop by Stop': { steps: 'timeline' },
+    'What a Tune-Up Catches': { table: 'cards' },
+    'What a Tune-Up Doesn’t Cover': { list: 'flags' },
+    'A One-Time Tune-Up or a Yearly Plan?': { table: 'decide' },
+    'When to Book a Tune-Up': { checklist: 'tracker' },
+  },
   'tree-branches-over-your-roof': {
     'Why Branches Matter to a Roof': { list: 'facts-numbered' },
     'The Yard Walkthrough': { steps: 'timeline' },
