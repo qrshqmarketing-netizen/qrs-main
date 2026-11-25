@@ -24,6 +24,192 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // Splitting seams on a flat roof membrane (owner, November 25 2026, brief "Splitting seams on a flat roof membrane / Why are my roof seams
+  // opening up?", from the commercial building owners' questions on the brief sheet): keyword "roof seams opening up", written for commercial
+  // flat roofs (owners, property managers, building engineers) like the other flat roof briefs. How each system's seams hold (`table:
+  // 'cards'`: TPO hot-air welded, EPDM taped or glued, modified bitumen lapped and fused or self-adhered, as the systems article describes
+  // them), why seams open (`list: 'facts-numbered'`), the signs (`list: 'flags'`), how serious (`table: 'decide'`), what not to do, questions
+  // before a seam repair (`checklist: 'tracker'`) and how we find and fix them (`steps: 'timeline'`: the roofer-led roof survey, never free;
+  // seams are named on the commercial repair page; a water test one section at a time; phased replacement; maintenance). We install TPO and
+  // modified bitumen; EPDM is explained, not offered; no coatings. No prices, lifespans or figures. Our voice, three "Our point of view"
+  // boxes. cardImage is a stand-in until the owner's thumbnail arrives.
+  {
+    slug: 'flat-roof-seams-opening-up',
+    title: 'Splitting Seams on a Flat Roof Membrane: Why Are My Roof Seams Opening Up?',
+    keyword: 'roof seams opening up',
+    topics: ['commercial', 'flat', 'tpo', 'leak', 'repair', 'maintenance'],
+    metaTitle: 'Why Are My Roof Seams Opening Up? Flat Roof Seam Splits',
+    metaDescription:
+      'Why are your flat roof seams opening up? How TPO, EPDM and modified bitumen seams fail, the signs, how serious a split seam is and how to get it fixed right.',
+    datePublished: '2026-11-25',
+    dateModified: '2026-11-25',
+    image: '/images/blog/flat-roof-seams-opening-up.webp',
+    imageAlt: 'A split seam on a commercial flat roof membrane with its edge lifted inside a puddle of standing water, a rooftop unit behind',
+    excerpt:
+      'A flat roof is only as watertight as its seams. Why roof seams open up on TPO, EPDM and modified bitumen roofs, the signs to look for, how serious a split seam is and what a lasting repair looks like.',
+    intro: [
+      'Roof seams opening up on a flat roof mean the roof is losing the one thing a flat roof can’t do without. A flat roof is made of sheets, and every place two sheets meet is a seam that has to stay closed for the life of the roof. When one starts to split, water that sits on the roof finds it, gets under the membrane and travels, often showing up inside well away from the opening.',
+      'This guide is for building owners, property managers and building engineers: how the seams on the common flat roof systems are made, why they open up, the signs to look for, how serious it is, and what a lasting seam repair looks like.',
+    ],
+    sections: [
+      {
+        heading: 'How a Flat Roof Seam Is Supposed to Hold',
+        blocks: [
+          { img: '/images/blog/flat-roof-seams-opening-up-tpo-seam-weld.webp', alt: 'Gloved hands running a hot-air welder along the overlap of two white TPO membrane sheets, with a roller pressing the seam behind it', caption: 'A TPO seam being welded with hot air and rolled, so the two sheets fuse into one.' },
+          {
+            table: {
+              head: ['System', 'How the seams are made', 'How they usually fail', 'What you see'],
+              rows: [
+                ['TPO', 'Overlapping sheets welded together with hot air, so the seam becomes part of the membrane', 'A weld that was never fully fused, or a seam stressed by movement or traffic', 'An edge you can lift, a gap at the lap, a seam that peels back'],
+                ['EPDM', 'Overlapping sheets joined with seam tape or adhesive', 'The tape or adhesive lets go with age, sun and movement', 'Seam edges curling up, a gap opening along the lap'],
+                ['Modified bitumen', 'Overlapping layers fused with heat or self-adhered', 'Laps that weren’t fully bonded, or that open as the cap sheet ages', 'Lifted lap edges, dark lines where the bond has let go, cracks along the lap'],
+              ],
+            },
+          },
+          { img: '/images/blog/flat-roof-seams-opening-up-epdm-seam-peeling.webp', alt: 'A black EPDM rubber roof membrane with a seam edge lifting and the old seam tape peeling away underneath', caption: 'An EPDM seam letting go: the edge lifts and the old seam tape peels away beneath it.' },
+          'Our guide to [TPO vs. EPDM vs. modified bitumen](/blog/tpo-vs-epdm-vs-modified-bitumen/) explains how the three systems differ.',
+          { img: '/images/blog/flat-roof-seams-opening-up-cap-sheet-lap-open.webp', alt: 'A white granulated cap sheet on a flat roof with a lap lifted and cracked open, exposing the dark layer beneath', caption: 'A modified bitumen lap that has opened, showing the dark layer underneath the white cap sheet.' },
+          { pov: 'Most open seams we find weren’t ruined by one storm. They were never fully bonded, or they have been working loose for years where water sits on them or people walk across them.' },
+        ],
+      },
+      {
+        heading: 'Why Roof Seams Open Up',
+        blocks: [
+          {
+            list: [
+              '**The seam was never fully bonded.** A weld made too cold or too fast, a dirty or damp lap, or adhesive applied wrong can look fine on day one and open later.',
+              '**Sun and heat.** Every day the membrane heats, expands, cools and contracts, and the seams take that movement over and over.',
+              '**Water sitting on the seam.** Ponding water works on a lap far longer than rain running off ever would. Our guide to [ponding water](/blog/ponding-water-commercial-flat-roof/) explains why.',
+              '**Laps that face the wrong way.** A lap should shed water like shingles do, with the upper sheet over the lower one; one that faces uphill lets water run into it.',
+              '**Foot traffic and rooftop work.** Seams on the paths to rooftop units get stepped on, kneeled on and dragged over.',
+              '**Movement in the building.** Seams over a joint in the deck, at the edge of a rooftop unit or near a wall take the building’s movement.',
+              '**Wind.** On a roof held down by fasteners, wind lifts the membrane between them and puts stress on the seams.',
+              '**Age.** Adhesives, tapes and surfacings all wear, and seams are where that wear shows first.',
+            ],
+          },
+          { img: '/images/blog/flat-roof-seams-opening-up-service-path-seam.webp', alt: 'A worn, scuffed path across a white flat roof to a rooftop unit, with a seam along the path peeling up and a loose screw beside it', caption: 'A seam on the service path to the rooftop units, scuffed by foot traffic and peeling up.' },
+        ],
+      },
+      {
+        heading: 'Signs Your Roof Seams Are Opening Up',
+        blocks: [
+          {
+            list: [
+              '**A seam edge you can see lifting** or curling up from the sheet below.',
+              '**A gap or a dark line** along a lap where the bond has let go.',
+              '**Wrinkles or fishmouths** running into a seam.',
+              '**Old patches, tape or roof cement** smeared along a seam.',
+              '**Dirt lines or water rings** where water has been sitting along a lap.',
+              '**Soft or spongy areas** next to a seam, a sign water has gotten under.',
+              '**A ceiling stain inside** with no obvious cause at a drain, curb or wall.',
+            ],
+          },
+          'Leave the probing to a roofer. Pulling at a seam to see if it lifts can make the opening bigger.',
+        ],
+      },
+      {
+        heading: 'How Serious Is an Open Seam?',
+        blocks: [
+          {
+            table: {
+              head: ['What the roof shows', 'What it usually means', 'What to do'],
+              rows: [
+                ['One short open spot on an otherwise sound roof', 'A local problem', 'Repair that seam properly, then watch the next rain'],
+                ['Several seams opening in one area, like a service path', 'Wear from traffic or movement in that area', 'Repair the seams and add walk pads or fix the cause'],
+                ['Seams opening where water ponds', 'The seam and the drainage are both the problem', 'Repair the seams and deal with the drainage'],
+                ['Seams opening across most of the roof', 'The roof is aging, or was never bonded well', 'Get a survey, and plan for a replacement'],
+                ['Open seams with wet insulation under them', 'Water has been getting in for a while', 'The wet areas need to come out; a seam repair alone won’t dry them'],
+              ],
+            },
+          },
+          { pov: 'One open seam is a repair. Seams failing all over the roof are the roof telling you something, and we would rather show you that in photos than keep patching it one seam at a time.' },
+        ],
+      },
+      {
+        heading: 'What Not to Do',
+        blocks: [
+          { img: '/images/blog/flat-roof-seams-opening-up-roof-cement-on-seam.webp', alt: 'Thick black roof cement smeared along a seam on a white flat roof membrane, cracked and pulling away, with the seam still open beneath', caption: 'Roof cement smeared along a seam: cracked, pulling away, and the seam is still open underneath.' },
+          {
+            list: [
+              '**Don’t smear roof cement or caulk along a seam.** It rarely bonds to the membrane for long, and it makes the proper repair harder.',
+              '**Don’t use the wrong tape or patch.** A patch that isn’t compatible with the membrane may not stick, or may damage it.',
+              '**Don’t coat over open seams.** A coating covers the surface; it doesn’t rebuild a failed seam. See [whether a roof coating is worth it](/blog/roof-coating-worth-it/).',
+              '**Don’t send staff onto a wet roof** to look for the opening.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Questions to Ask Before a Seam Repair',
+        blocks: [
+          {
+            checklist: [
+              'Which seams are open, and can I see them in photos?',
+              'Why did they open: bonding, traffic, ponding, movement or age?',
+              'Is the insulation under the open seams wet?',
+              'Will the repair be made with material that matches the membrane, the way its manufacturer calls for?',
+              'Is anything being done about the cause, like walk pads or drainage?',
+              'Are other seams starting to go, and should we plan for more than a repair?',
+              'Can I see the scope and price in writing before any work?',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'How We Find and Fix Opening Seams',
+        blocks: [
+          { img: '/images/blog/flat-roof-seams-opening-up-roofer-probes-seam.webp', alt: 'A roofer in a hard hat kneeling on a white commercial flat roof, checking a membrane seam with a probe and recording it on a tablet', caption: 'A roofer checking a seam with a probe and photographing it, area by area.' },
+          {
+            steps: [
+              '**A roofer-led roof survey.** A roofer walks the roof and checks the seams, laps, surfacing, past patches and soft or wet areas, photographing them area by area.',
+              '**Work from the leak, if there is one.** We start where the water shows up inside and work upslope, checking every seam and detail in its path.',
+              '**Prove the source when it isn’t obvious.** A water test one section at a time, from the bottom up, shows which seam lets water in.',
+              '**Find the cause, not just the opening.** Traffic, ponding, movement or age, so the repair lasts.',
+              '**A written scope and price** before any work, with the photos to back it up.',
+            ],
+          },
+          { img: '/images/blog/flat-roof-seams-opening-up-cover-strip-repair.webp', alt: 'A clean, fully bonded white cover strip of matching membrane welded over an old seam on a white flat roof', caption: 'A seam rebuilt with a cover strip of matching membrane, fully bonded along both edges.' },
+          'When the open seams are in one area, a [commercial roof repair](/commercial-roofing/repair/) rebuilds them with matching material, while the building stays open. On a white TPO roof, the welded seams are the heart of the system; our [TPO roofing](/commercial-roofing/tpo-roofing/) page explains them. When seams are failing across the roof, a [commercial roof replacement](/commercial-roofing/replacement/) is phased section by section, and scheduled [commercial roof maintenance](/commercial-roofing/maintenance/) keeps an eye on the seams with a photo report every visit.',
+          'Our guide to [finding a flat roof leak](/blog/find-a-leak-on-a-commercial-flat-roof/) explains why the water inside can show up so far from the open seam.',
+          { pov: 'A seam repair should match the roof it goes on. Patching a welded seam with tape or cement buys a season; rebuilding it properly is what makes it the end of the problem.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Why are my roof seams opening up?',
+        a: 'Usually because the seam was never fully bonded, or because sun, heat, standing water, foot traffic, building movement or wind have worked it loose over time. Age wears seam adhesives and tapes, and seams are where that shows first.',
+      },
+      {
+        q: 'Can an open seam on a flat roof be repaired?',
+        a: 'Yes, when the rest of the roof is sound. The seam is cleaned and rebuilt with material that matches the membrane, and the cause, like traffic or ponding, is dealt with so it doesn’t open again.',
+      },
+      {
+        q: 'Is a split seam an emergency?',
+        a: 'If water is coming in, treat it like any active leak: protect what is below and call a roofer. If it isn’t leaking yet, have it repaired before the next rain, because an open seam lets water under the membrane.',
+      },
+      {
+        q: 'Can I just caulk or tape the seam?',
+        a: 'Caulk and roof cement rarely bond to the membrane for long, and the wrong tape may not stick at all. A lasting repair uses material compatible with the membrane, applied the way its manufacturer calls for.',
+      },
+      {
+        q: 'When do open seams mean the roof needs replacing?',
+        a: 'When seams are opening across most of the roof, or when there is wet insulation under large areas. At that point, repairing seam after seam usually costs more over time than planning a replacement.',
+      },
+      {
+        q: 'How do you find which seam is leaking?',
+        a: 'We start where the water shows up inside, work upslope across every seam and detail in its path, and photograph what we find. When the source isn’t obvious, a water test one section at a time shows which seam lets water in.',
+      },
+    ],
+    closing: {
+      heading: 'Seams Opening on Your Roof?',
+      blocks: [
+        'Request a [roof survey](#roof-check). A roofer checks every seam, photographs what is open, tells you in plain English whether it is a repair or a bigger plan, and gives you a written scope and price before any work. Or call [(310) 340-1643](tel:+13103401643).',
+        'For a flat roof on a home, see [flat roof repair](/residential-roofing/flat-roofing/repair/).',
+      ],
+    },
+    related: ['/commercial-roofing/repair/', '/commercial-roofing/tpo-roofing/', '/commercial-roofing/maintenance/', '/commercial-roofing/replacement/'],
+  },
   // Keeping critters out of the roofline (owner, November 25 2026, brief "How to keep critters out of your roofline / Quick demo /
   // Educational / Soffit and fascia repair"): keyword "critters out of your roofline". Soffit and fascia repair is NOT a confirmed QRS
   // service (the Newport Beach note leaves it out for that reason), so the article claims only the roofing side the site already states:

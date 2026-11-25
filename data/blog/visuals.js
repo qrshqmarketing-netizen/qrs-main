@@ -18,6 +18,14 @@
 //   table: 'cards'          rows to compare as cards with labelled lines
 //   table: 'hotspots'       "where / what goes wrong" rows as an interactive picture of a flat commercial roof
 export const POST_VISUALS = {
+  'flat-roof-seams-opening-up': {
+    'How a Flat Roof Seam Is Supposed to Hold': { table: 'cards' },
+    'Why Roof Seams Open Up': { list: 'facts-numbered' },
+    'Signs Your Roof Seams Are Opening Up': { list: 'flags' },
+    'How Serious Is an Open Seam?': { table: 'decide' },
+    'Questions to Ask Before a Seam Repair': { checklist: 'tracker' },
+    'How We Find and Fix Opening Seams': { steps: 'timeline' },
+  },
   'keep-critters-out-of-your-roofline': {
     'Where Critters Get Into a Roofline': { list: 'facts-numbered' },
     'Who Is Getting In?': { table: 'cards' },
