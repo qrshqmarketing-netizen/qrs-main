@@ -18,6 +18,14 @@
 //   table: 'cards'          rows to compare as cards with labelled lines
 //   table: 'hotspots'       "where / what goes wrong" rows as an interactive picture of a flat commercial roof
 export const POST_VISUALS = {
+  'leaking-skylight-reseal-or-replace': {
+    'Is It a Leak or Condensation?': { table: 'cards' },
+    'A Skylight, Up Close': { list: 'facts-numbered' },
+    'Reseal, Reflash or Replace? Side by Side': { table: 'cards' },
+    'Which Sounds Like Your Skylight?': { table: 'decide' },
+    'What Not to Do': { list: 'flags' },
+    'How We Fix a Leaking Skylight': { steps: 'timeline' },
+  },
   'never-pressure-wash-shingles': {
     'What a Pressure Washer Does to Shingles': { table: 'cards' },
     'Signs Your Roof Has Already Been Pressure Washed': { list: 'flags' },

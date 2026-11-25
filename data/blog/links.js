@@ -13,7 +13,7 @@ const C_REPAIR = '/commercial-roofing/repair/';
 
 export const KEEP_READING = {
   // Roof leaks
-  'roof-leak-source': [B('small-roof-leak-big-problem'), B('failing-chimney-flashing'), B('how-to-trace-a-roof-leak-in-the-attic'), B('how-to-read-a-ceiling-stain'), B('how-to-find-a-roof-leak'), B('how-to-stop-a-leaking-roof-now'), B('roof-repair-cost')],
+  'roof-leak-source': [B('leaking-skylight-reseal-or-replace'), B('small-roof-leak-big-problem'), B('failing-chimney-flashing'), B('how-to-trace-a-roof-leak-in-the-attic'), B('how-to-read-a-ceiling-stain'), B('how-to-find-a-roof-leak'), B('how-to-stop-a-leaking-roof-now'), B('roof-repair-cost')],
   'temporary-roof-repair-options': [B('how-to-stop-a-leaking-roof-now'), B('stop-a-roof-leak'), B('roof-repair-cost')],
   'stop-a-roof-leak': [B('first-hour-active-roof-leak'), B('how-to-stop-a-leaking-roof-now'), B('how-to-find-a-roof-leak'), B('roof-repair-cost')],
   'how-to-stop-a-leaking-roof-now': [B('first-hour-active-roof-leak'), B('how-to-read-a-ceiling-stain'), B('roof-leak-source'), B('roof-insurance-claims-california')],
@@ -22,7 +22,7 @@ export const KEEP_READING = {
   // Storms and upkeep
   'roof-storm-damage-signs': [B('hail-damage-vs-normal-wear'), B('sagging-roofline-urgent'), B('curling-cracked-missing-shingles'), B('how-to-check-your-roof-from-the-ground'), B('prepare-your-roof-for-el-nino'), B('how-to-stop-a-leaking-roof-now'), B('roof-insurance-claims-california')],
   'how-to-trace-a-roof-leak-in-the-attic': [B('sagging-roofline-urgent'), B('roof-leak-source'), B('how-to-stop-a-leaking-roof-now'), B('roof-repair-cost')],
-  'how-to-read-a-ceiling-stain': [B('how-to-trace-a-roof-leak-in-the-attic'), B('roof-leak-source'), B('stop-a-roof-leak'), B('roof-repair-cost')],
+  'how-to-read-a-ceiling-stain': [B('leaking-skylight-reseal-or-replace'), B('how-to-trace-a-roof-leak-in-the-attic'), B('roof-leak-source'), B('stop-a-roof-leak'), B('roof-repair-cost')],
   'how-to-check-your-roof-from-the-ground': [B('how-old-is-my-roof'), B('hail-damage-vs-normal-wear'), B('shingle-granule-loss'), B('how-to-read-a-ceiling-stain'), B('roof-storm-damage-signs'), B('roof-leak-source'), B('roof-drip-edge-flashing')],
   'roof-maintenance-checklist': [B('moss-on-roof-myth-vs-fact'), B('how-to-check-your-roof-from-the-ground'), B('prepare-your-roof-for-el-nino'), B('roof-drip-edge-flashing'), B('what-does-a-roof-inspection-include')],
   'prepare-your-roof-for-el-nino': [B('roof-maintenance-checklist'), B('roof-storm-damage-signs'), B('stop-a-roof-leak'), B('prepare-a-commercial-roof-for-el-nino')],
@@ -76,7 +76,8 @@ export const KEEP_READING = {
   'sagging-roofline-urgent': [B('first-hour-active-roof-leak'), B('how-to-stop-a-leaking-roof-now'), B('roof-storm-damage-signs'), B('roof-replacement-guide')],
   'never-pressure-wash-shingles': [B('moss-on-roof-myth-vs-fact'), B('shingle-granules-in-gutter'), B('curling-cracked-missing-shingles'), B('roof-maintenance-checklist'), B('how-to-check-your-roof-from-the-ground')],
   'moss-on-roof-myth-vs-fact': [B('never-pressure-wash-shingles'), B('shingle-granules-in-gutter'), B('roof-drip-edge-flashing'), B('prepare-your-roof-for-el-nino')],
-  'failing-chimney-flashing': [B('roof-leak-source'), B('how-to-find-a-roof-leak'), B('roof-repair-cost'), B('roof-drip-edge-flashing')],
+  'leaking-skylight-reseal-or-replace': [B('roof-leak-source'), B('failing-chimney-flashing'), B('how-to-trace-a-roof-leak-in-the-attic'), B('small-roof-leak-big-problem'), B('roof-repair-cost')],
+  'failing-chimney-flashing': [B('leaking-skylight-reseal-or-replace'), B('roof-leak-source'), B('how-to-find-a-roof-leak'), B('roof-repair-cost'), B('roof-drip-edge-flashing')],
   'curling-cracked-missing-shingles': [B('repair-or-replace-roof-3-question-test'), B('hail-damage-vs-normal-wear'), B('roof-storm-damage-signs'), B('roof-repair-cost'), B('how-to-check-your-roof-from-the-ground')],
   'shingle-granule-loss': [B('never-pressure-wash-shingles'), B('curling-cracked-missing-shingles'), B('shingle-granules-in-gutter'), B('how-to-check-your-roof-from-the-ground'), B('architectural-vs-3-tab-shingles')],
   'shingle-granules-in-gutter': [B('never-pressure-wash-shingles'), B('clean-gutters-without-damaging-roof-edge'), B('shingle-granule-loss'), B('roof-drip-edge-flashing'), B('how-to-check-your-roof-from-the-ground')],

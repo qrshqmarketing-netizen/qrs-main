@@ -24,6 +24,191 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // Leaking skylight, reseal or replace (owner, November 25 2026, brief "Leaking skylight: reseal or replace? / Close-up demo / Comparative /
+  // Skylight work"): keyword "leaking skylight". Most skylight leaks start at the flashing and the roofing around the curb, not the glass,
+  // so the honest comparison is three-way: reseal (caulk), reflash, or replace the skylight. What the site confirms we do: the roofing side
+  // (flashing at skylights reset or rebuilt rather than covered with sealant, the roofing around it repaired: *LeakRescue*; every skylight
+  // flashed new on a replacement, as the project pages say). Replacing the skylight unit itself is NOT a confirmed QRS service (the warehouse
+  // FAQ: "If a skylight itself is cracked or clouded, we note it"), so the article says we tell you when the unit has failed and never
+  // claims we install new skylights. Leak vs. condensation (`table: 'cards'`), the parts close up (`list: 'facts-numbered'`), the options
+  // side by side (`table: 'cards'`), which fits (`table: 'decide'`), what not to do (`list: 'flags'`), how we fix it (`steps: 'timeline'`).
+  // No prices, no lifespans. Our voice, three "Our point of view" boxes. cardImage is a stand-in until the owner's thumbnail arrives.
+  {
+    slug: 'leaking-skylight-reseal-or-replace',
+    title: 'Leaking Skylight: Reseal or Replace? A Close-Up Look at Where the Water Gets In',
+    keyword: 'leaking skylight',
+    topics: ['leak', 'repair', 'shingle', 'flat', 'replacement'],
+    metaTitle: 'Leaking Skylight: Reseal, Reflash or Replace It?',
+    metaDescription:
+      'A leaking skylight usually leaks at the flashing, not the glass. Leak or condensation, where the water gets in, and when to reseal, reflash or replace.',
+    datePublished: '2026-11-25',
+    dateModified: '2026-11-25',
+    image: '/images/blog/leaking-skylight-reseal-or-replace.webp',
+    imageAlt: 'A skylight on a wet shingle roof with leaves piled against its uphill side and a dark wet streak running from the corner of the flashing',
+    excerpt:
+      'Most skylight leaks aren’t in the glass. A close-up look at the parts of a skylight, how to tell a leak from condensation, where the water usually gets in, and when a reseal, a reflash or a new skylight is the right fix.',
+    intro: [
+      'A leaking skylight usually isn’t leaking through the glass. Most of the time, water is getting in at the flashing around the skylight, or through the roofing just above it, and running down into the shaft. That is why a bead of caulk around the frame so often stops the drip for a season and then doesn’t.',
+      'Below, we take a close look at the parts of a skylight, how to tell a leak from condensation, where the water usually gets in, and how resealing, reflashing and replacing the skylight compare, so you know which one your skylight actually needs.',
+    ],
+    sections: [
+      {
+        heading: 'Is It a Leak or Condensation?',
+        blocks: [
+          'Before anyone reaches for a caulk gun, check that it is really a leak. Warm, humid air inside the house can condense on a cold skylight and drip, and that looks a lot like a leak.',
+          {
+            table: {
+              head: ['Clue', 'A roof leak', 'Condensation'],
+              rows: [
+                ['When it drips', 'During or after rain, sometimes a day later', 'On cool mornings, or after showers and cooking, even in dry weather'],
+                ['Where the water shows', 'Stains in the corners of the shaft, on its framing or on the ceiling beside it', 'Droplets across the inside of the glass, running down to the frame'],
+                ['How it looks over time', 'Brown rings, bubbling paint, soft drywall in the shaft', 'Fogging, water spots on the sill, sometimes mildew on the frame'],
+                ['Where to look first', 'The flashing and the roofing around the skylight', 'Ventilation and humidity in the room below'],
+              ],
+            },
+          },
+          { img: '/images/blog/leaking-skylight-reseal-or-replace-stained-shaft.webp', alt: 'Looking up into a skylight shaft with brown water stains and peeling paint in its corners and along the sill, rain on the glass above', caption: 'A roof leak at a skylight: stains and peeling paint in the corners of the shaft, after rain.' },
+          'Our guide to [reading a ceiling stain](/blog/how-to-read-a-ceiling-stain/) has more on telling a roof leak from condensation and plumbing.',
+        ],
+      },
+      {
+        heading: 'A Skylight, Up Close',
+        blocks: [
+          {
+            list: [
+              '**The glass or dome:** the part you look through, glass panes or a plastic dome.',
+              '**The frame and its seal:** the seal between the glass and the frame keeps water out of the unit itself.',
+              '**The curb:** the raised box the skylight sits on, built up from the roof deck to lift the skylight above the water running down the roof.',
+              '**The flashing:** metal or membrane pieces that turn water around the curb. On a shingle roof that is step flashing up the sides, a head flashing on the uphill side and an apron at the bottom. On a flat roof the curb is wrapped in roofing membrane. On a tile roof the flashing sits under the tiles.',
+              '**The roofing around it:** the shingles, tiles or membrane that lap over or under the flashing.',
+              '**The shaft:** the opening through the ceiling below, where the stains usually show.',
+            ],
+          },
+          { img: '/images/blog/leaking-skylight-reseal-or-replace-step-flashing.webp', alt: 'A skylight curb on a shingle roof with the shingles beside it peeled back, showing the wooden curb, step flashing pieces up the side and the head flashing at the top', caption: 'The shingles peeled back: the curb, the step flashing up the side and the head flashing on the uphill side.' },
+          { pov: 'When we trace a leak at a skylight, we start at the flashing and the roofing around it, not the glass. That is where the water usually gets in.' },
+        ],
+      },
+      {
+        heading: 'Where Skylight Leaks Usually Start',
+        blocks: [
+          { img: '/images/blog/leaking-skylight-reseal-or-replace-debris-dam.webp', alt: 'Wet leaves and pine needles piled against the uphill side of a skylight on a shingle roof, with water pooled behind them', caption: 'Debris against the uphill side dams the water and pushes it toward the flashing.' },
+          {
+            list: [
+              '**The uphill side.** Leaves and debris pile up against the head of the skylight, dam the water and push it under the flashing.',
+              '**The step flashing up the sides,** where a piece has slipped, rusted or was never woven in with the shingles.',
+              '**Dried, cracked sealant** that was holding the flashing in place instead of the flashing being lapped correctly.',
+              '**Worn roofing just above the skylight,** where water gets under the shingles and runs down to the curb.',
+              '**A failed seal between the glass and the frame,** which lets water into the unit itself.',
+              '**A cracked dome or broken glass,** from age, sun or something falling on it.',
+              '**A soft or rotted curb,** after years of small leaks.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Reseal, Reflash or Replace? Side by Side',
+        blocks: [
+          {
+            table: {
+              head: ['Option', 'What it fixes', 'Makes sense when', 'What to know'],
+              rows: [
+                ['Reseal', 'A small gap in the sealant at the frame or a flashing joint', 'The flashing and the roofing are sound and the gap is the only problem', 'Often a stopgap; caulk alone rarely holds where flashing has failed'],
+                ['Reflash', 'Flashing that has slipped, rusted, cracked or was installed wrong, and the roofing around the curb', 'The skylight unit itself is sound', 'The most common real fix for a skylight leak; the roofing around the curb is opened and rebuilt'],
+                ['Replace the skylight', 'A unit with a cracked dome, broken glass, a failed seal or a rotted frame', 'The leak or fogging is in the unit itself', 'A new skylight needs new flashing too; the best time is during a roof replacement'],
+              ],
+            },
+          },
+          { img: '/images/blog/leaking-skylight-reseal-or-replace-old-caulk-rust.webp', alt: 'The corner of a skylight with rusted flashing, a gap at the corner and cracked layers of old caulk and roof cement around it', caption: 'Layers of old caulk and roof cement over rusted flashing, with the gap still open at the corner.' },
+          { pov: 'A skylight with sound glass and bad flashing doesn’t need replacing. A skylight with failed glass and good flashing won’t be fixed by flashing. Find out which it is first.' },
+        ],
+      },
+      {
+        heading: 'Which Sounds Like Your Skylight?',
+        blocks: [
+          { img: '/images/blog/leaking-skylight-reseal-or-replace-yellowed-dome.webp', alt: 'An old plastic dome skylight on a flat roof, yellowed, cracked and brittle, with debris trapped inside and a weathered frame', caption: 'A yellowed, cracked dome: here the skylight itself has failed, and no amount of flashing will fix that.' },
+          {
+            table: {
+              head: ['What you see', 'Usually points to', 'Usually the fix'],
+              rows: [
+                ['Stains in the upper corners of the shaft after rain', 'Water getting in at the head or the sides', 'Reflash, and clear what dams water on the uphill side'],
+                ['A drip that started after a heavy storm, skylight looks fine', 'Flashing or roofing around the curb', 'Reflash and repair the roofing around it'],
+                ['Old caulk smeared around the frame, leak keeps coming back', 'Sealant covering a flashing problem', 'Reflash; take the old sealant off'],
+                ['Fog or moisture trapped between the panes', 'A failed seal in the unit', 'Replace the skylight'],
+                ['A cracked, yellowed or brittle dome', 'The unit itself', 'Replace the skylight'],
+                ['Drips only on cold mornings, no stains after rain', 'Condensation', 'Ventilation and humidity in the room, not the roof'],
+              ],
+            },
+          },
+        ],
+      },
+      {
+        heading: 'What Not to Do',
+        blocks: [
+          {
+            list: [
+              '**Don’t smear roof cement around the frame.** It rarely seals the real gap and makes the proper repair harder.',
+              '**Don’t caulk over the flashing joints** or block the small weep openings some skylights use to let water out.',
+              '**Don’t step on or lean on a skylight.** Falls through skylights are a well-known roofing hazard.',
+              '**Don’t pressure wash the skylight or the roof around it.** It drives water under the flashing.',
+              '**Don’t wait for the next storm** if the drywall in the shaft is soft. Catch the drip and call.',
+            ],
+          },
+          { img: '/images/blog/leaking-skylight-reseal-or-replace-roof-cement.webp', alt: 'A gloved hand smearing thick black roof cement around the base of a skylight with a putty knife', caption: 'Roof cement smeared around the frame: it rarely seals the real gap and makes the proper repair harder.' },
+          'Our guide to [the first hour of an active roof leak](/blog/first-hour-active-roof-leak/) covers what to do while the water is still coming in.',
+        ],
+      },
+      {
+        heading: 'How We Fix a Leaking Skylight',
+        blocks: [
+          {
+            steps: [
+              '**Book a free roof evaluation.** A roofer looks at the roof, with *RoofScan 360* drone footage and photos.',
+              '**Look at the shaft first.** Where the stains are inside tells us which side of the skylight to start on.',
+              '**Work around and upslope of the skylight.** The head, the sides, the apron, the curb and the roofing just above it, all checked and photographed.',
+              '**Check the unit itself.** The glass or dome, the frame and its seal, for cracks, fogging or rot.',
+              '**Give you one next step** in plain English, with a written scope and price before any work.',
+            ],
+          },
+          'When the flashing or the roofing around the skylight has failed, the flashing is reset or rebuilt rather than covered with another layer of sealant, as a [*LeakRescue* repair](/residential-roofing/shingle-roofing/repair/), or a [flat roof repair](/residential-roofing/flat-roofing/repair/) when the skylight sits on a flat roof. If the skylight itself has failed, we tell you so and show you in the photos.',
+          'When the whole roof is being replaced, every skylight is flashed new as part of the job, which makes a roof replacement the best time to deal with an old skylight. See our [*TotalShield* shingle roof replacement](/residential-roofing/shingle-roofing/replacement/).',
+          { pov: 'We would rather fix the flashing once than come back to recaulk it every winter. If the skylight is the problem, the photos will show it.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Why is my skylight leaking?',
+        a: 'Usually because the flashing around it has slipped, rusted or failed, or the roofing just above it is letting water in. Less often the seal between the glass and the frame has failed or the dome is cracked.',
+      },
+      {
+        q: 'Can I just reseal a leaking skylight?',
+        a: 'Only if the flashing and the roofing around it are sound and the gap is small. When the flashing has failed, caulk usually stops the drip for a while and then the leak comes back.',
+      },
+      {
+        q: 'Should I repair or replace a leaking skylight?',
+        a: 'If the skylight unit is sound and the leak is at the flashing, reflashing is the fix. If the glass is cracked, the dome is brittle or moisture is trapped between the panes, the skylight itself needs replacing.',
+      },
+      {
+        q: 'Is it a leak or condensation?',
+        a: 'A leak shows up during or after rain, usually as stains in the corners of the shaft. Condensation drips on cool mornings or after showers, even in dry weather, and fogs the inside of the glass.',
+      },
+      {
+        q: 'Should I replace my skylight when I replace my roof?',
+        a: 'It is the best time to decide. Every skylight is flashed new during a roof replacement, and an old skylight with a failing seal or a brittle dome is easiest to deal with while the roofing around it is off.',
+      },
+      {
+        q: 'Do you repair skylight leaks?',
+        a: 'Yes. We trace the leak, repair or rebuild the flashing and the roofing around the skylight, and tell you plainly if the skylight itself has failed, with photos and a written scope and price before any work.',
+      },
+    ],
+    closing: {
+      heading: 'Skylight Leaking?',
+      blocks: [
+        'Find out where the water is really getting in. [Book a free roof evaluation](#roof-check): a roofer checks the skylight, the flashing and the roofing around it, and gives you a plain-English answer and a written scope and price before any work. Or call [(310) 340-1643](tel:+13103401643).',
+      ],
+    },
+    related: ['/roof-repair/', '/residential-roofing/shingle-roofing/repair/', '/residential-roofing/flat-roofing/repair/', '/roof-repair/emergency/'],
+  },
   // Never pressure wash shingles (owner, November 25 2026, brief "Why you should never pressure-wash shingles / Myth vs. fact / Educational /
   // Prevents damage you'd otherwise fix"): keyword "pressure wash shingles". Myth vs. fact in the moss article's format (h3 myth, **Fact:**),
   // as the maintenance plans FAQ says (pressure washing strips the granules that protect shingles and can drive water under tiles): how a
