@@ -24,6 +24,179 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // Re-roofing while the business stays open (owner, November 25 2026, brief "Re-roofing while your business stays open / Can we stay open
+  // during a roof replacement?"): keyword "stay open during a roof replacement", kept apart from commercial-roof-replacement-planning
+  // ("commercial roof replacement"), which it links to. Every service fact as the commercial pages state it: the building stays open, the
+  // replacement phased by roof section, noise, access, staging and delivery times settled in advance so tenants and staff get dates for each
+  // phase, one section open at a time with temporary cover when needed, a work plan with roof access and hoisting, noisy work and quiet
+  // hours, staging and tenant updates, entrances, walkways and loading areas kept clear, a self-adhered system where a flame is wrong,
+  // magnetic nail sweeps and daily cleanup, closeout photos, the roofer-led roof survey (never free). No schedules in days, no after-hours
+  // promises, no prices. What can affect the business (`table: 'cards'`), how a phased replacement works (`steps: 'timeline'`), plans by
+  // business (`table: 'decide'`), questions to settle (`checklist: 'tracker'`), how to prepare (`list: 'facts-numbered'`). Our voice, three
+  // "Our point of view" boxes. cardImage is a stand-in until the owner's thumbnail arrives.
+  {
+    slug: 'stay-open-during-a-roof-replacement',
+    title: 'Re-Roofing While Your Business Stays Open: Can You Stay Open During a Roof Replacement?',
+    keyword: 'stay open during a roof replacement',
+    topics: ['commercial', 'flat', 'tpo', 'replacement'],
+    metaTitle: 'Can You Stay Open During a Roof Replacement? How It Works',
+    metaDescription:
+      'Can you stay open during a roof replacement? Usually, yes. How a phased re-roof works, what can affect your business and what to settle before work starts.',
+    datePublished: '2026-11-25',
+    dateModified: '2026-11-25',
+    image: '/images/blog/stay-open-during-a-roof-replacement.webp',
+    imageAlt: 'Shoppers walking out of an open storefront while roofers lay a white membrane on the roof above, with cones and a material lift at the side',
+    excerpt:
+      'Most businesses can stay open during a roof replacement when the work is phased and planned with them. How a phased re-roof works, what can affect customers, tenants and staff, and what to settle before the first section comes off.',
+    intro: [
+      'Can you stay open during a roof replacement? For most businesses, yes. A commercial roof doesn’t have to come off all at once: it can be replaced one section at a time, with the work planned around your hours, your customers and your deliveries.',
+      'Here is how a phased re-roof works, what can affect your business while it happens, how the plan changes for a store, an office, a restaurant or a warehouse, and what to settle with your roofer before the first section comes off.',
+    ],
+    sections: [
+      {
+        heading: 'Why Most Buildings Can Stay Open',
+        blocks: [
+          'A large commercial roof is replaced in sections. Only one section is open at a time, it is closed up before the crew moves on, and temporary cover goes on when the weather calls for it. Everything else stays under a finished, watertight roof.',
+          'The rest is planning: when the noisy work happens, where materials are staged, how the roof is reached, and how customers, tenants and staff are kept clear of the work. Settled ahead of time, those details let the business run while the roof gets replaced.',
+          { img: '/images/blog/stay-open-during-a-roof-replacement-one-section-at-a-time.webp', alt: 'Drone view of a store roof being replaced in sections: one finished in white, one torn off to the deck with a crew working, the rest the old roof, cars in the lot', caption: 'One section at a time: finished, in progress and not yet started, with the store open below.' },
+          { pov: 'Staying open isn’t luck. It comes from a plan both sides agreed to before anyone climbed the ladder, with dates for every phase.' },
+        ],
+      },
+      {
+        heading: 'What Can Affect Your Business, and How It’s Handled',
+        blocks: [
+          { img: '/images/blog/stay-open-during-a-roof-replacement-office-working.webp', alt: 'Office workers at their desks while a roofer works on the roof of the next wing, seen through the windows', caption: 'Work goes on inside while the roof is replaced next door.' },
+          {
+            table: {
+              head: ['Concern', 'What happens', 'How it’s handled'],
+              rows: [
+                ['Noise', 'Tear-off and fastening are loud overhead', 'Noisy work is scheduled around the quiet hours you set'],
+                ['Odor and flame', 'Torch-applied roofing is fused with heat', 'Near air intakes and occupied spaces, a self-adhered system that needs no torch is often the better choice'],
+                ['Access and parking', 'Materials, lifts and a debris bin need room', 'Staging and roof access are planned with you, with entrances and walkways kept clear'],
+                ['Deliveries', 'Trucks and hoisting can block a loading area', 'Delivery and hoisting times are set around your own deliveries'],
+                ['Debris and safety', 'Old roofing comes off over your property', 'Debris goes straight to the bin or truck, with daily cleanup and magnetic nail sweeps'],
+                ['Rain during the work', 'An open section could let water in', 'One section open at a time, closed up before moving on, with temporary cover when needed'],
+                ['Rooftop equipment', 'Units may need to be lifted or disconnected', 'Coordinated with your HVAC contractor in the plan'],
+              ],
+            },
+          },
+          { img: '/images/blog/stay-open-during-a-roof-replacement-self-adhered-near-intake.webp', alt: 'A roofer rolling a self-adhered roofing sheet beside a rooftop air intake hood', caption: 'Near an air intake, a self-adhered sheet goes down with a roller, not a torch.' },
+        ],
+      },
+      {
+        heading: 'How a Phased Roof Replacement Works',
+        blocks: [
+          {
+            steps: [
+              '**A roofer-led roof survey.** A roofer walks the roof and photographs it area by area, so the plan starts from the roof’s real condition.',
+              '**The phases, planned with you.** The roof is divided into sections, and the written scope and price come with a plan for access, hoisting, noisy work, staging and deliveries.',
+              '**Dates for each phase.** You can give tenants, staff and customers notice of what is coming and when.',
+              '**One section at a time.** The old roof comes off that section, the deck is checked, and the new roof goes on and is flashed before the crew moves on.',
+              '**The site kept clean.** Entrances, walkways and loading areas stay clear, with daily cleanup and magnetic nail sweeps.',
+              '**A walk at the end.** Closeout photos of the finished roof, with the warranties in writing.',
+            ],
+          },
+          { img: '/images/blog/stay-open-during-a-roof-replacement-magnetic-sweep.webp', alt: 'A roofer pushing a magnetic sweeper across a parking lot in front of a commercial building at the end of the day', caption: 'A magnetic sweep of the lot at the end of the day.' },
+          'On a [commercial building in Westminster](/projects/commercial-flat-roof-replacement-westminster-92683/), the old roof came off down to the deck and a new white cap sheet went on.',
+        ],
+      },
+      {
+        heading: 'Different Businesses, Different Plans',
+        blocks: [
+          { img: '/images/blog/stay-open-during-a-roof-replacement-restaurant-open.webp', alt: 'Diners on a restaurant patio under umbrellas while a roofer works on the flat roof above near the kitchen exhaust fan', caption: 'A restaurant open for lunch, with the work planned around the kitchen exhaust and the service.' },
+          {
+            table: {
+              head: ['Your business', 'What matters most', 'How the plan usually handles it'],
+              rows: [
+                ['A store', 'Customers coming and going, the sales floor', 'Entrances and walkways kept clear, noisy work around your busiest hours'],
+                ['An office building', 'Tenants working under the roof', 'Tenant updates, quiet hours and work area by area'],
+                ['A restaurant', 'Kitchen exhausts, air intakes, the lunch rush', 'A system that needs no torch near intakes, work timed around service'],
+                ['A warehouse', 'Inventory under the roof, the loading docks', 'Sections over sensitive stock planned with you, deliveries around dock schedules'],
+                ['A church or community building', 'Services and events', 'Phases scheduled around the calendar you give us'],
+              ],
+            },
+          },
+          'Our pages on [retail](/commercial-roofing/retail/), [office buildings](/commercial-roofing/office-buildings/) and [warehouses](/commercial-roofing/warehouses/) go further for each kind of building.',
+        ],
+      },
+      {
+        heading: 'Questions to Settle Before Work Starts',
+        blocks: [
+          { img: '/images/blog/stay-open-during-a-roof-replacement-planning-the-phases.webp', alt: 'A roofer and a business owner looking at a roof plan spread on the hood of a truck in a parking lot', caption: 'Settling the phases, the staging and the dates before the first section comes off.' },
+          {
+            checklist: [
+              'Which sections come first, and what are the dates for each phase?',
+              'When will the noisy work happen?',
+              'Where will materials, the lift and the debris bin go?',
+              'How will entrances, walkways and loading areas be kept clear?',
+              'Will there be an open flame, and where?',
+              'Who coordinates with our HVAC contractor about rooftop units?',
+              'What happens if rain is forecast during a phase?',
+              'Who is our contact during the work, and how will tenants be updated?',
+            ],
+          },
+          { pov: 'Ask every bidder how they will keep you open, not just what the roof will cost. The answer tells you a lot about how the job will go.' },
+        ],
+      },
+      {
+        heading: 'How to Prepare Your Business',
+        blocks: [
+          { img: '/images/blog/stay-open-during-a-roof-replacement-staging-entrance-clear.webp', alt: 'A material lift and a covered debris bin coned off beside an office building while a visitor walks in the clear front entrance', caption: 'Staging coned off to one side, with the entrance clear and open.' },
+          {
+            list: [
+              '**Tell tenants, staff and customers** the dates for each phase, and what to expect.',
+              '**Mark the parking and loading areas** the work will use, and plan around them.',
+              '**Protect what is directly under the work,** like sensitive stock, equipment or displays, in the sections being replaced.',
+              '**Line up your HVAC contractor** if rooftop units need to be lifted or disconnected.',
+              '**Name one person on site** who can answer questions and unlock roof access.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'How We Keep You Open',
+        blocks: [
+          'Every [commercial roof replacement](/commercial-roofing/replacement/) starts with a roofer-led roof survey and comes with a written scope, a price and a plan for each phase. Your building stays open during the work: we phase the replacement by roof section and settle noise, access, staging and delivery times with you in advance. If you manage several buildings, see [property management roofing](/commercial-roofing/property-managers/).',
+          { img: '/images/blog/stay-open-during-a-roof-replacement-finished-center.webp', alt: 'Drone view of a finished white roof on a busy shopping center store with shoppers and full parking', caption: 'The finished roof over a store that stayed open the whole time.' },
+          'Our guide to [planning a commercial roof replacement](/blog/commercial-roof-replacement-planning/) covers budgeting and timing in more depth.',
+          { pov: 'The best compliment on a commercial re-roof is a customer who never noticed it was happening. That is what we plan for.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Can we stay open during a roof replacement?',
+        a: 'Usually, yes. The roof is replaced one section at a time, and noise, access, staging and delivery times are settled with you in advance, so the business keeps running.',
+      },
+      {
+        q: 'Will the noise bother customers and tenants?',
+        a: 'Tear-off and fastening are loud, so noisy work is scheduled around the quiet hours you set, and tenants and staff get dates for each phase.',
+      },
+      {
+        q: 'What if it rains during the replacement?',
+        a: 'Only one section is open at a time, it is closed up before the crew moves on, and temporary cover goes on when needed, so the rest of the building stays under a finished roof.',
+      },
+      {
+        q: 'Will roofing fumes get into the building?',
+        a: 'It depends on the roof system. Near air intakes and occupied spaces, a self-adhered system that needs no torch is often the better choice.',
+      },
+      {
+        q: 'Do we need to move anything inside?',
+        a: 'Usually only what is directly under the section being replaced and sensitive to dust or noise. Your phase plan says which areas are affected and when.',
+      },
+      {
+        q: 'How do tenants know what is happening?',
+        a: 'The plan gives dates for each phase, so you can tell tenants and staff ahead of time, and photos of the finished work are easy to share when it is done.',
+      },
+    ],
+    closing: {
+      heading: 'Planning a Re-Roof Without Closing?',
+      blocks: [
+        'Request a [roof survey](#roof-check). A roofer photographs the roof, recommends the right system, and gives you a written scope, a price and a plan for each phase before any work. Or call [(310) 340-1643](tel:+13103401643).',
+      ],
+    },
+    related: ['/commercial-roofing/replacement/', '/commercial-roofing/office-buildings/', '/commercial-roofing/retail/', '/commercial-roofing/property-managers/'],
+  },
   // HOA or homeowner, who repairs the roof (owner, November 25 2026, brief "Roof repairs: HOA's job or the homeowner's? / Who pays for this
   // roof leak, the HOA or me?"): keyword "hoa roof repair". General guidance only, not legal advice: the CC&Rs decide; California's
   // Davis-Stirling Act sets a default split between common area and each owner's separate interest that the CC&Rs can change (named, not

@@ -18,6 +18,13 @@
 //   table: 'cards'          rows to compare as cards with labelled lines
 //   table: 'hotspots'       "where / what goes wrong" rows as an interactive picture of a flat commercial roof
 export const POST_VISUALS = {
+  'stay-open-during-a-roof-replacement': {
+    'What Can Affect Your Business, and How It’s Handled': { table: 'cards' },
+    'How a Phased Roof Replacement Works': { steps: 'timeline' },
+    'Different Businesses, Different Plans': { table: 'decide' },
+    'Questions to Settle Before Work Starts': { checklist: 'tracker' },
+    'How to Prepare Your Business': { list: 'facts-numbered' },
+  },
   'hoa-roof-repair-who-pays': {
     'It Depends on Your CC&Rs': { table: 'cards' },
     'Where to Look in Your Documents': { list: 'facts-numbered' },
