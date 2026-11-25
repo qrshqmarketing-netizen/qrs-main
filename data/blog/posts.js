@@ -24,6 +24,200 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // Reflective commercial roofs and cooling costs (owner, November 25 2026, brief "Reflective commercial roofs and cooling costs / Can a
+  // cool roof cut my building's energy bill?"): keyword "commercial cool roof", so it doesn't compete with cool-roof-southern-california
+  // ("cool roof", the homeowner guide), which it links to. No savings figures, percentages or prices (site rule, as on the cool roofing
+  // page): what a cool roof does (reflectance, emittance, CRRC ratings), which buildings are most likely to notice it (`table: 'decide'`),
+  // what decides how much it helps (`list: 'facts-numbered'`), the commercial options (`table: 'cards'`: white TPO, a white granulated cap
+  // sheet, coatings, which we don't apply), Title 24 worded as the TPO and systems articles word it, what works against a cool roof
+  // (`list: 'flags'`), questions to ask (`checklist: 'tracker'`) and how we do it (`steps: 'timeline'`: the roofer-led roof survey, never
+  // free; the product and its rating named in the written scope; phased; maintenance keeps it clean). Our voice, three "Our point of view"
+  // boxes. cardImage is a stand-in until the owner's thumbnail arrives.
+  {
+    slug: 'commercial-cool-roof-cooling-costs',
+    title: 'Commercial Cool Roofs and Cooling Costs: Can a Reflective Roof Cut Your Building’s Energy Bill?',
+    keyword: 'commercial cool roof',
+    topics: ['commercial', 'flat', 'tpo', 'replacement', 'maintenance'],
+    metaTitle: 'Commercial Cool Roofs: Can One Cut Your Cooling Costs?',
+    metaDescription:
+      'A commercial cool roof reflects sunlight and sheds heat. Which buildings are most likely to see lower cooling costs, what decides it and what to ask first.',
+    datePublished: '2026-11-25',
+    dateModified: '2026-11-25',
+    image: '/images/blog/commercial-cool-roof-cooling-costs.webp',
+    imageAlt: 'Drone view of a single-story commercial building with a bright white roof and rooftop units, beside buildings with darker roofs',
+    excerpt:
+      'A reflective roof keeps the sun off your building, but how much it lowers the cooling bill depends on the building under it. Which buildings notice it most, what decides the difference and what to ask before you choose one.',
+    intro: [
+      'A commercial cool roof reflects more of the sun’s energy and gives off the heat it does absorb more readily than a dark roof. On a sunny afternoon the roof surface stays far cooler, and less of that heat works its way down into the building.',
+      'Whether that shows up on the energy bill depends on the building under the roof: how well it is insulated, how much of it is air-conditioned, how many floors sit under the roof and what is up there with it. Here is how a cool roof works on a commercial building, which buildings are most likely to notice it, the options, the energy code and what to ask before you choose one.',
+    ],
+    sections: [
+      {
+        heading: 'What a Cool Roof Does on a Commercial Building',
+        blocks: [
+          'Two properties make a roof “cool”:',
+          {
+            list: [
+              '**Solar reflectance:** how much of the sun’s energy the surface reflects instead of absorbing.',
+              '**Thermal emittance:** how readily the surface releases the heat it has absorbed.',
+            ],
+          },
+          'The Cool Roof Rating Council (CRRC) tests roofing products for both and lists the results, and the Solar Reflectance Index (SRI) combines them into one number. A higher number means a cooler surface in the sun.',
+          { img: '/images/blog/commercial-cool-roof-cooling-costs-white-vs-dark-roof.webp', alt: 'Two neighboring commercial buildings from above, one with a clean white roof and one with a dark, weathered roof', caption: 'Two buildings side by side: a white roof reflects the sun, a dark one soaks it up.' },
+          'On a building, that means less heat soaking through the roof into the space below during the hottest part of the day, so the air conditioning has less of the roof’s heat to remove.',
+          { pov: 'A cool roof lowers the heat coming through the roof. It doesn’t change the heat coming through the walls, the windows or the doors, so we talk about what it can do for your building, not a number from a brochure.' },
+        ],
+      },
+      {
+        heading: 'Which Buildings Are Most Likely to Notice It',
+        blocks: [
+          { img: '/images/blog/commercial-cool-roof-cooling-costs-big-store-roof.webp', alt: 'A large single-story store from above with a white roof, rooftop units and ductwork, and a full parking lot', caption: 'A big, low, air-conditioned building is where the roof is the largest surface facing the sun.' },
+          {
+            table: {
+              head: ['Your building', 'How much a cool roof is likely to help', 'Why'],
+              rows: [
+                ['Single-story, air-conditioned, large roof, little insulation', 'Most likely to notice it', 'The roof is the biggest surface facing the sun, and little stands between it and the cooled space'],
+                ['Single-story, well insulated under the roof', 'Some difference', 'The insulation already slows the heat; the roof surface still runs cooler'],
+                ['Several floors under one roof', 'Mostly the top floor', 'The floors below are shielded by the ones above'],
+                ['A warehouse or shop that isn’t air-conditioned', 'Comfort more than the bill', 'Less heat comes through the roof, so the space under it stays less hot'],
+                ['Rooftop units and ductwork on the roof', 'Can help the equipment too', 'The air the units draw in and the ducts running across the roof sit right above the roof surface'],
+                ['A white roof that is dirty or worn', 'Less than it should', 'Dirt and wear lower reflectance; cleaning, repair or replacement brings it back'],
+              ],
+            },
+          },
+        ],
+      },
+      {
+        heading: 'What Decides How Much a Cool Roof Helps',
+        blocks: [
+          {
+            list: [
+              '**Insulation under the roof:** the less insulation there is, the more of the roof’s heat reaches the space below, and the more a cool surface matters.',
+              '**How much of the building is cooled:** a fully air-conditioned office or store has more to gain than a partly cooled warehouse.',
+              '**Roof area compared with floors:** a big, low building has more roof per square foot of floor than a tall one.',
+              '**Rooftop equipment and ducts:** units and ductwork sitting over a cooler surface aren’t working in as much heat.',
+              '**Hours of sun:** long, sunny cooling seasons give a reflective roof more to do.',
+              '**How clean it stays:** dirt, debris and standing water dull a white surface.',
+              '**The roof underneath:** wet insulation insulates poorly, and a failing roof is a poor place for a new surface.',
+            ],
+          },
+          { img: '/images/blog/commercial-cool-roof-cooling-costs-insulation-under-roof.webp', alt: 'A roofer fastening rigid foam insulation boards over a metal roof deck, with white membrane laid beside them', caption: 'The insulation under the roof decides how much of the roof’s heat reaches the space below.' },
+          { pov: 'If a roof has wet insulation, a reflective surface on top won’t fix it. The roof has to be sound first, then it can be cool.' },
+        ],
+      },
+      {
+        heading: 'Cool Roof Options for Commercial Buildings',
+        blocks: [
+          {
+            table: {
+              head: ['Option', 'How it reflects', 'What to know'],
+              rows: [
+                ['White TPO', 'A white single-ply membrane with hot-air welded seams', 'Reflective from the day it goes on; common on large, open roofs'],
+                ['Modified bitumen with a white cap sheet', 'White granules on the top layer of a multi-layer roof', 'Stands up well to foot traffic and many details; torch-applied or self-adhered'],
+                ['Reflective coating', 'A light-colored liquid applied over the existing roof', 'Only as good as the roof underneath; we don’t apply coatings'],
+              ],
+            },
+          },
+          { img: '/images/blog/commercial-cool-roof-cooling-costs-tpo-and-cap-sheet.webp', alt: 'A smooth white TPO membrane with a welded seam next to a white granulated cap sheet with overlapping laps', caption: 'White TPO with a welded seam on the left, a white granulated cap sheet on the right.' },
+          'Our guides to [TPO vs. EPDM vs. modified bitumen](/blog/tpo-vs-epdm-vs-modified-bitumen/) and [whether a roof coating is worth it](/blog/roof-coating-worth-it/) go further into each option. For homes, see our guide to [cool roofs](/blog/cool-roof-southern-california/).',
+        ],
+      },
+      {
+        heading: 'Cool Roofs and California’s Energy Code',
+        blocks: [
+          'California’s energy code (Title 24, Part 6) has cool roof requirements for many nonresidential reroofs, depending on how much of the roof is replaced, the climate zone and the building. Where they apply, the roofing product has to carry a CRRC rating that meets them.',
+          { img: '/images/blog/commercial-cool-roof-cooling-costs-product-rating.webp', alt: 'A roofer kneeling by a roll of white roofing on a commercial roof, showing it to a property manager, with pallets of rolls behind them', caption: 'Where the permit calls for a cool roof, the product and its rating belong in the written scope.' },
+          'So on many commercial reroofs, the question isn’t only whether a cool roof will lower the bill; the permit may already call for one. Your roofer should know which path applies and handle it with the permit.',
+          { note: '**Before you choose a product,** ask whether the permit for your reroof calls for a cool roof, and have the product and its rating named in the written scope.' },
+        ],
+      },
+      {
+        heading: 'What Works Against a Cool Roof',
+        blocks: [
+          {
+            list: [
+              '**Dirt and debris.** A white roof covered in leaves, dust or grime reflects less; keeping it clear matters.',
+              '**Ponding water.** Standing water leaves dirt rings and wears the surface where it sits.',
+              '**Wet insulation.** It conducts heat and keeps the roof deteriorating under any surface.',
+              '**Worn service paths.** Foot traffic to the rooftop units scuffs and punctures the membrane; walk pads help.',
+              '**A coating over a failing roof.** A reflective surface doesn’t fix seams, flashings or wet layers underneath.',
+              '**Expecting a promised number.** How much a building saves depends on the building; be wary of anyone who guarantees a figure without looking at yours.',
+            ],
+          },
+          { img: '/images/blog/commercial-cool-roof-cooling-costs-dirty-white-roof.webp', alt: 'A dulled white commercial roof with a dirt ring where water stood, leaves piled at a drain and worn walk pads to a rooftop unit', caption: 'Dirt, standing water and debris at a drain all take the shine off a white roof.' },
+        ],
+      },
+      {
+        heading: 'Questions to Ask Before You Choose a Cool Roof',
+        blocks: [
+          {
+            checklist: [
+              'Is the product CRRC-rated, and what are its ratings?',
+              'Does the permit for this reroof call for a cool roof?',
+              'Is the insulation under the roof dry, and is any insulation being added?',
+              'How will the drainage keep water from standing on the new surface?',
+              'Where will walk pads go on the paths to the rooftop units?',
+              'How will the roof be kept clean and maintained?',
+              'What does the manufacturer’s warranty cover, and what does the workmanship warranty cover?',
+              'Can I see the scope and price in writing, with the product named?',
+            ],
+          },
+          { img: '/images/blog/commercial-cool-roof-cooling-costs-questions-on-the-roof.webp', alt: 'A roofer and a property manager in hard hats reviewing a tablet beside a rooftop unit on a white roof with walk pads', caption: 'Walk pads, drainage and upkeep are worth settling before the new roof goes on.' },
+        ],
+      },
+      {
+        heading: 'How We Put a Cool Roof on a Commercial Building',
+        blocks: [
+          {
+            steps: [
+              '**Survey the roof first.** A roofer-led roof survey photographs the surface, the seams, the flashings, the drains and any soft or wet areas.',
+              '**Make sure the roof underneath is sound.** Wet insulation and damaged deck come out before anything new goes on.',
+              '**Choose the system for the building.** A white TPO membrane or a modified bitumen roof with a white cap sheet, picked for the roof’s drainage, equipment and foot traffic.',
+              '**Name it in writing.** The written scope names the product, and its cool rating where the permit calls for one, with the price, before any work.',
+              '**Phase the work.** A [commercial roof replacement](/commercial-roofing/replacement/) goes section by section, so the building stays open.',
+              '**Keep it working.** [Scheduled maintenance](/commercial-roofing/maintenance/) keeps the drains and the surface clear, with a photo report every visit.',
+            ],
+          },
+          { img: '/images/blog/commercial-cool-roof-cooling-costs-phased-white-roof.webp', alt: 'A commercial roof replacement from above: one section finished in white, the next torn off to the deck, the rest still the old dark roof', caption: 'One section at a time: finished, torn off, then the old roof still to come, while the building stays open.' },
+          'On a [commercial building in Los Angeles](/projects/flat-roof-replacement-los-angeles-90029/), a new white cap sheet went over the whole roof and up the parapet walls. Our [TPO roofing](/commercial-roofing/tpo-roofing/) page explains the white membrane option.',
+          { pov: 'We would rather put a reflective roof on a sound building than sell a reflective surface on a roof that is failing. Get the roof right, and the cool surface keeps doing its job for you.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Can a cool roof lower my building’s energy bill?',
+        a: 'It can reduce how much of the sun’s heat comes through the roof, which can reduce how hard the air conditioning works. How much depends on the building: its insulation, how much of it is cooled, how many floors sit under the roof and how clean the roof stays.',
+      },
+      {
+        q: 'Which commercial buildings benefit most from a cool roof?',
+        a: 'Usually single-story, air-conditioned buildings with large roofs and little insulation under them. A well-insulated or multistory building tends to notice less, mostly on the top floor.',
+      },
+      {
+        q: 'Does a commercial cool roof have to be white?',
+        a: 'White is the most reflective and the most common on commercial flat roofs, as a white TPO membrane or a white granulated cap sheet. Other light colors can be cool-rated too; the CRRC rating tells you how a product performs.',
+      },
+      {
+        q: 'Is a cool roof required on a commercial reroof in California?',
+        a: 'Often. California’s energy code (Title 24, Part 6) has cool roof requirements for many nonresidential reroofs, depending on how much of the roof is replaced, the climate zone and the building. The permit for the job sets what applies.',
+      },
+      {
+        q: 'Does a white roof stay reflective?',
+        a: 'It loses some reflectance as it gets dirty or worn. Keeping drains and the surface clear, preventing ponding and putting walk pads on service paths help it keep working.',
+      },
+      {
+        q: 'Can you make our existing roof a cool roof?',
+        a: 'We don’t apply roof coatings. When a commercial roof is replaced, we install a white TPO membrane or a modified bitumen roof with a white cap sheet, after a roofer-led roof survey shows what the roof needs.',
+      },
+    ],
+    closing: {
+      heading: 'Wondering if a Cool Roof Fits Your Building?',
+      blocks: [
+        'Start with the roof you have. Request a [roof survey](#roof-check): a roofer photographs the roof, tells you in plain English what it needs and whether a reflective system fits, and gives you a written scope and price before any work. Or call [(310) 340-1643](tel:+13103401643).',
+      ],
+    },
+    related: ['/commercial-roofing/tpo-roofing/', '/commercial-roofing/replacement/', '/commercial-roofing/maintenance/', '/commercial-roofing/'],
+  },
   // How long commercial roofs last, by system (owner, November 24 2026, brief "How long commercial roofs last, by system / How many years
   // does my commercial roof have left?"): keyword "commercial roof lifespan", for owners, property managers and boards. Per the site's rule
   // (no lifespans in years; the TPO page says "We won't promise a number of years"), the article gives no year figures: it explains why a

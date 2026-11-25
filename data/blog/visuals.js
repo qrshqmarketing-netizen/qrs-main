@@ -18,6 +18,14 @@
 //   table: 'cards'          rows to compare as cards with labelled lines
 //   table: 'hotspots'       "where / what goes wrong" rows as an interactive picture of a flat commercial roof
 export const POST_VISUALS = {
+  'commercial-cool-roof-cooling-costs': {
+    'Which Buildings Are Most Likely to Notice It': { table: 'decide' },
+    'What Decides How Much a Cool Roof Helps': { list: 'facts-numbered' },
+    'Cool Roof Options for Commercial Buildings': { table: 'cards' },
+    'What Works Against a Cool Roof': { list: 'flags' },
+    'Questions to Ask Before You Choose a Cool Roof': { checklist: 'tracker' },
+    'How We Put a Cool Roof on a Commercial Building': { steps: 'timeline' },
+  },
   'commercial-roof-lifespan': {
     'What Decides How Long a Commercial Roof Lasts': { list: 'facts-numbered' },
     'How Each System Shows Its Age': { table: 'cards' },
