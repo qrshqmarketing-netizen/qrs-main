@@ -24,6 +24,179 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // Roof replacement day, hour by hour (owner, November 25 2026, brief "What happens on roof replacement day, hour by hour / Time-lapse /
+  // Purchase-intent / Removes fear of the process"): keyword "roof replacement day". A typical first day on a shingle roof in time blocks,
+  // not clock times (no confirmed start or finish hours): arrival and protection, tear-off, the deck, dry-in, flashings and vents, shingles,
+  // cleanup and the roof protected for the night (`steps: 'timeline'`), what you'll hear and see (`table: 'cards'`), days two to five
+  // (`list: 'facts-numbered'`), what if (`table: 'decide'`), a checklist (`checklist: 'tracker'`). Facts as the site states them: 3 to 5
+  // days for most homes, permit pulled and posted, tarps over landscaping, debris straight to a bin or truck, the deck photographed and
+  // damaged sections replaced as the written scope says, rain pauses with the roof protected, daily cleanup and magnetic sweeps, the
+  // inspection booked, the final walkthrough, the 10-year workmanship warranty (call for details), *TotalShield*. Builds on
+  // prepare-for-a-roof-replacement (linked both ways). No prices. Our voice, three "Our point of view" boxes. cardImage is a stand-in.
+  {
+    slug: 'roof-replacement-day-hour-by-hour',
+    title: 'What Happens on Roof Replacement Day, Hour by Hour',
+    keyword: 'roof replacement day',
+    topics: ['replacement', 'shingle'],
+    metaTitle: 'What Happens on Roof Replacement Day, Hour by Hour',
+    metaDescription:
+      'What happens on roof replacement day, hour by hour: from tear-off to the deck, the new roof and the cleanup, what you will hear and see, and the days after.',
+    datePublished: '2026-11-25',
+    dateModified: '2026-11-25',
+    image: '/images/blog/roof-replacement-day-hour-by-hour.webp',
+    imageAlt: 'Drone view of a single-story home mid roof replacement: half the roof torn off to the deck with a crew working, the other half in new grey shingles, tarps over the shrubs and a debris bin in the driveway',
+    excerpt:
+      'Roof replacement day is loud, busy and over sooner than most homeowners expect. A time-lapse of a typical first day, from the first tarp to the last magnet sweep, what you will hear and see, and what happens in the days after.',
+    intro: [
+      'Roof replacement day is the part homeowners worry about most: the noise, the strangers on the roof, the old shingles flying off, the open roof over the house. Most of that worry goes away once you know what actually happens, and in what order.',
+      'Here is a time-lapse of a typical first day on a shingle roof replacement, from the first tarp to the last magnet sweep, what you will hear and see along the way, what happens in the days after, and what to do if something comes up. Every roof is different, so read this as a typical day, not a schedule.',
+    ],
+    sections: [
+      {
+        heading: 'Before the Day',
+        blocks: [
+          'By replacement day the permit has been pulled and posted, the shingle and color are named in your written scope, and the start date is set. The driveway is clear, cars are on the street, and anything fragile on the walls or in the attic is put away.',
+          'Our guide to [preparing for a roof replacement](/blog/prepare-for-a-roof-replacement/) has the full checklist for the week before.',
+        ],
+      },
+      {
+        heading: 'Replacement Day, Hour by Hour',
+        blocks: [
+          { img: '/images/blog/roof-replacement-day-hour-by-hour-tarps-first.webp', alt: 'A roofing crew unrolling blue tarps over the flower beds along the side of a house in the early morning, a debris bin in the driveway', caption: 'First thing in the morning: tarps over the landscaping before anything comes off the roof.' },
+          {
+            steps: [
+              '**Arrival and protection.** The crew arrives, the bin or truck is placed and tarps go down over the landscaping and along the sides of the house before anything comes off the roof.',
+              '**The first hours: tear-off.** The old roof comes off, every layer down to the deck, starting at the top and working down. Debris goes straight to the bin or truck. This is the loudest part of the day.',
+              '**The deck, exposed.** With the old roof off, the deck is checked. Any soft or damaged sections are photographed, explained to you and replaced as your written scope says.',
+              '**Dry-in.** Drip edge goes on at the eaves and new underlayment covers the bare deck, so the house is protected again.',
+              '**Flashings and vents.** Valleys, walls, chimneys, pipe boots and vents get new flashings and are set for the new roof.',
+              '**Shingles go on.** Starting at the eaves and working up, course by course, around every vent and flashing.',
+              '**Cleanup.** Tarps come up, debris is cleared, and the yard, driveway and street get a magnetic sweep for nails.',
+              '**Protected for the night.** Whatever isn’t finished is left protected, so the house is weathertight overnight.',
+            ],
+          },
+          { img: '/images/blog/roof-replacement-day-hour-by-hour-tear-off.webp', alt: 'Roofers tearing old shingles off a roof with roofing shovels, the debris sliding down a chute into a bin', caption: 'The tear-off: the loudest part of the day, with the old roof going straight into the bin.' },
+          'How far the first day gets depends on the size of the roof and what the deck needs. Most home roof replacements take 3 to 5 days in all.',
+          { img: '/images/blog/roof-replacement-day-hour-by-hour-dry-in.webp', alt: 'Roofers rolling out underlayment over a new plywood deck, with metal drip edge already along the eave', caption: 'Dry-in: drip edge at the eaves and new underlayment over the deck, so the house is protected again.' },
+          { pov: 'The best replacement day is the one where the homeowner comes home, sees a clean driveway and a covered roof, and wonders what all the worry was about.' },
+        ],
+      },
+      {
+        heading: 'What You’ll Hear, See and Notice',
+        blocks: [
+          {
+            table: {
+              head: ['What', 'What it is', 'Good to know'],
+              rows: [
+                ['Loud scraping and thuds', 'The old roof coming off', 'The loudest part, and usually the first hours'],
+                ['Nail guns', 'The new roof going on', 'Steady but less jarring than the tear-off'],
+                ['Vibration and dust in the attic', 'Work right above the ceiling', 'Cover what is stored in the attic and clear tall shelves'],
+                ['A bin or truck out front', 'Where the old roof goes', 'Keep the driveway clear for it'],
+                ['Tarps over your plants', 'Protection for the landscaping', 'They come up at the end of the day'],
+                ['A roofer at your door', 'Usually about the deck, or a question about the scope', 'Photos of anything found are shown to you before it is fixed'],
+              ],
+            },
+          },
+          { img: '/images/blog/roof-replacement-day-hour-by-hour-inside-the-house.webp', alt: 'A dog asleep on a living room rug and a girl reading with headphones while a roofer works on the roof outside the window', caption: 'Inside, life goes on: pets settled and headphones on while the work happens overhead.' },
+        ],
+      },
+      {
+        heading: 'Days Two to Five',
+        blocks: [
+          { img: '/images/blog/roof-replacement-day-hour-by-hour-shingles-go-on.webp', alt: 'Two roofers nailing new grey architectural shingles course by course over underlayment, with bundles staged near the ridge', caption: 'Shingles going on course by course, from the eaves up.' },
+          {
+            list: [
+              '**The rest of the shingles,** and the ridge caps along the top of the roof.',
+              '**Flashings finished** at every wall, chimney and penetration, and vents completed.',
+              '**Cleanup every day,** with magnetic sweeps of the yard, the driveway and the street.',
+              '**The inspection,** booked with the building department under the permit.',
+              '**The final walkthrough,** where we walk the roof and the property with you.',
+            ],
+          },
+          'Our guide to the whole [roof replacement](/blog/roof-replacement-guide/) process explains the decisions that come before the work starts.',
+        ],
+      },
+      {
+        heading: 'What If…',
+        blocks: [
+          {
+            table: {
+              head: ['If…', 'What happens', 'What to do'],
+              rows: [
+                ['Rain is in the forecast', 'Work pauses and the roof is protected until it is dry enough to continue', 'Nothing, beyond keeping the crew’s number handy'],
+                ['Damaged deck is found', 'It is photographed and explained, then replaced as your written scope says', 'Look at the photos and ask questions'],
+                ['You need to leave for the day', 'The work continues; you can be reached by phone', 'Leave gates open and pets inside'],
+                ['Something lands in the yard', 'It is picked up during the day and in the end-of-day cleanup', 'Point it out to the crew'],
+                ['You have a question about the work', 'Your roofer answers it', 'Ask; it is your roof'],
+              ],
+            },
+          },
+          { img: '/images/blog/roof-replacement-day-hour-by-hour-deck-photographed.webp', alt: 'A roofer kneeling on a bare roof deck photographing a water-stained section with a tablet while the homeowner looks up from the yard', caption: 'A damaged section of deck, photographed and shown to the homeowner before it is replaced.' },
+          { pov: 'Damaged decking is the one surprise a roof can hold, and it is the reason we photograph the deck while it is open. You see what we see, before anything is replaced.' },
+        ],
+      },
+      {
+        heading: 'Your Replacement Day Checklist',
+        blocks: [
+          {
+            checklist: [
+              'Cars out of the driveway and on the street',
+              'Gates unlocked for the crew',
+              'Pets inside or away from the house for the day',
+              'Attic items covered, tall shelves cleared',
+              'Potted plants and patio furniture moved back from the house',
+              'Phone handy in case your roofer has a question',
+              'A walk around the yard at the end of the day',
+            ],
+          },
+          { img: '/images/blog/roof-replacement-day-hour-by-hour-magnetic-sweep.webp', alt: 'A roofer pushing a magnetic sweeper across a front lawn at the end of the day while two others fold the tarps', caption: 'End of the day: tarps folded and a magnetic sweep of the lawn and driveway.' },
+        ],
+      },
+      {
+        heading: 'How We Run Replacement Day',
+        blocks: [
+          'A [*TotalShield* shingle roof replacement](/residential-roofing/shingle-roofing/replacement/) is built from the deck up: the old roof comes off, the deck is checked and photographed, and new underlayment, flashings, drip edge, ventilation and shingles go on. We pull and post the permit, tarp the landscaping, sweep for nails every day and finish with a walkthrough. Installs are backed by our 10-year workmanship warranty (call for details).',
+          { img: '/images/blog/roof-replacement-day-hour-by-hour-walkthrough.webp', alt: 'A roofer and a homeowner standing in the front yard looking up at a finished shingle roof, the roofer pointing to the ridge', caption: 'The final walkthrough: the finished roof, looked at together.' },
+          'For a tile roof, see [tile roof replacement](/residential-roofing/tile-roofing/replacement/); for a flat roof, [flat roof replacement](/residential-roofing/flat-roofing/replacement/).',
+          { pov: 'We would rather tell you exactly what the day will look like than have you find out from the noise. If anything on this page worries you, ask before the start date.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'How long does a roof replacement take?',
+        a: 'Most home roof replacements take 3 to 5 days. The first day is usually the tear-off, the deck and getting the house protected again; the rest is the new roof, the flashings, the cleanup and the walkthrough.',
+      },
+      {
+        q: 'Do I need to be home on roof replacement day?',
+        a: 'Not necessarily. Leave gates open and keep your phone handy in case your roofer has a question, especially about the deck.',
+      },
+      {
+        q: 'Is my house left open overnight?',
+        a: 'No. Whatever isn’t finished at the end of the day is left protected, so the house is weathertight overnight.',
+      },
+      {
+        q: 'What if it rains during my roof replacement?',
+        a: 'Work pauses and the roof is protected until it is dry enough to continue. That is part of why a replacement is planned over several days.',
+      },
+      {
+        q: 'How loud is a roof replacement?',
+        a: 'The tear-off is loud, with scraping and thuds overhead. Nail guns follow when the new roof goes on. Most homeowners keep pets inside or away for the day.',
+      },
+      {
+        q: 'Will there be nails in my yard afterward?',
+        a: 'The yard, driveway and street get a magnetic sweep at the end of every day, and again before the final walkthrough.',
+      },
+    ],
+    closing: {
+      heading: 'Ready to Plan Your Replacement Day?',
+      blocks: [
+        '[Book a free roof evaluation](#roof-check). A roofer looks at your roof, tells you in plain English whether it needs a repair or a replacement, and gives you a written scope and price before any work. Or call [(310) 340-1643](tel:+13103401643).',
+        'Part of our [roof replacement guide](/blog/roof-replacement-guide/).',
+      ],
+    },
+    related: ['/residential-roofing/shingle-roofing/replacement/', '/roof-replacement/', '/residential-roofing/tile-roofing/replacement/', '/residential-roofing/flat-roofing/replacement/'],
+  },
   // Re-roofing while the business stays open (owner, November 25 2026, brief "Re-roofing while your business stays open / Can we stay open
   // during a roof replacement?"): keyword "stay open during a roof replacement", kept apart from commercial-roof-replacement-planning
   // ("commercial roof replacement"), which it links to. Every service fact as the commercial pages state it: the building stays open, the

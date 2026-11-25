@@ -18,6 +18,13 @@
 //   table: 'cards'          rows to compare as cards with labelled lines
 //   table: 'hotspots'       "where / what goes wrong" rows as an interactive picture of a flat commercial roof
 export const POST_VISUALS = {
+  'roof-replacement-day-hour-by-hour': {
+    'Replacement Day, Hour by Hour': { steps: 'timeline' },
+    'What You’ll Hear, See and Notice': { table: 'cards' },
+    'Days Two to Five': { list: 'facts-numbered' },
+    'What If…': { table: 'decide' },
+    'Your Replacement Day Checklist': { checklist: 'tracker' },
+  },
   'stay-open-during-a-roof-replacement': {
     'What Can Affect Your Business, and How It’s Handled': { table: 'cards' },
     'How a Phased Roof Replacement Works': { steps: 'timeline' },
