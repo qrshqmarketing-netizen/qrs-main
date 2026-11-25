@@ -24,6 +24,198 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // Protecting the interior during a roof leak (owner, November 25 2026, brief "How to protect your home's interior during a roof leak /
+  // Quick demo / Educational / Bridges to emergency service"): keyword "during a roof leak". Kept apart from first-hour-active-roof-leak
+  // ("active roof leak", the whole first hour), which it links to: this one is the inside of the house, room by room. Safety lines as the
+  // emergency page and the first-hour article say them (stay off the roof, keep away from water near lights and outlets, the breaker only
+  // without standing in water, never under a sagging ceiling, 911 for a downed line or a tree through the roof). A quick demo (`steps:
+  // 'timeline'`), room by room (`table: 'cards'`), a leak kit (`checklist: 'tracker'`), what not to do (`list: 'flags'`), when to call
+  // (`table: 'decide'`) and how we help (`list: 'facts-numbered'`: emergency calls after hours and weekends, cover the damaged area when the
+  // repair has to wait, photos, written scope and price). Drying out and interior repairs go to a water damage company, as the first-hour
+  // article says. No response times, no prices. Our voice, three "Our point of view" boxes. cardImage is a stand-in.
+  {
+    slug: 'protect-your-home-during-a-roof-leak',
+    title: 'How to Protect Your Home’s Interior During a Roof Leak: A Quick Demo',
+    keyword: 'during a roof leak',
+    topics: ['emergency', 'leak', 'repair', 'storm', 'insurance'],
+    metaTitle: 'How to Protect Your Home’s Interior During a Roof Leak',
+    metaDescription:
+      'How to protect your home’s interior during a roof leak: catch the water, move and cover belongings, protect floors and electronics, and know when to call.',
+    datePublished: '2026-11-25',
+    dateModified: '2026-11-25',
+    image: '/images/blog/protect-your-home-during-a-roof-leak.webp',
+    imageAlt: 'A living room during a roof leak: water dripping from a stained ceiling into a bucket on plastic and towels, the couch covered in plastic and the rug rolled up by the window',
+    excerpt:
+      'Water is coming through the ceiling. Before the roof is fixed, you can save most of what is under it. A quick demo of protecting the room under a leak, room by room, the kit to keep in the garage and when to call for help.',
+    intro: [
+      'What you do inside your home during a roof leak decides how much gets ruined. The roof needs a roofer, but the floors, the furniture, the electronics and the papers under the leak are in your hands for the first few minutes, and a bucket, a few towels and a sheet of plastic save most of them.',
+      'Here is a quick demo of protecting the room under a leak, what to do room by room, a simple kit to keep ready, what not to do, and when to call for emergency help. If water is coming in right now, make the room safe first, then come back to this list.',
+    ],
+    sections: [
+      {
+        heading: 'First, Make the Room Safe',
+        blocks: [
+          {
+            list: [
+              '**Keep away from water near lights, fans and outlets.** If water is near a fixture or wiring, switch that circuit off at the breaker, but only if you can reach the panel without standing in water.',
+              '**Don’t stand under a sagging ceiling.** A ceiling that bulges or holds water can come down. Keep everyone, and pets, out of that room.',
+              '**Stay off the roof.** Not to look, not to tarp, not in the rain.',
+              '**A tree through the roof or a downed power line?** Keep everyone clear and call 911 first.',
+            ],
+          },
+          { img: '/images/blog/protect-your-home-during-a-roof-leak-breaker-off.webp', alt: 'A hand switching off a breaker in a home electrical panel while the other hand holds a flashlight', caption: 'Water near a light or an outlet? Switch that circuit off at the breaker, if you can reach the panel without standing in water.' },
+          'Our guide to [the first hour of an active roof leak](/blog/first-hour-active-roof-leak/) covers the whole first hour, including the call.',
+        ],
+      },
+      {
+        heading: 'A Quick Demo: Protecting the Room Under the Leak',
+        blocks: [
+          { img: '/images/blog/protect-your-home-during-a-roof-leak-catch-the-water.webp', alt: 'A blue bucket with towels around it on a plastic sheet catching a drip from a peeling, water-stained ceiling in an empty room', caption: 'A bucket on plastic and towels, right under the drip.' },
+          {
+            steps: [
+              '**Catch the water.** A bucket, a storage tub or a large pot right under the drip. Put a towel or a sponge in the bottom so the splashing doesn’t spread the water.',
+              '**Protect the floor around it.** Plastic sheeting or a shower curtain under the bucket, with towels on top to catch the splash. Empty the bucket before it gets heavy.',
+              '**Move what you can.** Rugs, electronics, papers, books and anything with a cord go out of the room first, then smaller furniture.',
+              '**Cover what you can’t move.** Plastic sheeting or a tarp over beds, couches, shelves and cabinets, tucked in so water runs off onto the floor protection, not into the furniture.',
+              '**Lift furniture off a wet floor.** Foil, plastic lids or wood blocks under the legs keep wood and fabric from wicking up water and staining the floor.',
+              '**Watch the ceiling and walls.** New stains, bubbling paint or a growing bulge mean the water is spreading. Keep people out from under it and call.',
+              '**Take photos as you go,** before you move or throw anything away.',
+            ],
+          },
+          { img: '/images/blog/protect-your-home-during-a-roof-leak-move-belongings.webp', alt: 'A homeowner carrying a monitor and a box of papers out of a room with a water-stained ceiling, a rolled-up rug by the door', caption: 'Electronics, papers and the rug go out of the room first.' },
+          { pov: 'Most of what we see ruined in a leak wasn’t under the drip. It was next to it: the rug that wicked the water, the cord that sat in a puddle, the box on the floor of the closet. Clear a wide circle, not just the spot.' },
+        ],
+      },
+      {
+        heading: 'Room by Room',
+        blocks: [
+          { img: '/images/blog/protect-your-home-during-a-roof-leak-cover-with-plastic.webp', alt: 'A bed, a lamp and a bookshelf covered in clear plastic sheeting held with blue painter’s tape, a bucket catching a drip beside the bed', caption: 'What can’t move gets covered: plastic over the bed and the bookshelf, held with painter’s tape.' },
+          {
+            table: {
+              head: ['Room', 'What to protect first', 'How'],
+              rows: [
+                ['Living room', 'Rugs, the TV and electronics, upholstered furniture', 'Roll up and move rugs, unplug and move electronics, cover the couch with plastic'],
+                ['Bedroom', 'The bed, clothes, anything on the floor', 'Pull the bed away if you can, cover it, lift things off the floor'],
+                ['Kitchen', 'Outlets and appliances near the counter, open food', 'Switch off the circuit if water is near an outlet, move small appliances and food'],
+                ['Closets and storage', 'Boxes on the floor, papers, photos', 'Move boxes up and out; paper and photos are the hardest to save'],
+                ['Home office', 'Computers, documents, cords', 'Unplug and move electronics and paper first'],
+                ['Attic', 'Stored boxes, holiday decorations', 'Only if you can get there safely, standing on the joists; move what is under the wet spot'],
+              ],
+            },
+          },
+          { img: '/images/blog/protect-your-home-during-a-roof-leak-furniture-on-foil.webp', alt: 'A wooden furniture leg standing on a square of aluminum foil on a wet hardwood floor beside a towel soaking up water', caption: 'Foil under a furniture leg keeps the wood from wicking up water and staining the floor.' },
+        ],
+      },
+      {
+        heading: 'A Roof Leak Kit to Keep Ready',
+        blocks: [
+          {
+            checklist: [
+              'Two or three buckets or storage tubs',
+              'A stack of old towels',
+              'A roll of plastic sheeting or a couple of drop cloths',
+              'Painter’s tape to hold plastic in place without damaging walls',
+              'A flashlight and spare batteries',
+              'A phone charger or power bank',
+              'Work gloves',
+              'Our number saved in your phone: (310) 340-1643',
+            ],
+          },
+          { img: '/images/blog/protect-your-home-during-a-roof-leak-leak-kit.webp', alt: 'A roof leak kit on a garage workbench: stacked buckets, folded towels, a roll of plastic sheeting, painter’s tape, a flashlight, gloves and a power bank', caption: 'A simple roof leak kit, ready before the next storm.' },
+          'Keep it together in the garage or a hall closet, so nobody has to hunt for a bucket while the ceiling drips.',
+        ],
+      },
+      {
+        heading: 'What Not to Do',
+        blocks: [
+          {
+            list: [
+              '**Don’t poke a bulging ceiling** or stand under it. Keep people out of the room and call.',
+              '**Don’t use a vacuum, fan or extension cord in a wet area** until the circuit is off.',
+              '**Don’t leave wet rugs and carpet down.** Water keeps wicking into the floor and the pad underneath.',
+              '**Don’t throw anything away** before it is photographed; your insurer may want to see it.',
+              '**Don’t climb onto the roof** to find the leak or put a tarp on it.',
+              '**Don’t let a slow drip wait for the weekend.** Small leaks grow, and so does what is wet.',
+            ],
+          },
+          { pov: 'Protecting the inside is your job for the first few minutes. Going on the roof never is. Leave that to a roofer, especially in the rain.' },
+        ],
+      },
+      {
+        heading: 'Document It for Your Insurance',
+        blocks: [
+          'Photos and short videos of the ceiling, the water, the wet floors and anything damaged, with the date and time, help your insurer if you file a claim. Keep receipts for anything you buy to protect the house, like tarps, buckets or a dehumidifier. Our guide to [roof insurance claims](/blog/roof-insurance-claims-california/) explains what insurers usually ask for.',
+        ],
+      },
+      {
+        heading: 'When to Call for Emergency Help',
+        blocks: [
+          { img: '/images/blog/protect-your-home-during-a-roof-leak-sagging-ceiling-call.webp', alt: 'A homeowner on the phone at a doorway, staying back from a sagging, water-filled ceiling dripping onto a wet floor', caption: 'A ceiling that sags or bulges: stay out of the room and call right away.' },
+          {
+            table: {
+              head: ['What you see', 'How urgent', 'What to do'],
+              rows: [
+                ['Water pouring in, or a ceiling that bulges or sags', 'Call now', 'Keep everyone out of the room and call, any hour'],
+                ['Water near lights, outlets or the electrical panel', 'Call now', 'Switch off the circuit if you can do it safely, then call'],
+                ['A steady drip that fills a bucket', 'Call today', 'Catch it, protect the room and call'],
+                ['A new stain that grows with each rain', 'Call this week', 'Photograph it and book a roof evaluation'],
+                ['A dry, old stain that never changes', 'Have it checked', 'A roofer can tell you if it is an old leak or a new one'],
+              ],
+            },
+          },
+        ],
+      },
+      {
+        heading: 'How We Help When It’s Leaking',
+        blocks: [
+          {
+            list: [
+              '**We take emergency roof repair calls after hours and on weekends,** and tell you when a roofer can be there.',
+              '**A roofer finds where the water is getting in** and photographs the damage, inside and out.',
+              '**We stop the water now.** When the permanent repair has to wait, we cover the damaged area, for example with a tarp, to limit further water damage.',
+              '**You get a written scope and price** for the permanent repair, with the photos, ready to share with your insurance company.',
+            ],
+          },
+          { img: '/images/blog/protect-your-home-during-a-roof-leak-roofers-tarping.webp', alt: 'Two roofers in rain gear and harnesses fastening a blue tarp with wood battens over a damaged section of a wet shingle roof', caption: 'When the permanent repair has to wait, the damaged area is covered to stop the water now.' },
+          'See [emergency roof repair](/roof-repair/emergency/). Once the water has stopped, a ceiling that got soaked may need to be opened up and dried; that interior work is a job for a water damage or restoration company, and we can point you to the next step.',
+          { pov: 'Call us while the bucket is still filling, not after the ceiling has dried. The sooner the opening is covered, the less there is to dry out and fix inside.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What should I do first when my roof is leaking inside?',
+        a: 'Make the room safe: keep away from water near lights and outlets, switch off the circuit at the breaker if you can do it without standing in water, and stay out from under a sagging ceiling. Then catch the water and move what you can.',
+      },
+      {
+        q: 'How do I stop water from damaging my floors?',
+        a: 'Catch the drip in a bucket with a towel in the bottom, put plastic and towels under it, roll up rugs and lift furniture legs off the wet floor with foil, plastic lids or wood blocks.',
+      },
+      {
+        q: 'Should I poke a hole in a bulging ceiling?',
+        a: 'No. Keep everyone out from under it, move what you can out of the room, switch off any light or outlet near it at the breaker and call right away.',
+      },
+      {
+        q: 'What should I keep in a roof leak kit?',
+        a: 'Buckets or tubs, old towels, plastic sheeting, painter’s tape, a flashlight, a phone charger, work gloves and a roofer’s number saved in your phone.',
+      },
+      {
+        q: 'Do you come out at night or on weekends for a roof leak?',
+        a: 'Yes. We take emergency roof repair calls after hours and on weekends, and we tell you when a roofer can be there.',
+      },
+      {
+        q: 'Who dries out the inside of the house after a roof leak?',
+        a: 'A water damage or restoration company handles drying and interior repairs. We stop the water at the roof and repair the roof itself.',
+      },
+    ],
+    closing: {
+      heading: 'Water Coming In Right Now?',
+      blocks: [
+        'Call [(310) 340-1643](tel:+13103401643), even after hours or on a weekend. Not leaking yet but worried? [Book a free roof evaluation](#roof-check) and find the weak spot before the next storm does.',
+      ],
+    },
+    related: ['/roof-repair/emergency/', '/roof-repair/', '/roof-inspection/', '/roof-maintenance-plans/'],
+  },
   // What's under your shingles (owner, November 25 2026, brief "What's under your shingles: underlayment, decking, drip edge / Cutaway demo /
   // Educational / Explains line items in your quotes"): keyword "under your shingles". A cutaway from the framing up (`list:
   // 'facts-numbered'`), the line items in a quote (`table: 'cards'`), signs a hidden layer has failed (`table: 'decide'`), what a thin quote

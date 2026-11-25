@@ -18,6 +18,14 @@
 //   table: 'cards'          rows to compare as cards with labelled lines
 //   table: 'hotspots'       "where / what goes wrong" rows as an interactive picture of a flat commercial roof
 export const POST_VISUALS = {
+  'protect-your-home-during-a-roof-leak': {
+    'A Quick Demo: Protecting the Room Under the Leak': { steps: 'timeline' },
+    'Room by Room': { table: 'cards' },
+    'A Roof Leak Kit to Keep Ready': { checklist: 'tracker' },
+    'What Not to Do': { list: 'flags' },
+    'When to Call for Emergency Help': { table: 'decide' },
+    'How We Help When It’s Leaking': { list: 'facts-numbered' },
+  },
   'whats-under-your-shingles': {
     'The Layers, From the Bottom Up': { list: 'facts-numbered' },
     'The Line Items in Your Quote': { table: 'cards' },
