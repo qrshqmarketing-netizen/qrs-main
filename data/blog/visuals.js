@@ -18,6 +18,13 @@
 //   table: 'cards'          rows to compare as cards with labelled lines
 //   table: 'hotspots'       "where / what goes wrong" rows as an interactive picture of a flat commercial roof
 export const POST_VISUALS = {
+  'commercial-roof-lifespan': {
+    'What Decides How Long a Commercial Roof Lasts': { list: 'facts-numbered' },
+    'How Each System Shows Its Age': { table: 'cards' },
+    'Signs a Commercial Roof Is Near the End': { list: 'flags' },
+    'How Many Years Does Your Roof Have Left?': { table: 'decide' },
+    'How to Make a Commercial Roof Last': { checklist: 'tracker' },
+  },
   'tpo-vs-epdm-vs-modified-bitumen': {
     'TPO vs. EPDM vs. Modified Bitumen, Side by Side': { table: 'cards' },
     'Which System Fits Which Building?': { table: 'decide' },

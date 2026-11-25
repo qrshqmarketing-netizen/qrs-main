@@ -24,6 +24,189 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // How long commercial roofs last, by system (owner, November 24 2026, brief "How long commercial roofs last, by system / How many years
+  // does my commercial roof have left?"): keyword "commercial roof lifespan", for owners, property managers and boards. Per the site's rule
+  // (no lifespans in years; the TPO page says "We won't promise a number of years"), the article gives no year figures: it explains why a
+  // single number misleads, what decides how long a commercial roof lasts (`list: 'facts-numbered'`), how each system shows its age
+  // (`table: 'cards'`), the signs a roof is near the end (`list: 'flags'`), what a survey finding usually means for the years left
+  // (`table: 'decide'`), how to make it last (`checklist: 'tracker'`), planning and budgeting, and how we answer the question (the
+  // roofer-led roof survey, never free; scheduled maintenance photo records; a phased replacement). Warranty term is not lifespan. No prices.
+  // Our voice, three "Our point of view" boxes. Thumbnail and eight pictures in the text are the owner's images.
+  {
+    slug: 'commercial-roof-lifespan',
+    title: 'Commercial Roof Lifespan by System: How Many Years Does Your Roof Have Left?',
+    keyword: 'commercial roof lifespan',
+    topics: ['commercial', 'flat', 'tpo', 'replacement', 'maintenance', 'inspection'],
+    metaTitle: 'Commercial Roof Lifespan by System: How Much Life Is Left?',
+    metaDescription:
+      'Commercial roof lifespan depends on more than the system. What decides it, how TPO, EPDM and modified bitumen age, and how to tell how much life is left.',
+    datePublished: '2026-11-24',
+    dateModified: '2026-11-24',
+    image: '/images/blog/commercial-roof-lifespan.webp',
+    imageAlt: 'Drone view of a commercial building with a new white roof section beside older, weathered and patched roof sections',
+    excerpt:
+      'Owners want a number of years. The honest answer comes from the roof itself. What decides how long a commercial roof lasts, how each system shows its age, and how to tell how much life yours has left.',
+    intro: [
+      'Commercial roof lifespan is the first question most owners and boards ask, usually as a number: how many years does it have left? Charts online give a range for each system, and two buildings with the same system can still be years apart.',
+      'We won’t promise a number of years, and here is why: how a roof was installed, how it drains, how it is used and how it has been maintained decide its life far more than the name of the system. What follows is what decides commercial roof lifespan, how TPO, EPDM and modified bitumen each show their age, the signs a roof is near the end, and how to find out where yours stands.',
+    ],
+    sections: [
+      {
+        heading: 'Why a Single Number Misleads',
+        blocks: [
+          'A lifespan chart describes an average roof under average conditions. Your roof isn’t average: it has its own installer, its own drains, its own rooftop equipment, its own foot traffic and its own maintenance history. A roof installed well and looked after can outlast the chart; one with poor details or standing water can fail well before it.',
+          { img: '/images/blog/commercial-roof-lifespan-same-age-two-roofs.webp', alt: 'Two identical commercial buildings from above, one with a clean white roof and one stained, patched and ponding', caption: 'Same kind of building, same kind of roof: one drained and was looked after, the other wasn’t.' },
+          'A warranty term isn’t a lifespan either. It is how long a manufacturer or a contractor will cover certain problems, under certain conditions. It tells you nothing about how the roof on your building is doing today.',
+          { pov: 'The best way to know how much life a roof has left is to look at it. The age of the roof starts the conversation; its condition ends it.' },
+        ],
+      },
+      {
+        heading: 'What Decides How Long a Commercial Roof Lasts',
+        blocks: [
+          {
+            list: [
+              '**Installation and detailing:** most failures start at a seam, a flashing, a curb or a drain, not in the open field. How those were done matters more than anything else.',
+              '**Drainage:** water that stands on a roof wears it fastest where it sits. A roof that drains well ages evenly.',
+              '**Sun and heat:** the sun works on every roof surface, every day; a reflective surface and a sound top layer help.',
+              '**Foot traffic and rooftop equipment:** service visits wear paths and puncture membranes, especially without walk pads.',
+              '**Maintenance:** clear drains, resealed flashings and small repairs done early keep small problems from spreading.',
+              '**What is underneath:** wet insulation, a damaged deck or several old roofs below shorten the life of whatever is on top.',
+              '**How the building is used:** kitchen exhaust grease, chemicals and heavy equipment are hard on some membranes.',
+            ],
+          },
+          { img: '/images/blog/commercial-roof-lifespan-ponding-and-wear-paths.webp', alt: 'Standing water beside a rooftop unit and worn foot paths across a commercial flat roof leading to a drain', caption: 'Standing water and worn foot paths: two of the things that decide how long a roof lasts.' },
+        ],
+      },
+      {
+        heading: 'How Each System Shows Its Age',
+        blocks: [
+          {
+            table: {
+              head: ['System', 'How it shows its age', 'Where to look first'],
+              rows: [
+                ['TPO', 'The membrane weathers and wears thinner; seams and flashings loosen; punctures appear along service paths', 'Welded seams, curb and wall flashings, around rooftop units'],
+                ['EPDM', 'The black rubber weathers; taped or glued seams start to open; the membrane can pull at its edges and flashings', 'Seams, perimeter edges, flashings at walls and penetrations'],
+                ['Modified bitumen', 'The cap sheet loses its granules, then cracks and blisters; laps start to open', 'Laps, low spots, flashings at parapets, curbs and drains'],
+                ['A coated roof', 'The coating chalks, thins, peels or lifts, often first where water ponds', 'Ponding areas, seams and flashings under the coating'],
+              ],
+            },
+          },
+          { img: '/images/blog/commercial-roof-lifespan-aging-tpo.webp', alt: 'An aging white single-ply membrane with a lifted seam and a puncture beside a walk pad', caption: 'An aging single-ply membrane: a seam lifting and a puncture beside the service path.' },
+          { img: '/images/blog/commercial-roof-lifespan-aging-modified-bitumen.webp', alt: 'An aging modified bitumen cap sheet with granules worn away, cracked patches and an open lap', caption: 'An aging modified bitumen roof: granules gone, the surface cracking and a lap opening.' },
+          'Our guide to [TPO vs. EPDM vs. modified bitumen](/blog/tpo-vs-epdm-vs-modified-bitumen/) explains how the three systems differ when they are new.',
+        ],
+      },
+      {
+        heading: 'Signs a Commercial Roof Is Near the End',
+        blocks: [
+          {
+            list: [
+              '**Leaks in different places every season,** not one recurring spot.',
+              '**Wet insulation across large areas,** not just around one detail.',
+              '**Blisters, splits and open seams across most of the field.**',
+              '**Ponding that spreads** or gets deeper each year.',
+              '**Patches on top of patches,** with new leaks next to old repairs.',
+              '**Soft or damaged deck** found underfoot or from below.',
+            ],
+          },
+          { img: '/images/blog/commercial-roof-lifespan-patches-on-patches.webp', alt: 'A commercial flat roof covered in old patches, roof cement, blisters and open seams', caption: 'Patches on top of patches, blisters and open seams: the roof is near the end.' },
+          { pov: 'One leak is a repair. Leaks in a different place every storm are the roof telling you its time is coming. We would rather show you that in photos than keep billing you for patches.' },
+        ],
+      },
+      {
+        heading: 'How Many Years Does Your Roof Have Left?',
+        blocks: [
+          'The answer comes from what a roof survey finds, not from the calendar.',
+          {
+            table: {
+              head: ['What the survey finds', 'What it usually means', 'What to do'],
+              rows: [
+                ['A sound surface, tight seams and flashings, dry insulation, good drainage', 'Real life left', 'Maintain it, and survey it again on a schedule'],
+                ['Wear at a few details, the rest sound', 'Good life left once the details are fixed', 'Repair those areas, then maintain'],
+                ['Leaks in several areas and some wet insulation', 'The roof is getting closer to the end', 'Repair what is urgent and start planning a replacement'],
+                ['Widespread wet insulation, blisters or open seams', 'Near the end', 'Plan a replacement, phased so the building stays open'],
+              ],
+            },
+          },
+          { img: '/images/blog/commercial-roof-lifespan-roof-survey.webp', alt: 'A roofer with a tablet and a property manager with a clipboard walking a commercial flat roof', caption: 'The survey answers the question: a roofer walks the roof with your property manager and photographs what matters.' },
+          'Our [commercial roof inspection checklist](/blog/commercial-roof-inspection-checklist/) walks through what a good survey covers.',
+        ],
+      },
+      {
+        heading: 'How to Make a Commercial Roof Last',
+        blocks: [
+          {
+            checklist: [
+              'Keep drains, scuppers and downspouts clear, especially before the rainy season',
+              'Put walk pads on the paths service technicians use',
+              'Have a roofer check the roof after other trades work on it',
+              'Reseal and repair flashings at the first sign of wear',
+              'Deal with a leak right away, at its source',
+              'Keep a photo record of the roof from every visit',
+              'Have the roof surveyed on a schedule, not only when it leaks',
+            ],
+          },
+          { img: '/images/blog/commercial-roof-lifespan-well-kept-roof.webp', alt: 'A well-kept commercial flat roof after rain with walk pads to rooftop units and water running to clear drains', caption: 'Walk pads on the service paths, clear drains and sound flashings: how a roof gets every good year.' },
+          'Our guide to [keeping drains and scuppers clear](/blog/commercial-roof-drains-and-scuppers/) covers the simplest one on the list.',
+        ],
+      },
+      {
+        heading: 'Planning and Budgeting for the Next Roof',
+        blocks: [
+          'Knowing where a roof stands lets you plan the replacement on your timeline instead of a storm’s: put it in the budget, schedule it around tenants and operations, and replace it in phases. A photo record from every survey and maintenance visit shows the trend, so owners and boards can see the roof aging, not just hear about it.',
+          { img: '/images/blog/commercial-roof-lifespan-planning-the-next-roof.webp', alt: 'A property manager and a roofer reviewing an aerial roof plan with replacement phases outlined and survey photos on a laptop', caption: 'Planning the next roof on your timeline: phases outlined on the roof plan, survey photos on the screen.' },
+          'Our guide to [planning a commercial roof replacement](/blog/commercial-roof-replacement-planning/) explains how to keep the doors open while it happens.',
+        ],
+      },
+      {
+        heading: 'How We Answer the Question for Your Roof',
+        blocks: [
+          {
+            list: [
+              '**A roofer-led roof survey:** a roofer walks the whole roof, photographs it area by area and notes the seams, the surface, past patches, soft or wet areas, the drains, the curbs and the parapets.',
+              '**A plain-English answer:** repair, monitor, maintain or replace, with the photos to back it up and a written scope and price before any work.',
+              '**[Scheduled maintenance](/commercial-roofing/maintenance/):** drains cleared, flashings checked and resealed where needed, and a photo report every visit you can compare year to year.',
+              '**When it is time,** a [commercial roof replacement](/commercial-roofing/replacement/) phased section by section, so the building stays open.',
+            ],
+          },
+          { pov: 'We would rather help you get every good year out of the roof you have than replace it a day early. When it is time, the photos will make that plain.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'How long does a commercial roof last?',
+        a: 'There isn’t one honest number. The system matters, but how the roof was installed, how it drains, how it is used and how it has been maintained matter more. A roof survey tells you how much life your roof has left.',
+      },
+      {
+        q: 'Which commercial roof system lasts the longest?',
+        a: 'Any of the common systems can have a long life when it is installed and detailed well, drains properly and is maintained. A poorly installed roof of any system can fail early.',
+      },
+      {
+        q: 'How can I tell how many years my commercial roof has left?',
+        a: 'Have it surveyed. A roofer looks at the surface, the seams, the flashings, the drains and whether the insulation is wet, and tells you whether the roof needs maintenance, repairs or a replacement plan.',
+      },
+      {
+        q: 'Does a long warranty mean the roof will last that long?',
+        a: 'No. A warranty term is how long certain problems are covered, under certain conditions. It isn’t a promise about how long the roof will last, and it says nothing about the roof’s condition today.',
+      },
+      {
+        q: 'Does maintenance make a commercial roof last longer?',
+        a: 'It helps. Clear drains, sound flashings and small repairs done early keep small problems from spreading, and a photo record shows wear before it becomes a leak.',
+      },
+      {
+        q: 'When should we start planning a replacement?',
+        a: 'When a survey shows leaks in several areas, wet insulation or wear across the field. Starting early lets you budget for it and phase the work around tenants and operations.',
+      },
+    ],
+    closing: {
+      heading: 'Want to Know Where Your Roof Stands?',
+      blocks: [
+        'Request a [roof survey](#roof-check). A roofer photographs the roof, tells you in plain English whether it needs maintenance, repairs or a replacement plan, and gives you a written scope and price before any work. Or call [(310) 340-1643](tel:+13103401643).',
+      ],
+    },
+    related: ['/commercial-roofing/maintenance/', '/commercial-roofing/replacement/', '/commercial-roofing/repair/', '/commercial-roofing/property-managers/'],
+  },
   // TPO vs. EPDM vs. modified bitumen (owner, November 24 2026, brief "TPO vs. EPDM vs. modified bitumen / Which flat roof system fits my
   // building?"): keyword "tpo vs. epdm vs. modified bitumen", for commercial owners and property managers. It goes deeper than the TPO pros
   // and cons article (keyword "tpo roofing") and the systems table in the commercial contractor article, both linked. What each system is
