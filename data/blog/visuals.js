@@ -18,6 +18,14 @@
 //   table: 'cards'          rows to compare as cards with labelled lines
 //   table: 'hotspots'       "where / what goes wrong" rows as an interactive picture of a flat commercial roof
 export const POST_VISUALS = {
+  'hoa-roof-repair-who-pays': {
+    'It Depends on Your CC&Rs': { table: 'cards' },
+    'Where to Look in Your Documents': { list: 'facts-numbered' },
+    'What to Do the Day It Leaks': { steps: 'timeline' },
+    'The Gray Areas': { table: 'decide' },
+    'What Not to Do': { list: 'flags' },
+    'Your HOA Roof Leak Checklist': { checklist: 'tracker' },
+  },
   'what-voids-a-commercial-roof-warranty': {
     'Two Warranties on One Roof': { table: 'cards' },
     'Common Ways a Commercial Roof Warranty Is Put at Risk': { list: 'facts-numbered' },

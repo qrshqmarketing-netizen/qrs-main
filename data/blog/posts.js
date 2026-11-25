@@ -24,6 +24,195 @@
 const TILE = '/residential-roofing/tile-roofing/';
 
 export const BLOG_POSTS = [
+  // HOA or homeowner, who repairs the roof (owner, November 25 2026, brief "Roof repairs: HOA's job or the homeowner's? / Who pays for this
+  // roof leak, the HOA or me?"): keyword "hoa roof repair". General guidance only, not legal advice: the CC&Rs decide; California's
+  // Davis-Stirling Act sets a default split between common area and each owner's separate interest that the CC&Rs can change (named, not
+  // quoted). Who usually handles it by kind of home (`table: 'cards'`), where to look (`list: 'facts-numbered'`), what to do when the roof
+  // leaks (`steps: 'timeline'`), the gray areas (`table: 'decide'`), insurance (master policy vs. your own; the insurer decides; we
+  // document, as the insurance articles say), what not to do (`list: 'flags'`), a checklist (`checklist: 'tracker'`) and how we help both
+  // sides (HOA page: photo reports a board can take into a meeting, written proposals, one point of contact, *ReserveReady*; homeowners: the
+  // free roof evaluation; the HOA survey is never called free). No prices. Our voice, three "Our point of view" boxes. cardImage is a stand-in.
+  {
+    slug: 'hoa-roof-repair-who-pays',
+    title: 'HOA Roof Repair: Whose Job Is It, and Who Pays for a Roof Leak?',
+    keyword: 'hoa roof repair',
+    topics: ['repair', 'leak', 'maintenance', 'inspection'],
+    metaTitle: 'HOA Roof Repair: Who Pays for a Roof Leak, the HOA or You?',
+    metaDescription:
+      'HOA roof repair or your job? Who usually handles the roof in condos, townhomes and single-family HOAs, where to look in your CC&Rs and what to do when it leaks.',
+    datePublished: '2026-11-25',
+    dateModified: '2026-11-25',
+    image: '/images/blog/hoa-roof-repair-who-pays.webp',
+    imageAlt: 'A homeowner on the phone looking up at a water-stained, dripping ceiling in a townhome living room, with a bucket below',
+    excerpt:
+      'Water is coming through your ceiling and you live in an HOA. Is the roof repair the association’s job or yours? Who usually handles it in condos, townhomes and single-family HOAs, where to look in your CC&Rs and what to do first.',
+    intro: [
+      'HOA roof repair questions usually start with water on the ceiling. You live in a community with an HOA, and the first thing you want to know is whether the roof is the association’s job or yours, and who pays for the damage inside.',
+      'The honest answer is that your community’s documents decide. Here is who usually handles the roof in condos, townhomes and single-family homes in an HOA, where to look in your CC&Rs, what to do the day it leaks, the gray areas, and how insurance fits in. This is general guidance, not legal advice; for a dispute, talk to your HOA’s manager or an attorney.',
+    ],
+    sections: [
+      {
+        heading: 'It Depends on Your CC&Rs',
+        blocks: [
+          'Every HOA has governing documents, usually called the CC&Rs (covenants, conditions and restrictions). They say which parts of the property are common area, maintained by the association, and which parts belong to each owner. In California, the Davis-Stirling Act sets a default split between the two, but a community’s CC&Rs can change it, so your documents are the place to start.',
+          { img: '/images/blog/hoa-roof-repair-who-pays-hoa-community.webp', alt: 'Aerial view of an HOA community with attached townhomes, a condo building, a tile-roofed clubhouse and a pool among landscaped common areas', caption: 'One community, several kinds of roofs: townhomes, a condo building and a clubhouse can each be handled differently.' },
+          {
+            table: {
+              head: ['Kind of home', 'Who usually handles the roof', 'Why'],
+              rows: [
+                ['Condo in a shared building', 'Usually the HOA', 'The roof is typically common area, shared by everyone under it'],
+                ['Townhome or attached home', 'It varies', 'Some CC&Rs make each roof the owner’s; others keep roofs as common area'],
+                ['Single-family home in an HOA', 'Usually the homeowner', 'The house and roof are typically the owner’s, with the HOA approving materials and colors'],
+                ['Carports, clubhouses, common buildings', 'The HOA', 'They are common area'],
+              ],
+            },
+          },
+          { pov: 'We see the same confusion on both sides: owners who assume the HOA covers everything, and boards who assume owners will handle what is over their heads. Ten minutes with the CC&Rs settles most of it.' },
+        ],
+      },
+      {
+        heading: 'Where to Look in Your Documents',
+        blocks: [
+          {
+            list: [
+              '**The maintenance responsibility section** of the CC&Rs, often with a chart of who repairs what.',
+              '**The definition of common area,** separate interest and exclusive use common area.',
+              '**Any section on roofs,** exteriors or structural elements.',
+              '**Architectural rules,** which cover approvals for roof materials and colors.',
+              '**Board policies or resolutions** that have clarified responsibilities since the CC&Rs were written.',
+              '**The association’s insurance summary,** which says what the master policy covers.',
+            ],
+          },
+          { img: '/images/blog/hoa-roof-repair-who-pays-reading-ccrs.webp', alt: 'A homeowner reading a thick tabbed binder of HOA documents with highlighted pages at a kitchen table', caption: 'The maintenance section of the CC&Rs answers most “who fixes it” questions.' },
+          'If you can’t find them, ask the HOA’s manager for the governing documents and the maintenance chart.',
+        ],
+      },
+      {
+        heading: 'What to Do the Day It Leaks',
+        blocks: [
+          { img: '/images/blog/hoa-roof-repair-who-pays-photographing-the-leak.webp', alt: 'A homeowner photographing a water-stained ceiling in a condo bedroom, with a bucket on a towel below', caption: 'Photos first, with the date: they help with the HOA, the insurer and the roofer.' },
+          {
+            steps: [
+              '**Protect your home first.** Catch the water, move what can be damaged and keep people out from under a sagging ceiling.',
+              '**Document it.** Photos and video of the ceiling, the water and anything damaged, with the date and time.',
+              '**Notify the HOA in writing.** Email the manager or the board right away, even if you think the roof is yours, and keep a copy.',
+              '**Check your CC&Rs** for who handles the roof and how repairs are requested.',
+              '**Call your own insurer** if there is damage inside, and ask what your policy covers.',
+              '**Don’t let anyone open the roof** until it is clear who is responsible for it, unless it is an emergency and the HOA agrees.',
+            ],
+          },
+          'Our guide to [the first hour of an active roof leak](/blog/first-hour-active-roof-leak/) covers the first steps in more detail.',
+        ],
+      },
+      {
+        heading: 'The Gray Areas',
+        blocks: [
+          { img: '/images/blog/hoa-roof-repair-who-pays-attached-roofs.webp', alt: 'Drone view of two attached townhome roofs meeting at a shared parapet wall with worn flashing and a satellite dish on one roof', caption: 'Where attached roofs meet, and where something was added, is where responsibility gets unclear.' },
+          {
+            table: {
+              head: ['The situation', 'Who often ends up responsible', 'What to check'],
+              rows: [
+                ['The leak comes from a common roof but damages your unit', 'The HOA for the roof; the interior can depend on the CC&Rs and insurance', 'The maintenance chart and both insurance policies'],
+                ['Something you installed caused it, like a satellite dish or solar mount', 'Often the owner', 'Who approved and installed it'],
+                ['The leak starts on a neighbor’s roof in an attached row', 'Depends on whose roof it is under the CC&Rs', 'Where the water actually gets in'],
+                ['The HOA was told about a problem and didn’t act', 'Can shift responsibility for later damage', 'Your written notices and dates'],
+                ['A skylight, vent or chimney on your unit', 'Varies; often listed in the maintenance chart', 'The chart, item by item'],
+              ],
+            },
+          },
+          { pov: 'Before anyone argues about who pays, someone has to find where the water actually gets in. The source usually answers the question.' },
+        ],
+      },
+      {
+        heading: 'How Insurance Fits In',
+        blocks: [
+          'In many communities, the HOA carries a master policy for the common areas, and each owner carries their own policy for the inside of their home and their belongings. Which one responds depends on the policies and the CC&Rs, and the insurers decide coverage, not the roofer.',
+          { img: '/images/blog/hoa-roof-repair-who-pays-manager-and-owner.webp', alt: 'An HOA property manager showing a homeowner roof photos on a tablet at the door of a condo', caption: 'The manager and the owner looking at the same photos makes the next step easier to agree on.' },
+          'What a roofer can do is document the source and the damage with photos and a written scope, so both the HOA and the insurers are looking at the same facts. Our guide to [roof insurance claims](/blog/roof-insurance-claims-california/) explains how claims work.',
+        ],
+      },
+      {
+        heading: 'What Not to Do',
+        blocks: [
+          { img: '/images/blog/hoa-roof-repair-who-pays-diy-patch.webp', alt: 'A homeowner on a ladder spreading roof cement on the shingles of an attached townhome roof', caption: 'A do-it-yourself patch on a shared roof can make the source harder to find and the responsibility harder to settle.' },
+          {
+            list: [
+              '**Don’t hire your own roofer for a common-area roof** without the HOA’s approval. You may not be reimbursed, and the work may not be accepted.',
+              '**Don’t wait for the HOA to notice.** Report it in writing, the same day.',
+              '**Don’t throw away damaged materials** before they are photographed.',
+              '**Don’t assume the HOA covers the inside of your home.** Check your own policy.',
+              '**Don’t patch the roof yourself.** It can make the source harder to find and the responsibility harder to settle.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Your HOA Roof Leak Checklist',
+        blocks: [
+          {
+            checklist: [
+              'Protected the inside of the home and kept people clear of the leak',
+              'Photographed and filmed the damage, with dates',
+              'Notified the HOA manager or board in writing',
+              'Found the maintenance section and chart in the CC&Rs',
+              'Called my own insurer about the damage inside',
+              'Asked how the HOA wants the roof inspected and repaired',
+              'Kept copies of every email, photo and report',
+            ],
+          },
+          { img: '/images/blog/hoa-roof-repair-who-pays-written-notice.webp', alt: 'A laptop with an email being written beside printed photos of a stained ceiling and a phone on a desk', caption: 'Report it in writing, with photos attached, and keep a copy.' },
+        ],
+      },
+      {
+        heading: 'How We Help Homeowners and HOAs',
+        blocks: [
+          {
+            list: [
+              '**For boards and managers:** a roofer-led roof survey with a photo-documented report on each roof, a written proposal with scope and price, and one point of contact from the first walk to closeout. Our [*ReserveReady*](/residential-roofing/hoa-multi-family/) program adds phased proposals and long-range budget planning.',
+              '**For homeowners whose roof is their own:** a [free roof evaluation](#roof-check), with photos and a written scope and price before any work.',
+              '**For both:** a report that shows where the water gets in, which is what everyone needs to settle who handles it.',
+            ],
+          },
+          { img: '/images/blog/hoa-roof-repair-who-pays-board-meeting.webp', alt: 'A roofer presenting aerial roof photos on a screen to an HOA board and property manager in a clubhouse meeting room', caption: 'A board meeting with the roof photos on the screen: every member sees the same picture.' },
+          'Repairs are made as a [roof repair](/roof-repair/), and larger work is phased building by building so the community stays livable. Our [roof maintenance plans](/roof-maintenance-plans/) can cover the buildings across a community, with photo reports easy to share at board meetings.',
+          { pov: 'We would rather show the board and the owner the same photos than take sides. When everyone sees where the water gets in, the decision about who handles it usually follows.' },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Is the HOA responsible for roof repairs?',
+        a: 'Often for condos in shared buildings, where the roof is usually common area. In townhomes it varies, and in single-family homes it is usually the owner. Your community’s CC&Rs decide.',
+      },
+      {
+        q: 'Who pays for interior damage from a roof leak in an HOA?',
+        a: 'It depends on the CC&Rs and the insurance policies involved. The HOA’s master policy and your own policy may each cover different parts. Report it to the HOA in writing and call your own insurer.',
+      },
+      {
+        q: 'Can I hire my own roofer if my HOA is slow to fix the roof?',
+        a: 'For a common-area roof, not without the HOA’s approval, or you may not be reimbursed. Report the leak in writing, keep copies and follow up. For a roof that is yours under the CC&Rs, you can hire your own roofer, following any approval rules.',
+      },
+      {
+        q: 'What does California law say about HOA roof repairs?',
+        a: 'California’s Davis-Stirling Act sets a default split between what the association maintains and what each owner maintains, but a community’s CC&Rs can change it. For a specific dispute, talk to an attorney.',
+      },
+      {
+        q: 'Do you work with HOA boards and property managers?',
+        a: 'Yes. Boards and managers get photo-documented reports on each roof, written proposals with scope and price, and one point of contact from the first walk to closeout.',
+      },
+      {
+        q: 'Do I need HOA approval to replace my own roof?',
+        a: 'Often, yes. Many HOAs approve roof materials and colors even when the roof is the owner’s. Check your architectural rules before you order.',
+      },
+    ],
+    closing: {
+      heading: 'Need to Know Where the Water Gets In?',
+      blocks: [
+        'Homeowners: [book a free roof evaluation](#roof-check). Boards and managers: ask about a roof survey for the community. Either way, you get photos, a plain-English answer and a written scope and price before any work. Or call [(310) 340-1643](tel:+13103401643).',
+      ],
+    },
+    related: ['/residential-roofing/hoa-multi-family/', '/roof-repair/', '/roof-maintenance-plans/', '/commercial-roofing/property-managers/'],
+  },
   // What voids a commercial roof warranty (owner, November 25 2026, brief "What voids a commercial roof warranty / What could cancel my roof
   // warranty?", from the commercial owners' questions on the brief sheet): keyword "commercial roof warranty", kept apart from
   // roof-warranty-explained ("roof warranties", the homeowner guide), which it links to. General, as "many warranties" (every warranty
